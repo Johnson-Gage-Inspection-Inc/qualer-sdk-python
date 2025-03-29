@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.asset_service_records_api import AssetServiceRecordsApi  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.api.asset_service_records_api import AssetServiceRecordsApi  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestAssetServiceRecordsApi(unittest.TestCase):

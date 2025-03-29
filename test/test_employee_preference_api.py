@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.employee_preference_api import EmployeePreferenceApi  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.api.employee_preference_api import EmployeePreferenceApi  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestEmployeePreferenceApi(unittest.TestCase):

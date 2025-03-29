@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.common_api import CommonApi  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.api.common_api import CommonApi  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestCommonApi(unittest.TestCase):

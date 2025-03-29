@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_api_models_service_orders_to_charge_response_model_base_order_part_repair_price_model import QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_api_models_service_orders_to_charge_response_model_base_order_part_repair_price_model import QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel(unittest.TestCase):

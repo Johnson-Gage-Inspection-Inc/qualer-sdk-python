@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_api_models_clients_from_sponsored_client_create_model import QualerApiModelsClientsFromSponsoredClientCreateModel  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_api_models_clients_from_sponsored_client_create_model import QualerApiModelsClientsFromSponsoredClientCreateModel  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerApiModelsClientsFromSponsoredClientCreateModel(unittest.TestCase):

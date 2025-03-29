@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_core_shared_models_service_order_metadata_service_order_metadata_exhibits_key_value import QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibitsKeyValue  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_core_shared_models_service_order_metadata_service_order_metadata_exhibits_key_value import QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibitsKeyValue  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibitsKeyValue(unittest.TestCase):

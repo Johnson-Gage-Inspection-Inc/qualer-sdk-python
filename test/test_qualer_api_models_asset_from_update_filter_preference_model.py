@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_api_models_asset_from_update_filter_preference_model import QualerApiModelsAssetFromUpdateFilterPreferenceModel  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_api_models_asset_from_update_filter_preference_model import QualerApiModelsAssetFromUpdateFilterPreferenceModel  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerApiModelsAssetFromUpdateFilterPreferenceModel(unittest.TestCase):

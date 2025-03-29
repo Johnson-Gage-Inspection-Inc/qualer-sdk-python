@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_api_models_inventory_from_inventory_count_model import QualerApiModelsInventoryFromInventoryCountModel  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_api_models_inventory_from_inventory_count_model import QualerApiModelsInventoryFromInventoryCountModel  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerApiModelsInventoryFromInventoryCountModel(unittest.TestCase):
