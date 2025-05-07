@@ -1,4 +1,4 @@
-# swagger_client.ServiceOrderItemDocumentsApi
+# qualer_sdk.ServiceOrderItemDocumentsApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -21,12 +21,12 @@ Sample request:                GET /api/service/workitems/documents/list        
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderItemDocumentsApi()
+api_instance = qualer_sdk.ServiceOrderItemDocumentsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Retrieve documents where CreatedOnUtc greater than From parameter
 to = '2013-10-20T19:20:30+01:00' # datetime | Retrieve documents where CreatedOnUtc less than To parameter
 report_type = 'report_type_example' # str | Retrieve documents given types (Optional) (optional)
@@ -75,12 +75,12 @@ Sample request:                GET api/service/workitems/1000/documents
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderItemDocumentsApi()
+api_instance = qualer_sdk.ServiceOrderItemDocumentsApi()
 service_order_item_id = 56 # int | Retrieve documents where CreatedOnUtc greater than From parameter
 model_file_name = 'model_file_name_example' # str |  (optional)
 
@@ -123,12 +123,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderItemDocumentsApi()
+api_instance = qualer_sdk.ServiceOrderItemDocumentsApi()
 service_order_item_id = 56 # int | 
 model_report_type = 'model_report_type_example' # str |  (optional)
 
@@ -170,12 +170,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderItemDocumentsApi()
+api_instance = qualer_sdk.ServiceOrderItemDocumentsApi()
 service_order_item_id = 56 # int | 
 model_report_type = 'model_report_type_example' # str |  (optional)
 model_is_private = true # bool |  (optional)

@@ -1,4 +1,4 @@
-# swagger_client.EmployeesApi
+# qualer_sdk.EmployeesApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -21,14 +21,14 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.EmployeesApi()
+api_instance = qualer_sdk.EmployeesApi()
 employee_id = 56 # int | 
-model = swagger_client.QualerApiModelsEmployeesFromEmployeeDepartmentModel() # QualerApiModelsEmployeesFromEmployeeDepartmentModel | 
+model = qualer_sdk.QualerApiModelsEmployeesFromEmployeeDepartmentModel() # QualerApiModelsEmployeesFromEmployeeDepartmentModel | 
 
 try:
     # 
@@ -71,13 +71,13 @@ CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />  Cultur
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.EmployeesApi()
-model = swagger_client.QualerApiModelsEmployeesFromCreateEmployeeModel() # QualerApiModelsEmployeesFromCreateEmployeeModel | 
+api_instance = qualer_sdk.EmployeesApi()
+model = qualer_sdk.QualerApiModelsEmployeesFromCreateEmployeeModel() # QualerApiModelsEmployeesFromCreateEmployeeModel | 
 
 try:
     # Create Employee
@@ -117,12 +117,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.EmployeesApi()
+api_instance = qualer_sdk.EmployeesApi()
 employee_id = 56 # int | 
 department_id = 56 # int | 
 
@@ -165,12 +165,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.EmployeesApi()
+api_instance = qualer_sdk.EmployeesApi()
 employee_id = 56 # int | 
 
 try:
@@ -210,12 +210,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.EmployeesApi()
+api_instance = qualer_sdk.EmployeesApi()
 model_search_string = 'model_search_string_example' # str |  (optional)
 
 try:
@@ -257,14 +257,14 @@ CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />  Cultur
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.EmployeesApi()
+api_instance = qualer_sdk.EmployeesApi()
 employee_id = 56 # int | 
-model = swagger_client.QualerApiModelsEmployeesFromUpdateEmployeeModel() # QualerApiModelsEmployeesFromUpdateEmployeeModel | 
+model = qualer_sdk.QualerApiModelsEmployeesFromUpdateEmployeeModel() # QualerApiModelsEmployeesFromUpdateEmployeeModel | 
 
 try:
     # Update Employee

@@ -1,4 +1,4 @@
-# swagger_client.EmployeePreferenceApi
+# qualer_sdk.EmployeePreferenceApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -17,12 +17,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.EmployeePreferenceApi()
+api_instance = qualer_sdk.EmployeePreferenceApi()
 element_page = 'element_page_example' # str | 
 
 try:
@@ -64,12 +64,12 @@ elementPage:  AssetManager = 1,  WorkOrders = 2,  ServiceOrderItems = 3,  Servic
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.EmployeePreferenceApi()
+api_instance = qualer_sdk.EmployeePreferenceApi()
 element_page = 'element_page_example' # str | 
 
 try:

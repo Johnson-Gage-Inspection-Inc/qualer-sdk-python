@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_api_models_service_order_documents_from_get_documents_model import QualerApiModelsServiceOrderDocumentsFromGetDocumentsModel  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_api_models_service_order_documents_from_get_documents_model import QualerApiModelsServiceOrderDocumentsFromGetDocumentsModel  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerApiModelsServiceOrderDocumentsFromGetDocumentsModel(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestQualerApiModelsServiceOrderDocumentsFromGetDocumentsModel(unittest.Tes
     def testQualerApiModelsServiceOrderDocumentsFromGetDocumentsModel(self):
         """Test QualerApiModelsServiceOrderDocumentsFromGetDocumentsModel"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.qualer_api_models_service_order_documents_from_get_documents_model.QualerApiModelsServiceOrderDocumentsFromGetDocumentsModel()  # noqa: E501
+        # model = qualer_sdk.models.qualer_api_models_service_order_documents_from_get_documents_model.QualerApiModelsServiceOrderDocumentsFromGetDocumentsModel()  # noqa: E501
         pass
 
 

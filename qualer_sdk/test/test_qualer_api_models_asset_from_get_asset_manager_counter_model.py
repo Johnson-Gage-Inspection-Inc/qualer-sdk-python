@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_api_models_asset_from_get_asset_manager_counter_model import QualerApiModelsAssetFromGetAssetManagerCounterModel  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_api_models_asset_from_get_asset_manager_counter_model import QualerApiModelsAssetFromGetAssetManagerCounterModel  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerApiModelsAssetFromGetAssetManagerCounterModel(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestQualerApiModelsAssetFromGetAssetManagerCounterModel(unittest.TestCase)
     def testQualerApiModelsAssetFromGetAssetManagerCounterModel(self):
         """Test QualerApiModelsAssetFromGetAssetManagerCounterModel"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.qualer_api_models_asset_from_get_asset_manager_counter_model.QualerApiModelsAssetFromGetAssetManagerCounterModel()  # noqa: E501
+        # model = qualer_sdk.models.qualer_api_models_asset_from_get_asset_manager_counter_model.QualerApiModelsAssetFromGetAssetManagerCounterModel()  # noqa: E501
         pass
 
 

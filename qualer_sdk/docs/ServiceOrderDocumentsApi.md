@@ -1,4 +1,4 @@
-# swagger_client.ServiceOrderDocumentsApi
+# qualer_sdk.ServiceOrderDocumentsApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -23,12 +23,12 @@ Sample request:                GET api/service/workorders/documents/FE6B21DC-806
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderDocumentsApi()
+api_instance = qualer_sdk.ServiceOrderDocumentsApi()
 guid = 'guid_example' # str | Document unique id
 
 try:
@@ -71,12 +71,12 @@ Sample request:                GET api/service/workorders/documents/FE6B21DC-806
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderDocumentsApi()
+api_instance = qualer_sdk.ServiceOrderDocumentsApi()
 guid = 'guid_example' # str | Document unique id
 
 try:
@@ -119,12 +119,12 @@ Sample request:                GET /api/service/workorders/documents/list       
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderDocumentsApi()
+api_instance = qualer_sdk.ServiceOrderDocumentsApi()
 _from = '2013-10-20T19:20:30+01:00' # datetime | Retrieve documents where CreatedOnUtc greater than From parameter
 to = '2013-10-20T19:20:30+01:00' # datetime | Retrieve documents where CreatedOnUtc less than To parameter
 report_type = 'report_type_example' # str | Retrieve documents given types (Optional) (optional)
@@ -173,12 +173,12 @@ Sample request:                GET api/service/workorders/1000/documents
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderDocumentsApi()
+api_instance = qualer_sdk.ServiceOrderDocumentsApi()
 service_order_id = 56 # int | 
 model_file_name = 'model_file_name_example' # str |  (optional)
 
@@ -221,12 +221,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderDocumentsApi()
+api_instance = qualer_sdk.ServiceOrderDocumentsApi()
 service_order_id = 56 # int | 
 model_report_type = 'model_report_type_example' # str |  (optional)
 
@@ -270,12 +270,12 @@ reportType:<br />  assetsummary, assetlabel, assetdetail, assetcertificate,<br /
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderDocumentsApi()
+api_instance = qualer_sdk.ServiceOrderDocumentsApi()
 service_order_id = 56 # int | 
 model_report_type = 'model_report_type_example' # str |  (optional)
 model_is_private = true # bool |  (optional)

@@ -1,4 +1,4 @@
-# swagger_client.ServiceOrderShipmentsApi
+# qualer_sdk.ServiceOrderShipmentsApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -17,14 +17,14 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderShipmentsApi()
+api_instance = qualer_sdk.ServiceOrderShipmentsApi()
 service_order_id = 56 # int | 
-model = swagger_client.QualerApiModelsServiceOrdersFromAppendTrackingNumberModel() # QualerApiModelsServiceOrdersFromAppendTrackingNumberModel | 
+model = qualer_sdk.QualerApiModelsServiceOrdersFromAppendTrackingNumberModel() # QualerApiModelsServiceOrdersFromAppendTrackingNumberModel | 
 
 try:
     api_response = api_instance.service_order_shipments_append_shipment_tracking_number(service_order_id, model)
@@ -64,14 +64,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderShipmentsApi()
+api_instance = qualer_sdk.ServiceOrderShipmentsApi()
 service_order_id = 56 # int | 
-model = swagger_client.QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel() # QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel | 
+model = qualer_sdk.QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel() # QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel | 
 
 try:
     api_response = api_instance.service_order_shipments_update_shipment_status(service_order_id, model)

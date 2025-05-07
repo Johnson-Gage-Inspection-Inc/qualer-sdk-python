@@ -1,4 +1,4 @@
-# swagger_client.ServiceOrderTasksApi
+# qualer_sdk.ServiceOrderTasksApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -21,14 +21,14 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderTasksApi()
+api_instance = qualer_sdk.ServiceOrderTasksApi()
 service_order_id = 56 # int | 
-model = swagger_client.QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel() # QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel | 
+model = qualer_sdk.QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel() # QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel | 
 
 try:
     api_response = api_instance.service_order_tasks_create_work_order_task(service_order_id, model)
@@ -70,12 +70,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderTasksApi()
+api_instance = qualer_sdk.ServiceOrderTasksApi()
 service_order_id = 56 # int | 
 service_order_task_id = 56 # int | 
 
@@ -119,12 +119,12 @@ TimeSpent  Integer part (before dot) is hours  Fractional part (after dot) is mi
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderTasksApi()
+api_instance = qualer_sdk.ServiceOrderTasksApi()
 service_order_id = 56 # int | 
 
 try:
@@ -166,14 +166,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderTasksApi()
+api_instance = qualer_sdk.ServiceOrderTasksApi()
 service_order_id = 56 # int | 
-model = swagger_client.QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel() # QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel | 
+model = qualer_sdk.QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel() # QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel | 
 
 try:
     api_response = api_instance.service_order_tasks_update_work_order_task(service_order_id, model)

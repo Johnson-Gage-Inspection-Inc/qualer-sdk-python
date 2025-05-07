@@ -1,4 +1,4 @@
-# swagger_client.ServicePricingApi
+# qualer_sdk.ServicePricingApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -17,12 +17,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServicePricingApi()
+api_instance = qualer_sdk.ServicePricingApi()
 service_pricing_id = 56 # int | 
 service_group_id = 56 # int | optional (optional)
 
@@ -65,13 +65,13 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServicePricingApi()
-models = [swagger_client.QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel()] # list[QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel] | 
+api_instance = qualer_sdk.ServicePricingApi()
+models = [qualer_sdk.QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel()] # list[QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel] | 
 
 try:
     api_response = api_instance.service_pricing_update(models)

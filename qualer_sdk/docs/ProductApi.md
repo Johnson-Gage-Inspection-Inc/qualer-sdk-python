@@ -1,4 +1,4 @@
-# swagger_client.ProductApi
+# qualer_sdk.ProductApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -22,12 +22,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProductApi()
+api_instance = qualer_sdk.ProductApi()
 manufacturer_name = 'manufacturer_name_example' # str | 
 
 try:
@@ -67,13 +67,13 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProductApi()
-model = swagger_client.QualerWebMvcAreasApiModelsProductFromProductApiEditModel() # QualerWebMvcAreasApiModelsProductFromProductApiEditModel | 
+api_instance = qualer_sdk.ProductApi()
+model = qualer_sdk.QualerWebMvcAreasApiModelsProductFromProductApiEditModel() # QualerWebMvcAreasApiModelsProductFromProductApiEditModel | 
 
 try:
     api_response = api_instance.product_add_product(model)
@@ -112,12 +112,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProductApi()
+api_instance = qualer_sdk.ProductApi()
 
 try:
     api_response = api_instance.product_get_inventory_count()
@@ -153,12 +153,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProductApi()
+api_instance = qualer_sdk.ProductApi()
 
 try:
     api_response = api_instance.product_get_manufacturers()
@@ -194,12 +194,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProductApi()
+api_instance = qualer_sdk.ProductApi()
 product_id = 56 # int | 
 
 try:
@@ -239,14 +239,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProductApi()
+api_instance = qualer_sdk.ProductApi()
 product_id = 56 # int | 
-model = swagger_client.QualerWebMvcAreasApiModelsProductFromProductApiEditModel() # QualerWebMvcAreasApiModelsProductFromProductApiEditModel | 
+model = qualer_sdk.QualerWebMvcAreasApiModelsProductFromProductApiEditModel() # QualerWebMvcAreasApiModelsProductFromProductApiEditModel | 
 
 try:
     api_response = api_instance.product_product(product_id, model)
@@ -286,13 +286,13 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ProductApi()
-models = [swagger_client.QualerApiModelsInventoryFromInventoryCountModel()] # list[QualerApiModelsInventoryFromInventoryCountModel] | 
+api_instance = qualer_sdk.ProductApi()
+models = [qualer_sdk.QualerApiModelsInventoryFromInventoryCountModel()] # list[QualerApiModelsInventoryFromInventoryCountModel] | 
 
 try:
     api_response = api_instance.product_put_inventory_count(models)

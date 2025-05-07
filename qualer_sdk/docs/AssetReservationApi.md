@@ -1,4 +1,4 @@
-# swagger_client.AssetReservationApi
+# qualer_sdk.AssetReservationApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -18,12 +18,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetReservationApi()
+api_instance = qualer_sdk.AssetReservationApi()
 model_asset_id = 56 # int |  (optional)
 model_area_id = 56 # int |  (optional)
 model_product_id = 56 # int |  (optional)
@@ -73,12 +73,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetReservationApi()
+api_instance = qualer_sdk.AssetReservationApi()
 model_from = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 model_to = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 model_asset_id = 56 # int |  (optional)
@@ -132,13 +132,13 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetReservationApi()
-model = swagger_client.QualerApiModelsAssetReservationFromUpsertAssetReservationModel() # QualerApiModelsAssetReservationFromUpsertAssetReservationModel | 
+api_instance = qualer_sdk.AssetReservationApi()
+model = qualer_sdk.QualerApiModelsAssetReservationFromUpsertAssetReservationModel() # QualerApiModelsAssetReservationFromUpsertAssetReservationModel | 
 
 try:
     api_response = api_instance.asset_reservation_upsert(model)

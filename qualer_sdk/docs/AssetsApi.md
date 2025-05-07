@@ -1,4 +1,4 @@
-# swagger_client.AssetsApi
+# qualer_sdk.AssetsApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -35,13 +35,13 @@ ClearCollectedAssets(int[] assetIds)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
-asset_ids = [swagger_client.list[int]()] # list[int] | 
+api_instance = qualer_sdk.AssetsApi()
+asset_ids = [qualer_sdk.list[int]()] # list[int] | 
 
 try:
     # ClearCollectedAssets(int[] assetIds)
@@ -83,13 +83,13 @@ CollectAssets(int[] assetIds)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
-asset_ids = [swagger_client.list[int]()] # list[int] | 
+api_instance = qualer_sdk.AssetsApi()
+asset_ids = [qualer_sdk.list[int]()] # list[int] | 
 
 try:
     # CollectAssets(int[] assetIds)
@@ -129,12 +129,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
+api_instance = qualer_sdk.AssetsApi()
 
 try:
     api_response = api_instance.assets_get_all_assets()
@@ -170,12 +170,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
+api_instance = qualer_sdk.AssetsApi()
 id = 56 # int | 
 
 try:
@@ -215,12 +215,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
+api_instance = qualer_sdk.AssetsApi()
 asset_pool_id = 56 # int | 
 
 try:
@@ -260,12 +260,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
+api_instance = qualer_sdk.AssetsApi()
 asset_tag = 'asset_tag_example' # str | 
 
 try:
@@ -305,12 +305,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
+api_instance = qualer_sdk.AssetsApi()
 model_name = 'model_name_example' # str |  (optional)
 model_value = 'model_value_example' # str |  (optional)
 
@@ -352,12 +352,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
+api_instance = qualer_sdk.AssetsApi()
 barcode = 'barcode_example' # str | 
 
 try:
@@ -397,12 +397,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
+api_instance = qualer_sdk.AssetsApi()
 serial_number = 'serial_number_example' # str | 
 
 try:
@@ -444,12 +444,12 @@ returns list of asset image urls
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
+api_instance = qualer_sdk.AssetsApi()
 id = 56 # int | 
 
 try:
@@ -490,12 +490,12 @@ GetAssetManagerCounters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
+api_instance = qualer_sdk.AssetsApi()
 model_search_string = 'model_search_string_example' # str |  (optional)
 
 try:
@@ -538,12 +538,12 @@ filterType: Unset, DueForService, RecentlyServiced, NotServiced, RecentlyPurchas
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
+api_instance = qualer_sdk.AssetsApi()
 model_filter_type = 'model_filter_type_example' # str |  (optional)
 model_search_string = 'model_search_string_example' # str |  (optional)
 model_page = 56 # int |  (optional)
@@ -590,12 +590,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
+api_instance = qualer_sdk.AssetsApi()
 equipment_id = 'equipment_id_example' # str | 
 
 try:
@@ -637,12 +637,12 @@ returns list of asset image urls
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
+api_instance = qualer_sdk.AssetsApi()
 id = 56 # int | 
 
 try:
@@ -683,14 +683,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
+api_instance = qualer_sdk.AssetsApi()
 id = 56 # int | 
-model = swagger_client.QualerApiModelsAssetFromUpdateAssetClassModel() # QualerApiModelsAssetFromUpdateAssetClassModel | 
+model = qualer_sdk.QualerApiModelsAssetFromUpdateAssetClassModel() # QualerApiModelsAssetFromUpdateAssetClassModel | 
 
 try:
     api_response = api_instance.assets_update_asset_class(id, model)
@@ -730,14 +730,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
+api_instance = qualer_sdk.AssetsApi()
 id = 56 # int | 
-model = swagger_client.QualerApiModelsAssetFromUpdateAssetDepartmentModel() # QualerApiModelsAssetFromUpdateAssetDepartmentModel | 
+model = qualer_sdk.QualerApiModelsAssetFromUpdateAssetDepartmentModel() # QualerApiModelsAssetFromUpdateAssetDepartmentModel | 
 
 try:
     api_response = api_instance.assets_update_asset_department(id, model)
@@ -777,14 +777,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
+api_instance = qualer_sdk.AssetsApi()
 id = 56 # int | 
-model = swagger_client.QualerApiModelsAssetFromUpdateAssetRoomModel() # QualerApiModelsAssetFromUpdateAssetRoomModel | 
+model = qualer_sdk.QualerApiModelsAssetFromUpdateAssetRoomModel() # QualerApiModelsAssetFromUpdateAssetRoomModel | 
 
 try:
     api_response = api_instance.assets_update_asset_room(id, model)
@@ -824,13 +824,13 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetsApi()
-model = swagger_client.QualerApiModelsAssetFromUpdateRoomModel() # QualerApiModelsAssetFromUpdateRoomModel | 
+api_instance = qualer_sdk.AssetsApi()
+model = qualer_sdk.QualerApiModelsAssetFromUpdateRoomModel() # QualerApiModelsAssetFromUpdateRoomModel | 
 
 try:
     api_response = api_instance.assets_update_room(model)

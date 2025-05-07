@@ -1,4 +1,4 @@
-# swagger_client.AssetMaintenancePlansApi
+# qualer_sdk.AssetMaintenancePlansApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -18,12 +18,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetMaintenancePlansApi()
+api_instance = qualer_sdk.AssetMaintenancePlansApi()
 asset_id = 56 # int | 
 maintenance_plan_id = 56 # int | 
 
@@ -65,12 +65,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetMaintenancePlansApi()
+api_instance = qualer_sdk.AssetMaintenancePlansApi()
 asset_id = 56 # int | 
 
 try:
@@ -110,15 +110,15 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetMaintenancePlansApi()
+api_instance = qualer_sdk.AssetMaintenancePlansApi()
 asset_id = 56 # int | 
 maintenance_plan_id = 56 # int | 
-model = swagger_client.QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat() # QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat | 
+model = qualer_sdk.QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat() # QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat | 
 
 try:
     api_response = api_instance.asset_maintenance_plans_reset_initial_service_date(asset_id, maintenance_plan_id, model)

@@ -1,4 +1,4 @@
-# swagger_client.CompanyApi
+# qualer_sdk.CompanyApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -22,13 +22,13 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CompanyApi()
-model = swagger_client.QualerWebMvcAreasApiModelsCompanyFromAddDepartmentModel() # QualerWebMvcAreasApiModelsCompanyFromAddDepartmentModel | 
+api_instance = qualer_sdk.CompanyApi()
+model = qualer_sdk.QualerWebMvcAreasApiModelsCompanyFromAddDepartmentModel() # QualerWebMvcAreasApiModelsCompanyFromAddDepartmentModel | 
 
 try:
     # 
@@ -68,12 +68,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CompanyApi()
+api_instance = qualer_sdk.CompanyApi()
 department_id = 56 # int | 
 
 try:
@@ -114,12 +114,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CompanyApi()
+api_instance = qualer_sdk.CompanyApi()
 
 try:
     api_response = api_instance.company_departments()
@@ -157,12 +157,12 @@ lookupName:  AssetClass = 1  AssetCriticality = 2  AssetCondition = 3  Inventory
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CompanyApi()
+api_instance = qualer_sdk.CompanyApi()
 lookup_type = 'lookup_type_example' # str | 
 
 try:
@@ -202,12 +202,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CompanyApi()
+api_instance = qualer_sdk.CompanyApi()
 id = 56 # int | Site id  GET /api/company/sites
 
 try:
@@ -248,12 +248,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CompanyApi()
+api_instance = qualer_sdk.CompanyApi()
 
 try:
     api_response = api_instance.company_sites()
@@ -289,14 +289,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CompanyApi()
+api_instance = qualer_sdk.CompanyApi()
 department_id = 56 # int | 
-model = swagger_client.QualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel() # QualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel | 
+model = qualer_sdk.QualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel() # QualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel | 
 
 try:
     # 

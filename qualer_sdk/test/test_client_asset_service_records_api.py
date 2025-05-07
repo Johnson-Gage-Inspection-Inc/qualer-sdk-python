@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.client_asset_service_records_api import ClientAssetServiceRecordsApi  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.api.client_asset_service_records_api import ClientAssetServiceRecordsApi  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestClientAssetServiceRecordsApi(unittest.TestCase):
     """ClientAssetServiceRecordsApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.api.client_asset_service_records_api.ClientAssetServiceRecordsApi()  # noqa: E501
+        self.api = qualer_sdk.api.client_asset_service_records_api.ClientAssetServiceRecordsApi()  # noqa: E501
 
     def tearDown(self):
         pass

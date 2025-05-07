@@ -1,4 +1,4 @@
-# swagger_client.ServiceOrderPartsApi
+# qualer_sdk.ServiceOrderPartsApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -21,14 +21,14 @@ ServiceOrderChargeType: Part, Labor, Charge
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderPartsApi()
+api_instance = qualer_sdk.ServiceOrderPartsApi()
 service_order_id = 56 # int | 
-model = swagger_client.QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateModel() # QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateModel | 
+model = qualer_sdk.QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateModel() # QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateModel | 
 
 try:
     api_response = api_instance.service_order_parts_create_work_order_parts(service_order_id, model)
@@ -70,12 +70,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderPartsApi()
+api_instance = qualer_sdk.ServiceOrderPartsApi()
 service_order_id = 56 # int | 
 service_order_item_part_id = 56 # int | 
 
@@ -119,12 +119,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderPartsApi()
+api_instance = qualer_sdk.ServiceOrderPartsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -166,14 +166,14 @@ ServiceOrderChargeType: Part, Labor, Charge
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderPartsApi()
+api_instance = qualer_sdk.ServiceOrderPartsApi()
 service_order_id = 56 # int | 
-model = swagger_client.QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairUpdateModel() # QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairUpdateModel | 
+model = qualer_sdk.QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairUpdateModel() # QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairUpdateModel | 
 
 try:
     api_response = api_instance.service_order_parts_update_work_order_parts(service_order_id, model)

@@ -1,4 +1,4 @@
-# swagger_client.AssetAttributesApi
+# qualer_sdk.AssetAttributesApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -17,12 +17,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAttributesApi()
+api_instance = qualer_sdk.AssetAttributesApi()
 asset_id = 56 # int | 
 
 try:
@@ -62,14 +62,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAttributesApi()
+api_instance = qualer_sdk.AssetAttributesApi()
 asset_id = 56 # int | 
-model = [swagger_client.QualerApiModelsCommonFromAttributeModel()] # list[QualerApiModelsCommonFromAttributeModel] | 
+model = [qualer_sdk.QualerApiModelsCommonFromAttributeModel()] # list[QualerApiModelsCommonFromAttributeModel] | 
 
 try:
     api_response = api_instance.asset_attributes_upsert_asset_attributes(asset_id, model)

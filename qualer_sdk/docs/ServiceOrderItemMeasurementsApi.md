@@ -1,4 +1,4 @@
-# swagger_client.ServiceOrderItemMeasurementsApi
+# qualer_sdk.ServiceOrderItemMeasurementsApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -20,14 +20,14 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderItemMeasurementsApi()
+api_instance = qualer_sdk.ServiceOrderItemMeasurementsApi()
 work_item_id = 56 # int | 
-models = [swagger_client.QualerApiModelsMeasurementsFromCreateMeasurementToolModel()] # list[QualerApiModelsMeasurementsFromCreateMeasurementToolModel] | 
+models = [qualer_sdk.QualerApiModelsMeasurementsFromCreateMeasurementToolModel()] # list[QualerApiModelsMeasurementsFromCreateMeasurementToolModel] | 
 
 try:
     api_response = api_instance.service_order_item_measurements_add_auxiliary_tools(work_item_id, models)
@@ -69,14 +69,14 @@ BatchType: AsLeft, AsFound.                BatchResult: NotServiced, Fail, FailA
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderItemMeasurementsApi()
+api_instance = qualer_sdk.ServiceOrderItemMeasurementsApi()
 work_item_id = 56 # int | Work Item ID of Measurement Form
-model = swagger_client.QualerApiModelsMeasurementsFromCreateMeasurementFormModel() # QualerApiModelsMeasurementsFromCreateMeasurementFormModel | Measurement Form parameters
+model = qualer_sdk.QualerApiModelsMeasurementsFromCreateMeasurementFormModel() # QualerApiModelsMeasurementsFromCreateMeasurementFormModel | Measurement Form parameters
 
 try:
     # Create Measurement Form.
@@ -117,12 +117,12 @@ Get Measurement Form.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderItemMeasurementsApi()
+api_instance = qualer_sdk.ServiceOrderItemMeasurementsApi()
 work_item_id = 56 # int | Work Item ID of Measurement Form
 
 try:
@@ -163,12 +163,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderItemMeasurementsApi()
+api_instance = qualer_sdk.ServiceOrderItemMeasurementsApi()
 asset_id = 56 # int | 
 _from = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 to = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
@@ -212,14 +212,14 @@ Update Measurement Form.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderItemMeasurementsApi()
+api_instance = qualer_sdk.ServiceOrderItemMeasurementsApi()
 work_item_id = 56 # int | Work Item ID of Measurement Form
-model = swagger_client.QualerApiModelsMeasurementsFromUpdateMeasurementFormModel() # QualerApiModelsMeasurementsFromUpdateMeasurementFormModel | Measurement Form parameters
+model = qualer_sdk.QualerApiModelsMeasurementsFromUpdateMeasurementFormModel() # QualerApiModelsMeasurementsFromUpdateMeasurementFormModel | Measurement Form parameters
 
 try:
     # Update Measurement Form.

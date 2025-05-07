@@ -1,4 +1,4 @@
-# swagger_client.ServiceOrderMetadataApi
+# qualer_sdk.ServiceOrderMetadataApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -19,14 +19,14 @@ Create metadata
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderMetadataApi()
+api_instance = qualer_sdk.ServiceOrderMetadataApi()
 service_order_id = 56 # int | 
-model = swagger_client.QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel() # QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel | 
+model = qualer_sdk.QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel() # QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel | 
 
 try:
     # Create metadata
@@ -67,12 +67,12 @@ Delete metadata
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderMetadataApi()
+api_instance = qualer_sdk.ServiceOrderMetadataApi()
 service_order_id = 56 # int | 
 service_order_metadata_id = 56 # int | 
 
@@ -115,12 +115,12 @@ Get list of metadata
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderMetadataApi()
+api_instance = qualer_sdk.ServiceOrderMetadataApi()
 service_order_id = 56 # int | 
 
 try:
@@ -161,14 +161,14 @@ Update metadata
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderMetadataApi()
+api_instance = qualer_sdk.ServiceOrderMetadataApi()
 service_order_id = 56 # int | 
-model = swagger_client.QualerApiModelsServiceOrdersFromServiceOrderMetadataUpdateModel() # QualerApiModelsServiceOrdersFromServiceOrderMetadataUpdateModel | 
+model = qualer_sdk.QualerApiModelsServiceOrdersFromServiceOrderMetadataUpdateModel() # QualerApiModelsServiceOrdersFromServiceOrderMetadataUpdateModel | 
 
 try:
     # Update metadata

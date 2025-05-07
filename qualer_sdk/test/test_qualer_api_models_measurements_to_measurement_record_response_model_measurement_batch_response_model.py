@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model import QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model import QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestQualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurement
     def testQualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel(self):
         """Test QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model.QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel()  # noqa: E501
+        # model = qualer_sdk.models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model.QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel()  # noqa: E501
         pass
 
 

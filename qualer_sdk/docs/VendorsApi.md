@@ -1,4 +1,4 @@
-# swagger_client.VendorsApi
+# qualer_sdk.VendorsApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -21,13 +21,13 @@ Create Vendor information.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VendorsApi()
-model = swagger_client.QualerApiModelsVendorsFromSponsoredVendorCreateModel() # QualerApiModelsVendorsFromSponsoredVendorCreateModel | Vendor update model
+api_instance = qualer_sdk.VendorsApi()
+model = qualer_sdk.QualerApiModelsVendorsFromSponsoredVendorCreateModel() # QualerApiModelsVendorsFromSponsoredVendorCreateModel | Vendor update model
 
 try:
     # Create Vendor information.
@@ -67,12 +67,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VendorsApi()
+api_instance = qualer_sdk.VendorsApi()
 vendor_company_id = 56 # int | 
 
 try:
@@ -112,12 +112,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VendorsApi()
+api_instance = qualer_sdk.VendorsApi()
 model_account_number_text = 'model_account_number_text_example' # str |  (optional)
 model_company_name = 'model_company_name_example' # str |  (optional)
 model_take = 56 # int |  (optional)
@@ -165,13 +165,13 @@ Update Vendor information.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.VendorsApi()
-model = swagger_client.QualerApiModelsVendorsFromSponsoredVendorEditModel() # QualerApiModelsVendorsFromSponsoredVendorEditModel | Vendor update model
+api_instance = qualer_sdk.VendorsApi()
+model = qualer_sdk.QualerApiModelsVendorsFromSponsoredVendorEditModel() # QualerApiModelsVendorsFromSponsoredVendorEditModel | Vendor update model
 
 try:
     # Update Vendor information.

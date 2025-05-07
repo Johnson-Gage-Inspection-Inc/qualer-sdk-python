@@ -1,4 +1,4 @@
-# swagger_client.ClientsApi
+# qualer_sdk.ClientsApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -21,13 +21,13 @@ ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ClientsApi()
-model = swagger_client.QualerApiModelsClientsFromSponsoredClientCreateModel() # QualerApiModelsClientsFromSponsoredClientCreateModel | Client update model
+api_instance = qualer_sdk.ClientsApi()
+model = qualer_sdk.QualerApiModelsClientsFromSponsoredClientCreateModel() # QualerApiModelsClientsFromSponsoredClientCreateModel | Client update model
 
 try:
     # Create Client information.
@@ -67,12 +67,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ClientsApi()
+api_instance = qualer_sdk.ClientsApi()
 client_company_id = 56 # int | 
 
 try:
@@ -112,12 +112,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ClientsApi()
+api_instance = qualer_sdk.ClientsApi()
 model_legacy_id = 'model_legacy_id_example' # str |  (optional)
 model_account_number_text = 'model_account_number_text_example' # str |  (optional)
 model_company_name = 'model_company_name_example' # str |  (optional)
@@ -167,13 +167,13 @@ ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ClientsApi()
-model = swagger_client.QualerApiModelsClientsFromSponsoredClientEditModel() # QualerApiModelsClientsFromSponsoredClientEditModel | Client update model
+api_instance = qualer_sdk.ClientsApi()
+model = qualer_sdk.QualerApiModelsClientsFromSponsoredClientEditModel() # QualerApiModelsClientsFromSponsoredClientEditModel | Client update model
 
 try:
     # Update Client information.

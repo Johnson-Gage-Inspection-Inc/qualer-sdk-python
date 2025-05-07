@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_api_models_asset_reservation_to_upsert_asset_reservation_response import QualerApiModelsAssetReservationToUpsertAssetReservationResponse  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_api_models_asset_reservation_to_upsert_asset_reservation_response import QualerApiModelsAssetReservationToUpsertAssetReservationResponse  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerApiModelsAssetReservationToUpsertAssetReservationResponse(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestQualerApiModelsAssetReservationToUpsertAssetReservationResponse(unitte
     def testQualerApiModelsAssetReservationToUpsertAssetReservationResponse(self):
         """Test QualerApiModelsAssetReservationToUpsertAssetReservationResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.qualer_api_models_asset_reservation_to_upsert_asset_reservation_response.QualerApiModelsAssetReservationToUpsertAssetReservationResponse()  # noqa: E501
+        # model = qualer_sdk.models.qualer_api_models_asset_reservation_to_upsert_asset_reservation_response.QualerApiModelsAssetReservationToUpsertAssetReservationResponse()  # noqa: E501
         pass
 
 

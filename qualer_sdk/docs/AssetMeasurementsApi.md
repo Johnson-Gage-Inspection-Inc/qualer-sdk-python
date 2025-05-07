@@ -1,4 +1,4 @@
-# swagger_client.AssetMeasurementsApi
+# qualer_sdk.AssetMeasurementsApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -16,12 +16,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetMeasurementsApi()
+api_instance = qualer_sdk.AssetMeasurementsApi()
 asset_id = 56 # int | 
 _from = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 to = '2013-10-20T19:20:30+01:00' # datetime |  (optional)

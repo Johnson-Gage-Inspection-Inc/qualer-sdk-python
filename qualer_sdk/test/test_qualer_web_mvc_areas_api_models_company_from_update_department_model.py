@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_web_mvc_areas_api_models_company_from_update_department_model import QualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_web_mvc_areas_api_models_company_from_update_department_model import QualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestQualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel(unittest.Te
     def testQualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel(self):
         """Test QualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.qualer_web_mvc_areas_api_models_company_from_update_department_model.QualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel()  # noqa: E501
+        # model = qualer_sdk.models.qualer_web_mvc_areas_api_models_company_from_update_department_model.QualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel()  # noqa: E501
         pass
 
 

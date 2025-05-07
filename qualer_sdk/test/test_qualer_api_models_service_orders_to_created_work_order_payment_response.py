@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_api_models_service_orders_to_created_work_order_payment_response import QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_api_models_service_orders_to_created_work_order_payment_response import QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestQualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse(unittest
     def testQualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse(self):
         """Test QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.qualer_api_models_service_orders_to_created_work_order_payment_response.QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse()  # noqa: E501
+        # model = qualer_sdk.models.qualer_api_models_service_orders_to_created_work_order_payment_response.QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse()  # noqa: E501
         pass
 
 

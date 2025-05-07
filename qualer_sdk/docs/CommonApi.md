@@ -1,4 +1,4 @@
-# swagger_client.CommonApi
+# qualer_sdk.CommonApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -18,12 +18,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CommonApi()
+api_instance = qualer_sdk.CommonApi()
 
 try:
     api_response = api_instance.common_culture_list()
@@ -59,12 +59,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CommonApi()
+api_instance = qualer_sdk.CommonApi()
 
 try:
     api_response = api_instance.common_culture_ui_list()
@@ -100,12 +100,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CommonApi()
+api_instance = qualer_sdk.CommonApi()
 setting_key = 'setting_key_example' # str | 
 
 try:

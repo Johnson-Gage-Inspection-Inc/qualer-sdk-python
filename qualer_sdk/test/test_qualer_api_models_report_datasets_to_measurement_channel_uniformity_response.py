@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_api_models_report_datasets_to_measurement_channel_uniformity_response import QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_api_models_report_datasets_to_measurement_channel_uniformity_response import QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestQualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse(un
     def testQualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse(self):
         """Test QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.qualer_api_models_report_datasets_to_measurement_channel_uniformity_response.QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse()  # noqa: E501
+        # model = qualer_sdk.models.qualer_api_models_report_datasets_to_measurement_channel_uniformity_response.QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse()  # noqa: E501
         pass
 
 

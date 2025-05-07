@@ -1,4 +1,4 @@
-# swagger_client.EnvironmentsApi
+# qualer_sdk.EnvironmentsApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -17,12 +17,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.EnvironmentsApi()
+api_instance = qualer_sdk.EnvironmentsApi()
 id = 'id_example' # str | 
 
 try:
@@ -62,13 +62,13 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.EnvironmentsApi()
-model = swagger_client.QualerApiModelsEnvironmentFromEnvironmentModel() # QualerApiModelsEnvironmentFromEnvironmentModel | 
+api_instance = qualer_sdk.EnvironmentsApi()
+model = qualer_sdk.QualerApiModelsEnvironmentFromEnvironmentModel() # QualerApiModelsEnvironmentFromEnvironmentModel | 
 id = 'id_example' # str | 
 
 try:

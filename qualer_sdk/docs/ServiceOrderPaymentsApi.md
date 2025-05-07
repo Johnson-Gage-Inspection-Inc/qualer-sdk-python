@@ -1,4 +1,4 @@
-# swagger_client.ServiceOrderPaymentsApi
+# qualer_sdk.ServiceOrderPaymentsApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -19,14 +19,14 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderPaymentsApi()
+api_instance = qualer_sdk.ServiceOrderPaymentsApi()
 service_order_id = 56 # int | 
-model = swagger_client.QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel() # QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel | 
+model = qualer_sdk.QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel() # QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel | 
 
 try:
     api_response = api_instance.service_order_payments_change_work_order_payment_status(service_order_id, model)
@@ -66,14 +66,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderPaymentsApi()
+api_instance = qualer_sdk.ServiceOrderPaymentsApi()
 service_order_id = 56 # int | 
-model = swagger_client.QualerApiModelsServiceOrdersFromAddPaymentModel() # QualerApiModelsServiceOrdersFromAddPaymentModel | 
+model = qualer_sdk.QualerApiModelsServiceOrdersFromAddPaymentModel() # QualerApiModelsServiceOrdersFromAddPaymentModel | 
 
 try:
     api_response = api_instance.service_order_payments_create_work_order_payment(service_order_id, model)
@@ -113,12 +113,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderPaymentsApi()
+api_instance = qualer_sdk.ServiceOrderPaymentsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -158,12 +158,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderPaymentsApi()
+api_instance = qualer_sdk.ServiceOrderPaymentsApi()
 service_order_payment_id = 56 # int | 
 
 try:

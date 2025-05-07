@@ -1,4 +1,4 @@
-# swagger_client.AccountApi
+# qualer_sdk.AccountApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -21,13 +21,13 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccountApi()
-model = swagger_client.QualerWebMvcAreasApiModelsAccountToLoginModel() # QualerWebMvcAreasApiModelsAccountToLoginModel | 
+api_instance = qualer_sdk.AccountApi()
+model = qualer_sdk.QualerWebMvcAreasApiModelsAccountToLoginModel() # QualerWebMvcAreasApiModelsAccountToLoginModel | 
 
 try:
     api_response = api_instance.account_companies(model)
@@ -66,12 +66,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccountApi()
+api_instance = qualer_sdk.AccountApi()
 message_id = 56 # int | 
 
 try:
@@ -111,12 +111,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccountApi()
+api_instance = qualer_sdk.AccountApi()
 model_period = 56 # int |  (optional)
 model_site_id = 56 # int |  (optional)
 
@@ -158,13 +158,13 @@ Login
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccountApi()
-model = swagger_client.QualerWebMvcAreasApiModelsAccountToLoginModel() # QualerWebMvcAreasApiModelsAccountToLoginModel | 
+api_instance = qualer_sdk.AccountApi()
+model = qualer_sdk.QualerWebMvcAreasApiModelsAccountToLoginModel() # QualerWebMvcAreasApiModelsAccountToLoginModel | 
 
 try:
     # Login
@@ -206,13 +206,13 @@ LogoutAction:<br />  Logout - remove the passed token from the list of active se
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccountApi()
-model = swagger_client.QualerApiModelsAccountToLogoutModel() # QualerApiModelsAccountToLogoutModel | 
+api_instance = qualer_sdk.AccountApi()
+model = qualer_sdk.QualerApiModelsAccountToLogoutModel() # QualerApiModelsAccountToLogoutModel | 
 
 try:
     # Logout
@@ -254,13 +254,13 @@ Sample request:                POST api/user/location                Latitude - 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccountApi()
-model = swagger_client.QualerApiModelsEmployeesFromEmployeeLocationModel() # QualerApiModelsEmployeesFromEmployeeLocationModel | 
+api_instance = qualer_sdk.AccountApi()
+model = qualer_sdk.QualerApiModelsEmployeesFromEmployeeLocationModel() # QualerApiModelsEmployeesFromEmployeeLocationModel | 
 
 try:
     # Post Employee Location

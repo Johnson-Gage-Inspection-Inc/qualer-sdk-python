@@ -67,7 +67,8 @@ def generate_sdk():
         "generate",
         "-i", SPEC_FILE,
         "-l", "python",
-        "-o", OUTPUT_DIR
+        "-o", OUTPUT_DIR,
+        "--additional-properties=packageName=qualer_sdk"
     ]
 
     print("⚙️ Running Swagger Codegen...")

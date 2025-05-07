@@ -1,4 +1,4 @@
-# swagger_client.AssetServiceRecordsApi
+# qualer_sdk.AssetServiceRecordsApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -24,14 +24,14 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetServiceRecordsApi()
+api_instance = qualer_sdk.AssetServiceRecordsApi()
 asset_id = 56 # int | 
-model = swagger_client.QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel() # QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel | 
+model = qualer_sdk.QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel() # QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel | 
 
 try:
     api_response = api_instance.asset_service_records_add_asset_service_record(asset_id, model)
@@ -71,12 +71,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetServiceRecordsApi()
+api_instance = qualer_sdk.AssetServiceRecordsApi()
 asset_service_record_id = 'asset_service_record_id_example' # str | 
 model_asset_service_record_id = 56 # int |  (optional)
 
@@ -118,12 +118,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetServiceRecordsApi()
+api_instance = qualer_sdk.AssetServiceRecordsApi()
 asset_service_record_id = 'asset_service_record_id_example' # str | 
 file_name = 'file_name_example' # str | 
 model_asset_service_record_id = 56 # int |  (optional)
@@ -169,12 +169,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetServiceRecordsApi()
+api_instance = qualer_sdk.AssetServiceRecordsApi()
 asset_service_record_id = 56 # int | 
 
 try:
@@ -214,12 +214,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetServiceRecordsApi()
+api_instance = qualer_sdk.AssetServiceRecordsApi()
 asset_service_record_id = 'asset_service_record_id_example' # str | 
 model_asset_service_record_id = 56 # int |  (optional)
 
@@ -261,12 +261,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetServiceRecordsApi()
+api_instance = qualer_sdk.AssetServiceRecordsApi()
 model_asset_id = 56 # int |  (optional)
 model_serial_number = 'model_serial_number_example' # str |  (optional)
 model_from = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
@@ -312,12 +312,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetServiceRecordsApi()
+api_instance = qualer_sdk.AssetServiceRecordsApi()
 asset_id = 56 # int | 
 
 try:
@@ -357,14 +357,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetServiceRecordsApi()
+api_instance = qualer_sdk.AssetServiceRecordsApi()
 asset_service_record_id = 56 # int | 
-model = swagger_client.QualerApiModelsAssetServiceRecordsFromUpdateAssetServiceRecordModel() # QualerApiModelsAssetServiceRecordsFromUpdateAssetServiceRecordModel | 
+model = qualer_sdk.QualerApiModelsAssetServiceRecordsFromUpdateAssetServiceRecordModel() # QualerApiModelsAssetServiceRecordsFromUpdateAssetServiceRecordModel | 
 
 try:
     api_response = api_instance.asset_service_records_update_asset_service_record(asset_service_record_id, model)
@@ -404,12 +404,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetServiceRecordsApi()
+api_instance = qualer_sdk.AssetServiceRecordsApi()
 asset_service_record_id = 56 # int | 
 
 try:

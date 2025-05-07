@@ -1,4 +1,4 @@
-# swagger_client.ClientEmployeesApi
+# qualer_sdk.ClientEmployeesApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -19,13 +19,13 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ClientEmployeesApi()
-model = swagger_client.QualerApiModelsClientsFromSponsoredEmployeeModel() # QualerApiModelsClientsFromSponsoredEmployeeModel | 
+api_instance = qualer_sdk.ClientEmployeesApi()
+model = qualer_sdk.QualerApiModelsClientsFromSponsoredEmployeeModel() # QualerApiModelsClientsFromSponsoredEmployeeModel | 
 
 try:
     api_response = api_instance.client_employees_create_employee(model)
@@ -64,12 +64,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ClientEmployeesApi()
+api_instance = qualer_sdk.ClientEmployeesApi()
 employee_id = 'employee_id_example' # str | 
 model_employee_id = 56 # int |  (optional)
 
@@ -111,12 +111,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ClientEmployeesApi()
+api_instance = qualer_sdk.ClientEmployeesApi()
 client_company_id = 56 # int | 
 
 try:
@@ -156,14 +156,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ClientEmployeesApi()
+api_instance = qualer_sdk.ClientEmployeesApi()
 employee_id = 56 # int | 
-model = swagger_client.QualerApiModelsClientsFromSendEmployeeEmailModel() # QualerApiModelsClientsFromSendEmployeeEmailModel | 
+model = qualer_sdk.QualerApiModelsClientsFromSendEmployeeEmailModel() # QualerApiModelsClientsFromSendEmployeeEmailModel | 
 
 try:
     api_response = api_instance.client_employees_send_employee_email(employee_id, model)

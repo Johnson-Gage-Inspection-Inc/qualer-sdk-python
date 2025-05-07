@@ -1,4 +1,4 @@
-# swagger_client.ServiceOrderItemPartsApi
+# qualer_sdk.ServiceOrderItemPartsApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -16,12 +16,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ServiceOrderItemPartsApi()
+api_instance = qualer_sdk.ServiceOrderItemPartsApi()
 work_item_id = 56 # int | 
 
 try:

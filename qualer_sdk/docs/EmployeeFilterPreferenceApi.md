@@ -1,4 +1,4 @@
-# swagger_client.EmployeeFilterPreferenceApi
+# qualer_sdk.EmployeeFilterPreferenceApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -17,12 +17,12 @@ GetEmployeeFilterPreferences
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.EmployeeFilterPreferenceApi()
+api_instance = qualer_sdk.EmployeeFilterPreferenceApi()
 
 try:
     # GetEmployeeFilterPreferences
@@ -59,13 +59,13 @@ UpdateEmployeeFilterPreference
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.EmployeeFilterPreferenceApi()
-model = swagger_client.QualerApiModelsAssetFromUpdateFilterPreferenceModel() # QualerApiModelsAssetFromUpdateFilterPreferenceModel | FilterType: \\  DueForService(AssetsDue), RecentlyServiced(AssetsRecentlyServiced), NotServiced(AssetsNotServiced), \\  RecentlyPurchased(AssetsRecentlyPurchased), WarrantyExpiring(AssetsWarrantyExpires), \\  DueForReplacement(AssetsDueForReplacement), ServicePending(AssetsServicePending) \\                WithinDays: 30                UseDateRange: true, false                StartDate: '2020-01-01' optional                EndDate: '2020-05-31' optional
+api_instance = qualer_sdk.EmployeeFilterPreferenceApi()
+model = qualer_sdk.QualerApiModelsAssetFromUpdateFilterPreferenceModel() # QualerApiModelsAssetFromUpdateFilterPreferenceModel | FilterType: \\  DueForService(AssetsDue), RecentlyServiced(AssetsRecentlyServiced), NotServiced(AssetsNotServiced), \\  RecentlyPurchased(AssetsRecentlyPurchased), WarrantyExpiring(AssetsWarrantyExpires), \\  DueForReplacement(AssetsDueForReplacement), ServicePending(AssetsServicePending) \\                WithinDays: 30                UseDateRange: true, false                StartDate: '2020-01-01' optional                EndDate: '2020-05-31' optional
 
 try:
     # UpdateEmployeeFilterPreference

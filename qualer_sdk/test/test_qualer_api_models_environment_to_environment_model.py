@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_api_models_environment_to_environment_model import QualerApiModelsEnvironmentToEnvironmentModel  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_api_models_environment_to_environment_model import QualerApiModelsEnvironmentToEnvironmentModel  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerApiModelsEnvironmentToEnvironmentModel(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestQualerApiModelsEnvironmentToEnvironmentModel(unittest.TestCase):
     def testQualerApiModelsEnvironmentToEnvironmentModel(self):
         """Test QualerApiModelsEnvironmentToEnvironmentModel"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.qualer_api_models_environment_to_environment_model.QualerApiModelsEnvironmentToEnvironmentModel()  # noqa: E501
+        # model = qualer_sdk.models.qualer_api_models_environment_to_environment_model.QualerApiModelsEnvironmentToEnvironmentModel()  # noqa: E501
         pass
 
 

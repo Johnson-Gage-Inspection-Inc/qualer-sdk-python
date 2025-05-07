@@ -1,4 +1,4 @@
-# swagger_client.AssetPoolsApi
+# qualer_sdk.AssetPoolsApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -17,12 +17,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetPoolsApi()
+api_instance = qualer_sdk.AssetPoolsApi()
 id = 56 # int | 
 
 try:
@@ -62,12 +62,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetPoolsApi()
+api_instance = qualer_sdk.AssetPoolsApi()
 
 try:
     api_response = api_instance.asset_pools_get_all()

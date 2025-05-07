@@ -1,4 +1,4 @@
-# swagger_client.ReferenceApi
+# qualer_sdk.ReferenceApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -17,12 +17,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReferenceApi()
+api_instance = qualer_sdk.ReferenceApi()
 
 try:
     api_response = api_instance.reference_get_measurement_quantities()
@@ -58,12 +58,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReferenceApi()
+api_instance = qualer_sdk.ReferenceApi()
 
 try:
     api_response = api_instance.reference_get_units_of_measure()

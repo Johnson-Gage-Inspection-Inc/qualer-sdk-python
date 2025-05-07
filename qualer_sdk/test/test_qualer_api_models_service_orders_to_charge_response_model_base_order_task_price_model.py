@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_api_models_service_orders_to_charge_response_model_base_order_task_price_model import QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_api_models_service_orders_to_charge_response_model_base_order_task_price_model import QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestQualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceMod
     def testQualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel(self):
         """Test QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.qualer_api_models_service_orders_to_charge_response_model_base_order_task_price_model.QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel()  # noqa: E501
+        # model = qualer_sdk.models.qualer_api_models_service_orders_to_charge_response_model_base_order_task_price_model.QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel()  # noqa: E501
         pass
 
 

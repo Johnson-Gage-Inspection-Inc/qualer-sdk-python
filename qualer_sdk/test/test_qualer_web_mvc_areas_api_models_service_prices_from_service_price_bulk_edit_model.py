@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_web_mvc_areas_api_models_service_prices_from_service_price_bulk_edit_model import QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_web_mvc_areas_api_models_service_prices_from_service_price_bulk_edit_model import QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestQualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel(u
     def testQualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel(self):
         """Test QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.qualer_web_mvc_areas_api_models_service_prices_from_service_price_bulk_edit_model.QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel()  # noqa: E501
+        # model = qualer_sdk.models.qualer_web_mvc_areas_api_models_service_prices_from_service_price_bulk_edit_model.QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel()  # noqa: E501
         pass
 
 

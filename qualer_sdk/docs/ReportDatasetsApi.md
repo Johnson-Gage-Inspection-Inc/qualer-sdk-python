@@ -1,4 +1,4 @@
-# swagger_client.ReportDatasetsApi
+# qualer_sdk.ReportDatasetsApi
 
 All URIs are relative to *https://jgiquality.qualer.com*
 
@@ -52,12 +52,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -97,12 +97,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -142,12 +142,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -187,12 +187,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -232,12 +232,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -277,12 +277,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -322,12 +322,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -367,12 +367,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -412,12 +412,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -457,12 +457,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -502,12 +502,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -547,12 +547,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -592,12 +592,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -637,12 +637,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 
 try:
     api_response = api_instance.report_datasets_get_company_certifications()
@@ -678,12 +678,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 service_order_item_ids = [56] # list[int] | 
 
@@ -725,12 +725,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -770,12 +770,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -815,12 +815,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -860,12 +860,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -905,12 +905,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -950,12 +950,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -995,12 +995,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -1040,12 +1040,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -1085,12 +1085,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -1130,12 +1130,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -1175,12 +1175,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -1220,12 +1220,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -1265,12 +1265,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -1310,12 +1310,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -1355,12 +1355,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -1400,12 +1400,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -1445,12 +1445,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -1490,12 +1490,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -1535,12 +1535,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -1580,12 +1580,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_id = 56 # int | 
 
 try:
@@ -1625,12 +1625,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:
@@ -1670,12 +1670,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportDatasetsApi()
+api_instance = qualer_sdk.ReportDatasetsApi()
 service_order_item_id = 56 # int | 
 
 try:

@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.environments_api import EnvironmentsApi  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.api.environments_api import EnvironmentsApi  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestEnvironmentsApi(unittest.TestCase):
     """EnvironmentsApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.api.environments_api.EnvironmentsApi()  # noqa: E501
+        self.api = qualer_sdk.api.environments_api.EnvironmentsApi()  # noqa: E501
 
     def tearDown(self):
         pass

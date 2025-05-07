@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.qualer_api_models_report_datasets_to_measurement_field_response import QualerApiModelsReportDatasetsToMeasurementFieldResponse  # noqa: E501
-from swagger_client.rest import ApiException
+import qualer_sdk
+from qualer_sdk.models.qualer_api_models_report_datasets_to_measurement_field_response import QualerApiModelsReportDatasetsToMeasurementFieldResponse  # noqa: E501
+from qualer_sdk.rest import ApiException
 
 
 class TestQualerApiModelsReportDatasetsToMeasurementFieldResponse(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestQualerApiModelsReportDatasetsToMeasurementFieldResponse(unittest.TestC
     def testQualerApiModelsReportDatasetsToMeasurementFieldResponse(self):
         """Test QualerApiModelsReportDatasetsToMeasurementFieldResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.qualer_api_models_report_datasets_to_measurement_field_response.QualerApiModelsReportDatasetsToMeasurementFieldResponse()  # noqa: E501
+        # model = qualer_sdk.models.qualer_api_models_report_datasets_to_measurement_field_response.QualerApiModelsReportDatasetsToMeasurementFieldResponse()  # noqa: E501
         pass
 
 
