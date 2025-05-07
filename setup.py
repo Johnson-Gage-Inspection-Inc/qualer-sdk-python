@@ -1,0 +1,22 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="qualer-sdk",
+    version="1.0.0",
+    description="Auto-generated Python client for Qualer",
+    author="Your Lab or Org Name",
+    author_email="dev@example.com",
+    packages=find_packages(include=["qualer_sdk", "qualer_sdk.*"]),
+    install_requires=[
+        "urllib3>=1.15",
+        "six>=1.10",
+        "certifi",
+        "python-dateutil"
+    ],
+    python_requires=">=3.7",
+    include_package_data=True,
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Operating System :: OS Independent",
+    ],
+)
