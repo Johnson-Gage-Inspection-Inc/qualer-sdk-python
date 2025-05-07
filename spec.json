@@ -10136,6 +10136,11 @@
         },
         "DueStatus": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "x-enumNames": [
             "Empty",
             "Due",
             "PastDue"
@@ -11240,6 +11245,11 @@
         },
         "DueStatus": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "x-enumNames": [
             "Empty",
             "Due",
             "PastDue"
