@@ -189,7 +189,7 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentRespon
         :param document_type: The document_type of this QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse.  # noqa: E501
         :type: str
         """
-        allowed_values = ["ServiceRequest", "WorkOrder", "InventoryItem", "PurchaseOrder"]  # noqa: E501
+        allowed_values = ["0", "1", "2", "3"]  # noqa: E501
         if (self._configuration.client_side_validation and
                 document_type not in allowed_values):
             raise ValueError(

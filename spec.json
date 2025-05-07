@@ -18438,6 +18438,12 @@
         },
         "DocumentType": {
           "enum": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "x-enumNames": [
             "ServiceRequest",
             "WorkOrder",
             "InventoryItem",
@@ -18497,6 +18503,12 @@
         },
         "DocumentType": {
           "enum": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "x-enumNames": [
             "ServiceRequest",
             "WorkOrder",
             "InventoryItem",
