@@ -2275,7 +2275,7 @@ class QualerApiModelsAssetToAssetManageResponseModel(object):
         :param due_status: The due_status of this QualerApiModelsAssetToAssetManageResponseModel.  # noqa: E501
         :type: str
         """
-        allowed_values = ["Empty", "Due", "PastDue"]  # noqa: E501
+        allowed_values = ["0", "1", "2"]  # noqa: E501
         if (self._configuration.client_side_validation and
                 due_status not in allowed_values):
             raise ValueError(
