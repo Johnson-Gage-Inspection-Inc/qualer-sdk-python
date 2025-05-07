@@ -11,19 +11,12 @@ import os
 import subprocess
 import sys
 import json
-import urllib.request
 import shutil
 
 SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
 SWAGGER_CODEGEN_JAR = "swagger-codegen-cli-2.4.21.jar"
 SPEC_FILE = "spec.json"
 OUTPUT_DIR = "qualer_sdk"
-
-
-def download_spec():
-    print(f"📥 Downloading spec from {SWAGGER_URL}")
-    urllib.request.urlretrieve(SWAGGER_URL, SPEC_FILE)
-    print("✅ Downloaded spec.json")
 
 
 def patch_spec():
@@ -77,6 +70,5 @@ def generate_sdk():
 
 
 if __name__ == "__main__":
-    download_spec()
     patch_spec()
     generate_sdk()
