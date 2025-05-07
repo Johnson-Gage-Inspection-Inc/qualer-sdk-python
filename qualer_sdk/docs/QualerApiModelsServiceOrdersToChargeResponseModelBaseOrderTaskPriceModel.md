@@ -1,0 +1,15 @@
+# QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**contract_discount** | **float** |  | [optional] 
+**time_spent** | **float** |  | [optional] 
+**is_hourly** | **bool** |  | [optional] 
+**details** | **str** |  | [optional] 
+**name** | **str** |  | [optional] 
+**price** | **float** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
