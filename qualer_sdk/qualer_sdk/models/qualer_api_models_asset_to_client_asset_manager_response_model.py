@@ -1419,7 +1419,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel(object):
         :param tool_role: The tool_role of this QualerApiModelsAssetToClientAssetManagerResponseModel.  # noqa: E501
         :type: str
         """
-        allowed_values = ["ReferenceStandard", "EnvironmentalSensor", "ControlledEnvironment", "ScientificInstrument"]  # noqa: E501
+        allowed_values = ["0", "1", "2", "3"]  # noqa: E501
         if (self._configuration.client_side_validation and
                 tool_role not in allowed_values):
             raise ValueError(
