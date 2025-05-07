@@ -9923,6 +9923,12 @@
         },
         "ToolRole": {
           "enum": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "x-enumNames": [
             "ReferenceStandard",
             "EnvironmentalSensor",
             "ControlledEnvironment",
@@ -11009,6 +11015,12 @@
         },
         "ToolRole": {
           "enum": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "x-enumNames": [
             "ReferenceStandard",
             "EnvironmentalSensor",
             "ControlledEnvironment",
