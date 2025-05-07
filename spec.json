@@ -18457,7 +18457,22 @@
         },
         "ReportType": {
           "enum": [
-            "Unset",
+            0,
+            1,
+            11,
+            2,
+            21,
+            3,
+            31,
+            32,
+            5,
+            51,
+            6,
+            7,
+            71
+          ],
+          "x-enumNames": [
+            "General",
             "AssetSummary",
             "AssetLabel",
             "AssetDetail",
@@ -18465,7 +18480,6 @@
             "ServiceOrderSummary",
             "ServiceOrderInvoice",
             "ServiceOrderEstimate",
-            "Dashboard",
             "ServiceOrderDetail",
             "ServiceOrderCertificate",
             "PurchaseOrder",
