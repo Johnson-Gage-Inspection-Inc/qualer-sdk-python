@@ -1568,7 +1568,10 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/Qualer.Api.Models.AssetServiceRecords.To.AssetServiceRecordResponseModel"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Qualer.Api.Models.Asset.ServiceRecords.To.AssetServiceRecordResponseModel"
+              }
             }
           }
         }

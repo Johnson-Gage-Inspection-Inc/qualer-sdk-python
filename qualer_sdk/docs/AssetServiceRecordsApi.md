@@ -304,7 +304,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **asset_service_records_get_asset_service_records_by_asset**
-> QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel asset_service_records_get_asset_service_records_by_asset(asset_id)
+> list[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel] asset_service_records_get_asset_service_records_by_asset(asset_id)
 
 
 
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel**](QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel.md)
+[**list[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]**](QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel.md)
 
 ### Authorization
 
