@@ -1,0 +1,46 @@
+from __future__ import absolute_import
+
+# flake8: noqa
+
+# import apis into api package
+from swagger_client.api.account_api import AccountApi
+from swagger_client.api.asset_attributes_api import AssetAttributesApi
+from swagger_client.api.asset_maintenance_plans_api import AssetMaintenancePlansApi
+from swagger_client.api.asset_measurements_api import AssetMeasurementsApi
+from swagger_client.api.asset_pools_api import AssetPoolsApi
+from swagger_client.api.asset_reservation_api import AssetReservationApi
+from swagger_client.api.asset_service_forecast_api import AssetServiceForecastApi
+from swagger_client.api.asset_service_records_api import AssetServiceRecordsApi
+from swagger_client.api.assets_api import AssetsApi
+from swagger_client.api.client_asset_attributes_api import ClientAssetAttributesApi
+from swagger_client.api.client_asset_service_records_api import ClientAssetServiceRecordsApi
+from swagger_client.api.client_assets_api import ClientAssetsApi
+from swagger_client.api.client_attribute_api import ClientAttributeApi
+from swagger_client.api.client_employees_api import ClientEmployeesApi
+from swagger_client.api.client_maintenance_plans_api import ClientMaintenancePlansApi
+from swagger_client.api.client_site_api import ClientSiteApi
+from swagger_client.api.clients_api import ClientsApi
+from swagger_client.api.common_api import CommonApi
+from swagger_client.api.company_api import CompanyApi
+from swagger_client.api.employee_filter_preference_api import EmployeeFilterPreferenceApi
+from swagger_client.api.employee_preference_api import EmployeePreferenceApi
+from swagger_client.api.employees_api import EmployeesApi
+from swagger_client.api.environments_api import EnvironmentsApi
+from swagger_client.api.maintenance_plans_api import MaintenancePlansApi
+from swagger_client.api.product_api import ProductApi
+from swagger_client.api.reference_api import ReferenceApi
+from swagger_client.api.report_datasets_api import ReportDatasetsApi
+from swagger_client.api.service_order_documents_api import ServiceOrderDocumentsApi
+from swagger_client.api.service_order_item_documents_api import ServiceOrderItemDocumentsApi
+from swagger_client.api.service_order_item_measurements_api import ServiceOrderItemMeasurementsApi
+from swagger_client.api.service_order_item_parts_api import ServiceOrderItemPartsApi
+from swagger_client.api.service_order_item_tasks_api import ServiceOrderItemTasksApi
+from swagger_client.api.service_order_items_api import ServiceOrderItemsApi
+from swagger_client.api.service_order_metadata_api import ServiceOrderMetadataApi
+from swagger_client.api.service_order_parts_api import ServiceOrderPartsApi
+from swagger_client.api.service_order_payments_api import ServiceOrderPaymentsApi
+from swagger_client.api.service_order_shipments_api import ServiceOrderShipmentsApi
+from swagger_client.api.service_order_tasks_api import ServiceOrderTasksApi
+from swagger_client.api.service_orders_api import ServiceOrdersApi
+from swagger_client.api.service_pricing_api import ServicePricingApi
+from swagger_client.api.vendors_api import VendorsApi
