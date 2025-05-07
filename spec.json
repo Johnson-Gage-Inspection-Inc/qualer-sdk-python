@@ -21844,7 +21844,7 @@
   "securityDefinitions": {
     "Api-Token": {
       "type": "apiKey",
-      "description": "API Key Authentication",
+      "description": "Use the format: Api-Token {your_token}",
       "name": "Authorization",
       "in": "header"
     }
