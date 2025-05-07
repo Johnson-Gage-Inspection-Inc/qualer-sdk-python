@@ -9783,13 +9783,20 @@
           "type": "string"
         },
         "RecordType": {
+          "type": "integer",
+          "format": "int32",
           "enum": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "x-enumNames": [
             "WaitingForAgreement",
             "Equipment",
             "System",
             "Agreement"
-          ],
-          "type": "string"
+          ]
         },
         "ParentAssetId": {
           "format": "int32",
