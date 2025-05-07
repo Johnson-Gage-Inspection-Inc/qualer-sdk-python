@@ -238,7 +238,7 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentRespon
         :param report_type: The report_type of this QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse.  # noqa: E501
         :type: str
         """
-        allowed_values = ["Unset", "AssetSummary", "AssetLabel", "AssetDetail", "AssetCertificate", "ServiceOrderSummary", "ServiceOrderInvoice", "ServiceOrderEstimate", "Dashboard", "ServiceOrderDetail", "ServiceOrderCertificate", "PurchaseOrder", "InventoryItem", "InventoryItemLabel"]  # noqa: E501
+        allowed_values = ["0", "1", "11", "2", "21", "3", "31", "32", "5", "51", "6", "7", "71"]  # noqa: E501
         if (self._configuration.client_side_validation and
                 report_type not in allowed_values):
             raise ValueError(
