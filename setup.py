@@ -6,7 +6,8 @@ setup(
     description="Auto-generated Python client for Qualer",
     author="Your Lab or Org Name",
     author_email="dev@example.com",
-    packages=find_packages(include=["qualer_sdk", "qualer_sdk.*"]),
+    packages=find_packages(where="qualer_sdk"),
+    package_dir={"": "qualer_sdk"},
     install_requires=[
         "urllib3>=1.15",
         "six>=1.10",
