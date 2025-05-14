@@ -15,7 +15,7 @@ You can install the package using either `pip` or `setuptools`.
 ### Using pip
 
 ```sh
-pip install git+https://github.com/your_username/qualer-sdk-python.git
+pip install git+https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-python.git
 ```
 
 ### Using setuptools
