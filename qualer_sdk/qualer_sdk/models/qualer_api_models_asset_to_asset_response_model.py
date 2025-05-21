@@ -431,7 +431,7 @@ class QualerApiModelsAssetToAssetResponseModel(object):
         :param asset_status: The asset_status of this QualerApiModelsAssetToAssetResponseModel.  # noqa: E501
         :type: str
         """
-        allowed_values = ["New", "Active", "Inactive", "Failed", "Retired"]  # noqa: E501
+        allowed_values = ["0", "1", "2", "3", "4"]  # noqa: E501
         if (self._configuration.client_side_validation and
                 asset_status not in allowed_values):
             raise ValueError(

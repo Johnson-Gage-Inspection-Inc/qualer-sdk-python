@@ -8534,6 +8534,13 @@
         },
         "AssetStatus": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "x-enum-varnames": [
             "New",
             "Active",
             "Inactive",
@@ -9499,6 +9506,13 @@
         },
         "AssetStatus": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "x-enum-varnames": [
             "New",
             "Active",
             "Inactive",
@@ -11323,6 +11337,13 @@
         },
         "AssetStatus": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "x-enum-varnames": [
             "New",
             "Active",
             "Inactive",
@@ -11708,6 +11729,13 @@
         },
         "AssetStatus": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "x-enum-varnames": [
             "New",
             "Active",
             "Inactive",
