@@ -41,6 +41,24 @@ print(response)
 
 For more details on each API, refer to the generated [API documentation](docs/).
 
+## Prerequisites
+
+### Java Requirement
+
+To regenerate the SDK, you must have Java installed on your system. The `regenerate_sdk.py` script uses the Swagger Codegen CLI, which requires Java (version 8 or higher).
+
+- **Download Java:**
+  - [Oracle JDK Downloads](https://www.oracle.com/java/technologies/downloads/)
+  - [Adoptium OpenJDK](https://adoptium.net/)
+- **Verify Installation:**
+  - After installing, verify Java is available by running the following command in your terminal:
+    ```sh
+    java -version
+    ```
+  - You should see output indicating the installed Java version.
+- **Troubleshooting:**
+  - If you see an error like `'java' is not recognized as an internal or external command`, ensure Java is added to your system's PATH environment variable. See [How to set JAVA_HOME in Windows](https://www.baeldung.com/java-home-on-windows-7-8-10-mac-os-x-linux) for guidance.
+
 ## Regenerating the SDK
 
 If you need to update or regenerate the SDK based on a new specification:
