@@ -2,10 +2,10 @@ from setuptools import setup, find_packages
 
 setup(
     name="qualer-sdk",
-    version="1.0.0",
+    version="2.1.0",
     description="Auto-generated Python client for Qualer",
-    author="Your Lab or Org Name",
-    author_email="dev@example.com",
+    author="Johnson Gage & Inspection Inc.",
+    author_email="jhall@jgiquality.com",
     packages=find_packages(where="qualer_sdk"),
     package_dir={"": "qualer_sdk"},
     install_requires=[
