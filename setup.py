@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="qualer-sdk",
-    version="2.1.0",
+    version="2.2.1",
     description="Auto-generated Python client for Qualer",
     author="Johnson Gage & Inspection Inc.",
     author_email="jhall@jgiquality.com",
