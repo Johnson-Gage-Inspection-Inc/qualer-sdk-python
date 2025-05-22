@@ -4,12 +4,12 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**service_order_shipments_append_shipment_tracking_number**](ServiceOrderShipmentsApi.md#service_order_shipments_append_shipment_tracking_number) | **PUT** /api/service/workorders/{serviceOrderId}/shipments/trackingnumber | 
-[**service_order_shipments_update_shipment_status**](ServiceOrderShipmentsApi.md#service_order_shipments_update_shipment_status) | **PUT** /api/service/workorders/{serviceOrderId}/shipments/status | 
+[**append_shipment_tracking_number**](ServiceOrderShipmentsApi.md#append_shipment_tracking_number) | **PUT** /api/service/workorders/{serviceOrderId}/shipments/trackingnumber | 
+[**update_shipment_status**](ServiceOrderShipmentsApi.md#update_shipment_status) | **PUT** /api/service/workorders/{serviceOrderId}/shipments/status | 
 
 
-# **service_order_shipments_append_shipment_tracking_number**
-> object service_order_shipments_append_shipment_tracking_number(service_order_id, model)
+# **append_shipment_tracking_number**
+> object append_shipment_tracking_number(service_order_id, model)
 
 
 
@@ -27,10 +27,10 @@ service_order_id = 56 # int |
 model = qualer_sdk.QualerApiModelsServiceOrdersFromAppendTrackingNumberModel() # QualerApiModelsServiceOrdersFromAppendTrackingNumberModel | 
 
 try:
-    api_response = api_instance.service_order_shipments_append_shipment_tracking_number(service_order_id, model)
+    api_response = api_instance.append_shipment_tracking_number(service_order_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderShipmentsApi->service_order_shipments_append_shipment_tracking_number: %s\n" % e)
+    print("Exception when calling ServiceOrderShipmentsApi->append_shipment_tracking_number: %s\n" % e)
 ```
 
 ### Parameters
@@ -55,8 +55,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_shipments_update_shipment_status**
-> object service_order_shipments_update_shipment_status(service_order_id, model)
+# **update_shipment_status**
+> object update_shipment_status(service_order_id, model)
 
 
 
@@ -74,10 +74,10 @@ service_order_id = 56 # int |
 model = qualer_sdk.QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel() # QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel | 
 
 try:
-    api_response = api_instance.service_order_shipments_update_shipment_status(service_order_id, model)
+    api_response = api_instance.update_shipment_status(service_order_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderShipmentsApi->service_order_shipments_update_shipment_status: %s\n" % e)
+    print("Exception when calling ServiceOrderShipmentsApi->update_shipment_status: %s\n" % e)
 ```
 
 ### Parameters

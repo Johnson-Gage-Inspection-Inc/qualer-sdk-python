@@ -29,44 +29,44 @@ class TestProductApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_product_add_manufacturer(self):
-        """Test case for product_add_manufacturer
+    def test_add_manufacturer(self):
+        """Test case for add_manufacturer
 
         """
         pass
 
-    def test_product_add_product(self):
-        """Test case for product_add_product
+    def test_add_product(self):
+        """Test case for add_product
 
         """
         pass
 
-    def test_product_get_inventory_count(self):
-        """Test case for product_get_inventory_count
+    def test_get_inventory_count(self):
+        """Test case for get_inventory_count
 
         """
         pass
 
-    def test_product_get_manufacturers(self):
-        """Test case for product_get_manufacturers
+    def test_get_manufacturers(self):
+        """Test case for get_manufacturers
 
         """
         pass
 
-    def test_product_get_product(self):
-        """Test case for product_get_product
+    def test_get_product(self):
+        """Test case for get_product
 
         """
         pass
 
-    def test_product_product(self):
-        """Test case for product_product
+    def test_product(self):
+        """Test case for product
 
         """
         pass
 
-    def test_product_put_inventory_count(self):
-        """Test case for product_put_inventory_count
+    def test_put_inventory_count(self):
+        """Test case for put_inventory_count
 
         """
         pass

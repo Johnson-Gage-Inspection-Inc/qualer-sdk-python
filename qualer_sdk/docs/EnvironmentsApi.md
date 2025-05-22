@@ -4,12 +4,12 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**environments_get**](EnvironmentsApi.md#environments_get) | **GET** /api/Environments/{id} | 
-[**environments_post**](EnvironmentsApi.md#environments_post) | **POST** /api/Environments/{id} | 
+[**get**](EnvironmentsApi.md#get) | **GET** /api/Environments/{id} | 
+[**post**](EnvironmentsApi.md#post) | **POST** /api/Environments/{id} | 
 
 
-# **environments_get**
-> list[QualerApiModelsEnvironmentToEnvironmentModel] environments_get(id)
+# **get**
+> list[QualerApiModelsEnvironmentToEnvironmentModel] get(id)
 
 
 
@@ -26,10 +26,10 @@ api_instance = qualer_sdk.EnvironmentsApi()
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.environments_get(id)
+    api_response = api_instance.get(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling EnvironmentsApi->environments_get: %s\n" % e)
+    print("Exception when calling EnvironmentsApi->get: %s\n" % e)
 ```
 
 ### Parameters
@@ -53,8 +53,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **environments_post**
-> object environments_post(model, id)
+# **post**
+> object post(model, id)
 
 
 
@@ -72,10 +72,10 @@ model = qualer_sdk.QualerApiModelsEnvironmentFromEnvironmentModel() # QualerApiM
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.environments_post(model, id)
+    api_response = api_instance.post(model, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling EnvironmentsApi->environments_post: %s\n" % e)
+    print("Exception when calling EnvironmentsApi->post: %s\n" % e)
 ```
 
 ### Parameters

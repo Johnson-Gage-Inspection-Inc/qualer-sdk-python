@@ -29,72 +29,72 @@ class TestServiceOrderItemsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_service_order_items_add_work_items(self):
-        """Test case for service_order_items_add_work_items
+    def test_add_work_items(self):
+        """Test case for add_work_items
 
         Add work items  # noqa: E501
         """
         pass
 
-    def test_service_order_items_delete_work_item_image(self):
-        """Test case for service_order_items_delete_work_item_image
+    def test_delete_work_item_image(self):
+        """Test case for delete_work_item_image
 
         """
         pass
 
-    def test_service_order_items_get_work_item(self):
-        """Test case for service_order_items_get_work_item
+    def test_get_work_item(self):
+        """Test case for get_work_item
 
         """
         pass
 
-    def test_service_order_items_get_work_item_charges(self):
-        """Test case for service_order_items_get_work_item_charges
+    def test_get_work_item_charges(self):
+        """Test case for get_work_item_charges
 
         """
         pass
 
-    def test_service_order_items_get_work_item_image(self):
-        """Test case for service_order_items_get_work_item_image
+    def test_get_work_item_image(self):
+        """Test case for get_work_item_image
 
         """
         pass
 
-    def test_service_order_items_get_work_item_images(self):
-        """Test case for service_order_items_get_work_item_images
+    def test_get_work_item_images(self):
+        """Test case for get_work_item_images
 
         """
         pass
 
-    def test_service_order_items_get_work_items(self):
-        """Test case for service_order_items_get_work_items
+    def test_get_work_items(self):
+        """Test case for get_work_items
 
         """
         pass
 
-    def test_service_order_items_get_work_items_0(self):
-        """Test case for service_order_items_get_work_items_0
+    def test_get_work_items_0(self):
+        """Test case for get_work_items_0
 
         Retrieve work items  # noqa: E501
         """
         pass
 
-    def test_service_order_items_put_charges(self):
-        """Test case for service_order_items_put_charges
+    def test_put_charges(self):
+        """Test case for put_charges
 
         Apply Service Order Item Charges  # noqa: E501
         """
         pass
 
-    def test_service_order_items_set_work_item(self):
-        """Test case for service_order_items_set_work_item
+    def test_set_work_item(self):
+        """Test case for set_work_item
 
         Update work item  # noqa: E501
         """
         pass
 
-    def test_service_order_items_upload_work_item_images(self):
-        """Test case for service_order_items_upload_work_item_images
+    def test_upload_work_item_images(self):
+        """Test case for upload_work_item_images
 
         """
         pass

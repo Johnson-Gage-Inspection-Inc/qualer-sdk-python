@@ -16,7 +16,7 @@
         ],
         "summary": "Logout",
         "description": "LogoutAction:<br />\r\nLogout - remove the passed token from the list of active sessions (default value)<br />\r\nLogoutAll - remove this token and all other tokens created for the same user from the list of active sessions<br />\r\nLogoutAllOther - remove all tokens created for the same user from the list of session except for the one that is passed in<br />\r\nRotate - change the current token to a different GUID and return the new GUID",
-        "operationId": "Account_Logout",
+        "operationId": "Logout",
         "consumes": [
           "application/json",
           "text/json",
@@ -62,7 +62,7 @@
         "tags": [
           "Account"
         ],
-        "operationId": "Account_GetEmployeeMessages",
+        "operationId": "GetEmployeeMessages",
         "consumes": [],
         "produces": [
           "application/json",
@@ -104,7 +104,7 @@
         "tags": [
           "Account"
         ],
-        "operationId": "Account_GetEmployeeMessage",
+        "operationId": "GetEmployeeMessage",
         "consumes": [],
         "produces": [
           "application/json",
@@ -138,7 +138,7 @@
         ],
         "summary": "Post Employee Location",
         "description": "Sample request:\r\n            \r\nPOST api/user/location\r\n            \r\nLatitude - The latitude in degrees.<br />\r\nLongitude - The longitude in degrees.<br />\r\nAccuracy - The radius of uncertainty for the location, measured in meters.<br />\r\nAltitude - The altitude in meters above the WGS 84 reference ellipsoid.<br />\r\nAltitudeAccuracy - The accuracy of the altitude value, in meters.<br />\r\nHeading - Horizontal direction of travel of this device, measured in degrees starting at due north and continuing clockwise around the compass. Thus, north is 0 degrees, east is 90 degrees, south is 180 degrees, and so on.<br />\r\nSpeed - The instantaneous speed of the device in meters per second.<br />\r\nTimestamp - The time at which this position information was obtained, in seconds.",
-        "operationId": "Account_PostEmployeeLocation",
+        "operationId": "PostEmployeeLocation",
         "consumes": [
           "application/json",
           "text/json",
@@ -178,7 +178,7 @@
         "tags": [
           "Account"
         ],
-        "operationId": "Account_Companies",
+        "operationId": "Companies",
         "consumes": [
           "application/json",
           "text/json",
@@ -218,7 +218,7 @@
           "Account"
         ],
         "summary": "Login",
-        "operationId": "Account_Login",
+        "operationId": "Login",
         "consumes": [
           "application/json",
           "text/json",
@@ -260,7 +260,7 @@
         "tags": [
           "AssetAttributes"
         ],
-        "operationId": "AssetAttributes_GetAssetAttributes",
+        "operationId": "GetAssetAttributes",
         "consumes": [],
         "produces": [
           "application/json",
@@ -293,7 +293,7 @@
         "tags": [
           "AssetAttributes"
         ],
-        "operationId": "AssetAttributes_UpsertAssetAttributes",
+        "operationId": "UpsertAssetAttributes",
         "consumes": [
           "application/json",
           "text/json",
@@ -342,7 +342,7 @@
         "tags": [
           "AssetMaintenancePlans"
         ],
-        "operationId": "AssetMaintenancePlans_GetMaintenancePlans",
+        "operationId": "GetMaintenancePlans",
         "consumes": [],
         "produces": [
           "application/json",
@@ -374,7 +374,7 @@
         "tags": [
           "AssetMaintenancePlans"
         ],
-        "operationId": "AssetMaintenancePlans_GetMaintenancePlan",
+        "operationId": "GetMaintenancePlan",
         "consumes": [],
         "produces": [
           "application/json",
@@ -411,7 +411,7 @@
         "tags": [
           "AssetMaintenancePlans"
         ],
-        "operationId": "AssetMaintenancePlans_ResetInitialServiceDate",
+        "operationId": "ResetInitialServiceDate",
         "consumes": [
           "application/json",
           "text/json",
@@ -464,7 +464,7 @@
         "tags": [
           "AssetMeasurements"
         ],
-        "operationId": "AssetMeasurements_GetMeasurementsByAsset",
+        "operationId": "GetMeasurementsByAsset",
         "consumes": [],
         "produces": [
           "application/json",
@@ -513,7 +513,7 @@
         "tags": [
           "AssetPools"
         ],
-        "operationId": "AssetPools_Get",
+        "operationId": "Get",
         "consumes": [],
         "produces": [
           "application/json",
@@ -545,7 +545,7 @@
         "tags": [
           "AssetPools"
         ],
-        "operationId": "AssetPools_GetAll",
+        "operationId": "GetAll",
         "consumes": [],
         "produces": [
           "application/json",
@@ -571,7 +571,7 @@
         "tags": [
           "AssetReservation"
         ],
-        "operationId": "AssetReservation_Get",
+        "operationId": "Get",
         "consumes": [],
         "produces": [
           "application/json",
@@ -651,7 +651,7 @@
         "tags": [
           "AssetReservation"
         ],
-        "operationId": "AssetReservation_Upsert",
+        "operationId": "Upsert",
         "consumes": [
           "application/json",
           "text/json",
@@ -690,7 +690,7 @@
         "tags": [
           "AssetReservation"
         ],
-        "operationId": "AssetReservation_Close",
+        "operationId": "Close",
         "consumes": [],
         "produces": [
           "application/json",
@@ -755,7 +755,7 @@
         "tags": [
           "Assets"
         ],
-        "operationId": "Assets_GetAsset",
+        "operationId": "GetAsset",
         "consumes": [],
         "produces": [
           "application/json",
@@ -789,7 +789,7 @@
         ],
         "summary": "GetAssetImages",
         "description": "returns list of asset image urls",
-        "operationId": "Assets_GetAssetImages",
+        "operationId": "GetAssetImages",
         "consumes": [],
         "produces": [
           "application/json",
@@ -824,7 +824,7 @@
         ],
         "summary": "PostAssetImages",
         "description": "returns list of asset image urls",
-        "operationId": "Assets_PostAssetImages",
+        "operationId": "PostAssetImages",
         "consumes": [],
         "produces": [
           "application/json",
@@ -856,7 +856,7 @@
         "tags": [
           "Assets"
         ],
-        "operationId": "Assets_GetAllAssets",
+        "operationId": "GetAllAssets",
         "consumes": [],
         "produces": [
           "application/json",
@@ -882,7 +882,7 @@
         "tags": [
           "Assets"
         ],
-        "operationId": "Assets_GetAssetByAttribute",
+        "operationId": "GetAssetByAttribute",
         "consumes": [],
         "produces": [
           "application/json",
@@ -922,7 +922,7 @@
         "tags": [
           "Assets"
         ],
-        "operationId": "Assets_GetAssetByBarcode",
+        "operationId": "GetAssetByBarcode",
         "consumes": [],
         "produces": [
           "application/json",
@@ -956,7 +956,7 @@
         "tags": [
           "Assets"
         ],
-        "operationId": "Assets_GetAssetBySerialNumber",
+        "operationId": "GetAssetBySerialNumber",
         "consumes": [],
         "produces": [
           "application/json",
@@ -990,7 +990,7 @@
         "tags": [
           "Assets"
         ],
-        "operationId": "Assets_GetAssetByAssetTag",
+        "operationId": "GetAssetByAssetTag",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1024,7 +1024,7 @@
         "tags": [
           "Assets"
         ],
-        "operationId": "Assets_GetAssetByAssetPool",
+        "operationId": "GetAssetByAssetPool",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1059,7 +1059,7 @@
         "tags": [
           "Assets"
         ],
-        "operationId": "Assets_GetAssetsByEquipmentId",
+        "operationId": "GetAssetsByEquipmentId",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1093,7 +1093,7 @@
         "tags": [
           "Assets"
         ],
-        "operationId": "Assets_UpdateRoom",
+        "operationId": "UpdateRoom",
         "consumes": [
           "application/json",
           "text/json",
@@ -1133,7 +1133,7 @@
           "Assets"
         ],
         "summary": "GetAssetManagerCounters",
-        "operationId": "Assets_GetAssetManagerCounters",
+        "operationId": "GetAssetManagerCounters",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1166,7 +1166,7 @@
         ],
         "summary": "GetAssetManagerList",
         "description": "filterType: Unset, DueForService, RecentlyServiced, NotServiced, RecentlyPurchased,\r\n    WarrantyExpiring, DueForReplacement, OutOfService,\r\n    PastDue, ServicePending, CollectedAssets,  WithoutSchedule, WithoutVendor,\r\n    WithoutProduct, Added, Modified, Deleted,\r\n    NoAgreement, ExpiredAgreement, AgreementUpForRenewal",
-        "operationId": "Assets_GetAssetManagerList",
+        "operationId": "GetAssetManagerList",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1222,7 +1222,7 @@
         ],
         "summary": "CollectAssets(int[] assetIds)",
         "description": "[123,234,567]",
-        "operationId": "Assets_CollectAssets",
+        "operationId": "CollectAssets",
         "consumes": [
           "application/json",
           "text/json",
@@ -1267,7 +1267,7 @@
         ],
         "summary": "ClearCollectedAssets(int[] assetIds)",
         "description": "[123,234,567] removes assets with selected Ids\r\n            \r\n[] removes all assets from QuickCollection",
-        "operationId": "Assets_ClearCollectedAssets",
+        "operationId": "ClearCollectedAssets",
         "consumes": [
           "application/json",
           "text/json",
@@ -1310,7 +1310,7 @@
         "tags": [
           "Assets"
         ],
-        "operationId": "Assets_UpdateAssetRoom",
+        "operationId": "UpdateAssetRoom",
         "consumes": [
           "application/json",
           "text/json",
@@ -1356,7 +1356,7 @@
         "tags": [
           "Assets"
         ],
-        "operationId": "Assets_UpdateAssetClass",
+        "operationId": "UpdateAssetClass",
         "consumes": [
           "application/json",
           "text/json",
@@ -1402,7 +1402,7 @@
         "tags": [
           "Assets"
         ],
-        "operationId": "Assets_UpdateAssetDepartment",
+        "operationId": "UpdateAssetDepartment",
         "consumes": [
           "application/json",
           "text/json",
@@ -1448,7 +1448,7 @@
         "tags": [
           "AssetServiceForecast"
         ],
-        "operationId": "AssetServiceForecast_GetClientAssetForecastList",
+        "operationId": "GetClientAssetForecastList",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1483,7 +1483,7 @@
         "tags": [
           "AssetServiceForecast"
         ],
-        "operationId": "AssetServiceForecast_GetAssetForecastList",
+        "operationId": "GetAssetForecastList",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1509,7 +1509,7 @@
         "tags": [
           "AssetServiceRecords"
         ],
-        "operationId": "AssetServiceRecords_GetAssetServiceRecord",
+        "operationId": "GetAssetServiceRecord",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1547,7 +1547,7 @@
         "tags": [
           "AssetServiceRecords"
         ],
-        "operationId": "AssetServiceRecords_GetAssetServiceRecordsByAsset",
+        "operationId": "GetAssetServiceRecordsByAsset",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1580,7 +1580,7 @@
         "tags": [
           "AssetServiceRecords"
         ],
-        "operationId": "AssetServiceRecords_AddAssetServiceRecord",
+        "operationId": "AddAssetServiceRecord",
         "consumes": [
           "application/json",
           "text/json",
@@ -1632,7 +1632,7 @@
         "tags": [
           "AssetServiceRecords"
         ],
-        "operationId": "AssetServiceRecords_GetAssetServiceRecords",
+        "operationId": "GetAssetServiceRecords",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1684,7 +1684,7 @@
         "tags": [
           "AssetServiceRecords"
         ],
-        "operationId": "AssetServiceRecords_DownloadDocuments",
+        "operationId": "DownloadDocuments",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1714,7 +1714,7 @@
         "tags": [
           "AssetServiceRecords"
         ],
-        "operationId": "AssetServiceRecords_UploadDocuments",
+        "operationId": "UploadDocuments",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1746,7 +1746,7 @@
         "tags": [
           "AssetServiceRecords"
         ],
-        "operationId": "AssetServiceRecords_UpdateAssetServiceRecord",
+        "operationId": "UpdateAssetServiceRecord",
         "consumes": [
           "application/json",
           "text/json",
@@ -1792,7 +1792,7 @@
         "tags": [
           "AssetServiceRecords"
         ],
-        "operationId": "AssetServiceRecords_DocumentList",
+        "operationId": "DocumentList",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1833,7 +1833,7 @@
         "tags": [
           "AssetServiceRecords"
         ],
-        "operationId": "AssetServiceRecords_DownloadDocument",
+        "operationId": "DownloadDocument",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1883,7 +1883,7 @@
         "tags": [
           "ClientAssetAttributes"
         ],
-        "operationId": "ClientAssetAttributes_GetAssetAttributes",
+        "operationId": "GetAssetAttributes",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1916,7 +1916,7 @@
         "tags": [
           "ClientAssetAttributes"
         ],
-        "operationId": "ClientAssetAttributes_UpsertAssetAttributes",
+        "operationId": "UpsertAssetAttributes",
         "consumes": [
           "application/json",
           "text/json",
@@ -1965,7 +1965,7 @@
         "tags": [
           "ClientAssets"
         ],
-        "operationId": "ClientAssets_GetAsset",
+        "operationId": "GetAsset",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2003,7 +2003,7 @@
         "tags": [
           "ClientAssets"
         ],
-        "operationId": "ClientAssets_GetAssets",
+        "operationId": "GetAssets",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2068,7 +2068,7 @@
         "tags": [
           "ClientAssets"
         ],
-        "operationId": "ClientAssets_GetAssetCounters",
+        "operationId": "GetAssetCounters",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2102,7 +2102,7 @@
         ],
         "summary": "GetAssetManagerList",
         "description": "assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService, ClientOutOfService, ClientWithoutSchedule\r\n            \r\nClientDueForService - depends on Employee Filter Preference\r\nPOST api/user/filters",
-        "operationId": "ClientAssets_GetAssetManagerList",
+        "operationId": "GetAssetManagerList",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2164,7 +2164,7 @@
         "tags": [
           "ClientAssets"
         ],
-        "operationId": "ClientAssets_GetAllAssets",
+        "operationId": "GetAllAssets",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2220,7 +2220,7 @@
         "tags": [
           "ClientAssets"
         ],
-        "operationId": "ClientAssets_CreateAsset",
+        "operationId": "CreateAsset",
         "consumes": [
           "application/json",
           "text/json",
@@ -2265,7 +2265,7 @@
         "tags": [
           "ClientAssetServiceRecords"
         ],
-        "operationId": "ClientAssetServiceRecords_GetAssetServiceRecordsByAsset",
+        "operationId": "GetAssetServiceRecordsByAsset",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2300,7 +2300,7 @@
         "tags": [
           "ClientAttribute"
         ],
-        "operationId": "ClientAttribute_GetClientAttributes",
+        "operationId": "GetClientAttributes",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2330,7 +2330,7 @@
         "tags": [
           "ClientAttribute"
         ],
-        "operationId": "ClientAttribute_UpsertClientAttribute",
+        "operationId": "UpsertClientAttribute",
         "consumes": [
           "application/json",
           "text/json",
@@ -2376,7 +2376,7 @@
         "tags": [
           "ClientEmployees"
         ],
-        "operationId": "ClientEmployees_GetEmployees",
+        "operationId": "GetEmployees",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2411,7 +2411,7 @@
         "tags": [
           "ClientEmployees"
         ],
-        "operationId": "ClientEmployees_GetEmployee",
+        "operationId": "GetEmployee",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2449,7 +2449,7 @@
         "tags": [
           "ClientEmployees"
         ],
-        "operationId": "ClientEmployees_CreateEmployee",
+        "operationId": "CreateEmployee",
         "consumes": [
           "application/json",
           "text/json",
@@ -2494,7 +2494,7 @@
         "tags": [
           "ClientEmployees"
         ],
-        "operationId": "ClientEmployees_SendEmployeeEmail",
+        "operationId": "SendEmployeeEmail",
         "consumes": [
           "application/json",
           "text/json",
@@ -2540,7 +2540,7 @@
         "tags": [
           "ClientMaintenancePlans"
         ],
-        "operationId": "ClientMaintenancePlans_GetMaintenancePlans",
+        "operationId": "GetMaintenancePlans",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2575,7 +2575,7 @@
         "tags": [
           "ClientMaintenancePlans"
         ],
-        "operationId": "ClientMaintenancePlans_GetMaintenancePlanAssets",
+        "operationId": "GetMaintenancePlanAssets",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2610,7 +2610,7 @@
         "tags": [
           "Clients"
         ],
-        "operationId": "Clients_Get",
+        "operationId": "Get",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2642,7 +2642,7 @@
         "tags": [
           "Clients"
         ],
-        "operationId": "Clients_GetAll",
+        "operationId": "GetAll",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2702,7 +2702,7 @@
         ],
         "summary": "Update Client information.",
         "description": "ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3",
-        "operationId": "Clients_Update",
+        "operationId": "Update",
         "consumes": [
           "application/json",
           "text/json",
@@ -2748,7 +2748,7 @@
         ],
         "summary": "Create Client information.",
         "description": "ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3",
-        "operationId": "Clients_Create",
+        "operationId": "Create",
         "consumes": [
           "application/json",
           "text/json",
@@ -2791,7 +2791,7 @@
         "tags": [
           "ClientSite"
         ],
-        "operationId": "ClientSite_GetClientSites",
+        "operationId": "GetClientSites",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2826,7 +2826,7 @@
         ],
         "summary": "Update Client Site.",
         "description": "CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"",
-        "operationId": "ClientSite_UpdateClientSite",
+        "operationId": "UpdateClientSite",
         "consumes": [
           "application/json",
           "text/json",
@@ -2880,7 +2880,7 @@
         ],
         "summary": "Create Client Site.",
         "description": "CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"",
-        "operationId": "ClientSite_CreateClientSite",
+        "operationId": "CreateClientSite",
         "consumes": [
           "application/json",
           "text/json",
@@ -2934,7 +2934,7 @@
         "tags": [
           "Common"
         ],
-        "operationId": "Common_CultureList",
+        "operationId": "CultureList",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2957,7 +2957,7 @@
         "tags": [
           "Common"
         ],
-        "operationId": "Common_CultureUiList",
+        "operationId": "CultureUiList",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2980,7 +2980,7 @@
         "tags": [
           "Common"
         ],
-        "operationId": "Common_GetCompanySettings",
+        "operationId": "GetCompanySettings",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3012,7 +3012,7 @@
           "Company"
         ],
         "description": "lookupName:\r\nAssetClass = 1\r\nAssetCriticality = 2\r\nAssetCondition = 3\r\nInventoryCategory = 4\r\nInventoryUnit = 5\r\nOrderItemInProgressWorkStatus = 6\r\nOrderItemDelayWorkStatus = 7\r\nOrderItemWithdrawnWorkStatus = 8\r\nOrderItemCompletedWorkStatus = 9\r\nOrderDelayedStatus = 10\r\nClientInvoicing = 11\r\nClientStanding = 12\r\nClientCategory = 13\r\nCancelOrderReasons = 14\r\nOrderItemLockedWorkStatus = 15",
-        "operationId": "Company_Lookups",
+        "operationId": "Lookups",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3064,7 +3064,7 @@
         "tags": [
           "Company"
         ],
-        "operationId": "Company_Departments",
+        "operationId": "Departments",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3089,7 +3089,7 @@
           "Company"
         ],
         "summary": "",
-        "operationId": "Company_AddDepartment",
+        "operationId": "AddDepartment",
         "consumes": [
           "application/json",
           "text/json",
@@ -3133,7 +3133,7 @@
           "Company"
         ],
         "summary": "",
-        "operationId": "Company_UpdateDepartment",
+        "operationId": "UpdateDepartment",
         "consumes": [
           "application/json",
           "text/json",
@@ -3183,7 +3183,7 @@
           "Company"
         ],
         "summary": "",
-        "operationId": "Company_DeleteDepartment",
+        "operationId": "DeleteDepartment",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3218,7 +3218,7 @@
         "tags": [
           "Company"
         ],
-        "operationId": "Company_Sites",
+        "operationId": "Sites",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3245,7 +3245,7 @@
           "Company"
         ],
         "summary": "",
-        "operationId": "Company_SiteRooms",
+        "operationId": "SiteRooms",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3285,7 +3285,7 @@
           "EmployeeFilterPreference"
         ],
         "summary": "GetEmployeeFilterPreferences",
-        "operationId": "EmployeeFilterPreference_GetEmployeeFilterPreferences",
+        "operationId": "GetEmployeeFilterPreferences",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3310,7 +3310,7 @@
           "EmployeeFilterPreference"
         ],
         "summary": "UpdateEmployeeFilterPreference",
-        "operationId": "EmployeeFilterPreference_UpdateEmployeeFilterPreference",
+        "operationId": "UpdateEmployeeFilterPreference",
         "consumes": [
           "application/json",
           "text/json",
@@ -3351,7 +3351,7 @@
           "EmployeePreference"
         ],
         "description": "elementPage:\r\nAssetManager = 1,\r\nWorkOrders = 2,\r\nServiceOrderItems = 3,\r\nServiceSchedules = 4,\r\nServiceRequests = 5,\r\nVendors = 6,\r\nVendorAgreements = 7,\r\nClientAgreements = 8,\r\nWorkCalendar = 9,\r\nClients = 10,\r\nGlobalAssetManager = 11,\r\nInvoicesManager = 12,\r\nProductManager = 13,\r\nProductSpecifications = 14,\r\nDocumentManager = 15",
-        "operationId": "EmployeePreference_Get",
+        "operationId": "Get",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3404,7 +3404,7 @@
         "tags": [
           "EmployeePreference"
         ],
-        "operationId": "EmployeePreference_Delete",
+        "operationId": "Delete",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3455,7 +3455,7 @@
         "tags": [
           "Employees"
         ],
-        "operationId": "Employees_GetEmployee",
+        "operationId": "GetEmployee",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3487,7 +3487,7 @@
         ],
         "summary": "Update Employee",
         "description": "CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />\r\nCultureUiName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"<br />\r\nList of culture codes: GET /api/common/culturelist\"\r\nList of UI culture codes: GET /api/common/cultureuilist\"",
-        "operationId": "Employees_UpdateEmployee",
+        "operationId": "UpdateEmployee",
         "consumes": [
           "application/json",
           "text/json",
@@ -3536,7 +3536,7 @@
         "tags": [
           "Employees"
         ],
-        "operationId": "Employees_GetEmployees",
+        "operationId": "GetEmployees",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3570,7 +3570,7 @@
         ],
         "summary": "Create Employee",
         "description": "CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />\r\nCultureUiName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"<br />\r\nList of culture codes: GET /api/common/culturelist\"\r\nList of UI culture codes: GET /api/common/cultureuilist\"",
-        "operationId": "Employees_CreateEmployee",
+        "operationId": "CreateEmployee",
         "consumes": [
           "application/json",
           "text/json",
@@ -3613,7 +3613,7 @@
           "Employees"
         ],
         "summary": "",
-        "operationId": "Employees_AddEmployeeDepartment",
+        "operationId": "AddEmployeeDepartment",
         "consumes": [
           "application/json",
           "text/json",
@@ -3665,7 +3665,7 @@
           "Employees"
         ],
         "summary": "",
-        "operationId": "Employees_DeleteEmployeeDepartment",
+        "operationId": "DeleteEmployeeDepartment",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3709,7 +3709,7 @@
         "tags": [
           "Environments"
         ],
-        "operationId": "Environments_Get",
+        "operationId": "Get",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3742,7 +3742,7 @@
         "tags": [
           "Environments"
         ],
-        "operationId": "Environments_Post",
+        "operationId": "Post",
         "consumes": [
           "application/json",
           "text/json",
@@ -3788,7 +3788,7 @@
         "tags": [
           "MaintenancePlans"
         ],
-        "operationId": "MaintenancePlans_GetMaintenancePlans",
+        "operationId": "GetMaintenancePlans",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3814,7 +3814,7 @@
         "tags": [
           "MaintenancePlans"
         ],
-        "operationId": "MaintenancePlans_GetMaintenancePlanAssets",
+        "operationId": "GetMaintenancePlanAssets",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3849,7 +3849,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "Product_GetInventoryCount",
+        "operationId": "GetInventoryCount",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3873,7 +3873,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "Product_PutInventoryCount",
+        "operationId": "PutInventoryCount",
         "consumes": [
           "application/json",
           "text/json",
@@ -3915,7 +3915,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "Product_GetProduct",
+        "operationId": "GetProduct",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3945,7 +3945,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "Product_Product",
+        "operationId": "Product",
         "consumes": [
           "application/json",
           "text/json",
@@ -3991,7 +3991,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "Product_AddProduct",
+        "operationId": "AddProduct",
         "consumes": [
           "application/json",
           "text/json",
@@ -4030,7 +4030,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "Product_GetManufacturers",
+        "operationId": "GetManufacturers",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4056,7 +4056,7 @@
         "tags": [
           "Product"
         ],
-        "operationId": "Product_AddManufacturer",
+        "operationId": "AddManufacturer",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4087,7 +4087,7 @@
         "tags": [
           "Reference"
         ],
-        "operationId": "Reference_GetUnitsOfMeasure",
+        "operationId": "GetUnitsOfMeasure",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4113,7 +4113,7 @@
         "tags": [
           "Reference"
         ],
-        "operationId": "Reference_GetMeasurementQuantities",
+        "operationId": "GetMeasurementQuantities",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4139,7 +4139,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetMeasurementCharts",
+        "operationId": "GetMeasurementCharts",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4174,7 +4174,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetToolAttributes",
+        "operationId": "GetToolAttributes",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4209,7 +4209,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetToolRangeAttributes",
+        "operationId": "GetToolRangeAttributes",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4244,7 +4244,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetAssetAttributes",
+        "operationId": "GetAssetAttributes",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4279,7 +4279,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetOrderItemImages",
+        "operationId": "GetOrderItemImages",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4314,7 +4314,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetOrderItemDocuments",
+        "operationId": "GetOrderItemDocuments",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4349,7 +4349,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetServiceOrderTasks",
+        "operationId": "GetServiceOrderTasks",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4384,7 +4384,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetServiceOrderCharges",
+        "operationId": "GetServiceOrderCharges",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4419,7 +4419,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetServiceOrderItemTasksByOrderItems",
+        "operationId": "GetServiceOrderItemTasksByOrderItems",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4454,7 +4454,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetServiceOrderItemTasksByOrder",
+        "operationId": "GetServiceOrderItemTasksByOrder",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4489,7 +4489,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetServiceOrderItemFieldsByOrder",
+        "operationId": "GetServiceOrderItemFieldsByOrder",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4524,7 +4524,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetServiceOrderItemStatusHistoryAsync",
+        "operationId": "GetServiceOrderItemStatusHistoryAsync",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4559,7 +4559,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetMeasurementFields",
+        "operationId": "GetMeasurementFields",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4594,7 +4594,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetMeasurementFieldsByOrder",
+        "operationId": "GetMeasurementFieldsByOrder",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4629,7 +4629,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetServiceOrderItems",
+        "operationId": "GetServiceOrderItems",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4664,7 +4664,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetServiceOrderItemComponents",
+        "operationId": "GetServiceOrderItemComponents",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4699,7 +4699,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetServiceOrderItemsByOrder",
+        "operationId": "GetServiceOrderItemsByOrder",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4734,7 +4734,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetServiceOrderItemComponentsByOrder",
+        "operationId": "GetServiceOrderItemComponentsByOrder",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4769,7 +4769,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetServiceOrderItemOptions",
+        "operationId": "GetServiceOrderItemOptions",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4804,7 +4804,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetAssetServiceRecords",
+        "operationId": "GetAssetServiceRecords",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4836,7 +4836,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetServiceOrderAssignees",
+        "operationId": "GetServiceOrderAssignees",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4871,7 +4871,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetReferenceStandards",
+        "operationId": "GetReferenceStandards",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4906,7 +4906,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetReferenceStandardsByOrder",
+        "operationId": "GetReferenceStandardsByOrder",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4941,7 +4941,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetServiceOrders",
+        "operationId": "GetServiceOrders",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4973,7 +4973,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetAsFoundMeasurements",
+        "operationId": "GetAsFoundMeasurements",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5008,7 +5008,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetAsFoundMeasurementsByOrder",
+        "operationId": "GetAsFoundMeasurementsByOrder",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5043,7 +5043,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetAsLeftMeasurements",
+        "operationId": "GetAsLeftMeasurements",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5078,7 +5078,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetAsLeftMeasurementsByOrder",
+        "operationId": "GetAsLeftMeasurementsByOrder",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5113,7 +5113,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetAllMeasurements",
+        "operationId": "GetAllMeasurements",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5148,7 +5148,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetAllMeasurementsByOrder",
+        "operationId": "GetAllMeasurementsByOrder",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5183,7 +5183,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetCompanyCertifications",
+        "operationId": "GetCompanyCertifications",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5209,7 +5209,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetExternalDataReports",
+        "operationId": "GetExternalDataReports",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5255,7 +5255,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetClientAttributes",
+        "operationId": "GetClientAttributes",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5287,7 +5287,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetChannelResults",
+        "operationId": "GetChannelResults",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5322,7 +5322,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetChannelResultsByOrder",
+        "operationId": "GetChannelResultsByOrder",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5357,7 +5357,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_GetChannelUniformity",
+        "operationId": "GetChannelUniformity",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5392,7 +5392,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "ReportDatasets_ChannelUniformityByOrder",
+        "operationId": "ChannelUniformityByOrder",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5429,7 +5429,7 @@
         ],
         "summary": "Retrieve work order documents",
         "description": "Sample request:\r\n            \r\nGET api/service/workorders/1000/documents",
-        "operationId": "ServiceOrderDocuments_GetDocuments",
+        "operationId": "GetDocuments",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5474,7 +5474,7 @@
         ],
         "summary": "",
         "description": "reportType:<br />\r\nassetsummary, assetlabel, assetdetail, assetcertificate,<br />\r\nordersummary / serviceordersummary,<br />\r\norderinvoice / serviceorderinvoice,<br />\r\norderestimate / serviceorderestimate,<br />\r\norderdetail / serviceorderdetail,<br />\r\nordercertificate / serviceordercertificate,<br />\r\ngeneral",
-        "operationId": "ServiceOrderDocuments_UploadDocuments",
+        "operationId": "UploadDocuments",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5519,7 +5519,7 @@
         "tags": [
           "ServiceOrderDocuments"
         ],
-        "operationId": "ServiceOrderDocuments_GetDocumentsList",
+        "operationId": "GetDocumentsList",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5568,7 +5568,7 @@
         ],
         "summary": "Retrieve work order documents",
         "description": "Sample request:\r\n            \r\nGET /api/service/workorders/documents/list\r\n            \r\nGET /api/service/workorders/documents/list?status=reportType\r\n            \r\nGET /api/service/workorders/documents/list?from=2020-12-01T10:11:12&amp;to=2021-01-01T10:11:12&amp;reportType=OrderInvoice&amp;ServiceOrderId=1\r\n            \r\nreportType:<br />\r\nUnset = 0,<br />\r\nAssetSummary = 1,<br />\r\nAssetLabel = 11,<br />\r\nAssetDetail = 2,<br />\r\nAssetCertificate = 21,<br />\r\nOrderSummary / ServiceOrderSummary = 3,<br />\r\nOrderInvoice / ServiceOrderInvoice = 31,<br />\r\nOrderEstimate / ServiceOrderEstimate = 32,<br />\r\nDashboard = 4,<br />\r\nOrderDetail / ServiceOrderDetail = 5,<br />\r\nOrderCertificate / ServiceOrderCertificate = 5<br />",
-        "operationId": "ServiceOrderDocuments_GetDocumentList",
+        "operationId": "GetDocumentList",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5632,7 +5632,7 @@
         ],
         "summary": "Retrieve work order document by Unique Id",
         "description": "Sample request:\r\n            \r\nGET api/service/workorders/documents/FE6B21DC-8061-46FF-AAB8-12C2030FE4B9\r\n            \r\nGET api/wd/FE6B21DC-8061-46FF-AAB8-12C2030FE4B9",
-        "operationId": "ServiceOrderDocuments_GetDocument",
+        "operationId": "GetDocument",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5673,7 +5673,7 @@
         ],
         "summary": "Retrieve work order document by Unique Id",
         "description": "Sample request:\r\n            \r\nGET api/service/workorders/documents/FE6B21DC-8061-46FF-AAB8-12C2030FE4B9\r\n            \r\nGET api/wd/FE6B21DC-8061-46FF-AAB8-12C2030FE4B9",
-        "operationId": "ServiceOrderDocuments_GetDocument",
+        "operationId": "GetDocument",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5714,7 +5714,7 @@
         ],
         "summary": "Retrieve work order documents",
         "description": "Sample request:\r\n            \r\nGET api/service/workitems/1000/documents",
-        "operationId": "ServiceOrderItemDocuments_GetDocuments",
+        "operationId": "GetDocuments",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5757,7 +5757,7 @@
         "tags": [
           "ServiceOrderItemDocuments"
         ],
-        "operationId": "ServiceOrderItemDocuments_UploadDocuments",
+        "operationId": "UploadDocuments",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5801,7 +5801,7 @@
         "tags": [
           "ServiceOrderItemDocuments"
         ],
-        "operationId": "ServiceOrderItemDocuments_GetDocumentsList",
+        "operationId": "GetDocumentsList",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5850,7 +5850,7 @@
         ],
         "summary": "Retrieve work order documents",
         "description": "Sample request:\r\n            \r\nGET /api/service/workitems/documents/list\r\n            \r\nGET /api/service/workitems/documents/list?status=reportType\r\n            \r\nGET /api/service/workitems/documents/list?from=2020-12-01T10:11:12&amp;to=2021-01-01T10:11:12&amp;reportType=OrderInvoice&amp;ServiceOrderItemId=1\r\n            \r\nreportType:<br />\r\nUnset = 0,<br />\r\nAssetSummary = 1,<br />\r\nAssetLabel = 11,<br />\r\nAssetDetail = 2,<br />\r\nAssetCertificate = 21,<br />\r\nOrderSummary / ServiceOrderSummary = 3,<br />\r\nOrderInvoice / ServiceOrderInvoice = 31,<br />\r\nOrderEstimate / ServiceOrderEstimate = 32,<br />\r\nDashboard = 4,<br />\r\nOrderDetail / ServiceOrderDetail = 5,<br />\r\nOrderCertificate / ServiceOrderCertificate = 5<br />",
-        "operationId": "ServiceOrderItemDocuments_GetDocumentList",
+        "operationId": "GetDocumentList",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5914,7 +5914,7 @@
         ],
         "summary": "Create Measurement Form.",
         "description": "BatchType: AsLeft, AsFound.\r\n            \r\nBatchResult: NotServiced, Fail, FailAmbiguous, FailSignificant, Pass, PassAmbiguous, PassAdjustment, Done, Pending.\r\n            \r\nCustomFields.Result: NotServiced, Fail, Pass.\r\n            \r\nToleranceType: Percentage, Range, Offset, PercentagePlus, Ppm, PpmPlus, Function.\r\n            \r\nToleranceMode: Symmetric, Asymmetric, Range.\r\n            \r\nToleranceUnit: Percentage, UnitOfMeasure, Ppm.\r\n            \r\nPrecisionType: Percentage, UnitOfMeasure.\r\n            \r\nChannelsType: Combined, IndividualAcross, IndividualDown, OneOf.\r\n            \r\nMeasurement.Result: NotServiced, Fail, FailAmbiguous, FailSignificant, Pass, PassAmbiguous, PassAdjustment, Done, Pending.\r\n            \r\nFactorId: AmbientTemperature, AirHumidity, BarometricPressure, EvaporationRate, AirBuoyancy, ZFactor, Altitude, WindSpeed, SolarRadiation, LightIntensity, NoiseLevel, PhLevel, WaterConductivity3, WaterTemperature.",
-        "operationId": "ServiceOrderItemMeasurements_CreateMeasurementForm",
+        "operationId": "CreateMeasurementForm",
         "consumes": [
           "application/json",
           "text/json",
@@ -5971,7 +5971,7 @@
         "tags": [
           "ServiceOrderItemMeasurements"
         ],
-        "operationId": "ServiceOrderItemMeasurements_AddAuxiliaryTools",
+        "operationId": "AddAuxiliaryTools",
         "consumes": [
           "application/json",
           "text/json",
@@ -6021,7 +6021,7 @@
           "ServiceOrderItemMeasurements"
         ],
         "summary": "Get Measurement Form.",
-        "operationId": "ServiceOrderItemMeasurements_GetMeasurementForm",
+        "operationId": "GetMeasurementForm",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6059,7 +6059,7 @@
           "ServiceOrderItemMeasurements"
         ],
         "summary": "Update Measurement Form.",
-        "operationId": "ServiceOrderItemMeasurements_UpdateMeasurementForm",
+        "operationId": "UpdateMeasurementForm",
         "consumes": [
           "application/json",
           "text/json",
@@ -6116,7 +6116,7 @@
         "tags": [
           "ServiceOrderItemMeasurements"
         ],
-        "operationId": "ServiceOrderItemMeasurements_GetMeasurementsByAsset",
+        "operationId": "GetMeasurementsByAsset",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6165,7 +6165,7 @@
         "tags": [
           "ServiceOrderItemParts"
         ],
-        "operationId": "ServiceOrderItemParts_GetWorkItemParts",
+        "operationId": "GetWorkItemParts",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6200,7 +6200,7 @@
         "tags": [
           "ServiceOrderItems"
         ],
-        "operationId": "ServiceOrderItems_GetWorkItems",
+        "operationId": "GetWorkItems",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6234,7 +6234,7 @@
           "ServiceOrderItems"
         ],
         "summary": "Add work items",
-        "operationId": "ServiceOrderItems_AddWorkItems",
+        "operationId": "AddWorkItems",
         "consumes": [
           "application/json",
           "text/json",
@@ -6288,7 +6288,7 @@
         ],
         "summary": "Retrieve work items",
         "description": "Sample request:\r\n            \r\nGET /api/service/workitems\r\n            \r\nGET /api/service/workitems?status=pending\r\n            \r\nGET /api/service/workitems?&amp;status=pending,delayed&amp;companyId=10&amp;from=2010-11-15T10:11:12&amp;to=2011-11-15T10:11:12&amp;workItemNumber=0629-000032-02",
-        "operationId": "ServiceOrderItems_GetWorkItems",
+        "operationId": "GetWorkItems",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6364,7 +6364,7 @@
         "tags": [
           "ServiceOrderItems"
         ],
-        "operationId": "ServiceOrderItems_GetWorkItem",
+        "operationId": "GetWorkItem",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6396,7 +6396,7 @@
         ],
         "summary": "Update work item",
         "description": "WorkStatus:\r\nPending = 0\r\nInProgress = 1\r\nCompleted = 2\r\nDelayed = 3\r\nWithdrawn = 4\r\nLocked = 5<br />\r\nAsFoundCheck/AsLeftCheck (ChecklistResultStatus):\r\nNotServiced = 0,\r\nFail = 1,\r\nPass = 2<br />\r\nResultStatus/AsFoundResult/AsLeftResult (ServiceResultStatus):\r\nNotAvailable = 0,\r\nFail = 1,\r\nFailAmbiguous = 10,\r\nFailSignificant = 11,\r\nPass = 2,\r\nPassAmbiguous = 20,\r\nPassAdjustment = 21,\r\nDone = 22,",
-        "operationId": "ServiceOrderItems_SetWorkItem",
+        "operationId": "SetWorkItem",
         "consumes": [
           "application/json",
           "text/json",
@@ -6448,7 +6448,7 @@
         "tags": [
           "ServiceOrderItems"
         ],
-        "operationId": "ServiceOrderItems_GetWorkItemImages",
+        "operationId": "GetWorkItemImages",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6481,7 +6481,7 @@
         "tags": [
           "ServiceOrderItems"
         ],
-        "operationId": "ServiceOrderItems_UploadWorkItemImages",
+        "operationId": "UploadWorkItemImages",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6513,7 +6513,7 @@
         "tags": [
           "ServiceOrderItems"
         ],
-        "operationId": "ServiceOrderItems_GetWorkItemImage",
+        "operationId": "GetWorkItemImage",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6549,7 +6549,7 @@
         "tags": [
           "ServiceOrderItems"
         ],
-        "operationId": "ServiceOrderItems_DeleteWorkItemImage",
+        "operationId": "DeleteWorkItemImage",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6587,7 +6587,7 @@
         "tags": [
           "ServiceOrderItems"
         ],
-        "operationId": "ServiceOrderItems_GetWorkItemCharges",
+        "operationId": "GetWorkItemCharges",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6619,7 +6619,7 @@
         ],
         "summary": "Apply Service Order Item Charges",
         "description": "Allowed Names:\r\n    OverrideServiceTotal,\r\n    OverridePartsTotal,\r\n    OverrideRepairsTotal",
-        "operationId": "ServiceOrderItems_PutCharges",
+        "operationId": "PutCharges",
         "consumes": [
           "application/json",
           "text/json",
@@ -6667,7 +6667,7 @@
         "tags": [
           "ServiceOrderItemTasks"
         ],
-        "operationId": "ServiceOrderItemTasks_GetWorkItemTasks",
+        "operationId": "GetWorkItemTasks",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6697,7 +6697,7 @@
         "tags": [
           "ServiceOrderItemTasks"
         ],
-        "operationId": "ServiceOrderItemTasks_CreateWorkItemTask",
+        "operationId": "CreateWorkItemTask",
         "consumes": [
           "application/json",
           "text/json",
@@ -6743,7 +6743,7 @@
         "tags": [
           "ServiceOrderItemTasks"
         ],
-        "operationId": "ServiceOrderItemTasks_GetWorkItemTask",
+        "operationId": "GetWorkItemTask",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6780,7 +6780,7 @@
         "tags": [
           "ServiceOrderItemTasks"
         ],
-        "operationId": "ServiceOrderItemTasks_DeleteWorkItemTask",
+        "operationId": "DeleteWorkItemTask",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6820,7 +6820,7 @@
           "ServiceOrderMetadata"
         ],
         "summary": "Get list of metadata",
-        "operationId": "ServiceOrderMetadata_Get",
+        "operationId": "Get",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6852,7 +6852,7 @@
           "ServiceOrderMetadata"
         ],
         "summary": "Update metadata",
-        "operationId": "ServiceOrderMetadata_Update",
+        "operationId": "Update",
         "consumes": [
           "application/json",
           "text/json",
@@ -6899,7 +6899,7 @@
           "ServiceOrderMetadata"
         ],
         "summary": "Create metadata",
-        "operationId": "ServiceOrderMetadata_Create",
+        "operationId": "Create",
         "consumes": [
           "application/json",
           "text/json",
@@ -6948,7 +6948,7 @@
           "ServiceOrderMetadata"
         ],
         "summary": "Delete metadata",
-        "operationId": "ServiceOrderMetadata_Delete",
+        "operationId": "Delete",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6990,7 +6990,7 @@
           "ServiceOrderParts"
         ],
         "description": "",
-        "operationId": "ServiceOrderParts_GetWorkOrderParts",
+        "operationId": "GetWorkOrderParts",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7030,7 +7030,7 @@
           "ServiceOrderParts"
         ],
         "description": "ServiceOrderChargeType: Part, Labor, Charge",
-        "operationId": "ServiceOrderParts_UpdateWorkOrderParts",
+        "operationId": "UpdateWorkOrderParts",
         "consumes": [
           "application/json",
           "text/json",
@@ -7081,7 +7081,7 @@
           "ServiceOrderParts"
         ],
         "description": "ServiceOrderChargeType: Part, Labor, Charge",
-        "operationId": "ServiceOrderParts_CreateWorkOrderParts",
+        "operationId": "CreateWorkOrderParts",
         "consumes": [
           "application/json",
           "text/json",
@@ -7134,7 +7134,7 @@
           "ServiceOrderParts"
         ],
         "description": "",
-        "operationId": "ServiceOrderParts_DeleteWorkOrderTask",
+        "operationId": "DeleteWorkOrderTask",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7179,7 +7179,7 @@
         "tags": [
           "ServiceOrderPayments"
         ],
-        "operationId": "ServiceOrderPayments_GetWorkOrderPayment",
+        "operationId": "GetWorkOrderPayment",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7211,7 +7211,7 @@
         "tags": [
           "ServiceOrderPayments"
         ],
-        "operationId": "ServiceOrderPayments_GetAllWorkOrderPayments",
+        "operationId": "GetAllWorkOrderPayments",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7244,7 +7244,7 @@
         "tags": [
           "ServiceOrderPayments"
         ],
-        "operationId": "ServiceOrderPayments_CreateWorkOrderPayment",
+        "operationId": "CreateWorkOrderPayment",
         "consumes": [
           "application/json",
           "text/json",
@@ -7290,7 +7290,7 @@
         "tags": [
           "ServiceOrderPayments"
         ],
-        "operationId": "ServiceOrderPayments_ChangeWorkOrderPaymentStatus",
+        "operationId": "ChangeWorkOrderPaymentStatus",
         "consumes": [
           "application/json",
           "text/json",
@@ -7338,7 +7338,7 @@
         ],
         "summary": "Retrieve work orders by filters",
         "description": "Sample request:\r\n            \r\nGET /api/service/workorders\r\n            \r\nGET /api/service/workorders?status=submitted\r\n            \r\nGET /api/service/workorders?&amp;status=onsite,submitted&amp;companyId=10&amp;from=2010-11-15T10:11:12&amp;to=2011-11-15T10:11:12&amp;modifiedAfter=2010-12-15T10:11:12&amp;workOrderNumber=00567",
-        "operationId": "ServiceOrders_GetWorkOrders",
+        "operationId": "GetWorkOrders",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7422,7 +7422,7 @@
         ],
         "summary": "Create service order.",
         "description": "",
-        "operationId": "ServiceOrders_CreateAsync",
+        "operationId": "CreateAsync",
         "consumes": [
           "application/json",
           "text/json",
@@ -7465,7 +7465,7 @@
         "tags": [
           "ServiceOrders"
         ],
-        "operationId": "ServiceOrders_GetWorkOrders",
+        "operationId": "GetWorkOrders",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7506,7 +7506,7 @@
         "tags": [
           "ServiceOrders"
         ],
-        "operationId": "ServiceOrders_GetWorkOrder",
+        "operationId": "GetWorkOrder",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7538,7 +7538,7 @@
         "tags": [
           "ServiceOrders"
         ],
-        "operationId": "ServiceOrders_GetAssignments",
+        "operationId": "GetAssignments",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7573,7 +7573,7 @@
         "tags": [
           "ServiceOrders"
         ],
-        "operationId": "ServiceOrders_GetCharges",
+        "operationId": "GetCharges",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7604,7 +7604,7 @@
           "ServiceOrders"
         ],
         "summary": "Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount, ShippingFee",
-        "operationId": "ServiceOrders_PutCharges",
+        "operationId": "PutCharges",
         "consumes": [
           "application/json",
           "text/json",
@@ -7652,7 +7652,7 @@
         "tags": [
           "ServiceOrders"
         ],
-        "operationId": "ServiceOrders_CreateOrderBySchedule",
+        "operationId": "CreateOrderBySchedule",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7685,7 +7685,7 @@
           "ServiceOrders"
         ],
         "summary": "Cancel work order",
-        "operationId": "ServiceOrders_OrderCancel",
+        "operationId": "OrderCancel",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7726,7 +7726,7 @@
           "ServiceOrders"
         ],
         "summary": "Gets current status and next status according to the workflow",
-        "operationId": "ServiceOrders_GetOrderStatus",
+        "operationId": "GetOrderStatus",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7764,7 +7764,7 @@
           "ServiceOrders"
         ],
         "summary": "Change Work Order Status",
-        "operationId": "ServiceOrders_ChangeOrderStatus",
+        "operationId": "ChangeOrderStatus",
         "consumes": [
           "application/json",
           "text/json",
@@ -7821,7 +7821,7 @@
         "tags": [
           "ServiceOrderShipments"
         ],
-        "operationId": "ServiceOrderShipments_UpdateShipmentStatus",
+        "operationId": "UpdateShipmentStatus",
         "consumes": [
           "application/json",
           "text/json",
@@ -7867,7 +7867,7 @@
         "tags": [
           "ServiceOrderShipments"
         ],
-        "operationId": "ServiceOrderShipments_AppendShipmentTrackingNumber",
+        "operationId": "AppendShipmentTrackingNumber",
         "consumes": [
           "application/json",
           "text/json",
@@ -7914,7 +7914,7 @@
           "ServiceOrderTasks"
         ],
         "description": "TimeSpent\r\nInteger part (before dot) is hours\r\nFractional part (after dot) is minutes\r\nFor example:\r\n    if time spent is 10 minutes -&gt; 10 / 60 = 0.1666666666666667\r\n    if time spent is 65 minutes -&gt; (65 - 60) + (5 / 60) = 1.0833333333333333",
-        "operationId": "ServiceOrderTasks_GetWorkOrderTasks",
+        "operationId": "GetWorkOrderTasks",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7954,7 +7954,7 @@
           "ServiceOrderTasks"
         ],
         "description": "- If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their difference\r\n- If StartTime and FinishTime are not defined they will be recalculated\r\n    - if StartTime - in will be recalculated FinishTime - TimeSpent\r\n    - if FinishTime - in will be recalculated StartTime + TimeSpent",
-        "operationId": "ServiceOrderTasks_UpdateWorkOrderTask",
+        "operationId": "UpdateWorkOrderTask",
         "consumes": [
           "application/json",
           "text/json",
@@ -8005,7 +8005,7 @@
           "ServiceOrderTasks"
         ],
         "description": "- If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their difference\r\n- If StartTime and FinishTime are not defined they will be recalculated\r\n    - if StartTime - in will be recalculated FinishTime - TimeSpent\r\n    - if FinishTime - in will be recalculated StartTime + TimeSpent",
-        "operationId": "ServiceOrderTasks_CreateWorkOrderTask",
+        "operationId": "CreateWorkOrderTask",
         "consumes": [
           "application/json",
           "text/json",
@@ -8058,7 +8058,7 @@
           "ServiceOrderTasks"
         ],
         "description": "",
-        "operationId": "ServiceOrderTasks_DeleteWorkOrderTask",
+        "operationId": "DeleteWorkOrderTask",
         "consumes": [],
         "produces": [
           "application/json",
@@ -8104,7 +8104,7 @@
           "ServicePricing"
         ],
         "summary": "",
-        "operationId": "ServicePricing_Get",
+        "operationId": "Get",
         "consumes": [],
         "produces": [
           "application/json",
@@ -8146,7 +8146,7 @@
         "tags": [
           "ServicePricing"
         ],
-        "operationId": "ServicePricing_Update",
+        "operationId": "Update",
         "consumes": [
           "application/json",
           "text/json",
@@ -8191,7 +8191,7 @@
         "tags": [
           "Vendors"
         ],
-        "operationId": "Vendors_Get",
+        "operationId": "Get",
         "consumes": [],
         "produces": [
           "application/json",
@@ -8223,7 +8223,7 @@
         "tags": [
           "Vendors"
         ],
-        "operationId": "Vendors_GetAll",
+        "operationId": "GetAll",
         "consumes": [],
         "produces": [
           "application/json",
@@ -8277,7 +8277,7 @@
         ],
         "summary": "Update Vendor information.",
         "description": "",
-        "operationId": "Vendors_Update",
+        "operationId": "Update",
         "consumes": [
           "application/json",
           "text/json",
@@ -8323,7 +8323,7 @@
         ],
         "summary": "Create Vendor information.",
         "description": "",
-        "operationId": "Vendors_Create",
+        "operationId": "Create",
         "consumes": [
           "application/json",
           "text/json",

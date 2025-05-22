@@ -33,12 +33,12 @@ class ServiceOrderItemTasksApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def service_order_item_tasks_create_work_item_task(self, work_item_id, model, **kwargs):  # noqa: E501
-        """service_order_item_tasks_create_work_item_task  # noqa: E501
+    def create_work_item_task(self, work_item_id, model, **kwargs):  # noqa: E501
+        """create_work_item_task  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_tasks_create_work_item_task(work_item_id, model, async_req=True)
+        >>> thread = api.create_work_item_task(work_item_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -50,17 +50,17 @@ class ServiceOrderItemTasksApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_item_tasks_create_work_item_task_with_http_info(work_item_id, model, **kwargs)  # noqa: E501
+            return self.create_work_item_task_with_http_info(work_item_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_item_tasks_create_work_item_task_with_http_info(work_item_id, model, **kwargs)  # noqa: E501
+            (data) = self.create_work_item_task_with_http_info(work_item_id, model, **kwargs)  # noqa: E501
             return data
 
-    def service_order_item_tasks_create_work_item_task_with_http_info(self, work_item_id, model, **kwargs):  # noqa: E501
-        """service_order_item_tasks_create_work_item_task  # noqa: E501
+    def create_work_item_task_with_http_info(self, work_item_id, model, **kwargs):  # noqa: E501
+        """create_work_item_task  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_tasks_create_work_item_task_with_http_info(work_item_id, model, async_req=True)
+        >>> thread = api.create_work_item_task_with_http_info(work_item_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -82,18 +82,18 @@ class ServiceOrderItemTasksApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_item_tasks_create_work_item_task" % key
+                    " to method create_work_item_task" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'work_item_id' is set
         if self.api_client.client_side_validation and ('work_item_id' not in params or
                                                        params['work_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `work_item_id` when calling `service_order_item_tasks_create_work_item_task`")  # noqa: E501
+            raise ValueError("Missing the required parameter `work_item_id` when calling `create_work_item_task`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `service_order_item_tasks_create_work_item_task`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `create_work_item_task`")  # noqa: E501
 
         collection_formats = {}
 
@@ -138,12 +138,12 @@ class ServiceOrderItemTasksApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_order_item_tasks_delete_work_item_task(self, work_item_id, task_id, **kwargs):  # noqa: E501
-        """service_order_item_tasks_delete_work_item_task  # noqa: E501
+    def delete_work_item_task(self, work_item_id, task_id, **kwargs):  # noqa: E501
+        """delete_work_item_task  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_tasks_delete_work_item_task(work_item_id, task_id, async_req=True)
+        >>> thread = api.delete_work_item_task(work_item_id, task_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -155,17 +155,17 @@ class ServiceOrderItemTasksApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_item_tasks_delete_work_item_task_with_http_info(work_item_id, task_id, **kwargs)  # noqa: E501
+            return self.delete_work_item_task_with_http_info(work_item_id, task_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_item_tasks_delete_work_item_task_with_http_info(work_item_id, task_id, **kwargs)  # noqa: E501
+            (data) = self.delete_work_item_task_with_http_info(work_item_id, task_id, **kwargs)  # noqa: E501
             return data
 
-    def service_order_item_tasks_delete_work_item_task_with_http_info(self, work_item_id, task_id, **kwargs):  # noqa: E501
-        """service_order_item_tasks_delete_work_item_task  # noqa: E501
+    def delete_work_item_task_with_http_info(self, work_item_id, task_id, **kwargs):  # noqa: E501
+        """delete_work_item_task  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_tasks_delete_work_item_task_with_http_info(work_item_id, task_id, async_req=True)
+        >>> thread = api.delete_work_item_task_with_http_info(work_item_id, task_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -187,18 +187,18 @@ class ServiceOrderItemTasksApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_item_tasks_delete_work_item_task" % key
+                    " to method delete_work_item_task" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'work_item_id' is set
         if self.api_client.client_side_validation and ('work_item_id' not in params or
                                                        params['work_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `work_item_id` when calling `service_order_item_tasks_delete_work_item_task`")  # noqa: E501
+            raise ValueError("Missing the required parameter `work_item_id` when calling `delete_work_item_task`")  # noqa: E501
         # verify the required parameter 'task_id' is set
         if self.api_client.client_side_validation and ('task_id' not in params or
                                                        params['task_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `task_id` when calling `service_order_item_tasks_delete_work_item_task`")  # noqa: E501
+            raise ValueError("Missing the required parameter `task_id` when calling `delete_work_item_task`")  # noqa: E501
 
         collection_formats = {}
 
@@ -239,12 +239,12 @@ class ServiceOrderItemTasksApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_order_item_tasks_get_work_item_task(self, work_item_id, task_id, **kwargs):  # noqa: E501
-        """service_order_item_tasks_get_work_item_task  # noqa: E501
+    def get_work_item_task(self, work_item_id, task_id, **kwargs):  # noqa: E501
+        """get_work_item_task  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_tasks_get_work_item_task(work_item_id, task_id, async_req=True)
+        >>> thread = api.get_work_item_task(work_item_id, task_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -256,17 +256,17 @@ class ServiceOrderItemTasksApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_item_tasks_get_work_item_task_with_http_info(work_item_id, task_id, **kwargs)  # noqa: E501
+            return self.get_work_item_task_with_http_info(work_item_id, task_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_item_tasks_get_work_item_task_with_http_info(work_item_id, task_id, **kwargs)  # noqa: E501
+            (data) = self.get_work_item_task_with_http_info(work_item_id, task_id, **kwargs)  # noqa: E501
             return data
 
-    def service_order_item_tasks_get_work_item_task_with_http_info(self, work_item_id, task_id, **kwargs):  # noqa: E501
-        """service_order_item_tasks_get_work_item_task  # noqa: E501
+    def get_work_item_task_with_http_info(self, work_item_id, task_id, **kwargs):  # noqa: E501
+        """get_work_item_task  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_tasks_get_work_item_task_with_http_info(work_item_id, task_id, async_req=True)
+        >>> thread = api.get_work_item_task_with_http_info(work_item_id, task_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -288,18 +288,18 @@ class ServiceOrderItemTasksApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_item_tasks_get_work_item_task" % key
+                    " to method get_work_item_task" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'work_item_id' is set
         if self.api_client.client_side_validation and ('work_item_id' not in params or
                                                        params['work_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `work_item_id` when calling `service_order_item_tasks_get_work_item_task`")  # noqa: E501
+            raise ValueError("Missing the required parameter `work_item_id` when calling `get_work_item_task`")  # noqa: E501
         # verify the required parameter 'task_id' is set
         if self.api_client.client_side_validation and ('task_id' not in params or
                                                        params['task_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `task_id` when calling `service_order_item_tasks_get_work_item_task`")  # noqa: E501
+            raise ValueError("Missing the required parameter `task_id` when calling `get_work_item_task`")  # noqa: E501
 
         collection_formats = {}
 
@@ -340,12 +340,12 @@ class ServiceOrderItemTasksApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_order_item_tasks_get_work_item_tasks(self, work_item_id, **kwargs):  # noqa: E501
-        """service_order_item_tasks_get_work_item_tasks  # noqa: E501
+    def get_work_item_tasks(self, work_item_id, **kwargs):  # noqa: E501
+        """get_work_item_tasks  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_tasks_get_work_item_tasks(work_item_id, async_req=True)
+        >>> thread = api.get_work_item_tasks(work_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -356,17 +356,17 @@ class ServiceOrderItemTasksApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_item_tasks_get_work_item_tasks_with_http_info(work_item_id, **kwargs)  # noqa: E501
+            return self.get_work_item_tasks_with_http_info(work_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_item_tasks_get_work_item_tasks_with_http_info(work_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_work_item_tasks_with_http_info(work_item_id, **kwargs)  # noqa: E501
             return data
 
-    def service_order_item_tasks_get_work_item_tasks_with_http_info(self, work_item_id, **kwargs):  # noqa: E501
-        """service_order_item_tasks_get_work_item_tasks  # noqa: E501
+    def get_work_item_tasks_with_http_info(self, work_item_id, **kwargs):  # noqa: E501
+        """get_work_item_tasks  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_tasks_get_work_item_tasks_with_http_info(work_item_id, async_req=True)
+        >>> thread = api.get_work_item_tasks_with_http_info(work_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -387,14 +387,14 @@ class ServiceOrderItemTasksApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_item_tasks_get_work_item_tasks" % key
+                    " to method get_work_item_tasks" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'work_item_id' is set
         if self.api_client.client_side_validation and ('work_item_id' not in params or
                                                        params['work_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `work_item_id` when calling `service_order_item_tasks_get_work_item_tasks`")  # noqa: E501
+            raise ValueError("Missing the required parameter `work_item_id` when calling `get_work_item_tasks`")  # noqa: E501
 
         collection_formats = {}
 

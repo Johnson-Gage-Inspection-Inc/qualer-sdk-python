@@ -56,10 +56,10 @@ api_instance = qualer_sdk.AccountApi(qualer_sdk.ApiClient(configuration))
 model = qualer_sdk.QualerWebMvcAreasApiModelsAccountToLoginModel() # QualerWebMvcAreasApiModelsAccountToLoginModel | 
 
 try:
-    api_response = api_instance.account_companies(model)
+    api_response = api_instance.companies(model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AccountApi->account_companies: %s\n" % e)
+    print("Exception when calling AccountApi->companies: %s\n" % e)
 
 ```
 
@@ -69,212 +69,212 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccountApi* | [**account_companies**](docs/AccountApi.md#account_companies) | **POST** /api/user/companies | 
-*AccountApi* | [**account_get_employee_message**](docs/AccountApi.md#account_get_employee_message) | **GET** /api/user/messages/{messageId} | 
-*AccountApi* | [**account_get_employee_messages**](docs/AccountApi.md#account_get_employee_messages) | **GET** /api/user/messages | 
-*AccountApi* | [**account_login**](docs/AccountApi.md#account_login) | **POST** /api/login | Login
-*AccountApi* | [**account_logout**](docs/AccountApi.md#account_logout) | **POST** /api/logout | Logout
-*AccountApi* | [**account_post_employee_location**](docs/AccountApi.md#account_post_employee_location) | **POST** /api/user/location | Post Employee Location
-*AssetAttributesApi* | [**asset_attributes_get_asset_attributes**](docs/AssetAttributesApi.md#asset_attributes_get_asset_attributes) | **GET** /api/assets/{assetId}/attributes | 
-*AssetAttributesApi* | [**asset_attributes_upsert_asset_attributes**](docs/AssetAttributesApi.md#asset_attributes_upsert_asset_attributes) | **PUT** /api/assets/{assetId}/attributes | 
-*AssetMaintenancePlansApi* | [**asset_maintenance_plans_get_maintenance_plan**](docs/AssetMaintenancePlansApi.md#asset_maintenance_plans_get_maintenance_plan) | **GET** /api/assets/{assetId}/plans/{maintenancePlanId} | 
-*AssetMaintenancePlansApi* | [**asset_maintenance_plans_get_maintenance_plans**](docs/AssetMaintenancePlansApi.md#asset_maintenance_plans_get_maintenance_plans) | **GET** /api/assets/{assetId}/plans | 
-*AssetMaintenancePlansApi* | [**asset_maintenance_plans_reset_initial_service_date**](docs/AssetMaintenancePlansApi.md#asset_maintenance_plans_reset_initial_service_date) | **PUT** /api/assets/{assetId}/plans/{maintenancePlanId} | 
-*AssetMeasurementsApi* | [**asset_measurements_get_measurements_by_asset**](docs/AssetMeasurementsApi.md#asset_measurements_get_measurements_by_asset) | **GET** /api/assets/{assetId}/measurements | 
-*AssetPoolsApi* | [**asset_pools_get**](docs/AssetPoolsApi.md#asset_pools_get) | **GET** /api/assetpools/{id} | 
-*AssetPoolsApi* | [**asset_pools_get_all**](docs/AssetPoolsApi.md#asset_pools_get_all) | **GET** /api/assetpools | 
-*AssetReservationApi* | [**asset_reservation_close**](docs/AssetReservationApi.md#asset_reservation_close) | **PUT** /api/assetsreservations/close | 
-*AssetReservationApi* | [**asset_reservation_get**](docs/AssetReservationApi.md#asset_reservation_get) | **GET** /api/assetsreservations | 
-*AssetReservationApi* | [**asset_reservation_upsert**](docs/AssetReservationApi.md#asset_reservation_upsert) | **PUT** /api/assetsreservations | 
-*AssetServiceForecastApi* | [**asset_service_forecast_get_asset_forecast_list**](docs/AssetServiceForecastApi.md#asset_service_forecast_get_asset_forecast_list) | **GET** /api/assetserviceforecast | 
-*AssetServiceForecastApi* | [**asset_service_forecast_get_client_asset_forecast_list**](docs/AssetServiceForecastApi.md#asset_service_forecast_get_client_asset_forecast_list) | **GET** /api/assetserviceforecast/client/{clientCompanyId} | 
-*AssetServiceRecordsApi* | [**asset_service_records_add_asset_service_record**](docs/AssetServiceRecordsApi.md#asset_service_records_add_asset_service_record) | **POST** /api/assets/{assetId}/assetservicerecords | 
-*AssetServiceRecordsApi* | [**asset_service_records_document_list**](docs/AssetServiceRecordsApi.md#asset_service_records_document_list) | **GET** /api/assetservicerecords/{AssetServiceRecordId}/documents/files | 
-*AssetServiceRecordsApi* | [**asset_service_records_download_document**](docs/AssetServiceRecordsApi.md#asset_service_records_download_document) | **GET** /api/assetservicerecords/{AssetServiceRecordId}/documents/{FileName} | 
-*AssetServiceRecordsApi* | [**asset_service_records_download_documents**](docs/AssetServiceRecordsApi.md#asset_service_records_download_documents) | **GET** /api/assetservicerecords/{assetServiceRecordId}/documents | 
-*AssetServiceRecordsApi* | [**asset_service_records_get_asset_service_record**](docs/AssetServiceRecordsApi.md#asset_service_records_get_asset_service_record) | **GET** /api/assetservicerecords/{AssetServiceRecordId} | 
-*AssetServiceRecordsApi* | [**asset_service_records_get_asset_service_records**](docs/AssetServiceRecordsApi.md#asset_service_records_get_asset_service_records) | **GET** /api/assetservicerecords | 
-*AssetServiceRecordsApi* | [**asset_service_records_get_asset_service_records_by_asset**](docs/AssetServiceRecordsApi.md#asset_service_records_get_asset_service_records_by_asset) | **GET** /api/assets/{assetId}/assetservicerecords | 
-*AssetServiceRecordsApi* | [**asset_service_records_update_asset_service_record**](docs/AssetServiceRecordsApi.md#asset_service_records_update_asset_service_record) | **PUT** /api/assetservicerecords/{assetServiceRecordId} | 
-*AssetServiceRecordsApi* | [**asset_service_records_upload_documents**](docs/AssetServiceRecordsApi.md#asset_service_records_upload_documents) | **POST** /api/assetservicerecords/{assetServiceRecordId}/documents | 
-*AssetsApi* | [**assets_clear_collected_assets**](docs/AssetsApi.md#assets_clear_collected_assets) | **PUT** /api/assets/collection/remove | ClearCollectedAssets(int[] assetIds)
-*AssetsApi* | [**assets_collect_assets**](docs/AssetsApi.md#assets_collect_assets) | **PUT** /api/assets/collection/add | CollectAssets(int[] assetIds)
-*AssetsApi* | [**assets_get_all_assets**](docs/AssetsApi.md#assets_get_all_assets) | **GET** /api/assets | 
-*AssetsApi* | [**assets_get_asset**](docs/AssetsApi.md#assets_get_asset) | **GET** /api/assets/{id} | 
-*AssetsApi* | [**assets_get_asset_by_asset_pool**](docs/AssetsApi.md#assets_get_asset_by_asset_pool) | **GET** /api/assets/byassetpool/{assetPoolId} | 
-*AssetsApi* | [**assets_get_asset_by_asset_tag**](docs/AssetsApi.md#assets_get_asset_by_asset_tag) | **GET** /api/assets/byassettag/{assetTag} | 
-*AssetsApi* | [**assets_get_asset_by_attribute**](docs/AssetsApi.md#assets_get_asset_by_attribute) | **GET** /api/assets/byattribute | 
-*AssetsApi* | [**assets_get_asset_by_barcode**](docs/AssetsApi.md#assets_get_asset_by_barcode) | **GET** /api/assets/bybarcode/{barcode} | 
-*AssetsApi* | [**assets_get_asset_by_serial_number**](docs/AssetsApi.md#assets_get_asset_by_serial_number) | **GET** /api/assets/byserialnumber/{serialNumber} | 
-*AssetsApi* | [**assets_get_asset_images**](docs/AssetsApi.md#assets_get_asset_images) | **GET** /api/assets/{id}/images | GetAssetImages
-*AssetsApi* | [**assets_get_asset_manager_counters**](docs/AssetsApi.md#assets_get_asset_manager_counters) | **GET** /api/assets/counters | GetAssetManagerCounters
-*AssetsApi* | [**assets_get_asset_manager_list**](docs/AssetsApi.md#assets_get_asset_manager_list) | **GET** /api/assets/byfilter | GetAssetManagerList
-*AssetsApi* | [**assets_get_assets_by_equipment_id**](docs/AssetsApi.md#assets_get_assets_by_equipment_id) | **GET** /api/assets/byequipmentid/{equipmentId} | 
-*AssetsApi* | [**assets_post_asset_images**](docs/AssetsApi.md#assets_post_asset_images) | **POST** /api/assets/{id}/images | PostAssetImages
-*AssetsApi* | [**assets_update_asset_class**](docs/AssetsApi.md#assets_update_asset_class) | **PUT** /api/assets/{id}/class | 
-*AssetsApi* | [**assets_update_asset_department**](docs/AssetsApi.md#assets_update_asset_department) | **PUT** /api/assets/{id}/department | 
-*AssetsApi* | [**assets_update_asset_room**](docs/AssetsApi.md#assets_update_asset_room) | **PUT** /api/assets/{id}/room | 
-*AssetsApi* | [**assets_update_room**](docs/AssetsApi.md#assets_update_room) | **PUT** /api/assets/room | 
-*ClientAssetAttributesApi* | [**client_asset_attributes_get_asset_attributes**](docs/ClientAssetAttributesApi.md#client_asset_attributes_get_asset_attributes) | **GET** /api/service/clients/assets/{assetId}/attributes | 
-*ClientAssetAttributesApi* | [**client_asset_attributes_upsert_asset_attributes**](docs/ClientAssetAttributesApi.md#client_asset_attributes_upsert_asset_attributes) | **PUT** /api/service/clients/assets/{assetId}/attributes | 
-*ClientAssetServiceRecordsApi* | [**client_asset_service_records_get_asset_service_records_by_asset**](docs/ClientAssetServiceRecordsApi.md#client_asset_service_records_get_asset_service_records_by_asset) | **GET** /api/service/clients/assets/{assetId}/assetservicerecords | 
-*ClientAssetsApi* | [**client_assets_create_asset**](docs/ClientAssetsApi.md#client_assets_create_asset) | **POST** /api/service/clients/assets | 
-*ClientAssetsApi* | [**client_assets_get_all_assets**](docs/ClientAssetsApi.md#client_assets_get_all_assets) | **GET** /api/service/clients/assets | 
-*ClientAssetsApi* | [**client_assets_get_asset**](docs/ClientAssetsApi.md#client_assets_get_asset) | **GET** /api/service/clients/assets/{AssetId} | 
-*ClientAssetsApi* | [**client_assets_get_asset_counters**](docs/ClientAssetsApi.md#client_assets_get_asset_counters) | **GET** /api/service/clients/{clientCompanyId}/counters | 
-*ClientAssetsApi* | [**client_assets_get_asset_manager_list**](docs/ClientAssetsApi.md#client_assets_get_asset_manager_list) | **GET** /api/service/clients/{clientCompanyId}/assets/byfilter | GetAssetManagerList
-*ClientAssetsApi* | [**client_assets_get_assets**](docs/ClientAssetsApi.md#client_assets_get_assets) | **GET** /api/service/clients/{clientCompanyId}/assets | 
-*ClientAttributeApi* | [**client_attribute_get_client_attributes**](docs/ClientAttributeApi.md#client_attribute_get_client_attributes) | **GET** /api/service/clients/{clientCompanyId}/attributes | 
-*ClientAttributeApi* | [**client_attribute_upsert_client_attribute**](docs/ClientAttributeApi.md#client_attribute_upsert_client_attribute) | **POST** /api/service/clients/{clientCompanyId}/attributes | 
-*ClientEmployeesApi* | [**client_employees_create_employee**](docs/ClientEmployeesApi.md#client_employees_create_employee) | **POST** /api/service/clients/employees | 
-*ClientEmployeesApi* | [**client_employees_get_employee**](docs/ClientEmployeesApi.md#client_employees_get_employee) | **GET** /api/service/clients/employees/{EmployeeId} | 
-*ClientEmployeesApi* | [**client_employees_get_employees**](docs/ClientEmployeesApi.md#client_employees_get_employees) | **GET** /api/service/clients/{clientCompanyId}/employees | 
-*ClientEmployeesApi* | [**client_employees_send_employee_email**](docs/ClientEmployeesApi.md#client_employees_send_employee_email) | **PUT** /api/service/clients/employees/{employeeId}/sendemail | 
-*ClientMaintenancePlansApi* | [**client_maintenance_plans_get_maintenance_plan_assets**](docs/ClientMaintenancePlansApi.md#client_maintenance_plans_get_maintenance_plan_assets) | **GET** /api/service/clients/plans/{maintenancePlanId}/assets | 
-*ClientMaintenancePlansApi* | [**client_maintenance_plans_get_maintenance_plans**](docs/ClientMaintenancePlansApi.md#client_maintenance_plans_get_maintenance_plans) | **GET** /api/service/clients/{clientCompanyId}/plans | 
-*ClientSiteApi* | [**client_site_create_client_site**](docs/ClientSiteApi.md#client_site_create_client_site) | **POST** /api/service/clients/{clientCompanyId}/sites | Create Client Site.
-*ClientSiteApi* | [**client_site_get_client_sites**](docs/ClientSiteApi.md#client_site_get_client_sites) | **GET** /api/service/clients/{clientCompanyId}/sites | 
-*ClientSiteApi* | [**client_site_update_client_site**](docs/ClientSiteApi.md#client_site_update_client_site) | **PUT** /api/service/clients/{clientCompanyId}/sites | Update Client Site.
-*ClientsApi* | [**clients_create**](docs/ClientsApi.md#clients_create) | **POST** /api/service/clients | Create Client information.
-*ClientsApi* | [**clients_get**](docs/ClientsApi.md#clients_get) | **GET** /api/service/clients/{clientCompanyId} | 
-*ClientsApi* | [**clients_get_all**](docs/ClientsApi.md#clients_get_all) | **GET** /api/service/clients | 
-*ClientsApi* | [**clients_update**](docs/ClientsApi.md#clients_update) | **PUT** /api/service/clients | Update Client information.
-*CommonApi* | [**common_culture_list**](docs/CommonApi.md#common_culture_list) | **GET** /api/common/culturelist | 
-*CommonApi* | [**common_culture_ui_list**](docs/CommonApi.md#common_culture_ui_list) | **GET** /api/common/cultureuilist | 
-*CommonApi* | [**common_get_company_settings**](docs/CommonApi.md#common_get_company_settings) | **GET** /api/common/settings | 
-*CompanyApi* | [**company_add_department**](docs/CompanyApi.md#company_add_department) | **POST** /api/company/departments | 
-*CompanyApi* | [**company_delete_department**](docs/CompanyApi.md#company_delete_department) | **DELETE** /api/company/departments/{departmentId} | 
-*CompanyApi* | [**company_departments**](docs/CompanyApi.md#company_departments) | **GET** /api/company/departments | 
-*CompanyApi* | [**company_lookups**](docs/CompanyApi.md#company_lookups) | **GET** /api/company/lookups | 
-*CompanyApi* | [**company_site_rooms**](docs/CompanyApi.md#company_site_rooms) | **GET** /api/company/sites/{id}/rooms | 
-*CompanyApi* | [**company_sites**](docs/CompanyApi.md#company_sites) | **GET** /api/company/sites | 
-*CompanyApi* | [**company_update_department**](docs/CompanyApi.md#company_update_department) | **PUT** /api/company/departments/{departmentId} | 
-*EmployeeFilterPreferenceApi* | [**employee_filter_preference_get_employee_filter_preferences**](docs/EmployeeFilterPreferenceApi.md#employee_filter_preference_get_employee_filter_preferences) | **GET** /api/user/filters | GetEmployeeFilterPreferences
-*EmployeeFilterPreferenceApi* | [**employee_filter_preference_update_employee_filter_preference**](docs/EmployeeFilterPreferenceApi.md#employee_filter_preference_update_employee_filter_preference) | **PUT** /api/user/filters | UpdateEmployeeFilterPreference
-*EmployeePreferenceApi* | [**employee_preference_delete**](docs/EmployeePreferenceApi.md#employee_preference_delete) | **DELETE** /api/user/preferences/{elementPage} | 
-*EmployeePreferenceApi* | [**employee_preference_get**](docs/EmployeePreferenceApi.md#employee_preference_get) | **GET** /api/user/preferences/{elementPage} | 
-*EmployeesApi* | [**employees_add_employee_department**](docs/EmployeesApi.md#employees_add_employee_department) | **POST** /api/employees/{employeeId}/department | 
-*EmployeesApi* | [**employees_create_employee**](docs/EmployeesApi.md#employees_create_employee) | **POST** /api/employees | Create Employee
-*EmployeesApi* | [**employees_delete_employee_department**](docs/EmployeesApi.md#employees_delete_employee_department) | **DELETE** /api/employees/{employeeId}/department/{departmentId} | 
-*EmployeesApi* | [**employees_get_employee**](docs/EmployeesApi.md#employees_get_employee) | **GET** /api/employees/{employeeId} | 
-*EmployeesApi* | [**employees_get_employees**](docs/EmployeesApi.md#employees_get_employees) | **GET** /api/employees | 
-*EmployeesApi* | [**employees_update_employee**](docs/EmployeesApi.md#employees_update_employee) | **PUT** /api/employees/{employeeId} | Update Employee
-*EnvironmentsApi* | [**environments_get**](docs/EnvironmentsApi.md#environments_get) | **GET** /api/Environments/{id} | 
-*EnvironmentsApi* | [**environments_post**](docs/EnvironmentsApi.md#environments_post) | **POST** /api/Environments/{id} | 
-*MaintenancePlansApi* | [**maintenance_plans_get_maintenance_plan_assets**](docs/MaintenancePlansApi.md#maintenance_plans_get_maintenance_plan_assets) | **GET** /api/plans/{maintenancePlanId}/assets | 
-*MaintenancePlansApi* | [**maintenance_plans_get_maintenance_plans**](docs/MaintenancePlansApi.md#maintenance_plans_get_maintenance_plans) | **GET** /api/plans | 
-*ProductApi* | [**product_add_manufacturer**](docs/ProductApi.md#product_add_manufacturer) | **POST** /api/manufacturers/add | 
-*ProductApi* | [**product_add_product**](docs/ProductApi.md#product_add_product) | **POST** /api/products/add | 
-*ProductApi* | [**product_get_inventory_count**](docs/ProductApi.md#product_get_inventory_count) | **GET** /api/products/inventorycount | 
-*ProductApi* | [**product_get_manufacturers**](docs/ProductApi.md#product_get_manufacturers) | **GET** /api/manufacturers | 
-*ProductApi* | [**product_get_product**](docs/ProductApi.md#product_get_product) | **GET** /api/products/{productId} | 
-*ProductApi* | [**product_product**](docs/ProductApi.md#product_product) | **PUT** /api/products/{productId} | 
-*ProductApi* | [**product_put_inventory_count**](docs/ProductApi.md#product_put_inventory_count) | **PUT** /api/products/inventorycount | 
-*ReferenceApi* | [**reference_get_measurement_quantities**](docs/ReferenceApi.md#reference_get_measurement_quantities) | **GET** /api/reference/MeasurementQuantities | 
-*ReferenceApi* | [**reference_get_units_of_measure**](docs/ReferenceApi.md#reference_get_units_of_measure) | **GET** /api/reference/UnitsOfMeasure | 
-*ReportDatasetsApi* | [**report_datasets_channel_uniformity_by_order**](docs/ReportDatasetsApi.md#report_datasets_channel_uniformity_by_order) | **GET** /api/data/orders/{serviceOrderId}/ChannelUniformity | 
-*ReportDatasetsApi* | [**report_datasets_get_all_measurements**](docs/ReportDatasetsApi.md#report_datasets_get_all_measurements) | **GET** /api/data/Measurements/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_all_measurements_by_order**](docs/ReportDatasetsApi.md#report_datasets_get_all_measurements_by_order) | **GET** /api/data/orders/{serviceOrderId}/Measurements | 
-*ReportDatasetsApi* | [**report_datasets_get_as_found_measurements**](docs/ReportDatasetsApi.md#report_datasets_get_as_found_measurements) | **GET** /api/data/MeasurementsAsFound/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_as_found_measurements_by_order**](docs/ReportDatasetsApi.md#report_datasets_get_as_found_measurements_by_order) | **GET** /api/data/orders/{serviceOrderId}/MeasurementsAsFound | 
-*ReportDatasetsApi* | [**report_datasets_get_as_left_measurements**](docs/ReportDatasetsApi.md#report_datasets_get_as_left_measurements) | **GET** /api/data/MeasurementsAsLeft/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_as_left_measurements_by_order**](docs/ReportDatasetsApi.md#report_datasets_get_as_left_measurements_by_order) | **GET** /api/data/orders/{serviceOrderId}/MeasurementsAsLeft | 
-*ReportDatasetsApi* | [**report_datasets_get_asset_attributes**](docs/ReportDatasetsApi.md#report_datasets_get_asset_attributes) | **GET** /api/data/AssetAttributes/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_asset_service_records**](docs/ReportDatasetsApi.md#report_datasets_get_asset_service_records) | **GET** /api/data/AssetServiceRecords/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_channel_results**](docs/ReportDatasetsApi.md#report_datasets_get_channel_results) | **GET** /api/data/ChannelResults/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_channel_results_by_order**](docs/ReportDatasetsApi.md#report_datasets_get_channel_results_by_order) | **GET** /api/data/orders/{serviceOrderId}/ChannelResults | 
-*ReportDatasetsApi* | [**report_datasets_get_channel_uniformity**](docs/ReportDatasetsApi.md#report_datasets_get_channel_uniformity) | **GET** /api/data/ChannelUniformity/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_client_attributes**](docs/ReportDatasetsApi.md#report_datasets_get_client_attributes) | **GET** /api/data/ClientAttributes/{serviceOrderId} | 
-*ReportDatasetsApi* | [**report_datasets_get_company_certifications**](docs/ReportDatasetsApi.md#report_datasets_get_company_certifications) | **GET** /api/data/CompanyCertifications | 
-*ReportDatasetsApi* | [**report_datasets_get_external_data_reports**](docs/ReportDatasetsApi.md#report_datasets_get_external_data_reports) | **GET** /api/data/{serviceOrderId}/ExternalDataReports | 
-*ReportDatasetsApi* | [**report_datasets_get_measurement_charts**](docs/ReportDatasetsApi.md#report_datasets_get_measurement_charts) | **GET** /api/data/MeasurementChart/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_measurement_fields**](docs/ReportDatasetsApi.md#report_datasets_get_measurement_fields) | **GET** /api/data/MeasurementFields/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_measurement_fields_by_order**](docs/ReportDatasetsApi.md#report_datasets_get_measurement_fields_by_order) | **GET** /api/data/orders/{serviceOrderId}/MeasurementFields | 
-*ReportDatasetsApi* | [**report_datasets_get_order_item_documents**](docs/ReportDatasetsApi.md#report_datasets_get_order_item_documents) | **GET** /api/data/OrderItemDocuments/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_order_item_images**](docs/ReportDatasetsApi.md#report_datasets_get_order_item_images) | **GET** /api/data/OrderItemImages/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_reference_standards**](docs/ReportDatasetsApi.md#report_datasets_get_reference_standards) | **GET** /api/data/ReferenceStandards/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_reference_standards_by_order**](docs/ReportDatasetsApi.md#report_datasets_get_reference_standards_by_order) | **GET** /api/data/orders/{serviceOrderId}/ReferenceStandards | 
-*ReportDatasetsApi* | [**report_datasets_get_service_order_assignees**](docs/ReportDatasetsApi.md#report_datasets_get_service_order_assignees) | **GET** /api/data/ServiceOrderAssignees/{serviceOrderId} | 
-*ReportDatasetsApi* | [**report_datasets_get_service_order_charges**](docs/ReportDatasetsApi.md#report_datasets_get_service_order_charges) | **GET** /api/data/ServiceOrderCharges/{serviceOrderId} | 
-*ReportDatasetsApi* | [**report_datasets_get_service_order_item_components**](docs/ReportDatasetsApi.md#report_datasets_get_service_order_item_components) | **GET** /api/data/ServiceOrderItemComponents/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_service_order_item_components_by_order**](docs/ReportDatasetsApi.md#report_datasets_get_service_order_item_components_by_order) | **GET** /api/data/orders/{serviceOrderId}/ServiceOrderItemComponents | 
-*ReportDatasetsApi* | [**report_datasets_get_service_order_item_fields_by_order**](docs/ReportDatasetsApi.md#report_datasets_get_service_order_item_fields_by_order) | **GET** /api/data/ServiceOrderItemFieldsByOrder/{serviceOrderId} | 
-*ReportDatasetsApi* | [**report_datasets_get_service_order_item_options**](docs/ReportDatasetsApi.md#report_datasets_get_service_order_item_options) | **GET** /api/data/ServiceOrderItemOptions/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_service_order_item_status_history_async**](docs/ReportDatasetsApi.md#report_datasets_get_service_order_item_status_history_async) | **GET** /api/data/ServiceOrderItemStatusHistory/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_service_order_item_tasks_by_order**](docs/ReportDatasetsApi.md#report_datasets_get_service_order_item_tasks_by_order) | **GET** /api/data/ServiceOrderItemTasksByOrder/{serviceOrderId} | 
-*ReportDatasetsApi* | [**report_datasets_get_service_order_item_tasks_by_order_items**](docs/ReportDatasetsApi.md#report_datasets_get_service_order_item_tasks_by_order_items) | **GET** /api/data/ServiceOrderItemTasksByOrderItem/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_service_order_items**](docs/ReportDatasetsApi.md#report_datasets_get_service_order_items) | **GET** /api/data/ServiceOrderItems/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_service_order_items_by_order**](docs/ReportDatasetsApi.md#report_datasets_get_service_order_items_by_order) | **GET** /api/data/orders/{serviceOrderId}/ServiceOrderItems | 
-*ReportDatasetsApi* | [**report_datasets_get_service_order_tasks**](docs/ReportDatasetsApi.md#report_datasets_get_service_order_tasks) | **GET** /api/data/ServiceOrderTasks/{serviceOrderId} | 
-*ReportDatasetsApi* | [**report_datasets_get_service_orders**](docs/ReportDatasetsApi.md#report_datasets_get_service_orders) | **GET** /api/data/ServiceOrders/{serviceOrderId} | 
-*ReportDatasetsApi* | [**report_datasets_get_tool_attributes**](docs/ReportDatasetsApi.md#report_datasets_get_tool_attributes) | **GET** /api/data/ToolAttributes/{serviceOrderItemId} | 
-*ReportDatasetsApi* | [**report_datasets_get_tool_range_attributes**](docs/ReportDatasetsApi.md#report_datasets_get_tool_range_attributes) | **GET** /api/data/ToolRangeAttributes/{serviceOrderItemId} | 
-*ServiceOrderDocumentsApi* | [**service_order_documents_get_document**](docs/ServiceOrderDocumentsApi.md#service_order_documents_get_document) | **GET** /api/service/workorders/documents/{guid} | Retrieve work order document by Unique Id
-*ServiceOrderDocumentsApi* | [**service_order_documents_get_document_0**](docs/ServiceOrderDocumentsApi.md#service_order_documents_get_document_0) | **GET** /api/wd/{guid} | Retrieve work order document by Unique Id
-*ServiceOrderDocumentsApi* | [**service_order_documents_get_document_list**](docs/ServiceOrderDocumentsApi.md#service_order_documents_get_document_list) | **GET** /api/service/workorders/documents/list | Retrieve work order documents
-*ServiceOrderDocumentsApi* | [**service_order_documents_get_documents**](docs/ServiceOrderDocumentsApi.md#service_order_documents_get_documents) | **GET** /api/service/workorders/{serviceOrderId}/documents | Retrieve work order documents
-*ServiceOrderDocumentsApi* | [**service_order_documents_get_documents_list**](docs/ServiceOrderDocumentsApi.md#service_order_documents_get_documents_list) | **GET** /api/service/workorders/{serviceOrderId}/documents/list | 
-*ServiceOrderDocumentsApi* | [**service_order_documents_upload_documents**](docs/ServiceOrderDocumentsApi.md#service_order_documents_upload_documents) | **POST** /api/service/workorders/{serviceOrderId}/documents | 
-*ServiceOrderItemDocumentsApi* | [**service_order_item_documents_get_document_list**](docs/ServiceOrderItemDocumentsApi.md#service_order_item_documents_get_document_list) | **GET** /api/service/workitems/documents/list | Retrieve work order documents
-*ServiceOrderItemDocumentsApi* | [**service_order_item_documents_get_documents**](docs/ServiceOrderItemDocumentsApi.md#service_order_item_documents_get_documents) | **GET** /api/service/workitems/{serviceOrderItemId}/documents | Retrieve work order documents
-*ServiceOrderItemDocumentsApi* | [**service_order_item_documents_get_documents_list**](docs/ServiceOrderItemDocumentsApi.md#service_order_item_documents_get_documents_list) | **GET** /api/service/workitems/{serviceOrderItemId}/documents/list | 
-*ServiceOrderItemDocumentsApi* | [**service_order_item_documents_upload_documents**](docs/ServiceOrderItemDocumentsApi.md#service_order_item_documents_upload_documents) | **POST** /api/service/workitems/{serviceOrderItemId}/documents | 
-*ServiceOrderItemMeasurementsApi* | [**service_order_item_measurements_add_auxiliary_tools**](docs/ServiceOrderItemMeasurementsApi.md#service_order_item_measurements_add_auxiliary_tools) | **POST** /api/service/workitems/{workItemId}/AuxiliaryTools | 
-*ServiceOrderItemMeasurementsApi* | [**service_order_item_measurements_create_measurement_form**](docs/ServiceOrderItemMeasurementsApi.md#service_order_item_measurements_create_measurement_form) | **POST** /api/service/workitems/{workItemId}/measurements | Create Measurement Form.
-*ServiceOrderItemMeasurementsApi* | [**service_order_item_measurements_get_measurement_form**](docs/ServiceOrderItemMeasurementsApi.md#service_order_item_measurements_get_measurement_form) | **GET** /api/service/workitems/{workItemId}/form | Get Measurement Form.
-*ServiceOrderItemMeasurementsApi* | [**service_order_item_measurements_get_measurements_by_asset**](docs/ServiceOrderItemMeasurementsApi.md#service_order_item_measurements_get_measurements_by_asset) | **GET** /api/service/assets/{assetId}/measurements | 
-*ServiceOrderItemMeasurementsApi* | [**service_order_item_measurements_update_measurement_form**](docs/ServiceOrderItemMeasurementsApi.md#service_order_item_measurements_update_measurement_form) | **POST** /api/service/workitems/{workItemId}/form | Update Measurement Form.
-*ServiceOrderItemPartsApi* | [**service_order_item_parts_get_work_item_parts**](docs/ServiceOrderItemPartsApi.md#service_order_item_parts_get_work_item_parts) | **GET** /api/service/workitems/{workItemId}/parts | 
-*ServiceOrderItemTasksApi* | [**service_order_item_tasks_create_work_item_task**](docs/ServiceOrderItemTasksApi.md#service_order_item_tasks_create_work_item_task) | **POST** /api/service/workitems/{workItemId}/tasks | 
-*ServiceOrderItemTasksApi* | [**service_order_item_tasks_delete_work_item_task**](docs/ServiceOrderItemTasksApi.md#service_order_item_tasks_delete_work_item_task) | **DELETE** /api/service/workitems/{workItemId}/tasks/{taskId} | 
-*ServiceOrderItemTasksApi* | [**service_order_item_tasks_get_work_item_task**](docs/ServiceOrderItemTasksApi.md#service_order_item_tasks_get_work_item_task) | **GET** /api/service/workitems/{workItemId}/tasks/{taskId} | 
-*ServiceOrderItemTasksApi* | [**service_order_item_tasks_get_work_item_tasks**](docs/ServiceOrderItemTasksApi.md#service_order_item_tasks_get_work_item_tasks) | **GET** /api/service/workitems/{workItemId}/tasks | 
-*ServiceOrderItemsApi* | [**service_order_items_add_work_items**](docs/ServiceOrderItemsApi.md#service_order_items_add_work_items) | **PUT** /api/service/workorders/{serviceOrderId}/workitems | Add work items
-*ServiceOrderItemsApi* | [**service_order_items_delete_work_item_image**](docs/ServiceOrderItemsApi.md#service_order_items_delete_work_item_image) | **DELETE** /api/service/workitems/{workItemId}/images/{imageName} | 
-*ServiceOrderItemsApi* | [**service_order_items_get_work_item**](docs/ServiceOrderItemsApi.md#service_order_items_get_work_item) | **GET** /api/service/workitems/{workItemId} | 
-*ServiceOrderItemsApi* | [**service_order_items_get_work_item_charges**](docs/ServiceOrderItemsApi.md#service_order_items_get_work_item_charges) | **GET** /api/service/workitems/{workItemId}/charges | 
-*ServiceOrderItemsApi* | [**service_order_items_get_work_item_image**](docs/ServiceOrderItemsApi.md#service_order_items_get_work_item_image) | **GET** /api/service/workitems/{workItemId}/images/{imageName} | 
-*ServiceOrderItemsApi* | [**service_order_items_get_work_item_images**](docs/ServiceOrderItemsApi.md#service_order_items_get_work_item_images) | **GET** /api/service/workitems/{workItemId}/images | 
-*ServiceOrderItemsApi* | [**service_order_items_get_work_items**](docs/ServiceOrderItemsApi.md#service_order_items_get_work_items) | **GET** /api/service/workorders/{serviceOrderId}/workitems | 
-*ServiceOrderItemsApi* | [**service_order_items_get_work_items_0**](docs/ServiceOrderItemsApi.md#service_order_items_get_work_items_0) | **GET** /api/service/workitems | Retrieve work items
-*ServiceOrderItemsApi* | [**service_order_items_put_charges**](docs/ServiceOrderItemsApi.md#service_order_items_put_charges) | **PUT** /api/service/workitems/{workItemId}/charges | Apply Service Order Item Charges
-*ServiceOrderItemsApi* | [**service_order_items_set_work_item**](docs/ServiceOrderItemsApi.md#service_order_items_set_work_item) | **PUT** /api/service/workitems/{workItemId} | Update work item
-*ServiceOrderItemsApi* | [**service_order_items_upload_work_item_images**](docs/ServiceOrderItemsApi.md#service_order_items_upload_work_item_images) | **POST** /api/service/workitems/{workItemId}/images | 
-*ServiceOrderMetadataApi* | [**service_order_metadata_create**](docs/ServiceOrderMetadataApi.md#service_order_metadata_create) | **POST** /api/service/workorders/{serviceOrderId}/metadata | Create metadata
-*ServiceOrderMetadataApi* | [**service_order_metadata_delete**](docs/ServiceOrderMetadataApi.md#service_order_metadata_delete) | **DELETE** /api/service/workorders/{serviceOrderId}/metadata/{serviceOrderMetadataId} | Delete metadata
-*ServiceOrderMetadataApi* | [**service_order_metadata_get**](docs/ServiceOrderMetadataApi.md#service_order_metadata_get) | **GET** /api/service/workorders/{serviceOrderId}/metadata | Get list of metadata
-*ServiceOrderMetadataApi* | [**service_order_metadata_update**](docs/ServiceOrderMetadataApi.md#service_order_metadata_update) | **PUT** /api/service/workorders/{serviceOrderId}/metadata | Update metadata
-*ServiceOrderPartsApi* | [**service_order_parts_create_work_order_parts**](docs/ServiceOrderPartsApi.md#service_order_parts_create_work_order_parts) | **POST** /api/service/workorders/{serviceOrderId}/parts | 
-*ServiceOrderPartsApi* | [**service_order_parts_delete_work_order_task**](docs/ServiceOrderPartsApi.md#service_order_parts_delete_work_order_task) | **DELETE** /api/service/workorders/{serviceOrderId}/parts/{serviceOrderItemPartId} | 
-*ServiceOrderPartsApi* | [**service_order_parts_get_work_order_parts**](docs/ServiceOrderPartsApi.md#service_order_parts_get_work_order_parts) | **GET** /api/service/workorders/{serviceOrderId}/parts | 
-*ServiceOrderPartsApi* | [**service_order_parts_update_work_order_parts**](docs/ServiceOrderPartsApi.md#service_order_parts_update_work_order_parts) | **PUT** /api/service/workorders/{serviceOrderId}/parts | 
-*ServiceOrderPaymentsApi* | [**service_order_payments_change_work_order_payment_status**](docs/ServiceOrderPaymentsApi.md#service_order_payments_change_work_order_payment_status) | **PUT** /api/service/workorders/{serviceOrderId}/payments/status | 
-*ServiceOrderPaymentsApi* | [**service_order_payments_create_work_order_payment**](docs/ServiceOrderPaymentsApi.md#service_order_payments_create_work_order_payment) | **POST** /api/service/workorders/{serviceOrderId}/payments | 
-*ServiceOrderPaymentsApi* | [**service_order_payments_get_all_work_order_payments**](docs/ServiceOrderPaymentsApi.md#service_order_payments_get_all_work_order_payments) | **GET** /api/service/workorders/{serviceOrderId}/payments | 
-*ServiceOrderPaymentsApi* | [**service_order_payments_get_work_order_payment**](docs/ServiceOrderPaymentsApi.md#service_order_payments_get_work_order_payment) | **GET** /api/service/workorders/payments/{serviceOrderPaymentId} | 
-*ServiceOrderShipmentsApi* | [**service_order_shipments_append_shipment_tracking_number**](docs/ServiceOrderShipmentsApi.md#service_order_shipments_append_shipment_tracking_number) | **PUT** /api/service/workorders/{serviceOrderId}/shipments/trackingnumber | 
-*ServiceOrderShipmentsApi* | [**service_order_shipments_update_shipment_status**](docs/ServiceOrderShipmentsApi.md#service_order_shipments_update_shipment_status) | **PUT** /api/service/workorders/{serviceOrderId}/shipments/status | 
-*ServiceOrderTasksApi* | [**service_order_tasks_create_work_order_task**](docs/ServiceOrderTasksApi.md#service_order_tasks_create_work_order_task) | **POST** /api/service/workorders/{serviceOrderId}/tasks | 
-*ServiceOrderTasksApi* | [**service_order_tasks_delete_work_order_task**](docs/ServiceOrderTasksApi.md#service_order_tasks_delete_work_order_task) | **DELETE** /api/service/workorders/{serviceOrderId}/Tasks/{serviceOrderTaskId} | 
-*ServiceOrderTasksApi* | [**service_order_tasks_get_work_order_tasks**](docs/ServiceOrderTasksApi.md#service_order_tasks_get_work_order_tasks) | **GET** /api/service/workorders/{serviceOrderId}/tasks | 
-*ServiceOrderTasksApi* | [**service_order_tasks_update_work_order_task**](docs/ServiceOrderTasksApi.md#service_order_tasks_update_work_order_task) | **PUT** /api/service/workorders/{serviceOrderId}/tasks | 
-*ServiceOrdersApi* | [**service_orders_change_order_status**](docs/ServiceOrdersApi.md#service_orders_change_order_status) | **PUT** /api/service/workorders/{serviceOrderId}/status | Change Work Order Status
-*ServiceOrdersApi* | [**service_orders_create_async**](docs/ServiceOrdersApi.md#service_orders_create_async) | **POST** /api/service/workorders | Create service order.
-*ServiceOrdersApi* | [**service_orders_create_order_by_schedule**](docs/ServiceOrdersApi.md#service_orders_create_order_by_schedule) | **POST** /api/service/workorders/byplan/{serviceScheduleId} | 
-*ServiceOrdersApi* | [**service_orders_get_assignments**](docs/ServiceOrdersApi.md#service_orders_get_assignments) | **GET** /api/service/workorders/{serviceOrderId}/assignments | 
-*ServiceOrdersApi* | [**service_orders_get_charges**](docs/ServiceOrdersApi.md#service_orders_get_charges) | **GET** /api/service/workorders/{serviceOrderId}/charges | 
-*ServiceOrdersApi* | [**service_orders_get_order_status**](docs/ServiceOrdersApi.md#service_orders_get_order_status) | **GET** /api/service/workorders/{serviceOrderId}/status | Gets current status and next status according to the workflow
-*ServiceOrdersApi* | [**service_orders_get_work_order**](docs/ServiceOrdersApi.md#service_orders_get_work_order) | **GET** /api/service/workorders/{serviceOrderId} | 
-*ServiceOrdersApi* | [**service_orders_get_work_orders**](docs/ServiceOrdersApi.md#service_orders_get_work_orders) | **GET** /api/service/workorders | Retrieve work orders by filters
-*ServiceOrdersApi* | [**service_orders_get_work_orders_0**](docs/ServiceOrdersApi.md#service_orders_get_work_orders_0) | **GET** /api/employee/{employeeId}/workorders | 
-*ServiceOrdersApi* | [**service_orders_order_cancel**](docs/ServiceOrdersApi.md#service_orders_order_cancel) | **PUT** /api/service/workorders/{serviceOrderId}/cancel | Cancel work order
-*ServiceOrdersApi* | [**service_orders_put_charges**](docs/ServiceOrdersApi.md#service_orders_put_charges) | **PUT** /api/service/workorders/{serviceOrderId}/charges | Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount, ShippingFee
-*ServicePricingApi* | [**service_pricing_get**](docs/ServicePricingApi.md#service_pricing_get) | **GET** /api/service/pricing | 
-*ServicePricingApi* | [**service_pricing_update**](docs/ServicePricingApi.md#service_pricing_update) | **PUT** /api/service/pricing | 
-*VendorsApi* | [**vendors_create**](docs/VendorsApi.md#vendors_create) | **POST** /api/service/vendors | Create Vendor information.
-*VendorsApi* | [**vendors_get**](docs/VendorsApi.md#vendors_get) | **GET** /api/service/vendors/{vendorCompanyId} | 
-*VendorsApi* | [**vendors_get_all**](docs/VendorsApi.md#vendors_get_all) | **GET** /api/service/vendors | 
-*VendorsApi* | [**vendors_update**](docs/VendorsApi.md#vendors_update) | **PUT** /api/service/vendors | Update Vendor information.
+*AccountApi* | [**companies**](docs/AccountApi.md#companies) | **POST** /api/user/companies | 
+*AccountApi* | [**get_employee_message**](docs/AccountApi.md#get_employee_message) | **GET** /api/user/messages/{messageId} | 
+*AccountApi* | [**get_employee_messages**](docs/AccountApi.md#get_employee_messages) | **GET** /api/user/messages | 
+*AccountApi* | [**login**](docs/AccountApi.md#login) | **POST** /api/login | Login
+*AccountApi* | [**logout**](docs/AccountApi.md#logout) | **POST** /api/logout | Logout
+*AccountApi* | [**post_employee_location**](docs/AccountApi.md#post_employee_location) | **POST** /api/user/location | Post Employee Location
+*AssetAttributesApi* | [**get_asset_attributes**](docs/AssetAttributesApi.md#get_asset_attributes) | **GET** /api/assets/{assetId}/attributes | 
+*AssetAttributesApi* | [**upsert_asset_attributes**](docs/AssetAttributesApi.md#upsert_asset_attributes) | **PUT** /api/assets/{assetId}/attributes | 
+*AssetMaintenancePlansApi* | [**get_maintenance_plan**](docs/AssetMaintenancePlansApi.md#get_maintenance_plan) | **GET** /api/assets/{assetId}/plans/{maintenancePlanId} | 
+*AssetMaintenancePlansApi* | [**get_maintenance_plans**](docs/AssetMaintenancePlansApi.md#get_maintenance_plans) | **GET** /api/assets/{assetId}/plans | 
+*AssetMaintenancePlansApi* | [**reset_initial_service_date**](docs/AssetMaintenancePlansApi.md#reset_initial_service_date) | **PUT** /api/assets/{assetId}/plans/{maintenancePlanId} | 
+*AssetMeasurementsApi* | [**get_measurements_by_asset**](docs/AssetMeasurementsApi.md#get_measurements_by_asset) | **GET** /api/assets/{assetId}/measurements | 
+*AssetPoolsApi* | [**get**](docs/AssetPoolsApi.md#get) | **GET** /api/assetpools/{id} | 
+*AssetPoolsApi* | [**get_all**](docs/AssetPoolsApi.md#get_all) | **GET** /api/assetpools | 
+*AssetReservationApi* | [**close**](docs/AssetReservationApi.md#close) | **PUT** /api/assetsreservations/close | 
+*AssetReservationApi* | [**get**](docs/AssetReservationApi.md#get) | **GET** /api/assetsreservations | 
+*AssetReservationApi* | [**upsert**](docs/AssetReservationApi.md#upsert) | **PUT** /api/assetsreservations | 
+*AssetServiceForecastApi* | [**get_asset_forecast_list**](docs/AssetServiceForecastApi.md#get_asset_forecast_list) | **GET** /api/assetserviceforecast | 
+*AssetServiceForecastApi* | [**get_client_asset_forecast_list**](docs/AssetServiceForecastApi.md#get_client_asset_forecast_list) | **GET** /api/assetserviceforecast/client/{clientCompanyId} | 
+*AssetServiceRecordsApi* | [**add_asset_service_record**](docs/AssetServiceRecordsApi.md#add_asset_service_record) | **POST** /api/assets/{assetId}/assetservicerecords | 
+*AssetServiceRecordsApi* | [**document_list**](docs/AssetServiceRecordsApi.md#document_list) | **GET** /api/assetservicerecords/{AssetServiceRecordId}/documents/files | 
+*AssetServiceRecordsApi* | [**download_document**](docs/AssetServiceRecordsApi.md#download_document) | **GET** /api/assetservicerecords/{AssetServiceRecordId}/documents/{FileName} | 
+*AssetServiceRecordsApi* | [**download_documents**](docs/AssetServiceRecordsApi.md#download_documents) | **GET** /api/assetservicerecords/{assetServiceRecordId}/documents | 
+*AssetServiceRecordsApi* | [**get_asset_service_record**](docs/AssetServiceRecordsApi.md#get_asset_service_record) | **GET** /api/assetservicerecords/{AssetServiceRecordId} | 
+*AssetServiceRecordsApi* | [**get_asset_service_records**](docs/AssetServiceRecordsApi.md#get_asset_service_records) | **GET** /api/assetservicerecords | 
+*AssetServiceRecordsApi* | [**get_asset_service_records_by_asset**](docs/AssetServiceRecordsApi.md#get_asset_service_records_by_asset) | **GET** /api/assets/{assetId}/assetservicerecords | 
+*AssetServiceRecordsApi* | [**update_asset_service_record**](docs/AssetServiceRecordsApi.md#update_asset_service_record) | **PUT** /api/assetservicerecords/{assetServiceRecordId} | 
+*AssetServiceRecordsApi* | [**upload_documents**](docs/AssetServiceRecordsApi.md#upload_documents) | **POST** /api/assetservicerecords/{assetServiceRecordId}/documents | 
+*AssetsApi* | [**clear_collected_assets**](docs/AssetsApi.md#clear_collected_assets) | **PUT** /api/assets/collection/remove | ClearCollectedAssets(int[] assetIds)
+*AssetsApi* | [**collect_assets**](docs/AssetsApi.md#collect_assets) | **PUT** /api/assets/collection/add | CollectAssets(int[] assetIds)
+*AssetsApi* | [**get_all_assets**](docs/AssetsApi.md#get_all_assets) | **GET** /api/assets | 
+*AssetsApi* | [**get_asset**](docs/AssetsApi.md#get_asset) | **GET** /api/assets/{id} | 
+*AssetsApi* | [**get_asset_by_asset_pool**](docs/AssetsApi.md#get_asset_by_asset_pool) | **GET** /api/assets/byassetpool/{assetPoolId} | 
+*AssetsApi* | [**get_asset_by_asset_tag**](docs/AssetsApi.md#get_asset_by_asset_tag) | **GET** /api/assets/byassettag/{assetTag} | 
+*AssetsApi* | [**get_asset_by_attribute**](docs/AssetsApi.md#get_asset_by_attribute) | **GET** /api/assets/byattribute | 
+*AssetsApi* | [**get_asset_by_barcode**](docs/AssetsApi.md#get_asset_by_barcode) | **GET** /api/assets/bybarcode/{barcode} | 
+*AssetsApi* | [**get_asset_by_serial_number**](docs/AssetsApi.md#get_asset_by_serial_number) | **GET** /api/assets/byserialnumber/{serialNumber} | 
+*AssetsApi* | [**get_asset_images**](docs/AssetsApi.md#get_asset_images) | **GET** /api/assets/{id}/images | GetAssetImages
+*AssetsApi* | [**get_asset_manager_counters**](docs/AssetsApi.md#get_asset_manager_counters) | **GET** /api/assets/counters | GetAssetManagerCounters
+*AssetsApi* | [**get_asset_manager_list**](docs/AssetsApi.md#get_asset_manager_list) | **GET** /api/assets/byfilter | GetAssetManagerList
+*AssetsApi* | [**get_assets_by_equipment_id**](docs/AssetsApi.md#get_assets_by_equipment_id) | **GET** /api/assets/byequipmentid/{equipmentId} | 
+*AssetsApi* | [**post_asset_images**](docs/AssetsApi.md#post_asset_images) | **POST** /api/assets/{id}/images | PostAssetImages
+*AssetsApi* | [**update_asset_class**](docs/AssetsApi.md#update_asset_class) | **PUT** /api/assets/{id}/class | 
+*AssetsApi* | [**update_asset_department**](docs/AssetsApi.md#update_asset_department) | **PUT** /api/assets/{id}/department | 
+*AssetsApi* | [**update_asset_room**](docs/AssetsApi.md#update_asset_room) | **PUT** /api/assets/{id}/room | 
+*AssetsApi* | [**update_room**](docs/AssetsApi.md#update_room) | **PUT** /api/assets/room | 
+*ClientAssetAttributesApi* | [**get_asset_attributes**](docs/ClientAssetAttributesApi.md#get_asset_attributes) | **GET** /api/service/clients/assets/{assetId}/attributes | 
+*ClientAssetAttributesApi* | [**upsert_asset_attributes**](docs/ClientAssetAttributesApi.md#upsert_asset_attributes) | **PUT** /api/service/clients/assets/{assetId}/attributes | 
+*ClientAssetServiceRecordsApi* | [**get_asset_service_records_by_asset**](docs/ClientAssetServiceRecordsApi.md#get_asset_service_records_by_asset) | **GET** /api/service/clients/assets/{assetId}/assetservicerecords | 
+*ClientAssetsApi* | [**create_asset**](docs/ClientAssetsApi.md#create_asset) | **POST** /api/service/clients/assets | 
+*ClientAssetsApi* | [**get_all_assets**](docs/ClientAssetsApi.md#get_all_assets) | **GET** /api/service/clients/assets | 
+*ClientAssetsApi* | [**get_asset**](docs/ClientAssetsApi.md#get_asset) | **GET** /api/service/clients/assets/{AssetId} | 
+*ClientAssetsApi* | [**get_asset_counters**](docs/ClientAssetsApi.md#get_asset_counters) | **GET** /api/service/clients/{clientCompanyId}/counters | 
+*ClientAssetsApi* | [**get_asset_manager_list**](docs/ClientAssetsApi.md#get_asset_manager_list) | **GET** /api/service/clients/{clientCompanyId}/assets/byfilter | GetAssetManagerList
+*ClientAssetsApi* | [**get_assets**](docs/ClientAssetsApi.md#get_assets) | **GET** /api/service/clients/{clientCompanyId}/assets | 
+*ClientAttributeApi* | [**get_client_attributes**](docs/ClientAttributeApi.md#get_client_attributes) | **GET** /api/service/clients/{clientCompanyId}/attributes | 
+*ClientAttributeApi* | [**upsert_client_attribute**](docs/ClientAttributeApi.md#upsert_client_attribute) | **POST** /api/service/clients/{clientCompanyId}/attributes | 
+*ClientEmployeesApi* | [**create_employee**](docs/ClientEmployeesApi.md#create_employee) | **POST** /api/service/clients/employees | 
+*ClientEmployeesApi* | [**get_employee**](docs/ClientEmployeesApi.md#get_employee) | **GET** /api/service/clients/employees/{EmployeeId} | 
+*ClientEmployeesApi* | [**get_employees**](docs/ClientEmployeesApi.md#get_employees) | **GET** /api/service/clients/{clientCompanyId}/employees | 
+*ClientEmployeesApi* | [**send_employee_email**](docs/ClientEmployeesApi.md#send_employee_email) | **PUT** /api/service/clients/employees/{employeeId}/sendemail | 
+*ClientMaintenancePlansApi* | [**get_maintenance_plan_assets**](docs/ClientMaintenancePlansApi.md#get_maintenance_plan_assets) | **GET** /api/service/clients/plans/{maintenancePlanId}/assets | 
+*ClientMaintenancePlansApi* | [**get_maintenance_plans**](docs/ClientMaintenancePlansApi.md#get_maintenance_plans) | **GET** /api/service/clients/{clientCompanyId}/plans | 
+*ClientSiteApi* | [**create_client_site**](docs/ClientSiteApi.md#create_client_site) | **POST** /api/service/clients/{clientCompanyId}/sites | Create Client Site.
+*ClientSiteApi* | [**get_client_sites**](docs/ClientSiteApi.md#get_client_sites) | **GET** /api/service/clients/{clientCompanyId}/sites | 
+*ClientSiteApi* | [**update_client_site**](docs/ClientSiteApi.md#update_client_site) | **PUT** /api/service/clients/{clientCompanyId}/sites | Update Client Site.
+*ClientsApi* | [**create**](docs/ClientsApi.md#create) | **POST** /api/service/clients | Create Client information.
+*ClientsApi* | [**get**](docs/ClientsApi.md#get) | **GET** /api/service/clients/{clientCompanyId} | 
+*ClientsApi* | [**get_all**](docs/ClientsApi.md#get_all) | **GET** /api/service/clients | 
+*ClientsApi* | [**update**](docs/ClientsApi.md#update) | **PUT** /api/service/clients | Update Client information.
+*CommonApi* | [**culture_list**](docs/CommonApi.md#culture_list) | **GET** /api/common/culturelist | 
+*CommonApi* | [**culture_ui_list**](docs/CommonApi.md#culture_ui_list) | **GET** /api/common/cultureuilist | 
+*CommonApi* | [**get_company_settings**](docs/CommonApi.md#get_company_settings) | **GET** /api/common/settings | 
+*CompanyApi* | [**add_department**](docs/CompanyApi.md#add_department) | **POST** /api/company/departments | 
+*CompanyApi* | [**delete_department**](docs/CompanyApi.md#delete_department) | **DELETE** /api/company/departments/{departmentId} | 
+*CompanyApi* | [**departments**](docs/CompanyApi.md#departments) | **GET** /api/company/departments | 
+*CompanyApi* | [**lookups**](docs/CompanyApi.md#lookups) | **GET** /api/company/lookups | 
+*CompanyApi* | [**site_rooms**](docs/CompanyApi.md#site_rooms) | **GET** /api/company/sites/{id}/rooms | 
+*CompanyApi* | [**sites**](docs/CompanyApi.md#sites) | **GET** /api/company/sites | 
+*CompanyApi* | [**update_department**](docs/CompanyApi.md#update_department) | **PUT** /api/company/departments/{departmentId} | 
+*EmployeeFilterPreferenceApi* | [**get_employee_filter_preferences**](docs/EmployeeFilterPreferenceApi.md#get_employee_filter_preferences) | **GET** /api/user/filters | GetEmployeeFilterPreferences
+*EmployeeFilterPreferenceApi* | [**update_employee_filter_preference**](docs/EmployeeFilterPreferenceApi.md#update_employee_filter_preference) | **PUT** /api/user/filters | UpdateEmployeeFilterPreference
+*EmployeePreferenceApi* | [**delete**](docs/EmployeePreferenceApi.md#delete) | **DELETE** /api/user/preferences/{elementPage} | 
+*EmployeePreferenceApi* | [**get**](docs/EmployeePreferenceApi.md#get) | **GET** /api/user/preferences/{elementPage} | 
+*EmployeesApi* | [**add_employee_department**](docs/EmployeesApi.md#add_employee_department) | **POST** /api/employees/{employeeId}/department | 
+*EmployeesApi* | [**create_employee**](docs/EmployeesApi.md#create_employee) | **POST** /api/employees | Create Employee
+*EmployeesApi* | [**delete_employee_department**](docs/EmployeesApi.md#delete_employee_department) | **DELETE** /api/employees/{employeeId}/department/{departmentId} | 
+*EmployeesApi* | [**get_employee**](docs/EmployeesApi.md#get_employee) | **GET** /api/employees/{employeeId} | 
+*EmployeesApi* | [**get_employees**](docs/EmployeesApi.md#get_employees) | **GET** /api/employees | 
+*EmployeesApi* | [**update_employee**](docs/EmployeesApi.md#update_employee) | **PUT** /api/employees/{employeeId} | Update Employee
+*EnvironmentsApi* | [**get**](docs/EnvironmentsApi.md#get) | **GET** /api/Environments/{id} | 
+*EnvironmentsApi* | [**post**](docs/EnvironmentsApi.md#post) | **POST** /api/Environments/{id} | 
+*MaintenancePlansApi* | [**get_maintenance_plan_assets**](docs/MaintenancePlansApi.md#get_maintenance_plan_assets) | **GET** /api/plans/{maintenancePlanId}/assets | 
+*MaintenancePlansApi* | [**get_maintenance_plans**](docs/MaintenancePlansApi.md#get_maintenance_plans) | **GET** /api/plans | 
+*ProductApi* | [**add_manufacturer**](docs/ProductApi.md#add_manufacturer) | **POST** /api/manufacturers/add | 
+*ProductApi* | [**add_product**](docs/ProductApi.md#add_product) | **POST** /api/products/add | 
+*ProductApi* | [**get_inventory_count**](docs/ProductApi.md#get_inventory_count) | **GET** /api/products/inventorycount | 
+*ProductApi* | [**get_manufacturers**](docs/ProductApi.md#get_manufacturers) | **GET** /api/manufacturers | 
+*ProductApi* | [**get_product**](docs/ProductApi.md#get_product) | **GET** /api/products/{productId} | 
+*ProductApi* | [**product**](docs/ProductApi.md#product) | **PUT** /api/products/{productId} | 
+*ProductApi* | [**put_inventory_count**](docs/ProductApi.md#put_inventory_count) | **PUT** /api/products/inventorycount | 
+*ReferenceApi* | [**get_measurement_quantities**](docs/ReferenceApi.md#get_measurement_quantities) | **GET** /api/reference/MeasurementQuantities | 
+*ReferenceApi* | [**get_units_of_measure**](docs/ReferenceApi.md#get_units_of_measure) | **GET** /api/reference/UnitsOfMeasure | 
+*ReportDatasetsApi* | [**channel_uniformity_by_order**](docs/ReportDatasetsApi.md#channel_uniformity_by_order) | **GET** /api/data/orders/{serviceOrderId}/ChannelUniformity | 
+*ReportDatasetsApi* | [**get_all_measurements**](docs/ReportDatasetsApi.md#get_all_measurements) | **GET** /api/data/Measurements/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_all_measurements_by_order**](docs/ReportDatasetsApi.md#get_all_measurements_by_order) | **GET** /api/data/orders/{serviceOrderId}/Measurements | 
+*ReportDatasetsApi* | [**get_as_found_measurements**](docs/ReportDatasetsApi.md#get_as_found_measurements) | **GET** /api/data/MeasurementsAsFound/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_as_found_measurements_by_order**](docs/ReportDatasetsApi.md#get_as_found_measurements_by_order) | **GET** /api/data/orders/{serviceOrderId}/MeasurementsAsFound | 
+*ReportDatasetsApi* | [**get_as_left_measurements**](docs/ReportDatasetsApi.md#get_as_left_measurements) | **GET** /api/data/MeasurementsAsLeft/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_as_left_measurements_by_order**](docs/ReportDatasetsApi.md#get_as_left_measurements_by_order) | **GET** /api/data/orders/{serviceOrderId}/MeasurementsAsLeft | 
+*ReportDatasetsApi* | [**get_asset_attributes**](docs/ReportDatasetsApi.md#get_asset_attributes) | **GET** /api/data/AssetAttributes/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_asset_service_records**](docs/ReportDatasetsApi.md#get_asset_service_records) | **GET** /api/data/AssetServiceRecords/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_channel_results**](docs/ReportDatasetsApi.md#get_channel_results) | **GET** /api/data/ChannelResults/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_channel_results_by_order**](docs/ReportDatasetsApi.md#get_channel_results_by_order) | **GET** /api/data/orders/{serviceOrderId}/ChannelResults | 
+*ReportDatasetsApi* | [**get_channel_uniformity**](docs/ReportDatasetsApi.md#get_channel_uniformity) | **GET** /api/data/ChannelUniformity/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_client_attributes**](docs/ReportDatasetsApi.md#get_client_attributes) | **GET** /api/data/ClientAttributes/{serviceOrderId} | 
+*ReportDatasetsApi* | [**get_company_certifications**](docs/ReportDatasetsApi.md#get_company_certifications) | **GET** /api/data/CompanyCertifications | 
+*ReportDatasetsApi* | [**get_external_data_reports**](docs/ReportDatasetsApi.md#get_external_data_reports) | **GET** /api/data/{serviceOrderId}/ExternalDataReports | 
+*ReportDatasetsApi* | [**get_measurement_charts**](docs/ReportDatasetsApi.md#get_measurement_charts) | **GET** /api/data/MeasurementChart/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_measurement_fields**](docs/ReportDatasetsApi.md#get_measurement_fields) | **GET** /api/data/MeasurementFields/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_measurement_fields_by_order**](docs/ReportDatasetsApi.md#get_measurement_fields_by_order) | **GET** /api/data/orders/{serviceOrderId}/MeasurementFields | 
+*ReportDatasetsApi* | [**get_order_item_documents**](docs/ReportDatasetsApi.md#get_order_item_documents) | **GET** /api/data/OrderItemDocuments/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_order_item_images**](docs/ReportDatasetsApi.md#get_order_item_images) | **GET** /api/data/OrderItemImages/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_reference_standards**](docs/ReportDatasetsApi.md#get_reference_standards) | **GET** /api/data/ReferenceStandards/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_reference_standards_by_order**](docs/ReportDatasetsApi.md#get_reference_standards_by_order) | **GET** /api/data/orders/{serviceOrderId}/ReferenceStandards | 
+*ReportDatasetsApi* | [**get_service_order_assignees**](docs/ReportDatasetsApi.md#get_service_order_assignees) | **GET** /api/data/ServiceOrderAssignees/{serviceOrderId} | 
+*ReportDatasetsApi* | [**get_service_order_charges**](docs/ReportDatasetsApi.md#get_service_order_charges) | **GET** /api/data/ServiceOrderCharges/{serviceOrderId} | 
+*ReportDatasetsApi* | [**get_service_order_item_components**](docs/ReportDatasetsApi.md#get_service_order_item_components) | **GET** /api/data/ServiceOrderItemComponents/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_service_order_item_components_by_order**](docs/ReportDatasetsApi.md#get_service_order_item_components_by_order) | **GET** /api/data/orders/{serviceOrderId}/ServiceOrderItemComponents | 
+*ReportDatasetsApi* | [**get_service_order_item_fields_by_order**](docs/ReportDatasetsApi.md#get_service_order_item_fields_by_order) | **GET** /api/data/ServiceOrderItemFieldsByOrder/{serviceOrderId} | 
+*ReportDatasetsApi* | [**get_service_order_item_options**](docs/ReportDatasetsApi.md#get_service_order_item_options) | **GET** /api/data/ServiceOrderItemOptions/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_service_order_item_status_history_async**](docs/ReportDatasetsApi.md#get_service_order_item_status_history_async) | **GET** /api/data/ServiceOrderItemStatusHistory/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_service_order_item_tasks_by_order**](docs/ReportDatasetsApi.md#get_service_order_item_tasks_by_order) | **GET** /api/data/ServiceOrderItemTasksByOrder/{serviceOrderId} | 
+*ReportDatasetsApi* | [**get_service_order_item_tasks_by_order_items**](docs/ReportDatasetsApi.md#get_service_order_item_tasks_by_order_items) | **GET** /api/data/ServiceOrderItemTasksByOrderItem/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_service_order_items**](docs/ReportDatasetsApi.md#get_service_order_items) | **GET** /api/data/ServiceOrderItems/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_service_order_items_by_order**](docs/ReportDatasetsApi.md#get_service_order_items_by_order) | **GET** /api/data/orders/{serviceOrderId}/ServiceOrderItems | 
+*ReportDatasetsApi* | [**get_service_order_tasks**](docs/ReportDatasetsApi.md#get_service_order_tasks) | **GET** /api/data/ServiceOrderTasks/{serviceOrderId} | 
+*ReportDatasetsApi* | [**get_service_orders**](docs/ReportDatasetsApi.md#get_service_orders) | **GET** /api/data/ServiceOrders/{serviceOrderId} | 
+*ReportDatasetsApi* | [**get_tool_attributes**](docs/ReportDatasetsApi.md#get_tool_attributes) | **GET** /api/data/ToolAttributes/{serviceOrderItemId} | 
+*ReportDatasetsApi* | [**get_tool_range_attributes**](docs/ReportDatasetsApi.md#get_tool_range_attributes) | **GET** /api/data/ToolRangeAttributes/{serviceOrderItemId} | 
+*ServiceOrderDocumentsApi* | [**get_document**](docs/ServiceOrderDocumentsApi.md#get_document) | **GET** /api/service/workorders/documents/{guid} | Retrieve work order document by Unique Id
+*ServiceOrderDocumentsApi* | [**get_document_0**](docs/ServiceOrderDocumentsApi.md#get_document_0) | **GET** /api/wd/{guid} | Retrieve work order document by Unique Id
+*ServiceOrderDocumentsApi* | [**get_document_list**](docs/ServiceOrderDocumentsApi.md#get_document_list) | **GET** /api/service/workorders/documents/list | Retrieve work order documents
+*ServiceOrderDocumentsApi* | [**get_documents**](docs/ServiceOrderDocumentsApi.md#get_documents) | **GET** /api/service/workorders/{serviceOrderId}/documents | Retrieve work order documents
+*ServiceOrderDocumentsApi* | [**get_documents_list**](docs/ServiceOrderDocumentsApi.md#get_documents_list) | **GET** /api/service/workorders/{serviceOrderId}/documents/list | 
+*ServiceOrderDocumentsApi* | [**upload_documents**](docs/ServiceOrderDocumentsApi.md#upload_documents) | **POST** /api/service/workorders/{serviceOrderId}/documents | 
+*ServiceOrderItemDocumentsApi* | [**get_document_list**](docs/ServiceOrderItemDocumentsApi.md#get_document_list) | **GET** /api/service/workitems/documents/list | Retrieve work order documents
+*ServiceOrderItemDocumentsApi* | [**get_documents**](docs/ServiceOrderItemDocumentsApi.md#get_documents) | **GET** /api/service/workitems/{serviceOrderItemId}/documents | Retrieve work order documents
+*ServiceOrderItemDocumentsApi* | [**get_documents_list**](docs/ServiceOrderItemDocumentsApi.md#get_documents_list) | **GET** /api/service/workitems/{serviceOrderItemId}/documents/list | 
+*ServiceOrderItemDocumentsApi* | [**upload_documents**](docs/ServiceOrderItemDocumentsApi.md#upload_documents) | **POST** /api/service/workitems/{serviceOrderItemId}/documents | 
+*ServiceOrderItemMeasurementsApi* | [**add_auxiliary_tools**](docs/ServiceOrderItemMeasurementsApi.md#add_auxiliary_tools) | **POST** /api/service/workitems/{workItemId}/AuxiliaryTools | 
+*ServiceOrderItemMeasurementsApi* | [**create_measurement_form**](docs/ServiceOrderItemMeasurementsApi.md#create_measurement_form) | **POST** /api/service/workitems/{workItemId}/measurements | Create Measurement Form.
+*ServiceOrderItemMeasurementsApi* | [**get_measurement_form**](docs/ServiceOrderItemMeasurementsApi.md#get_measurement_form) | **GET** /api/service/workitems/{workItemId}/form | Get Measurement Form.
+*ServiceOrderItemMeasurementsApi* | [**get_measurements_by_asset**](docs/ServiceOrderItemMeasurementsApi.md#get_measurements_by_asset) | **GET** /api/service/assets/{assetId}/measurements | 
+*ServiceOrderItemMeasurementsApi* | [**update_measurement_form**](docs/ServiceOrderItemMeasurementsApi.md#update_measurement_form) | **POST** /api/service/workitems/{workItemId}/form | Update Measurement Form.
+*ServiceOrderItemPartsApi* | [**get_work_item_parts**](docs/ServiceOrderItemPartsApi.md#get_work_item_parts) | **GET** /api/service/workitems/{workItemId}/parts | 
+*ServiceOrderItemTasksApi* | [**create_work_item_task**](docs/ServiceOrderItemTasksApi.md#create_work_item_task) | **POST** /api/service/workitems/{workItemId}/tasks | 
+*ServiceOrderItemTasksApi* | [**delete_work_item_task**](docs/ServiceOrderItemTasksApi.md#delete_work_item_task) | **DELETE** /api/service/workitems/{workItemId}/tasks/{taskId} | 
+*ServiceOrderItemTasksApi* | [**get_work_item_task**](docs/ServiceOrderItemTasksApi.md#get_work_item_task) | **GET** /api/service/workitems/{workItemId}/tasks/{taskId} | 
+*ServiceOrderItemTasksApi* | [**get_work_item_tasks**](docs/ServiceOrderItemTasksApi.md#get_work_item_tasks) | **GET** /api/service/workitems/{workItemId}/tasks | 
+*ServiceOrderItemsApi* | [**add_work_items**](docs/ServiceOrderItemsApi.md#add_work_items) | **PUT** /api/service/workorders/{serviceOrderId}/workitems | Add work items
+*ServiceOrderItemsApi* | [**delete_work_item_image**](docs/ServiceOrderItemsApi.md#delete_work_item_image) | **DELETE** /api/service/workitems/{workItemId}/images/{imageName} | 
+*ServiceOrderItemsApi* | [**get_work_item**](docs/ServiceOrderItemsApi.md#get_work_item) | **GET** /api/service/workitems/{workItemId} | 
+*ServiceOrderItemsApi* | [**get_work_item_charges**](docs/ServiceOrderItemsApi.md#get_work_item_charges) | **GET** /api/service/workitems/{workItemId}/charges | 
+*ServiceOrderItemsApi* | [**get_work_item_image**](docs/ServiceOrderItemsApi.md#get_work_item_image) | **GET** /api/service/workitems/{workItemId}/images/{imageName} | 
+*ServiceOrderItemsApi* | [**get_work_item_images**](docs/ServiceOrderItemsApi.md#get_work_item_images) | **GET** /api/service/workitems/{workItemId}/images | 
+*ServiceOrderItemsApi* | [**get_work_items**](docs/ServiceOrderItemsApi.md#get_work_items) | **GET** /api/service/workorders/{serviceOrderId}/workitems | 
+*ServiceOrderItemsApi* | [**get_work_items_0**](docs/ServiceOrderItemsApi.md#get_work_items_0) | **GET** /api/service/workitems | Retrieve work items
+*ServiceOrderItemsApi* | [**put_charges**](docs/ServiceOrderItemsApi.md#put_charges) | **PUT** /api/service/workitems/{workItemId}/charges | Apply Service Order Item Charges
+*ServiceOrderItemsApi* | [**set_work_item**](docs/ServiceOrderItemsApi.md#set_work_item) | **PUT** /api/service/workitems/{workItemId} | Update work item
+*ServiceOrderItemsApi* | [**upload_work_item_images**](docs/ServiceOrderItemsApi.md#upload_work_item_images) | **POST** /api/service/workitems/{workItemId}/images | 
+*ServiceOrderMetadataApi* | [**create**](docs/ServiceOrderMetadataApi.md#create) | **POST** /api/service/workorders/{serviceOrderId}/metadata | Create metadata
+*ServiceOrderMetadataApi* | [**delete**](docs/ServiceOrderMetadataApi.md#delete) | **DELETE** /api/service/workorders/{serviceOrderId}/metadata/{serviceOrderMetadataId} | Delete metadata
+*ServiceOrderMetadataApi* | [**get**](docs/ServiceOrderMetadataApi.md#get) | **GET** /api/service/workorders/{serviceOrderId}/metadata | Get list of metadata
+*ServiceOrderMetadataApi* | [**update**](docs/ServiceOrderMetadataApi.md#update) | **PUT** /api/service/workorders/{serviceOrderId}/metadata | Update metadata
+*ServiceOrderPartsApi* | [**create_work_order_parts**](docs/ServiceOrderPartsApi.md#create_work_order_parts) | **POST** /api/service/workorders/{serviceOrderId}/parts | 
+*ServiceOrderPartsApi* | [**delete_work_order_task**](docs/ServiceOrderPartsApi.md#delete_work_order_task) | **DELETE** /api/service/workorders/{serviceOrderId}/parts/{serviceOrderItemPartId} | 
+*ServiceOrderPartsApi* | [**get_work_order_parts**](docs/ServiceOrderPartsApi.md#get_work_order_parts) | **GET** /api/service/workorders/{serviceOrderId}/parts | 
+*ServiceOrderPartsApi* | [**update_work_order_parts**](docs/ServiceOrderPartsApi.md#update_work_order_parts) | **PUT** /api/service/workorders/{serviceOrderId}/parts | 
+*ServiceOrderPaymentsApi* | [**change_work_order_payment_status**](docs/ServiceOrderPaymentsApi.md#change_work_order_payment_status) | **PUT** /api/service/workorders/{serviceOrderId}/payments/status | 
+*ServiceOrderPaymentsApi* | [**create_work_order_payment**](docs/ServiceOrderPaymentsApi.md#create_work_order_payment) | **POST** /api/service/workorders/{serviceOrderId}/payments | 
+*ServiceOrderPaymentsApi* | [**get_all_work_order_payments**](docs/ServiceOrderPaymentsApi.md#get_all_work_order_payments) | **GET** /api/service/workorders/{serviceOrderId}/payments | 
+*ServiceOrderPaymentsApi* | [**get_work_order_payment**](docs/ServiceOrderPaymentsApi.md#get_work_order_payment) | **GET** /api/service/workorders/payments/{serviceOrderPaymentId} | 
+*ServiceOrderShipmentsApi* | [**append_shipment_tracking_number**](docs/ServiceOrderShipmentsApi.md#append_shipment_tracking_number) | **PUT** /api/service/workorders/{serviceOrderId}/shipments/trackingnumber | 
+*ServiceOrderShipmentsApi* | [**update_shipment_status**](docs/ServiceOrderShipmentsApi.md#update_shipment_status) | **PUT** /api/service/workorders/{serviceOrderId}/shipments/status | 
+*ServiceOrderTasksApi* | [**create_work_order_task**](docs/ServiceOrderTasksApi.md#create_work_order_task) | **POST** /api/service/workorders/{serviceOrderId}/tasks | 
+*ServiceOrderTasksApi* | [**delete_work_order_task**](docs/ServiceOrderTasksApi.md#delete_work_order_task) | **DELETE** /api/service/workorders/{serviceOrderId}/Tasks/{serviceOrderTaskId} | 
+*ServiceOrderTasksApi* | [**get_work_order_tasks**](docs/ServiceOrderTasksApi.md#get_work_order_tasks) | **GET** /api/service/workorders/{serviceOrderId}/tasks | 
+*ServiceOrderTasksApi* | [**update_work_order_task**](docs/ServiceOrderTasksApi.md#update_work_order_task) | **PUT** /api/service/workorders/{serviceOrderId}/tasks | 
+*ServiceOrdersApi* | [**change_order_status**](docs/ServiceOrdersApi.md#change_order_status) | **PUT** /api/service/workorders/{serviceOrderId}/status | Change Work Order Status
+*ServiceOrdersApi* | [**create_async**](docs/ServiceOrdersApi.md#create_async) | **POST** /api/service/workorders | Create service order.
+*ServiceOrdersApi* | [**create_order_by_schedule**](docs/ServiceOrdersApi.md#create_order_by_schedule) | **POST** /api/service/workorders/byplan/{serviceScheduleId} | 
+*ServiceOrdersApi* | [**get_assignments**](docs/ServiceOrdersApi.md#get_assignments) | **GET** /api/service/workorders/{serviceOrderId}/assignments | 
+*ServiceOrdersApi* | [**get_charges**](docs/ServiceOrdersApi.md#get_charges) | **GET** /api/service/workorders/{serviceOrderId}/charges | 
+*ServiceOrdersApi* | [**get_order_status**](docs/ServiceOrdersApi.md#get_order_status) | **GET** /api/service/workorders/{serviceOrderId}/status | Gets current status and next status according to the workflow
+*ServiceOrdersApi* | [**get_work_order**](docs/ServiceOrdersApi.md#get_work_order) | **GET** /api/service/workorders/{serviceOrderId} | 
+*ServiceOrdersApi* | [**get_work_orders**](docs/ServiceOrdersApi.md#get_work_orders) | **GET** /api/service/workorders | Retrieve work orders by filters
+*ServiceOrdersApi* | [**get_work_orders_0**](docs/ServiceOrdersApi.md#get_work_orders_0) | **GET** /api/employee/{employeeId}/workorders | 
+*ServiceOrdersApi* | [**order_cancel**](docs/ServiceOrdersApi.md#order_cancel) | **PUT** /api/service/workorders/{serviceOrderId}/cancel | Cancel work order
+*ServiceOrdersApi* | [**put_charges**](docs/ServiceOrdersApi.md#put_charges) | **PUT** /api/service/workorders/{serviceOrderId}/charges | Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount, ShippingFee
+*ServicePricingApi* | [**get**](docs/ServicePricingApi.md#get) | **GET** /api/service/pricing | 
+*ServicePricingApi* | [**update**](docs/ServicePricingApi.md#update) | **PUT** /api/service/pricing | 
+*VendorsApi* | [**create**](docs/VendorsApi.md#create) | **POST** /api/service/vendors | Create Vendor information.
+*VendorsApi* | [**get**](docs/VendorsApi.md#get) | **GET** /api/service/vendors/{vendorCompanyId} | 
+*VendorsApi* | [**get_all**](docs/VendorsApi.md#get_all) | **GET** /api/service/vendors | 
+*VendorsApi* | [**update**](docs/VendorsApi.md#update) | **PUT** /api/service/vendors | Update Vendor information.
 
 
 ## Documentation For Models

@@ -29,20 +29,20 @@ class TestAssetMaintenancePlansApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_asset_maintenance_plans_get_maintenance_plan(self):
-        """Test case for asset_maintenance_plans_get_maintenance_plan
+    def test_get_maintenance_plan(self):
+        """Test case for get_maintenance_plan
 
         """
         pass
 
-    def test_asset_maintenance_plans_get_maintenance_plans(self):
-        """Test case for asset_maintenance_plans_get_maintenance_plans
+    def test_get_maintenance_plans(self):
+        """Test case for get_maintenance_plans
 
         """
         pass
 
-    def test_asset_maintenance_plans_reset_initial_service_date(self):
-        """Test case for asset_maintenance_plans_reset_initial_service_date
+    def test_reset_initial_service_date(self):
+        """Test case for reset_initial_service_date
 
         """
         pass

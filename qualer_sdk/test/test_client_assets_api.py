@@ -29,39 +29,39 @@ class TestClientAssetsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_client_assets_create_asset(self):
-        """Test case for client_assets_create_asset
+    def test_create_asset(self):
+        """Test case for create_asset
 
         """
         pass
 
-    def test_client_assets_get_all_assets(self):
-        """Test case for client_assets_get_all_assets
+    def test_get_all_assets(self):
+        """Test case for get_all_assets
 
         """
         pass
 
-    def test_client_assets_get_asset(self):
-        """Test case for client_assets_get_asset
+    def test_get_asset(self):
+        """Test case for get_asset
 
         """
         pass
 
-    def test_client_assets_get_asset_counters(self):
-        """Test case for client_assets_get_asset_counters
+    def test_get_asset_counters(self):
+        """Test case for get_asset_counters
 
         """
         pass
 
-    def test_client_assets_get_asset_manager_list(self):
-        """Test case for client_assets_get_asset_manager_list
+    def test_get_asset_manager_list(self):
+        """Test case for get_asset_manager_list
 
         GetAssetManagerList  # noqa: E501
         """
         pass
 
-    def test_client_assets_get_assets(self):
-        """Test case for client_assets_get_assets
+    def test_get_assets(self):
+        """Test case for get_assets
 
         """
         pass

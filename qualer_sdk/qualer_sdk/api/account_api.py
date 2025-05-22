@@ -33,12 +33,12 @@ class AccountApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def account_companies(self, model, **kwargs):  # noqa: E501
-        """account_companies  # noqa: E501
+    def companies(self, model, **kwargs):  # noqa: E501
+        """companies  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.account_companies(model, async_req=True)
+        >>> thread = api.companies(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -49,17 +49,17 @@ class AccountApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.account_companies_with_http_info(model, **kwargs)  # noqa: E501
+            return self.companies_with_http_info(model, **kwargs)  # noqa: E501
         else:
-            (data) = self.account_companies_with_http_info(model, **kwargs)  # noqa: E501
+            (data) = self.companies_with_http_info(model, **kwargs)  # noqa: E501
             return data
 
-    def account_companies_with_http_info(self, model, **kwargs):  # noqa: E501
-        """account_companies  # noqa: E501
+    def companies_with_http_info(self, model, **kwargs):  # noqa: E501
+        """companies  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.account_companies_with_http_info(model, async_req=True)
+        >>> thread = api.companies_with_http_info(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -80,14 +80,14 @@ class AccountApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method account_companies" % key
+                    " to method companies" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `account_companies`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `companies`")  # noqa: E501
 
         collection_formats = {}
 
@@ -130,12 +130,12 @@ class AccountApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def account_get_employee_message(self, message_id, **kwargs):  # noqa: E501
-        """account_get_employee_message  # noqa: E501
+    def get_employee_message(self, message_id, **kwargs):  # noqa: E501
+        """get_employee_message  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.account_get_employee_message(message_id, async_req=True)
+        >>> thread = api.get_employee_message(message_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -146,17 +146,17 @@ class AccountApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.account_get_employee_message_with_http_info(message_id, **kwargs)  # noqa: E501
+            return self.get_employee_message_with_http_info(message_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.account_get_employee_message_with_http_info(message_id, **kwargs)  # noqa: E501
+            (data) = self.get_employee_message_with_http_info(message_id, **kwargs)  # noqa: E501
             return data
 
-    def account_get_employee_message_with_http_info(self, message_id, **kwargs):  # noqa: E501
-        """account_get_employee_message  # noqa: E501
+    def get_employee_message_with_http_info(self, message_id, **kwargs):  # noqa: E501
+        """get_employee_message  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.account_get_employee_message_with_http_info(message_id, async_req=True)
+        >>> thread = api.get_employee_message_with_http_info(message_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -177,14 +177,14 @@ class AccountApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method account_get_employee_message" % key
+                    " to method get_employee_message" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'message_id' is set
         if self.api_client.client_side_validation and ('message_id' not in params or
                                                        params['message_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `message_id` when calling `account_get_employee_message`")  # noqa: E501
+            raise ValueError("Missing the required parameter `message_id` when calling `get_employee_message`")  # noqa: E501
 
         collection_formats = {}
 
@@ -223,12 +223,12 @@ class AccountApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def account_get_employee_messages(self, **kwargs):  # noqa: E501
-        """account_get_employee_messages  # noqa: E501
+    def get_employee_messages(self, **kwargs):  # noqa: E501
+        """get_employee_messages  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.account_get_employee_messages(async_req=True)
+        >>> thread = api.get_employee_messages(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -240,17 +240,17 @@ class AccountApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.account_get_employee_messages_with_http_info(**kwargs)  # noqa: E501
+            return self.get_employee_messages_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.account_get_employee_messages_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_employee_messages_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def account_get_employee_messages_with_http_info(self, **kwargs):  # noqa: E501
-        """account_get_employee_messages  # noqa: E501
+    def get_employee_messages_with_http_info(self, **kwargs):  # noqa: E501
+        """get_employee_messages  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.account_get_employee_messages_with_http_info(async_req=True)
+        >>> thread = api.get_employee_messages_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -272,7 +272,7 @@ class AccountApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method account_get_employee_messages" % key
+                    " to method get_employee_messages" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -316,12 +316,12 @@ class AccountApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def account_login(self, model, **kwargs):  # noqa: E501
+    def login(self, model, **kwargs):  # noqa: E501
         """Login  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.account_login(model, async_req=True)
+        >>> thread = api.login(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -332,17 +332,17 @@ class AccountApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.account_login_with_http_info(model, **kwargs)  # noqa: E501
+            return self.login_with_http_info(model, **kwargs)  # noqa: E501
         else:
-            (data) = self.account_login_with_http_info(model, **kwargs)  # noqa: E501
+            (data) = self.login_with_http_info(model, **kwargs)  # noqa: E501
             return data
 
-    def account_login_with_http_info(self, model, **kwargs):  # noqa: E501
+    def login_with_http_info(self, model, **kwargs):  # noqa: E501
         """Login  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.account_login_with_http_info(model, async_req=True)
+        >>> thread = api.login_with_http_info(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -363,14 +363,14 @@ class AccountApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method account_login" % key
+                    " to method login" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `account_login`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `login`")  # noqa: E501
 
         collection_formats = {}
 
@@ -413,13 +413,13 @@ class AccountApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def account_logout(self, model, **kwargs):  # noqa: E501
+    def logout(self, model, **kwargs):  # noqa: E501
         """Logout  # noqa: E501
 
         LogoutAction:<br />  Logout - remove the passed token from the list of active sessions (default value)<br />  LogoutAll - remove this token and all other tokens created for the same user from the list of active sessions<br />  LogoutAllOther - remove all tokens created for the same user from the list of session except for the one that is passed in<br />  Rotate - change the current token to a different GUID and return the new GUID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.account_logout(model, async_req=True)
+        >>> thread = api.logout(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -430,18 +430,18 @@ class AccountApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.account_logout_with_http_info(model, **kwargs)  # noqa: E501
+            return self.logout_with_http_info(model, **kwargs)  # noqa: E501
         else:
-            (data) = self.account_logout_with_http_info(model, **kwargs)  # noqa: E501
+            (data) = self.logout_with_http_info(model, **kwargs)  # noqa: E501
             return data
 
-    def account_logout_with_http_info(self, model, **kwargs):  # noqa: E501
+    def logout_with_http_info(self, model, **kwargs):  # noqa: E501
         """Logout  # noqa: E501
 
         LogoutAction:<br />  Logout - remove the passed token from the list of active sessions (default value)<br />  LogoutAll - remove this token and all other tokens created for the same user from the list of active sessions<br />  LogoutAllOther - remove all tokens created for the same user from the list of session except for the one that is passed in<br />  Rotate - change the current token to a different GUID and return the new GUID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.account_logout_with_http_info(model, async_req=True)
+        >>> thread = api.logout_with_http_info(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -462,14 +462,14 @@ class AccountApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method account_logout" % key
+                    " to method logout" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `account_logout`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `logout`")  # noqa: E501
 
         collection_formats = {}
 
@@ -512,13 +512,13 @@ class AccountApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def account_post_employee_location(self, model, **kwargs):  # noqa: E501
+    def post_employee_location(self, model, **kwargs):  # noqa: E501
         """Post Employee Location  # noqa: E501
 
         Sample request:                POST api/user/location                Latitude - The latitude in degrees.<br />  Longitude - The longitude in degrees.<br />  Accuracy - The radius of uncertainty for the location, measured in meters.<br />  Altitude - The altitude in meters above the WGS 84 reference ellipsoid.<br />  AltitudeAccuracy - The accuracy of the altitude value, in meters.<br />  Heading - Horizontal direction of travel of this device, measured in degrees starting at due north and continuing clockwise around the compass. Thus, north is 0 degrees, east is 90 degrees, south is 180 degrees, and so on.<br />  Speed - The instantaneous speed of the device in meters per second.<br />  Timestamp - The time at which this position information was obtained, in seconds.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.account_post_employee_location(model, async_req=True)
+        >>> thread = api.post_employee_location(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -529,18 +529,18 @@ class AccountApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.account_post_employee_location_with_http_info(model, **kwargs)  # noqa: E501
+            return self.post_employee_location_with_http_info(model, **kwargs)  # noqa: E501
         else:
-            (data) = self.account_post_employee_location_with_http_info(model, **kwargs)  # noqa: E501
+            (data) = self.post_employee_location_with_http_info(model, **kwargs)  # noqa: E501
             return data
 
-    def account_post_employee_location_with_http_info(self, model, **kwargs):  # noqa: E501
+    def post_employee_location_with_http_info(self, model, **kwargs):  # noqa: E501
         """Post Employee Location  # noqa: E501
 
         Sample request:                POST api/user/location                Latitude - The latitude in degrees.<br />  Longitude - The longitude in degrees.<br />  Accuracy - The radius of uncertainty for the location, measured in meters.<br />  Altitude - The altitude in meters above the WGS 84 reference ellipsoid.<br />  AltitudeAccuracy - The accuracy of the altitude value, in meters.<br />  Heading - Horizontal direction of travel of this device, measured in degrees starting at due north and continuing clockwise around the compass. Thus, north is 0 degrees, east is 90 degrees, south is 180 degrees, and so on.<br />  Speed - The instantaneous speed of the device in meters per second.<br />  Timestamp - The time at which this position information was obtained, in seconds.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.account_post_employee_location_with_http_info(model, async_req=True)
+        >>> thread = api.post_employee_location_with_http_info(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -561,14 +561,14 @@ class AccountApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method account_post_employee_location" % key
+                    " to method post_employee_location" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `account_post_employee_location`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `post_employee_location`")  # noqa: E501
 
         collection_formats = {}
 

@@ -29,27 +29,27 @@ class TestVendorsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_vendors_create(self):
-        """Test case for vendors_create
+    def test_create(self):
+        """Test case for create
 
         Create Vendor information.  # noqa: E501
         """
         pass
 
-    def test_vendors_get(self):
-        """Test case for vendors_get
+    def test_get(self):
+        """Test case for get
 
         """
         pass
 
-    def test_vendors_get_all(self):
-        """Test case for vendors_get_all
+    def test_get_all(self):
+        """Test case for get_all
 
         """
         pass
 
-    def test_vendors_update(self):
-        """Test case for vendors_update
+    def test_update(self):
+        """Test case for update
 
         Update Vendor information.  # noqa: E501
         """

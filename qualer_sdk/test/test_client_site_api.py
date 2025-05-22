@@ -29,21 +29,21 @@ class TestClientSiteApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_client_site_create_client_site(self):
-        """Test case for client_site_create_client_site
+    def test_create_client_site(self):
+        """Test case for create_client_site
 
         Create Client Site.  # noqa: E501
         """
         pass
 
-    def test_client_site_get_client_sites(self):
-        """Test case for client_site_get_client_sites
+    def test_get_client_sites(self):
+        """Test case for get_client_sites
 
         """
         pass
 
-    def test_client_site_update_client_site(self):
-        """Test case for client_site_update_client_site
+    def test_update_client_site(self):
+        """Test case for update_client_site
 
         Update Client Site.  # noqa: E501
         """

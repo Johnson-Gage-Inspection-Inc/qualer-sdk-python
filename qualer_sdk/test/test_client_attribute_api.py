@@ -29,14 +29,14 @@ class TestClientAttributeApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_client_attribute_get_client_attributes(self):
-        """Test case for client_attribute_get_client_attributes
+    def test_get_client_attributes(self):
+        """Test case for get_client_attributes
 
         """
         pass
 
-    def test_client_attribute_upsert_client_attribute(self):
-        """Test case for client_attribute_upsert_client_attribute
+    def test_upsert_client_attribute(self):
+        """Test case for upsert_client_attribute
 
         """
         pass

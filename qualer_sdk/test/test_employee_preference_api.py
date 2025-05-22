@@ -29,14 +29,14 @@ class TestEmployeePreferenceApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_employee_preference_delete(self):
-        """Test case for employee_preference_delete
+    def test_delete(self):
+        """Test case for delete
 
         """
         pass
 
-    def test_employee_preference_get(self):
-        """Test case for employee_preference_get
+    def test_get(self):
+        """Test case for get
 
         """
         pass

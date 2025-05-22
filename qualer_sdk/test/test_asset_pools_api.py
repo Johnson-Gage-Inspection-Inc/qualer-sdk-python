@@ -29,14 +29,14 @@ class TestAssetPoolsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_asset_pools_get(self):
-        """Test case for asset_pools_get
+    def test_get(self):
+        """Test case for get
 
         """
         pass
 
-    def test_asset_pools_get_all(self):
-        """Test case for asset_pools_get_all
+    def test_get_all(self):
+        """Test case for get_all
 
         """
         pass

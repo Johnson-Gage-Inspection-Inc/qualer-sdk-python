@@ -33,12 +33,12 @@ class ServiceOrdersApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def service_orders_change_order_status(self, service_order_id, model, **kwargs):  # noqa: E501
+    def change_order_status(self, service_order_id, model, **kwargs):  # noqa: E501
         """Change Work Order Status  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_change_order_status(service_order_id, model, async_req=True)
+        >>> thread = api.change_order_status(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -50,17 +50,17 @@ class ServiceOrdersApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_orders_change_order_status_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            return self.change_order_status_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_orders_change_order_status_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            (data) = self.change_order_status_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
             return data
 
-    def service_orders_change_order_status_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
+    def change_order_status_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
         """Change Work Order Status  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_change_order_status_with_http_info(service_order_id, model, async_req=True)
+        >>> thread = api.change_order_status_with_http_info(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -82,18 +82,18 @@ class ServiceOrdersApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_orders_change_order_status" % key
+                    " to method change_order_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_orders_change_order_status`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `change_order_status`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `service_orders_change_order_status`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `change_order_status`")  # noqa: E501
 
         collection_formats = {}
 
@@ -138,13 +138,13 @@ class ServiceOrdersApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_orders_create_async(self, model, **kwargs):  # noqa: E501
+    def create_async(self, model, **kwargs):  # noqa: E501
         """Create service order.  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_create_async(model, async_req=True)
+        >>> thread = api.create_async(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -155,18 +155,18 @@ class ServiceOrdersApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_orders_create_async_with_http_info(model, **kwargs)  # noqa: E501
+            return self.create_async_with_http_info(model, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_orders_create_async_with_http_info(model, **kwargs)  # noqa: E501
+            (data) = self.create_async_with_http_info(model, **kwargs)  # noqa: E501
             return data
 
-    def service_orders_create_async_with_http_info(self, model, **kwargs):  # noqa: E501
+    def create_async_with_http_info(self, model, **kwargs):  # noqa: E501
         """Create service order.  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_create_async_with_http_info(model, async_req=True)
+        >>> thread = api.create_async_with_http_info(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -187,14 +187,14 @@ class ServiceOrdersApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_orders_create_async" % key
+                    " to method create_async" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `service_orders_create_async`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `create_async`")  # noqa: E501
 
         collection_formats = {}
 
@@ -237,12 +237,12 @@ class ServiceOrdersApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_orders_create_order_by_schedule(self, service_schedule_id, **kwargs):  # noqa: E501
-        """service_orders_create_order_by_schedule  # noqa: E501
+    def create_order_by_schedule(self, service_schedule_id, **kwargs):  # noqa: E501
+        """create_order_by_schedule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_create_order_by_schedule(service_schedule_id, async_req=True)
+        >>> thread = api.create_order_by_schedule(service_schedule_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -253,17 +253,17 @@ class ServiceOrdersApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_orders_create_order_by_schedule_with_http_info(service_schedule_id, **kwargs)  # noqa: E501
+            return self.create_order_by_schedule_with_http_info(service_schedule_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_orders_create_order_by_schedule_with_http_info(service_schedule_id, **kwargs)  # noqa: E501
+            (data) = self.create_order_by_schedule_with_http_info(service_schedule_id, **kwargs)  # noqa: E501
             return data
 
-    def service_orders_create_order_by_schedule_with_http_info(self, service_schedule_id, **kwargs):  # noqa: E501
-        """service_orders_create_order_by_schedule  # noqa: E501
+    def create_order_by_schedule_with_http_info(self, service_schedule_id, **kwargs):  # noqa: E501
+        """create_order_by_schedule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_create_order_by_schedule_with_http_info(service_schedule_id, async_req=True)
+        >>> thread = api.create_order_by_schedule_with_http_info(service_schedule_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -284,14 +284,14 @@ class ServiceOrdersApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_orders_create_order_by_schedule" % key
+                    " to method create_order_by_schedule" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_schedule_id' is set
         if self.api_client.client_side_validation and ('service_schedule_id' not in params or
                                                        params['service_schedule_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_schedule_id` when calling `service_orders_create_order_by_schedule`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_schedule_id` when calling `create_order_by_schedule`")  # noqa: E501
 
         collection_formats = {}
 
@@ -330,12 +330,12 @@ class ServiceOrdersApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_orders_get_assignments(self, service_order_id, **kwargs):  # noqa: E501
-        """service_orders_get_assignments  # noqa: E501
+    def get_assignments(self, service_order_id, **kwargs):  # noqa: E501
+        """get_assignments  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_get_assignments(service_order_id, async_req=True)
+        >>> thread = api.get_assignments(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -346,17 +346,17 @@ class ServiceOrdersApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_orders_get_assignments_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_assignments_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_orders_get_assignments_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_assignments_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def service_orders_get_assignments_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """service_orders_get_assignments  # noqa: E501
+    def get_assignments_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_assignments  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_get_assignments_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_assignments_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -377,14 +377,14 @@ class ServiceOrdersApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_orders_get_assignments" % key
+                    " to method get_assignments" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_orders_get_assignments`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_assignments`")  # noqa: E501
 
         collection_formats = {}
 
@@ -423,12 +423,12 @@ class ServiceOrdersApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_orders_get_charges(self, service_order_id, **kwargs):  # noqa: E501
-        """service_orders_get_charges  # noqa: E501
+    def get_charges(self, service_order_id, **kwargs):  # noqa: E501
+        """get_charges  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_get_charges(service_order_id, async_req=True)
+        >>> thread = api.get_charges(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -439,17 +439,17 @@ class ServiceOrdersApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_orders_get_charges_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_charges_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_orders_get_charges_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_charges_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def service_orders_get_charges_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """service_orders_get_charges  # noqa: E501
+    def get_charges_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_charges  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_get_charges_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_charges_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -470,14 +470,14 @@ class ServiceOrdersApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_orders_get_charges" % key
+                    " to method get_charges" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_orders_get_charges`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_charges`")  # noqa: E501
 
         collection_formats = {}
 
@@ -516,12 +516,12 @@ class ServiceOrdersApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_orders_get_order_status(self, service_order_id, **kwargs):  # noqa: E501
+    def get_order_status(self, service_order_id, **kwargs):  # noqa: E501
         """Gets current status and next status according to the workflow  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_get_order_status(service_order_id, async_req=True)
+        >>> thread = api.get_order_status(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -532,17 +532,17 @@ class ServiceOrdersApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_orders_get_order_status_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_order_status_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_orders_get_order_status_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_order_status_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def service_orders_get_order_status_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+    def get_order_status_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
         """Gets current status and next status according to the workflow  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_get_order_status_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_order_status_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -563,14 +563,14 @@ class ServiceOrdersApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_orders_get_order_status" % key
+                    " to method get_order_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_orders_get_order_status`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_order_status`")  # noqa: E501
 
         collection_formats = {}
 
@@ -609,12 +609,12 @@ class ServiceOrdersApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_orders_get_work_order(self, service_order_id, **kwargs):  # noqa: E501
-        """service_orders_get_work_order  # noqa: E501
+    def get_work_order(self, service_order_id, **kwargs):  # noqa: E501
+        """get_work_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_get_work_order(service_order_id, async_req=True)
+        >>> thread = api.get_work_order(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -625,17 +625,17 @@ class ServiceOrdersApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_orders_get_work_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_work_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_orders_get_work_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_work_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def service_orders_get_work_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """service_orders_get_work_order  # noqa: E501
+    def get_work_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_work_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_get_work_order_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_work_order_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -656,14 +656,14 @@ class ServiceOrdersApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_orders_get_work_order" % key
+                    " to method get_work_order" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_orders_get_work_order`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_work_order`")  # noqa: E501
 
         collection_formats = {}
 
@@ -702,13 +702,13 @@ class ServiceOrdersApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_orders_get_work_orders(self, **kwargs):  # noqa: E501
+    def get_work_orders(self, **kwargs):  # noqa: E501
         """Retrieve work orders by filters  # noqa: E501
 
         Sample request:                GET /api/service/workorders                GET /api/service/workorders?status=submitted                GET /api/service/workorders?&amp;status=onsite,submitted&amp;companyId=10&amp;from=2010-11-15T10:11:12&amp;to=2011-11-15T10:11:12&amp;modifiedAfter=2010-12-15T10:11:12&amp;workOrderNumber=00567  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_get_work_orders(async_req=True)
+        >>> thread = api.get_work_orders(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -725,18 +725,18 @@ class ServiceOrdersApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_orders_get_work_orders_with_http_info(**kwargs)  # noqa: E501
+            return self.get_work_orders_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.service_orders_get_work_orders_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_work_orders_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def service_orders_get_work_orders_with_http_info(self, **kwargs):  # noqa: E501
+    def get_work_orders_with_http_info(self, **kwargs):  # noqa: E501
         """Retrieve work orders by filters  # noqa: E501
 
         Sample request:                GET /api/service/workorders                GET /api/service/workorders?status=submitted                GET /api/service/workorders?&amp;status=onsite,submitted&amp;companyId=10&amp;from=2010-11-15T10:11:12&amp;to=2011-11-15T10:11:12&amp;modifiedAfter=2010-12-15T10:11:12&amp;workOrderNumber=00567  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_get_work_orders_with_http_info(async_req=True)
+        >>> thread = api.get_work_orders_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -763,7 +763,7 @@ class ServiceOrdersApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_orders_get_work_orders" % key
+                    " to method get_work_orders" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -817,12 +817,12 @@ class ServiceOrdersApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_orders_get_work_orders_0(self, employee_id, **kwargs):  # noqa: E501
-        """service_orders_get_work_orders_0  # noqa: E501
+    def get_work_orders_0(self, employee_id, **kwargs):  # noqa: E501
+        """get_work_orders_0  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_get_work_orders_0(employee_id, async_req=True)
+        >>> thread = api.get_work_orders_0(employee_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -834,17 +834,17 @@ class ServiceOrdersApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_orders_get_work_orders_0_with_http_info(employee_id, **kwargs)  # noqa: E501
+            return self.get_work_orders_0_with_http_info(employee_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_orders_get_work_orders_0_with_http_info(employee_id, **kwargs)  # noqa: E501
+            (data) = self.get_work_orders_0_with_http_info(employee_id, **kwargs)  # noqa: E501
             return data
 
-    def service_orders_get_work_orders_0_with_http_info(self, employee_id, **kwargs):  # noqa: E501
-        """service_orders_get_work_orders_0  # noqa: E501
+    def get_work_orders_0_with_http_info(self, employee_id, **kwargs):  # noqa: E501
+        """get_work_orders_0  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_get_work_orders_0_with_http_info(employee_id, async_req=True)
+        >>> thread = api.get_work_orders_0_with_http_info(employee_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -866,14 +866,14 @@ class ServiceOrdersApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_orders_get_work_orders_0" % key
+                    " to method get_work_orders_0" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'employee_id' is set
         if self.api_client.client_side_validation and ('employee_id' not in params or
                                                        params['employee_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `employee_id` when calling `service_orders_get_work_orders_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `employee_id` when calling `get_work_orders_0`")  # noqa: E501
 
         collection_formats = {}
 
@@ -914,12 +914,12 @@ class ServiceOrdersApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_orders_order_cancel(self, service_order_id, **kwargs):  # noqa: E501
+    def order_cancel(self, service_order_id, **kwargs):  # noqa: E501
         """Cancel work order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_order_cancel(service_order_id, async_req=True)
+        >>> thread = api.order_cancel(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -931,17 +931,17 @@ class ServiceOrdersApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_orders_order_cancel_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.order_cancel_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_orders_order_cancel_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.order_cancel_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def service_orders_order_cancel_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+    def order_cancel_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
         """Cancel work order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_order_cancel_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.order_cancel_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -963,14 +963,14 @@ class ServiceOrdersApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_orders_order_cancel" % key
+                    " to method order_cancel" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_orders_order_cancel`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `order_cancel`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1011,12 +1011,12 @@ class ServiceOrdersApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_orders_put_charges(self, service_order_id, model, **kwargs):  # noqa: E501
+    def put_charges(self, service_order_id, model, **kwargs):  # noqa: E501
         """Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount, ShippingFee  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_put_charges(service_order_id, model, async_req=True)
+        >>> thread = api.put_charges(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1028,17 +1028,17 @@ class ServiceOrdersApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_orders_put_charges_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            return self.put_charges_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_orders_put_charges_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            (data) = self.put_charges_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
             return data
 
-    def service_orders_put_charges_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
+    def put_charges_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
         """Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount, ShippingFee  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_orders_put_charges_with_http_info(service_order_id, model, async_req=True)
+        >>> thread = api.put_charges_with_http_info(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1060,18 +1060,18 @@ class ServiceOrdersApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_orders_put_charges" % key
+                    " to method put_charges" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_orders_put_charges`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `put_charges`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `service_orders_put_charges`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `put_charges`")  # noqa: E501
 
         collection_formats = {}
 

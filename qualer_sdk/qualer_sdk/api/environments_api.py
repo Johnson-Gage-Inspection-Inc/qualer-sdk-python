@@ -33,12 +33,12 @@ class EnvironmentsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def environments_get(self, id, **kwargs):  # noqa: E501
-        """environments_get  # noqa: E501
+    def get(self, id, **kwargs):  # noqa: E501
+        """get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.environments_get(id, async_req=True)
+        >>> thread = api.get(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -49,17 +49,17 @@ class EnvironmentsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.environments_get_with_http_info(id, **kwargs)  # noqa: E501
+            return self.get_with_http_info(id, **kwargs)  # noqa: E501
         else:
-            (data) = self.environments_get_with_http_info(id, **kwargs)  # noqa: E501
+            (data) = self.get_with_http_info(id, **kwargs)  # noqa: E501
             return data
 
-    def environments_get_with_http_info(self, id, **kwargs):  # noqa: E501
-        """environments_get  # noqa: E501
+    def get_with_http_info(self, id, **kwargs):  # noqa: E501
+        """get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.environments_get_with_http_info(id, async_req=True)
+        >>> thread = api.get_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -80,14 +80,14 @@ class EnvironmentsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method environments_get" % key
+                    " to method get" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
         if self.api_client.client_side_validation and ('id' not in params or
                                                        params['id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `id` when calling `environments_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `get`")  # noqa: E501
 
         collection_formats = {}
 
@@ -126,12 +126,12 @@ class EnvironmentsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def environments_post(self, model, id, **kwargs):  # noqa: E501
-        """environments_post  # noqa: E501
+    def post(self, model, id, **kwargs):  # noqa: E501
+        """post  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.environments_post(model, id, async_req=True)
+        >>> thread = api.post(model, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -143,17 +143,17 @@ class EnvironmentsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.environments_post_with_http_info(model, id, **kwargs)  # noqa: E501
+            return self.post_with_http_info(model, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.environments_post_with_http_info(model, id, **kwargs)  # noqa: E501
+            (data) = self.post_with_http_info(model, id, **kwargs)  # noqa: E501
             return data
 
-    def environments_post_with_http_info(self, model, id, **kwargs):  # noqa: E501
-        """environments_post  # noqa: E501
+    def post_with_http_info(self, model, id, **kwargs):  # noqa: E501
+        """post  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.environments_post_with_http_info(model, id, async_req=True)
+        >>> thread = api.post_with_http_info(model, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -175,18 +175,18 @@ class EnvironmentsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method environments_post" % key
+                    " to method post" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `environments_post`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `post`")  # noqa: E501
         # verify the required parameter 'id' is set
         if self.api_client.client_side_validation and ('id' not in params or
                                                        params['id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `id` when calling `environments_post`")  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `post`")  # noqa: E501
 
         collection_formats = {}
 

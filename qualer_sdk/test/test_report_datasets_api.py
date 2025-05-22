@@ -29,224 +29,224 @@ class TestReportDatasetsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_report_datasets_channel_uniformity_by_order(self):
-        """Test case for report_datasets_channel_uniformity_by_order
+    def test_channel_uniformity_by_order(self):
+        """Test case for channel_uniformity_by_order
 
         """
         pass
 
-    def test_report_datasets_get_all_measurements(self):
-        """Test case for report_datasets_get_all_measurements
+    def test_get_all_measurements(self):
+        """Test case for get_all_measurements
 
         """
         pass
 
-    def test_report_datasets_get_all_measurements_by_order(self):
-        """Test case for report_datasets_get_all_measurements_by_order
+    def test_get_all_measurements_by_order(self):
+        """Test case for get_all_measurements_by_order
 
         """
         pass
 
-    def test_report_datasets_get_as_found_measurements(self):
-        """Test case for report_datasets_get_as_found_measurements
+    def test_get_as_found_measurements(self):
+        """Test case for get_as_found_measurements
 
         """
         pass
 
-    def test_report_datasets_get_as_found_measurements_by_order(self):
-        """Test case for report_datasets_get_as_found_measurements_by_order
+    def test_get_as_found_measurements_by_order(self):
+        """Test case for get_as_found_measurements_by_order
 
         """
         pass
 
-    def test_report_datasets_get_as_left_measurements(self):
-        """Test case for report_datasets_get_as_left_measurements
+    def test_get_as_left_measurements(self):
+        """Test case for get_as_left_measurements
 
         """
         pass
 
-    def test_report_datasets_get_as_left_measurements_by_order(self):
-        """Test case for report_datasets_get_as_left_measurements_by_order
+    def test_get_as_left_measurements_by_order(self):
+        """Test case for get_as_left_measurements_by_order
 
         """
         pass
 
-    def test_report_datasets_get_asset_attributes(self):
-        """Test case for report_datasets_get_asset_attributes
+    def test_get_asset_attributes(self):
+        """Test case for get_asset_attributes
 
         """
         pass
 
-    def test_report_datasets_get_asset_service_records(self):
-        """Test case for report_datasets_get_asset_service_records
+    def test_get_asset_service_records(self):
+        """Test case for get_asset_service_records
 
         """
         pass
 
-    def test_report_datasets_get_channel_results(self):
-        """Test case for report_datasets_get_channel_results
+    def test_get_channel_results(self):
+        """Test case for get_channel_results
 
         """
         pass
 
-    def test_report_datasets_get_channel_results_by_order(self):
-        """Test case for report_datasets_get_channel_results_by_order
+    def test_get_channel_results_by_order(self):
+        """Test case for get_channel_results_by_order
 
         """
         pass
 
-    def test_report_datasets_get_channel_uniformity(self):
-        """Test case for report_datasets_get_channel_uniformity
+    def test_get_channel_uniformity(self):
+        """Test case for get_channel_uniformity
 
         """
         pass
 
-    def test_report_datasets_get_client_attributes(self):
-        """Test case for report_datasets_get_client_attributes
+    def test_get_client_attributes(self):
+        """Test case for get_client_attributes
 
         """
         pass
 
-    def test_report_datasets_get_company_certifications(self):
-        """Test case for report_datasets_get_company_certifications
+    def test_get_company_certifications(self):
+        """Test case for get_company_certifications
 
         """
         pass
 
-    def test_report_datasets_get_external_data_reports(self):
-        """Test case for report_datasets_get_external_data_reports
+    def test_get_external_data_reports(self):
+        """Test case for get_external_data_reports
 
         """
         pass
 
-    def test_report_datasets_get_measurement_charts(self):
-        """Test case for report_datasets_get_measurement_charts
+    def test_get_measurement_charts(self):
+        """Test case for get_measurement_charts
 
         """
         pass
 
-    def test_report_datasets_get_measurement_fields(self):
-        """Test case for report_datasets_get_measurement_fields
+    def test_get_measurement_fields(self):
+        """Test case for get_measurement_fields
 
         """
         pass
 
-    def test_report_datasets_get_measurement_fields_by_order(self):
-        """Test case for report_datasets_get_measurement_fields_by_order
+    def test_get_measurement_fields_by_order(self):
+        """Test case for get_measurement_fields_by_order
 
         """
         pass
 
-    def test_report_datasets_get_order_item_documents(self):
-        """Test case for report_datasets_get_order_item_documents
+    def test_get_order_item_documents(self):
+        """Test case for get_order_item_documents
 
         """
         pass
 
-    def test_report_datasets_get_order_item_images(self):
-        """Test case for report_datasets_get_order_item_images
+    def test_get_order_item_images(self):
+        """Test case for get_order_item_images
 
         """
         pass
 
-    def test_report_datasets_get_reference_standards(self):
-        """Test case for report_datasets_get_reference_standards
+    def test_get_reference_standards(self):
+        """Test case for get_reference_standards
 
         """
         pass
 
-    def test_report_datasets_get_reference_standards_by_order(self):
-        """Test case for report_datasets_get_reference_standards_by_order
+    def test_get_reference_standards_by_order(self):
+        """Test case for get_reference_standards_by_order
 
         """
         pass
 
-    def test_report_datasets_get_service_order_assignees(self):
-        """Test case for report_datasets_get_service_order_assignees
+    def test_get_service_order_assignees(self):
+        """Test case for get_service_order_assignees
 
         """
         pass
 
-    def test_report_datasets_get_service_order_charges(self):
-        """Test case for report_datasets_get_service_order_charges
+    def test_get_service_order_charges(self):
+        """Test case for get_service_order_charges
 
         """
         pass
 
-    def test_report_datasets_get_service_order_item_components(self):
-        """Test case for report_datasets_get_service_order_item_components
+    def test_get_service_order_item_components(self):
+        """Test case for get_service_order_item_components
 
         """
         pass
 
-    def test_report_datasets_get_service_order_item_components_by_order(self):
-        """Test case for report_datasets_get_service_order_item_components_by_order
+    def test_get_service_order_item_components_by_order(self):
+        """Test case for get_service_order_item_components_by_order
 
         """
         pass
 
-    def test_report_datasets_get_service_order_item_fields_by_order(self):
-        """Test case for report_datasets_get_service_order_item_fields_by_order
+    def test_get_service_order_item_fields_by_order(self):
+        """Test case for get_service_order_item_fields_by_order
 
         """
         pass
 
-    def test_report_datasets_get_service_order_item_options(self):
-        """Test case for report_datasets_get_service_order_item_options
+    def test_get_service_order_item_options(self):
+        """Test case for get_service_order_item_options
 
         """
         pass
 
-    def test_report_datasets_get_service_order_item_status_history_async(self):
-        """Test case for report_datasets_get_service_order_item_status_history_async
+    def test_get_service_order_item_status_history_async(self):
+        """Test case for get_service_order_item_status_history_async
 
         """
         pass
 
-    def test_report_datasets_get_service_order_item_tasks_by_order(self):
-        """Test case for report_datasets_get_service_order_item_tasks_by_order
+    def test_get_service_order_item_tasks_by_order(self):
+        """Test case for get_service_order_item_tasks_by_order
 
         """
         pass
 
-    def test_report_datasets_get_service_order_item_tasks_by_order_items(self):
-        """Test case for report_datasets_get_service_order_item_tasks_by_order_items
+    def test_get_service_order_item_tasks_by_order_items(self):
+        """Test case for get_service_order_item_tasks_by_order_items
 
         """
         pass
 
-    def test_report_datasets_get_service_order_items(self):
-        """Test case for report_datasets_get_service_order_items
+    def test_get_service_order_items(self):
+        """Test case for get_service_order_items
 
         """
         pass
 
-    def test_report_datasets_get_service_order_items_by_order(self):
-        """Test case for report_datasets_get_service_order_items_by_order
+    def test_get_service_order_items_by_order(self):
+        """Test case for get_service_order_items_by_order
 
         """
         pass
 
-    def test_report_datasets_get_service_order_tasks(self):
-        """Test case for report_datasets_get_service_order_tasks
+    def test_get_service_order_tasks(self):
+        """Test case for get_service_order_tasks
 
         """
         pass
 
-    def test_report_datasets_get_service_orders(self):
-        """Test case for report_datasets_get_service_orders
+    def test_get_service_orders(self):
+        """Test case for get_service_orders
 
         """
         pass
 
-    def test_report_datasets_get_tool_attributes(self):
-        """Test case for report_datasets_get_tool_attributes
+    def test_get_tool_attributes(self):
+        """Test case for get_tool_attributes
 
         """
         pass
 
-    def test_report_datasets_get_tool_range_attributes(self):
-        """Test case for report_datasets_get_tool_range_attributes
+    def test_get_tool_range_attributes(self):
+        """Test case for get_tool_range_attributes
 
         """
         pass

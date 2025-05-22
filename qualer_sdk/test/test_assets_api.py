@@ -29,116 +29,116 @@ class TestAssetsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_assets_clear_collected_assets(self):
-        """Test case for assets_clear_collected_assets
+    def test_clear_collected_assets(self):
+        """Test case for clear_collected_assets
 
         ClearCollectedAssets(int[] assetIds)  # noqa: E501
         """
         pass
 
-    def test_assets_collect_assets(self):
-        """Test case for assets_collect_assets
+    def test_collect_assets(self):
+        """Test case for collect_assets
 
         CollectAssets(int[] assetIds)  # noqa: E501
         """
         pass
 
-    def test_assets_get_all_assets(self):
-        """Test case for assets_get_all_assets
+    def test_get_all_assets(self):
+        """Test case for get_all_assets
 
         """
         pass
 
-    def test_assets_get_asset(self):
-        """Test case for assets_get_asset
+    def test_get_asset(self):
+        """Test case for get_asset
 
         """
         pass
 
-    def test_assets_get_asset_by_asset_pool(self):
-        """Test case for assets_get_asset_by_asset_pool
+    def test_get_asset_by_asset_pool(self):
+        """Test case for get_asset_by_asset_pool
 
         """
         pass
 
-    def test_assets_get_asset_by_asset_tag(self):
-        """Test case for assets_get_asset_by_asset_tag
+    def test_get_asset_by_asset_tag(self):
+        """Test case for get_asset_by_asset_tag
 
         """
         pass
 
-    def test_assets_get_asset_by_attribute(self):
-        """Test case for assets_get_asset_by_attribute
+    def test_get_asset_by_attribute(self):
+        """Test case for get_asset_by_attribute
 
         """
         pass
 
-    def test_assets_get_asset_by_barcode(self):
-        """Test case for assets_get_asset_by_barcode
+    def test_get_asset_by_barcode(self):
+        """Test case for get_asset_by_barcode
 
         """
         pass
 
-    def test_assets_get_asset_by_serial_number(self):
-        """Test case for assets_get_asset_by_serial_number
+    def test_get_asset_by_serial_number(self):
+        """Test case for get_asset_by_serial_number
 
         """
         pass
 
-    def test_assets_get_asset_images(self):
-        """Test case for assets_get_asset_images
+    def test_get_asset_images(self):
+        """Test case for get_asset_images
 
         GetAssetImages  # noqa: E501
         """
         pass
 
-    def test_assets_get_asset_manager_counters(self):
-        """Test case for assets_get_asset_manager_counters
+    def test_get_asset_manager_counters(self):
+        """Test case for get_asset_manager_counters
 
         GetAssetManagerCounters  # noqa: E501
         """
         pass
 
-    def test_assets_get_asset_manager_list(self):
-        """Test case for assets_get_asset_manager_list
+    def test_get_asset_manager_list(self):
+        """Test case for get_asset_manager_list
 
         GetAssetManagerList  # noqa: E501
         """
         pass
 
-    def test_assets_get_assets_by_equipment_id(self):
-        """Test case for assets_get_assets_by_equipment_id
+    def test_get_assets_by_equipment_id(self):
+        """Test case for get_assets_by_equipment_id
 
         """
         pass
 
-    def test_assets_post_asset_images(self):
-        """Test case for assets_post_asset_images
+    def test_post_asset_images(self):
+        """Test case for post_asset_images
 
         PostAssetImages  # noqa: E501
         """
         pass
 
-    def test_assets_update_asset_class(self):
-        """Test case for assets_update_asset_class
+    def test_update_asset_class(self):
+        """Test case for update_asset_class
 
         """
         pass
 
-    def test_assets_update_asset_department(self):
-        """Test case for assets_update_asset_department
+    def test_update_asset_department(self):
+        """Test case for update_asset_department
 
         """
         pass
 
-    def test_assets_update_asset_room(self):
-        """Test case for assets_update_asset_room
+    def test_update_asset_room(self):
+        """Test case for update_asset_room
 
         """
         pass
 
-    def test_assets_update_room(self):
-        """Test case for assets_update_room
+    def test_update_room(self):
+        """Test case for update_room
 
         """
         pass

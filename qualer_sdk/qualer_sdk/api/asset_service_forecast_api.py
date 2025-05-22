@@ -33,12 +33,12 @@ class AssetServiceForecastApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def asset_service_forecast_get_asset_forecast_list(self, **kwargs):  # noqa: E501
-        """asset_service_forecast_get_asset_forecast_list  # noqa: E501
+    def get_asset_forecast_list(self, **kwargs):  # noqa: E501
+        """get_asset_forecast_list  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_forecast_get_asset_forecast_list(async_req=True)
+        >>> thread = api.get_asset_forecast_list(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -48,17 +48,17 @@ class AssetServiceForecastApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_service_forecast_get_asset_forecast_list_with_http_info(**kwargs)  # noqa: E501
+            return self.get_asset_forecast_list_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.asset_service_forecast_get_asset_forecast_list_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_asset_forecast_list_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def asset_service_forecast_get_asset_forecast_list_with_http_info(self, **kwargs):  # noqa: E501
-        """asset_service_forecast_get_asset_forecast_list  # noqa: E501
+    def get_asset_forecast_list_with_http_info(self, **kwargs):  # noqa: E501
+        """get_asset_forecast_list  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_forecast_get_asset_forecast_list_with_http_info(async_req=True)
+        >>> thread = api.get_asset_forecast_list_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -78,7 +78,7 @@ class AssetServiceForecastApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_service_forecast_get_asset_forecast_list" % key
+                    " to method get_asset_forecast_list" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -118,12 +118,12 @@ class AssetServiceForecastApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def asset_service_forecast_get_client_asset_forecast_list(self, client_company_id, **kwargs):  # noqa: E501
-        """asset_service_forecast_get_client_asset_forecast_list  # noqa: E501
+    def get_client_asset_forecast_list(self, client_company_id, **kwargs):  # noqa: E501
+        """get_client_asset_forecast_list  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_forecast_get_client_asset_forecast_list(client_company_id, async_req=True)
+        >>> thread = api.get_client_asset_forecast_list(client_company_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -134,17 +134,17 @@ class AssetServiceForecastApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_service_forecast_get_client_asset_forecast_list_with_http_info(client_company_id, **kwargs)  # noqa: E501
+            return self.get_client_asset_forecast_list_with_http_info(client_company_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.asset_service_forecast_get_client_asset_forecast_list_with_http_info(client_company_id, **kwargs)  # noqa: E501
+            (data) = self.get_client_asset_forecast_list_with_http_info(client_company_id, **kwargs)  # noqa: E501
             return data
 
-    def asset_service_forecast_get_client_asset_forecast_list_with_http_info(self, client_company_id, **kwargs):  # noqa: E501
-        """asset_service_forecast_get_client_asset_forecast_list  # noqa: E501
+    def get_client_asset_forecast_list_with_http_info(self, client_company_id, **kwargs):  # noqa: E501
+        """get_client_asset_forecast_list  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_forecast_get_client_asset_forecast_list_with_http_info(client_company_id, async_req=True)
+        >>> thread = api.get_client_asset_forecast_list_with_http_info(client_company_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -165,14 +165,14 @@ class AssetServiceForecastApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_service_forecast_get_client_asset_forecast_list" % key
+                    " to method get_client_asset_forecast_list" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'client_company_id' is set
         if self.api_client.client_side_validation and ('client_company_id' not in params or
                                                        params['client_company_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `client_company_id` when calling `asset_service_forecast_get_client_asset_forecast_list`")  # noqa: E501
+            raise ValueError("Missing the required parameter `client_company_id` when calling `get_client_asset_forecast_list`")  # noqa: E501
 
         collection_formats = {}
 

@@ -4,12 +4,12 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**employee_preference_delete**](EmployeePreferenceApi.md#employee_preference_delete) | **DELETE** /api/user/preferences/{elementPage} | 
-[**employee_preference_get**](EmployeePreferenceApi.md#employee_preference_get) | **GET** /api/user/preferences/{elementPage} | 
+[**delete**](EmployeePreferenceApi.md#delete) | **DELETE** /api/user/preferences/{elementPage} | 
+[**get**](EmployeePreferenceApi.md#get) | **GET** /api/user/preferences/{elementPage} | 
 
 
-# **employee_preference_delete**
-> object employee_preference_delete(element_page)
+# **delete**
+> object delete(element_page)
 
 
 
@@ -26,10 +26,10 @@ api_instance = qualer_sdk.EmployeePreferenceApi()
 element_page = 'element_page_example' # str | 
 
 try:
-    api_response = api_instance.employee_preference_delete(element_page)
+    api_response = api_instance.delete(element_page)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling EmployeePreferenceApi->employee_preference_delete: %s\n" % e)
+    print("Exception when calling EmployeePreferenceApi->delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -53,8 +53,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **employee_preference_get**
-> list[QualerApiModelsAssetToEmployeePreferenceResponseModel] employee_preference_get(element_page)
+# **get**
+> list[QualerApiModelsAssetToEmployeePreferenceResponseModel] get(element_page)
 
 
 
@@ -73,10 +73,10 @@ api_instance = qualer_sdk.EmployeePreferenceApi()
 element_page = 'element_page_example' # str | 
 
 try:
-    api_response = api_instance.employee_preference_get(element_page)
+    api_response = api_instance.get(element_page)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling EmployeePreferenceApi->employee_preference_get: %s\n" % e)
+    print("Exception when calling EmployeePreferenceApi->get: %s\n" % e)
 ```
 
 ### Parameters

@@ -29,73 +29,73 @@ class TestServiceOrdersApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_service_orders_change_order_status(self):
-        """Test case for service_orders_change_order_status
+    def test_change_order_status(self):
+        """Test case for change_order_status
 
         Change Work Order Status  # noqa: E501
         """
         pass
 
-    def test_service_orders_create_async(self):
-        """Test case for service_orders_create_async
+    def test_create_async(self):
+        """Test case for create_async
 
         Create service order.  # noqa: E501
         """
         pass
 
-    def test_service_orders_create_order_by_schedule(self):
-        """Test case for service_orders_create_order_by_schedule
+    def test_create_order_by_schedule(self):
+        """Test case for create_order_by_schedule
 
         """
         pass
 
-    def test_service_orders_get_assignments(self):
-        """Test case for service_orders_get_assignments
+    def test_get_assignments(self):
+        """Test case for get_assignments
 
         """
         pass
 
-    def test_service_orders_get_charges(self):
-        """Test case for service_orders_get_charges
+    def test_get_charges(self):
+        """Test case for get_charges
 
         """
         pass
 
-    def test_service_orders_get_order_status(self):
-        """Test case for service_orders_get_order_status
+    def test_get_order_status(self):
+        """Test case for get_order_status
 
         Gets current status and next status according to the workflow  # noqa: E501
         """
         pass
 
-    def test_service_orders_get_work_order(self):
-        """Test case for service_orders_get_work_order
+    def test_get_work_order(self):
+        """Test case for get_work_order
 
         """
         pass
 
-    def test_service_orders_get_work_orders(self):
-        """Test case for service_orders_get_work_orders
+    def test_get_work_orders(self):
+        """Test case for get_work_orders
 
         Retrieve work orders by filters  # noqa: E501
         """
         pass
 
-    def test_service_orders_get_work_orders_0(self):
-        """Test case for service_orders_get_work_orders_0
+    def test_get_work_orders_0(self):
+        """Test case for get_work_orders_0
 
         """
         pass
 
-    def test_service_orders_order_cancel(self):
-        """Test case for service_orders_order_cancel
+    def test_order_cancel(self):
+        """Test case for order_cancel
 
         Cancel work order  # noqa: E501
         """
         pass
 
-    def test_service_orders_put_charges(self):
-        """Test case for service_orders_put_charges
+    def test_put_charges(self):
+        """Test case for put_charges
 
         Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount, ShippingFee  # noqa: E501
         """

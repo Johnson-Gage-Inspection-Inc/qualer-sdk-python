@@ -33,12 +33,12 @@ class ProductApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def product_add_manufacturer(self, manufacturer_name, **kwargs):  # noqa: E501
-        """product_add_manufacturer  # noqa: E501
+    def add_manufacturer(self, manufacturer_name, **kwargs):  # noqa: E501
+        """add_manufacturer  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.product_add_manufacturer(manufacturer_name, async_req=True)
+        >>> thread = api.add_manufacturer(manufacturer_name, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -49,17 +49,17 @@ class ProductApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.product_add_manufacturer_with_http_info(manufacturer_name, **kwargs)  # noqa: E501
+            return self.add_manufacturer_with_http_info(manufacturer_name, **kwargs)  # noqa: E501
         else:
-            (data) = self.product_add_manufacturer_with_http_info(manufacturer_name, **kwargs)  # noqa: E501
+            (data) = self.add_manufacturer_with_http_info(manufacturer_name, **kwargs)  # noqa: E501
             return data
 
-    def product_add_manufacturer_with_http_info(self, manufacturer_name, **kwargs):  # noqa: E501
-        """product_add_manufacturer  # noqa: E501
+    def add_manufacturer_with_http_info(self, manufacturer_name, **kwargs):  # noqa: E501
+        """add_manufacturer  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.product_add_manufacturer_with_http_info(manufacturer_name, async_req=True)
+        >>> thread = api.add_manufacturer_with_http_info(manufacturer_name, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -80,14 +80,14 @@ class ProductApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method product_add_manufacturer" % key
+                    " to method add_manufacturer" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'manufacturer_name' is set
         if self.api_client.client_side_validation and ('manufacturer_name' not in params or
                                                        params['manufacturer_name'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `manufacturer_name` when calling `product_add_manufacturer`")  # noqa: E501
+            raise ValueError("Missing the required parameter `manufacturer_name` when calling `add_manufacturer`")  # noqa: E501
 
         collection_formats = {}
 
@@ -126,12 +126,12 @@ class ProductApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def product_add_product(self, model, **kwargs):  # noqa: E501
-        """product_add_product  # noqa: E501
+    def add_product(self, model, **kwargs):  # noqa: E501
+        """add_product  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.product_add_product(model, async_req=True)
+        >>> thread = api.add_product(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -142,17 +142,17 @@ class ProductApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.product_add_product_with_http_info(model, **kwargs)  # noqa: E501
+            return self.add_product_with_http_info(model, **kwargs)  # noqa: E501
         else:
-            (data) = self.product_add_product_with_http_info(model, **kwargs)  # noqa: E501
+            (data) = self.add_product_with_http_info(model, **kwargs)  # noqa: E501
             return data
 
-    def product_add_product_with_http_info(self, model, **kwargs):  # noqa: E501
-        """product_add_product  # noqa: E501
+    def add_product_with_http_info(self, model, **kwargs):  # noqa: E501
+        """add_product  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.product_add_product_with_http_info(model, async_req=True)
+        >>> thread = api.add_product_with_http_info(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -173,14 +173,14 @@ class ProductApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method product_add_product" % key
+                    " to method add_product" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `product_add_product`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `add_product`")  # noqa: E501
 
         collection_formats = {}
 
@@ -223,12 +223,12 @@ class ProductApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def product_get_inventory_count(self, **kwargs):  # noqa: E501
-        """product_get_inventory_count  # noqa: E501
+    def get_inventory_count(self, **kwargs):  # noqa: E501
+        """get_inventory_count  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.product_get_inventory_count(async_req=True)
+        >>> thread = api.get_inventory_count(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -238,17 +238,17 @@ class ProductApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.product_get_inventory_count_with_http_info(**kwargs)  # noqa: E501
+            return self.get_inventory_count_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.product_get_inventory_count_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_inventory_count_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def product_get_inventory_count_with_http_info(self, **kwargs):  # noqa: E501
-        """product_get_inventory_count  # noqa: E501
+    def get_inventory_count_with_http_info(self, **kwargs):  # noqa: E501
+        """get_inventory_count  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.product_get_inventory_count_with_http_info(async_req=True)
+        >>> thread = api.get_inventory_count_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -268,7 +268,7 @@ class ProductApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method product_get_inventory_count" % key
+                    " to method get_inventory_count" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -308,12 +308,12 @@ class ProductApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def product_get_manufacturers(self, **kwargs):  # noqa: E501
-        """product_get_manufacturers  # noqa: E501
+    def get_manufacturers(self, **kwargs):  # noqa: E501
+        """get_manufacturers  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.product_get_manufacturers(async_req=True)
+        >>> thread = api.get_manufacturers(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -323,17 +323,17 @@ class ProductApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.product_get_manufacturers_with_http_info(**kwargs)  # noqa: E501
+            return self.get_manufacturers_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.product_get_manufacturers_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_manufacturers_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def product_get_manufacturers_with_http_info(self, **kwargs):  # noqa: E501
-        """product_get_manufacturers  # noqa: E501
+    def get_manufacturers_with_http_info(self, **kwargs):  # noqa: E501
+        """get_manufacturers  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.product_get_manufacturers_with_http_info(async_req=True)
+        >>> thread = api.get_manufacturers_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -353,7 +353,7 @@ class ProductApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method product_get_manufacturers" % key
+                    " to method get_manufacturers" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -393,12 +393,12 @@ class ProductApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def product_get_product(self, product_id, **kwargs):  # noqa: E501
-        """product_get_product  # noqa: E501
+    def get_product(self, product_id, **kwargs):  # noqa: E501
+        """get_product  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.product_get_product(product_id, async_req=True)
+        >>> thread = api.get_product(product_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -409,17 +409,17 @@ class ProductApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.product_get_product_with_http_info(product_id, **kwargs)  # noqa: E501
+            return self.get_product_with_http_info(product_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.product_get_product_with_http_info(product_id, **kwargs)  # noqa: E501
+            (data) = self.get_product_with_http_info(product_id, **kwargs)  # noqa: E501
             return data
 
-    def product_get_product_with_http_info(self, product_id, **kwargs):  # noqa: E501
-        """product_get_product  # noqa: E501
+    def get_product_with_http_info(self, product_id, **kwargs):  # noqa: E501
+        """get_product  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.product_get_product_with_http_info(product_id, async_req=True)
+        >>> thread = api.get_product_with_http_info(product_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -440,14 +440,14 @@ class ProductApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method product_get_product" % key
+                    " to method get_product" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'product_id' is set
         if self.api_client.client_side_validation and ('product_id' not in params or
                                                        params['product_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `product_id` when calling `product_get_product`")  # noqa: E501
+            raise ValueError("Missing the required parameter `product_id` when calling `get_product`")  # noqa: E501
 
         collection_formats = {}
 
@@ -486,12 +486,12 @@ class ProductApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def product_product(self, product_id, model, **kwargs):  # noqa: E501
-        """product_product  # noqa: E501
+    def product(self, product_id, model, **kwargs):  # noqa: E501
+        """product  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.product_product(product_id, model, async_req=True)
+        >>> thread = api.product(product_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -503,17 +503,17 @@ class ProductApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.product_product_with_http_info(product_id, model, **kwargs)  # noqa: E501
+            return self.product_with_http_info(product_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.product_product_with_http_info(product_id, model, **kwargs)  # noqa: E501
+            (data) = self.product_with_http_info(product_id, model, **kwargs)  # noqa: E501
             return data
 
-    def product_product_with_http_info(self, product_id, model, **kwargs):  # noqa: E501
-        """product_product  # noqa: E501
+    def product_with_http_info(self, product_id, model, **kwargs):  # noqa: E501
+        """product  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.product_product_with_http_info(product_id, model, async_req=True)
+        >>> thread = api.product_with_http_info(product_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -535,18 +535,18 @@ class ProductApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method product_product" % key
+                    " to method product" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'product_id' is set
         if self.api_client.client_side_validation and ('product_id' not in params or
                                                        params['product_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `product_id` when calling `product_product`")  # noqa: E501
+            raise ValueError("Missing the required parameter `product_id` when calling `product`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `product_product`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `product`")  # noqa: E501
 
         collection_formats = {}
 
@@ -591,12 +591,12 @@ class ProductApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def product_put_inventory_count(self, models, **kwargs):  # noqa: E501
-        """product_put_inventory_count  # noqa: E501
+    def put_inventory_count(self, models, **kwargs):  # noqa: E501
+        """put_inventory_count  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.product_put_inventory_count(models, async_req=True)
+        >>> thread = api.put_inventory_count(models, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -607,17 +607,17 @@ class ProductApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.product_put_inventory_count_with_http_info(models, **kwargs)  # noqa: E501
+            return self.put_inventory_count_with_http_info(models, **kwargs)  # noqa: E501
         else:
-            (data) = self.product_put_inventory_count_with_http_info(models, **kwargs)  # noqa: E501
+            (data) = self.put_inventory_count_with_http_info(models, **kwargs)  # noqa: E501
             return data
 
-    def product_put_inventory_count_with_http_info(self, models, **kwargs):  # noqa: E501
-        """product_put_inventory_count  # noqa: E501
+    def put_inventory_count_with_http_info(self, models, **kwargs):  # noqa: E501
+        """put_inventory_count  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.product_put_inventory_count_with_http_info(models, async_req=True)
+        >>> thread = api.put_inventory_count_with_http_info(models, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -638,14 +638,14 @@ class ProductApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method product_put_inventory_count" % key
+                    " to method put_inventory_count" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'models' is set
         if self.api_client.client_side_validation and ('models' not in params or
                                                        params['models'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `models` when calling `product_put_inventory_count`")  # noqa: E501
+            raise ValueError("Missing the required parameter `models` when calling `put_inventory_count`")  # noqa: E501
 
         collection_formats = {}
 

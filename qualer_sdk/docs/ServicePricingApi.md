@@ -4,12 +4,12 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**service_pricing_get**](ServicePricingApi.md#service_pricing_get) | **GET** /api/service/pricing | 
-[**service_pricing_update**](ServicePricingApi.md#service_pricing_update) | **PUT** /api/service/pricing | 
+[**get**](ServicePricingApi.md#get) | **GET** /api/service/pricing | 
+[**update**](ServicePricingApi.md#update) | **PUT** /api/service/pricing | 
 
 
-# **service_pricing_get**
-> list[QualerApiModelsServiceOrdersToServiceOrderTaskResponse] service_pricing_get(service_pricing_id, service_group_id=service_group_id)
+# **get**
+> list[QualerApiModelsServiceOrdersToServiceOrderTaskResponse] get(service_pricing_id, service_group_id=service_group_id)
 
 
 
@@ -28,10 +28,10 @@ service_group_id = 56 # int | optional (optional)
 
 try:
     # 
-    api_response = api_instance.service_pricing_get(service_pricing_id, service_group_id=service_group_id)
+    api_response = api_instance.get(service_pricing_id, service_group_id=service_group_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServicePricingApi->service_pricing_get: %s\n" % e)
+    print("Exception when calling ServicePricingApi->get: %s\n" % e)
 ```
 
 ### Parameters
@@ -56,8 +56,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_pricing_update**
-> list[QualerApiModelsServiceOrdersToServiceOrderTaskResponse] service_pricing_update(models)
+# **update**
+> list[QualerApiModelsServiceOrdersToServiceOrderTaskResponse] update(models)
 
 
 
@@ -74,10 +74,10 @@ api_instance = qualer_sdk.ServicePricingApi()
 models = [qualer_sdk.QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel()] # list[QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel] | 
 
 try:
-    api_response = api_instance.service_pricing_update(models)
+    api_response = api_instance.update(models)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServicePricingApi->service_pricing_update: %s\n" % e)
+    print("Exception when calling ServicePricingApi->update: %s\n" % e)
 ```
 
 ### Parameters

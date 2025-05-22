@@ -29,15 +29,15 @@ class TestServicePricingApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_service_pricing_get(self):
-        """Test case for service_pricing_get
+    def test_get(self):
+        """Test case for get
 
           # noqa: E501
         """
         pass
 
-    def test_service_pricing_update(self):
-        """Test case for service_pricing_update
+    def test_update(self):
+        """Test case for update
 
         """
         pass

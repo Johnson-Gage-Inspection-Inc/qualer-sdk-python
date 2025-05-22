@@ -33,12 +33,12 @@ class ReportDatasetsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def report_datasets_channel_uniformity_by_order(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_channel_uniformity_by_order  # noqa: E501
+    def channel_uniformity_by_order(self, service_order_id, **kwargs):  # noqa: E501
+        """channel_uniformity_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_channel_uniformity_by_order(service_order_id, async_req=True)
+        >>> thread = api.channel_uniformity_by_order(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -49,17 +49,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_channel_uniformity_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.channel_uniformity_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_channel_uniformity_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.channel_uniformity_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_channel_uniformity_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_channel_uniformity_by_order  # noqa: E501
+    def channel_uniformity_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """channel_uniformity_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_channel_uniformity_by_order_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.channel_uniformity_by_order_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -80,14 +80,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_channel_uniformity_by_order" % key
+                    " to method channel_uniformity_by_order" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_channel_uniformity_by_order`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `channel_uniformity_by_order`")  # noqa: E501
 
         collection_formats = {}
 
@@ -126,12 +126,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_all_measurements(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_all_measurements  # noqa: E501
+    def get_all_measurements(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_all_measurements  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_all_measurements(service_order_item_id, async_req=True)
+        >>> thread = api.get_all_measurements(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -142,17 +142,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_all_measurements_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_all_measurements_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_all_measurements_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_all_measurements_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_all_measurements_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_all_measurements  # noqa: E501
+    def get_all_measurements_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_all_measurements  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_all_measurements_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_all_measurements_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -173,14 +173,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_all_measurements" % key
+                    " to method get_all_measurements" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_all_measurements`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_all_measurements`")  # noqa: E501
 
         collection_formats = {}
 
@@ -219,12 +219,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_all_measurements_by_order(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_all_measurements_by_order  # noqa: E501
+    def get_all_measurements_by_order(self, service_order_id, **kwargs):  # noqa: E501
+        """get_all_measurements_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_all_measurements_by_order(service_order_id, async_req=True)
+        >>> thread = api.get_all_measurements_by_order(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -235,17 +235,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_all_measurements_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_all_measurements_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_all_measurements_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_all_measurements_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_all_measurements_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_all_measurements_by_order  # noqa: E501
+    def get_all_measurements_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_all_measurements_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_all_measurements_by_order_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_all_measurements_by_order_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -266,14 +266,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_all_measurements_by_order" % key
+                    " to method get_all_measurements_by_order" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_all_measurements_by_order`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_all_measurements_by_order`")  # noqa: E501
 
         collection_formats = {}
 
@@ -312,12 +312,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_as_found_measurements(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_as_found_measurements  # noqa: E501
+    def get_as_found_measurements(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_as_found_measurements  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_as_found_measurements(service_order_item_id, async_req=True)
+        >>> thread = api.get_as_found_measurements(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -328,17 +328,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_as_found_measurements_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_as_found_measurements_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_as_found_measurements_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_as_found_measurements_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_as_found_measurements_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_as_found_measurements  # noqa: E501
+    def get_as_found_measurements_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_as_found_measurements  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_as_found_measurements_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_as_found_measurements_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -359,14 +359,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_as_found_measurements" % key
+                    " to method get_as_found_measurements" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_as_found_measurements`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_as_found_measurements`")  # noqa: E501
 
         collection_formats = {}
 
@@ -405,12 +405,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_as_found_measurements_by_order(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_as_found_measurements_by_order  # noqa: E501
+    def get_as_found_measurements_by_order(self, service_order_id, **kwargs):  # noqa: E501
+        """get_as_found_measurements_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_as_found_measurements_by_order(service_order_id, async_req=True)
+        >>> thread = api.get_as_found_measurements_by_order(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -421,17 +421,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_as_found_measurements_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_as_found_measurements_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_as_found_measurements_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_as_found_measurements_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_as_found_measurements_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_as_found_measurements_by_order  # noqa: E501
+    def get_as_found_measurements_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_as_found_measurements_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_as_found_measurements_by_order_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_as_found_measurements_by_order_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -452,14 +452,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_as_found_measurements_by_order" % key
+                    " to method get_as_found_measurements_by_order" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_as_found_measurements_by_order`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_as_found_measurements_by_order`")  # noqa: E501
 
         collection_formats = {}
 
@@ -498,12 +498,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_as_left_measurements(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_as_left_measurements  # noqa: E501
+    def get_as_left_measurements(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_as_left_measurements  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_as_left_measurements(service_order_item_id, async_req=True)
+        >>> thread = api.get_as_left_measurements(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -514,17 +514,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_as_left_measurements_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_as_left_measurements_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_as_left_measurements_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_as_left_measurements_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_as_left_measurements_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_as_left_measurements  # noqa: E501
+    def get_as_left_measurements_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_as_left_measurements  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_as_left_measurements_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_as_left_measurements_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -545,14 +545,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_as_left_measurements" % key
+                    " to method get_as_left_measurements" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_as_left_measurements`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_as_left_measurements`")  # noqa: E501
 
         collection_formats = {}
 
@@ -591,12 +591,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_as_left_measurements_by_order(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_as_left_measurements_by_order  # noqa: E501
+    def get_as_left_measurements_by_order(self, service_order_id, **kwargs):  # noqa: E501
+        """get_as_left_measurements_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_as_left_measurements_by_order(service_order_id, async_req=True)
+        >>> thread = api.get_as_left_measurements_by_order(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -607,17 +607,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_as_left_measurements_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_as_left_measurements_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_as_left_measurements_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_as_left_measurements_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_as_left_measurements_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_as_left_measurements_by_order  # noqa: E501
+    def get_as_left_measurements_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_as_left_measurements_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_as_left_measurements_by_order_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_as_left_measurements_by_order_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -638,14 +638,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_as_left_measurements_by_order" % key
+                    " to method get_as_left_measurements_by_order" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_as_left_measurements_by_order`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_as_left_measurements_by_order`")  # noqa: E501
 
         collection_formats = {}
 
@@ -684,12 +684,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_asset_attributes(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_asset_attributes  # noqa: E501
+    def get_asset_attributes(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_asset_attributes  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_asset_attributes(service_order_item_id, async_req=True)
+        >>> thread = api.get_asset_attributes(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -700,17 +700,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_asset_attributes_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_asset_attributes_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_asset_attributes_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_asset_attributes_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_asset_attributes_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_asset_attributes  # noqa: E501
+    def get_asset_attributes_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_asset_attributes  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_asset_attributes_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_asset_attributes_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -731,14 +731,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_asset_attributes" % key
+                    " to method get_asset_attributes" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_asset_attributes`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_asset_attributes`")  # noqa: E501
 
         collection_formats = {}
 
@@ -777,12 +777,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_asset_service_records(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_asset_service_records  # noqa: E501
+    def get_asset_service_records(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_asset_service_records  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_asset_service_records(service_order_item_id, async_req=True)
+        >>> thread = api.get_asset_service_records(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -793,17 +793,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_asset_service_records_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_asset_service_records_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_asset_service_records_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_asset_service_records_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_asset_service_records_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_asset_service_records  # noqa: E501
+    def get_asset_service_records_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_asset_service_records  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_asset_service_records_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_asset_service_records_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -824,14 +824,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_asset_service_records" % key
+                    " to method get_asset_service_records" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_asset_service_records`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_asset_service_records`")  # noqa: E501
 
         collection_formats = {}
 
@@ -870,12 +870,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_channel_results(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_channel_results  # noqa: E501
+    def get_channel_results(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_channel_results  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_channel_results(service_order_item_id, async_req=True)
+        >>> thread = api.get_channel_results(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -886,17 +886,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_channel_results_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_channel_results_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_channel_results_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_channel_results_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_channel_results_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_channel_results  # noqa: E501
+    def get_channel_results_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_channel_results  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_channel_results_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_channel_results_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -917,14 +917,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_channel_results" % key
+                    " to method get_channel_results" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_channel_results`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_channel_results`")  # noqa: E501
 
         collection_formats = {}
 
@@ -963,12 +963,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_channel_results_by_order(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_channel_results_by_order  # noqa: E501
+    def get_channel_results_by_order(self, service_order_id, **kwargs):  # noqa: E501
+        """get_channel_results_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_channel_results_by_order(service_order_id, async_req=True)
+        >>> thread = api.get_channel_results_by_order(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -979,17 +979,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_channel_results_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_channel_results_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_channel_results_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_channel_results_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_channel_results_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_channel_results_by_order  # noqa: E501
+    def get_channel_results_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_channel_results_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_channel_results_by_order_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_channel_results_by_order_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1010,14 +1010,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_channel_results_by_order" % key
+                    " to method get_channel_results_by_order" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_channel_results_by_order`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_channel_results_by_order`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1056,12 +1056,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_channel_uniformity(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_channel_uniformity  # noqa: E501
+    def get_channel_uniformity(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_channel_uniformity  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_channel_uniformity(service_order_item_id, async_req=True)
+        >>> thread = api.get_channel_uniformity(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1072,17 +1072,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_channel_uniformity_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_channel_uniformity_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_channel_uniformity_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_channel_uniformity_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_channel_uniformity_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_channel_uniformity  # noqa: E501
+    def get_channel_uniformity_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_channel_uniformity  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_channel_uniformity_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_channel_uniformity_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1103,14 +1103,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_channel_uniformity" % key
+                    " to method get_channel_uniformity" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_channel_uniformity`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_channel_uniformity`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1149,12 +1149,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_client_attributes(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_client_attributes  # noqa: E501
+    def get_client_attributes(self, service_order_id, **kwargs):  # noqa: E501
+        """get_client_attributes  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_client_attributes(service_order_id, async_req=True)
+        >>> thread = api.get_client_attributes(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1165,17 +1165,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_client_attributes_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_client_attributes_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_client_attributes_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_client_attributes_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_client_attributes_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_client_attributes  # noqa: E501
+    def get_client_attributes_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_client_attributes  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_client_attributes_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_client_attributes_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1196,14 +1196,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_client_attributes" % key
+                    " to method get_client_attributes" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_client_attributes`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_client_attributes`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1242,12 +1242,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_company_certifications(self, **kwargs):  # noqa: E501
-        """report_datasets_get_company_certifications  # noqa: E501
+    def get_company_certifications(self, **kwargs):  # noqa: E501
+        """get_company_certifications  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_company_certifications(async_req=True)
+        >>> thread = api.get_company_certifications(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1257,17 +1257,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_company_certifications_with_http_info(**kwargs)  # noqa: E501
+            return self.get_company_certifications_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_company_certifications_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_company_certifications_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_company_certifications_with_http_info(self, **kwargs):  # noqa: E501
-        """report_datasets_get_company_certifications  # noqa: E501
+    def get_company_certifications_with_http_info(self, **kwargs):  # noqa: E501
+        """get_company_certifications  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_company_certifications_with_http_info(async_req=True)
+        >>> thread = api.get_company_certifications_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1287,7 +1287,7 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_company_certifications" % key
+                    " to method get_company_certifications" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -1327,12 +1327,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_external_data_reports(self, service_order_id, service_order_item_ids, **kwargs):  # noqa: E501
-        """report_datasets_get_external_data_reports  # noqa: E501
+    def get_external_data_reports(self, service_order_id, service_order_item_ids, **kwargs):  # noqa: E501
+        """get_external_data_reports  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_external_data_reports(service_order_id, service_order_item_ids, async_req=True)
+        >>> thread = api.get_external_data_reports(service_order_id, service_order_item_ids, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1344,17 +1344,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_external_data_reports_with_http_info(service_order_id, service_order_item_ids, **kwargs)  # noqa: E501
+            return self.get_external_data_reports_with_http_info(service_order_id, service_order_item_ids, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_external_data_reports_with_http_info(service_order_id, service_order_item_ids, **kwargs)  # noqa: E501
+            (data) = self.get_external_data_reports_with_http_info(service_order_id, service_order_item_ids, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_external_data_reports_with_http_info(self, service_order_id, service_order_item_ids, **kwargs):  # noqa: E501
-        """report_datasets_get_external_data_reports  # noqa: E501
+    def get_external_data_reports_with_http_info(self, service_order_id, service_order_item_ids, **kwargs):  # noqa: E501
+        """get_external_data_reports  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_external_data_reports_with_http_info(service_order_id, service_order_item_ids, async_req=True)
+        >>> thread = api.get_external_data_reports_with_http_info(service_order_id, service_order_item_ids, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1376,18 +1376,18 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_external_data_reports" % key
+                    " to method get_external_data_reports" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_external_data_reports`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_external_data_reports`")  # noqa: E501
         # verify the required parameter 'service_order_item_ids' is set
         if self.api_client.client_side_validation and ('service_order_item_ids' not in params or
                                                        params['service_order_item_ids'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_ids` when calling `report_datasets_get_external_data_reports`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_ids` when calling `get_external_data_reports`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1429,12 +1429,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_measurement_charts(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_measurement_charts  # noqa: E501
+    def get_measurement_charts(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_measurement_charts  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_measurement_charts(service_order_item_id, async_req=True)
+        >>> thread = api.get_measurement_charts(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1445,17 +1445,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_measurement_charts_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_measurement_charts_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_measurement_charts_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_measurement_charts_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_measurement_charts_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_measurement_charts  # noqa: E501
+    def get_measurement_charts_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_measurement_charts  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_measurement_charts_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_measurement_charts_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1476,14 +1476,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_measurement_charts" % key
+                    " to method get_measurement_charts" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_measurement_charts`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_measurement_charts`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1522,12 +1522,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_measurement_fields(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_measurement_fields  # noqa: E501
+    def get_measurement_fields(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_measurement_fields  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_measurement_fields(service_order_item_id, async_req=True)
+        >>> thread = api.get_measurement_fields(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1538,17 +1538,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_measurement_fields_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_measurement_fields_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_measurement_fields_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_measurement_fields_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_measurement_fields_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_measurement_fields  # noqa: E501
+    def get_measurement_fields_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_measurement_fields  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_measurement_fields_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_measurement_fields_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1569,14 +1569,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_measurement_fields" % key
+                    " to method get_measurement_fields" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_measurement_fields`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_measurement_fields`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1615,12 +1615,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_measurement_fields_by_order(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_measurement_fields_by_order  # noqa: E501
+    def get_measurement_fields_by_order(self, service_order_id, **kwargs):  # noqa: E501
+        """get_measurement_fields_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_measurement_fields_by_order(service_order_id, async_req=True)
+        >>> thread = api.get_measurement_fields_by_order(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1631,17 +1631,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_measurement_fields_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_measurement_fields_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_measurement_fields_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_measurement_fields_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_measurement_fields_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_measurement_fields_by_order  # noqa: E501
+    def get_measurement_fields_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_measurement_fields_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_measurement_fields_by_order_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_measurement_fields_by_order_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1662,14 +1662,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_measurement_fields_by_order" % key
+                    " to method get_measurement_fields_by_order" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_measurement_fields_by_order`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_measurement_fields_by_order`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1708,12 +1708,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_order_item_documents(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_order_item_documents  # noqa: E501
+    def get_order_item_documents(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_order_item_documents  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_order_item_documents(service_order_item_id, async_req=True)
+        >>> thread = api.get_order_item_documents(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1724,17 +1724,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_order_item_documents_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_order_item_documents_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_order_item_documents_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_order_item_documents_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_order_item_documents_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_order_item_documents  # noqa: E501
+    def get_order_item_documents_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_order_item_documents  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_order_item_documents_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_order_item_documents_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1755,14 +1755,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_order_item_documents" % key
+                    " to method get_order_item_documents" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_order_item_documents`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_order_item_documents`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1801,12 +1801,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_order_item_images(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_order_item_images  # noqa: E501
+    def get_order_item_images(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_order_item_images  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_order_item_images(service_order_item_id, async_req=True)
+        >>> thread = api.get_order_item_images(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1817,17 +1817,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_order_item_images_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_order_item_images_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_order_item_images_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_order_item_images_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_order_item_images_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_order_item_images  # noqa: E501
+    def get_order_item_images_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_order_item_images  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_order_item_images_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_order_item_images_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1848,14 +1848,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_order_item_images" % key
+                    " to method get_order_item_images" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_order_item_images`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_order_item_images`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1894,12 +1894,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_reference_standards(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_reference_standards  # noqa: E501
+    def get_reference_standards(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_reference_standards  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_reference_standards(service_order_item_id, async_req=True)
+        >>> thread = api.get_reference_standards(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1910,17 +1910,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_reference_standards_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_reference_standards_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_reference_standards_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_reference_standards_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_reference_standards_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_reference_standards  # noqa: E501
+    def get_reference_standards_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_reference_standards  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_reference_standards_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_reference_standards_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1941,14 +1941,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_reference_standards" % key
+                    " to method get_reference_standards" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_reference_standards`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_reference_standards`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1987,12 +1987,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_reference_standards_by_order(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_reference_standards_by_order  # noqa: E501
+    def get_reference_standards_by_order(self, service_order_id, **kwargs):  # noqa: E501
+        """get_reference_standards_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_reference_standards_by_order(service_order_id, async_req=True)
+        >>> thread = api.get_reference_standards_by_order(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2003,17 +2003,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_reference_standards_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_reference_standards_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_reference_standards_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_reference_standards_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_reference_standards_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_reference_standards_by_order  # noqa: E501
+    def get_reference_standards_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_reference_standards_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_reference_standards_by_order_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_reference_standards_by_order_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2034,14 +2034,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_reference_standards_by_order" % key
+                    " to method get_reference_standards_by_order" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_reference_standards_by_order`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_reference_standards_by_order`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2080,12 +2080,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_service_order_assignees(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_assignees  # noqa: E501
+    def get_service_order_assignees(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_order_assignees  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_assignees(service_order_id, async_req=True)
+        >>> thread = api.get_service_order_assignees(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2096,17 +2096,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_service_order_assignees_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_service_order_assignees_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_service_order_assignees_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_service_order_assignees_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_service_order_assignees_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_assignees  # noqa: E501
+    def get_service_order_assignees_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_order_assignees  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_assignees_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_service_order_assignees_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2127,14 +2127,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_service_order_assignees" % key
+                    " to method get_service_order_assignees" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_service_order_assignees`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_service_order_assignees`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2173,12 +2173,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_service_order_charges(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_charges  # noqa: E501
+    def get_service_order_charges(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_order_charges  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_charges(service_order_id, async_req=True)
+        >>> thread = api.get_service_order_charges(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2189,17 +2189,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_service_order_charges_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_service_order_charges_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_service_order_charges_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_service_order_charges_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_service_order_charges_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_charges  # noqa: E501
+    def get_service_order_charges_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_order_charges  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_charges_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_service_order_charges_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2220,14 +2220,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_service_order_charges" % key
+                    " to method get_service_order_charges" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_service_order_charges`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_service_order_charges`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2266,12 +2266,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_service_order_item_components(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_item_components  # noqa: E501
+    def get_service_order_item_components(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_service_order_item_components  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_item_components(service_order_item_id, async_req=True)
+        >>> thread = api.get_service_order_item_components(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2282,17 +2282,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_service_order_item_components_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_service_order_item_components_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_service_order_item_components_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_service_order_item_components_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_service_order_item_components_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_item_components  # noqa: E501
+    def get_service_order_item_components_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_service_order_item_components  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_item_components_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_service_order_item_components_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2313,14 +2313,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_service_order_item_components" % key
+                    " to method get_service_order_item_components" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_service_order_item_components`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_service_order_item_components`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2359,12 +2359,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_service_order_item_components_by_order(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_item_components_by_order  # noqa: E501
+    def get_service_order_item_components_by_order(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_order_item_components_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_item_components_by_order(service_order_id, async_req=True)
+        >>> thread = api.get_service_order_item_components_by_order(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2375,17 +2375,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_service_order_item_components_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_service_order_item_components_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_service_order_item_components_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_service_order_item_components_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_service_order_item_components_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_item_components_by_order  # noqa: E501
+    def get_service_order_item_components_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_order_item_components_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_item_components_by_order_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_service_order_item_components_by_order_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2406,14 +2406,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_service_order_item_components_by_order" % key
+                    " to method get_service_order_item_components_by_order" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_service_order_item_components_by_order`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_service_order_item_components_by_order`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2452,12 +2452,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_service_order_item_fields_by_order(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_item_fields_by_order  # noqa: E501
+    def get_service_order_item_fields_by_order(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_order_item_fields_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_item_fields_by_order(service_order_id, async_req=True)
+        >>> thread = api.get_service_order_item_fields_by_order(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2468,17 +2468,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_service_order_item_fields_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_service_order_item_fields_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_service_order_item_fields_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_service_order_item_fields_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_service_order_item_fields_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_item_fields_by_order  # noqa: E501
+    def get_service_order_item_fields_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_order_item_fields_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_item_fields_by_order_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_service_order_item_fields_by_order_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2499,14 +2499,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_service_order_item_fields_by_order" % key
+                    " to method get_service_order_item_fields_by_order" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_service_order_item_fields_by_order`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_service_order_item_fields_by_order`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2545,12 +2545,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_service_order_item_options(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_item_options  # noqa: E501
+    def get_service_order_item_options(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_service_order_item_options  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_item_options(service_order_item_id, async_req=True)
+        >>> thread = api.get_service_order_item_options(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2561,17 +2561,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_service_order_item_options_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_service_order_item_options_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_service_order_item_options_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_service_order_item_options_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_service_order_item_options_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_item_options  # noqa: E501
+    def get_service_order_item_options_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_service_order_item_options  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_item_options_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_service_order_item_options_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2592,14 +2592,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_service_order_item_options" % key
+                    " to method get_service_order_item_options" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_service_order_item_options`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_service_order_item_options`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2638,12 +2638,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_service_order_item_status_history_async(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_item_status_history_async  # noqa: E501
+    def get_service_order_item_status_history_async(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_service_order_item_status_history_async  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_item_status_history_async(service_order_item_id, async_req=True)
+        >>> thread = api.get_service_order_item_status_history_async(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2654,17 +2654,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_service_order_item_status_history_async_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_service_order_item_status_history_async_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_service_order_item_status_history_async_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_service_order_item_status_history_async_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_service_order_item_status_history_async_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_item_status_history_async  # noqa: E501
+    def get_service_order_item_status_history_async_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_service_order_item_status_history_async  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_item_status_history_async_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_service_order_item_status_history_async_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2685,14 +2685,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_service_order_item_status_history_async" % key
+                    " to method get_service_order_item_status_history_async" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_service_order_item_status_history_async`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_service_order_item_status_history_async`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2731,12 +2731,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_service_order_item_tasks_by_order(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_item_tasks_by_order  # noqa: E501
+    def get_service_order_item_tasks_by_order(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_order_item_tasks_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_item_tasks_by_order(service_order_id, async_req=True)
+        >>> thread = api.get_service_order_item_tasks_by_order(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2747,17 +2747,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_service_order_item_tasks_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_service_order_item_tasks_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_service_order_item_tasks_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_service_order_item_tasks_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_service_order_item_tasks_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_item_tasks_by_order  # noqa: E501
+    def get_service_order_item_tasks_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_order_item_tasks_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_item_tasks_by_order_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_service_order_item_tasks_by_order_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2778,14 +2778,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_service_order_item_tasks_by_order" % key
+                    " to method get_service_order_item_tasks_by_order" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_service_order_item_tasks_by_order`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_service_order_item_tasks_by_order`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2824,12 +2824,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_service_order_item_tasks_by_order_items(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_item_tasks_by_order_items  # noqa: E501
+    def get_service_order_item_tasks_by_order_items(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_service_order_item_tasks_by_order_items  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_item_tasks_by_order_items(service_order_item_id, async_req=True)
+        >>> thread = api.get_service_order_item_tasks_by_order_items(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2840,17 +2840,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_service_order_item_tasks_by_order_items_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_service_order_item_tasks_by_order_items_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_service_order_item_tasks_by_order_items_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_service_order_item_tasks_by_order_items_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_service_order_item_tasks_by_order_items_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_item_tasks_by_order_items  # noqa: E501
+    def get_service_order_item_tasks_by_order_items_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_service_order_item_tasks_by_order_items  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_item_tasks_by_order_items_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_service_order_item_tasks_by_order_items_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2871,14 +2871,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_service_order_item_tasks_by_order_items" % key
+                    " to method get_service_order_item_tasks_by_order_items" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_service_order_item_tasks_by_order_items`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_service_order_item_tasks_by_order_items`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2917,12 +2917,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_service_order_items(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_items  # noqa: E501
+    def get_service_order_items(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_service_order_items  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_items(service_order_item_id, async_req=True)
+        >>> thread = api.get_service_order_items(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2933,17 +2933,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_service_order_items_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_service_order_items_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_service_order_items_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_service_order_items_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_service_order_items_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_items  # noqa: E501
+    def get_service_order_items_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_service_order_items  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_items_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_service_order_items_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2964,14 +2964,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_service_order_items" % key
+                    " to method get_service_order_items" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_service_order_items`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_service_order_items`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3010,12 +3010,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_service_order_items_by_order(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_items_by_order  # noqa: E501
+    def get_service_order_items_by_order(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_order_items_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_items_by_order(service_order_id, async_req=True)
+        >>> thread = api.get_service_order_items_by_order(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -3026,17 +3026,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_service_order_items_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_service_order_items_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_service_order_items_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_service_order_items_by_order_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_service_order_items_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_items_by_order  # noqa: E501
+    def get_service_order_items_by_order_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_order_items_by_order  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_items_by_order_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_service_order_items_by_order_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -3057,14 +3057,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_service_order_items_by_order" % key
+                    " to method get_service_order_items_by_order" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_service_order_items_by_order`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_service_order_items_by_order`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3103,12 +3103,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_service_order_tasks(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_tasks  # noqa: E501
+    def get_service_order_tasks(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_order_tasks  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_tasks(service_order_id, async_req=True)
+        >>> thread = api.get_service_order_tasks(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -3119,17 +3119,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_service_order_tasks_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_service_order_tasks_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_service_order_tasks_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_service_order_tasks_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_service_order_tasks_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_order_tasks  # noqa: E501
+    def get_service_order_tasks_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_order_tasks  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_order_tasks_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_service_order_tasks_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -3150,14 +3150,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_service_order_tasks" % key
+                    " to method get_service_order_tasks" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_service_order_tasks`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_service_order_tasks`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3196,12 +3196,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_service_orders(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_orders  # noqa: E501
+    def get_service_orders(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_orders  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_orders(service_order_id, async_req=True)
+        >>> thread = api.get_service_orders(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -3212,17 +3212,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_service_orders_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_service_orders_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_service_orders_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_service_orders_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_service_orders_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """report_datasets_get_service_orders  # noqa: E501
+    def get_service_orders_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_service_orders  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_service_orders_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_service_orders_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -3243,14 +3243,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_service_orders" % key
+                    " to method get_service_orders" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `report_datasets_get_service_orders`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_service_orders`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3289,12 +3289,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_tool_attributes(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_tool_attributes  # noqa: E501
+    def get_tool_attributes(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_tool_attributes  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_tool_attributes(service_order_item_id, async_req=True)
+        >>> thread = api.get_tool_attributes(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -3305,17 +3305,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_tool_attributes_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_tool_attributes_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_tool_attributes_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_tool_attributes_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_tool_attributes_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_tool_attributes  # noqa: E501
+    def get_tool_attributes_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_tool_attributes  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_tool_attributes_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_tool_attributes_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -3336,14 +3336,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_tool_attributes" % key
+                    " to method get_tool_attributes" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_tool_attributes`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_tool_attributes`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3382,12 +3382,12 @@ class ReportDatasetsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def report_datasets_get_tool_range_attributes(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_tool_range_attributes  # noqa: E501
+    def get_tool_range_attributes(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_tool_range_attributes  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_tool_range_attributes(service_order_item_id, async_req=True)
+        >>> thread = api.get_tool_range_attributes(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -3398,17 +3398,17 @@ class ReportDatasetsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.report_datasets_get_tool_range_attributes_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            return self.get_tool_range_attributes_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.report_datasets_get_tool_range_attributes_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_tool_range_attributes_with_http_info(service_order_item_id, **kwargs)  # noqa: E501
             return data
 
-    def report_datasets_get_tool_range_attributes_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
-        """report_datasets_get_tool_range_attributes  # noqa: E501
+    def get_tool_range_attributes_with_http_info(self, service_order_item_id, **kwargs):  # noqa: E501
+        """get_tool_range_attributes  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.report_datasets_get_tool_range_attributes_with_http_info(service_order_item_id, async_req=True)
+        >>> thread = api.get_tool_range_attributes_with_http_info(service_order_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -3429,14 +3429,14 @@ class ReportDatasetsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method report_datasets_get_tool_range_attributes" % key
+                    " to method get_tool_range_attributes" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_item_id' is set
         if self.api_client.client_side_validation and ('service_order_item_id' not in params or
                                                        params['service_order_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_item_id` when calling `report_datasets_get_tool_range_attributes`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_item_id` when calling `get_tool_range_attributes`")  # noqa: E501
 
         collection_formats = {}
 

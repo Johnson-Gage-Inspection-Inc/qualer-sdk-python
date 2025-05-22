@@ -29,41 +29,41 @@ class TestEmployeesApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_employees_add_employee_department(self):
-        """Test case for employees_add_employee_department
+    def test_add_employee_department(self):
+        """Test case for add_employee_department
 
           # noqa: E501
         """
         pass
 
-    def test_employees_create_employee(self):
-        """Test case for employees_create_employee
+    def test_create_employee(self):
+        """Test case for create_employee
 
         Create Employee  # noqa: E501
         """
         pass
 
-    def test_employees_delete_employee_department(self):
-        """Test case for employees_delete_employee_department
+    def test_delete_employee_department(self):
+        """Test case for delete_employee_department
 
           # noqa: E501
         """
         pass
 
-    def test_employees_get_employee(self):
-        """Test case for employees_get_employee
+    def test_get_employee(self):
+        """Test case for get_employee
 
         """
         pass
 
-    def test_employees_get_employees(self):
-        """Test case for employees_get_employees
+    def test_get_employees(self):
+        """Test case for get_employees
 
         """
         pass
 
-    def test_employees_update_employee(self):
-        """Test case for employees_update_employee
+    def test_update_employee(self):
+        """Test case for update_employee
 
         Update Employee  # noqa: E501
         """

@@ -33,12 +33,12 @@ class ServiceOrderMetadataApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def service_order_metadata_create(self, service_order_id, model, **kwargs):  # noqa: E501
+    def create(self, service_order_id, model, **kwargs):  # noqa: E501
         """Create metadata  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_metadata_create(service_order_id, model, async_req=True)
+        >>> thread = api.create(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -50,17 +50,17 @@ class ServiceOrderMetadataApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_metadata_create_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            return self.create_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_metadata_create_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            (data) = self.create_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
             return data
 
-    def service_order_metadata_create_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
+    def create_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
         """Create metadata  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_metadata_create_with_http_info(service_order_id, model, async_req=True)
+        >>> thread = api.create_with_http_info(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -82,18 +82,18 @@ class ServiceOrderMetadataApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_metadata_create" % key
+                    " to method create" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_order_metadata_create`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `create`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `service_order_metadata_create`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `create`")  # noqa: E501
 
         collection_formats = {}
 
@@ -138,12 +138,12 @@ class ServiceOrderMetadataApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_order_metadata_delete(self, service_order_id, service_order_metadata_id, **kwargs):  # noqa: E501
+    def delete(self, service_order_id, service_order_metadata_id, **kwargs):  # noqa: E501
         """Delete metadata  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_metadata_delete(service_order_id, service_order_metadata_id, async_req=True)
+        >>> thread = api.delete(service_order_id, service_order_metadata_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -155,17 +155,17 @@ class ServiceOrderMetadataApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_metadata_delete_with_http_info(service_order_id, service_order_metadata_id, **kwargs)  # noqa: E501
+            return self.delete_with_http_info(service_order_id, service_order_metadata_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_metadata_delete_with_http_info(service_order_id, service_order_metadata_id, **kwargs)  # noqa: E501
+            (data) = self.delete_with_http_info(service_order_id, service_order_metadata_id, **kwargs)  # noqa: E501
             return data
 
-    def service_order_metadata_delete_with_http_info(self, service_order_id, service_order_metadata_id, **kwargs):  # noqa: E501
+    def delete_with_http_info(self, service_order_id, service_order_metadata_id, **kwargs):  # noqa: E501
         """Delete metadata  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_metadata_delete_with_http_info(service_order_id, service_order_metadata_id, async_req=True)
+        >>> thread = api.delete_with_http_info(service_order_id, service_order_metadata_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -187,18 +187,18 @@ class ServiceOrderMetadataApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_metadata_delete" % key
+                    " to method delete" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_order_metadata_delete`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `delete`")  # noqa: E501
         # verify the required parameter 'service_order_metadata_id' is set
         if self.api_client.client_side_validation and ('service_order_metadata_id' not in params or
                                                        params['service_order_metadata_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_metadata_id` when calling `service_order_metadata_delete`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_metadata_id` when calling `delete`")  # noqa: E501
 
         collection_formats = {}
 
@@ -239,12 +239,12 @@ class ServiceOrderMetadataApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_order_metadata_get(self, service_order_id, **kwargs):  # noqa: E501
+    def get(self, service_order_id, **kwargs):  # noqa: E501
         """Get list of metadata  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_metadata_get(service_order_id, async_req=True)
+        >>> thread = api.get(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -255,17 +255,17 @@ class ServiceOrderMetadataApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_metadata_get_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_metadata_get_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def service_order_metadata_get_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+    def get_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
         """Get list of metadata  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_metadata_get_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -286,14 +286,14 @@ class ServiceOrderMetadataApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_metadata_get" % key
+                    " to method get" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_order_metadata_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get`")  # noqa: E501
 
         collection_formats = {}
 
@@ -332,12 +332,12 @@ class ServiceOrderMetadataApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_order_metadata_update(self, service_order_id, model, **kwargs):  # noqa: E501
+    def update(self, service_order_id, model, **kwargs):  # noqa: E501
         """Update metadata  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_metadata_update(service_order_id, model, async_req=True)
+        >>> thread = api.update(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -349,17 +349,17 @@ class ServiceOrderMetadataApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_metadata_update_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            return self.update_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_metadata_update_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            (data) = self.update_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
             return data
 
-    def service_order_metadata_update_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
+    def update_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
         """Update metadata  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_metadata_update_with_http_info(service_order_id, model, async_req=True)
+        >>> thread = api.update_with_http_info(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -381,18 +381,18 @@ class ServiceOrderMetadataApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_metadata_update" % key
+                    " to method update" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_order_metadata_update`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `update`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `service_order_metadata_update`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `update`")  # noqa: E501
 
         collection_formats = {}
 

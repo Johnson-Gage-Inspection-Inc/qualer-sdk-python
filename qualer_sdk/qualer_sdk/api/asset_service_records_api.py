@@ -33,12 +33,12 @@ class AssetServiceRecordsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def asset_service_records_add_asset_service_record(self, asset_id, model, **kwargs):  # noqa: E501
-        """asset_service_records_add_asset_service_record  # noqa: E501
+    def add_asset_service_record(self, asset_id, model, **kwargs):  # noqa: E501
+        """add_asset_service_record  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_add_asset_service_record(asset_id, model, async_req=True)
+        >>> thread = api.add_asset_service_record(asset_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -50,17 +50,17 @@ class AssetServiceRecordsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_service_records_add_asset_service_record_with_http_info(asset_id, model, **kwargs)  # noqa: E501
+            return self.add_asset_service_record_with_http_info(asset_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.asset_service_records_add_asset_service_record_with_http_info(asset_id, model, **kwargs)  # noqa: E501
+            (data) = self.add_asset_service_record_with_http_info(asset_id, model, **kwargs)  # noqa: E501
             return data
 
-    def asset_service_records_add_asset_service_record_with_http_info(self, asset_id, model, **kwargs):  # noqa: E501
-        """asset_service_records_add_asset_service_record  # noqa: E501
+    def add_asset_service_record_with_http_info(self, asset_id, model, **kwargs):  # noqa: E501
+        """add_asset_service_record  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_add_asset_service_record_with_http_info(asset_id, model, async_req=True)
+        >>> thread = api.add_asset_service_record_with_http_info(asset_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -82,18 +82,18 @@ class AssetServiceRecordsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_service_records_add_asset_service_record" % key
+                    " to method add_asset_service_record" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'asset_id' is set
         if self.api_client.client_side_validation and ('asset_id' not in params or
                                                        params['asset_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `asset_id` when calling `asset_service_records_add_asset_service_record`")  # noqa: E501
+            raise ValueError("Missing the required parameter `asset_id` when calling `add_asset_service_record`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `asset_service_records_add_asset_service_record`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `add_asset_service_record`")  # noqa: E501
 
         collection_formats = {}
 
@@ -138,12 +138,12 @@ class AssetServiceRecordsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def asset_service_records_document_list(self, asset_service_record_id, **kwargs):  # noqa: E501
-        """asset_service_records_document_list  # noqa: E501
+    def document_list(self, asset_service_record_id, **kwargs):  # noqa: E501
+        """document_list  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_document_list(asset_service_record_id, async_req=True)
+        >>> thread = api.document_list(asset_service_record_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -155,17 +155,17 @@ class AssetServiceRecordsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_service_records_document_list_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
+            return self.document_list_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.asset_service_records_document_list_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
+            (data) = self.document_list_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
             return data
 
-    def asset_service_records_document_list_with_http_info(self, asset_service_record_id, **kwargs):  # noqa: E501
-        """asset_service_records_document_list  # noqa: E501
+    def document_list_with_http_info(self, asset_service_record_id, **kwargs):  # noqa: E501
+        """document_list  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_document_list_with_http_info(asset_service_record_id, async_req=True)
+        >>> thread = api.document_list_with_http_info(asset_service_record_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -187,14 +187,14 @@ class AssetServiceRecordsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_service_records_document_list" % key
+                    " to method document_list" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'asset_service_record_id' is set
         if self.api_client.client_side_validation and ('asset_service_record_id' not in params or
                                                        params['asset_service_record_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `asset_service_record_id` when calling `asset_service_records_document_list`")  # noqa: E501
+            raise ValueError("Missing the required parameter `asset_service_record_id` when calling `document_list`")  # noqa: E501
 
         collection_formats = {}
 
@@ -235,12 +235,12 @@ class AssetServiceRecordsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def asset_service_records_download_document(self, asset_service_record_id, file_name, **kwargs):  # noqa: E501
-        """asset_service_records_download_document  # noqa: E501
+    def download_document(self, asset_service_record_id, file_name, **kwargs):  # noqa: E501
+        """download_document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_download_document(asset_service_record_id, file_name, async_req=True)
+        >>> thread = api.download_document(asset_service_record_id, file_name, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -254,17 +254,17 @@ class AssetServiceRecordsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_service_records_download_document_with_http_info(asset_service_record_id, file_name, **kwargs)  # noqa: E501
+            return self.download_document_with_http_info(asset_service_record_id, file_name, **kwargs)  # noqa: E501
         else:
-            (data) = self.asset_service_records_download_document_with_http_info(asset_service_record_id, file_name, **kwargs)  # noqa: E501
+            (data) = self.download_document_with_http_info(asset_service_record_id, file_name, **kwargs)  # noqa: E501
             return data
 
-    def asset_service_records_download_document_with_http_info(self, asset_service_record_id, file_name, **kwargs):  # noqa: E501
-        """asset_service_records_download_document  # noqa: E501
+    def download_document_with_http_info(self, asset_service_record_id, file_name, **kwargs):  # noqa: E501
+        """download_document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_download_document_with_http_info(asset_service_record_id, file_name, async_req=True)
+        >>> thread = api.download_document_with_http_info(asset_service_record_id, file_name, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -288,18 +288,18 @@ class AssetServiceRecordsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_service_records_download_document" % key
+                    " to method download_document" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'asset_service_record_id' is set
         if self.api_client.client_side_validation and ('asset_service_record_id' not in params or
                                                        params['asset_service_record_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `asset_service_record_id` when calling `asset_service_records_download_document`")  # noqa: E501
+            raise ValueError("Missing the required parameter `asset_service_record_id` when calling `download_document`")  # noqa: E501
         # verify the required parameter 'file_name' is set
         if self.api_client.client_side_validation and ('file_name' not in params or
                                                        params['file_name'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `file_name` when calling `asset_service_records_download_document`")  # noqa: E501
+            raise ValueError("Missing the required parameter `file_name` when calling `download_document`")  # noqa: E501
 
         collection_formats = {}
 
@@ -344,12 +344,12 @@ class AssetServiceRecordsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def asset_service_records_download_documents(self, asset_service_record_id, **kwargs):  # noqa: E501
-        """asset_service_records_download_documents  # noqa: E501
+    def download_documents(self, asset_service_record_id, **kwargs):  # noqa: E501
+        """download_documents  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_download_documents(asset_service_record_id, async_req=True)
+        >>> thread = api.download_documents(asset_service_record_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -360,17 +360,17 @@ class AssetServiceRecordsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_service_records_download_documents_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
+            return self.download_documents_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.asset_service_records_download_documents_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
+            (data) = self.download_documents_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
             return data
 
-    def asset_service_records_download_documents_with_http_info(self, asset_service_record_id, **kwargs):  # noqa: E501
-        """asset_service_records_download_documents  # noqa: E501
+    def download_documents_with_http_info(self, asset_service_record_id, **kwargs):  # noqa: E501
+        """download_documents  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_download_documents_with_http_info(asset_service_record_id, async_req=True)
+        >>> thread = api.download_documents_with_http_info(asset_service_record_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -391,14 +391,14 @@ class AssetServiceRecordsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_service_records_download_documents" % key
+                    " to method download_documents" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'asset_service_record_id' is set
         if self.api_client.client_side_validation and ('asset_service_record_id' not in params or
                                                        params['asset_service_record_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `asset_service_record_id` when calling `asset_service_records_download_documents`")  # noqa: E501
+            raise ValueError("Missing the required parameter `asset_service_record_id` when calling `download_documents`")  # noqa: E501
 
         collection_formats = {}
 
@@ -437,12 +437,12 @@ class AssetServiceRecordsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def asset_service_records_get_asset_service_record(self, asset_service_record_id, **kwargs):  # noqa: E501
-        """asset_service_records_get_asset_service_record  # noqa: E501
+    def get_asset_service_record(self, asset_service_record_id, **kwargs):  # noqa: E501
+        """get_asset_service_record  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_get_asset_service_record(asset_service_record_id, async_req=True)
+        >>> thread = api.get_asset_service_record(asset_service_record_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -454,17 +454,17 @@ class AssetServiceRecordsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_service_records_get_asset_service_record_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
+            return self.get_asset_service_record_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.asset_service_records_get_asset_service_record_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
+            (data) = self.get_asset_service_record_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
             return data
 
-    def asset_service_records_get_asset_service_record_with_http_info(self, asset_service_record_id, **kwargs):  # noqa: E501
-        """asset_service_records_get_asset_service_record  # noqa: E501
+    def get_asset_service_record_with_http_info(self, asset_service_record_id, **kwargs):  # noqa: E501
+        """get_asset_service_record  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_get_asset_service_record_with_http_info(asset_service_record_id, async_req=True)
+        >>> thread = api.get_asset_service_record_with_http_info(asset_service_record_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -486,14 +486,14 @@ class AssetServiceRecordsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_service_records_get_asset_service_record" % key
+                    " to method get_asset_service_record" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'asset_service_record_id' is set
         if self.api_client.client_side_validation and ('asset_service_record_id' not in params or
                                                        params['asset_service_record_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `asset_service_record_id` when calling `asset_service_records_get_asset_service_record`")  # noqa: E501
+            raise ValueError("Missing the required parameter `asset_service_record_id` when calling `get_asset_service_record`")  # noqa: E501
 
         collection_formats = {}
 
@@ -534,12 +534,12 @@ class AssetServiceRecordsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def asset_service_records_get_asset_service_records(self, **kwargs):  # noqa: E501
-        """asset_service_records_get_asset_service_records  # noqa: E501
+    def get_asset_service_records(self, **kwargs):  # noqa: E501
+        """get_asset_service_records  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_get_asset_service_records(async_req=True)
+        >>> thread = api.get_asset_service_records(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -553,17 +553,17 @@ class AssetServiceRecordsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_service_records_get_asset_service_records_with_http_info(**kwargs)  # noqa: E501
+            return self.get_asset_service_records_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.asset_service_records_get_asset_service_records_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_asset_service_records_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def asset_service_records_get_asset_service_records_with_http_info(self, **kwargs):  # noqa: E501
-        """asset_service_records_get_asset_service_records  # noqa: E501
+    def get_asset_service_records_with_http_info(self, **kwargs):  # noqa: E501
+        """get_asset_service_records  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_get_asset_service_records_with_http_info(async_req=True)
+        >>> thread = api.get_asset_service_records_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -587,7 +587,7 @@ class AssetServiceRecordsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_service_records_get_asset_service_records" % key
+                    " to method get_asset_service_records" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -635,12 +635,12 @@ class AssetServiceRecordsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def asset_service_records_get_asset_service_records_by_asset(self, asset_id, **kwargs):  # noqa: E501
-        """asset_service_records_get_asset_service_records_by_asset  # noqa: E501
+    def get_asset_service_records_by_asset(self, asset_id, **kwargs):  # noqa: E501
+        """get_asset_service_records_by_asset  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_get_asset_service_records_by_asset(asset_id, async_req=True)
+        >>> thread = api.get_asset_service_records_by_asset(asset_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -651,17 +651,17 @@ class AssetServiceRecordsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_service_records_get_asset_service_records_by_asset_with_http_info(asset_id, **kwargs)  # noqa: E501
+            return self.get_asset_service_records_by_asset_with_http_info(asset_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.asset_service_records_get_asset_service_records_by_asset_with_http_info(asset_id, **kwargs)  # noqa: E501
+            (data) = self.get_asset_service_records_by_asset_with_http_info(asset_id, **kwargs)  # noqa: E501
             return data
 
-    def asset_service_records_get_asset_service_records_by_asset_with_http_info(self, asset_id, **kwargs):  # noqa: E501
-        """asset_service_records_get_asset_service_records_by_asset  # noqa: E501
+    def get_asset_service_records_by_asset_with_http_info(self, asset_id, **kwargs):  # noqa: E501
+        """get_asset_service_records_by_asset  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_get_asset_service_records_by_asset_with_http_info(asset_id, async_req=True)
+        >>> thread = api.get_asset_service_records_by_asset_with_http_info(asset_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -682,14 +682,14 @@ class AssetServiceRecordsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_service_records_get_asset_service_records_by_asset" % key
+                    " to method get_asset_service_records_by_asset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'asset_id' is set
         if self.api_client.client_side_validation and ('asset_id' not in params or
                                                        params['asset_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `asset_id` when calling `asset_service_records_get_asset_service_records_by_asset`")  # noqa: E501
+            raise ValueError("Missing the required parameter `asset_id` when calling `get_asset_service_records_by_asset`")  # noqa: E501
 
         collection_formats = {}
 
@@ -728,12 +728,12 @@ class AssetServiceRecordsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def asset_service_records_update_asset_service_record(self, asset_service_record_id, model, **kwargs):  # noqa: E501
-        """asset_service_records_update_asset_service_record  # noqa: E501
+    def update_asset_service_record(self, asset_service_record_id, model, **kwargs):  # noqa: E501
+        """update_asset_service_record  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_update_asset_service_record(asset_service_record_id, model, async_req=True)
+        >>> thread = api.update_asset_service_record(asset_service_record_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -745,17 +745,17 @@ class AssetServiceRecordsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_service_records_update_asset_service_record_with_http_info(asset_service_record_id, model, **kwargs)  # noqa: E501
+            return self.update_asset_service_record_with_http_info(asset_service_record_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.asset_service_records_update_asset_service_record_with_http_info(asset_service_record_id, model, **kwargs)  # noqa: E501
+            (data) = self.update_asset_service_record_with_http_info(asset_service_record_id, model, **kwargs)  # noqa: E501
             return data
 
-    def asset_service_records_update_asset_service_record_with_http_info(self, asset_service_record_id, model, **kwargs):  # noqa: E501
-        """asset_service_records_update_asset_service_record  # noqa: E501
+    def update_asset_service_record_with_http_info(self, asset_service_record_id, model, **kwargs):  # noqa: E501
+        """update_asset_service_record  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_update_asset_service_record_with_http_info(asset_service_record_id, model, async_req=True)
+        >>> thread = api.update_asset_service_record_with_http_info(asset_service_record_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -777,18 +777,18 @@ class AssetServiceRecordsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_service_records_update_asset_service_record" % key
+                    " to method update_asset_service_record" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'asset_service_record_id' is set
         if self.api_client.client_side_validation and ('asset_service_record_id' not in params or
                                                        params['asset_service_record_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `asset_service_record_id` when calling `asset_service_records_update_asset_service_record`")  # noqa: E501
+            raise ValueError("Missing the required parameter `asset_service_record_id` when calling `update_asset_service_record`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `asset_service_records_update_asset_service_record`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `update_asset_service_record`")  # noqa: E501
 
         collection_formats = {}
 
@@ -833,12 +833,12 @@ class AssetServiceRecordsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def asset_service_records_upload_documents(self, asset_service_record_id, **kwargs):  # noqa: E501
-        """asset_service_records_upload_documents  # noqa: E501
+    def upload_documents(self, asset_service_record_id, **kwargs):  # noqa: E501
+        """upload_documents  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_upload_documents(asset_service_record_id, async_req=True)
+        >>> thread = api.upload_documents(asset_service_record_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -849,17 +849,17 @@ class AssetServiceRecordsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_service_records_upload_documents_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
+            return self.upload_documents_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.asset_service_records_upload_documents_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
+            (data) = self.upload_documents_with_http_info(asset_service_record_id, **kwargs)  # noqa: E501
             return data
 
-    def asset_service_records_upload_documents_with_http_info(self, asset_service_record_id, **kwargs):  # noqa: E501
-        """asset_service_records_upload_documents  # noqa: E501
+    def upload_documents_with_http_info(self, asset_service_record_id, **kwargs):  # noqa: E501
+        """upload_documents  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_service_records_upload_documents_with_http_info(asset_service_record_id, async_req=True)
+        >>> thread = api.upload_documents_with_http_info(asset_service_record_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -880,14 +880,14 @@ class AssetServiceRecordsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_service_records_upload_documents" % key
+                    " to method upload_documents" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'asset_service_record_id' is set
         if self.api_client.client_side_validation and ('asset_service_record_id' not in params or
                                                        params['asset_service_record_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `asset_service_record_id` when calling `asset_service_records_upload_documents`")  # noqa: E501
+            raise ValueError("Missing the required parameter `asset_service_record_id` when calling `upload_documents`")  # noqa: E501
 
         collection_formats = {}
 

@@ -4,14 +4,14 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**clients_create**](ClientsApi.md#clients_create) | **POST** /api/service/clients | Create Client information.
-[**clients_get**](ClientsApi.md#clients_get) | **GET** /api/service/clients/{clientCompanyId} | 
-[**clients_get_all**](ClientsApi.md#clients_get_all) | **GET** /api/service/clients | 
-[**clients_update**](ClientsApi.md#clients_update) | **PUT** /api/service/clients | Update Client information.
+[**create**](ClientsApi.md#create) | **POST** /api/service/clients | Create Client information.
+[**get**](ClientsApi.md#get) | **GET** /api/service/clients/{clientCompanyId} | 
+[**get_all**](ClientsApi.md#get_all) | **GET** /api/service/clients | 
+[**update**](ClientsApi.md#update) | **PUT** /api/service/clients | Update Client information.
 
 
-# **clients_create**
-> QualerApiModelsClientsToCreatedClientCompanyResponse clients_create(model)
+# **create**
+> QualerApiModelsClientsToCreatedClientCompanyResponse create(model)
 
 Create Client information.
 
@@ -31,10 +31,10 @@ model = qualer_sdk.QualerApiModelsClientsFromSponsoredClientCreateModel() # Qual
 
 try:
     # Create Client information.
-    api_response = api_instance.clients_create(model)
+    api_response = api_instance.create(model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientsApi->clients_create: %s\n" % e)
+    print("Exception when calling ClientsApi->create: %s\n" % e)
 ```
 
 ### Parameters
@@ -58,8 +58,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **clients_get**
-> QualerApiModelsClientsToClientCompanyResponseModel clients_get(client_company_id)
+# **get**
+> QualerApiModelsClientsToClientCompanyResponseModel get(client_company_id)
 
 
 
@@ -76,10 +76,10 @@ api_instance = qualer_sdk.ClientsApi()
 client_company_id = 56 # int | 
 
 try:
-    api_response = api_instance.clients_get(client_company_id)
+    api_response = api_instance.get(client_company_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientsApi->clients_get: %s\n" % e)
+    print("Exception when calling ClientsApi->get: %s\n" % e)
 ```
 
 ### Parameters
@@ -103,8 +103,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **clients_get_all**
-> list[QualerApiModelsClientsToClientCompanyResponseModel] clients_get_all(model_legacy_id=model_legacy_id, model_account_number_text=model_account_number_text, model_company_name=model_company_name, model_take=model_take, model_modified_after=model_modified_after)
+# **get_all**
+> list[QualerApiModelsClientsToClientCompanyResponseModel] get_all(model_legacy_id=model_legacy_id, model_account_number_text=model_account_number_text, model_company_name=model_company_name, model_take=model_take, model_modified_after=model_modified_after)
 
 
 
@@ -125,10 +125,10 @@ model_take = 56 # int |  (optional)
 model_modified_after = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 
 try:
-    api_response = api_instance.clients_get_all(model_legacy_id=model_legacy_id, model_account_number_text=model_account_number_text, model_company_name=model_company_name, model_take=model_take, model_modified_after=model_modified_after)
+    api_response = api_instance.get_all(model_legacy_id=model_legacy_id, model_account_number_text=model_account_number_text, model_company_name=model_company_name, model_take=model_take, model_modified_after=model_modified_after)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientsApi->clients_get_all: %s\n" % e)
+    print("Exception when calling ClientsApi->get_all: %s\n" % e)
 ```
 
 ### Parameters
@@ -156,8 +156,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **clients_update**
-> object clients_update(model)
+# **update**
+> object update(model)
 
 Update Client information.
 
@@ -177,10 +177,10 @@ model = qualer_sdk.QualerApiModelsClientsFromSponsoredClientEditModel() # Qualer
 
 try:
     # Update Client information.
-    api_response = api_instance.clients_update(model)
+    api_response = api_instance.update(model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientsApi->clients_update: %s\n" % e)
+    print("Exception when calling ClientsApi->update: %s\n" % e)
 ```
 
 ### Parameters

@@ -33,12 +33,12 @@ class ServicePricingApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def service_pricing_get(self, service_pricing_id, **kwargs):  # noqa: E501
+    def get(self, service_pricing_id, **kwargs):  # noqa: E501
         """  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_pricing_get(service_pricing_id, async_req=True)
+        >>> thread = api.get(service_pricing_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -50,17 +50,17 @@ class ServicePricingApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_pricing_get_with_http_info(service_pricing_id, **kwargs)  # noqa: E501
+            return self.get_with_http_info(service_pricing_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_pricing_get_with_http_info(service_pricing_id, **kwargs)  # noqa: E501
+            (data) = self.get_with_http_info(service_pricing_id, **kwargs)  # noqa: E501
             return data
 
-    def service_pricing_get_with_http_info(self, service_pricing_id, **kwargs):  # noqa: E501
+    def get_with_http_info(self, service_pricing_id, **kwargs):  # noqa: E501
         """  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_pricing_get_with_http_info(service_pricing_id, async_req=True)
+        >>> thread = api.get_with_http_info(service_pricing_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -82,14 +82,14 @@ class ServicePricingApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_pricing_get" % key
+                    " to method get" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_pricing_id' is set
         if self.api_client.client_side_validation and ('service_pricing_id' not in params or
                                                        params['service_pricing_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_pricing_id` when calling `service_pricing_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_pricing_id` when calling `get`")  # noqa: E501
 
         collection_formats = {}
 
@@ -130,12 +130,12 @@ class ServicePricingApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_pricing_update(self, models, **kwargs):  # noqa: E501
-        """service_pricing_update  # noqa: E501
+    def update(self, models, **kwargs):  # noqa: E501
+        """update  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_pricing_update(models, async_req=True)
+        >>> thread = api.update(models, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -146,17 +146,17 @@ class ServicePricingApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_pricing_update_with_http_info(models, **kwargs)  # noqa: E501
+            return self.update_with_http_info(models, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_pricing_update_with_http_info(models, **kwargs)  # noqa: E501
+            (data) = self.update_with_http_info(models, **kwargs)  # noqa: E501
             return data
 
-    def service_pricing_update_with_http_info(self, models, **kwargs):  # noqa: E501
-        """service_pricing_update  # noqa: E501
+    def update_with_http_info(self, models, **kwargs):  # noqa: E501
+        """update  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_pricing_update_with_http_info(models, async_req=True)
+        >>> thread = api.update_with_http_info(models, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -177,14 +177,14 @@ class ServicePricingApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_pricing_update" % key
+                    " to method update" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'models' is set
         if self.api_client.client_side_validation and ('models' not in params or
                                                        params['models'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `models` when calling `service_pricing_update`")  # noqa: E501
+            raise ValueError("Missing the required parameter `models` when calling `update`")  # noqa: E501
 
         collection_formats = {}
 

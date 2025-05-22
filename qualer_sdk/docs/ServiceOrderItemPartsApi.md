@@ -4,11 +4,11 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**service_order_item_parts_get_work_item_parts**](ServiceOrderItemPartsApi.md#service_order_item_parts_get_work_item_parts) | **GET** /api/service/workitems/{workItemId}/parts | 
+[**get_work_item_parts**](ServiceOrderItemPartsApi.md#get_work_item_parts) | **GET** /api/service/workitems/{workItemId}/parts | 
 
 
-# **service_order_item_parts_get_work_item_parts**
-> list[QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel] service_order_item_parts_get_work_item_parts(work_item_id)
+# **get_work_item_parts**
+> list[QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel] get_work_item_parts(work_item_id)
 
 
 
@@ -25,10 +25,10 @@ api_instance = qualer_sdk.ServiceOrderItemPartsApi()
 work_item_id = 56 # int | 
 
 try:
-    api_response = api_instance.service_order_item_parts_get_work_item_parts(work_item_id)
+    api_response = api_instance.get_work_item_parts(work_item_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemPartsApi->service_order_item_parts_get_work_item_parts: %s\n" % e)
+    print("Exception when calling ServiceOrderItemPartsApi->get_work_item_parts: %s\n" % e)
 ```
 
 ### Parameters

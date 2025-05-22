@@ -4,12 +4,12 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**asset_attributes_get_asset_attributes**](AssetAttributesApi.md#asset_attributes_get_asset_attributes) | **GET** /api/assets/{assetId}/attributes | 
-[**asset_attributes_upsert_asset_attributes**](AssetAttributesApi.md#asset_attributes_upsert_asset_attributes) | **PUT** /api/assets/{assetId}/attributes | 
+[**get_asset_attributes**](AssetAttributesApi.md#get_asset_attributes) | **GET** /api/assets/{assetId}/attributes | 
+[**upsert_asset_attributes**](AssetAttributesApi.md#upsert_asset_attributes) | **PUT** /api/assets/{assetId}/attributes | 
 
 
-# **asset_attributes_get_asset_attributes**
-> list[QualerApiModelsAssetAttributesToAssetAttributesResponse] asset_attributes_get_asset_attributes(asset_id)
+# **get_asset_attributes**
+> list[QualerApiModelsAssetAttributesToAssetAttributesResponse] get_asset_attributes(asset_id)
 
 
 
@@ -26,10 +26,10 @@ api_instance = qualer_sdk.AssetAttributesApi()
 asset_id = 56 # int | 
 
 try:
-    api_response = api_instance.asset_attributes_get_asset_attributes(asset_id)
+    api_response = api_instance.get_asset_attributes(asset_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetAttributesApi->asset_attributes_get_asset_attributes: %s\n" % e)
+    print("Exception when calling AssetAttributesApi->get_asset_attributes: %s\n" % e)
 ```
 
 ### Parameters
@@ -53,8 +53,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **asset_attributes_upsert_asset_attributes**
-> object asset_attributes_upsert_asset_attributes(asset_id, model)
+# **upsert_asset_attributes**
+> object upsert_asset_attributes(asset_id, model)
 
 
 
@@ -72,10 +72,10 @@ asset_id = 56 # int |
 model = [qualer_sdk.QualerApiModelsCommonFromAttributeModel()] # list[QualerApiModelsCommonFromAttributeModel] | 
 
 try:
-    api_response = api_instance.asset_attributes_upsert_asset_attributes(asset_id, model)
+    api_response = api_instance.upsert_asset_attributes(asset_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetAttributesApi->asset_attributes_upsert_asset_attributes: %s\n" % e)
+    print("Exception when calling AssetAttributesApi->upsert_asset_attributes: %s\n" % e)
 ```
 
 ### Parameters

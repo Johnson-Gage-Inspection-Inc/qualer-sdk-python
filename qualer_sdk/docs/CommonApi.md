@@ -4,13 +4,13 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**common_culture_list**](CommonApi.md#common_culture_list) | **GET** /api/common/culturelist | 
-[**common_culture_ui_list**](CommonApi.md#common_culture_ui_list) | **GET** /api/common/cultureuilist | 
-[**common_get_company_settings**](CommonApi.md#common_get_company_settings) | **GET** /api/common/settings | 
+[**culture_list**](CommonApi.md#culture_list) | **GET** /api/common/culturelist | 
+[**culture_ui_list**](CommonApi.md#culture_ui_list) | **GET** /api/common/cultureuilist | 
+[**get_company_settings**](CommonApi.md#get_company_settings) | **GET** /api/common/settings | 
 
 
-# **common_culture_list**
-> QualerApiModelsCommonToCultureListResponseModel common_culture_list()
+# **culture_list**
+> QualerApiModelsCommonToCultureListResponseModel culture_list()
 
 
 
@@ -26,10 +26,10 @@ from pprint import pprint
 api_instance = qualer_sdk.CommonApi()
 
 try:
-    api_response = api_instance.common_culture_list()
+    api_response = api_instance.culture_list()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CommonApi->common_culture_list: %s\n" % e)
+    print("Exception when calling CommonApi->culture_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -50,8 +50,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **common_culture_ui_list**
-> QualerApiModelsCommonToCultureListResponseModel common_culture_ui_list()
+# **culture_ui_list**
+> QualerApiModelsCommonToCultureListResponseModel culture_ui_list()
 
 
 
@@ -67,10 +67,10 @@ from pprint import pprint
 api_instance = qualer_sdk.CommonApi()
 
 try:
-    api_response = api_instance.common_culture_ui_list()
+    api_response = api_instance.culture_ui_list()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CommonApi->common_culture_ui_list: %s\n" % e)
+    print("Exception when calling CommonApi->culture_ui_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -91,8 +91,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **common_get_company_settings**
-> QualerApiModelsCommonToSettingResponseModel common_get_company_settings(setting_key)
+# **get_company_settings**
+> QualerApiModelsCommonToSettingResponseModel get_company_settings(setting_key)
 
 
 
@@ -109,10 +109,10 @@ api_instance = qualer_sdk.CommonApi()
 setting_key = 'setting_key_example' # str | 
 
 try:
-    api_response = api_instance.common_get_company_settings(setting_key)
+    api_response = api_instance.get_company_settings(setting_key)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CommonApi->common_get_company_settings: %s\n" % e)
+    print("Exception when calling CommonApi->get_company_settings: %s\n" % e)
 ```
 
 ### Parameters

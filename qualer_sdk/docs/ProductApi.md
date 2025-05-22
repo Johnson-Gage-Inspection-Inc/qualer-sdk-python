@@ -4,17 +4,17 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**product_add_manufacturer**](ProductApi.md#product_add_manufacturer) | **POST** /api/manufacturers/add | 
-[**product_add_product**](ProductApi.md#product_add_product) | **POST** /api/products/add | 
-[**product_get_inventory_count**](ProductApi.md#product_get_inventory_count) | **GET** /api/products/inventorycount | 
-[**product_get_manufacturers**](ProductApi.md#product_get_manufacturers) | **GET** /api/manufacturers | 
-[**product_get_product**](ProductApi.md#product_get_product) | **GET** /api/products/{productId} | 
-[**product_product**](ProductApi.md#product_product) | **PUT** /api/products/{productId} | 
-[**product_put_inventory_count**](ProductApi.md#product_put_inventory_count) | **PUT** /api/products/inventorycount | 
+[**add_manufacturer**](ProductApi.md#add_manufacturer) | **POST** /api/manufacturers/add | 
+[**add_product**](ProductApi.md#add_product) | **POST** /api/products/add | 
+[**get_inventory_count**](ProductApi.md#get_inventory_count) | **GET** /api/products/inventorycount | 
+[**get_manufacturers**](ProductApi.md#get_manufacturers) | **GET** /api/manufacturers | 
+[**get_product**](ProductApi.md#get_product) | **GET** /api/products/{productId} | 
+[**product**](ProductApi.md#product) | **PUT** /api/products/{productId} | 
+[**put_inventory_count**](ProductApi.md#put_inventory_count) | **PUT** /api/products/inventorycount | 
 
 
-# **product_add_manufacturer**
-> object product_add_manufacturer(manufacturer_name)
+# **add_manufacturer**
+> object add_manufacturer(manufacturer_name)
 
 
 
@@ -31,10 +31,10 @@ api_instance = qualer_sdk.ProductApi()
 manufacturer_name = 'manufacturer_name_example' # str | 
 
 try:
-    api_response = api_instance.product_add_manufacturer(manufacturer_name)
+    api_response = api_instance.add_manufacturer(manufacturer_name)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProductApi->product_add_manufacturer: %s\n" % e)
+    print("Exception when calling ProductApi->add_manufacturer: %s\n" % e)
 ```
 
 ### Parameters
@@ -58,8 +58,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **product_add_product**
-> object product_add_product(model)
+# **add_product**
+> object add_product(model)
 
 
 
@@ -76,10 +76,10 @@ api_instance = qualer_sdk.ProductApi()
 model = qualer_sdk.QualerWebMvcAreasApiModelsProductFromProductApiEditModel() # QualerWebMvcAreasApiModelsProductFromProductApiEditModel | 
 
 try:
-    api_response = api_instance.product_add_product(model)
+    api_response = api_instance.add_product(model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProductApi->product_add_product: %s\n" % e)
+    print("Exception when calling ProductApi->add_product: %s\n" % e)
 ```
 
 ### Parameters
@@ -103,8 +103,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **product_get_inventory_count**
-> list[QualerApiModelsInventoryToInventoryResponseModel] product_get_inventory_count()
+# **get_inventory_count**
+> list[QualerApiModelsInventoryToInventoryResponseModel] get_inventory_count()
 
 
 
@@ -120,10 +120,10 @@ from pprint import pprint
 api_instance = qualer_sdk.ProductApi()
 
 try:
-    api_response = api_instance.product_get_inventory_count()
+    api_response = api_instance.get_inventory_count()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProductApi->product_get_inventory_count: %s\n" % e)
+    print("Exception when calling ProductApi->get_inventory_count: %s\n" % e)
 ```
 
 ### Parameters
@@ -144,8 +144,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **product_get_manufacturers**
-> list[QualerApiModelsProductToManufacturerResponseModel] product_get_manufacturers()
+# **get_manufacturers**
+> list[QualerApiModelsProductToManufacturerResponseModel] get_manufacturers()
 
 
 
@@ -161,10 +161,10 @@ from pprint import pprint
 api_instance = qualer_sdk.ProductApi()
 
 try:
-    api_response = api_instance.product_get_manufacturers()
+    api_response = api_instance.get_manufacturers()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProductApi->product_get_manufacturers: %s\n" % e)
+    print("Exception when calling ProductApi->get_manufacturers: %s\n" % e)
 ```
 
 ### Parameters
@@ -185,8 +185,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **product_get_product**
-> QualerApiModelsProductToProductApiResponseModel product_get_product(product_id)
+# **get_product**
+> QualerApiModelsProductToProductApiResponseModel get_product(product_id)
 
 
 
@@ -203,10 +203,10 @@ api_instance = qualer_sdk.ProductApi()
 product_id = 56 # int | 
 
 try:
-    api_response = api_instance.product_get_product(product_id)
+    api_response = api_instance.get_product(product_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProductApi->product_get_product: %s\n" % e)
+    print("Exception when calling ProductApi->get_product: %s\n" % e)
 ```
 
 ### Parameters
@@ -230,8 +230,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **product_product**
-> object product_product(product_id, model)
+# **product**
+> object product(product_id, model)
 
 
 
@@ -249,10 +249,10 @@ product_id = 56 # int |
 model = qualer_sdk.QualerWebMvcAreasApiModelsProductFromProductApiEditModel() # QualerWebMvcAreasApiModelsProductFromProductApiEditModel | 
 
 try:
-    api_response = api_instance.product_product(product_id, model)
+    api_response = api_instance.product(product_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProductApi->product_product: %s\n" % e)
+    print("Exception when calling ProductApi->product: %s\n" % e)
 ```
 
 ### Parameters
@@ -277,8 +277,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **product_put_inventory_count**
-> object product_put_inventory_count(models)
+# **put_inventory_count**
+> object put_inventory_count(models)
 
 
 
@@ -295,10 +295,10 @@ api_instance = qualer_sdk.ProductApi()
 models = [qualer_sdk.QualerApiModelsInventoryFromInventoryCountModel()] # list[QualerApiModelsInventoryFromInventoryCountModel] | 
 
 try:
-    api_response = api_instance.product_put_inventory_count(models)
+    api_response = api_instance.put_inventory_count(models)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProductApi->product_put_inventory_count: %s\n" % e)
+    print("Exception when calling ProductApi->put_inventory_count: %s\n" % e)
 ```
 
 ### Parameters

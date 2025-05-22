@@ -4,16 +4,16 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**account_companies**](AccountApi.md#account_companies) | **POST** /api/user/companies | 
-[**account_get_employee_message**](AccountApi.md#account_get_employee_message) | **GET** /api/user/messages/{messageId} | 
-[**account_get_employee_messages**](AccountApi.md#account_get_employee_messages) | **GET** /api/user/messages | 
-[**account_login**](AccountApi.md#account_login) | **POST** /api/login | Login
-[**account_logout**](AccountApi.md#account_logout) | **POST** /api/logout | Logout
-[**account_post_employee_location**](AccountApi.md#account_post_employee_location) | **POST** /api/user/location | Post Employee Location
+[**companies**](AccountApi.md#companies) | **POST** /api/user/companies | 
+[**get_employee_message**](AccountApi.md#get_employee_message) | **GET** /api/user/messages/{messageId} | 
+[**get_employee_messages**](AccountApi.md#get_employee_messages) | **GET** /api/user/messages | 
+[**login**](AccountApi.md#login) | **POST** /api/login | Login
+[**logout**](AccountApi.md#logout) | **POST** /api/logout | Logout
+[**post_employee_location**](AccountApi.md#post_employee_location) | **POST** /api/user/location | Post Employee Location
 
 
-# **account_companies**
-> object account_companies(model)
+# **companies**
+> object companies(model)
 
 
 
@@ -30,10 +30,10 @@ api_instance = qualer_sdk.AccountApi()
 model = qualer_sdk.QualerWebMvcAreasApiModelsAccountToLoginModel() # QualerWebMvcAreasApiModelsAccountToLoginModel | 
 
 try:
-    api_response = api_instance.account_companies(model)
+    api_response = api_instance.companies(model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AccountApi->account_companies: %s\n" % e)
+    print("Exception when calling AccountApi->companies: %s\n" % e)
 ```
 
 ### Parameters
@@ -57,8 +57,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **account_get_employee_message**
-> QualerApiModelsAccountToEmployeeEventMessageResponseModel account_get_employee_message(message_id)
+# **get_employee_message**
+> QualerApiModelsAccountToEmployeeEventMessageResponseModel get_employee_message(message_id)
 
 
 
@@ -75,10 +75,10 @@ api_instance = qualer_sdk.AccountApi()
 message_id = 56 # int | 
 
 try:
-    api_response = api_instance.account_get_employee_message(message_id)
+    api_response = api_instance.get_employee_message(message_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AccountApi->account_get_employee_message: %s\n" % e)
+    print("Exception when calling AccountApi->get_employee_message: %s\n" % e)
 ```
 
 ### Parameters
@@ -102,8 +102,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **account_get_employee_messages**
-> list[QualerApiModelsAccountToEmployeeEventResponseModel] account_get_employee_messages(model_period=model_period, model_site_id=model_site_id)
+# **get_employee_messages**
+> list[QualerApiModelsAccountToEmployeeEventResponseModel] get_employee_messages(model_period=model_period, model_site_id=model_site_id)
 
 
 
@@ -121,10 +121,10 @@ model_period = 56 # int |  (optional)
 model_site_id = 56 # int |  (optional)
 
 try:
-    api_response = api_instance.account_get_employee_messages(model_period=model_period, model_site_id=model_site_id)
+    api_response = api_instance.get_employee_messages(model_period=model_period, model_site_id=model_site_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AccountApi->account_get_employee_messages: %s\n" % e)
+    print("Exception when calling AccountApi->get_employee_messages: %s\n" % e)
 ```
 
 ### Parameters
@@ -149,8 +149,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **account_login**
-> QualerApiModelsAccountFromLoginResponseModel account_login(model)
+# **login**
+> QualerApiModelsAccountFromLoginResponseModel login(model)
 
 Login
 
@@ -168,10 +168,10 @@ model = qualer_sdk.QualerWebMvcAreasApiModelsAccountToLoginModel() # QualerWebMv
 
 try:
     # Login
-    api_response = api_instance.account_login(model)
+    api_response = api_instance.login(model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AccountApi->account_login: %s\n" % e)
+    print("Exception when calling AccountApi->login: %s\n" % e)
 ```
 
 ### Parameters
@@ -195,8 +195,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **account_logout**
-> object account_logout(model)
+# **logout**
+> object logout(model)
 
 Logout
 
@@ -216,10 +216,10 @@ model = qualer_sdk.QualerApiModelsAccountToLogoutModel() # QualerApiModelsAccoun
 
 try:
     # Logout
-    api_response = api_instance.account_logout(model)
+    api_response = api_instance.logout(model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AccountApi->account_logout: %s\n" % e)
+    print("Exception when calling AccountApi->logout: %s\n" % e)
 ```
 
 ### Parameters
@@ -243,8 +243,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **account_post_employee_location**
-> object account_post_employee_location(model)
+# **post_employee_location**
+> object post_employee_location(model)
 
 Post Employee Location
 
@@ -264,10 +264,10 @@ model = qualer_sdk.QualerApiModelsEmployeesFromEmployeeLocationModel() # QualerA
 
 try:
     # Post Employee Location
-    api_response = api_instance.account_post_employee_location(model)
+    api_response = api_instance.post_employee_location(model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AccountApi->account_post_employee_location: %s\n" % e)
+    print("Exception when calling AccountApi->post_employee_location: %s\n" % e)
 ```
 
 ### Parameters

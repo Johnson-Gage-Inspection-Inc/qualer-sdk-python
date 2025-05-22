@@ -4,14 +4,14 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**service_order_tasks_create_work_order_task**](ServiceOrderTasksApi.md#service_order_tasks_create_work_order_task) | **POST** /api/service/workorders/{serviceOrderId}/tasks | 
-[**service_order_tasks_delete_work_order_task**](ServiceOrderTasksApi.md#service_order_tasks_delete_work_order_task) | **DELETE** /api/service/workorders/{serviceOrderId}/Tasks/{serviceOrderTaskId} | 
-[**service_order_tasks_get_work_order_tasks**](ServiceOrderTasksApi.md#service_order_tasks_get_work_order_tasks) | **GET** /api/service/workorders/{serviceOrderId}/tasks | 
-[**service_order_tasks_update_work_order_task**](ServiceOrderTasksApi.md#service_order_tasks_update_work_order_task) | **PUT** /api/service/workorders/{serviceOrderId}/tasks | 
+[**create_work_order_task**](ServiceOrderTasksApi.md#create_work_order_task) | **POST** /api/service/workorders/{serviceOrderId}/tasks | 
+[**delete_work_order_task**](ServiceOrderTasksApi.md#delete_work_order_task) | **DELETE** /api/service/workorders/{serviceOrderId}/Tasks/{serviceOrderTaskId} | 
+[**get_work_order_tasks**](ServiceOrderTasksApi.md#get_work_order_tasks) | **GET** /api/service/workorders/{serviceOrderId}/tasks | 
+[**update_work_order_task**](ServiceOrderTasksApi.md#update_work_order_task) | **PUT** /api/service/workorders/{serviceOrderId}/tasks | 
 
 
-# **service_order_tasks_create_work_order_task**
-> object service_order_tasks_create_work_order_task(service_order_id, model)
+# **create_work_order_task**
+> object create_work_order_task(service_order_id, model)
 
 
 
@@ -31,10 +31,10 @@ service_order_id = 56 # int |
 model = qualer_sdk.QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel() # QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel | 
 
 try:
-    api_response = api_instance.service_order_tasks_create_work_order_task(service_order_id, model)
+    api_response = api_instance.create_work_order_task(service_order_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderTasksApi->service_order_tasks_create_work_order_task: %s\n" % e)
+    print("Exception when calling ServiceOrderTasksApi->create_work_order_task: %s\n" % e)
 ```
 
 ### Parameters
@@ -59,8 +59,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_tasks_delete_work_order_task**
-> object service_order_tasks_delete_work_order_task(service_order_id, service_order_task_id)
+# **delete_work_order_task**
+> object delete_work_order_task(service_order_id, service_order_task_id)
 
 
 
@@ -80,10 +80,10 @@ service_order_id = 56 # int |
 service_order_task_id = 56 # int | 
 
 try:
-    api_response = api_instance.service_order_tasks_delete_work_order_task(service_order_id, service_order_task_id)
+    api_response = api_instance.delete_work_order_task(service_order_id, service_order_task_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderTasksApi->service_order_tasks_delete_work_order_task: %s\n" % e)
+    print("Exception when calling ServiceOrderTasksApi->delete_work_order_task: %s\n" % e)
 ```
 
 ### Parameters
@@ -108,8 +108,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_tasks_get_work_order_tasks**
-> list[QualerApiModelsServiceOrdersToServiceOrderTaskResponse] service_order_tasks_get_work_order_tasks(service_order_id)
+# **get_work_order_tasks**
+> list[QualerApiModelsServiceOrdersToServiceOrderTaskResponse] get_work_order_tasks(service_order_id)
 
 
 
@@ -128,10 +128,10 @@ api_instance = qualer_sdk.ServiceOrderTasksApi()
 service_order_id = 56 # int | 
 
 try:
-    api_response = api_instance.service_order_tasks_get_work_order_tasks(service_order_id)
+    api_response = api_instance.get_work_order_tasks(service_order_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderTasksApi->service_order_tasks_get_work_order_tasks: %s\n" % e)
+    print("Exception when calling ServiceOrderTasksApi->get_work_order_tasks: %s\n" % e)
 ```
 
 ### Parameters
@@ -155,8 +155,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_tasks_update_work_order_task**
-> object service_order_tasks_update_work_order_task(service_order_id, model)
+# **update_work_order_task**
+> object update_work_order_task(service_order_id, model)
 
 
 
@@ -176,10 +176,10 @@ service_order_id = 56 # int |
 model = qualer_sdk.QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel() # QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel | 
 
 try:
-    api_response = api_instance.service_order_tasks_update_work_order_task(service_order_id, model)
+    api_response = api_instance.update_work_order_task(service_order_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderTasksApi->service_order_tasks_update_work_order_task: %s\n" % e)
+    print("Exception when calling ServiceOrderTasksApi->update_work_order_task: %s\n" % e)
 ```
 
 ### Parameters

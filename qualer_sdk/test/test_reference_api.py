@@ -29,14 +29,14 @@ class TestReferenceApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_reference_get_measurement_quantities(self):
-        """Test case for reference_get_measurement_quantities
+    def test_get_measurement_quantities(self):
+        """Test case for get_measurement_quantities
 
         """
         pass
 
-    def test_reference_get_units_of_measure(self):
-        """Test case for reference_get_units_of_measure
+    def test_get_units_of_measure(self):
+        """Test case for get_units_of_measure
 
         """
         pass

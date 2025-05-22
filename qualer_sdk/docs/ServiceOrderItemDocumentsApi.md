@@ -4,14 +4,14 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**service_order_item_documents_get_document_list**](ServiceOrderItemDocumentsApi.md#service_order_item_documents_get_document_list) | **GET** /api/service/workitems/documents/list | Retrieve work order documents
-[**service_order_item_documents_get_documents**](ServiceOrderItemDocumentsApi.md#service_order_item_documents_get_documents) | **GET** /api/service/workitems/{serviceOrderItemId}/documents | Retrieve work order documents
-[**service_order_item_documents_get_documents_list**](ServiceOrderItemDocumentsApi.md#service_order_item_documents_get_documents_list) | **GET** /api/service/workitems/{serviceOrderItemId}/documents/list | 
-[**service_order_item_documents_upload_documents**](ServiceOrderItemDocumentsApi.md#service_order_item_documents_upload_documents) | **POST** /api/service/workitems/{serviceOrderItemId}/documents | 
+[**get_document_list**](ServiceOrderItemDocumentsApi.md#get_document_list) | **GET** /api/service/workitems/documents/list | Retrieve work order documents
+[**get_documents**](ServiceOrderItemDocumentsApi.md#get_documents) | **GET** /api/service/workitems/{serviceOrderItemId}/documents | Retrieve work order documents
+[**get_documents_list**](ServiceOrderItemDocumentsApi.md#get_documents_list) | **GET** /api/service/workitems/{serviceOrderItemId}/documents/list | 
+[**upload_documents**](ServiceOrderItemDocumentsApi.md#upload_documents) | **POST** /api/service/workitems/{serviceOrderItemId}/documents | 
 
 
-# **service_order_item_documents_get_document_list**
-> list[QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse] service_order_item_documents_get_document_list(_from, to, report_type=report_type, service_order_item_id=service_order_item_id)
+# **get_document_list**
+> list[QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse] get_document_list(_from, to, report_type=report_type, service_order_item_id=service_order_item_id)
 
 Retrieve work order documents
 
@@ -34,10 +34,10 @@ service_order_item_id = 56 # int | Retrieve documents by given service order ite
 
 try:
     # Retrieve work order documents
-    api_response = api_instance.service_order_item_documents_get_document_list(_from, to, report_type=report_type, service_order_item_id=service_order_item_id)
+    api_response = api_instance.get_document_list(_from, to, report_type=report_type, service_order_item_id=service_order_item_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemDocumentsApi->service_order_item_documents_get_document_list: %s\n" % e)
+    print("Exception when calling ServiceOrderItemDocumentsApi->get_document_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -64,8 +64,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_item_documents_get_documents**
-> object service_order_item_documents_get_documents(service_order_item_id, model_file_name=model_file_name)
+# **get_documents**
+> object get_documents(service_order_item_id, model_file_name=model_file_name)
 
 Retrieve work order documents
 
@@ -86,10 +86,10 @@ model_file_name = 'model_file_name_example' # str |  (optional)
 
 try:
     # Retrieve work order documents
-    api_response = api_instance.service_order_item_documents_get_documents(service_order_item_id, model_file_name=model_file_name)
+    api_response = api_instance.get_documents(service_order_item_id, model_file_name=model_file_name)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemDocumentsApi->service_order_item_documents_get_documents: %s\n" % e)
+    print("Exception when calling ServiceOrderItemDocumentsApi->get_documents: %s\n" % e)
 ```
 
 ### Parameters
@@ -114,8 +114,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_item_documents_get_documents_list**
-> list[QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse] service_order_item_documents_get_documents_list(service_order_item_id, model_report_type=model_report_type)
+# **get_documents_list**
+> list[QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse] get_documents_list(service_order_item_id, model_report_type=model_report_type)
 
 
 
@@ -133,10 +133,10 @@ service_order_item_id = 56 # int |
 model_report_type = 'model_report_type_example' # str |  (optional)
 
 try:
-    api_response = api_instance.service_order_item_documents_get_documents_list(service_order_item_id, model_report_type=model_report_type)
+    api_response = api_instance.get_documents_list(service_order_item_id, model_report_type=model_report_type)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemDocumentsApi->service_order_item_documents_get_documents_list: %s\n" % e)
+    print("Exception when calling ServiceOrderItemDocumentsApi->get_documents_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -161,8 +161,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_item_documents_upload_documents**
-> object service_order_item_documents_upload_documents(service_order_item_id, model_report_type=model_report_type, model_is_private=model_is_private)
+# **upload_documents**
+> object upload_documents(service_order_item_id, model_report_type=model_report_type, model_is_private=model_is_private)
 
 
 
@@ -181,10 +181,10 @@ model_report_type = 'model_report_type_example' # str |  (optional)
 model_is_private = true # bool |  (optional)
 
 try:
-    api_response = api_instance.service_order_item_documents_upload_documents(service_order_item_id, model_report_type=model_report_type, model_is_private=model_is_private)
+    api_response = api_instance.upload_documents(service_order_item_id, model_report_type=model_report_type, model_is_private=model_is_private)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemDocumentsApi->service_order_item_documents_upload_documents: %s\n" % e)
+    print("Exception when calling ServiceOrderItemDocumentsApi->upload_documents: %s\n" % e)
 ```
 
 ### Parameters

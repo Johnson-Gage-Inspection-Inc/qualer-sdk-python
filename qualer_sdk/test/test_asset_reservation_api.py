@@ -29,20 +29,20 @@ class TestAssetReservationApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_asset_reservation_close(self):
-        """Test case for asset_reservation_close
+    def test_close(self):
+        """Test case for close
 
         """
         pass
 
-    def test_asset_reservation_get(self):
-        """Test case for asset_reservation_get
+    def test_get(self):
+        """Test case for get
 
         """
         pass
 
-    def test_asset_reservation_upsert(self):
-        """Test case for asset_reservation_upsert
+    def test_upsert(self):
+        """Test case for upsert
 
         """
         pass

@@ -29,8 +29,8 @@ class TestServiceOrderItemPartsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_service_order_item_parts_get_work_item_parts(self):
-        """Test case for service_order_item_parts_get_work_item_parts
+    def test_get_work_item_parts(self):
+        """Test case for get_work_item_parts
 
         """
         pass

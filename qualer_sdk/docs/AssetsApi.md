@@ -4,28 +4,28 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**assets_clear_collected_assets**](AssetsApi.md#assets_clear_collected_assets) | **PUT** /api/assets/collection/remove | ClearCollectedAssets(int[] assetIds)
-[**assets_collect_assets**](AssetsApi.md#assets_collect_assets) | **PUT** /api/assets/collection/add | CollectAssets(int[] assetIds)
-[**assets_get_all_assets**](AssetsApi.md#assets_get_all_assets) | **GET** /api/assets | 
-[**assets_get_asset**](AssetsApi.md#assets_get_asset) | **GET** /api/assets/{id} | 
-[**assets_get_asset_by_asset_pool**](AssetsApi.md#assets_get_asset_by_asset_pool) | **GET** /api/assets/byassetpool/{assetPoolId} | 
-[**assets_get_asset_by_asset_tag**](AssetsApi.md#assets_get_asset_by_asset_tag) | **GET** /api/assets/byassettag/{assetTag} | 
-[**assets_get_asset_by_attribute**](AssetsApi.md#assets_get_asset_by_attribute) | **GET** /api/assets/byattribute | 
-[**assets_get_asset_by_barcode**](AssetsApi.md#assets_get_asset_by_barcode) | **GET** /api/assets/bybarcode/{barcode} | 
-[**assets_get_asset_by_serial_number**](AssetsApi.md#assets_get_asset_by_serial_number) | **GET** /api/assets/byserialnumber/{serialNumber} | 
-[**assets_get_asset_images**](AssetsApi.md#assets_get_asset_images) | **GET** /api/assets/{id}/images | GetAssetImages
-[**assets_get_asset_manager_counters**](AssetsApi.md#assets_get_asset_manager_counters) | **GET** /api/assets/counters | GetAssetManagerCounters
-[**assets_get_asset_manager_list**](AssetsApi.md#assets_get_asset_manager_list) | **GET** /api/assets/byfilter | GetAssetManagerList
-[**assets_get_assets_by_equipment_id**](AssetsApi.md#assets_get_assets_by_equipment_id) | **GET** /api/assets/byequipmentid/{equipmentId} | 
-[**assets_post_asset_images**](AssetsApi.md#assets_post_asset_images) | **POST** /api/assets/{id}/images | PostAssetImages
-[**assets_update_asset_class**](AssetsApi.md#assets_update_asset_class) | **PUT** /api/assets/{id}/class | 
-[**assets_update_asset_department**](AssetsApi.md#assets_update_asset_department) | **PUT** /api/assets/{id}/department | 
-[**assets_update_asset_room**](AssetsApi.md#assets_update_asset_room) | **PUT** /api/assets/{id}/room | 
-[**assets_update_room**](AssetsApi.md#assets_update_room) | **PUT** /api/assets/room | 
+[**clear_collected_assets**](AssetsApi.md#clear_collected_assets) | **PUT** /api/assets/collection/remove | ClearCollectedAssets(int[] assetIds)
+[**collect_assets**](AssetsApi.md#collect_assets) | **PUT** /api/assets/collection/add | CollectAssets(int[] assetIds)
+[**get_all_assets**](AssetsApi.md#get_all_assets) | **GET** /api/assets | 
+[**get_asset**](AssetsApi.md#get_asset) | **GET** /api/assets/{id} | 
+[**get_asset_by_asset_pool**](AssetsApi.md#get_asset_by_asset_pool) | **GET** /api/assets/byassetpool/{assetPoolId} | 
+[**get_asset_by_asset_tag**](AssetsApi.md#get_asset_by_asset_tag) | **GET** /api/assets/byassettag/{assetTag} | 
+[**get_asset_by_attribute**](AssetsApi.md#get_asset_by_attribute) | **GET** /api/assets/byattribute | 
+[**get_asset_by_barcode**](AssetsApi.md#get_asset_by_barcode) | **GET** /api/assets/bybarcode/{barcode} | 
+[**get_asset_by_serial_number**](AssetsApi.md#get_asset_by_serial_number) | **GET** /api/assets/byserialnumber/{serialNumber} | 
+[**get_asset_images**](AssetsApi.md#get_asset_images) | **GET** /api/assets/{id}/images | GetAssetImages
+[**get_asset_manager_counters**](AssetsApi.md#get_asset_manager_counters) | **GET** /api/assets/counters | GetAssetManagerCounters
+[**get_asset_manager_list**](AssetsApi.md#get_asset_manager_list) | **GET** /api/assets/byfilter | GetAssetManagerList
+[**get_assets_by_equipment_id**](AssetsApi.md#get_assets_by_equipment_id) | **GET** /api/assets/byequipmentid/{equipmentId} | 
+[**post_asset_images**](AssetsApi.md#post_asset_images) | **POST** /api/assets/{id}/images | PostAssetImages
+[**update_asset_class**](AssetsApi.md#update_asset_class) | **PUT** /api/assets/{id}/class | 
+[**update_asset_department**](AssetsApi.md#update_asset_department) | **PUT** /api/assets/{id}/department | 
+[**update_asset_room**](AssetsApi.md#update_asset_room) | **PUT** /api/assets/{id}/room | 
+[**update_room**](AssetsApi.md#update_room) | **PUT** /api/assets/room | 
 
 
-# **assets_clear_collected_assets**
-> object assets_clear_collected_assets(asset_ids)
+# **clear_collected_assets**
+> object clear_collected_assets(asset_ids)
 
 ClearCollectedAssets(int[] assetIds)
 
@@ -45,10 +45,10 @@ asset_ids = [qualer_sdk.list[int]()] # list[int] |
 
 try:
     # ClearCollectedAssets(int[] assetIds)
-    api_response = api_instance.assets_clear_collected_assets(asset_ids)
+    api_response = api_instance.clear_collected_assets(asset_ids)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_clear_collected_assets: %s\n" % e)
+    print("Exception when calling AssetsApi->clear_collected_assets: %s\n" % e)
 ```
 
 ### Parameters
@@ -72,8 +72,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_collect_assets**
-> object assets_collect_assets(asset_ids)
+# **collect_assets**
+> object collect_assets(asset_ids)
 
 CollectAssets(int[] assetIds)
 
@@ -93,10 +93,10 @@ asset_ids = [qualer_sdk.list[int]()] # list[int] |
 
 try:
     # CollectAssets(int[] assetIds)
-    api_response = api_instance.assets_collect_assets(asset_ids)
+    api_response = api_instance.collect_assets(asset_ids)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_collect_assets: %s\n" % e)
+    print("Exception when calling AssetsApi->collect_assets: %s\n" % e)
 ```
 
 ### Parameters
@@ -120,8 +120,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_get_all_assets**
-> list[QualerApiModelsAssetToAssetResponseModel] assets_get_all_assets()
+# **get_all_assets**
+> list[QualerApiModelsAssetToAssetResponseModel] get_all_assets()
 
 
 
@@ -137,10 +137,10 @@ from pprint import pprint
 api_instance = qualer_sdk.AssetsApi()
 
 try:
-    api_response = api_instance.assets_get_all_assets()
+    api_response = api_instance.get_all_assets()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_get_all_assets: %s\n" % e)
+    print("Exception when calling AssetsApi->get_all_assets: %s\n" % e)
 ```
 
 ### Parameters
@@ -161,8 +161,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_get_asset**
-> QualerApiModelsAssetToAssetResponseModel assets_get_asset(id)
+# **get_asset**
+> QualerApiModelsAssetToAssetResponseModel get_asset(id)
 
 
 
@@ -179,10 +179,10 @@ api_instance = qualer_sdk.AssetsApi()
 id = 56 # int | 
 
 try:
-    api_response = api_instance.assets_get_asset(id)
+    api_response = api_instance.get_asset(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_get_asset: %s\n" % e)
+    print("Exception when calling AssetsApi->get_asset: %s\n" % e)
 ```
 
 ### Parameters
@@ -206,8 +206,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_get_asset_by_asset_pool**
-> list[QualerApiModelsAssetToAssetResponseModel] assets_get_asset_by_asset_pool(asset_pool_id)
+# **get_asset_by_asset_pool**
+> list[QualerApiModelsAssetToAssetResponseModel] get_asset_by_asset_pool(asset_pool_id)
 
 
 
@@ -224,10 +224,10 @@ api_instance = qualer_sdk.AssetsApi()
 asset_pool_id = 56 # int | 
 
 try:
-    api_response = api_instance.assets_get_asset_by_asset_pool(asset_pool_id)
+    api_response = api_instance.get_asset_by_asset_pool(asset_pool_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_get_asset_by_asset_pool: %s\n" % e)
+    print("Exception when calling AssetsApi->get_asset_by_asset_pool: %s\n" % e)
 ```
 
 ### Parameters
@@ -251,8 +251,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_get_asset_by_asset_tag**
-> list[QualerApiModelsAssetToAssetResponseModel] assets_get_asset_by_asset_tag(asset_tag)
+# **get_asset_by_asset_tag**
+> list[QualerApiModelsAssetToAssetResponseModel] get_asset_by_asset_tag(asset_tag)
 
 
 
@@ -269,10 +269,10 @@ api_instance = qualer_sdk.AssetsApi()
 asset_tag = 'asset_tag_example' # str | 
 
 try:
-    api_response = api_instance.assets_get_asset_by_asset_tag(asset_tag)
+    api_response = api_instance.get_asset_by_asset_tag(asset_tag)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_get_asset_by_asset_tag: %s\n" % e)
+    print("Exception when calling AssetsApi->get_asset_by_asset_tag: %s\n" % e)
 ```
 
 ### Parameters
@@ -296,8 +296,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_get_asset_by_attribute**
-> list[QualerApiModelsAssetToAssetResponseModel] assets_get_asset_by_attribute(model_name=model_name, model_value=model_value)
+# **get_asset_by_attribute**
+> list[QualerApiModelsAssetToAssetResponseModel] get_asset_by_attribute(model_name=model_name, model_value=model_value)
 
 
 
@@ -315,10 +315,10 @@ model_name = 'model_name_example' # str |  (optional)
 model_value = 'model_value_example' # str |  (optional)
 
 try:
-    api_response = api_instance.assets_get_asset_by_attribute(model_name=model_name, model_value=model_value)
+    api_response = api_instance.get_asset_by_attribute(model_name=model_name, model_value=model_value)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_get_asset_by_attribute: %s\n" % e)
+    print("Exception when calling AssetsApi->get_asset_by_attribute: %s\n" % e)
 ```
 
 ### Parameters
@@ -343,8 +343,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_get_asset_by_barcode**
-> list[QualerApiModelsAssetToAssetResponseModel] assets_get_asset_by_barcode(barcode)
+# **get_asset_by_barcode**
+> list[QualerApiModelsAssetToAssetResponseModel] get_asset_by_barcode(barcode)
 
 
 
@@ -361,10 +361,10 @@ api_instance = qualer_sdk.AssetsApi()
 barcode = 'barcode_example' # str | 
 
 try:
-    api_response = api_instance.assets_get_asset_by_barcode(barcode)
+    api_response = api_instance.get_asset_by_barcode(barcode)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_get_asset_by_barcode: %s\n" % e)
+    print("Exception when calling AssetsApi->get_asset_by_barcode: %s\n" % e)
 ```
 
 ### Parameters
@@ -388,8 +388,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_get_asset_by_serial_number**
-> list[QualerApiModelsAssetToAssetResponseModel] assets_get_asset_by_serial_number(serial_number)
+# **get_asset_by_serial_number**
+> list[QualerApiModelsAssetToAssetResponseModel] get_asset_by_serial_number(serial_number)
 
 
 
@@ -406,10 +406,10 @@ api_instance = qualer_sdk.AssetsApi()
 serial_number = 'serial_number_example' # str | 
 
 try:
-    api_response = api_instance.assets_get_asset_by_serial_number(serial_number)
+    api_response = api_instance.get_asset_by_serial_number(serial_number)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_get_asset_by_serial_number: %s\n" % e)
+    print("Exception when calling AssetsApi->get_asset_by_serial_number: %s\n" % e)
 ```
 
 ### Parameters
@@ -433,8 +433,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_get_asset_images**
-> list[str] assets_get_asset_images(id)
+# **get_asset_images**
+> list[str] get_asset_images(id)
 
 GetAssetImages
 
@@ -454,10 +454,10 @@ id = 56 # int |
 
 try:
     # GetAssetImages
-    api_response = api_instance.assets_get_asset_images(id)
+    api_response = api_instance.get_asset_images(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_get_asset_images: %s\n" % e)
+    print("Exception when calling AssetsApi->get_asset_images: %s\n" % e)
 ```
 
 ### Parameters
@@ -481,8 +481,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_get_asset_manager_counters**
-> QualerApiModelsAssetToAssetsCountResponseModel assets_get_asset_manager_counters(model_search_string=model_search_string)
+# **get_asset_manager_counters**
+> QualerApiModelsAssetToAssetsCountResponseModel get_asset_manager_counters(model_search_string=model_search_string)
 
 GetAssetManagerCounters
 
@@ -500,10 +500,10 @@ model_search_string = 'model_search_string_example' # str |  (optional)
 
 try:
     # GetAssetManagerCounters
-    api_response = api_instance.assets_get_asset_manager_counters(model_search_string=model_search_string)
+    api_response = api_instance.get_asset_manager_counters(model_search_string=model_search_string)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_get_asset_manager_counters: %s\n" % e)
+    print("Exception when calling AssetsApi->get_asset_manager_counters: %s\n" % e)
 ```
 
 ### Parameters
@@ -527,8 +527,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_get_asset_manager_list**
-> list[QualerApiModelsAssetToAssetManageResponseModel] assets_get_asset_manager_list(model_filter_type=model_filter_type, model_search_string=model_search_string, model_page=model_page, model_page_size=model_page_size)
+# **get_asset_manager_list**
+> list[QualerApiModelsAssetToAssetManageResponseModel] get_asset_manager_list(model_filter_type=model_filter_type, model_search_string=model_search_string, model_page=model_page, model_page_size=model_page_size)
 
 GetAssetManagerList
 
@@ -551,10 +551,10 @@ model_page_size = 56 # int |  (optional)
 
 try:
     # GetAssetManagerList
-    api_response = api_instance.assets_get_asset_manager_list(model_filter_type=model_filter_type, model_search_string=model_search_string, model_page=model_page, model_page_size=model_page_size)
+    api_response = api_instance.get_asset_manager_list(model_filter_type=model_filter_type, model_search_string=model_search_string, model_page=model_page, model_page_size=model_page_size)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_get_asset_manager_list: %s\n" % e)
+    print("Exception when calling AssetsApi->get_asset_manager_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -581,8 +581,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_get_assets_by_equipment_id**
-> list[QualerApiModelsAssetToAssetResponseModel] assets_get_assets_by_equipment_id(equipment_id)
+# **get_assets_by_equipment_id**
+> list[QualerApiModelsAssetToAssetResponseModel] get_assets_by_equipment_id(equipment_id)
 
 
 
@@ -599,10 +599,10 @@ api_instance = qualer_sdk.AssetsApi()
 equipment_id = 'equipment_id_example' # str | 
 
 try:
-    api_response = api_instance.assets_get_assets_by_equipment_id(equipment_id)
+    api_response = api_instance.get_assets_by_equipment_id(equipment_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_get_assets_by_equipment_id: %s\n" % e)
+    print("Exception when calling AssetsApi->get_assets_by_equipment_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -626,8 +626,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_post_asset_images**
-> object assets_post_asset_images(id)
+# **post_asset_images**
+> object post_asset_images(id)
 
 PostAssetImages
 
@@ -647,10 +647,10 @@ id = 56 # int |
 
 try:
     # PostAssetImages
-    api_response = api_instance.assets_post_asset_images(id)
+    api_response = api_instance.post_asset_images(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_post_asset_images: %s\n" % e)
+    print("Exception when calling AssetsApi->post_asset_images: %s\n" % e)
 ```
 
 ### Parameters
@@ -674,8 +674,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_update_asset_class**
-> object assets_update_asset_class(id, model)
+# **update_asset_class**
+> object update_asset_class(id, model)
 
 
 
@@ -693,10 +693,10 @@ id = 56 # int |
 model = qualer_sdk.QualerApiModelsAssetFromUpdateAssetClassModel() # QualerApiModelsAssetFromUpdateAssetClassModel | 
 
 try:
-    api_response = api_instance.assets_update_asset_class(id, model)
+    api_response = api_instance.update_asset_class(id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_update_asset_class: %s\n" % e)
+    print("Exception when calling AssetsApi->update_asset_class: %s\n" % e)
 ```
 
 ### Parameters
@@ -721,8 +721,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_update_asset_department**
-> object assets_update_asset_department(id, model)
+# **update_asset_department**
+> object update_asset_department(id, model)
 
 
 
@@ -740,10 +740,10 @@ id = 56 # int |
 model = qualer_sdk.QualerApiModelsAssetFromUpdateAssetDepartmentModel() # QualerApiModelsAssetFromUpdateAssetDepartmentModel | 
 
 try:
-    api_response = api_instance.assets_update_asset_department(id, model)
+    api_response = api_instance.update_asset_department(id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_update_asset_department: %s\n" % e)
+    print("Exception when calling AssetsApi->update_asset_department: %s\n" % e)
 ```
 
 ### Parameters
@@ -768,8 +768,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_update_asset_room**
-> object assets_update_asset_room(id, model)
+# **update_asset_room**
+> object update_asset_room(id, model)
 
 
 
@@ -787,10 +787,10 @@ id = 56 # int |
 model = qualer_sdk.QualerApiModelsAssetFromUpdateAssetRoomModel() # QualerApiModelsAssetFromUpdateAssetRoomModel | 
 
 try:
-    api_response = api_instance.assets_update_asset_room(id, model)
+    api_response = api_instance.update_asset_room(id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_update_asset_room: %s\n" % e)
+    print("Exception when calling AssetsApi->update_asset_room: %s\n" % e)
 ```
 
 ### Parameters
@@ -815,8 +815,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assets_update_room**
-> object assets_update_room(model)
+# **update_room**
+> object update_room(model)
 
 
 
@@ -833,10 +833,10 @@ api_instance = qualer_sdk.AssetsApi()
 model = qualer_sdk.QualerApiModelsAssetFromUpdateRoomModel() # QualerApiModelsAssetFromUpdateRoomModel | 
 
 try:
-    api_response = api_instance.assets_update_room(model)
+    api_response = api_instance.update_room(model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetsApi->assets_update_room: %s\n" % e)
+    print("Exception when calling AssetsApi->update_room: %s\n" % e)
 ```
 
 ### Parameters

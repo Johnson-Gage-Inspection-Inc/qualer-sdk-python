@@ -33,13 +33,13 @@ class ServiceOrderTasksApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def service_order_tasks_create_work_order_task(self, service_order_id, model, **kwargs):  # noqa: E501
-        """service_order_tasks_create_work_order_task  # noqa: E501
+    def create_work_order_task(self, service_order_id, model, **kwargs):  # noqa: E501
+        """create_work_order_task  # noqa: E501
 
         - If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their difference  - If StartTime and FinishTime are not defined they will be recalculated      - if StartTime - in will be recalculated FinishTime - TimeSpent      - if FinishTime - in will be recalculated StartTime + TimeSpent  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_tasks_create_work_order_task(service_order_id, model, async_req=True)
+        >>> thread = api.create_work_order_task(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -51,18 +51,18 @@ class ServiceOrderTasksApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_tasks_create_work_order_task_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            return self.create_work_order_task_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_tasks_create_work_order_task_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            (data) = self.create_work_order_task_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
             return data
 
-    def service_order_tasks_create_work_order_task_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
-        """service_order_tasks_create_work_order_task  # noqa: E501
+    def create_work_order_task_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
+        """create_work_order_task  # noqa: E501
 
         - If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their difference  - If StartTime and FinishTime are not defined they will be recalculated      - if StartTime - in will be recalculated FinishTime - TimeSpent      - if FinishTime - in will be recalculated StartTime + TimeSpent  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_tasks_create_work_order_task_with_http_info(service_order_id, model, async_req=True)
+        >>> thread = api.create_work_order_task_with_http_info(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -84,18 +84,18 @@ class ServiceOrderTasksApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_tasks_create_work_order_task" % key
+                    " to method create_work_order_task" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_order_tasks_create_work_order_task`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `create_work_order_task`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `service_order_tasks_create_work_order_task`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `create_work_order_task`")  # noqa: E501
 
         collection_formats = {}
 
@@ -140,13 +140,13 @@ class ServiceOrderTasksApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_order_tasks_delete_work_order_task(self, service_order_id, service_order_task_id, **kwargs):  # noqa: E501
-        """service_order_tasks_delete_work_order_task  # noqa: E501
+    def delete_work_order_task(self, service_order_id, service_order_task_id, **kwargs):  # noqa: E501
+        """delete_work_order_task  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_tasks_delete_work_order_task(service_order_id, service_order_task_id, async_req=True)
+        >>> thread = api.delete_work_order_task(service_order_id, service_order_task_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -158,18 +158,18 @@ class ServiceOrderTasksApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_tasks_delete_work_order_task_with_http_info(service_order_id, service_order_task_id, **kwargs)  # noqa: E501
+            return self.delete_work_order_task_with_http_info(service_order_id, service_order_task_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_tasks_delete_work_order_task_with_http_info(service_order_id, service_order_task_id, **kwargs)  # noqa: E501
+            (data) = self.delete_work_order_task_with_http_info(service_order_id, service_order_task_id, **kwargs)  # noqa: E501
             return data
 
-    def service_order_tasks_delete_work_order_task_with_http_info(self, service_order_id, service_order_task_id, **kwargs):  # noqa: E501
-        """service_order_tasks_delete_work_order_task  # noqa: E501
+    def delete_work_order_task_with_http_info(self, service_order_id, service_order_task_id, **kwargs):  # noqa: E501
+        """delete_work_order_task  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_tasks_delete_work_order_task_with_http_info(service_order_id, service_order_task_id, async_req=True)
+        >>> thread = api.delete_work_order_task_with_http_info(service_order_id, service_order_task_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -191,18 +191,18 @@ class ServiceOrderTasksApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_tasks_delete_work_order_task" % key
+                    " to method delete_work_order_task" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_order_tasks_delete_work_order_task`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `delete_work_order_task`")  # noqa: E501
         # verify the required parameter 'service_order_task_id' is set
         if self.api_client.client_side_validation and ('service_order_task_id' not in params or
                                                        params['service_order_task_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_task_id` when calling `service_order_tasks_delete_work_order_task`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_task_id` when calling `delete_work_order_task`")  # noqa: E501
 
         collection_formats = {}
 
@@ -243,13 +243,13 @@ class ServiceOrderTasksApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_order_tasks_get_work_order_tasks(self, service_order_id, **kwargs):  # noqa: E501
-        """service_order_tasks_get_work_order_tasks  # noqa: E501
+    def get_work_order_tasks(self, service_order_id, **kwargs):  # noqa: E501
+        """get_work_order_tasks  # noqa: E501
 
         TimeSpent  Integer part (before dot) is hours  Fractional part (after dot) is minutes  For example:      if time spent is 10 minutes -&gt; 10 / 60 = 0.1666666666666667      if time spent is 65 minutes -&gt; (65 - 60) + (5 / 60) = 1.0833333333333333  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_tasks_get_work_order_tasks(service_order_id, async_req=True)
+        >>> thread = api.get_work_order_tasks(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -260,18 +260,18 @@ class ServiceOrderTasksApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_tasks_get_work_order_tasks_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            return self.get_work_order_tasks_with_http_info(service_order_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_tasks_get_work_order_tasks_with_http_info(service_order_id, **kwargs)  # noqa: E501
+            (data) = self.get_work_order_tasks_with_http_info(service_order_id, **kwargs)  # noqa: E501
             return data
 
-    def service_order_tasks_get_work_order_tasks_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
-        """service_order_tasks_get_work_order_tasks  # noqa: E501
+    def get_work_order_tasks_with_http_info(self, service_order_id, **kwargs):  # noqa: E501
+        """get_work_order_tasks  # noqa: E501
 
         TimeSpent  Integer part (before dot) is hours  Fractional part (after dot) is minutes  For example:      if time spent is 10 minutes -&gt; 10 / 60 = 0.1666666666666667      if time spent is 65 minutes -&gt; (65 - 60) + (5 / 60) = 1.0833333333333333  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_tasks_get_work_order_tasks_with_http_info(service_order_id, async_req=True)
+        >>> thread = api.get_work_order_tasks_with_http_info(service_order_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -292,14 +292,14 @@ class ServiceOrderTasksApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_tasks_get_work_order_tasks" % key
+                    " to method get_work_order_tasks" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_order_tasks_get_work_order_tasks`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `get_work_order_tasks`")  # noqa: E501
 
         collection_formats = {}
 
@@ -338,13 +338,13 @@ class ServiceOrderTasksApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_order_tasks_update_work_order_task(self, service_order_id, model, **kwargs):  # noqa: E501
-        """service_order_tasks_update_work_order_task  # noqa: E501
+    def update_work_order_task(self, service_order_id, model, **kwargs):  # noqa: E501
+        """update_work_order_task  # noqa: E501
 
         - If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their difference  - If StartTime and FinishTime are not defined they will be recalculated      - if StartTime - in will be recalculated FinishTime - TimeSpent      - if FinishTime - in will be recalculated StartTime + TimeSpent  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_tasks_update_work_order_task(service_order_id, model, async_req=True)
+        >>> thread = api.update_work_order_task(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -356,18 +356,18 @@ class ServiceOrderTasksApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_tasks_update_work_order_task_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            return self.update_work_order_task_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_tasks_update_work_order_task_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            (data) = self.update_work_order_task_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
             return data
 
-    def service_order_tasks_update_work_order_task_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
-        """service_order_tasks_update_work_order_task  # noqa: E501
+    def update_work_order_task_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
+        """update_work_order_task  # noqa: E501
 
         - If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their difference  - If StartTime and FinishTime are not defined they will be recalculated      - if StartTime - in will be recalculated FinishTime - TimeSpent      - if FinishTime - in will be recalculated StartTime + TimeSpent  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_tasks_update_work_order_task_with_http_info(service_order_id, model, async_req=True)
+        >>> thread = api.update_work_order_task_with_http_info(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -389,18 +389,18 @@ class ServiceOrderTasksApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_tasks_update_work_order_task" % key
+                    " to method update_work_order_task" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_order_tasks_update_work_order_task`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `update_work_order_task`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `service_order_tasks_update_work_order_task`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `update_work_order_task`")  # noqa: E501
 
         collection_formats = {}
 

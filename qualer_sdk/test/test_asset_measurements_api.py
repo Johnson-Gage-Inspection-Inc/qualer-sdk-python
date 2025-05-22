@@ -29,8 +29,8 @@ class TestAssetMeasurementsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_asset_measurements_get_measurements_by_asset(self):
-        """Test case for asset_measurements_get_measurements_by_asset
+    def test_get_measurements_by_asset(self):
+        """Test case for get_measurements_by_asset
 
         """
         pass

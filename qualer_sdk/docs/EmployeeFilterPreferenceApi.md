@@ -4,12 +4,12 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**employee_filter_preference_get_employee_filter_preferences**](EmployeeFilterPreferenceApi.md#employee_filter_preference_get_employee_filter_preferences) | **GET** /api/user/filters | GetEmployeeFilterPreferences
-[**employee_filter_preference_update_employee_filter_preference**](EmployeeFilterPreferenceApi.md#employee_filter_preference_update_employee_filter_preference) | **PUT** /api/user/filters | UpdateEmployeeFilterPreference
+[**get_employee_filter_preferences**](EmployeeFilterPreferenceApi.md#get_employee_filter_preferences) | **GET** /api/user/filters | GetEmployeeFilterPreferences
+[**update_employee_filter_preference**](EmployeeFilterPreferenceApi.md#update_employee_filter_preference) | **PUT** /api/user/filters | UpdateEmployeeFilterPreference
 
 
-# **employee_filter_preference_get_employee_filter_preferences**
-> list[QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel] employee_filter_preference_get_employee_filter_preferences()
+# **get_employee_filter_preferences**
+> list[QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel] get_employee_filter_preferences()
 
 GetEmployeeFilterPreferences
 
@@ -26,10 +26,10 @@ api_instance = qualer_sdk.EmployeeFilterPreferenceApi()
 
 try:
     # GetEmployeeFilterPreferences
-    api_response = api_instance.employee_filter_preference_get_employee_filter_preferences()
+    api_response = api_instance.get_employee_filter_preferences()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling EmployeeFilterPreferenceApi->employee_filter_preference_get_employee_filter_preferences: %s\n" % e)
+    print("Exception when calling EmployeeFilterPreferenceApi->get_employee_filter_preferences: %s\n" % e)
 ```
 
 ### Parameters
@@ -50,8 +50,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **employee_filter_preference_update_employee_filter_preference**
-> object employee_filter_preference_update_employee_filter_preference(model)
+# **update_employee_filter_preference**
+> object update_employee_filter_preference(model)
 
 UpdateEmployeeFilterPreference
 
@@ -69,10 +69,10 @@ model = qualer_sdk.QualerApiModelsAssetFromUpdateFilterPreferenceModel() # Quale
 
 try:
     # UpdateEmployeeFilterPreference
-    api_response = api_instance.employee_filter_preference_update_employee_filter_preference(model)
+    api_response = api_instance.update_employee_filter_preference(model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling EmployeeFilterPreferenceApi->employee_filter_preference_update_employee_filter_preference: %s\n" % e)
+    print("Exception when calling EmployeeFilterPreferenceApi->update_employee_filter_preference: %s\n" % e)
 ```
 
 ### Parameters

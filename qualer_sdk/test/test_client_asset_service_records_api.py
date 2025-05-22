@@ -29,8 +29,8 @@ class TestClientAssetServiceRecordsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_client_asset_service_records_get_asset_service_records_by_asset(self):
-        """Test case for client_asset_service_records_get_asset_service_records_by_asset
+    def test_get_asset_service_records_by_asset(self):
+        """Test case for get_asset_service_records_by_asset
 
         """
         pass

@@ -4,15 +4,15 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**service_order_item_measurements_add_auxiliary_tools**](ServiceOrderItemMeasurementsApi.md#service_order_item_measurements_add_auxiliary_tools) | **POST** /api/service/workitems/{workItemId}/AuxiliaryTools | 
-[**service_order_item_measurements_create_measurement_form**](ServiceOrderItemMeasurementsApi.md#service_order_item_measurements_create_measurement_form) | **POST** /api/service/workitems/{workItemId}/measurements | Create Measurement Form.
-[**service_order_item_measurements_get_measurement_form**](ServiceOrderItemMeasurementsApi.md#service_order_item_measurements_get_measurement_form) | **GET** /api/service/workitems/{workItemId}/form | Get Measurement Form.
-[**service_order_item_measurements_get_measurements_by_asset**](ServiceOrderItemMeasurementsApi.md#service_order_item_measurements_get_measurements_by_asset) | **GET** /api/service/assets/{assetId}/measurements | 
-[**service_order_item_measurements_update_measurement_form**](ServiceOrderItemMeasurementsApi.md#service_order_item_measurements_update_measurement_form) | **POST** /api/service/workitems/{workItemId}/form | Update Measurement Form.
+[**add_auxiliary_tools**](ServiceOrderItemMeasurementsApi.md#add_auxiliary_tools) | **POST** /api/service/workitems/{workItemId}/AuxiliaryTools | 
+[**create_measurement_form**](ServiceOrderItemMeasurementsApi.md#create_measurement_form) | **POST** /api/service/workitems/{workItemId}/measurements | Create Measurement Form.
+[**get_measurement_form**](ServiceOrderItemMeasurementsApi.md#get_measurement_form) | **GET** /api/service/workitems/{workItemId}/form | Get Measurement Form.
+[**get_measurements_by_asset**](ServiceOrderItemMeasurementsApi.md#get_measurements_by_asset) | **GET** /api/service/assets/{assetId}/measurements | 
+[**update_measurement_form**](ServiceOrderItemMeasurementsApi.md#update_measurement_form) | **POST** /api/service/workitems/{workItemId}/form | Update Measurement Form.
 
 
-# **service_order_item_measurements_add_auxiliary_tools**
-> object service_order_item_measurements_add_auxiliary_tools(work_item_id, models)
+# **add_auxiliary_tools**
+> object add_auxiliary_tools(work_item_id, models)
 
 
 
@@ -30,10 +30,10 @@ work_item_id = 56 # int |
 models = [qualer_sdk.QualerApiModelsMeasurementsFromCreateMeasurementToolModel()] # list[QualerApiModelsMeasurementsFromCreateMeasurementToolModel] | 
 
 try:
-    api_response = api_instance.service_order_item_measurements_add_auxiliary_tools(work_item_id, models)
+    api_response = api_instance.add_auxiliary_tools(work_item_id, models)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemMeasurementsApi->service_order_item_measurements_add_auxiliary_tools: %s\n" % e)
+    print("Exception when calling ServiceOrderItemMeasurementsApi->add_auxiliary_tools: %s\n" % e)
 ```
 
 ### Parameters
@@ -58,8 +58,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_item_measurements_create_measurement_form**
-> object service_order_item_measurements_create_measurement_form(work_item_id, model)
+# **create_measurement_form**
+> object create_measurement_form(work_item_id, model)
 
 Create Measurement Form.
 
@@ -80,10 +80,10 @@ model = qualer_sdk.QualerApiModelsMeasurementsFromCreateMeasurementFormModel() #
 
 try:
     # Create Measurement Form.
-    api_response = api_instance.service_order_item_measurements_create_measurement_form(work_item_id, model)
+    api_response = api_instance.create_measurement_form(work_item_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemMeasurementsApi->service_order_item_measurements_create_measurement_form: %s\n" % e)
+    print("Exception when calling ServiceOrderItemMeasurementsApi->create_measurement_form: %s\n" % e)
 ```
 
 ### Parameters
@@ -108,8 +108,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_item_measurements_get_measurement_form**
-> QualerApiModelsMeasurementsToUpdateMeasurementFormResponseModel service_order_item_measurements_get_measurement_form(work_item_id)
+# **get_measurement_form**
+> QualerApiModelsMeasurementsToUpdateMeasurementFormResponseModel get_measurement_form(work_item_id)
 
 Get Measurement Form.
 
@@ -127,10 +127,10 @@ work_item_id = 56 # int | Work Item ID of Measurement Form
 
 try:
     # Get Measurement Form.
-    api_response = api_instance.service_order_item_measurements_get_measurement_form(work_item_id)
+    api_response = api_instance.get_measurement_form(work_item_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemMeasurementsApi->service_order_item_measurements_get_measurement_form: %s\n" % e)
+    print("Exception when calling ServiceOrderItemMeasurementsApi->get_measurement_form: %s\n" % e)
 ```
 
 ### Parameters
@@ -154,8 +154,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_item_measurements_get_measurements_by_asset**
-> list[QualerApiModelsMeasurementsToMeasurementRecordResponseModel] service_order_item_measurements_get_measurements_by_asset(asset_id, _from=_from, to=to)
+# **get_measurements_by_asset**
+> list[QualerApiModelsMeasurementsToMeasurementRecordResponseModel] get_measurements_by_asset(asset_id, _from=_from, to=to)
 
 
 
@@ -174,10 +174,10 @@ _from = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 to = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 
 try:
-    api_response = api_instance.service_order_item_measurements_get_measurements_by_asset(asset_id, _from=_from, to=to)
+    api_response = api_instance.get_measurements_by_asset(asset_id, _from=_from, to=to)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemMeasurementsApi->service_order_item_measurements_get_measurements_by_asset: %s\n" % e)
+    print("Exception when calling ServiceOrderItemMeasurementsApi->get_measurements_by_asset: %s\n" % e)
 ```
 
 ### Parameters
@@ -203,8 +203,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_item_measurements_update_measurement_form**
-> object service_order_item_measurements_update_measurement_form(work_item_id, model)
+# **update_measurement_form**
+> object update_measurement_form(work_item_id, model)
 
 Update Measurement Form.
 
@@ -223,10 +223,10 @@ model = qualer_sdk.QualerApiModelsMeasurementsFromUpdateMeasurementFormModel() #
 
 try:
     # Update Measurement Form.
-    api_response = api_instance.service_order_item_measurements_update_measurement_form(work_item_id, model)
+    api_response = api_instance.update_measurement_form(work_item_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemMeasurementsApi->service_order_item_measurements_update_measurement_form: %s\n" % e)
+    print("Exception when calling ServiceOrderItemMeasurementsApi->update_measurement_form: %s\n" % e)
 ```
 
 ### Parameters

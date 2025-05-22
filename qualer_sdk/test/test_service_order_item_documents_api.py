@@ -29,28 +29,28 @@ class TestServiceOrderItemDocumentsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_service_order_item_documents_get_document_list(self):
-        """Test case for service_order_item_documents_get_document_list
+    def test_get_document_list(self):
+        """Test case for get_document_list
 
         Retrieve work order documents  # noqa: E501
         """
         pass
 
-    def test_service_order_item_documents_get_documents(self):
-        """Test case for service_order_item_documents_get_documents
+    def test_get_documents(self):
+        """Test case for get_documents
 
         Retrieve work order documents  # noqa: E501
         """
         pass
 
-    def test_service_order_item_documents_get_documents_list(self):
-        """Test case for service_order_item_documents_get_documents_list
+    def test_get_documents_list(self):
+        """Test case for get_documents_list
 
         """
         pass
 
-    def test_service_order_item_documents_upload_documents(self):
-        """Test case for service_order_item_documents_upload_documents
+    def test_upload_documents(self):
+        """Test case for upload_documents
 
         """
         pass

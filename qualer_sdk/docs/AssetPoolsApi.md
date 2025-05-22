@@ -4,12 +4,12 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**asset_pools_get**](AssetPoolsApi.md#asset_pools_get) | **GET** /api/assetpools/{id} | 
-[**asset_pools_get_all**](AssetPoolsApi.md#asset_pools_get_all) | **GET** /api/assetpools | 
+[**get**](AssetPoolsApi.md#get) | **GET** /api/assetpools/{id} | 
+[**get_all**](AssetPoolsApi.md#get_all) | **GET** /api/assetpools | 
 
 
-# **asset_pools_get**
-> QualerApiModelsAssetPoolsToAssetPoolModel asset_pools_get(id)
+# **get**
+> QualerApiModelsAssetPoolsToAssetPoolModel get(id)
 
 
 
@@ -26,10 +26,10 @@ api_instance = qualer_sdk.AssetPoolsApi()
 id = 56 # int | 
 
 try:
-    api_response = api_instance.asset_pools_get(id)
+    api_response = api_instance.get(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetPoolsApi->asset_pools_get: %s\n" % e)
+    print("Exception when calling AssetPoolsApi->get: %s\n" % e)
 ```
 
 ### Parameters
@@ -53,8 +53,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **asset_pools_get_all**
-> list[QualerApiModelsAssetPoolsToAssetPoolModel] asset_pools_get_all()
+# **get_all**
+> list[QualerApiModelsAssetPoolsToAssetPoolModel] get_all()
 
 
 
@@ -70,10 +70,10 @@ from pprint import pprint
 api_instance = qualer_sdk.AssetPoolsApi()
 
 try:
-    api_response = api_instance.asset_pools_get_all()
+    api_response = api_instance.get_all()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetPoolsApi->asset_pools_get_all: %s\n" % e)
+    print("Exception when calling AssetPoolsApi->get_all: %s\n" % e)
 ```
 
 ### Parameters

@@ -33,12 +33,12 @@ class ReferenceApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def reference_get_measurement_quantities(self, **kwargs):  # noqa: E501
-        """reference_get_measurement_quantities  # noqa: E501
+    def get_measurement_quantities(self, **kwargs):  # noqa: E501
+        """get_measurement_quantities  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.reference_get_measurement_quantities(async_req=True)
+        >>> thread = api.get_measurement_quantities(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -48,17 +48,17 @@ class ReferenceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.reference_get_measurement_quantities_with_http_info(**kwargs)  # noqa: E501
+            return self.get_measurement_quantities_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.reference_get_measurement_quantities_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_measurement_quantities_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def reference_get_measurement_quantities_with_http_info(self, **kwargs):  # noqa: E501
-        """reference_get_measurement_quantities  # noqa: E501
+    def get_measurement_quantities_with_http_info(self, **kwargs):  # noqa: E501
+        """get_measurement_quantities  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.reference_get_measurement_quantities_with_http_info(async_req=True)
+        >>> thread = api.get_measurement_quantities_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -78,7 +78,7 @@ class ReferenceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method reference_get_measurement_quantities" % key
+                    " to method get_measurement_quantities" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -118,12 +118,12 @@ class ReferenceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def reference_get_units_of_measure(self, **kwargs):  # noqa: E501
-        """reference_get_units_of_measure  # noqa: E501
+    def get_units_of_measure(self, **kwargs):  # noqa: E501
+        """get_units_of_measure  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.reference_get_units_of_measure(async_req=True)
+        >>> thread = api.get_units_of_measure(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -133,17 +133,17 @@ class ReferenceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.reference_get_units_of_measure_with_http_info(**kwargs)  # noqa: E501
+            return self.get_units_of_measure_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.reference_get_units_of_measure_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_units_of_measure_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def reference_get_units_of_measure_with_http_info(self, **kwargs):  # noqa: E501
-        """reference_get_units_of_measure  # noqa: E501
+    def get_units_of_measure_with_http_info(self, **kwargs):  # noqa: E501
+        """get_units_of_measure  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.reference_get_units_of_measure_with_http_info(async_req=True)
+        >>> thread = api.get_units_of_measure_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -163,7 +163,7 @@ class ReferenceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method reference_get_units_of_measure" % key
+                    " to method get_units_of_measure" % key
                 )
             params[key] = val
         del params['kwargs']

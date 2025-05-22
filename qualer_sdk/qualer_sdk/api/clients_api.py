@@ -33,13 +33,13 @@ class ClientsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def clients_create(self, model, **kwargs):  # noqa: E501
+    def create(self, model, **kwargs):  # noqa: E501
         """Create Client information.  # noqa: E501
 
         ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.clients_create(model, async_req=True)
+        >>> thread = api.create(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -50,18 +50,18 @@ class ClientsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.clients_create_with_http_info(model, **kwargs)  # noqa: E501
+            return self.create_with_http_info(model, **kwargs)  # noqa: E501
         else:
-            (data) = self.clients_create_with_http_info(model, **kwargs)  # noqa: E501
+            (data) = self.create_with_http_info(model, **kwargs)  # noqa: E501
             return data
 
-    def clients_create_with_http_info(self, model, **kwargs):  # noqa: E501
+    def create_with_http_info(self, model, **kwargs):  # noqa: E501
         """Create Client information.  # noqa: E501
 
         ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.clients_create_with_http_info(model, async_req=True)
+        >>> thread = api.create_with_http_info(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -82,14 +82,14 @@ class ClientsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method clients_create" % key
+                    " to method create" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `clients_create`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `create`")  # noqa: E501
 
         collection_formats = {}
 
@@ -132,12 +132,12 @@ class ClientsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def clients_get(self, client_company_id, **kwargs):  # noqa: E501
-        """clients_get  # noqa: E501
+    def get(self, client_company_id, **kwargs):  # noqa: E501
+        """get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.clients_get(client_company_id, async_req=True)
+        >>> thread = api.get(client_company_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -148,17 +148,17 @@ class ClientsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.clients_get_with_http_info(client_company_id, **kwargs)  # noqa: E501
+            return self.get_with_http_info(client_company_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.clients_get_with_http_info(client_company_id, **kwargs)  # noqa: E501
+            (data) = self.get_with_http_info(client_company_id, **kwargs)  # noqa: E501
             return data
 
-    def clients_get_with_http_info(self, client_company_id, **kwargs):  # noqa: E501
-        """clients_get  # noqa: E501
+    def get_with_http_info(self, client_company_id, **kwargs):  # noqa: E501
+        """get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.clients_get_with_http_info(client_company_id, async_req=True)
+        >>> thread = api.get_with_http_info(client_company_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -179,14 +179,14 @@ class ClientsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method clients_get" % key
+                    " to method get" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'client_company_id' is set
         if self.api_client.client_side_validation and ('client_company_id' not in params or
                                                        params['client_company_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `client_company_id` when calling `clients_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `client_company_id` when calling `get`")  # noqa: E501
 
         collection_formats = {}
 
@@ -225,12 +225,12 @@ class ClientsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def clients_get_all(self, **kwargs):  # noqa: E501
-        """clients_get_all  # noqa: E501
+    def get_all(self, **kwargs):  # noqa: E501
+        """get_all  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.clients_get_all(async_req=True)
+        >>> thread = api.get_all(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -245,17 +245,17 @@ class ClientsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.clients_get_all_with_http_info(**kwargs)  # noqa: E501
+            return self.get_all_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.clients_get_all_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_all_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def clients_get_all_with_http_info(self, **kwargs):  # noqa: E501
-        """clients_get_all  # noqa: E501
+    def get_all_with_http_info(self, **kwargs):  # noqa: E501
+        """get_all  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.clients_get_all_with_http_info(async_req=True)
+        >>> thread = api.get_all_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -280,7 +280,7 @@ class ClientsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method clients_get_all" % key
+                    " to method get_all" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -330,13 +330,13 @@ class ClientsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def clients_update(self, model, **kwargs):  # noqa: E501
+    def update(self, model, **kwargs):  # noqa: E501
         """Update Client information.  # noqa: E501
 
         ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.clients_update(model, async_req=True)
+        >>> thread = api.update(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -347,18 +347,18 @@ class ClientsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.clients_update_with_http_info(model, **kwargs)  # noqa: E501
+            return self.update_with_http_info(model, **kwargs)  # noqa: E501
         else:
-            (data) = self.clients_update_with_http_info(model, **kwargs)  # noqa: E501
+            (data) = self.update_with_http_info(model, **kwargs)  # noqa: E501
             return data
 
-    def clients_update_with_http_info(self, model, **kwargs):  # noqa: E501
+    def update_with_http_info(self, model, **kwargs):  # noqa: E501
         """Update Client information.  # noqa: E501
 
         ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.clients_update_with_http_info(model, async_req=True)
+        >>> thread = api.update_with_http_info(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -379,14 +379,14 @@ class ClientsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method clients_update" % key
+                    " to method update" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `clients_update`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `update`")  # noqa: E501
 
         collection_formats = {}
 

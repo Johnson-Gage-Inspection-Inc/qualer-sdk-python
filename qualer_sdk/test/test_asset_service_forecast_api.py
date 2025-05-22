@@ -29,14 +29,14 @@ class TestAssetServiceForecastApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_asset_service_forecast_get_asset_forecast_list(self):
-        """Test case for asset_service_forecast_get_asset_forecast_list
+    def test_get_asset_forecast_list(self):
+        """Test case for get_asset_forecast_list
 
         """
         pass
 
-    def test_asset_service_forecast_get_client_asset_forecast_list(self):
-        """Test case for asset_service_forecast_get_client_asset_forecast_list
+    def test_get_client_asset_forecast_list(self):
+        """Test case for get_client_asset_forecast_list
 
         """
         pass

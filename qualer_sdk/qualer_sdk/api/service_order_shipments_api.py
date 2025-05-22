@@ -33,12 +33,12 @@ class ServiceOrderShipmentsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def service_order_shipments_append_shipment_tracking_number(self, service_order_id, model, **kwargs):  # noqa: E501
-        """service_order_shipments_append_shipment_tracking_number  # noqa: E501
+    def append_shipment_tracking_number(self, service_order_id, model, **kwargs):  # noqa: E501
+        """append_shipment_tracking_number  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_shipments_append_shipment_tracking_number(service_order_id, model, async_req=True)
+        >>> thread = api.append_shipment_tracking_number(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -50,17 +50,17 @@ class ServiceOrderShipmentsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_shipments_append_shipment_tracking_number_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            return self.append_shipment_tracking_number_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_shipments_append_shipment_tracking_number_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            (data) = self.append_shipment_tracking_number_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
             return data
 
-    def service_order_shipments_append_shipment_tracking_number_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
-        """service_order_shipments_append_shipment_tracking_number  # noqa: E501
+    def append_shipment_tracking_number_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
+        """append_shipment_tracking_number  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_shipments_append_shipment_tracking_number_with_http_info(service_order_id, model, async_req=True)
+        >>> thread = api.append_shipment_tracking_number_with_http_info(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -82,18 +82,18 @@ class ServiceOrderShipmentsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_shipments_append_shipment_tracking_number" % key
+                    " to method append_shipment_tracking_number" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_order_shipments_append_shipment_tracking_number`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `append_shipment_tracking_number`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `service_order_shipments_append_shipment_tracking_number`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `append_shipment_tracking_number`")  # noqa: E501
 
         collection_formats = {}
 
@@ -138,12 +138,12 @@ class ServiceOrderShipmentsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_order_shipments_update_shipment_status(self, service_order_id, model, **kwargs):  # noqa: E501
-        """service_order_shipments_update_shipment_status  # noqa: E501
+    def update_shipment_status(self, service_order_id, model, **kwargs):  # noqa: E501
+        """update_shipment_status  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_shipments_update_shipment_status(service_order_id, model, async_req=True)
+        >>> thread = api.update_shipment_status(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -155,17 +155,17 @@ class ServiceOrderShipmentsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_shipments_update_shipment_status_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            return self.update_shipment_status_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_shipments_update_shipment_status_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
+            (data) = self.update_shipment_status_with_http_info(service_order_id, model, **kwargs)  # noqa: E501
             return data
 
-    def service_order_shipments_update_shipment_status_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
-        """service_order_shipments_update_shipment_status  # noqa: E501
+    def update_shipment_status_with_http_info(self, service_order_id, model, **kwargs):  # noqa: E501
+        """update_shipment_status  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_shipments_update_shipment_status_with_http_info(service_order_id, model, async_req=True)
+        >>> thread = api.update_shipment_status_with_http_info(service_order_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -187,18 +187,18 @@ class ServiceOrderShipmentsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_shipments_update_shipment_status" % key
+                    " to method update_shipment_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'service_order_id' is set
         if self.api_client.client_side_validation and ('service_order_id' not in params or
                                                        params['service_order_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `service_order_id` when calling `service_order_shipments_update_shipment_status`")  # noqa: E501
+            raise ValueError("Missing the required parameter `service_order_id` when calling `update_shipment_status`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `service_order_shipments_update_shipment_status`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `update_shipment_status`")  # noqa: E501
 
         collection_formats = {}
 

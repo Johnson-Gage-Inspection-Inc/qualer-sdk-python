@@ -33,12 +33,12 @@ class AssetPoolsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def asset_pools_get(self, id, **kwargs):  # noqa: E501
-        """asset_pools_get  # noqa: E501
+    def get(self, id, **kwargs):  # noqa: E501
+        """get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_pools_get(id, async_req=True)
+        >>> thread = api.get(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -49,17 +49,17 @@ class AssetPoolsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_pools_get_with_http_info(id, **kwargs)  # noqa: E501
+            return self.get_with_http_info(id, **kwargs)  # noqa: E501
         else:
-            (data) = self.asset_pools_get_with_http_info(id, **kwargs)  # noqa: E501
+            (data) = self.get_with_http_info(id, **kwargs)  # noqa: E501
             return data
 
-    def asset_pools_get_with_http_info(self, id, **kwargs):  # noqa: E501
-        """asset_pools_get  # noqa: E501
+    def get_with_http_info(self, id, **kwargs):  # noqa: E501
+        """get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_pools_get_with_http_info(id, async_req=True)
+        >>> thread = api.get_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -80,14 +80,14 @@ class AssetPoolsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_pools_get" % key
+                    " to method get" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
         if self.api_client.client_side_validation and ('id' not in params or
                                                        params['id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `id` when calling `asset_pools_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `get`")  # noqa: E501
 
         collection_formats = {}
 
@@ -126,12 +126,12 @@ class AssetPoolsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def asset_pools_get_all(self, **kwargs):  # noqa: E501
-        """asset_pools_get_all  # noqa: E501
+    def get_all(self, **kwargs):  # noqa: E501
+        """get_all  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_pools_get_all(async_req=True)
+        >>> thread = api.get_all(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -141,17 +141,17 @@ class AssetPoolsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_pools_get_all_with_http_info(**kwargs)  # noqa: E501
+            return self.get_all_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.asset_pools_get_all_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_all_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def asset_pools_get_all_with_http_info(self, **kwargs):  # noqa: E501
-        """asset_pools_get_all  # noqa: E501
+    def get_all_with_http_info(self, **kwargs):  # noqa: E501
+        """get_all  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_pools_get_all_with_http_info(async_req=True)
+        >>> thread = api.get_all_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -171,7 +171,7 @@ class AssetPoolsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_pools_get_all" % key
+                    " to method get_all" % key
                 )
             params[key] = val
         del params['kwargs']

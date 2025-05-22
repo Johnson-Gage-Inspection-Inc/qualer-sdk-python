@@ -4,21 +4,21 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**service_order_items_add_work_items**](ServiceOrderItemsApi.md#service_order_items_add_work_items) | **PUT** /api/service/workorders/{serviceOrderId}/workitems | Add work items
-[**service_order_items_delete_work_item_image**](ServiceOrderItemsApi.md#service_order_items_delete_work_item_image) | **DELETE** /api/service/workitems/{workItemId}/images/{imageName} | 
-[**service_order_items_get_work_item**](ServiceOrderItemsApi.md#service_order_items_get_work_item) | **GET** /api/service/workitems/{workItemId} | 
-[**service_order_items_get_work_item_charges**](ServiceOrderItemsApi.md#service_order_items_get_work_item_charges) | **GET** /api/service/workitems/{workItemId}/charges | 
-[**service_order_items_get_work_item_image**](ServiceOrderItemsApi.md#service_order_items_get_work_item_image) | **GET** /api/service/workitems/{workItemId}/images/{imageName} | 
-[**service_order_items_get_work_item_images**](ServiceOrderItemsApi.md#service_order_items_get_work_item_images) | **GET** /api/service/workitems/{workItemId}/images | 
-[**service_order_items_get_work_items**](ServiceOrderItemsApi.md#service_order_items_get_work_items) | **GET** /api/service/workorders/{serviceOrderId}/workitems | 
-[**service_order_items_get_work_items_0**](ServiceOrderItemsApi.md#service_order_items_get_work_items_0) | **GET** /api/service/workitems | Retrieve work items
-[**service_order_items_put_charges**](ServiceOrderItemsApi.md#service_order_items_put_charges) | **PUT** /api/service/workitems/{workItemId}/charges | Apply Service Order Item Charges
-[**service_order_items_set_work_item**](ServiceOrderItemsApi.md#service_order_items_set_work_item) | **PUT** /api/service/workitems/{workItemId} | Update work item
-[**service_order_items_upload_work_item_images**](ServiceOrderItemsApi.md#service_order_items_upload_work_item_images) | **POST** /api/service/workitems/{workItemId}/images | 
+[**add_work_items**](ServiceOrderItemsApi.md#add_work_items) | **PUT** /api/service/workorders/{serviceOrderId}/workitems | Add work items
+[**delete_work_item_image**](ServiceOrderItemsApi.md#delete_work_item_image) | **DELETE** /api/service/workitems/{workItemId}/images/{imageName} | 
+[**get_work_item**](ServiceOrderItemsApi.md#get_work_item) | **GET** /api/service/workitems/{workItemId} | 
+[**get_work_item_charges**](ServiceOrderItemsApi.md#get_work_item_charges) | **GET** /api/service/workitems/{workItemId}/charges | 
+[**get_work_item_image**](ServiceOrderItemsApi.md#get_work_item_image) | **GET** /api/service/workitems/{workItemId}/images/{imageName} | 
+[**get_work_item_images**](ServiceOrderItemsApi.md#get_work_item_images) | **GET** /api/service/workitems/{workItemId}/images | 
+[**get_work_items**](ServiceOrderItemsApi.md#get_work_items) | **GET** /api/service/workorders/{serviceOrderId}/workitems | 
+[**get_work_items_0**](ServiceOrderItemsApi.md#get_work_items_0) | **GET** /api/service/workitems | Retrieve work items
+[**put_charges**](ServiceOrderItemsApi.md#put_charges) | **PUT** /api/service/workitems/{workItemId}/charges | Apply Service Order Item Charges
+[**set_work_item**](ServiceOrderItemsApi.md#set_work_item) | **PUT** /api/service/workitems/{workItemId} | Update work item
+[**upload_work_item_images**](ServiceOrderItemsApi.md#upload_work_item_images) | **POST** /api/service/workitems/{workItemId}/images | 
 
 
-# **service_order_items_add_work_items**
-> QualerApiModelsServiceOrdersToAssetAddResultResponseModel service_order_items_add_work_items(service_order_id, model)
+# **add_work_items**
+> QualerApiModelsServiceOrdersToAssetAddResultResponseModel add_work_items(service_order_id, model)
 
 Add work items
 
@@ -37,10 +37,10 @@ model = qualer_sdk.QualerApiModelsServiceOrdersFromAddWorkItemsModel() # QualerA
 
 try:
     # Add work items
-    api_response = api_instance.service_order_items_add_work_items(service_order_id, model)
+    api_response = api_instance.add_work_items(service_order_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemsApi->service_order_items_add_work_items: %s\n" % e)
+    print("Exception when calling ServiceOrderItemsApi->add_work_items: %s\n" % e)
 ```
 
 ### Parameters
@@ -65,8 +65,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_items_delete_work_item_image**
-> object service_order_items_delete_work_item_image(work_item_id, image_name)
+# **delete_work_item_image**
+> object delete_work_item_image(work_item_id, image_name)
 
 
 
@@ -84,10 +84,10 @@ work_item_id = 56 # int |
 image_name = 'image_name_example' # str | 
 
 try:
-    api_response = api_instance.service_order_items_delete_work_item_image(work_item_id, image_name)
+    api_response = api_instance.delete_work_item_image(work_item_id, image_name)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemsApi->service_order_items_delete_work_item_image: %s\n" % e)
+    print("Exception when calling ServiceOrderItemsApi->delete_work_item_image: %s\n" % e)
 ```
 
 ### Parameters
@@ -112,8 +112,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_items_get_work_item**
-> QualerApiModelsServiceOrdersToClientOrderItemResponseModel service_order_items_get_work_item(work_item_id)
+# **get_work_item**
+> QualerApiModelsServiceOrdersToClientOrderItemResponseModel get_work_item(work_item_id)
 
 
 
@@ -130,10 +130,10 @@ api_instance = qualer_sdk.ServiceOrderItemsApi()
 work_item_id = 56 # int | 
 
 try:
-    api_response = api_instance.service_order_items_get_work_item(work_item_id)
+    api_response = api_instance.get_work_item(work_item_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemsApi->service_order_items_get_work_item: %s\n" % e)
+    print("Exception when calling ServiceOrderItemsApi->get_work_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -157,8 +157,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_items_get_work_item_charges**
-> object service_order_items_get_work_item_charges(work_item_id)
+# **get_work_item_charges**
+> object get_work_item_charges(work_item_id)
 
 
 
@@ -175,10 +175,10 @@ api_instance = qualer_sdk.ServiceOrderItemsApi()
 work_item_id = 56 # int | 
 
 try:
-    api_response = api_instance.service_order_items_get_work_item_charges(work_item_id)
+    api_response = api_instance.get_work_item_charges(work_item_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemsApi->service_order_items_get_work_item_charges: %s\n" % e)
+    print("Exception when calling ServiceOrderItemsApi->get_work_item_charges: %s\n" % e)
 ```
 
 ### Parameters
@@ -202,8 +202,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_items_get_work_item_image**
-> object service_order_items_get_work_item_image(work_item_id, image_name)
+# **get_work_item_image**
+> object get_work_item_image(work_item_id, image_name)
 
 
 
@@ -221,10 +221,10 @@ work_item_id = 56 # int |
 image_name = 'image_name_example' # str | 
 
 try:
-    api_response = api_instance.service_order_items_get_work_item_image(work_item_id, image_name)
+    api_response = api_instance.get_work_item_image(work_item_id, image_name)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemsApi->service_order_items_get_work_item_image: %s\n" % e)
+    print("Exception when calling ServiceOrderItemsApi->get_work_item_image: %s\n" % e)
 ```
 
 ### Parameters
@@ -249,8 +249,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_items_get_work_item_images**
-> list[str] service_order_items_get_work_item_images(work_item_id)
+# **get_work_item_images**
+> list[str] get_work_item_images(work_item_id)
 
 
 
@@ -267,10 +267,10 @@ api_instance = qualer_sdk.ServiceOrderItemsApi()
 work_item_id = 56 # int | 
 
 try:
-    api_response = api_instance.service_order_items_get_work_item_images(work_item_id)
+    api_response = api_instance.get_work_item_images(work_item_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemsApi->service_order_items_get_work_item_images: %s\n" % e)
+    print("Exception when calling ServiceOrderItemsApi->get_work_item_images: %s\n" % e)
 ```
 
 ### Parameters
@@ -294,8 +294,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_items_get_work_items**
-> list[QualerApiModelsServiceOrdersToClientOrderItemResponseModel] service_order_items_get_work_items(service_order_id)
+# **get_work_items**
+> list[QualerApiModelsServiceOrdersToClientOrderItemResponseModel] get_work_items(service_order_id)
 
 
 
@@ -312,10 +312,10 @@ api_instance = qualer_sdk.ServiceOrderItemsApi()
 service_order_id = 56 # int | 
 
 try:
-    api_response = api_instance.service_order_items_get_work_items(service_order_id)
+    api_response = api_instance.get_work_items(service_order_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemsApi->service_order_items_get_work_items: %s\n" % e)
+    print("Exception when calling ServiceOrderItemsApi->get_work_items: %s\n" % e)
 ```
 
 ### Parameters
@@ -339,8 +339,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_items_get_work_items_0**
-> list[QualerApiModelsServiceOrdersToClientOrderItemResponseModel] service_order_items_get_work_items_0(status=status, company_id=company_id, _from=_from, to=to, work_item_number=work_item_number, asset_search=asset_search)
+# **get_work_items_0**
+> list[QualerApiModelsServiceOrdersToClientOrderItemResponseModel] get_work_items_0(status=status, company_id=company_id, _from=_from, to=to, work_item_number=work_item_number, asset_search=asset_search)
 
 Retrieve work items
 
@@ -365,10 +365,10 @@ asset_search = 'asset_search_example' # str | Filter by asset Search keywords: S
 
 try:
     # Retrieve work items
-    api_response = api_instance.service_order_items_get_work_items_0(status=status, company_id=company_id, _from=_from, to=to, work_item_number=work_item_number, asset_search=asset_search)
+    api_response = api_instance.get_work_items_0(status=status, company_id=company_id, _from=_from, to=to, work_item_number=work_item_number, asset_search=asset_search)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemsApi->service_order_items_get_work_items_0: %s\n" % e)
+    print("Exception when calling ServiceOrderItemsApi->get_work_items_0: %s\n" % e)
 ```
 
 ### Parameters
@@ -397,8 +397,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_items_put_charges**
-> object service_order_items_put_charges(work_item_id, model)
+# **put_charges**
+> object put_charges(work_item_id, model)
 
 Apply Service Order Item Charges
 
@@ -419,10 +419,10 @@ model = qualer_sdk.QualerApiModelsServiceOrdersFromItemChargeUpdateModel() # Qua
 
 try:
     # Apply Service Order Item Charges
-    api_response = api_instance.service_order_items_put_charges(work_item_id, model)
+    api_response = api_instance.put_charges(work_item_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemsApi->service_order_items_put_charges: %s\n" % e)
+    print("Exception when calling ServiceOrderItemsApi->put_charges: %s\n" % e)
 ```
 
 ### Parameters
@@ -447,8 +447,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_items_set_work_item**
-> object service_order_items_set_work_item(work_item_id, model)
+# **set_work_item**
+> object set_work_item(work_item_id, model)
 
 Update work item
 
@@ -469,10 +469,10 @@ model = qualer_sdk.QualerApiModelsServiceOrdersFromOrderItemUpdateModel() # Qual
 
 try:
     # Update work item
-    api_response = api_instance.service_order_items_set_work_item(work_item_id, model)
+    api_response = api_instance.set_work_item(work_item_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemsApi->service_order_items_set_work_item: %s\n" % e)
+    print("Exception when calling ServiceOrderItemsApi->set_work_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -497,8 +497,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_items_upload_work_item_images**
-> object service_order_items_upload_work_item_images(work_item_id)
+# **upload_work_item_images**
+> object upload_work_item_images(work_item_id)
 
 
 
@@ -515,10 +515,10 @@ api_instance = qualer_sdk.ServiceOrderItemsApi()
 work_item_id = 56 # int | 
 
 try:
-    api_response = api_instance.service_order_items_upload_work_item_images(work_item_id)
+    api_response = api_instance.upload_work_item_images(work_item_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderItemsApi->service_order_items_upload_work_item_images: %s\n" % e)
+    print("Exception when calling ServiceOrderItemsApi->upload_work_item_images: %s\n" % e)
 ```
 
 ### Parameters

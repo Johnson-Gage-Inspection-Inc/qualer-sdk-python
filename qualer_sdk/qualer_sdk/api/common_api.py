@@ -33,12 +33,12 @@ class CommonApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def common_culture_list(self, **kwargs):  # noqa: E501
-        """common_culture_list  # noqa: E501
+    def culture_list(self, **kwargs):  # noqa: E501
+        """culture_list  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.common_culture_list(async_req=True)
+        >>> thread = api.culture_list(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -48,17 +48,17 @@ class CommonApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.common_culture_list_with_http_info(**kwargs)  # noqa: E501
+            return self.culture_list_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.common_culture_list_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.culture_list_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def common_culture_list_with_http_info(self, **kwargs):  # noqa: E501
-        """common_culture_list  # noqa: E501
+    def culture_list_with_http_info(self, **kwargs):  # noqa: E501
+        """culture_list  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.common_culture_list_with_http_info(async_req=True)
+        >>> thread = api.culture_list_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -78,7 +78,7 @@ class CommonApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method common_culture_list" % key
+                    " to method culture_list" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -118,12 +118,12 @@ class CommonApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def common_culture_ui_list(self, **kwargs):  # noqa: E501
-        """common_culture_ui_list  # noqa: E501
+    def culture_ui_list(self, **kwargs):  # noqa: E501
+        """culture_ui_list  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.common_culture_ui_list(async_req=True)
+        >>> thread = api.culture_ui_list(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -133,17 +133,17 @@ class CommonApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.common_culture_ui_list_with_http_info(**kwargs)  # noqa: E501
+            return self.culture_ui_list_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.common_culture_ui_list_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.culture_ui_list_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def common_culture_ui_list_with_http_info(self, **kwargs):  # noqa: E501
-        """common_culture_ui_list  # noqa: E501
+    def culture_ui_list_with_http_info(self, **kwargs):  # noqa: E501
+        """culture_ui_list  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.common_culture_ui_list_with_http_info(async_req=True)
+        >>> thread = api.culture_ui_list_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -163,7 +163,7 @@ class CommonApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method common_culture_ui_list" % key
+                    " to method culture_ui_list" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -203,12 +203,12 @@ class CommonApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def common_get_company_settings(self, setting_key, **kwargs):  # noqa: E501
-        """common_get_company_settings  # noqa: E501
+    def get_company_settings(self, setting_key, **kwargs):  # noqa: E501
+        """get_company_settings  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.common_get_company_settings(setting_key, async_req=True)
+        >>> thread = api.get_company_settings(setting_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -219,17 +219,17 @@ class CommonApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.common_get_company_settings_with_http_info(setting_key, **kwargs)  # noqa: E501
+            return self.get_company_settings_with_http_info(setting_key, **kwargs)  # noqa: E501
         else:
-            (data) = self.common_get_company_settings_with_http_info(setting_key, **kwargs)  # noqa: E501
+            (data) = self.get_company_settings_with_http_info(setting_key, **kwargs)  # noqa: E501
             return data
 
-    def common_get_company_settings_with_http_info(self, setting_key, **kwargs):  # noqa: E501
-        """common_get_company_settings  # noqa: E501
+    def get_company_settings_with_http_info(self, setting_key, **kwargs):  # noqa: E501
+        """get_company_settings  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.common_get_company_settings_with_http_info(setting_key, async_req=True)
+        >>> thread = api.get_company_settings_with_http_info(setting_key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -250,14 +250,14 @@ class CommonApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method common_get_company_settings" % key
+                    " to method get_company_settings" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'setting_key' is set
         if self.api_client.client_side_validation and ('setting_key' not in params or
                                                        params['setting_key'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `setting_key` when calling `common_get_company_settings`")  # noqa: E501
+            raise ValueError("Missing the required parameter `setting_key` when calling `get_company_settings`")  # noqa: E501
 
         collection_formats = {}
 

@@ -4,19 +4,19 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**asset_service_records_add_asset_service_record**](AssetServiceRecordsApi.md#asset_service_records_add_asset_service_record) | **POST** /api/assets/{assetId}/assetservicerecords | 
-[**asset_service_records_document_list**](AssetServiceRecordsApi.md#asset_service_records_document_list) | **GET** /api/assetservicerecords/{AssetServiceRecordId}/documents/files | 
-[**asset_service_records_download_document**](AssetServiceRecordsApi.md#asset_service_records_download_document) | **GET** /api/assetservicerecords/{AssetServiceRecordId}/documents/{FileName} | 
-[**asset_service_records_download_documents**](AssetServiceRecordsApi.md#asset_service_records_download_documents) | **GET** /api/assetservicerecords/{assetServiceRecordId}/documents | 
-[**asset_service_records_get_asset_service_record**](AssetServiceRecordsApi.md#asset_service_records_get_asset_service_record) | **GET** /api/assetservicerecords/{AssetServiceRecordId} | 
-[**asset_service_records_get_asset_service_records**](AssetServiceRecordsApi.md#asset_service_records_get_asset_service_records) | **GET** /api/assetservicerecords | 
-[**asset_service_records_get_asset_service_records_by_asset**](AssetServiceRecordsApi.md#asset_service_records_get_asset_service_records_by_asset) | **GET** /api/assets/{assetId}/assetservicerecords | 
-[**asset_service_records_update_asset_service_record**](AssetServiceRecordsApi.md#asset_service_records_update_asset_service_record) | **PUT** /api/assetservicerecords/{assetServiceRecordId} | 
-[**asset_service_records_upload_documents**](AssetServiceRecordsApi.md#asset_service_records_upload_documents) | **POST** /api/assetservicerecords/{assetServiceRecordId}/documents | 
+[**add_asset_service_record**](AssetServiceRecordsApi.md#add_asset_service_record) | **POST** /api/assets/{assetId}/assetservicerecords | 
+[**document_list**](AssetServiceRecordsApi.md#document_list) | **GET** /api/assetservicerecords/{AssetServiceRecordId}/documents/files | 
+[**download_document**](AssetServiceRecordsApi.md#download_document) | **GET** /api/assetservicerecords/{AssetServiceRecordId}/documents/{FileName} | 
+[**download_documents**](AssetServiceRecordsApi.md#download_documents) | **GET** /api/assetservicerecords/{assetServiceRecordId}/documents | 
+[**get_asset_service_record**](AssetServiceRecordsApi.md#get_asset_service_record) | **GET** /api/assetservicerecords/{AssetServiceRecordId} | 
+[**get_asset_service_records**](AssetServiceRecordsApi.md#get_asset_service_records) | **GET** /api/assetservicerecords | 
+[**get_asset_service_records_by_asset**](AssetServiceRecordsApi.md#get_asset_service_records_by_asset) | **GET** /api/assets/{assetId}/assetservicerecords | 
+[**update_asset_service_record**](AssetServiceRecordsApi.md#update_asset_service_record) | **PUT** /api/assetservicerecords/{assetServiceRecordId} | 
+[**upload_documents**](AssetServiceRecordsApi.md#upload_documents) | **POST** /api/assetservicerecords/{assetServiceRecordId}/documents | 
 
 
-# **asset_service_records_add_asset_service_record**
-> object asset_service_records_add_asset_service_record(asset_id, model)
+# **add_asset_service_record**
+> object add_asset_service_record(asset_id, model)
 
 
 
@@ -34,10 +34,10 @@ asset_id = 56 # int |
 model = qualer_sdk.QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel() # QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel | 
 
 try:
-    api_response = api_instance.asset_service_records_add_asset_service_record(asset_id, model)
+    api_response = api_instance.add_asset_service_record(asset_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetServiceRecordsApi->asset_service_records_add_asset_service_record: %s\n" % e)
+    print("Exception when calling AssetServiceRecordsApi->add_asset_service_record: %s\n" % e)
 ```
 
 ### Parameters
@@ -62,8 +62,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **asset_service_records_document_list**
-> list[str] asset_service_records_document_list(asset_service_record_id, model_asset_service_record_id=model_asset_service_record_id)
+# **document_list**
+> list[str] document_list(asset_service_record_id, model_asset_service_record_id=model_asset_service_record_id)
 
 
 
@@ -81,10 +81,10 @@ asset_service_record_id = 'asset_service_record_id_example' # str |
 model_asset_service_record_id = 56 # int |  (optional)
 
 try:
-    api_response = api_instance.asset_service_records_document_list(asset_service_record_id, model_asset_service_record_id=model_asset_service_record_id)
+    api_response = api_instance.document_list(asset_service_record_id, model_asset_service_record_id=model_asset_service_record_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetServiceRecordsApi->asset_service_records_document_list: %s\n" % e)
+    print("Exception when calling AssetServiceRecordsApi->document_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -109,8 +109,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **asset_service_records_download_document**
-> object asset_service_records_download_document(asset_service_record_id, file_name, model_asset_service_record_id=model_asset_service_record_id, model_file_name=model_file_name)
+# **download_document**
+> object download_document(asset_service_record_id, file_name, model_asset_service_record_id=model_asset_service_record_id, model_file_name=model_file_name)
 
 
 
@@ -130,10 +130,10 @@ model_asset_service_record_id = 56 # int |  (optional)
 model_file_name = 'model_file_name_example' # str |  (optional)
 
 try:
-    api_response = api_instance.asset_service_records_download_document(asset_service_record_id, file_name, model_asset_service_record_id=model_asset_service_record_id, model_file_name=model_file_name)
+    api_response = api_instance.download_document(asset_service_record_id, file_name, model_asset_service_record_id=model_asset_service_record_id, model_file_name=model_file_name)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetServiceRecordsApi->asset_service_records_download_document: %s\n" % e)
+    print("Exception when calling AssetServiceRecordsApi->download_document: %s\n" % e)
 ```
 
 ### Parameters
@@ -160,8 +160,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **asset_service_records_download_documents**
-> object asset_service_records_download_documents(asset_service_record_id)
+# **download_documents**
+> object download_documents(asset_service_record_id)
 
 
 
@@ -178,10 +178,10 @@ api_instance = qualer_sdk.AssetServiceRecordsApi()
 asset_service_record_id = 56 # int | 
 
 try:
-    api_response = api_instance.asset_service_records_download_documents(asset_service_record_id)
+    api_response = api_instance.download_documents(asset_service_record_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetServiceRecordsApi->asset_service_records_download_documents: %s\n" % e)
+    print("Exception when calling AssetServiceRecordsApi->download_documents: %s\n" % e)
 ```
 
 ### Parameters
@@ -205,8 +205,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **asset_service_records_get_asset_service_record**
-> QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel asset_service_records_get_asset_service_record(asset_service_record_id, model_asset_service_record_id=model_asset_service_record_id)
+# **get_asset_service_record**
+> QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel get_asset_service_record(asset_service_record_id, model_asset_service_record_id=model_asset_service_record_id)
 
 
 
@@ -224,10 +224,10 @@ asset_service_record_id = 'asset_service_record_id_example' # str |
 model_asset_service_record_id = 56 # int |  (optional)
 
 try:
-    api_response = api_instance.asset_service_records_get_asset_service_record(asset_service_record_id, model_asset_service_record_id=model_asset_service_record_id)
+    api_response = api_instance.get_asset_service_record(asset_service_record_id, model_asset_service_record_id=model_asset_service_record_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetServiceRecordsApi->asset_service_records_get_asset_service_record: %s\n" % e)
+    print("Exception when calling AssetServiceRecordsApi->get_asset_service_record: %s\n" % e)
 ```
 
 ### Parameters
@@ -252,8 +252,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **asset_service_records_get_asset_service_records**
-> QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel asset_service_records_get_asset_service_records(model_asset_id=model_asset_id, model_serial_number=model_serial_number, model_from=model_from, model_to=model_to)
+# **get_asset_service_records**
+> QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel get_asset_service_records(model_asset_id=model_asset_id, model_serial_number=model_serial_number, model_from=model_from, model_to=model_to)
 
 
 
@@ -273,10 +273,10 @@ model_from = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 model_to = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 
 try:
-    api_response = api_instance.asset_service_records_get_asset_service_records(model_asset_id=model_asset_id, model_serial_number=model_serial_number, model_from=model_from, model_to=model_to)
+    api_response = api_instance.get_asset_service_records(model_asset_id=model_asset_id, model_serial_number=model_serial_number, model_from=model_from, model_to=model_to)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetServiceRecordsApi->asset_service_records_get_asset_service_records: %s\n" % e)
+    print("Exception when calling AssetServiceRecordsApi->get_asset_service_records: %s\n" % e)
 ```
 
 ### Parameters
@@ -303,8 +303,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **asset_service_records_get_asset_service_records_by_asset**
-> list[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel] asset_service_records_get_asset_service_records_by_asset(asset_id)
+# **get_asset_service_records_by_asset**
+> list[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel] get_asset_service_records_by_asset(asset_id)
 
 
 
@@ -321,10 +321,10 @@ api_instance = qualer_sdk.AssetServiceRecordsApi()
 asset_id = 56 # int | 
 
 try:
-    api_response = api_instance.asset_service_records_get_asset_service_records_by_asset(asset_id)
+    api_response = api_instance.get_asset_service_records_by_asset(asset_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetServiceRecordsApi->asset_service_records_get_asset_service_records_by_asset: %s\n" % e)
+    print("Exception when calling AssetServiceRecordsApi->get_asset_service_records_by_asset: %s\n" % e)
 ```
 
 ### Parameters
@@ -348,8 +348,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **asset_service_records_update_asset_service_record**
-> object asset_service_records_update_asset_service_record(asset_service_record_id, model)
+# **update_asset_service_record**
+> object update_asset_service_record(asset_service_record_id, model)
 
 
 
@@ -367,10 +367,10 @@ asset_service_record_id = 56 # int |
 model = qualer_sdk.QualerApiModelsAssetServiceRecordsFromUpdateAssetServiceRecordModel() # QualerApiModelsAssetServiceRecordsFromUpdateAssetServiceRecordModel | 
 
 try:
-    api_response = api_instance.asset_service_records_update_asset_service_record(asset_service_record_id, model)
+    api_response = api_instance.update_asset_service_record(asset_service_record_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetServiceRecordsApi->asset_service_records_update_asset_service_record: %s\n" % e)
+    print("Exception when calling AssetServiceRecordsApi->update_asset_service_record: %s\n" % e)
 ```
 
 ### Parameters
@@ -395,8 +395,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **asset_service_records_upload_documents**
-> object asset_service_records_upload_documents(asset_service_record_id)
+# **upload_documents**
+> object upload_documents(asset_service_record_id)
 
 
 
@@ -413,10 +413,10 @@ api_instance = qualer_sdk.AssetServiceRecordsApi()
 asset_service_record_id = 56 # int | 
 
 try:
-    api_response = api_instance.asset_service_records_upload_documents(asset_service_record_id)
+    api_response = api_instance.upload_documents(asset_service_record_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetServiceRecordsApi->asset_service_records_upload_documents: %s\n" % e)
+    print("Exception when calling AssetServiceRecordsApi->upload_documents: %s\n" % e)
 ```
 
 ### Parameters

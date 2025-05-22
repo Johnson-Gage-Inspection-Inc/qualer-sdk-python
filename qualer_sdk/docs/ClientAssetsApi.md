@@ -4,16 +4,16 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**client_assets_create_asset**](ClientAssetsApi.md#client_assets_create_asset) | **POST** /api/service/clients/assets | 
-[**client_assets_get_all_assets**](ClientAssetsApi.md#client_assets_get_all_assets) | **GET** /api/service/clients/assets | 
-[**client_assets_get_asset**](ClientAssetsApi.md#client_assets_get_asset) | **GET** /api/service/clients/assets/{AssetId} | 
-[**client_assets_get_asset_counters**](ClientAssetsApi.md#client_assets_get_asset_counters) | **GET** /api/service/clients/{clientCompanyId}/counters | 
-[**client_assets_get_asset_manager_list**](ClientAssetsApi.md#client_assets_get_asset_manager_list) | **GET** /api/service/clients/{clientCompanyId}/assets/byfilter | GetAssetManagerList
-[**client_assets_get_assets**](ClientAssetsApi.md#client_assets_get_assets) | **GET** /api/service/clients/{clientCompanyId}/assets | 
+[**create_asset**](ClientAssetsApi.md#create_asset) | **POST** /api/service/clients/assets | 
+[**get_all_assets**](ClientAssetsApi.md#get_all_assets) | **GET** /api/service/clients/assets | 
+[**get_asset**](ClientAssetsApi.md#get_asset) | **GET** /api/service/clients/assets/{AssetId} | 
+[**get_asset_counters**](ClientAssetsApi.md#get_asset_counters) | **GET** /api/service/clients/{clientCompanyId}/counters | 
+[**get_asset_manager_list**](ClientAssetsApi.md#get_asset_manager_list) | **GET** /api/service/clients/{clientCompanyId}/assets/byfilter | GetAssetManagerList
+[**get_assets**](ClientAssetsApi.md#get_assets) | **GET** /api/service/clients/{clientCompanyId}/assets | 
 
 
-# **client_assets_create_asset**
-> object client_assets_create_asset(model)
+# **create_asset**
+> object create_asset(model)
 
 
 
@@ -30,10 +30,10 @@ api_instance = qualer_sdk.ClientAssetsApi()
 model = qualer_sdk.QualerApiModelsClientsFromAssetModel() # QualerApiModelsClientsFromAssetModel | 
 
 try:
-    api_response = api_instance.client_assets_create_asset(model)
+    api_response = api_instance.create_asset(model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientAssetsApi->client_assets_create_asset: %s\n" % e)
+    print("Exception when calling ClientAssetsApi->create_asset: %s\n" % e)
 ```
 
 ### Parameters
@@ -57,8 +57,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **client_assets_get_all_assets**
-> list[QualerApiModelsAssetToAssetResponseModel] client_assets_get_all_assets(query_equipment_id=query_equipment_id, query_serial_number=query_serial_number, query_asset_tag=query_asset_tag, query_barcode=query_barcode, query_legacy_id=query_legacy_id)
+# **get_all_assets**
+> list[QualerApiModelsAssetToAssetResponseModel] get_all_assets(query_equipment_id=query_equipment_id, query_serial_number=query_serial_number, query_asset_tag=query_asset_tag, query_barcode=query_barcode, query_legacy_id=query_legacy_id)
 
 
 
@@ -79,10 +79,10 @@ query_barcode = 'query_barcode_example' # str |  (optional)
 query_legacy_id = 'query_legacy_id_example' # str |  (optional)
 
 try:
-    api_response = api_instance.client_assets_get_all_assets(query_equipment_id=query_equipment_id, query_serial_number=query_serial_number, query_asset_tag=query_asset_tag, query_barcode=query_barcode, query_legacy_id=query_legacy_id)
+    api_response = api_instance.get_all_assets(query_equipment_id=query_equipment_id, query_serial_number=query_serial_number, query_asset_tag=query_asset_tag, query_barcode=query_barcode, query_legacy_id=query_legacy_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientAssetsApi->client_assets_get_all_assets: %s\n" % e)
+    print("Exception when calling ClientAssetsApi->get_all_assets: %s\n" % e)
 ```
 
 ### Parameters
@@ -110,8 +110,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **client_assets_get_asset**
-> QualerApiModelsAssetToAssetResponseModel client_assets_get_asset(asset_id, model_asset_id=model_asset_id)
+# **get_asset**
+> QualerApiModelsAssetToAssetResponseModel get_asset(asset_id, model_asset_id=model_asset_id)
 
 
 
@@ -129,10 +129,10 @@ asset_id = 'asset_id_example' # str |
 model_asset_id = 56 # int |  (optional)
 
 try:
-    api_response = api_instance.client_assets_get_asset(asset_id, model_asset_id=model_asset_id)
+    api_response = api_instance.get_asset(asset_id, model_asset_id=model_asset_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientAssetsApi->client_assets_get_asset: %s\n" % e)
+    print("Exception when calling ClientAssetsApi->get_asset: %s\n" % e)
 ```
 
 ### Parameters
@@ -157,8 +157,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **client_assets_get_asset_counters**
-> QualerApiModelsAssetToClientAssetCountersResponseModel client_assets_get_asset_counters(client_company_id)
+# **get_asset_counters**
+> QualerApiModelsAssetToClientAssetCountersResponseModel get_asset_counters(client_company_id)
 
 
 
@@ -175,10 +175,10 @@ api_instance = qualer_sdk.ClientAssetsApi()
 client_company_id = 56 # int | 
 
 try:
-    api_response = api_instance.client_assets_get_asset_counters(client_company_id)
+    api_response = api_instance.get_asset_counters(client_company_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientAssetsApi->client_assets_get_asset_counters: %s\n" % e)
+    print("Exception when calling ClientAssetsApi->get_asset_counters: %s\n" % e)
 ```
 
 ### Parameters
@@ -202,8 +202,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **client_assets_get_asset_manager_list**
-> list[QualerApiModelsAssetToClientAssetManagerResponseModel] client_assets_get_asset_manager_list(client_company_id, query_filter_type=query_filter_type, query_search_string=query_search_string, query_page=query_page, query_page_size=query_page_size)
+# **get_asset_manager_list**
+> list[QualerApiModelsAssetToClientAssetManagerResponseModel] get_asset_manager_list(client_company_id, query_filter_type=query_filter_type, query_search_string=query_search_string, query_page=query_page, query_page_size=query_page_size)
 
 GetAssetManagerList
 
@@ -227,10 +227,10 @@ query_page_size = 56 # int |  (optional)
 
 try:
     # GetAssetManagerList
-    api_response = api_instance.client_assets_get_asset_manager_list(client_company_id, query_filter_type=query_filter_type, query_search_string=query_search_string, query_page=query_page, query_page_size=query_page_size)
+    api_response = api_instance.get_asset_manager_list(client_company_id, query_filter_type=query_filter_type, query_search_string=query_search_string, query_page=query_page, query_page_size=query_page_size)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientAssetsApi->client_assets_get_asset_manager_list: %s\n" % e)
+    print("Exception when calling ClientAssetsApi->get_asset_manager_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -258,8 +258,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **client_assets_get_assets**
-> list[QualerApiModelsAssetToAssetResponseModel] client_assets_get_assets(client_company_id, query_equipment_id=query_equipment_id, query_serial_number=query_serial_number, query_asset_tag=query_asset_tag, query_barcode=query_barcode, query_legacy_id=query_legacy_id)
+# **get_assets**
+> list[QualerApiModelsAssetToAssetResponseModel] get_assets(client_company_id, query_equipment_id=query_equipment_id, query_serial_number=query_serial_number, query_asset_tag=query_asset_tag, query_barcode=query_barcode, query_legacy_id=query_legacy_id)
 
 
 
@@ -281,10 +281,10 @@ query_barcode = 'query_barcode_example' # str |  (optional)
 query_legacy_id = 'query_legacy_id_example' # str |  (optional)
 
 try:
-    api_response = api_instance.client_assets_get_assets(client_company_id, query_equipment_id=query_equipment_id, query_serial_number=query_serial_number, query_asset_tag=query_asset_tag, query_barcode=query_barcode, query_legacy_id=query_legacy_id)
+    api_response = api_instance.get_assets(client_company_id, query_equipment_id=query_equipment_id, query_serial_number=query_serial_number, query_asset_tag=query_asset_tag, query_barcode=query_barcode, query_legacy_id=query_legacy_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientAssetsApi->client_assets_get_assets: %s\n" % e)
+    print("Exception when calling ClientAssetsApi->get_assets: %s\n" % e)
 ```
 
 ### Parameters

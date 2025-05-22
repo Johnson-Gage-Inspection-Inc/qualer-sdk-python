@@ -29,27 +29,27 @@ class TestClientsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_clients_create(self):
-        """Test case for clients_create
+    def test_create(self):
+        """Test case for create
 
         Create Client information.  # noqa: E501
         """
         pass
 
-    def test_clients_get(self):
-        """Test case for clients_get
+    def test_get(self):
+        """Test case for get
 
         """
         pass
 
-    def test_clients_get_all(self):
-        """Test case for clients_get_all
+    def test_get_all(self):
+        """Test case for get_all
 
         """
         pass
 
-    def test_clients_update(self):
-        """Test case for clients_update
+    def test_update(self):
+        """Test case for update
 
         Update Client information.  # noqa: E501
         """

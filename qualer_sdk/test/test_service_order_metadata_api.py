@@ -29,29 +29,29 @@ class TestServiceOrderMetadataApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_service_order_metadata_create(self):
-        """Test case for service_order_metadata_create
+    def test_create(self):
+        """Test case for create
 
         Create metadata  # noqa: E501
         """
         pass
 
-    def test_service_order_metadata_delete(self):
-        """Test case for service_order_metadata_delete
+    def test_delete(self):
+        """Test case for delete
 
         Delete metadata  # noqa: E501
         """
         pass
 
-    def test_service_order_metadata_get(self):
-        """Test case for service_order_metadata_get
+    def test_get(self):
+        """Test case for get
 
         Get list of metadata  # noqa: E501
         """
         pass
 
-    def test_service_order_metadata_update(self):
-        """Test case for service_order_metadata_update
+    def test_update(self):
+        """Test case for update
 
         Update metadata  # noqa: E501
         """

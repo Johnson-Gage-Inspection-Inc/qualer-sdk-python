@@ -33,12 +33,12 @@ class CompanyApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def company_add_department(self, model, **kwargs):  # noqa: E501
+    def add_department(self, model, **kwargs):  # noqa: E501
         """  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.company_add_department(model, async_req=True)
+        >>> thread = api.add_department(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -49,17 +49,17 @@ class CompanyApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.company_add_department_with_http_info(model, **kwargs)  # noqa: E501
+            return self.add_department_with_http_info(model, **kwargs)  # noqa: E501
         else:
-            (data) = self.company_add_department_with_http_info(model, **kwargs)  # noqa: E501
+            (data) = self.add_department_with_http_info(model, **kwargs)  # noqa: E501
             return data
 
-    def company_add_department_with_http_info(self, model, **kwargs):  # noqa: E501
+    def add_department_with_http_info(self, model, **kwargs):  # noqa: E501
         """  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.company_add_department_with_http_info(model, async_req=True)
+        >>> thread = api.add_department_with_http_info(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -80,14 +80,14 @@ class CompanyApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method company_add_department" % key
+                    " to method add_department" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `company_add_department`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `add_department`")  # noqa: E501
 
         collection_formats = {}
 
@@ -130,12 +130,12 @@ class CompanyApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def company_delete_department(self, department_id, **kwargs):  # noqa: E501
+    def delete_department(self, department_id, **kwargs):  # noqa: E501
         """  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.company_delete_department(department_id, async_req=True)
+        >>> thread = api.delete_department(department_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -146,17 +146,17 @@ class CompanyApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.company_delete_department_with_http_info(department_id, **kwargs)  # noqa: E501
+            return self.delete_department_with_http_info(department_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.company_delete_department_with_http_info(department_id, **kwargs)  # noqa: E501
+            (data) = self.delete_department_with_http_info(department_id, **kwargs)  # noqa: E501
             return data
 
-    def company_delete_department_with_http_info(self, department_id, **kwargs):  # noqa: E501
+    def delete_department_with_http_info(self, department_id, **kwargs):  # noqa: E501
         """  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.company_delete_department_with_http_info(department_id, async_req=True)
+        >>> thread = api.delete_department_with_http_info(department_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -177,14 +177,14 @@ class CompanyApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method company_delete_department" % key
+                    " to method delete_department" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'department_id' is set
         if self.api_client.client_side_validation and ('department_id' not in params or
                                                        params['department_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `department_id` when calling `company_delete_department`")  # noqa: E501
+            raise ValueError("Missing the required parameter `department_id` when calling `delete_department`")  # noqa: E501
 
         collection_formats = {}
 
@@ -223,12 +223,12 @@ class CompanyApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def company_departments(self, **kwargs):  # noqa: E501
-        """company_departments  # noqa: E501
+    def departments(self, **kwargs):  # noqa: E501
+        """departments  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.company_departments(async_req=True)
+        >>> thread = api.departments(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -238,17 +238,17 @@ class CompanyApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.company_departments_with_http_info(**kwargs)  # noqa: E501
+            return self.departments_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.company_departments_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.departments_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def company_departments_with_http_info(self, **kwargs):  # noqa: E501
-        """company_departments  # noqa: E501
+    def departments_with_http_info(self, **kwargs):  # noqa: E501
+        """departments  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.company_departments_with_http_info(async_req=True)
+        >>> thread = api.departments_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -268,7 +268,7 @@ class CompanyApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method company_departments" % key
+                    " to method departments" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -308,13 +308,13 @@ class CompanyApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def company_lookups(self, lookup_type, **kwargs):  # noqa: E501
-        """company_lookups  # noqa: E501
+    def lookups(self, lookup_type, **kwargs):  # noqa: E501
+        """lookups  # noqa: E501
 
         lookupName:  AssetClass = 1  AssetCriticality = 2  AssetCondition = 3  InventoryCategory = 4  InventoryUnit = 5  OrderItemInProgressWorkStatus = 6  OrderItemDelayWorkStatus = 7  OrderItemWithdrawnWorkStatus = 8  OrderItemCompletedWorkStatus = 9  OrderDelayedStatus = 10  ClientInvoicing = 11  ClientStanding = 12  ClientCategory = 13  CancelOrderReasons = 14  OrderItemLockedWorkStatus = 15  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.company_lookups(lookup_type, async_req=True)
+        >>> thread = api.lookups(lookup_type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -325,18 +325,18 @@ class CompanyApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.company_lookups_with_http_info(lookup_type, **kwargs)  # noqa: E501
+            return self.lookups_with_http_info(lookup_type, **kwargs)  # noqa: E501
         else:
-            (data) = self.company_lookups_with_http_info(lookup_type, **kwargs)  # noqa: E501
+            (data) = self.lookups_with_http_info(lookup_type, **kwargs)  # noqa: E501
             return data
 
-    def company_lookups_with_http_info(self, lookup_type, **kwargs):  # noqa: E501
-        """company_lookups  # noqa: E501
+    def lookups_with_http_info(self, lookup_type, **kwargs):  # noqa: E501
+        """lookups  # noqa: E501
 
         lookupName:  AssetClass = 1  AssetCriticality = 2  AssetCondition = 3  InventoryCategory = 4  InventoryUnit = 5  OrderItemInProgressWorkStatus = 6  OrderItemDelayWorkStatus = 7  OrderItemWithdrawnWorkStatus = 8  OrderItemCompletedWorkStatus = 9  OrderDelayedStatus = 10  ClientInvoicing = 11  ClientStanding = 12  ClientCategory = 13  CancelOrderReasons = 14  OrderItemLockedWorkStatus = 15  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.company_lookups_with_http_info(lookup_type, async_req=True)
+        >>> thread = api.lookups_with_http_info(lookup_type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -357,14 +357,14 @@ class CompanyApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method company_lookups" % key
+                    " to method lookups" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'lookup_type' is set
         if self.api_client.client_side_validation and ('lookup_type' not in params or
                                                        params['lookup_type'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `lookup_type` when calling `company_lookups`")  # noqa: E501
+            raise ValueError("Missing the required parameter `lookup_type` when calling `lookups`")  # noqa: E501
 
         collection_formats = {}
 
@@ -403,12 +403,12 @@ class CompanyApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def company_site_rooms(self, id, **kwargs):  # noqa: E501
+    def site_rooms(self, id, **kwargs):  # noqa: E501
         """  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.company_site_rooms(id, async_req=True)
+        >>> thread = api.site_rooms(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -419,17 +419,17 @@ class CompanyApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.company_site_rooms_with_http_info(id, **kwargs)  # noqa: E501
+            return self.site_rooms_with_http_info(id, **kwargs)  # noqa: E501
         else:
-            (data) = self.company_site_rooms_with_http_info(id, **kwargs)  # noqa: E501
+            (data) = self.site_rooms_with_http_info(id, **kwargs)  # noqa: E501
             return data
 
-    def company_site_rooms_with_http_info(self, id, **kwargs):  # noqa: E501
+    def site_rooms_with_http_info(self, id, **kwargs):  # noqa: E501
         """  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.company_site_rooms_with_http_info(id, async_req=True)
+        >>> thread = api.site_rooms_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -450,14 +450,14 @@ class CompanyApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method company_site_rooms" % key
+                    " to method site_rooms" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
         if self.api_client.client_side_validation and ('id' not in params or
                                                        params['id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `id` when calling `company_site_rooms`")  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `site_rooms`")  # noqa: E501
 
         collection_formats = {}
 
@@ -496,12 +496,12 @@ class CompanyApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def company_sites(self, **kwargs):  # noqa: E501
-        """company_sites  # noqa: E501
+    def sites(self, **kwargs):  # noqa: E501
+        """sites  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.company_sites(async_req=True)
+        >>> thread = api.sites(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -511,17 +511,17 @@ class CompanyApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.company_sites_with_http_info(**kwargs)  # noqa: E501
+            return self.sites_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.company_sites_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.sites_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def company_sites_with_http_info(self, **kwargs):  # noqa: E501
-        """company_sites  # noqa: E501
+    def sites_with_http_info(self, **kwargs):  # noqa: E501
+        """sites  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.company_sites_with_http_info(async_req=True)
+        >>> thread = api.sites_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -541,7 +541,7 @@ class CompanyApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method company_sites" % key
+                    " to method sites" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -581,12 +581,12 @@ class CompanyApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def company_update_department(self, department_id, model, **kwargs):  # noqa: E501
+    def update_department(self, department_id, model, **kwargs):  # noqa: E501
         """  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.company_update_department(department_id, model, async_req=True)
+        >>> thread = api.update_department(department_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -598,17 +598,17 @@ class CompanyApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.company_update_department_with_http_info(department_id, model, **kwargs)  # noqa: E501
+            return self.update_department_with_http_info(department_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.company_update_department_with_http_info(department_id, model, **kwargs)  # noqa: E501
+            (data) = self.update_department_with_http_info(department_id, model, **kwargs)  # noqa: E501
             return data
 
-    def company_update_department_with_http_info(self, department_id, model, **kwargs):  # noqa: E501
+    def update_department_with_http_info(self, department_id, model, **kwargs):  # noqa: E501
         """  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.company_update_department_with_http_info(department_id, model, async_req=True)
+        >>> thread = api.update_department_with_http_info(department_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -630,18 +630,18 @@ class CompanyApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method company_update_department" % key
+                    " to method update_department" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'department_id' is set
         if self.api_client.client_side_validation and ('department_id' not in params or
                                                        params['department_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `department_id` when calling `company_update_department`")  # noqa: E501
+            raise ValueError("Missing the required parameter `department_id` when calling `update_department`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `company_update_department`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `update_department`")  # noqa: E501
 
         collection_formats = {}
 

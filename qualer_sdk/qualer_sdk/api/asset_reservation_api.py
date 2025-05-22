@@ -33,12 +33,12 @@ class AssetReservationApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def asset_reservation_close(self, **kwargs):  # noqa: E501
-        """asset_reservation_close  # noqa: E501
+    def close(self, **kwargs):  # noqa: E501
+        """close  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_reservation_close(async_req=True)
+        >>> thread = api.close(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -54,17 +54,17 @@ class AssetReservationApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_reservation_close_with_http_info(**kwargs)  # noqa: E501
+            return self.close_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.asset_reservation_close_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.close_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def asset_reservation_close_with_http_info(self, **kwargs):  # noqa: E501
-        """asset_reservation_close  # noqa: E501
+    def close_with_http_info(self, **kwargs):  # noqa: E501
+        """close  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_reservation_close_with_http_info(async_req=True)
+        >>> thread = api.close_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -90,7 +90,7 @@ class AssetReservationApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_reservation_close" % key
+                    " to method close" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -142,12 +142,12 @@ class AssetReservationApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def asset_reservation_get(self, **kwargs):  # noqa: E501
-        """asset_reservation_get  # noqa: E501
+    def get(self, **kwargs):  # noqa: E501
+        """get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_reservation_get(async_req=True)
+        >>> thread = api.get(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -165,17 +165,17 @@ class AssetReservationApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_reservation_get_with_http_info(**kwargs)  # noqa: E501
+            return self.get_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.asset_reservation_get_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def asset_reservation_get_with_http_info(self, **kwargs):  # noqa: E501
-        """asset_reservation_get  # noqa: E501
+    def get_with_http_info(self, **kwargs):  # noqa: E501
+        """get  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_reservation_get_with_http_info(async_req=True)
+        >>> thread = api.get_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -203,7 +203,7 @@ class AssetReservationApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_reservation_get" % key
+                    " to method get" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -259,12 +259,12 @@ class AssetReservationApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def asset_reservation_upsert(self, model, **kwargs):  # noqa: E501
-        """asset_reservation_upsert  # noqa: E501
+    def upsert(self, model, **kwargs):  # noqa: E501
+        """upsert  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_reservation_upsert(model, async_req=True)
+        >>> thread = api.upsert(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -275,17 +275,17 @@ class AssetReservationApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.asset_reservation_upsert_with_http_info(model, **kwargs)  # noqa: E501
+            return self.upsert_with_http_info(model, **kwargs)  # noqa: E501
         else:
-            (data) = self.asset_reservation_upsert_with_http_info(model, **kwargs)  # noqa: E501
+            (data) = self.upsert_with_http_info(model, **kwargs)  # noqa: E501
             return data
 
-    def asset_reservation_upsert_with_http_info(self, model, **kwargs):  # noqa: E501
-        """asset_reservation_upsert  # noqa: E501
+    def upsert_with_http_info(self, model, **kwargs):  # noqa: E501
+        """upsert  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.asset_reservation_upsert_with_http_info(model, async_req=True)
+        >>> thread = api.upsert_with_http_info(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -306,14 +306,14 @@ class AssetReservationApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method asset_reservation_upsert" % key
+                    " to method upsert" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `asset_reservation_upsert`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `upsert`")  # noqa: E501
 
         collection_formats = {}
 

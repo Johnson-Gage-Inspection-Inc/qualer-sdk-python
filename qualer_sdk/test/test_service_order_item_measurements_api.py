@@ -29,34 +29,34 @@ class TestServiceOrderItemMeasurementsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_service_order_item_measurements_add_auxiliary_tools(self):
-        """Test case for service_order_item_measurements_add_auxiliary_tools
+    def test_add_auxiliary_tools(self):
+        """Test case for add_auxiliary_tools
 
         """
         pass
 
-    def test_service_order_item_measurements_create_measurement_form(self):
-        """Test case for service_order_item_measurements_create_measurement_form
+    def test_create_measurement_form(self):
+        """Test case for create_measurement_form
 
         Create Measurement Form.  # noqa: E501
         """
         pass
 
-    def test_service_order_item_measurements_get_measurement_form(self):
-        """Test case for service_order_item_measurements_get_measurement_form
+    def test_get_measurement_form(self):
+        """Test case for get_measurement_form
 
         Get Measurement Form.  # noqa: E501
         """
         pass
 
-    def test_service_order_item_measurements_get_measurements_by_asset(self):
-        """Test case for service_order_item_measurements_get_measurements_by_asset
+    def test_get_measurements_by_asset(self):
+        """Test case for get_measurements_by_asset
 
         """
         pass
 
-    def test_service_order_item_measurements_update_measurement_form(self):
-        """Test case for service_order_item_measurements_update_measurement_form
+    def test_update_measurement_form(self):
+        """Test case for update_measurement_form
 
         Update Measurement Form.  # noqa: E501
         """

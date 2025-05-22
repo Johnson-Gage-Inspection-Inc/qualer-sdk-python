@@ -33,12 +33,12 @@ class ClientEmployeesApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def client_employees_create_employee(self, model, **kwargs):  # noqa: E501
-        """client_employees_create_employee  # noqa: E501
+    def create_employee(self, model, **kwargs):  # noqa: E501
+        """create_employee  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_employees_create_employee(model, async_req=True)
+        >>> thread = api.create_employee(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -49,17 +49,17 @@ class ClientEmployeesApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.client_employees_create_employee_with_http_info(model, **kwargs)  # noqa: E501
+            return self.create_employee_with_http_info(model, **kwargs)  # noqa: E501
         else:
-            (data) = self.client_employees_create_employee_with_http_info(model, **kwargs)  # noqa: E501
+            (data) = self.create_employee_with_http_info(model, **kwargs)  # noqa: E501
             return data
 
-    def client_employees_create_employee_with_http_info(self, model, **kwargs):  # noqa: E501
-        """client_employees_create_employee  # noqa: E501
+    def create_employee_with_http_info(self, model, **kwargs):  # noqa: E501
+        """create_employee  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_employees_create_employee_with_http_info(model, async_req=True)
+        >>> thread = api.create_employee_with_http_info(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -80,14 +80,14 @@ class ClientEmployeesApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method client_employees_create_employee" % key
+                    " to method create_employee" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `client_employees_create_employee`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `create_employee`")  # noqa: E501
 
         collection_formats = {}
 
@@ -130,12 +130,12 @@ class ClientEmployeesApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def client_employees_get_employee(self, employee_id, **kwargs):  # noqa: E501
-        """client_employees_get_employee  # noqa: E501
+    def get_employee(self, employee_id, **kwargs):  # noqa: E501
+        """get_employee  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_employees_get_employee(employee_id, async_req=True)
+        >>> thread = api.get_employee(employee_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -147,17 +147,17 @@ class ClientEmployeesApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.client_employees_get_employee_with_http_info(employee_id, **kwargs)  # noqa: E501
+            return self.get_employee_with_http_info(employee_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.client_employees_get_employee_with_http_info(employee_id, **kwargs)  # noqa: E501
+            (data) = self.get_employee_with_http_info(employee_id, **kwargs)  # noqa: E501
             return data
 
-    def client_employees_get_employee_with_http_info(self, employee_id, **kwargs):  # noqa: E501
-        """client_employees_get_employee  # noqa: E501
+    def get_employee_with_http_info(self, employee_id, **kwargs):  # noqa: E501
+        """get_employee  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_employees_get_employee_with_http_info(employee_id, async_req=True)
+        >>> thread = api.get_employee_with_http_info(employee_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -179,14 +179,14 @@ class ClientEmployeesApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method client_employees_get_employee" % key
+                    " to method get_employee" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'employee_id' is set
         if self.api_client.client_side_validation and ('employee_id' not in params or
                                                        params['employee_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `employee_id` when calling `client_employees_get_employee`")  # noqa: E501
+            raise ValueError("Missing the required parameter `employee_id` when calling `get_employee`")  # noqa: E501
 
         collection_formats = {}
 
@@ -227,12 +227,12 @@ class ClientEmployeesApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def client_employees_get_employees(self, client_company_id, **kwargs):  # noqa: E501
-        """client_employees_get_employees  # noqa: E501
+    def get_employees(self, client_company_id, **kwargs):  # noqa: E501
+        """get_employees  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_employees_get_employees(client_company_id, async_req=True)
+        >>> thread = api.get_employees(client_company_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -243,17 +243,17 @@ class ClientEmployeesApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.client_employees_get_employees_with_http_info(client_company_id, **kwargs)  # noqa: E501
+            return self.get_employees_with_http_info(client_company_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.client_employees_get_employees_with_http_info(client_company_id, **kwargs)  # noqa: E501
+            (data) = self.get_employees_with_http_info(client_company_id, **kwargs)  # noqa: E501
             return data
 
-    def client_employees_get_employees_with_http_info(self, client_company_id, **kwargs):  # noqa: E501
-        """client_employees_get_employees  # noqa: E501
+    def get_employees_with_http_info(self, client_company_id, **kwargs):  # noqa: E501
+        """get_employees  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_employees_get_employees_with_http_info(client_company_id, async_req=True)
+        >>> thread = api.get_employees_with_http_info(client_company_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -274,14 +274,14 @@ class ClientEmployeesApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method client_employees_get_employees" % key
+                    " to method get_employees" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'client_company_id' is set
         if self.api_client.client_side_validation and ('client_company_id' not in params or
                                                        params['client_company_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `client_company_id` when calling `client_employees_get_employees`")  # noqa: E501
+            raise ValueError("Missing the required parameter `client_company_id` when calling `get_employees`")  # noqa: E501
 
         collection_formats = {}
 
@@ -320,12 +320,12 @@ class ClientEmployeesApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def client_employees_send_employee_email(self, employee_id, model, **kwargs):  # noqa: E501
-        """client_employees_send_employee_email  # noqa: E501
+    def send_employee_email(self, employee_id, model, **kwargs):  # noqa: E501
+        """send_employee_email  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_employees_send_employee_email(employee_id, model, async_req=True)
+        >>> thread = api.send_employee_email(employee_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -337,17 +337,17 @@ class ClientEmployeesApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.client_employees_send_employee_email_with_http_info(employee_id, model, **kwargs)  # noqa: E501
+            return self.send_employee_email_with_http_info(employee_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.client_employees_send_employee_email_with_http_info(employee_id, model, **kwargs)  # noqa: E501
+            (data) = self.send_employee_email_with_http_info(employee_id, model, **kwargs)  # noqa: E501
             return data
 
-    def client_employees_send_employee_email_with_http_info(self, employee_id, model, **kwargs):  # noqa: E501
-        """client_employees_send_employee_email  # noqa: E501
+    def send_employee_email_with_http_info(self, employee_id, model, **kwargs):  # noqa: E501
+        """send_employee_email  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_employees_send_employee_email_with_http_info(employee_id, model, async_req=True)
+        >>> thread = api.send_employee_email_with_http_info(employee_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -369,18 +369,18 @@ class ClientEmployeesApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method client_employees_send_employee_email" % key
+                    " to method send_employee_email" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'employee_id' is set
         if self.api_client.client_side_validation and ('employee_id' not in params or
                                                        params['employee_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `employee_id` when calling `client_employees_send_employee_email`")  # noqa: E501
+            raise ValueError("Missing the required parameter `employee_id` when calling `send_employee_email`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `client_employees_send_employee_email`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `send_employee_email`")  # noqa: E501
 
         collection_formats = {}
 

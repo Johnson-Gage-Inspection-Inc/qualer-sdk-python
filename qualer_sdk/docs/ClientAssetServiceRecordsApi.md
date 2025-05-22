@@ -4,11 +4,11 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**client_asset_service_records_get_asset_service_records_by_asset**](ClientAssetServiceRecordsApi.md#client_asset_service_records_get_asset_service_records_by_asset) | **GET** /api/service/clients/assets/{assetId}/assetservicerecords | 
+[**get_asset_service_records_by_asset**](ClientAssetServiceRecordsApi.md#get_asset_service_records_by_asset) | **GET** /api/service/clients/assets/{assetId}/assetservicerecords | 
 
 
-# **client_asset_service_records_get_asset_service_records_by_asset**
-> list[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel] client_asset_service_records_get_asset_service_records_by_asset(asset_id)
+# **get_asset_service_records_by_asset**
+> list[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel] get_asset_service_records_by_asset(asset_id)
 
 
 
@@ -25,10 +25,10 @@ api_instance = qualer_sdk.ClientAssetServiceRecordsApi()
 asset_id = 56 # int | 
 
 try:
-    api_response = api_instance.client_asset_service_records_get_asset_service_records_by_asset(asset_id)
+    api_response = api_instance.get_asset_service_records_by_asset(asset_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientAssetServiceRecordsApi->client_asset_service_records_get_asset_service_records_by_asset: %s\n" % e)
+    print("Exception when calling ClientAssetServiceRecordsApi->get_asset_service_records_by_asset: %s\n" % e)
 ```
 
 ### Parameters

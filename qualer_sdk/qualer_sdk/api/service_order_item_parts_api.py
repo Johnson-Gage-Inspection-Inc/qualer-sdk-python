@@ -33,12 +33,12 @@ class ServiceOrderItemPartsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def service_order_item_parts_get_work_item_parts(self, work_item_id, **kwargs):  # noqa: E501
-        """service_order_item_parts_get_work_item_parts  # noqa: E501
+    def get_work_item_parts(self, work_item_id, **kwargs):  # noqa: E501
+        """get_work_item_parts  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_parts_get_work_item_parts(work_item_id, async_req=True)
+        >>> thread = api.get_work_item_parts(work_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -49,17 +49,17 @@ class ServiceOrderItemPartsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_item_parts_get_work_item_parts_with_http_info(work_item_id, **kwargs)  # noqa: E501
+            return self.get_work_item_parts_with_http_info(work_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_item_parts_get_work_item_parts_with_http_info(work_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_work_item_parts_with_http_info(work_item_id, **kwargs)  # noqa: E501
             return data
 
-    def service_order_item_parts_get_work_item_parts_with_http_info(self, work_item_id, **kwargs):  # noqa: E501
-        """service_order_item_parts_get_work_item_parts  # noqa: E501
+    def get_work_item_parts_with_http_info(self, work_item_id, **kwargs):  # noqa: E501
+        """get_work_item_parts  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_parts_get_work_item_parts_with_http_info(work_item_id, async_req=True)
+        >>> thread = api.get_work_item_parts_with_http_info(work_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -80,14 +80,14 @@ class ServiceOrderItemPartsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_item_parts_get_work_item_parts" % key
+                    " to method get_work_item_parts" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'work_item_id' is set
         if self.api_client.client_side_validation and ('work_item_id' not in params or
                                                        params['work_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `work_item_id` when calling `service_order_item_parts_get_work_item_parts`")  # noqa: E501
+            raise ValueError("Missing the required parameter `work_item_id` when calling `get_work_item_parts`")  # noqa: E501
 
         collection_formats = {}
 

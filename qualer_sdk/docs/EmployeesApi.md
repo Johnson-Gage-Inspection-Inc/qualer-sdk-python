@@ -4,16 +4,16 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**employees_add_employee_department**](EmployeesApi.md#employees_add_employee_department) | **POST** /api/employees/{employeeId}/department | 
-[**employees_create_employee**](EmployeesApi.md#employees_create_employee) | **POST** /api/employees | Create Employee
-[**employees_delete_employee_department**](EmployeesApi.md#employees_delete_employee_department) | **DELETE** /api/employees/{employeeId}/department/{departmentId} | 
-[**employees_get_employee**](EmployeesApi.md#employees_get_employee) | **GET** /api/employees/{employeeId} | 
-[**employees_get_employees**](EmployeesApi.md#employees_get_employees) | **GET** /api/employees | 
-[**employees_update_employee**](EmployeesApi.md#employees_update_employee) | **PUT** /api/employees/{employeeId} | Update Employee
+[**add_employee_department**](EmployeesApi.md#add_employee_department) | **POST** /api/employees/{employeeId}/department | 
+[**create_employee**](EmployeesApi.md#create_employee) | **POST** /api/employees | Create Employee
+[**delete_employee_department**](EmployeesApi.md#delete_employee_department) | **DELETE** /api/employees/{employeeId}/department/{departmentId} | 
+[**get_employee**](EmployeesApi.md#get_employee) | **GET** /api/employees/{employeeId} | 
+[**get_employees**](EmployeesApi.md#get_employees) | **GET** /api/employees | 
+[**update_employee**](EmployeesApi.md#update_employee) | **PUT** /api/employees/{employeeId} | Update Employee
 
 
-# **employees_add_employee_department**
-> object employees_add_employee_department(employee_id, model)
+# **add_employee_department**
+> object add_employee_department(employee_id, model)
 
 
 
@@ -32,10 +32,10 @@ model = qualer_sdk.QualerApiModelsEmployeesFromEmployeeDepartmentModel() # Quale
 
 try:
     # 
-    api_response = api_instance.employees_add_employee_department(employee_id, model)
+    api_response = api_instance.add_employee_department(employee_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling EmployeesApi->employees_add_employee_department: %s\n" % e)
+    print("Exception when calling EmployeesApi->add_employee_department: %s\n" % e)
 ```
 
 ### Parameters
@@ -60,8 +60,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **employees_create_employee**
-> QualerApiModelsEmployeesToCreatedEmployeeResponse employees_create_employee(model)
+# **create_employee**
+> QualerApiModelsEmployeesToCreatedEmployeeResponse create_employee(model)
 
 Create Employee
 
@@ -81,10 +81,10 @@ model = qualer_sdk.QualerApiModelsEmployeesFromCreateEmployeeModel() # QualerApi
 
 try:
     # Create Employee
-    api_response = api_instance.employees_create_employee(model)
+    api_response = api_instance.create_employee(model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling EmployeesApi->employees_create_employee: %s\n" % e)
+    print("Exception when calling EmployeesApi->create_employee: %s\n" % e)
 ```
 
 ### Parameters
@@ -108,8 +108,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **employees_delete_employee_department**
-> object employees_delete_employee_department(employee_id, department_id)
+# **delete_employee_department**
+> object delete_employee_department(employee_id, department_id)
 
 
 
@@ -128,10 +128,10 @@ department_id = 56 # int |
 
 try:
     # 
-    api_response = api_instance.employees_delete_employee_department(employee_id, department_id)
+    api_response = api_instance.delete_employee_department(employee_id, department_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling EmployeesApi->employees_delete_employee_department: %s\n" % e)
+    print("Exception when calling EmployeesApi->delete_employee_department: %s\n" % e)
 ```
 
 ### Parameters
@@ -156,8 +156,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **employees_get_employee**
-> QualerApiModelsClientsToEmployeeResponseModel employees_get_employee(employee_id)
+# **get_employee**
+> QualerApiModelsClientsToEmployeeResponseModel get_employee(employee_id)
 
 
 
@@ -174,10 +174,10 @@ api_instance = qualer_sdk.EmployeesApi()
 employee_id = 56 # int | 
 
 try:
-    api_response = api_instance.employees_get_employee(employee_id)
+    api_response = api_instance.get_employee(employee_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling EmployeesApi->employees_get_employee: %s\n" % e)
+    print("Exception when calling EmployeesApi->get_employee: %s\n" % e)
 ```
 
 ### Parameters
@@ -201,8 +201,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **employees_get_employees**
-> list[QualerApiModelsClientsToEmployeeResponseModel] employees_get_employees(model_search_string=model_search_string)
+# **get_employees**
+> list[QualerApiModelsClientsToEmployeeResponseModel] get_employees(model_search_string=model_search_string)
 
 
 
@@ -219,10 +219,10 @@ api_instance = qualer_sdk.EmployeesApi()
 model_search_string = 'model_search_string_example' # str |  (optional)
 
 try:
-    api_response = api_instance.employees_get_employees(model_search_string=model_search_string)
+    api_response = api_instance.get_employees(model_search_string=model_search_string)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling EmployeesApi->employees_get_employees: %s\n" % e)
+    print("Exception when calling EmployeesApi->get_employees: %s\n" % e)
 ```
 
 ### Parameters
@@ -246,8 +246,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **employees_update_employee**
-> object employees_update_employee(employee_id, model)
+# **update_employee**
+> object update_employee(employee_id, model)
 
 Update Employee
 
@@ -268,10 +268,10 @@ model = qualer_sdk.QualerApiModelsEmployeesFromUpdateEmployeeModel() # QualerApi
 
 try:
     # Update Employee
-    api_response = api_instance.employees_update_employee(employee_id, model)
+    api_response = api_instance.update_employee(employee_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling EmployeesApi->employees_update_employee: %s\n" % e)
+    print("Exception when calling EmployeesApi->update_employee: %s\n" % e)
 ```
 
 ### Parameters

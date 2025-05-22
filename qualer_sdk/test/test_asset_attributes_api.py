@@ -29,14 +29,14 @@ class TestAssetAttributesApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_asset_attributes_get_asset_attributes(self):
-        """Test case for asset_attributes_get_asset_attributes
+    def test_get_asset_attributes(self):
+        """Test case for get_asset_attributes
 
         """
         pass
 
-    def test_asset_attributes_upsert_asset_attributes(self):
-        """Test case for asset_attributes_upsert_asset_attributes
+    def test_upsert_asset_attributes(self):
+        """Test case for upsert_asset_attributes
 
         """
         pass

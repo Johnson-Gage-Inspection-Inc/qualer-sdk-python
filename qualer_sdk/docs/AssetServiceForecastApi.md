@@ -4,12 +4,12 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**asset_service_forecast_get_asset_forecast_list**](AssetServiceForecastApi.md#asset_service_forecast_get_asset_forecast_list) | **GET** /api/assetserviceforecast | 
-[**asset_service_forecast_get_client_asset_forecast_list**](AssetServiceForecastApi.md#asset_service_forecast_get_client_asset_forecast_list) | **GET** /api/assetserviceforecast/client/{clientCompanyId} | 
+[**get_asset_forecast_list**](AssetServiceForecastApi.md#get_asset_forecast_list) | **GET** /api/assetserviceforecast | 
+[**get_client_asset_forecast_list**](AssetServiceForecastApi.md#get_client_asset_forecast_list) | **GET** /api/assetserviceforecast/client/{clientCompanyId} | 
 
 
-# **asset_service_forecast_get_asset_forecast_list**
-> list[QualerApiModelsAssetToAssetServiceForecastModel] asset_service_forecast_get_asset_forecast_list()
+# **get_asset_forecast_list**
+> list[QualerApiModelsAssetToAssetServiceForecastModel] get_asset_forecast_list()
 
 
 
@@ -25,10 +25,10 @@ from pprint import pprint
 api_instance = qualer_sdk.AssetServiceForecastApi()
 
 try:
-    api_response = api_instance.asset_service_forecast_get_asset_forecast_list()
+    api_response = api_instance.get_asset_forecast_list()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetServiceForecastApi->asset_service_forecast_get_asset_forecast_list: %s\n" % e)
+    print("Exception when calling AssetServiceForecastApi->get_asset_forecast_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -49,8 +49,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **asset_service_forecast_get_client_asset_forecast_list**
-> list[QualerApiModelsAssetToAssetServiceForecastModel] asset_service_forecast_get_client_asset_forecast_list(client_company_id)
+# **get_client_asset_forecast_list**
+> list[QualerApiModelsAssetToAssetServiceForecastModel] get_client_asset_forecast_list(client_company_id)
 
 
 
@@ -67,10 +67,10 @@ api_instance = qualer_sdk.AssetServiceForecastApi()
 client_company_id = 56 # int | 
 
 try:
-    api_response = api_instance.asset_service_forecast_get_client_asset_forecast_list(client_company_id)
+    api_response = api_instance.get_client_asset_forecast_list(client_company_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetServiceForecastApi->asset_service_forecast_get_client_asset_forecast_list: %s\n" % e)
+    print("Exception when calling AssetServiceForecastApi->get_client_asset_forecast_list: %s\n" % e)
 ```
 
 ### Parameters

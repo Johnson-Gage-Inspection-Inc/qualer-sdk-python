@@ -29,26 +29,26 @@ class TestServiceOrderPartsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_service_order_parts_create_work_order_parts(self):
-        """Test case for service_order_parts_create_work_order_parts
+    def test_create_work_order_parts(self):
+        """Test case for create_work_order_parts
 
         """
         pass
 
-    def test_service_order_parts_delete_work_order_task(self):
-        """Test case for service_order_parts_delete_work_order_task
+    def test_delete_work_order_task(self):
+        """Test case for delete_work_order_task
 
         """
         pass
 
-    def test_service_order_parts_get_work_order_parts(self):
-        """Test case for service_order_parts_get_work_order_parts
+    def test_get_work_order_parts(self):
+        """Test case for get_work_order_parts
 
         """
         pass
 
-    def test_service_order_parts_update_work_order_parts(self):
-        """Test case for service_order_parts_update_work_order_parts
+    def test_update_work_order_parts(self):
+        """Test case for update_work_order_parts
 
         """
         pass

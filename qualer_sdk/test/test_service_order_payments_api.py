@@ -29,26 +29,26 @@ class TestServiceOrderPaymentsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_service_order_payments_change_work_order_payment_status(self):
-        """Test case for service_order_payments_change_work_order_payment_status
+    def test_change_work_order_payment_status(self):
+        """Test case for change_work_order_payment_status
 
         """
         pass
 
-    def test_service_order_payments_create_work_order_payment(self):
-        """Test case for service_order_payments_create_work_order_payment
+    def test_create_work_order_payment(self):
+        """Test case for create_work_order_payment
 
         """
         pass
 
-    def test_service_order_payments_get_all_work_order_payments(self):
-        """Test case for service_order_payments_get_all_work_order_payments
+    def test_get_all_work_order_payments(self):
+        """Test case for get_all_work_order_payments
 
         """
         pass
 
-    def test_service_order_payments_get_work_order_payment(self):
-        """Test case for service_order_payments_get_work_order_payment
+    def test_get_work_order_payment(self):
+        """Test case for get_work_order_payment
 
         """
         pass

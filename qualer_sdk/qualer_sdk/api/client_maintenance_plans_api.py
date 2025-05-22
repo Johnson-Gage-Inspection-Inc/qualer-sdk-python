@@ -33,12 +33,12 @@ class ClientMaintenancePlansApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def client_maintenance_plans_get_maintenance_plan_assets(self, maintenance_plan_id, **kwargs):  # noqa: E501
-        """client_maintenance_plans_get_maintenance_plan_assets  # noqa: E501
+    def get_maintenance_plan_assets(self, maintenance_plan_id, **kwargs):  # noqa: E501
+        """get_maintenance_plan_assets  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_maintenance_plans_get_maintenance_plan_assets(maintenance_plan_id, async_req=True)
+        >>> thread = api.get_maintenance_plan_assets(maintenance_plan_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -49,17 +49,17 @@ class ClientMaintenancePlansApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.client_maintenance_plans_get_maintenance_plan_assets_with_http_info(maintenance_plan_id, **kwargs)  # noqa: E501
+            return self.get_maintenance_plan_assets_with_http_info(maintenance_plan_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.client_maintenance_plans_get_maintenance_plan_assets_with_http_info(maintenance_plan_id, **kwargs)  # noqa: E501
+            (data) = self.get_maintenance_plan_assets_with_http_info(maintenance_plan_id, **kwargs)  # noqa: E501
             return data
 
-    def client_maintenance_plans_get_maintenance_plan_assets_with_http_info(self, maintenance_plan_id, **kwargs):  # noqa: E501
-        """client_maintenance_plans_get_maintenance_plan_assets  # noqa: E501
+    def get_maintenance_plan_assets_with_http_info(self, maintenance_plan_id, **kwargs):  # noqa: E501
+        """get_maintenance_plan_assets  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_maintenance_plans_get_maintenance_plan_assets_with_http_info(maintenance_plan_id, async_req=True)
+        >>> thread = api.get_maintenance_plan_assets_with_http_info(maintenance_plan_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -80,14 +80,14 @@ class ClientMaintenancePlansApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method client_maintenance_plans_get_maintenance_plan_assets" % key
+                    " to method get_maintenance_plan_assets" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'maintenance_plan_id' is set
         if self.api_client.client_side_validation and ('maintenance_plan_id' not in params or
                                                        params['maintenance_plan_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `maintenance_plan_id` when calling `client_maintenance_plans_get_maintenance_plan_assets`")  # noqa: E501
+            raise ValueError("Missing the required parameter `maintenance_plan_id` when calling `get_maintenance_plan_assets`")  # noqa: E501
 
         collection_formats = {}
 
@@ -126,12 +126,12 @@ class ClientMaintenancePlansApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def client_maintenance_plans_get_maintenance_plans(self, client_company_id, **kwargs):  # noqa: E501
-        """client_maintenance_plans_get_maintenance_plans  # noqa: E501
+    def get_maintenance_plans(self, client_company_id, **kwargs):  # noqa: E501
+        """get_maintenance_plans  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_maintenance_plans_get_maintenance_plans(client_company_id, async_req=True)
+        >>> thread = api.get_maintenance_plans(client_company_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -142,17 +142,17 @@ class ClientMaintenancePlansApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.client_maintenance_plans_get_maintenance_plans_with_http_info(client_company_id, **kwargs)  # noqa: E501
+            return self.get_maintenance_plans_with_http_info(client_company_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.client_maintenance_plans_get_maintenance_plans_with_http_info(client_company_id, **kwargs)  # noqa: E501
+            (data) = self.get_maintenance_plans_with_http_info(client_company_id, **kwargs)  # noqa: E501
             return data
 
-    def client_maintenance_plans_get_maintenance_plans_with_http_info(self, client_company_id, **kwargs):  # noqa: E501
-        """client_maintenance_plans_get_maintenance_plans  # noqa: E501
+    def get_maintenance_plans_with_http_info(self, client_company_id, **kwargs):  # noqa: E501
+        """get_maintenance_plans  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_maintenance_plans_get_maintenance_plans_with_http_info(client_company_id, async_req=True)
+        >>> thread = api.get_maintenance_plans_with_http_info(client_company_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -173,14 +173,14 @@ class ClientMaintenancePlansApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method client_maintenance_plans_get_maintenance_plans" % key
+                    " to method get_maintenance_plans" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'client_company_id' is set
         if self.api_client.client_side_validation and ('client_company_id' not in params or
                                                        params['client_company_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `client_company_id` when calling `client_maintenance_plans_get_maintenance_plans`")  # noqa: E501
+            raise ValueError("Missing the required parameter `client_company_id` when calling `get_maintenance_plans`")  # noqa: E501
 
         collection_formats = {}
 

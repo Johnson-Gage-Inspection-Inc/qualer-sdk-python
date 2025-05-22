@@ -33,13 +33,13 @@ class ClientSiteApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def client_site_create_client_site(self, client_company_id, model, **kwargs):  # noqa: E501
+    def create_client_site(self, client_company_id, model, **kwargs):  # noqa: E501
         """Create Client Site.  # noqa: E501
 
         CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_site_create_client_site(client_company_id, model, async_req=True)
+        >>> thread = api.create_client_site(client_company_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -51,18 +51,18 @@ class ClientSiteApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.client_site_create_client_site_with_http_info(client_company_id, model, **kwargs)  # noqa: E501
+            return self.create_client_site_with_http_info(client_company_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.client_site_create_client_site_with_http_info(client_company_id, model, **kwargs)  # noqa: E501
+            (data) = self.create_client_site_with_http_info(client_company_id, model, **kwargs)  # noqa: E501
             return data
 
-    def client_site_create_client_site_with_http_info(self, client_company_id, model, **kwargs):  # noqa: E501
+    def create_client_site_with_http_info(self, client_company_id, model, **kwargs):  # noqa: E501
         """Create Client Site.  # noqa: E501
 
         CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_site_create_client_site_with_http_info(client_company_id, model, async_req=True)
+        >>> thread = api.create_client_site_with_http_info(client_company_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -84,18 +84,18 @@ class ClientSiteApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method client_site_create_client_site" % key
+                    " to method create_client_site" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'client_company_id' is set
         if self.api_client.client_side_validation and ('client_company_id' not in params or
                                                        params['client_company_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `client_company_id` when calling `client_site_create_client_site`")  # noqa: E501
+            raise ValueError("Missing the required parameter `client_company_id` when calling `create_client_site`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `client_site_create_client_site`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `create_client_site`")  # noqa: E501
 
         collection_formats = {}
 
@@ -140,12 +140,12 @@ class ClientSiteApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def client_site_get_client_sites(self, client_company_id, **kwargs):  # noqa: E501
-        """client_site_get_client_sites  # noqa: E501
+    def get_client_sites(self, client_company_id, **kwargs):  # noqa: E501
+        """get_client_sites  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_site_get_client_sites(client_company_id, async_req=True)
+        >>> thread = api.get_client_sites(client_company_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -156,17 +156,17 @@ class ClientSiteApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.client_site_get_client_sites_with_http_info(client_company_id, **kwargs)  # noqa: E501
+            return self.get_client_sites_with_http_info(client_company_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.client_site_get_client_sites_with_http_info(client_company_id, **kwargs)  # noqa: E501
+            (data) = self.get_client_sites_with_http_info(client_company_id, **kwargs)  # noqa: E501
             return data
 
-    def client_site_get_client_sites_with_http_info(self, client_company_id, **kwargs):  # noqa: E501
-        """client_site_get_client_sites  # noqa: E501
+    def get_client_sites_with_http_info(self, client_company_id, **kwargs):  # noqa: E501
+        """get_client_sites  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_site_get_client_sites_with_http_info(client_company_id, async_req=True)
+        >>> thread = api.get_client_sites_with_http_info(client_company_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -187,14 +187,14 @@ class ClientSiteApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method client_site_get_client_sites" % key
+                    " to method get_client_sites" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'client_company_id' is set
         if self.api_client.client_side_validation and ('client_company_id' not in params or
                                                        params['client_company_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `client_company_id` when calling `client_site_get_client_sites`")  # noqa: E501
+            raise ValueError("Missing the required parameter `client_company_id` when calling `get_client_sites`")  # noqa: E501
 
         collection_formats = {}
 
@@ -233,13 +233,13 @@ class ClientSiteApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def client_site_update_client_site(self, client_company_id, model, **kwargs):  # noqa: E501
+    def update_client_site(self, client_company_id, model, **kwargs):  # noqa: E501
         """Update Client Site.  # noqa: E501
 
         CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_site_update_client_site(client_company_id, model, async_req=True)
+        >>> thread = api.update_client_site(client_company_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -251,18 +251,18 @@ class ClientSiteApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.client_site_update_client_site_with_http_info(client_company_id, model, **kwargs)  # noqa: E501
+            return self.update_client_site_with_http_info(client_company_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.client_site_update_client_site_with_http_info(client_company_id, model, **kwargs)  # noqa: E501
+            (data) = self.update_client_site_with_http_info(client_company_id, model, **kwargs)  # noqa: E501
             return data
 
-    def client_site_update_client_site_with_http_info(self, client_company_id, model, **kwargs):  # noqa: E501
+    def update_client_site_with_http_info(self, client_company_id, model, **kwargs):  # noqa: E501
         """Update Client Site.  # noqa: E501
 
         CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_site_update_client_site_with_http_info(client_company_id, model, async_req=True)
+        >>> thread = api.update_client_site_with_http_info(client_company_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -284,18 +284,18 @@ class ClientSiteApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method client_site_update_client_site" % key
+                    " to method update_client_site" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'client_company_id' is set
         if self.api_client.client_side_validation and ('client_company_id' not in params or
                                                        params['client_company_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `client_company_id` when calling `client_site_update_client_site`")  # noqa: E501
+            raise ValueError("Missing the required parameter `client_company_id` when calling `update_client_site`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `client_site_update_client_site`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `update_client_site`")  # noqa: E501
 
         collection_formats = {}
 

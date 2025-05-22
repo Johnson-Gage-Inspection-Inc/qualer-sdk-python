@@ -29,14 +29,14 @@ class TestServiceOrderShipmentsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_service_order_shipments_append_shipment_tracking_number(self):
-        """Test case for service_order_shipments_append_shipment_tracking_number
+    def test_append_shipment_tracking_number(self):
+        """Test case for append_shipment_tracking_number
 
         """
         pass
 
-    def test_service_order_shipments_update_shipment_status(self):
-        """Test case for service_order_shipments_update_shipment_status
+    def test_update_shipment_status(self):
+        """Test case for update_shipment_status
 
         """
         pass

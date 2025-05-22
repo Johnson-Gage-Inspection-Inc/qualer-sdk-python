@@ -29,47 +29,47 @@ class TestCompanyApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_company_add_department(self):
-        """Test case for company_add_department
+    def test_add_department(self):
+        """Test case for add_department
 
           # noqa: E501
         """
         pass
 
-    def test_company_delete_department(self):
-        """Test case for company_delete_department
+    def test_delete_department(self):
+        """Test case for delete_department
 
           # noqa: E501
         """
         pass
 
-    def test_company_departments(self):
-        """Test case for company_departments
+    def test_departments(self):
+        """Test case for departments
 
         """
         pass
 
-    def test_company_lookups(self):
-        """Test case for company_lookups
+    def test_lookups(self):
+        """Test case for lookups
 
         """
         pass
 
-    def test_company_site_rooms(self):
-        """Test case for company_site_rooms
+    def test_site_rooms(self):
+        """Test case for site_rooms
 
           # noqa: E501
         """
         pass
 
-    def test_company_sites(self):
-        """Test case for company_sites
+    def test_sites(self):
+        """Test case for sites
 
         """
         pass
 
-    def test_company_update_department(self):
-        """Test case for company_update_department
+    def test_update_department(self):
+        """Test case for update_department
 
           # noqa: E501
         """

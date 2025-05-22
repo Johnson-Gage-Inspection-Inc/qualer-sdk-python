@@ -4,12 +4,12 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**client_attribute_get_client_attributes**](ClientAttributeApi.md#client_attribute_get_client_attributes) | **GET** /api/service/clients/{clientCompanyId}/attributes | 
-[**client_attribute_upsert_client_attribute**](ClientAttributeApi.md#client_attribute_upsert_client_attribute) | **POST** /api/service/clients/{clientCompanyId}/attributes | 
+[**get_client_attributes**](ClientAttributeApi.md#get_client_attributes) | **GET** /api/service/clients/{clientCompanyId}/attributes | 
+[**upsert_client_attribute**](ClientAttributeApi.md#upsert_client_attribute) | **POST** /api/service/clients/{clientCompanyId}/attributes | 
 
 
-# **client_attribute_get_client_attributes**
-> object client_attribute_get_client_attributes(client_company_id)
+# **get_client_attributes**
+> object get_client_attributes(client_company_id)
 
 
 
@@ -26,10 +26,10 @@ api_instance = qualer_sdk.ClientAttributeApi()
 client_company_id = 56 # int | 
 
 try:
-    api_response = api_instance.client_attribute_get_client_attributes(client_company_id)
+    api_response = api_instance.get_client_attributes(client_company_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientAttributeApi->client_attribute_get_client_attributes: %s\n" % e)
+    print("Exception when calling ClientAttributeApi->get_client_attributes: %s\n" % e)
 ```
 
 ### Parameters
@@ -53,8 +53,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **client_attribute_upsert_client_attribute**
-> object client_attribute_upsert_client_attribute(client_company_id, model)
+# **upsert_client_attribute**
+> object upsert_client_attribute(client_company_id, model)
 
 
 
@@ -72,10 +72,10 @@ client_company_id = 56 # int |
 model = qualer_sdk.QualerApiModelsClientAttributesFromClientAttributeModel() # QualerApiModelsClientAttributesFromClientAttributeModel | 
 
 try:
-    api_response = api_instance.client_attribute_upsert_client_attribute(client_company_id, model)
+    api_response = api_instance.upsert_client_attribute(client_company_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientAttributeApi->client_attribute_upsert_client_attribute: %s\n" % e)
+    print("Exception when calling ClientAttributeApi->upsert_client_attribute: %s\n" % e)
 ```
 
 ### Parameters

@@ -29,14 +29,14 @@ class TestEnvironmentsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_environments_get(self):
-        """Test case for environments_get
+    def test_get(self):
+        """Test case for get
 
         """
         pass
 
-    def test_environments_post(self):
-        """Test case for environments_post
+    def test_post(self):
+        """Test case for post
 
         """
         pass

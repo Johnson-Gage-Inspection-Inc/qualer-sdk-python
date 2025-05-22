@@ -33,12 +33,12 @@ class EmployeesApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def employees_add_employee_department(self, employee_id, model, **kwargs):  # noqa: E501
+    def add_employee_department(self, employee_id, model, **kwargs):  # noqa: E501
         """  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employees_add_employee_department(employee_id, model, async_req=True)
+        >>> thread = api.add_employee_department(employee_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -50,17 +50,17 @@ class EmployeesApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.employees_add_employee_department_with_http_info(employee_id, model, **kwargs)  # noqa: E501
+            return self.add_employee_department_with_http_info(employee_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.employees_add_employee_department_with_http_info(employee_id, model, **kwargs)  # noqa: E501
+            (data) = self.add_employee_department_with_http_info(employee_id, model, **kwargs)  # noqa: E501
             return data
 
-    def employees_add_employee_department_with_http_info(self, employee_id, model, **kwargs):  # noqa: E501
+    def add_employee_department_with_http_info(self, employee_id, model, **kwargs):  # noqa: E501
         """  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employees_add_employee_department_with_http_info(employee_id, model, async_req=True)
+        >>> thread = api.add_employee_department_with_http_info(employee_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -82,18 +82,18 @@ class EmployeesApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method employees_add_employee_department" % key
+                    " to method add_employee_department" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'employee_id' is set
         if self.api_client.client_side_validation and ('employee_id' not in params or
                                                        params['employee_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `employee_id` when calling `employees_add_employee_department`")  # noqa: E501
+            raise ValueError("Missing the required parameter `employee_id` when calling `add_employee_department`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `employees_add_employee_department`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `add_employee_department`")  # noqa: E501
 
         collection_formats = {}
 
@@ -138,13 +138,13 @@ class EmployeesApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def employees_create_employee(self, model, **kwargs):  # noqa: E501
+    def create_employee(self, model, **kwargs):  # noqa: E501
         """Create Employee  # noqa: E501
 
         CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />  CultureUiName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"<br />  List of culture codes: GET /api/common/culturelist\"  List of UI culture codes: GET /api/common/cultureuilist\"  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employees_create_employee(model, async_req=True)
+        >>> thread = api.create_employee(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -155,18 +155,18 @@ class EmployeesApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.employees_create_employee_with_http_info(model, **kwargs)  # noqa: E501
+            return self.create_employee_with_http_info(model, **kwargs)  # noqa: E501
         else:
-            (data) = self.employees_create_employee_with_http_info(model, **kwargs)  # noqa: E501
+            (data) = self.create_employee_with_http_info(model, **kwargs)  # noqa: E501
             return data
 
-    def employees_create_employee_with_http_info(self, model, **kwargs):  # noqa: E501
+    def create_employee_with_http_info(self, model, **kwargs):  # noqa: E501
         """Create Employee  # noqa: E501
 
         CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />  CultureUiName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"<br />  List of culture codes: GET /api/common/culturelist\"  List of UI culture codes: GET /api/common/cultureuilist\"  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employees_create_employee_with_http_info(model, async_req=True)
+        >>> thread = api.create_employee_with_http_info(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -187,14 +187,14 @@ class EmployeesApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method employees_create_employee" % key
+                    " to method create_employee" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `employees_create_employee`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `create_employee`")  # noqa: E501
 
         collection_formats = {}
 
@@ -237,12 +237,12 @@ class EmployeesApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def employees_delete_employee_department(self, employee_id, department_id, **kwargs):  # noqa: E501
+    def delete_employee_department(self, employee_id, department_id, **kwargs):  # noqa: E501
         """  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employees_delete_employee_department(employee_id, department_id, async_req=True)
+        >>> thread = api.delete_employee_department(employee_id, department_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -254,17 +254,17 @@ class EmployeesApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.employees_delete_employee_department_with_http_info(employee_id, department_id, **kwargs)  # noqa: E501
+            return self.delete_employee_department_with_http_info(employee_id, department_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.employees_delete_employee_department_with_http_info(employee_id, department_id, **kwargs)  # noqa: E501
+            (data) = self.delete_employee_department_with_http_info(employee_id, department_id, **kwargs)  # noqa: E501
             return data
 
-    def employees_delete_employee_department_with_http_info(self, employee_id, department_id, **kwargs):  # noqa: E501
+    def delete_employee_department_with_http_info(self, employee_id, department_id, **kwargs):  # noqa: E501
         """  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employees_delete_employee_department_with_http_info(employee_id, department_id, async_req=True)
+        >>> thread = api.delete_employee_department_with_http_info(employee_id, department_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -286,18 +286,18 @@ class EmployeesApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method employees_delete_employee_department" % key
+                    " to method delete_employee_department" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'employee_id' is set
         if self.api_client.client_side_validation and ('employee_id' not in params or
                                                        params['employee_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `employee_id` when calling `employees_delete_employee_department`")  # noqa: E501
+            raise ValueError("Missing the required parameter `employee_id` when calling `delete_employee_department`")  # noqa: E501
         # verify the required parameter 'department_id' is set
         if self.api_client.client_side_validation and ('department_id' not in params or
                                                        params['department_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `department_id` when calling `employees_delete_employee_department`")  # noqa: E501
+            raise ValueError("Missing the required parameter `department_id` when calling `delete_employee_department`")  # noqa: E501
 
         collection_formats = {}
 
@@ -338,12 +338,12 @@ class EmployeesApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def employees_get_employee(self, employee_id, **kwargs):  # noqa: E501
-        """employees_get_employee  # noqa: E501
+    def get_employee(self, employee_id, **kwargs):  # noqa: E501
+        """get_employee  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employees_get_employee(employee_id, async_req=True)
+        >>> thread = api.get_employee(employee_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -354,17 +354,17 @@ class EmployeesApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.employees_get_employee_with_http_info(employee_id, **kwargs)  # noqa: E501
+            return self.get_employee_with_http_info(employee_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.employees_get_employee_with_http_info(employee_id, **kwargs)  # noqa: E501
+            (data) = self.get_employee_with_http_info(employee_id, **kwargs)  # noqa: E501
             return data
 
-    def employees_get_employee_with_http_info(self, employee_id, **kwargs):  # noqa: E501
-        """employees_get_employee  # noqa: E501
+    def get_employee_with_http_info(self, employee_id, **kwargs):  # noqa: E501
+        """get_employee  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employees_get_employee_with_http_info(employee_id, async_req=True)
+        >>> thread = api.get_employee_with_http_info(employee_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -385,14 +385,14 @@ class EmployeesApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method employees_get_employee" % key
+                    " to method get_employee" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'employee_id' is set
         if self.api_client.client_side_validation and ('employee_id' not in params or
                                                        params['employee_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `employee_id` when calling `employees_get_employee`")  # noqa: E501
+            raise ValueError("Missing the required parameter `employee_id` when calling `get_employee`")  # noqa: E501
 
         collection_formats = {}
 
@@ -431,12 +431,12 @@ class EmployeesApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def employees_get_employees(self, **kwargs):  # noqa: E501
-        """employees_get_employees  # noqa: E501
+    def get_employees(self, **kwargs):  # noqa: E501
+        """get_employees  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employees_get_employees(async_req=True)
+        >>> thread = api.get_employees(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -447,17 +447,17 @@ class EmployeesApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.employees_get_employees_with_http_info(**kwargs)  # noqa: E501
+            return self.get_employees_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.employees_get_employees_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_employees_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def employees_get_employees_with_http_info(self, **kwargs):  # noqa: E501
-        """employees_get_employees  # noqa: E501
+    def get_employees_with_http_info(self, **kwargs):  # noqa: E501
+        """get_employees  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employees_get_employees_with_http_info(async_req=True)
+        >>> thread = api.get_employees_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -478,7 +478,7 @@ class EmployeesApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method employees_get_employees" % key
+                    " to method get_employees" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -520,13 +520,13 @@ class EmployeesApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def employees_update_employee(self, employee_id, model, **kwargs):  # noqa: E501
+    def update_employee(self, employee_id, model, **kwargs):  # noqa: E501
         """Update Employee  # noqa: E501
 
         CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />  CultureUiName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"<br />  List of culture codes: GET /api/common/culturelist\"  List of UI culture codes: GET /api/common/cultureuilist\"  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employees_update_employee(employee_id, model, async_req=True)
+        >>> thread = api.update_employee(employee_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -538,18 +538,18 @@ class EmployeesApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.employees_update_employee_with_http_info(employee_id, model, **kwargs)  # noqa: E501
+            return self.update_employee_with_http_info(employee_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.employees_update_employee_with_http_info(employee_id, model, **kwargs)  # noqa: E501
+            (data) = self.update_employee_with_http_info(employee_id, model, **kwargs)  # noqa: E501
             return data
 
-    def employees_update_employee_with_http_info(self, employee_id, model, **kwargs):  # noqa: E501
+    def update_employee_with_http_info(self, employee_id, model, **kwargs):  # noqa: E501
         """Update Employee  # noqa: E501
 
         CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />  CultureUiName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"<br />  List of culture codes: GET /api/common/culturelist\"  List of UI culture codes: GET /api/common/cultureuilist\"  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employees_update_employee_with_http_info(employee_id, model, async_req=True)
+        >>> thread = api.update_employee_with_http_info(employee_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -571,18 +571,18 @@ class EmployeesApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method employees_update_employee" % key
+                    " to method update_employee" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'employee_id' is set
         if self.api_client.client_side_validation and ('employee_id' not in params or
                                                        params['employee_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `employee_id` when calling `employees_update_employee`")  # noqa: E501
+            raise ValueError("Missing the required parameter `employee_id` when calling `update_employee`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `employees_update_employee`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `update_employee`")  # noqa: E501
 
         collection_formats = {}
 

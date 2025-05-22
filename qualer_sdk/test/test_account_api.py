@@ -29,40 +29,40 @@ class TestAccountApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_account_companies(self):
-        """Test case for account_companies
+    def test_companies(self):
+        """Test case for companies
 
         """
         pass
 
-    def test_account_get_employee_message(self):
-        """Test case for account_get_employee_message
+    def test_get_employee_message(self):
+        """Test case for get_employee_message
 
         """
         pass
 
-    def test_account_get_employee_messages(self):
-        """Test case for account_get_employee_messages
+    def test_get_employee_messages(self):
+        """Test case for get_employee_messages
 
         """
         pass
 
-    def test_account_login(self):
-        """Test case for account_login
+    def test_login(self):
+        """Test case for login
 
         Login  # noqa: E501
         """
         pass
 
-    def test_account_logout(self):
-        """Test case for account_logout
+    def test_logout(self):
+        """Test case for logout
 
         Logout  # noqa: E501
         """
         pass
 
-    def test_account_post_employee_location(self):
-        """Test case for account_post_employee_location
+    def test_post_employee_location(self):
+        """Test case for post_employee_location
 
         Post Employee Location  # noqa: E501
         """

@@ -29,26 +29,26 @@ class TestServiceOrderItemTasksApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_service_order_item_tasks_create_work_item_task(self):
-        """Test case for service_order_item_tasks_create_work_item_task
+    def test_create_work_item_task(self):
+        """Test case for create_work_item_task
 
         """
         pass
 
-    def test_service_order_item_tasks_delete_work_item_task(self):
-        """Test case for service_order_item_tasks_delete_work_item_task
+    def test_delete_work_item_task(self):
+        """Test case for delete_work_item_task
 
         """
         pass
 
-    def test_service_order_item_tasks_get_work_item_task(self):
-        """Test case for service_order_item_tasks_get_work_item_task
+    def test_get_work_item_task(self):
+        """Test case for get_work_item_task
 
         """
         pass
 
-    def test_service_order_item_tasks_get_work_item_tasks(self):
-        """Test case for service_order_item_tasks_get_work_item_tasks
+    def test_get_work_item_tasks(self):
+        """Test case for get_work_item_tasks
 
         """
         pass

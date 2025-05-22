@@ -4,12 +4,12 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**reference_get_measurement_quantities**](ReferenceApi.md#reference_get_measurement_quantities) | **GET** /api/reference/MeasurementQuantities | 
-[**reference_get_units_of_measure**](ReferenceApi.md#reference_get_units_of_measure) | **GET** /api/reference/UnitsOfMeasure | 
+[**get_measurement_quantities**](ReferenceApi.md#get_measurement_quantities) | **GET** /api/reference/MeasurementQuantities | 
+[**get_units_of_measure**](ReferenceApi.md#get_units_of_measure) | **GET** /api/reference/UnitsOfMeasure | 
 
 
-# **reference_get_measurement_quantities**
-> list[QualerApiModelsReferenceToMeasurementQuantityResponse] reference_get_measurement_quantities()
+# **get_measurement_quantities**
+> list[QualerApiModelsReferenceToMeasurementQuantityResponse] get_measurement_quantities()
 
 
 
@@ -25,10 +25,10 @@ from pprint import pprint
 api_instance = qualer_sdk.ReferenceApi()
 
 try:
-    api_response = api_instance.reference_get_measurement_quantities()
+    api_response = api_instance.get_measurement_quantities()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ReferenceApi->reference_get_measurement_quantities: %s\n" % e)
+    print("Exception when calling ReferenceApi->get_measurement_quantities: %s\n" % e)
 ```
 
 ### Parameters
@@ -49,8 +49,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **reference_get_units_of_measure**
-> list[QualerApiModelsReferenceToUnitOfMeasureResponse] reference_get_units_of_measure()
+# **get_units_of_measure**
+> list[QualerApiModelsReferenceToUnitOfMeasureResponse] get_units_of_measure()
 
 
 
@@ -66,10 +66,10 @@ from pprint import pprint
 api_instance = qualer_sdk.ReferenceApi()
 
 try:
-    api_response = api_instance.reference_get_units_of_measure()
+    api_response = api_instance.get_units_of_measure()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ReferenceApi->reference_get_units_of_measure: %s\n" % e)
+    print("Exception when calling ReferenceApi->get_units_of_measure: %s\n" % e)
 ```
 
 ### Parameters

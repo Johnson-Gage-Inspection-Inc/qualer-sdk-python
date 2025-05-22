@@ -4,14 +4,14 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**vendors_create**](VendorsApi.md#vendors_create) | **POST** /api/service/vendors | Create Vendor information.
-[**vendors_get**](VendorsApi.md#vendors_get) | **GET** /api/service/vendors/{vendorCompanyId} | 
-[**vendors_get_all**](VendorsApi.md#vendors_get_all) | **GET** /api/service/vendors | 
-[**vendors_update**](VendorsApi.md#vendors_update) | **PUT** /api/service/vendors | Update Vendor information.
+[**create**](VendorsApi.md#create) | **POST** /api/service/vendors | Create Vendor information.
+[**get**](VendorsApi.md#get) | **GET** /api/service/vendors/{vendorCompanyId} | 
+[**get_all**](VendorsApi.md#get_all) | **GET** /api/service/vendors | 
+[**update**](VendorsApi.md#update) | **PUT** /api/service/vendors | Update Vendor information.
 
 
-# **vendors_create**
-> QualerApiModelsVendorsToCreatedVendorCompanyResponse vendors_create(model)
+# **create**
+> QualerApiModelsVendorsToCreatedVendorCompanyResponse create(model)
 
 Create Vendor information.
 
@@ -31,10 +31,10 @@ model = qualer_sdk.QualerApiModelsVendorsFromSponsoredVendorCreateModel() # Qual
 
 try:
     # Create Vendor information.
-    api_response = api_instance.vendors_create(model)
+    api_response = api_instance.create(model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling VendorsApi->vendors_create: %s\n" % e)
+    print("Exception when calling VendorsApi->create: %s\n" % e)
 ```
 
 ### Parameters
@@ -58,8 +58,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **vendors_get**
-> QualerApiModelsVendorsToVendorCompanyResponseModel vendors_get(vendor_company_id)
+# **get**
+> QualerApiModelsVendorsToVendorCompanyResponseModel get(vendor_company_id)
 
 
 
@@ -76,10 +76,10 @@ api_instance = qualer_sdk.VendorsApi()
 vendor_company_id = 56 # int | 
 
 try:
-    api_response = api_instance.vendors_get(vendor_company_id)
+    api_response = api_instance.get(vendor_company_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling VendorsApi->vendors_get: %s\n" % e)
+    print("Exception when calling VendorsApi->get: %s\n" % e)
 ```
 
 ### Parameters
@@ -103,8 +103,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **vendors_get_all**
-> list[QualerApiModelsVendorsToVendorCompanyResponseModel] vendors_get_all(model_account_number_text=model_account_number_text, model_company_name=model_company_name, model_take=model_take, model_modified_after=model_modified_after)
+# **get_all**
+> list[QualerApiModelsVendorsToVendorCompanyResponseModel] get_all(model_account_number_text=model_account_number_text, model_company_name=model_company_name, model_take=model_take, model_modified_after=model_modified_after)
 
 
 
@@ -124,10 +124,10 @@ model_take = 56 # int |  (optional)
 model_modified_after = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 
 try:
-    api_response = api_instance.vendors_get_all(model_account_number_text=model_account_number_text, model_company_name=model_company_name, model_take=model_take, model_modified_after=model_modified_after)
+    api_response = api_instance.get_all(model_account_number_text=model_account_number_text, model_company_name=model_company_name, model_take=model_take, model_modified_after=model_modified_after)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling VendorsApi->vendors_get_all: %s\n" % e)
+    print("Exception when calling VendorsApi->get_all: %s\n" % e)
 ```
 
 ### Parameters
@@ -154,8 +154,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **vendors_update**
-> object vendors_update(model)
+# **update**
+> object update(model)
 
 Update Vendor information.
 
@@ -175,10 +175,10 @@ model = qualer_sdk.QualerApiModelsVendorsFromSponsoredVendorEditModel() # Qualer
 
 try:
     # Update Vendor information.
-    api_response = api_instance.vendors_update(model)
+    api_response = api_instance.update(model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling VendorsApi->vendors_update: %s\n" % e)
+    print("Exception when calling VendorsApi->update: %s\n" % e)
 ```
 
 ### Parameters

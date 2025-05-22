@@ -4,13 +4,13 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**client_site_create_client_site**](ClientSiteApi.md#client_site_create_client_site) | **POST** /api/service/clients/{clientCompanyId}/sites | Create Client Site.
-[**client_site_get_client_sites**](ClientSiteApi.md#client_site_get_client_sites) | **GET** /api/service/clients/{clientCompanyId}/sites | 
-[**client_site_update_client_site**](ClientSiteApi.md#client_site_update_client_site) | **PUT** /api/service/clients/{clientCompanyId}/sites | Update Client Site.
+[**create_client_site**](ClientSiteApi.md#create_client_site) | **POST** /api/service/clients/{clientCompanyId}/sites | Create Client Site.
+[**get_client_sites**](ClientSiteApi.md#get_client_sites) | **GET** /api/service/clients/{clientCompanyId}/sites | 
+[**update_client_site**](ClientSiteApi.md#update_client_site) | **PUT** /api/service/clients/{clientCompanyId}/sites | Update Client Site.
 
 
-# **client_site_create_client_site**
-> object client_site_create_client_site(client_company_id, model)
+# **create_client_site**
+> object create_client_site(client_company_id, model)
 
 Create Client Site.
 
@@ -31,10 +31,10 @@ model = qualer_sdk.QualerApiModelsSiteFromSiteCreateModel() # QualerApiModelsSit
 
 try:
     # Create Client Site.
-    api_response = api_instance.client_site_create_client_site(client_company_id, model)
+    api_response = api_instance.create_client_site(client_company_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientSiteApi->client_site_create_client_site: %s\n" % e)
+    print("Exception when calling ClientSiteApi->create_client_site: %s\n" % e)
 ```
 
 ### Parameters
@@ -59,8 +59,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **client_site_get_client_sites**
-> list[QualerApiModelsSiteToClientSiteResponse] client_site_get_client_sites(client_company_id)
+# **get_client_sites**
+> list[QualerApiModelsSiteToClientSiteResponse] get_client_sites(client_company_id)
 
 
 
@@ -77,10 +77,10 @@ api_instance = qualer_sdk.ClientSiteApi()
 client_company_id = 56 # int | 
 
 try:
-    api_response = api_instance.client_site_get_client_sites(client_company_id)
+    api_response = api_instance.get_client_sites(client_company_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientSiteApi->client_site_get_client_sites: %s\n" % e)
+    print("Exception when calling ClientSiteApi->get_client_sites: %s\n" % e)
 ```
 
 ### Parameters
@@ -104,8 +104,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **client_site_update_client_site**
-> object client_site_update_client_site(client_company_id, model)
+# **update_client_site**
+> object update_client_site(client_company_id, model)
 
 Update Client Site.
 
@@ -126,10 +126,10 @@ model = qualer_sdk.QualerApiModelsSiteFromSiteUpdateModel() # QualerApiModelsSit
 
 try:
     # Update Client Site.
-    api_response = api_instance.client_site_update_client_site(client_company_id, model)
+    api_response = api_instance.update_client_site(client_company_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ClientSiteApi->client_site_update_client_site: %s\n" % e)
+    print("Exception when calling ClientSiteApi->update_client_site: %s\n" % e)
 ```
 
 ### Parameters

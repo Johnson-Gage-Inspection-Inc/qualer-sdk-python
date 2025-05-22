@@ -4,12 +4,12 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**maintenance_plans_get_maintenance_plan_assets**](MaintenancePlansApi.md#maintenance_plans_get_maintenance_plan_assets) | **GET** /api/plans/{maintenancePlanId}/assets | 
-[**maintenance_plans_get_maintenance_plans**](MaintenancePlansApi.md#maintenance_plans_get_maintenance_plans) | **GET** /api/plans | 
+[**get_maintenance_plan_assets**](MaintenancePlansApi.md#get_maintenance_plan_assets) | **GET** /api/plans/{maintenancePlanId}/assets | 
+[**get_maintenance_plans**](MaintenancePlansApi.md#get_maintenance_plans) | **GET** /api/plans | 
 
 
-# **maintenance_plans_get_maintenance_plan_assets**
-> list[QualerApiModelsAssetToAssetForecastApiResponseModel] maintenance_plans_get_maintenance_plan_assets(maintenance_plan_id)
+# **get_maintenance_plan_assets**
+> list[QualerApiModelsAssetToAssetForecastApiResponseModel] get_maintenance_plan_assets(maintenance_plan_id)
 
 
 
@@ -26,10 +26,10 @@ api_instance = qualer_sdk.MaintenancePlansApi()
 maintenance_plan_id = 56 # int | 
 
 try:
-    api_response = api_instance.maintenance_plans_get_maintenance_plan_assets(maintenance_plan_id)
+    api_response = api_instance.get_maintenance_plan_assets(maintenance_plan_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling MaintenancePlansApi->maintenance_plans_get_maintenance_plan_assets: %s\n" % e)
+    print("Exception when calling MaintenancePlansApi->get_maintenance_plan_assets: %s\n" % e)
 ```
 
 ### Parameters
@@ -53,8 +53,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **maintenance_plans_get_maintenance_plans**
-> list[QualerApiModelsMaintenancePlansToMaintenancePlanResponse] maintenance_plans_get_maintenance_plans()
+# **get_maintenance_plans**
+> list[QualerApiModelsMaintenancePlansToMaintenancePlanResponse] get_maintenance_plans()
 
 
 
@@ -70,10 +70,10 @@ from pprint import pprint
 api_instance = qualer_sdk.MaintenancePlansApi()
 
 try:
-    api_response = api_instance.maintenance_plans_get_maintenance_plans()
+    api_response = api_instance.get_maintenance_plans()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling MaintenancePlansApi->maintenance_plans_get_maintenance_plans: %s\n" % e)
+    print("Exception when calling MaintenancePlansApi->get_maintenance_plans: %s\n" % e)
 ```
 
 ### Parameters

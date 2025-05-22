@@ -33,12 +33,12 @@ class ServiceOrderItemMeasurementsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def service_order_item_measurements_add_auxiliary_tools(self, work_item_id, models, **kwargs):  # noqa: E501
-        """service_order_item_measurements_add_auxiliary_tools  # noqa: E501
+    def add_auxiliary_tools(self, work_item_id, models, **kwargs):  # noqa: E501
+        """add_auxiliary_tools  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_measurements_add_auxiliary_tools(work_item_id, models, async_req=True)
+        >>> thread = api.add_auxiliary_tools(work_item_id, models, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -50,17 +50,17 @@ class ServiceOrderItemMeasurementsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_item_measurements_add_auxiliary_tools_with_http_info(work_item_id, models, **kwargs)  # noqa: E501
+            return self.add_auxiliary_tools_with_http_info(work_item_id, models, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_item_measurements_add_auxiliary_tools_with_http_info(work_item_id, models, **kwargs)  # noqa: E501
+            (data) = self.add_auxiliary_tools_with_http_info(work_item_id, models, **kwargs)  # noqa: E501
             return data
 
-    def service_order_item_measurements_add_auxiliary_tools_with_http_info(self, work_item_id, models, **kwargs):  # noqa: E501
-        """service_order_item_measurements_add_auxiliary_tools  # noqa: E501
+    def add_auxiliary_tools_with_http_info(self, work_item_id, models, **kwargs):  # noqa: E501
+        """add_auxiliary_tools  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_measurements_add_auxiliary_tools_with_http_info(work_item_id, models, async_req=True)
+        >>> thread = api.add_auxiliary_tools_with_http_info(work_item_id, models, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -82,18 +82,18 @@ class ServiceOrderItemMeasurementsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_item_measurements_add_auxiliary_tools" % key
+                    " to method add_auxiliary_tools" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'work_item_id' is set
         if self.api_client.client_side_validation and ('work_item_id' not in params or
                                                        params['work_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `work_item_id` when calling `service_order_item_measurements_add_auxiliary_tools`")  # noqa: E501
+            raise ValueError("Missing the required parameter `work_item_id` when calling `add_auxiliary_tools`")  # noqa: E501
         # verify the required parameter 'models' is set
         if self.api_client.client_side_validation and ('models' not in params or
                                                        params['models'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `models` when calling `service_order_item_measurements_add_auxiliary_tools`")  # noqa: E501
+            raise ValueError("Missing the required parameter `models` when calling `add_auxiliary_tools`")  # noqa: E501
 
         collection_formats = {}
 
@@ -138,13 +138,13 @@ class ServiceOrderItemMeasurementsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_order_item_measurements_create_measurement_form(self, work_item_id, model, **kwargs):  # noqa: E501
+    def create_measurement_form(self, work_item_id, model, **kwargs):  # noqa: E501
         """Create Measurement Form.  # noqa: E501
 
         BatchType: AsLeft, AsFound.                BatchResult: NotServiced, Fail, FailAmbiguous, FailSignificant, Pass, PassAmbiguous, PassAdjustment, Done, Pending.                CustomFields.Result: NotServiced, Fail, Pass.                ToleranceType: Percentage, Range, Offset, PercentagePlus, Ppm, PpmPlus, Function.                ToleranceMode: Symmetric, Asymmetric, Range.                ToleranceUnit: Percentage, UnitOfMeasure, Ppm.                PrecisionType: Percentage, UnitOfMeasure.                ChannelsType: Combined, IndividualAcross, IndividualDown, OneOf.                Measurement.Result: NotServiced, Fail, FailAmbiguous, FailSignificant, Pass, PassAmbiguous, PassAdjustment, Done, Pending.                FactorId: AmbientTemperature, AirHumidity, BarometricPressure, EvaporationRate, AirBuoyancy, ZFactor, Altitude, WindSpeed, SolarRadiation, LightIntensity, NoiseLevel, PhLevel, WaterConductivity3, WaterTemperature.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_measurements_create_measurement_form(work_item_id, model, async_req=True)
+        >>> thread = api.create_measurement_form(work_item_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -156,18 +156,18 @@ class ServiceOrderItemMeasurementsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_item_measurements_create_measurement_form_with_http_info(work_item_id, model, **kwargs)  # noqa: E501
+            return self.create_measurement_form_with_http_info(work_item_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_item_measurements_create_measurement_form_with_http_info(work_item_id, model, **kwargs)  # noqa: E501
+            (data) = self.create_measurement_form_with_http_info(work_item_id, model, **kwargs)  # noqa: E501
             return data
 
-    def service_order_item_measurements_create_measurement_form_with_http_info(self, work_item_id, model, **kwargs):  # noqa: E501
+    def create_measurement_form_with_http_info(self, work_item_id, model, **kwargs):  # noqa: E501
         """Create Measurement Form.  # noqa: E501
 
         BatchType: AsLeft, AsFound.                BatchResult: NotServiced, Fail, FailAmbiguous, FailSignificant, Pass, PassAmbiguous, PassAdjustment, Done, Pending.                CustomFields.Result: NotServiced, Fail, Pass.                ToleranceType: Percentage, Range, Offset, PercentagePlus, Ppm, PpmPlus, Function.                ToleranceMode: Symmetric, Asymmetric, Range.                ToleranceUnit: Percentage, UnitOfMeasure, Ppm.                PrecisionType: Percentage, UnitOfMeasure.                ChannelsType: Combined, IndividualAcross, IndividualDown, OneOf.                Measurement.Result: NotServiced, Fail, FailAmbiguous, FailSignificant, Pass, PassAmbiguous, PassAdjustment, Done, Pending.                FactorId: AmbientTemperature, AirHumidity, BarometricPressure, EvaporationRate, AirBuoyancy, ZFactor, Altitude, WindSpeed, SolarRadiation, LightIntensity, NoiseLevel, PhLevel, WaterConductivity3, WaterTemperature.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_measurements_create_measurement_form_with_http_info(work_item_id, model, async_req=True)
+        >>> thread = api.create_measurement_form_with_http_info(work_item_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -189,18 +189,18 @@ class ServiceOrderItemMeasurementsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_item_measurements_create_measurement_form" % key
+                    " to method create_measurement_form" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'work_item_id' is set
         if self.api_client.client_side_validation and ('work_item_id' not in params or
                                                        params['work_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `work_item_id` when calling `service_order_item_measurements_create_measurement_form`")  # noqa: E501
+            raise ValueError("Missing the required parameter `work_item_id` when calling `create_measurement_form`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `service_order_item_measurements_create_measurement_form`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `create_measurement_form`")  # noqa: E501
 
         collection_formats = {}
 
@@ -245,12 +245,12 @@ class ServiceOrderItemMeasurementsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_order_item_measurements_get_measurement_form(self, work_item_id, **kwargs):  # noqa: E501
+    def get_measurement_form(self, work_item_id, **kwargs):  # noqa: E501
         """Get Measurement Form.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_measurements_get_measurement_form(work_item_id, async_req=True)
+        >>> thread = api.get_measurement_form(work_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -261,17 +261,17 @@ class ServiceOrderItemMeasurementsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_item_measurements_get_measurement_form_with_http_info(work_item_id, **kwargs)  # noqa: E501
+            return self.get_measurement_form_with_http_info(work_item_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_item_measurements_get_measurement_form_with_http_info(work_item_id, **kwargs)  # noqa: E501
+            (data) = self.get_measurement_form_with_http_info(work_item_id, **kwargs)  # noqa: E501
             return data
 
-    def service_order_item_measurements_get_measurement_form_with_http_info(self, work_item_id, **kwargs):  # noqa: E501
+    def get_measurement_form_with_http_info(self, work_item_id, **kwargs):  # noqa: E501
         """Get Measurement Form.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_measurements_get_measurement_form_with_http_info(work_item_id, async_req=True)
+        >>> thread = api.get_measurement_form_with_http_info(work_item_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -292,14 +292,14 @@ class ServiceOrderItemMeasurementsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_item_measurements_get_measurement_form" % key
+                    " to method get_measurement_form" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'work_item_id' is set
         if self.api_client.client_side_validation and ('work_item_id' not in params or
                                                        params['work_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `work_item_id` when calling `service_order_item_measurements_get_measurement_form`")  # noqa: E501
+            raise ValueError("Missing the required parameter `work_item_id` when calling `get_measurement_form`")  # noqa: E501
 
         collection_formats = {}
 
@@ -338,12 +338,12 @@ class ServiceOrderItemMeasurementsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_order_item_measurements_get_measurements_by_asset(self, asset_id, **kwargs):  # noqa: E501
-        """service_order_item_measurements_get_measurements_by_asset  # noqa: E501
+    def get_measurements_by_asset(self, asset_id, **kwargs):  # noqa: E501
+        """get_measurements_by_asset  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_measurements_get_measurements_by_asset(asset_id, async_req=True)
+        >>> thread = api.get_measurements_by_asset(asset_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -356,17 +356,17 @@ class ServiceOrderItemMeasurementsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_item_measurements_get_measurements_by_asset_with_http_info(asset_id, **kwargs)  # noqa: E501
+            return self.get_measurements_by_asset_with_http_info(asset_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_item_measurements_get_measurements_by_asset_with_http_info(asset_id, **kwargs)  # noqa: E501
+            (data) = self.get_measurements_by_asset_with_http_info(asset_id, **kwargs)  # noqa: E501
             return data
 
-    def service_order_item_measurements_get_measurements_by_asset_with_http_info(self, asset_id, **kwargs):  # noqa: E501
-        """service_order_item_measurements_get_measurements_by_asset  # noqa: E501
+    def get_measurements_by_asset_with_http_info(self, asset_id, **kwargs):  # noqa: E501
+        """get_measurements_by_asset  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_measurements_get_measurements_by_asset_with_http_info(asset_id, async_req=True)
+        >>> thread = api.get_measurements_by_asset_with_http_info(asset_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -389,14 +389,14 @@ class ServiceOrderItemMeasurementsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_item_measurements_get_measurements_by_asset" % key
+                    " to method get_measurements_by_asset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'asset_id' is set
         if self.api_client.client_side_validation and ('asset_id' not in params or
                                                        params['asset_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `asset_id` when calling `service_order_item_measurements_get_measurements_by_asset`")  # noqa: E501
+            raise ValueError("Missing the required parameter `asset_id` when calling `get_measurements_by_asset`")  # noqa: E501
 
         collection_formats = {}
 
@@ -439,12 +439,12 @@ class ServiceOrderItemMeasurementsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def service_order_item_measurements_update_measurement_form(self, work_item_id, model, **kwargs):  # noqa: E501
+    def update_measurement_form(self, work_item_id, model, **kwargs):  # noqa: E501
         """Update Measurement Form.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_measurements_update_measurement_form(work_item_id, model, async_req=True)
+        >>> thread = api.update_measurement_form(work_item_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -456,17 +456,17 @@ class ServiceOrderItemMeasurementsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.service_order_item_measurements_update_measurement_form_with_http_info(work_item_id, model, **kwargs)  # noqa: E501
+            return self.update_measurement_form_with_http_info(work_item_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.service_order_item_measurements_update_measurement_form_with_http_info(work_item_id, model, **kwargs)  # noqa: E501
+            (data) = self.update_measurement_form_with_http_info(work_item_id, model, **kwargs)  # noqa: E501
             return data
 
-    def service_order_item_measurements_update_measurement_form_with_http_info(self, work_item_id, model, **kwargs):  # noqa: E501
+    def update_measurement_form_with_http_info(self, work_item_id, model, **kwargs):  # noqa: E501
         """Update Measurement Form.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.service_order_item_measurements_update_measurement_form_with_http_info(work_item_id, model, async_req=True)
+        >>> thread = api.update_measurement_form_with_http_info(work_item_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -488,18 +488,18 @@ class ServiceOrderItemMeasurementsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method service_order_item_measurements_update_measurement_form" % key
+                    " to method update_measurement_form" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'work_item_id' is set
         if self.api_client.client_side_validation and ('work_item_id' not in params or
                                                        params['work_item_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `work_item_id` when calling `service_order_item_measurements_update_measurement_form`")  # noqa: E501
+            raise ValueError("Missing the required parameter `work_item_id` when calling `update_measurement_form`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `service_order_item_measurements_update_measurement_form`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `update_measurement_form`")  # noqa: E501
 
         collection_formats = {}
 

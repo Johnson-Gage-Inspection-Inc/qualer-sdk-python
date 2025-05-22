@@ -33,12 +33,12 @@ class EmployeeFilterPreferenceApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def employee_filter_preference_get_employee_filter_preferences(self, **kwargs):  # noqa: E501
+    def get_employee_filter_preferences(self, **kwargs):  # noqa: E501
         """GetEmployeeFilterPreferences  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employee_filter_preference_get_employee_filter_preferences(async_req=True)
+        >>> thread = api.get_employee_filter_preferences(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -48,17 +48,17 @@ class EmployeeFilterPreferenceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.employee_filter_preference_get_employee_filter_preferences_with_http_info(**kwargs)  # noqa: E501
+            return self.get_employee_filter_preferences_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.employee_filter_preference_get_employee_filter_preferences_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_employee_filter_preferences_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def employee_filter_preference_get_employee_filter_preferences_with_http_info(self, **kwargs):  # noqa: E501
+    def get_employee_filter_preferences_with_http_info(self, **kwargs):  # noqa: E501
         """GetEmployeeFilterPreferences  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employee_filter_preference_get_employee_filter_preferences_with_http_info(async_req=True)
+        >>> thread = api.get_employee_filter_preferences_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -78,7 +78,7 @@ class EmployeeFilterPreferenceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method employee_filter_preference_get_employee_filter_preferences" % key
+                    " to method get_employee_filter_preferences" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -118,12 +118,12 @@ class EmployeeFilterPreferenceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def employee_filter_preference_update_employee_filter_preference(self, model, **kwargs):  # noqa: E501
+    def update_employee_filter_preference(self, model, **kwargs):  # noqa: E501
         """UpdateEmployeeFilterPreference  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employee_filter_preference_update_employee_filter_preference(model, async_req=True)
+        >>> thread = api.update_employee_filter_preference(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -134,17 +134,17 @@ class EmployeeFilterPreferenceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.employee_filter_preference_update_employee_filter_preference_with_http_info(model, **kwargs)  # noqa: E501
+            return self.update_employee_filter_preference_with_http_info(model, **kwargs)  # noqa: E501
         else:
-            (data) = self.employee_filter_preference_update_employee_filter_preference_with_http_info(model, **kwargs)  # noqa: E501
+            (data) = self.update_employee_filter_preference_with_http_info(model, **kwargs)  # noqa: E501
             return data
 
-    def employee_filter_preference_update_employee_filter_preference_with_http_info(self, model, **kwargs):  # noqa: E501
+    def update_employee_filter_preference_with_http_info(self, model, **kwargs):  # noqa: E501
         """UpdateEmployeeFilterPreference  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employee_filter_preference_update_employee_filter_preference_with_http_info(model, async_req=True)
+        >>> thread = api.update_employee_filter_preference_with_http_info(model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -165,14 +165,14 @@ class EmployeeFilterPreferenceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method employee_filter_preference_update_employee_filter_preference" % key
+                    " to method update_employee_filter_preference" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `employee_filter_preference_update_employee_filter_preference`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `update_employee_filter_preference`")  # noqa: E501
 
         collection_formats = {}
 

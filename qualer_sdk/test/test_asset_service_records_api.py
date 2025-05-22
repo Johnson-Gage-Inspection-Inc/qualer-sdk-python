@@ -29,56 +29,56 @@ class TestAssetServiceRecordsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_asset_service_records_add_asset_service_record(self):
-        """Test case for asset_service_records_add_asset_service_record
+    def test_add_asset_service_record(self):
+        """Test case for add_asset_service_record
 
         """
         pass
 
-    def test_asset_service_records_document_list(self):
-        """Test case for asset_service_records_document_list
+    def test_document_list(self):
+        """Test case for document_list
 
         """
         pass
 
-    def test_asset_service_records_download_document(self):
-        """Test case for asset_service_records_download_document
+    def test_download_document(self):
+        """Test case for download_document
 
         """
         pass
 
-    def test_asset_service_records_download_documents(self):
-        """Test case for asset_service_records_download_documents
+    def test_download_documents(self):
+        """Test case for download_documents
 
         """
         pass
 
-    def test_asset_service_records_get_asset_service_record(self):
-        """Test case for asset_service_records_get_asset_service_record
+    def test_get_asset_service_record(self):
+        """Test case for get_asset_service_record
 
         """
         pass
 
-    def test_asset_service_records_get_asset_service_records(self):
-        """Test case for asset_service_records_get_asset_service_records
+    def test_get_asset_service_records(self):
+        """Test case for get_asset_service_records
 
         """
         pass
 
-    def test_asset_service_records_get_asset_service_records_by_asset(self):
-        """Test case for asset_service_records_get_asset_service_records_by_asset
+    def test_get_asset_service_records_by_asset(self):
+        """Test case for get_asset_service_records_by_asset
 
         """
         pass
 
-    def test_asset_service_records_update_asset_service_record(self):
-        """Test case for asset_service_records_update_asset_service_record
+    def test_update_asset_service_record(self):
+        """Test case for update_asset_service_record
 
         """
         pass
 
-    def test_asset_service_records_upload_documents(self):
-        """Test case for asset_service_records_upload_documents
+    def test_upload_documents(self):
+        """Test case for upload_documents
 
         """
         pass

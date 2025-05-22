@@ -4,21 +4,21 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**service_orders_change_order_status**](ServiceOrdersApi.md#service_orders_change_order_status) | **PUT** /api/service/workorders/{serviceOrderId}/status | Change Work Order Status
-[**service_orders_create_async**](ServiceOrdersApi.md#service_orders_create_async) | **POST** /api/service/workorders | Create service order.
-[**service_orders_create_order_by_schedule**](ServiceOrdersApi.md#service_orders_create_order_by_schedule) | **POST** /api/service/workorders/byplan/{serviceScheduleId} | 
-[**service_orders_get_assignments**](ServiceOrdersApi.md#service_orders_get_assignments) | **GET** /api/service/workorders/{serviceOrderId}/assignments | 
-[**service_orders_get_charges**](ServiceOrdersApi.md#service_orders_get_charges) | **GET** /api/service/workorders/{serviceOrderId}/charges | 
-[**service_orders_get_order_status**](ServiceOrdersApi.md#service_orders_get_order_status) | **GET** /api/service/workorders/{serviceOrderId}/status | Gets current status and next status according to the workflow
-[**service_orders_get_work_order**](ServiceOrdersApi.md#service_orders_get_work_order) | **GET** /api/service/workorders/{serviceOrderId} | 
-[**service_orders_get_work_orders**](ServiceOrdersApi.md#service_orders_get_work_orders) | **GET** /api/service/workorders | Retrieve work orders by filters
-[**service_orders_get_work_orders_0**](ServiceOrdersApi.md#service_orders_get_work_orders_0) | **GET** /api/employee/{employeeId}/workorders | 
-[**service_orders_order_cancel**](ServiceOrdersApi.md#service_orders_order_cancel) | **PUT** /api/service/workorders/{serviceOrderId}/cancel | Cancel work order
-[**service_orders_put_charges**](ServiceOrdersApi.md#service_orders_put_charges) | **PUT** /api/service/workorders/{serviceOrderId}/charges | Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount, ShippingFee
+[**change_order_status**](ServiceOrdersApi.md#change_order_status) | **PUT** /api/service/workorders/{serviceOrderId}/status | Change Work Order Status
+[**create_async**](ServiceOrdersApi.md#create_async) | **POST** /api/service/workorders | Create service order.
+[**create_order_by_schedule**](ServiceOrdersApi.md#create_order_by_schedule) | **POST** /api/service/workorders/byplan/{serviceScheduleId} | 
+[**get_assignments**](ServiceOrdersApi.md#get_assignments) | **GET** /api/service/workorders/{serviceOrderId}/assignments | 
+[**get_charges**](ServiceOrdersApi.md#get_charges) | **GET** /api/service/workorders/{serviceOrderId}/charges | 
+[**get_order_status**](ServiceOrdersApi.md#get_order_status) | **GET** /api/service/workorders/{serviceOrderId}/status | Gets current status and next status according to the workflow
+[**get_work_order**](ServiceOrdersApi.md#get_work_order) | **GET** /api/service/workorders/{serviceOrderId} | 
+[**get_work_orders**](ServiceOrdersApi.md#get_work_orders) | **GET** /api/service/workorders | Retrieve work orders by filters
+[**get_work_orders_0**](ServiceOrdersApi.md#get_work_orders_0) | **GET** /api/employee/{employeeId}/workorders | 
+[**order_cancel**](ServiceOrdersApi.md#order_cancel) | **PUT** /api/service/workorders/{serviceOrderId}/cancel | Cancel work order
+[**put_charges**](ServiceOrdersApi.md#put_charges) | **PUT** /api/service/workorders/{serviceOrderId}/charges | Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount, ShippingFee
 
 
-# **service_orders_change_order_status**
-> object service_orders_change_order_status(service_order_id, model)
+# **change_order_status**
+> object change_order_status(service_order_id, model)
 
 Change Work Order Status
 
@@ -37,10 +37,10 @@ model = qualer_sdk.QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel
 
 try:
     # Change Work Order Status
-    api_response = api_instance.service_orders_change_order_status(service_order_id, model)
+    api_response = api_instance.change_order_status(service_order_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrdersApi->service_orders_change_order_status: %s\n" % e)
+    print("Exception when calling ServiceOrdersApi->change_order_status: %s\n" % e)
 ```
 
 ### Parameters
@@ -65,8 +65,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_orders_create_async**
-> object service_orders_create_async(model)
+# **create_async**
+> object create_async(model)
 
 Create service order.
 
@@ -86,10 +86,10 @@ model = qualer_sdk.QualerApiModelsServiceOrdersFromCreateOrderModel() # QualerAp
 
 try:
     # Create service order.
-    api_response = api_instance.service_orders_create_async(model)
+    api_response = api_instance.create_async(model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrdersApi->service_orders_create_async: %s\n" % e)
+    print("Exception when calling ServiceOrdersApi->create_async: %s\n" % e)
 ```
 
 ### Parameters
@@ -113,8 +113,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_orders_create_order_by_schedule**
-> object service_orders_create_order_by_schedule(service_schedule_id)
+# **create_order_by_schedule**
+> object create_order_by_schedule(service_schedule_id)
 
 
 
@@ -131,10 +131,10 @@ api_instance = qualer_sdk.ServiceOrdersApi()
 service_schedule_id = 56 # int | 
 
 try:
-    api_response = api_instance.service_orders_create_order_by_schedule(service_schedule_id)
+    api_response = api_instance.create_order_by_schedule(service_schedule_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrdersApi->service_orders_create_order_by_schedule: %s\n" % e)
+    print("Exception when calling ServiceOrdersApi->create_order_by_schedule: %s\n" % e)
 ```
 
 ### Parameters
@@ -158,8 +158,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_orders_get_assignments**
-> list[QualerApiModelsServiceOrdersToOrderAssignmentResponseModel] service_orders_get_assignments(service_order_id)
+# **get_assignments**
+> list[QualerApiModelsServiceOrdersToOrderAssignmentResponseModel] get_assignments(service_order_id)
 
 
 
@@ -176,10 +176,10 @@ api_instance = qualer_sdk.ServiceOrdersApi()
 service_order_id = 56 # int | 
 
 try:
-    api_response = api_instance.service_orders_get_assignments(service_order_id)
+    api_response = api_instance.get_assignments(service_order_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrdersApi->service_orders_get_assignments: %s\n" % e)
+    print("Exception when calling ServiceOrdersApi->get_assignments: %s\n" % e)
 ```
 
 ### Parameters
@@ -203,8 +203,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_orders_get_charges**
-> QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel service_orders_get_charges(service_order_id)
+# **get_charges**
+> QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel get_charges(service_order_id)
 
 
 
@@ -221,10 +221,10 @@ api_instance = qualer_sdk.ServiceOrdersApi()
 service_order_id = 56 # int | 
 
 try:
-    api_response = api_instance.service_orders_get_charges(service_order_id)
+    api_response = api_instance.get_charges(service_order_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrdersApi->service_orders_get_charges: %s\n" % e)
+    print("Exception when calling ServiceOrdersApi->get_charges: %s\n" % e)
 ```
 
 ### Parameters
@@ -248,8 +248,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_orders_get_order_status**
-> object service_orders_get_order_status(service_order_id)
+# **get_order_status**
+> object get_order_status(service_order_id)
 
 Gets current status and next status according to the workflow
 
@@ -267,10 +267,10 @@ service_order_id = 56 # int |
 
 try:
     # Gets current status and next status according to the workflow
-    api_response = api_instance.service_orders_get_order_status(service_order_id)
+    api_response = api_instance.get_order_status(service_order_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrdersApi->service_orders_get_order_status: %s\n" % e)
+    print("Exception when calling ServiceOrdersApi->get_order_status: %s\n" % e)
 ```
 
 ### Parameters
@@ -294,8 +294,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_orders_get_work_order**
-> QualerApiModelsServiceOrdersToClientOrderResponseModel service_orders_get_work_order(service_order_id)
+# **get_work_order**
+> QualerApiModelsServiceOrdersToClientOrderResponseModel get_work_order(service_order_id)
 
 
 
@@ -312,10 +312,10 @@ api_instance = qualer_sdk.ServiceOrdersApi()
 service_order_id = 56 # int | 
 
 try:
-    api_response = api_instance.service_orders_get_work_order(service_order_id)
+    api_response = api_instance.get_work_order(service_order_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrdersApi->service_orders_get_work_order: %s\n" % e)
+    print("Exception when calling ServiceOrdersApi->get_work_order: %s\n" % e)
 ```
 
 ### Parameters
@@ -339,8 +339,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_orders_get_work_orders**
-> list[QualerApiModelsServiceOrdersToClientOrderResponseModel] service_orders_get_work_orders(status=status, company_id=company_id, _from=_from, to=to, modified_after=modified_after, work_order_number=work_order_number, assigned_employees=assigned_employees)
+# **get_work_orders**
+> list[QualerApiModelsServiceOrdersToClientOrderResponseModel] get_work_orders(status=status, company_id=company_id, _from=_from, to=to, modified_after=modified_after, work_order_number=work_order_number, assigned_employees=assigned_employees)
 
 Retrieve work orders by filters
 
@@ -366,10 +366,10 @@ assigned_employees = 'assigned_employees_example' # str | Comma separated list o
 
 try:
     # Retrieve work orders by filters
-    api_response = api_instance.service_orders_get_work_orders(status=status, company_id=company_id, _from=_from, to=to, modified_after=modified_after, work_order_number=work_order_number, assigned_employees=assigned_employees)
+    api_response = api_instance.get_work_orders(status=status, company_id=company_id, _from=_from, to=to, modified_after=modified_after, work_order_number=work_order_number, assigned_employees=assigned_employees)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrdersApi->service_orders_get_work_orders: %s\n" % e)
+    print("Exception when calling ServiceOrdersApi->get_work_orders: %s\n" % e)
 ```
 
 ### Parameters
@@ -399,8 +399,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_orders_get_work_orders_0**
-> list[QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel] service_orders_get_work_orders_0(employee_id, is_internal=is_internal)
+# **get_work_orders_0**
+> list[QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel] get_work_orders_0(employee_id, is_internal=is_internal)
 
 
 
@@ -418,10 +418,10 @@ employee_id = 56 # int |
 is_internal = true # bool |  (optional)
 
 try:
-    api_response = api_instance.service_orders_get_work_orders_0(employee_id, is_internal=is_internal)
+    api_response = api_instance.get_work_orders_0(employee_id, is_internal=is_internal)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrdersApi->service_orders_get_work_orders_0: %s\n" % e)
+    print("Exception when calling ServiceOrdersApi->get_work_orders_0: %s\n" % e)
 ```
 
 ### Parameters
@@ -446,8 +446,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_orders_order_cancel**
-> object service_orders_order_cancel(service_order_id, reason_text=reason_text)
+# **order_cancel**
+> object order_cancel(service_order_id, reason_text=reason_text)
 
 Cancel work order
 
@@ -466,10 +466,10 @@ reason_text = 'reason_text_example' # str | cancel description (optional)
 
 try:
     # Cancel work order
-    api_response = api_instance.service_orders_order_cancel(service_order_id, reason_text=reason_text)
+    api_response = api_instance.order_cancel(service_order_id, reason_text=reason_text)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrdersApi->service_orders_order_cancel: %s\n" % e)
+    print("Exception when calling ServiceOrdersApi->order_cancel: %s\n" % e)
 ```
 
 ### Parameters
@@ -494,8 +494,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_orders_put_charges**
-> object service_orders_put_charges(service_order_id, model)
+# **put_charges**
+> object put_charges(service_order_id, model)
 
 Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount, ShippingFee
 
@@ -514,10 +514,10 @@ model = qualer_sdk.QualerApiModelsServiceOrdersFromChargeUpdateModel() # QualerA
 
 try:
     # Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount, ShippingFee
-    api_response = api_instance.service_orders_put_charges(service_order_id, model)
+    api_response = api_instance.put_charges(service_order_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrdersApi->service_orders_put_charges: %s\n" % e)
+    print("Exception when calling ServiceOrdersApi->put_charges: %s\n" % e)
 ```
 
 ### Parameters

@@ -4,14 +4,14 @@ All URIs are relative to *https://jgiquality.qualer.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**service_order_payments_change_work_order_payment_status**](ServiceOrderPaymentsApi.md#service_order_payments_change_work_order_payment_status) | **PUT** /api/service/workorders/{serviceOrderId}/payments/status | 
-[**service_order_payments_create_work_order_payment**](ServiceOrderPaymentsApi.md#service_order_payments_create_work_order_payment) | **POST** /api/service/workorders/{serviceOrderId}/payments | 
-[**service_order_payments_get_all_work_order_payments**](ServiceOrderPaymentsApi.md#service_order_payments_get_all_work_order_payments) | **GET** /api/service/workorders/{serviceOrderId}/payments | 
-[**service_order_payments_get_work_order_payment**](ServiceOrderPaymentsApi.md#service_order_payments_get_work_order_payment) | **GET** /api/service/workorders/payments/{serviceOrderPaymentId} | 
+[**change_work_order_payment_status**](ServiceOrderPaymentsApi.md#change_work_order_payment_status) | **PUT** /api/service/workorders/{serviceOrderId}/payments/status | 
+[**create_work_order_payment**](ServiceOrderPaymentsApi.md#create_work_order_payment) | **POST** /api/service/workorders/{serviceOrderId}/payments | 
+[**get_all_work_order_payments**](ServiceOrderPaymentsApi.md#get_all_work_order_payments) | **GET** /api/service/workorders/{serviceOrderId}/payments | 
+[**get_work_order_payment**](ServiceOrderPaymentsApi.md#get_work_order_payment) | **GET** /api/service/workorders/payments/{serviceOrderPaymentId} | 
 
 
-# **service_order_payments_change_work_order_payment_status**
-> object service_order_payments_change_work_order_payment_status(service_order_id, model)
+# **change_work_order_payment_status**
+> object change_work_order_payment_status(service_order_id, model)
 
 
 
@@ -29,10 +29,10 @@ service_order_id = 56 # int |
 model = qualer_sdk.QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel() # QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel | 
 
 try:
-    api_response = api_instance.service_order_payments_change_work_order_payment_status(service_order_id, model)
+    api_response = api_instance.change_work_order_payment_status(service_order_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderPaymentsApi->service_order_payments_change_work_order_payment_status: %s\n" % e)
+    print("Exception when calling ServiceOrderPaymentsApi->change_work_order_payment_status: %s\n" % e)
 ```
 
 ### Parameters
@@ -57,8 +57,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_payments_create_work_order_payment**
-> QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse service_order_payments_create_work_order_payment(service_order_id, model)
+# **create_work_order_payment**
+> QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse create_work_order_payment(service_order_id, model)
 
 
 
@@ -76,10 +76,10 @@ service_order_id = 56 # int |
 model = qualer_sdk.QualerApiModelsServiceOrdersFromAddPaymentModel() # QualerApiModelsServiceOrdersFromAddPaymentModel | 
 
 try:
-    api_response = api_instance.service_order_payments_create_work_order_payment(service_order_id, model)
+    api_response = api_instance.create_work_order_payment(service_order_id, model)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderPaymentsApi->service_order_payments_create_work_order_payment: %s\n" % e)
+    print("Exception when calling ServiceOrderPaymentsApi->create_work_order_payment: %s\n" % e)
 ```
 
 ### Parameters
@@ -104,8 +104,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_payments_get_all_work_order_payments**
-> list[QualerApiModelsServiceOrdersToPaymentResponseModel] service_order_payments_get_all_work_order_payments(service_order_id)
+# **get_all_work_order_payments**
+> list[QualerApiModelsServiceOrdersToPaymentResponseModel] get_all_work_order_payments(service_order_id)
 
 
 
@@ -122,10 +122,10 @@ api_instance = qualer_sdk.ServiceOrderPaymentsApi()
 service_order_id = 56 # int | 
 
 try:
-    api_response = api_instance.service_order_payments_get_all_work_order_payments(service_order_id)
+    api_response = api_instance.get_all_work_order_payments(service_order_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderPaymentsApi->service_order_payments_get_all_work_order_payments: %s\n" % e)
+    print("Exception when calling ServiceOrderPaymentsApi->get_all_work_order_payments: %s\n" % e)
 ```
 
 ### Parameters
@@ -149,8 +149,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **service_order_payments_get_work_order_payment**
-> QualerApiModelsServiceOrdersToPaymentResponseModel service_order_payments_get_work_order_payment(service_order_payment_id)
+# **get_work_order_payment**
+> QualerApiModelsServiceOrdersToPaymentResponseModel get_work_order_payment(service_order_payment_id)
 
 
 
@@ -167,10 +167,10 @@ api_instance = qualer_sdk.ServiceOrderPaymentsApi()
 service_order_payment_id = 56 # int | 
 
 try:
-    api_response = api_instance.service_order_payments_get_work_order_payment(service_order_payment_id)
+    api_response = api_instance.get_work_order_payment(service_order_payment_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ServiceOrderPaymentsApi->service_order_payments_get_work_order_payment: %s\n" % e)
+    print("Exception when calling ServiceOrderPaymentsApi->get_work_order_payment: %s\n" % e)
 ```
 
 ### Parameters

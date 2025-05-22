@@ -33,12 +33,12 @@ class ClientAttributeApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def client_attribute_get_client_attributes(self, client_company_id, **kwargs):  # noqa: E501
-        """client_attribute_get_client_attributes  # noqa: E501
+    def get_client_attributes(self, client_company_id, **kwargs):  # noqa: E501
+        """get_client_attributes  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_attribute_get_client_attributes(client_company_id, async_req=True)
+        >>> thread = api.get_client_attributes(client_company_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -49,17 +49,17 @@ class ClientAttributeApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.client_attribute_get_client_attributes_with_http_info(client_company_id, **kwargs)  # noqa: E501
+            return self.get_client_attributes_with_http_info(client_company_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.client_attribute_get_client_attributes_with_http_info(client_company_id, **kwargs)  # noqa: E501
+            (data) = self.get_client_attributes_with_http_info(client_company_id, **kwargs)  # noqa: E501
             return data
 
-    def client_attribute_get_client_attributes_with_http_info(self, client_company_id, **kwargs):  # noqa: E501
-        """client_attribute_get_client_attributes  # noqa: E501
+    def get_client_attributes_with_http_info(self, client_company_id, **kwargs):  # noqa: E501
+        """get_client_attributes  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_attribute_get_client_attributes_with_http_info(client_company_id, async_req=True)
+        >>> thread = api.get_client_attributes_with_http_info(client_company_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -80,14 +80,14 @@ class ClientAttributeApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method client_attribute_get_client_attributes" % key
+                    " to method get_client_attributes" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'client_company_id' is set
         if self.api_client.client_side_validation and ('client_company_id' not in params or
                                                        params['client_company_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `client_company_id` when calling `client_attribute_get_client_attributes`")  # noqa: E501
+            raise ValueError("Missing the required parameter `client_company_id` when calling `get_client_attributes`")  # noqa: E501
 
         collection_formats = {}
 
@@ -126,12 +126,12 @@ class ClientAttributeApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def client_attribute_upsert_client_attribute(self, client_company_id, model, **kwargs):  # noqa: E501
-        """client_attribute_upsert_client_attribute  # noqa: E501
+    def upsert_client_attribute(self, client_company_id, model, **kwargs):  # noqa: E501
+        """upsert_client_attribute  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_attribute_upsert_client_attribute(client_company_id, model, async_req=True)
+        >>> thread = api.upsert_client_attribute(client_company_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -143,17 +143,17 @@ class ClientAttributeApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.client_attribute_upsert_client_attribute_with_http_info(client_company_id, model, **kwargs)  # noqa: E501
+            return self.upsert_client_attribute_with_http_info(client_company_id, model, **kwargs)  # noqa: E501
         else:
-            (data) = self.client_attribute_upsert_client_attribute_with_http_info(client_company_id, model, **kwargs)  # noqa: E501
+            (data) = self.upsert_client_attribute_with_http_info(client_company_id, model, **kwargs)  # noqa: E501
             return data
 
-    def client_attribute_upsert_client_attribute_with_http_info(self, client_company_id, model, **kwargs):  # noqa: E501
-        """client_attribute_upsert_client_attribute  # noqa: E501
+    def upsert_client_attribute_with_http_info(self, client_company_id, model, **kwargs):  # noqa: E501
+        """upsert_client_attribute  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.client_attribute_upsert_client_attribute_with_http_info(client_company_id, model, async_req=True)
+        >>> thread = api.upsert_client_attribute_with_http_info(client_company_id, model, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -175,18 +175,18 @@ class ClientAttributeApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method client_attribute_upsert_client_attribute" % key
+                    " to method upsert_client_attribute" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'client_company_id' is set
         if self.api_client.client_side_validation and ('client_company_id' not in params or
                                                        params['client_company_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `client_company_id` when calling `client_attribute_upsert_client_attribute`")  # noqa: E501
+            raise ValueError("Missing the required parameter `client_company_id` when calling `upsert_client_attribute`")  # noqa: E501
         # verify the required parameter 'model' is set
         if self.api_client.client_side_validation and ('model' not in params or
                                                        params['model'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `model` when calling `client_attribute_upsert_client_attribute`")  # noqa: E501
+            raise ValueError("Missing the required parameter `model` when calling `upsert_client_attribute`")  # noqa: E501
 
         collection_formats = {}
 

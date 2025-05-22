@@ -20,14 +20,15 @@ OUTPUT_DIR = "qualer_sdk"
 
 
 def patch_spec():
-    print("🛠️ Patching RecordType enum...")
+    print("🛠️ Patching RecordType enum and operationIds...")
     with open(SPEC_FILE, "r", encoding="utf-8") as f:
         spec = json.load(f)
 
-    target_def = spec["definitions"][
+    # Patch RecordType enum
+    target_def = spec["definitions"].get(
         "Qualer.Api.Models.Asset.To.AssetManageResponseModel"
-        ]
-    if "RecordType" in target_def["properties"]:
+    )
+    if target_def and "RecordType" in target_def.get("properties", {}):
         target_def["properties"]["RecordType"] = {
             "type": "integer",
             "format": "int32",
@@ -39,12 +40,24 @@ def patch_spec():
                 "Agreement"
             ]
         }
-        with open(SPEC_FILE, "w", encoding="utf-8") as f:
-            json.dump(spec, f, indent=2)
         print("✅ Patched RecordType enum.")
     else:
         print("⚠️  RecordType not found in expected definition.")
         sys.exit(1)
+
+    # Clean up redundant prefixes in operationIds
+    for path_item in spec.get("paths", {}).values():
+        for op in path_item.values():
+            tags = op.get("tags", [])
+            operation_id = op.get("operationId")
+            if operation_id and tags:
+                tag_prefix = f"{tags[0]}_"
+                if operation_id.startswith(tag_prefix):
+                    op["operationId"] = operation_id[len(tag_prefix):]
+
+    with open(SPEC_FILE, "w", encoding="utf-8") as f:
+        json.dump(spec, f, indent=2)
+    print("✅ Cleaned up operationId prefixes.")
 
 
 def generate_sdk():

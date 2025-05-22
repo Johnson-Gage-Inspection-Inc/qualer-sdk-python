@@ -29,15 +29,15 @@ class TestEmployeeFilterPreferenceApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_employee_filter_preference_get_employee_filter_preferences(self):
-        """Test case for employee_filter_preference_get_employee_filter_preferences
+    def test_get_employee_filter_preferences(self):
+        """Test case for get_employee_filter_preferences
 
         GetEmployeeFilterPreferences  # noqa: E501
         """
         pass
 
-    def test_employee_filter_preference_update_employee_filter_preference(self):
-        """Test case for employee_filter_preference_update_employee_filter_preference
+    def test_update_employee_filter_preference(self):
+        """Test case for update_employee_filter_preference
 
         UpdateEmployeeFilterPreference  # noqa: E501
         """

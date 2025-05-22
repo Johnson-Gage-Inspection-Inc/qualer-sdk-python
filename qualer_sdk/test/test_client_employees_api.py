@@ -29,26 +29,26 @@ class TestClientEmployeesApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_client_employees_create_employee(self):
-        """Test case for client_employees_create_employee
+    def test_create_employee(self):
+        """Test case for create_employee
 
         """
         pass
 
-    def test_client_employees_get_employee(self):
-        """Test case for client_employees_get_employee
+    def test_get_employee(self):
+        """Test case for get_employee
 
         """
         pass
 
-    def test_client_employees_get_employees(self):
-        """Test case for client_employees_get_employees
+    def test_get_employees(self):
+        """Test case for get_employees
 
         """
         pass
 
-    def test_client_employees_send_employee_email(self):
-        """Test case for client_employees_send_employee_email
+    def test_send_employee_email(self):
+        """Test case for send_employee_email
 
         """
         pass

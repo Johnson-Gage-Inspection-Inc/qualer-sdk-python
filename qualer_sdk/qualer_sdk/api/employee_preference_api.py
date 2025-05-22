@@ -33,12 +33,12 @@ class EmployeePreferenceApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def employee_preference_delete(self, element_page, **kwargs):  # noqa: E501
-        """employee_preference_delete  # noqa: E501
+    def delete(self, element_page, **kwargs):  # noqa: E501
+        """delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employee_preference_delete(element_page, async_req=True)
+        >>> thread = api.delete(element_page, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -49,17 +49,17 @@ class EmployeePreferenceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.employee_preference_delete_with_http_info(element_page, **kwargs)  # noqa: E501
+            return self.delete_with_http_info(element_page, **kwargs)  # noqa: E501
         else:
-            (data) = self.employee_preference_delete_with_http_info(element_page, **kwargs)  # noqa: E501
+            (data) = self.delete_with_http_info(element_page, **kwargs)  # noqa: E501
             return data
 
-    def employee_preference_delete_with_http_info(self, element_page, **kwargs):  # noqa: E501
-        """employee_preference_delete  # noqa: E501
+    def delete_with_http_info(self, element_page, **kwargs):  # noqa: E501
+        """delete  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employee_preference_delete_with_http_info(element_page, async_req=True)
+        >>> thread = api.delete_with_http_info(element_page, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -80,14 +80,14 @@ class EmployeePreferenceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method employee_preference_delete" % key
+                    " to method delete" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'element_page' is set
         if self.api_client.client_side_validation and ('element_page' not in params or
                                                        params['element_page'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `element_page` when calling `employee_preference_delete`")  # noqa: E501
+            raise ValueError("Missing the required parameter `element_page` when calling `delete`")  # noqa: E501
 
         collection_formats = {}
 
@@ -126,13 +126,13 @@ class EmployeePreferenceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def employee_preference_get(self, element_page, **kwargs):  # noqa: E501
-        """employee_preference_get  # noqa: E501
+    def get(self, element_page, **kwargs):  # noqa: E501
+        """get  # noqa: E501
 
         elementPage:  AssetManager = 1,  WorkOrders = 2,  ServiceOrderItems = 3,  ServiceSchedules = 4,  ServiceRequests = 5,  Vendors = 6,  VendorAgreements = 7,  ClientAgreements = 8,  WorkCalendar = 9,  Clients = 10,  GlobalAssetManager = 11,  InvoicesManager = 12,  ProductManager = 13,  ProductSpecifications = 14,  DocumentManager = 15  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employee_preference_get(element_page, async_req=True)
+        >>> thread = api.get(element_page, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -143,18 +143,18 @@ class EmployeePreferenceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.employee_preference_get_with_http_info(element_page, **kwargs)  # noqa: E501
+            return self.get_with_http_info(element_page, **kwargs)  # noqa: E501
         else:
-            (data) = self.employee_preference_get_with_http_info(element_page, **kwargs)  # noqa: E501
+            (data) = self.get_with_http_info(element_page, **kwargs)  # noqa: E501
             return data
 
-    def employee_preference_get_with_http_info(self, element_page, **kwargs):  # noqa: E501
-        """employee_preference_get  # noqa: E501
+    def get_with_http_info(self, element_page, **kwargs):  # noqa: E501
+        """get  # noqa: E501
 
         elementPage:  AssetManager = 1,  WorkOrders = 2,  ServiceOrderItems = 3,  ServiceSchedules = 4,  ServiceRequests = 5,  Vendors = 6,  VendorAgreements = 7,  ClientAgreements = 8,  WorkCalendar = 9,  Clients = 10,  GlobalAssetManager = 11,  InvoicesManager = 12,  ProductManager = 13,  ProductSpecifications = 14,  DocumentManager = 15  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.employee_preference_get_with_http_info(element_page, async_req=True)
+        >>> thread = api.get_with_http_info(element_page, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -175,14 +175,14 @@ class EmployeePreferenceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method employee_preference_get" % key
+                    " to method get" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'element_page' is set
         if self.api_client.client_side_validation and ('element_page' not in params or
                                                        params['element_page'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `element_page` when calling `employee_preference_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `element_page` when calling `get`")  # noqa: E501
 
         collection_formats = {}
 

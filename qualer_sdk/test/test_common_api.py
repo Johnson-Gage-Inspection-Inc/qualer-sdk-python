@@ -29,20 +29,20 @@ class TestCommonApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_common_culture_list(self):
-        """Test case for common_culture_list
+    def test_culture_list(self):
+        """Test case for culture_list
 
         """
         pass
 
-    def test_common_culture_ui_list(self):
-        """Test case for common_culture_ui_list
+    def test_culture_ui_list(self):
+        """Test case for culture_ui_list
 
         """
         pass
 
-    def test_common_get_company_settings(self):
-        """Test case for common_get_company_settings
+    def test_get_company_settings(self):
+        """Test case for get_company_settings
 
         """
         pass
