@@ -8,7 +8,7 @@ version = "2.2.1"
 description = "Auto-generated Python client for Qualer API"
 readme = "README.md"
 requires-python = ">=3.7"
-license = "MIT"
+license = { text = "MIT" }
 authors = [
     {name = "Johnson Gage & Inspection Inc.", email = "jhall@jgiquality.com"}
 ]
