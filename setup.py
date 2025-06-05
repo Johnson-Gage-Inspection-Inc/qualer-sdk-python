@@ -8,8 +8,7 @@ setup(
     install_requires=["urllib3>=1.15", "six>=1.10", "certifi", "python-dateutil"],
     name="qualer-sdk",
     package_data={"qualer_sdk": ["py.typed"]},
-    package_dir={"": "qualer_sdk"},
-    packages=find_packages(where="qualer_sdk"),
+    packages=find_packages(),
     python_requires=">=3.7",
     version="2.2.1",
     classifiers=[
