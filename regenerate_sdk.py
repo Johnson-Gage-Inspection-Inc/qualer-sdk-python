@@ -7,11 +7,11 @@ Steps:
 3. Regenerates the SDK using swagger-codegen-cli
 """
 
+import json
 import os
+import shutil
 import subprocess
 import sys
-import json
-import shutil
 
 SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
 SWAGGER_CODEGEN_JAR = "swagger-codegen-cli-2.4.21.jar"
@@ -20,7 +20,7 @@ OUTPUT_DIR = os.path.join("src", "qualer_sdk")
 
 
 def patch_spec():
-    print("🛠️ Patching RecordType enum and operationIds...")
+    print("Patching RecordType enum and operationIds...")
     with open(SPEC_FILE, "r", encoding="utf-8") as f:
         spec = json.load(f)
 
@@ -114,16 +114,93 @@ def generate_sdk():
             if os.path.isdir(src_path):
                 shutil.copytree(src_path, dst_path)
             else:
-                shutil.copy2(src_path, dst_path)
-
-    # Add py.typed marker
+                shutil.copy2(src_path, dst_path)  # Add py.typed marker
     py_typed_path = os.path.join(OUTPUT_DIR, "py.typed")
     with open(py_typed_path, "w") as f:
         f.write("")  # Empty file to mark as typed package
 
+    # Post-process generated files to fix known issues
+    post_process_generated_files()
+
+    # Format all generated files with black
+    format_generated_files()
+
     # Clean up temporary directory
     shutil.rmtree(temp_dir)
     print("✅ SDK regenerated successfully.")
+
+
+def post_process_generated_files():
+    """Fix known issues in generated files."""
+    print("🔧 Post-processing generated files...")
+
+    # Fix __init__.py to add version
+    init_file = os.path.join(OUTPUT_DIR, "__init__.py")
+    if os.path.exists(init_file):
+        with open(init_file, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        # Add version at the top after the future import
+        if "__version__" not in content:
+            lines = content.split("\n")
+            # Find the line with "from __future__ import absolute_import"
+            insert_idx = 0
+            for i, line in enumerate(lines):
+                if "from __future__ import absolute_import" in line:
+                    insert_idx = i + 1
+                    break
+
+            lines.insert(insert_idx, "")
+            lines.insert(insert_idx + 1, '__version__ = "2.2.1"')
+
+            content = "\n".join(lines)
+            with open(init_file, "w", encoding="utf-8") as f:
+                f.write(content)
+            print("✅ Added __version__ to __init__.py")
+
+    # Fix api_client.py Python 3 compatibility
+    api_client_file = os.path.join(OUTPUT_DIR, "api_client.py")
+    if os.path.exists(api_client_file):
+        with open(api_client_file, "r", encoding="utf-8") as f:
+            content = f.read()
+        # Fix the long type issue
+        old_line = '"long": int if six.PY3 else long,  # noqa: F821'
+        new_line = '"long": int,  # In Python 3, long is just int'
+
+        if old_line in content:
+            content = content.replace(old_line, new_line)
+            with open(api_client_file, "w", encoding="utf-8") as f:
+                f.write(content)
+            print("✅ Fixed Python 3 compatibility in api_client.py")
+
+
+def format_generated_files():
+    """Format all generated files using black."""
+    print("🎨 Formatting generated files with black...")
+
+    try:
+        # Run black on the entire SDK directory
+        result = subprocess.run(
+            ["black", OUTPUT_DIR],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",  # Explicitly specify UTF-8 encoding
+            errors="replace",  # Replace problematic characters instead of failing
+            check=False,  # Don't raise exception on non-zero exit code
+        )
+
+        if result.returncode == 0:
+            print("✅ Code formatting completed successfully")
+        else:
+            print(f"⚠️  Black formatting had some issues: {result.stderr}")
+            # Don't fail the entire process if black has issues
+
+    except FileNotFoundError:
+        print("⚠️  Black not found. Install with: pip install black")
+        print("   Skipping code formatting...")
+    except Exception as e:
+        print(f"⚠️  Error running black: {e}")
+        print("   Skipping code formatting...")
 
 
 if __name__ == "__main__":

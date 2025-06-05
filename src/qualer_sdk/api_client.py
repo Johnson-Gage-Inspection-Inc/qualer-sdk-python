@@ -14,18 +14,18 @@ from __future__ import absolute_import
 import datetime
 import json
 import mimetypes
-from multiprocessing.pool import ThreadPool
 import os
 import re
 import tempfile
+from multiprocessing.pool import ThreadPool
 
 # python 2 and python 3 compatibility library
 import six
 from six.moves.urllib.parse import quote
 
-from qualer_sdk.configuration import Configuration
 import qualer_sdk.models
 from qualer_sdk import rest
+from qualer_sdk.configuration import Configuration
 
 
 class ApiClient(object):
@@ -51,7 +51,7 @@ class ApiClient(object):
     PRIMITIVE_TYPES = (float, bool, bytes, six.text_type) + six.integer_types
     NATIVE_TYPES_MAPPING = {
         "int": int,
-        "long": int if six.PY3 else long,  # noqa: F821
+        "long": int,  # In Python 3, long is just int
         "float": float,
         "str": str,
         "bool": bool,
