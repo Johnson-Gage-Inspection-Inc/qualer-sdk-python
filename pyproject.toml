@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qualer-sdk"
+version = "2.2.1"
+description = "Auto-generated Python client for Qualer API"
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+authors = [
+    {name = "Johnson Gage & Inspection Inc.", email = "jhall@jgiquality.com"}
+]
+keywords = ["qualer", "api", "sdk", "client"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP",
+    "Typing :: Typed",
+]
+dependencies = [
+    "urllib3>=1.15",
+    "six>=1.10",
+    "certifi",
+    "python-dateutil",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov",
+    "mypy",
+    "black",
+    "flake8",
+    "isort",
+]
+
+[project.urls]
+Homepage = "https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-python"
+Repository = "https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-python"
+Issues = "https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-python/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+qualer_sdk = ["py.typed"]
+
+[tool.black]
+line-length = 88
+target-version = ['py37']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
