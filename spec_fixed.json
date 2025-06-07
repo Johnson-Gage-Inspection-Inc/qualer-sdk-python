@@ -7569,6 +7569,19 @@
         }
       }
     },
+    "Qualer.Api.Models.Account.From.EmployeeMessagesModel": {
+      "type": "object",
+      "properties": {
+        "Period": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "SiteId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
     "Qualer.Api.Models.Account.To.EmployeeEventResponseModel": {
       "type": "object",
       "properties": {
@@ -8553,6 +8566,41 @@
         }
       }
     },
+    "Qualer.Api.Models.AssetReservation.From.GetAssetReservationsModel": {
+      "type": "object",
+      "properties": {
+        "From": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "To": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "AssetId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "AreaId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ProductId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "SerialNumber": {
+          "type": "string"
+        },
+        "AssetTag": {
+          "type": "string"
+        },
+        "ReservationId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
     "Qualer.Api.Models.AssetReservation.To.AssetReservationResponse": {
       "type": "object",
       "properties": {
@@ -8601,6 +8649,33 @@
         },
         "ReservedByName": {
           "type": "string"
+        }
+      }
+    },
+    "Qualer.Api.Models.AssetReservation.From.CloseAssetReservationsModel": {
+      "type": "object",
+      "properties": {
+        "AssetId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "AreaId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ProductId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "SerialNumber": {
+          "type": "string"
+        },
+        "AssetTag": {
+          "type": "string"
+        },
+        "ReservationId": {
+          "format": "int32",
+          "type": "integer"
         }
       }
     },
@@ -8794,6 +8869,14 @@
         }
       }
     },
+    "Qualer.Api.Models.Asset.From.GetAssetManagerCounterModel": {
+      "type": "object",
+      "properties": {
+        "SearchString": {
+          "type": "string"
+        }
+      }
+    },
     "Qualer.Api.Models.Asset.To.AssetsCountResponseModel": {
       "type": "object",
       "properties": {
@@ -8874,6 +8957,25 @@
           "type": "integer"
         },
         "AssetsExpiringSoonAgreement": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "Qualer.Api.Models.Asset.From.GetAssetManagerListModel": {
+      "type": "object",
+      "properties": {
+        "FilterType": {
+          "type": "string"
+        },
+        "SearchString": {
+          "type": "string"
+        },
+        "Page": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "PageSize": {
           "format": "int32",
           "type": "integer"
         }
@@ -9487,6 +9589,15 @@
         }
       }
     },
+    "Qualer.Api.Models.AssetServiceRecords.From.AssetServiceRecordModel": {
+      "type": "object",
+      "properties": {
+        "AssetServiceRecordId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
     "Qualer.Api.Models.AssetServiceRecords.To.AssetServiceRecordResponseModel": {
       "type": "object",
       "properties": {
@@ -9743,6 +9854,26 @@
         }
       }
     },
+    "Qualer.Api.Models.AssetServiceRecords.From.AssetServiceRecordFilterModel": {
+      "type": "object",
+      "properties": {
+        "AssetId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "SerialNumber": {
+          "type": "string"
+        },
+        "From": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "To": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
     "Qualer.Api.Models.AssetServiceRecords.From.UpdateAssetServiceRecordModel": {
       "type": "object",
       "properties": {
@@ -9856,6 +9987,56 @@
         }
       }
     },
+    "Qualer.Api.Models.AssetServiceRecords.From.AsrDocumentModel": {
+      "type": "object",
+      "properties": {
+        "AssetServiceRecordId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "Qualer.Api.Models.AssetServiceRecords.From.AsrDocumentDownloadModel": {
+      "type": "object",
+      "properties": {
+        "AssetServiceRecordId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "FileName": {
+          "type": "string"
+        }
+      }
+    },
+    "Qualer.Api.Models.Clients.From.ClientAssetModel": {
+      "type": "object",
+      "properties": {
+        "AssetId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "Qualer.Api.Models.Clients.From.ClientAssetQuery": {
+      "type": "object",
+      "properties": {
+        "EquipmentId": {
+          "type": "string"
+        },
+        "SerialNumber": {
+          "type": "string"
+        },
+        "AssetTag": {
+          "type": "string"
+        },
+        "Barcode": {
+          "type": "string"
+        },
+        "LegacyId": {
+          "type": "string"
+        }
+      }
+    },
     "Qualer.Api.Models.Asset.To.ClientAssetCountersResponseModel": {
       "type": "object",
       "properties": {
@@ -9880,6 +10061,25 @@
           "type": "integer"
         },
         "ClientWithoutSchedule": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "Qualer.Api.Models.Asset.From.ClientAssetManagerListModel": {
+      "type": "object",
+      "properties": {
+        "FilterType": {
+          "type": "string"
+        },
+        "SearchString": {
+          "type": "string"
+        },
+        "Page": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "PageSize": {
           "format": "int32",
           "type": "integer"
         }
@@ -10512,6 +10712,15 @@
         }
       }
     },
+    "Qualer.Api.Models.Clients.From.ClientEmployeeModel": {
+      "type": "object",
+      "properties": {
+        "EmployeeId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
     "Qualer.Api.Models.Clients.From.SponsoredEmployeeModel": {
       "type": "object",
       "properties": {
@@ -10995,6 +11204,28 @@
           "type": "string"
         },
         "Value": {
+          "type": "string"
+        }
+      }
+    },
+    "Qualer.Api.Models.Clients.From.ClientCompanySearchModel": {
+      "type": "object",
+      "properties": {
+        "LegacyId": {
+          "type": "string"
+        },
+        "AccountNumberText": {
+          "type": "string"
+        },
+        "CompanyName": {
+          "type": "string"
+        },
+        "Take": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ModifiedAfter": {
+          "format": "date-time",
           "type": "string"
         }
       }
@@ -11531,6 +11762,14 @@
           "type": "string"
         },
         "ImageUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "Qualer.Api.Models.Employees.From.SearchEmployeeModel": {
+      "type": "object",
+      "properties": {
+        "SearchString": {
           "type": "string"
         }
       }
@@ -17378,6 +17617,33 @@
         }
       }
     },
+    "Qualer.Api.Models.ServiceOrderDocuments.From.GetDocumentsModel": {
+      "type": "object",
+      "properties": {
+        "FileName": {
+          "type": "string"
+        }
+      }
+    },
+    "Qualer.Api.Models.ServiceOrderDocuments.From.UploadDocumentsModel": {
+      "type": "object",
+      "properties": {
+        "ReportType": {
+          "type": "string"
+        },
+        "IsPrivate": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Qualer.Api.Models.ServiceOrderDocuments.From.DocumentsListModel": {
+      "type": "object",
+      "properties": {
+        "ReportType": {
+          "type": "string"
+        }
+      }
+    },
     "Qualer.Api.Models.ServiceOrderDocuments.To.CompanyOrderControlledDocumentResponse": {
       "type": "object",
       "properties": {
@@ -20752,6 +21018,25 @@
           "$ref": "#/definitions/Qualer.Api.Models.Address.To.AddressResponseModel"
         },
         "UpdatedOnUtc": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Qualer.Api.Models.Vendors.From.VendorCompanySearchModel": {
+      "type": "object",
+      "properties": {
+        "AccountNumberText": {
+          "type": "string"
+        },
+        "CompanyName": {
+          "type": "string"
+        },
+        "Take": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ModifiedAfter": {
           "format": "date-time",
           "type": "string"
         }
