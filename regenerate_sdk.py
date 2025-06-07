@@ -4,19 +4,40 @@ Regenerates the Qualer SDK from the patched Swagger spec.
 Steps:
 1. Downloads the OpenAPI spec from the Qualer server
 2. Patches RecordType enum to support integer values
-3. Regenerates the SDK using swagger-codegen-cli
+3. Regenerates the SDK using openapi-generator-cli
 """
 
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
+from collections import defaultdict
 
 SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
-SWAGGER_CODEGEN_JAR = "swagger-codegen-cli-2.4.21.jar"
+OPENAPI_GENERATOR_JAR = "openapi-generator-cli.jar"
 SPEC_FILE = "spec.json"
 OUTPUT_DIR = os.path.join("src", "qualer_sdk")
+
+
+def uniquify_operation_ids(spec):
+    """Rename any operationId collisions by appending _{method}_{count}."""
+    seen = defaultdict(int)
+
+    for path, path_item in spec.get("paths", {}).items():
+        for method, op in path_item.items():
+            opid = op.get("operationId")
+            if not opid:
+                continue
+
+            key = opid.lower()
+            seen[key] += 1
+            if seen[key] > 1:
+                # e.g. “getAsset” → “getAsset_get_2”
+                new_opid = f"{opid}_{method}_{seen[key]}"
+                print(f"🔧 Renaming duplicate operationId {opid!r} → {new_opid!r}")
+                op["operationId"] = new_opid
 
 
 def patch_spec():
@@ -50,33 +71,65 @@ def patch_spec():
                 if operation_id.startswith(tag_prefix):
                     op["operationId"] = operation_id[len(tag_prefix) :]
 
+    # Inject any path‐template parameters that weren't declared
+    inject_missing_path_params(spec)
+
+    # Ensure operationIds are unique
+    uniquify_operation_ids(spec)
+
     with open(SPEC_FILE, "w", encoding="utf-8") as f:
         json.dump(spec, f, indent=2)
     print("✅ Cleaned up operationId prefixes.")
 
 
+def inject_missing_path_params(spec):
+    """For each path like /foo/{X}/{y}, ensure X and y are declared as path params."""
+    for path, path_item in spec.get("paths", {}).items():
+        # 1) Gather all declared path‐param names (case-sensitive)
+        declared = set(
+            p["name"]
+            for op in path_item.values()
+            for p in op.get("parameters", [])
+            if p.get("in") == "path"
+        )
+
+        # 2) Find all {ParamName} in the path template
+        for name in re.findall(r"\{([^/}]+)\}", path):
+            if name not in declared:
+                # inject into *every* operation under this path
+                param_obj = {
+                    "name": name,
+                    "in": "path",
+                    "required": True,
+                    "type": "string",
+                }
+                print(f"🔧 Injecting path-param {name!r} into {path!r}")
+                for op in path_item.values():
+                    op.setdefault("parameters", []).append(param_obj.copy())
+
+
 def generate_sdk():
-    if not os.path.exists(SWAGGER_CODEGEN_JAR):
-        sys.exit(f"❌ Swagger Codegen JAR not found: {SWAGGER_CODEGEN_JAR}")
+    if not os.path.exists(OPENAPI_GENERATOR_JAR):
+        sys.exit(f"❌ OpenAPI Generator JAR not found: {OPENAPI_GENERATOR_JAR}")
 
     # Create a temporary directory for generation
-    temp_dir = "temp_sdk_gen"
-
+    temp_dir = "temp_sdk_gen"  # Use OpenAPI Generator (typed output)
     command = [
         "java",
         "-jar",
-        SWAGGER_CODEGEN_JAR,
+        OPENAPI_GENERATOR_JAR,
         "generate",
         "-i",
         SPEC_FILE,
-        "-l",
-        "python",
+        "-g",
+        "python-nextgen",
         "-o",
         temp_dir,
         "--additional-properties=packageName=qualer_sdk",
+        # "--skip-validate-spec",
     ]
 
-    print("⚙️ Running Swagger Codegen...")
+    print("⚙️ Running OpenAPI Generator...")
     subprocess.run(command, check=True)
 
     # Clean previous SDK core files in the proper location
@@ -158,24 +211,55 @@ def post_process_generated_files():
                 f.write(content)
             print("✅ Added __version__ to __init__.py")
 
-    # Fix api_client.py Python 3 compatibility
-    api_client_file = os.path.join(OUTPUT_DIR, "api_client.py")
-    if os.path.exists(api_client_file):
-        with open(api_client_file, "r", encoding="utf-8") as f:
-            content = f.read()
-        # Fix the long type issue
-        old_line = '"long": int if six.PY3 else long,  # noqa: F821'
-        new_line = '"long": int,  # In Python 3, long is just int'
-
-        if old_line in content:
-            content = content.replace(old_line, new_line)
-            with open(api_client_file, "w", encoding="utf-8") as f:
-                f.write(content)
-            print("✅ Fixed Python 3 compatibility in api_client.py")
-
 
 def format_generated_files():
     """Format all generated files using black."""
+
+    format_files_with_autoflake()
+    sort_imports_with_isort()
+    format_generated_files_with_black()
+
+
+def sort_imports_with_isort():
+    print("🎨 Sorting imports with isort...")
+    try:
+        subprocess.run(
+            ["isort", OUTPUT_DIR],
+            check=True,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+        )
+    except FileNotFoundError:
+        print("⚠️  isort not found. Install with: pip install isort")
+        print("   Skipping import sorting...")
+
+
+def format_files_with_autoflake():
+    print("🎨 Formatting generated files with autoflake...")
+    try:
+        subprocess.run(
+            [
+                "autoflake",
+                "--in-place",
+                "--remove-all-unused-imports",
+                "--remove-unused-variables",
+                "--recursive",
+                OUTPUT_DIR,
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+        )
+    except FileNotFoundError:
+        print("⚠️  Autoflake not found. Install with: pip install autoflake")
+        print("   Skipping autoflake formatting...")
+
+
+def format_generated_files_with_black():
     print("🎨 Formatting generated files with black...")
 
     try:
