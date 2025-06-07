@@ -159,7 +159,7 @@ class ServiceOrderDocumentsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -191,7 +191,7 @@ class ServiceOrderDocumentsApi(object):
         )
 
     @validate_arguments
-    def get_document_get2(
+    def get_document_get_wd(
         self,
         guid: Annotated[StrictStr, Field(..., description="Document unique id")],
         **kwargs,
@@ -202,7 +202,7 @@ class ServiceOrderDocumentsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_document_get2(guid, async_req=True)
+        >>> thread = api.get_document_get_wd(guid, async_req=True)
         >>> result = thread.get()
 
         :param guid: Document unique id (required)
@@ -221,12 +221,12 @@ class ServiceOrderDocumentsApi(object):
         kwargs["_return_http_data_only"] = True
         if "_preload_content" in kwargs:
             raise ValueError(
-                "Error! Please call the get_document_get2_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"
+                "Error! Please call the get_document_get_wd_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"
             )
-        return self.get_document_get2_with_http_info(guid, **kwargs)  # noqa: E501
+        return self.get_document_get_wd_with_http_info(guid, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_document_get2_with_http_info(
+    def get_document_get_wd_with_http_info(
         self,
         guid: Annotated[StrictStr, Field(..., description="Document unique id")],
         **kwargs,
@@ -237,7 +237,7 @@ class ServiceOrderDocumentsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_document_get2_with_http_info(guid, async_req=True)
+        >>> thread = api.get_document_get_wd_with_http_info(guid, async_req=True)
         >>> result = thread.get()
 
         :param guid: Document unique id (required)
@@ -287,7 +287,7 @@ class ServiceOrderDocumentsApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_document_get2" % _key
+                    " to method get_document_get_wd" % _key
                 )
             _params[_key] = _val
         del _params["kwargs"]
@@ -310,7 +310,7 @@ class ServiceOrderDocumentsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -553,7 +553,7 @@ class ServiceOrderDocumentsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -714,7 +714,7 @@ class ServiceOrderDocumentsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -876,7 +876,7 @@ class ServiceOrderDocumentsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -1047,7 +1047,7 @@ class ServiceOrderDocumentsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting

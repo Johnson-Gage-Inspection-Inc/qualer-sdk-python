@@ -180,21 +180,13 @@ class ServiceOrderItemsApi(object):
 
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get(
             "_content_type",
-            self.api_client.select_header_content_type(
-                [
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml",
-                    "application/x-www-form-urlencoded",
-                ]
-            ),
+            self.api_client.select_header_content_type(["application/json"]),
         )
         if _content_types_list:
             _header_params["Content-Type"] = _content_types_list
@@ -350,7 +342,7 @@ class ServiceOrderItemsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -493,7 +485,7 @@ class ServiceOrderItemsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -638,7 +630,7 @@ class ServiceOrderItemsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -790,7 +782,7 @@ class ServiceOrderItemsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -935,7 +927,7 @@ class ServiceOrderItemsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -1080,7 +1072,7 @@ class ServiceOrderItemsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -1110,7 +1102,7 @@ class ServiceOrderItemsApi(object):
         )
 
     @validate_arguments
-    def get_work_items_get2(
+    def get_work_items_workitems(
         self,
         status: Annotated[
             Optional[StrictStr],
@@ -1151,7 +1143,7 @@ class ServiceOrderItemsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_work_items_get2(status, company_id, var_from, to, work_item_number, asset_search, async_req=True)
+        >>> thread = api.get_work_items_workitems(status, company_id, var_from, to, work_item_number, asset_search, async_req=True)
         >>> result = thread.get()
 
         :param status: Comma separated list of work item statuses: Pending, Completed, Delayed, InProgress, Withdrawn
@@ -1180,14 +1172,14 @@ class ServiceOrderItemsApi(object):
         kwargs["_return_http_data_only"] = True
         if "_preload_content" in kwargs:
             raise ValueError(
-                "Error! Please call the get_work_items_get2_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"
+                "Error! Please call the get_work_items_workitems_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"
             )
-        return self.get_work_items_get2_with_http_info(
+        return self.get_work_items_workitems_with_http_info(
             status, company_id, var_from, to, work_item_number, asset_search, **kwargs
         )  # noqa: E501
 
     @validate_arguments
-    def get_work_items_get2_with_http_info(
+    def get_work_items_workitems_with_http_info(
         self,
         status: Annotated[
             Optional[StrictStr],
@@ -1228,7 +1220,7 @@ class ServiceOrderItemsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_work_items_get2_with_http_info(status, company_id, var_from, to, work_item_number, asset_search, async_req=True)
+        >>> thread = api.get_work_items_workitems_with_http_info(status, company_id, var_from, to, work_item_number, asset_search, async_req=True)
         >>> result = thread.get()
 
         :param status: Comma separated list of work item statuses: Pending, Completed, Delayed, InProgress, Withdrawn
@@ -1295,7 +1287,7 @@ class ServiceOrderItemsApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_work_items_get2" % _key
+                    " to method get_work_items_workitems" % _key
                 )
             _params[_key] = _val
         del _params["kwargs"]
@@ -1354,7 +1346,7 @@ class ServiceOrderItemsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -1515,21 +1507,13 @@ class ServiceOrderItemsApi(object):
 
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get(
             "_content_type",
-            self.api_client.select_header_content_type(
-                [
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml",
-                    "application/x-www-form-urlencoded",
-                ]
-            ),
+            self.api_client.select_header_content_type(["application/json"]),
         )
         if _content_types_list:
             _header_params["Content-Type"] = _content_types_list
@@ -1691,21 +1675,13 @@ class ServiceOrderItemsApi(object):
 
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get(
             "_content_type",
-            self.api_client.select_header_content_type(
-                [
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml",
-                    "application/x-www-form-urlencoded",
-                ]
-            ),
+            self.api_client.select_header_content_type(["application/json"]),
         )
         if _content_types_list:
             _header_params["Content-Type"] = _content_types_list
@@ -1854,7 +1830,7 @@ class ServiceOrderItemsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting

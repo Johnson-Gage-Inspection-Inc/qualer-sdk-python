@@ -161,21 +161,13 @@ class ClientAssetsApi(object):
 
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get(
             "_content_type",
-            self.api_client.select_header_content_type(
-                [
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml",
-                    "application/x-www-form-urlencoded",
-                ]
-            ),
+            self.api_client.select_header_content_type(["application/json"]),
         )
         if _content_types_list:
             _header_params["Content-Type"] = _content_types_list
@@ -375,7 +367,7 @@ class ClientAssetsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -520,7 +512,7 @@ class ClientAssetsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -552,8 +544,8 @@ class ClientAssetsApi(object):
     @validate_arguments
     def get_asset_get2(
         self,
-        asset_id: StrictStr,
         asset_id2: StrictStr,
+        asset_id: Optional[StrictStr] = None,
         model_asset_id: Optional[StrictInt] = None,
         **kwargs,
     ) -> QualerApiModelsAssetToAssetResponseModel:  # noqa: E501
@@ -562,13 +554,13 @@ class ClientAssetsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_asset_get2(asset_id, asset_id2, model_asset_id, async_req=True)
+        >>> thread = api.get_asset_get2(asset_id2, asset_id, model_asset_id, async_req=True)
         >>> result = thread.get()
 
-        :param asset_id: (required)
-        :type asset_id: str
         :param asset_id2: (required)
         :type asset_id2: str
+        :param asset_id:
+        :type asset_id: str
         :param model_asset_id:
         :type model_asset_id: int
         :param async_req: Whether to execute the request asynchronously.
@@ -588,14 +580,14 @@ class ClientAssetsApi(object):
                 "Error! Please call the get_asset_get2_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"
             )
         return self.get_asset_get2_with_http_info(
-            asset_id, asset_id2, model_asset_id, **kwargs
+            asset_id2, asset_id, model_asset_id, **kwargs
         )  # noqa: E501
 
     @validate_arguments
     def get_asset_get2_with_http_info(
         self,
-        asset_id: StrictStr,
         asset_id2: StrictStr,
+        asset_id: Optional[StrictStr] = None,
         model_asset_id: Optional[StrictInt] = None,
         **kwargs,
     ) -> ApiResponse:  # noqa: E501
@@ -604,13 +596,13 @@ class ClientAssetsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_asset_get2_with_http_info(asset_id, asset_id2, model_asset_id, async_req=True)
+        >>> thread = api.get_asset_get2_with_http_info(asset_id2, asset_id, model_asset_id, async_req=True)
         >>> result = thread.get()
 
-        :param asset_id: (required)
-        :type asset_id: str
         :param asset_id2: (required)
         :type asset_id2: str
+        :param asset_id:
+        :type asset_id: str
         :param model_asset_id:
         :type model_asset_id: int
         :param async_req: Whether to execute the request asynchronously.
@@ -640,7 +632,7 @@ class ClientAssetsApi(object):
 
         _params = locals()
 
-        _all_params = ["asset_id", "asset_id2", "model_asset_id"]
+        _all_params = ["asset_id2", "asset_id", "model_asset_id"]
         _all_params.extend(
             [
                 "async_req",
@@ -687,7 +679,7 @@ class ClientAssetsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -885,7 +877,7 @@ class ClientAssetsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -1092,7 +1084,7 @@ class ClientAssetsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting

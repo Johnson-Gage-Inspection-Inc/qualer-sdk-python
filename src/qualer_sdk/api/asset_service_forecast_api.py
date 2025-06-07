@@ -145,7 +145,7 @@ class AssetServiceForecastApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -290,7 +290,7 @@ class AssetServiceForecastApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting

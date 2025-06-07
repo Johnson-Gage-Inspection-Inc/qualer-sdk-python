@@ -173,21 +173,13 @@ class AssetServiceRecordsApi(object):
 
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get(
             "_content_type",
-            self.api_client.select_header_content_type(
-                [
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml",
-                    "application/x-www-form-urlencoded",
-                ]
-            ),
+            self.api_client.select_header_content_type(["application/json"]),
         )
         if _content_types_list:
             _header_params["Content-Type"] = _content_types_list
@@ -222,8 +214,8 @@ class AssetServiceRecordsApi(object):
     @validate_arguments
     def document_list(
         self,
-        asset_service_record_id: StrictStr,
         asset_service_record_id2: StrictStr,
+        asset_service_record_id: Optional[StrictStr] = None,
         model_asset_service_record_id: Optional[StrictInt] = None,
         **kwargs,
     ) -> List[str]:  # noqa: E501
@@ -232,13 +224,13 @@ class AssetServiceRecordsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.document_list(asset_service_record_id, asset_service_record_id2, model_asset_service_record_id, async_req=True)
+        >>> thread = api.document_list(asset_service_record_id2, asset_service_record_id, model_asset_service_record_id, async_req=True)
         >>> result = thread.get()
 
-        :param asset_service_record_id: (required)
-        :type asset_service_record_id: str
         :param asset_service_record_id2: (required)
         :type asset_service_record_id2: str
+        :param asset_service_record_id:
+        :type asset_service_record_id: str
         :param model_asset_service_record_id:
         :type model_asset_service_record_id: int
         :param async_req: Whether to execute the request asynchronously.
@@ -258,8 +250,8 @@ class AssetServiceRecordsApi(object):
                 "Error! Please call the document_list_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"
             )
         return self.document_list_with_http_info(
-            asset_service_record_id,
             asset_service_record_id2,
+            asset_service_record_id,
             model_asset_service_record_id,
             **kwargs,
         )  # noqa: E501
@@ -267,8 +259,8 @@ class AssetServiceRecordsApi(object):
     @validate_arguments
     def document_list_with_http_info(
         self,
-        asset_service_record_id: StrictStr,
         asset_service_record_id2: StrictStr,
+        asset_service_record_id: Optional[StrictStr] = None,
         model_asset_service_record_id: Optional[StrictInt] = None,
         **kwargs,
     ) -> ApiResponse:  # noqa: E501
@@ -277,13 +269,13 @@ class AssetServiceRecordsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.document_list_with_http_info(asset_service_record_id, asset_service_record_id2, model_asset_service_record_id, async_req=True)
+        >>> thread = api.document_list_with_http_info(asset_service_record_id2, asset_service_record_id, model_asset_service_record_id, async_req=True)
         >>> result = thread.get()
 
-        :param asset_service_record_id: (required)
-        :type asset_service_record_id: str
         :param asset_service_record_id2: (required)
         :type asset_service_record_id2: str
+        :param asset_service_record_id:
+        :type asset_service_record_id: str
         :param model_asset_service_record_id:
         :type model_asset_service_record_id: int
         :param async_req: Whether to execute the request asynchronously.
@@ -314,8 +306,8 @@ class AssetServiceRecordsApi(object):
         _params = locals()
 
         _all_params = [
-            "asset_service_record_id",
             "asset_service_record_id2",
+            "asset_service_record_id",
             "model_asset_service_record_id",
         ]
         _all_params.extend(
@@ -368,7 +360,7 @@ class AssetServiceRecordsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -400,10 +392,10 @@ class AssetServiceRecordsApi(object):
     @validate_arguments
     def download_document(
         self,
-        asset_service_record_id: StrictStr,
-        file_name: StrictStr,
         asset_service_record_id2: StrictStr,
         file_name2: StrictStr,
+        asset_service_record_id: Optional[StrictStr] = None,
+        file_name: Optional[StrictStr] = None,
         model_asset_service_record_id: Optional[StrictInt] = None,
         model_file_name: Optional[StrictStr] = None,
         **kwargs,
@@ -413,17 +405,17 @@ class AssetServiceRecordsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.download_document(asset_service_record_id, file_name, asset_service_record_id2, file_name2, model_asset_service_record_id, model_file_name, async_req=True)
+        >>> thread = api.download_document(asset_service_record_id2, file_name2, asset_service_record_id, file_name, model_asset_service_record_id, model_file_name, async_req=True)
         >>> result = thread.get()
 
-        :param asset_service_record_id: (required)
-        :type asset_service_record_id: str
-        :param file_name: (required)
-        :type file_name: str
         :param asset_service_record_id2: (required)
         :type asset_service_record_id2: str
         :param file_name2: (required)
         :type file_name2: str
+        :param asset_service_record_id:
+        :type asset_service_record_id: str
+        :param file_name:
+        :type file_name: str
         :param model_asset_service_record_id:
         :type model_asset_service_record_id: int
         :param model_file_name:
@@ -445,10 +437,10 @@ class AssetServiceRecordsApi(object):
                 "Error! Please call the download_document_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"
             )
         return self.download_document_with_http_info(
-            asset_service_record_id,
-            file_name,
             asset_service_record_id2,
             file_name2,
+            asset_service_record_id,
+            file_name,
             model_asset_service_record_id,
             model_file_name,
             **kwargs,
@@ -457,10 +449,10 @@ class AssetServiceRecordsApi(object):
     @validate_arguments
     def download_document_with_http_info(
         self,
-        asset_service_record_id: StrictStr,
-        file_name: StrictStr,
         asset_service_record_id2: StrictStr,
         file_name2: StrictStr,
+        asset_service_record_id: Optional[StrictStr] = None,
+        file_name: Optional[StrictStr] = None,
         model_asset_service_record_id: Optional[StrictInt] = None,
         model_file_name: Optional[StrictStr] = None,
         **kwargs,
@@ -470,17 +462,17 @@ class AssetServiceRecordsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.download_document_with_http_info(asset_service_record_id, file_name, asset_service_record_id2, file_name2, model_asset_service_record_id, model_file_name, async_req=True)
+        >>> thread = api.download_document_with_http_info(asset_service_record_id2, file_name2, asset_service_record_id, file_name, model_asset_service_record_id, model_file_name, async_req=True)
         >>> result = thread.get()
 
-        :param asset_service_record_id: (required)
-        :type asset_service_record_id: str
-        :param file_name: (required)
-        :type file_name: str
         :param asset_service_record_id2: (required)
         :type asset_service_record_id2: str
         :param file_name2: (required)
         :type file_name2: str
+        :param asset_service_record_id:
+        :type asset_service_record_id: str
+        :param file_name:
+        :type file_name: str
         :param model_asset_service_record_id:
         :type model_asset_service_record_id: int
         :param model_file_name:
@@ -513,10 +505,10 @@ class AssetServiceRecordsApi(object):
         _params = locals()
 
         _all_params = [
-            "asset_service_record_id",
-            "file_name",
             "asset_service_record_id2",
             "file_name2",
+            "asset_service_record_id",
+            "file_name",
             "model_asset_service_record_id",
             "model_file_name",
         ]
@@ -579,7 +571,7 @@ class AssetServiceRecordsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -724,7 +716,7 @@ class AssetServiceRecordsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -886,7 +878,7 @@ class AssetServiceRecordsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -1090,7 +1082,7 @@ class AssetServiceRecordsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -1237,7 +1229,7 @@ class AssetServiceRecordsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -1395,21 +1387,13 @@ class AssetServiceRecordsApi(object):
 
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get(
             "_content_type",
-            self.api_client.select_header_content_type(
-                [
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml",
-                    "application/x-www-form-urlencoded",
-                ]
-            ),
+            self.api_client.select_header_content_type(["application/json"]),
         )
         if _content_types_list:
             _header_params["Content-Type"] = _content_types_list
@@ -1556,7 +1540,7 @@ class AssetServiceRecordsApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting

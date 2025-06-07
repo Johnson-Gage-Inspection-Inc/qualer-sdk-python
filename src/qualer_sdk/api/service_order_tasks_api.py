@@ -174,21 +174,13 @@ class ServiceOrderTasksApi(object):
 
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get(
             "_content_type",
-            self.api_client.select_header_content_type(
-                [
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml",
-                    "application/x-www-form-urlencoded",
-                ]
-            ),
+            self.api_client.select_header_content_type(["application/json"]),
         )
         if _content_types_list:
             _header_params["Content-Type"] = _content_types_list
@@ -344,7 +336,7 @@ class ServiceOrderTasksApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -493,7 +485,7 @@ class ServiceOrderTasksApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -655,21 +647,13 @@ class ServiceOrderTasksApi(object):
 
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get(
             "_content_type",
-            self.api_client.select_header_content_type(
-                [
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml",
-                    "application/x-www-form-urlencoded",
-                ]
-            ),
+            self.api_client.select_header_content_type(["application/json"]),
         )
         if _content_types_list:
             _header_params["Content-Type"] = _content_types_list

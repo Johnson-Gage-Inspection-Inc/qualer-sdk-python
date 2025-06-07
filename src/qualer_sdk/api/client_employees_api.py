@@ -158,21 +158,13 @@ class ClientEmployeesApi(object):
 
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get(
             "_content_type",
-            self.api_client.select_header_content_type(
-                [
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml",
-                    "application/x-www-form-urlencoded",
-                ]
-            ),
+            self.api_client.select_header_content_type(["application/json"]),
         )
         if _content_types_list:
             _header_params["Content-Type"] = _content_types_list
@@ -207,8 +199,8 @@ class ClientEmployeesApi(object):
     @validate_arguments
     def get_employee(
         self,
-        employee_id: StrictStr,
         employee_id2: StrictStr,
+        employee_id: Optional[StrictStr] = None,
         model_employee_id: Optional[StrictInt] = None,
         **kwargs,
     ) -> QualerApiModelsClientsToEmployeeResponseModel:  # noqa: E501
@@ -217,13 +209,13 @@ class ClientEmployeesApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_employee(employee_id, employee_id2, model_employee_id, async_req=True)
+        >>> thread = api.get_employee(employee_id2, employee_id, model_employee_id, async_req=True)
         >>> result = thread.get()
 
-        :param employee_id: (required)
-        :type employee_id: str
         :param employee_id2: (required)
         :type employee_id2: str
+        :param employee_id:
+        :type employee_id: str
         :param model_employee_id:
         :type model_employee_id: int
         :param async_req: Whether to execute the request asynchronously.
@@ -243,14 +235,14 @@ class ClientEmployeesApi(object):
                 "Error! Please call the get_employee_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"
             )
         return self.get_employee_with_http_info(
-            employee_id, employee_id2, model_employee_id, **kwargs
+            employee_id2, employee_id, model_employee_id, **kwargs
         )  # noqa: E501
 
     @validate_arguments
     def get_employee_with_http_info(
         self,
-        employee_id: StrictStr,
         employee_id2: StrictStr,
+        employee_id: Optional[StrictStr] = None,
         model_employee_id: Optional[StrictInt] = None,
         **kwargs,
     ) -> ApiResponse:  # noqa: E501
@@ -259,13 +251,13 @@ class ClientEmployeesApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_employee_with_http_info(employee_id, employee_id2, model_employee_id, async_req=True)
+        >>> thread = api.get_employee_with_http_info(employee_id2, employee_id, model_employee_id, async_req=True)
         >>> result = thread.get()
 
-        :param employee_id: (required)
-        :type employee_id: str
         :param employee_id2: (required)
         :type employee_id2: str
+        :param employee_id:
+        :type employee_id: str
         :param model_employee_id:
         :type model_employee_id: int
         :param async_req: Whether to execute the request asynchronously.
@@ -295,7 +287,7 @@ class ClientEmployeesApi(object):
 
         _params = locals()
 
-        _all_params = ["employee_id", "employee_id2", "model_employee_id"]
+        _all_params = ["employee_id2", "employee_id", "model_employee_id"]
         _all_params.extend(
             [
                 "async_req",
@@ -342,7 +334,7 @@ class ClientEmployeesApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -487,7 +479,7 @@ class ClientEmployeesApi(object):
         _body_params = None
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # authentication setting
@@ -645,21 +637,13 @@ class ClientEmployeesApi(object):
 
         # set the HTTP header `Accept`
         _header_params["Accept"] = self.api_client.select_header_accept(
-            ["application/json", "text/json", "application/xml", "text/xml"]
+            ["application/json"]
         )  # noqa: E501
 
         # set the HTTP header `Content-Type`
         _content_types_list = _params.get(
             "_content_type",
-            self.api_client.select_header_content_type(
-                [
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml",
-                    "application/x-www-form-urlencoded",
-                ]
-            ),
+            self.api_client.select_header_content_type(["application/json"]),
         )
         if _content_types_list:
             _header_params["Content-Type"] = _content_types_list

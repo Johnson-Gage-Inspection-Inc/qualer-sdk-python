@@ -15,9 +15,12 @@ import subprocess
 import sys
 from collections import defaultdict
 
+from fix_swagger_spec import fix_swagger_spec
+
 SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
 OPENAPI_GENERATOR_JAR = "openapi-generator-cli.jar"
 SPEC_FILE = "spec.json"
+FIXED_SPEC_FILE = "spec_fixed.json"
 OUTPUT_DIR = os.path.join("src", "qualer_sdk")
 
 
@@ -71,12 +74,17 @@ def patch_spec():
                 if operation_id.startswith(tag_prefix):
                     op["operationId"] = operation_id[len(tag_prefix) :]
 
-    # Inject any path‐template parameters that weren't declared
+    # Inject any path-template parameters that weren't declared
     inject_missing_path_params(spec)
 
     # Ensure operationIds are unique
     uniquify_operation_ids(spec)
 
+    # Apply the fix to avoid multiple schema issues
+    fix_swagger_spec(SPEC_FILE, FIXED_SPEC_FILE)
+    print("✅ Fixed multiple schema issues in specification.")
+
+    # Save the original spec with our base patches
     with open(SPEC_FILE, "w", encoding="utf-8") as f:
         json.dump(spec, f, indent=2)
     print("✅ Cleaned up operationId prefixes.")
@@ -113,9 +121,9 @@ def inject_missing_path_params(spec):
 
 def generate_sdk():
     if not os.path.exists(OPENAPI_GENERATOR_JAR):
-        sys.exit(f"❌ OpenAPI Generator JAR not found: {OPENAPI_GENERATOR_JAR}")
-
-    # Create a temporary directory for generation
+        sys.exit(
+            f"❌ OpenAPI Generator JAR not found: {OPENAPI_GENERATOR_JAR}"
+        )  # Create a temporary directory for generation
     temp_dir = "temp_sdk_gen"  # Use OpenAPI Generator (typed output)
     command = [
         "java",
@@ -123,13 +131,13 @@ def generate_sdk():
         OPENAPI_GENERATOR_JAR,
         "generate",
         "-i",
-        SPEC_FILE,
+        FIXED_SPEC_FILE,  # Use the fixed specification
         "-g",
         "python-nextgen",
         "-o",
         temp_dir,
-        "--additional-properties=packageName=qualer_sdk",
-        # "--skip-validate-spec",
+        "--additional-properties=packageName=qualer_sdk,legacyDiscriminatorBehavior=true",
+        "--skip-validate-spec",
     ]
 
     print("⚙️ Running OpenAPI Generator...")
@@ -296,4 +304,5 @@ if __name__ == "__main__":
 
     print("🧹 Cleaning up auto-generated files...")
     # No need to remove setup.py from SDK folder since we use a temp directory now
+    print("✅ SDK regeneration complete! Clean structure maintained.")
     print("✅ SDK regeneration complete! Clean structure maintained.")
