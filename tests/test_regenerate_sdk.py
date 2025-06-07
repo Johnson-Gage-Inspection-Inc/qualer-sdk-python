@@ -4,14 +4,96 @@ from unittest.mock import MagicMock, mock_open, patch
 import pytest
 
 from regenerate_sdk import (
+    OPENAPI_GENERATOR_JAR,
     OUTPUT_DIR,
     SPEC_FILE,
-    SWAGGER_CODEGEN_JAR,
+    format_files_with_autoflake,
     format_generated_files,
+    format_generated_files_with_black,
     generate_sdk,
+    inject_missing_path_params,
     patch_spec,
     post_process_generated_files,
+    sort_imports_with_isort,
+    uniquify_operation_ids,
 )
+
+
+class TestUniqueOperationIds:
+    def test_uniquify_operation_ids(self):
+
+        # Create mock spec with duplicate operation IDs
+        mock_spec = {
+            "paths": {
+                "/api/resource1": {"get": {"operationId": "getDuplicateOp"}},
+                "/api/resource2": {"get": {"operationId": "getDuplicateOp"}},
+                "/api/resource3": {"post": {"operationId": "uniqueOp"}},
+            }
+        }
+
+        # Call the function
+        uniquify_operation_ids(mock_spec)
+
+        # Check that the first operationId is unchanged and the duplicate is renamed
+        assert (
+            mock_spec["paths"]["/api/resource1"]["get"]["operationId"]
+            == "getDuplicateOp"
+        )
+        assert (
+            mock_spec["paths"]["/api/resource2"]["get"]["operationId"]
+            == "getDuplicateOp_get_2"
+        )
+        assert mock_spec["paths"]["/api/resource3"]["post"]["operationId"] == "uniqueOp"
+
+
+class TestInjectMissingPathParams:
+    def test_inject_missing_path_params(self):
+
+        # Create mock spec with a path template missing parameter declarations
+        mock_spec = {
+            "paths": {
+                "/api/{resourceId}/items/{itemId}": {
+                    "get": {
+                        "operationId": "getItem",
+                        "parameters": [
+                            # Only resourceId is declared, itemId is missing
+                            {
+                                "name": "resourceId",
+                                "in": "path",
+                                "required": True,
+                                "type": "string",
+                            }
+                        ],
+                    },
+                    "put": {"operationId": "updateItem", "parameters": []},
+                }
+            }
+        }
+
+        # Call the function
+        inject_missing_path_params(mock_spec)
+
+        # Check that the missing path parameter was added to both operations
+        get_params = mock_spec["paths"]["/api/{resourceId}/items/{itemId}"]["get"][
+            "parameters"
+        ]
+        put_params = mock_spec["paths"]["/api/{resourceId}/items/{itemId}"]["put"][
+            "parameters"
+        ]
+
+        # Check that itemId was added to get operation
+        itemId_param = next((p for p in get_params if p["name"] == "itemId"), None)
+        assert itemId_param is not None
+        assert itemId_param["in"] == "path"
+        assert itemId_param["required"] is True
+
+        # Check that both parameters were added to put operation
+        resourceId_param = next(
+            (p for p in put_params if p["name"] == "resourceId"), None
+        )
+        itemId_param = next((p for p in put_params if p["name"] == "itemId"), None)
+        assert resourceId_param is not None
+        assert itemId_param is not None
 
 
 class TestPatchSpec:
@@ -101,22 +183,21 @@ class TestGenerateSDK:
     ):
         # Setup mocks
         mock_exists.side_effect = (
-            lambda path: path == SWAGGER_CODEGEN_JAR or path.startswith("temp_sdk_gen")
+            lambda path: path == OPENAPI_GENERATOR_JAR
+            or path.startswith("temp_sdk_gen")
         )
         mock_subprocess.return_value = MagicMock()
 
-        generate_sdk()
-
-        # Verify subprocess was called with correct command
+        generate_sdk()  # Verify subprocess was called with correct command
         expected_command = [
             "java",
             "-jar",
-            SWAGGER_CODEGEN_JAR,
+            OPENAPI_GENERATOR_JAR,
             "generate",
             "-i",
             SPEC_FILE,
-            "-l",
-            "python",
+            "-g",
+            "python-nextgen",
             "-o",
             "temp_sdk_gen",
             "--additional-properties=packageName=qualer_sdk",
@@ -131,7 +212,7 @@ class TestGenerateSDK:
 
         with pytest.raises(SystemExit) as excinfo:
             generate_sdk()
-        assert f"❌ Swagger Codegen JAR not found: {SWAGGER_CODEGEN_JAR}" in str(
+        assert f"❌ OpenAPI Generator JAR not found: {OPENAPI_GENERATOR_JAR}" in str(
             excinfo.value
         )
 
@@ -159,24 +240,82 @@ class TestPostProcessGeneratedFiles:
             # Should not modify content if version already exists
             mock_file().write.assert_not_called()
 
-    @patch("os.path.exists")
-    def test_post_process_api_client_fixes_long_type(self, mock_exists):
-        mock_exists.side_effect = lambda path: "api_client.py" in path
-        old_content = '"long": int if six.PY3 else long,  # noqa: F821'
-        expected_content = '"long": int,  # In Python 3, long is just int'
-
-        with patch("builtins.open", mock_open(read_data=old_content)) as mock_file:
-            post_process_generated_files()
-
-            mock_file().write.assert_called_with(expected_content)
-
 
 class TestFormatGeneratedFiles:
-    @patch("subprocess.run")
-    def test_format_generated_files_success(self, mock_subprocess):
-        mock_subprocess.return_value = MagicMock(returncode=0)
+    @patch("regenerate_sdk.format_files_with_autoflake")
+    @patch("regenerate_sdk.sort_imports_with_isort")
+    @patch("regenerate_sdk.format_generated_files_with_black")
+    def test_format_generated_files_calls_all_formatters(
+        self, mock_black, mock_isort, mock_autoflake
+    ):
 
         format_generated_files()
+
+        mock_autoflake.assert_called_once()
+        mock_isort.assert_called_once()
+        mock_black.assert_called_once()
+
+    @patch("subprocess.run")
+    def test_format_files_with_autoflake(self, mock_subprocess):
+
+        mock_subprocess.return_value = MagicMock()
+
+        format_files_with_autoflake()
+
+        mock_subprocess.assert_called_once_with(
+            [
+                "autoflake",
+                "--in-place",
+                "--remove-all-unused-imports",
+                "--remove-unused-variables",
+                "--recursive",
+                OUTPUT_DIR,
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+        )
+
+    @patch("subprocess.run")
+    def test_format_files_with_autoflake_not_found(self, mock_subprocess):
+
+        mock_subprocess.side_effect = FileNotFoundError()
+
+        # Should not raise exception
+        format_files_with_autoflake()
+
+    @patch("subprocess.run")
+    def test_sort_imports_with_isort(self, mock_subprocess):
+
+        mock_subprocess.return_value = MagicMock()
+
+        sort_imports_with_isort()
+
+        mock_subprocess.assert_called_once_with(
+            ["isort", OUTPUT_DIR],
+            check=True,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+        )
+
+    @patch("subprocess.run")
+    def test_sort_imports_with_isort_not_found(self, mock_subprocess):
+
+        mock_subprocess.side_effect = FileNotFoundError()
+
+        # Should not raise exception
+        sort_imports_with_isort()
+
+    @patch("subprocess.run")
+    def test_format_generated_files_with_black_success(self, mock_subprocess):
+
+        mock_subprocess.return_value = MagicMock(returncode=0)
+
+        format_generated_files_with_black()
 
         mock_subprocess.assert_called_once_with(
             ["black", OUTPUT_DIR],
@@ -188,25 +327,28 @@ class TestFormatGeneratedFiles:
         )
 
     @patch("subprocess.run")
-    def test_format_generated_files_black_not_found(self, mock_subprocess):
-        mock_subprocess.side_effect = FileNotFoundError()
+    def test_format_generated_files_with_black_failure(self, mock_subprocess):
 
-        # Should not raise exception
-        format_generated_files()
-
-    @patch("subprocess.run")
-    def test_format_generated_files_black_error(self, mock_subprocess):
         mock_subprocess.return_value = MagicMock(returncode=1, stderr="Error message")
 
         # Should not raise exception
-        format_generated_files()
+        format_generated_files_with_black()
 
     @patch("subprocess.run")
-    def test_format_generated_files_exception(self, mock_subprocess):
+    def test_format_generated_files_with_black_not_found(self, mock_subprocess):
+
+        mock_subprocess.side_effect = FileNotFoundError()
+
+        # Should not raise exception
+        format_generated_files_with_black()
+
+    @patch("subprocess.run")
+    def test_format_generated_files_with_black_exception(self, mock_subprocess):
+
         mock_subprocess.side_effect = Exception("Unexpected error")
 
         # Should not raise exception
-        format_generated_files()
+        format_generated_files_with_black()
 
 
 class TestMainExecution:
