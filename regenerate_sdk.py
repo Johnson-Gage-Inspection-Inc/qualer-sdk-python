@@ -85,27 +85,30 @@ def patch_spec():
 def inject_missing_path_params(spec):
     """For each path like /foo/{X}/{y}, ensure X and y are declared as path params."""
     for path, path_item in spec.get("paths", {}).items():
-        # 1) Gather all declared path‐param names (case-sensitive)
-        declared = set(
-            p["name"]
-            for op in path_item.values()
-            for p in op.get("parameters", [])
-            if p.get("in") == "path"
-        )
+        # Extract all parameters from the path template
+        path_param_names = re.findall(r"\{([^/}]+)\}", path)
 
-        # 2) Find all {ParamName} in the path template
-        for name in re.findall(r"\{([^/}]+)\}", path):
-            if name not in declared:
-                # inject into *every* operation under this path
-                param_obj = {
-                    "name": name,
-                    "in": "path",
-                    "required": True,
-                    "type": "string",
-                }
-                print(f"🔧 Injecting path-param {name!r} into {path!r}")
-                for op in path_item.values():
-                    op.setdefault("parameters", []).append(param_obj.copy())
+        # For each operation in this path
+        for method, op in path_item.items():
+            # Initialize parameters list if it doesn't exist
+            op.setdefault("parameters", [])
+
+            # Get the set of path parameter names already declared for this operation
+            declared_for_op = {
+                p["name"] for p in op.get("parameters", []) if p.get("in") == "path"
+            }
+
+            # Add any missing path parameters for this specific operation
+            for name in path_param_names:
+                if name not in declared_for_op:
+                    param_obj = {
+                        "name": name,
+                        "in": "path",
+                        "required": True,
+                        "type": "string",
+                    }
+                    print(f"🔧 Injecting path-param {name!r} into {path!r} {method}")
+                    op["parameters"].append(param_obj.copy())
 
 
 def generate_sdk():
