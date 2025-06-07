@@ -48,13 +48,13 @@ def test_required_dependencies():
 
 
 def test_python_version_requirement():
-    """Test that python_requires is set to >=3.7"""
+    """Test that python_requires is set to >=3.9"""
     with open("setup.py", "r", encoding="utf-8") as f:
         content = f.read()
 
     assert (
-        'python_requires=">=3.7"' in content
-    ), "Python version requirement should be >=3.7"
+        'python_requires=">=3.9"' in content
+    ), "Python version requirement should be >=3.9"
 
 
 def test_package_data():
