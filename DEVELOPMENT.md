@@ -242,6 +242,23 @@ twine upload dist/*
 
 ## 🔄 Development Workflow
 
+### Regenerating the SDK
+
+The SDK can be regenerated from the Qualer API's Swagger 2.0 specification:
+
+```bash
+python regenerate_sdk.py
+```
+
+The regeneration process consists of these steps:
+1. Downloads the OpenAPI spec from the Qualer server
+2. Patches the RecordType enum to support integer values
+3. Applies fixes for multiple schema issues in the API specification using `fix_swagger_spec.py`
+4. Regenerates the SDK using openapi-generator-cli
+5. Post-processes the generated code (formatting, typing, etc.)
+
+The `fix_swagger_spec.py` script specifically addresses an issue where multiple media types in the Swagger 2.0 "consumes" and "produces" arrays were causing "Multiple schemas found in the OAS 'content' section" warnings when converted to OpenAPI 3.0. The fix ensures only one media type is kept in each case.
+
 ### Feature Development
 
 1. Create feature branch from `develop`:

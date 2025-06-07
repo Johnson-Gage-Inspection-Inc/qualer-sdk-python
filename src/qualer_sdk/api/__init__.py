@@ -1,8 +1,14 @@
-from __future__ import absolute_import
+# coding: utf-8
 
 # flake8: noqa
 
-# import apis into api package
+"""
+Qualer SDK API Classes
+
+This module provides access to all API classes.
+"""
+
+# Import all API classes
 from qualer_sdk.api.account_api import AccountApi
 from qualer_sdk.api.asset_attributes_api import AssetAttributesApi
 from qualer_sdk.api.asset_maintenance_plans_api import AssetMaintenancePlansApi
@@ -46,3 +52,47 @@ from qualer_sdk.api.service_order_tasks_api import ServiceOrderTasksApi
 from qualer_sdk.api.service_orders_api import ServiceOrdersApi
 from qualer_sdk.api.service_pricing_api import ServicePricingApi
 from qualer_sdk.api.vendors_api import VendorsApi
+
+__all__ = [
+    "AccountApi",
+    "AssetAttributesApi",
+    "AssetMaintenancePlansApi",
+    "AssetMeasurementsApi",
+    "AssetPoolsApi",
+    "AssetReservationApi",
+    "AssetServiceForecastApi",
+    "AssetServiceRecordsApi",
+    "AssetsApi",
+    "ClientAssetAttributesApi",
+    "ClientAssetServiceRecordsApi",
+    "ClientAssetsApi",
+    "ClientAttributeApi",
+    "ClientEmployeesApi",
+    "ClientMaintenancePlansApi",
+    "ClientSiteApi",
+    "ClientsApi",
+    "CommonApi",
+    "CompanyApi",
+    "EmployeeFilterPreferenceApi",
+    "EmployeePreferenceApi",
+    "EmployeesApi",
+    "EnvironmentsApi",
+    "MaintenancePlansApi",
+    "ProductApi",
+    "ReferenceApi",
+    "ReportDatasetsApi",
+    "ServiceOrderDocumentsApi",
+    "ServiceOrderItemDocumentsApi",
+    "ServiceOrderItemMeasurementsApi",
+    "ServiceOrderItemPartsApi",
+    "ServiceOrderItemTasksApi",
+    "ServiceOrderItemsApi",
+    "ServiceOrderMetadataApi",
+    "ServiceOrderPartsApi",
+    "ServiceOrderPaymentsApi",
+    "ServiceOrderShipmentsApi",
+    "ServiceOrderTasksApi",
+    "ServiceOrdersApi",
+    "ServicePricingApi",
+    "VendorsApi",
+]
