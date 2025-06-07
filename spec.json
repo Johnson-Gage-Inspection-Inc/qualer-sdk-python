@@ -563,7 +563,8 @@
               }
             }
           }
-        }
+        },
+        "parameters": []
       }
     },
     "/api/assetsreservations": {
@@ -874,7 +875,8 @@
               }
             }
           }
-        }
+        },
+        "parameters": []
       }
     },
     "/api/assets/byattribute": {
@@ -1501,7 +1503,8 @@
               }
             }
           }
-        }
+        },
+        "parameters": []
       }
     },
     "/api/assetservicerecords/{AssetServiceRecordId}": {
@@ -2979,7 +2982,8 @@
               "$ref": "#/definitions/Qualer.Api.Models.Common.To.CultureListResponseModel"
             }
           }
-        }
+        },
+        "parameters": []
       }
     },
     "/api/common/cultureuilist": {
@@ -3002,7 +3006,8 @@
               "$ref": "#/definitions/Qualer.Api.Models.Common.To.CultureListResponseModel"
             }
           }
-        }
+        },
+        "parameters": []
       }
     },
     "/api/common/settings": {
@@ -3112,7 +3117,8 @@
               }
             }
           }
-        }
+        },
+        "parameters": []
       },
       "post": {
         "tags": [
@@ -3266,7 +3272,8 @@
               }
             }
           }
-        }
+        },
+        "parameters": []
       }
     },
     "/api/company/sites/{id}/rooms": {
@@ -3333,7 +3340,8 @@
               }
             }
           }
-        }
+        },
+        "parameters": []
       },
       "put": {
         "tags": [
@@ -3836,7 +3844,8 @@
               }
             }
           }
-        }
+        },
+        "parameters": []
       }
     },
     "/api/plans/{maintenancePlanId}/assets": {
@@ -3897,7 +3906,8 @@
               }
             }
           }
-        }
+        },
+        "parameters": []
       },
       "put": {
         "tags": [
@@ -4078,7 +4088,8 @@
               }
             }
           }
-        }
+        },
+        "parameters": []
       }
     },
     "/api/manufacturers/add": {
@@ -4135,7 +4146,8 @@
               }
             }
           }
-        }
+        },
+        "parameters": []
       }
     },
     "/api/reference/MeasurementQuantities": {
@@ -4161,7 +4173,8 @@
               }
             }
           }
-        }
+        },
+        "parameters": []
       }
     },
     "/api/data/MeasurementChart/{serviceOrderItemId}": {
@@ -5231,7 +5244,8 @@
               }
             }
           }
-        }
+        },
+        "parameters": []
       }
     },
     "/api/data/{serviceOrderId}/ExternalDataReports": {
