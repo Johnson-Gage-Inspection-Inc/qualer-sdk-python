@@ -139,7 +139,7 @@ class TestPatchSpec:
             assert (
                 patched_spec["paths"]["/api/test"]["get"]["operationId"] == "GetAsset"
             )
-            
+
             # Verify fix_swagger_spec was called
             mock_fix_swagger.assert_called_once_with(SPEC_FILE, FIXED_SPEC_FILE)
 

@@ -12,12 +12,17 @@ setup(
     long_description_content_type="text/markdown",
     author="Johnson Gage & Inspection Inc.",
     author_email="jhall@jgiquality.com",
-    url="https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-python",
-    packages=find_packages(where="src"),
+    url="https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-python",    packages=find_packages(where="src"),
     package_dir={"": "src"},
     include_package_data=True,
     package_data={"qualer_sdk": ["py.typed"]},
-    install_requires=["urllib3>=1.15", "six>=1.10", "certifi", "python-dateutil"],
+    install_requires=[
+        "urllib3>=1.15",
+        "six>=1.10",
+        "certifi",
+        "python-dateutil",
+        "pydantic>=2.11.5"
+    ],
     python_requires=">=3.7",
     classifiers=[
         "Development Status :: 4 - Beta",
