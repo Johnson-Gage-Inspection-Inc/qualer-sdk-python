@@ -571,7 +571,7 @@
         "tags": [
           "AssetReservation"
         ],
-        "operationId": "Get",
+        "operationId": "Get_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1813,6 +1813,12 @@
             "required": false,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "name": "AssetServiceRecordId",
+            "in": "path",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -1866,6 +1872,18 @@
             "in": "query",
             "required": false,
             "type": "string"
+          },
+          {
+            "name": "AssetServiceRecordId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "FileName",
+            "in": "path",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -1883,7 +1901,7 @@
         "tags": [
           "ClientAssetAttributes"
         ],
-        "operationId": "GetAssetAttributes",
+        "operationId": "GetAssetAttributes_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1916,7 +1934,7 @@
         "tags": [
           "ClientAssetAttributes"
         ],
-        "operationId": "UpsertAssetAttributes",
+        "operationId": "UpsertAssetAttributes_put_2",
         "consumes": [
           "application/json",
           "text/json",
@@ -1965,7 +1983,7 @@
         "tags": [
           "ClientAssets"
         ],
-        "operationId": "GetAsset",
+        "operationId": "GetAsset_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1986,6 +2004,12 @@
             "required": false,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "name": "AssetId",
+            "in": "path",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -2102,7 +2126,7 @@
         ],
         "summary": "GetAssetManagerList",
         "description": "assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService, ClientOutOfService, ClientWithoutSchedule\r\n            \r\nClientDueForService - depends on Employee Filter Preference\r\nPOST api/user/filters",
-        "operationId": "GetAssetManagerList",
+        "operationId": "GetAssetManagerList_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2164,7 +2188,7 @@
         "tags": [
           "ClientAssets"
         ],
-        "operationId": "GetAllAssets",
+        "operationId": "GetAllAssets_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2265,7 +2289,7 @@
         "tags": [
           "ClientAssetServiceRecords"
         ],
-        "operationId": "GetAssetServiceRecordsByAsset",
+        "operationId": "GetAssetServiceRecordsByAsset_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2432,6 +2456,12 @@
             "required": false,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "name": "EmployeeId",
+            "in": "path",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -2540,7 +2570,7 @@
         "tags": [
           "ClientMaintenancePlans"
         ],
-        "operationId": "GetMaintenancePlans",
+        "operationId": "GetMaintenancePlans_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2610,7 +2640,7 @@
         "tags": [
           "Clients"
         ],
-        "operationId": "Get",
+        "operationId": "Get_get_3",
         "consumes": [],
         "produces": [
           "application/json",
@@ -2642,7 +2672,7 @@
         "tags": [
           "Clients"
         ],
-        "operationId": "GetAll",
+        "operationId": "GetAll_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3351,7 +3381,7 @@
           "EmployeePreference"
         ],
         "description": "elementPage:\r\nAssetManager = 1,\r\nWorkOrders = 2,\r\nServiceOrderItems = 3,\r\nServiceSchedules = 4,\r\nServiceRequests = 5,\r\nVendors = 6,\r\nVendorAgreements = 7,\r\nClientAgreements = 8,\r\nWorkCalendar = 9,\r\nClients = 10,\r\nGlobalAssetManager = 11,\r\nInvoicesManager = 12,\r\nProductManager = 13,\r\nProductSpecifications = 14,\r\nDocumentManager = 15",
-        "operationId": "Get",
+        "operationId": "Get_get_4",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3455,7 +3485,7 @@
         "tags": [
           "Employees"
         ],
-        "operationId": "GetEmployee",
+        "operationId": "GetEmployee_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3536,7 +3566,7 @@
         "tags": [
           "Employees"
         ],
-        "operationId": "GetEmployees",
+        "operationId": "GetEmployees_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3570,7 +3600,7 @@
         ],
         "summary": "Create Employee",
         "description": "CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />\r\nCultureUiName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"<br />\r\nList of culture codes: GET /api/common/culturelist\"\r\nList of UI culture codes: GET /api/common/cultureuilist\"",
-        "operationId": "CreateEmployee",
+        "operationId": "CreateEmployee_post_2",
         "consumes": [
           "application/json",
           "text/json",
@@ -3709,7 +3739,7 @@
         "tags": [
           "Environments"
         ],
-        "operationId": "Get",
+        "operationId": "Get_get_5",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3788,7 +3818,7 @@
         "tags": [
           "MaintenancePlans"
         ],
-        "operationId": "GetMaintenancePlans",
+        "operationId": "GetMaintenancePlans_get_3",
         "consumes": [],
         "produces": [
           "application/json",
@@ -3814,7 +3844,7 @@
         "tags": [
           "MaintenancePlans"
         ],
-        "operationId": "GetMaintenancePlanAssets",
+        "operationId": "GetMaintenancePlanAssets_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4244,7 +4274,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "GetAssetAttributes",
+        "operationId": "GetAssetAttributes_get_3",
         "consumes": [],
         "produces": [
           "application/json",
@@ -4804,7 +4834,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "GetAssetServiceRecords",
+        "operationId": "GetAssetServiceRecords_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5255,7 +5285,7 @@
         "tags": [
           "ReportDatasets"
         ],
-        "operationId": "GetClientAttributes",
+        "operationId": "GetClientAttributes_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5474,7 +5504,7 @@
         ],
         "summary": "",
         "description": "reportType:<br />\r\nassetsummary, assetlabel, assetdetail, assetcertificate,<br />\r\nordersummary / serviceordersummary,<br />\r\norderinvoice / serviceorderinvoice,<br />\r\norderestimate / serviceorderestimate,<br />\r\norderdetail / serviceorderdetail,<br />\r\nordercertificate / serviceordercertificate,<br />\r\ngeneral",
-        "operationId": "UploadDocuments",
+        "operationId": "UploadDocuments_post_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5673,7 +5703,7 @@
         ],
         "summary": "Retrieve work order document by Unique Id",
         "description": "Sample request:\r\n            \r\nGET api/service/workorders/documents/FE6B21DC-8061-46FF-AAB8-12C2030FE4B9\r\n            \r\nGET api/wd/FE6B21DC-8061-46FF-AAB8-12C2030FE4B9",
-        "operationId": "GetDocument",
+        "operationId": "GetDocument_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5714,7 +5744,7 @@
         ],
         "summary": "Retrieve work order documents",
         "description": "Sample request:\r\n            \r\nGET api/service/workitems/1000/documents",
-        "operationId": "GetDocuments",
+        "operationId": "GetDocuments_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5757,7 +5787,7 @@
         "tags": [
           "ServiceOrderItemDocuments"
         ],
-        "operationId": "UploadDocuments",
+        "operationId": "UploadDocuments_post_3",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5801,7 +5831,7 @@
         "tags": [
           "ServiceOrderItemDocuments"
         ],
-        "operationId": "GetDocumentsList",
+        "operationId": "GetDocumentsList_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -5850,7 +5880,7 @@
         ],
         "summary": "Retrieve work order documents",
         "description": "Sample request:\r\n            \r\nGET /api/service/workitems/documents/list\r\n            \r\nGET /api/service/workitems/documents/list?status=reportType\r\n            \r\nGET /api/service/workitems/documents/list?from=2020-12-01T10:11:12&amp;to=2021-01-01T10:11:12&amp;reportType=OrderInvoice&amp;ServiceOrderItemId=1\r\n            \r\nreportType:<br />\r\nUnset = 0,<br />\r\nAssetSummary = 1,<br />\r\nAssetLabel = 11,<br />\r\nAssetDetail = 2,<br />\r\nAssetCertificate = 21,<br />\r\nOrderSummary / ServiceOrderSummary = 3,<br />\r\nOrderInvoice / ServiceOrderInvoice = 31,<br />\r\nOrderEstimate / ServiceOrderEstimate = 32,<br />\r\nDashboard = 4,<br />\r\nOrderDetail / ServiceOrderDetail = 5,<br />\r\nOrderCertificate / ServiceOrderCertificate = 5<br />",
-        "operationId": "GetDocumentList",
+        "operationId": "GetDocumentList_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6116,7 +6146,7 @@
         "tags": [
           "ServiceOrderItemMeasurements"
         ],
-        "operationId": "GetMeasurementsByAsset",
+        "operationId": "GetMeasurementsByAsset_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6288,7 +6318,7 @@
         ],
         "summary": "Retrieve work items",
         "description": "Sample request:\r\n            \r\nGET /api/service/workitems\r\n            \r\nGET /api/service/workitems?status=pending\r\n            \r\nGET /api/service/workitems?&amp;status=pending,delayed&amp;companyId=10&amp;from=2010-11-15T10:11:12&amp;to=2011-11-15T10:11:12&amp;workItemNumber=0629-000032-02",
-        "operationId": "GetWorkItems",
+        "operationId": "GetWorkItems_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6820,7 +6850,7 @@
           "ServiceOrderMetadata"
         ],
         "summary": "Get list of metadata",
-        "operationId": "Get",
+        "operationId": "Get_get_6",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6852,7 +6882,7 @@
           "ServiceOrderMetadata"
         ],
         "summary": "Update metadata",
-        "operationId": "Update",
+        "operationId": "Update_put_2",
         "consumes": [
           "application/json",
           "text/json",
@@ -6899,7 +6929,7 @@
           "ServiceOrderMetadata"
         ],
         "summary": "Create metadata",
-        "operationId": "Create",
+        "operationId": "Create_post_2",
         "consumes": [
           "application/json",
           "text/json",
@@ -6948,7 +6978,7 @@
           "ServiceOrderMetadata"
         ],
         "summary": "Delete metadata",
-        "operationId": "Delete",
+        "operationId": "Delete_delete_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7465,7 +7495,7 @@
         "tags": [
           "ServiceOrders"
         ],
-        "operationId": "GetWorkOrders",
+        "operationId": "GetWorkOrders_get_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7604,7 +7634,7 @@
           "ServiceOrders"
         ],
         "summary": "Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount, ShippingFee",
-        "operationId": "PutCharges",
+        "operationId": "PutCharges_put_2",
         "consumes": [
           "application/json",
           "text/json",
@@ -8058,7 +8088,7 @@
           "ServiceOrderTasks"
         ],
         "description": "",
-        "operationId": "DeleteWorkOrderTask",
+        "operationId": "DeleteWorkOrderTask_delete_2",
         "consumes": [],
         "produces": [
           "application/json",
@@ -8104,7 +8134,7 @@
           "ServicePricing"
         ],
         "summary": "",
-        "operationId": "Get",
+        "operationId": "Get_get_7",
         "consumes": [],
         "produces": [
           "application/json",
@@ -8146,7 +8176,7 @@
         "tags": [
           "ServicePricing"
         ],
-        "operationId": "Update",
+        "operationId": "Update_put_3",
         "consumes": [
           "application/json",
           "text/json",
@@ -8191,7 +8221,7 @@
         "tags": [
           "Vendors"
         ],
-        "operationId": "Get",
+        "operationId": "Get_get_8",
         "consumes": [],
         "produces": [
           "application/json",
@@ -8223,7 +8253,7 @@
         "tags": [
           "Vendors"
         ],
-        "operationId": "GetAll",
+        "operationId": "GetAll_get_3",
         "consumes": [],
         "produces": [
           "application/json",
@@ -8277,7 +8307,7 @@
         ],
         "summary": "Update Vendor information.",
         "description": "",
-        "operationId": "Update",
+        "operationId": "Update_put_4",
         "consumes": [
           "application/json",
           "text/json",
@@ -8323,7 +8353,7 @@
         ],
         "summary": "Create Vendor information.",
         "description": "",
-        "operationId": "Create",
+        "operationId": "Create_post_3",
         "consumes": [
           "application/json",
           "text/json",
