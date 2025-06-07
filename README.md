@@ -149,7 +149,7 @@ If you need to update or regenerate the SDK based on a new specification:
 python regenerate_sdk.py
 ```
 
-This script uses the [swagger-codegen-cli-2.4.21.jar](swagger-codegen-cli-2.4.21.jar) along with [spec.json](spec.json).
+This script uses the [openapi-generator-cli.jar](openapi-generator-cli.jar) along with [spec.json](spec.json). It also employs the [fix_swagger_spec.py](fix_swagger_spec.py) script to resolve issues with multiple content types in the OpenAPI specification, which can cause warnings during SDK generation.
 
 ## Running Tests
 
