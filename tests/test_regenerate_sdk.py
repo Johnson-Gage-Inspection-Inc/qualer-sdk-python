@@ -4,6 +4,7 @@ from unittest.mock import MagicMock, mock_open, patch
 import pytest
 
 from regenerate_sdk import (
+    FIXED_SPEC_FILE,
     OPENAPI_GENERATOR_JAR,
     OUTPUT_DIR,
     SPEC_FILE,
@@ -97,7 +98,8 @@ class TestInjectMissingPathParams:
 
 
 class TestPatchSpec:
-    def test_patch_spec_success(self):
+    @patch("regenerate_sdk.fix_swagger_spec")
+    def test_patch_spec_success(self, mock_fix_swagger):
         mock_spec = {
             "definitions": {
                 "Qualer.Api.Models.Asset.To.AssetManageResponseModel": {
@@ -137,6 +139,9 @@ class TestPatchSpec:
             assert (
                 patched_spec["paths"]["/api/test"]["get"]["operationId"] == "GetAsset"
             )
+            
+            # Verify fix_swagger_spec was called
+            mock_fix_swagger.assert_called_once_with(SPEC_FILE, FIXED_SPEC_FILE)
 
     def test_patch_spec_missing_record_type(self):
         mock_spec = {
@@ -189,18 +194,19 @@ class TestGenerateSDK:
         mock_subprocess.return_value = MagicMock()
 
         generate_sdk()  # Verify subprocess was called with correct command
+
         expected_command = [
             "java",
             "-jar",
             OPENAPI_GENERATOR_JAR,
             "generate",
             "-i",
-            SPEC_FILE,
+            FIXED_SPEC_FILE,
             "-g",
             "python-nextgen",
             "-o",
             "temp_sdk_gen",
-            "--additional-properties=packageName=qualer_sdk",
+            "--additional-properties=packageName=qualer_sdk,legacyDiscriminatorBehavior=true",
         ]
         mock_subprocess.assert_called_once_with(expected_command, check=True)
         mock_post_process.assert_called_once()

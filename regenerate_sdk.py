@@ -76,18 +76,17 @@ def patch_spec():
 
     # Inject any path-template parameters that weren't declared
     inject_missing_path_params(spec)
-
     # Ensure operationIds are unique
     uniquify_operation_ids(spec)
-
-    # Apply the fix to avoid multiple schema issues
-    fix_swagger_spec(SPEC_FILE, FIXED_SPEC_FILE)
-    print("✅ Fixed multiple schema issues in specification.")
 
     # Save the original spec with our base patches
     with open(SPEC_FILE, "w", encoding="utf-8") as f:
         json.dump(spec, f, indent=2)
     print("✅ Cleaned up operationId prefixes.")
+
+    # Apply the fix to avoid multiple schema issues
+    fix_swagger_spec(SPEC_FILE, FIXED_SPEC_FILE)
+    print("✅ Fixed multiple schema issues in specification.")
 
 
 def inject_missing_path_params(spec):
@@ -137,7 +136,6 @@ def generate_sdk():
         "-o",
         temp_dir,
         "--additional-properties=packageName=qualer_sdk,legacyDiscriminatorBehavior=true",
-        "--skip-validate-spec",
     ]
 
     print("⚙️ Running OpenAPI Generator...")
