@@ -1573,7 +1573,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Qualer.Api.Models.Asset.ServiceRecords.To.AssetServiceRecordResponseModel"
+                "$ref": "#/definitions/Qualer.Api.Models.AssetServiceRecords.To.AssetServiceRecordResponseModel"
               }
             }
           }
@@ -1807,7 +1807,7 @@
           {
             "name": "assetServiceRecordId",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string"
           },
           {
@@ -1854,13 +1854,13 @@
           {
             "name": "assetServiceRecordId",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string"
           },
           {
             "name": "fileName",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string"
           },
           {
@@ -1998,7 +1998,7 @@
           {
             "name": "assetId",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string"
           },
           {
@@ -2450,7 +2450,7 @@
           {
             "name": "employeeId",
             "in": "query",
-            "required": true,
+            "required": false,
             "type": "string"
           },
           {
@@ -5717,7 +5717,7 @@
         ],
         "summary": "Retrieve work order document by Unique Id",
         "description": "Sample request:\r\n            \r\nGET api/service/workorders/documents/FE6B21DC-8061-46FF-AAB8-12C2030FE4B9\r\n            \r\nGET api/wd/FE6B21DC-8061-46FF-AAB8-12C2030FE4B9",
-        "operationId": "GetDocument_get_2",
+        "operationId": "GetDocument_get_wd",
         "consumes": [],
         "produces": [
           "application/json",
@@ -6332,7 +6332,7 @@
         ],
         "summary": "Retrieve work items",
         "description": "Sample request:\r\n            \r\nGET /api/service/workitems\r\n            \r\nGET /api/service/workitems?status=pending\r\n            \r\nGET /api/service/workitems?&amp;status=pending,delayed&amp;companyId=10&amp;from=2010-11-15T10:11:12&amp;to=2011-11-15T10:11:12&amp;workItemNumber=0629-000032-02",
-        "operationId": "GetWorkItems_get_2",
+        "operationId": "GetWorkItems_workitems",
         "consumes": [],
         "produces": [
           "application/json",
@@ -7509,7 +7509,7 @@
         "tags": [
           "ServiceOrders"
         ],
-        "operationId": "GetWorkOrders_get_2",
+        "operationId": "GetWorkOrders_employee",
         "consumes": [],
         "produces": [
           "application/json",
