@@ -303,6 +303,4 @@ if __name__ == "__main__":
     generate_sdk()
 
     print("🧹 Cleaning up auto-generated files...")
-    # No need to remove setup.py from SDK folder since we use a temp directory now
-    print("✅ SDK regeneration complete! Clean structure maintained.")
     print("✅ SDK regeneration complete! Clean structure maintained.")

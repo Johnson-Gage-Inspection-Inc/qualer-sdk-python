@@ -4,7 +4,21 @@ import sys
 
 
 def fix_swagger_spec(input_file, output_file):
-    """Fix multiple schema issues in Swagger 2.0 spec"""
+    """Fix multiple schema issues in Swagger 2.0 spec.
+
+    When converting Swagger 2.0 to OpenAPI 3.0, multiple media types in "consumes"
+    and "produces" arrays get transformed into 'content' objects with multiple schemas.
+    This causes warnings like "Multiple schemas found in the OAS 'content' section,
+    returning only the first one" during SDK generation.
+
+    This function resolves the issue by keeping only the first content type in each
+    consumes/produces array, ensuring consistent behavior when the generator transforms
+    the spec to OpenAPI 3.0.
+
+    Args:
+        input_file: Path to the input Swagger 2.0 specification file
+        output_file: Path where the fixed specification will be saved
+    """
     with open(input_file, "r", encoding="utf-8") as f:
         spec = json.load(f)
 
