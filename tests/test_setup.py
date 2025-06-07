@@ -4,18 +4,20 @@ import sys
 
 from setuptools import find_packages
 
-# Add the parent directory to sys.path to allow importing setup.py as a module
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
+# Add the repository root directory to sys.path to allow importing setup.py as a module
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
 def test_readme_exists():
     """Test that README.md file exists"""
-    assert os.path.isfile("README.md"), "README.md file not found"
+    readme_path = os.path.join(os.path.dirname(__file__), "..", "README.md")
+    assert os.path.isfile(readme_path), "README.md file not found"
 
 
 def test_setup_version_format():
     """Test that version follows semantic versioning"""
-    with open("setup.py", "r", encoding="utf-8") as f:
+    setup_path = os.path.join(os.path.dirname(__file__), "..", "setup.py")
+    with open(setup_path, "r", encoding="utf-8") as f:
         content = f.read()
 
     # Extract version using regex
@@ -31,8 +33,9 @@ def test_setup_version_format():
 
 def test_package_structure():
     """Test that src directory exists and contains packages"""
-    assert os.path.isdir("src"), "src directory not found"
-    packages = find_packages(where="src")
+    src_path = os.path.join(os.path.dirname(__file__), "..", "src")
+    assert os.path.isdir(src_path), "src directory not found"
+    packages = find_packages(where=src_path)
     assert "qualer_sdk" in packages, "qualer_sdk package not found in src directory"
 
 
@@ -40,7 +43,8 @@ def test_required_dependencies():
     """Test that all required dependencies are listed"""
     required_deps = ["urllib3", "six", "certifi", "python-dateutil"]
 
-    with open("setup.py", "r", encoding="utf-8") as f:
+    setup_path = os.path.join(os.path.dirname(__file__), "..", "setup.py")
+    with open(setup_path, "r", encoding="utf-8") as f:
         content = f.read()
 
     for dep in required_deps:
@@ -49,7 +53,8 @@ def test_required_dependencies():
 
 def test_python_version_requirement():
     """Test that python_requires is set to >=3.9"""
-    with open("setup.py", "r", encoding="utf-8") as f:
+    setup_path = os.path.join(os.path.dirname(__file__), "..", "setup.py")
+    with open(setup_path, "r", encoding="utf-8") as f:
         content = f.read()
 
     assert (
@@ -59,7 +64,8 @@ def test_python_version_requirement():
 
 def test_package_data():
     """Test that py.typed is included in package data"""
-    with open("setup.py", "r", encoding="utf-8") as f:
+    setup_path = os.path.join(os.path.dirname(__file__), "..", "setup.py")
+    with open(setup_path, "r", encoding="utf-8") as f:
         content = f.read()
 
     assert (
@@ -69,7 +75,8 @@ def test_package_data():
 
 def test_classifiers():
     """Test that important classifiers are included"""
-    with open("setup.py", "r", encoding="utf-8") as f:
+    setup_path = os.path.join(os.path.dirname(__file__), "..", "setup.py")
+    with open(setup_path, "r", encoding="utf-8") as f:
         content = f.read()
 
     important_classifiers = [
@@ -79,9 +86,6 @@ def test_classifiers():
     ]
 
     for classifier in important_classifiers:
-        assert (
-            classifier in content
-        ), f"Important classifier '{classifier}' not found in setup.py"
         assert (
             classifier in content
         ), f"Important classifier '{classifier}' not found in setup.py"

@@ -23,7 +23,8 @@ setup(
         "certifi",
         "python-dateutil",
         "pydantic>=2.11.0,<2.12.0",
-    ],    python_requires=">=3.9",
+    ],
+    python_requires=">=3.9",
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
