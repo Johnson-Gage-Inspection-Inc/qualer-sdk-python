@@ -18,7 +18,7 @@ from collections import defaultdict
 from fix_swagger_spec import fix_swagger_spec
 
 SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
-OPENAPI_GENERATOR_JAR = "openapi-generator-cli.jar"
+OPENAPI_GENERATOR_JAR = "openapi-generator-cli-7.13.0.jar"
 SPEC_FILE = "spec.json"
 FIXED_SPEC_FILE = "spec_fixed.json"
 OUTPUT_DIR = os.path.join("src", "qualer_sdk")
@@ -120,10 +120,12 @@ def inject_missing_path_params(spec):
 
 def generate_sdk():
     if not os.path.exists(OPENAPI_GENERATOR_JAR):
-        sys.exit(
-            f"❌ OpenAPI Generator JAR not found: {OPENAPI_GENERATOR_JAR}"
-        )  # Create a temporary directory for generation
-    temp_dir = "temp_sdk_gen"  # Use OpenAPI Generator (typed output)
+        sys.exit(f"❌ OpenAPI Generator JAR not found: {OPENAPI_GENERATOR_JAR}")
+
+    # Create a temporary directory for generation
+    temp_dir = "temp_sdk_gen"
+
+    # Use OpenAPI Generator with native Pydantic V2 support
     command = [
         "java",
         "-jar",
@@ -132,7 +134,7 @@ def generate_sdk():
         "-i",
         FIXED_SPEC_FILE,  # Use the fixed specification
         "-g",
-        "python-nextgen",
+        "python",  # Use the standard python generator with native Pydantic V2 support
         "-o",
         temp_dir,
         "--additional-properties=packageName=qualer_sdk,legacyDiscriminatorBehavior=true",

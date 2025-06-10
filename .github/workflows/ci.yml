@@ -44,7 +44,7 @@ jobs:
 
     - name: Validate OpenAPI spec
       run: |
-        java -jar openapi-generator-cli.jar validate -i spec.json
+        java -jar openapi-generator-cli-7.13.0.jar validate -i spec.json
 
     - name: Test with pytest
       run: |
