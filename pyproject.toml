@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [
-    {name = "Johnson Gage & Inspection Inc.", email = "jhall@jgiquality.com"}
+    {name = "Jeff Hall", email = "jhall@jgiquality.com"}
 ]
 keywords = ["qualer", "api", "sdk", "client"]
 classifiers = [
