@@ -84,7 +84,7 @@ class TestSDKRegeneration:
 
         # Test importing the main SDK
         try:
-            import qualer_sdk
+            import qualer_sdk  # noqa: F401
 
             print("✅ Main SDK import successful")
         except Exception as e:
@@ -92,7 +92,7 @@ class TestSDKRegeneration:
 
         # Test importing specific modules
         try:
-            from qualer_sdk import api, models
+            from qualer_sdk import api, models  # noqa: F401
 
             print("✅ API and models import successful")
         except Exception as e:
@@ -100,7 +100,7 @@ class TestSDKRegeneration:
 
         # Test importing a specific API class
         try:
-            from qualer_sdk.api.assets_api import AssetsApi
+            from qualer_sdk.api.assets_api import AssetsApi  # noqa: F401
 
             print("✅ Specific API class import successful")
         except Exception as e:
@@ -108,7 +108,7 @@ class TestSDKRegeneration:
 
         # Test importing a specific model
         try:
-            from qualer_sdk.models.qualer_api_models_asset_to_asset_response_model import (
+            from qualer_sdk.models.qualer_api_models_asset_to_asset_response_model import (  # noqa: F401
                 QualerApiModelsAssetToAssetResponseModel,
             )
 
@@ -126,8 +126,8 @@ class TestSDKRegeneration:
 
             try:
                 # Import the SDK which should trigger any deprecation warnings
-                import qualer_sdk
-                from qualer_sdk import api, models
+                import qualer_sdk  # noqa: F401
+                from qualer_sdk import api, models  # noqa: F401
 
                 # Try to create a simple model instance to trigger any validation warnings
                 from qualer_sdk.models.qualer_api_models_asset_to_asset_response_model import (
@@ -135,7 +135,7 @@ class TestSDKRegeneration:
                 )
 
                 # Create an instance with some data
-                model = QualerApiModelsAssetToAssetResponseModel()
+                model = QualerApiModelsAssetToAssetResponseModel()  # noqa: F841
 
             except Exception as e:
                 pytest.fail(f"Error during warning check: {e}")
