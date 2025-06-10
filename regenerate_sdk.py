@@ -370,7 +370,7 @@ from qualer_sdk.exceptions import (
 )
 
 # Import all API classes for convenience
-from qualer_sdk.api import *
+from qualer_sdk import api
 
 # Import commonly used models for convenience
 from qualer_sdk import models
@@ -388,6 +388,7 @@ __all__ = [
     "NotFoundException",
     "ServiceException",
     "OpenApiException",
+    "api",
     "models",
 ]
 '''
@@ -433,10 +434,10 @@ This module provides access to all API classes.
 """
 
 # Import all API classes
-{chr(10).join(api_imports)}
+{"\n".join(api_imports)}
 
 __all__ = [
-{chr(10).join(api_exports)}
+{"\n".join(api_exports)}
 ]
 '''
 
@@ -490,10 +491,10 @@ The version of the OpenAPI document: v1
 """
 
 # Import all model classes
-{chr(10).join(model_imports)}
+{"\n".join(model_imports)}
 
 __all__ = [
-{chr(10).join(model_exports)}
+{"\n".join(model_exports)}
 ]
 '''
 
