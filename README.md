@@ -74,6 +74,7 @@ The project includes a Makefile with convenient commands:
 
 ```sh
 make help           # Show available commands
+make install        # Install package in editable mode
 make install-dev    # Install development dependencies
 make test           # Run tests
 make test-cov       # Run tests with coverage
@@ -83,6 +84,7 @@ make type-check     # Run type checking with mypy
 make build          # Build package
 make clean          # Clean build artifacts
 make regenerate     # Regenerate SDK from OpenAPI spec
+make check-all      # Run all checks (lint, type-check, test)
 make ci             # Run full CI pipeline locally
 ```
 
@@ -151,12 +153,27 @@ python regenerate_sdk.py
 
 This script uses the [openapi-generator-cli.jar](openapi-generator-cli.jar) along with [spec.json](spec.json). It also employs the [fix_swagger_spec.py](fix_swagger_spec.py) script to resolve issues with multiple content types in the OpenAPI specification, which can cause warnings during SDK generation.
 
+The regeneration process has been refactored to use modular template files located in the `templates/` directory:
+- **Exception classes**: Defined in `templates/exceptions.py`
+- **Package initialization**: Main template in `templates/init_template.py`  
+- **API initialization**: API-specific template in `templates/api_init_template.py`
+- **Models initialization**: Models-specific template in `templates/models_init_template.py`
+
+This modular approach improves maintainability and makes it easier to customize the generated SDK structure.
+
 ## Running Tests
 
-The repository includes tests for various API endpoints. You can run the tests using `nosetests`:
+The repository includes comprehensive tests for various API endpoints and functionality. You can run the tests using `pytest`:
 
 ```sh
-nosetests
+# Run all tests
+pytest tests/ -v
+
+# Run tests with coverage
+pytest tests/ -v --cov=qualer_sdk --cov-report=html
+
+# Run the SDK regeneration tests
+pytest test_regenerate_sdk.py -v
 ```
 
 ## Repository Structure
@@ -174,6 +191,11 @@ qualer-sdk-python/
 │       └── models/            # Data model classes
 ├── tests/                     # Unit tests
 ├── docs/                      # Generated API documentation
+├── templates/                 # Template files for SDK generation
+│   ├── exceptions.py          # Exception classes template
+│   ├── init_template.py       # Main __init__.py template
+│   ├── api_init_template.py   # API __init__.py template
+│   └── models_init_template.py # Models __init__.py template
 ├── .pre-commit-config.yaml    # Pre-commit hooks configuration
 ├── Makefile                   # Development commands
 ├── pyproject.toml             # Modern Python packaging config
@@ -192,6 +214,7 @@ The repository has been restructured to follow modern Python packaging standards
 - Documentation moved from `src/qualer_sdk/docs/` to standard `docs/` directory
 - Added modern `pyproject.toml` with comprehensive build configuration
 - Enhanced CI/CD pipeline with GitHub Actions
+- **Refactored SDK generation**: Template files moved from embedded strings to modular files in `templates/` directory for better maintainability
 
 ## Contributing
 
