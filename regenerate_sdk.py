@@ -246,6 +246,21 @@ def post_process_generated_files():
                 f.write(content)
             print("✅ Added __version__ to __init__.py")
 
+    # Fix client.py to use "Api-Token" prefix instead of "Bearer"
+    client_file = os.path.join(OUTPUT_DIR, "client.py")
+    if os.path.exists(client_file):
+        with open(client_file, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        # Replace the default Bearer prefix with Api-Token
+        if 'prefix: str = "Bearer"' in content:
+            content = content.replace(
+                'prefix: str = "Bearer"', 'prefix: str = "Api-Token"'
+            )
+            with open(client_file, "w", encoding="utf-8") as f:
+                f.write(content)
+            print("✅ Changed default prefix from 'Bearer' to 'Api-Token' in client.py")
+
 
 def create_exceptions_file():
     """Create the exceptions.py file needed by the generated SDK code."""
