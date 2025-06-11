@@ -1,13 +1,24 @@
+# coding: utf-8
+
+"""
+Tests for regenerate_sdk.py
+
+Tests the modern openapi-python-client based SDK generation.
+"""
+
 import json
+import subprocess
 from unittest.mock import MagicMock, mock_open, patch
 
 import pytest
 
 from regenerate_sdk import (
     FIXED_SPEC_FILE,
-    OPENAPI_GENERATOR_JAR,
     OUTPUT_DIR,
     SPEC_FILE,
+    create_api_init_file,
+    create_custom_init_file,
+    create_models_init_file,
     format_files_with_autoflake,
     format_generated_files,
     format_generated_files_with_black,
@@ -22,7 +33,7 @@ from regenerate_sdk import (
 
 class TestUniqueOperationIds:
     def test_uniquify_operation_ids(self):
-
+        """Test that duplicate operation IDs are properly renamed."""
         # Create mock spec with duplicate operation IDs
         mock_spec = {
             "paths": {
@@ -49,7 +60,7 @@ class TestUniqueOperationIds:
 
 class TestInjectMissingPathParams:
     def test_inject_missing_path_params(self):
-
+        """Test that missing path parameters are properly injected."""
         # Create mock spec with a path template missing parameter declarations
         mock_spec = {
             "paths": {
@@ -100,6 +111,7 @@ class TestInjectMissingPathParams:
 class TestPatchSpec:
     @patch("regenerate_sdk.fix_swagger_spec")
     def test_patch_spec_success(self, mock_fix_swagger):
+        """Test successful spec patching."""
         mock_spec = {
             "definitions": {
                 "Qualer.Api.Models.Asset.To.AssetManageResponseModel": {
@@ -144,6 +156,7 @@ class TestPatchSpec:
             mock_fix_swagger.assert_called_once_with(SPEC_FILE, FIXED_SPEC_FILE)
 
     def test_patch_spec_missing_record_type(self):
+        """Test patch_spec when RecordType is missing."""
         mock_spec = {
             "definitions": {
                 "Qualer.Api.Models.Asset.To.AssetManageResponseModel": {
@@ -158,6 +171,7 @@ class TestPatchSpec:
             assert excinfo.value.code == 1
 
     def test_patch_spec_missing_definition(self):
+        """Test patch_spec when the target definition is missing."""
         mock_spec = {"definitions": {}}
 
         with patch("builtins.open", mock_open(read_data=json.dumps(mock_spec))):
@@ -167,65 +181,119 @@ class TestPatchSpec:
 
 
 class TestGenerateSDK:
+    @patch("builtins.open", new_callable=mock_open)
+    @patch("os.path.isdir")
+    @patch("os.path.isfile")
+    @patch("os.remove")
     @patch("os.path.exists")
     @patch("subprocess.run")
     @patch("os.makedirs")
     @patch("shutil.rmtree")
     @patch("shutil.copytree")
     @patch("shutil.copy2")
+    @patch("os.listdir")
     @patch("regenerate_sdk.post_process_generated_files")
     @patch("regenerate_sdk.format_generated_files")
+    @patch("regenerate_sdk.create_custom_init_file")
+    @patch("regenerate_sdk.create_api_init_file")
+    @patch("regenerate_sdk.create_models_init_file")
     def test_generate_sdk_success(
         self,
+        mock_create_models,
+        mock_create_api,
+        mock_create_custom,
         mock_format,
         mock_post_process,
+        mock_listdir,
         mock_copy2,
         mock_copytree,
         mock_rmtree,
         mock_makedirs,
         mock_subprocess,
         mock_exists,
+        mock_remove,
+        mock_isfile,
+        mock_isdir,
+        mock_file,
     ):
-        # Setup mocks
-        mock_exists.side_effect = (
-            lambda path: path == OPENAPI_GENERATOR_JAR
-            or path.startswith("temp_sdk_gen")
-        )
+        """Test successful SDK generation."""  # Setup mocks
+
+        def exists_side_effect(path):
+            if "temp_sdk_gen" in path and "qualer_sdk" in path:
+                return True
+            if path == OUTPUT_DIR:
+                return True
+            if any(
+                item in path
+                for item in [
+                    "api",
+                    "models",
+                    "client.py",
+                    "errors.py",
+                    "types.py",
+                    "__init__.py",
+                ]
+            ):
+                return True
+            return False
+
+        def isdir_side_effect(path):
+            # For cleanup, return False (treat as files)
+            if OUTPUT_DIR in path and any(item in path for item in ["api", "models"]):
+                return True if "api" in path or "models" in path else False
+            # For the temp directory check, return True for the generated package
+            if "temp_sdk_gen" in path and "qualer_sdk" in path:
+                return True
+            return False
+
+        mock_exists.side_effect = exists_side_effect
+        mock_isdir.side_effect = isdir_side_effect
+        mock_isfile.return_value = True  # Files exist for cleanup
         mock_subprocess.return_value = MagicMock()
 
-        generate_sdk()  # Verify subprocess was called with correct command
+        # Mock directory listing to return the generated package
+        def listdir_side_effect(path):
+            if path == "temp_sdk_gen":
+                return ["qualer_sdk"]
+            return []
 
+        mock_listdir.side_effect = listdir_side_effect
+
+        generate_sdk()
+
+        # Verify subprocess was called with correct command
         expected_command = [
-            "java",
-            "-jar",
-            OPENAPI_GENERATOR_JAR,
+            "openapi-python-client",
             "generate",
-            "-i",
-            FIXED_SPEC_FILE,
-            "-g",
-            "python-nextgen",
-            "-o",
+            "--path",
+            "spec_openapi3.json",
+            "--output-path",
             "temp_sdk_gen",
-            "--additional-properties=packageName=qualer_sdk,legacyDiscriminatorBehavior=true",
+            "--overwrite",
         ]
         mock_subprocess.assert_called_once_with(expected_command, check=True)
         mock_post_process.assert_called_once()
         mock_format.assert_called_once()
+        mock_create_custom.assert_called_once()
+        mock_create_api.assert_called_once()
+        mock_create_models.assert_called_once()
 
-    @patch("os.path.exists")
-    def test_generate_sdk_missing_jar(self, mock_exists):
-        mock_exists.return_value = False
+    @patch("subprocess.run")
+    def test_generate_sdk_failure(self, mock_subprocess):
+        """Test SDK generation failure handling."""
+        mock_subprocess.side_effect = subprocess.CalledProcessError(
+            1, "openapi-python-client"
+        )
 
         with pytest.raises(SystemExit) as excinfo:
             generate_sdk()
-        assert f"❌ OpenAPI Generator JAR not found: {OPENAPI_GENERATOR_JAR}" in str(
-            excinfo.value
-        )
+        assert excinfo.value.code == 1
 
 
 class TestPostProcessGeneratedFiles:
     @patch("os.path.exists")
     def test_post_process_init_file_adds_version(self, mock_exists):
+        """Test that version is added to __init__.py when missing."""
         mock_exists.return_value = True
         init_content = "from __future__ import absolute_import\nother content"
         expected_content = 'from __future__ import absolute_import\n\n__version__ = "2.2.1"\nother content'
@@ -237,6 +305,7 @@ class TestPostProcessGeneratedFiles:
 
     @patch("os.path.exists")
     def test_post_process_init_file_version_exists(self, mock_exists):
+        """Test that version is not added when already present."""
         mock_exists.return_value = True
         init_content = 'from __future__ import absolute_import\n__version__ = "1.0.0"'
 
@@ -254,7 +323,7 @@ class TestFormatGeneratedFiles:
     def test_format_generated_files_calls_all_formatters(
         self, mock_black, mock_isort, mock_autoflake
     ):
-
+        """Test that all formatters are called."""
         format_generated_files()
 
         mock_autoflake.assert_called_once()
@@ -263,7 +332,7 @@ class TestFormatGeneratedFiles:
 
     @patch("subprocess.run")
     def test_format_files_with_autoflake(self, mock_subprocess):
-
+        """Test autoflake formatting."""
         mock_subprocess.return_value = MagicMock()
 
         format_files_with_autoflake()
@@ -286,7 +355,7 @@ class TestFormatGeneratedFiles:
 
     @patch("subprocess.run")
     def test_format_files_with_autoflake_not_found(self, mock_subprocess):
-
+        """Test autoflake when not installed."""
         mock_subprocess.side_effect = FileNotFoundError()
 
         # Should not raise exception
@@ -294,7 +363,7 @@ class TestFormatGeneratedFiles:
 
     @patch("subprocess.run")
     def test_sort_imports_with_isort(self, mock_subprocess):
-
+        """Test isort import sorting."""
         mock_subprocess.return_value = MagicMock()
 
         sort_imports_with_isort()
@@ -310,7 +379,7 @@ class TestFormatGeneratedFiles:
 
     @patch("subprocess.run")
     def test_sort_imports_with_isort_not_found(self, mock_subprocess):
-
+        """Test isort when not installed."""
         mock_subprocess.side_effect = FileNotFoundError()
 
         # Should not raise exception
@@ -318,7 +387,7 @@ class TestFormatGeneratedFiles:
 
     @patch("subprocess.run")
     def test_format_generated_files_with_black_success(self, mock_subprocess):
-
+        """Test black formatting success."""
         mock_subprocess.return_value = MagicMock(returncode=0)
 
         format_generated_files_with_black()
@@ -334,7 +403,7 @@ class TestFormatGeneratedFiles:
 
     @patch("subprocess.run")
     def test_format_generated_files_with_black_failure(self, mock_subprocess):
-
+        """Test black formatting failure."""
         mock_subprocess.return_value = MagicMock(returncode=1, stderr="Error message")
 
         # Should not raise exception
@@ -342,7 +411,7 @@ class TestFormatGeneratedFiles:
 
     @patch("subprocess.run")
     def test_format_generated_files_with_black_not_found(self, mock_subprocess):
-
+        """Test black when not installed."""
         mock_subprocess.side_effect = FileNotFoundError()
 
         # Should not raise exception
@@ -350,20 +419,81 @@ class TestFormatGeneratedFiles:
 
     @patch("subprocess.run")
     def test_format_generated_files_with_black_exception(self, mock_subprocess):
-
+        """Test black unexpected exception."""
         mock_subprocess.side_effect = Exception("Unexpected error")
 
         # Should not raise exception
         format_generated_files_with_black()
 
 
+class TestCreateFiles:
+    @patch("os.path.exists")
+    @patch("os.listdir")
+    def test_create_custom_init_file(self, mock_listdir, mock_exists):
+        """Test custom __init__.py file creation."""
+        mock_exists.return_value = True
+
+        with patch("builtins.open", mock_open()) as mock_file:
+            create_custom_init_file()
+
+            # Verify file was written
+            mock_file.assert_called_once()
+            written_content = mock_file().write.call_args[0][0]
+            assert '__version__ = "2.2.1"' in written_content
+            assert "from .client import Client" in written_content
+
+    @patch("os.path.exists")
+    @patch("os.listdir")
+    def test_create_api_init_file(self, mock_listdir, mock_exists):
+        """Test API __init__.py file creation."""
+        mock_exists.return_value = True
+        mock_listdir.side_effect = [
+            ["account", "assets"],  # API subdirectories (sorted)
+            ["get_asset.py", "get_all_assets.py"],  # Files in account
+            ["login.py", "logout.py"],  # Files in assets
+        ]
+
+        with patch("builtins.open", mock_open()) as mock_file:
+            create_api_init_file()
+
+            # Verify file was written
+            mock_file.assert_called_once()
+            written_content = mock_file().write.call_args[0][0]
+            assert "from .account.get_asset import *" in written_content
+            assert "from .assets.login import *" in written_content
+
+    @patch("os.path.exists")
+    @patch("os.listdir")
+    def test_create_models_init_file(self, mock_listdir, mock_exists):
+        """Test models __init__.py file creation."""
+        mock_exists.return_value = True
+        mock_listdir.return_value = [
+            "test_model.py",
+            "another_model.py",
+            "__init__.py",  # Should be excluded
+        ]
+
+        with patch("builtins.open", mock_open()) as mock_file:
+            create_models_init_file()
+
+            # Verify file was written
+            mock_file.assert_called_once()
+            written_content = mock_file().write.call_args[0][0]
+            assert "from .test_model import TestModel" in written_content
+            assert "from .another_model import AnotherModel" in written_content
+            assert '"TestModel",' in written_content
+
+
 class TestMainExecution:
     @patch("regenerate_sdk.patch_spec")
     @patch("regenerate_sdk.generate_sdk")
-    def test_main_execution(self, mock_generate, mock_patch):
+    @patch("regenerate_sdk.convert_spec_to_openapi_v3")
+    def test_main_execution(self, mock_convert, mock_generate, mock_patch):
+        """Test main execution flow."""
         # Create a mock globals dict that includes our mocked functions
         mock_globals = {
             "patch_spec": mock_patch,
+            "convert_spec_to_openapi_v3": mock_convert,
             "generate_sdk": mock_generate,
             "__name__": "__main__",
             "print": print,  # Keep print for any output
@@ -373,10 +503,12 @@ class TestMainExecution:
         main_code = """
 if __name__ == "__main__":
     patch_spec()
+    convert_spec_to_openapi_v3()
     generate_sdk()
 """
 
         exec(compile(main_code, "regenerate_sdk.py", "exec"), mock_globals)
 
         mock_patch.assert_called_once()
+        mock_convert.assert_called_once()
         mock_generate.assert_called_once()

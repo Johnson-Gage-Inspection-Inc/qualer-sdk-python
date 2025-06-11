@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Comprehensive test script for the qualer-sdk package restructuring.
+Comprehensive test script for the qualer-sdk package - modernized for openapi-python-client.
 """
 
 
@@ -11,56 +11,61 @@ def test_imports():
         import qualer_sdk
 
         print("✓ Package imported successfully")
-        print(f"✓ Version: {qualer_sdk.__version__}")
-
-        # Core imports
-        from qualer_sdk import ApiClient, Configuration
+        print(
+            f"✓ Version: {qualer_sdk.__version__}"
+        )  # Core imports (modern openapi-python-client style)
+        from qualer_sdk import Client
 
         print("✓ Core classes imported")
 
-        # API imports
-        from qualer_sdk.api import AccountApi, AssetsApi, CommonApi, ServiceOrdersApi
+        # API imports (function-based APIs)
+        from qualer_sdk.api.account import login
+        from qualer_sdk.api.assets import get_asset
 
-        print("✓ API classes imported")
+        print("✓ API functions imported")
 
         # Model imports
-        from qualer_sdk import models
+        from qualer_sdk import models  # noqa: F401
 
         print("✓ Models package imported")
-        # Test client creation
-        config = Configuration()
-        client = ApiClient(config)
+
+        # Test client creation (modern style)
+        client = Client(base_url="https://api.example.com")
         print("✓ Client instantiation successful")
 
         # Use assertion instead of return for pytest
         assert client is not None
-        assert config is not None
+        assert login is not None
+        assert get_asset is not None
 
     except Exception as e:
         print(f"✗ Import test failed: {e}")
         assert False, f"Import test failed: {e}"
 
 
-def test_api_classes():
-    """Test that API classes can be instantiated."""
+def test_api_functions():
+    """Test that API functions can be imported and are callable."""
     try:
-        from qualer_sdk import ApiClient, Configuration
-        from qualer_sdk.api import AccountApi, AssetsApi
+        from qualer_sdk import Client
+        from qualer_sdk.api.account import companies, login
+        from qualer_sdk.api.assets import get_asset
 
-        config = Configuration()
-        client = ApiClient(config)
-        # Test API instantiation
-        account_api = AccountApi(client)
-        assets_api = AssetsApi(client)
+        # Test client creation
+        client = Client(base_url="https://api.example.com")
 
-        print("✓ API classes instantiated successfully")
+        # Test that API functions are callable (don't actually call them)
+        assert callable(login.sync)
+        assert callable(companies.sync)
+        assert callable(get_asset.sync)
+
+        print("✓ API functions are callable")
+
         # Use assertion instead of return for pytest
-        assert account_api is not None
-        assert assets_api is not None
+        assert client is not None
 
     except Exception as e:
-        print(f"✗ API class test failed: {e}")
-        assert False, f"API class test failed: {e}"
+        print(f"✗ API function test failed: {e}")
+        assert False, f"API function test failed: {e}"
 
 
 def main():
@@ -78,10 +83,10 @@ def main():
         print(f"Import test failed: {e}")
 
     try:
-        test_api_classes()
+        test_api_functions()
         tests_passed += 1
     except Exception as e:
-        print(f"API class test failed: {e}")
+        print(f"API function test failed: {e}")
 
     print("=" * 50)
     if tests_passed == total_tests:
@@ -94,5 +99,4 @@ def main():
 
 
 if __name__ == "__main__":
-    success = main()
-    exit(0 if success else 1)
+    main()

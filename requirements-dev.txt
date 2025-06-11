@@ -10,5 +10,6 @@ build>=0.7
 twine>=3.0
 pre-commit>=2.0
 autoflake>=2.3.1
+openapi-python-client>=0.25.0
 # Pin pydantic to ensure CI compatibility
 pydantic>=2.11.0,<2.12.0
