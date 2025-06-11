@@ -1,0 +1,20 @@
+# .github/codeql/codeql-config.yml
+name: "CodeQL Config"
+
+# Disable default queries and run only security queries
+disable-default-queries: false
+
+# Enable additional query suites
+queries:
+  - uses: security-and-quality
+
+# Paths to exclude from analysis
+paths-ignore:
+  - "tests/**"
+  - "docs/**"
+  - "*.md"
+
+# Paths to analyze (optional - by default analyzes everything)
+paths:
+  - "src/**"
+  - "regenerate_sdk.py"
