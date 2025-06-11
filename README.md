@@ -47,6 +47,22 @@ print(response)
 
 For more details on each API, refer to the generated [API documentation](docs/).
 
+## Authentication
+
+The SDK supports token authenticated requests using the `AuthenticatedClient` class. By default, the SDK uses `"Api-Token"` as the authorization prefix:
+
+```python
+from qualer_sdk.client import AuthenticatedClient
+
+# Default usage with Api-Token prefix
+client = AuthenticatedClient(
+    base_url="https://api.qualer.com",
+    token="your-api-token-here"
+)
+# This sends: Authorization: Api-Token your-api-token-here
+```
+
+
 ## Development
 
 ### Setting up Development Environment

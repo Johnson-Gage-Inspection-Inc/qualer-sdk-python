@@ -93,19 +93,59 @@ def test_inject_missing_path_params():
 
 @patch("regenerate_sdk.os.path.exists")
 @patch("regenerate_sdk.open", new_callable=mock_open)
-def test_post_process_generated_files(mock_file, mock_exists):
-    """Test that version is added to __init__.py."""
-    mock_exists.return_value = True
+def test_post_process_generated_files_init_only(mock_file, mock_exists):
+    """Test that version is added to __init__.py when only __init__.py exists."""
+    # Set up file existence: only __init__.py exists
+    def mock_exists_side_effect(path):
+        if path.endswith("__init__.py"):
+            return True
+        return False
 
-    # Create a mock file content without __version__
-    file_content = "from __future__ import absolute_import\n\nsome other content"
-    mock_file.return_value.read.return_value = file_content
+    mock_exists.side_effect = mock_exists_side_effect
+
+    # Mock file content for __init__.py (without __version__)
+    init_file_content = "from __future__ import absolute_import\n\nsome other content"
+    mock_file.return_value.read.return_value = init_file_content
 
     post_process_generated_files()
 
-    # Verify that write was called with the expected content
+    # Verify that write was called once for __init__.py only
     expected_content = 'from __future__ import absolute_import\n\n__version__ = "2.2.1"\n\nsome other content'
     mock_file.return_value.write.assert_called_once_with(expected_content)
+
+
+@patch("regenerate_sdk.os.path.exists")
+@patch("regenerate_sdk.open", new_callable=mock_open)
+def test_post_process_generated_files_full(mock_file, mock_exists):
+    """Test that version is added to __init__.py and client template is applied when all files exist."""
+    # Set up file existence: all files exist
+    def mock_exists_side_effect(path):
+        return True  # All files exist
+
+    mock_exists.side_effect = mock_exists_side_effect
+
+    # Mock file content for __init__.py (without __version__)
+    init_file_content = "from __future__ import absolute_import\n\nsome other content"
+    # Mock file content for client template
+    template_content = "# Custom client template content with Api-Token"
+
+    # Set up side effects for read operations - the function reads two files
+    mock_file.return_value.read.side_effect = [init_file_content, template_content]
+
+    post_process_generated_files()
+
+    # Verify that write was called twice - once for __init__.py and once for client.py
+    expected_init_content = 'from __future__ import absolute_import\n\n__version__ = "2.2.1"\n\nsome other content'
+    expected_client_content = "# Custom client template content with Api-Token"
+
+    write_calls = mock_file.return_value.write.call_args_list
+    assert len(write_calls) == 2, f"Expected 2 write calls, but got {len(write_calls)}"
+    assert write_calls[0][0][0] == expected_init_content, "First write call content mismatch"
+    assert write_calls[1][0][0] == expected_client_content, "Second write call content mismatch"
+
+
+# Legacy test name for backward compatibility - use full test since template files are tracked in git
+test_post_process_generated_files = test_post_process_generated_files_full
 
 
 @patch("regenerate_sdk.os.path.exists")
