@@ -5,6 +5,7 @@ Steps:
 1. Downloads the OpenAPI spec from the Qualer server
 2. Patches RecordType enum to support integer values
 3. Regenerates the SDK using openapi-generator-cli
+4. Applies custom templates for better maintainability (e.g., client.py with Api-Token prefix)
 """
 
 import json
@@ -245,21 +246,18 @@ def post_process_generated_files():
             with open(init_file, "w", encoding="utf-8") as f:
                 f.write(content)
             print("✅ Added __version__ to __init__.py")
-
-    # Fix client.py to use "Api-Token" prefix instead of "Bearer"
+    # Use custom client template with Api-Token as default prefix
+    client_template_file = os.path.join("templates", "client_template.py")
     client_file = os.path.join(OUTPUT_DIR, "client.py")
-    if os.path.exists(client_file):
-        with open(client_file, "r", encoding="utf-8") as f:
-            content = f.read()
 
-        # Replace the default Bearer prefix with Api-Token
-        if 'prefix: str = "Bearer"' in content:
-            content = content.replace(
-                'prefix: str = "Bearer"', 'prefix: str = "Api-Token"'
-            )
-            with open(client_file, "w", encoding="utf-8") as f:
-                f.write(content)
-            print("✅ Changed default prefix from 'Bearer' to 'Api-Token' in client.py")
+    if os.path.exists(client_template_file) and os.path.exists(client_file):
+        # Replace the generated client.py with our custom template
+        with open(client_template_file, "r", encoding="utf-8") as f:
+            template_content = f.read()
+
+        with open(client_file, "w", encoding="utf-8") as f:
+            f.write(template_content)
+        print("✅ Applied custom client template with 'Api-Token' as default prefix")
 
 
 def create_exceptions_file():
