@@ -62,3 +62,4 @@ src_old/
 temp_sdk_gen/
 swagger-codegen-cli-*.jar
 qualer_sdk.egg-info/*
+temp_test_gen/*

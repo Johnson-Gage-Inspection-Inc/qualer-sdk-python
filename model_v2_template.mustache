@@ -1,0 +1,115 @@
+{{>licenseInfo}}
+{{#models}}
+{{#model}}
+# coding: utf-8
+
+{{#appDescription}}
+"""
+{{.}}
+"""
+{{/appDescription}}
+
+from __future__ import annotations
+
+import json
+import pprint
+import re  # noqa: F401
+{{#vendorExtensions.x-py-datetime-imports}}
+from datetime import {{#-last}}{{name}}{{/-last}}{{^-last}}{{name}}, {{/-last}}{{/vendorExtensions.x-py-datetime-imports}}
+from typing import {{#vendorExtensions.x-py-typing-imports}}{{#-last}}{{import}}{{/-last}}{{^-last}}{{import}}, {{/-last}}{{/vendorExtensions.x-py-typing-imports}}
+
+from pydantic import BaseModel, Field{{#hasValidation}}, field_validator{{/hasValidation}}{{#vendorExtensions.x-py-other-imports}}, {{.}}{{/vendorExtensions.x-py-other-imports}}
+
+{{#imports}}
+from {{package}}.{{#modelPackage}}{{.}}{{/modelPackage}}{{^modelPackage}}models{{/modelPackage}}.{{filename}} import {{classname}}
+{{/imports}}
+
+
+class {{classname}}(BaseModel):
+    """
+    {{#description}}{{.}}{{/description}}{{^description}}{{classname}}{{/description}}
+    """
+{{#vendorExtensions.x-py-model-vars}}
+
+    {{name}}: {{datatype}} = Field({{#defaultValue}}{{.}}{{/defaultValue}}{{^defaultValue}}None{{/defaultValue}}, alias="{{baseName}}"){{/vendorExtensions.x-py-model-vars}}
+    __properties = [{{#vendorExtensions.x-py-model-vars}}"{{baseName}}"{{^-last}}, {{/-last}}{{/vendorExtensions.x-py-model-vars}}]
+
+{{#hasValidation}}
+{{#vendorExtensions.x-py-model-vars}}
+{{#hasValidation}}
+    @field_validator("{{name}}", mode="before")
+    @classmethod
+    def {{name}}_validate_{{#isEnum}}enum{{/isEnum}}{{#hasPattern}}regular_expression{{/hasPattern}}(cls, value):
+        """Validates the {{#isEnum}}enum{{/isEnum}}{{#hasPattern}}regular expression{{/hasPattern}}"""
+        if value is None:
+            return value
+
+{{#isEnum}}
+        if value not in ({{#allowableValues}}{{#values}}"{{.}}"{{^-last}}, {{/-last}}{{/values}}{{/allowableValues}}):
+            raise ValueError("must be one of enum values ({{#allowableValues}}{{#values}}'{{.}}'{{^-last}}, {{/-last}}{{/values}}{{/allowableValues}})")
+{{/isEnum}}
+{{#hasPattern}}
+        if not re.match(r"{{pattern}}", value):
+            raise ValueError(r"must validate the regular expression /{{pattern}}/")
+{{/hasPattern}}
+        return value
+
+{{/hasValidation}}
+{{/vendorExtensions.x-py-model-vars}}
+{{/hasValidation}}
+    class Config:
+        """Pydantic configuration"""
+
+        populate_by_name = True
+        validate_assignment = True
+
+    def to_str(self) -> str:
+        """Returns the string representation of the model using alias"""
+        return pprint.pformat(self.model_dump(by_alias=True))
+
+    def to_json(self) -> str:
+        """Returns the JSON representation of the model using alias"""
+        return json.dumps(self.to_dict())
+
+    @classmethod
+    def from_json(cls, json_str: str) -> {{classname}}:
+        """Create an instance of {{classname}} from a JSON string"""
+        return cls.from_dict(json.loads(json_str))
+
+    def to_dict(self):
+        """Returns the dictionary representation of the model using alias"""
+        _dict = self.model_dump(by_alias=True, exclude={}, exclude_none=True)
+{{#vendorExtensions.x-py-postponed-model-imports}}
+        # override the default output from pydantic by calling `to_dict()` of {{name}}
+        if self.{{name}}:
+            _dict["{{baseName}}"] = self.{{name}}.to_dict()
+{{/vendorExtensions.x-py-postponed-model-imports}}
+{{#vendorExtensions.x-py-dict-array-item-imports}}
+        # override the default output from pydantic by calling `to_dict()` of each item in {{name}} (list)
+        _items = []
+        if self.{{name}}:
+            for _item in self.{{name}}:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict["{{baseName}}"] = _items
+{{/vendorExtensions.x-py-dict-array-item-imports}}
+        return _dict
+
+    @classmethod
+    def from_dict(cls, obj: dict) -> {{classname}}:
+        """Create an instance of {{classname}} from a dict"""
+        if obj is None:
+            return None
+
+        if not isinstance(obj, dict):
+            return {{classname}}.model_validate(obj)
+
+        _obj = {{classname}}.model_validate({
+{{#vendorExtensions.x-py-model-vars}}
+            "{{name}}": {{#isContainer}}{{#isListContainer}}{{#items}}{{#isModel}}[{{classname}}.from_dict(_item) for _item in obj.get("{{baseName}}")] if obj.get("{{baseName}}") is not None else None{{/isModel}}{{^isModel}}obj.get("{{baseName}}"){{/isModel}}{{/items}}{{/isListContainer}}{{^isListContainer}}obj.get("{{baseName}}"){{/isListContainer}}{{/isContainer}}{{^isContainer}}{{#isModel}}{{classname}}.from_dict(obj.get("{{baseName}}")) if obj.get("{{baseName}}") is not None else None{{/isModel}}{{^isModel}}obj.get("{{baseName}}"){{/isModel}}{{/isContainer}}{{^-last}},{{/-last}}
+{{/vendorExtensions.x-py-model-vars}}
+        })
+        return _obj
+
+{{/model}}
+{{/models}}

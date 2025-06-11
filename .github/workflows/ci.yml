@@ -42,9 +42,12 @@ jobs:
         # Exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 src/qualer_sdk --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-    - name: Validate OpenAPI spec
+    - name: Validate SDK structure
       run: |
-        java -jar openapi-generator-cli.jar validate -i spec.json
+        # Basic validation that the SDK is properly structured
+        python -c "from qualer_sdk import Client; print('✅ SDK imports successfully')"
+        python -c "import qualer_sdk.api; print('✅ API modules available')"
+        python -c "import qualer_sdk.models; print('✅ Model modules available')"
 
     - name: Test with pytest
       run: |

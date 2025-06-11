@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 
 import qualer_sdk
-from qualer_sdk.models.qualer_api_models_vendors_to_created_vendor_company_response import (
+from qualer_sdk.models.qualer_api_models_vendors_to_created_vendor_company_response import (  # noqa: E501
     QualerApiModelsVendorsToCreatedVendorCompanyResponse,
-)  # noqa: E501
+)
 from qualer_sdk.rest import ApiException
 
 

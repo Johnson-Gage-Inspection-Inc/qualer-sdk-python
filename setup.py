@@ -10,7 +10,7 @@ setup(
     description="Auto-generated Python client for Qualer API",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="Johnson Gage & Inspection Inc.",
+    author="Jeff Hall",
     author_email="jhall@jgiquality.com",
     url="https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-python",
     packages=find_packages(where="src"),
