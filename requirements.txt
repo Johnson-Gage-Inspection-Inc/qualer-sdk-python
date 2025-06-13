@@ -5,3 +5,4 @@ certifi
 python-dateutil
 setuptools>=80.8
 attrs>=21.3.0
+setuptools_scm>=8.3.1

@@ -1,4 +1,5 @@
 from setuptools import find_packages, setup
+from setuptools_scm import get_version
 
 # Read long description from README
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -6,7 +7,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="qualer-sdk",
-    version="2.2.1",
+    use_scm_version={
+        "version_scheme": "python-simplified-semver",
+        "local_scheme": "node-and-date",
+        "tag_regex": r"^v(?P<version>.*)$",
+    },
+    setup_requires=["setuptools-scm"],
     description="Auto-generated Python client for Qualer API",
     long_description=long_description,
     long_description_content_type="text/markdown",

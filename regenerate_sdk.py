@@ -17,6 +17,7 @@ import sys
 from collections import defaultdict
 
 from fix_swagger_spec import fix_swagger_spec
+from get_version import get_version_from_git_with_commits
 
 SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
 SPEC_FILE = "spec.json"
@@ -227,10 +228,9 @@ def post_process_generated_files():
     init_file = os.path.join(OUTPUT_DIR, "__init__.py")
     if os.path.exists(init_file):
         with open(init_file, "r", encoding="utf-8") as f:
-            content = f.read()
-
-        # Add version at the top after the future import
+            content = f.read()  # Add version at the top after the future import
         if "__version__" not in content:
+            current_version = get_version_from_git_with_commits()
             lines = content.split("\n")
             # Find the line with "from __future__ import absolute_import"
             insert_idx = 0
@@ -240,12 +240,12 @@ def post_process_generated_files():
                     break
 
             lines.insert(insert_idx, "")
-            lines.insert(insert_idx + 1, '__version__ = "2.2.1"')
+            lines.insert(insert_idx + 1, f'__version__ = "{current_version}"')
 
             content = "\n".join(lines)
             with open(init_file, "w", encoding="utf-8") as f:
                 f.write(content)
-            print("✅ Added __version__ to __init__.py")
+            print(f"✅ Added __version__ = '{current_version}' to __init__.py")
     # Use custom client template with Api-Token as default prefix
     client_template_file = os.path.join("templates", "client_template.py")
     client_file = os.path.join(OUTPUT_DIR, "client.py")
