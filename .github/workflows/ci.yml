@@ -45,7 +45,6 @@ jobs:
         # Basic validation that the SDK is properly structured
         python -c "from qualer_sdk import Client; print('✅ SDK imports successfully')"
         python -c "import qualer_sdk.api; print('✅ API modules available')"
-        python -c "import qualer_sdk.models; print('✅ Model modules available')"available')"
         python -c "import qualer_sdk.models; print('✅ Model modules available')"
 
     - name: Test with pytest
