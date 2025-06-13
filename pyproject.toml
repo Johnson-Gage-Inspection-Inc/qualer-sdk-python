@@ -119,3 +119,20 @@ exclude_lines = [
     "if 0:",
     "if __name__ == .__main__.:"
 ]
+
+[tool.pyright]
+include = ["src", "tests"]
+exclude = [
+    "templates",
+    "build",
+    "dist",
+    "**/__pycache__",
+    "**/.pytest_cache",
+    "temp_sdk_gen",
+    "src_old",
+    "*.egg-info"
+]
+typeCheckingMode = "basic"
+reportMissingImports = true
+reportMissingTypeStubs = false
+pythonVersion = "3.9"

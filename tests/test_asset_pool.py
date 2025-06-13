@@ -7,21 +7,21 @@ import os
 import sys
 import traceback
 from pathlib import Path
+from typing import List
+
+from dotenv import load_dotenv
+
+from qualer_sdk.api.assets.get_asset_by_asset_pool import sync as get_assets_by_pool
+from qualer_sdk.client import AuthenticatedClient
+from qualer_sdk.models import QualerApiModelsAssetToAssetResponseModel
 
 # Add the src directory to the Python path
 src_path = Path(__file__).parent / "src"
 sys.path.insert(0, str(src_path))
 
 # Load environment variables
-from dotenv import load_dotenv
 
 load_dotenv()
-
-from typing import List
-
-from qualer_sdk.api.assets.get_asset_by_asset_pool import sync as get_assets_by_pool
-from qualer_sdk.client import AuthenticatedClient
-from qualer_sdk.models import QualerApiModelsAssetToAssetResponseModel
 
 
 def main():
