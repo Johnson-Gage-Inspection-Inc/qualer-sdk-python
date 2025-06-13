@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -76,8 +76,8 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         asset_user (Union[Unset, str]):
         equipment_id (Union[Unset, str]):
         legacy_identifier (Union[Unset, str]):
-        activation_date (Union[Unset, datetime.datetime]):
-        purchase_date (Union[Unset, datetime.datetime]):
+        activation_date (Union[None, Unset, datetime.datetime]):
+        purchase_date (Union[None, Unset, datetime.datetime]):
         part_name (Union[Unset, str]):
         part_description (Union[Unset, str]):
         is_taxable (Union[Unset, bool]):
@@ -217,8 +217,8 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
     asset_user: Union[Unset, str] = UNSET
     equipment_id: Union[Unset, str] = UNSET
     legacy_identifier: Union[Unset, str] = UNSET
-    activation_date: Union[Unset, datetime.datetime] = UNSET
-    purchase_date: Union[Unset, datetime.datetime] = UNSET
+    activation_date: Union[None, Unset, datetime.datetime] = UNSET
+    purchase_date: Union[None, Unset, datetime.datetime] = UNSET
     part_name: Union[Unset, str] = UNSET
     part_description: Union[Unset, str] = UNSET
     is_taxable: Union[Unset, bool] = UNSET
@@ -430,13 +430,21 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
 
         legacy_identifier = self.legacy_identifier
 
-        activation_date: Union[Unset, str] = UNSET
-        if not isinstance(self.activation_date, Unset):
+        activation_date: Union[None, Unset, str]
+        if isinstance(self.activation_date, Unset):
+            activation_date = UNSET
+        elif isinstance(self.activation_date, datetime.datetime):
             activation_date = self.activation_date.isoformat()
+        else:
+            activation_date = self.activation_date
 
-        purchase_date: Union[Unset, str] = UNSET
-        if not isinstance(self.purchase_date, Unset):
+        purchase_date: Union[None, Unset, str]
+        if isinstance(self.purchase_date, Unset):
+            purchase_date = UNSET
+        elif isinstance(self.purchase_date, datetime.datetime):
             purchase_date = self.purchase_date.isoformat()
+        else:
+            purchase_date = self.purchase_date
 
         part_name = self.part_name
 
@@ -1038,19 +1046,41 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
 
         legacy_identifier = d.pop("LegacyIdentifier", UNSET)
 
-        _activation_date = d.pop("ActivationDate", UNSET)
-        activation_date: Union[Unset, datetime.datetime]
-        if isinstance(_activation_date, Unset):
-            activation_date = UNSET
-        else:
-            activation_date = isoparse(_activation_date)
+        def _parse_activation_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                activation_date_type_0 = isoparse(data)
 
-        _purchase_date = d.pop("PurchaseDate", UNSET)
-        purchase_date: Union[Unset, datetime.datetime]
-        if isinstance(_purchase_date, Unset):
-            purchase_date = UNSET
-        else:
-            purchase_date = isoparse(_purchase_date)
+                return activation_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        activation_date = _parse_activation_date(d.pop("ActivationDate", UNSET))
+
+        def _parse_purchase_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                purchase_date_type_0 = isoparse(data)
+
+                return purchase_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        purchase_date = _parse_purchase_date(d.pop("PurchaseDate", UNSET))
 
         part_name = d.pop("PartName", UNSET)
 

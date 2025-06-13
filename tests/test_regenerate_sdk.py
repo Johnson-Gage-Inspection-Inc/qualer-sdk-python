@@ -95,6 +95,7 @@ def test_inject_missing_path_params():
 @patch("regenerate_sdk.open", new_callable=mock_open)
 def test_post_process_generated_files_init_only(mock_file, mock_exists):
     """Test that version is added to __init__.py when only __init__.py exists."""
+
     # Set up file existence: only __init__.py exists
     def mock_exists_side_effect(path):
         if path.endswith("__init__.py"):
@@ -118,6 +119,7 @@ def test_post_process_generated_files_init_only(mock_file, mock_exists):
 @patch("regenerate_sdk.open", new_callable=mock_open)
 def test_post_process_generated_files_full(mock_file, mock_exists):
     """Test that version is added to __init__.py and client template is applied when all files exist."""
+
     # Set up file existence: all files exist
     def mock_exists_side_effect(path):
         return True  # All files exist
@@ -140,8 +142,12 @@ def test_post_process_generated_files_full(mock_file, mock_exists):
 
     write_calls = mock_file.return_value.write.call_args_list
     assert len(write_calls) == 2, f"Expected 2 write calls, but got {len(write_calls)}"
-    assert write_calls[0][0][0] == expected_init_content, "First write call content mismatch"
-    assert write_calls[1][0][0] == expected_client_content, "Second write call content mismatch"
+    assert (
+        write_calls[0][0][0] == expected_init_content
+    ), "First write call content mismatch"
+    assert (
+        write_calls[1][0][0] == expected_client_content
+    ), "Second write call content mismatch"
 
 
 # Legacy test name for backward compatibility - use full test since template files are tracked in git

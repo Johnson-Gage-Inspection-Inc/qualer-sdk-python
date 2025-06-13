@@ -8578,13 +8578,6 @@
         },
         "AssetStatus": {
           "enum": [
-            0,
-            1,
-            2,
-            3,
-            4
-          ],
-          "x-enum-varnames": [
             "New",
             "Active",
             "Inactive",
@@ -8689,7 +8682,8 @@
         },
         "PurchaseDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PurchaseCost": {
           "format": "double",
@@ -8701,7 +8695,8 @@
         },
         "ActivationDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DepreciationBasis": {
           "format": "double",
@@ -8713,7 +8708,8 @@
         },
         "RetirementDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SalvageValue": {
           "format": "double",
@@ -9550,13 +9546,6 @@
         },
         "AssetStatus": {
           "enum": [
-            0,
-            1,
-            2,
-            3,
-            4
-          ],
-          "x-enum-varnames": [
             "New",
             "Active",
             "Inactive",
@@ -9661,7 +9650,8 @@
         },
         "PurchaseDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PurchaseCost": {
           "format": "double",
@@ -9673,7 +9663,8 @@
         },
         "ActivationDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DepreciationBasis": {
           "format": "double",
@@ -9685,7 +9676,8 @@
         },
         "RetirementDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SalvageValue": {
           "format": "double",
@@ -9897,7 +9889,8 @@
         },
         "ActivationDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "RetirmentDate": {
           "format": "date-time",
@@ -10051,7 +10044,8 @@
         },
         "PurchaseDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PurchaseCost": {
           "format": "double",
@@ -10994,7 +10988,8 @@
         },
         "ActivationDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "RetirmentDate": {
           "format": "date-time",
@@ -11148,7 +11143,8 @@
         },
         "PurchaseDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PurchaseCost": {
           "format": "double",
@@ -11381,13 +11377,6 @@
         },
         "AssetStatus": {
           "enum": [
-            0,
-            1,
-            2,
-            3,
-            4
-          ],
-          "x-enum-varnames": [
             "New",
             "Active",
             "Inactive",
@@ -11425,7 +11414,8 @@
         },
         "PurchaseDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PurchaseCost": {
           "format": "double",
@@ -11437,7 +11427,8 @@
         },
         "ActivationDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DepreciationBasis": {
           "format": "double",
@@ -11449,7 +11440,8 @@
         },
         "RetirementDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SalvageValue": {
           "format": "double",
@@ -11773,13 +11765,6 @@
         },
         "AssetStatus": {
           "enum": [
-            0,
-            1,
-            2,
-            3,
-            4
-          ],
-          "x-enum-varnames": [
             "New",
             "Active",
             "Inactive",
@@ -11884,7 +11869,8 @@
         },
         "PurchaseDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PurchaseCost": {
           "format": "double",
@@ -11896,7 +11882,8 @@
         },
         "ActivationDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DepreciationBasis": {
           "format": "double",
@@ -11908,7 +11895,8 @@
         },
         "RetirementDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SalvageValue": {
           "format": "double",
@@ -13542,11 +13530,13 @@
         },
         "ActivationDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PurchaseDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PartName": {
           "type": "string"

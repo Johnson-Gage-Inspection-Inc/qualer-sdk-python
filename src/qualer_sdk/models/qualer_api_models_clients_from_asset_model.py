@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -36,13 +36,13 @@ class QualerApiModelsClientsFromAssetModel:
         legacy_identifier (Union[Unset, str]):
         condition (Union[Unset, str]):
         criticality (Union[Unset, str]):
-        purchase_date (Union[Unset, datetime.datetime]):
+        purchase_date (Union[None, Unset, datetime.datetime]):
         purchase_cost (Union[Unset, float]):
         life_span_months (Union[Unset, int]):
-        activation_date (Union[Unset, datetime.datetime]):
+        activation_date (Union[None, Unset, datetime.datetime]):
         depreciation_basis (Union[Unset, float]):
         depreciation_method (Union[Unset, int]):
-        retirement_date (Union[Unset, datetime.datetime]):
+        retirement_date (Union[None, Unset, datetime.datetime]):
         salvage_value (Union[Unset, float]):
     """
 
@@ -64,13 +64,13 @@ class QualerApiModelsClientsFromAssetModel:
     legacy_identifier: Union[Unset, str] = UNSET
     condition: Union[Unset, str] = UNSET
     criticality: Union[Unset, str] = UNSET
-    purchase_date: Union[Unset, datetime.datetime] = UNSET
+    purchase_date: Union[None, Unset, datetime.datetime] = UNSET
     purchase_cost: Union[Unset, float] = UNSET
     life_span_months: Union[Unset, int] = UNSET
-    activation_date: Union[Unset, datetime.datetime] = UNSET
+    activation_date: Union[None, Unset, datetime.datetime] = UNSET
     depreciation_basis: Union[Unset, float] = UNSET
     depreciation_method: Union[Unset, int] = UNSET
-    retirement_date: Union[Unset, datetime.datetime] = UNSET
+    retirement_date: Union[None, Unset, datetime.datetime] = UNSET
     salvage_value: Union[Unset, float] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -113,25 +113,37 @@ class QualerApiModelsClientsFromAssetModel:
 
         criticality = self.criticality
 
-        purchase_date: Union[Unset, str] = UNSET
-        if not isinstance(self.purchase_date, Unset):
+        purchase_date: Union[None, Unset, str]
+        if isinstance(self.purchase_date, Unset):
+            purchase_date = UNSET
+        elif isinstance(self.purchase_date, datetime.datetime):
             purchase_date = self.purchase_date.isoformat()
+        else:
+            purchase_date = self.purchase_date
 
         purchase_cost = self.purchase_cost
 
         life_span_months = self.life_span_months
 
-        activation_date: Union[Unset, str] = UNSET
-        if not isinstance(self.activation_date, Unset):
+        activation_date: Union[None, Unset, str]
+        if isinstance(self.activation_date, Unset):
+            activation_date = UNSET
+        elif isinstance(self.activation_date, datetime.datetime):
             activation_date = self.activation_date.isoformat()
+        else:
+            activation_date = self.activation_date
 
         depreciation_basis = self.depreciation_basis
 
         depreciation_method = self.depreciation_method
 
-        retirement_date: Union[Unset, str] = UNSET
-        if not isinstance(self.retirement_date, Unset):
+        retirement_date: Union[None, Unset, str]
+        if isinstance(self.retirement_date, Unset):
+            retirement_date = UNSET
+        elif isinstance(self.retirement_date, datetime.datetime):
             retirement_date = self.retirement_date.isoformat()
+        else:
+            retirement_date = self.retirement_date
 
         salvage_value = self.salvage_value
 
@@ -239,34 +251,68 @@ class QualerApiModelsClientsFromAssetModel:
 
         criticality = d.pop("Criticality", UNSET)
 
-        _purchase_date = d.pop("PurchaseDate", UNSET)
-        purchase_date: Union[Unset, datetime.datetime]
-        if isinstance(_purchase_date, Unset):
-            purchase_date = UNSET
-        else:
-            purchase_date = isoparse(_purchase_date)
+        def _parse_purchase_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                purchase_date_type_0 = isoparse(data)
+
+                return purchase_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        purchase_date = _parse_purchase_date(d.pop("PurchaseDate", UNSET))
 
         purchase_cost = d.pop("PurchaseCost", UNSET)
 
         life_span_months = d.pop("LifeSpanMonths", UNSET)
 
-        _activation_date = d.pop("ActivationDate", UNSET)
-        activation_date: Union[Unset, datetime.datetime]
-        if isinstance(_activation_date, Unset):
-            activation_date = UNSET
-        else:
-            activation_date = isoparse(_activation_date)
+        def _parse_activation_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                activation_date_type_0 = isoparse(data)
+
+                return activation_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        activation_date = _parse_activation_date(d.pop("ActivationDate", UNSET))
 
         depreciation_basis = d.pop("DepreciationBasis", UNSET)
 
         depreciation_method = d.pop("DepreciationMethod", UNSET)
 
-        _retirement_date = d.pop("RetirementDate", UNSET)
-        retirement_date: Union[Unset, datetime.datetime]
-        if isinstance(_retirement_date, Unset):
-            retirement_date = UNSET
-        else:
-            retirement_date = isoparse(_retirement_date)
+        def _parse_retirement_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                retirement_date_type_0 = isoparse(data)
+
+                return retirement_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        retirement_date = _parse_retirement_date(d.pop("RetirementDate", UNSET))
 
         salvage_value = d.pop("SalvageValue", UNSET)
 

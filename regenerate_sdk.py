@@ -494,4 +494,10 @@ if __name__ == "__main__":
     generate_sdk()
 
     print("🧹 Cleaning up auto-generated files...")
+    # Delete spec_fixed.json and spec_openapi3.json
+    if os.path.exists(FIXED_SPEC_FILE):
+        os.remove(FIXED_SPEC_FILE)
+    OPENAPI_V3_SPEC_FILE = "spec_openapi3.json"
+    if os.path.exists(OPENAPI_V3_SPEC_FILE):
+        os.remove(OPENAPI_V3_SPEC_FILE)
     print("✅ SDK regeneration complete! Clean structure maintained.")

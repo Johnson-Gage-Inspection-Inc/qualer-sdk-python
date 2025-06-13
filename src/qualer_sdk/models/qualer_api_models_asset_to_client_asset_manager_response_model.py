@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -55,7 +55,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         criticality (Union[Unset, str]):
         condition (Union[Unset, str]):
         asset_class (Union[Unset, str]):
-        activation_date (Union[Unset, datetime.datetime]):
+        activation_date (Union[None, Unset, datetime.datetime]):
         retirment_date (Union[Unset, datetime.datetime]):
         client_vendor_id (Union[Unset, int]):
         company_name (Union[Unset, str]):
@@ -96,7 +96,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         life_span_months (Union[Unset, int]):
         due_for_replacement_date (Union[Unset, datetime.datetime]):
         depreciation_proc (Union[Unset, float]):
-        purchase_date (Union[Unset, datetime.datetime]):
+        purchase_date (Union[None, Unset, datetime.datetime]):
         purchase_cost (Union[Unset, float]):
         time_in_service (Union[Unset, int]):
         retirement_reason (Union[Unset, str]):
@@ -152,7 +152,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
     criticality: Union[Unset, str] = UNSET
     condition: Union[Unset, str] = UNSET
     asset_class: Union[Unset, str] = UNSET
-    activation_date: Union[Unset, datetime.datetime] = UNSET
+    activation_date: Union[None, Unset, datetime.datetime] = UNSET
     retirment_date: Union[Unset, datetime.datetime] = UNSET
     client_vendor_id: Union[Unset, int] = UNSET
     company_name: Union[Unset, str] = UNSET
@@ -195,7 +195,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
     life_span_months: Union[Unset, int] = UNSET
     due_for_replacement_date: Union[Unset, datetime.datetime] = UNSET
     depreciation_proc: Union[Unset, float] = UNSET
-    purchase_date: Union[Unset, datetime.datetime] = UNSET
+    purchase_date: Union[None, Unset, datetime.datetime] = UNSET
     purchase_cost: Union[Unset, float] = UNSET
     time_in_service: Union[Unset, int] = UNSET
     retirement_reason: Union[Unset, str] = UNSET
@@ -280,9 +280,13 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         asset_class = self.asset_class
 
-        activation_date: Union[Unset, str] = UNSET
-        if not isinstance(self.activation_date, Unset):
+        activation_date: Union[None, Unset, str]
+        if isinstance(self.activation_date, Unset):
+            activation_date = UNSET
+        elif isinstance(self.activation_date, datetime.datetime):
             activation_date = self.activation_date.isoformat()
+        else:
+            activation_date = self.activation_date
 
         retirment_date: Union[Unset, str] = UNSET
         if not isinstance(self.retirment_date, Unset):
@@ -372,9 +376,13 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         depreciation_proc = self.depreciation_proc
 
-        purchase_date: Union[Unset, str] = UNSET
-        if not isinstance(self.purchase_date, Unset):
+        purchase_date: Union[None, Unset, str]
+        if isinstance(self.purchase_date, Unset):
+            purchase_date = UNSET
+        elif isinstance(self.purchase_date, datetime.datetime):
             purchase_date = self.purchase_date.isoformat()
+        else:
+            purchase_date = self.purchase_date
 
         purchase_cost = self.purchase_cost
 
@@ -704,12 +712,24 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         asset_class = d.pop("AssetClass", UNSET)
 
-        _activation_date = d.pop("ActivationDate", UNSET)
-        activation_date: Union[Unset, datetime.datetime]
-        if isinstance(_activation_date, Unset):
-            activation_date = UNSET
-        else:
-            activation_date = isoparse(_activation_date)
+        def _parse_activation_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                activation_date_type_0 = isoparse(data)
+
+                return activation_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        activation_date = _parse_activation_date(d.pop("ActivationDate", UNSET))
 
         _retirment_date = d.pop("RetirmentDate", UNSET)
         retirment_date: Union[Unset, datetime.datetime]
@@ -815,12 +835,22 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         depreciation_proc = d.pop("DepreciationProc", UNSET)
 
-        _purchase_date = d.pop("PurchaseDate", UNSET)
-        purchase_date: Union[Unset, datetime.datetime]
-        if isinstance(_purchase_date, Unset):
-            purchase_date = UNSET
-        else:
-            purchase_date = isoparse(_purchase_date)
+        def _parse_purchase_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                purchase_date_type_0 = isoparse(data)
+
+                return purchase_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        purchase_date = _parse_purchase_date(d.pop("PurchaseDate", UNSET))
 
         purchase_cost = d.pop("PurchaseCost", UNSET)
 
