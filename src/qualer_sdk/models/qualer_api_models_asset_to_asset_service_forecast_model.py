@@ -286,7 +286,7 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
                 next_service_date_type_0 = isoparse(data)
 
                 return next_service_date_type_0
-            except:  # noqa: E722
+            except Exception:  # noqa: E722
                 pass
             return cast(Union[None, Unset, datetime.datetime], data)
 
