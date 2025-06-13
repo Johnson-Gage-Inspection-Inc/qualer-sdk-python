@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -170,8 +170,8 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         assignee_name (Union[Unset, str]):
         payment_due_on (Union[Unset, datetime.datetime]):
         process_date_option (Union[Unset, QualerApiModelsReportDatasetsToServiceOrderResponseProcessDateOption]):
-        desired_date (Union[Unset, datetime.datetime]):
-        deadline_date (Union[Unset, datetime.datetime]):
+        desired_date (Union[None, Unset, datetime.datetime]):
+        deadline_date (Union[None, Unset, datetime.datetime]):
         vendor_sign_off_on (Union[Unset, datetime.datetime]):
         vendor_sign_off_by_name (Union[Unset, str]):
         service_discount (Union[Unset, float]):
@@ -345,8 +345,8 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
     process_date_option: Union[
         Unset, QualerApiModelsReportDatasetsToServiceOrderResponseProcessDateOption
     ] = UNSET
-    desired_date: Union[Unset, datetime.datetime] = UNSET
-    deadline_date: Union[Unset, datetime.datetime] = UNSET
+    desired_date: Union[None, Unset, datetime.datetime] = UNSET
+    deadline_date: Union[None, Unset, datetime.datetime] = UNSET
     vendor_sign_off_on: Union[Unset, datetime.datetime] = UNSET
     vendor_sign_off_by_name: Union[Unset, str] = UNSET
     service_discount: Union[Unset, float] = UNSET
@@ -711,13 +711,21 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         if not isinstance(self.process_date_option, Unset):
             process_date_option = self.process_date_option.value
 
-        desired_date: Union[Unset, str] = UNSET
-        if not isinstance(self.desired_date, Unset):
+        desired_date: Union[None, Unset, str]
+        if isinstance(self.desired_date, Unset):
+            desired_date = UNSET
+        elif isinstance(self.desired_date, datetime.datetime):
             desired_date = self.desired_date.isoformat()
+        else:
+            desired_date = self.desired_date
 
-        deadline_date: Union[Unset, str] = UNSET
-        if not isinstance(self.deadline_date, Unset):
+        deadline_date: Union[None, Unset, str]
+        if isinstance(self.deadline_date, Unset):
+            deadline_date = UNSET
+        elif isinstance(self.deadline_date, datetime.datetime):
             deadline_date = self.deadline_date.isoformat()
+        else:
+            deadline_date = self.deadline_date
 
         vendor_sign_off_on: Union[Unset, str] = UNSET
         if not isinstance(self.vendor_sign_off_on, Unset):
@@ -1522,19 +1530,39 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 )
             )
 
-        _desired_date = d.pop("DesiredDate", UNSET)
-        desired_date: Union[Unset, datetime.datetime]
-        if isinstance(_desired_date, Unset):
-            desired_date = UNSET
-        else:
-            desired_date = isoparse(_desired_date)
+        def _parse_desired_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                desired_date_type_0 = isoparse(data)
 
-        _deadline_date = d.pop("DeadlineDate", UNSET)
-        deadline_date: Union[Unset, datetime.datetime]
-        if isinstance(_deadline_date, Unset):
-            deadline_date = UNSET
-        else:
-            deadline_date = isoparse(_deadline_date)
+                return desired_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        desired_date = _parse_desired_date(d.pop("DesiredDate", UNSET))
+
+        def _parse_deadline_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                deadline_date_type_0 = isoparse(data)
+
+                return deadline_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        deadline_date = _parse_deadline_date(d.pop("DeadlineDate", UNSET))
 
         _vendor_sign_off_on = d.pop("VendorSignOffOn", UNSET)
         vendor_sign_off_on: Union[Unset, datetime.datetime]

@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 from uuid import UUID
 
 from attrs import define as _attrs_define
@@ -38,16 +38,16 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         client_company_name (Union[Unset, str]):
         client_site_name (Union[Unset, str]):
         client_legacy_id (Union[Unset, str]):
-        business_from_time (Union[Unset, datetime.datetime]):
-        business_to_time (Union[Unset, datetime.datetime]):
+        business_from_time (Union[None, Unset, datetime.datetime]):
+        business_to_time (Union[None, Unset, datetime.datetime]):
         timeframe (Union[Unset, QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe]):
         site_access_notes (Union[Unset, str]):
-        desired_date (Union[Unset, datetime.datetime]):
-        deadline_date (Union[Unset, datetime.datetime]):
-        request_from_date (Union[Unset, datetime.datetime]):
-        request_from_time (Union[Unset, datetime.datetime]):
-        request_to_date (Union[Unset, datetime.datetime]):
-        request_to_time (Union[Unset, datetime.datetime]):
+        desired_date (Union[None, Unset, datetime.datetime]):
+        deadline_date (Union[None, Unset, datetime.datetime]):
+        request_from_date (Union[None, Unset, datetime.datetime]):
+        request_from_time (Union[None, Unset, datetime.datetime]):
+        request_to_date (Union[None, Unset, datetime.datetime]):
+        request_to_time (Union[None, Unset, datetime.datetime]):
     """
 
     service_order_id: Union[Unset, int] = UNSET
@@ -67,18 +67,18 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
     client_company_name: Union[Unset, str] = UNSET
     client_site_name: Union[Unset, str] = UNSET
     client_legacy_id: Union[Unset, str] = UNSET
-    business_from_time: Union[Unset, datetime.datetime] = UNSET
-    business_to_time: Union[Unset, datetime.datetime] = UNSET
+    business_from_time: Union[None, Unset, datetime.datetime] = UNSET
+    business_to_time: Union[None, Unset, datetime.datetime] = UNSET
     timeframe: Union[
         Unset, QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe
     ] = UNSET
     site_access_notes: Union[Unset, str] = UNSET
-    desired_date: Union[Unset, datetime.datetime] = UNSET
-    deadline_date: Union[Unset, datetime.datetime] = UNSET
-    request_from_date: Union[Unset, datetime.datetime] = UNSET
-    request_from_time: Union[Unset, datetime.datetime] = UNSET
-    request_to_date: Union[Unset, datetime.datetime] = UNSET
-    request_to_time: Union[Unset, datetime.datetime] = UNSET
+    desired_date: Union[None, Unset, datetime.datetime] = UNSET
+    deadline_date: Union[None, Unset, datetime.datetime] = UNSET
+    request_from_date: Union[None, Unset, datetime.datetime] = UNSET
+    request_from_time: Union[None, Unset, datetime.datetime] = UNSET
+    request_to_date: Union[None, Unset, datetime.datetime] = UNSET
+    request_to_time: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -116,13 +116,21 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
 
         client_legacy_id = self.client_legacy_id
 
-        business_from_time: Union[Unset, str] = UNSET
-        if not isinstance(self.business_from_time, Unset):
+        business_from_time: Union[None, Unset, str]
+        if isinstance(self.business_from_time, Unset):
+            business_from_time = UNSET
+        elif isinstance(self.business_from_time, datetime.datetime):
             business_from_time = self.business_from_time.isoformat()
+        else:
+            business_from_time = self.business_from_time
 
-        business_to_time: Union[Unset, str] = UNSET
-        if not isinstance(self.business_to_time, Unset):
+        business_to_time: Union[None, Unset, str]
+        if isinstance(self.business_to_time, Unset):
+            business_to_time = UNSET
+        elif isinstance(self.business_to_time, datetime.datetime):
             business_to_time = self.business_to_time.isoformat()
+        else:
+            business_to_time = self.business_to_time
 
         timeframe: Union[Unset, str] = UNSET
         if not isinstance(self.timeframe, Unset):
@@ -130,29 +138,53 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
 
         site_access_notes = self.site_access_notes
 
-        desired_date: Union[Unset, str] = UNSET
-        if not isinstance(self.desired_date, Unset):
+        desired_date: Union[None, Unset, str]
+        if isinstance(self.desired_date, Unset):
+            desired_date = UNSET
+        elif isinstance(self.desired_date, datetime.datetime):
             desired_date = self.desired_date.isoformat()
+        else:
+            desired_date = self.desired_date
 
-        deadline_date: Union[Unset, str] = UNSET
-        if not isinstance(self.deadline_date, Unset):
+        deadline_date: Union[None, Unset, str]
+        if isinstance(self.deadline_date, Unset):
+            deadline_date = UNSET
+        elif isinstance(self.deadline_date, datetime.datetime):
             deadline_date = self.deadline_date.isoformat()
+        else:
+            deadline_date = self.deadline_date
 
-        request_from_date: Union[Unset, str] = UNSET
-        if not isinstance(self.request_from_date, Unset):
+        request_from_date: Union[None, Unset, str]
+        if isinstance(self.request_from_date, Unset):
+            request_from_date = UNSET
+        elif isinstance(self.request_from_date, datetime.datetime):
             request_from_date = self.request_from_date.isoformat()
+        else:
+            request_from_date = self.request_from_date
 
-        request_from_time: Union[Unset, str] = UNSET
-        if not isinstance(self.request_from_time, Unset):
+        request_from_time: Union[None, Unset, str]
+        if isinstance(self.request_from_time, Unset):
+            request_from_time = UNSET
+        elif isinstance(self.request_from_time, datetime.datetime):
             request_from_time = self.request_from_time.isoformat()
+        else:
+            request_from_time = self.request_from_time
 
-        request_to_date: Union[Unset, str] = UNSET
-        if not isinstance(self.request_to_date, Unset):
+        request_to_date: Union[None, Unset, str]
+        if isinstance(self.request_to_date, Unset):
+            request_to_date = UNSET
+        elif isinstance(self.request_to_date, datetime.datetime):
             request_to_date = self.request_to_date.isoformat()
+        else:
+            request_to_date = self.request_to_date
 
-        request_to_time: Union[Unset, str] = UNSET
-        if not isinstance(self.request_to_time, Unset):
+        request_to_time: Union[None, Unset, str]
+        if isinstance(self.request_to_time, Unset):
+            request_to_time = UNSET
+        elif isinstance(self.request_to_time, datetime.datetime):
             request_to_time = self.request_to_time.isoformat()
+        else:
+            request_to_time = self.request_to_time
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -259,19 +291,43 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
 
         client_legacy_id = d.pop("ClientLegacyId", UNSET)
 
-        _business_from_time = d.pop("BusinessFromTime", UNSET)
-        business_from_time: Union[Unset, datetime.datetime]
-        if isinstance(_business_from_time, Unset):
-            business_from_time = UNSET
-        else:
-            business_from_time = isoparse(_business_from_time)
+        def _parse_business_from_time(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                business_from_time_type_0 = isoparse(data)
 
-        _business_to_time = d.pop("BusinessToTime", UNSET)
-        business_to_time: Union[Unset, datetime.datetime]
-        if isinstance(_business_to_time, Unset):
-            business_to_time = UNSET
-        else:
-            business_to_time = isoparse(_business_to_time)
+                return business_from_time_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        business_from_time = _parse_business_from_time(d.pop("BusinessFromTime", UNSET))
+
+        def _parse_business_to_time(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                business_to_time_type_0 = isoparse(data)
+
+                return business_to_time_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        business_to_time = _parse_business_to_time(d.pop("BusinessToTime", UNSET))
 
         _timeframe = d.pop("Timeframe", UNSET)
         timeframe: Union[
@@ -287,47 +343,115 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
 
         site_access_notes = d.pop("SiteAccessNotes", UNSET)
 
-        _desired_date = d.pop("DesiredDate", UNSET)
-        desired_date: Union[Unset, datetime.datetime]
-        if isinstance(_desired_date, Unset):
-            desired_date = UNSET
-        else:
-            desired_date = isoparse(_desired_date)
+        def _parse_desired_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                desired_date_type_0 = isoparse(data)
 
-        _deadline_date = d.pop("DeadlineDate", UNSET)
-        deadline_date: Union[Unset, datetime.datetime]
-        if isinstance(_deadline_date, Unset):
-            deadline_date = UNSET
-        else:
-            deadline_date = isoparse(_deadline_date)
+                return desired_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
 
-        _request_from_date = d.pop("RequestFromDate", UNSET)
-        request_from_date: Union[Unset, datetime.datetime]
-        if isinstance(_request_from_date, Unset):
-            request_from_date = UNSET
-        else:
-            request_from_date = isoparse(_request_from_date)
+        desired_date = _parse_desired_date(d.pop("DesiredDate", UNSET))
 
-        _request_from_time = d.pop("RequestFromTime", UNSET)
-        request_from_time: Union[Unset, datetime.datetime]
-        if isinstance(_request_from_time, Unset):
-            request_from_time = UNSET
-        else:
-            request_from_time = isoparse(_request_from_time)
+        def _parse_deadline_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                deadline_date_type_0 = isoparse(data)
 
-        _request_to_date = d.pop("RequestToDate", UNSET)
-        request_to_date: Union[Unset, datetime.datetime]
-        if isinstance(_request_to_date, Unset):
-            request_to_date = UNSET
-        else:
-            request_to_date = isoparse(_request_to_date)
+                return deadline_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
 
-        _request_to_time = d.pop("RequestToTime", UNSET)
-        request_to_time: Union[Unset, datetime.datetime]
-        if isinstance(_request_to_time, Unset):
-            request_to_time = UNSET
-        else:
-            request_to_time = isoparse(_request_to_time)
+        deadline_date = _parse_deadline_date(d.pop("DeadlineDate", UNSET))
+
+        def _parse_request_from_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                request_from_date_type_0 = isoparse(data)
+
+                return request_from_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        request_from_date = _parse_request_from_date(d.pop("RequestFromDate", UNSET))
+
+        def _parse_request_from_time(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                request_from_time_type_0 = isoparse(data)
+
+                return request_from_time_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        request_from_time = _parse_request_from_time(d.pop("RequestFromTime", UNSET))
+
+        def _parse_request_to_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                request_to_date_type_0 = isoparse(data)
+
+                return request_to_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        request_to_date = _parse_request_to_date(d.pop("RequestToDate", UNSET))
+
+        def _parse_request_to_time(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                request_to_time_type_0 = isoparse(data)
+
+                return request_to_time_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        request_to_time = _parse_request_to_time(d.pop("RequestToTime", UNSET))
 
         qualer_api_models_service_orders_to_provider_service_order_response_model = cls(
             service_order_id=service_order_id,

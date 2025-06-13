@@ -15,12 +15,13 @@ __version__ = "2.2.1"
 from . import api, models
 
 # Import core classes using relative imports
-from .client import Client
+from .client import AuthenticatedClient, Client
 from .errors import UnexpectedStatus
 from .types import Response
 
 __all__ = [
     "Client",
+    "AuthenticatedClient",
     "UnexpectedStatus",
     "Response",
     "api",

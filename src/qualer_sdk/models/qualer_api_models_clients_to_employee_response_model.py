@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union
+from typing import TYPE_CHECKING, Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -35,7 +35,7 @@ class QualerApiModelsClientsToEmployeeResponseModel:
         alias (Union[Unset, str]):
         title (Union[Unset, str]):
         is_deleted (Union[Unset, bool]):
-        last_seen_date_utc (Union[Unset, datetime.datetime]):
+        last_seen_date_utc (Union[None, Unset, datetime.datetime]):
         culture_name (Union[Unset, str]):
         culture_ui_name (Union[Unset, str]):
     """
@@ -56,7 +56,7 @@ class QualerApiModelsClientsToEmployeeResponseModel:
     alias: Union[Unset, str] = UNSET
     title: Union[Unset, str] = UNSET
     is_deleted: Union[Unset, bool] = UNSET
-    last_seen_date_utc: Union[Unset, datetime.datetime] = UNSET
+    last_seen_date_utc: Union[None, Unset, datetime.datetime] = UNSET
     culture_name: Union[Unset, str] = UNSET
     culture_ui_name: Union[Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -95,9 +95,13 @@ class QualerApiModelsClientsToEmployeeResponseModel:
 
         is_deleted = self.is_deleted
 
-        last_seen_date_utc: Union[Unset, str] = UNSET
-        if not isinstance(self.last_seen_date_utc, Unset):
+        last_seen_date_utc: Union[None, Unset, str]
+        if isinstance(self.last_seen_date_utc, Unset):
+            last_seen_date_utc = UNSET
+        elif isinstance(self.last_seen_date_utc, datetime.datetime):
             last_seen_date_utc = self.last_seen_date_utc.isoformat()
+        else:
+            last_seen_date_utc = self.last_seen_date_utc
 
         culture_name = self.culture_name
 
@@ -187,12 +191,24 @@ class QualerApiModelsClientsToEmployeeResponseModel:
 
         is_deleted = d.pop("IsDeleted", UNSET)
 
-        _last_seen_date_utc = d.pop("LastSeenDateUtc", UNSET)
-        last_seen_date_utc: Union[Unset, datetime.datetime]
-        if isinstance(_last_seen_date_utc, Unset):
-            last_seen_date_utc = UNSET
-        else:
-            last_seen_date_utc = isoparse(_last_seen_date_utc)
+        def _parse_last_seen_date_utc(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                last_seen_date_utc_type_0 = isoparse(data)
+
+                return last_seen_date_utc_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        last_seen_date_utc = _parse_last_seen_date_utc(d.pop("LastSeenDateUtc", UNSET))
 
         culture_name = d.pop("CultureName", UNSET)
 
