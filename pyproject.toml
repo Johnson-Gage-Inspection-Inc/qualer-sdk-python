@@ -21,6 +21,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Operating System :: OS Independent",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Internet :: WWW/HTTP",
@@ -32,6 +33,7 @@ dependencies = [
     "certifi",
     "python-dateutil",
     "attrs",
+    "httpx>=0.23.3",
 ]
 
 [project.optional-dependencies]
@@ -119,3 +121,20 @@ exclude_lines = [
     "if 0:",
     "if __name__ == .__main__.:"
 ]
+
+[tool.pyright]
+include = ["src", "tests"]
+exclude = [
+    "templates",
+    "build",
+    "dist",
+    "**/__pycache__",
+    "**/.pytest_cache",
+    "temp_sdk_gen",
+    "src_old",
+    "*.egg-info"
+]
+typeCheckingMode = "basic"
+reportMissingImports = true
+reportMissingTypeStubs = false
+pythonVersion = "3.13"

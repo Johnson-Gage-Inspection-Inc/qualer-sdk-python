@@ -1,8 +1,9 @@
 # Runtime dependencies for qualer-sdk
-urllib3>=1.15
-six>=1.10
+attrs>=21.3.0
 certifi
+httpx>=0.23.3
 python-dateutil
 setuptools>=80.8
-attrs>=21.3.0
 setuptools_scm>=8.3.1
+six>=1.10
+urllib3>=1.15
