@@ -4,4 +4,4 @@ six>=1.10
 certifi
 python-dateutil
 setuptools>=80.8
-pydantic>=2
+attrs>=21.3.0

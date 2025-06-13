@@ -59,9 +59,9 @@ def patch_spec():
             "enum": [0, 1, 2, 3],
             "x-enumNames": ["WaitingForAgreement", "Equipment", "System", "Agreement"],
         }
-        print("✅ Patched RecordType enum.")
+        print("Patched RecordType enum.")
     else:
-        print("⚠️  RecordType not found in expected definition.")
+        print("RecordType not found in expected definition.")
         sys.exit(1)
 
     # Clean up redundant prefixes in operationIds

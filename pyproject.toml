@@ -31,7 +31,7 @@ dependencies = [
     "six>=1.10",
     "certifi",
     "python-dateutil",
-    "pydantic>=2.11.0,<2.12.0",
+    "attrs",
 ]
 
 [project.optional-dependencies]

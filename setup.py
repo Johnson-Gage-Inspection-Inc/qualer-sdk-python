@@ -22,7 +22,8 @@ setup(
         "six>=1.10",
         "certifi",
         "python-dateutil",
-        "pydantic>=2.11.0,<2.12.0",
+        "attrs>=21.3.0",
+        "httpx>=0.20.0",
     ],
     python_requires=">=3.9",
     classifiers=[
