@@ -32,6 +32,7 @@ dependencies = [
     "certifi",
     "python-dateutil",
     "attrs",
+    "httpx>=0.23.3",
 ]
 
 [project.optional-dependencies]
