@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -18,15 +18,15 @@ class QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel:
         filter_type (Union[Unset, str]):
         within_days (Union[Unset, int]):
         use_date_range (Union[Unset, bool]):
-        start_date (Union[Unset, datetime.datetime]):
-        end_date (Union[Unset, datetime.datetime]):
+        start_date (Union[None, Unset, datetime.datetime]):
+        end_date (Union[None, Unset, datetime.datetime]):
     """
 
     filter_type: Union[Unset, str] = UNSET
     within_days: Union[Unset, int] = UNSET
     use_date_range: Union[Unset, bool] = UNSET
-    start_date: Union[Unset, datetime.datetime] = UNSET
-    end_date: Union[Unset, datetime.datetime] = UNSET
+    start_date: Union[None, Unset, datetime.datetime] = UNSET
+    end_date: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -36,13 +36,21 @@ class QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel:
 
         use_date_range = self.use_date_range
 
-        start_date: Union[Unset, str] = UNSET
-        if not isinstance(self.start_date, Unset):
+        start_date: Union[None, Unset, str]
+        if isinstance(self.start_date, Unset):
+            start_date = UNSET
+        elif isinstance(self.start_date, datetime.datetime):
             start_date = self.start_date.isoformat()
+        else:
+            start_date = self.start_date
 
-        end_date: Union[Unset, str] = UNSET
-        if not isinstance(self.end_date, Unset):
+        end_date: Union[None, Unset, str]
+        if isinstance(self.end_date, Unset):
+            end_date = UNSET
+        elif isinstance(self.end_date, datetime.datetime):
             end_date = self.end_date.isoformat()
+        else:
+            end_date = self.end_date
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -69,19 +77,39 @@ class QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel:
 
         use_date_range = d.pop("UseDateRange", UNSET)
 
-        _start_date = d.pop("StartDate", UNSET)
-        start_date: Union[Unset, datetime.datetime]
-        if isinstance(_start_date, Unset):
-            start_date = UNSET
-        else:
-            start_date = isoparse(_start_date)
+        def _parse_start_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                start_date_type_0 = isoparse(data)
 
-        _end_date = d.pop("EndDate", UNSET)
-        end_date: Union[Unset, datetime.datetime]
-        if isinstance(_end_date, Unset):
-            end_date = UNSET
-        else:
-            end_date = isoparse(_end_date)
+                return start_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        start_date = _parse_start_date(d.pop("StartDate", UNSET))
+
+        def _parse_end_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                end_date_type_0 = isoparse(data)
+
+                return end_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        end_date = _parse_end_date(d.pop("EndDate", UNSET))
 
         qualer_api_models_asset_to_employee_filter_preference_response_model = cls(
             filter_type=filter_type,

@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -26,7 +26,7 @@ class QualerApiModelsServiceOrdersToOrderAssignmentResponseModel:
         alias (Union[Unset, str]):
         title (Union[Unset, str]):
         is_deleted (Union[Unset, bool]):
-        last_seen_date_utc (Union[Unset, datetime.datetime]):
+        last_seen_date_utc (Union[None, Unset, datetime.datetime]):
     """
 
     work_item_id: Union[Unset, int] = UNSET
@@ -40,7 +40,7 @@ class QualerApiModelsServiceOrdersToOrderAssignmentResponseModel:
     alias: Union[Unset, str] = UNSET
     title: Union[Unset, str] = UNSET
     is_deleted: Union[Unset, bool] = UNSET
-    last_seen_date_utc: Union[Unset, datetime.datetime] = UNSET
+    last_seen_date_utc: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -66,9 +66,13 @@ class QualerApiModelsServiceOrdersToOrderAssignmentResponseModel:
 
         is_deleted = self.is_deleted
 
-        last_seen_date_utc: Union[Unset, str] = UNSET
-        if not isinstance(self.last_seen_date_utc, Unset):
+        last_seen_date_utc: Union[None, Unset, str]
+        if isinstance(self.last_seen_date_utc, Unset):
+            last_seen_date_utc = UNSET
+        elif isinstance(self.last_seen_date_utc, datetime.datetime):
             last_seen_date_utc = self.last_seen_date_utc.isoformat()
+        else:
+            last_seen_date_utc = self.last_seen_date_utc
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -125,12 +129,24 @@ class QualerApiModelsServiceOrdersToOrderAssignmentResponseModel:
 
         is_deleted = d.pop("IsDeleted", UNSET)
 
-        _last_seen_date_utc = d.pop("LastSeenDateUtc", UNSET)
-        last_seen_date_utc: Union[Unset, datetime.datetime]
-        if isinstance(_last_seen_date_utc, Unset):
-            last_seen_date_utc = UNSET
-        else:
-            last_seen_date_utc = isoparse(_last_seen_date_utc)
+        def _parse_last_seen_date_utc(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                last_seen_date_utc_type_0 = isoparse(data)
+
+                return last_seen_date_utc_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        last_seen_date_utc = _parse_last_seen_date_utc(d.pop("LastSeenDateUtc", UNSET))
 
         qualer_api_models_service_orders_to_order_assignment_response_model = cls(
             work_item_id=work_item_id,

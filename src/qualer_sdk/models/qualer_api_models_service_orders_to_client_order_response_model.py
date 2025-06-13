@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union
+from typing import TYPE_CHECKING, Any, TypeVar, Union, cast
 from uuid import UUID
 
 from attrs import define as _attrs_define
@@ -10,8 +10,11 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.qualer_api_models_address_to_address_response_model import (
-        QualerApiModelsAddressToAddressResponseModel,
+    from ..models.qualer_api_models_service_orders_to_client_order_response_model_billing_address_type_0 import (
+        QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0,
+    )
+    from ..models.qualer_api_models_service_orders_to_client_order_response_model_shipping_address_type_0 import (
+        QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0,
     )
 
 
@@ -47,24 +50,24 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
         client_alternative_names (Union[Unset, str]):
         service_comments (Union[Unset, str]):
         service_private_comments (Union[Unset, str]):
-        created_on (Union[Unset, datetime.datetime]):
-        approved_on (Union[Unset, datetime.datetime]):
-        sign_off_on (Union[Unset, datetime.datetime]):
-        vendor_sign_off_on (Union[Unset, datetime.datetime]):
-        completed_on (Union[Unset, datetime.datetime]):
-        submited_on (Union[Unset, datetime.datetime]):
-        shipped_on (Union[Unset, datetime.datetime]):
-        accepted_on (Union[Unset, datetime.datetime]):
-        ready_for_quality_control_on (Union[Unset, datetime.datetime]):
-        quality_control_on (Union[Unset, datetime.datetime]):
-        delivered_on (Union[Unset, datetime.datetime]):
-        invoiced_on (Union[Unset, datetime.datetime]):
-        last_invoiced_on (Union[Unset, datetime.datetime]):
-        payment_due_on (Union[Unset, datetime.datetime]):
-        paid_on (Union[Unset, datetime.datetime]):
-        late_fee_on (Union[Unset, datetime.datetime]):
-        cancelled_on (Union[Unset, datetime.datetime]):
-        closed_on (Union[Unset, datetime.datetime]):
+        created_on (Union[None, Unset, datetime.datetime]):
+        approved_on (Union[None, Unset, datetime.datetime]):
+        sign_off_on (Union[None, Unset, datetime.datetime]):
+        vendor_sign_off_on (Union[None, Unset, datetime.datetime]):
+        completed_on (Union[None, Unset, datetime.datetime]):
+        submited_on (Union[None, Unset, datetime.datetime]):
+        shipped_on (Union[None, Unset, datetime.datetime]):
+        accepted_on (Union[None, Unset, datetime.datetime]):
+        ready_for_quality_control_on (Union[None, Unset, datetime.datetime]):
+        quality_control_on (Union[None, Unset, datetime.datetime]):
+        delivered_on (Union[None, Unset, datetime.datetime]):
+        invoiced_on (Union[None, Unset, datetime.datetime]):
+        last_invoiced_on (Union[None, Unset, datetime.datetime]):
+        payment_due_on (Union[None, Unset, datetime.datetime]):
+        paid_on (Union[None, Unset, datetime.datetime]):
+        late_fee_on (Union[None, Unset, datetime.datetime]):
+        cancelled_on (Union[None, Unset, datetime.datetime]):
+        closed_on (Union[None, Unset, datetime.datetime]):
         last_updated_on (Union[Unset, datetime.datetime]):
         last_updated_by (Union[Unset, str]):
         submited_by_id (Union[Unset, int]):
@@ -120,18 +123,20 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
         vendor_site (Union[Unset, str]):
         internal (Union[Unset, bool]):
         guid (Union[Unset, UUID]):  Example: 00000000-0000-0000-0000-000000000000.
-        business_from_time (Union[Unset, datetime.datetime]):
-        business_to_time (Union[Unset, datetime.datetime]):
+        business_from_time (Union[None, Unset, datetime.datetime]):
+        business_to_time (Union[None, Unset, datetime.datetime]):
         site_access_notes (Union[Unset, str]):
-        desired_date (Union[Unset, datetime.datetime]):
-        deadline_date (Union[Unset, datetime.datetime]):
-        request_from_date (Union[Unset, datetime.datetime]):
-        request_from_time (Union[Unset, datetime.datetime]):
-        request_to_date (Union[Unset, datetime.datetime]):
-        request_to_time (Union[Unset, datetime.datetime]):
+        desired_date (Union[None, Unset, datetime.datetime]):
+        deadline_date (Union[None, Unset, datetime.datetime]):
+        request_from_date (Union[None, Unset, datetime.datetime]):
+        request_from_time (Union[None, Unset, datetime.datetime]):
+        request_to_date (Union[None, Unset, datetime.datetime]):
+        request_to_time (Union[None, Unset, datetime.datetime]):
         order_notes (Union[Unset, str]):
-        billing_address (Union[Unset, QualerApiModelsAddressToAddressResponseModel]):
-        shipping_address (Union[Unset, QualerApiModelsAddressToAddressResponseModel]):
+        billing_address (Union['QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0', None,
+            Unset]):
+        shipping_address (Union['QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0', None,
+            Unset]):
     """
 
     service_order_id: Union[Unset, int] = UNSET
@@ -159,24 +164,24 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
     client_alternative_names: Union[Unset, str] = UNSET
     service_comments: Union[Unset, str] = UNSET
     service_private_comments: Union[Unset, str] = UNSET
-    created_on: Union[Unset, datetime.datetime] = UNSET
-    approved_on: Union[Unset, datetime.datetime] = UNSET
-    sign_off_on: Union[Unset, datetime.datetime] = UNSET
-    vendor_sign_off_on: Union[Unset, datetime.datetime] = UNSET
-    completed_on: Union[Unset, datetime.datetime] = UNSET
-    submited_on: Union[Unset, datetime.datetime] = UNSET
-    shipped_on: Union[Unset, datetime.datetime] = UNSET
-    accepted_on: Union[Unset, datetime.datetime] = UNSET
-    ready_for_quality_control_on: Union[Unset, datetime.datetime] = UNSET
-    quality_control_on: Union[Unset, datetime.datetime] = UNSET
-    delivered_on: Union[Unset, datetime.datetime] = UNSET
-    invoiced_on: Union[Unset, datetime.datetime] = UNSET
-    last_invoiced_on: Union[Unset, datetime.datetime] = UNSET
-    payment_due_on: Union[Unset, datetime.datetime] = UNSET
-    paid_on: Union[Unset, datetime.datetime] = UNSET
-    late_fee_on: Union[Unset, datetime.datetime] = UNSET
-    cancelled_on: Union[Unset, datetime.datetime] = UNSET
-    closed_on: Union[Unset, datetime.datetime] = UNSET
+    created_on: Union[None, Unset, datetime.datetime] = UNSET
+    approved_on: Union[None, Unset, datetime.datetime] = UNSET
+    sign_off_on: Union[None, Unset, datetime.datetime] = UNSET
+    vendor_sign_off_on: Union[None, Unset, datetime.datetime] = UNSET
+    completed_on: Union[None, Unset, datetime.datetime] = UNSET
+    submited_on: Union[None, Unset, datetime.datetime] = UNSET
+    shipped_on: Union[None, Unset, datetime.datetime] = UNSET
+    accepted_on: Union[None, Unset, datetime.datetime] = UNSET
+    ready_for_quality_control_on: Union[None, Unset, datetime.datetime] = UNSET
+    quality_control_on: Union[None, Unset, datetime.datetime] = UNSET
+    delivered_on: Union[None, Unset, datetime.datetime] = UNSET
+    invoiced_on: Union[None, Unset, datetime.datetime] = UNSET
+    last_invoiced_on: Union[None, Unset, datetime.datetime] = UNSET
+    payment_due_on: Union[None, Unset, datetime.datetime] = UNSET
+    paid_on: Union[None, Unset, datetime.datetime] = UNSET
+    late_fee_on: Union[None, Unset, datetime.datetime] = UNSET
+    cancelled_on: Union[None, Unset, datetime.datetime] = UNSET
+    closed_on: Union[None, Unset, datetime.datetime] = UNSET
     last_updated_on: Union[Unset, datetime.datetime] = UNSET
     last_updated_by: Union[Unset, str] = UNSET
     submited_by_id: Union[Unset, int] = UNSET
@@ -232,25 +237,36 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
     vendor_site: Union[Unset, str] = UNSET
     internal: Union[Unset, bool] = UNSET
     guid: Union[Unset, UUID] = UNSET
-    business_from_time: Union[Unset, datetime.datetime] = UNSET
-    business_to_time: Union[Unset, datetime.datetime] = UNSET
+    business_from_time: Union[None, Unset, datetime.datetime] = UNSET
+    business_to_time: Union[None, Unset, datetime.datetime] = UNSET
     site_access_notes: Union[Unset, str] = UNSET
-    desired_date: Union[Unset, datetime.datetime] = UNSET
-    deadline_date: Union[Unset, datetime.datetime] = UNSET
-    request_from_date: Union[Unset, datetime.datetime] = UNSET
-    request_from_time: Union[Unset, datetime.datetime] = UNSET
-    request_to_date: Union[Unset, datetime.datetime] = UNSET
-    request_to_time: Union[Unset, datetime.datetime] = UNSET
+    desired_date: Union[None, Unset, datetime.datetime] = UNSET
+    deadline_date: Union[None, Unset, datetime.datetime] = UNSET
+    request_from_date: Union[None, Unset, datetime.datetime] = UNSET
+    request_from_time: Union[None, Unset, datetime.datetime] = UNSET
+    request_to_date: Union[None, Unset, datetime.datetime] = UNSET
+    request_to_time: Union[None, Unset, datetime.datetime] = UNSET
     order_notes: Union[Unset, str] = UNSET
-    billing_address: Union[Unset, "QualerApiModelsAddressToAddressResponseModel"] = (
-        UNSET
-    )
-    shipping_address: Union[Unset, "QualerApiModelsAddressToAddressResponseModel"] = (
-        UNSET
-    )
+    billing_address: Union[
+        "QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0",
+        None,
+        Unset,
+    ] = UNSET
+    shipping_address: Union[
+        "QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0",
+        None,
+        Unset,
+    ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.qualer_api_models_service_orders_to_client_order_response_model_billing_address_type_0 import (
+            QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0,
+        )
+        from ..models.qualer_api_models_service_orders_to_client_order_response_model_shipping_address_type_0 import (
+            QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0,
+        )
+
         service_order_id = self.service_order_id
 
         parent_order_id = self.parent_order_id
@@ -301,77 +317,149 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
 
         service_private_comments = self.service_private_comments
 
-        created_on: Union[Unset, str] = UNSET
-        if not isinstance(self.created_on, Unset):
+        created_on: Union[None, Unset, str]
+        if isinstance(self.created_on, Unset):
+            created_on = UNSET
+        elif isinstance(self.created_on, datetime.datetime):
             created_on = self.created_on.isoformat()
+        else:
+            created_on = self.created_on
 
-        approved_on: Union[Unset, str] = UNSET
-        if not isinstance(self.approved_on, Unset):
+        approved_on: Union[None, Unset, str]
+        if isinstance(self.approved_on, Unset):
+            approved_on = UNSET
+        elif isinstance(self.approved_on, datetime.datetime):
             approved_on = self.approved_on.isoformat()
+        else:
+            approved_on = self.approved_on
 
-        sign_off_on: Union[Unset, str] = UNSET
-        if not isinstance(self.sign_off_on, Unset):
+        sign_off_on: Union[None, Unset, str]
+        if isinstance(self.sign_off_on, Unset):
+            sign_off_on = UNSET
+        elif isinstance(self.sign_off_on, datetime.datetime):
             sign_off_on = self.sign_off_on.isoformat()
+        else:
+            sign_off_on = self.sign_off_on
 
-        vendor_sign_off_on: Union[Unset, str] = UNSET
-        if not isinstance(self.vendor_sign_off_on, Unset):
+        vendor_sign_off_on: Union[None, Unset, str]
+        if isinstance(self.vendor_sign_off_on, Unset):
+            vendor_sign_off_on = UNSET
+        elif isinstance(self.vendor_sign_off_on, datetime.datetime):
             vendor_sign_off_on = self.vendor_sign_off_on.isoformat()
+        else:
+            vendor_sign_off_on = self.vendor_sign_off_on
 
-        completed_on: Union[Unset, str] = UNSET
-        if not isinstance(self.completed_on, Unset):
+        completed_on: Union[None, Unset, str]
+        if isinstance(self.completed_on, Unset):
+            completed_on = UNSET
+        elif isinstance(self.completed_on, datetime.datetime):
             completed_on = self.completed_on.isoformat()
+        else:
+            completed_on = self.completed_on
 
-        submited_on: Union[Unset, str] = UNSET
-        if not isinstance(self.submited_on, Unset):
+        submited_on: Union[None, Unset, str]
+        if isinstance(self.submited_on, Unset):
+            submited_on = UNSET
+        elif isinstance(self.submited_on, datetime.datetime):
             submited_on = self.submited_on.isoformat()
+        else:
+            submited_on = self.submited_on
 
-        shipped_on: Union[Unset, str] = UNSET
-        if not isinstance(self.shipped_on, Unset):
+        shipped_on: Union[None, Unset, str]
+        if isinstance(self.shipped_on, Unset):
+            shipped_on = UNSET
+        elif isinstance(self.shipped_on, datetime.datetime):
             shipped_on = self.shipped_on.isoformat()
+        else:
+            shipped_on = self.shipped_on
 
-        accepted_on: Union[Unset, str] = UNSET
-        if not isinstance(self.accepted_on, Unset):
+        accepted_on: Union[None, Unset, str]
+        if isinstance(self.accepted_on, Unset):
+            accepted_on = UNSET
+        elif isinstance(self.accepted_on, datetime.datetime):
             accepted_on = self.accepted_on.isoformat()
+        else:
+            accepted_on = self.accepted_on
 
-        ready_for_quality_control_on: Union[Unset, str] = UNSET
-        if not isinstance(self.ready_for_quality_control_on, Unset):
+        ready_for_quality_control_on: Union[None, Unset, str]
+        if isinstance(self.ready_for_quality_control_on, Unset):
+            ready_for_quality_control_on = UNSET
+        elif isinstance(self.ready_for_quality_control_on, datetime.datetime):
             ready_for_quality_control_on = self.ready_for_quality_control_on.isoformat()
+        else:
+            ready_for_quality_control_on = self.ready_for_quality_control_on
 
-        quality_control_on: Union[Unset, str] = UNSET
-        if not isinstance(self.quality_control_on, Unset):
+        quality_control_on: Union[None, Unset, str]
+        if isinstance(self.quality_control_on, Unset):
+            quality_control_on = UNSET
+        elif isinstance(self.quality_control_on, datetime.datetime):
             quality_control_on = self.quality_control_on.isoformat()
+        else:
+            quality_control_on = self.quality_control_on
 
-        delivered_on: Union[Unset, str] = UNSET
-        if not isinstance(self.delivered_on, Unset):
+        delivered_on: Union[None, Unset, str]
+        if isinstance(self.delivered_on, Unset):
+            delivered_on = UNSET
+        elif isinstance(self.delivered_on, datetime.datetime):
             delivered_on = self.delivered_on.isoformat()
+        else:
+            delivered_on = self.delivered_on
 
-        invoiced_on: Union[Unset, str] = UNSET
-        if not isinstance(self.invoiced_on, Unset):
+        invoiced_on: Union[None, Unset, str]
+        if isinstance(self.invoiced_on, Unset):
+            invoiced_on = UNSET
+        elif isinstance(self.invoiced_on, datetime.datetime):
             invoiced_on = self.invoiced_on.isoformat()
+        else:
+            invoiced_on = self.invoiced_on
 
-        last_invoiced_on: Union[Unset, str] = UNSET
-        if not isinstance(self.last_invoiced_on, Unset):
+        last_invoiced_on: Union[None, Unset, str]
+        if isinstance(self.last_invoiced_on, Unset):
+            last_invoiced_on = UNSET
+        elif isinstance(self.last_invoiced_on, datetime.datetime):
             last_invoiced_on = self.last_invoiced_on.isoformat()
+        else:
+            last_invoiced_on = self.last_invoiced_on
 
-        payment_due_on: Union[Unset, str] = UNSET
-        if not isinstance(self.payment_due_on, Unset):
+        payment_due_on: Union[None, Unset, str]
+        if isinstance(self.payment_due_on, Unset):
+            payment_due_on = UNSET
+        elif isinstance(self.payment_due_on, datetime.datetime):
             payment_due_on = self.payment_due_on.isoformat()
+        else:
+            payment_due_on = self.payment_due_on
 
-        paid_on: Union[Unset, str] = UNSET
-        if not isinstance(self.paid_on, Unset):
+        paid_on: Union[None, Unset, str]
+        if isinstance(self.paid_on, Unset):
+            paid_on = UNSET
+        elif isinstance(self.paid_on, datetime.datetime):
             paid_on = self.paid_on.isoformat()
+        else:
+            paid_on = self.paid_on
 
-        late_fee_on: Union[Unset, str] = UNSET
-        if not isinstance(self.late_fee_on, Unset):
+        late_fee_on: Union[None, Unset, str]
+        if isinstance(self.late_fee_on, Unset):
+            late_fee_on = UNSET
+        elif isinstance(self.late_fee_on, datetime.datetime):
             late_fee_on = self.late_fee_on.isoformat()
+        else:
+            late_fee_on = self.late_fee_on
 
-        cancelled_on: Union[Unset, str] = UNSET
-        if not isinstance(self.cancelled_on, Unset):
+        cancelled_on: Union[None, Unset, str]
+        if isinstance(self.cancelled_on, Unset):
+            cancelled_on = UNSET
+        elif isinstance(self.cancelled_on, datetime.datetime):
             cancelled_on = self.cancelled_on.isoformat()
+        else:
+            cancelled_on = self.cancelled_on
 
-        closed_on: Union[Unset, str] = UNSET
-        if not isinstance(self.closed_on, Unset):
+        closed_on: Union[None, Unset, str]
+        if isinstance(self.closed_on, Unset):
+            closed_on = UNSET
+        elif isinstance(self.closed_on, datetime.datetime):
             closed_on = self.closed_on.isoformat()
+        else:
+            closed_on = self.closed_on
 
         last_updated_on: Union[Unset, str] = UNSET
         if not isinstance(self.last_updated_on, Unset):
@@ -487,49 +575,95 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
         if not isinstance(self.guid, Unset):
             guid = str(self.guid)
 
-        business_from_time: Union[Unset, str] = UNSET
-        if not isinstance(self.business_from_time, Unset):
+        business_from_time: Union[None, Unset, str]
+        if isinstance(self.business_from_time, Unset):
+            business_from_time = UNSET
+        elif isinstance(self.business_from_time, datetime.datetime):
             business_from_time = self.business_from_time.isoformat()
+        else:
+            business_from_time = self.business_from_time
 
-        business_to_time: Union[Unset, str] = UNSET
-        if not isinstance(self.business_to_time, Unset):
+        business_to_time: Union[None, Unset, str]
+        if isinstance(self.business_to_time, Unset):
+            business_to_time = UNSET
+        elif isinstance(self.business_to_time, datetime.datetime):
             business_to_time = self.business_to_time.isoformat()
+        else:
+            business_to_time = self.business_to_time
 
         site_access_notes = self.site_access_notes
 
-        desired_date: Union[Unset, str] = UNSET
-        if not isinstance(self.desired_date, Unset):
+        desired_date: Union[None, Unset, str]
+        if isinstance(self.desired_date, Unset):
+            desired_date = UNSET
+        elif isinstance(self.desired_date, datetime.datetime):
             desired_date = self.desired_date.isoformat()
+        else:
+            desired_date = self.desired_date
 
-        deadline_date: Union[Unset, str] = UNSET
-        if not isinstance(self.deadline_date, Unset):
+        deadline_date: Union[None, Unset, str]
+        if isinstance(self.deadline_date, Unset):
+            deadline_date = UNSET
+        elif isinstance(self.deadline_date, datetime.datetime):
             deadline_date = self.deadline_date.isoformat()
+        else:
+            deadline_date = self.deadline_date
 
-        request_from_date: Union[Unset, str] = UNSET
-        if not isinstance(self.request_from_date, Unset):
+        request_from_date: Union[None, Unset, str]
+        if isinstance(self.request_from_date, Unset):
+            request_from_date = UNSET
+        elif isinstance(self.request_from_date, datetime.datetime):
             request_from_date = self.request_from_date.isoformat()
+        else:
+            request_from_date = self.request_from_date
 
-        request_from_time: Union[Unset, str] = UNSET
-        if not isinstance(self.request_from_time, Unset):
+        request_from_time: Union[None, Unset, str]
+        if isinstance(self.request_from_time, Unset):
+            request_from_time = UNSET
+        elif isinstance(self.request_from_time, datetime.datetime):
             request_from_time = self.request_from_time.isoformat()
+        else:
+            request_from_time = self.request_from_time
 
-        request_to_date: Union[Unset, str] = UNSET
-        if not isinstance(self.request_to_date, Unset):
+        request_to_date: Union[None, Unset, str]
+        if isinstance(self.request_to_date, Unset):
+            request_to_date = UNSET
+        elif isinstance(self.request_to_date, datetime.datetime):
             request_to_date = self.request_to_date.isoformat()
+        else:
+            request_to_date = self.request_to_date
 
-        request_to_time: Union[Unset, str] = UNSET
-        if not isinstance(self.request_to_time, Unset):
+        request_to_time: Union[None, Unset, str]
+        if isinstance(self.request_to_time, Unset):
+            request_to_time = UNSET
+        elif isinstance(self.request_to_time, datetime.datetime):
             request_to_time = self.request_to_time.isoformat()
+        else:
+            request_to_time = self.request_to_time
 
         order_notes = self.order_notes
 
-        billing_address: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.billing_address, Unset):
+        billing_address: Union[None, Unset, dict[str, Any]]
+        if isinstance(self.billing_address, Unset):
+            billing_address = UNSET
+        elif isinstance(
+            self.billing_address,
+            QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0,
+        ):
             billing_address = self.billing_address.to_dict()
+        else:
+            billing_address = self.billing_address
 
-        shipping_address: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.shipping_address, Unset):
+        shipping_address: Union[None, Unset, dict[str, Any]]
+        if isinstance(self.shipping_address, Unset):
+            shipping_address = UNSET
+        elif isinstance(
+            self.shipping_address,
+            QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0,
+        ):
             shipping_address = self.shipping_address.to_dict()
+        else:
+            shipping_address = self.shipping_address
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -761,8 +895,11 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.qualer_api_models_address_to_address_response_model import (
-            QualerApiModelsAddressToAddressResponseModel,
+        from ..models.qualer_api_models_service_orders_to_client_order_response_model_billing_address_type_0 import (
+            QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0,
+        )
+        from ..models.qualer_api_models_service_orders_to_client_order_response_model_shipping_address_type_0 import (
+            QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0,
         )
 
         d = dict(src_dict)
@@ -816,131 +953,323 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
 
         service_private_comments = d.pop("ServicePrivateComments", UNSET)
 
-        _created_on = d.pop("CreatedOn", UNSET)
-        created_on: Union[Unset, datetime.datetime]
-        if isinstance(_created_on, Unset):
-            created_on = UNSET
-        else:
-            created_on = isoparse(_created_on)
+        def _parse_created_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                created_on_type_0 = isoparse(data)
 
-        _approved_on = d.pop("ApprovedOn", UNSET)
-        approved_on: Union[Unset, datetime.datetime]
-        if isinstance(_approved_on, Unset):
-            approved_on = UNSET
-        else:
-            approved_on = isoparse(_approved_on)
+                return created_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
 
-        _sign_off_on = d.pop("SignOffOn", UNSET)
-        sign_off_on: Union[Unset, datetime.datetime]
-        if isinstance(_sign_off_on, Unset):
-            sign_off_on = UNSET
-        else:
-            sign_off_on = isoparse(_sign_off_on)
+        created_on = _parse_created_on(d.pop("CreatedOn", UNSET))
 
-        _vendor_sign_off_on = d.pop("VendorSignOffOn", UNSET)
-        vendor_sign_off_on: Union[Unset, datetime.datetime]
-        if isinstance(_vendor_sign_off_on, Unset):
-            vendor_sign_off_on = UNSET
-        else:
-            vendor_sign_off_on = isoparse(_vendor_sign_off_on)
+        def _parse_approved_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                approved_on_type_0 = isoparse(data)
 
-        _completed_on = d.pop("CompletedOn", UNSET)
-        completed_on: Union[Unset, datetime.datetime]
-        if isinstance(_completed_on, Unset):
-            completed_on = UNSET
-        else:
-            completed_on = isoparse(_completed_on)
+                return approved_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
 
-        _submited_on = d.pop("SubmitedOn", UNSET)
-        submited_on: Union[Unset, datetime.datetime]
-        if isinstance(_submited_on, Unset):
-            submited_on = UNSET
-        else:
-            submited_on = isoparse(_submited_on)
+        approved_on = _parse_approved_on(d.pop("ApprovedOn", UNSET))
 
-        _shipped_on = d.pop("ShippedOn", UNSET)
-        shipped_on: Union[Unset, datetime.datetime]
-        if isinstance(_shipped_on, Unset):
-            shipped_on = UNSET
-        else:
-            shipped_on = isoparse(_shipped_on)
+        def _parse_sign_off_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                sign_off_on_type_0 = isoparse(data)
 
-        _accepted_on = d.pop("AcceptedOn", UNSET)
-        accepted_on: Union[Unset, datetime.datetime]
-        if isinstance(_accepted_on, Unset):
-            accepted_on = UNSET
-        else:
-            accepted_on = isoparse(_accepted_on)
+                return sign_off_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
 
-        _ready_for_quality_control_on = d.pop("ReadyForQualityControlOn", UNSET)
-        ready_for_quality_control_on: Union[Unset, datetime.datetime]
-        if isinstance(_ready_for_quality_control_on, Unset):
-            ready_for_quality_control_on = UNSET
-        else:
-            ready_for_quality_control_on = isoparse(_ready_for_quality_control_on)
+        sign_off_on = _parse_sign_off_on(d.pop("SignOffOn", UNSET))
 
-        _quality_control_on = d.pop("QualityControlOn", UNSET)
-        quality_control_on: Union[Unset, datetime.datetime]
-        if isinstance(_quality_control_on, Unset):
-            quality_control_on = UNSET
-        else:
-            quality_control_on = isoparse(_quality_control_on)
+        def _parse_vendor_sign_off_on(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                vendor_sign_off_on_type_0 = isoparse(data)
 
-        _delivered_on = d.pop("DeliveredOn", UNSET)
-        delivered_on: Union[Unset, datetime.datetime]
-        if isinstance(_delivered_on, Unset):
-            delivered_on = UNSET
-        else:
-            delivered_on = isoparse(_delivered_on)
+                return vendor_sign_off_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
 
-        _invoiced_on = d.pop("InvoicedOn", UNSET)
-        invoiced_on: Union[Unset, datetime.datetime]
-        if isinstance(_invoiced_on, Unset):
-            invoiced_on = UNSET
-        else:
-            invoiced_on = isoparse(_invoiced_on)
+        vendor_sign_off_on = _parse_vendor_sign_off_on(d.pop("VendorSignOffOn", UNSET))
 
-        _last_invoiced_on = d.pop("LastInvoicedOn", UNSET)
-        last_invoiced_on: Union[Unset, datetime.datetime]
-        if isinstance(_last_invoiced_on, Unset):
-            last_invoiced_on = UNSET
-        else:
-            last_invoiced_on = isoparse(_last_invoiced_on)
+        def _parse_completed_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                completed_on_type_0 = isoparse(data)
 
-        _payment_due_on = d.pop("PaymentDueOn", UNSET)
-        payment_due_on: Union[Unset, datetime.datetime]
-        if isinstance(_payment_due_on, Unset):
-            payment_due_on = UNSET
-        else:
-            payment_due_on = isoparse(_payment_due_on)
+                return completed_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
 
-        _paid_on = d.pop("PaidOn", UNSET)
-        paid_on: Union[Unset, datetime.datetime]
-        if isinstance(_paid_on, Unset):
-            paid_on = UNSET
-        else:
-            paid_on = isoparse(_paid_on)
+        completed_on = _parse_completed_on(d.pop("CompletedOn", UNSET))
 
-        _late_fee_on = d.pop("LateFeeOn", UNSET)
-        late_fee_on: Union[Unset, datetime.datetime]
-        if isinstance(_late_fee_on, Unset):
-            late_fee_on = UNSET
-        else:
-            late_fee_on = isoparse(_late_fee_on)
+        def _parse_submited_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                submited_on_type_0 = isoparse(data)
 
-        _cancelled_on = d.pop("CancelledOn", UNSET)
-        cancelled_on: Union[Unset, datetime.datetime]
-        if isinstance(_cancelled_on, Unset):
-            cancelled_on = UNSET
-        else:
-            cancelled_on = isoparse(_cancelled_on)
+                return submited_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
 
-        _closed_on = d.pop("ClosedOn", UNSET)
-        closed_on: Union[Unset, datetime.datetime]
-        if isinstance(_closed_on, Unset):
-            closed_on = UNSET
-        else:
-            closed_on = isoparse(_closed_on)
+        submited_on = _parse_submited_on(d.pop("SubmitedOn", UNSET))
+
+        def _parse_shipped_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                shipped_on_type_0 = isoparse(data)
+
+                return shipped_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        shipped_on = _parse_shipped_on(d.pop("ShippedOn", UNSET))
+
+        def _parse_accepted_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                accepted_on_type_0 = isoparse(data)
+
+                return accepted_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        accepted_on = _parse_accepted_on(d.pop("AcceptedOn", UNSET))
+
+        def _parse_ready_for_quality_control_on(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                ready_for_quality_control_on_type_0 = isoparse(data)
+
+                return ready_for_quality_control_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        ready_for_quality_control_on = _parse_ready_for_quality_control_on(
+            d.pop("ReadyForQualityControlOn", UNSET)
+        )
+
+        def _parse_quality_control_on(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                quality_control_on_type_0 = isoparse(data)
+
+                return quality_control_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        quality_control_on = _parse_quality_control_on(d.pop("QualityControlOn", UNSET))
+
+        def _parse_delivered_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                delivered_on_type_0 = isoparse(data)
+
+                return delivered_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        delivered_on = _parse_delivered_on(d.pop("DeliveredOn", UNSET))
+
+        def _parse_invoiced_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                invoiced_on_type_0 = isoparse(data)
+
+                return invoiced_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        invoiced_on = _parse_invoiced_on(d.pop("InvoicedOn", UNSET))
+
+        def _parse_last_invoiced_on(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                last_invoiced_on_type_0 = isoparse(data)
+
+                return last_invoiced_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        last_invoiced_on = _parse_last_invoiced_on(d.pop("LastInvoicedOn", UNSET))
+
+        def _parse_payment_due_on(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                payment_due_on_type_0 = isoparse(data)
+
+                return payment_due_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        payment_due_on = _parse_payment_due_on(d.pop("PaymentDueOn", UNSET))
+
+        def _parse_paid_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                paid_on_type_0 = isoparse(data)
+
+                return paid_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        paid_on = _parse_paid_on(d.pop("PaidOn", UNSET))
+
+        def _parse_late_fee_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                late_fee_on_type_0 = isoparse(data)
+
+                return late_fee_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        late_fee_on = _parse_late_fee_on(d.pop("LateFeeOn", UNSET))
+
+        def _parse_cancelled_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                cancelled_on_type_0 = isoparse(data)
+
+                return cancelled_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        cancelled_on = _parse_cancelled_on(d.pop("CancelledOn", UNSET))
+
+        def _parse_closed_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                closed_on_type_0 = isoparse(data)
+
+                return closed_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        closed_on = _parse_closed_on(d.pop("ClosedOn", UNSET))
 
         _last_updated_on = d.pop("LastUpdatedOn", UNSET)
         last_updated_on: Union[Unset, datetime.datetime]
@@ -1062,83 +1391,221 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
         else:
             guid = UUID(_guid)
 
-        _business_from_time = d.pop("BusinessFromTime", UNSET)
-        business_from_time: Union[Unset, datetime.datetime]
-        if isinstance(_business_from_time, Unset):
-            business_from_time = UNSET
-        else:
-            business_from_time = isoparse(_business_from_time)
+        def _parse_business_from_time(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                business_from_time_type_0 = isoparse(data)
 
-        _business_to_time = d.pop("BusinessToTime", UNSET)
-        business_to_time: Union[Unset, datetime.datetime]
-        if isinstance(_business_to_time, Unset):
-            business_to_time = UNSET
-        else:
-            business_to_time = isoparse(_business_to_time)
+                return business_from_time_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        business_from_time = _parse_business_from_time(d.pop("BusinessFromTime", UNSET))
+
+        def _parse_business_to_time(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                business_to_time_type_0 = isoparse(data)
+
+                return business_to_time_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        business_to_time = _parse_business_to_time(d.pop("BusinessToTime", UNSET))
 
         site_access_notes = d.pop("SiteAccessNotes", UNSET)
 
-        _desired_date = d.pop("DesiredDate", UNSET)
-        desired_date: Union[Unset, datetime.datetime]
-        if isinstance(_desired_date, Unset):
-            desired_date = UNSET
-        else:
-            desired_date = isoparse(_desired_date)
+        def _parse_desired_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                desired_date_type_0 = isoparse(data)
 
-        _deadline_date = d.pop("DeadlineDate", UNSET)
-        deadline_date: Union[Unset, datetime.datetime]
-        if isinstance(_deadline_date, Unset):
-            deadline_date = UNSET
-        else:
-            deadline_date = isoparse(_deadline_date)
+                return desired_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
 
-        _request_from_date = d.pop("RequestFromDate", UNSET)
-        request_from_date: Union[Unset, datetime.datetime]
-        if isinstance(_request_from_date, Unset):
-            request_from_date = UNSET
-        else:
-            request_from_date = isoparse(_request_from_date)
+        desired_date = _parse_desired_date(d.pop("DesiredDate", UNSET))
 
-        _request_from_time = d.pop("RequestFromTime", UNSET)
-        request_from_time: Union[Unset, datetime.datetime]
-        if isinstance(_request_from_time, Unset):
-            request_from_time = UNSET
-        else:
-            request_from_time = isoparse(_request_from_time)
+        def _parse_deadline_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                deadline_date_type_0 = isoparse(data)
 
-        _request_to_date = d.pop("RequestToDate", UNSET)
-        request_to_date: Union[Unset, datetime.datetime]
-        if isinstance(_request_to_date, Unset):
-            request_to_date = UNSET
-        else:
-            request_to_date = isoparse(_request_to_date)
+                return deadline_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
 
-        _request_to_time = d.pop("RequestToTime", UNSET)
-        request_to_time: Union[Unset, datetime.datetime]
-        if isinstance(_request_to_time, Unset):
-            request_to_time = UNSET
-        else:
-            request_to_time = isoparse(_request_to_time)
+        deadline_date = _parse_deadline_date(d.pop("DeadlineDate", UNSET))
+
+        def _parse_request_from_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                request_from_date_type_0 = isoparse(data)
+
+                return request_from_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        request_from_date = _parse_request_from_date(d.pop("RequestFromDate", UNSET))
+
+        def _parse_request_from_time(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                request_from_time_type_0 = isoparse(data)
+
+                return request_from_time_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        request_from_time = _parse_request_from_time(d.pop("RequestFromTime", UNSET))
+
+        def _parse_request_to_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                request_to_date_type_0 = isoparse(data)
+
+                return request_to_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        request_to_date = _parse_request_to_date(d.pop("RequestToDate", UNSET))
+
+        def _parse_request_to_time(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                request_to_time_type_0 = isoparse(data)
+
+                return request_to_time_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        request_to_time = _parse_request_to_time(d.pop("RequestToTime", UNSET))
 
         order_notes = d.pop("OrderNotes", UNSET)
 
-        _billing_address = d.pop("BillingAddress", UNSET)
-        billing_address: Union[Unset, QualerApiModelsAddressToAddressResponseModel]
-        if isinstance(_billing_address, Unset):
-            billing_address = UNSET
-        else:
-            billing_address = QualerApiModelsAddressToAddressResponseModel.from_dict(
-                _billing_address
+        def _parse_billing_address(
+            data: object,
+        ) -> Union[
+            "QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0",
+            None,
+            Unset,
+        ]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                billing_address_type_0 = QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0.from_dict(
+                    data
+                )
+
+                return billing_address_type_0
+            except:  # noqa: E722
+                pass
+            return cast(
+                Union[
+                    "QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0",
+                    None,
+                    Unset,
+                ],
+                data,
             )
 
-        _shipping_address = d.pop("ShippingAddress", UNSET)
-        shipping_address: Union[Unset, QualerApiModelsAddressToAddressResponseModel]
-        if isinstance(_shipping_address, Unset):
-            shipping_address = UNSET
-        else:
-            shipping_address = QualerApiModelsAddressToAddressResponseModel.from_dict(
-                _shipping_address
+        billing_address = _parse_billing_address(d.pop("BillingAddress", UNSET))
+
+        def _parse_shipping_address(
+            data: object,
+        ) -> Union[
+            "QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0",
+            None,
+            Unset,
+        ]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                shipping_address_type_0 = QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0.from_dict(
+                    data
+                )
+
+                return shipping_address_type_0
+            except:  # noqa: E722
+                pass
+            return cast(
+                Union[
+                    "QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0",
+                    None,
+                    Unset,
+                ],
+                data,
             )
+
+        shipping_address = _parse_shipping_address(d.pop("ShippingAddress", UNSET))
 
         qualer_api_models_service_orders_to_client_order_response_model = cls(
             service_order_id=service_order_id,

@@ -1,23 +1,11 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.qualer_api_models_asset_to_asset_service_forecast_model_on_day import (
-    QualerApiModelsAssetToAssetServiceForecastModelOnDay,
-)
-from ..models.qualer_api_models_asset_to_asset_service_forecast_model_on_month import (
-    QualerApiModelsAssetToAssetServiceForecastModelOnMonth,
-)
-from ..models.qualer_api_models_asset_to_asset_service_forecast_model_on_week_days import (
-    QualerApiModelsAssetToAssetServiceForecastModelOnWeekDays,
-)
-from ..models.qualer_api_models_asset_to_asset_service_forecast_model_weekday_of_month import (
-    QualerApiModelsAssetToAssetServiceForecastModelWeekdayOfMonth,
-)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsAssetToAssetServiceForecastModel")
@@ -43,17 +31,17 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
         maintenance_plan_name (Union[Unset, str]):
         maintenance_task_id (Union[Unset, int]):
         maintenance_task_name (Union[Unset, str]):
-        next_service_date (Union[Unset, datetime.datetime]):
-        advance_recall_date (Union[Unset, datetime.datetime]):
-        grace_period_date (Union[Unset, datetime.datetime]):
-        certificate_next_service_date (Union[Unset, datetime.datetime]):
+        next_service_date (Union[None, Unset, datetime.datetime]):
+        advance_recall_date (Union[None, Unset, datetime.datetime]):
+        grace_period_date (Union[None, Unset, datetime.datetime]):
+        certificate_next_service_date (Union[None, Unset, datetime.datetime]):
         service_interval (Union[Unset, str]):
         interval_cycle (Union[Unset, str]):
         interval_length (Union[Unset, int]):
-        on_day (Union[Unset, QualerApiModelsAssetToAssetServiceForecastModelOnDay]):
-        on_month (Union[Unset, QualerApiModelsAssetToAssetServiceForecastModelOnMonth]):
-        on_week_days (Union[Unset, QualerApiModelsAssetToAssetServiceForecastModelOnWeekDays]):
-        weekday_of_month (Union[Unset, QualerApiModelsAssetToAssetServiceForecastModelWeekdayOfMonth]):
+        on_day (Union[Unset, int]):
+        on_month (Union[Unset, int]):
+        on_week_days (Union[Unset, int]):
+        weekday_of_month (Union[Unset, int]):
         advance_recall_period (Union[Unset, str]):
         days_before_due (Union[Unset, int]):
         past_due_grace_period (Union[Unset, str]):
@@ -76,23 +64,17 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
     maintenance_plan_name: Union[Unset, str] = UNSET
     maintenance_task_id: Union[Unset, int] = UNSET
     maintenance_task_name: Union[Unset, str] = UNSET
-    next_service_date: Union[Unset, datetime.datetime] = UNSET
-    advance_recall_date: Union[Unset, datetime.datetime] = UNSET
-    grace_period_date: Union[Unset, datetime.datetime] = UNSET
-    certificate_next_service_date: Union[Unset, datetime.datetime] = UNSET
+    next_service_date: Union[None, Unset, datetime.datetime] = UNSET
+    advance_recall_date: Union[None, Unset, datetime.datetime] = UNSET
+    grace_period_date: Union[None, Unset, datetime.datetime] = UNSET
+    certificate_next_service_date: Union[None, Unset, datetime.datetime] = UNSET
     service_interval: Union[Unset, str] = UNSET
     interval_cycle: Union[Unset, str] = UNSET
     interval_length: Union[Unset, int] = UNSET
-    on_day: Union[Unset, QualerApiModelsAssetToAssetServiceForecastModelOnDay] = UNSET
-    on_month: Union[Unset, QualerApiModelsAssetToAssetServiceForecastModelOnMonth] = (
-        UNSET
-    )
-    on_week_days: Union[
-        Unset, QualerApiModelsAssetToAssetServiceForecastModelOnWeekDays
-    ] = UNSET
-    weekday_of_month: Union[
-        Unset, QualerApiModelsAssetToAssetServiceForecastModelWeekdayOfMonth
-    ] = UNSET
+    on_day: Union[Unset, int] = UNSET
+    on_month: Union[Unset, int] = UNSET
+    on_week_days: Union[Unset, int] = UNSET
+    weekday_of_month: Union[Unset, int] = UNSET
     advance_recall_period: Union[Unset, str] = UNSET
     days_before_due: Union[Unset, int] = UNSET
     past_due_grace_period: Union[Unset, str] = UNSET
@@ -132,23 +114,39 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
 
         maintenance_task_name = self.maintenance_task_name
 
-        next_service_date: Union[Unset, str] = UNSET
-        if not isinstance(self.next_service_date, Unset):
+        next_service_date: Union[None, Unset, str]
+        if isinstance(self.next_service_date, Unset):
+            next_service_date = UNSET
+        elif isinstance(self.next_service_date, datetime.datetime):
             next_service_date = self.next_service_date.isoformat()
+        else:
+            next_service_date = self.next_service_date
 
-        advance_recall_date: Union[Unset, str] = UNSET
-        if not isinstance(self.advance_recall_date, Unset):
+        advance_recall_date: Union[None, Unset, str]
+        if isinstance(self.advance_recall_date, Unset):
+            advance_recall_date = UNSET
+        elif isinstance(self.advance_recall_date, datetime.datetime):
             advance_recall_date = self.advance_recall_date.isoformat()
+        else:
+            advance_recall_date = self.advance_recall_date
 
-        grace_period_date: Union[Unset, str] = UNSET
-        if not isinstance(self.grace_period_date, Unset):
+        grace_period_date: Union[None, Unset, str]
+        if isinstance(self.grace_period_date, Unset):
+            grace_period_date = UNSET
+        elif isinstance(self.grace_period_date, datetime.datetime):
             grace_period_date = self.grace_period_date.isoformat()
+        else:
+            grace_period_date = self.grace_period_date
 
-        certificate_next_service_date: Union[Unset, str] = UNSET
-        if not isinstance(self.certificate_next_service_date, Unset):
+        certificate_next_service_date: Union[None, Unset, str]
+        if isinstance(self.certificate_next_service_date, Unset):
+            certificate_next_service_date = UNSET
+        elif isinstance(self.certificate_next_service_date, datetime.datetime):
             certificate_next_service_date = (
                 self.certificate_next_service_date.isoformat()
             )
+        else:
+            certificate_next_service_date = self.certificate_next_service_date
 
         service_interval = self.service_interval
 
@@ -156,21 +154,13 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
 
         interval_length = self.interval_length
 
-        on_day: Union[Unset, str] = UNSET
-        if not isinstance(self.on_day, Unset):
-            on_day = self.on_day.value
+        on_day = self.on_day
 
-        on_month: Union[Unset, str] = UNSET
-        if not isinstance(self.on_month, Unset):
-            on_month = self.on_month.value
+        on_month = self.on_month
 
-        on_week_days: Union[Unset, str] = UNSET
-        if not isinstance(self.on_week_days, Unset):
-            on_week_days = self.on_week_days.value
+        on_week_days = self.on_week_days
 
-        weekday_of_month: Union[Unset, str] = UNSET
-        if not isinstance(self.weekday_of_month, Unset):
-            weekday_of_month = self.weekday_of_month.value
+        weekday_of_month = self.weekday_of_month
 
         advance_recall_period = self.advance_recall_period
 
@@ -283,33 +273,85 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
 
         maintenance_task_name = d.pop("MaintenanceTaskName", UNSET)
 
-        _next_service_date = d.pop("NextServiceDate", UNSET)
-        next_service_date: Union[Unset, datetime.datetime]
-        if isinstance(_next_service_date, Unset):
-            next_service_date = UNSET
-        else:
-            next_service_date = isoparse(_next_service_date)
+        def _parse_next_service_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                next_service_date_type_0 = isoparse(data)
 
-        _advance_recall_date = d.pop("AdvanceRecallDate", UNSET)
-        advance_recall_date: Union[Unset, datetime.datetime]
-        if isinstance(_advance_recall_date, Unset):
-            advance_recall_date = UNSET
-        else:
-            advance_recall_date = isoparse(_advance_recall_date)
+                return next_service_date_type_0
+            except Exception:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
 
-        _grace_period_date = d.pop("GracePeriodDate", UNSET)
-        grace_period_date: Union[Unset, datetime.datetime]
-        if isinstance(_grace_period_date, Unset):
-            grace_period_date = UNSET
-        else:
-            grace_period_date = isoparse(_grace_period_date)
+        next_service_date = _parse_next_service_date(d.pop("NextServiceDate", UNSET))
 
-        _certificate_next_service_date = d.pop("CertificateNextServiceDate", UNSET)
-        certificate_next_service_date: Union[Unset, datetime.datetime]
-        if isinstance(_certificate_next_service_date, Unset):
-            certificate_next_service_date = UNSET
-        else:
-            certificate_next_service_date = isoparse(_certificate_next_service_date)
+        def _parse_advance_recall_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                advance_recall_date_type_0 = isoparse(data)
+
+                return advance_recall_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        advance_recall_date = _parse_advance_recall_date(
+            d.pop("AdvanceRecallDate", UNSET)
+        )
+
+        def _parse_grace_period_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                grace_period_date_type_0 = isoparse(data)
+
+                return grace_period_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        grace_period_date = _parse_grace_period_date(d.pop("GracePeriodDate", UNSET))
+
+        def _parse_certificate_next_service_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                certificate_next_service_date_type_0 = isoparse(data)
+
+                return certificate_next_service_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        certificate_next_service_date = _parse_certificate_next_service_date(
+            d.pop("CertificateNextServiceDate", UNSET)
+        )
 
         service_interval = d.pop("ServiceInterval", UNSET)
 
@@ -317,43 +359,13 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
 
         interval_length = d.pop("IntervalLength", UNSET)
 
-        _on_day = d.pop("OnDay", UNSET)
-        on_day: Union[Unset, QualerApiModelsAssetToAssetServiceForecastModelOnDay]
-        if isinstance(_on_day, Unset):
-            on_day = UNSET
-        else:
-            on_day = QualerApiModelsAssetToAssetServiceForecastModelOnDay(_on_day)
+        on_day = d.pop("OnDay", UNSET)
 
-        _on_month = d.pop("OnMonth", UNSET)
-        on_month: Union[Unset, QualerApiModelsAssetToAssetServiceForecastModelOnMonth]
-        if isinstance(_on_month, Unset):
-            on_month = UNSET
-        else:
-            on_month = QualerApiModelsAssetToAssetServiceForecastModelOnMonth(_on_month)
+        on_month = d.pop("OnMonth", UNSET)
 
-        _on_week_days = d.pop("OnWeekDays", UNSET)
-        on_week_days: Union[
-            Unset, QualerApiModelsAssetToAssetServiceForecastModelOnWeekDays
-        ]
-        if isinstance(_on_week_days, Unset):
-            on_week_days = UNSET
-        else:
-            on_week_days = QualerApiModelsAssetToAssetServiceForecastModelOnWeekDays(
-                _on_week_days
-            )
+        on_week_days = d.pop("OnWeekDays", UNSET)
 
-        _weekday_of_month = d.pop("WeekdayOfMonth", UNSET)
-        weekday_of_month: Union[
-            Unset, QualerApiModelsAssetToAssetServiceForecastModelWeekdayOfMonth
-        ]
-        if isinstance(_weekday_of_month, Unset):
-            weekday_of_month = UNSET
-        else:
-            weekday_of_month = (
-                QualerApiModelsAssetToAssetServiceForecastModelWeekdayOfMonth(
-                    _weekday_of_month
-                )
-            )
+        weekday_of_month = d.pop("WeekdayOfMonth", UNSET)
 
         advance_recall_period = d.pop("AdvanceRecallPeriod", UNSET)
 

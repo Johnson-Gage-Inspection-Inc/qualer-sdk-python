@@ -67,9 +67,9 @@ class TestSDKStructure:
 
             print("✅ API and models import successful")
         except Exception as e:
-            pytest.fail(
-                f"Failed to import qualer_sdk.api or qualer_sdk.models: {e}"
-            )  # Test importing a specific API function
+            pytest.fail(f"Failed to import qualer_sdk.api or qualer_sdk.models: {e}")
+
+        # Test importing a specific API function
         try:
             from qualer_sdk.api.assets.get_all_assets import sync  # noqa: F401
 
@@ -143,7 +143,7 @@ class TestSDKStructure:
         python_files = list(src_dir.rglob("*.py"))
 
         attrs_usage_count = 0
-        attrs_issues = []
+        pydantic_issues = []
 
         for file_path in python_files:
             try:
@@ -156,17 +156,17 @@ class TestSDKStructure:
 
                 # Check for old Pydantic syntax that shouldn't be there
                 if "from pydantic import" in content:
-                    attrs_issues.append(f"{file_path}: contains pydantic imports")
+                    pydantic_issues.append(f"{file_path}: contains pydantic imports")
 
                 if "BaseModel" in content and "pydantic" in content:
-                    attrs_issues.append(f"{file_path}: contains BaseModel usage")
+                    pydantic_issues.append(f"{file_path}: contains BaseModel usage")
 
             except Exception as e:
                 pytest.fail(f"Error checking {file_path}: {e}")
 
-        if attrs_issues:
+        if pydantic_issues:
             error_msg = "Pydantic usage found in files (should use attrs):\n"
-            for issue in attrs_issues:
+            for issue in pydantic_issues:
                 error_msg += f"  - {issue}\n"
             pytest.fail(error_msg)
 
@@ -181,7 +181,7 @@ class TestSDKStructure:
             from qualer_sdk.client import Client
 
             # Create API client
-            Client(base_url="https://test.qualer.com")
+            client = Client(base_url="https://test.qualer.com")
 
             # Test that we can import and call an API function
             from qualer_sdk.api.assets.get_all_assets import sync

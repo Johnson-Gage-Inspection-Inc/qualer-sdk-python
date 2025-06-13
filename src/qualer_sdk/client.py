@@ -24,12 +24,13 @@ class Client:
         ``timeout``: The maximum amount of a time a request can take. API functions will raise
         httpx.TimeoutException if this is exceeded.
 
-        ``verify_ssl``: Whether or not to verify the SSL certificate of the API server. This should be True in production,
-        but can be set to False for testing purposes.
+        ``verify_ssl``: Whether or not to verify the SSL certificate of the API server. This should be
+            True in production, but can be set to False for testing purposes.
 
         ``follow_redirects``: Whether or not to follow redirects. Default value is False.
 
-        ``httpx_args``: A dictionary of additional arguments to be passed to the ``httpx.Client`` and ``httpx.AsyncClient`` constructor.
+        ``httpx_args``: A dictionary of additional arguments to be passed to the ``httpx.Client`` and
+            ``httpx.AsyncClient`` constructor.
 
 
     Attributes:
@@ -162,20 +163,22 @@ class AuthenticatedClient:
 
         ``follow_redirects``: Whether or not to follow redirects. Default value is False.
 
-        ``httpx_args``: A dictionary of additional arguments to be passed to the ``httpx.Client`` and ``httpx.AsyncClient`` constructor.
+        ``httpx_args``: A dictionary of additional arguments to be passed to the ``httpx.Client`` and
+        ``httpx.AsyncClient`` constructor.
 
 
     Attributes:
+        token: The token to use for authentication
         raise_on_unexpected_status: Whether or not to raise an errors.UnexpectedStatus if the API returns a
             status code that was not documented in the source OpenAPI document. Can also be provided as a keyword
             argument to the constructor.
-        token: The token to use for authentication
         prefix: The prefix to use for the Authorization header (default: "Api-Token")
         auth_header_name: The name of the Authorization header
     """
 
+    token: str
     raise_on_unexpected_status: bool = field(default=False, kw_only=True)
-    _base_url: str = field(alias="base_url")
+    _base_url: str = field(alias="base_url", default="https://jgiquality.qualer.com")
     _cookies: Dict[str, str] = field(factory=dict, kw_only=True, alias="cookies")
     _headers: Dict[str, str] = field(factory=dict, kw_only=True, alias="headers")
     _timeout: Optional[httpx.Timeout] = field(
@@ -191,7 +194,6 @@ class AuthenticatedClient:
     _client: Optional[httpx.Client] = field(default=None, init=False)
     _async_client: Optional[httpx.AsyncClient] = field(default=None, init=False)
 
-    token: str
     prefix: str = "Api-Token"
     auth_header_name: str = "Authorization"
 

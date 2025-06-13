@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union
+from typing import TYPE_CHECKING, Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -9,11 +9,14 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.qualer_api_models_address_to_address_response_model import (
-        QualerApiModelsAddressToAddressResponseModel,
-    )
     from ..models.qualer_api_models_common_from_attribute_model import (
         QualerApiModelsCommonFromAttributeModel,
+    )
+    from ..models.qualer_api_models_site_to_client_site_response_billing_address_type_0 import (
+        QualerApiModelsSiteToClientSiteResponseBillingAddressType0,
+    )
+    from ..models.qualer_api_models_site_to_client_site_response_shipping_address_type_0 import (
+        QualerApiModelsSiteToClientSiteResponseShippingAddressType0,
     )
 
 
@@ -27,9 +30,9 @@ class QualerApiModelsSiteToClientSiteResponse:
         site_id (Union[Unset, int]):
         site_name (Union[Unset, str]):
         site_code (Union[Unset, str]):
-        shipping_address (Union[Unset, QualerApiModelsAddressToAddressResponseModel]):
+        shipping_address (Union['QualerApiModelsSiteToClientSiteResponseShippingAddressType0', None, Unset]):
         shipping_inherited (Union[Unset, bool]):
-        billing_address (Union[Unset, QualerApiModelsAddressToAddressResponseModel]):
+        billing_address (Union['QualerApiModelsSiteToClientSiteResponseBillingAddressType0', None, Unset]):
         default_account_representative_employee_id (Union[Unset, int]):
         billing_inherited (Union[Unset, bool]):
         federal_number (Union[Unset, str]):
@@ -48,13 +51,13 @@ class QualerApiModelsSiteToClientSiteResponse:
     site_id: Union[Unset, int] = UNSET
     site_name: Union[Unset, str] = UNSET
     site_code: Union[Unset, str] = UNSET
-    shipping_address: Union[Unset, "QualerApiModelsAddressToAddressResponseModel"] = (
-        UNSET
-    )
+    shipping_address: Union[
+        "QualerApiModelsSiteToClientSiteResponseShippingAddressType0", None, Unset
+    ] = UNSET
     shipping_inherited: Union[Unset, bool] = UNSET
-    billing_address: Union[Unset, "QualerApiModelsAddressToAddressResponseModel"] = (
-        UNSET
-    )
+    billing_address: Union[
+        "QualerApiModelsSiteToClientSiteResponseBillingAddressType0", None, Unset
+    ] = UNSET
     default_account_representative_employee_id: Union[Unset, int] = UNSET
     billing_inherited: Union[Unset, bool] = UNSET
     federal_number: Union[Unset, str] = UNSET
@@ -71,21 +74,42 @@ class QualerApiModelsSiteToClientSiteResponse:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.qualer_api_models_site_to_client_site_response_billing_address_type_0 import (
+            QualerApiModelsSiteToClientSiteResponseBillingAddressType0,
+        )
+        from ..models.qualer_api_models_site_to_client_site_response_shipping_address_type_0 import (
+            QualerApiModelsSiteToClientSiteResponseShippingAddressType0,
+        )
+
         site_id = self.site_id
 
         site_name = self.site_name
 
         site_code = self.site_code
 
-        shipping_address: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.shipping_address, Unset):
+        shipping_address: Union[None, Unset, dict[str, Any]]
+        if isinstance(self.shipping_address, Unset):
+            shipping_address = UNSET
+        elif isinstance(
+            self.shipping_address,
+            QualerApiModelsSiteToClientSiteResponseShippingAddressType0,
+        ):
             shipping_address = self.shipping_address.to_dict()
+        else:
+            shipping_address = self.shipping_address
 
         shipping_inherited = self.shipping_inherited
 
-        billing_address: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.billing_address, Unset):
+        billing_address: Union[None, Unset, dict[str, Any]]
+        if isinstance(self.billing_address, Unset):
+            billing_address = UNSET
+        elif isinstance(
+            self.billing_address,
+            QualerApiModelsSiteToClientSiteResponseBillingAddressType0,
+        ):
             billing_address = self.billing_address.to_dict()
+        else:
+            billing_address = self.billing_address
 
         default_account_representative_employee_id = (
             self.default_account_representative_employee_id
@@ -170,11 +194,14 @@ class QualerApiModelsSiteToClientSiteResponse:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.qualer_api_models_address_to_address_response_model import (
-            QualerApiModelsAddressToAddressResponseModel,
-        )
         from ..models.qualer_api_models_common_from_attribute_model import (
             QualerApiModelsCommonFromAttributeModel,
+        )
+        from ..models.qualer_api_models_site_to_client_site_response_billing_address_type_0 import (
+            QualerApiModelsSiteToClientSiteResponseBillingAddressType0,
+        )
+        from ..models.qualer_api_models_site_to_client_site_response_shipping_address_type_0 import (
+            QualerApiModelsSiteToClientSiteResponseShippingAddressType0,
         )
 
         d = dict(src_dict)
@@ -184,25 +211,67 @@ class QualerApiModelsSiteToClientSiteResponse:
 
         site_code = d.pop("SiteCode", UNSET)
 
-        _shipping_address = d.pop("ShippingAddress", UNSET)
-        shipping_address: Union[Unset, QualerApiModelsAddressToAddressResponseModel]
-        if isinstance(_shipping_address, Unset):
-            shipping_address = UNSET
-        else:
-            shipping_address = QualerApiModelsAddressToAddressResponseModel.from_dict(
-                _shipping_address
+        def _parse_shipping_address(
+            data: object,
+        ) -> Union[
+            "QualerApiModelsSiteToClientSiteResponseShippingAddressType0", None, Unset
+        ]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                shipping_address_type_0 = QualerApiModelsSiteToClientSiteResponseShippingAddressType0.from_dict(
+                    data
+                )
+
+                return shipping_address_type_0
+            except:  # noqa: E722
+                pass
+            return cast(
+                Union[
+                    "QualerApiModelsSiteToClientSiteResponseShippingAddressType0",
+                    None,
+                    Unset,
+                ],
+                data,
             )
+
+        shipping_address = _parse_shipping_address(d.pop("ShippingAddress", UNSET))
 
         shipping_inherited = d.pop("ShippingInherited", UNSET)
 
-        _billing_address = d.pop("BillingAddress", UNSET)
-        billing_address: Union[Unset, QualerApiModelsAddressToAddressResponseModel]
-        if isinstance(_billing_address, Unset):
-            billing_address = UNSET
-        else:
-            billing_address = QualerApiModelsAddressToAddressResponseModel.from_dict(
-                _billing_address
+        def _parse_billing_address(
+            data: object,
+        ) -> Union[
+            "QualerApiModelsSiteToClientSiteResponseBillingAddressType0", None, Unset
+        ]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                billing_address_type_0 = QualerApiModelsSiteToClientSiteResponseBillingAddressType0.from_dict(
+                    data
+                )
+
+                return billing_address_type_0
+            except:  # noqa: E722
+                pass
+            return cast(
+                Union[
+                    "QualerApiModelsSiteToClientSiteResponseBillingAddressType0",
+                    None,
+                    Unset,
+                ],
+                data,
             )
+
+        billing_address = _parse_billing_address(d.pop("BillingAddress", UNSET))
 
         default_account_representative_employee_id = d.pop(
             "DefaultAccountRepresentativeEmployeeId", UNSET

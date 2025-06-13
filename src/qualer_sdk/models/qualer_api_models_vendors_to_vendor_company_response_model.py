@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union
+from typing import TYPE_CHECKING, Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -9,8 +9,11 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.qualer_api_models_address_to_address_response_model import (
-        QualerApiModelsAddressToAddressResponseModel,
+    from ..models.qualer_api_models_vendors_to_vendor_company_response_model_billing_address_type_0 import (
+        QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0,
+    )
+    from ..models.qualer_api_models_vendors_to_vendor_company_response_model_shipping_address_type_0 import (
+        QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0,
     )
 
 
@@ -28,8 +31,8 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
         company_name (Union[Unset, str]):
         domain_name (Union[Unset, str]):
         custom_name (Union[Unset, str]):
-        billing_address (Union[Unset, QualerApiModelsAddressToAddressResponseModel]):
-        shipping_address (Union[Unset, QualerApiModelsAddressToAddressResponseModel]):
+        billing_address (Union['QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0', None, Unset]):
+        shipping_address (Union['QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0', None, Unset]):
         updated_on_utc (Union[Unset, datetime.datetime]):
     """
 
@@ -40,16 +43,27 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
     company_name: Union[Unset, str] = UNSET
     domain_name: Union[Unset, str] = UNSET
     custom_name: Union[Unset, str] = UNSET
-    billing_address: Union[Unset, "QualerApiModelsAddressToAddressResponseModel"] = (
-        UNSET
-    )
-    shipping_address: Union[Unset, "QualerApiModelsAddressToAddressResponseModel"] = (
-        UNSET
-    )
+    billing_address: Union[
+        "QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0",
+        None,
+        Unset,
+    ] = UNSET
+    shipping_address: Union[
+        "QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0",
+        None,
+        Unset,
+    ] = UNSET
     updated_on_utc: Union[Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.qualer_api_models_vendors_to_vendor_company_response_model_billing_address_type_0 import (
+            QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0,
+        )
+        from ..models.qualer_api_models_vendors_to_vendor_company_response_model_shipping_address_type_0 import (
+            QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0,
+        )
+
         account_number_text = self.account_number_text
 
         account_number = self.account_number
@@ -64,13 +78,27 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
 
         custom_name = self.custom_name
 
-        billing_address: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.billing_address, Unset):
+        billing_address: Union[None, Unset, dict[str, Any]]
+        if isinstance(self.billing_address, Unset):
+            billing_address = UNSET
+        elif isinstance(
+            self.billing_address,
+            QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0,
+        ):
             billing_address = self.billing_address.to_dict()
+        else:
+            billing_address = self.billing_address
 
-        shipping_address: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.shipping_address, Unset):
+        shipping_address: Union[None, Unset, dict[str, Any]]
+        if isinstance(self.shipping_address, Unset):
+            shipping_address = UNSET
+        elif isinstance(
+            self.shipping_address,
+            QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0,
+        ):
             shipping_address = self.shipping_address.to_dict()
+        else:
+            shipping_address = self.shipping_address
 
         updated_on_utc: Union[Unset, str] = UNSET
         if not isinstance(self.updated_on_utc, Unset):
@@ -104,8 +132,11 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.qualer_api_models_address_to_address_response_model import (
-            QualerApiModelsAddressToAddressResponseModel,
+        from ..models.qualer_api_models_vendors_to_vendor_company_response_model_billing_address_type_0 import (
+            QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0,
+        )
+        from ..models.qualer_api_models_vendors_to_vendor_company_response_model_shipping_address_type_0 import (
+            QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0,
         )
 
         d = dict(src_dict)
@@ -123,23 +154,69 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
 
         custom_name = d.pop("CustomName", UNSET)
 
-        _billing_address = d.pop("BillingAddress", UNSET)
-        billing_address: Union[Unset, QualerApiModelsAddressToAddressResponseModel]
-        if isinstance(_billing_address, Unset):
-            billing_address = UNSET
-        else:
-            billing_address = QualerApiModelsAddressToAddressResponseModel.from_dict(
-                _billing_address
+        def _parse_billing_address(
+            data: object,
+        ) -> Union[
+            "QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0",
+            None,
+            Unset,
+        ]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                billing_address_type_0 = QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0.from_dict(
+                    data
+                )
+
+                return billing_address_type_0
+            except:  # noqa: E722
+                pass
+            return cast(
+                Union[
+                    "QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0",
+                    None,
+                    Unset,
+                ],
+                data,
             )
 
-        _shipping_address = d.pop("ShippingAddress", UNSET)
-        shipping_address: Union[Unset, QualerApiModelsAddressToAddressResponseModel]
-        if isinstance(_shipping_address, Unset):
-            shipping_address = UNSET
-        else:
-            shipping_address = QualerApiModelsAddressToAddressResponseModel.from_dict(
-                _shipping_address
+        billing_address = _parse_billing_address(d.pop("BillingAddress", UNSET))
+
+        def _parse_shipping_address(
+            data: object,
+        ) -> Union[
+            "QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0",
+            None,
+            Unset,
+        ]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                shipping_address_type_0 = QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0.from_dict(
+                    data
+                )
+
+                return shipping_address_type_0
+            except:  # noqa: E722
+                pass
+            return cast(
+                Union[
+                    "QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0",
+                    None,
+                    Unset,
+                ],
+                data,
             )
+
+        shipping_address = _parse_shipping_address(d.pop("ShippingAddress", UNSET))
 
         _updated_on_utc = d.pop("UpdatedOnUtc", UNSET)
         updated_on_utc: Union[Unset, datetime.datetime]
