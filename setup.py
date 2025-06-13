@@ -1,5 +1,5 @@
 from setuptools import find_packages, setup
-from setuptools_scm import get_version
+from setuptools_scm import get_version  # noqa: F401
 
 # Read long description from README
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -41,6 +41,7 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
         "Operating System :: OS Independent",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Typing :: Typed",

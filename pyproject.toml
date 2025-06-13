@@ -21,6 +21,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Operating System :: OS Independent",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Internet :: WWW/HTTP",
@@ -136,4 +137,4 @@ exclude = [
 typeCheckingMode = "basic"
 reportMissingImports = true
 reportMissingTypeStubs = false
-pythonVersion = "3.9"
+pythonVersion = "3.13"

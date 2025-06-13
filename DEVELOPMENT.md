@@ -177,7 +177,7 @@ profile = "black"
 
 The project includes a comprehensive CI/CD pipeline (`.github/workflows/ci.yml`) that:
 
-1. **Multi-Python Testing**: Tests against Python 3.8, 3.9, 3.10, 3.11, and 3.12
+1. **Multi-Python Testing**: Tests against Python 3.9, 3.10, 3.11, 3.12, and 3.13
 2. **Code Quality Checks**: Runs linting, formatting, and type checking
 3. **Test Execution**: Runs all 422 tests with coverage reporting
 4. **Package Building**: Builds both source and wheel distributions

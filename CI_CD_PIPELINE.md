@@ -13,7 +13,7 @@ Triggered on: **Pull Requests to `master`**
 #### Jobs:
 
 **🧪 Test Job**
-- **Matrix Testing**: Python 3.9, 3.10, 3.11, 3.12
+- **Matrix Testing**: Python 3.9, 3.10, 3.11, 3.12, 3.13
 - **Dependency Caching**: Speeds up builds
 - **Linting**: flake8 for code quality
 - **SDK Validation**: Import tests
