@@ -10566,7 +10566,8 @@
         },
         "ServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SerialNumber": {
           "type": "string"
@@ -10591,11 +10592,13 @@
         },
         "DueDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderTechnician": {
           "type": "string"
