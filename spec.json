@@ -18625,7 +18625,8 @@
             "InventoryItem",
             "PurchaseOrder"
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32"
         },
         "RevisionNumber": {
           "format": "int32",
@@ -18704,7 +18705,8 @@
             "InventoryItem",
             "PurchaseOrder"
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32"
         },
         "RevisionNumber": {
           "format": "int32",

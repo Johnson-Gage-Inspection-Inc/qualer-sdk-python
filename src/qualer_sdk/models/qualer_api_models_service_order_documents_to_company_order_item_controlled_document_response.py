@@ -66,7 +66,7 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentRe
 
         file_name = self.file_name
 
-        document_type: Union[Unset, str] = UNSET
+        document_type: Union[Unset, int] = UNSET
         if not isinstance(self.document_type, Unset):
             document_type = self.document_type.value
 
