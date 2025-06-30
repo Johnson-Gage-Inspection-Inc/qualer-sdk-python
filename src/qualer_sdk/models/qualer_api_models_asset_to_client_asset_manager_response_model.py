@@ -109,7 +109,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         as_left_result (Union[Unset, QualerApiModelsAssetToClientAssetManagerResponseModelAsLeftResult]):
         last_service_date (Union[Unset, datetime.datetime]):
         last_service (Union[Unset, str]):
-        next_service_date (Union[Unset, datetime.datetime]):
+        next_service_date (Union[None, Unset, datetime.datetime]):
         next_service (Union[Unset, str]):
         service_schedule_segment_id (Union[Unset, int]):
         service_schedule_id (Union[Unset, int]):
@@ -214,7 +214,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
     ] = UNSET
     last_service_date: Union[Unset, datetime.datetime] = UNSET
     last_service: Union[Unset, str] = UNSET
-    next_service_date: Union[Unset, datetime.datetime] = UNSET
+    next_service_date: Union[None, Unset, datetime.datetime] = UNSET
     next_service: Union[Unset, str] = UNSET
     service_schedule_segment_id: Union[Unset, int] = UNSET
     service_schedule_id: Union[Unset, int] = UNSET
@@ -416,9 +416,13 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         last_service = self.last_service
 
-        next_service_date: Union[Unset, str] = UNSET
-        if not isinstance(self.next_service_date, Unset):
+        next_service_date: Union[None, Unset, str]
+        if isinstance(self.next_service_date, Unset):
+            next_service_date = UNSET
+        elif isinstance(self.next_service_date, datetime.datetime):
             next_service_date = self.next_service_date.isoformat()
+        else:
+            next_service_date = self.next_service_date
 
         next_service = self.next_service
 
@@ -914,12 +918,24 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         last_service = d.pop("LastService", UNSET)
 
-        _next_service_date = d.pop("NextServiceDate", UNSET)
-        next_service_date: Union[Unset, datetime.datetime]
-        if isinstance(_next_service_date, Unset):
-            next_service_date = UNSET
-        else:
-            next_service_date = isoparse(_next_service_date)
+        def _parse_next_service_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                next_service_date_type_0 = isoparse(data)
+
+                return next_service_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        next_service_date = _parse_next_service_date(d.pop("NextServiceDate", UNSET))
 
         next_service = d.pop("NextService", UNSET)
 
