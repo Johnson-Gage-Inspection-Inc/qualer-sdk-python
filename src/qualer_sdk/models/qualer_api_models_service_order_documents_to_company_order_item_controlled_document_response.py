@@ -72,7 +72,7 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentRe
 
         revision_number = self.revision_number
 
-        report_type: Union[Unset, str] = UNSET
+        report_type: Union[Unset, int] = UNSET
         if not isinstance(self.report_type, Unset):
             report_type = self.report_type.value
 
