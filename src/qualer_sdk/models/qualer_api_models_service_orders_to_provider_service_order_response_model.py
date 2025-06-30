@@ -28,7 +28,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         guid (Union[Unset, UUID]):  Example: 00000000-0000-0000-0000-000000000000.
         service_order_number (Union[Unset, int]):
         custom_order_number (Union[Unset, str]):
-        due_date (Union[Unset, datetime.datetime]):
+        due_date (Union[None, Unset, datetime.datetime]):
         assets (Union[Unset, int]):
         completed_assets (Union[Unset, int]):
         order_status (Union[Unset, QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus]):
@@ -54,7 +54,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
     guid: Union[Unset, UUID] = UNSET
     service_order_number: Union[Unset, int] = UNSET
     custom_order_number: Union[Unset, str] = UNSET
-    due_date: Union[Unset, datetime.datetime] = UNSET
+    due_date: Union[None, Unset, datetime.datetime] = UNSET
     assets: Union[Unset, int] = UNSET
     completed_assets: Union[Unset, int] = UNSET
     order_status: Union[
@@ -92,9 +92,13 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
 
         custom_order_number = self.custom_order_number
 
-        due_date: Union[Unset, str] = UNSET
-        if not isinstance(self.due_date, Unset):
+        due_date: Union[None, Unset, str]
+        if isinstance(self.due_date, Unset):
+            due_date = UNSET
+        elif isinstance(self.due_date, datetime.datetime):
             due_date = self.due_date.isoformat()
+        else:
+            due_date = self.due_date
 
         assets = self.assets
 
@@ -256,12 +260,22 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
 
         custom_order_number = d.pop("CustomOrderNumber", UNSET)
 
-        _due_date = d.pop("DueDate", UNSET)
-        due_date: Union[Unset, datetime.datetime]
-        if isinstance(_due_date, Unset):
-            due_date = UNSET
-        else:
-            due_date = isoparse(_due_date)
+        def _parse_due_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                due_date_type_0 = isoparse(data)
+
+                return due_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        due_date = _parse_due_date(d.pop("DueDate", UNSET))
 
         assets = d.pop("Assets", UNSET)
 

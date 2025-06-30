@@ -68,8 +68,8 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         root_category_name (Union[Unset, str]):
         vendor_tag (Union[Unset, str]):
         result_status (Union[Unset, int]):
-        service_date (Union[Unset, datetime.datetime]):
-        next_service_date (Union[Unset, datetime.datetime]):
+        service_date (Union[None, Unset, datetime.datetime]):
+        next_service_date (Union[None, Unset, datetime.datetime]):
         original_due_date (Union[Unset, datetime.datetime]):
         asset_tag (Union[Unset, str]):
         department (Union[Unset, str]):
@@ -209,8 +209,8 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
     root_category_name: Union[Unset, str] = UNSET
     vendor_tag: Union[Unset, str] = UNSET
     result_status: Union[Unset, int] = UNSET
-    service_date: Union[Unset, datetime.datetime] = UNSET
-    next_service_date: Union[Unset, datetime.datetime] = UNSET
+    service_date: Union[None, Unset, datetime.datetime] = UNSET
+    next_service_date: Union[None, Unset, datetime.datetime] = UNSET
     original_due_date: Union[Unset, datetime.datetime] = UNSET
     asset_tag: Union[Unset, str] = UNSET
     department: Union[Unset, str] = UNSET
@@ -408,13 +408,21 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
 
         result_status = self.result_status
 
-        service_date: Union[Unset, str] = UNSET
-        if not isinstance(self.service_date, Unset):
+        service_date: Union[None, Unset, str]
+        if isinstance(self.service_date, Unset):
+            service_date = UNSET
+        elif isinstance(self.service_date, datetime.datetime):
             service_date = self.service_date.isoformat()
+        else:
+            service_date = self.service_date
 
-        next_service_date: Union[Unset, str] = UNSET
-        if not isinstance(self.next_service_date, Unset):
+        next_service_date: Union[None, Unset, str]
+        if isinstance(self.next_service_date, Unset):
+            next_service_date = UNSET
+        elif isinstance(self.next_service_date, datetime.datetime):
             next_service_date = self.next_service_date.isoformat()
+        else:
+            next_service_date = self.next_service_date
 
         original_due_date: Union[Unset, str] = UNSET
         if not isinstance(self.original_due_date, Unset):
@@ -1015,19 +1023,41 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
 
         result_status = d.pop("ResultStatus", UNSET)
 
-        _service_date = d.pop("ServiceDate", UNSET)
-        service_date: Union[Unset, datetime.datetime]
-        if isinstance(_service_date, Unset):
-            service_date = UNSET
-        else:
-            service_date = isoparse(_service_date)
+        def _parse_service_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                service_date_type_0 = isoparse(data)
 
-        _next_service_date = d.pop("NextServiceDate", UNSET)
-        next_service_date: Union[Unset, datetime.datetime]
-        if isinstance(_next_service_date, Unset):
-            next_service_date = UNSET
-        else:
-            next_service_date = isoparse(_next_service_date)
+                return service_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        service_date = _parse_service_date(d.pop("ServiceDate", UNSET))
+
+        def _parse_next_service_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                next_service_date_type_0 = isoparse(data)
+
+                return next_service_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        next_service_date = _parse_next_service_date(d.pop("NextServiceDate", UNSET))
 
         _original_due_date = d.pop("OriginalDueDate", UNSET)
         original_due_date: Union[Unset, datetime.datetime]

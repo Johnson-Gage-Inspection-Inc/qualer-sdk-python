@@ -8753,11 +8753,13 @@
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "CertificateDueDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "OwnerFirstName": {
           "type": "string"
@@ -8849,7 +8851,8 @@
         },
         "ServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SerialNumber": {
           "type": "string"
@@ -8874,11 +8877,13 @@
         },
         "DueDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceLevel": {
           "type": "string"
@@ -9313,7 +9318,8 @@
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "CalibratedBy": {
           "type": "string"
@@ -10124,7 +10130,8 @@
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextService": {
           "type": "string"
@@ -10696,7 +10703,8 @@
         },
         "ServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SerialNumber": {
           "type": "string"
@@ -10712,11 +10720,13 @@
         },
         "DueDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderTechnician": {
           "type": "string"
@@ -10838,7 +10848,8 @@
         },
         "ServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SerialNumber": {
           "type": "string"
@@ -10854,11 +10865,13 @@
         },
         "DueDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderTechnician": {
           "type": "string"
@@ -11311,7 +11324,8 @@
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextService": {
           "type": "string"
@@ -11823,7 +11837,8 @@
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceTask": {
           "type": "string"
@@ -13618,11 +13633,13 @@
         },
         "ServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "OriginalDueDate": {
           "format": "date-time",
@@ -14014,11 +14031,13 @@
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PartNumber": {
           "type": "string"
@@ -14134,7 +14153,8 @@
         },
         "DueDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PartsCharge": {
           "format": "double",
@@ -14206,7 +14226,8 @@
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "CertificateNumber": {
           "type": "string"
@@ -14892,7 +14913,8 @@
         },
         "PrimaryToolNextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PrimaryToolCalibratedBy": {
           "type": "string"
@@ -14921,7 +14943,8 @@
         },
         "SecondaryToolNextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SecondaryToolCalibratedBy": {
           "type": "string"
@@ -15586,11 +15609,13 @@
         },
         "ServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceOrderItemId": {
           "format": "int32",
@@ -16335,11 +16360,13 @@
         },
         "ServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceOrderItemId": {
           "format": "int32",
@@ -16441,7 +16468,8 @@
         },
         "AsLeftPrimaryToolNextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsLeftPrimaryToolCalibratedBy": {
           "type": "string"
@@ -16534,7 +16562,8 @@
         },
         "AsFoundPrimaryToolNextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundPrimaryToolCalibratedBy": {
           "type": "string"
@@ -16563,7 +16592,8 @@
         },
         "AsLeftSecondaryToolNextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsLeftSecondaryToolCalibratedBy": {
           "type": "string"
@@ -16592,7 +16622,8 @@
         },
         "AsFoundSecondaryToolNextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundSecondaryToolCalibratedBy": {
           "type": "string"
@@ -18628,7 +18659,8 @@
             "InventoryItem",
             "PurchaseOrder"
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32"
         },
         "RevisionNumber": {
           "format": "int32",
@@ -18665,7 +18697,8 @@
             "InventoryItem",
             "InventoryItemLabel"
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32"
         },
         "DownloadUrl": {
           "type": "string"
@@ -18707,7 +18740,8 @@
             "InventoryItem",
             "PurchaseOrder"
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32"
         },
         "RevisionNumber": {
           "format": "int32",
@@ -18744,7 +18778,8 @@
             "InventoryItem",
             "InventoryItemLabel"
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32"
         },
         "DownloadUrl": {
           "type": "string"
@@ -19120,7 +19155,8 @@
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "CalibratedBy": {
           "type": "string"
@@ -19551,7 +19587,8 @@
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "CalibratedBy": {
           "type": "string"
@@ -19903,7 +19940,8 @@
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "CalibratedBy": {
           "type": "string"
@@ -20500,11 +20538,13 @@
         },
         "ServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "VendorTag": {
           "type": "string"
@@ -21382,7 +21422,8 @@
         },
         "DueDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "Assets": {
           "format": "int32",

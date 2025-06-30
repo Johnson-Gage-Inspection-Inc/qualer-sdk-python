@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -27,13 +27,13 @@ class QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel:
         applied_interval (Union[Unset, int]):
         as_found_tolerance (Union[Unset, float]):
         as_left_tolerance (Union[Unset, float]):
-        service_date (Union[Unset, datetime.datetime]):
+        service_date (Union[None, Unset, datetime.datetime]):
         serial_number (Union[Unset, str]):
         asset_tag (Union[Unset, str]):
         asset_user (Union[Unset, str]):
         service_notes (Union[Unset, str]):
-        due_date (Union[Unset, datetime.datetime]):
-        next_service_date (Union[Unset, datetime.datetime]):
+        due_date (Union[None, Unset, datetime.datetime]):
+        next_service_date (Union[None, Unset, datetime.datetime]):
         provider_technician (Union[Unset, str]):
         provider_phone (Union[Unset, str]):
         provider_company (Union[Unset, str]):
@@ -61,13 +61,13 @@ class QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel:
     applied_interval: Union[Unset, int] = UNSET
     as_found_tolerance: Union[Unset, float] = UNSET
     as_left_tolerance: Union[Unset, float] = UNSET
-    service_date: Union[Unset, datetime.datetime] = UNSET
+    service_date: Union[None, Unset, datetime.datetime] = UNSET
     serial_number: Union[Unset, str] = UNSET
     asset_tag: Union[Unset, str] = UNSET
     asset_user: Union[Unset, str] = UNSET
     service_notes: Union[Unset, str] = UNSET
-    due_date: Union[Unset, datetime.datetime] = UNSET
-    next_service_date: Union[Unset, datetime.datetime] = UNSET
+    due_date: Union[None, Unset, datetime.datetime] = UNSET
+    next_service_date: Union[None, Unset, datetime.datetime] = UNSET
     provider_technician: Union[Unset, str] = UNSET
     provider_phone: Union[Unset, str] = UNSET
     provider_company: Union[Unset, str] = UNSET
@@ -106,9 +106,13 @@ class QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel:
 
         as_left_tolerance = self.as_left_tolerance
 
-        service_date: Union[Unset, str] = UNSET
-        if not isinstance(self.service_date, Unset):
+        service_date: Union[None, Unset, str]
+        if isinstance(self.service_date, Unset):
+            service_date = UNSET
+        elif isinstance(self.service_date, datetime.datetime):
             service_date = self.service_date.isoformat()
+        else:
+            service_date = self.service_date
 
         serial_number = self.serial_number
 
@@ -118,13 +122,21 @@ class QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel:
 
         service_notes = self.service_notes
 
-        due_date: Union[Unset, str] = UNSET
-        if not isinstance(self.due_date, Unset):
+        due_date: Union[None, Unset, str]
+        if isinstance(self.due_date, Unset):
+            due_date = UNSET
+        elif isinstance(self.due_date, datetime.datetime):
             due_date = self.due_date.isoformat()
+        else:
+            due_date = self.due_date
 
-        next_service_date: Union[Unset, str] = UNSET
-        if not isinstance(self.next_service_date, Unset):
+        next_service_date: Union[None, Unset, str]
+        if isinstance(self.next_service_date, Unset):
+            next_service_date = UNSET
+        elif isinstance(self.next_service_date, datetime.datetime):
             next_service_date = self.next_service_date.isoformat()
+        else:
+            next_service_date = self.next_service_date
 
         provider_technician = self.provider_technician
 
@@ -249,12 +261,22 @@ class QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel:
 
         as_left_tolerance = d.pop("AsLeftTolerance", UNSET)
 
-        _service_date = d.pop("ServiceDate", UNSET)
-        service_date: Union[Unset, datetime.datetime]
-        if isinstance(_service_date, Unset):
-            service_date = UNSET
-        else:
-            service_date = isoparse(_service_date)
+        def _parse_service_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                service_date_type_0 = isoparse(data)
+
+                return service_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        service_date = _parse_service_date(d.pop("ServiceDate", UNSET))
 
         serial_number = d.pop("SerialNumber", UNSET)
 
@@ -264,19 +286,41 @@ class QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel:
 
         service_notes = d.pop("ServiceNotes", UNSET)
 
-        _due_date = d.pop("DueDate", UNSET)
-        due_date: Union[Unset, datetime.datetime]
-        if isinstance(_due_date, Unset):
-            due_date = UNSET
-        else:
-            due_date = isoparse(_due_date)
+        def _parse_due_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                due_date_type_0 = isoparse(data)
 
-        _next_service_date = d.pop("NextServiceDate", UNSET)
-        next_service_date: Union[Unset, datetime.datetime]
-        if isinstance(_next_service_date, Unset):
-            next_service_date = UNSET
-        else:
-            next_service_date = isoparse(_next_service_date)
+                return due_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        due_date = _parse_due_date(d.pop("DueDate", UNSET))
+
+        def _parse_next_service_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                next_service_date_type_0 = isoparse(data)
+
+                return next_service_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        next_service_date = _parse_next_service_date(d.pop("NextServiceDate", UNSET))
 
         provider_technician = d.pop("ProviderTechnician", UNSET)
 

@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -17,7 +17,7 @@ class QualerApiModelsReportDatasetsToReferenceStandardResponse:
     Attributes:
         is_auxiliary (Union[Unset, bool]):
         last_service_date (Union[Unset, datetime.datetime]):
-        next_service_date (Union[Unset, datetime.datetime]):
+        next_service_date (Union[None, Unset, datetime.datetime]):
         certificate_number (Union[Unset, str]):
         calibrated_by (Union[Unset, str]):
         tool_name (Union[Unset, str]):
@@ -41,7 +41,7 @@ class QualerApiModelsReportDatasetsToReferenceStandardResponse:
 
     is_auxiliary: Union[Unset, bool] = UNSET
     last_service_date: Union[Unset, datetime.datetime] = UNSET
-    next_service_date: Union[Unset, datetime.datetime] = UNSET
+    next_service_date: Union[None, Unset, datetime.datetime] = UNSET
     certificate_number: Union[Unset, str] = UNSET
     calibrated_by: Union[Unset, str] = UNSET
     tool_name: Union[Unset, str] = UNSET
@@ -70,9 +70,13 @@ class QualerApiModelsReportDatasetsToReferenceStandardResponse:
         if not isinstance(self.last_service_date, Unset):
             last_service_date = self.last_service_date.isoformat()
 
-        next_service_date: Union[Unset, str] = UNSET
-        if not isinstance(self.next_service_date, Unset):
+        next_service_date: Union[None, Unset, str]
+        if isinstance(self.next_service_date, Unset):
+            next_service_date = UNSET
+        elif isinstance(self.next_service_date, datetime.datetime):
             next_service_date = self.next_service_date.isoformat()
+        else:
+            next_service_date = self.next_service_date
 
         certificate_number = self.certificate_number
 
@@ -174,12 +178,24 @@ class QualerApiModelsReportDatasetsToReferenceStandardResponse:
         else:
             last_service_date = isoparse(_last_service_date)
 
-        _next_service_date = d.pop("NextServiceDate", UNSET)
-        next_service_date: Union[Unset, datetime.datetime]
-        if isinstance(_next_service_date, Unset):
-            next_service_date = UNSET
-        else:
-            next_service_date = isoparse(_next_service_date)
+        def _parse_next_service_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                next_service_date_type_0 = isoparse(data)
+
+                return next_service_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        next_service_date = _parse_next_service_date(d.pop("NextServiceDate", UNSET))
 
         certificate_number = d.pop("CertificateNumber", UNSET)
 
