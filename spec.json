@@ -18697,7 +18697,8 @@
             "InventoryItem",
             "InventoryItemLabel"
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32"
         },
         "DownloadUrl": {
           "type": "string"
@@ -18777,7 +18778,8 @@
             "InventoryItem",
             "InventoryItemLabel"
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32"
         },
         "DownloadUrl": {
           "type": "string"
