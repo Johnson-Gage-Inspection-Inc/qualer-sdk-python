@@ -1,22 +1,22 @@
-from enum import Enum
+from enum import IntEnum
 
 
 class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseReportType(
-    str, Enum
+    IntEnum
 ):
-    VALUE_0 = "0"
-    VALUE_1 = "1"
-    VALUE_10 = "6"
-    VALUE_11 = "7"
-    VALUE_12 = "71"
-    VALUE_2 = "11"
-    VALUE_3 = "2"
-    VALUE_4 = "21"
-    VALUE_5 = "3"
-    VALUE_6 = "31"
-    VALUE_7 = "32"
-    VALUE_8 = "5"
-    VALUE_9 = "51"
+    VALUE_0 = 0
+    VALUE_1 = 1
+    VALUE_11 = 11
+    VALUE_2 = 2
+    VALUE_21 = 21
+    VALUE_3 = 3
+    VALUE_31 = 31
+    VALUE_32 = 32
+    VALUE_5 = 5
+    VALUE_51 = 51
+    VALUE_6 = 6
+    VALUE_7 = 7
+    VALUE_71 = 71
 
     def __str__(self) -> str:
         return str(self.value)

@@ -62,13 +62,13 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentRespon
 
         file_name = self.file_name
 
-        document_type: Union[Unset, str] = UNSET
+        document_type: Union[Unset, int] = UNSET
         if not isinstance(self.document_type, Unset):
             document_type = self.document_type.value
 
         revision_number = self.revision_number
 
-        report_type: Union[Unset, str] = UNSET
+        report_type: Union[Unset, int] = UNSET
         if not isinstance(self.report_type, Unset):
             report_type = self.report_type.value
 
