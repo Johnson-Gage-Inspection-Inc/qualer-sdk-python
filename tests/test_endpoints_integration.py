@@ -439,6 +439,41 @@ def discover_service_order_item_id_endpoints() -> List[Tuple[str, Any]]:
     return endpoints
 
 
+# Test data for Asset Service Record ID endpoints
+try:
+    import qualer_sdk.api.asset_service_records.get_asset_service_record
+    import qualer_sdk.api.asset_service_records.document_list
+    import qualer_sdk.api.asset_service_records.download_documents
+    import qualer_sdk.api.asset_service_records.upload_documents
+
+    ASSET_SERVICE_RECORD_ID_ONLY_ENDPOINTS = [
+        (
+            "asset_service_records.get_asset_service_record",
+            qualer_sdk.api.asset_service_records.get_asset_service_record.sync,
+        ),
+        (
+            "asset_service_records.document_list",
+            qualer_sdk.api.asset_service_records.document_list.sync,
+        ),
+        (
+            "asset_service_records.download_documents",
+            qualer_sdk.api.asset_service_records.download_documents.sync,
+        ),
+        (
+            "asset_service_records.upload_documents",
+            qualer_sdk.api.asset_service_records.upload_documents.sync,
+        ),
+    ]
+except ImportError:
+    ASSET_SERVICE_RECORD_ID_ONLY_ENDPOINTS = []
+
+# Problematic Asset Service Record ID endpoints (known OpenAPI generator issues)
+PROBLEMATIC_ASSET_SERVICE_RECORD_ENDPOINTS = [
+    # Download endpoints return binary data, not JSON
+    "asset_service_records.download_documents",
+]
+
+
 # Discover endpoints at module level for pytest parameterization
 TESTABLE_ENDPOINTS = discover_testable_endpoints()
 ASSET_ID_ONLY_ENDPOINTS = discover_asset_id_only_endpoints()
@@ -862,6 +897,67 @@ def test_service_order_item_id_endpoint_response_parsing(
     ), f"Endpoint {endpoint_name} returned error type: {response_type}"
 
 
+@pytest.mark.parametrize(
+    "endpoint_name,endpoint_func", ASSET_SERVICE_RECORD_ID_ONLY_ENDPOINTS
+)
+def test_asset_service_record_id_endpoint_response_parsing(
+    endpoint_name, endpoint_func, authenticated_client
+):
+    """Test endpoints that require an AssetServiceRecordId parameter."""
+    # Skip problematic endpoints
+    if endpoint_name in PROBLEMATIC_ASSET_SERVICE_RECORD_ENDPOINTS:
+        pytest.skip(f"Skipping {endpoint_name} - known OpenAPI generator issue")
+
+    # Get the function signature to find the parameter name
+    sig = inspect.signature(endpoint_func)
+    asset_service_record_param_name = None
+
+    for name, param in sig.parameters.items():
+        if name == "client":
+            continue
+        if param.default == inspect.Parameter.empty:
+            asset_service_record_param_name = name
+            break
+
+    if not asset_service_record_param_name:
+        pytest.fail(
+            f"Could not determine asset service record ID parameter name for {endpoint_name}"
+        )
+
+    # Use a sample asset service record ID for testing
+    # This should be a valid AssetServiceRecordId from your test data
+    sample_asset_service_record_id = 2325444
+
+    # Call the endpoint with the sample asset service record ID
+    kwargs = {
+        "client": authenticated_client,
+        asset_service_record_param_name: sample_asset_service_record_id,
+    }
+    response = endpoint_func(**kwargs)
+
+    # The main goal is to test that the response parses without errors
+    print(
+        f"✓ {endpoint_name}: Response parsed successfully with "
+        f"{asset_service_record_param_name}={sample_asset_service_record_id}"
+    )
+
+    # Log response details for debugging
+    if response is None:
+        print(f"  - {endpoint_name}: Response is None (may be expected)")
+    elif isinstance(response, list):
+        print(f"  - {endpoint_name}: Response is a list with {len(response)} items")
+    elif hasattr(response, "__dict__"):
+        print(f"  - {endpoint_name}: Response is a {type(response).__name__} object")
+    else:
+        print(f"  - {endpoint_name}: Response type: {type(response)}")
+
+    # Response should have a valid type name (not contain error indicators)
+    response_type = type(response).__name__
+    assert (
+        "Error" not in response_type
+    ), f"Endpoint {endpoint_name} returned error type: {response_type}"
+
+
 def test_endpoint_discovery():
     """Test that we can discover endpoints."""
     assert len(TESTABLE_ENDPOINTS) > 0, "No testable endpoints found"
@@ -884,6 +980,9 @@ def test_endpoint_discovery():
     )
     print(
         f"Discovered {len(SERVICE_ORDER_ITEM_ID_ONLY_ENDPOINTS)} service_order_item_id-only endpoints"
+    )
+    print(
+        f"Discovered {len(ASSET_SERVICE_RECORD_ID_ONLY_ENDPOINTS)} asset_service_record_id-only endpoints"
     )
 
 
