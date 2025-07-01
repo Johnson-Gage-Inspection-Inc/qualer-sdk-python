@@ -67,7 +67,8 @@ class TestGetDocumentMockBinaryResponse(unittest.TestCase):
                 )
                 # The fix should prevent UnicodeDecodeError and return a proper response
                 self.assertIsNotNone(response)
-                print("✅ Binary endpoint now works correctly - no UnicodeDecodeError!")
+                # Verify that the response contains the expected binary content
+                self.assertIsNotNone(response.content)
             except UnicodeDecodeError:
                 self.fail(
                     "UnicodeDecodeError should not occur with the fixed binary endpoint"
@@ -94,7 +95,9 @@ class TestGetDocumentMockBinaryResponse(unittest.TestCase):
         self.assertTrue(mock_response.content.startswith(b"%PDF"))
         self.assertEqual(mock_response.headers["content-type"], "application/pdf")
 
-        print("✅ Binary content can be handled without JSON parsing")
+        # Additional assertions to verify binary content handling
+        self.assertIsInstance(mock_response.content, bytes)
+        self.assertGreater(len(mock_response.content), 0)
 
 
 if __name__ == "__main__":
