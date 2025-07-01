@@ -5679,10 +5679,12 @@
         "operationId": "GetDocument",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/pdf",
+          "application/octet-stream",
+          "image/jpeg",
+          "image/png",
+          "application/msword",
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         ],
         "parameters": [
           {
@@ -5698,7 +5700,8 @@
           "200": {
             "description": "Return document",
             "schema": {
-              "type": "object"
+              "type": "string",
+              "format": "binary"
             }
           },
           "400": {
@@ -5720,10 +5723,12 @@
         "operationId": "GetDocument_get_wd",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/pdf",
+          "application/octet-stream",
+          "image/jpeg",
+          "image/png",
+          "application/msword",
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         ],
         "parameters": [
           {
@@ -5739,7 +5744,8 @@
           "200": {
             "description": "Return document",
             "schema": {
-              "type": "object"
+              "type": "string",
+              "format": "binary"
             }
           },
           "400": {
