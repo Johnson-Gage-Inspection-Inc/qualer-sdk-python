@@ -1690,10 +1690,7 @@
         "operationId": "DownloadDocuments",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/octet-stream"
         ],
         "parameters": [
           {
@@ -1708,7 +1705,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "string",
+              "format": "binary"
             }
           }
         }
@@ -1845,10 +1843,7 @@
         "operationId": "DownloadDocument",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/octet-stream"
         ],
         "parameters": [
           {
@@ -1893,7 +1888,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "string",
+              "format": "binary"
             }
           }
         }
@@ -6566,10 +6562,7 @@
         "operationId": "GetWorkItemImage",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "image/*"
         ],
         "parameters": [
           {
@@ -6590,7 +6583,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "string",
+              "format": "binary"
             }
           }
         }

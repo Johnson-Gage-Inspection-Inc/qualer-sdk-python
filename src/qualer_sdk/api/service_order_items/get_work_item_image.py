@@ -5,7 +5,6 @@ import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.get_work_item_image_response_200 import GetWorkItemImageResponse200
 from ...types import Response
 
 
@@ -23,11 +22,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[GetWorkItemImageResponse200]:
-    if response.status_code == 200:
-        response_200 = GetWorkItemImageResponse200.from_dict(response.json())
-
-        return response_200
+) -> Optional[Any]:
     if client.raise_on_unexpected_status:
         raise errors.UnexpectedStatus(response.status_code, response.content)
     else:
@@ -36,7 +31,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[GetWorkItemImageResponse200]:
+) -> Response[Any]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -50,7 +45,7 @@ def sync_detailed(
     image_name: str,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[GetWorkItemImageResponse200]:
+) -> Response[Any]:
     """
     Args:
         work_item_id (int):
@@ -61,7 +56,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetWorkItemImageResponse200]
+        Response[Any]
     """
 
     kwargs = _get_kwargs(
@@ -76,38 +71,12 @@ def sync_detailed(
     return _build_response(client=client, response=response)
 
 
-def sync(
-    work_item_id: int,
-    image_name: str,
-    *,
-    client: Union[AuthenticatedClient, Client],
-) -> Optional[GetWorkItemImageResponse200]:
-    """
-    Args:
-        work_item_id (int):
-        image_name (str):
-
-    Raises:
-        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
-        httpx.TimeoutException: If the request takes longer than Client.timeout.
-
-    Returns:
-        GetWorkItemImageResponse200
-    """
-
-    return sync_detailed(
-        work_item_id=work_item_id,
-        image_name=image_name,
-        client=client,
-    ).parsed
-
-
 async def asyncio_detailed(
     work_item_id: int,
     image_name: str,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[GetWorkItemImageResponse200]:
+) -> Response[Any]:
     """
     Args:
         work_item_id (int):
@@ -118,7 +87,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetWorkItemImageResponse200]
+        Response[Any]
     """
 
     kwargs = _get_kwargs(
@@ -129,31 +98,3 @@ async def asyncio_detailed(
     response = await client.get_async_httpx_client().request(**kwargs)
 
     return _build_response(client=client, response=response)
-
-
-async def asyncio(
-    work_item_id: int,
-    image_name: str,
-    *,
-    client: Union[AuthenticatedClient, Client],
-) -> Optional[GetWorkItemImageResponse200]:
-    """
-    Args:
-        work_item_id (int):
-        image_name (str):
-
-    Raises:
-        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
-        httpx.TimeoutException: If the request takes longer than Client.timeout.
-
-    Returns:
-        GetWorkItemImageResponse200
-    """
-
-    return (
-        await asyncio_detailed(
-            work_item_id=work_item_id,
-            image_name=image_name,
-            client=client,
-        )
-    ).parsed
