@@ -474,6 +474,35 @@ PROBLEMATIC_ASSET_SERVICE_RECORD_ENDPOINTS = [
 ]
 
 
+# Test data for Employee ID endpoints
+try:
+    import qualer_sdk.api.employees.get_employee_get_2
+    import qualer_sdk.api.service_orders.get_work_orders_employee
+    import qualer_sdk.api.client_employees.get_employee
+
+    EMPLOYEE_ID_ONLY_ENDPOINTS = [
+        (
+            "employees.get_employee_get_2",
+            qualer_sdk.api.employees.get_employee_get_2.sync,
+        ),
+        (
+            "service_orders.get_work_orders_employee",
+            qualer_sdk.api.service_orders.get_work_orders_employee.sync,
+        ),
+        (
+            "client_employees.get_employee",
+            qualer_sdk.api.client_employees.get_employee.sync,
+        ),
+    ]
+except ImportError:
+    EMPLOYEE_ID_ONLY_ENDPOINTS = []
+
+# Problematic Employee ID endpoints (known OpenAPI generator issues)
+PROBLEMATIC_EMPLOYEE_ENDPOINTS = [
+    # Add any endpoints here that have known issues
+]
+
+
 # Discover endpoints at module level for pytest parameterization
 TESTABLE_ENDPOINTS = discover_testable_endpoints()
 ASSET_ID_ONLY_ENDPOINTS = discover_asset_id_only_endpoints()
@@ -573,6 +602,28 @@ def sample_service_order_id(authenticated_client):
 
     except Exception as e:
         pytest.skip(f"Could not retrieve sample service order ID: {e}")
+
+
+@pytest.fixture(scope="session")
+def sample_employee_id(authenticated_client):
+    """Get a sample employee ID for testing."""
+    try:
+        # Try to get employees from the get_employees_get_2 endpoint
+        from qualer_sdk.api.employees import get_employees_get_2
+
+        employees = get_employees_get_2.sync(client=authenticated_client)
+        if employees and len(employees) > 0:
+            employee = employees[0]
+            # Check for common employee ID attribute names
+            for attr_name in ["id", "employee_id", "user_id", "person_id"]:
+                if hasattr(employee, attr_name):
+                    return getattr(employee, attr_name)
+
+        # If we can't get employees, skip the employee ID tests
+        pytest.skip("Could not retrieve sample employee ID for testing")
+
+    except Exception as e:
+        pytest.skip(f"Could not retrieve sample employee ID: {e}")
 
 
 @pytest.mark.parametrize("endpoint_name,endpoint_func", TESTABLE_ENDPOINTS)
@@ -984,6 +1035,7 @@ def test_endpoint_discovery():
     print(
         f"Discovered {len(ASSET_SERVICE_RECORD_ID_ONLY_ENDPOINTS)} asset_service_record_id-only endpoints"
     )
+    print(f"Discovered {len(EMPLOYEE_ID_ONLY_ENDPOINTS)} employee_id-only endpoints")
 
 
 if __name__ == "__main__":
