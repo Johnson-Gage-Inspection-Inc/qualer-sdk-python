@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -16,19 +16,23 @@ class QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel:
     """
     Attributes:
         payment_status (Union[Unset, str]):
-        invoiced_on (Union[Unset, datetime.datetime]):
+        invoiced_on (Union[None, Unset, datetime.datetime]):
     """
 
     payment_status: Union[Unset, str] = UNSET
-    invoiced_on: Union[Unset, datetime.datetime] = UNSET
+    invoiced_on: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         payment_status = self.payment_status
 
-        invoiced_on: Union[Unset, str] = UNSET
-        if not isinstance(self.invoiced_on, Unset):
+        invoiced_on: Union[None, Unset, str]
+        if isinstance(self.invoiced_on, Unset):
+            invoiced_on = UNSET
+        elif isinstance(self.invoiced_on, datetime.datetime):
             invoiced_on = self.invoiced_on.isoformat()
+        else:
+            invoiced_on = self.invoiced_on
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -45,12 +49,22 @@ class QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel:
         d = dict(src_dict)
         payment_status = d.pop("PaymentStatus", UNSET)
 
-        _invoiced_on = d.pop("InvoicedOn", UNSET)
-        invoiced_on: Union[Unset, datetime.datetime]
-        if isinstance(_invoiced_on, Unset):
-            invoiced_on = UNSET
-        else:
-            invoiced_on = isoparse(_invoiced_on)
+        def _parse_invoiced_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                invoiced_on_type_0 = isoparse(data)
+
+                return invoiced_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        invoiced_on = _parse_invoiced_on(d.pop("InvoicedOn", UNSET))
 
         qualer_api_models_service_orders_from_update_payment_status_model = cls(
             payment_status=payment_status,

@@ -4,9 +4,6 @@ from typing import Any, TypeVar, Union
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.qualer_api_models_report_datasets_to_service_order_item_field_response_type import (
-    QualerApiModelsReportDatasetsToServiceOrderItemFieldResponseType,
-)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderItemFieldResponse")
@@ -17,16 +14,14 @@ class QualerApiModelsReportDatasetsToServiceOrderItemFieldResponse:
     """
     Attributes:
         field_id (Union[Unset, str]):
-        type_ (Union[Unset, QualerApiModelsReportDatasetsToServiceOrderItemFieldResponseType]):
+        type_ (Union[Unset, int]):
         value (Union[Unset, str]):
         service_order_item_id (Union[Unset, int]):
         service_order_item_task_id (Union[Unset, int]):
     """
 
     field_id: Union[Unset, str] = UNSET
-    type_: Union[
-        Unset, QualerApiModelsReportDatasetsToServiceOrderItemFieldResponseType
-    ] = UNSET
+    type_: Union[Unset, int] = UNSET
     value: Union[Unset, str] = UNSET
     service_order_item_id: Union[Unset, int] = UNSET
     service_order_item_task_id: Union[Unset, int] = UNSET
@@ -35,9 +30,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemFieldResponse:
     def to_dict(self) -> dict[str, Any]:
         field_id = self.field_id
 
-        type_: Union[Unset, str] = UNSET
-        if not isinstance(self.type_, Unset):
-            type_ = self.type_.value
+        type_ = self.type_
 
         value = self.value
 
@@ -66,16 +59,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemFieldResponse:
         d = dict(src_dict)
         field_id = d.pop("FieldId", UNSET)
 
-        _type_ = d.pop("Type", UNSET)
-        type_: Union[
-            Unset, QualerApiModelsReportDatasetsToServiceOrderItemFieldResponseType
-        ]
-        if isinstance(_type_, Unset):
-            type_ = UNSET
-        else:
-            type_ = QualerApiModelsReportDatasetsToServiceOrderItemFieldResponseType(
-                _type_
-            )
+        type_ = d.pop("Type", UNSET)
 
         value = d.pop("Value", UNSET)
 

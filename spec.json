@@ -13355,6 +13355,18 @@
         },
         "Type": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "type": "integer",
+          "x-enumNames": [
             "Int",
             "Double",
             "String",
@@ -13364,8 +13376,7 @@
             "DateTime",
             "ValueLookup",
             "Text"
-          ],
-          "type": "string"
+          ]
         },
         "Value": {
           "type": "string"
@@ -13450,11 +13461,17 @@
         },
         "BatchType": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "x-enumNames": [
             "Unset",
             "AsFound",
             "AsLeft"
           ],
-          "type": "string"
+          "format": "int32",
+          "type": "integer"
         },
         "ServiceOrderItemId": {
           "format": "int32",
@@ -13656,7 +13673,8 @@
         },
         "OriginalDueDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetTag": {
           "type": "string"
@@ -13796,7 +13814,8 @@
         },
         "ReceivedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "CompletedByName": {
           "type": "string"
@@ -14339,7 +14358,8 @@
         },
         "ShippedDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PaymentTerms": {
           "format": "int32",
@@ -14656,7 +14676,8 @@
         },
         "SignOffDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "QualityControlDate": {
           "format": "date-time",
@@ -14664,14 +14685,16 @@
         },
         "ClientSignOffOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ClientSignOffByName": {
           "type": "string"
         },
         "ClientSignedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ClientStickerNotes": {
           "type": "string"
@@ -14703,19 +14726,23 @@
         },
         "InvoicedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SubmittedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ShippedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "CompletedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AcceptedOn": {
           "format": "date-time",
@@ -14723,34 +14750,42 @@
         },
         "ApprovedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DeliveredOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PaidOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "CancelledOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "FulfilledOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SignOffOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "VendorSignedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ClientNotes": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "OrderShippingOption": {
           "format": "int32",
@@ -14775,44 +14810,57 @@
           "type": "string"
         },
         "CompletedByName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ShippedByName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AcceptedByName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ApproveByName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "InvoicedByName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DeliveredByName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PaidByName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "CancelledByName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SignOffByName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "OwnerName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "OwnerDepartment": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssigneeName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PaymentDueOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProcessDateOption": {
           "enum": [
@@ -14922,7 +14970,8 @@
         },
         "PrimaryToolLastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PrimaryToolNextServiceDate": {
           "format": "date-time",
@@ -14952,7 +15001,8 @@
         },
         "SecondaryToolLastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SecondaryToolNextServiceDate": {
           "format": "date-time",
@@ -15168,7 +15218,8 @@
             "Tur41",
             "Rds"
           ],
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "UncertaintyBudget": {
           "type": "string"
@@ -15734,7 +15785,8 @@
         },
         "ShippedDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ShipmentStatus": {
           "enum": [
@@ -16393,7 +16445,8 @@
         },
         "ShippedDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "TrackingNumber": {
           "type": "string"
@@ -16477,7 +16530,8 @@
         },
         "AsLeftPrimaryToolLastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsLeftPrimaryToolNextServiceDate": {
           "format": "date-time",
@@ -16571,7 +16625,8 @@
         },
         "AsFoundPrimaryToolLastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundPrimaryToolNextServiceDate": {
           "format": "date-time",
@@ -16601,7 +16656,8 @@
         },
         "AsLeftSecondaryToolLastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsLeftSecondaryToolNextServiceDate": {
           "format": "date-time",
@@ -16631,7 +16687,8 @@
         },
         "AsFoundSecondaryToolLastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundSecondaryToolNextServiceDate": {
           "format": "date-time",
@@ -16665,7 +16722,8 @@
             "Fail",
             "Limited"
           ],
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundHideFromCertificate": {
           "type": "boolean"
@@ -16752,7 +16810,8 @@
             "Tur41",
             "Rds"
           ],
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsLeftGuardBandLogic": {
           "enum": [
@@ -16761,7 +16820,8 @@
             "Tur41",
             "Rds"
           ],
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundError": {
           "format": "double",
@@ -18493,11 +18553,17 @@
         },
         "BatchType": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "x-enumNames": [
             "Unset",
             "AsFound",
             "AsLeft"
           ],
-          "type": "string"
+          "format": "int32",
+          "type": "integer"
         },
         "Result": {
           "enum": [
@@ -18558,11 +18624,17 @@
         },
         "BatchType": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "x-enumNames": [
             "Unset",
             "AsFound",
             "AsLeft"
           ],
-          "type": "string"
+          "format": "int32",
+          "type": "integer"
         },
         "ColumnIndex": {
           "format": "int32",
@@ -19268,7 +19340,8 @@
             "CustomField",
             "ManuallySelected"
           ],
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "InfluenceParameter1ToolTypeId": {
           "format": "int32",
@@ -19697,7 +19770,8 @@
             "CustomField",
             "ManuallySelected"
           ],
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "InfluenceParameter1ToolTypeId": {
           "format": "int32",
@@ -20933,7 +21007,8 @@
         },
         "InvoicedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         }
       }
     },

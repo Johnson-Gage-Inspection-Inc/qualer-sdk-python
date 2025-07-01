@@ -70,7 +70,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         result_status (Union[Unset, int]):
         service_date (Union[None, Unset, datetime.datetime]):
         next_service_date (Union[None, Unset, datetime.datetime]):
-        original_due_date (Union[Unset, datetime.datetime]):
+        original_due_date (Union[None, Unset, datetime.datetime]):
         asset_tag (Union[Unset, str]):
         department (Union[Unset, str]):
         asset_user (Union[Unset, str]):
@@ -109,7 +109,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         as_found_result (Union[Unset, int]):
         as_left_result (Union[Unset, int]):
         completed_on (Union[Unset, datetime.datetime]):
-        received_on (Union[Unset, datetime.datetime]):
+        received_on (Union[None, Unset, datetime.datetime]):
         completed_by_name (Union[Unset, str]):
         service_charge_base (Union[Unset, float]):
         service_total (Union[Unset, float]):
@@ -211,7 +211,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
     result_status: Union[Unset, int] = UNSET
     service_date: Union[None, Unset, datetime.datetime] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    original_due_date: Union[Unset, datetime.datetime] = UNSET
+    original_due_date: Union[None, Unset, datetime.datetime] = UNSET
     asset_tag: Union[Unset, str] = UNSET
     department: Union[Unset, str] = UNSET
     asset_user: Union[Unset, str] = UNSET
@@ -250,7 +250,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
     as_found_result: Union[Unset, int] = UNSET
     as_left_result: Union[Unset, int] = UNSET
     completed_on: Union[Unset, datetime.datetime] = UNSET
-    received_on: Union[Unset, datetime.datetime] = UNSET
+    received_on: Union[None, Unset, datetime.datetime] = UNSET
     completed_by_name: Union[Unset, str] = UNSET
     service_charge_base: Union[Unset, float] = UNSET
     service_total: Union[Unset, float] = UNSET
@@ -424,9 +424,13 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         else:
             next_service_date = self.next_service_date
 
-        original_due_date: Union[Unset, str] = UNSET
-        if not isinstance(self.original_due_date, Unset):
+        original_due_date: Union[None, Unset, str]
+        if isinstance(self.original_due_date, Unset):
+            original_due_date = UNSET
+        elif isinstance(self.original_due_date, datetime.datetime):
             original_due_date = self.original_due_date.isoformat()
+        else:
+            original_due_date = self.original_due_date
 
         asset_tag = self.asset_tag
 
@@ -518,9 +522,13 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         if not isinstance(self.completed_on, Unset):
             completed_on = self.completed_on.isoformat()
 
-        received_on: Union[Unset, str] = UNSET
-        if not isinstance(self.received_on, Unset):
+        received_on: Union[None, Unset, str]
+        if isinstance(self.received_on, Unset):
+            received_on = UNSET
+        elif isinstance(self.received_on, datetime.datetime):
             received_on = self.received_on.isoformat()
+        else:
+            received_on = self.received_on
 
         completed_by_name = self.completed_by_name
 
@@ -1059,12 +1067,24 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
 
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", UNSET))
 
-        _original_due_date = d.pop("OriginalDueDate", UNSET)
-        original_due_date: Union[Unset, datetime.datetime]
-        if isinstance(_original_due_date, Unset):
-            original_due_date = UNSET
-        else:
-            original_due_date = isoparse(_original_due_date)
+        def _parse_original_due_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                original_due_date_type_0 = isoparse(data)
+
+                return original_due_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        original_due_date = _parse_original_due_date(d.pop("OriginalDueDate", UNSET))
 
         asset_tag = d.pop("AssetTag", UNSET)
 
@@ -1185,12 +1205,22 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         else:
             completed_on = isoparse(_completed_on)
 
-        _received_on = d.pop("ReceivedOn", UNSET)
-        received_on: Union[Unset, datetime.datetime]
-        if isinstance(_received_on, Unset):
-            received_on = UNSET
-        else:
-            received_on = isoparse(_received_on)
+        def _parse_received_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                received_on_type_0 = isoparse(data)
+
+                return received_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        received_on = _parse_received_on(d.pop("ReceivedOn", UNSET))
 
         completed_by_name = d.pop("CompletedByName", UNSET)
 

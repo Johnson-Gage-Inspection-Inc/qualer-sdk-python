@@ -65,7 +65,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
 
         measurement_point_id = self.measurement_point_id
 
-        batch_type: Union[Unset, str] = UNSET
+        batch_type: Union[Unset, int] = UNSET
         if not isinstance(self.batch_type, Unset):
             batch_type = self.batch_type.value
 
