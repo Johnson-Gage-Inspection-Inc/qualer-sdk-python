@@ -108,3 +108,20 @@ All hardcoded version references have been replaced with dynamic detection:
 - ~~`setup.py`: `version="2.2.1"`~~ → `use_scm_version=...`  
 - ~~`__init__.py`: `__version__ = "2.2.1"`~~ → Dynamic import from metadata
 - ~~`regenerate_sdk.py`: Hardcoded insertion~~ → Uses `get_version_from_git_with_commits()`
+
+## Versioning Tests
+
+### Dirty-Tag Scheme
+
+The `dirty-tag` local scheme ensures that version strings include `+dirty` when the working directory has uncommitted changes. This behavior is verified by the `test_versioning.py` test file.
+
+To run the test:
+
+```bash
+pytest tests/test_versioning.py
+```
+
+Expected output:
+
+- The test passes if the version string includes `+dirty` when the repository is in a dirty state.
+- The test fails if the version string does not include `+dirty` or if there are errors in version resolution.

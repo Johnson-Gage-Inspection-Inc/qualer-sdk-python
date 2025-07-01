@@ -9,7 +9,7 @@ setup(
     name="qualer-sdk",
     use_scm_version={
         "version_scheme": "python-simplified-semver",
-        "local_scheme": "node-and-date",
+        "local_scheme": "dirty-tag",
         "tag_regex": r"^v(?P<version>.*)$",
     },
     setup_requires=["setuptools-scm"],
