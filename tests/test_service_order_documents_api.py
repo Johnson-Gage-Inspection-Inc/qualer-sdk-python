@@ -133,7 +133,9 @@ class TestServiceOrderDocumentsApiModern(unittest.TestCase):
         mock_get_document_get_wd.return_value = mock_response
 
         # Call the function
-        result = get_document_get_wd.sync_detailed(client=self.client, guid=UUID('12345678-1234-1234-1234-123456789abc'))
+        result = get_document_get_wd.sync_detailed(
+            client=self.client, guid=UUID("12345678-1234-1234-1234-123456789abc")
+        )
 
         # Verify the call
         mock_get_document_get_wd.assert_called_once()

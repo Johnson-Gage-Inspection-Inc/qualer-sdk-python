@@ -164,7 +164,9 @@ class TestServiceOrderItemsApiModern(unittest.TestCase):
         mock_get_work_item_image.return_value = mock_response
 
         # Call the function
-        result = get_work_item_image.sync_detailed(client=self.client, work_item_id=123, image_name="test.jpg")
+        result = get_work_item_image.sync_detailed(
+            client=self.client, work_item_id=123, image_name="test.jpg"
+        )
 
         # Verify the call
         mock_get_work_item_image.assert_called_once()
