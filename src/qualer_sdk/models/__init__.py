@@ -684,9 +684,6 @@ from .qualer_api_models_report_datasets_to_service_order_item_component_response
 from .qualer_api_models_report_datasets_to_service_order_item_field_response import (
     QualerApiModelsReportDatasetsToServiceOrderItemFieldResponse,
 )
-from .qualer_api_models_report_datasets_to_service_order_item_field_response_type import (
-    QualerApiModelsReportDatasetsToServiceOrderItemFieldResponseType,
-)
 from .qualer_api_models_report_datasets_to_service_order_item_option_response import (
     QualerApiModelsReportDatasetsToServiceOrderItemOptionResponse,
 )
@@ -1239,7 +1236,6 @@ __all__ = [
     "QualerApiModelsReportDatasetsToServiceOrderChargeResponse",
     "QualerApiModelsReportDatasetsToServiceOrderItemComponentResponse",
     "QualerApiModelsReportDatasetsToServiceOrderItemFieldResponse",
-    "QualerApiModelsReportDatasetsToServiceOrderItemFieldResponseType",
     "QualerApiModelsReportDatasetsToServiceOrderItemOptionResponse",
     "QualerApiModelsReportDatasetsToServiceOrderItemResponse",
     "QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse",

@@ -176,10 +176,9 @@ def main():
         return 1
 
     # Create authenticated client
-    base_url = "https://jgiquality.qualer.com"
-    client = AuthenticatedClient(base_url=base_url, token=api_token)
+    client = AuthenticatedClient(api_token)
 
-    print(f"🔧 Connected to {base_url}")
+    print("🔧 Connected to Qualer API")
     print(f"🔑 Using API token: {api_token[:8]}...")
 
     # Discover all endpoints

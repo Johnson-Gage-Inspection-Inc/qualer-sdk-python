@@ -67,7 +67,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         parameter_id (Union[Unset, int]):
         tool_range_name (Union[Unset, str]):
         tool_range_uncertainty (Union[Unset, str]):
-        primary_tool_last_service_date (Union[Unset, datetime.datetime]):
+        primary_tool_last_service_date (Union[None, Unset, datetime.datetime]):
         primary_tool_next_service_date (Union[None, Unset, datetime.datetime]):
         primary_tool_calibrated_by (Union[Unset, str]):
         primary_tool_tool_name (Union[Unset, str]):
@@ -76,7 +76,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         primary_tool_manufacturer (Union[Unset, str]):
         primary_tool_manufacturer_part_number (Union[Unset, str]):
         primary_tool_serial_number (Union[Unset, str]):
-        secondary_tool_last_service_date (Union[Unset, datetime.datetime]):
+        secondary_tool_last_service_date (Union[None, Unset, datetime.datetime]):
         secondary_tool_next_service_date (Union[None, Unset, datetime.datetime]):
         secondary_tool_calibrated_by (Union[Unset, str]):
         secondary_tool_tool_name (Union[Unset, str]):
@@ -280,7 +280,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         tolerance_string (Union[Unset, str]):
         po_number (Union[Unset, str]):
         secondary_po (Union[Unset, str]):
-        shipped_date (Union[Unset, datetime.datetime]):
+        shipped_date (Union[None, Unset, datetime.datetime]):
         shipment_status (Union[Unset, QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus]):
         shipped_on (Union[Unset, datetime.datetime]):
         delivered_on (Union[Unset, datetime.datetime]):
@@ -451,7 +451,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     parameter_id: Union[Unset, int] = UNSET
     tool_range_name: Union[Unset, str] = UNSET
     tool_range_uncertainty: Union[Unset, str] = UNSET
-    primary_tool_last_service_date: Union[Unset, datetime.datetime] = UNSET
+    primary_tool_last_service_date: Union[None, Unset, datetime.datetime] = UNSET
     primary_tool_next_service_date: Union[None, Unset, datetime.datetime] = UNSET
     primary_tool_calibrated_by: Union[Unset, str] = UNSET
     primary_tool_tool_name: Union[Unset, str] = UNSET
@@ -460,7 +460,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     primary_tool_manufacturer: Union[Unset, str] = UNSET
     primary_tool_manufacturer_part_number: Union[Unset, str] = UNSET
     primary_tool_serial_number: Union[Unset, str] = UNSET
-    secondary_tool_last_service_date: Union[Unset, datetime.datetime] = UNSET
+    secondary_tool_last_service_date: Union[None, Unset, datetime.datetime] = UNSET
     secondary_tool_next_service_date: Union[None, Unset, datetime.datetime] = UNSET
     secondary_tool_calibrated_by: Union[Unset, str] = UNSET
     secondary_tool_tool_name: Union[Unset, str] = UNSET
@@ -686,7 +686,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     tolerance_string: Union[Unset, str] = UNSET
     po_number: Union[Unset, str] = UNSET
     secondary_po: Union[Unset, str] = UNSET
-    shipped_date: Union[Unset, datetime.datetime] = UNSET
+    shipped_date: Union[None, Unset, datetime.datetime] = UNSET
     shipment_status: Union[
         Unset, QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus
     ] = UNSET
@@ -873,11 +873,15 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         tool_range_uncertainty = self.tool_range_uncertainty
 
-        primary_tool_last_service_date: Union[Unset, str] = UNSET
-        if not isinstance(self.primary_tool_last_service_date, Unset):
+        primary_tool_last_service_date: Union[None, Unset, str]
+        if isinstance(self.primary_tool_last_service_date, Unset):
+            primary_tool_last_service_date = UNSET
+        elif isinstance(self.primary_tool_last_service_date, datetime.datetime):
             primary_tool_last_service_date = (
                 self.primary_tool_last_service_date.isoformat()
             )
+        else:
+            primary_tool_last_service_date = self.primary_tool_last_service_date
 
         primary_tool_next_service_date: Union[None, Unset, str]
         if isinstance(self.primary_tool_next_service_date, Unset):
@@ -905,11 +909,15 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         primary_tool_serial_number = self.primary_tool_serial_number
 
-        secondary_tool_last_service_date: Union[Unset, str] = UNSET
-        if not isinstance(self.secondary_tool_last_service_date, Unset):
+        secondary_tool_last_service_date: Union[None, Unset, str]
+        if isinstance(self.secondary_tool_last_service_date, Unset):
+            secondary_tool_last_service_date = UNSET
+        elif isinstance(self.secondary_tool_last_service_date, datetime.datetime):
             secondary_tool_last_service_date = (
                 self.secondary_tool_last_service_date.isoformat()
             )
+        else:
+            secondary_tool_last_service_date = self.secondary_tool_last_service_date
 
         secondary_tool_next_service_date: Union[None, Unset, str]
         if isinstance(self.secondary_tool_next_service_date, Unset):
@@ -1367,9 +1375,13 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         secondary_po = self.secondary_po
 
-        shipped_date: Union[Unset, str] = UNSET
-        if not isinstance(self.shipped_date, Unset):
+        shipped_date: Union[None, Unset, str]
+        if isinstance(self.shipped_date, Unset):
+            shipped_date = UNSET
+        elif isinstance(self.shipped_date, datetime.datetime):
             shipped_date = self.shipped_date.isoformat()
+        else:
+            shipped_date = self.shipped_date
 
         shipment_status: Union[Unset, str] = UNSET
         if not isinstance(self.shipment_status, Unset):
@@ -2498,12 +2510,26 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         tool_range_uncertainty = d.pop("ToolRangeUncertainty", UNSET)
 
-        _primary_tool_last_service_date = d.pop("PrimaryToolLastServiceDate", UNSET)
-        primary_tool_last_service_date: Union[Unset, datetime.datetime]
-        if isinstance(_primary_tool_last_service_date, Unset):
-            primary_tool_last_service_date = UNSET
-        else:
-            primary_tool_last_service_date = isoparse(_primary_tool_last_service_date)
+        def _parse_primary_tool_last_service_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                primary_tool_last_service_date_type_0 = isoparse(data)
+
+                return primary_tool_last_service_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        primary_tool_last_service_date = _parse_primary_tool_last_service_date(
+            d.pop("PrimaryToolLastServiceDate", UNSET)
+        )
 
         def _parse_primary_tool_next_service_date(
             data: object,
@@ -2542,14 +2568,26 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         primary_tool_serial_number = d.pop("PrimaryToolSerialNumber", UNSET)
 
-        _secondary_tool_last_service_date = d.pop("SecondaryToolLastServiceDate", UNSET)
-        secondary_tool_last_service_date: Union[Unset, datetime.datetime]
-        if isinstance(_secondary_tool_last_service_date, Unset):
-            secondary_tool_last_service_date = UNSET
-        else:
-            secondary_tool_last_service_date = isoparse(
-                _secondary_tool_last_service_date
-            )
+        def _parse_secondary_tool_last_service_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                secondary_tool_last_service_date_type_0 = isoparse(data)
+
+                return secondary_tool_last_service_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        secondary_tool_last_service_date = _parse_secondary_tool_last_service_date(
+            d.pop("SecondaryToolLastServiceDate", UNSET)
+        )
 
         def _parse_secondary_tool_next_service_date(
             data: object,
@@ -3148,12 +3186,22 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         secondary_po = d.pop("SecondaryPo", UNSET)
 
-        _shipped_date = d.pop("ShippedDate", UNSET)
-        shipped_date: Union[Unset, datetime.datetime]
-        if isinstance(_shipped_date, Unset):
-            shipped_date = UNSET
-        else:
-            shipped_date = isoparse(_shipped_date)
+        def _parse_shipped_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                shipped_date_type_0 = isoparse(data)
+
+                return shipped_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        shipped_date = _parse_shipped_date(d.pop("ShippedDate", UNSET))
 
         _shipment_status = d.pop("ShipmentStatus", UNSET)
         shipment_status: Union[

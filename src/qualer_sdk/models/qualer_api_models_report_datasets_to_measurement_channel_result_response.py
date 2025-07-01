@@ -66,7 +66,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelResultResponse:
 
         column_index = self.column_index
 
-        batch_type: Union[Unset, str] = UNSET
+        batch_type: Union[Unset, int] = UNSET
         if not isinstance(self.batch_type, Unset):
             batch_type = self.batch_type.value
 

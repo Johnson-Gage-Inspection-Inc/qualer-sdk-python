@@ -56,7 +56,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         condition (Union[Unset, str]):
         asset_class (Union[Unset, str]):
         activation_date (Union[None, Unset, datetime.datetime]):
-        retirment_date (Union[Unset, datetime.datetime]):
+        retirment_date (Union[None, Unset, datetime.datetime]):
         client_vendor_id (Union[Unset, int]):
         company_name (Union[Unset, str]):
         site_name (Union[Unset, str]):
@@ -153,7 +153,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
     condition: Union[Unset, str] = UNSET
     asset_class: Union[Unset, str] = UNSET
     activation_date: Union[None, Unset, datetime.datetime] = UNSET
-    retirment_date: Union[Unset, datetime.datetime] = UNSET
+    retirment_date: Union[None, Unset, datetime.datetime] = UNSET
     client_vendor_id: Union[Unset, int] = UNSET
     company_name: Union[Unset, str] = UNSET
     site_name: Union[Unset, str] = UNSET
@@ -254,7 +254,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         asset_maker = self.asset_maker
 
-        record_type: Union[Unset, str] = UNSET
+        record_type: Union[Unset, int] = UNSET
         if not isinstance(self.record_type, Unset):
             record_type = self.record_type.value
 
@@ -288,9 +288,13 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         else:
             activation_date = self.activation_date
 
-        retirment_date: Union[Unset, str] = UNSET
-        if not isinstance(self.retirment_date, Unset):
+        retirment_date: Union[None, Unset, str]
+        if isinstance(self.retirment_date, Unset):
+            retirment_date = UNSET
+        elif isinstance(self.retirment_date, datetime.datetime):
             retirment_date = self.retirment_date.isoformat()
+        else:
+            retirment_date = self.retirment_date
 
         client_vendor_id = self.client_vendor_id
 
@@ -340,7 +344,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         station = self.station
 
-        tool_role: Union[Unset, str] = UNSET
+        tool_role: Union[Unset, int] = UNSET
         if not isinstance(self.tool_role, Unset):
             tool_role = self.tool_role.value
 
@@ -735,12 +739,24 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         activation_date = _parse_activation_date(d.pop("ActivationDate", UNSET))
 
-        _retirment_date = d.pop("RetirmentDate", UNSET)
-        retirment_date: Union[Unset, datetime.datetime]
-        if isinstance(_retirment_date, Unset):
-            retirment_date = UNSET
-        else:
-            retirment_date = isoparse(_retirment_date)
+        def _parse_retirment_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                retirment_date_type_0 = isoparse(data)
+
+                return retirment_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        retirment_date = _parse_retirment_date(d.pop("RetirmentDate", UNSET))
 
         client_vendor_id = d.pop("ClientVendorId", UNSET)
 
