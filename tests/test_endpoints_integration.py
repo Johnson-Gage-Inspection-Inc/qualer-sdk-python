@@ -93,8 +93,90 @@ def can_call_with_client_only(func: Any) -> bool:
         return False
 
 
+def discover_asset_id_only_endpoints() -> List[Tuple[str, Any]]:
+    """
+    Discover all endpoints that require only asset_id parameter (plus client).
+    Returns list of (endpoint_name, function) tuples.
+    """
+    endpoints = []
+
+    try:
+        import qualer_sdk.api as api_package
+
+        api_path = Path(api_package.__file__).parent
+
+        # Scan all API subdirectories
+        for subdir in api_path.iterdir():
+            if subdir.is_dir() and not subdir.name.startswith("__"):
+                module_name = f"qualer_sdk.api.{subdir.name}"
+
+                try:
+                    # Import the module
+                    __import__(module_name, fromlist=[""])
+
+                    # Scan all Python files in the subdirectory
+                    for py_file in subdir.glob("*.py"):
+                        if py_file.name.startswith("__"):
+                            continue
+
+                        function_module_name = f"{module_name}.{py_file.stem}"
+                        try:
+                            function_module = __import__(
+                                function_module_name, fromlist=[""]
+                            )
+
+                            # Look for 'sync' function (the main API function)
+                            if hasattr(function_module, "sync"):
+                                sync_func = getattr(function_module, "sync")
+
+                                # Check if function requires only asset_id
+                                if requires_only_asset_id(sync_func):
+                                    endpoint_name = f"{subdir.name}.{py_file.stem}"
+                                    endpoints.append((endpoint_name, sync_func))
+
+                        except ImportError:
+                            continue
+
+                except ImportError:
+                    continue
+
+    except Exception:
+        pass
+
+    return endpoints
+
+
+def requires_only_asset_id(func: Any) -> bool:
+    """
+    Check if function requires only asset_id parameter (plus client).
+    """
+    try:
+        sig = inspect.signature(func)
+        params = sig.parameters
+
+        required_params = []
+
+        # Check for required parameters (excluding 'client')
+        for name, param in params.items():
+            if name == "client":
+                continue
+            if param.default == inspect.Parameter.empty:
+                required_params.append(name.lower())
+
+        # Check if the only required parameter is some form of asset_id
+        if len(required_params) == 1:
+            param_name = required_params[0]
+            # Check for common asset ID parameter names
+            return param_name in ["asset_id", "assetid", "id", "asset_identifier"]
+
+        return False
+    except Exception:
+        return False
+
+
 # Discover endpoints at module level for pytest parameterization
 TESTABLE_ENDPOINTS = discover_testable_endpoints()
+ASSET_ID_ONLY_ENDPOINTS = discover_asset_id_only_endpoints()
 
 
 @pytest.fixture(scope="session")
@@ -106,6 +188,24 @@ def authenticated_client():
 
     base_url = "https://jgiquality.qualer.com"
     return AuthenticatedClient(base_url=base_url, token=api_token)
+
+
+@pytest.fixture(scope="session")
+def sample_asset_id(authenticated_client):
+    """Get a sample asset ID for testing asset-specific endpoints."""
+    try:
+        # Try to get assets from the get_all_assets endpoint
+        from qualer_sdk.api.assets import get_all_assets
+
+        assets = get_all_assets.sync(client=authenticated_client)
+        if assets and len(assets) > 0:
+            return assets[0].asset_id
+
+        # If we can't get assets, skip the asset ID tests
+        pytest.skip("Could not retrieve sample asset ID for testing")
+
+    except Exception as e:
+        pytest.skip(f"Could not retrieve sample asset ID: {e}")
 
 
 @pytest.mark.parametrize("endpoint_name,endpoint_func", TESTABLE_ENDPOINTS)
@@ -133,6 +233,60 @@ def test_endpoint_response_parsing(endpoint_name, endpoint_func, authenticated_c
         print(
             f"  - {endpoint_name}: Response is None (may be expected for this endpoint)"
         )
+    elif isinstance(response, list):
+        print(f"  - {endpoint_name}: Response is a list with {len(response)} items")
+    elif hasattr(response, "__dict__"):
+        print(f"  - {endpoint_name}: Response is a {type(response).__name__} object")
+    else:
+        print(f"  - {endpoint_name}: Response type: {type(response)}")
+
+    # Response should have a valid type name (not contain error indicators)
+    response_type = type(response).__name__
+    assert (
+        "Error" not in response_type
+    ), f"Endpoint {endpoint_name} returned error type: {response_type}"
+
+
+@pytest.mark.parametrize("endpoint_name,endpoint_func", ASSET_ID_ONLY_ENDPOINTS)
+def test_asset_id_endpoint_response_parsing(
+    endpoint_name, endpoint_func, authenticated_client, sample_asset_id
+):
+    """
+    Test that endpoints requiring only asset_id can be called and parsed correctly.
+
+    This test verifies:
+    1. The endpoint can be called with a valid asset_id
+    2. The response can be parsed by the generated SDK models
+    3. No parsing/enum/date errors occur
+    """
+    # Get the function signature to determine the asset_id parameter name
+    sig = inspect.signature(endpoint_func)
+    asset_param_name = None
+
+    for name, param in sig.parameters.items():
+        if name == "client":
+            continue
+        if param.default == inspect.Parameter.empty:
+            param_name_lower = name.lower()
+            if param_name_lower in ["asset_id", "assetid", "id", "asset_identifier"]:
+                asset_param_name = name
+                break
+
+    if not asset_param_name:
+        pytest.fail(f"Could not determine asset ID parameter name for {endpoint_name}")
+
+    # Call the endpoint with the sample asset ID
+    kwargs = {"client": authenticated_client, asset_param_name: sample_asset_id}
+    response = endpoint_func(**kwargs)
+
+    # The main goal is to test that the response parses without errors
+    print(
+        f"✓ {endpoint_name}: Response parsed successfully with asset_id={sample_asset_id}"
+    )
+
+    # Log response details for debugging
+    if response is None:
+        print(f"  - {endpoint_name}: Response is None (may be expected)")
     elif isinstance(response, list):
         print(f"  - {endpoint_name}: Response is a list with {len(response)} items")
     elif hasattr(response, "__dict__"):
