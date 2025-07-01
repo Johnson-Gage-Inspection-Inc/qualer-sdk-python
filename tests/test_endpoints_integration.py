@@ -503,12 +503,81 @@ PROBLEMATIC_EMPLOYEE_ENDPOINTS = [
 ]
 
 
+# Individual specialized endpoint definitions
+try:
+    # Asset Pool ID endpoints
+    import qualer_sdk.api.assets.get_asset_by_asset_pool
+
+    ASSET_POOL_ID_ENDPOINTS = [
+        (
+            "assets.get_asset_by_asset_pool",
+            qualer_sdk.api.assets.get_asset_by_asset_pool.sync,
+        ),
+    ]
+
+    # Equipment ID endpoints
+    import qualer_sdk.api.assets.get_assets_by_equipment_id
+
+    EQUIPMENT_ID_ENDPOINTS = [
+        (
+            "assets.get_assets_by_equipment_id",
+            qualer_sdk.api.assets.get_assets_by_equipment_id.sync,
+        ),
+    ]
+
+    # Product ID endpoints
+    import qualer_sdk.api.product.get_product
+
+    PRODUCT_ID_ENDPOINTS = [
+        ("product.get_product", qualer_sdk.api.product.get_product.sync),
+    ]
+
+    # Service Order Payment ID endpoints
+    import qualer_sdk.api.service_order_payments.get_work_order_payment
+
+    SERVICE_ORDER_PAYMENT_ID_ENDPOINTS = [
+        (
+            "service_order_payments.get_work_order_payment",
+            qualer_sdk.api.service_order_payments.get_work_order_payment.sync,
+        ),
+    ]
+
+    # Vendor Company ID endpoints
+    import qualer_sdk.api.vendors.get_get_8
+
+    VENDOR_COMPANY_ID_ENDPOINTS = [
+        ("vendors.get_get_8", qualer_sdk.api.vendors.get_get_8.sync),
+    ]
+
+    # Maintenance Plan ID endpoints (the GET ones only)
+    import qualer_sdk.api.maintenance_plans.get_maintenance_plan_assets_get_2
+    import qualer_sdk.api.client_maintenance_plans.get_maintenance_plan_assets
+
+    MAINTENANCE_PLAN_ID_ENDPOINTS = [
+        (
+            "maintenance_plans.get_maintenance_plan_assets_get_2",
+            qualer_sdk.api.maintenance_plans.get_maintenance_plan_assets_get_2.sync,
+        ),
+        (
+            "client_maintenance_plans.get_maintenance_plan_assets",
+            qualer_sdk.api.client_maintenance_plans.get_maintenance_plan_assets.sync,
+        ),
+    ]
+
+except ImportError:
+    ASSET_POOL_ID_ENDPOINTS = []
+    EQUIPMENT_ID_ENDPOINTS = []
+    PRODUCT_ID_ENDPOINTS = []
+    SERVICE_ORDER_PAYMENT_ID_ENDPOINTS = []
+    VENDOR_COMPANY_ID_ENDPOINTS = []
+    MAINTENANCE_PLAN_ID_ENDPOINTS = []
+
+
 # Discover endpoints at module level for pytest parameterization
 TESTABLE_ENDPOINTS = discover_testable_endpoints()
 ASSET_ID_ONLY_ENDPOINTS = discover_asset_id_only_endpoints()
 CLIENT_COMPANY_ID_ONLY_ENDPOINTS = discover_client_company_id_only_endpoints()
 SERVICE_ORDER_ID_ONLY_ENDPOINTS = discover_service_order_id_endpoints()
-SERVICE_ORDER_ITEM_ID_ONLY_ENDPOINTS = discover_service_order_item_id_endpoints()
 SERVICE_ORDER_ITEM_ID_ONLY_ENDPOINTS = discover_service_order_item_id_endpoints()
 
 
@@ -624,6 +693,45 @@ def sample_employee_id(authenticated_client):
 
     except Exception as e:
         pytest.skip(f"Could not retrieve sample employee ID: {e}")
+
+
+# Individual test functions for specialized endpoints
+
+
+@pytest.fixture(scope="session")
+def sample_asset_pool_id():
+    """Get a sample asset pool ID for testing."""
+    return 1  # Hardcoded for now - replace with dynamic lookup if needed
+
+
+@pytest.fixture(scope="session")
+def sample_equipment_id():
+    """Get a sample equipment ID for testing."""
+    return "EQ001"  # Hardcoded for now - replace with dynamic lookup if needed
+
+
+@pytest.fixture(scope="session")
+def sample_product_id():
+    """Get a sample product ID for testing."""
+    return 1  # Hardcoded for now - replace with dynamic lookup if needed
+
+
+@pytest.fixture(scope="session")
+def sample_service_order_payment_id():
+    """Get a sample service order payment ID for testing."""
+    return 1  # Hardcoded for now - replace with dynamic lookup if needed
+
+
+@pytest.fixture(scope="session")
+def sample_vendor_company_id():
+    """Get a sample vendor company ID for testing."""
+    return 1  # Hardcoded for now - replace with dynamic lookup if needed
+
+
+@pytest.fixture(scope="session")
+def sample_maintenance_plan_id():
+    """Get a sample maintenance plan ID for testing."""
+    return 1  # Hardcoded for now - replace with dynamic lookup if needed
 
 
 @pytest.mark.parametrize("endpoint_name,endpoint_func", TESTABLE_ENDPOINTS)
@@ -1009,6 +1117,109 @@ def test_asset_service_record_id_endpoint_response_parsing(
     ), f"Endpoint {endpoint_name} returned error type: {response_type}"
 
 
+@pytest.mark.parametrize("endpoint_name,endpoint_func", ASSET_POOL_ID_ENDPOINTS)
+def test_asset_pool_id_endpoint(
+    endpoint_name, endpoint_func, authenticated_client, sample_asset_pool_id
+):
+    """Test endpoints that require an AssetPoolId parameter."""
+    response = endpoint_func(
+        client=authenticated_client, asset_pool_id=sample_asset_pool_id
+    )
+    print(
+        f"✓ {endpoint_name}: Response parsed successfully with asset_pool_id={sample_asset_pool_id}"
+    )
+    response_type = type(response).__name__
+    assert (
+        "Error" not in response_type
+    ), f"Endpoint {endpoint_name} returned error type: {response_type}"
+
+
+@pytest.mark.parametrize("endpoint_name,endpoint_func", EQUIPMENT_ID_ENDPOINTS)
+def test_equipment_id_endpoint(
+    endpoint_name, endpoint_func, authenticated_client, sample_equipment_id
+):
+    """Test endpoints that require an EquipmentId parameter."""
+    response = endpoint_func(
+        client=authenticated_client, equipment_id=sample_equipment_id
+    )
+    print(
+        f"✓ {endpoint_name}: Response parsed successfully with equipment_id={sample_equipment_id}"
+    )
+    response_type = type(response).__name__
+    assert (
+        "Error" not in response_type
+    ), f"Endpoint {endpoint_name} returned error type: {response_type}"
+
+
+@pytest.mark.parametrize("endpoint_name,endpoint_func", PRODUCT_ID_ENDPOINTS)
+def test_product_id_endpoint(
+    endpoint_name, endpoint_func, authenticated_client, sample_product_id
+):
+    """Test endpoints that require a ProductId parameter."""
+    response = endpoint_func(client=authenticated_client, product_id=sample_product_id)
+    print(
+        f"✓ {endpoint_name}: Response parsed successfully with product_id={sample_product_id}"
+    )
+    response_type = type(response).__name__
+    assert (
+        "Error" not in response_type
+    ), f"Endpoint {endpoint_name} returned error type: {response_type}"
+
+
+@pytest.mark.parametrize(
+    "endpoint_name,endpoint_func", SERVICE_ORDER_PAYMENT_ID_ENDPOINTS
+)
+def test_service_order_payment_id_endpoint(
+    endpoint_name, endpoint_func, authenticated_client, sample_service_order_payment_id
+):
+    """Test endpoints that require a ServiceOrderPaymentId parameter."""
+    response = endpoint_func(
+        client=authenticated_client,
+        service_order_payment_id=sample_service_order_payment_id,
+    )
+    print(
+        f"✓ {endpoint_name}: Response parsed successfully with service_order_payment_id={sample_service_order_payment_id}"
+    )
+    response_type = type(response).__name__
+    assert (
+        "Error" not in response_type
+    ), f"Endpoint {endpoint_name} returned error type: {response_type}"
+
+
+@pytest.mark.parametrize("endpoint_name,endpoint_func", VENDOR_COMPANY_ID_ENDPOINTS)
+def test_vendor_company_id_endpoint(
+    endpoint_name, endpoint_func, authenticated_client, sample_vendor_company_id
+):
+    """Test endpoints that require a VendorCompanyId parameter."""
+    response = endpoint_func(
+        client=authenticated_client, vendor_company_id=sample_vendor_company_id
+    )
+    print(
+        f"✓ {endpoint_name}: Response parsed successfully with vendor_company_id={sample_vendor_company_id}"
+    )
+    response_type = type(response).__name__
+    assert (
+        "Error" not in response_type
+    ), f"Endpoint {endpoint_name} returned error type: {response_type}"
+
+
+@pytest.mark.parametrize("endpoint_name,endpoint_func", MAINTENANCE_PLAN_ID_ENDPOINTS)
+def test_maintenance_plan_id_endpoint(
+    endpoint_name, endpoint_func, authenticated_client, sample_maintenance_plan_id
+):
+    """Test endpoints that require a MaintenancePlanId parameter."""
+    response = endpoint_func(
+        client=authenticated_client, maintenance_plan_id=sample_maintenance_plan_id
+    )
+    print(
+        f"✓ {endpoint_name}: Response parsed successfully with maintenance_plan_id={sample_maintenance_plan_id}"
+    )
+    response_type = type(response).__name__
+    assert (
+        "Error" not in response_type
+    ), f"Endpoint {endpoint_name} returned error type: {response_type}"
+
+
 def test_endpoint_discovery():
     """Test that we can discover endpoints."""
     assert len(TESTABLE_ENDPOINTS) > 0, "No testable endpoints found"
@@ -1036,6 +1247,18 @@ def test_endpoint_discovery():
         f"Discovered {len(ASSET_SERVICE_RECORD_ID_ONLY_ENDPOINTS)} asset_service_record_id-only endpoints"
     )
     print(f"Discovered {len(EMPLOYEE_ID_ONLY_ENDPOINTS)} employee_id-only endpoints")
+    print(f"Discovered {len(ASSET_POOL_ID_ENDPOINTS)} asset_pool_id-only endpoints")
+    print(f"Discovered {len(EQUIPMENT_ID_ENDPOINTS)} equipment_id-only endpoints")
+    print(f"Discovered {len(PRODUCT_ID_ENDPOINTS)} product_id-only endpoints")
+    print(
+        f"Discovered {len(SERVICE_ORDER_PAYMENT_ID_ENDPOINTS)} service_order_payment_id-only endpoints"
+    )
+    print(
+        f"Discovered {len(VENDOR_COMPANY_ID_ENDPOINTS)} vendor_company_id-only endpoints"
+    )
+    print(
+        f"Discovered {len(MAINTENANCE_PLAN_ID_ENDPOINTS)} maintenance_plan_id-only endpoints"
+    )
 
 
 if __name__ == "__main__":
