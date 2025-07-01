@@ -32,6 +32,14 @@ from qualer_sdk.client import AuthenticatedClient
 # Load environment variables
 load_dotenv()
 
+# Check if API key is available - skip entire module if not
+API_KEY = os.getenv("QUALER_API_KEY")
+if not API_KEY:
+    pytest.skip(
+        "QUALER_API_KEY not found in environment variables. Skipping integration tests.",
+        allow_module_level=True,
+    )
+
 
 def discover_testable_endpoints() -> List[Tuple[str, Any]]:
     """
@@ -496,11 +504,6 @@ try:
     ]
 except ImportError:
     EMPLOYEE_ID_ONLY_ENDPOINTS = []
-
-# Problematic Employee ID endpoints (known OpenAPI generator issues)
-PROBLEMATIC_EMPLOYEE_ENDPOINTS = [
-    # Add any endpoints here that have known issues
-]
 
 
 # Individual specialized endpoint definitions
