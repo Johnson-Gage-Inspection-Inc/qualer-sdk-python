@@ -49,7 +49,8 @@ jobs:
 
     - name: Test with pytest
       run: |
-        pytest tests/ -v --cov=qualer_sdk --cov-report=xml --cov-report=term-missing
+        # Skip integration tests in CI as they require API credentials and network access
+        pytest tests/ -v --cov=qualer_sdk --cov-report=xml --cov-report=term-missing --ignore=tests/test_endpoints_integration.py --ignore=tests/test_get_document_integration.py --ignore=tests/test_download_documents_integration.py
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v5
