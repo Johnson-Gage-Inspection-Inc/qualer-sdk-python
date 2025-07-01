@@ -274,10 +274,92 @@ def requires_only_client_company_id(func: Any) -> bool:
         return False
 
 
+def discover_service_order_id_endpoints() -> List[Tuple[str, Any]]:
+    """
+    Discover all endpoints that require only service_order_id parameter.
+    Returns list of (endpoint_name, function) tuples.
+    """
+    endpoints = []
+
+    try:
+        import qualer_sdk.api as api_package
+
+        api_path = Path(api_package.__file__).parent
+
+        # Scan all API subdirectories
+        for subdir in api_path.iterdir():
+            if subdir.is_dir() and not subdir.name.startswith("__"):
+                module_name = f"qualer_sdk.api.{subdir.name}"
+
+                try:
+                    # Import the module
+                    __import__(module_name, fromlist=[""])
+
+                    # Scan all Python files in the subdirectory
+                    for py_file in subdir.glob("*.py"):
+                        if py_file.name.startswith("__"):
+                            continue
+
+                        function_module_name = f"{module_name}.{py_file.stem}"
+                        try:
+                            function_module = __import__(
+                                function_module_name, fromlist=[""]
+                            )
+
+                            # Look for 'sync' function (the main API function)
+                            if hasattr(function_module, "sync"):
+                                sync_func = getattr(function_module, "sync")
+
+                                # Check if function requires only service_order_id
+                                if requires_only_service_order_id(sync_func):
+                                    endpoint_name = f"{subdir.name}.{py_file.stem}"
+                                    endpoints.append((endpoint_name, sync_func))
+
+                        except ImportError:
+                            continue
+
+                except ImportError:
+                    continue
+
+    except Exception:
+        pass
+
+    return endpoints
+
+
+def requires_only_service_order_id(func: Any) -> bool:
+    """
+    Check if function requires only service_order_id parameter (plus client).
+    """
+    try:
+        sig = inspect.signature(func)
+        params = sig.parameters
+
+        # Should have exactly 2 parameters: client and service_order_id (or similar)
+        non_client_params = [name for name in params.keys() if name != "client"]
+
+        if len(non_client_params) != 1:
+            return False
+
+        # Check if the parameter is related to service order ID
+        param_name = non_client_params[0].lower()
+        service_order_keywords = [
+            "service_order_id",
+            "serviceorderid",
+            "order_id",
+            "orderid",
+        ]
+
+        return any(keyword in param_name for keyword in service_order_keywords)
+    except Exception:
+        return False
+
+
 # Discover endpoints at module level for pytest parameterization
 TESTABLE_ENDPOINTS = discover_testable_endpoints()
 ASSET_ID_ONLY_ENDPOINTS = discover_asset_id_only_endpoints()
 CLIENT_COMPANY_ID_ONLY_ENDPOINTS = discover_client_company_id_only_endpoints()
+SERVICE_ORDER_ID_ONLY_ENDPOINTS = discover_service_order_id_endpoints()
 
 
 @pytest.fixture(scope="session")
@@ -341,6 +423,33 @@ def sample_client_company_id(authenticated_client):
 
     # except Exception as e:
     #     pytest.skip(f"Could not retrieve sample client company ID: {e}")
+
+
+@pytest.fixture(scope="session")
+def sample_service_order_id(authenticated_client):
+    """Get a sample service order ID for testing."""
+
+    # Return a hardcoded service order ID for testing
+    # This should be a valid service order ID in your system
+    return 12345  # Replace with a valid service order ID
+
+    # Alternative: Try to get a real service order ID from the API
+    # try:
+    #     from qualer_sdk.api.service_orders.get_work_orders import sync as get_work_orders
+    #
+    #     service_orders = get_work_orders(client=authenticated_client)
+    #
+    #     if service_orders and len(service_orders) > 0:
+    #         service_order = service_orders[0]
+    #         # Check for common service order ID attribute names
+    #         for attr_name in ['id', 'service_order_id', 'order_id', 'work_order_id']:
+    #             if hasattr(service_order, attr_name):
+    #                 return getattr(service_order, attr_name)
+    #
+    #     pytest.skip("Could not retrieve sample service order ID for testing")
+    #
+    # except Exception as e:
+    #     pytest.skip(f"Could not retrieve sample service order ID: {e}")
 
 
 @pytest.mark.parametrize("endpoint_name,endpoint_func", TESTABLE_ENDPOINTS)
@@ -514,6 +623,71 @@ def test_client_company_id_endpoint_response_parsing(
     else:
         print(f"  - {endpoint_name}: Response type: {type(response)}")
 
+
+@pytest.mark.parametrize("endpoint_name,endpoint_func", SERVICE_ORDER_ID_ONLY_ENDPOINTS)
+def test_service_order_id_endpoint_response_parsing(
+    endpoint_name, endpoint_func, authenticated_client
+):
+    """
+    Test that endpoints requiring only service_order_id can be called and parsed correctly.
+
+    This test verifies:
+    1. The endpoint can be called with a valid service_order_id
+    2. The response can be parsed by the generated SDK models
+    3. No parsing/enum/date errors occur
+    """
+    # Skip problematic endpoints with known OpenAPI generator issues
+    problematic_endpoints = [
+        "client_assets.get_asset_manager_list_get_2",  # ToolRole enum doesn't handle None
+    ]
+
+    if endpoint_name in problematic_endpoints:
+        pytest.skip(
+            f"Skipping {endpoint_name} - known OpenAPI generator issue with nullable enums"
+        )
+    # Get the service order ID parameter name from the function signature
+    sig = inspect.signature(endpoint_func)
+    service_order_param_name = None
+
+    for name, param in sig.parameters.items():
+        if name == "client":
+            continue
+        if param.default == inspect.Parameter.empty:
+            service_order_param_name = name
+            break
+
+    if not service_order_param_name:
+        pytest.fail(
+            f"Could not determine service order ID parameter name for {endpoint_name}"
+        )
+
+    # Use a sample service order ID for testing
+    sample_service_order_id = (
+        1235369  # Replace with a valid service order ID for testing
+    )
+
+    # Call the endpoint with the sample service order ID
+    kwargs = {
+        "client": authenticated_client,
+        service_order_param_name: sample_service_order_id,
+    }
+    response = endpoint_func(**kwargs)
+
+    # The main goal is to test that the response parses without errors
+    print(
+        f"✓ {endpoint_name}: Response parsed successfully with {service_order_param_name}={sample_service_order_id}"
+    )
+
+    # Log response details for debugging
+    if response is None:
+        print(f"  - {endpoint_name}: Response is None (may be expected)")
+    elif isinstance(response, list):
+        print(f"  - {endpoint_name}: Response is a list with {len(response)} items")
+    elif hasattr(response, "__dict__"):
+        print(f"  - {endpoint_name}: Response is a {type(response).__name__} object")
+    else:
+        print(f"  - {endpoint_name}: Response type: {type(response)}")
+
     # Response should have a valid type name (not contain error indicators)
     response_type = type(response).__name__
     assert (
@@ -532,6 +706,11 @@ def test_endpoint_discovery():
 
     if len(TESTABLE_ENDPOINTS) > 5:
         print(f"  ... and {len(TESTABLE_ENDPOINTS) - 5} more")
+
+    # Show info about other endpoint types
+    print(f"\nDiscovered {len(ASSET_ID_ONLY_ENDPOINTS)} asset_id-only endpoints")
+    print(f"Discovered {len(CLIENT_COMPANY_ID_ONLY_ENDPOINTS)} client_company_id-only endpoints")
+    print(f"Discovered {len(SERVICE_ORDER_ID_ONLY_ENDPOINTS)} service_order_id-only endpoints")
 
 
 if __name__ == "__main__":
