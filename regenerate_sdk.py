@@ -16,6 +16,7 @@ import subprocess
 import sys
 from collections import defaultdict
 
+from fix_binary_endpoints import fix_binary_endpoints
 from fix_swagger_spec import fix_swagger_spec
 from get_version import get_version_from_git_with_commits
 
@@ -258,6 +259,9 @@ def post_process_generated_files():
         with open(client_file, "w", encoding="utf-8") as f:
             f.write(template_content)
         print("✅ Applied custom client template with 'Api-Token' as default prefix")
+
+    # Fix binary endpoints to properly handle HTTP 200 responses
+    fix_binary_endpoints()
 
 
 def create_exceptions_file():
