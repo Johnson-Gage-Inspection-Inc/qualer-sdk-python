@@ -9900,7 +9900,8 @@
         },
         "RetirmentDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ClientVendorId": {
           "format": "int32",
@@ -9994,7 +9995,9 @@
             "ControlledEnvironment",
             "ScientificInstrument"
           ],
-          "type": "string"
+          "format": "int32",
+          "type": "integer",
+          "x-nullable": true
         },
         "ToolId": {
           "format": "int32",
@@ -11039,13 +11042,20 @@
           "type": "string"
         },
         "RecordType": {
+          "type": "integer",
+          "format": "int32",
           "enum": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "x-enumNames": [
             "WaitingForAgreement",
             "Equipment",
             "System",
             "Agreement"
-          ],
-          "type": "string"
+          ]
         },
         "ParentAssetId": {
           "format": "int32",
@@ -11090,7 +11100,8 @@
         },
         "RetirmentDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ClientVendorId": {
           "format": "int32",
@@ -11184,7 +11195,9 @@
             "ControlledEnvironment",
             "ScientificInstrument"
           ],
-          "type": "string"
+          "format": "int32",
+          "type": "integer",
+          "x-nullable": true
         },
         "ToolId": {
           "format": "int32",
