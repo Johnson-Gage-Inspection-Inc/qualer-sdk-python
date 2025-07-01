@@ -1,12 +1,12 @@
 from http import HTTPStatus
+from io import BytesIO
 from typing import Any, Optional, Union
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.download_documents_response_200 import DownloadDocumentsResponse200
-from ...types import Response
+from ...types import File, Response
 
 
 def _get_kwargs(
@@ -22,9 +22,9 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[DownloadDocumentsResponse200]:
+) -> Optional[File]:
     if response.status_code == 200:
-        response_200 = DownloadDocumentsResponse200.from_dict(response.json())
+        response_200 = File(payload=BytesIO(response.content))
 
         return response_200
     if client.raise_on_unexpected_status:
@@ -35,7 +35,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[DownloadDocumentsResponse200]:
+) -> Response[File]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -48,7 +48,7 @@ def sync_detailed(
     asset_service_record_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[DownloadDocumentsResponse200]:
+) -> Response[File]:
     """
     Args:
         asset_service_record_id (int):
@@ -58,7 +58,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DownloadDocumentsResponse200]
+        Response[File]
     """
 
     kwargs = _get_kwargs(
@@ -76,7 +76,7 @@ def sync(
     asset_service_record_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[DownloadDocumentsResponse200]:
+) -> Optional[File]:
     """
     Args:
         asset_service_record_id (int):
@@ -86,7 +86,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DownloadDocumentsResponse200
+        File
     """
 
     return sync_detailed(
@@ -99,7 +99,7 @@ async def asyncio_detailed(
     asset_service_record_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[DownloadDocumentsResponse200]:
+) -> Response[File]:
     """
     Args:
         asset_service_record_id (int):
@@ -109,7 +109,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DownloadDocumentsResponse200]
+        Response[File]
     """
 
     kwargs = _get_kwargs(
@@ -125,7 +125,7 @@ async def asyncio(
     asset_service_record_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[DownloadDocumentsResponse200]:
+) -> Optional[File]:
     """
     Args:
         asset_service_record_id (int):
@@ -135,7 +135,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DownloadDocumentsResponse200
+        File
     """
 
     return (

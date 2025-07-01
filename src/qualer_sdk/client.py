@@ -40,7 +40,7 @@ class Client:
     """
 
     raise_on_unexpected_status: bool = field(default=False, kw_only=True)
-    _base_url: str = field(alias="base_url")
+    _base_url: str = field(alias="base_url", default="https://jgiquality.qualer.com")
     _cookies: Dict[str, str] = field(factory=dict, kw_only=True, alias="cookies")
     _headers: Dict[str, str] = field(factory=dict, kw_only=True, alias="headers")
     _timeout: Optional[httpx.Timeout] = field(
