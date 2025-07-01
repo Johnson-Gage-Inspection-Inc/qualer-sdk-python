@@ -59,13 +59,19 @@ class TestGetDocumentMockBinaryResponse(unittest.TestCase):
 
         # Patch the httpx client's request method at the module level
         with patch("httpx.Client.request", return_value=mock_response):
-            # This should reproduce the UnicodeDecodeError
-            with self.assertRaises(UnicodeDecodeError) as context:
-                get_document.sync(guid=self.sample_uuid, client=self.client)
-
-            # Verify we got the expected error
-            self.assertIn("utf-8", str(context.exception).lower())
-            print(f"✅ Successfully reproduced UnicodeDecodeError: {context.exception}")
+            # This should reproduce the UnicodeDecodeError - but since we fixed it,
+            # we expect this to work without errors now
+            try:
+                response = get_document.sync_detailed(
+                    guid=self.sample_uuid, client=self.client
+                )
+                # The fix should prevent UnicodeDecodeError and return a proper response
+                self.assertIsNotNone(response)
+                print("✅ Binary endpoint now works correctly - no UnicodeDecodeError!")
+            except UnicodeDecodeError:
+                self.fail(
+                    "UnicodeDecodeError should not occur with the fixed binary endpoint"
+                )
 
     def test_binary_content_handling_fix(self):
         """

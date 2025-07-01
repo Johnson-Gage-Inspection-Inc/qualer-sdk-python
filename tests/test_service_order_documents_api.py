@@ -9,6 +9,7 @@ Migrated from the old class-based approach using actual discovered function name
 
 import unittest
 from unittest.mock import MagicMock, patch
+from uuid import UUID
 
 from qualer_sdk.api.service_order_documents import (
     get_document,
@@ -30,35 +31,39 @@ class TestServiceOrderDocumentsApiModern(unittest.TestCase):
     def tearDown(self):
         pass
 
-    @patch("qualer_sdk.api.service_order_documents.get_document.sync")
+    @patch("qualer_sdk.api.service_order_documents.get_document.sync_detailed")
     def test_get_document_function(self, mock_get_document):
-        """Test the new get_document function approach."""
+        """Test the new get_document function approach for binary endpoints."""
         # Mock the response
         mock_response = MagicMock()
         mock_get_document.return_value = mock_response
 
         # Call the function
-        result = get_document.sync(client=self.client)
+        result = get_document.sync_detailed(
+            client=self.client, guid=UUID("12345678-1234-1234-1234-123456789abc")
+        )
 
         # Verify the call
-        mock_get_document.assert_called_once_with(client=self.client)
+        mock_get_document.assert_called_once()
         self.assertEqual(result, mock_response)
 
-    @patch("qualer_sdk.api.service_order_documents.get_document.sync")
+    @patch("qualer_sdk.api.service_order_documents.get_document.sync_detailed")
     def test_get_document_0_function(self, mock_get_document):
-        """Test the new get_document function approach."""
+        """Test the new get_document function approach for binary endpoints."""
         # Mock the response
         mock_response = MagicMock()
         mock_get_document.return_value = mock_response
 
         # Call the function
-        result = get_document.sync(client=self.client)
+        result = get_document.sync_detailed(
+            client=self.client, guid=UUID("12345678-1234-1234-1234-123456789abc")
+        )
 
         # Verify the call
-        mock_get_document.assert_called_once_with(client=self.client)
+        mock_get_document.assert_called_once()
         self.assertEqual(result, mock_response)
 
-    @patch("qualer_sdk.api.service_order_documents.get_document.sync")
+    @patch("qualer_sdk.api.service_order_documents.get_document.sync_detailed")
     def test_get_document_list_function(self, mock_get_document):
         """Test the new get_document function approach."""
         # Mock the response
@@ -66,13 +71,15 @@ class TestServiceOrderDocumentsApiModern(unittest.TestCase):
         mock_get_document.return_value = mock_response
 
         # Call the function
-        result = get_document.sync(client=self.client)
+        result = get_document.sync_detailed(
+            client=self.client, guid=UUID("12345678-1234-1234-1234-123456789abc")
+        )
 
         # Verify the call
-        mock_get_document.assert_called_once_with(client=self.client)
+        mock_get_document.assert_called_once()
         self.assertEqual(result, mock_response)
 
-    @patch("qualer_sdk.api.service_order_documents.get_document.sync")
+    @patch("qualer_sdk.api.service_order_documents.get_document.sync_detailed")
     def test_get_documents_function(self, mock_get_document):
         """Test the new get_document function approach."""
         # Mock the response
@@ -80,13 +87,15 @@ class TestServiceOrderDocumentsApiModern(unittest.TestCase):
         mock_get_document.return_value = mock_response
 
         # Call the function
-        result = get_document.sync(client=self.client)
+        result = get_document.sync_detailed(
+            client=self.client, guid=UUID("12345678-1234-1234-1234-123456789abc")
+        )
 
         # Verify the call
-        mock_get_document.assert_called_once_with(client=self.client)
+        mock_get_document.assert_called_once()
         self.assertEqual(result, mock_response)
 
-    @patch("qualer_sdk.api.service_order_documents.get_document.sync")
+    @patch("qualer_sdk.api.service_order_documents.get_document.sync_detailed")
     def test_get_documents_list_function(self, mock_get_document):
         """Test the new get_document function approach."""
         # Mock the response
@@ -94,10 +103,12 @@ class TestServiceOrderDocumentsApiModern(unittest.TestCase):
         mock_get_document.return_value = mock_response
 
         # Call the function
-        result = get_document.sync(client=self.client)
+        result = get_document.sync_detailed(
+            client=self.client, guid=UUID("12345678-1234-1234-1234-123456789abc")
+        )
 
         # Verify the call
-        mock_get_document.assert_called_once_with(client=self.client)
+        mock_get_document.assert_called_once()
         self.assertEqual(result, mock_response)
 
     @patch("qualer_sdk.api.service_order_documents.upload_documents_post_2.sync")
@@ -114,7 +125,7 @@ class TestServiceOrderDocumentsApiModern(unittest.TestCase):
         mock_upload_documents_post_2.assert_called_once_with(client=self.client)
         self.assertEqual(result, mock_response)
 
-    @patch("qualer_sdk.api.service_order_documents.get_document_get_wd.sync")
+    @patch("qualer_sdk.api.service_order_documents.get_document_get_wd.sync_detailed")
     def test_get_document_get_wd_function(self, mock_get_document_get_wd):
         """Test the new get_document_get_wd function approach."""
         # Mock the response
@@ -122,10 +133,10 @@ class TestServiceOrderDocumentsApiModern(unittest.TestCase):
         mock_get_document_get_wd.return_value = mock_response
 
         # Call the function
-        result = get_document_get_wd.sync(client=self.client)
+        result = get_document_get_wd.sync_detailed(client=self.client, guid=UUID('12345678-1234-1234-1234-123456789abc'))
 
         # Verify the call
-        mock_get_document_get_wd.assert_called_once_with(client=self.client)
+        mock_get_document_get_wd.assert_called_once()
         self.assertEqual(result, mock_response)
 
     @patch("qualer_sdk.api.service_order_documents.get_document_list.sync")

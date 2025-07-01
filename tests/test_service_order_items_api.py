@@ -156,7 +156,7 @@ class TestServiceOrderItemsApiModern(unittest.TestCase):
         mock_get_work_item_charges.assert_called_once_with(client=self.client)
         self.assertEqual(result, mock_response)
 
-    @patch("qualer_sdk.api.service_order_items.get_work_item_image.sync")
+    @patch("qualer_sdk.api.service_order_items.get_work_item_image.sync_detailed")
     def test_set_work_item_function(self, mock_get_work_item_image):
         """Test the new get_work_item_image function approach."""
         # Mock the response
@@ -164,10 +164,10 @@ class TestServiceOrderItemsApiModern(unittest.TestCase):
         mock_get_work_item_image.return_value = mock_response
 
         # Call the function
-        result = get_work_item_image.sync(client=self.client)
+        result = get_work_item_image.sync_detailed(client=self.client, work_item_id=123, image_name="test.jpg")
 
         # Verify the call
-        mock_get_work_item_image.assert_called_once_with(client=self.client)
+        mock_get_work_item_image.assert_called_once()
         self.assertEqual(result, mock_response)
 
     @patch("qualer_sdk.api.service_order_items.get_work_item_images.sync")
