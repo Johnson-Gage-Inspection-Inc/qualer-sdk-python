@@ -591,8 +591,7 @@ def authenticated_client():
     if not api_token:
         pytest.skip("QUALER_API_KEY not found in environment variables")
 
-    base_url = "https://jgiquality.qualer.com"
-    return AuthenticatedClient(base_url=base_url, token=api_token)
+    return AuthenticatedClient(api_token)
 
 
 @pytest.fixture(scope="session")
