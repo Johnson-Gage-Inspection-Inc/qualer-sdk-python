@@ -198,7 +198,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
 
         is_accredited = self.is_accredited
 
-        specification_mode: Union[Unset, str] = UNSET
+        specification_mode: Union[Unset, int] = UNSET
         if not isinstance(self.specification_mode, Unset):
             specification_mode = self.specification_mode.value
 
