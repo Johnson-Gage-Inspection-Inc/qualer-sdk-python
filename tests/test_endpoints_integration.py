@@ -597,19 +597,20 @@ def authenticated_client():
 @pytest.fixture(scope="session")
 def sample_asset_id(authenticated_client):
     """Get a sample asset ID for testing asset-specific endpoints."""
-    try:
-        # Try to get assets from the get_all_assets endpoint
-        from qualer_sdk.api.assets import get_all_assets
+    return 1235564
+    # try:
+    #     # Try to get assets from the get_all_assets endpoint
+    #     from qualer_sdk.api.assets import get_all_assets
 
-        assets = get_all_assets.sync(client=authenticated_client)
-        if assets and len(assets) > 0:
-            return assets[0].asset_id
+    #     assets = get_all_assets.sync(client=authenticated_client)
+    #     if assets and len(assets) > 0:
+    #         return assets[0].asset_id
 
-        # If we can't get assets, skip the asset ID tests
-        pytest.skip("Could not retrieve sample asset ID for testing")
+    #     # If we can't get assets, skip the asset ID tests
+    #     pytest.skip("Could not retrieve sample asset ID for testing")
 
-    except Exception as e:
-        pytest.skip(f"Could not retrieve sample asset ID: {e}")
+    # except Exception as e:
+    #     pytest.skip(f"Could not retrieve sample asset ID: {e}")
 
 
 @pytest.fixture(scope="session")
@@ -777,7 +778,7 @@ def test_endpoint_response_parsing(endpoint_name, endpoint_func, authenticated_c
 
 @pytest.mark.parametrize("endpoint_name,endpoint_func", ASSET_ID_ONLY_ENDPOINTS)
 def test_asset_id_endpoint_response_parsing(
-    endpoint_name, endpoint_func, authenticated_client, sample_asset_id
+    endpoint_name, endpoint_func, authenticated_client, sample_asset_id=57071
 ):
     """
     Test that endpoints requiring only asset_id can be called and parsed correctly.
