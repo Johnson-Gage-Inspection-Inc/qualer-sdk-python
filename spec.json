@@ -9107,10 +9107,15 @@
         },
         "SpecificationMode": {
           "enum": [
+            0,
+            1
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
             "Point",
             "Range"
-          ],
-          "type": "string"
+          ]
         },
         "ToleranceMode": {
           "enum": [
@@ -15753,10 +15758,15 @@
         },
         "SpecificationMode": {
           "enum": [
+            0,
+            1
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
             "Point",
             "Range"
-          ],
-          "type": "string"
+          ]
         },
         "ToleranceMode": {
           "enum": [
@@ -19030,7 +19040,16 @@
           "type": "number"
         },
         "SpecificationMode": {
-          "type": "string"
+          "enum": [
+            0,
+            1
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
+            "Point",
+            "Range"
+          ]
         },
         "ToleranceType": {
           "type": "string"
@@ -19467,10 +19486,15 @@
         },
         "SpecificationMode": {
           "enum": [
+            0,
+            1
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
             "Point",
             "Range"
-          ],
-          "type": "string"
+          ]
         },
         "ToleranceMode": {
           "enum": [

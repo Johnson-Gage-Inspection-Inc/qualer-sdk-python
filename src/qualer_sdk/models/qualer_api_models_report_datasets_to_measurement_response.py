@@ -1357,7 +1357,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         if not isinstance(self.precision_type, Unset):
             precision_type = self.precision_type.value
 
-        specification_mode: Union[Unset, str] = UNSET
+        specification_mode: Union[Unset, int] = UNSET
         if not isinstance(self.specification_mode, Unset):
             specification_mode = self.specification_mode.value
 

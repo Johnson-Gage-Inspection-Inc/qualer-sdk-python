@@ -394,6 +394,9 @@ from .qualer_api_models_measurements_from_create_measurement_model import (
 from .qualer_api_models_measurements_from_create_measurement_point_model import (
     QualerApiModelsMeasurementsFromCreateMeasurementPointModel,
 )
+from .qualer_api_models_measurements_from_create_measurement_point_model_specification_mode import (
+    QualerApiModelsMeasurementsFromCreateMeasurementPointModelSpecificationMode,
+)
 from .qualer_api_models_measurements_from_create_measurement_set_model import (
     QualerApiModelsMeasurementsFromCreateMeasurementSetModel,
 )
@@ -1131,6 +1134,7 @@ __all__ = [
     "QualerApiModelsMeasurementsFromCreateMeasurementFormModel",
     "QualerApiModelsMeasurementsFromCreateMeasurementModel",
     "QualerApiModelsMeasurementsFromCreateMeasurementPointModel",
+    "QualerApiModelsMeasurementsFromCreateMeasurementPointModelSpecificationMode",
     "QualerApiModelsMeasurementsFromCreateMeasurementSetModel",
     "QualerApiModelsMeasurementsFromCreateMeasurementToolModel",
     "QualerApiModelsMeasurementsFromCustomFields",
