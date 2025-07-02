@@ -1,12 +1,12 @@
-from enum import Enum
+from enum import IntEnum
 
 
 class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode(
-    str, Enum
+    IntEnum
 ):
-    ASYMMETRIC = "Asymmetric"
-    RANGE = "Range"
-    SYMMETRIC = "Symmetric"
+    VALUE_0 = 0
+    VALUE_1 = 1
+    VALUE_2 = 2
 
     def __str__(self) -> str:
         return str(self.value)

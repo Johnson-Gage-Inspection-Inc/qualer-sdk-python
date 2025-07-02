@@ -9119,11 +9119,17 @@
         },
         "ToleranceMode": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
             "Symmetric",
             "Asymmetric",
             "Range"
-          ],
-          "type": "string"
+          ]
         },
         "ToleranceUnit": {
           "enum": [
@@ -15770,11 +15776,17 @@
         },
         "ToleranceMode": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
             "Symmetric",
             "Asymmetric",
             "Range"
-          ],
-          "type": "string"
+          ]
         },
         "ToleranceUnit": {
           "enum": [
@@ -19055,7 +19067,18 @@
           "type": "string"
         },
         "ToleranceMode": {
-          "type": "string"
+          "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
+            "Symmetric",
+            "Asymmetric",
+            "Range"
+          ]
         },
         "ToleranceUnit": {
           "type": "string"
@@ -19498,11 +19521,17 @@
         },
         "ToleranceMode": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
             "Symmetric",
             "Asymmetric",
             "Range"
-          ],
-          "type": "string"
+          ]
         },
         "ToleranceUnit": {
           "enum": [
@@ -19891,7 +19920,18 @@
           "type": "string"
         },
         "ToleranceMode": {
-          "type": "string"
+          "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
+            "Symmetric",
+            "Asymmetric",
+            "Range"
+          ]
         },
         "ToleranceUnit": {
           "type": "string"
