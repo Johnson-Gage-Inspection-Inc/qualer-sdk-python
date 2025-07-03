@@ -9133,11 +9133,17 @@
         },
         "ToleranceUnit": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
             "Percentage",
             "UnitOfMeasure",
             "Ppm"
-          ],
-          "type": "string"
+          ]
         },
         "PrecisionType": {
           "type": "string"
@@ -15790,11 +15796,17 @@
         },
         "ToleranceUnit": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
             "Percentage",
             "UnitOfMeasure",
             "Ppm"
-          ],
-          "type": "string"
+          ]
         },
         "ToleranceString": {
           "type": "string"
@@ -19081,7 +19093,18 @@
           ]
         },
         "ToleranceUnit": {
-          "type": "string"
+          "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
+            "Percentage",
+            "UnitOfMeasure",
+            "Ppm"
+          ]
         },
         "PrecisionType": {
           "type": "string"
@@ -19535,11 +19558,17 @@
         },
         "ToleranceUnit": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
             "Percentage",
             "UnitOfMeasure",
             "Ppm"
-          ],
-          "type": "string"
+          ]
         },
         "Measurements": {
           "type": "array",
@@ -19934,7 +19963,18 @@
           ]
         },
         "ToleranceUnit": {
-          "type": "string"
+          "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
+            "Percentage",
+            "UnitOfMeasure",
+            "Ppm"
+          ]
         },
         "PrecisionType": {
           "type": "string"
