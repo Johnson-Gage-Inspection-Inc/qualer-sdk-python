@@ -303,6 +303,8 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         ]
         if isinstance(_work_status, Unset):
             work_status = UNSET
+        elif _work_status is None:
+            work_status = None
         else:
             work_status = (
                 QualerApiModelsServiceOrdersFromOrderItemUpdateModelWorkStatus(
@@ -364,6 +366,8 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         ]
         if isinstance(_result_status, Unset):
             result_status = UNSET
+        elif _result_status is None:
+            result_status = None
         else:
             result_status = (
                 QualerApiModelsServiceOrdersFromOrderItemUpdateModelResultStatus(
@@ -377,6 +381,8 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         ]
         if isinstance(_as_found_result, Unset):
             as_found_result = UNSET
+        elif _as_found_result is None:
+            as_found_result = None
         else:
             as_found_result = (
                 QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundResult(
@@ -390,6 +396,8 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         ]
         if isinstance(_as_left_result, Unset):
             as_left_result = UNSET
+        elif _as_left_result is None:
+            as_left_result = None
         else:
             as_left_result = (
                 QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftResult(

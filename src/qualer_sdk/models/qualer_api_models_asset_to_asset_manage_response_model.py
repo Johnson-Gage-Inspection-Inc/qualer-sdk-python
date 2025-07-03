@@ -667,6 +667,8 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         ]
         if isinstance(_record_type, Unset):
             record_type = UNSET
+        elif _record_type is None:
+            record_type = None
         else:
             record_type = QualerApiModelsAssetToAssetManageResponseModelRecordType(
                 _record_type
@@ -784,6 +786,8 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         tool_role: Union[Unset, QualerApiModelsAssetToAssetManageResponseModelToolRole]
         if isinstance(_tool_role, Unset):
             tool_role = UNSET
+        elif _tool_role is None:
+            tool_role = None
         else:
             tool_role = QualerApiModelsAssetToAssetManageResponseModelToolRole(
                 _tool_role
@@ -886,6 +890,8 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         ]
         if isinstance(_result_status, Unset):
             result_status = UNSET
+        elif _result_status is None:
+            result_status = None
         else:
             result_status = QualerApiModelsAssetToAssetManageResponseModelResultStatus(
                 _result_status
@@ -897,6 +903,8 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         ]
         if isinstance(_as_found_result, Unset):
             as_found_result = UNSET
+        elif _as_found_result is None:
+            as_found_result = None
         else:
             as_found_result = (
                 QualerApiModelsAssetToAssetManageResponseModelAsFoundResult(
@@ -910,6 +918,8 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         ]
         if isinstance(_as_left_result, Unset):
             as_left_result = UNSET
+        elif _as_left_result is None:
+            as_left_result = None
         else:
             as_left_result = QualerApiModelsAssetToAssetManageResponseModelAsLeftResult(
                 _as_left_result
@@ -978,6 +988,8 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         ]
         if isinstance(_service_order_status, Unset):
             service_order_status = UNSET
+        elif _service_order_status is None:
+            service_order_status = None
         else:
             service_order_status = (
                 QualerApiModelsAssetToAssetManageResponseModelServiceOrderStatus(
@@ -1041,6 +1053,8 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         ]
         if isinstance(_due_status, Unset):
             due_status = UNSET
+        elif _due_status is None:
+            due_status = None
         else:
             due_status = QualerApiModelsAssetToAssetManageResponseModelDueStatus(
                 _due_status
@@ -1052,6 +1066,8 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         ]
         if isinstance(_work_status, Unset):
             work_status = UNSET
+        elif _work_status is None:
+            work_status = None
         else:
             work_status = QualerApiModelsAssetToAssetManageResponseModelWorkStatus(
                 _work_status

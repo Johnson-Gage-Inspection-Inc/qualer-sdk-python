@@ -27,35 +27,35 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
         custom_order_number (Union[Unset, str]):
         order_item_number (Union[Unset, int]):
         certificate_number (Union[Unset, str]):
-        result_status (Union[Unset, str]):
-        as_found_result (Union[Unset, str]):
-        as_left_result (Union[Unset, str]):
+        result_status (Union[None, Unset, str]):
+        as_found_result (Union[None, Unset, str]):
+        as_left_result (Union[None, Unset, str]):
         service_date (Union[None, Unset, datetime.datetime]):
         serial_number (Union[Unset, str]):
-        asset_tag (Union[Unset, str]):
-        asset_user (Union[Unset, str]):
-        asset_tag_change (Union[Unset, str]):
-        asset_user_change (Union[Unset, str]):
-        service_notes (Union[Unset, str]):
-        serial_number_change (Union[Unset, str]):
+        asset_tag (Union[None, Unset, str]):
+        asset_user (Union[None, Unset, str]):
+        asset_tag_change (Union[None, Unset, str]):
+        asset_user_change (Union[None, Unset, str]):
+        service_notes (Union[None, Unset, str]):
+        serial_number_change (Union[None, Unset, str]):
         due_date (Union[None, Unset, datetime.datetime]):
         next_service_date (Union[None, Unset, datetime.datetime]):
-        provider_technician (Union[Unset, str]):
-        provider_phone (Union[Unset, str]):
-        provider_company (Union[Unset, str]):
-        service_level (Union[Unset, str]):
-        service_level_code (Union[Unset, str]):
-        next_service_level (Union[Unset, str]):
-        next_service_level_code (Union[Unset, str]):
-        asset_name (Union[Unset, str]):
-        asset_description (Union[Unset, str]):
-        parts_charge (Union[Unset, float]):
-        parts_charge_before_discount (Union[Unset, float]):
-        service_charge (Union[Unset, float]):
-        repairs_charge (Union[Unset, float]):
-        guid (Union[Unset, UUID]):  Example: 00000000-0000-0000-0000-000000000000.
-        segment_name (Union[Unset, str]):
-        schedule_name (Union[Unset, str]):
+        provider_technician (Union[None, Unset, str]):
+        provider_phone (Union[None, Unset, str]):
+        provider_company (Union[None, Unset, str]):
+        service_level (Union[None, Unset, str]):
+        service_level_code (Union[None, Unset, str]):
+        next_service_level (Union[None, Unset, str]):
+        next_service_level_code (Union[None, Unset, str]):
+        asset_name (Union[None, Unset, str]):
+        asset_description (Union[None, Unset, str]):
+        parts_charge (Union[None, Unset, float]):
+        parts_charge_before_discount (Union[None, Unset, float]):
+        service_charge (Union[None, Unset, float]):
+        repairs_charge (Union[None, Unset, float]):
+        guid (Union[None, UUID, Unset]):  Example: 00000000-0000-0000-0000-000000000000.
+        segment_name (Union[None, Unset, str]):
+        schedule_name (Union[None, Unset, str]):
     """
 
     asset_id: Union[Unset, int] = UNSET
@@ -67,35 +67,35 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
     custom_order_number: Union[Unset, str] = UNSET
     order_item_number: Union[Unset, int] = UNSET
     certificate_number: Union[Unset, str] = UNSET
-    result_status: Union[Unset, str] = UNSET
-    as_found_result: Union[Unset, str] = UNSET
-    as_left_result: Union[Unset, str] = UNSET
+    result_status: Union[None, Unset, str] = UNSET
+    as_found_result: Union[None, Unset, str] = UNSET
+    as_left_result: Union[None, Unset, str] = UNSET
     service_date: Union[None, Unset, datetime.datetime] = UNSET
     serial_number: Union[Unset, str] = UNSET
-    asset_tag: Union[Unset, str] = UNSET
-    asset_user: Union[Unset, str] = UNSET
-    asset_tag_change: Union[Unset, str] = UNSET
-    asset_user_change: Union[Unset, str] = UNSET
-    service_notes: Union[Unset, str] = UNSET
-    serial_number_change: Union[Unset, str] = UNSET
+    asset_tag: Union[None, Unset, str] = UNSET
+    asset_user: Union[None, Unset, str] = UNSET
+    asset_tag_change: Union[None, Unset, str] = UNSET
+    asset_user_change: Union[None, Unset, str] = UNSET
+    service_notes: Union[None, Unset, str] = UNSET
+    serial_number_change: Union[None, Unset, str] = UNSET
     due_date: Union[None, Unset, datetime.datetime] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    provider_technician: Union[Unset, str] = UNSET
-    provider_phone: Union[Unset, str] = UNSET
-    provider_company: Union[Unset, str] = UNSET
-    service_level: Union[Unset, str] = UNSET
-    service_level_code: Union[Unset, str] = UNSET
-    next_service_level: Union[Unset, str] = UNSET
-    next_service_level_code: Union[Unset, str] = UNSET
-    asset_name: Union[Unset, str] = UNSET
-    asset_description: Union[Unset, str] = UNSET
-    parts_charge: Union[Unset, float] = UNSET
-    parts_charge_before_discount: Union[Unset, float] = UNSET
-    service_charge: Union[Unset, float] = UNSET
-    repairs_charge: Union[Unset, float] = UNSET
-    guid: Union[Unset, UUID] = UNSET
-    segment_name: Union[Unset, str] = UNSET
-    schedule_name: Union[Unset, str] = UNSET
+    provider_technician: Union[None, Unset, str] = UNSET
+    provider_phone: Union[None, Unset, str] = UNSET
+    provider_company: Union[None, Unset, str] = UNSET
+    service_level: Union[None, Unset, str] = UNSET
+    service_level_code: Union[None, Unset, str] = UNSET
+    next_service_level: Union[None, Unset, str] = UNSET
+    next_service_level_code: Union[None, Unset, str] = UNSET
+    asset_name: Union[None, Unset, str] = UNSET
+    asset_description: Union[None, Unset, str] = UNSET
+    parts_charge: Union[None, Unset, float] = UNSET
+    parts_charge_before_discount: Union[None, Unset, float] = UNSET
+    service_charge: Union[None, Unset, float] = UNSET
+    repairs_charge: Union[None, Unset, float] = UNSET
+    guid: Union[None, UUID, Unset] = UNSET
+    segment_name: Union[None, Unset, str] = UNSET
+    schedule_name: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -117,11 +117,23 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
 
         certificate_number = self.certificate_number
 
-        result_status = self.result_status
+        result_status: Union[None, Unset, str]
+        if isinstance(self.result_status, Unset):
+            result_status = UNSET
+        else:
+            result_status = self.result_status
 
-        as_found_result = self.as_found_result
+        as_found_result: Union[None, Unset, str]
+        if isinstance(self.as_found_result, Unset):
+            as_found_result = UNSET
+        else:
+            as_found_result = self.as_found_result
 
-        as_left_result = self.as_left_result
+        as_left_result: Union[None, Unset, str]
+        if isinstance(self.as_left_result, Unset):
+            as_left_result = UNSET
+        else:
+            as_left_result = self.as_left_result
 
         service_date: Union[None, Unset, str]
         if isinstance(self.service_date, Unset):
@@ -133,17 +145,41 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
 
         serial_number = self.serial_number
 
-        asset_tag = self.asset_tag
+        asset_tag: Union[None, Unset, str]
+        if isinstance(self.asset_tag, Unset):
+            asset_tag = UNSET
+        else:
+            asset_tag = self.asset_tag
 
-        asset_user = self.asset_user
+        asset_user: Union[None, Unset, str]
+        if isinstance(self.asset_user, Unset):
+            asset_user = UNSET
+        else:
+            asset_user = self.asset_user
 
-        asset_tag_change = self.asset_tag_change
+        asset_tag_change: Union[None, Unset, str]
+        if isinstance(self.asset_tag_change, Unset):
+            asset_tag_change = UNSET
+        else:
+            asset_tag_change = self.asset_tag_change
 
-        asset_user_change = self.asset_user_change
+        asset_user_change: Union[None, Unset, str]
+        if isinstance(self.asset_user_change, Unset):
+            asset_user_change = UNSET
+        else:
+            asset_user_change = self.asset_user_change
 
-        service_notes = self.service_notes
+        service_notes: Union[None, Unset, str]
+        if isinstance(self.service_notes, Unset):
+            service_notes = UNSET
+        else:
+            service_notes = self.service_notes
 
-        serial_number_change = self.serial_number_change
+        serial_number_change: Union[None, Unset, str]
+        if isinstance(self.serial_number_change, Unset):
+            serial_number_change = UNSET
+        else:
+            serial_number_change = self.serial_number_change
 
         due_date: Union[None, Unset, str]
         if isinstance(self.due_date, Unset):
@@ -161,39 +197,103 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
         else:
             next_service_date = self.next_service_date
 
-        provider_technician = self.provider_technician
+        provider_technician: Union[None, Unset, str]
+        if isinstance(self.provider_technician, Unset):
+            provider_technician = UNSET
+        else:
+            provider_technician = self.provider_technician
 
-        provider_phone = self.provider_phone
+        provider_phone: Union[None, Unset, str]
+        if isinstance(self.provider_phone, Unset):
+            provider_phone = UNSET
+        else:
+            provider_phone = self.provider_phone
 
-        provider_company = self.provider_company
+        provider_company: Union[None, Unset, str]
+        if isinstance(self.provider_company, Unset):
+            provider_company = UNSET
+        else:
+            provider_company = self.provider_company
 
-        service_level = self.service_level
+        service_level: Union[None, Unset, str]
+        if isinstance(self.service_level, Unset):
+            service_level = UNSET
+        else:
+            service_level = self.service_level
 
-        service_level_code = self.service_level_code
+        service_level_code: Union[None, Unset, str]
+        if isinstance(self.service_level_code, Unset):
+            service_level_code = UNSET
+        else:
+            service_level_code = self.service_level_code
 
-        next_service_level = self.next_service_level
+        next_service_level: Union[None, Unset, str]
+        if isinstance(self.next_service_level, Unset):
+            next_service_level = UNSET
+        else:
+            next_service_level = self.next_service_level
 
-        next_service_level_code = self.next_service_level_code
+        next_service_level_code: Union[None, Unset, str]
+        if isinstance(self.next_service_level_code, Unset):
+            next_service_level_code = UNSET
+        else:
+            next_service_level_code = self.next_service_level_code
 
-        asset_name = self.asset_name
+        asset_name: Union[None, Unset, str]
+        if isinstance(self.asset_name, Unset):
+            asset_name = UNSET
+        else:
+            asset_name = self.asset_name
 
-        asset_description = self.asset_description
+        asset_description: Union[None, Unset, str]
+        if isinstance(self.asset_description, Unset):
+            asset_description = UNSET
+        else:
+            asset_description = self.asset_description
 
-        parts_charge = self.parts_charge
+        parts_charge: Union[None, Unset, float]
+        if isinstance(self.parts_charge, Unset):
+            parts_charge = UNSET
+        else:
+            parts_charge = self.parts_charge
 
-        parts_charge_before_discount = self.parts_charge_before_discount
+        parts_charge_before_discount: Union[None, Unset, float]
+        if isinstance(self.parts_charge_before_discount, Unset):
+            parts_charge_before_discount = UNSET
+        else:
+            parts_charge_before_discount = self.parts_charge_before_discount
 
-        service_charge = self.service_charge
+        service_charge: Union[None, Unset, float]
+        if isinstance(self.service_charge, Unset):
+            service_charge = UNSET
+        else:
+            service_charge = self.service_charge
 
-        repairs_charge = self.repairs_charge
+        repairs_charge: Union[None, Unset, float]
+        if isinstance(self.repairs_charge, Unset):
+            repairs_charge = UNSET
+        else:
+            repairs_charge = self.repairs_charge
 
-        guid: Union[Unset, str] = UNSET
-        if not isinstance(self.guid, Unset):
+        guid: Union[None, Unset, str]
+        if isinstance(self.guid, Unset):
+            guid = UNSET
+        elif isinstance(self.guid, UUID):
             guid = str(self.guid)
+        else:
+            guid = self.guid
 
-        segment_name = self.segment_name
+        segment_name: Union[None, Unset, str]
+        if isinstance(self.segment_name, Unset):
+            segment_name = UNSET
+        else:
+            segment_name = self.segment_name
 
-        schedule_name = self.schedule_name
+        schedule_name: Union[None, Unset, str]
+        if isinstance(self.schedule_name, Unset):
+            schedule_name = UNSET
+        else:
+            schedule_name = self.schedule_name
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -298,11 +398,32 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
 
         certificate_number = d.pop("CertificateNumber", UNSET)
 
-        result_status = d.pop("ResultStatus", UNSET)
+        def _parse_result_status(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        as_found_result = d.pop("AsFoundResult", UNSET)
+        result_status = _parse_result_status(d.pop("ResultStatus", UNSET))
 
-        as_left_result = d.pop("AsLeftResult", UNSET)
+        def _parse_as_found_result(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        as_found_result = _parse_as_found_result(d.pop("AsFoundResult", UNSET))
+
+        def _parse_as_left_result(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        as_left_result = _parse_as_left_result(d.pop("AsLeftResult", UNSET))
 
         def _parse_service_date(data: object) -> Union[None, Unset, datetime.datetime]:
             if data is None:
@@ -323,17 +444,61 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
 
         serial_number = d.pop("SerialNumber", UNSET)
 
-        asset_tag = d.pop("AssetTag", UNSET)
+        def _parse_asset_tag(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        asset_user = d.pop("AssetUser", UNSET)
+        asset_tag = _parse_asset_tag(d.pop("AssetTag", UNSET))
 
-        asset_tag_change = d.pop("AssetTagChange", UNSET)
+        def _parse_asset_user(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        asset_user_change = d.pop("AssetUserChange", UNSET)
+        asset_user = _parse_asset_user(d.pop("AssetUser", UNSET))
 
-        service_notes = d.pop("ServiceNotes", UNSET)
+        def _parse_asset_tag_change(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        serial_number_change = d.pop("SerialNumberChange", UNSET)
+        asset_tag_change = _parse_asset_tag_change(d.pop("AssetTagChange", UNSET))
+
+        def _parse_asset_user_change(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        asset_user_change = _parse_asset_user_change(d.pop("AssetUserChange", UNSET))
+
+        def _parse_service_notes(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        service_notes = _parse_service_notes(d.pop("ServiceNotes", UNSET))
+
+        def _parse_serial_number_change(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        serial_number_change = _parse_serial_number_change(
+            d.pop("SerialNumberChange", UNSET)
+        )
 
         def _parse_due_date(data: object) -> Union[None, Unset, datetime.datetime]:
             if data is None:
@@ -371,42 +536,165 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
 
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", UNSET))
 
-        provider_technician = d.pop("ProviderTechnician", UNSET)
+        def _parse_provider_technician(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        provider_phone = d.pop("ProviderPhone", UNSET)
+        provider_technician = _parse_provider_technician(
+            d.pop("ProviderTechnician", UNSET)
+        )
 
-        provider_company = d.pop("ProviderCompany", UNSET)
+        def _parse_provider_phone(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        service_level = d.pop("ServiceLevel", UNSET)
+        provider_phone = _parse_provider_phone(d.pop("ProviderPhone", UNSET))
 
-        service_level_code = d.pop("ServiceLevelCode", UNSET)
+        def _parse_provider_company(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        next_service_level = d.pop("NextServiceLevel", UNSET)
+        provider_company = _parse_provider_company(d.pop("ProviderCompany", UNSET))
 
-        next_service_level_code = d.pop("NextServiceLevelCode", UNSET)
+        def _parse_service_level(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        asset_name = d.pop("AssetName", UNSET)
+        service_level = _parse_service_level(d.pop("ServiceLevel", UNSET))
 
-        asset_description = d.pop("AssetDescription", UNSET)
+        def _parse_service_level_code(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        parts_charge = d.pop("PartsCharge", UNSET)
+        service_level_code = _parse_service_level_code(d.pop("ServiceLevelCode", UNSET))
 
-        parts_charge_before_discount = d.pop("PartsChargeBeforeDiscount", UNSET)
+        def _parse_next_service_level(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        service_charge = d.pop("ServiceCharge", UNSET)
+        next_service_level = _parse_next_service_level(d.pop("NextServiceLevel", UNSET))
 
-        repairs_charge = d.pop("RepairsCharge", UNSET)
+        def _parse_next_service_level_code(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        _guid = d.pop("Guid", UNSET)
-        guid: Union[Unset, UUID]
-        if isinstance(_guid, Unset):
-            guid = UNSET
-        else:
-            guid = UUID(_guid)
+        next_service_level_code = _parse_next_service_level_code(
+            d.pop("NextServiceLevelCode", UNSET)
+        )
 
-        segment_name = d.pop("SegmentName", UNSET)
+        def _parse_asset_name(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        schedule_name = d.pop("ScheduleName", UNSET)
+        asset_name = _parse_asset_name(d.pop("AssetName", UNSET))
+
+        def _parse_asset_description(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        asset_description = _parse_asset_description(d.pop("AssetDescription", UNSET))
+
+        def _parse_parts_charge(data: object) -> Union[None, Unset, float]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, float], data)
+
+        parts_charge = _parse_parts_charge(d.pop("PartsCharge", UNSET))
+
+        def _parse_parts_charge_before_discount(
+            data: object,
+        ) -> Union[None, Unset, float]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, float], data)
+
+        parts_charge_before_discount = _parse_parts_charge_before_discount(
+            d.pop("PartsChargeBeforeDiscount", UNSET)
+        )
+
+        def _parse_service_charge(data: object) -> Union[None, Unset, float]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, float], data)
+
+        service_charge = _parse_service_charge(d.pop("ServiceCharge", UNSET))
+
+        def _parse_repairs_charge(data: object) -> Union[None, Unset, float]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, float], data)
+
+        repairs_charge = _parse_repairs_charge(d.pop("RepairsCharge", UNSET))
+
+        def _parse_guid(data: object) -> Union[None, UUID, Unset]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                guid_type_0 = UUID(data)
+
+                return guid_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, UUID, Unset], data)
+
+        guid = _parse_guid(d.pop("Guid", UNSET))
+
+        def _parse_segment_name(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        segment_name = _parse_segment_name(d.pop("SegmentName", UNSET))
+
+        def _parse_schedule_name(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        schedule_name = _parse_schedule_name(d.pop("ScheduleName", UNSET))
 
         qualer_api_models_asset_service_records_to_asset_service_record_response_model = cls(
             asset_id=asset_id,

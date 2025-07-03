@@ -45,32 +45,32 @@ class QualerApiModelsReportDatasetsToAssetSummaryResponse:
         next_service_level (Union[Unset, str]):
         next_service_level_code (Union[Unset, str]):
         asset_id (Union[Unset, int]):
-        result_status (Union[Unset, int]):
-        serial_number_change (Union[Unset, str]):
-        provider_technician (Union[Unset, str]):
-        provider_technician_alias (Union[Unset, str]):
-        provider_phone (Union[Unset, str]):
-        provider_company (Union[Unset, str]):
-        qr_code (Union[Unset, str]):
-        bar_code (Union[Unset, str]):
-        bar_code_string (Union[Unset, str]):
-        owner_company_id (Union[Unset, int]):
-        owner_company_name (Union[Unset, str]):
-        as_found_result (Union[Unset, int]):
-        as_left_result (Union[Unset, int]):
-        asset_tag_change (Union[Unset, str]):
-        asset_user_change (Union[Unset, str]):
+        result_status (Union[None, Unset, int]):
+        serial_number_change (Union[None, Unset, str]):
+        provider_technician (Union[None, Unset, str]):
+        provider_technician_alias (Union[None, Unset, str]):
+        provider_phone (Union[None, Unset, str]):
+        provider_company (Union[None, Unset, str]):
+        qr_code (Union[None, Unset, str]):
+        bar_code (Union[None, Unset, str]):
+        bar_code_string (Union[None, Unset, str]):
+        owner_company_id (Union[None, Unset, int]):
+        owner_company_name (Union[None, Unset, str]):
+        as_found_result (Union[None, Unset, int]):
+        as_left_result (Union[None, Unset, int]):
+        asset_tag_change (Union[None, Unset, str]):
+        asset_user_change (Union[None, Unset, str]):
         due_date (Union[None, Unset, datetime.datetime]):
-        parts_charge (Union[Unset, float]):
-        parts_charge_before_discount (Union[Unset, float]):
-        service_charge (Union[Unset, float]):
-        repairs_charge (Union[Unset, float]):
-        segment_name (Union[Unset, str]):
-        schedule_name (Union[Unset, str]):
-        next_segment_name (Union[Unset, str]):
-        client_id (Union[Unset, int]):
-        interval_length (Union[Unset, int]):
-        interval_cycle (Union[Unset, str]):
+        parts_charge (Union[None, Unset, float]):
+        parts_charge_before_discount (Union[None, Unset, float]):
+        service_charge (Union[None, Unset, float]):
+        repairs_charge (Union[None, Unset, float]):
+        segment_name (Union[None, Unset, str]):
+        schedule_name (Union[None, Unset, str]):
+        next_segment_name (Union[None, Unset, str]):
+        client_id (Union[None, Unset, int]):
+        interval_length (Union[None, Unset, int]):
+        interval_cycle (Union[None, Unset, str]):
     """
 
     service_order_number: Union[Unset, int] = UNSET
@@ -103,32 +103,32 @@ class QualerApiModelsReportDatasetsToAssetSummaryResponse:
     next_service_level: Union[Unset, str] = UNSET
     next_service_level_code: Union[Unset, str] = UNSET
     asset_id: Union[Unset, int] = UNSET
-    result_status: Union[Unset, int] = UNSET
-    serial_number_change: Union[Unset, str] = UNSET
-    provider_technician: Union[Unset, str] = UNSET
-    provider_technician_alias: Union[Unset, str] = UNSET
-    provider_phone: Union[Unset, str] = UNSET
-    provider_company: Union[Unset, str] = UNSET
-    qr_code: Union[Unset, str] = UNSET
-    bar_code: Union[Unset, str] = UNSET
-    bar_code_string: Union[Unset, str] = UNSET
-    owner_company_id: Union[Unset, int] = UNSET
-    owner_company_name: Union[Unset, str] = UNSET
-    as_found_result: Union[Unset, int] = UNSET
-    as_left_result: Union[Unset, int] = UNSET
-    asset_tag_change: Union[Unset, str] = UNSET
-    asset_user_change: Union[Unset, str] = UNSET
+    result_status: Union[None, Unset, int] = UNSET
+    serial_number_change: Union[None, Unset, str] = UNSET
+    provider_technician: Union[None, Unset, str] = UNSET
+    provider_technician_alias: Union[None, Unset, str] = UNSET
+    provider_phone: Union[None, Unset, str] = UNSET
+    provider_company: Union[None, Unset, str] = UNSET
+    qr_code: Union[None, Unset, str] = UNSET
+    bar_code: Union[None, Unset, str] = UNSET
+    bar_code_string: Union[None, Unset, str] = UNSET
+    owner_company_id: Union[None, Unset, int] = UNSET
+    owner_company_name: Union[None, Unset, str] = UNSET
+    as_found_result: Union[None, Unset, int] = UNSET
+    as_left_result: Union[None, Unset, int] = UNSET
+    asset_tag_change: Union[None, Unset, str] = UNSET
+    asset_user_change: Union[None, Unset, str] = UNSET
     due_date: Union[None, Unset, datetime.datetime] = UNSET
-    parts_charge: Union[Unset, float] = UNSET
-    parts_charge_before_discount: Union[Unset, float] = UNSET
-    service_charge: Union[Unset, float] = UNSET
-    repairs_charge: Union[Unset, float] = UNSET
-    segment_name: Union[Unset, str] = UNSET
-    schedule_name: Union[Unset, str] = UNSET
-    next_segment_name: Union[Unset, str] = UNSET
-    client_id: Union[Unset, int] = UNSET
-    interval_length: Union[Unset, int] = UNSET
-    interval_cycle: Union[Unset, str] = UNSET
+    parts_charge: Union[None, Unset, float] = UNSET
+    parts_charge_before_discount: Union[None, Unset, float] = UNSET
+    service_charge: Union[None, Unset, float] = UNSET
+    repairs_charge: Union[None, Unset, float] = UNSET
+    segment_name: Union[None, Unset, str] = UNSET
+    schedule_name: Union[None, Unset, str] = UNSET
+    next_segment_name: Union[None, Unset, str] = UNSET
+    client_id: Union[None, Unset, int] = UNSET
+    interval_length: Union[None, Unset, int] = UNSET
+    interval_cycle: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -204,35 +204,95 @@ class QualerApiModelsReportDatasetsToAssetSummaryResponse:
 
         asset_id = self.asset_id
 
-        result_status = self.result_status
+        result_status: Union[None, Unset, int]
+        if isinstance(self.result_status, Unset):
+            result_status = UNSET
+        else:
+            result_status = self.result_status
 
-        serial_number_change = self.serial_number_change
+        serial_number_change: Union[None, Unset, str]
+        if isinstance(self.serial_number_change, Unset):
+            serial_number_change = UNSET
+        else:
+            serial_number_change = self.serial_number_change
 
-        provider_technician = self.provider_technician
+        provider_technician: Union[None, Unset, str]
+        if isinstance(self.provider_technician, Unset):
+            provider_technician = UNSET
+        else:
+            provider_technician = self.provider_technician
 
-        provider_technician_alias = self.provider_technician_alias
+        provider_technician_alias: Union[None, Unset, str]
+        if isinstance(self.provider_technician_alias, Unset):
+            provider_technician_alias = UNSET
+        else:
+            provider_technician_alias = self.provider_technician_alias
 
-        provider_phone = self.provider_phone
+        provider_phone: Union[None, Unset, str]
+        if isinstance(self.provider_phone, Unset):
+            provider_phone = UNSET
+        else:
+            provider_phone = self.provider_phone
 
-        provider_company = self.provider_company
+        provider_company: Union[None, Unset, str]
+        if isinstance(self.provider_company, Unset):
+            provider_company = UNSET
+        else:
+            provider_company = self.provider_company
 
-        qr_code = self.qr_code
+        qr_code: Union[None, Unset, str]
+        if isinstance(self.qr_code, Unset):
+            qr_code = UNSET
+        else:
+            qr_code = self.qr_code
 
-        bar_code = self.bar_code
+        bar_code: Union[None, Unset, str]
+        if isinstance(self.bar_code, Unset):
+            bar_code = UNSET
+        else:
+            bar_code = self.bar_code
 
-        bar_code_string = self.bar_code_string
+        bar_code_string: Union[None, Unset, str]
+        if isinstance(self.bar_code_string, Unset):
+            bar_code_string = UNSET
+        else:
+            bar_code_string = self.bar_code_string
 
-        owner_company_id = self.owner_company_id
+        owner_company_id: Union[None, Unset, int]
+        if isinstance(self.owner_company_id, Unset):
+            owner_company_id = UNSET
+        else:
+            owner_company_id = self.owner_company_id
 
-        owner_company_name = self.owner_company_name
+        owner_company_name: Union[None, Unset, str]
+        if isinstance(self.owner_company_name, Unset):
+            owner_company_name = UNSET
+        else:
+            owner_company_name = self.owner_company_name
 
-        as_found_result = self.as_found_result
+        as_found_result: Union[None, Unset, int]
+        if isinstance(self.as_found_result, Unset):
+            as_found_result = UNSET
+        else:
+            as_found_result = self.as_found_result
 
-        as_left_result = self.as_left_result
+        as_left_result: Union[None, Unset, int]
+        if isinstance(self.as_left_result, Unset):
+            as_left_result = UNSET
+        else:
+            as_left_result = self.as_left_result
 
-        asset_tag_change = self.asset_tag_change
+        asset_tag_change: Union[None, Unset, str]
+        if isinstance(self.asset_tag_change, Unset):
+            asset_tag_change = UNSET
+        else:
+            asset_tag_change = self.asset_tag_change
 
-        asset_user_change = self.asset_user_change
+        asset_user_change: Union[None, Unset, str]
+        if isinstance(self.asset_user_change, Unset):
+            asset_user_change = UNSET
+        else:
+            asset_user_change = self.asset_user_change
 
         due_date: Union[None, Unset, str]
         if isinstance(self.due_date, Unset):
@@ -242,25 +302,65 @@ class QualerApiModelsReportDatasetsToAssetSummaryResponse:
         else:
             due_date = self.due_date
 
-        parts_charge = self.parts_charge
+        parts_charge: Union[None, Unset, float]
+        if isinstance(self.parts_charge, Unset):
+            parts_charge = UNSET
+        else:
+            parts_charge = self.parts_charge
 
-        parts_charge_before_discount = self.parts_charge_before_discount
+        parts_charge_before_discount: Union[None, Unset, float]
+        if isinstance(self.parts_charge_before_discount, Unset):
+            parts_charge_before_discount = UNSET
+        else:
+            parts_charge_before_discount = self.parts_charge_before_discount
 
-        service_charge = self.service_charge
+        service_charge: Union[None, Unset, float]
+        if isinstance(self.service_charge, Unset):
+            service_charge = UNSET
+        else:
+            service_charge = self.service_charge
 
-        repairs_charge = self.repairs_charge
+        repairs_charge: Union[None, Unset, float]
+        if isinstance(self.repairs_charge, Unset):
+            repairs_charge = UNSET
+        else:
+            repairs_charge = self.repairs_charge
 
-        segment_name = self.segment_name
+        segment_name: Union[None, Unset, str]
+        if isinstance(self.segment_name, Unset):
+            segment_name = UNSET
+        else:
+            segment_name = self.segment_name
 
-        schedule_name = self.schedule_name
+        schedule_name: Union[None, Unset, str]
+        if isinstance(self.schedule_name, Unset):
+            schedule_name = UNSET
+        else:
+            schedule_name = self.schedule_name
 
-        next_segment_name = self.next_segment_name
+        next_segment_name: Union[None, Unset, str]
+        if isinstance(self.next_segment_name, Unset):
+            next_segment_name = UNSET
+        else:
+            next_segment_name = self.next_segment_name
 
-        client_id = self.client_id
+        client_id: Union[None, Unset, int]
+        if isinstance(self.client_id, Unset):
+            client_id = UNSET
+        else:
+            client_id = self.client_id
 
-        interval_length = self.interval_length
+        interval_length: Union[None, Unset, int]
+        if isinstance(self.interval_length, Unset):
+            interval_length = UNSET
+        else:
+            interval_length = self.interval_length
 
-        interval_cycle = self.interval_cycle
+        interval_cycle: Union[None, Unset, str]
+        if isinstance(self.interval_cycle, Unset):
+            interval_cycle = UNSET
+        else:
+            interval_cycle = self.interval_cycle
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -475,35 +575,146 @@ class QualerApiModelsReportDatasetsToAssetSummaryResponse:
 
         asset_id = d.pop("AssetId", UNSET)
 
-        result_status = d.pop("ResultStatus", UNSET)
+        def _parse_result_status(data: object) -> Union[None, Unset, int]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, int], data)
 
-        serial_number_change = d.pop("SerialNumberChange", UNSET)
+        result_status = _parse_result_status(d.pop("ResultStatus", UNSET))
 
-        provider_technician = d.pop("ProviderTechnician", UNSET)
+        def _parse_serial_number_change(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        provider_technician_alias = d.pop("ProviderTechnicianAlias", UNSET)
+        serial_number_change = _parse_serial_number_change(
+            d.pop("SerialNumberChange", UNSET)
+        )
 
-        provider_phone = d.pop("ProviderPhone", UNSET)
+        def _parse_provider_technician(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        provider_company = d.pop("ProviderCompany", UNSET)
+        provider_technician = _parse_provider_technician(
+            d.pop("ProviderTechnician", UNSET)
+        )
 
-        qr_code = d.pop("QrCode", UNSET)
+        def _parse_provider_technician_alias(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        bar_code = d.pop("BarCode", UNSET)
+        provider_technician_alias = _parse_provider_technician_alias(
+            d.pop("ProviderTechnicianAlias", UNSET)
+        )
 
-        bar_code_string = d.pop("BarCodeString", UNSET)
+        def _parse_provider_phone(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        owner_company_id = d.pop("OwnerCompanyId", UNSET)
+        provider_phone = _parse_provider_phone(d.pop("ProviderPhone", UNSET))
 
-        owner_company_name = d.pop("OwnerCompanyName", UNSET)
+        def _parse_provider_company(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        as_found_result = d.pop("AsFoundResult", UNSET)
+        provider_company = _parse_provider_company(d.pop("ProviderCompany", UNSET))
 
-        as_left_result = d.pop("AsLeftResult", UNSET)
+        def _parse_qr_code(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        asset_tag_change = d.pop("AssetTagChange", UNSET)
+        qr_code = _parse_qr_code(d.pop("QrCode", UNSET))
 
-        asset_user_change = d.pop("AssetUserChange", UNSET)
+        def _parse_bar_code(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        bar_code = _parse_bar_code(d.pop("BarCode", UNSET))
+
+        def _parse_bar_code_string(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        bar_code_string = _parse_bar_code_string(d.pop("BarCodeString", UNSET))
+
+        def _parse_owner_company_id(data: object) -> Union[None, Unset, int]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, int], data)
+
+        owner_company_id = _parse_owner_company_id(d.pop("OwnerCompanyId", UNSET))
+
+        def _parse_owner_company_name(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        owner_company_name = _parse_owner_company_name(d.pop("OwnerCompanyName", UNSET))
+
+        def _parse_as_found_result(data: object) -> Union[None, Unset, int]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, int], data)
+
+        as_found_result = _parse_as_found_result(d.pop("AsFoundResult", UNSET))
+
+        def _parse_as_left_result(data: object) -> Union[None, Unset, int]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, int], data)
+
+        as_left_result = _parse_as_left_result(d.pop("AsLeftResult", UNSET))
+
+        def _parse_asset_tag_change(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        asset_tag_change = _parse_asset_tag_change(d.pop("AssetTagChange", UNSET))
+
+        def _parse_asset_user_change(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        asset_user_change = _parse_asset_user_change(d.pop("AssetUserChange", UNSET))
 
         def _parse_due_date(data: object) -> Union[None, Unset, datetime.datetime]:
             if data is None:
@@ -522,25 +733,99 @@ class QualerApiModelsReportDatasetsToAssetSummaryResponse:
 
         due_date = _parse_due_date(d.pop("DueDate", UNSET))
 
-        parts_charge = d.pop("PartsCharge", UNSET)
+        def _parse_parts_charge(data: object) -> Union[None, Unset, float]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, float], data)
 
-        parts_charge_before_discount = d.pop("PartsChargeBeforeDiscount", UNSET)
+        parts_charge = _parse_parts_charge(d.pop("PartsCharge", UNSET))
 
-        service_charge = d.pop("ServiceCharge", UNSET)
+        def _parse_parts_charge_before_discount(
+            data: object,
+        ) -> Union[None, Unset, float]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, float], data)
 
-        repairs_charge = d.pop("RepairsCharge", UNSET)
+        parts_charge_before_discount = _parse_parts_charge_before_discount(
+            d.pop("PartsChargeBeforeDiscount", UNSET)
+        )
 
-        segment_name = d.pop("SegmentName", UNSET)
+        def _parse_service_charge(data: object) -> Union[None, Unset, float]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, float], data)
 
-        schedule_name = d.pop("ScheduleName", UNSET)
+        service_charge = _parse_service_charge(d.pop("ServiceCharge", UNSET))
 
-        next_segment_name = d.pop("NextSegmentName", UNSET)
+        def _parse_repairs_charge(data: object) -> Union[None, Unset, float]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, float], data)
 
-        client_id = d.pop("ClientId", UNSET)
+        repairs_charge = _parse_repairs_charge(d.pop("RepairsCharge", UNSET))
 
-        interval_length = d.pop("IntervalLength", UNSET)
+        def _parse_segment_name(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
 
-        interval_cycle = d.pop("IntervalCycle", UNSET)
+        segment_name = _parse_segment_name(d.pop("SegmentName", UNSET))
+
+        def _parse_schedule_name(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        schedule_name = _parse_schedule_name(d.pop("ScheduleName", UNSET))
+
+        def _parse_next_segment_name(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        next_segment_name = _parse_next_segment_name(d.pop("NextSegmentName", UNSET))
+
+        def _parse_client_id(data: object) -> Union[None, Unset, int]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, int], data)
+
+        client_id = _parse_client_id(d.pop("ClientId", UNSET))
+
+        def _parse_interval_length(data: object) -> Union[None, Unset, int]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, int], data)
+
+        interval_length = _parse_interval_length(d.pop("IntervalLength", UNSET))
+
+        def _parse_interval_cycle(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        interval_cycle = _parse_interval_cycle(d.pop("IntervalCycle", UNSET))
 
         qualer_api_models_report_datasets_to_asset_summary_response = cls(
             service_order_number=service_order_number,

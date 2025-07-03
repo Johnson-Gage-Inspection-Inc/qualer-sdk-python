@@ -26,9 +26,9 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
         custom_order_number (Union[Unset, str]):
         order_item_number (Union[Unset, int]):
         certificate_number (Union[Unset, str]):
-        result_status (Union[Unset, str]):
+        result_status (Union[None, Unset, str]):
         as_found_result (Union[Unset, str]):
-        as_left_result (Union[Unset, str]):
+        as_left_result (Union[None, Unset, str]):
         service_date (Union[None, Unset, datetime.datetime]):
         serial_number (Union[Unset, str]):
         asset_tag (Union[Unset, str]):
@@ -63,9 +63,9 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
     custom_order_number: Union[Unset, str] = UNSET
     order_item_number: Union[Unset, int] = UNSET
     certificate_number: Union[Unset, str] = UNSET
-    result_status: Union[Unset, str] = UNSET
+    result_status: Union[None, Unset, str] = UNSET
     as_found_result: Union[Unset, str] = UNSET
-    as_left_result: Union[Unset, str] = UNSET
+    as_left_result: Union[None, Unset, str] = UNSET
     service_date: Union[None, Unset, datetime.datetime] = UNSET
     serial_number: Union[Unset, str] = UNSET
     asset_tag: Union[Unset, str] = UNSET
@@ -110,11 +110,19 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
 
         certificate_number = self.certificate_number
 
-        result_status = self.result_status
+        result_status: Union[None, Unset, str]
+        if isinstance(self.result_status, Unset):
+            result_status = UNSET
+        else:
+            result_status = self.result_status
 
         as_found_result = self.as_found_result
 
-        as_left_result = self.as_left_result
+        as_left_result: Union[None, Unset, str]
+        if isinstance(self.as_left_result, Unset):
+            as_left_result = UNSET
+        else:
+            as_left_result = self.as_left_result
 
         service_date: Union[None, Unset, str]
         if isinstance(self.service_date, Unset):
@@ -282,11 +290,25 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
 
         certificate_number = d.pop("CertificateNumber", UNSET)
 
-        result_status = d.pop("ResultStatus", UNSET)
+        def _parse_result_status(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        result_status = _parse_result_status(d.pop("ResultStatus", UNSET))
 
         as_found_result = d.pop("AsFoundResult", UNSET)
 
-        as_left_result = d.pop("AsLeftResult", UNSET)
+        def _parse_as_left_result(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        as_left_result = _parse_as_left_result(d.pop("AsLeftResult", UNSET))
 
         def _parse_service_date(data: object) -> Union[None, Unset, datetime.datetime]:
             if data is None:

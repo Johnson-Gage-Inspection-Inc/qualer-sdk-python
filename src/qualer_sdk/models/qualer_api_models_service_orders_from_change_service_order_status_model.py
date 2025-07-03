@@ -67,6 +67,8 @@ class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel:
         ]
         if isinstance(_service_order_status, Unset):
             service_order_status = UNSET
+        elif _service_order_status is None:
+            service_order_status = None
         else:
             service_order_status = QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus(
                 _service_order_status

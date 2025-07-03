@@ -576,7 +576,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_cv_raw (Union[Unset, float]):
         as_left_delta (Union[Unset, float]):
         as_left_range (Union[Unset, float]):
-        as_left_result (Union[Unset, int]):
+        as_left_result (Union[None, Unset, int]):
         as_left_range_result (Union[Unset, bool]):
         as_left_delta_result (Union[Unset, bool]):
         as_left_min_result (Union[Unset, bool]):
@@ -1226,7 +1226,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_left_cv_raw: Union[Unset, float] = UNSET
     as_left_delta: Union[Unset, float] = UNSET
     as_left_range: Union[Unset, float] = UNSET
-    as_left_result: Union[Unset, int] = UNSET
+    as_left_result: Union[None, Unset, int] = UNSET
     as_left_range_result: Union[Unset, bool] = UNSET
     as_left_delta_result: Union[Unset, bool] = UNSET
     as_left_min_result: Union[Unset, bool] = UNSET
@@ -2542,7 +2542,11 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_range = self.as_left_range
 
-        as_left_result = self.as_left_result
+        as_left_result: Union[None, Unset, int]
+        if isinstance(self.as_left_result, Unset):
+            as_left_result = UNSET
+        else:
+            as_left_result = self.as_left_result
 
         as_left_range_result = self.as_left_range_result
 
@@ -5467,7 +5471,14 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_range = d.pop("AsLeftRange", UNSET)
 
-        as_left_result = d.pop("AsLeftResult", UNSET)
+        def _parse_as_left_result(data: object) -> Union[None, Unset, int]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, int], data)
+
+        as_left_result = _parse_as_left_result(d.pop("AsLeftResult", UNSET))
 
         as_left_range_result = d.pop("AsLeftRangeResult", UNSET)
 
