@@ -149,11 +149,11 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         if not isinstance(self.specification_mode, Unset):
             specification_mode = self.specification_mode.value
 
-        tolerance_mode: Union[Unset, str] = UNSET
+        tolerance_mode: Union[Unset, int] = UNSET
         if not isinstance(self.tolerance_mode, Unset):
             tolerance_mode = self.tolerance_mode.value
 
-        tolerance_unit: Union[Unset, str] = UNSET
+        tolerance_unit: Union[Unset, int] = UNSET
         if not isinstance(self.tolerance_unit, Unset):
             tolerance_unit = self.tolerance_unit.value
 

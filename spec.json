@@ -8746,7 +8746,8 @@
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceTask": {
           "type": "string"
@@ -9119,19 +9120,31 @@
         },
         "ToleranceMode": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
             "Symmetric",
             "Asymmetric",
             "Range"
-          ],
-          "type": "string"
+          ]
         },
         "ToleranceUnit": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
             "Percentage",
             "UnitOfMeasure",
             "Ppm"
-          ],
-          "type": "string"
+          ]
         },
         "PrecisionType": {
           "type": "string"
@@ -9310,7 +9323,8 @@
         },
         "LastModifiedOnUtc": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         }
       }
     },
@@ -9319,7 +9333,8 @@
       "properties": {
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
@@ -10131,10 +10146,12 @@
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "LastService": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
@@ -11335,10 +11352,12 @@
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "LastService": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
@@ -11847,11 +11866,13 @@
       "properties": {
         "LastDueDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
@@ -11859,7 +11880,8 @@
           "x-nullable": true
         },
         "NextServiceTask": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "CompanyId": {
           "format": "int32",
@@ -14259,7 +14281,8 @@
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
@@ -14267,10 +14290,12 @@
           "x-nullable": true
         },
         "CertificateNumber": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "CalibratedBy": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ToolName": {
           "type": "string"
@@ -15770,19 +15795,31 @@
         },
         "ToleranceMode": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
             "Symmetric",
             "Asymmetric",
             "Range"
-          ],
-          "type": "string"
+          ]
         },
         "ToleranceUnit": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
             "Percentage",
             "UnitOfMeasure",
             "Ppm"
-          ],
-          "type": "string"
+          ]
         },
         "ToleranceString": {
           "type": "string"
@@ -19055,10 +19092,32 @@
           "type": "string"
         },
         "ToleranceMode": {
-          "type": "string"
+          "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
+            "Symmetric",
+            "Asymmetric",
+            "Range"
+          ]
         },
         "ToleranceUnit": {
-          "type": "string"
+          "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
+            "Percentage",
+            "UnitOfMeasure",
+            "Ppm"
+          ]
         },
         "PrecisionType": {
           "type": "string"
@@ -19237,7 +19296,8 @@
         },
         "LastModifiedOnUtc": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         }
       }
     },
@@ -19255,7 +19315,8 @@
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
@@ -19498,19 +19559,31 @@
         },
         "ToleranceMode": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
             "Symmetric",
             "Asymmetric",
             "Range"
-          ],
-          "type": "string"
+          ]
         },
         "ToleranceUnit": {
           "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
             "Percentage",
             "UnitOfMeasure",
             "Ppm"
-          ],
-          "type": "string"
+          ]
         },
         "Measurements": {
           "type": "array",
@@ -19693,7 +19766,8 @@
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
@@ -19891,10 +19965,32 @@
           "type": "string"
         },
         "ToleranceMode": {
-          "type": "string"
+          "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
+            "Symmetric",
+            "Asymmetric",
+            "Range"
+          ]
         },
         "ToleranceUnit": {
-          "type": "string"
+          "enum": [
+            0,
+            1,
+            2
+          ],
+          "type": "integer",
+          "format": "int32",
+          "x-enumNames": [
+            "Percentage",
+            "UnitOfMeasure",
+            "Ppm"
+          ]
         },
         "PrecisionType": {
           "type": "string"
@@ -20047,7 +20143,8 @@
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",

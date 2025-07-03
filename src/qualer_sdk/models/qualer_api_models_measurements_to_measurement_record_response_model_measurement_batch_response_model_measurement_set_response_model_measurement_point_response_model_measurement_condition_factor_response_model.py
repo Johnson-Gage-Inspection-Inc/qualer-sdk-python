@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -22,14 +22,14 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         factor_name (Union[Unset, str]):
         factor_value (Union[Unset, float]):
         factor_uom (Union[Unset, str]):
-        last_modified_on_utc (Union[Unset, datetime.datetime]):
+        last_modified_on_utc (Union[None, Unset, datetime.datetime]):
     """
 
     factor_id: Union[Unset, str] = UNSET
     factor_name: Union[Unset, str] = UNSET
     factor_value: Union[Unset, float] = UNSET
     factor_uom: Union[Unset, str] = UNSET
-    last_modified_on_utc: Union[Unset, datetime.datetime] = UNSET
+    last_modified_on_utc: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -41,9 +41,13 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
 
         factor_uom = self.factor_uom
 
-        last_modified_on_utc: Union[Unset, str] = UNSET
-        if not isinstance(self.last_modified_on_utc, Unset):
+        last_modified_on_utc: Union[None, Unset, str]
+        if isinstance(self.last_modified_on_utc, Unset):
+            last_modified_on_utc = UNSET
+        elif isinstance(self.last_modified_on_utc, datetime.datetime):
             last_modified_on_utc = self.last_modified_on_utc.isoformat()
+        else:
+            last_modified_on_utc = self.last_modified_on_utc
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -72,12 +76,26 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
 
         factor_uom = d.pop("FactorUom", UNSET)
 
-        _last_modified_on_utc = d.pop("LastModifiedOnUtc", UNSET)
-        last_modified_on_utc: Union[Unset, datetime.datetime]
-        if isinstance(_last_modified_on_utc, Unset):
-            last_modified_on_utc = UNSET
-        else:
-            last_modified_on_utc = isoparse(_last_modified_on_utc)
+        def _parse_last_modified_on_utc(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                last_modified_on_utc_type_0 = isoparse(data)
+
+                return last_modified_on_utc_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        last_modified_on_utc = _parse_last_modified_on_utc(
+            d.pop("LastModifiedOnUtc", UNSET)
+        )
 
         qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model_measurement_condition_factor_response_model = cls(
             factor_id=factor_id,

@@ -1,12 +1,10 @@
-from enum import Enum
+from enum import IntEnum
 
 
-class QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceUnit(
-    str, Enum
-):
-    PERCENTAGE = "Percentage"
-    PPM = "Ppm"
-    UNITOFMEASURE = "UnitOfMeasure"
+class QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceUnit(IntEnum):
+    VALUE_0 = 0
+    VALUE_1 = 1
+    VALUE_2 = 2
 
     def __str__(self) -> str:
         return str(self.value)

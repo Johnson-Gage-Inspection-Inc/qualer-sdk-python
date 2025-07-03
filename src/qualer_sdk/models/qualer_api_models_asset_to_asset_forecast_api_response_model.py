@@ -18,10 +18,10 @@ T = TypeVar("T", bound="QualerApiModelsAssetToAssetForecastApiResponseModel")
 class QualerApiModelsAssetToAssetForecastApiResponseModel:
     """
     Attributes:
-        last_due_date (Union[Unset, datetime.datetime]):
-        last_service_date (Union[Unset, datetime.datetime]):
+        last_due_date (Union[None, Unset, datetime.datetime]):
+        last_service_date (Union[None, Unset, datetime.datetime]):
         next_service_date (Union[None, Unset, datetime.datetime]):
-        next_service_task (Union[Unset, str]):
+        next_service_task (Union[None, Unset, str]):
         company_id (Union[Unset, int]):
         asset_id (Union[Unset, int]):
         serial_number (Union[Unset, str]):
@@ -72,10 +72,10 @@ class QualerApiModelsAssetToAssetForecastApiResponseModel:
         composite_child_count (Union[Unset, int]):
     """
 
-    last_due_date: Union[Unset, datetime.datetime] = UNSET
-    last_service_date: Union[Unset, datetime.datetime] = UNSET
+    last_due_date: Union[None, Unset, datetime.datetime] = UNSET
+    last_service_date: Union[None, Unset, datetime.datetime] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    next_service_task: Union[Unset, str] = UNSET
+    next_service_task: Union[None, Unset, str] = UNSET
     company_id: Union[Unset, int] = UNSET
     asset_id: Union[Unset, int] = UNSET
     serial_number: Union[Unset, str] = UNSET
@@ -129,13 +129,21 @@ class QualerApiModelsAssetToAssetForecastApiResponseModel:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        last_due_date: Union[Unset, str] = UNSET
-        if not isinstance(self.last_due_date, Unset):
+        last_due_date: Union[None, Unset, str]
+        if isinstance(self.last_due_date, Unset):
+            last_due_date = UNSET
+        elif isinstance(self.last_due_date, datetime.datetime):
             last_due_date = self.last_due_date.isoformat()
+        else:
+            last_due_date = self.last_due_date
 
-        last_service_date: Union[Unset, str] = UNSET
-        if not isinstance(self.last_service_date, Unset):
+        last_service_date: Union[None, Unset, str]
+        if isinstance(self.last_service_date, Unset):
+            last_service_date = UNSET
+        elif isinstance(self.last_service_date, datetime.datetime):
             last_service_date = self.last_service_date.isoformat()
+        else:
+            last_service_date = self.last_service_date
 
         next_service_date: Union[None, Unset, str]
         if isinstance(self.next_service_date, Unset):
@@ -145,7 +153,11 @@ class QualerApiModelsAssetToAssetForecastApiResponseModel:
         else:
             next_service_date = self.next_service_date
 
-        next_service_task = self.next_service_task
+        next_service_task: Union[None, Unset, str]
+        if isinstance(self.next_service_task, Unset):
+            next_service_task = UNSET
+        else:
+            next_service_task = self.next_service_task
 
         company_id = self.company_id
 
@@ -376,19 +388,42 @@ class QualerApiModelsAssetToAssetForecastApiResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        _last_due_date = d.pop("LastDueDate", UNSET)
-        last_due_date: Union[Unset, datetime.datetime]
-        if isinstance(_last_due_date, Unset):
-            last_due_date = UNSET
-        else:
-            last_due_date = isoparse(_last_due_date)
 
-        _last_service_date = d.pop("LastServiceDate", UNSET)
-        last_service_date: Union[Unset, datetime.datetime]
-        if isinstance(_last_service_date, Unset):
-            last_service_date = UNSET
-        else:
-            last_service_date = isoparse(_last_service_date)
+        def _parse_last_due_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                last_due_date_type_0 = isoparse(data)
+
+                return last_due_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        last_due_date = _parse_last_due_date(d.pop("LastDueDate", UNSET))
+
+        def _parse_last_service_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                last_service_date_type_0 = isoparse(data)
+
+                return last_service_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        last_service_date = _parse_last_service_date(d.pop("LastServiceDate", UNSET))
 
         def _parse_next_service_date(
             data: object,
@@ -409,7 +444,14 @@ class QualerApiModelsAssetToAssetForecastApiResponseModel:
 
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", UNSET))
 
-        next_service_task = d.pop("NextServiceTask", UNSET)
+        def _parse_next_service_task(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        next_service_task = _parse_next_service_task(d.pop("NextServiceTask", UNSET))
 
         company_id = d.pop("CompanyId", UNSET)
 

@@ -7,6 +7,12 @@ from attrs import field as _attrs_field
 from ..models.qualer_api_models_measurements_from_create_measurement_point_model_specification_mode import (
     QualerApiModelsMeasurementsFromCreateMeasurementPointModelSpecificationMode,
 )
+from ..models.qualer_api_models_measurements_from_create_measurement_point_model_tolerance_mode import (
+    QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceMode,
+)
+from ..models.qualer_api_models_measurements_from_create_measurement_point_model_tolerance_unit import (
+    QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceUnit,
+)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -36,8 +42,8 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
         range_max (Union[Unset, float]):
         specification_mode (Union[Unset, QualerApiModelsMeasurementsFromCreateMeasurementPointModelSpecificationMode]):
         tolerance_type (Union[Unset, str]):
-        tolerance_mode (Union[Unset, str]):
-        tolerance_unit (Union[Unset, str]):
+        tolerance_mode (Union[Unset, QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceMode]):
+        tolerance_unit (Union[Unset, QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceUnit]):
         precision_type (Union[Unset, str]):
         readings (Union[Unset, int]):
         channels_type (Union[Unset, str]):
@@ -69,8 +75,12 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
         QualerApiModelsMeasurementsFromCreateMeasurementPointModelSpecificationMode,
     ] = UNSET
     tolerance_type: Union[Unset, str] = UNSET
-    tolerance_mode: Union[Unset, str] = UNSET
-    tolerance_unit: Union[Unset, str] = UNSET
+    tolerance_mode: Union[
+        Unset, QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceMode
+    ] = UNSET
+    tolerance_unit: Union[
+        Unset, QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceUnit
+    ] = UNSET
     precision_type: Union[Unset, str] = UNSET
     readings: Union[Unset, int] = UNSET
     channels_type: Union[Unset, str] = UNSET
@@ -119,9 +129,13 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
 
         tolerance_type = self.tolerance_type
 
-        tolerance_mode = self.tolerance_mode
+        tolerance_mode: Union[Unset, int] = UNSET
+        if not isinstance(self.tolerance_mode, Unset):
+            tolerance_mode = self.tolerance_mode.value
 
-        tolerance_unit = self.tolerance_unit
+        tolerance_unit: Union[Unset, int] = UNSET
+        if not isinstance(self.tolerance_unit, Unset):
+            tolerance_unit = self.tolerance_unit.value
 
         precision_type = self.precision_type
 
@@ -274,9 +288,33 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
 
         tolerance_type = d.pop("ToleranceType", UNSET)
 
-        tolerance_mode = d.pop("ToleranceMode", UNSET)
+        _tolerance_mode = d.pop("ToleranceMode", UNSET)
+        tolerance_mode: Union[
+            Unset,
+            QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceMode,
+        ]
+        if isinstance(_tolerance_mode, Unset):
+            tolerance_mode = UNSET
+        else:
+            tolerance_mode = (
+                QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceMode(
+                    _tolerance_mode
+                )
+            )
 
-        tolerance_unit = d.pop("ToleranceUnit", UNSET)
+        _tolerance_unit = d.pop("ToleranceUnit", UNSET)
+        tolerance_unit: Union[
+            Unset,
+            QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceUnit,
+        ]
+        if isinstance(_tolerance_unit, Unset):
+            tolerance_unit = UNSET
+        else:
+            tolerance_unit = (
+                QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceUnit(
+                    _tolerance_unit
+                )
+            )
 
         precision_type = d.pop("PrecisionType", UNSET)
 
