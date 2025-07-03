@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -28,7 +28,7 @@ class QualerApiModelsReportDatasetsToServiceOrderChargeResponse:
         time_spent_in_minutes (Union[Unset, float]):
         is_hourly_pricing (Union[Unset, bool]):
         created_by (Union[Unset, str]):
-        charge_date (Union[Unset, datetime.datetime]):
+        charge_date (Union[None, Unset, datetime.datetime]):
     """
 
     service_order_id: Union[Unset, int] = UNSET
@@ -44,7 +44,7 @@ class QualerApiModelsReportDatasetsToServiceOrderChargeResponse:
     time_spent_in_minutes: Union[Unset, float] = UNSET
     is_hourly_pricing: Union[Unset, bool] = UNSET
     created_by: Union[Unset, str] = UNSET
-    charge_date: Union[Unset, datetime.datetime] = UNSET
+    charge_date: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -74,9 +74,13 @@ class QualerApiModelsReportDatasetsToServiceOrderChargeResponse:
 
         created_by = self.created_by
 
-        charge_date: Union[Unset, str] = UNSET
-        if not isinstance(self.charge_date, Unset):
+        charge_date: Union[None, Unset, str]
+        if isinstance(self.charge_date, Unset):
+            charge_date = UNSET
+        elif isinstance(self.charge_date, datetime.datetime):
             charge_date = self.charge_date.isoformat()
+        else:
+            charge_date = self.charge_date
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -141,12 +145,22 @@ class QualerApiModelsReportDatasetsToServiceOrderChargeResponse:
 
         created_by = d.pop("CreatedBy", UNSET)
 
-        _charge_date = d.pop("ChargeDate", UNSET)
-        charge_date: Union[Unset, datetime.datetime]
-        if isinstance(_charge_date, Unset):
-            charge_date = UNSET
-        else:
-            charge_date = isoparse(_charge_date)
+        def _parse_charge_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                charge_date_type_0 = isoparse(data)
+
+                return charge_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        charge_date = _parse_charge_date(d.pop("ChargeDate", UNSET))
 
         qualer_api_models_report_datasets_to_service_order_charge_response = cls(
             service_order_id=service_order_id,

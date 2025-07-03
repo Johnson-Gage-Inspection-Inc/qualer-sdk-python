@@ -87,14 +87,14 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         department_name (Union[Unset, str]):
         custodian_name (Union[Unset, str]):
         warranty (Union[Unset, str]):
-        warranty_end (Union[Unset, datetime.datetime]):
+        warranty_end (Union[None, Unset, datetime.datetime]):
         is_warranty_expired (Union[Unset, bool]):
         depreciation_method (Union[Unset, int]):
         depreciation_basis (Union[Unset, float]):
         salvage_value (Union[Unset, float]):
         total_service_cost (Union[Unset, float]):
         life_span_months (Union[Unset, int]):
-        due_for_replacement_date (Union[Unset, datetime.datetime]):
+        due_for_replacement_date (Union[None, Unset, datetime.datetime]):
         depreciation_proc (Union[Unset, float]):
         purchase_date (Union[None, Unset, datetime.datetime]):
         purchase_cost (Union[Unset, float]):
@@ -123,8 +123,8 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         vendor (Union[Unset, str]):
         technician (Union[Unset, str]):
         certificate_number (Union[Unset, str]):
-        due_trigger_date (Union[Unset, datetime.datetime]):
-        past_due_trigger_date (Union[Unset, datetime.datetime]):
+        due_trigger_date (Union[None, Unset, datetime.datetime]):
+        past_due_trigger_date (Union[None, Unset, datetime.datetime]):
         due_status (Union[Unset, QualerApiModelsAssetToClientAssetManagerResponseModelDueStatus]):
         work_status (Union[Unset, QualerApiModelsAssetToClientAssetManagerResponseModelWorkStatus]):
         service_tag (Union[Unset, str]):
@@ -186,14 +186,14 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
     department_name: Union[Unset, str] = UNSET
     custodian_name: Union[Unset, str] = UNSET
     warranty: Union[Unset, str] = UNSET
-    warranty_end: Union[Unset, datetime.datetime] = UNSET
+    warranty_end: Union[None, Unset, datetime.datetime] = UNSET
     is_warranty_expired: Union[Unset, bool] = UNSET
     depreciation_method: Union[Unset, int] = UNSET
     depreciation_basis: Union[Unset, float] = UNSET
     salvage_value: Union[Unset, float] = UNSET
     total_service_cost: Union[Unset, float] = UNSET
     life_span_months: Union[Unset, int] = UNSET
-    due_for_replacement_date: Union[Unset, datetime.datetime] = UNSET
+    due_for_replacement_date: Union[None, Unset, datetime.datetime] = UNSET
     depreciation_proc: Union[Unset, float] = UNSET
     purchase_date: Union[None, Unset, datetime.datetime] = UNSET
     purchase_cost: Union[Unset, float] = UNSET
@@ -230,8 +230,8 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
     vendor: Union[Unset, str] = UNSET
     technician: Union[Unset, str] = UNSET
     certificate_number: Union[Unset, str] = UNSET
-    due_trigger_date: Union[Unset, datetime.datetime] = UNSET
-    past_due_trigger_date: Union[Unset, datetime.datetime] = UNSET
+    due_trigger_date: Union[None, Unset, datetime.datetime] = UNSET
+    past_due_trigger_date: Union[None, Unset, datetime.datetime] = UNSET
     due_status: Union[
         Unset, QualerApiModelsAssetToClientAssetManagerResponseModelDueStatus
     ] = UNSET
@@ -358,9 +358,13 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         warranty = self.warranty
 
-        warranty_end: Union[Unset, str] = UNSET
-        if not isinstance(self.warranty_end, Unset):
+        warranty_end: Union[None, Unset, str]
+        if isinstance(self.warranty_end, Unset):
+            warranty_end = UNSET
+        elif isinstance(self.warranty_end, datetime.datetime):
             warranty_end = self.warranty_end.isoformat()
+        else:
+            warranty_end = self.warranty_end
 
         is_warranty_expired = self.is_warranty_expired
 
@@ -374,9 +378,13 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         life_span_months = self.life_span_months
 
-        due_for_replacement_date: Union[Unset, str] = UNSET
-        if not isinstance(self.due_for_replacement_date, Unset):
+        due_for_replacement_date: Union[None, Unset, str]
+        if isinstance(self.due_for_replacement_date, Unset):
+            due_for_replacement_date = UNSET
+        elif isinstance(self.due_for_replacement_date, datetime.datetime):
             due_for_replacement_date = self.due_for_replacement_date.isoformat()
+        else:
+            due_for_replacement_date = self.due_for_replacement_date
 
         depreciation_proc = self.depreciation_proc
 
@@ -464,13 +472,21 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         certificate_number = self.certificate_number
 
-        due_trigger_date: Union[Unset, str] = UNSET
-        if not isinstance(self.due_trigger_date, Unset):
+        due_trigger_date: Union[None, Unset, str]
+        if isinstance(self.due_trigger_date, Unset):
+            due_trigger_date = UNSET
+        elif isinstance(self.due_trigger_date, datetime.datetime):
             due_trigger_date = self.due_trigger_date.isoformat()
+        else:
+            due_trigger_date = self.due_trigger_date
 
-        past_due_trigger_date: Union[Unset, str] = UNSET
-        if not isinstance(self.past_due_trigger_date, Unset):
+        past_due_trigger_date: Union[None, Unset, str]
+        if isinstance(self.past_due_trigger_date, Unset):
+            past_due_trigger_date = UNSET
+        elif isinstance(self.past_due_trigger_date, datetime.datetime):
             past_due_trigger_date = self.past_due_trigger_date.isoformat()
+        else:
+            past_due_trigger_date = self.past_due_trigger_date
 
         due_status: Union[Unset, str] = UNSET
         if not isinstance(self.due_status, Unset):
@@ -835,12 +851,22 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         warranty = d.pop("Warranty", UNSET)
 
-        _warranty_end = d.pop("WarrantyEnd", UNSET)
-        warranty_end: Union[Unset, datetime.datetime]
-        if isinstance(_warranty_end, Unset):
-            warranty_end = UNSET
-        else:
-            warranty_end = isoparse(_warranty_end)
+        def _parse_warranty_end(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                warranty_end_type_0 = isoparse(data)
+
+                return warranty_end_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        warranty_end = _parse_warranty_end(d.pop("WarrantyEnd", UNSET))
 
         is_warranty_expired = d.pop("IsWarrantyExpired", UNSET)
 
@@ -854,12 +880,26 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         life_span_months = d.pop("LifeSpanMonths", UNSET)
 
-        _due_for_replacement_date = d.pop("DueForReplacementDate", UNSET)
-        due_for_replacement_date: Union[Unset, datetime.datetime]
-        if isinstance(_due_for_replacement_date, Unset):
-            due_for_replacement_date = UNSET
-        else:
-            due_for_replacement_date = isoparse(_due_for_replacement_date)
+        def _parse_due_for_replacement_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                due_for_replacement_date_type_0 = isoparse(data)
+
+                return due_for_replacement_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        due_for_replacement_date = _parse_due_for_replacement_date(
+            d.pop("DueForReplacementDate", UNSET)
+        )
 
         depreciation_proc = d.pop("DepreciationProc", UNSET)
 
@@ -1018,19 +1058,45 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         certificate_number = d.pop("CertificateNumber", UNSET)
 
-        _due_trigger_date = d.pop("DueTriggerDate", UNSET)
-        due_trigger_date: Union[Unset, datetime.datetime]
-        if isinstance(_due_trigger_date, Unset):
-            due_trigger_date = UNSET
-        else:
-            due_trigger_date = isoparse(_due_trigger_date)
+        def _parse_due_trigger_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                due_trigger_date_type_0 = isoparse(data)
 
-        _past_due_trigger_date = d.pop("PastDueTriggerDate", UNSET)
-        past_due_trigger_date: Union[Unset, datetime.datetime]
-        if isinstance(_past_due_trigger_date, Unset):
-            past_due_trigger_date = UNSET
-        else:
-            past_due_trigger_date = isoparse(_past_due_trigger_date)
+                return due_trigger_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        due_trigger_date = _parse_due_trigger_date(d.pop("DueTriggerDate", UNSET))
+
+        def _parse_past_due_trigger_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                past_due_trigger_date_type_0 = isoparse(data)
+
+                return past_due_trigger_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        past_due_trigger_date = _parse_past_due_trigger_date(
+            d.pop("PastDueTriggerDate", UNSET)
+        )
 
         _due_status = d.pop("DueStatus", UNSET)
         due_status: Union[

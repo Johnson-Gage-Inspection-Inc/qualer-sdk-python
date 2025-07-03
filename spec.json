@@ -10038,7 +10038,8 @@
         },
         "WarrantyEnd": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "IsWarrantyExpired": {
           "type": "boolean"
@@ -10065,7 +10066,8 @@
         },
         "DueForReplacementDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DepreciationProc": {
           "format": "double",
@@ -10215,11 +10217,13 @@
         },
         "DueTriggerDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PastDueTriggerDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DueStatus": {
           "enum": [
@@ -11240,7 +11244,8 @@
         },
         "WarrantyEnd": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "IsWarrantyExpired": {
           "type": "boolean"
@@ -11267,7 +11272,8 @@
         },
         "DueForReplacementDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DepreciationProc": {
           "format": "double",
@@ -11429,11 +11435,13 @@
         },
         "DueTriggerDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PastDueTriggerDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DueStatus": {
           "enum": [
@@ -12704,11 +12712,13 @@
         },
         "StartDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "EndDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         }
       }
     },
@@ -13324,7 +13334,8 @@
         },
         "ChargeDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         }
       }
     },
@@ -13530,7 +13541,8 @@
         },
         "EffectiveDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DocumentSection": {
           "type": "string"

@@ -18,7 +18,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         certificate_number (Union[Unset, str]):
         document_number (Union[Unset, str]):
         revision (Union[Unset, str]):
-        effective_date (Union[Unset, datetime.datetime]):
+        effective_date (Union[None, Unset, datetime.datetime]):
         document_section (Union[Unset, str]):
         service_level (Union[Unset, str]):
         service_level_code (Union[Unset, str]):
@@ -159,7 +159,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
     certificate_number: Union[Unset, str] = UNSET
     document_number: Union[Unset, str] = UNSET
     revision: Union[Unset, str] = UNSET
-    effective_date: Union[Unset, datetime.datetime] = UNSET
+    effective_date: Union[None, Unset, datetime.datetime] = UNSET
     document_section: Union[Unset, str] = UNSET
     service_level: Union[Unset, str] = UNSET
     service_level_code: Union[Unset, str] = UNSET
@@ -304,9 +304,13 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
 
         revision = self.revision
 
-        effective_date: Union[Unset, str] = UNSET
-        if not isinstance(self.effective_date, Unset):
+        effective_date: Union[None, Unset, str]
+        if isinstance(self.effective_date, Unset):
+            effective_date = UNSET
+        elif isinstance(self.effective_date, datetime.datetime):
             effective_date = self.effective_date.isoformat()
+        else:
+            effective_date = self.effective_date
 
         document_section = self.document_section
 
@@ -921,12 +925,24 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
 
         revision = d.pop("Revision", UNSET)
 
-        _effective_date = d.pop("EffectiveDate", UNSET)
-        effective_date: Union[Unset, datetime.datetime]
-        if isinstance(_effective_date, Unset):
-            effective_date = UNSET
-        else:
-            effective_date = isoparse(_effective_date)
+        def _parse_effective_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                effective_date_type_0 = isoparse(data)
+
+                return effective_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        effective_date = _parse_effective_date(d.pop("EffectiveDate", UNSET))
 
         document_section = d.pop("DocumentSection", UNSET)
 
