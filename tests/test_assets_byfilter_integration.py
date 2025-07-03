@@ -85,8 +85,8 @@ def test_assets_byfilter_thermocouple_wire_set(authenticated_client):
                 print(f"      Asset Tag: {asset.asset_tag}")
 
                 # Check for date fields that might be None
-                if hasattr(asset, "warranty_start") and asset.warranty:
-                    print(f"      Warranty Start: {asset.warranty}")
+                if hasattr(asset, "warranty") and asset.warranty:
+                    print(f"      Warranty: {asset.warranty}")
                 if hasattr(asset, "warranty_end") and asset.warranty_end:
                     print(f"      Warranty End: {asset.warranty_end}")
                 if hasattr(asset, "purchase_date") and asset.purchase_date:
