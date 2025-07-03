@@ -121,7 +121,7 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
     service_type: Union[Unset, str] = UNSET
     document_number: Union[Unset, str] = UNSET
     document_section: Union[Unset, str] = UNSET
-    work_status: Union[Unset, str] = UNSET
+    work_status: Union[None, Unset, str] = UNSET
     custom_work_status: Union[Unset, str] = UNSET
     is_limited: Union[Unset, bool] = UNSET
     checked_on: Union[None, Unset, datetime.datetime] = UNSET
@@ -224,8 +224,15 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
 
         document_section = self.document_section
 
-        work_status = self.work_status
+        work_status: Union[None, Unset, str]
 
+        if isinstance(self.work_status, Unset):
+
+            work_status = UNSET
+
+        else:
+
+            work_status = self.work_status
         custom_work_status = self.custom_work_status
 
         is_limited = self.is_limited
@@ -354,20 +361,41 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
         if isinstance(self.result_status, Unset):
             result_status = UNSET
         else:
-            result_status = self.result_status
+            result_status: Union[None, Unset, str]
 
+            if isinstance(self.result_status, Unset):
+
+                result_status = UNSET
+
+            else:
+
+                result_status = self.result_status
         as_found_result: Union[None, Unset, str]
         if isinstance(self.as_found_result, Unset):
             as_found_result = UNSET
         else:
-            as_found_result = self.as_found_result
+            as_found_result: Union[None, Unset, str]
 
+            if isinstance(self.as_found_result, Unset):
+
+                as_found_result = UNSET
+
+            else:
+
+                as_found_result = self.as_found_result
         as_left_result: Union[None, Unset, str]
         if isinstance(self.as_left_result, Unset):
             as_left_result = UNSET
         else:
-            as_left_result = self.as_left_result
+            as_left_result: Union[None, Unset, str]
 
+            if isinstance(self.as_left_result, Unset):
+
+                as_left_result = UNSET
+
+            else:
+
+                as_left_result = self.as_left_result
         serial_number: Union[None, Unset, str]
         if isinstance(self.serial_number, Unset):
             serial_number = UNSET

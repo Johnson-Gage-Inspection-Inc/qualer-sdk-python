@@ -168,7 +168,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
     service_charge: Union[Unset, float] = UNSET
     updated_by: Union[Unset, str] = UNSET
     updated_on: Union[Unset, datetime.datetime] = UNSET
-    work_status: Union[Unset, int] = UNSET
+    work_status: Union[None, Unset, int] = UNSET
     custom_work_status: Union[Unset, str] = UNSET
     service_comments: Union[Unset, str] = UNSET
     client_notes: Union[Unset, str] = UNSET
@@ -330,8 +330,15 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         if not isinstance(self.updated_on, Unset):
             updated_on = self.updated_on.isoformat()
 
-        work_status = self.work_status
+        work_status: Union[None, Unset, str]
 
+        if isinstance(self.work_status, Unset):
+
+            work_status = UNSET
+
+        else:
+
+            work_status = self.work_status
         custom_work_status = self.custom_work_status
 
         service_comments = self.service_comments
@@ -414,8 +421,15 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         if isinstance(self.result_status, Unset):
             result_status = UNSET
         else:
-            result_status = self.result_status
+            result_status: Union[None, Unset, str]
 
+            if isinstance(self.result_status, Unset):
+
+                result_status = UNSET
+
+            else:
+
+                result_status = self.result_status
         service_date: Union[None, Unset, str]
         if isinstance(self.service_date, Unset):
             service_date = UNSET
@@ -640,14 +654,28 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         if isinstance(self.as_found_result, Unset):
             as_found_result = UNSET
         else:
-            as_found_result = self.as_found_result
+            as_found_result: Union[None, Unset, str]
 
+            if isinstance(self.as_found_result, Unset):
+
+                as_found_result = UNSET
+
+            else:
+
+                as_found_result = self.as_found_result
         as_left_result: Union[None, Unset, int]
         if isinstance(self.as_left_result, Unset):
             as_left_result = UNSET
         else:
-            as_left_result = self.as_left_result
+            as_left_result: Union[None, Unset, str]
 
+            if isinstance(self.as_left_result, Unset):
+
+                as_left_result = UNSET
+
+            else:
+
+                as_left_result = self.as_left_result
         completed_on: Union[None, Unset, str]
         if isinstance(self.completed_on, Unset):
             completed_on = UNSET

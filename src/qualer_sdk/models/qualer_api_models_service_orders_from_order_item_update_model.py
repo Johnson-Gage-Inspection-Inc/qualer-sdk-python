@@ -75,7 +75,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
     repairs_total: Union[Unset, float] = UNSET
     parts_total: Union[Unset, float] = UNSET
     work_status: Union[
-        Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelWorkStatus
+        None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelWorkStatus
     ] = UNSET
     custom_work_status: Union[Unset, str] = UNSET
     is_limited: Union[Unset, bool] = UNSET
@@ -90,13 +90,13 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck
     ] = UNSET
     result_status: Union[
-        Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelResultStatus
+        None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelResultStatus
     ] = UNSET
     as_found_result: Union[
-        Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundResult
+        None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundResult
     ] = UNSET
     as_left_result: Union[
-        Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftResult
+        None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftResult
     ] = UNSET
     equipment_id: Union[Unset, str] = UNSET
     legacy_id: Union[Unset, str] = UNSET
@@ -128,7 +128,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
 
         parts_total = self.parts_total
 
-        work_status: Union[Unset, str] = UNSET
+        work_status: Union[None, Unset, str] = UNSET
         if not isinstance(self.work_status, Unset):
             work_status = self.work_status.value
 
@@ -156,15 +156,15 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         if not isinstance(self.as_left_check, Unset):
             as_left_check = self.as_left_check.value
 
-        result_status: Union[Unset, str] = UNSET
+        result_status: Union[None, Unset, str] = UNSET
         if not isinstance(self.result_status, Unset):
             result_status = self.result_status.value
 
-        as_found_result: Union[Unset, str] = UNSET
+        as_found_result: Union[None, Unset, str] = UNSET
         if not isinstance(self.as_found_result, Unset):
             as_found_result = self.as_found_result.value
 
-        as_left_result: Union[Unset, str] = UNSET
+        as_left_result: Union[None, Unset, str] = UNSET
         if not isinstance(self.as_left_result, Unset):
             as_left_result = self.as_left_result.value
 

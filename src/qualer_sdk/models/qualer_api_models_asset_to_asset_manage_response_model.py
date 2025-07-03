@@ -131,7 +131,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
     asset_description: Union[Unset, str] = UNSET
     asset_maker: Union[Unset, str] = UNSET
     record_type: Union[
-        Unset, QualerApiModelsAssetToAssetManageResponseModelRecordType
+        None, Unset, QualerApiModelsAssetToAssetManageResponseModelRecordType
     ] = UNSET
     parent_asset_id: Union[Unset, int] = UNSET
     children_count: Union[Unset, int] = UNSET
@@ -170,9 +170,9 @@ class QualerApiModelsAssetToAssetManageResponseModel:
     asset_room: Union[Unset, str] = UNSET
     location: Union[Unset, str] = UNSET
     station: Union[Unset, str] = UNSET
-    tool_role: Union[Unset, QualerApiModelsAssetToAssetManageResponseModelToolRole] = (
-        UNSET
-    )
+    tool_role: Union[
+        None, Unset, QualerApiModelsAssetToAssetManageResponseModelToolRole
+    ] = UNSET
     tool_id: Union[Unset, int] = UNSET
     department_id: Union[Unset, int] = UNSET
     department_name: Union[Unset, str] = UNSET
@@ -195,13 +195,13 @@ class QualerApiModelsAssetToAssetManageResponseModel:
     employee_id: Union[Unset, int] = UNSET
     asset_service_record_id: Union[Unset, int] = UNSET
     result_status: Union[
-        Unset, QualerApiModelsAssetToAssetManageResponseModelResultStatus
+        None, Unset, QualerApiModelsAssetToAssetManageResponseModelResultStatus
     ] = UNSET
     as_found_result: Union[
-        Unset, QualerApiModelsAssetToAssetManageResponseModelAsFoundResult
+        None, Unset, QualerApiModelsAssetToAssetManageResponseModelAsFoundResult
     ] = UNSET
     as_left_result: Union[
-        Unset, QualerApiModelsAssetToAssetManageResponseModelAsLeftResult
+        None, Unset, QualerApiModelsAssetToAssetManageResponseModelAsLeftResult
     ] = UNSET
     last_service_date: Union[None, Unset, datetime.datetime] = UNSET
     last_service: Union[None, Unset, str] = UNSET
@@ -212,7 +212,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
     service_schedule: Union[Unset, str] = UNSET
     service_order_id: Union[Unset, int] = UNSET
     service_order_status: Union[
-        Unset, QualerApiModelsAssetToAssetManageResponseModelServiceOrderStatus
+        None, Unset, QualerApiModelsAssetToAssetManageResponseModelServiceOrderStatus
     ] = UNSET
     custom_order_number: Union[Unset, str] = UNSET
     service_order_item_id: Union[Unset, int] = UNSET
@@ -222,10 +222,10 @@ class QualerApiModelsAssetToAssetManageResponseModel:
     due_trigger_date: Union[None, Unset, datetime.datetime] = UNSET
     past_due_trigger_date: Union[None, Unset, datetime.datetime] = UNSET
     due_status: Union[
-        Unset, QualerApiModelsAssetToAssetManageResponseModelDueStatus
+        None, Unset, QualerApiModelsAssetToAssetManageResponseModelDueStatus
     ] = UNSET
     work_status: Union[
-        Unset, QualerApiModelsAssetToAssetManageResponseModelWorkStatus
+        None, Unset, QualerApiModelsAssetToAssetManageResponseModelWorkStatus
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -238,7 +238,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
 
         asset_maker = self.asset_maker
 
-        record_type: Union[Unset, int] = UNSET
+        record_type: Union[None, Unset, int] = UNSET
         if not isinstance(self.record_type, Unset):
             record_type = self.record_type.value
 
@@ -328,7 +328,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
 
         station = self.station
 
-        tool_role: Union[Unset, int] = UNSET
+        tool_role: Union[None, Unset, int] = UNSET
         if not isinstance(self.tool_role, Unset):
             tool_role = self.tool_role.value
 
@@ -392,15 +392,15 @@ class QualerApiModelsAssetToAssetManageResponseModel:
 
         asset_service_record_id = self.asset_service_record_id
 
-        result_status: Union[Unset, str] = UNSET
+        result_status: Union[None, Unset, str] = UNSET
         if not isinstance(self.result_status, Unset):
             result_status = self.result_status.value
 
-        as_found_result: Union[Unset, str] = UNSET
+        as_found_result: Union[None, Unset, str] = UNSET
         if not isinstance(self.as_found_result, Unset):
             as_found_result = self.as_found_result.value
 
-        as_left_result: Union[Unset, str] = UNSET
+        as_left_result: Union[None, Unset, str] = UNSET
         if not isinstance(self.as_left_result, Unset):
             as_left_result = self.as_left_result.value
 
@@ -436,7 +436,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
 
         service_order_id = self.service_order_id
 
-        service_order_status: Union[Unset, str] = UNSET
+        service_order_status: Union[None, Unset, str] = UNSET
         if not isinstance(self.service_order_status, Unset):
             service_order_status = self.service_order_status.value
 
@@ -466,11 +466,11 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         else:
             past_due_trigger_date = self.past_due_trigger_date
 
-        due_status: Union[Unset, int] = UNSET
+        due_status: Union[None, Unset, int] = UNSET
         if not isinstance(self.due_status, Unset):
             due_status = self.due_status.value
 
-        work_status: Union[Unset, str] = UNSET
+        work_status: Union[None, Unset, str] = UNSET
         if not isinstance(self.work_status, Unset):
             work_status = self.work_status.value
 

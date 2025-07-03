@@ -64,7 +64,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
     order_item_number: Union[Unset, int] = UNSET
     certificate_number: Union[Unset, str] = UNSET
     result_status: Union[None, Unset, str] = UNSET
-    as_found_result: Union[Unset, str] = UNSET
+    as_found_result: Union[None, Unset, str] = UNSET
     as_left_result: Union[None, Unset, str] = UNSET
     service_date: Union[None, Unset, datetime.datetime] = UNSET
     serial_number: Union[Unset, str] = UNSET
@@ -114,16 +114,37 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
         if isinstance(self.result_status, Unset):
             result_status = UNSET
         else:
-            result_status = self.result_status
+            result_status: Union[None, Unset, str]
 
-        as_found_result = self.as_found_result
+            if isinstance(self.result_status, Unset):
 
+                result_status = UNSET
+
+            else:
+
+                result_status = self.result_status
+        as_found_result: Union[None, Unset, str]
+
+        if isinstance(self.as_found_result, Unset):
+
+            as_found_result = UNSET
+
+        else:
+
+            as_found_result = self.as_found_result
         as_left_result: Union[None, Unset, str]
         if isinstance(self.as_left_result, Unset):
             as_left_result = UNSET
         else:
-            as_left_result = self.as_left_result
+            as_left_result: Union[None, Unset, str]
 
+            if isinstance(self.as_left_result, Unset):
+
+                as_left_result = UNSET
+
+            else:
+
+                as_left_result = self.as_left_result
         service_date: Union[None, Unset, str]
         if isinstance(self.service_date, Unset):
             service_date = UNSET

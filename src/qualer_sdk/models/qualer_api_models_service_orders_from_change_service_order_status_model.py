@@ -33,7 +33,7 @@ class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        service_order_status: Union[Unset, str] = UNSET
+        service_order_status: Union[None, Unset, str] = UNSET
         if not isinstance(self.service_order_status, Unset):
             service_order_status = self.service_order_status.value
 

@@ -632,7 +632,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     schedule_name: Union[Unset, str] = UNSET
     next_segment_name: Union[Unset, str] = UNSET
     certificate_number: Union[Unset, str] = UNSET
-    work_status: Union[Unset, int] = UNSET
+    work_status: Union[None, Unset, int] = UNSET
     service_type: Union[Unset, str] = UNSET
     service_level: Union[Unset, str] = UNSET
     barcode: Union[Unset, str] = UNSET
@@ -1265,8 +1265,15 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         certificate_number = self.certificate_number
 
-        work_status = self.work_status
+        work_status: Union[None, Unset, str]
 
+        if isinstance(self.work_status, Unset):
+
+            work_status = UNSET
+
+        else:
+
+            work_status = self.work_status
         service_type = self.service_type
 
         service_level = self.service_level

@@ -98,20 +98,41 @@ class QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel:
         if isinstance(self.result_status, Unset):
             result_status = UNSET
         else:
-            result_status = self.result_status
+            result_status: Union[None, Unset, str]
 
+            if isinstance(self.result_status, Unset):
+
+                result_status = UNSET
+
+            else:
+
+                result_status = self.result_status
         as_found_result: Union[None, Unset, str]
         if isinstance(self.as_found_result, Unset):
             as_found_result = UNSET
         else:
-            as_found_result = self.as_found_result
+            as_found_result: Union[None, Unset, str]
 
+            if isinstance(self.as_found_result, Unset):
+
+                as_found_result = UNSET
+
+            else:
+
+                as_found_result = self.as_found_result
         as_left_result: Union[None, Unset, str]
         if isinstance(self.as_left_result, Unset):
             as_left_result = UNSET
         else:
-            as_left_result = self.as_left_result
+            as_left_result: Union[None, Unset, str]
 
+            if isinstance(self.as_left_result, Unset):
+
+                as_left_result = UNSET
+
+            else:
+
+                as_left_result = self.as_left_result
         applied_interval: Union[None, Unset, int]
         if isinstance(self.applied_interval, Unset):
             applied_interval = UNSET

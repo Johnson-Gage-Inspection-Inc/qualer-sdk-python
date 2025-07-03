@@ -549,21 +549,39 @@ def fix_nullable_enums():
 
             # Fix each nullable enum pattern
             for var_name, enum_class_suffix in nullable_enum_patterns:
+                # Fix 1: Update type annotations to include None
+                # Look for: var_name: Union[Unset, EnumClass]
+                # Replace with: var_name: Union[None, Unset, EnumClass]
+                type_annotation_pattern = rf"(\s+){var_name}: Union\[Unset, ([^\]]+)\]"
+                type_match = re.search(type_annotation_pattern, content)
+                if type_match and "None" not in type_match.group(0):
+                    old_annotation = type_match.group(0)
+                    new_annotation = f"{type_match.group(1)}{var_name}: Union[None, Unset, {type_match.group(2)}]"
+                    content = content.replace(old_annotation, new_annotation)
+                    print(f"✅ Fixed {var_name} type annotation in {filename}")
+
+                # Fix 2: Update constructor parameters to include None
+                # Look for: var_name: Union[Unset, EnumClass] = UNSET,
+                # Replace with: var_name: Union[None, Unset, EnumClass] = UNSET,
+                constructor_param_pattern = (
+                    rf"(\s+){var_name}: Union\[Unset, ([^\]]+)\](\s*=\s*UNSET,?)"
+                )
+                constructor_match = re.search(constructor_param_pattern, content)
+                if constructor_match and "None" not in constructor_match.group(0):
+                    old_param = constructor_match.group(0)
+                    new_param = (
+                        f"{constructor_match.group(1)}{var_name}: Union[None, Unset, "
+                        f"{constructor_match.group(2)}]{constructor_match.group(3)}"
+                    )
+                    content = content.replace(old_param, new_param)
+                    print(f"✅ Fixed {var_name} constructor parameter in {filename}")
+
+                # Fix 3: Update from_dict parsing logic
                 # Look for the specific pattern that needs fixing:
                 # if isinstance(_var_name, Unset):
                 #     var_name = UNSET
                 # else:
                 #     var_name = EnumClass(_var_name)
-
-                # This pattern should be replaced with:
-                # if isinstance(_var_name, Unset):
-                #     var_name = UNSET
-                # elif _var_name is None:
-                #     var_name = None
-                # else:
-                #     var_name = EnumClass(_var_name)
-
-                # Use a more flexible pattern that handles multi-line enum constructors
                 old_pattern = (
                     rf"(\s+)if isinstance\(_{var_name}, Unset\):\s*\n"
                     rf"(\s+){var_name} = UNSET\s*\n"
@@ -596,7 +614,25 @@ def fix_nullable_enums():
                         )
 
                         content = content.replace(full_match, replacement)
-                        print(f"✅ Fixed {var_name} nullable enum in {filename}")
+                        print(f"✅ Fixed {var_name} from_dict parsing in {filename}")
+
+                # Fix 4: Update to_dict serialization logic
+                # Look for: var_name = self.var_name
+                # Replace with proper None handling
+                to_dict_pattern = rf"(\s+){var_name} = self\.{var_name}\s*\n"
+                to_dict_match = re.search(to_dict_pattern, content)
+                if to_dict_match:
+                    old_to_dict = to_dict_match.group(0)
+                    indent = to_dict_match.group(1)
+                    new_to_dict = (
+                        f"{indent}{var_name}: Union[None, Unset, str]\n"
+                        f"{indent}if isinstance(self.{var_name}, Unset):\n"
+                        f"{indent}    {var_name} = UNSET\n"
+                        f"{indent}else:\n"
+                        f"{indent}    {var_name} = self.{var_name}\n"
+                    )
+                    content = content.replace(old_to_dict, new_to_dict)
+                    print(f"✅ Fixed {var_name} to_dict serialization in {filename}")
 
             # Save the file if it was modified
             if content != original_content:
