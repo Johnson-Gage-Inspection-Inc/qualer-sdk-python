@@ -9323,7 +9323,8 @@
         },
         "LastModifiedOnUtc": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         }
       }
     },
@@ -19295,7 +19296,8 @@
         },
         "LastModifiedOnUtc": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         }
       }
     },
