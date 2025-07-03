@@ -1,10 +1,10 @@
-from enum import Enum
+from enum import IntEnum
 
 
-class QualerApiModelsAssetToAssetManageResponseModelDueStatus(str, Enum):
-    VALUE_0 = "0"
-    VALUE_1 = "1"
-    VALUE_2 = "2"
+class QualerApiModelsAssetToAssetManageResponseModelDueStatus(IntEnum):
+    VALUE_0 = 0
+    VALUE_1 = 1
+    VALUE_2 = 2
 
     def __str__(self) -> str:
         return str(self.value)

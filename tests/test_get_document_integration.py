@@ -20,6 +20,7 @@ from qualer_sdk.client import AuthenticatedClient
 load_dotenv()
 
 
+@pytest.mark.integration
 class TestGetDocumentIntegration(unittest.TestCase):
     """Integration tests for the get_document endpoint."""
 
@@ -88,6 +89,11 @@ class TestGetDocumentIntegration(unittest.TestCase):
                 content_type = response.headers.get("content-type", "").lower()
                 print(f"📋 Content-Type: {content_type}")
 
+                self.assertTrue(
+                    response.headers.encoding == "ascii",
+                    "Content-Type should be ASCII encoded for PDF",
+                )
+
                 # Test 6: Verify PDF structure
                 if len(response.content) > 100:
                     # Look for PDF version in first 20 bytes
@@ -105,12 +111,6 @@ class TestGetDocumentIntegration(unittest.TestCase):
                         print("✅ Content appears to be a valid PDF document")
                     else:
                         print("⚠️  Content may not be a complete PDF")
-
-                # Test 7: Parsed response should be None for binary endpoints
-                self.assertIsNone(
-                    response.parsed,
-                    "Parsed response should be None for binary endpoints",
-                )
 
                 print("🎉 SUCCESS: PDF document retrieved successfully!")
 

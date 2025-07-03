@@ -576,7 +576,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_cv_raw (Union[Unset, float]):
         as_left_delta (Union[Unset, float]):
         as_left_range (Union[Unset, float]):
-        as_left_result (Union[Unset, int]):
+        as_left_result (Union[None, Unset, int]):
         as_left_range_result (Union[Unset, bool]):
         as_left_delta_result (Union[Unset, bool]):
         as_left_min_result (Union[Unset, bool]):
@@ -682,7 +682,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     schedule_name: Union[Unset, str] = UNSET
     next_segment_name: Union[Unset, str] = UNSET
     certificate_number: Union[Unset, str] = UNSET
-    work_status: Union[Unset, int] = UNSET
+    work_status: Union[None, Unset, int] = UNSET
     service_type: Union[Unset, str] = UNSET
     service_level: Union[Unset, str] = UNSET
     service_comments: Union[Unset, str] = UNSET
@@ -996,7 +996,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_found_range: Union[Unset, float] = UNSET
     as_found_cv: Union[Unset, float] = UNSET
     as_found_cv_raw: Union[Unset, float] = UNSET
-    as_found_result: Union[Unset, int] = UNSET
+    as_found_result: Union[None, Unset, int] = UNSET
     as_found_range_result: Union[Unset, bool] = UNSET
     as_found_delta_result: Union[Unset, bool] = UNSET
     as_found_min_result: Union[Unset, bool] = UNSET
@@ -1226,7 +1226,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_left_cv_raw: Union[Unset, float] = UNSET
     as_left_delta: Union[Unset, float] = UNSET
     as_left_range: Union[Unset, float] = UNSET
-    as_left_result: Union[Unset, int] = UNSET
+    as_left_result: Union[None, Unset, int] = UNSET
     as_left_range_result: Union[Unset, bool] = UNSET
     as_left_delta_result: Union[Unset, bool] = UNSET
     as_left_min_result: Union[Unset, bool] = UNSET
@@ -1356,8 +1356,15 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         certificate_number = self.certificate_number
 
-        work_status = self.work_status
+        work_status: Union[None, Unset, str]
 
+        if isinstance(self.work_status, Unset):
+
+            work_status = UNSET
+
+        else:
+
+            work_status = self.work_status
         service_type = self.service_type
 
         service_level = self.service_level
@@ -2084,8 +2091,15 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_found_cv_raw = self.as_found_cv_raw
 
-        as_found_result = self.as_found_result
+        as_found_result: Union[None, Unset, str]
 
+        if isinstance(self.as_found_result, Unset):
+
+            as_found_result = UNSET
+
+        else:
+
+            as_found_result = self.as_found_result
         as_found_range_result = self.as_found_range_result
 
         as_found_delta_result = self.as_found_delta_result
@@ -2542,8 +2556,19 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_range = self.as_left_range
 
-        as_left_result = self.as_left_result
+        as_left_result: Union[None, Unset, int]
+        if isinstance(self.as_left_result, Unset):
+            as_left_result = UNSET
+        else:
+            as_left_result: Union[None, Unset, str]
 
+            if isinstance(self.as_left_result, Unset):
+
+                as_left_result = UNSET
+
+            else:
+
+                as_left_result = self.as_left_result
         as_left_range_result = self.as_left_range_result
 
         as_left_delta_result = self.as_left_delta_result
@@ -5467,7 +5492,14 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_range = d.pop("AsLeftRange", UNSET)
 
-        as_left_result = d.pop("AsLeftResult", UNSET)
+        def _parse_as_left_result(data: object) -> Union[None, Unset, int]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, int], data)
+
+        as_left_result = _parse_as_left_result(d.pop("AsLeftResult", UNSET))
 
         as_left_range_result = d.pop("AsLeftRangeResult", UNSET)
 

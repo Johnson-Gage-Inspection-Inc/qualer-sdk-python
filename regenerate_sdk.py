@@ -120,13 +120,26 @@ def inject_missing_path_params(spec):
                     op["parameters"].append(param_obj.copy())
 
 
+def on_rm_error(func, path, exc_info):
+    """Error handler for shutil.rmtree to handle Windows file locks."""
+    import stat
+
+    try:
+        # Remove read-only flag and try again
+        os.chmod(path, stat.S_IWRITE)
+        func(path)
+    except Exception:
+        # If it still fails, just continue
+        pass
+
+
 def generate_sdk():
     # Create a temporary directory for generation
     temp_dir = "temp_sdk_gen"
 
     # Remove temporary directory if it exists
     if os.path.exists(temp_dir):
-        shutil.rmtree(temp_dir)
+        shutil.rmtree(temp_dir, onerror=on_rm_error)
 
     # Use openapi-python-client to generate the SDK
     command = [
@@ -159,9 +172,12 @@ def generate_sdk():
         ]:
             path = os.path.join(OUTPUT_DIR, sub)
             if os.path.isdir(path):
-                shutil.rmtree(path)
+                shutil.rmtree(path, onerror=on_rm_error)
             elif os.path.isfile(path):
-                os.remove(path)
+                try:
+                    os.remove(path)
+                except OSError:
+                    pass  # Ignore if file is locked
     else:
         os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -217,7 +233,7 @@ def generate_sdk():
     format_generated_files()
 
     # Clean up temporary directory
-    shutil.rmtree(temp_dir)
+    shutil.rmtree(temp_dir, onerror=on_rm_error)
     print("✅ SDK regenerated successfully.")
 
 
@@ -262,6 +278,9 @@ def post_process_generated_files():
 
     # Fix binary endpoints to properly handle HTTP 200 responses
     fix_binary_endpoints()
+
+    # Fix nullable enums to properly handle None values
+    fix_nullable_enums()
 
 
 def create_exceptions_file():
@@ -490,6 +509,147 @@ def convert_spec_to_openapi_v3():
     except Exception as e:
         print(f"❌ Failed to convert spec to OpenAPI v3: {e}")
         sys.exit(1)
+
+
+def fix_nullable_enums():
+    """Fix nullable enum fields to properly handle None values in generated models."""
+    print("🔧 Fixing nullable enum fields...")
+
+    models_dir = os.path.join(OUTPUT_DIR, "models")
+    if not os.path.exists(models_dir):
+        print("⚠️  Models directory not found, skipping nullable enum fixes")
+        return
+
+    # List of known nullable enum fields that need fixing
+    nullable_enum_patterns = [
+        # Pattern: (enum_var_name, enum_class_pattern)
+        ("service_order_status", "ServiceOrderStatus"),
+        ("as_found_result", "AsFoundResult"),
+        ("as_left_result", "AsLeftResult"),
+        ("result_status", "ResultStatus"),
+        ("due_status", "DueStatus"),
+        ("work_status", "WorkStatus"),
+        ("tool_role", "ToolRole"),
+        ("record_type", "RecordType"),
+    ]
+
+    fixed_files = []
+
+    for filename in os.listdir(models_dir):
+        if not filename.endswith(".py"):
+            continue
+
+        filepath = os.path.join(models_dir, filename)
+
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                content = f.read()
+
+            original_content = content
+
+            # Fix each nullable enum pattern
+            for var_name, enum_class_suffix in nullable_enum_patterns:
+                # Fix 1: Update type annotations to include None
+                # Look for: var_name: Union[Unset, EnumClass]
+                # Replace with: var_name: Union[None, Unset, EnumClass]
+                type_annotation_pattern = rf"(\s+){var_name}: Union\[Unset, ([^\]]+)\]"
+                type_match = re.search(type_annotation_pattern, content)
+                if type_match and "None" not in type_match.group(0):
+                    old_annotation = type_match.group(0)
+                    new_annotation = f"{type_match.group(1)}{var_name}: Union[None, Unset, {type_match.group(2)}]"
+                    content = content.replace(old_annotation, new_annotation)
+                    print(f"✅ Fixed {var_name} type annotation in {filename}")
+
+                # Fix 2: Update constructor parameters to include None
+                # Look for: var_name: Union[Unset, EnumClass] = UNSET,
+                # Replace with: var_name: Union[None, Unset, EnumClass] = UNSET,
+                constructor_param_pattern = (
+                    rf"(\s+){var_name}: Union\[Unset, ([^\]]+)\](\s*=\s*UNSET,?)"
+                )
+                constructor_match = re.search(constructor_param_pattern, content)
+                if constructor_match and "None" not in constructor_match.group(0):
+                    old_param = constructor_match.group(0)
+                    new_param = (
+                        f"{constructor_match.group(1)}{var_name}: Union[None, Unset, "
+                        f"{constructor_match.group(2)}]{constructor_match.group(3)}"
+                    )
+                    content = content.replace(old_param, new_param)
+                    print(f"✅ Fixed {var_name} constructor parameter in {filename}")
+
+                # Fix 3: Update from_dict parsing logic
+                # Look for the specific pattern that needs fixing:
+                # if isinstance(_var_name, Unset):
+                #     var_name = UNSET
+                # else:
+                #     var_name = EnumClass(_var_name)
+                old_pattern = (
+                    rf"(\s+)if isinstance\(_{var_name}, Unset\):\s*\n"
+                    rf"(\s+){var_name} = UNSET\s*\n"
+                    rf"(\s+)else:\s*\n"
+                    rf"(\s+){var_name} = (\s*\n\s*)?([^(]+\(\s*_{var_name}\s*\))"
+                )
+
+                # Find the pattern
+                match = re.search(old_pattern, content, re.MULTILINE | re.DOTALL)
+                if match:
+                    # Check if it already has the None check
+                    full_match = match.group(0)
+                    if f"elif _{var_name} is None:" not in full_match:
+                        # Extract indentation from the captured groups
+                        indent1 = match.group(1)
+                        indent2 = match.group(2)
+                        indent3 = match.group(3)
+                        indent4 = match.group(4)
+                        # Get the enum constructor, handling multi-line cases
+                        enum_constructor = match.group(6).strip()
+
+                        # Create the replacement with proper indentation
+                        replacement = (
+                            f"{indent1}if isinstance(_{var_name}, Unset):\n"
+                            f"{indent2}{var_name} = UNSET\n"
+                            f"{indent3}elif _{var_name} is None:\n"
+                            f"{indent4}{var_name} = None\n"
+                            f"{indent3}else:\n"
+                            f"{indent4}{var_name} = {enum_constructor}"
+                        )
+
+                        content = content.replace(full_match, replacement)
+                        print(f"✅ Fixed {var_name} from_dict parsing in {filename}")
+
+                # Fix 4: Update to_dict serialization logic
+                # Look for: var_name = self.var_name
+                # Replace with proper None handling
+                to_dict_pattern = rf"(\s+){var_name} = self\.{var_name}\s*\n"
+                to_dict_match = re.search(to_dict_pattern, content)
+                if to_dict_match:
+                    old_to_dict = to_dict_match.group(0)
+                    indent = to_dict_match.group(1)
+                    new_to_dict = (
+                        f"{indent}{var_name}: Union[None, Unset, str]\n"
+                        f"{indent}if isinstance(self.{var_name}, Unset):\n"
+                        f"{indent}    {var_name} = UNSET\n"
+                        f"{indent}else:\n"
+                        f"{indent}    {var_name} = self.{var_name}\n"
+                    )
+                    content = content.replace(old_to_dict, new_to_dict)
+                    print(f"✅ Fixed {var_name} to_dict serialization in {filename}")
+
+            # Save the file if it was modified
+            if content != original_content:
+                with open(filepath, "w", encoding="utf-8") as f:
+                    f.write(content)
+                fixed_files.append(filename)
+
+        except Exception as e:
+            print(f"⚠️  Error processing {filename}: {e}")
+            continue
+
+    if fixed_files:
+        print(
+            f"✅ Fixed nullable enums in {len(fixed_files)} files: {', '.join(fixed_files)}"
+        )
+    else:
+        print("ℹ️  No nullable enum fixes needed")
 
 
 if __name__ == "__main__":

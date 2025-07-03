@@ -8842,13 +8842,15 @@
           "type": "string"
         },
         "ResultStatus": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundResult": {
           "type": "string"
         },
         "AsLeftResult": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceDate": {
           "format": "date-time",
@@ -10038,7 +10040,8 @@
         },
         "WarrantyEnd": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "IsWarrantyExpired": {
           "type": "boolean"
@@ -10065,7 +10068,8 @@
         },
         "DueForReplacementDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DepreciationProc": {
           "format": "double",
@@ -10112,7 +10116,8 @@
             "Pending",
             "Missed"
           ],
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundResult": {
           "enum": [
@@ -10127,7 +10132,8 @@
             "Pending",
             "Missed"
           ],
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsLeftResult": {
           "enum": [
@@ -10142,7 +10148,8 @@
             "Pending",
             "Missed"
           ],
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "LastServiceDate": {
           "format": "date-time",
@@ -10215,11 +10222,13 @@
         },
         "DueTriggerDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PastDueTriggerDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DueStatus": {
           "enum": [
@@ -10232,7 +10241,8 @@
             "Due",
             "PastDue"
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32"
         },
         "WorkStatus": {
           "enum": [
@@ -10588,13 +10598,16 @@
           "type": "string"
         },
         "ResultStatus": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundResult": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsLeftResult": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceDate": {
           "format": "date-time",
@@ -10605,22 +10618,28 @@
           "type": "string"
         },
         "AssetTag": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetUser": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetTagChange": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetUserChange": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceNotes": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SerialNumberChange": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DueDate": {
           "format": "date-time",
@@ -10633,58 +10652,74 @@
           "x-nullable": true
         },
         "ProviderTechnician": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderPhone": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderCompany": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceLevel": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceLevelCode": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceLevel": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceLevelCode": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetDescription": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PartsCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "PartsChargeBeforeDiscount": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "ServiceCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "RepairsCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "Guid": {
           "format": "uuid",
           "type": "string",
-          "example": "00000000-0000-0000-0000-000000000000"
+          "example": "00000000-0000-0000-0000-000000000000",
+          "x-nullable": true
         },
         "SegmentName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ScheduleName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         }
       }
     },
@@ -10706,25 +10741,31 @@
           "type": "string"
         },
         "ResultStatus": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundResult": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsLeftResult": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AppliedInterval": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "AsFoundTolerance": {
           "format": "float",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "AsLeftTolerance": {
           "format": "float",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "ServiceDate": {
           "format": "date-time",
@@ -10732,16 +10773,20 @@
           "x-nullable": true
         },
         "SerialNumber": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetTag": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetUser": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceNotes": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DueDate": {
           "format": "date-time",
@@ -10754,53 +10799,68 @@
           "x-nullable": true
         },
         "ProviderTechnician": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderPhone": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderCompany": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceLevel": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceLevelCode": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceLevel": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceLevelCode": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetDescription": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PartsCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "PartsChargeBeforeDiscount": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "ServiceCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "RepairsCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "SegmentName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ScheduleName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         }
       }
     },
@@ -10851,25 +10911,31 @@
           "type": "string"
         },
         "ResultStatus": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundResult": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsLeftResult": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AppliedInterval": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "AsFoundTolerance": {
           "format": "float",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "AsLeftTolerance": {
           "format": "float",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "ServiceDate": {
           "format": "date-time",
@@ -10880,13 +10946,16 @@
           "type": "string"
         },
         "AssetTag": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetUser": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceNotes": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DueDate": {
           "format": "date-time",
@@ -10899,53 +10968,68 @@
           "x-nullable": true
         },
         "ProviderTechnician": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderPhone": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderCompany": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceLevel": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceLevelCode": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceLevel": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceLevelCode": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetDescription": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PartsCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "PartsChargeBeforeDiscount": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "ServiceCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "RepairsCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "SegmentName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ScheduleName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         }
       }
     },
@@ -11240,7 +11324,8 @@
         },
         "WarrantyEnd": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "IsWarrantyExpired": {
           "type": "boolean"
@@ -11267,7 +11352,8 @@
         },
         "DueForReplacementDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DepreciationProc": {
           "format": "double",
@@ -11318,7 +11404,8 @@
             "Pending",
             "Missed"
           ],
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundResult": {
           "enum": [
@@ -11333,7 +11420,8 @@
             "Pending",
             "Missed"
           ],
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsLeftResult": {
           "enum": [
@@ -11348,7 +11436,8 @@
             "Pending",
             "Missed"
           ],
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "LastServiceDate": {
           "format": "date-time",
@@ -11429,11 +11518,13 @@
         },
         "DueTriggerDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PastDueTriggerDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DueStatus": {
           "enum": [
@@ -11446,7 +11537,8 @@
             "Due",
             "PastDue"
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32"
         },
         "WorkStatus": {
           "enum": [
@@ -12704,11 +12796,13 @@
         },
         "StartDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "EndDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         }
       }
     },
@@ -13324,7 +13418,8 @@
         },
         "ChargeDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         }
       }
     },
@@ -13530,7 +13625,8 @@
         },
         "EffectiveDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DocumentSection": {
           "type": "string"
@@ -13686,7 +13782,8 @@
         },
         "ResultStatus": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "ServiceDate": {
           "format": "date-time",
@@ -13704,19 +13801,24 @@
           "x-nullable": true
         },
         "AssetTag": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "Department": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetUser": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "EquipmentId": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "LegacyIdentifier": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ActivationDate": {
           "format": "date-time",
@@ -13729,10 +13831,12 @@
           "x-nullable": true
         },
         "PartName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "PartDescription": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "IsTaxable": {
           "type": "boolean"
@@ -13742,37 +13846,45 @@
         },
         "Quantity": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "Discount": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "Price": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "TimeSpentInMinutes": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "IsHourlyPricing": {
-          "type": "boolean"
+          "type": "boolean",
+          "x-nullable": true
         },
         "DeliveryCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "SerialNumber": {
           "type": "string"
         },
         "PartRepairCharges": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "PartRepairPrice": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "OverridePartsTotal": {
           "type": "boolean"
@@ -13781,63 +13893,79 @@
           "type": "boolean"
         },
         "AssetCustodianName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundSpecificationGroupName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundSpecificationCompanyName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsLeftSpecificationGroupName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsLeftSpecificationCompanyName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "OrderId": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "ParentOrderId": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "OrderItemId": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "OrderItemPartId": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "AsFoundSpecificationGroupId": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "AsLeftSpecificationGroupId": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "AsFoundStatus": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "AsLeftStatus": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "AsFoundResult": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "AsLeftResult": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "CompletedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ReceivedOn": {
           "format": "date-time",
@@ -13845,142 +13973,186 @@
           "x-nullable": true
         },
         "CompletedByName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceChargeBase": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "ServiceTotal": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "RepairsTotal": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "PartsTotal": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "PartsTotalBeforeDiscount": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "ParentManufacturer": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ParentLocation": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ParentManufacturerPartNumber": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ParentDisplayPartNumber": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ParentAssetId": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "ParentCategoryName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ParentRootCategoryName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ParentSerialNumber": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ParentAssetTag": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ParentAssetUser": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ParentDisplayName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ParentEquipmentId": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetShippingAddress1": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetShippingAddress2": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetShippingFirstName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetShippingLastName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetShippingEmail": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetShippingCompany": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetShippingCity": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetShippingZip": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetShippingPhoneNumber": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetShippingFaxNumber": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetShippingCountry": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetShippingState": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ShippingAddress1": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ShippingAddress2": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ShippingFirstName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ShippingLastName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ShippingEmail": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ShippingCompany": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ShippingCity": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ShippingZip": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ShippingPhoneNumber": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ShippingFaxNumber": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ShippingCountry": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ShippingState": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetServiceNotes": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceOptionServiceCode": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         }
       }
     },
@@ -14161,54 +14333,69 @@
         },
         "ResultStatus": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "SerialNumberChange": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderTechnician": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderTechnicianAlias": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderPhone": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderCompany": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "QrCode": {
           "format": "byte",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "BarCode": {
           "format": "byte",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "BarCodeString": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "OwnerCompanyId": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "OwnerCompanyName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundResult": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "AsLeftResult": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "AssetTagChange": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetUserChange": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "DueDate": {
           "format": "date-time",
@@ -14217,39 +14404,49 @@
         },
         "PartsCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "PartsChargeBeforeDiscount": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "ServiceCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "RepairsCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "SegmentName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ScheduleName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextSegmentName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ClientId": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "IntervalLength": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "IntervalCycle": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         }
       }
     },
@@ -18124,7 +18321,8 @@
         },
         "AsLeftResult": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "AsLeftRangeResult": {
           "type": "boolean"
@@ -20352,143 +20550,185 @@
           "type": "string"
         },
         "ItemResultStatus": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ItemAsFoundResult": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ItemAsLeftResult": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundSpecification": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "AsLeftSpecification": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "CreatedOnUtc": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "UpdatedOnUtc": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "EquipmentId": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceLevel": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceLevelCode": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceLevelDocumentNumber": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceLevelDocumentSection": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceLevel": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceLevelCode": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ResultStatus": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundResult": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsLeftResult": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SerialNumber": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "SerialNumberChange": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetTag": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetUser": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetTagChange": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetUserChange": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetId": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "AssetName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetDescription": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetSiteName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetSiteId": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "AssetCompanyName": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AssetCompanyId": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "ClientCompanyId": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "VendorCompanyId": {
           "format": "int32",
-          "type": "integer"
+          "type": "integer",
+          "x-nullable": true
         },
         "ServiceNotes": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderTechnician": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderPhone": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ProviderCompany": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "RepairsCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "PartsCharge": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "PartsChargeBeforeDiscount": {
           "format": "double",
-          "type": "number"
+          "type": "number",
+          "x-nullable": true
         },
         "CustomOrderNumber": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "CertificateNumber": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceDate": {
           "format": "date-time",
@@ -20509,7 +20749,8 @@
           "type": "string"
         },
         "MaintenancePlan": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ServiceOptions": {
           "type": "array",
@@ -20680,7 +20921,8 @@
             "PassAdjustment",
             "Done"
           ],
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "AsFoundResult": {
           "enum": [
@@ -20706,7 +20948,8 @@
             "PassAdjustment",
             "Done"
           ],
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "EquipmentId": {
           "type": "string"
