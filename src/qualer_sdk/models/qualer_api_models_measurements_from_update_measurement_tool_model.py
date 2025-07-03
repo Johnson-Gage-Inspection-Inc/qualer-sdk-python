@@ -18,7 +18,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementToolModel:
         measurement_tool_id (Union[Unset, int]):
         tool_id (Union[Unset, int]):
         tool_type_name (Union[Unset, str]):
-        last_service_date (Union[Unset, datetime.datetime]):
+        last_service_date (Union[None, Unset, datetime.datetime]):
         next_service_date (Union[None, Unset, datetime.datetime]):
         calibrated_by (Union[Unset, str]):
         certificate_number (Union[Unset, str]):
@@ -35,7 +35,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementToolModel:
     measurement_tool_id: Union[Unset, int] = UNSET
     tool_id: Union[Unset, int] = UNSET
     tool_type_name: Union[Unset, str] = UNSET
-    last_service_date: Union[Unset, datetime.datetime] = UNSET
+    last_service_date: Union[None, Unset, datetime.datetime] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
     calibrated_by: Union[Unset, str] = UNSET
     certificate_number: Union[Unset, str] = UNSET
@@ -56,9 +56,13 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementToolModel:
 
         tool_type_name = self.tool_type_name
 
-        last_service_date: Union[Unset, str] = UNSET
-        if not isinstance(self.last_service_date, Unset):
+        last_service_date: Union[None, Unset, str]
+        if isinstance(self.last_service_date, Unset):
+            last_service_date = UNSET
+        elif isinstance(self.last_service_date, datetime.datetime):
             last_service_date = self.last_service_date.isoformat()
+        else:
+            last_service_date = self.last_service_date
 
         next_service_date: Union[None, Unset, str]
         if isinstance(self.next_service_date, Unset):
@@ -133,12 +137,24 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementToolModel:
 
         tool_type_name = d.pop("ToolTypeName", UNSET)
 
-        _last_service_date = d.pop("LastServiceDate", UNSET)
-        last_service_date: Union[Unset, datetime.datetime]
-        if isinstance(_last_service_date, Unset):
-            last_service_date = UNSET
-        else:
-            last_service_date = isoparse(_last_service_date)
+        def _parse_last_service_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                last_service_date_type_0 = isoparse(data)
+
+                return last_service_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        last_service_date = _parse_last_service_date(d.pop("LastServiceDate", UNSET))
 
         def _parse_next_service_date(
             data: object,

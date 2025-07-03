@@ -8746,7 +8746,8 @@
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceTask": {
           "type": "string"
@@ -9331,7 +9332,8 @@
       "properties": {
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
@@ -10143,10 +10145,12 @@
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "LastService": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
@@ -11347,10 +11351,12 @@
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "LastService": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
@@ -11859,11 +11865,13 @@
       "properties": {
         "LastDueDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
@@ -11871,7 +11879,8 @@
           "x-nullable": true
         },
         "NextServiceTask": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "CompanyId": {
           "format": "int32",
@@ -14271,7 +14280,8 @@
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
@@ -14279,10 +14289,12 @@
           "x-nullable": true
         },
         "CertificateNumber": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "CalibratedBy": {
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ToolName": {
           "type": "string"
@@ -19301,7 +19313,8 @@
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
@@ -19751,7 +19764,8 @@
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
@@ -20127,7 +20141,8 @@
         },
         "LastServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",

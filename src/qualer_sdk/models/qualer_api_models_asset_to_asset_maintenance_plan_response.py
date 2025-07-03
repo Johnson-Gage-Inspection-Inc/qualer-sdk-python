@@ -25,7 +25,7 @@ class QualerApiModelsAssetToAssetMaintenancePlanResponse:
         maintenance_plan_name (Union[Unset, str]):
         task_notes (Union[Unset, str]):
         last_service_task (Union[Unset, str]):
-        last_service_date (Union[Unset, datetime.datetime]):
+        last_service_date (Union[None, Unset, datetime.datetime]):
         next_service_task (Union[Unset, str]):
         next_service_date (Union[None, Unset, datetime.datetime]):
         certificate_due_date (Union[None, Unset, datetime.datetime]):
@@ -44,7 +44,7 @@ class QualerApiModelsAssetToAssetMaintenancePlanResponse:
     maintenance_plan_name: Union[Unset, str] = UNSET
     task_notes: Union[Unset, str] = UNSET
     last_service_task: Union[Unset, str] = UNSET
-    last_service_date: Union[Unset, datetime.datetime] = UNSET
+    last_service_date: Union[None, Unset, datetime.datetime] = UNSET
     next_service_task: Union[Unset, str] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
     certificate_due_date: Union[None, Unset, datetime.datetime] = UNSET
@@ -71,9 +71,13 @@ class QualerApiModelsAssetToAssetMaintenancePlanResponse:
 
         last_service_task = self.last_service_task
 
-        last_service_date: Union[Unset, str] = UNSET
-        if not isinstance(self.last_service_date, Unset):
+        last_service_date: Union[None, Unset, str]
+        if isinstance(self.last_service_date, Unset):
+            last_service_date = UNSET
+        elif isinstance(self.last_service_date, datetime.datetime):
             last_service_date = self.last_service_date.isoformat()
+        else:
+            last_service_date = self.last_service_date
 
         next_service_task = self.next_service_task
 
@@ -171,12 +175,24 @@ class QualerApiModelsAssetToAssetMaintenancePlanResponse:
 
         last_service_task = d.pop("LastServiceTask", UNSET)
 
-        _last_service_date = d.pop("LastServiceDate", UNSET)
-        last_service_date: Union[Unset, datetime.datetime]
-        if isinstance(_last_service_date, Unset):
-            last_service_date = UNSET
-        else:
-            last_service_date = isoparse(_last_service_date)
+        def _parse_last_service_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                last_service_date_type_0 = isoparse(data)
+
+                return last_service_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        last_service_date = _parse_last_service_date(d.pop("LastServiceDate", UNSET))
 
         next_service_task = d.pop("NextServiceTask", UNSET)
 
