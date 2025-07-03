@@ -10241,7 +10241,8 @@
             "Due",
             "PastDue"
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32"
         },
         "WorkStatus": {
           "enum": [
@@ -11536,7 +11537,8 @@
             "Due",
             "PastDue"
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32"
         },
         "WorkStatus": {
           "enum": [

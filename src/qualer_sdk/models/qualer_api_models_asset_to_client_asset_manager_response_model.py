@@ -488,7 +488,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         else:
             past_due_trigger_date = self.past_due_trigger_date
 
-        due_status: Union[Unset, str] = UNSET
+        due_status: Union[Unset, int] = UNSET
         if not isinstance(self.due_status, Unset):
             due_status = self.due_status.value
 
