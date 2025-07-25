@@ -18,17 +18,10 @@
         "description": "LogoutAction:<br />\r\nLogout - remove the passed token from the list of active sessions (default value)<br />\r\nLogoutAll - remove this token and all other tokens created for the same user from the list of active sessions<br />\r\nLogoutAllOther - remove all tokens created for the same user from the list of session except for the one that is passed in<br />\r\nRotate - change the current token to a different GUID and return the new GUID",
         "operationId": "Logout",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -65,10 +58,7 @@
         "operationId": "GetEmployeeMessages",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -107,10 +97,7 @@
         "operationId": "GetEmployeeMessage",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -140,17 +127,10 @@
         "description": "Sample request:\r\n            \r\nPOST api/user/location\r\n            \r\nLatitude - The latitude in degrees.<br />\r\nLongitude - The longitude in degrees.<br />\r\nAccuracy - The radius of uncertainty for the location, measured in meters.<br />\r\nAltitude - The altitude in meters above the WGS 84 reference ellipsoid.<br />\r\nAltitudeAccuracy - The accuracy of the altitude value, in meters.<br />\r\nHeading - Horizontal direction of travel of this device, measured in degrees starting at due north and continuing clockwise around the compass. Thus, north is 0 degrees, east is 90 degrees, south is 180 degrees, and so on.<br />\r\nSpeed - The instantaneous speed of the device in meters per second.<br />\r\nTimestamp - The time at which this position information was obtained, in seconds.",
         "operationId": "PostEmployeeLocation",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -180,17 +160,10 @@
         ],
         "operationId": "Companies",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -220,17 +193,10 @@
         "summary": "Login",
         "operationId": "Login",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -263,10 +229,7 @@
         "operationId": "GetAssetAttributes",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -295,17 +258,10 @@
         ],
         "operationId": "UpsertAssetAttributes",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -345,10 +301,7 @@
         "operationId": "GetMaintenancePlans",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -377,10 +330,7 @@
         "operationId": "GetMaintenancePlan",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -413,17 +363,10 @@
         ],
         "operationId": "ResetInitialServiceDate",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -467,10 +410,7 @@
         "operationId": "GetMeasurementsByAsset",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -516,10 +456,7 @@
         "operationId": "Get",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -548,10 +485,7 @@
         "operationId": "GetAll",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "responses": {
           "200": {
@@ -575,10 +509,7 @@
         "operationId": "Get_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -654,17 +585,10 @@
         ],
         "operationId": "Upsert",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -694,10 +618,7 @@
         "operationId": "Close",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -759,10 +680,7 @@
         "operationId": "GetAsset",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -793,10 +711,7 @@
         "operationId": "GetAssetImages",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -828,10 +743,7 @@
         "operationId": "PostAssetImages",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -860,10 +772,7 @@
         "operationId": "GetAllAssets",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "responses": {
           "200": {
@@ -887,10 +796,7 @@
         "operationId": "GetAssetByAttribute",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -927,10 +833,7 @@
         "operationId": "GetAssetByBarcode",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -961,10 +864,7 @@
         "operationId": "GetAssetBySerialNumber",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -995,10 +895,7 @@
         "operationId": "GetAssetByAssetTag",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1029,10 +926,7 @@
         "operationId": "GetAssetByAssetPool",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1064,10 +958,7 @@
         "operationId": "GetAssetsByEquipmentId",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1097,17 +988,10 @@
         ],
         "operationId": "UpdateRoom",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1138,10 +1022,7 @@
         "operationId": "GetAssetManagerCounters",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1171,10 +1052,7 @@
         "operationId": "GetAssetManagerList",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1226,17 +1104,10 @@
         "description": "[123,234,567]",
         "operationId": "CollectAssets",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1271,17 +1142,10 @@
         "description": "[123,234,567] removes assets with selected Ids\r\n            \r\n[] removes all assets from QuickCollection",
         "operationId": "ClearCollectedAssets",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1314,17 +1178,10 @@
         ],
         "operationId": "UpdateAssetRoom",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1360,17 +1217,10 @@
         ],
         "operationId": "UpdateAssetClass",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1406,17 +1256,10 @@
         ],
         "operationId": "UpdateAssetDepartment",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1453,10 +1296,7 @@
         "operationId": "GetClientAssetForecastList",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1488,10 +1328,7 @@
         "operationId": "GetAssetForecastList",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "responses": {
           "200": {
@@ -1515,10 +1352,7 @@
         "operationId": "GetAssetServiceRecord",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1553,10 +1387,7 @@
         "operationId": "GetAssetServiceRecordsByAsset",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1585,17 +1416,10 @@
         ],
         "operationId": "AddAssetServiceRecord",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1638,10 +1462,7 @@
         "operationId": "GetAssetServiceRecords",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1718,10 +1539,7 @@
         "operationId": "UploadDocuments",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1749,17 +1567,10 @@
         ],
         "operationId": "UpdateAssetServiceRecord",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1796,10 +1607,7 @@
         "operationId": "DocumentList",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1903,10 +1711,7 @@
         "operationId": "GetAssetAttributes_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1935,17 +1740,10 @@
         ],
         "operationId": "UpsertAssetAttributes_put_2",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -1985,10 +1783,7 @@
         "operationId": "GetAsset_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2029,10 +1824,7 @@
         "operationId": "GetAssets",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2094,10 +1886,7 @@
         "operationId": "GetAssetCounters",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2128,10 +1917,7 @@
         "operationId": "GetAssetManagerList_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2190,10 +1976,7 @@
         "operationId": "GetAllAssets_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2245,17 +2028,10 @@
         ],
         "operationId": "CreateAsset",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2291,10 +2067,7 @@
         "operationId": "GetAssetServiceRecordsByAsset_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2326,10 +2099,7 @@
         "operationId": "GetClientAttributes",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2355,17 +2125,10 @@
         ],
         "operationId": "UpsertClientAttribute",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2402,10 +2165,7 @@
         "operationId": "GetEmployees",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2437,10 +2197,7 @@
         "operationId": "GetEmployee",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2480,17 +2237,10 @@
         ],
         "operationId": "CreateEmployee",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2525,17 +2275,10 @@
         ],
         "operationId": "SendEmployeeEmail",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2572,10 +2315,7 @@
         "operationId": "GetMaintenancePlans_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2607,10 +2347,7 @@
         "operationId": "GetMaintenancePlanAssets",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2642,10 +2379,7 @@
         "operationId": "Get_get_3",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2674,10 +2408,7 @@
         "operationId": "GetAll_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2733,17 +2464,10 @@
         "description": "ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3",
         "operationId": "Update",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2779,17 +2503,10 @@
         "description": "ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3",
         "operationId": "Create",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2823,10 +2540,7 @@
         "operationId": "GetClientSites",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2857,17 +2571,10 @@
         "description": "CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"",
         "operationId": "UpdateClientSite",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2911,17 +2618,10 @@
         "description": "CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"",
         "operationId": "CreateClientSite",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2966,10 +2666,7 @@
         "operationId": "CultureList",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "responses": {
           "200": {
@@ -2990,10 +2687,7 @@
         "operationId": "CultureUiList",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "responses": {
           "200": {
@@ -3014,10 +2708,7 @@
         "operationId": "GetCompanySettings",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3046,10 +2737,7 @@
         "operationId": "Lookups",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3098,10 +2786,7 @@
         "operationId": "Departments",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "responses": {
           "200": {
@@ -3123,17 +2808,10 @@
         "summary": "",
         "operationId": "AddDepartment",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3167,17 +2845,10 @@
         "summary": "",
         "operationId": "UpdateDepartment",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3218,10 +2889,7 @@
         "operationId": "DeleteDepartment",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3253,10 +2921,7 @@
         "operationId": "Sites",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "responses": {
           "200": {
@@ -3281,10 +2946,7 @@
         "operationId": "SiteRooms",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3321,10 +2983,7 @@
         "operationId": "GetEmployeeFilterPreferences",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "responses": {
           "200": {
@@ -3346,17 +3005,10 @@
         "summary": "UpdateEmployeeFilterPreference",
         "operationId": "UpdateEmployeeFilterPreference",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3388,10 +3040,7 @@
         "operationId": "Get_get_4",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3441,10 +3090,7 @@
         "operationId": "Delete",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3492,10 +3138,7 @@
         "operationId": "GetEmployee_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3523,17 +3166,10 @@
         "description": "CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />\r\nCultureUiName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"<br />\r\nList of culture codes: GET /api/common/culturelist\"\r\nList of UI culture codes: GET /api/common/cultureuilist\"",
         "operationId": "UpdateEmployee",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3573,10 +3209,7 @@
         "operationId": "GetEmployees_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3606,17 +3239,10 @@
         "description": "CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />\r\nCultureUiName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"<br />\r\nList of culture codes: GET /api/common/culturelist\"\r\nList of UI culture codes: GET /api/common/cultureuilist\"",
         "operationId": "CreateEmployee_post_2",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3649,17 +3275,10 @@
         "summary": "",
         "operationId": "AddEmployeeDepartment",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3702,10 +3321,7 @@
         "operationId": "DeleteEmployeeDepartment",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3746,10 +3362,7 @@
         "operationId": "Get_get_5",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3778,17 +3391,10 @@
         ],
         "operationId": "Post",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3825,10 +3431,7 @@
         "operationId": "GetMaintenancePlans_get_3",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "responses": {
           "200": {
@@ -3852,10 +3455,7 @@
         "operationId": "GetMaintenancePlanAssets_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3887,10 +3487,7 @@
         "operationId": "GetInventoryCount",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "responses": {
           "200": {
@@ -3911,17 +3508,10 @@
         ],
         "operationId": "PutInventoryCount",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3954,10 +3544,7 @@
         "operationId": "GetProduct",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -3983,17 +3570,10 @@
         ],
         "operationId": "Product",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4029,17 +3609,10 @@
         ],
         "operationId": "AddProduct",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4069,10 +3642,7 @@
         "operationId": "GetManufacturers",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "responses": {
           "200": {
@@ -4096,10 +3666,7 @@
         "operationId": "AddManufacturer",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4127,10 +3694,7 @@
         "operationId": "GetUnitsOfMeasure",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "responses": {
           "200": {
@@ -4154,10 +3718,7 @@
         "operationId": "GetMeasurementQuantities",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "responses": {
           "200": {
@@ -4181,10 +3742,7 @@
         "operationId": "GetMeasurementCharts",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4216,10 +3774,7 @@
         "operationId": "GetToolAttributes",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4251,10 +3806,7 @@
         "operationId": "GetToolRangeAttributes",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4286,10 +3838,7 @@
         "operationId": "GetAssetAttributes_get_3",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4321,10 +3870,7 @@
         "operationId": "GetOrderItemImages",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4356,10 +3902,7 @@
         "operationId": "GetOrderItemDocuments",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4391,10 +3934,7 @@
         "operationId": "GetServiceOrderTasks",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4426,10 +3966,7 @@
         "operationId": "GetServiceOrderCharges",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4461,10 +3998,7 @@
         "operationId": "GetServiceOrderItemTasksByOrderItems",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4496,10 +4030,7 @@
         "operationId": "GetServiceOrderItemTasksByOrder",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4531,10 +4062,7 @@
         "operationId": "GetServiceOrderItemFieldsByOrder",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4566,10 +4094,7 @@
         "operationId": "GetServiceOrderItemStatusHistoryAsync",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4601,10 +4126,7 @@
         "operationId": "GetMeasurementFields",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4636,10 +4158,7 @@
         "operationId": "GetMeasurementFieldsByOrder",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4671,10 +4190,7 @@
         "operationId": "GetServiceOrderItems",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4706,10 +4222,7 @@
         "operationId": "GetServiceOrderItemComponents",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4741,10 +4254,7 @@
         "operationId": "GetServiceOrderItemsByOrder",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4776,10 +4286,7 @@
         "operationId": "GetServiceOrderItemComponentsByOrder",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4811,10 +4318,7 @@
         "operationId": "GetServiceOrderItemOptions",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4846,10 +4350,7 @@
         "operationId": "GetAssetServiceRecords_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4878,10 +4379,7 @@
         "operationId": "GetServiceOrderAssignees",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4913,10 +4411,7 @@
         "operationId": "GetReferenceStandards",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4948,10 +4443,7 @@
         "operationId": "GetReferenceStandardsByOrder",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -4983,10 +4475,7 @@
         "operationId": "GetServiceOrders",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5015,10 +4504,7 @@
         "operationId": "GetAsFoundMeasurements",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5050,10 +4536,7 @@
         "operationId": "GetAsFoundMeasurementsByOrder",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5085,10 +4568,7 @@
         "operationId": "GetAsLeftMeasurements",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5120,10 +4600,7 @@
         "operationId": "GetAsLeftMeasurementsByOrder",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5155,10 +4632,7 @@
         "operationId": "GetAllMeasurements",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5190,10 +4664,7 @@
         "operationId": "GetAllMeasurementsByOrder",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5225,10 +4696,7 @@
         "operationId": "GetCompanyCertifications",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "responses": {
           "200": {
@@ -5252,10 +4720,7 @@
         "operationId": "GetExternalDataReports",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5298,10 +4763,7 @@
         "operationId": "GetClientAttributes_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5330,10 +4792,7 @@
         "operationId": "GetChannelResults",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5365,10 +4824,7 @@
         "operationId": "GetChannelResultsByOrder",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5400,10 +4856,7 @@
         "operationId": "GetChannelUniformity",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5435,10 +4888,7 @@
         "operationId": "ChannelUniformityByOrder",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5472,10 +4922,7 @@
         "operationId": "GetDocuments",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5517,10 +4964,7 @@
         "operationId": "UploadDocuments_post_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5562,10 +5006,7 @@
         "operationId": "GetDocumentsList",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5611,10 +5052,7 @@
         "operationId": "GetDocumentList",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5675,12 +5113,7 @@
         "operationId": "GetDocument",
         "consumes": [],
         "produces": [
-          "application/pdf",
-          "application/octet-stream",
-          "image/jpeg",
-          "image/png",
-          "application/msword",
-          "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          "application/pdf"
         ],
         "parameters": [
           {
@@ -5719,12 +5152,7 @@
         "operationId": "GetDocument_get_wd",
         "consumes": [],
         "produces": [
-          "application/pdf",
-          "application/octet-stream",
-          "image/jpeg",
-          "image/png",
-          "application/msword",
-          "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          "application/pdf"
         ],
         "parameters": [
           {
@@ -5763,10 +5191,7 @@
         "operationId": "GetDocuments_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5806,10 +5231,7 @@
         "operationId": "UploadDocuments_post_3",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5850,10 +5272,7 @@
         "operationId": "GetDocumentsList_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5899,10 +5318,7 @@
         "operationId": "GetDocumentList_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -5962,17 +5378,10 @@
         "description": "BatchType: AsLeft, AsFound.\r\n            \r\nBatchResult: NotServiced, Fail, FailAmbiguous, FailSignificant, Pass, PassAmbiguous, PassAdjustment, Done, Pending.\r\n            \r\nCustomFields.Result: NotServiced, Fail, Pass.\r\n            \r\nToleranceType: Percentage, Range, Offset, PercentagePlus, Ppm, PpmPlus, Function.\r\n            \r\nToleranceMode: Symmetric, Asymmetric, Range.\r\n            \r\nToleranceUnit: Percentage, UnitOfMeasure, Ppm.\r\n            \r\nPrecisionType: Percentage, UnitOfMeasure.\r\n            \r\nChannelsType: Combined, IndividualAcross, IndividualDown, OneOf.\r\n            \r\nMeasurement.Result: NotServiced, Fail, FailAmbiguous, FailSignificant, Pass, PassAmbiguous, PassAdjustment, Done, Pending.\r\n            \r\nFactorId: AmbientTemperature, AirHumidity, BarometricPressure, EvaporationRate, AirBuoyancy, ZFactor, Altitude, WindSpeed, SolarRadiation, LightIntensity, NoiseLevel, PhLevel, WaterConductivity3, WaterTemperature.",
         "operationId": "CreateMeasurementForm",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6019,17 +5428,10 @@
         ],
         "operationId": "AddAuxiliaryTools",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6070,10 +5472,7 @@
         "operationId": "GetMeasurementForm",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6107,17 +5506,10 @@
         "summary": "Update Measurement Form.",
         "operationId": "UpdateMeasurementForm",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6165,10 +5557,7 @@
         "operationId": "GetMeasurementsByAsset_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6214,10 +5603,7 @@
         "operationId": "GetWorkItemParts",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6249,10 +5635,7 @@
         "operationId": "GetWorkItems",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6282,17 +5665,10 @@
         "summary": "Add work items",
         "operationId": "AddWorkItems",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6337,10 +5713,7 @@
         "operationId": "GetWorkItems_workitems",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6413,10 +5786,7 @@
         "operationId": "GetWorkItem",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6444,17 +5814,10 @@
         "description": "WorkStatus:\r\nPending = 0\r\nInProgress = 1\r\nCompleted = 2\r\nDelayed = 3\r\nWithdrawn = 4\r\nLocked = 5<br />\r\nAsFoundCheck/AsLeftCheck (ChecklistResultStatus):\r\nNotServiced = 0,\r\nFail = 1,\r\nPass = 2<br />\r\nResultStatus/AsFoundResult/AsLeftResult (ServiceResultStatus):\r\nNotAvailable = 0,\r\nFail = 1,\r\nFailAmbiguous = 10,\r\nFailSignificant = 11,\r\nPass = 2,\r\nPassAmbiguous = 20,\r\nPassAdjustment = 21,\r\nDone = 22,",
         "operationId": "SetWorkItem",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6497,10 +5860,7 @@
         "operationId": "GetWorkItemImages",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6530,10 +5890,7 @@
         "operationId": "UploadWorkItemImages",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6596,10 +5953,7 @@
         "operationId": "DeleteWorkItemImage",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6634,10 +5988,7 @@
         "operationId": "GetWorkItemCharges",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6665,17 +6016,10 @@
         "description": "Allowed Names:\r\n    OverrideServiceTotal,\r\n    OverridePartsTotal,\r\n    OverrideRepairsTotal",
         "operationId": "PutCharges",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6714,10 +6058,7 @@
         "operationId": "GetWorkItemTasks",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6743,17 +6084,10 @@
         ],
         "operationId": "CreateWorkItemTask",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6790,10 +6124,7 @@
         "operationId": "GetWorkItemTask",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6827,10 +6158,7 @@
         "operationId": "DeleteWorkItemTask",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6867,10 +6195,7 @@
         "operationId": "Get_get_6",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6898,17 +6223,10 @@
         "summary": "Update metadata",
         "operationId": "Update_put_2",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6945,17 +6263,10 @@
         "summary": "Create metadata",
         "operationId": "Create_post_2",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -6995,10 +6306,7 @@
         "operationId": "Delete_delete_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7037,10 +6345,7 @@
         "operationId": "GetWorkOrderParts",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7076,17 +6381,10 @@
         "description": "ServiceOrderChargeType: Part, Labor, Charge",
         "operationId": "UpdateWorkOrderParts",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7127,17 +6425,10 @@
         "description": "ServiceOrderChargeType: Part, Labor, Charge",
         "operationId": "CreateWorkOrderParts",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7181,10 +6472,7 @@
         "operationId": "DeleteWorkOrderTask",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7226,10 +6514,7 @@
         "operationId": "GetWorkOrderPayment",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7258,10 +6543,7 @@
         "operationId": "GetAllWorkOrderPayments",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7290,17 +6572,10 @@
         ],
         "operationId": "CreateWorkOrderPayment",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7336,17 +6611,10 @@
         ],
         "operationId": "ChangeWorkOrderPaymentStatus",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7385,10 +6653,7 @@
         "operationId": "GetWorkOrders",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7468,17 +6733,10 @@
         "description": "",
         "operationId": "CreateAsync",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7512,10 +6770,7 @@
         "operationId": "GetWorkOrders_employee",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7553,10 +6808,7 @@
         "operationId": "GetWorkOrder",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7585,10 +6837,7 @@
         "operationId": "GetAssignments",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7620,10 +6869,7 @@
         "operationId": "GetCharges",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7650,17 +6896,10 @@
         "summary": "Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount, ShippingFee",
         "operationId": "PutCharges_put_2",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7699,10 +6938,7 @@
         "operationId": "CreateOrderBySchedule",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7732,10 +6968,7 @@
         "operationId": "OrderCancel",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7773,10 +7006,7 @@
         "operationId": "GetOrderStatus",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7810,17 +7040,10 @@
         "summary": "Change Work Order Status",
         "operationId": "ChangeOrderStatus",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7867,17 +7090,10 @@
         ],
         "operationId": "UpdateShipmentStatus",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7913,17 +7129,10 @@
         ],
         "operationId": "AppendShipmentTrackingNumber",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -7961,10 +7170,7 @@
         "operationId": "GetWorkOrderTasks",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -8000,17 +7206,10 @@
         "description": "- If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their difference\r\n- If StartTime and FinishTime are not defined they will be recalculated\r\n    - if StartTime - in will be recalculated FinishTime - TimeSpent\r\n    - if FinishTime - in will be recalculated StartTime + TimeSpent",
         "operationId": "UpdateWorkOrderTask",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -8051,17 +7250,10 @@
         "description": "- If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their difference\r\n- If StartTime and FinishTime are not defined they will be recalculated\r\n    - if StartTime - in will be recalculated FinishTime - TimeSpent\r\n    - if FinishTime - in will be recalculated StartTime + TimeSpent",
         "operationId": "CreateWorkOrderTask",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -8105,10 +7297,7 @@
         "operationId": "DeleteWorkOrderTask_delete_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -8151,10 +7340,7 @@
         "operationId": "Get_get_7",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -8192,17 +7378,10 @@
         ],
         "operationId": "Update_put_3",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -8238,10 +7417,7 @@
         "operationId": "Get_get_8",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -8270,10 +7446,7 @@
         "operationId": "GetAll_get_3",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -8323,17 +7496,10 @@
         "description": "",
         "operationId": "Update_put_4",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -8369,17 +7535,10 @@
         "description": "",
         "operationId": "Create_post_3",
         "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
+          "application/json"
         ],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/json"
         ],
         "parameters": [
           {
