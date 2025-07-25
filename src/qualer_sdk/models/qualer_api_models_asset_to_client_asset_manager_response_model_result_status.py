@@ -1,17 +1,17 @@
-from enum import Enum
+from enum import IntEnum
 
 
-class QualerApiModelsAssetToClientAssetManagerResponseModelResultStatus(int, Enum):
-    NOTAVAILABLE = 0
-    FAIL = 1
-    PASS = 2
-    FAILAMBIGUOUS = 10
-    FAILSIGNIFICANT = 11
-    PASSAMBIGUOUS = 20
-    PASSADJUSTMENT = 21
-    DONE = 22
-    PENDING = 30
-    MISSED = 31
+class QualerApiModelsAssetToClientAssetManagerResponseModelResultStatus(IntEnum):
+    VALUE_0 = 0
+    VALUE_1 = 1
+    VALUE_10 = 10
+    VALUE_11 = 11
+    VALUE_2 = 2
+    VALUE_20 = 20
+    VALUE_21 = 21
+    VALUE_22 = 22
+    VALUE_30 = 30
+    VALUE_31 = 31
 
     def __str__(self) -> str:
         return str(self.value)

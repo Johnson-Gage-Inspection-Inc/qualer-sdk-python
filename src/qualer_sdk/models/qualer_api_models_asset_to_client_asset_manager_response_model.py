@@ -412,7 +412,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         asset_service_record_id = self.asset_service_record_id
 
-        result_status: Union[None, Unset, str] = UNSET
+        result_status: Union[None, Unset, int] = UNSET
         if not isinstance(self.result_status, Unset):
             result_status = self.result_status.value
 
