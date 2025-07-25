@@ -1,7 +1,7 @@
 # qualer-sdk-python
 
 [![Last Commit](https://img.shields.io/github/last-commit/Johnson-Gage-Inspection-Inc/qualer-sdk-python)](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-python/commits/main)
-![CI](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-python/workflows/CI/badge.svg)
+[![CI](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-python/workflows/CI/badge.svg)](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-python/actions)
 [![codecov](https://codecov.io/gh/Johnson-Gage-Inspection-Inc/qualer-sdk-python/branch/main/graph/badge.svg)](https://codecov.io/gh/Johnson-Gage-Inspection-Inc/qualer-sdk-python)
 [![Python Versions](https://img.shields.io/badge/python-3.9+-blue)](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-python)
 [![Qualer API](https://img.shields.io/badge/Qualer%20API-v1-orange)](https://jgiquality.qualer.com/swagger/ui/index)
