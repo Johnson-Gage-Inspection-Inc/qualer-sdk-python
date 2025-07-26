@@ -18,22 +18,12 @@ SITE_ID = 81690  # valid site id
 
 # Mapping of endpoint to required params (from discovery log)
 ENDPOINT_REQUIRED_PARAMS = {
-    # "account.companies": {"body": '"BODY_PLACEHOLDER"'},
-    # "account.get_employee_message": {"message_id": ""},
-    # "account.get_employee_messages": {},
-    # "account.login": {"body": '"BODY_PLACEHOLDER"'},
-    # "account.logout": {"body": '"BODY_PLACEHOLDER"'},
     "asset_attributes.get_asset_attributes": {"asset_id": ASSET_ID},
     "asset_maintenance_plans.get_maintenance_plan": {
         "asset_id": ASSET_ID,
         "maintenance_plan_id": "MAINTENANCE_PLAN_ID",
     },
     "asset_maintenance_plans.get_maintenance_plans": {"asset_id": ASSET_ID},
-    # "asset_maintenance_plans.reset_initial_service_date": {
-    #     "asset_id": ASSET_ID,
-    #     "body": '"BODY_PLACEHOLDER"',
-    #     "maintenance_plan_id": "MAINTENANCE_PLAN_ID",
-    # },
     "asset_measurements.get_measurements_by_asset": {"asset_id": ASSET_ID},
     "asset_pools.get": {"id": ASSET_POOL_ID},
     "asset_pools.get_all": {},
