@@ -90,7 +90,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         significant_figures (Union[Unset, int]):
         sd_header (Union[Unset, float]):
         cv_header (Union[Unset, float]):
-        measurement_local_time (Union[Unset, datetime.datetime]):
+        measurement_local_time (Union[None, Unset, datetime.datetime]):
         mean (Union[Unset, float]):
         mean_raw (Union[Unset, float]):
         mean_decimal_places (Union[Unset, int]):
@@ -143,7 +143,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         channel (Union[Unset, int]):
         measurement_type (Union[Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType]):
         updated_by (Union[Unset, str]):
-        updated_on (Union[Unset, datetime.datetime]):
+        updated_on (Union[None, Unset, datetime.datetime]):
         error (Union[Unset, float]):
         error_extended (Union[Unset, str]):
         require_adjustment (Union[Unset, bool]):
@@ -474,7 +474,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     significant_figures: Union[Unset, int] = UNSET
     sd_header: Union[Unset, float] = UNSET
     cv_header: Union[Unset, float] = UNSET
-    measurement_local_time: Union[Unset, datetime.datetime] = UNSET
+    measurement_local_time: Union[None, Unset, datetime.datetime] = UNSET
     mean: Union[Unset, float] = UNSET
     mean_raw: Union[Unset, float] = UNSET
     mean_decimal_places: Union[Unset, int] = UNSET
@@ -520,7 +520,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     tar_decimal_places: Union[Unset, int] = UNSET
     guard_band: Union[Unset, str] = UNSET
     guard_band_logic: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic
+        None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic
     ] = UNSET
     uncertainty_budget: Union[Unset, str] = UNSET
     calculated_uncertainty: Union[Unset, float] = UNSET
@@ -531,7 +531,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType
     ] = UNSET
     updated_by: Union[Unset, str] = UNSET
-    updated_on: Union[Unset, datetime.datetime] = UNSET
+    updated_on: Union[None, Unset, datetime.datetime] = UNSET
     error: Union[Unset, float] = UNSET
     error_extended: Union[Unset, str] = UNSET
     require_adjustment: Union[Unset, bool] = UNSET
@@ -592,7 +592,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     base_value: Union[Unset, float] = UNSET
     use_expected_value: Union[Unset, bool] = UNSET
     reading_entry_logic: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic
+        None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic
     ] = UNSET
     reading_entry_math: Union[
         Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath
@@ -955,9 +955,13 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         cv_header = self.cv_header
 
-        measurement_local_time: Union[Unset, str] = UNSET
-        if not isinstance(self.measurement_local_time, Unset):
+        measurement_local_time: Union[None, Unset, str]
+        if isinstance(self.measurement_local_time, Unset):
+            measurement_local_time = UNSET
+        elif isinstance(self.measurement_local_time, datetime.datetime):
             measurement_local_time = self.measurement_local_time.isoformat()
+        else:
+            measurement_local_time = self.measurement_local_time
 
         mean = self.mean
 
@@ -1047,7 +1051,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         guard_band = self.guard_band
 
-        guard_band_logic: Union[Unset, str] = UNSET
+        guard_band_logic: Union[None, Unset, int] = UNSET
         if not isinstance(self.guard_band_logic, Unset):
             guard_band_logic = self.guard_band_logic.value
 
@@ -1067,9 +1071,13 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         updated_by = self.updated_by
 
-        updated_on: Union[Unset, str] = UNSET
-        if not isinstance(self.updated_on, Unset):
+        updated_on: Union[None, Unset, str]
+        if isinstance(self.updated_on, Unset):
+            updated_on = UNSET
+        elif isinstance(self.updated_on, datetime.datetime):
             updated_on = self.updated_on.isoformat()
+        else:
+            updated_on = self.updated_on
 
         error = self.error
 
@@ -1191,7 +1199,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         use_expected_value = self.use_expected_value
 
-        reading_entry_logic: Union[Unset, str] = UNSET
+        reading_entry_logic: Union[None, Unset, int] = UNSET
         if not isinstance(self.reading_entry_logic, Unset):
             reading_entry_logic = self.reading_entry_logic.value
 
@@ -2643,12 +2651,26 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         cv_header = d.pop("CvHeader", UNSET)
 
-        _measurement_local_time = d.pop("MeasurementLocalTime", UNSET)
-        measurement_local_time: Union[Unset, datetime.datetime]
-        if isinstance(_measurement_local_time, Unset):
-            measurement_local_time = UNSET
-        else:
-            measurement_local_time = isoparse(_measurement_local_time)
+        def _parse_measurement_local_time(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                measurement_local_time_type_0 = isoparse(data)
+
+                return measurement_local_time_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        measurement_local_time = _parse_measurement_local_time(
+            d.pop("MeasurementLocalTime", UNSET)
+        )
 
         mean = d.pop("Mean", UNSET)
 
@@ -2744,6 +2766,8 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         ]
         if isinstance(_guard_band_logic, Unset):
             guard_band_logic = UNSET
+        elif _guard_band_logic is None:
+            guard_band_logic = None
         else:
             guard_band_logic = (
                 QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic(
@@ -2776,12 +2800,22 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         updated_by = d.pop("UpdatedBy", UNSET)
 
-        _updated_on = d.pop("UpdatedOn", UNSET)
-        updated_on: Union[Unset, datetime.datetime]
-        if isinstance(_updated_on, Unset):
-            updated_on = UNSET
-        else:
-            updated_on = isoparse(_updated_on)
+        def _parse_updated_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                updated_on_type_0 = isoparse(data)
+
+                return updated_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        updated_on = _parse_updated_on(d.pop("UpdatedOn", UNSET))
 
         error = d.pop("Error", UNSET)
 
@@ -2818,7 +2852,13 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         if isinstance(_commenced_on, Unset):
             commenced_on = UNSET
         else:
-            commenced_on = isoparse(_commenced_on)
+            if _commenced_on is None:
+
+                commenced_on = None
+
+            else:
+
+                commenced_on = isoparse(_commenced_on)
 
         commenced_by = d.pop("CommencedBy", UNSET)
 
@@ -2912,6 +2952,8 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         ]
         if isinstance(_reading_entry_logic, Unset):
             reading_entry_logic = UNSET
+        elif _reading_entry_logic is None:
+            reading_entry_logic = None
         else:
             reading_entry_logic = (
                 QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic(
@@ -3000,7 +3042,13 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         if isinstance(_completed_on, Unset):
             completed_on = UNSET
         else:
-            completed_on = isoparse(_completed_on)
+            if _completed_on is None:
+
+                completed_on = None
+
+            else:
+
+                completed_on = isoparse(_completed_on)
 
         is_limited = d.pop("IsLimited", UNSET)
 
@@ -3228,14 +3276,26 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         if isinstance(_shipped_on, Unset):
             shipped_on = UNSET
         else:
-            shipped_on = isoparse(_shipped_on)
+            if _shipped_on is None:
+
+                shipped_on = None
+
+            else:
+
+                shipped_on = isoparse(_shipped_on)
 
         _delivered_on = d.pop("DeliveredOn", UNSET)
         delivered_on: Union[Unset, datetime.datetime]
         if isinstance(_delivered_on, Unset):
             delivered_on = UNSET
         else:
-            delivered_on = isoparse(_delivered_on)
+            if _delivered_on is None:
+
+                delivered_on = None
+
+            else:
+
+                delivered_on = isoparse(_delivered_on)
 
         tracking_number = d.pop("TrackingNumber", UNSET)
 

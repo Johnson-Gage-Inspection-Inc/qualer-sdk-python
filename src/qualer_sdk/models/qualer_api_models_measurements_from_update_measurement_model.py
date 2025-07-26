@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -19,14 +19,14 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementModel:
         values (Union[Unset, str]):
         channel (Union[Unset, int]):
         updated_by (Union[Unset, str]):
-        updated_on (Union[Unset, datetime.datetime]):
+        updated_on (Union[None, Unset, datetime.datetime]):
     """
 
     measurement_id: Union[Unset, int] = UNSET
     values: Union[Unset, str] = UNSET
     channel: Union[Unset, int] = UNSET
     updated_by: Union[Unset, str] = UNSET
-    updated_on: Union[Unset, datetime.datetime] = UNSET
+    updated_on: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -38,9 +38,13 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementModel:
 
         updated_by = self.updated_by
 
-        updated_on: Union[Unset, str] = UNSET
-        if not isinstance(self.updated_on, Unset):
+        updated_on: Union[None, Unset, str]
+        if isinstance(self.updated_on, Unset):
+            updated_on = UNSET
+        elif isinstance(self.updated_on, datetime.datetime):
             updated_on = self.updated_on.isoformat()
+        else:
+            updated_on = self.updated_on
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -69,12 +73,22 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementModel:
 
         updated_by = d.pop("UpdatedBy", UNSET)
 
-        _updated_on = d.pop("UpdatedOn", UNSET)
-        updated_on: Union[Unset, datetime.datetime]
-        if isinstance(_updated_on, Unset):
-            updated_on = UNSET
-        else:
-            updated_on = isoparse(_updated_on)
+        def _parse_updated_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                updated_on_type_0 = isoparse(data)
+
+                return updated_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        updated_on = _parse_updated_on(d.pop("UpdatedOn", UNSET))
 
         qualer_api_models_measurements_from_update_measurement_model = cls(
             measurement_id=measurement_id,

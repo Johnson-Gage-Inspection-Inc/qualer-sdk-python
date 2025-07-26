@@ -93,7 +93,7 @@ class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
 
         significant_figures = self.significant_figures
 
-        influence_parameter_1_type: Union[Unset, int] = UNSET
+        influence_parameter_1_type: Union[None, Unset, int] = UNSET
         if not isinstance(self.influence_parameter_1_type, Unset):
             influence_parameter_1_type = self.influence_parameter_1_type.value
 

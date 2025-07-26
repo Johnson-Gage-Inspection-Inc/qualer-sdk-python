@@ -1,11 +1,11 @@
-from enum import Enum
+from enum import IntEnum
 
 
-class QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic(str, Enum):
-    NCSLZ5403 = "Ncslz5403"
-    RDS = "Rds"
-    TUR41 = "Tur41"
-    UNCERTAINTY = "Uncertainty"
+class QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic(IntEnum):
+    VALUE_0 = 0
+    VALUE_1 = 1
+    VALUE_2 = 2
+    VALUE_3 = 3
 
     def __str__(self) -> str:
         return str(self.value)

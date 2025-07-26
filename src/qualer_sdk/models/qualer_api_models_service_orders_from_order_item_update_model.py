@@ -321,7 +321,13 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         if isinstance(_checked_on, Unset):
             checked_on = UNSET
         else:
-            checked_on = isoparse(_checked_on)
+            if _checked_on is None:
+
+                checked_on = None
+
+            else:
+
+                checked_on = isoparse(_checked_on)
 
         checked_by_name = d.pop("CheckedByName", UNSET)
 
@@ -330,7 +336,13 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         if isinstance(_completed_on, Unset):
             completed_on = UNSET
         else:
-            completed_on = isoparse(_completed_on)
+            if _completed_on is None:
+
+                completed_on = None
+
+            else:
+
+                completed_on = isoparse(_completed_on)
 
         completed_by_name = d.pop("CompletedByName", UNSET)
 

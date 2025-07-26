@@ -124,7 +124,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         vendor_company_id (Union[Unset, int]):
         client_vendor_id (Union[Unset, int]):
         sign_off_date (Union[None, Unset, datetime.datetime]):
-        quality_control_date (Union[Unset, datetime.datetime]):
+        quality_control_date (Union[None, Unset, datetime.datetime]):
         client_sign_off_on (Union[None, Unset, datetime.datetime]):
         client_sign_off_by_name (Union[Unset, str]):
         client_signed_on (Union[None, Unset, datetime.datetime]):
@@ -297,7 +297,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
     vendor_company_id: Union[Unset, int] = UNSET
     client_vendor_id: Union[Unset, int] = UNSET
     sign_off_date: Union[None, Unset, datetime.datetime] = UNSET
-    quality_control_date: Union[Unset, datetime.datetime] = UNSET
+    quality_control_date: Union[None, Unset, datetime.datetime] = UNSET
     client_sign_off_on: Union[None, Unset, datetime.datetime] = UNSET
     client_sign_off_by_name: Union[Unset, str] = UNSET
     client_signed_on: Union[None, Unset, datetime.datetime] = UNSET
@@ -343,7 +343,9 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
     assignee_name: Union[None, Unset, str] = UNSET
     payment_due_on: Union[None, Unset, datetime.datetime] = UNSET
     process_date_option: Union[
-        Unset, QualerApiModelsReportDatasetsToServiceOrderResponseProcessDateOption
+        None,
+        Unset,
+        QualerApiModelsReportDatasetsToServiceOrderResponseProcessDateOption,
     ] = UNSET
     desired_date: Union[None, Unset, datetime.datetime] = UNSET
     deadline_date: Union[None, Unset, datetime.datetime] = UNSET
@@ -591,9 +593,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         else:
             sign_off_date = self.sign_off_date
 
-        quality_control_date: Union[Unset, str] = UNSET
-        if not isinstance(self.quality_control_date, Unset):
+        quality_control_date: Union[None, Unset, str]
+        if isinstance(self.quality_control_date, Unset):
+            quality_control_date = UNSET
+        elif isinstance(self.quality_control_date, datetime.datetime):
             quality_control_date = self.quality_control_date.isoformat()
+        else:
+            quality_control_date = self.quality_control_date
 
         client_sign_off_on: Union[None, Unset, str]
         if isinstance(self.client_sign_off_on, Unset):
@@ -823,7 +829,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         else:
             payment_due_on = self.payment_due_on
 
-        process_date_option: Union[Unset, int] = UNSET
+        process_date_option: Union[None, Unset, int] = UNSET
         if not isinstance(self.process_date_option, Unset):
             process_date_option = self.process_date_option.value
 
@@ -1478,12 +1484,26 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
 
         sign_off_date = _parse_sign_off_date(d.pop("SignOffDate", UNSET))
 
-        _quality_control_date = d.pop("QualityControlDate", UNSET)
-        quality_control_date: Union[Unset, datetime.datetime]
-        if isinstance(_quality_control_date, Unset):
-            quality_control_date = UNSET
-        else:
-            quality_control_date = isoparse(_quality_control_date)
+        def _parse_quality_control_date(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                quality_control_date_type_0 = isoparse(data)
+
+                return quality_control_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        quality_control_date = _parse_quality_control_date(
+            d.pop("QualityControlDate", UNSET)
+        )
 
         def _parse_client_sign_off_on(
             data: object,
@@ -1546,7 +1566,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         if isinstance(_created_on, Unset):
             created_on = UNSET
         else:
-            created_on = isoparse(_created_on)
+            if _created_on is None:
+
+                created_on = None
+
+            else:
+
+                created_on = isoparse(_created_on)
 
         def _parse_invoiced_on(data: object) -> Union[None, Unset, datetime.datetime]:
             if data is None:
@@ -1621,7 +1647,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         if isinstance(_accepted_on, Unset):
             accepted_on = UNSET
         else:
-            accepted_on = isoparse(_accepted_on)
+            if _accepted_on is None:
+
+                accepted_on = None
+
+            else:
+
+                accepted_on = isoparse(_accepted_on)
 
         def _parse_approved_on(data: object) -> Union[None, Unset, datetime.datetime]:
             if data is None:
@@ -1898,6 +1930,8 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         ]
         if isinstance(_process_date_option, Unset):
             process_date_option = UNSET
+        elif _process_date_option is None:
+            process_date_option = None
         else:
             process_date_option = (
                 QualerApiModelsReportDatasetsToServiceOrderResponseProcessDateOption(
@@ -1944,7 +1978,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         if isinstance(_vendor_sign_off_on, Unset):
             vendor_sign_off_on = UNSET
         else:
-            vendor_sign_off_on = isoparse(_vendor_sign_off_on)
+            if _vendor_sign_off_on is None:
+
+                vendor_sign_off_on = None
+
+            else:
+
+                vendor_sign_off_on = isoparse(_vendor_sign_off_on)
 
         vendor_sign_off_by_name = d.pop("VendorSignOffByName", UNSET)
 
@@ -1957,14 +1997,26 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         if isinstance(_business_hours_from, Unset):
             business_hours_from = UNSET
         else:
-            business_hours_from = isoparse(_business_hours_from)
+            if _business_hours_from is None:
+
+                business_hours_from = None
+
+            else:
+
+                business_hours_from = isoparse(_business_hours_from)
 
         _business_hours_to = d.pop("BusinessHoursTo", UNSET)
         business_hours_to: Union[Unset, datetime.datetime]
         if isinstance(_business_hours_to, Unset):
             business_hours_to = UNSET
         else:
-            business_hours_to = isoparse(_business_hours_to)
+            if _business_hours_to is None:
+
+                business_hours_to = None
+
+            else:
+
+                business_hours_to = isoparse(_business_hours_to)
 
         client_company_alternative_names = d.pop("ClientCompanyAlternativeNames", UNSET)
 

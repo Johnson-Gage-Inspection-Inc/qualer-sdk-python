@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -19,8 +19,8 @@ class QualerApiModelsAssetReservationFromUpsertAssetReservationModel:
         product_id (Union[Unset, int]):
         reservation_id (Union[Unset, int]):
         service_order_id (Union[Unset, int]):
-        begin_date (Union[Unset, datetime.datetime]):
-        end_date (Union[Unset, datetime.datetime]):
+        begin_date (Union[None, Unset, datetime.datetime]):
+        end_date (Union[None, Unset, datetime.datetime]):
         reserved_by (Union[Unset, int]):
         reserved_by_name (Union[Unset, str]):
         comments (Union[Unset, str]):
@@ -30,8 +30,8 @@ class QualerApiModelsAssetReservationFromUpsertAssetReservationModel:
     product_id: Union[Unset, int] = UNSET
     reservation_id: Union[Unset, int] = UNSET
     service_order_id: Union[Unset, int] = UNSET
-    begin_date: Union[Unset, datetime.datetime] = UNSET
-    end_date: Union[Unset, datetime.datetime] = UNSET
+    begin_date: Union[None, Unset, datetime.datetime] = UNSET
+    end_date: Union[None, Unset, datetime.datetime] = UNSET
     reserved_by: Union[Unset, int] = UNSET
     reserved_by_name: Union[Unset, str] = UNSET
     comments: Union[Unset, str] = UNSET
@@ -46,13 +46,21 @@ class QualerApiModelsAssetReservationFromUpsertAssetReservationModel:
 
         service_order_id = self.service_order_id
 
-        begin_date: Union[Unset, str] = UNSET
-        if not isinstance(self.begin_date, Unset):
+        begin_date: Union[None, Unset, str]
+        if isinstance(self.begin_date, Unset):
+            begin_date = UNSET
+        elif isinstance(self.begin_date, datetime.datetime):
             begin_date = self.begin_date.isoformat()
+        else:
+            begin_date = self.begin_date
 
-        end_date: Union[Unset, str] = UNSET
-        if not isinstance(self.end_date, Unset):
+        end_date: Union[None, Unset, str]
+        if isinstance(self.end_date, Unset):
+            end_date = UNSET
+        elif isinstance(self.end_date, datetime.datetime):
             end_date = self.end_date.isoformat()
+        else:
+            end_date = self.end_date
 
         reserved_by = self.reserved_by
 
@@ -95,19 +103,39 @@ class QualerApiModelsAssetReservationFromUpsertAssetReservationModel:
 
         service_order_id = d.pop("ServiceOrderId", UNSET)
 
-        _begin_date = d.pop("BeginDate", UNSET)
-        begin_date: Union[Unset, datetime.datetime]
-        if isinstance(_begin_date, Unset):
-            begin_date = UNSET
-        else:
-            begin_date = isoparse(_begin_date)
+        def _parse_begin_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                begin_date_type_0 = isoparse(data)
 
-        _end_date = d.pop("EndDate", UNSET)
-        end_date: Union[Unset, datetime.datetime]
-        if isinstance(_end_date, Unset):
-            end_date = UNSET
-        else:
-            end_date = isoparse(_end_date)
+                return begin_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        begin_date = _parse_begin_date(d.pop("BeginDate", UNSET))
+
+        def _parse_end_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                end_date_type_0 = isoparse(data)
+
+                return end_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        end_date = _parse_end_date(d.pop("EndDate", UNSET))
 
         reserved_by = d.pop("ReservedBy", UNSET)
 

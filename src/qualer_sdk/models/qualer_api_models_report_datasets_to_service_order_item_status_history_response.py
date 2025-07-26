@@ -116,14 +116,26 @@ class QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse:
         if isinstance(_created_on, Unset):
             created_on = UNSET
         else:
-            created_on = isoparse(_created_on)
+            if _created_on is None:
+
+                created_on = None
+
+            else:
+
+                created_on = isoparse(_created_on)
 
         _created_on_utc = d.pop("CreatedOnUtc", UNSET)
         created_on_utc: Union[Unset, datetime.datetime]
         if isinstance(_created_on_utc, Unset):
             created_on_utc = UNSET
         else:
-            created_on_utc = isoparse(_created_on_utc)
+            if _created_on_utc is None:
+
+                created_on_utc = None
+
+            else:
+
+                created_on_utc = isoparse(_created_on_utc)
 
         employee_id = d.pop("EmployeeId", UNSET)
 

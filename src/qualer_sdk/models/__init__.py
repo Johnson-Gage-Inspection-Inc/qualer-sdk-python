@@ -36,7 +36,7 @@ from .create_employee_response_200 import CreateEmployeeResponse200
 from .create_measurement_form_response_200 import CreateMeasurementFormResponse200
 from .create_order_by_schedule_response_200 import CreateOrderByScheduleResponse200
 from .create_post_2_response_200 import CreatePost2Response200
-from .create_work_item_task_response_200 import CreateWorkItemTaskResponse200
+from .create_work_item_task_response_200_item import CreateWorkItemTaskResponse200Item
 from .create_work_order_parts_response_204 import CreateWorkOrderPartsResponse204
 from .create_work_order_task_response_204 import CreateWorkOrderTaskResponse204
 from .delete_delete_2_response_200 import DeleteDelete2Response200
@@ -56,7 +56,7 @@ from .get_get_6_response_200 import GetGet6Response200
 from .get_order_status_response_200 import GetOrderStatusResponse200
 from .get_work_item_charges_response_200 import GetWorkItemChargesResponse200
 from .get_work_item_task_response_200 import GetWorkItemTaskResponse200
-from .get_work_item_tasks_response_200 import GetWorkItemTasksResponse200
+from .get_work_item_tasks_response_200_item import GetWorkItemTasksResponse200Item
 from .logout_response_200 import LogoutResponse200
 from .lookups_lookup_type import LookupsLookupType
 from .order_cancel_response_200 import OrderCancelResponse200
@@ -1002,7 +1002,7 @@ __all__ = [
     "CreateMeasurementFormResponse200",
     "CreateOrderByScheduleResponse200",
     "CreatePost2Response200",
-    "CreateWorkItemTaskResponse200",
+    "CreateWorkItemTaskResponse200Item",
     "CreateWorkOrderPartsResponse204",
     "CreateWorkOrderTaskResponse204",
     "DeleteDelete2Response200",
@@ -1020,7 +1020,7 @@ __all__ = [
     "GetOrderStatusResponse200",
     "GetWorkItemChargesResponse200",
     "GetWorkItemTaskResponse200",
-    "GetWorkItemTasksResponse200",
+    "GetWorkItemTasksResponse200Item",
     "LogoutResponse200",
     "LookupsLookupType",
     "OrderCancelResponse200",
