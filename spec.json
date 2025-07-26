@@ -485,14 +485,16 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           },
           {
             "name": "to",
             "in": "query",
             "required": false,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           }
         ],
         "responses": {
@@ -586,14 +588,16 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           },
           {
             "name": "model.to",
             "in": "query",
             "required": false,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           },
           {
             "name": "model.assetId",
@@ -1662,14 +1666,16 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           },
           {
             "name": "model.to",
             "in": "query",
             "required": false,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           }
         ],
         "responses": {
@@ -1796,10 +1802,9 @@
         "operationId": "DocumentList",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/octet-stream",
+          "application/pdf",
+          "application/zip"
         ],
         "parameters": [
           {
@@ -1826,10 +1831,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
+              "type": "string",
+              "format": "binary"
             }
           }
         }
@@ -2710,7 +2713,8 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           }
         ],
         "responses": {
@@ -5472,10 +5476,9 @@
         "operationId": "GetDocuments",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/octet-stream",
+          "application/pdf",
+          "application/zip"
         ],
         "parameters": [
           {
@@ -5497,7 +5500,8 @@
           "200": {
             "description": "Returns an array of documents or empty list",
             "schema": {
-              "type": "object"
+              "type": "string",
+              "format": "binary"
             }
           },
           "403": {
@@ -5517,10 +5521,9 @@
         "operationId": "UploadDocuments_post_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/octet-stream",
+          "application/pdf",
+          "application/zip"
         ],
         "parameters": [
           {
@@ -5548,7 +5551,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "string",
+              "format": "binary"
             }
           }
         }
@@ -5562,10 +5566,9 @@
         "operationId": "GetDocumentsList",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/octet-stream",
+          "application/pdf",
+          "application/zip"
         ],
         "parameters": [
           {
@@ -5586,10 +5589,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Qualer.Api.Models.ServiceOrderDocuments.To.CompanyOrderControlledDocumentResponse"
-              }
+              "type": "string",
+              "format": "binary"
             }
           },
           "403": {
@@ -5623,7 +5624,8 @@
             "description": "Retrieve documents where CreatedOnUtc greater than From parameter",
             "required": true,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           },
           {
             "name": "to",
@@ -5631,7 +5633,8 @@
             "description": "Retrieve documents where CreatedOnUtc less than To parameter",
             "required": true,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           },
           {
             "name": "reportType",
@@ -5763,10 +5766,9 @@
         "operationId": "GetDocuments_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/octet-stream",
+          "application/pdf",
+          "application/zip"
         ],
         "parameters": [
           {
@@ -5788,7 +5790,8 @@
           "200": {
             "description": "Returns an array of documents or empty list",
             "schema": {
-              "type": "object"
+              "type": "string",
+              "format": "binary"
             }
           },
           "403": {
@@ -5806,10 +5809,9 @@
         "operationId": "UploadDocuments_post_3",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/octet-stream",
+          "application/pdf",
+          "application/zip"
         ],
         "parameters": [
           {
@@ -5836,7 +5838,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "string",
+              "format": "binary"
             }
           }
         }
@@ -5850,10 +5853,9 @@
         "operationId": "GetDocumentsList_get_2",
         "consumes": [],
         "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
+          "application/octet-stream",
+          "application/pdf",
+          "application/zip"
         ],
         "parameters": [
           {
@@ -5874,10 +5876,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Qualer.Api.Models.ServiceOrderDocuments.To.CompanyOrderItemControlledDocumentResponse"
-              }
+              "type": "string",
+              "format": "binary"
             }
           },
           "403": {
@@ -5911,7 +5911,8 @@
             "description": "Retrieve documents where CreatedOnUtc greater than From parameter",
             "required": true,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           },
           {
             "name": "to",
@@ -5919,7 +5920,8 @@
             "description": "Retrieve documents where CreatedOnUtc less than To parameter",
             "required": true,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           },
           {
             "name": "reportType",
@@ -6183,14 +6185,16 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           },
           {
             "name": "to",
             "in": "query",
             "required": false,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           }
         ],
         "responses": {
@@ -6364,7 +6368,8 @@
             "description": "Retrieve Work Items where CreatedOnUtc greater than From parameter",
             "required": false,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           },
           {
             "name": "to",
@@ -6372,7 +6377,8 @@
             "description": "Retrieve Work Items where CreatedOnUtc less than To parameter",
             "required": false,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           },
           {
             "name": "workItemNumber",
@@ -6732,7 +6738,11 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": true
+              }
             }
           }
         }
@@ -6776,7 +6786,11 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": true
+              }
             }
           }
         }
@@ -7412,7 +7426,8 @@
             "description": "Retrieve Work Orders where LastUpdatedOn greater than From parameter",
             "required": false,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           },
           {
             "name": "to",
@@ -7420,7 +7435,8 @@
             "description": "Retrieve Work Orders where LastUpdatedOn less than To parameter",
             "required": false,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           },
           {
             "name": "modifiedAfter",
@@ -7428,7 +7444,8 @@
             "description": "Retrieve Work Orders where LastUpdatedOn greater than ModifiedAfter parameter",
             "required": false,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           },
           {
             "name": "workOrderNumber",
@@ -8300,7 +8317,8 @@
             "in": "query",
             "required": false,
             "type": "string",
-            "format": "date-time"
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2})?$",
+            "x-python-type": "Union[str, datetime.datetime]"
           }
         ],
         "responses": {
@@ -8683,7 +8701,8 @@
         "PurchaseDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "PurchaseCost": {
           "format": "double",
@@ -8696,7 +8715,8 @@
         "ActivationDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "DepreciationBasis": {
           "format": "double",
@@ -8709,7 +8729,8 @@
         "RetirementDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "SalvageValue": {
           "format": "double",
@@ -8747,7 +8768,8 @@
         "LastServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceTask": {
           "type": "string"
@@ -8755,12 +8777,14 @@
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "CertificateDueDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "OwnerFirstName": {
           "type": "string"
@@ -8813,7 +8837,9 @@
       "properties": {
         "ResetServiceDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "ResetServiceTask": {
           "type": "string"
@@ -8855,7 +8881,8 @@
         "ServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "SerialNumber": {
           "type": "string"
@@ -8881,12 +8908,14 @@
         "DueDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "ServiceLevel": {
           "type": "string"
@@ -9300,7 +9329,9 @@
         },
         "UpdatedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "UpdatedBy": {
           "type": "string"
@@ -9336,12 +9367,14 @@
         "LastServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "CalibratedBy": {
           "type": "string"
@@ -9408,11 +9441,15 @@
         },
         "BeginDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "EndDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "ReservedBy": {
           "format": "int32",
@@ -9476,19 +9513,27 @@
       "properties": {
         "OriginalBeginDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "OriginalEndDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "BeginDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "EndDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "ReservedOn": {
           "format": "date-time",
@@ -9679,7 +9724,8 @@
         "PurchaseDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "PurchaseCost": {
           "format": "double",
@@ -9692,7 +9738,8 @@
         "ActivationDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "DepreciationBasis": {
           "format": "double",
@@ -9705,7 +9752,8 @@
         "RetirementDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "SalvageValue": {
           "format": "double",
@@ -9918,12 +9966,14 @@
         "ActivationDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "RetirmentDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "ClientVendorId": {
           "format": "int32",
@@ -10069,7 +10119,8 @@
         "DueForReplacementDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "DepreciationProc": {
           "format": "double",
@@ -10078,7 +10129,8 @@
         "PurchaseDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "PurchaseCost": {
           "format": "double",
@@ -10105,19 +10157,30 @@
         },
         "ResultStatus": {
           "enum": [
-            "NotAvailable",
+            0,
+            1,
+            2,
+            10,
+            11,
+            20,
+            21,
+            22,
+            "Done",
             "Fail",
             "FailAmbiguous",
             "FailSignificant",
+            "Missed",
+            "NotAvailable",
             "Pass",
-            "PassAmbiguous",
             "PassAdjustment",
-            "Done",
+            "PassAmbiguous",
             "Pending",
-            "Missed"
+            null
           ],
-          "type": "string",
-          "x-nullable": true
+          "type": "integer",
+          "x-nullable": true,
+          "format": "int32",
+          "nullable": true
         },
         "AsFoundResult": {
           "enum": [
@@ -10154,7 +10217,8 @@
         "LastServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "LastService": {
           "type": "string",
@@ -10163,7 +10227,8 @@
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextService": {
           "type": "string"
@@ -10185,24 +10250,33 @@
         },
         "ServiceOrderStatus": {
           "enum": [
-            "New",
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            "Cancelled",
+            "Closed",
+            "Completed",
+            "Delayed",
+            "DelayedApproval",
+            "Denied",
             "Draft",
-            "WaitingForApproval",
-            "Submitted",
+            "New",
             "Processing",
             "QualityControl",
-            "Cancelled",
-            "WaitingForClientSignOff",
-            "Completed",
-            "Denied",
-            "Delayed",
+            "Ready",
             "Scheduling",
-            "Closed",
+            "Submitted",
+            "WaitingForApproval",
+            "WaitingForClientSignOff",
             "WaitingForVendorSignOff",
-            "DelayedApproval",
-            "Ready"
+            null
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32",
+          "nullable": true
         },
         "CustomOrderNumber": {
           "type": "string"
@@ -10223,12 +10297,14 @@
         "DueTriggerDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "PastDueTriggerDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "DueStatus": {
           "enum": [
@@ -10246,17 +10322,26 @@
         },
         "WorkStatus": {
           "enum": [
-            "Pending",
-            "InProgress",
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            "Closed",
             "Completed",
             "Delayed",
-            "Withdrawn",
+            "InProgress",
             "Locked",
             "New",
-            "Closed",
-            "Wait"
+            "Pending",
+            "Wait",
+            "Withdrawn",
+            null
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32",
+          "nullable": true
         }
       }
     },
@@ -10344,22 +10429,26 @@
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "AdvanceRecallDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "GracePeriodDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "CertificateNextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "ServiceInterval": {
           "type": "string"
@@ -10612,7 +10701,8 @@
         "ServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "SerialNumber": {
           "type": "string"
@@ -10644,12 +10734,14 @@
         "DueDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "ProviderTechnician": {
           "type": "string",
@@ -10770,7 +10862,8 @@
         "ServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "SerialNumber": {
           "type": "string",
@@ -10791,12 +10884,14 @@
         "DueDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "ProviderTechnician": {
           "type": "string",
@@ -10940,7 +11035,8 @@
         "ServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "SerialNumber": {
           "type": "string"
@@ -10960,12 +11056,14 @@
         "DueDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "ProviderTechnician": {
           "type": "string",
@@ -11202,12 +11300,14 @@
         "ActivationDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "RetirmentDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "ClientVendorId": {
           "format": "int32",
@@ -11353,7 +11453,8 @@
         "DueForReplacementDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "DepreciationProc": {
           "format": "double",
@@ -11362,7 +11463,8 @@
         "PurchaseDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "PurchaseCost": {
           "format": "double",
@@ -11393,19 +11495,30 @@
         },
         "ResultStatus": {
           "enum": [
-            "NotAvailable",
+            0,
+            1,
+            2,
+            10,
+            11,
+            20,
+            21,
+            22,
+            "Done",
             "Fail",
             "FailAmbiguous",
             "FailSignificant",
+            "Missed",
+            "NotAvailable",
             "Pass",
-            "PassAmbiguous",
             "PassAdjustment",
-            "Done",
+            "PassAmbiguous",
             "Pending",
-            "Missed"
+            null
           ],
-          "type": "string",
-          "x-nullable": true
+          "type": "integer",
+          "x-nullable": true,
+          "format": "int32",
+          "nullable": true
         },
         "AsFoundResult": {
           "enum": [
@@ -11442,7 +11555,8 @@
         "LastServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "LastService": {
           "type": "string",
@@ -11451,7 +11565,8 @@
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextService": {
           "type": "string"
@@ -11481,24 +11596,33 @@
         },
         "ServiceOrderStatus": {
           "enum": [
-            "New",
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            "Cancelled",
+            "Closed",
+            "Completed",
+            "Delayed",
+            "DelayedApproval",
+            "Denied",
             "Draft",
-            "WaitingForApproval",
-            "Submitted",
+            "New",
             "Processing",
             "QualityControl",
-            "Cancelled",
-            "WaitingForClientSignOff",
-            "Completed",
-            "Denied",
-            "Delayed",
+            "Ready",
             "Scheduling",
-            "Closed",
+            "Submitted",
+            "WaitingForApproval",
+            "WaitingForClientSignOff",
             "WaitingForVendorSignOff",
-            "DelayedApproval",
-            "Ready"
+            null
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32",
+          "nullable": true
         },
         "CustomOrderNumber": {
           "type": "string"
@@ -11519,12 +11643,14 @@
         "DueTriggerDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "PastDueTriggerDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "DueStatus": {
           "enum": [
@@ -11542,17 +11668,26 @@
         },
         "WorkStatus": {
           "enum": [
-            "Pending",
-            "InProgress",
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            "Closed",
             "Completed",
             "Delayed",
-            "Withdrawn",
+            "InProgress",
             "Locked",
             "New",
-            "Closed",
-            "Wait"
+            "Pending",
+            "Wait",
+            "Withdrawn",
+            null
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32",
+          "nullable": true
         },
         "ServiceTag": {
           "type": "string"
@@ -11642,7 +11777,8 @@
         "PurchaseDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "PurchaseCost": {
           "format": "double",
@@ -11655,7 +11791,8 @@
         "ActivationDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "DepreciationBasis": {
           "format": "double",
@@ -11668,7 +11805,8 @@
         "RetirementDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "SalvageValue": {
           "format": "double",
@@ -11753,7 +11891,8 @@
         "LastSeenDateUtc": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "CultureName": {
           "type": "string"
@@ -11959,17 +12098,20 @@
         "LastDueDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "LastServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceTask": {
           "type": "string",
@@ -12102,7 +12244,8 @@
         "PurchaseDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "PurchaseCost": {
           "format": "double",
@@ -12115,7 +12258,8 @@
         "ActivationDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "DepreciationBasis": {
           "format": "double",
@@ -12128,7 +12272,8 @@
         "RetirementDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "SalvageValue": {
           "format": "double",
@@ -12185,7 +12330,9 @@
         },
         "UpdatedOnUtc": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "AccountRepresentativeEmployeeId": {
           "format": "int32",
@@ -12544,7 +12691,9 @@
         },
         "UpdatedOnUtc": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "Attributes": {
           "type": "array",
@@ -12772,12 +12921,14 @@
         "StartDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "EndDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         }
       }
     },
@@ -12797,12 +12948,14 @@
         "StartDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "EndDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         }
       }
     },
@@ -13419,7 +13572,8 @@
         "ChargeDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         }
       }
     },
@@ -13626,7 +13780,8 @@
         "EffectiveDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "DocumentSection": {
           "type": "string"
@@ -13653,7 +13808,9 @@
         },
         "UpdatedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "WorkStatus": {
           "format": "int32",
@@ -13788,17 +13945,20 @@
         "ServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "OriginalDueDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "AssetTag": {
           "type": "string",
@@ -13823,12 +13983,14 @@
         "ActivationDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "PurchaseDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "PartName": {
           "type": "string",
@@ -14263,12 +14425,14 @@
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "ServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "PartNumber": {
           "type": "string"
@@ -14400,7 +14564,8 @@
         "DueDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "PartsCharge": {
           "format": "double",
@@ -14479,12 +14644,14 @@
         "LastServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "CertificateNumber": {
           "type": "string",
@@ -14586,7 +14753,8 @@
         "ShippedDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "PaymentTerms": {
           "format": "int32",
@@ -14904,11 +15072,14 @@
         "SignOffDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "QualityControlDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "ClientSignOffOn": {
           "format": "date-time",
@@ -15091,23 +15262,32 @@
         },
         "ProcessDateOption": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
             "AsSoonAsPossible",
-            "Urgent",
+            "BeforeDate",
             "OnDateTime",
+            "Urgent",
             "WithinRange",
-            "BeforeDate"
+            null
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32",
+          "nullable": true
         },
         "DesiredDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "DeadlineDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "VendorSignOffOn": {
           "format": "date-time",
@@ -15198,12 +15378,14 @@
         "PrimaryToolLastServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "PrimaryToolNextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "PrimaryToolCalibratedBy": {
           "type": "string"
@@ -15229,12 +15411,14 @@
         "SecondaryToolLastServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "SecondaryToolNextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "SecondaryToolCalibratedBy": {
           "type": "string"
@@ -15278,7 +15462,9 @@
         },
         "MeasurementLocalTime": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "Mean": {
           "format": "double",
@@ -15440,13 +15626,20 @@
         },
         "GuardBandLogic": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
             "Ncslz5403",
-            "Uncertainty",
+            "Rds",
             "Tur41",
-            "Rds"
+            "Uncertainty",
+            null
           ],
-          "type": "string",
-          "x-nullable": true
+          "type": "integer",
+          "x-nullable": true,
+          "format": "int32",
+          "nullable": true
         },
         "UncertaintyBudget": {
           "type": "string"
@@ -15468,17 +15661,28 @@
         },
         "MeasurementType": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            "Cumulative",
             "Data",
-            "Cumulative"
+            null
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32",
+          "nullable": true
         },
         "UpdatedBy": {
           "type": "string"
         },
         "UpdatedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "Error": {
           "format": "double",
@@ -15689,14 +15893,21 @@
         },
         "ReadingEntryLogic": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
+            "DoubleSubstitution",
+            "MeasuredValueConversion",
+            "MeasuredValueConversionDisplay",
             "SingleValue",
             "TwoValues",
             "TwoValuesAndResult",
-            "MeasuredValueConversion",
-            "MeasuredValueConversionDisplay",
-            "DoubleSubstitution"
+            null
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32",
+          "nullable": true
         },
         "ReadingEntryMath": {
           "enum": [
@@ -15901,12 +16112,14 @@
         "ServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "ServiceOrderItemId": {
           "format": "int32",
@@ -16030,7 +16243,8 @@
         "ShippedDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "ShipmentStatus": {
           "enum": [
@@ -16670,12 +16884,14 @@
         "ServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "ServiceOrderItemId": {
           "format": "int32",
@@ -16690,7 +16906,8 @@
         "ShippedDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "TrackingNumber": {
           "type": "string"
@@ -16775,12 +16992,14 @@
         "AsLeftPrimaryToolLastServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "AsLeftPrimaryToolNextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "AsLeftPrimaryToolCalibratedBy": {
           "type": "string"
@@ -16870,12 +17089,14 @@
         "AsFoundPrimaryToolLastServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "AsFoundPrimaryToolNextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "AsFoundPrimaryToolCalibratedBy": {
           "type": "string"
@@ -16901,12 +17122,14 @@
         "AsLeftSecondaryToolLastServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "AsLeftSecondaryToolNextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "AsLeftSecondaryToolCalibratedBy": {
           "type": "string"
@@ -16932,12 +17155,14 @@
         "AsFoundSecondaryToolLastServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "AsFoundSecondaryToolNextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "AsFoundSecondaryToolCalibratedBy": {
           "type": "string"
@@ -16962,12 +17187,19 @@
         },
         "AsFoundMeasurementNotTakenResult": {
           "enum": [
-            "Pass",
+            0,
+            1,
+            2,
+            3,
             "Fail",
-            "Limited"
+            "Limited",
+            "Pass",
+            null
           ],
-          "type": "string",
-          "x-nullable": true
+          "type": "integer",
+          "x-nullable": true,
+          "format": "int32",
+          "nullable": true
         },
         "AsFoundHideFromCertificate": {
           "type": "boolean"
@@ -17007,7 +17239,9 @@
         },
         "AsFoundMeasurementLocalTime": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "AsFoundTur": {
           "format": "double",
@@ -17049,23 +17283,37 @@
         },
         "AsFoundGuardBandLogic": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
             "Ncslz5403",
-            "Uncertainty",
+            "Rds",
             "Tur41",
-            "Rds"
+            "Uncertainty",
+            null
           ],
-          "type": "string",
-          "x-nullable": true
+          "type": "integer",
+          "x-nullable": true,
+          "format": "int32",
+          "nullable": true
         },
         "AsLeftGuardBandLogic": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
             "Ncslz5403",
-            "Uncertainty",
+            "Rds",
             "Tur41",
-            "Rds"
+            "Uncertainty",
+            null
           ],
-          "type": "string",
-          "x-nullable": true
+          "type": "integer",
+          "x-nullable": true,
+          "format": "int32",
+          "nullable": true
         },
         "AsFoundError": {
           "format": "double",
@@ -17652,17 +17900,28 @@
         },
         "AsFoundMeasurementType": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            "Cumulative",
             "Data",
-            "Cumulative"
+            null
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32",
+          "nullable": true
         },
         "AsFoundUpdatedBy": {
           "type": "string"
         },
         "AsFoundUpdatedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "AsLeftAbbreviatedUOM": {
           "type": "string"
@@ -17908,7 +18167,9 @@
         },
         "AsLeftMeasurementLocalTime": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "AsLeftReadingEntryMath": {
           "enum": [
@@ -18398,17 +18659,28 @@
         },
         "AsLeftMeasurementType": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            "Cumulative",
             "Data",
-            "Cumulative"
+            null
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32",
+          "nullable": true
         },
         "AsLeftUpdatedBy": {
           "type": "string"
         },
         "AsLeftUpdatedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "AsLeftSpecificationTitle": {
           "type": "string"
@@ -18651,15 +18923,21 @@
         },
         "InitialDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "CertificationDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "ExpirationDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "CertificationName": {
           "type": "string"
@@ -19469,7 +19747,9 @@
         },
         "UpdatedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "UpdatedBy": {
           "type": "string"
@@ -19514,12 +19794,14 @@
         "LastServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "CalibratedBy": {
           "type": "string"
@@ -19611,15 +19893,22 @@
         },
         "InfluenceParameter1Type": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
+            "CustomField",
+            "ManuallySelected",
             "MeasurementQuantity",
             "StaticValue",
-            "UutAttribute",
             "ToolAttribute",
-            "CustomField",
-            "ManuallySelected"
+            "UutAttribute",
+            null
           ],
-          "type": "string",
-          "x-nullable": true
+          "type": "integer",
+          "x-nullable": true,
+          "format": "int32",
+          "nullable": true
         },
         "InfluenceParameter1ToolTypeId": {
           "format": "int32",
@@ -19920,7 +20209,9 @@
         },
         "UpdatedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         }
       }
     },
@@ -19965,12 +20256,14 @@
         "LastServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "CalibratedBy": {
           "type": "string"
@@ -20059,15 +20352,22 @@
         },
         "InfluenceParameter1Type": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
+            "CustomField",
+            "ManuallySelected",
             "MeasurementQuantity",
             "StaticValue",
-            "UutAttribute",
             "ToolAttribute",
-            "CustomField",
-            "ManuallySelected"
+            "UutAttribute",
+            null
           ],
-          "type": "string",
-          "x-nullable": true
+          "type": "integer",
+          "x-nullable": true,
+          "format": "int32",
+          "nullable": true
         },
         "InfluenceParameter1ToolTypeId": {
           "format": "int32",
@@ -20306,7 +20606,9 @@
         },
         "UpdatedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         }
       }
     },
@@ -20342,12 +20644,14 @@
         "LastServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "CalibratedBy": {
           "type": "string"
@@ -20579,7 +20883,8 @@
         "UpdatedOnUtc": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "EquipmentId": {
           "type": "string",
@@ -20733,17 +21038,20 @@
         "ServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "DueDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "MaintenanceTask": {
           "type": "string"
@@ -20862,17 +21170,26 @@
         },
         "WorkStatus": {
           "enum": [
-            "Pending",
-            "InProgress",
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            "Closed",
             "Completed",
             "Delayed",
-            "Withdrawn",
+            "InProgress",
             "Locked",
             "New",
-            "Closed",
-            "Wait"
+            "Pending",
+            "Wait",
+            "Withdrawn",
+            null
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32",
+          "nullable": true
         },
         "CustomWorkStatus": {
           "type": "string"
@@ -20912,17 +21229,28 @@
         },
         "ResultStatus": {
           "enum": [
-            "NotAvailable",
+            0,
+            1,
+            2,
+            10,
+            11,
+            20,
+            21,
+            22,
+            "Done",
             "Fail",
             "FailAmbiguous",
             "FailSignificant",
+            "NotAvailable",
             "Pass",
-            "PassAmbiguous",
             "PassAdjustment",
-            "Done"
+            "PassAmbiguous",
+            null
           ],
-          "type": "string",
-          "x-nullable": true
+          "type": "integer",
+          "x-nullable": true,
+          "format": "int32",
+          "nullable": true
         },
         "AsFoundResult": {
           "enum": [
@@ -20990,12 +21318,14 @@
         "ServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "NextServiceDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "VendorTag": {
           "type": "string"
@@ -21162,7 +21492,9 @@
         },
         "ChargeDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "ContractRepairsDiscount": {
           "format": "double",
@@ -21203,7 +21535,9 @@
         },
         "ChargeDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "Price": {
           "format": "double",
@@ -21262,7 +21596,9 @@
         },
         "ChargeDate": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "Price": {
           "format": "double",
@@ -21549,7 +21885,9 @@
         },
         "LastUpdatedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "LastUpdatedBy": {
           "type": "string"
@@ -21752,12 +22090,14 @@
         "BusinessFromTime": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "BusinessToTime": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "SiteAccessNotes": {
           "type": "string"
@@ -21765,32 +22105,38 @@
         "DesiredDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "DeadlineDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "RequestFromDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "RequestFromTime": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "RequestToDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "RequestToTime": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "OrderNotes": {
           "type": "string"
@@ -21875,7 +22221,8 @@
         "DueDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "Assets": {
           "format": "int32",
@@ -21928,12 +22275,14 @@
         "BusinessFromTime": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "BusinessToTime": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "Timeframe": {
           "enum": [
@@ -21951,32 +22300,38 @@
         "DesiredDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "DeadlineDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "RequestFromDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "RequestFromTime": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "RequestToDate": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         },
         "RequestToTime": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         }
       }
     },
@@ -22022,7 +22377,8 @@
         "LastSeenDateUtc": {
           "format": "date-time",
           "type": "string",
-          "x-nullable": true
+          "x-nullable": true,
+          "nullable": true
         }
       }
     },
@@ -22265,24 +22621,33 @@
       "properties": {
         "ServiceOrderStatus": {
           "enum": [
-            "New",
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            "Cancelled",
+            "Closed",
+            "Completed",
+            "Delayed",
+            "DelayedApproval",
+            "Denied",
             "Draft",
-            "WaitingForApproval",
-            "Submitted",
+            "New",
             "Processing",
             "QualityControl",
-            "Cancelled",
-            "WaitingForClientSignOff",
-            "Completed",
-            "Denied",
-            "Delayed",
+            "Ready",
             "Scheduling",
-            "Closed",
+            "Submitted",
+            "WaitingForApproval",
+            "WaitingForClientSignOff",
             "WaitingForVendorSignOff",
-            "DelayedApproval",
-            "Ready"
+            null
           ],
-          "type": "string"
+          "type": "integer",
+          "format": "int32",
+          "nullable": true
         },
         "ResetStatus": {
           "type": "boolean"
@@ -22338,11 +22703,15 @@
         },
         "StartTime": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "FinishTime": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "Price": {
           "format": "double",
@@ -22364,11 +22733,15 @@
         },
         "StartTime": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "FinishTime": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "TimeSpentMinutes": {
           "format": "int32",
@@ -22398,11 +22771,15 @@
         },
         "StartTime": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "FinishTime": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         },
         "TimeSpentMinutes": {
           "format": "int32",
@@ -22525,7 +22902,9 @@
         },
         "UpdatedOnUtc": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true
         }
       }
     },

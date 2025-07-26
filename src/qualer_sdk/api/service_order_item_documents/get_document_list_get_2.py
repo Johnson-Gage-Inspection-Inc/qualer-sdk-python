@@ -1,4 +1,3 @@
-import datetime
 from http import HTTPStatus
 from typing import Any, Optional, Union, cast
 
@@ -14,18 +13,16 @@ from ...types import UNSET, Response, Unset
 
 def _get_kwargs(
     *,
-    from_: datetime.datetime,
-    to: datetime.datetime,
+    from_: str,
+    to: str,
     report_type: Union[Unset, str] = UNSET,
     service_order_item_id: Union[Unset, int] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
-    json_from_ = from_.isoformat()
-    params["from"] = json_from_
+    params["from"] = from_
 
-    json_to = to.isoformat()
-    params["to"] = json_to
+    params["to"] = to
 
     params["reportType"] = report_type
 
@@ -93,8 +90,8 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    from_: datetime.datetime,
-    to: datetime.datetime,
+    from_: str,
+    to: str,
     report_type: Union[Unset, str] = UNSET,
     service_order_item_id: Union[Unset, int] = UNSET,
 ) -> Response[
@@ -130,8 +127,8 @@ def sync_detailed(
     OrderCertificate / ServiceOrderCertificate = 5<br />
 
     Args:
-        from_ (datetime.datetime):
-        to (datetime.datetime):
+        from_ (str):
+        to (str):
         report_type (Union[Unset, str]):
         service_order_item_id (Union[Unset, int]):
 
@@ -160,8 +157,8 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    from_: datetime.datetime,
-    to: datetime.datetime,
+    from_: str,
+    to: str,
     report_type: Union[Unset, str] = UNSET,
     service_order_item_id: Union[Unset, int] = UNSET,
 ) -> Optional[
@@ -197,8 +194,8 @@ def sync(
     OrderCertificate / ServiceOrderCertificate = 5<br />
 
     Args:
-        from_ (datetime.datetime):
-        to (datetime.datetime):
+        from_ (str):
+        to (str):
         report_type (Union[Unset, str]):
         service_order_item_id (Union[Unset, int]):
 
@@ -222,8 +219,8 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    from_: datetime.datetime,
-    to: datetime.datetime,
+    from_: str,
+    to: str,
     report_type: Union[Unset, str] = UNSET,
     service_order_item_id: Union[Unset, int] = UNSET,
 ) -> Response[
@@ -259,8 +256,8 @@ async def asyncio_detailed(
     OrderCertificate / ServiceOrderCertificate = 5<br />
 
     Args:
-        from_ (datetime.datetime):
-        to (datetime.datetime):
+        from_ (str):
+        to (str):
         report_type (Union[Unset, str]):
         service_order_item_id (Union[Unset, int]):
 
@@ -287,8 +284,8 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    from_: datetime.datetime,
-    to: datetime.datetime,
+    from_: str,
+    to: str,
     report_type: Union[Unset, str] = UNSET,
     service_order_item_id: Union[Unset, int] = UNSET,
 ) -> Optional[
@@ -324,8 +321,8 @@ async def asyncio(
     OrderCertificate / ServiceOrderCertificate = 5<br />
 
     Args:
-        from_ (datetime.datetime):
-        to (datetime.datetime):
+        from_ (str):
+        to (str):
         report_type (Union[Unset, str]):
         service_order_item_id (Union[Unset, int]):
 

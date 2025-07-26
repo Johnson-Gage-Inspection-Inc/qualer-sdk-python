@@ -33,7 +33,7 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
         custom_name (Union[Unset, str]):
         billing_address (Union['QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0', None, Unset]):
         shipping_address (Union['QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0', None, Unset]):
-        updated_on_utc (Union[Unset, datetime.datetime]):
+        updated_on_utc (Union[None, Unset, datetime.datetime]):
     """
 
     account_number_text: Union[Unset, str] = UNSET
@@ -53,7 +53,7 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
         None,
         Unset,
     ] = UNSET
-    updated_on_utc: Union[Unset, datetime.datetime] = UNSET
+    updated_on_utc: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -100,9 +100,13 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
         else:
             shipping_address = self.shipping_address
 
-        updated_on_utc: Union[Unset, str] = UNSET
-        if not isinstance(self.updated_on_utc, Unset):
+        updated_on_utc: Union[None, Unset, str]
+        if isinstance(self.updated_on_utc, Unset):
+            updated_on_utc = UNSET
+        elif isinstance(self.updated_on_utc, datetime.datetime):
             updated_on_utc = self.updated_on_utc.isoformat()
+        else:
+            updated_on_utc = self.updated_on_utc
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -218,12 +222,24 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
 
         shipping_address = _parse_shipping_address(d.pop("ShippingAddress", UNSET))
 
-        _updated_on_utc = d.pop("UpdatedOnUtc", UNSET)
-        updated_on_utc: Union[Unset, datetime.datetime]
-        if isinstance(_updated_on_utc, Unset):
-            updated_on_utc = UNSET
-        else:
-            updated_on_utc = isoparse(_updated_on_utc)
+        def _parse_updated_on_utc(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                updated_on_utc_type_0 = isoparse(data)
+
+                return updated_on_utc_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        updated_on_utc = _parse_updated_on_utc(d.pop("UpdatedOnUtc", UNSET))
 
         qualer_api_models_vendors_to_vendor_company_response_model = cls(
             account_number_text=account_number_text,

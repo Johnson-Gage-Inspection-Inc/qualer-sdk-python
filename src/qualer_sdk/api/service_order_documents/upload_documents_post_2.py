@@ -1,14 +1,12 @@
 from http import HTTPStatus
+from io import BytesIO
 from typing import Any, Optional, Union
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.upload_documents_post_2_response_200 import (
-    UploadDocumentsPost2Response200,
-)
-from ...types import UNSET, Response, Unset
+from ...types import UNSET, File, Response, Unset
 
 
 def _get_kwargs(
@@ -36,9 +34,9 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[UploadDocumentsPost2Response200]:
+) -> Optional[File]:
     if response.status_code == 200:
-        response_200 = UploadDocumentsPost2Response200.from_dict(response.json())
+        response_200 = File(payload=BytesIO(response.content))
 
         return response_200
     if client.raise_on_unexpected_status:
@@ -49,7 +47,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[UploadDocumentsPost2Response200]:
+) -> Response[File]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -64,7 +62,7 @@ def sync_detailed(
     client: Union[AuthenticatedClient, Client],
     model_report_type: Union[Unset, str] = UNSET,
     model_is_private: Union[Unset, bool] = UNSET,
-) -> Response[UploadDocumentsPost2Response200]:
+) -> Response[File]:
     """reportType:<br />
     assetsummary, assetlabel, assetdetail, assetcertificate,<br />
     ordersummary / serviceordersummary,<br />
@@ -84,7 +82,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[UploadDocumentsPost2Response200]
+        Response[File]
     """
 
     kwargs = _get_kwargs(
@@ -106,7 +104,7 @@ def sync(
     client: Union[AuthenticatedClient, Client],
     model_report_type: Union[Unset, str] = UNSET,
     model_is_private: Union[Unset, bool] = UNSET,
-) -> Optional[UploadDocumentsPost2Response200]:
+) -> Optional[File]:
     """reportType:<br />
     assetsummary, assetlabel, assetdetail, assetcertificate,<br />
     ordersummary / serviceordersummary,<br />
@@ -126,7 +124,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        UploadDocumentsPost2Response200
+        File
     """
 
     return sync_detailed(
@@ -143,7 +141,7 @@ async def asyncio_detailed(
     client: Union[AuthenticatedClient, Client],
     model_report_type: Union[Unset, str] = UNSET,
     model_is_private: Union[Unset, bool] = UNSET,
-) -> Response[UploadDocumentsPost2Response200]:
+) -> Response[File]:
     """reportType:<br />
     assetsummary, assetlabel, assetdetail, assetcertificate,<br />
     ordersummary / serviceordersummary,<br />
@@ -163,7 +161,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[UploadDocumentsPost2Response200]
+        Response[File]
     """
 
     kwargs = _get_kwargs(
@@ -183,7 +181,7 @@ async def asyncio(
     client: Union[AuthenticatedClient, Client],
     model_report_type: Union[Unset, str] = UNSET,
     model_is_private: Union[Unset, bool] = UNSET,
-) -> Optional[UploadDocumentsPost2Response200]:
+) -> Optional[File]:
     """reportType:<br />
     assetsummary, assetlabel, assetdetail, assetcertificate,<br />
     ordersummary / serviceordersummary,<br />
@@ -203,7 +201,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        UploadDocumentsPost2Response200
+        File
     """
 
     return (

@@ -1,25 +1,15 @@
-from enum import Enum
+from enum import IntEnum
 
 
 class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus(
-    str, Enum
+    IntEnum
 ):
-    CANCELLED = "Cancelled"
-    CLOSED = "Closed"
-    COMPLETED = "Completed"
-    DELAYED = "Delayed"
-    DELAYEDAPPROVAL = "DelayedApproval"
-    DENIED = "Denied"
-    DRAFT = "Draft"
-    NEW = "New"
-    PROCESSING = "Processing"
-    QUALITYCONTROL = "QualityControl"
-    READY = "Ready"
-    SCHEDULING = "Scheduling"
-    SUBMITTED = "Submitted"
-    WAITINGFORAPPROVAL = "WaitingForApproval"
-    WAITINGFORCLIENTSIGNOFF = "WaitingForClientSignOff"
-    WAITINGFORVENDORSIGNOFF = "WaitingForVendorSignOff"
+    VALUE_0 = 0
+    VALUE_1 = 1
+    VALUE_2 = 2
+    VALUE_3 = 3
+    VALUE_4 = 4
+    VALUE_5 = 5
 
     def __str__(self) -> str:
         return str(self.value)

@@ -68,14 +68,26 @@ class QualerApiModelsAssetServiceRecordsFromAssetServiceRecordFilterModel:
         if isinstance(_from_, Unset):
             from_ = UNSET
         else:
-            from_ = isoparse(_from_)
+            if _from_ is None:
+
+                from_ = None
+
+            else:
+
+                from_ = isoparse(_from_)
 
         _to = d.pop("To", UNSET)
         to: Union[Unset, datetime.datetime]
         if isinstance(_to, Unset):
             to = UNSET
         else:
-            to = isoparse(_to)
+            if _to is None:
+
+                to = None
+
+            else:
+
+                to = isoparse(_to)
 
         qualer_api_models_asset_service_records_from_asset_service_record_filter_model = cls(
             asset_id=asset_id,

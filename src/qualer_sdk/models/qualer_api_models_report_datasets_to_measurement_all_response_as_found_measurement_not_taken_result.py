@@ -1,12 +1,13 @@
-from enum import Enum
+from enum import IntEnum
 
 
 class QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult(
-    str, Enum
+    IntEnum
 ):
-    FAIL = "Fail"
-    LIMITED = "Limited"
-    PASS = "Pass"
+    VALUE_0 = 0
+    VALUE_1 = 1
+    VALUE_2 = 2
+    VALUE_3 = 3
 
     def __str__(self) -> str:
         return str(self.value)

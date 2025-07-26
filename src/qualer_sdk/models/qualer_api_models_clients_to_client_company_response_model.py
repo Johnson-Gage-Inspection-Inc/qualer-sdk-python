@@ -37,7 +37,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
         domain_name (Union[Unset, str]):
         custom_client_name (Union[Unset, str]):
         legacy_id (Union[Unset, str]):
-        updated_on_utc (Union[Unset, datetime.datetime]):
+        updated_on_utc (Union[None, Unset, datetime.datetime]):
         account_representative_employee_id (Union[Unset, int]):
         account_representative_site_id (Union[Unset, int]):
         account_manager_employee_id (Union[Unset, int]):
@@ -56,7 +56,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
     domain_name: Union[Unset, str] = UNSET
     custom_client_name: Union[Unset, str] = UNSET
     legacy_id: Union[Unset, str] = UNSET
-    updated_on_utc: Union[Unset, datetime.datetime] = UNSET
+    updated_on_utc: Union[None, Unset, datetime.datetime] = UNSET
     account_representative_employee_id: Union[Unset, int] = UNSET
     account_representative_site_id: Union[Unset, int] = UNSET
     account_manager_employee_id: Union[Unset, int] = UNSET
@@ -103,9 +103,13 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
 
         legacy_id = self.legacy_id
 
-        updated_on_utc: Union[Unset, str] = UNSET
-        if not isinstance(self.updated_on_utc, Unset):
+        updated_on_utc: Union[None, Unset, str]
+        if isinstance(self.updated_on_utc, Unset):
+            updated_on_utc = UNSET
+        elif isinstance(self.updated_on_utc, datetime.datetime):
             updated_on_utc = self.updated_on_utc.isoformat()
+        else:
+            updated_on_utc = self.updated_on_utc
 
         account_representative_employee_id = self.account_representative_employee_id
 
@@ -217,12 +221,24 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
 
         legacy_id = d.pop("LegacyId", UNSET)
 
-        _updated_on_utc = d.pop("UpdatedOnUtc", UNSET)
-        updated_on_utc: Union[Unset, datetime.datetime]
-        if isinstance(_updated_on_utc, Unset):
-            updated_on_utc = UNSET
-        else:
-            updated_on_utc = isoparse(_updated_on_utc)
+        def _parse_updated_on_utc(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                updated_on_utc_type_0 = isoparse(data)
+
+                return updated_on_utc_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        updated_on_utc = _parse_updated_on_utc(d.pop("UpdatedOnUtc", UNSET))
 
         account_representative_employee_id = d.pop(
             "AccountRepresentativeEmployeeId", UNSET

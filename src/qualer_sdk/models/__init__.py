@@ -36,7 +36,7 @@ from .create_employee_response_200 import CreateEmployeeResponse200
 from .create_measurement_form_response_200 import CreateMeasurementFormResponse200
 from .create_order_by_schedule_response_200 import CreateOrderByScheduleResponse200
 from .create_post_2_response_200 import CreatePost2Response200
-from .create_work_item_task_response_200 import CreateWorkItemTaskResponse200
+from .create_work_item_task_response_200_item import CreateWorkItemTaskResponse200Item
 from .create_work_order_parts_response_204 import CreateWorkOrderPartsResponse204
 from .create_work_order_task_response_204 import CreateWorkOrderTaskResponse204
 from .delete_delete_2_response_200 import DeleteDelete2Response200
@@ -51,14 +51,12 @@ from .delete_work_order_task_delete_2_response_204 import (
 )
 from .delete_work_order_task_response_204 import DeleteWorkOrderTaskResponse204
 from .get_client_attributes_response_200 import GetClientAttributesResponse200
-from .get_documents_get_2_response_200 import GetDocumentsGet2Response200
-from .get_documents_response_200 import GetDocumentsResponse200
 from .get_get_4_element_page import GetGet4ElementPage
 from .get_get_6_response_200 import GetGet6Response200
 from .get_order_status_response_200 import GetOrderStatusResponse200
 from .get_work_item_charges_response_200 import GetWorkItemChargesResponse200
 from .get_work_item_task_response_200 import GetWorkItemTaskResponse200
-from .get_work_item_tasks_response_200 import GetWorkItemTasksResponse200
+from .get_work_item_tasks_response_200_item import GetWorkItemTasksResponse200Item
 from .logout_response_200 import LogoutResponse200
 from .lookups_lookup_type import LookupsLookupType
 from .order_cancel_response_200 import OrderCancelResponse200
@@ -975,8 +973,6 @@ from .update_room_response_200 import UpdateRoomResponse200
 from .update_shipment_status_response_200 import UpdateShipmentStatusResponse200
 from .update_work_order_parts_response_204 import UpdateWorkOrderPartsResponse204
 from .update_work_order_task_response_204 import UpdateWorkOrderTaskResponse204
-from .upload_documents_post_2_response_200 import UploadDocumentsPost2Response200
-from .upload_documents_post_3_response_200 import UploadDocumentsPost3Response200
 from .upload_documents_response_200 import UploadDocumentsResponse200
 from .upload_work_item_images_response_200 import UploadWorkItemImagesResponse200
 from .upsert_asset_attributes_put_2_response_200 import (
@@ -1006,7 +1002,7 @@ __all__ = [
     "CreateMeasurementFormResponse200",
     "CreateOrderByScheduleResponse200",
     "CreatePost2Response200",
-    "CreateWorkItemTaskResponse200",
+    "CreateWorkItemTaskResponse200Item",
     "CreateWorkOrderPartsResponse204",
     "CreateWorkOrderTaskResponse204",
     "DeleteDelete2Response200",
@@ -1019,14 +1015,12 @@ __all__ = [
     "DeleteWorkOrderTaskDelete2Response204",
     "DeleteWorkOrderTaskResponse204",
     "GetClientAttributesResponse200",
-    "GetDocumentsGet2Response200",
-    "GetDocumentsResponse200",
     "GetGet4ElementPage",
     "GetGet6Response200",
     "GetOrderStatusResponse200",
     "GetWorkItemChargesResponse200",
     "GetWorkItemTaskResponse200",
-    "GetWorkItemTasksResponse200",
+    "GetWorkItemTasksResponse200Item",
     "LogoutResponse200",
     "LookupsLookupType",
     "OrderCancelResponse200",
@@ -1351,8 +1345,6 @@ __all__ = [
     "UpdateShipmentStatusResponse200",
     "UpdateWorkOrderPartsResponse204",
     "UpdateWorkOrderTaskResponse204",
-    "UploadDocumentsPost2Response200",
-    "UploadDocumentsPost3Response200",
     "UploadDocumentsResponse200",
     "UploadWorkItemImagesResponse200",
     "UpsertAssetAttributesPut2Response200",

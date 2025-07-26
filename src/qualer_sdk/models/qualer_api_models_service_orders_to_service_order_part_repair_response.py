@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -31,7 +31,7 @@ class QualerApiModelsServiceOrdersToServiceOrderPartRepairResponse:
         created_by_id (Union[Unset, int]):
         created_by (Union[Unset, str]):
         created_on_utc (Union[Unset, datetime.datetime]):
-        charge_date (Union[Unset, datetime.datetime]):
+        charge_date (Union[None, Unset, datetime.datetime]):
         contract_repairs_discount (Union[Unset, float]):
         contract_parts_discount (Union[Unset, float]):
         service_order_charge_type (Union[Unset, str]):
@@ -56,7 +56,7 @@ class QualerApiModelsServiceOrdersToServiceOrderPartRepairResponse:
     created_by_id: Union[Unset, int] = UNSET
     created_by: Union[Unset, str] = UNSET
     created_on_utc: Union[Unset, datetime.datetime] = UNSET
-    charge_date: Union[Unset, datetime.datetime] = UNSET
+    charge_date: Union[None, Unset, datetime.datetime] = UNSET
     contract_repairs_discount: Union[Unset, float] = UNSET
     contract_parts_discount: Union[Unset, float] = UNSET
     service_order_charge_type: Union[Unset, str] = UNSET
@@ -100,9 +100,13 @@ class QualerApiModelsServiceOrdersToServiceOrderPartRepairResponse:
         if not isinstance(self.created_on_utc, Unset):
             created_on_utc = self.created_on_utc.isoformat()
 
-        charge_date: Union[Unset, str] = UNSET
-        if not isinstance(self.charge_date, Unset):
+        charge_date: Union[None, Unset, str]
+        if isinstance(self.charge_date, Unset):
+            charge_date = UNSET
+        elif isinstance(self.charge_date, datetime.datetime):
             charge_date = self.charge_date.isoformat()
+        else:
+            charge_date = self.charge_date
 
         contract_repairs_discount = self.contract_repairs_discount
 
@@ -206,14 +210,30 @@ class QualerApiModelsServiceOrdersToServiceOrderPartRepairResponse:
         if isinstance(_created_on_utc, Unset):
             created_on_utc = UNSET
         else:
-            created_on_utc = isoparse(_created_on_utc)
+            if _created_on_utc is None:
 
-        _charge_date = d.pop("ChargeDate", UNSET)
-        charge_date: Union[Unset, datetime.datetime]
-        if isinstance(_charge_date, Unset):
-            charge_date = UNSET
-        else:
-            charge_date = isoparse(_charge_date)
+                created_on_utc = None
+
+            else:
+
+                created_on_utc = isoparse(_created_on_utc)
+
+        def _parse_charge_date(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                charge_date_type_0 = isoparse(data)
+
+                return charge_date_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        charge_date = _parse_charge_date(d.pop("ChargeDate", UNSET))
 
         contract_repairs_discount = d.pop("ContractRepairsDiscount", UNSET)
 

@@ -1,13 +1,13 @@
-from enum import Enum
+from enum import IntEnum
 
 
 class QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic(
-    str, Enum
+    IntEnum
 ):
-    NCSLZ5403 = "Ncslz5403"
-    RDS = "Rds"
-    TUR41 = "Tur41"
-    UNCERTAINTY = "Uncertainty"
+    VALUE_0 = 0
+    VALUE_1 = 1
+    VALUE_2 = 2
+    VALUE_3 = 3
 
     def __str__(self) -> str:
         return str(self.value)

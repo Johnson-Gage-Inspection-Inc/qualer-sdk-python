@@ -70,7 +70,13 @@ class QualerApiModelsAccountToEmployeeEventResponseModel:
         if isinstance(_created_on_utc, Unset):
             created_on_utc = UNSET
         else:
-            created_on_utc = isoparse(_created_on_utc)
+            if _created_on_utc is None:
+
+                created_on_utc = None
+
+            else:
+
+                created_on_utc = isoparse(_created_on_utc)
 
         event_type_id = d.pop("EventTypeId", UNSET)
 
