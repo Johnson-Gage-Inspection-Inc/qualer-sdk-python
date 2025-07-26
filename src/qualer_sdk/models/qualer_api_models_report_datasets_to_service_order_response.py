@@ -823,7 +823,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         else:
             payment_due_on = self.payment_due_on
 
-        process_date_option: Union[Unset, str] = UNSET
+        process_date_option: Union[Unset, int] = UNSET
         if not isinstance(self.process_date_option, Unset):
             process_date_option = self.process_date_option.value
 

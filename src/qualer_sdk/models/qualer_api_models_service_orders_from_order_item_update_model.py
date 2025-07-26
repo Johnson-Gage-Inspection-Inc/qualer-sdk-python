@@ -128,7 +128,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
 
         parts_total = self.parts_total
 
-        work_status: Union[None, Unset, str] = UNSET
+        work_status: Union[None, Unset, int] = UNSET
         if not isinstance(self.work_status, Unset):
             work_status = self.work_status.value
 
@@ -156,7 +156,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         if not isinstance(self.as_left_check, Unset):
             as_left_check = self.as_left_check.value
 
-        result_status: Union[None, Unset, str] = UNSET
+        result_status: Union[None, Unset, int] = UNSET
         if not isinstance(self.result_status, Unset):
             result_status = self.result_status.value
 

@@ -1709,7 +1709,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
             self.as_found_secondary_tool_serial_number
         )
 
-        as_found_measurement_not_taken_result: Union[Unset, str] = UNSET
+        as_found_measurement_not_taken_result: Union[Unset, int] = UNSET
         if not isinstance(self.as_found_measurement_not_taken_result, Unset):
             as_found_measurement_not_taken_result = (
                 self.as_found_measurement_not_taken_result.value
@@ -2142,7 +2142,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_found_channel = self.as_found_channel
 
-        as_found_measurement_type: Union[Unset, str] = UNSET
+        as_found_measurement_type: Union[Unset, int] = UNSET
         if not isinstance(self.as_found_measurement_type, Unset):
             as_found_measurement_type = self.as_found_measurement_type.value
 
@@ -2611,7 +2611,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_channel = self.as_left_channel
 
-        as_left_measurement_type: Union[Unset, str] = UNSET
+        as_left_measurement_type: Union[Unset, int] = UNSET
         if not isinstance(self.as_left_measurement_type, Unset):
             as_left_measurement_type = self.as_left_measurement_type.value
 

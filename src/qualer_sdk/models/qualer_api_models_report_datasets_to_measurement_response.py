@@ -1061,7 +1061,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         channel = self.channel
 
-        measurement_type: Union[Unset, str] = UNSET
+        measurement_type: Union[Unset, int] = UNSET
         if not isinstance(self.measurement_type, Unset):
             measurement_type = self.measurement_type.value
 

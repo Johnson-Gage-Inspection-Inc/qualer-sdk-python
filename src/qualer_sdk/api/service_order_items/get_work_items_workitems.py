@@ -1,4 +1,3 @@
-import datetime
 from http import HTTPStatus
 from typing import Any, Optional, Union, cast
 
@@ -16,8 +15,8 @@ def _get_kwargs(
     *,
     status: Union[Unset, str] = UNSET,
     company_id: Union[Unset, int] = UNSET,
-    from_: Union[Unset, datetime.datetime] = UNSET,
-    to: Union[Unset, datetime.datetime] = UNSET,
+    from_: Union[Unset, str] = UNSET,
+    to: Union[Unset, str] = UNSET,
     work_item_number: Union[Unset, str] = UNSET,
     asset_search: Union[Unset, str] = UNSET,
 ) -> dict[str, Any]:
@@ -27,15 +26,9 @@ def _get_kwargs(
 
     params["companyId"] = company_id
 
-    json_from_: Union[Unset, str] = UNSET
-    if not isinstance(from_, Unset):
-        json_from_ = from_.isoformat()
-    params["from"] = json_from_
+    params["from"] = from_
 
-    json_to: Union[Unset, str] = UNSET
-    if not isinstance(to, Unset):
-        json_to = to.isoformat()
-    params["to"] = json_to
+    params["to"] = to
 
     params["workItemNumber"] = work_item_number
 
@@ -97,8 +90,8 @@ def sync_detailed(
     client: Union[AuthenticatedClient, Client],
     status: Union[Unset, str] = UNSET,
     company_id: Union[Unset, int] = UNSET,
-    from_: Union[Unset, datetime.datetime] = UNSET,
-    to: Union[Unset, datetime.datetime] = UNSET,
+    from_: Union[Unset, str] = UNSET,
+    to: Union[Unset, str] = UNSET,
     work_item_number: Union[Unset, str] = UNSET,
     asset_search: Union[Unset, str] = UNSET,
 ) -> Response[
@@ -118,8 +111,8 @@ def sync_detailed(
     Args:
         status (Union[Unset, str]):
         company_id (Union[Unset, int]):
-        from_ (Union[Unset, datetime.datetime]):
-        to (Union[Unset, datetime.datetime]):
+        from_ (Union[Unset, str]):
+        to (Union[Unset, str]):
         work_item_number (Union[Unset, str]):
         asset_search (Union[Unset, str]):
 
@@ -152,8 +145,8 @@ def sync(
     client: Union[AuthenticatedClient, Client],
     status: Union[Unset, str] = UNSET,
     company_id: Union[Unset, int] = UNSET,
-    from_: Union[Unset, datetime.datetime] = UNSET,
-    to: Union[Unset, datetime.datetime] = UNSET,
+    from_: Union[Unset, str] = UNSET,
+    to: Union[Unset, str] = UNSET,
     work_item_number: Union[Unset, str] = UNSET,
     asset_search: Union[Unset, str] = UNSET,
 ) -> Optional[
@@ -173,8 +166,8 @@ def sync(
     Args:
         status (Union[Unset, str]):
         company_id (Union[Unset, int]):
-        from_ (Union[Unset, datetime.datetime]):
-        to (Union[Unset, datetime.datetime]):
+        from_ (Union[Unset, str]):
+        to (Union[Unset, str]):
         work_item_number (Union[Unset, str]):
         asset_search (Union[Unset, str]):
 
@@ -202,8 +195,8 @@ async def asyncio_detailed(
     client: Union[AuthenticatedClient, Client],
     status: Union[Unset, str] = UNSET,
     company_id: Union[Unset, int] = UNSET,
-    from_: Union[Unset, datetime.datetime] = UNSET,
-    to: Union[Unset, datetime.datetime] = UNSET,
+    from_: Union[Unset, str] = UNSET,
+    to: Union[Unset, str] = UNSET,
     work_item_number: Union[Unset, str] = UNSET,
     asset_search: Union[Unset, str] = UNSET,
 ) -> Response[
@@ -223,8 +216,8 @@ async def asyncio_detailed(
     Args:
         status (Union[Unset, str]):
         company_id (Union[Unset, int]):
-        from_ (Union[Unset, datetime.datetime]):
-        to (Union[Unset, datetime.datetime]):
+        from_ (Union[Unset, str]):
+        to (Union[Unset, str]):
         work_item_number (Union[Unset, str]):
         asset_search (Union[Unset, str]):
 
@@ -255,8 +248,8 @@ async def asyncio(
     client: Union[AuthenticatedClient, Client],
     status: Union[Unset, str] = UNSET,
     company_id: Union[Unset, int] = UNSET,
-    from_: Union[Unset, datetime.datetime] = UNSET,
-    to: Union[Unset, datetime.datetime] = UNSET,
+    from_: Union[Unset, str] = UNSET,
+    to: Union[Unset, str] = UNSET,
     work_item_number: Union[Unset, str] = UNSET,
     asset_search: Union[Unset, str] = UNSET,
 ) -> Optional[
@@ -276,8 +269,8 @@ async def asyncio(
     Args:
         status (Union[Unset, str]):
         company_id (Union[Unset, int]):
-        from_ (Union[Unset, datetime.datetime]):
-        to (Union[Unset, datetime.datetime]):
+        from_ (Union[Unset, str]):
+        to (Union[Unset, str]):
         work_item_number (Union[Unset, str]):
         asset_search (Union[Unset, str]):
 

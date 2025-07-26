@@ -66,6 +66,15 @@ def patch_spec():
         print("RecordType not found in expected definition.")
         sys.exit(1)
 
+    # Fix nullable enums in spec definitions
+    fix_nullable_enums_in_spec(spec)
+
+    # Fix date-time parameters to accept string inputs
+    fix_datetime_parameters_in_spec(spec)
+
+    # Fix binary endpoints that incorrectly declare JSON responses
+    fix_binary_endpoints_in_spec(spec)
+
     # Clean up redundant prefixes in operationIds
     for path_item in spec.get("paths", {}).values():
         for op in path_item.values():
@@ -650,6 +659,211 @@ def fix_nullable_enums():
         )
     else:
         print("ℹ️  No nullable enum fixes needed")
+
+
+def fix_nullable_enums_in_spec(spec):
+    """Fix enum definitions to allow None values where appropriate."""
+    print("🔧 Fixing nullable enum definitions in spec...")
+
+    # Known enum fields that can be None and the values that should be allowed
+    nullable_enum_fixes = {
+        # WorkStatus enum - add None as valid value
+        "WorkStatus": {
+            "nullable": True,
+            "additional_values": [
+                None,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+            ],  # Pending=0, InProgress=1, Completed=2, etc.
+        },
+        # ServiceOrderStatus enum
+        "ServiceOrderStatus": {
+            "nullable": True,
+            "additional_values": [None, 0, 1, 2, 3, 4, 5],
+        },
+        # ResultStatus enum
+        "ResultStatus": {
+            "nullable": True,
+            "additional_values": [
+                None,
+                0,
+                1,
+                2,
+                10,
+                11,
+                20,
+                21,
+                22,
+            ],  # NotAvailable=0, Fail=1, Pass=2, etc.
+        },
+        # ProcessDateOption enum
+        "ProcessDateOption": {
+            "nullable": True,
+            "additional_values": [None, 0, 1, 2, 3],
+        },
+        # MeasurementType enum
+        "MeasurementType": {
+            "nullable": True,
+            "additional_values": [None, 0, 1, 2, 3, 4, 5],
+        },
+        # InfluenceParameter1Type enum
+        "InfluenceParameter1Type": {
+            "nullable": True,
+            "additional_values": [None, 0, 1, 2, 3],
+        },
+        # AsFoundMeasurementNotTakenResult enum
+        "AsFoundMeasurementNotTakenResult": {
+            "nullable": True,
+            "additional_values": [None, 0, 1, 2, 3],
+        },
+    }
+
+    fixed_enums = []
+
+    # Traverse all definitions to find and fix enum fields
+    for def_name, definition in spec.get("definitions", {}).items():
+        if isinstance(definition, dict) and "properties" in definition:
+            for prop_name, prop_def in definition["properties"].items():
+                if isinstance(prop_def, dict):
+                    # Check if this property has an enum that we need to fix
+                    enum_values = prop_def.get("enum")
+
+                    # Look for enum properties that match our patterns
+                    for enum_pattern, fix_info in nullable_enum_fixes.items():
+                        if enum_pattern.lower() in prop_name.lower() or (
+                            enum_values
+                            and any(enum_pattern in str(val) for val in enum_values)
+                        ):
+
+                            # Make the enum nullable and add missing values
+                            if enum_values:
+                                # Convert enum to integer type with nullable
+                                prop_def["type"] = "integer"
+                                prop_def["format"] = "int32"
+                                prop_def["nullable"] = True
+
+                                # Add the additional enum values if not present
+                                current_values = set(enum_values)
+                                for new_val in fix_info["additional_values"]:
+                                    if new_val not in current_values:
+                                        current_values.add(new_val)
+
+                                # Sort values, handling mixed types safely
+                                non_none_values = [
+                                    v for v in current_values if v is not None
+                                ]
+                                # Separate integers and strings for sorting
+                                int_values = sorted(
+                                    [v for v in non_none_values if isinstance(v, int)]
+                                )
+                                str_values = sorted(
+                                    [v for v in non_none_values if isinstance(v, str)]
+                                )
+                                prop_def["enum"] = int_values + str_values + [None]
+                                fixed_enums.append(f"{def_name}.{prop_name}")
+                                break
+
+    if fixed_enums:
+        print(
+            f"✅ Fixed nullable enums: {', '.join(fixed_enums[:5])}{'...' if len(fixed_enums) > 5 else ''}"
+        )
+    else:
+        print("ℹ️  No nullable enum fixes needed")
+
+
+def fix_datetime_parameters_in_spec(spec):
+    """Fix date-time parameters to properly handle string inputs."""
+    print("🔧 Fixing date-time parameters in spec...")
+
+    fixed_params = []
+
+    for path, path_item in spec.get("paths", {}).items():
+        for method, operation in path_item.items():
+            if isinstance(operation, dict) and "parameters" in operation:
+                for param in operation["parameters"]:
+                    if (
+                        isinstance(param, dict)
+                        and param.get("type") == "string"
+                        and param.get("format") == "date-time"
+                    ):
+
+                        # Keep as string but remove the strict date-time format requirement
+                        # This allows the generated code to accept string inputs
+                        param["type"] = "string"
+                        # Remove format to be less strict about the exact format
+                        if "format" in param:
+                            del param["format"]
+
+                        # Add pattern to indicate expected format
+                        param["pattern"] = r"^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2})?$"
+                        param["x-python-type"] = "Union[str, datetime.datetime]"
+
+                        fixed_params.append(
+                            f"{path}:{method}:{param.get('name', 'unknown')}"
+                        )
+
+    if fixed_params:
+        print(f"✅ Fixed {len(fixed_params)} date-time parameters")
+    else:
+        print("ℹ️  No date-time parameter fixes needed")
+
+
+def fix_binary_endpoints_in_spec(spec):
+    """Fix endpoints that return binary data but are marked as JSON."""
+    print("🔧 Fixing binary endpoints in spec...")
+
+    # Known endpoints that return binary data but are incorrectly marked as JSON
+    binary_endpoints = [
+        "/api/service/workorders/{serviceOrderId}/documents",
+        "/api/service/workitems/{serviceOrderItemId}/documents",
+        "/api/assetservicerecords/{AssetServiceRecordId}/documents/files",
+    ]
+
+    fixed_endpoints = []
+
+    for path, path_item in spec.get("paths", {}).items():
+        # Check if this path might return binary data
+        is_binary_path = any(
+            binary_pattern in path for binary_pattern in binary_endpoints
+        )
+
+        if is_binary_path:
+            for method, operation in path_item.items():
+                if isinstance(operation, dict) and "responses" in operation:
+                    for status_code, response_def in operation["responses"].items():
+                        if (
+                            isinstance(response_def, dict)
+                            and "schema" in response_def
+                            and status_code == "200"
+                        ):
+
+                            # Check if this claims to return JSON but should be binary
+                            produces = operation.get("produces", [])
+                            if any("json" in prod for prod in produces):
+                                # This is likely a binary endpoint mismarked as JSON
+                                # Update the response schema to indicate binary
+                                response_def["schema"] = {
+                                    "type": "string",
+                                    "format": "binary",
+                                }
+
+                                # Update produces to indicate binary content
+                                operation["produces"] = [
+                                    "application/octet-stream",
+                                    "application/pdf",
+                                    "application/zip",
+                                ]
+
+                                fixed_endpoints.append(f"{path}:{method}")
+
+    if fixed_endpoints:
+        print(f"✅ Fixed {len(fixed_endpoints)} binary endpoints")
+    else:
+        print("ℹ️  No binary endpoint fixes needed")
 
 
 if __name__ == "__main__":
