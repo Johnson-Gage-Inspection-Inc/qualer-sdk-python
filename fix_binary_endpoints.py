@@ -91,4 +91,6 @@ def fix_binary_endpoints():
 
 
 if __name__ == "__main__":
-    fix_binary_endpoints()
+    raise RuntimeError(
+        "This script is not meant to be run directly. Please use the appropriate entry point."
+    )
