@@ -1,3 +1,4 @@
+import datetime
 import importlib
 import os
 
@@ -205,16 +206,16 @@ ENDPOINT_REQUIRED_PARAMS = {
         "service_order_item_id": SERVICE_ORDER_ITEM_ID
     },
     "service_order_documents.get_document_list": {
-        "from_": '"2024-01-01"',
-        "to": '"2024-12-31"',
+        "from_": datetime.datetime(2024, 1, 1),
+        "to": datetime.datetime(2024, 12, 31),
     },
     "service_order_documents.get_documents": {"service_order_id": SERVICE_ORDER_ID},
     "service_order_documents.get_documents_list": {
         "service_order_id": SERVICE_ORDER_ID
     },
     "service_order_item_documents.get_document_list_get_2": {
-        "from_": '"2024-01-01"',
-        "to": '"2024-12-31"',
+        "from_": datetime.datetime(2024, 1, 1),
+        "to": datetime.datetime(2024, 12, 31),
     },
     "service_order_item_documents.get_documents_get_2": {
         "service_order_item_id": SERVICE_ORDER_ITEM_ID
@@ -301,4 +302,5 @@ def test_the_other_get_endpoints(endpoint_name):
     try:
         sync_func(**call_args)
     except Exception as e:
+        pytest.fail(f"Endpoint {endpoint_name} raised exception: {e}")
         pytest.fail(f"Endpoint {endpoint_name} raised exception: {e}")
