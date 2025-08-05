@@ -32,7 +32,26 @@ def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
 ) -> Optional[Union[Any, File]]:
     if response.status_code == 200:
-        return response.content
+        # Extract filename from Content-Disposition header if present
+        import re
+        from io import BytesIO
+
+        content_disposition = response.headers.get("Content-Disposition", "")
+        filename = None
+        if "filename=" in content_disposition:
+            # Content-Disposition: attachment; filename="example.txt"
+            match = re.search(r'filename="?([^";]+)"?', content_disposition)
+            if match:
+                filename = match.group(1)
+
+        content_type = response.headers.get("Content-Type", None)
+
+        # Create File object with proper payload
+        return File(
+            payload=BytesIO(response.content),
+            file_name=filename,
+            mime_type=content_type,
+        )
     if response.status_code == 403:
         response_403 = cast(Any, None)
         return response_403
