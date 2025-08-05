@@ -6,9 +6,6 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.qualer_api_models_report_datasets_to_service_order_response_process_date_option import (
-    QualerApiModelsReportDatasetsToServiceOrderResponseProcessDateOption,
-)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderResponse")
@@ -169,7 +166,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         owner_department (Union[None, Unset, str]):
         assignee_name (Union[None, Unset, str]):
         payment_due_on (Union[None, Unset, datetime.datetime]):
-        process_date_option (Union[Unset, QualerApiModelsReportDatasetsToServiceOrderResponseProcessDateOption]):
+        process_date_option (Union[Unset, int]):
         desired_date (Union[None, Unset, datetime.datetime]):
         deadline_date (Union[None, Unset, datetime.datetime]):
         vendor_sign_off_on (Union[Unset, datetime.datetime]):
@@ -342,9 +339,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
     owner_department: Union[None, Unset, str] = UNSET
     assignee_name: Union[None, Unset, str] = UNSET
     payment_due_on: Union[None, Unset, datetime.datetime] = UNSET
-    process_date_option: Union[
-        Unset, QualerApiModelsReportDatasetsToServiceOrderResponseProcessDateOption
-    ] = UNSET
+    process_date_option: Union[Unset, int] = UNSET
     desired_date: Union[None, Unset, datetime.datetime] = UNSET
     deadline_date: Union[None, Unset, datetime.datetime] = UNSET
     vendor_sign_off_on: Union[Unset, datetime.datetime] = UNSET
@@ -827,9 +822,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         else:
             payment_due_on = self.payment_due_on
 
-        process_date_option: Union[Unset, str] = UNSET
-        if not isinstance(self.process_date_option, Unset):
-            process_date_option = self.process_date_option.value
+        process_date_option = self.process_date_option
 
         desired_date: Union[None, Unset, str]
         if isinstance(self.desired_date, Unset):
@@ -1906,18 +1899,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
 
         payment_due_on = _parse_payment_due_on(d.pop("PaymentDueOn", UNSET))
 
-        _process_date_option = d.pop("ProcessDateOption", UNSET)
-        process_date_option: Union[
-            Unset, QualerApiModelsReportDatasetsToServiceOrderResponseProcessDateOption
-        ]
-        if isinstance(_process_date_option, Unset):
-            process_date_option = UNSET
-        else:
-            process_date_option = (
-                QualerApiModelsReportDatasetsToServiceOrderResponseProcessDateOption(
-                    _process_date_option
-                )
-            )
+        process_date_option = d.pop("ProcessDateOption", UNSET)
 
         def _parse_desired_date(data: object) -> Union[None, Unset, datetime.datetime]:
             if data is None:
