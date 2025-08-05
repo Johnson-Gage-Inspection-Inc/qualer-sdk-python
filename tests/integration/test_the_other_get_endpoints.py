@@ -303,4 +303,3 @@ def test_the_other_get_endpoints(endpoint_name):
         sync_func(**call_args)
     except Exception as e:
         pytest.fail(f"Endpoint {endpoint_name} raised exception: {e}")
-        pytest.fail(f"Endpoint {endpoint_name} raised exception: {e}")
