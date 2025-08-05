@@ -173,8 +173,8 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         vendor_sign_off_by_name (Union[Unset, str]):
         service_discount (Union[Unset, float]):
         return_account (Union[Unset, str]):
-        business_hours_from (Union[Unset, datetime.datetime]):
-        business_hours_to (Union[Unset, datetime.datetime]):
+        business_hours_from (Union[None, Unset, datetime.datetime]):
+        business_hours_to (Union[None, Unset, datetime.datetime]):
         client_company_alternative_names (Union[Unset, str]):
         client_id (Union[Unset, int]):
         client_class (Union[Unset, str]):
@@ -346,8 +346,8 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
     vendor_sign_off_by_name: Union[Unset, str] = UNSET
     service_discount: Union[Unset, float] = UNSET
     return_account: Union[Unset, str] = UNSET
-    business_hours_from: Union[Unset, datetime.datetime] = UNSET
-    business_hours_to: Union[Unset, datetime.datetime] = UNSET
+    business_hours_from: Union[None, Unset, datetime.datetime] = UNSET
+    business_hours_to: Union[None, Unset, datetime.datetime] = UNSET
     client_company_alternative_names: Union[Unset, str] = UNSET
     client_id: Union[Unset, int] = UNSET
     client_class: Union[Unset, str] = UNSET
@@ -850,13 +850,21 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
 
         return_account = self.return_account
 
-        business_hours_from: Union[Unset, str] = UNSET
-        if not isinstance(self.business_hours_from, Unset):
+        business_hours_from: Union[None, Unset, str]
+        if isinstance(self.business_hours_from, Unset):
+            business_hours_from = UNSET
+        elif isinstance(self.business_hours_from, datetime.datetime):
             business_hours_from = self.business_hours_from.isoformat()
+        else:
+            business_hours_from = self.business_hours_from
 
-        business_hours_to: Union[Unset, str] = UNSET
-        if not isinstance(self.business_hours_to, Unset):
+        business_hours_to: Union[None, Unset, str]
+        if isinstance(self.business_hours_to, Unset):
+            business_hours_to = UNSET
+        elif isinstance(self.business_hours_to, datetime.datetime):
             business_hours_to = self.business_hours_to.isoformat()
+        else:
+            business_hours_to = self.business_hours_to
 
         client_company_alternative_names = self.client_company_alternative_names
 
@@ -1948,19 +1956,45 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
 
         return_account = d.pop("ReturnAccount", UNSET)
 
-        _business_hours_from = d.pop("BusinessHoursFrom", UNSET)
-        business_hours_from: Union[Unset, datetime.datetime]
-        if isinstance(_business_hours_from, Unset):
-            business_hours_from = UNSET
-        else:
-            business_hours_from = isoparse(_business_hours_from)
+        def _parse_business_hours_from(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                business_hours_from_type_0 = isoparse(data)
 
-        _business_hours_to = d.pop("BusinessHoursTo", UNSET)
-        business_hours_to: Union[Unset, datetime.datetime]
-        if isinstance(_business_hours_to, Unset):
-            business_hours_to = UNSET
-        else:
-            business_hours_to = isoparse(_business_hours_to)
+                return business_hours_from_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        business_hours_from = _parse_business_hours_from(
+            d.pop("BusinessHoursFrom", UNSET)
+        )
+
+        def _parse_business_hours_to(
+            data: object,
+        ) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                business_hours_to_type_0 = isoparse(data)
+
+                return business_hours_to_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        business_hours_to = _parse_business_hours_to(d.pop("BusinessHoursTo", UNSET))
 
         client_company_alternative_names = d.pop("ClientCompanyAlternativeNames", UNSET)
 

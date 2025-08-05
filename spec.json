@@ -6734,7 +6734,10 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Qualer.Api.Models.ReportDatasets.To.ServiceOrderTaskResponse"
+              }
             }
           }
         }
@@ -15135,11 +15138,13 @@
         },
         "BusinessHoursFrom": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "BusinessHoursTo": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ClientCompanyAlternativeNames": {
           "type": "string"

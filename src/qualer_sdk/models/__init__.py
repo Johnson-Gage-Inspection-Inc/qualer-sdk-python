@@ -56,7 +56,6 @@ from .get_get_6_response_200 import GetGet6Response200
 from .get_order_status_response_200 import GetOrderStatusResponse200
 from .get_work_item_charges_response_200 import GetWorkItemChargesResponse200
 from .get_work_item_task_response_200 import GetWorkItemTaskResponse200
-from .get_work_item_tasks_response_200 import GetWorkItemTasksResponse200
 from .logout_response_200 import LogoutResponse200
 from .lookups_lookup_type import LookupsLookupType
 from .order_cancel_response_200 import OrderCancelResponse200
@@ -1019,7 +1018,6 @@ __all__ = [
     "GetOrderStatusResponse200",
     "GetWorkItemChargesResponse200",
     "GetWorkItemTaskResponse200",
-    "GetWorkItemTasksResponse200",
     "LogoutResponse200",
     "LookupsLookupType",
     "OrderCancelResponse200",

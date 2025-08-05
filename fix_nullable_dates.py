@@ -34,6 +34,8 @@ def fix_nullable_date_fields(spec_path: str) -> None:
         "CertificateDueDate",
         "ServiceDate",
         "AcceptedOn",
+        "BusinessHoursFrom",
+        "BusinessHoursTo",
     ]
 
     changes_made = 0
