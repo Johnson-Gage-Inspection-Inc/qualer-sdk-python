@@ -66,13 +66,7 @@ class QualerApiModelsVendorsFromVendorCompanySearchModel:
         if isinstance(_modified_after, Unset):
             modified_after = UNSET
         else:
-            if _modified_after is None:
-
-                modified_after = None
-
-            else:
-
-                modified_after = isoparse(_modified_after)
+            modified_after = isoparse(_modified_after)
 
         qualer_api_models_vendors_from_vendor_company_search_model = cls(
             account_number_text=account_number_text,

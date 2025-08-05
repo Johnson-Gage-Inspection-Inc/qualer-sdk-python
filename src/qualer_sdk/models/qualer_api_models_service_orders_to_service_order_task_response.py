@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union, cast
+from typing import Any, TypeVar, Union
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -21,8 +21,8 @@ class QualerApiModelsServiceOrdersToServiceOrderTaskResponse:
         task_details (Union[Unset, str]):
         time_spent (Union[Unset, float]):
         time_spent_in_minutes (Union[Unset, int]):
-        start_time (Union[None, Unset, datetime.datetime]):
-        finish_time (Union[None, Unset, datetime.datetime]):
+        start_time (Union[Unset, datetime.datetime]):
+        finish_time (Union[Unset, datetime.datetime]):
         price (Union[Unset, float]):
         is_hourly (Union[Unset, bool]):
     """
@@ -33,8 +33,8 @@ class QualerApiModelsServiceOrdersToServiceOrderTaskResponse:
     task_details: Union[Unset, str] = UNSET
     time_spent: Union[Unset, float] = UNSET
     time_spent_in_minutes: Union[Unset, int] = UNSET
-    start_time: Union[None, Unset, datetime.datetime] = UNSET
-    finish_time: Union[None, Unset, datetime.datetime] = UNSET
+    start_time: Union[Unset, datetime.datetime] = UNSET
+    finish_time: Union[Unset, datetime.datetime] = UNSET
     price: Union[Unset, float] = UNSET
     is_hourly: Union[Unset, bool] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -52,21 +52,13 @@ class QualerApiModelsServiceOrdersToServiceOrderTaskResponse:
 
         time_spent_in_minutes = self.time_spent_in_minutes
 
-        start_time: Union[None, Unset, str]
-        if isinstance(self.start_time, Unset):
-            start_time = UNSET
-        elif isinstance(self.start_time, datetime.datetime):
+        start_time: Union[Unset, str] = UNSET
+        if not isinstance(self.start_time, Unset):
             start_time = self.start_time.isoformat()
-        else:
-            start_time = self.start_time
 
-        finish_time: Union[None, Unset, str]
-        if isinstance(self.finish_time, Unset):
-            finish_time = UNSET
-        elif isinstance(self.finish_time, datetime.datetime):
+        finish_time: Union[Unset, str] = UNSET
+        if not isinstance(self.finish_time, Unset):
             finish_time = self.finish_time.isoformat()
-        else:
-            finish_time = self.finish_time
 
         price = self.price
 
@@ -113,39 +105,19 @@ class QualerApiModelsServiceOrdersToServiceOrderTaskResponse:
 
         time_spent_in_minutes = d.pop("TimeSpentInMinutes", UNSET)
 
-        def _parse_start_time(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                start_time_type_0 = isoparse(data)
+        _start_time = d.pop("StartTime", UNSET)
+        start_time: Union[Unset, datetime.datetime]
+        if isinstance(_start_time, Unset):
+            start_time = UNSET
+        else:
+            start_time = isoparse(_start_time)
 
-                return start_time_type_0
-            except:  # noqa: E722
-                pass
-            return cast(Union[None, Unset, datetime.datetime], data)
-
-        start_time = _parse_start_time(d.pop("StartTime", UNSET))
-
-        def _parse_finish_time(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                finish_time_type_0 = isoparse(data)
-
-                return finish_time_type_0
-            except:  # noqa: E722
-                pass
-            return cast(Union[None, Unset, datetime.datetime], data)
-
-        finish_time = _parse_finish_time(d.pop("FinishTime", UNSET))
+        _finish_time = d.pop("FinishTime", UNSET)
+        finish_time: Union[Unset, datetime.datetime]
+        if isinstance(_finish_time, Unset):
+            finish_time = UNSET
+        else:
+            finish_time = isoparse(_finish_time)
 
         price = d.pop("Price", UNSET)
 

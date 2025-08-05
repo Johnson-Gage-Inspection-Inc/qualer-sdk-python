@@ -1,11 +1,12 @@
-from enum import IntEnum
+from enum import Enum
 
 
-class QualerApiModelsReportDatasetsToServiceOrderResponseProcessDateOption(IntEnum):
-    VALUE_0 = 0
-    VALUE_1 = 1
-    VALUE_2 = 2
-    VALUE_3 = 3
+class QualerApiModelsReportDatasetsToServiceOrderResponseProcessDateOption(str, Enum):
+    ASSOONASPOSSIBLE = "AsSoonAsPossible"
+    BEFOREDATE = "BeforeDate"
+    ONDATETIME = "OnDateTime"
+    URGENT = "Urgent"
+    WITHINRANGE = "WithinRange"
 
     def __str__(self) -> str:
         return str(self.value)

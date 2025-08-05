@@ -128,7 +128,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
 
         parts_total = self.parts_total
 
-        work_status: Union[None, Unset, int] = UNSET
+        work_status: Union[None, Unset, str] = UNSET
         if not isinstance(self.work_status, Unset):
             work_status = self.work_status.value
 
@@ -156,7 +156,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         if not isinstance(self.as_left_check, Unset):
             as_left_check = self.as_left_check.value
 
-        result_status: Union[None, Unset, int] = UNSET
+        result_status: Union[None, Unset, str] = UNSET
         if not isinstance(self.result_status, Unset):
             result_status = self.result_status.value
 
@@ -321,13 +321,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         if isinstance(_checked_on, Unset):
             checked_on = UNSET
         else:
-            if _checked_on is None:
-
-                checked_on = None
-
-            else:
-
-                checked_on = isoparse(_checked_on)
+            checked_on = isoparse(_checked_on)
 
         checked_by_name = d.pop("CheckedByName", UNSET)
 
@@ -336,13 +330,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         if isinstance(_completed_on, Unset):
             completed_on = UNSET
         else:
-            if _completed_on is None:
-
-                completed_on = None
-
-            else:
-
-                completed_on = isoparse(_completed_on)
+            completed_on = isoparse(_completed_on)
 
         completed_by_name = d.pop("CompletedByName", UNSET)
 

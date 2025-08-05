@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union, cast
+from typing import Any, TypeVar, Union
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -15,10 +15,10 @@ T = TypeVar("T", bound="QualerApiModelsAssetReservationToAssetReservationRespons
 class QualerApiModelsAssetReservationToAssetReservationResponse:
     """
     Attributes:
-        original_begin_date (Union[None, Unset, datetime.datetime]):
-        original_end_date (Union[None, Unset, datetime.datetime]):
-        begin_date (Union[None, Unset, datetime.datetime]):
-        end_date (Union[None, Unset, datetime.datetime]):
+        original_begin_date (Union[Unset, datetime.datetime]):
+        original_end_date (Union[Unset, datetime.datetime]):
+        begin_date (Union[Unset, datetime.datetime]):
+        end_date (Union[Unset, datetime.datetime]):
         reserved_on (Union[Unset, datetime.datetime]):
         reserved_on_utc (Union[Unset, datetime.datetime]):
         comments (Union[Unset, str]):
@@ -29,10 +29,10 @@ class QualerApiModelsAssetReservationToAssetReservationResponse:
         reserved_by_name (Union[Unset, str]):
     """
 
-    original_begin_date: Union[None, Unset, datetime.datetime] = UNSET
-    original_end_date: Union[None, Unset, datetime.datetime] = UNSET
-    begin_date: Union[None, Unset, datetime.datetime] = UNSET
-    end_date: Union[None, Unset, datetime.datetime] = UNSET
+    original_begin_date: Union[Unset, datetime.datetime] = UNSET
+    original_end_date: Union[Unset, datetime.datetime] = UNSET
+    begin_date: Union[Unset, datetime.datetime] = UNSET
+    end_date: Union[Unset, datetime.datetime] = UNSET
     reserved_on: Union[Unset, datetime.datetime] = UNSET
     reserved_on_utc: Union[Unset, datetime.datetime] = UNSET
     comments: Union[Unset, str] = UNSET
@@ -44,37 +44,21 @@ class QualerApiModelsAssetReservationToAssetReservationResponse:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        original_begin_date: Union[None, Unset, str]
-        if isinstance(self.original_begin_date, Unset):
-            original_begin_date = UNSET
-        elif isinstance(self.original_begin_date, datetime.datetime):
+        original_begin_date: Union[Unset, str] = UNSET
+        if not isinstance(self.original_begin_date, Unset):
             original_begin_date = self.original_begin_date.isoformat()
-        else:
-            original_begin_date = self.original_begin_date
 
-        original_end_date: Union[None, Unset, str]
-        if isinstance(self.original_end_date, Unset):
-            original_end_date = UNSET
-        elif isinstance(self.original_end_date, datetime.datetime):
+        original_end_date: Union[Unset, str] = UNSET
+        if not isinstance(self.original_end_date, Unset):
             original_end_date = self.original_end_date.isoformat()
-        else:
-            original_end_date = self.original_end_date
 
-        begin_date: Union[None, Unset, str]
-        if isinstance(self.begin_date, Unset):
-            begin_date = UNSET
-        elif isinstance(self.begin_date, datetime.datetime):
+        begin_date: Union[Unset, str] = UNSET
+        if not isinstance(self.begin_date, Unset):
             begin_date = self.begin_date.isoformat()
-        else:
-            begin_date = self.begin_date
 
-        end_date: Union[None, Unset, str]
-        if isinstance(self.end_date, Unset):
-            end_date = UNSET
-        elif isinstance(self.end_date, datetime.datetime):
+        end_date: Union[Unset, str] = UNSET
+        if not isinstance(self.end_date, Unset):
             end_date = self.end_date.isoformat()
-        else:
-            end_date = self.end_date
 
         reserved_on: Union[Unset, str] = UNSET
         if not isinstance(self.reserved_on, Unset):
@@ -129,106 +113,47 @@ class QualerApiModelsAssetReservationToAssetReservationResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
+        _original_begin_date = d.pop("OriginalBeginDate", UNSET)
+        original_begin_date: Union[Unset, datetime.datetime]
+        if isinstance(_original_begin_date, Unset):
+            original_begin_date = UNSET
+        else:
+            original_begin_date = isoparse(_original_begin_date)
 
-        def _parse_original_begin_date(
-            data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                original_begin_date_type_0 = isoparse(data)
+        _original_end_date = d.pop("OriginalEndDate", UNSET)
+        original_end_date: Union[Unset, datetime.datetime]
+        if isinstance(_original_end_date, Unset):
+            original_end_date = UNSET
+        else:
+            original_end_date = isoparse(_original_end_date)
 
-                return original_begin_date_type_0
-            except:  # noqa: E722
-                pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+        _begin_date = d.pop("BeginDate", UNSET)
+        begin_date: Union[Unset, datetime.datetime]
+        if isinstance(_begin_date, Unset):
+            begin_date = UNSET
+        else:
+            begin_date = isoparse(_begin_date)
 
-        original_begin_date = _parse_original_begin_date(
-            d.pop("OriginalBeginDate", UNSET)
-        )
-
-        def _parse_original_end_date(
-            data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                original_end_date_type_0 = isoparse(data)
-
-                return original_end_date_type_0
-            except:  # noqa: E722
-                pass
-            return cast(Union[None, Unset, datetime.datetime], data)
-
-        original_end_date = _parse_original_end_date(d.pop("OriginalEndDate", UNSET))
-
-        def _parse_begin_date(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                begin_date_type_0 = isoparse(data)
-
-                return begin_date_type_0
-            except:  # noqa: E722
-                pass
-            return cast(Union[None, Unset, datetime.datetime], data)
-
-        begin_date = _parse_begin_date(d.pop("BeginDate", UNSET))
-
-        def _parse_end_date(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                end_date_type_0 = isoparse(data)
-
-                return end_date_type_0
-            except:  # noqa: E722
-                pass
-            return cast(Union[None, Unset, datetime.datetime], data)
-
-        end_date = _parse_end_date(d.pop("EndDate", UNSET))
+        _end_date = d.pop("EndDate", UNSET)
+        end_date: Union[Unset, datetime.datetime]
+        if isinstance(_end_date, Unset):
+            end_date = UNSET
+        else:
+            end_date = isoparse(_end_date)
 
         _reserved_on = d.pop("ReservedOn", UNSET)
         reserved_on: Union[Unset, datetime.datetime]
         if isinstance(_reserved_on, Unset):
             reserved_on = UNSET
         else:
-            if _reserved_on is None:
-
-                reserved_on = None
-
-            else:
-
-                reserved_on = isoparse(_reserved_on)
+            reserved_on = isoparse(_reserved_on)
 
         _reserved_on_utc = d.pop("ReservedOnUtc", UNSET)
         reserved_on_utc: Union[Unset, datetime.datetime]
         if isinstance(_reserved_on_utc, Unset):
             reserved_on_utc = UNSET
         else:
-            if _reserved_on_utc is None:
-
-                reserved_on_utc = None
-
-            else:
-
-                reserved_on_utc = isoparse(_reserved_on_utc)
+            reserved_on_utc = isoparse(_reserved_on_utc)
 
         comments = d.pop("Comments", UNSET)
 

@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union, cast
+from typing import Any, TypeVar, Union
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -15,22 +15,18 @@ T = TypeVar("T", bound="QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat
 class QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat:
     """
     Attributes:
-        reset_service_date (Union[None, Unset, datetime.datetime]):
+        reset_service_date (Union[Unset, datetime.datetime]):
         reset_service_task (Union[Unset, str]):
     """
 
-    reset_service_date: Union[None, Unset, datetime.datetime] = UNSET
+    reset_service_date: Union[Unset, datetime.datetime] = UNSET
     reset_service_task: Union[Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        reset_service_date: Union[None, Unset, str]
-        if isinstance(self.reset_service_date, Unset):
-            reset_service_date = UNSET
-        elif isinstance(self.reset_service_date, datetime.datetime):
+        reset_service_date: Union[Unset, str] = UNSET
+        if not isinstance(self.reset_service_date, Unset):
             reset_service_date = self.reset_service_date.isoformat()
-        else:
-            reset_service_date = self.reset_service_date
 
         reset_service_task = self.reset_service_task
 
@@ -47,25 +43,12 @@ class QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-
-        def _parse_reset_service_date(
-            data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                reset_service_date_type_0 = isoparse(data)
-
-                return reset_service_date_type_0
-            except:  # noqa: E722
-                pass
-            return cast(Union[None, Unset, datetime.datetime], data)
-
-        reset_service_date = _parse_reset_service_date(d.pop("ResetServiceDate", UNSET))
+        _reset_service_date = d.pop("ResetServiceDate", UNSET)
+        reset_service_date: Union[Unset, datetime.datetime]
+        if isinstance(_reset_service_date, Unset):
+            reset_service_date = UNSET
+        else:
+            reset_service_date = isoparse(_reset_service_date)
 
         reset_service_task = d.pop("ResetServiceTask", UNSET)
 

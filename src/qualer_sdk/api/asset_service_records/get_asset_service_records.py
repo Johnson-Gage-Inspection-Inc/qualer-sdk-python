@@ -1,3 +1,4 @@
+import datetime
 from http import HTTPStatus
 from typing import Any, Optional, Union
 
@@ -15,8 +16,8 @@ def _get_kwargs(
     *,
     model_asset_id: Union[Unset, int] = UNSET,
     model_serial_number: Union[Unset, str] = UNSET,
-    model_from: Union[Unset, str] = UNSET,
-    model_to: Union[Unset, str] = UNSET,
+    model_from: Union[Unset, datetime.datetime] = UNSET,
+    model_to: Union[Unset, datetime.datetime] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -24,9 +25,15 @@ def _get_kwargs(
 
     params["model.serialNumber"] = model_serial_number
 
-    params["model.from"] = model_from
+    json_model_from: Union[Unset, str] = UNSET
+    if not isinstance(model_from, Unset):
+        json_model_from = model_from.isoformat()
+    params["model.from"] = json_model_from
 
-    params["model.to"] = model_to
+    json_model_to: Union[Unset, str] = UNSET
+    if not isinstance(model_to, Unset):
+        json_model_to = model_to.isoformat()
+    params["model.to"] = json_model_to
 
     params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
 
@@ -70,15 +77,15 @@ def sync_detailed(
     client: Union[AuthenticatedClient, Client],
     model_asset_id: Union[Unset, int] = UNSET,
     model_serial_number: Union[Unset, str] = UNSET,
-    model_from: Union[Unset, str] = UNSET,
-    model_to: Union[Unset, str] = UNSET,
+    model_from: Union[Unset, datetime.datetime] = UNSET,
+    model_to: Union[Unset, datetime.datetime] = UNSET,
 ) -> Response[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]:
     """
     Args:
         model_asset_id (Union[Unset, int]):
         model_serial_number (Union[Unset, str]):
-        model_from (Union[Unset, str]):
-        model_to (Union[Unset, str]):
+        model_from (Union[Unset, datetime.datetime]):
+        model_to (Union[Unset, datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -107,15 +114,15 @@ def sync(
     client: Union[AuthenticatedClient, Client],
     model_asset_id: Union[Unset, int] = UNSET,
     model_serial_number: Union[Unset, str] = UNSET,
-    model_from: Union[Unset, str] = UNSET,
-    model_to: Union[Unset, str] = UNSET,
+    model_from: Union[Unset, datetime.datetime] = UNSET,
+    model_to: Union[Unset, datetime.datetime] = UNSET,
 ) -> Optional[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]:
     """
     Args:
         model_asset_id (Union[Unset, int]):
         model_serial_number (Union[Unset, str]):
-        model_from (Union[Unset, str]):
-        model_to (Union[Unset, str]):
+        model_from (Union[Unset, datetime.datetime]):
+        model_to (Union[Unset, datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -139,15 +146,15 @@ async def asyncio_detailed(
     client: Union[AuthenticatedClient, Client],
     model_asset_id: Union[Unset, int] = UNSET,
     model_serial_number: Union[Unset, str] = UNSET,
-    model_from: Union[Unset, str] = UNSET,
-    model_to: Union[Unset, str] = UNSET,
+    model_from: Union[Unset, datetime.datetime] = UNSET,
+    model_to: Union[Unset, datetime.datetime] = UNSET,
 ) -> Response[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]:
     """
     Args:
         model_asset_id (Union[Unset, int]):
         model_serial_number (Union[Unset, str]):
-        model_from (Union[Unset, str]):
-        model_to (Union[Unset, str]):
+        model_from (Union[Unset, datetime.datetime]):
+        model_to (Union[Unset, datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -174,15 +181,15 @@ async def asyncio(
     client: Union[AuthenticatedClient, Client],
     model_asset_id: Union[Unset, int] = UNSET,
     model_serial_number: Union[Unset, str] = UNSET,
-    model_from: Union[Unset, str] = UNSET,
-    model_to: Union[Unset, str] = UNSET,
+    model_from: Union[Unset, datetime.datetime] = UNSET,
+    model_to: Union[Unset, datetime.datetime] = UNSET,
 ) -> Optional[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]:
     """
     Args:
         model_asset_id (Union[Unset, int]):
         model_serial_number (Union[Unset, str]):
-        model_from (Union[Unset, str]):
-        model_to (Union[Unset, str]):
+        model_from (Union[Unset, datetime.datetime]):
+        model_to (Union[Unset, datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

@@ -1,13 +1,9 @@
-from enum import IntEnum
+from enum import Enum
 
 
-class QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType(IntEnum):
-    VALUE_0 = 0
-    VALUE_1 = 1
-    VALUE_2 = 2
-    VALUE_3 = 3
-    VALUE_4 = 4
-    VALUE_5 = 5
+class QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType(str, Enum):
+    CUMULATIVE = "Cumulative"
+    DATA = "Data"
 
     def __str__(self) -> str:
         return str(self.value)

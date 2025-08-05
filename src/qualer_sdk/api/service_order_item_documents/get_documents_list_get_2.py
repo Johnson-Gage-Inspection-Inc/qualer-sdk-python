@@ -1,12 +1,14 @@
 from http import HTTPStatus
-from io import BytesIO
 from typing import Any, Optional, Union, cast
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...types import UNSET, File, Response, Unset
+from ...models.qualer_api_models_service_order_documents_to_company_order_item_controlled_document_response import (
+    QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse,
+)
+from ...types import UNSET, Response, Unset
 
 
 def _get_kwargs(
@@ -31,9 +33,23 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, File]]:
+) -> Optional[
+    Union[
+        Any,
+        list[
+            "QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"
+        ],
+    ]
+]:
     if response.status_code == 200:
-        response_200 = File(payload=BytesIO(response.content))
+        response_200 = []
+        _response_200 = response.json()
+        for response_200_item_data in _response_200:
+            response_200_item = QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse.from_dict(
+                response_200_item_data
+            )
+
+            response_200.append(response_200_item)
 
         return response_200
     if response.status_code == 403:
@@ -50,7 +66,14 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, File]]:
+) -> Response[
+    Union[
+        Any,
+        list[
+            "QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"
+        ],
+    ]
+]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -64,7 +87,14 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     model_report_type: Union[Unset, str] = UNSET,
-) -> Response[Union[Any, File]]:
+) -> Response[
+    Union[
+        Any,
+        list[
+            "QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"
+        ],
+    ]
+]:
     """
     Args:
         service_order_item_id (int):
@@ -75,7 +105,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, File]]
+        Response[Union[Any, list['QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]]
     """
 
     kwargs = _get_kwargs(
@@ -95,7 +125,14 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     model_report_type: Union[Unset, str] = UNSET,
-) -> Optional[Union[Any, File]]:
+) -> Optional[
+    Union[
+        Any,
+        list[
+            "QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"
+        ],
+    ]
+]:
     """
     Args:
         service_order_item_id (int):
@@ -106,7 +143,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, File]
+        Union[Any, list['QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]
     """
 
     return sync_detailed(
@@ -121,7 +158,14 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     model_report_type: Union[Unset, str] = UNSET,
-) -> Response[Union[Any, File]]:
+) -> Response[
+    Union[
+        Any,
+        list[
+            "QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"
+        ],
+    ]
+]:
     """
     Args:
         service_order_item_id (int):
@@ -132,7 +176,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, File]]
+        Response[Union[Any, list['QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]]
     """
 
     kwargs = _get_kwargs(
@@ -150,7 +194,14 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     model_report_type: Union[Unset, str] = UNSET,
-) -> Optional[Union[Any, File]]:
+) -> Optional[
+    Union[
+        Any,
+        list[
+            "QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"
+        ],
+    ]
+]:
     """
     Args:
         service_order_item_id (int):
@@ -161,7 +212,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, File]
+        Union[Any, list['QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]
     """
 
     return (
