@@ -51,8 +51,6 @@ from .delete_work_order_task_delete_2_response_204 import (
 )
 from .delete_work_order_task_response_204 import DeleteWorkOrderTaskResponse204
 from .get_client_attributes_response_200 import GetClientAttributesResponse200
-from .get_documents_get_2_response_200 import GetDocumentsGet2Response200
-from .get_documents_response_200 import GetDocumentsResponse200
 from .get_get_4_element_page import GetGet4ElementPage
 from .get_get_6_response_200 import GetGet6Response200
 from .get_order_status_response_200 import GetOrderStatusResponse200
@@ -1019,8 +1017,6 @@ __all__ = [
     "DeleteWorkOrderTaskDelete2Response204",
     "DeleteWorkOrderTaskResponse204",
     "GetClientAttributesResponse200",
-    "GetDocumentsGet2Response200",
-    "GetDocumentsResponse200",
     "GetGet4ElementPage",
     "GetGet6Response200",
     "GetOrderStatusResponse200",

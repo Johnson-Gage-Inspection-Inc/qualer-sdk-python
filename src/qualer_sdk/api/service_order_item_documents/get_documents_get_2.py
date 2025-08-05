@@ -5,8 +5,7 @@ import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.get_documents_get_2_response_200 import GetDocumentsGet2Response200
-from ...types import UNSET, Response, Unset
+from ...types import UNSET, File, Response, Unset
 
 
 def _get_kwargs(
@@ -31,11 +30,9 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, GetDocumentsGet2Response200]]:
+) -> Optional[Union[Any, File]]:
     if response.status_code == 200:
-        response_200 = GetDocumentsGet2Response200.from_dict(response.json())
-
-        return response_200
+        return response.content
     if response.status_code == 403:
         response_403 = cast(Any, None)
         return response_403
@@ -50,7 +47,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, GetDocumentsGet2Response200]]:
+) -> Response[Union[Any, File]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -64,7 +61,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     model_file_name: Union[Unset, str] = UNSET,
-) -> Response[Union[Any, GetDocumentsGet2Response200]]:
+) -> Response[Union[Any, File]]:
     """Retrieve work order documents
 
      Sample request:
@@ -80,7 +77,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, GetDocumentsGet2Response200]]
+        Response[Union[Any, File]]
     """
 
     kwargs = _get_kwargs(
@@ -100,7 +97,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     model_file_name: Union[Unset, str] = UNSET,
-) -> Optional[Union[Any, GetDocumentsGet2Response200]]:
+) -> Optional[Union[Any, File]]:
     """Retrieve work order documents
 
      Sample request:
@@ -116,7 +113,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, GetDocumentsGet2Response200]
+        Union[Any, File]
     """
 
     return sync_detailed(
@@ -131,7 +128,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     model_file_name: Union[Unset, str] = UNSET,
-) -> Response[Union[Any, GetDocumentsGet2Response200]]:
+) -> Response[Union[Any, File]]:
     """Retrieve work order documents
 
      Sample request:
@@ -147,7 +144,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, GetDocumentsGet2Response200]]
+        Response[Union[Any, File]]
     """
 
     kwargs = _get_kwargs(
@@ -165,7 +162,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     model_file_name: Union[Unset, str] = UNSET,
-) -> Optional[Union[Any, GetDocumentsGet2Response200]]:
+) -> Optional[Union[Any, File]]:
     """Retrieve work order documents
 
      Sample request:
@@ -181,7 +178,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, GetDocumentsGet2Response200]
+        Union[Any, File]
     """
 
     return (

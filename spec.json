@@ -5497,7 +5497,8 @@
           "200": {
             "description": "Returns an array of documents or empty list",
             "schema": {
-              "type": "object"
+              "type": "string",
+              "format": "binary"
             }
           },
           "403": {
@@ -5788,7 +5789,8 @@
           "200": {
             "description": "Returns an array of documents or empty list",
             "schema": {
-              "type": "object"
+              "type": "string",
+              "format": "binary"
             }
           },
           "403": {
@@ -14973,7 +14975,8 @@
         },
         "AcceptedOn": {
           "format": "date-time",
-          "type": "string"
+          "type": "string",
+          "x-nullable": true
         },
         "ApprovedOn": {
           "format": "date-time",

@@ -141,7 +141,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         submitted_on (Union[None, Unset, datetime.datetime]):
         shipped_on (Union[None, Unset, datetime.datetime]):
         completed_on (Union[None, Unset, datetime.datetime]):
-        accepted_on (Union[Unset, datetime.datetime]):
+        accepted_on (Union[None, Unset, datetime.datetime]):
         approved_on (Union[None, Unset, datetime.datetime]):
         delivered_on (Union[None, Unset, datetime.datetime]):
         paid_on (Union[None, Unset, datetime.datetime]):
@@ -314,7 +314,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
     submitted_on: Union[None, Unset, datetime.datetime] = UNSET
     shipped_on: Union[None, Unset, datetime.datetime] = UNSET
     completed_on: Union[None, Unset, datetime.datetime] = UNSET
-    accepted_on: Union[Unset, datetime.datetime] = UNSET
+    accepted_on: Union[None, Unset, datetime.datetime] = UNSET
     approved_on: Union[None, Unset, datetime.datetime] = UNSET
     delivered_on: Union[None, Unset, datetime.datetime] = UNSET
     paid_on: Union[None, Unset, datetime.datetime] = UNSET
@@ -665,9 +665,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         else:
             completed_on = self.completed_on
 
-        accepted_on: Union[Unset, str] = UNSET
-        if not isinstance(self.accepted_on, Unset):
+        accepted_on: Union[None, Unset, str]
+        if isinstance(self.accepted_on, Unset):
+            accepted_on = UNSET
+        elif isinstance(self.accepted_on, datetime.datetime):
             accepted_on = self.accepted_on.isoformat()
+        else:
+            accepted_on = self.accepted_on
 
         approved_on: Union[None, Unset, str]
         if isinstance(self.approved_on, Unset):
@@ -1616,12 +1620,22 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
 
         completed_on = _parse_completed_on(d.pop("CompletedOn", UNSET))
 
-        _accepted_on = d.pop("AcceptedOn", UNSET)
-        accepted_on: Union[Unset, datetime.datetime]
-        if isinstance(_accepted_on, Unset):
-            accepted_on = UNSET
-        else:
-            accepted_on = isoparse(_accepted_on)
+        def _parse_accepted_on(data: object) -> Union[None, Unset, datetime.datetime]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                accepted_on_type_0 = isoparse(data)
+
+                return accepted_on_type_0
+            except:  # noqa: E722
+                pass
+            return cast(Union[None, Unset, datetime.datetime], data)
+
+        accepted_on = _parse_accepted_on(d.pop("AcceptedOn", UNSET))
 
         def _parse_approved_on(data: object) -> Union[None, Unset, datetime.datetime]:
             if data is None:
