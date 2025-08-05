@@ -179,7 +179,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_parameter_id (Union[Unset, int]):
         as_found_sd_header (Union[Unset, float]):
         as_found_cv_header (Union[Unset, float]):
-        as_found_measurement_local_time (Union[None, Unset, datetime.datetime]):
+        as_found_measurement_local_time (Union[Unset, datetime.datetime]):
         as_found_tur (Union[Unset, float]):
         as_found_tur_raw (Union[Unset, float]):
         as_left_tur (Union[Unset, float]):
@@ -376,7 +376,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_measurement_type (Union[Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementType]):
         as_found_updated_by (Union[Unset, str]):
-        as_found_updated_on (Union[None, Unset, datetime.datetime]):
+        as_found_updated_on (Union[Unset, datetime.datetime]):
         as_left_abbreviated_uom (Union[Unset, str]):
         as_left_unit_scale_factor (Union[Unset, float]):
         as_found_specification_title (Union[Unset, str]):
@@ -444,7 +444,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_parameter_id (Union[Unset, int]):
         as_left_sd_header (Union[Unset, float]):
         as_left_cv_header (Union[Unset, float]):
-        as_left_measurement_local_time (Union[None, Unset, datetime.datetime]):
+        as_left_measurement_local_time (Union[Unset, datetime.datetime]):
         as_left_reading_entry_math (Union[Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath]):
         as_left_reading_entry_math_string (Union[Unset, str]):
@@ -601,7 +601,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_measurement_type (Union[Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementType]):
         as_left_updated_by (Union[Unset, str]):
-        as_left_updated_on (Union[None, Unset, datetime.datetime]):
+        as_left_updated_on (Union[Unset, datetime.datetime]):
         as_left_specification_title (Union[Unset, str]):
         as_left_specification_subtitle (Union[Unset, str]):
         as_left_specification_group (Union[Unset, str]):
@@ -819,7 +819,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_found_parameter_id: Union[Unset, int] = UNSET
     as_found_sd_header: Union[Unset, float] = UNSET
     as_found_cv_header: Union[Unset, float] = UNSET
-    as_found_measurement_local_time: Union[None, Unset, datetime.datetime] = UNSET
+    as_found_measurement_local_time: Union[Unset, datetime.datetime] = UNSET
     as_found_tur: Union[Unset, float] = UNSET
     as_found_tur_raw: Union[Unset, float] = UNSET
     as_left_tur: Union[Unset, float] = UNSET
@@ -1023,7 +1023,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
     ] = UNSET
     as_found_updated_by: Union[Unset, str] = UNSET
-    as_found_updated_on: Union[None, Unset, datetime.datetime] = UNSET
+    as_found_updated_on: Union[Unset, datetime.datetime] = UNSET
     as_left_abbreviated_uom: Union[Unset, str] = UNSET
     as_left_unit_scale_factor: Union[Unset, float] = UNSET
     as_found_specification_title: Union[Unset, str] = UNSET
@@ -1092,7 +1092,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_left_parameter_id: Union[Unset, int] = UNSET
     as_left_sd_header: Union[Unset, float] = UNSET
     as_left_cv_header: Union[Unset, float] = UNSET
-    as_left_measurement_local_time: Union[None, Unset, datetime.datetime] = UNSET
+    as_left_measurement_local_time: Union[Unset, datetime.datetime] = UNSET
     as_left_reading_entry_math: Union[
         Unset,
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
@@ -1253,7 +1253,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
     ] = UNSET
     as_left_updated_by: Union[Unset, str] = UNSET
-    as_left_updated_on: Union[None, Unset, datetime.datetime] = UNSET
+    as_left_updated_on: Union[Unset, datetime.datetime] = UNSET
     as_left_specification_title: Union[Unset, str] = UNSET
     as_left_specification_subtitle: Union[Unset, str] = UNSET
     as_left_specification_group: Union[Unset, str] = UNSET
@@ -1709,7 +1709,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
             self.as_found_secondary_tool_serial_number
         )
 
-        as_found_measurement_not_taken_result: Union[None, Unset, int] = UNSET
+        as_found_measurement_not_taken_result: Union[Unset, str] = UNSET
         if not isinstance(self.as_found_measurement_not_taken_result, Unset):
             as_found_measurement_not_taken_result = (
                 self.as_found_measurement_not_taken_result.value
@@ -1739,15 +1739,11 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_found_cv_header = self.as_found_cv_header
 
-        as_found_measurement_local_time: Union[None, Unset, str]
-        if isinstance(self.as_found_measurement_local_time, Unset):
-            as_found_measurement_local_time = UNSET
-        elif isinstance(self.as_found_measurement_local_time, datetime.datetime):
+        as_found_measurement_local_time: Union[Unset, str] = UNSET
+        if not isinstance(self.as_found_measurement_local_time, Unset):
             as_found_measurement_local_time = (
                 self.as_found_measurement_local_time.isoformat()
             )
-        else:
-            as_found_measurement_local_time = self.as_found_measurement_local_time
 
         as_found_tur = self.as_found_tur
 
@@ -1769,11 +1765,11 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_guard_band = self.as_left_guard_band
 
-        as_found_guard_band_logic: Union[Unset, int] = UNSET
+        as_found_guard_band_logic: Union[Unset, str] = UNSET
         if not isinstance(self.as_found_guard_band_logic, Unset):
             as_found_guard_band_logic = self.as_found_guard_band_logic.value
 
-        as_left_guard_band_logic: Union[Unset, int] = UNSET
+        as_left_guard_band_logic: Union[Unset, str] = UNSET
         if not isinstance(self.as_left_guard_band_logic, Unset):
             as_left_guard_band_logic = self.as_left_guard_band_logic.value
 
@@ -2146,19 +2142,15 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_found_channel = self.as_found_channel
 
-        as_found_measurement_type: Union[Unset, int] = UNSET
+        as_found_measurement_type: Union[Unset, str] = UNSET
         if not isinstance(self.as_found_measurement_type, Unset):
             as_found_measurement_type = self.as_found_measurement_type.value
 
         as_found_updated_by = self.as_found_updated_by
 
-        as_found_updated_on: Union[None, Unset, str]
-        if isinstance(self.as_found_updated_on, Unset):
-            as_found_updated_on = UNSET
-        elif isinstance(self.as_found_updated_on, datetime.datetime):
+        as_found_updated_on: Union[Unset, str] = UNSET
+        if not isinstance(self.as_found_updated_on, Unset):
             as_found_updated_on = self.as_found_updated_on.isoformat()
-        else:
-            as_found_updated_on = self.as_found_updated_on
 
         as_left_abbreviated_uom = self.as_left_abbreviated_uom
 
@@ -2296,15 +2288,11 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_cv_header = self.as_left_cv_header
 
-        as_left_measurement_local_time: Union[None, Unset, str]
-        if isinstance(self.as_left_measurement_local_time, Unset):
-            as_left_measurement_local_time = UNSET
-        elif isinstance(self.as_left_measurement_local_time, datetime.datetime):
+        as_left_measurement_local_time: Union[Unset, str] = UNSET
+        if not isinstance(self.as_left_measurement_local_time, Unset):
             as_left_measurement_local_time = (
                 self.as_left_measurement_local_time.isoformat()
             )
-        else:
-            as_left_measurement_local_time = self.as_left_measurement_local_time
 
         as_left_reading_entry_math: Union[Unset, str] = UNSET
         if not isinstance(self.as_left_reading_entry_math, Unset):
@@ -2623,19 +2611,15 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_channel = self.as_left_channel
 
-        as_left_measurement_type: Union[Unset, int] = UNSET
+        as_left_measurement_type: Union[Unset, str] = UNSET
         if not isinstance(self.as_left_measurement_type, Unset):
             as_left_measurement_type = self.as_left_measurement_type.value
 
         as_left_updated_by = self.as_left_updated_by
 
-        as_left_updated_on: Union[None, Unset, str]
-        if isinstance(self.as_left_updated_on, Unset):
-            as_left_updated_on = UNSET
-        elif isinstance(self.as_left_updated_on, datetime.datetime):
+        as_left_updated_on: Union[Unset, str] = UNSET
+        if not isinstance(self.as_left_updated_on, Unset):
             as_left_updated_on = self.as_left_updated_on.isoformat()
-        else:
-            as_left_updated_on = self.as_left_updated_on
 
         as_left_specification_title = self.as_left_specification_title
 
@@ -4109,13 +4093,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         if isinstance(_completed_on, Unset):
             completed_on = UNSET
         else:
-            if _completed_on is None:
-
-                completed_on = None
-
-            else:
-
-                completed_on = isoparse(_completed_on)
+            completed_on = isoparse(_completed_on)
 
         is_limited = d.pop("IsLimited", UNSET)
 
@@ -4644,26 +4622,12 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_found_cv_header = d.pop("AsFoundCvHeader", UNSET)
 
-        def _parse_as_found_measurement_local_time(
-            data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                as_found_measurement_local_time_type_0 = isoparse(data)
-
-                return as_found_measurement_local_time_type_0
-            except:  # noqa: E722
-                pass
-            return cast(Union[None, Unset, datetime.datetime], data)
-
-        as_found_measurement_local_time = _parse_as_found_measurement_local_time(
-            d.pop("AsFoundMeasurementLocalTime", UNSET)
-        )
+        _as_found_measurement_local_time = d.pop("AsFoundMeasurementLocalTime", UNSET)
+        as_found_measurement_local_time: Union[Unset, datetime.datetime]
+        if isinstance(_as_found_measurement_local_time, Unset):
+            as_found_measurement_local_time = UNSET
+        else:
+            as_found_measurement_local_time = isoparse(_as_found_measurement_local_time)
 
         as_found_tur = d.pop("AsFoundTur", UNSET)
 
@@ -5095,26 +5059,12 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_found_updated_by = d.pop("AsFoundUpdatedBy", UNSET)
 
-        def _parse_as_found_updated_on(
-            data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                as_found_updated_on_type_0 = isoparse(data)
-
-                return as_found_updated_on_type_0
-            except:  # noqa: E722
-                pass
-            return cast(Union[None, Unset, datetime.datetime], data)
-
-        as_found_updated_on = _parse_as_found_updated_on(
-            d.pop("AsFoundUpdatedOn", UNSET)
-        )
+        _as_found_updated_on = d.pop("AsFoundUpdatedOn", UNSET)
+        as_found_updated_on: Union[Unset, datetime.datetime]
+        if isinstance(_as_found_updated_on, Unset):
+            as_found_updated_on = UNSET
+        else:
+            as_found_updated_on = isoparse(_as_found_updated_on)
 
         as_left_abbreviated_uom = d.pop("AsLeftAbbreviatedUOM", UNSET)
 
@@ -5139,13 +5089,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         if isinstance(_as_found_commenced_on, Unset):
             as_found_commenced_on = UNSET
         else:
-            if _as_found_commenced_on is None:
-
-                as_found_commenced_on = None
-
-            else:
-
-                as_found_commenced_on = isoparse(_as_found_commenced_on)
+            as_found_commenced_on = isoparse(_as_found_commenced_on)
 
         as_found_commenced_by = d.pop("AsFoundCommencedBy", UNSET)
 
@@ -5271,26 +5215,12 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_cv_header = d.pop("AsLeftCvHeader", UNSET)
 
-        def _parse_as_left_measurement_local_time(
-            data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                as_left_measurement_local_time_type_0 = isoparse(data)
-
-                return as_left_measurement_local_time_type_0
-            except:  # noqa: E722
-                pass
-            return cast(Union[None, Unset, datetime.datetime], data)
-
-        as_left_measurement_local_time = _parse_as_left_measurement_local_time(
-            d.pop("AsLeftMeasurementLocalTime", UNSET)
-        )
+        _as_left_measurement_local_time = d.pop("AsLeftMeasurementLocalTime", UNSET)
+        as_left_measurement_local_time: Union[Unset, datetime.datetime]
+        if isinstance(_as_left_measurement_local_time, Unset):
+            as_left_measurement_local_time = UNSET
+        else:
+            as_left_measurement_local_time = isoparse(_as_left_measurement_local_time)
 
         _as_left_reading_entry_math = d.pop("AsLeftReadingEntryMath", UNSET)
         as_left_reading_entry_math: Union[
@@ -5627,24 +5557,12 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_updated_by = d.pop("AsLeftUpdatedBy", UNSET)
 
-        def _parse_as_left_updated_on(
-            data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                as_left_updated_on_type_0 = isoparse(data)
-
-                return as_left_updated_on_type_0
-            except:  # noqa: E722
-                pass
-            return cast(Union[None, Unset, datetime.datetime], data)
-
-        as_left_updated_on = _parse_as_left_updated_on(d.pop("AsLeftUpdatedOn", UNSET))
+        _as_left_updated_on = d.pop("AsLeftUpdatedOn", UNSET)
+        as_left_updated_on: Union[Unset, datetime.datetime]
+        if isinstance(_as_left_updated_on, Unset):
+            as_left_updated_on = UNSET
+        else:
+            as_left_updated_on = isoparse(_as_left_updated_on)
 
         as_left_specification_title = d.pop("AsLeftSpecificationTitle", UNSET)
 
@@ -5665,13 +5583,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         if isinstance(_as_left_commenced_on, Unset):
             as_left_commenced_on = UNSET
         else:
-            if _as_left_commenced_on is None:
-
-                as_left_commenced_on = None
-
-            else:
-
-                as_left_commenced_on = isoparse(_as_left_commenced_on)
+            as_left_commenced_on = isoparse(_as_left_commenced_on)
 
         as_left_commenced_by = d.pop("AsLeftCommencedBy", UNSET)
 

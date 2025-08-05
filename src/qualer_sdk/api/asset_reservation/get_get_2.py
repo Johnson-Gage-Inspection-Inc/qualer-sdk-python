@@ -1,3 +1,4 @@
+import datetime
 from http import HTTPStatus
 from typing import Any, Optional, Union
 
@@ -13,8 +14,8 @@ from ...types import UNSET, Response, Unset
 
 def _get_kwargs(
     *,
-    model_from: Union[Unset, str] = UNSET,
-    model_to: Union[Unset, str] = UNSET,
+    model_from: Union[Unset, datetime.datetime] = UNSET,
+    model_to: Union[Unset, datetime.datetime] = UNSET,
     model_asset_id: Union[Unset, int] = UNSET,
     model_area_id: Union[Unset, int] = UNSET,
     model_product_id: Union[Unset, int] = UNSET,
@@ -24,9 +25,15 @@ def _get_kwargs(
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
-    params["model.from"] = model_from
+    json_model_from: Union[Unset, str] = UNSET
+    if not isinstance(model_from, Unset):
+        json_model_from = model_from.isoformat()
+    params["model.from"] = json_model_from
 
-    params["model.to"] = model_to
+    json_model_to: Union[Unset, str] = UNSET
+    if not isinstance(model_to, Unset):
+        json_model_to = model_to.isoformat()
+    params["model.to"] = json_model_to
 
     params["model.assetId"] = model_asset_id
 
@@ -87,8 +94,8 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_from: Union[Unset, str] = UNSET,
-    model_to: Union[Unset, str] = UNSET,
+    model_from: Union[Unset, datetime.datetime] = UNSET,
+    model_to: Union[Unset, datetime.datetime] = UNSET,
     model_asset_id: Union[Unset, int] = UNSET,
     model_area_id: Union[Unset, int] = UNSET,
     model_product_id: Union[Unset, int] = UNSET,
@@ -98,8 +105,8 @@ def sync_detailed(
 ) -> Response[list["QualerApiModelsAssetReservationToAssetReservationResponse"]]:
     """
     Args:
-        model_from (Union[Unset, str]):
-        model_to (Union[Unset, str]):
+        model_from (Union[Unset, datetime.datetime]):
+        model_to (Union[Unset, datetime.datetime]):
         model_asset_id (Union[Unset, int]):
         model_area_id (Union[Unset, int]):
         model_product_id (Union[Unset, int]):
@@ -136,8 +143,8 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_from: Union[Unset, str] = UNSET,
-    model_to: Union[Unset, str] = UNSET,
+    model_from: Union[Unset, datetime.datetime] = UNSET,
+    model_to: Union[Unset, datetime.datetime] = UNSET,
     model_asset_id: Union[Unset, int] = UNSET,
     model_area_id: Union[Unset, int] = UNSET,
     model_product_id: Union[Unset, int] = UNSET,
@@ -147,8 +154,8 @@ def sync(
 ) -> Optional[list["QualerApiModelsAssetReservationToAssetReservationResponse"]]:
     """
     Args:
-        model_from (Union[Unset, str]):
-        model_to (Union[Unset, str]):
+        model_from (Union[Unset, datetime.datetime]):
+        model_to (Union[Unset, datetime.datetime]):
         model_asset_id (Union[Unset, int]):
         model_area_id (Union[Unset, int]):
         model_product_id (Union[Unset, int]):
@@ -180,8 +187,8 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_from: Union[Unset, str] = UNSET,
-    model_to: Union[Unset, str] = UNSET,
+    model_from: Union[Unset, datetime.datetime] = UNSET,
+    model_to: Union[Unset, datetime.datetime] = UNSET,
     model_asset_id: Union[Unset, int] = UNSET,
     model_area_id: Union[Unset, int] = UNSET,
     model_product_id: Union[Unset, int] = UNSET,
@@ -191,8 +198,8 @@ async def asyncio_detailed(
 ) -> Response[list["QualerApiModelsAssetReservationToAssetReservationResponse"]]:
     """
     Args:
-        model_from (Union[Unset, str]):
-        model_to (Union[Unset, str]):
+        model_from (Union[Unset, datetime.datetime]):
+        model_to (Union[Unset, datetime.datetime]):
         model_asset_id (Union[Unset, int]):
         model_area_id (Union[Unset, int]):
         model_product_id (Union[Unset, int]):
@@ -227,8 +234,8 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_from: Union[Unset, str] = UNSET,
-    model_to: Union[Unset, str] = UNSET,
+    model_from: Union[Unset, datetime.datetime] = UNSET,
+    model_to: Union[Unset, datetime.datetime] = UNSET,
     model_asset_id: Union[Unset, int] = UNSET,
     model_area_id: Union[Unset, int] = UNSET,
     model_product_id: Union[Unset, int] = UNSET,
@@ -238,8 +245,8 @@ async def asyncio(
 ) -> Optional[list["QualerApiModelsAssetReservationToAssetReservationResponse"]]:
     """
     Args:
-        model_from (Union[Unset, str]):
-        model_to (Union[Unset, str]):
+        model_from (Union[Unset, datetime.datetime]):
+        model_to (Union[Unset, datetime.datetime]):
         model_asset_id (Union[Unset, int]):
         model_area_id (Union[Unset, int]):
         model_product_id (Union[Unset, int]):

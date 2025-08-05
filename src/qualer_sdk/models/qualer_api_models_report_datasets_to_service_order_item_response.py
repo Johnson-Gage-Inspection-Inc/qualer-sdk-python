@@ -26,7 +26,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         order_item_number (Union[Unset, int]):
         service_charge (Union[Unset, float]):
         updated_by (Union[Unset, str]):
-        updated_on (Union[None, Unset, datetime.datetime]):
+        updated_on (Union[Unset, datetime.datetime]):
         work_status (Union[Unset, int]):
         custom_work_status (Union[Unset, str]):
         service_comments (Union[Unset, str]):
@@ -167,7 +167,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
     order_item_number: Union[Unset, int] = UNSET
     service_charge: Union[Unset, float] = UNSET
     updated_by: Union[Unset, str] = UNSET
-    updated_on: Union[None, Unset, datetime.datetime] = UNSET
+    updated_on: Union[Unset, datetime.datetime] = UNSET
     work_status: Union[None, Unset, int] = UNSET
     custom_work_status: Union[Unset, str] = UNSET
     service_comments: Union[Unset, str] = UNSET
@@ -326,13 +326,9 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
 
         updated_by = self.updated_by
 
-        updated_on: Union[None, Unset, str]
-        if isinstance(self.updated_on, Unset):
-            updated_on = UNSET
-        elif isinstance(self.updated_on, datetime.datetime):
+        updated_on: Union[Unset, str] = UNSET
+        if not isinstance(self.updated_on, Unset):
             updated_on = self.updated_on.isoformat()
-        else:
-            updated_on = self.updated_on
 
         work_status: Union[None, Unset, str]
 
@@ -1296,22 +1292,12 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
 
         updated_by = d.pop("UpdatedBy", UNSET)
 
-        def _parse_updated_on(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                updated_on_type_0 = isoparse(data)
-
-                return updated_on_type_0
-            except:  # noqa: E722
-                pass
-            return cast(Union[None, Unset, datetime.datetime], data)
-
-        updated_on = _parse_updated_on(d.pop("UpdatedOn", UNSET))
+        _updated_on = d.pop("UpdatedOn", UNSET)
+        updated_on: Union[Unset, datetime.datetime]
+        if isinstance(_updated_on, Unset):
+            updated_on = UNSET
+        else:
+            updated_on = isoparse(_updated_on)
 
         work_status = d.pop("WorkStatus", UNSET)
 

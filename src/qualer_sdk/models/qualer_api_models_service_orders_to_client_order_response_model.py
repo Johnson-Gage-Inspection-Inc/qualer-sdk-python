@@ -68,7 +68,7 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
         late_fee_on (Union[None, Unset, datetime.datetime]):
         cancelled_on (Union[None, Unset, datetime.datetime]):
         closed_on (Union[None, Unset, datetime.datetime]):
-        last_updated_on (Union[None, Unset, datetime.datetime]):
+        last_updated_on (Union[Unset, datetime.datetime]):
         last_updated_by (Union[Unset, str]):
         submited_by_id (Union[Unset, int]):
         sign_off_by_id (Union[Unset, int]):
@@ -182,7 +182,7 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
     late_fee_on: Union[None, Unset, datetime.datetime] = UNSET
     cancelled_on: Union[None, Unset, datetime.datetime] = UNSET
     closed_on: Union[None, Unset, datetime.datetime] = UNSET
-    last_updated_on: Union[None, Unset, datetime.datetime] = UNSET
+    last_updated_on: Union[Unset, datetime.datetime] = UNSET
     last_updated_by: Union[Unset, str] = UNSET
     submited_by_id: Union[Unset, int] = UNSET
     sign_off_by_id: Union[Unset, int] = UNSET
@@ -461,13 +461,9 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
         else:
             closed_on = self.closed_on
 
-        last_updated_on: Union[None, Unset, str]
-        if isinstance(self.last_updated_on, Unset):
-            last_updated_on = UNSET
-        elif isinstance(self.last_updated_on, datetime.datetime):
+        last_updated_on: Union[Unset, str] = UNSET
+        if not isinstance(self.last_updated_on, Unset):
             last_updated_on = self.last_updated_on.isoformat()
-        else:
-            last_updated_on = self.last_updated_on
 
         last_updated_by = self.last_updated_by
 
@@ -1275,24 +1271,12 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
 
         closed_on = _parse_closed_on(d.pop("ClosedOn", UNSET))
 
-        def _parse_last_updated_on(
-            data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                last_updated_on_type_0 = isoparse(data)
-
-                return last_updated_on_type_0
-            except:  # noqa: E722
-                pass
-            return cast(Union[None, Unset, datetime.datetime], data)
-
-        last_updated_on = _parse_last_updated_on(d.pop("LastUpdatedOn", UNSET))
+        _last_updated_on = d.pop("LastUpdatedOn", UNSET)
+        last_updated_on: Union[Unset, datetime.datetime]
+        if isinstance(_last_updated_on, Unset):
+            last_updated_on = UNSET
+        else:
+            last_updated_on = isoparse(_last_updated_on)
 
         last_updated_by = d.pop("LastUpdatedBy", UNSET)
 

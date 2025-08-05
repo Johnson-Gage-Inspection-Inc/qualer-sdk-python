@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union, cast
+from typing import Any, TypeVar, Union
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -21,7 +21,7 @@ class QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairUpdateMod
         service_order_item_part_id (Union[Unset, int]):
         name (Union[Unset, str]):
         description (Union[Unset, str]):
-        charge_date (Union[None, Unset, datetime.datetime]):
+        charge_date (Union[Unset, datetime.datetime]):
         price (Union[Unset, float]):
         unit_name (Union[Unset, str]):
         is_hourly_pricing (Union[Unset, bool]):
@@ -38,7 +38,7 @@ class QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairUpdateMod
     service_order_item_part_id: Union[Unset, int] = UNSET
     name: Union[Unset, str] = UNSET
     description: Union[Unset, str] = UNSET
-    charge_date: Union[None, Unset, datetime.datetime] = UNSET
+    charge_date: Union[Unset, datetime.datetime] = UNSET
     price: Union[Unset, float] = UNSET
     unit_name: Union[Unset, str] = UNSET
     is_hourly_pricing: Union[Unset, bool] = UNSET
@@ -59,13 +59,9 @@ class QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairUpdateMod
 
         description = self.description
 
-        charge_date: Union[None, Unset, str]
-        if isinstance(self.charge_date, Unset):
-            charge_date = UNSET
-        elif isinstance(self.charge_date, datetime.datetime):
+        charge_date: Union[Unset, str] = UNSET
+        if not isinstance(self.charge_date, Unset):
             charge_date = self.charge_date.isoformat()
-        else:
-            charge_date = self.charge_date
 
         price = self.price
 
@@ -134,22 +130,12 @@ class QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairUpdateMod
 
         description = d.pop("Description", UNSET)
 
-        def _parse_charge_date(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                charge_date_type_0 = isoparse(data)
-
-                return charge_date_type_0
-            except:  # noqa: E722
-                pass
-            return cast(Union[None, Unset, datetime.datetime], data)
-
-        charge_date = _parse_charge_date(d.pop("ChargeDate", UNSET))
+        _charge_date = d.pop("ChargeDate", UNSET)
+        charge_date: Union[Unset, datetime.datetime]
+        if isinstance(_charge_date, Unset):
+            charge_date = UNSET
+        else:
+            charge_date = isoparse(_charge_date)
 
         price = d.pop("Price", UNSET)
 

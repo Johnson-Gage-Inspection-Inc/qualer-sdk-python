@@ -1,13 +1,15 @@
-from enum import IntEnum
+from enum import Enum
 
 
 class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type(
-    IntEnum
+    str, Enum
 ):
-    VALUE_0 = 0
-    VALUE_1 = 1
-    VALUE_2 = 2
-    VALUE_3 = 3
+    CUSTOMFIELD = "CustomField"
+    MANUALLYSELECTED = "ManuallySelected"
+    MEASUREMENTQUANTITY = "MeasurementQuantity"
+    STATICVALUE = "StaticValue"
+    TOOLATTRIBUTE = "ToolAttribute"
+    UUTATTRIBUTE = "UutAttribute"
 
     def __str__(self) -> str:
         return str(self.value)

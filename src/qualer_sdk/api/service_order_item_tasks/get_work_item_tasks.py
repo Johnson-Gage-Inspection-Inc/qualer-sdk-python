@@ -5,8 +5,8 @@ import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.get_work_item_tasks_response_200_item import (
-    GetWorkItemTasksResponse200Item,
+from ...models.qualer_api_models_report_datasets_to_service_order_task_response import (
+    QualerApiModelsReportDatasetsToServiceOrderTaskResponse,
 )
 from ...types import Response
 
@@ -24,13 +24,15 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[list["GetWorkItemTasksResponse200Item"]]:
+) -> Optional[list["QualerApiModelsReportDatasetsToServiceOrderTaskResponse"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = GetWorkItemTasksResponse200Item.from_dict(
-                response_200_item_data
+            response_200_item = (
+                QualerApiModelsReportDatasetsToServiceOrderTaskResponse.from_dict(
+                    response_200_item_data
+                )
             )
 
             response_200.append(response_200_item)
@@ -44,7 +46,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[list["GetWorkItemTasksResponse200Item"]]:
+) -> Response[list["QualerApiModelsReportDatasetsToServiceOrderTaskResponse"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -57,7 +59,7 @@ def sync_detailed(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[list["GetWorkItemTasksResponse200Item"]]:
+) -> Response[list["QualerApiModelsReportDatasetsToServiceOrderTaskResponse"]]:
     """
     Args:
         work_item_id (int):
@@ -67,7 +69,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['GetWorkItemTasksResponse200Item']]
+        Response[list['QualerApiModelsReportDatasetsToServiceOrderTaskResponse']]
     """
 
     kwargs = _get_kwargs(
@@ -85,7 +87,7 @@ def sync(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[list["GetWorkItemTasksResponse200Item"]]:
+) -> Optional[list["QualerApiModelsReportDatasetsToServiceOrderTaskResponse"]]:
     """
     Args:
         work_item_id (int):
@@ -95,7 +97,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['GetWorkItemTasksResponse200Item']
+        list['QualerApiModelsReportDatasetsToServiceOrderTaskResponse']
     """
 
     return sync_detailed(
@@ -108,7 +110,7 @@ async def asyncio_detailed(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[list["GetWorkItemTasksResponse200Item"]]:
+) -> Response[list["QualerApiModelsReportDatasetsToServiceOrderTaskResponse"]]:
     """
     Args:
         work_item_id (int):
@@ -118,7 +120,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['GetWorkItemTasksResponse200Item']]
+        Response[list['QualerApiModelsReportDatasetsToServiceOrderTaskResponse']]
     """
 
     kwargs = _get_kwargs(
@@ -134,7 +136,7 @@ async def asyncio(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[list["GetWorkItemTasksResponse200Item"]]:
+) -> Optional[list["QualerApiModelsReportDatasetsToServiceOrderTaskResponse"]]:
     """
     Args:
         work_item_id (int):
@@ -144,7 +146,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['GetWorkItemTasksResponse200Item']
+        list['QualerApiModelsReportDatasetsToServiceOrderTaskResponse']
     """
 
     return (

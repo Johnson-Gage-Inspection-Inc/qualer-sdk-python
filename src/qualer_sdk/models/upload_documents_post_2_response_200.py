@@ -4,11 +4,11 @@ from typing import Any, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-T = TypeVar("T", bound="GetWorkItemTasksResponse200Item")
+T = TypeVar("T", bound="UploadDocumentsPost2Response200")
 
 
 @_attrs_define
-class GetWorkItemTasksResponse200Item:
+class UploadDocumentsPost2Response200:
     """ """
 
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -22,10 +22,10 @@ class GetWorkItemTasksResponse200Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        get_work_item_tasks_response_200_item = cls()
+        upload_documents_post_2_response_200 = cls()
 
-        get_work_item_tasks_response_200_item.additional_properties = d
-        return get_work_item_tasks_response_200_item
+        upload_documents_post_2_response_200.additional_properties = d
+        return upload_documents_post_2_response_200
 
     @property
     def additional_keys(self) -> list[str]:

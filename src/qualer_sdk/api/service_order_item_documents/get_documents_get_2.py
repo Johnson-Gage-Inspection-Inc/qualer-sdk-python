@@ -1,5 +1,4 @@
 from http import HTTPStatus
-from io import BytesIO
 from typing import Any, Optional, Union, cast
 
 import httpx
@@ -33,9 +32,7 @@ def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
 ) -> Optional[Union[Any, File]]:
     if response.status_code == 200:
-        response_200 = File(payload=BytesIO(response.content))
-
-        return response_200
+        return response.content
     if response.status_code == 403:
         response_403 = cast(Any, None)
         return response_403

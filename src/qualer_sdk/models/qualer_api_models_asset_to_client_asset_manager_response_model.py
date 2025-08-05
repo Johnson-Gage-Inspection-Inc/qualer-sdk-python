@@ -412,7 +412,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         asset_service_record_id = self.asset_service_record_id
 
-        result_status: Union[None, Unset, int] = UNSET
+        result_status: Union[None, Unset, str] = UNSET
         if not isinstance(self.result_status, Unset):
             result_status = self.result_status.value
 
@@ -460,7 +460,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
 
         service_order_id = self.service_order_id
 
-        service_order_status: Union[None, Unset, int] = UNSET
+        service_order_status: Union[None, Unset, str] = UNSET
         if not isinstance(self.service_order_status, Unset):
             service_order_status = self.service_order_status.value
 
@@ -494,7 +494,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         if not isinstance(self.due_status, Unset):
             due_status = self.due_status.value
 
-        work_status: Union[None, Unset, int] = UNSET
+        work_status: Union[None, Unset, str] = UNSET
         if not isinstance(self.work_status, Unset):
             work_status = self.work_status.value
 

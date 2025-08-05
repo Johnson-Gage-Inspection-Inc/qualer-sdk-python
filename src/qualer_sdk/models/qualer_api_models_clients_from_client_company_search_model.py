@@ -74,13 +74,7 @@ class QualerApiModelsClientsFromClientCompanySearchModel:
         if isinstance(_modified_after, Unset):
             modified_after = UNSET
         else:
-            if _modified_after is None:
-
-                modified_after = None
-
-            else:
-
-                modified_after = isoparse(_modified_after)
+            modified_after = isoparse(_modified_after)
 
         qualer_api_models_clients_from_client_company_search_model = cls(
             legacy_id=legacy_id,
