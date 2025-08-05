@@ -22,10 +22,11 @@ def fix_binary_endpoint_file(file_path):
     if "_parse_response" not in content:
         return False
 
-    # Check if it already has correct 200 handling (return response.content)
+    # Check if it already has correct 200 handling (returns proper File object)
     if (
         "response.status_code == 200" in content
-        and "return response.content" in content
+        and "return File(" in content
+        and "payload=BytesIO(response.content)" in content
     ):
         return False
 
@@ -44,14 +45,89 @@ def fix_binary_endpoint_file(file_path):
         r"(\s+response_200 = File\(payload=BytesIO\(response\.json\(\)\)\)\s*\n\s*\n)"
         r"(\s+return response_200\s*\n)"
     )
-    replacement2 = r"\1        return response.content\n"
+    replacement2 = (
+        r"\1        # Extract filename from Content-Disposition header if present\n"
+        r"        import cgi\n"
+        r"        from io import BytesIO\n"
+        r"        from urllib.parse import unquote\n"
+        r"        \n"
+        r"        content_disposition = response.headers.get('Content-Disposition', '')\n"
+        r"        filename = None\n"
+        r"        if content_disposition:\n"
+        r"            value, params = cgi.parse_header(content_disposition)\n"
+        r"            # Prefer RFC 5987 filename* if present\n"
+        r"            if 'filename*' in params:\n"
+        r"                # RFC 5987: filename*=utf-8''encoded-filename\n"
+        r"                filename_star = params['filename*']\n"
+        r"                # Split encoding and language if present\n"
+        r"                parts = filename_star.split(" + '"\'", 2)' + r"\n"
+        r"                if len(parts) == 3:\n"
+        r"                    # parts[0]: encoding, parts[1]: language, parts[2]: value\n"
+        r"                    filename = unquote(parts[2])\n"
+        r"                else:\n"
+        r"                    filename = unquote(filename_star)\n"
+        r"            elif 'filename' in params:\n"
+        r"                filename = params['filename']\n"
+        r"        \n"
+        r"        content_type = response.headers.get('Content-Type', None)\n"
+        r"        \n"
+        r"        # Create File object with proper payload\n"
+        r"        return File(\n"
+        r"            payload=BytesIO(response.content),\n"
+        r"            file_name=filename,\n"
+        r"            mime_type=content_type,\n"
+        r"        )\n"
+    )
+
+    # Pattern 3: Simple 200 handling that returns response.content (should be upgraded to File object)
+    pattern3 = (
+        r"(\s+if response\.status_code == 200:\s*\n)"
+        r"(\s+return response\.content\s*\n)"
+    )
+    replacement3 = (
+        r"\1        # Extract filename from Content-Disposition header if present\n"
+        r"        import cgi\n"
+        r"        from io import BytesIO\n"
+        r"        from urllib.parse import unquote\n"
+        r"        \n"
+        r"        content_disposition = response.headers.get('Content-Disposition', '')\n"
+        r"        filename = None\n"
+        r"        if content_disposition:\n"
+        r"            value, params = cgi.parse_header(content_disposition)\n"
+        r"            # Prefer RFC 5987 filename* if present\n"
+        r"            if 'filename*' in params:\n"
+        r"                # RFC 5987: filename*=utf-8''encoded-filename\n"
+        r"                filename_star = params['filename*']\n"
+        r"                # Split encoding and language if present\n"
+        r"                parts = filename_star.split(" + '"\'", 2)' + r"\n"
+        r"                if len(parts) == 3:\n"
+        r"                    # parts[0]: encoding, parts[1]: language, parts[2]: value\n"
+        r"                    filename = unquote(parts[2])\n"
+        r"                else:\n"
+        r"                    filename = unquote(filename_star)\n"
+        r"            elif 'filename' in params:\n"
+        r"                filename = params['filename']\n"
+        r"        \n"
+        r"        content_type = response.headers.get('Content-Type', None)\n"
+        r"        \n"
+        r"        # Create File object with proper payload\n"
+        r"        return File(\n"
+        r"            payload=BytesIO(response.content),\n"
+        r"            file_name=filename,\n"
+        r"            mime_type=content_type,\n"
+        r"        )\n"
+    )
 
     # Try pattern 1 first (missing 200 handling)
     new_content = re.sub(pattern1, replacement1, content)
 
-    # If that didn't change anything, try pattern 2 (wrong 200 handling)
+    # If that didn't change anything, try pattern 2 (wrong 200 handling with File creation)
     if new_content == content:
         new_content = re.sub(pattern2, replacement2, content, flags=re.MULTILINE)
+
+    # If that didn't change anything, try pattern 3 (simple response.content return)
+    if new_content == content:
+        new_content = re.sub(pattern3, replacement3, content, flags=re.MULTILINE)
 
     if new_content != content:
         with open(file_path, "w", encoding="utf-8") as f:
@@ -91,4 +167,6 @@ def fix_binary_endpoints():
 
 
 if __name__ == "__main__":
-    fix_binary_endpoints()
+    raise RuntimeError(
+        "This script is not meant to be run directly. Please use the appropriate entry point."
+    )

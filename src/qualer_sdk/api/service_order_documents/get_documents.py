@@ -32,7 +32,37 @@ def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
 ) -> Optional[Union[Any, File]]:
     if response.status_code == 200:
-        return response.content
+        # Extract filename from Content-Disposition header if present
+        import cgi
+        from io import BytesIO
+        from urllib.parse import unquote
+
+        content_disposition = response.headers.get("Content-Disposition", "")
+        filename = None
+        if content_disposition:
+            value, params = cgi.parse_header(content_disposition)
+            # Prefer RFC 5987 filename* if present
+            if "filename*" in params:
+                # RFC 5987: filename*=utf-8''encoded-filename
+                filename_star = params["filename*"]
+                # Split encoding and language if present
+                parts = filename_star.split("'", 2)
+                if len(parts) == 3:
+                    # parts[0]: encoding, parts[1]: language, parts[2]: value
+                    filename = unquote(parts[2])
+                else:
+                    filename = unquote(filename_star)
+            elif "filename" in params:
+                filename = params["filename"]
+
+        content_type = response.headers.get("Content-Type", None)
+
+        # Create File object with proper payload
+        return File(
+            payload=BytesIO(response.content),
+            file_name=filename,
+            mime_type=content_type,
+        )
     if response.status_code == 403:
         response_403 = cast(Any, None)
         return response_403
