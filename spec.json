@@ -8435,10 +8435,10 @@
         "Closed",
         "Wait"
       ],
-      "type": "string"
+      "type": "integer"
     },
     "ServiceResultStatus": {
-      "type": "string",
+      "type": "integer",
       "enum": [
         0,
         1,
