@@ -8412,6 +8412,29 @@
     }
   },
   "definitions": {
+    "ServiceResultStatus": {
+      "type": "string",
+      "enum": [
+        0,
+        1,
+        10,
+        11,
+        2,
+        20,
+        21,
+        22
+      ],
+      "x-enumNames": [
+        "NotAvailable",
+        "Fail",
+        "FailAmbiguous",
+        "FailSignificant",
+        "Pass",
+        "PassAmbiguous",
+        "PassAdjustment",
+        "Done"
+      ]
+    },
     "Qualer.Api.Models.Account.To.LogoutModel": {
       "type": "object",
       "properties": {
@@ -10109,72 +10132,13 @@
           "type": "integer"
         },
         "ResultStatus": {
-          "enum": [
-            "NotAvailable",
-            "Fail",
-            "FailAmbiguous",
-            "FailSignificant",
-            "Pass",
-            "PassAmbiguous",
-            "PassAdjustment",
-            "Done",
-            "Pending",
-            "Missed"
-          ],
-          "type": "string",
-          "x-nullable": true
+          "$ref": "#/definitions/ServiceResultStatus"
         },
         "AsFoundResult": {
-          "enum": [
-            0,
-            1,
-            10,
-            11,
-            2,
-            20,
-            21,
-            22
-          ],
-          "x-enumNames": [
-            "NotAvailable",
-            "Fail",
-            "FailAmbiguous",
-            "FailSignificant",
-            "Pass",
-            "PassAmbiguous",
-            "PassAdjustment",
-            "Done",
-            "Pending",
-            "Missed"
-          ],
-          "type": "string",
-          "x-nullable": true
+          "$ref": "#/definitions/ServiceResultStatus"
         },
         "AsLeftResult": {
-          "enum": [
-            0,
-            1,
-            10,
-            11,
-            2,
-            20,
-            21,
-            22
-          ],
-          "x-enumNames": [
-            "NotAvailable",
-            "Fail",
-            "FailAmbiguous",
-            "FailSignificant",
-            "Pass",
-            "PassAmbiguous",
-            "PassAdjustment",
-            "Done",
-            "Pending",
-            "Missed"
-          ],
-          "type": "string",
-          "x-nullable": true
+          "$ref": "#/definitions/ServiceResultStatus"
         },
         "LastServiceDate": {
           "format": "date-time",
@@ -10271,6 +10235,17 @@
         },
         "WorkStatus": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "x-enumNames": [
             "Pending",
             "InProgress",
             "Completed",
@@ -11417,72 +11392,13 @@
           "type": "integer"
         },
         "ResultStatus": {
-          "enum": [
-            "NotAvailable",
-            "Fail",
-            "FailAmbiguous",
-            "FailSignificant",
-            "Pass",
-            "PassAmbiguous",
-            "PassAdjustment",
-            "Done",
-            "Pending",
-            "Missed"
-          ],
-          "type": "string",
-          "x-nullable": true
+          "$ref": "#/definitions/ServiceResultStatus"
         },
         "AsFoundResult": {
-          "enum": [
-            0,
-            1,
-            10,
-            11,
-            2,
-            20,
-            21,
-            22
-          ],
-          "x-enumNames": [
-            "NotAvailable",
-            "Fail",
-            "FailAmbiguous",
-            "FailSignificant",
-            "Pass",
-            "PassAmbiguous",
-            "PassAdjustment",
-            "Done",
-            "Pending",
-            "Missed"
-          ],
-          "type": "string",
-          "x-nullable": true
+          "$ref": "#/definitions/ServiceResultStatus"
         },
         "AsLeftResult": {
-          "enum": [
-            0,
-            1,
-            10,
-            11,
-            2,
-            20,
-            21,
-            22
-          ],
-          "x-enumNames": [
-            "NotAvailable",
-            "Fail",
-            "FailAmbiguous",
-            "FailSignificant",
-            "Pass",
-            "PassAmbiguous",
-            "PassAdjustment",
-            "Done",
-            "Pending",
-            "Missed"
-          ],
-          "type": "string",
-          "x-nullable": true
+          "$ref": "#/definitions/ServiceResultStatus"
         },
         "LastServiceDate": {
           "format": "date-time",
@@ -11587,6 +11503,17 @@
         },
         "WorkStatus": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "x-enumNames": [
             "Pending",
             "InProgress",
             "Completed",
@@ -18866,18 +18793,7 @@
           "type": "integer"
         },
         "Result": {
-          "enum": [
-            "NotServiced",
-            "Fail",
-            "FailAmbiguous",
-            "FailSignificant",
-            "Pass",
-            "PassAmbiguous",
-            "PassAdjustment",
-            "Done",
-            "Pending"
-          ],
-          "type": "string"
+          "$ref": "#/definitions/ServiceResultStatus"
         },
         "MeanResult": {
           "type": "boolean"
@@ -18971,18 +18887,7 @@
           "type": "boolean"
         },
         "Result": {
-          "enum": [
-            "NotServiced",
-            "Fail",
-            "FailAmbiguous",
-            "FailSignificant",
-            "Pass",
-            "PassAmbiguous",
-            "PassAdjustment",
-            "Done",
-            "Pending"
-          ],
-          "type": "string"
+          "$ref": "#/definitions/ServiceResultStatus"
         }
       }
     },
@@ -20917,6 +20822,17 @@
         },
         "WorkStatus": {
           "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "x-enumNames": [
             "Pending",
             "InProgress",
             "Completed",
@@ -20966,64 +20882,13 @@
           "type": "string"
         },
         "ResultStatus": {
-          "enum": [
-            "NotAvailable",
-            "Fail",
-            "FailAmbiguous",
-            "FailSignificant",
-            "Pass",
-            "PassAmbiguous",
-            "PassAdjustment",
-            "Done"
-          ],
-          "type": "string",
-          "x-nullable": true
+          "$ref": "#/definitions/ServiceResultStatus"
         },
         "AsFoundResult": {
-          "enum": [
-            0,
-            1,
-            10,
-            11,
-            2,
-            20,
-            21,
-            22
-          ],
-          "x-enumNames": [
-            "NotAvailable",
-            "Fail",
-            "FailAmbiguous",
-            "FailSignificant",
-            "Pass",
-            "PassAmbiguous",
-            "PassAdjustment",
-            "Done"
-          ],
-          "type": "string"
+          "$ref": "#/definitions/ServiceResultStatus"
         },
         "AsLeftResult": {
-          "enum": [
-            0,
-            1,
-            10,
-            11,
-            2,
-            20,
-            21,
-            22
-          ],
-          "x-enumNames": [
-            "NotAvailable",
-            "Fail",
-            "FailAmbiguous",
-            "FailSignificant",
-            "Pass",
-            "PassAmbiguous",
-            "PassAdjustment",
-            "Done"
-          ],
-          "type": "string",
+          "$ref": "#/definitions/ServiceResultStatus",
           "x-nullable": true
         },
         "EquipmentId": {
