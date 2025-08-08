@@ -10152,6 +10152,16 @@
         },
         "AsLeftResult": {
           "enum": [
+            0,
+            1,
+            10,
+            11,
+            2,
+            20,
+            21,
+            22
+          ],
+          "x-enumNames": [
             "NotAvailable",
             "Fail",
             "FailAmbiguous",
@@ -11450,6 +11460,16 @@
         },
         "AsLeftResult": {
           "enum": [
+            0,
+            1,
+            10,
+            11,
+            2,
+            20,
+            21,
+            22
+          ],
+          "x-enumNames": [
             "NotAvailable",
             "Fail",
             "FailAmbiguous",
@@ -20984,6 +21004,16 @@
         },
         "AsLeftResult": {
           "enum": [
+            0,
+            1,
+            10,
+            11,
+            2,
+            20,
+            21,
+            22
+          ],
+          "x-enumNames": [
             "NotAvailable",
             "Fail",
             "FailAmbiguous",
