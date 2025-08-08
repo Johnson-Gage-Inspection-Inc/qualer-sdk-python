@@ -33,14 +33,28 @@ def _parse_response(
 ) -> Optional[Union[Any, File]]:
     if response.status_code == 200:
         # Extract filename from Content-Disposition header if present
-        import cgi
         from io import BytesIO
         from urllib.parse import unquote
 
         content_disposition = response.headers.get("Content-Disposition", "")
         filename = None
         if content_disposition:
-            value, params = cgi.parse_header(content_disposition)
+
+            # Parse header manually to avoid deprecated cgi module
+
+            value = content_disposition.split(";")[0].strip()
+
+            params = {}
+
+            for part in content_disposition.split(";")[1:]:
+
+                if "=" in part:
+
+                    key, val = part.split("=", 1)
+
+                    params[key.strip()] = val.strip(" \"'")
+
+            value, params = value, params
             # Prefer RFC 5987 filename* if present
             if "filename*" in params:
                 # RFC 5987: filename*=utf-8''encoded-filename

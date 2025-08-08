@@ -7,9 +7,7 @@ from attrs import field as _attrs_field
 from ..models.qualer_api_models_report_datasets_to_measurement_channel_uniformity_response_batch_type import (
     QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseBatchType,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_channel_uniformity_response_result import (
-    QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseResult,
-)
+from ..models.service_result_status import ServiceResultStatus
 from ..types import UNSET, Unset
 
 T = TypeVar(
@@ -35,7 +33,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
         range_result (Union[Unset, bool]):
         delta (Union[Unset, str]):
         delta_result (Union[Unset, bool]):
-        result (Union[Unset, QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseResult]):
+        result (Union[Unset, ServiceResultStatus]):
     """
 
     service_order_item_id: Union[Unset, int] = UNSET
@@ -55,9 +53,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
     range_result: Union[Unset, bool] = UNSET
     delta: Union[Unset, str] = UNSET
     delta_result: Union[Unset, bool] = UNSET
-    result: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseResult
-    ] = UNSET
+    result: Union[Unset, ServiceResultStatus] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -91,7 +87,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
 
         delta_result = self.delta_result
 
-        result: Union[Unset, str] = UNSET
+        result: Union[Unset, int] = UNSET
         if not isinstance(self.result, Unset):
             result = self.result.value
 
@@ -173,16 +169,11 @@ class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
         delta_result = d.pop("DeltaResult", UNSET)
 
         _result = d.pop("Result", UNSET)
-        result: Union[
-            Unset,
-            QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseResult,
-        ]
+        result: Union[Unset, ServiceResultStatus]
         if isinstance(_result, Unset):
             result = UNSET
         else:
-            result = QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseResult(
-                _result
-            )
+            result = ServiceResultStatus(_result)
 
         qualer_api_models_report_datasets_to_measurement_channel_uniformity_response = (
             cls(

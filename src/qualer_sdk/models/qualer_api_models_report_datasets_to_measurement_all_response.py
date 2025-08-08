@@ -36,6 +36,7 @@ from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_l
 from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_reading_entry_math import (
     QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
 )
+from ..models.work_status import WorkStatus
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsReportDatasetsToMeasurementAllResponse")
@@ -60,7 +61,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         schedule_name (Union[Unset, str]):
         next_segment_name (Union[Unset, str]):
         certificate_number (Union[Unset, str]):
-        work_status (Union[Unset, int]):
+        work_status (Union[Unset, WorkStatus]):
         service_type (Union[Unset, str]):
         service_level (Union[Unset, str]):
         service_comments (Union[Unset, str]):
@@ -682,7 +683,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     schedule_name: Union[Unset, str] = UNSET
     next_segment_name: Union[Unset, str] = UNSET
     certificate_number: Union[Unset, str] = UNSET
-    work_status: Union[None, Unset, int] = UNSET
+    work_status: Union[None, Unset, WorkStatus] = UNSET
     service_type: Union[Unset, str] = UNSET
     service_level: Union[Unset, str] = UNSET
     service_comments: Union[Unset, str] = UNSET
@@ -1356,15 +1357,10 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         certificate_number = self.certificate_number
 
-        work_status: Union[None, Unset, str]
+        work_status: Union[None, Unset, int] = UNSET
+        if not isinstance(self.work_status, Unset):
+            work_status = self.work_status.value
 
-        if isinstance(self.work_status, Unset):
-
-            work_status = UNSET
-
-        else:
-
-            work_status = self.work_status
         service_type = self.service_type
 
         service_level = self.service_level
@@ -4109,7 +4105,14 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         certificate_number = d.pop("CertificateNumber", UNSET)
 
-        work_status = d.pop("WorkStatus", UNSET)
+        _work_status = d.pop("WorkStatus", UNSET)
+        work_status: Union[Unset, WorkStatus]
+        if isinstance(_work_status, Unset):
+            work_status = UNSET
+        elif _work_status is None:
+            work_status = None
+        else:
+            work_status = WorkStatus(_work_status)
 
         service_type = d.pop("ServiceType", UNSET)
 

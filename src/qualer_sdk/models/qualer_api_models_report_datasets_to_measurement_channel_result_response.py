@@ -7,9 +7,7 @@ from attrs import field as _attrs_field
 from ..models.qualer_api_models_report_datasets_to_measurement_channel_result_response_batch_type import (
     QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_channel_result_response_result import (
-    QualerApiModelsReportDatasetsToMeasurementChannelResultResponseResult,
-)
+from ..models.service_result_status import ServiceResultStatus
 from ..types import UNSET, Unset
 
 T = TypeVar(
@@ -25,7 +23,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelResultResponse:
         measurement_point_id (Union[Unset, int]):
         column_index (Union[Unset, int]):
         batch_type (Union[Unset, QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType]):
-        result (Union[Unset, QualerApiModelsReportDatasetsToMeasurementChannelResultResponseResult]):
+        result (Union[Unset, ServiceResultStatus]):
         mean_result (Union[Unset, bool]):
         range_result (Union[Unset, bool]):
         delta_result (Union[Unset, bool]):
@@ -44,9 +42,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelResultResponse:
     batch_type: Union[
         Unset, QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType
     ] = UNSET
-    result: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementChannelResultResponseResult
-    ] = UNSET
+    result: Union[Unset, ServiceResultStatus] = UNSET
     mean_result: Union[Unset, bool] = UNSET
     range_result: Union[Unset, bool] = UNSET
     delta_result: Union[Unset, bool] = UNSET
@@ -70,7 +66,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelResultResponse:
         if not isinstance(self.batch_type, Unset):
             batch_type = self.batch_type.value
 
-        result: Union[Unset, str] = UNSET
+        result: Union[Unset, int] = UNSET
         if not isinstance(self.result, Unset):
             result = self.result.value
 
@@ -152,17 +148,11 @@ class QualerApiModelsReportDatasetsToMeasurementChannelResultResponse:
             )
 
         _result = d.pop("Result", UNSET)
-        result: Union[
-            Unset, QualerApiModelsReportDatasetsToMeasurementChannelResultResponseResult
-        ]
+        result: Union[Unset, ServiceResultStatus]
         if isinstance(_result, Unset):
             result = UNSET
         else:
-            result = (
-                QualerApiModelsReportDatasetsToMeasurementChannelResultResponseResult(
-                    _result
-                )
-            )
+            result = ServiceResultStatus(_result)
 
         mean_result = d.pop("MeanResult", UNSET)
 

@@ -51,7 +51,7 @@ ENDPOINT_REQUIRED_PARAMS = {
     # "assets.clear_collected_assets": {"body": '"BODY_PLACEHOLDER"'},
     # "assets.collect_assets": {"body": '"BODY_PLACEHOLDER"'},
     "assets.get_all_assets": {},
-    "assets.get_asset": {"id": ""},
+    "assets.get_asset": {"id": ASSET_ID},
     "assets.get_asset_by_asset_pool": {"asset_pool_id": "ASSET_POOL_ID"},
     "assets.get_asset_by_asset_tag": {"asset_tag": "ASSET_TAG"},
     "assets.get_asset_by_attribute": {},
