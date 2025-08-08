@@ -4,9 +4,6 @@ from typing import TYPE_CHECKING, Any, TypeVar, Union
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.qualer_api_models_measurements_from_create_measurement_point_model_specification_mode import (
-    QualerApiModelsMeasurementsFromCreateMeasurementPointModelSpecificationMode,
-)
 from ..models.qualer_api_models_measurements_from_create_measurement_point_model_tolerance_mode import (
     QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceMode,
 )
@@ -40,7 +37,7 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
         unit_of_measure (Union[Unset, str]):
         range_min (Union[Unset, float]):
         range_max (Union[Unset, float]):
-        specification_mode (Union[Unset, QualerApiModelsMeasurementsFromCreateMeasurementPointModelSpecificationMode]):
+        specification_mode (Union[Unset, int]):
         tolerance_type (Union[Unset, str]):
         tolerance_mode (Union[Unset, QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceMode]):
         tolerance_unit (Union[Unset, QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceUnit]):
@@ -70,10 +67,7 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
     unit_of_measure: Union[Unset, str] = UNSET
     range_min: Union[Unset, float] = UNSET
     range_max: Union[Unset, float] = UNSET
-    specification_mode: Union[
-        Unset,
-        QualerApiModelsMeasurementsFromCreateMeasurementPointModelSpecificationMode,
-    ] = UNSET
+    specification_mode: Union[Unset, int] = UNSET
     tolerance_type: Union[Unset, str] = UNSET
     tolerance_mode: Union[
         Unset, QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceMode
@@ -123,9 +117,7 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
 
         range_max = self.range_max
 
-        specification_mode: Union[Unset, int] = UNSET
-        if not isinstance(self.specification_mode, Unset):
-            specification_mode = self.specification_mode.value
+        specification_mode = self.specification_mode
 
         tolerance_type = self.tolerance_type
 
@@ -274,17 +266,7 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
 
         range_max = d.pop("RangeMax", UNSET)
 
-        _specification_mode = d.pop("SpecificationMode", UNSET)
-        specification_mode: Union[
-            Unset,
-            QualerApiModelsMeasurementsFromCreateMeasurementPointModelSpecificationMode,
-        ]
-        if isinstance(_specification_mode, Unset):
-            specification_mode = UNSET
-        else:
-            specification_mode = QualerApiModelsMeasurementsFromCreateMeasurementPointModelSpecificationMode(
-                _specification_mode
-            )
+        specification_mode = d.pop("SpecificationMode", UNSET)
 
         tolerance_type = d.pop("ToleranceType", UNSET)
 

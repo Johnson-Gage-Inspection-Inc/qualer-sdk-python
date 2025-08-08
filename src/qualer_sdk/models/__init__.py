@@ -178,29 +178,17 @@ from .qualer_api_models_asset_to_asset_maintenance_plan_response_assigned_employ
 from .qualer_api_models_asset_to_asset_manage_response_model import (
     QualerApiModelsAssetToAssetManageResponseModel,
 )
-from .qualer_api_models_asset_to_asset_manage_response_model_as_found_result import (
-    QualerApiModelsAssetToAssetManageResponseModelAsFoundResult,
-)
-from .qualer_api_models_asset_to_asset_manage_response_model_as_left_result import (
-    QualerApiModelsAssetToAssetManageResponseModelAsLeftResult,
-)
 from .qualer_api_models_asset_to_asset_manage_response_model_due_status import (
     QualerApiModelsAssetToAssetManageResponseModelDueStatus,
 )
 from .qualer_api_models_asset_to_asset_manage_response_model_record_type import (
     QualerApiModelsAssetToAssetManageResponseModelRecordType,
 )
-from .qualer_api_models_asset_to_asset_manage_response_model_result_status import (
-    QualerApiModelsAssetToAssetManageResponseModelResultStatus,
-)
 from .qualer_api_models_asset_to_asset_manage_response_model_service_order_status import (
     QualerApiModelsAssetToAssetManageResponseModelServiceOrderStatus,
 )
 from .qualer_api_models_asset_to_asset_manage_response_model_tool_role import (
     QualerApiModelsAssetToAssetManageResponseModelToolRole,
-)
-from .qualer_api_models_asset_to_asset_manage_response_model_work_status import (
-    QualerApiModelsAssetToAssetManageResponseModelWorkStatus,
 )
 from .qualer_api_models_asset_to_asset_response_model import (
     QualerApiModelsAssetToAssetResponseModel,
@@ -220,29 +208,17 @@ from .qualer_api_models_asset_to_client_asset_counters_response_model import (
 from .qualer_api_models_asset_to_client_asset_manager_response_model import (
     QualerApiModelsAssetToClientAssetManagerResponseModel,
 )
-from .qualer_api_models_asset_to_client_asset_manager_response_model_as_found_result import (
-    QualerApiModelsAssetToClientAssetManagerResponseModelAsFoundResult,
-)
-from .qualer_api_models_asset_to_client_asset_manager_response_model_as_left_result import (
-    QualerApiModelsAssetToClientAssetManagerResponseModelAsLeftResult,
-)
 from .qualer_api_models_asset_to_client_asset_manager_response_model_due_status import (
     QualerApiModelsAssetToClientAssetManagerResponseModelDueStatus,
 )
 from .qualer_api_models_asset_to_client_asset_manager_response_model_record_type import (
     QualerApiModelsAssetToClientAssetManagerResponseModelRecordType,
 )
-from .qualer_api_models_asset_to_client_asset_manager_response_model_result_status import (
-    QualerApiModelsAssetToClientAssetManagerResponseModelResultStatus,
-)
 from .qualer_api_models_asset_to_client_asset_manager_response_model_service_order_status import (
     QualerApiModelsAssetToClientAssetManagerResponseModelServiceOrderStatus,
 )
 from .qualer_api_models_asset_to_client_asset_manager_response_model_tool_role import (
     QualerApiModelsAssetToClientAssetManagerResponseModelToolRole,
-)
-from .qualer_api_models_asset_to_client_asset_manager_response_model_work_status import (
-    QualerApiModelsAssetToClientAssetManagerResponseModelWorkStatus,
 )
 from .qualer_api_models_asset_to_employee_filter_preference_response_model import (
     QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel,
@@ -390,9 +366,6 @@ from .qualer_api_models_measurements_from_create_measurement_model import (
 )
 from .qualer_api_models_measurements_from_create_measurement_point_model import (
     QualerApiModelsMeasurementsFromCreateMeasurementPointModel,
-)
-from .qualer_api_models_measurements_from_create_measurement_point_model_specification_mode import (
-    QualerApiModelsMeasurementsFromCreateMeasurementPointModelSpecificationMode,
 )
 from .qualer_api_models_measurements_from_create_measurement_point_model_tolerance_mode import (
     QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceMode,
@@ -604,17 +577,11 @@ from .qualer_api_models_report_datasets_to_measurement_channel_result_response i
 from .qualer_api_models_report_datasets_to_measurement_channel_result_response_batch_type import (
     QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType,
 )
-from .qualer_api_models_report_datasets_to_measurement_channel_result_response_result import (
-    QualerApiModelsReportDatasetsToMeasurementChannelResultResponseResult,
-)
 from .qualer_api_models_report_datasets_to_measurement_channel_uniformity_response import (
     QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse,
 )
 from .qualer_api_models_report_datasets_to_measurement_channel_uniformity_response_batch_type import (
     QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseBatchType,
-)
-from .qualer_api_models_report_datasets_to_measurement_channel_uniformity_response_result import (
-    QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseResult,
 )
 from .qualer_api_models_report_datasets_to_measurement_chart_response import (
     QualerApiModelsReportDatasetsToMeasurementChartResponse,
@@ -733,17 +700,8 @@ from .qualer_api_models_service_order_documents_to_company_order_controlled_docu
 from .qualer_api_models_service_order_documents_to_company_order_controlled_document_response_document_type import (
     QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
 )
-from .qualer_api_models_service_order_documents_to_company_order_controlled_document_response_report_type import (
-    QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseReportType,
-)
 from .qualer_api_models_service_order_documents_to_company_order_item_controlled_document_response import (
     QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse,
-)
-from .qualer_api_models_service_order_documents_to_company_order_item_controlled_document_response_document_type import (
-    QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponseDocumentType,
-)
-from .qualer_api_models_service_order_documents_to_company_order_item_controlled_document_response_report_type import (
-    QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponseReportType,
 )
 from .qualer_api_models_service_order_item_parts_to_order_item_part_response_model import (
     QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel,
@@ -790,20 +748,8 @@ from .qualer_api_models_service_orders_from_order_item_update_model import (
 from .qualer_api_models_service_orders_from_order_item_update_model_as_found_check import (
     QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck,
 )
-from .qualer_api_models_service_orders_from_order_item_update_model_as_found_result import (
-    QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundResult,
-)
 from .qualer_api_models_service_orders_from_order_item_update_model_as_left_check import (
     QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck,
-)
-from .qualer_api_models_service_orders_from_order_item_update_model_as_left_result import (
-    QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftResult,
-)
-from .qualer_api_models_service_orders_from_order_item_update_model_result_status import (
-    QualerApiModelsServiceOrdersFromOrderItemUpdateModelResultStatus,
-)
-from .qualer_api_models_service_orders_from_order_item_update_model_work_status import (
-    QualerApiModelsServiceOrdersFromOrderItemUpdateModelWorkStatus,
 )
 from .qualer_api_models_service_orders_from_service_order_metadata_create_model import (
     QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel,
@@ -946,8 +892,10 @@ from .qualer_web_mvc_areas_api_models_service_orders_to_charge_response_model im
 from .qualer_web_mvc_areas_api_models_service_prices_from_service_price_bulk_edit_model import (
     QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel,
 )
+from .report_type import ReportType
 from .reset_initial_service_date_response_200 import ResetInitialServiceDateResponse200
 from .send_employee_email_response_200 import SendEmployeeEmailResponse200
+from .service_result_status import ServiceResultStatus
 from .set_work_item_response_200 import SetWorkItemResponse200
 from .update_asset_class_response_200 import UpdateAssetClassResponse200
 from .update_asset_department_response_200 import UpdateAssetDepartmentResponse200
@@ -978,6 +926,7 @@ from .upsert_asset_attributes_put_2_response_200 import (
 )
 from .upsert_asset_attributes_response_200 import UpsertAssetAttributesResponse200
 from .upsert_client_attribute_response_200 import UpsertClientAttributeResponse200
+from .work_status import WorkStatus
 
 __all__ = [
     "AddAssetServiceRecordResponse200",
@@ -1066,28 +1015,20 @@ __all__ = [
     "QualerApiModelsAssetToAssetMaintenancePlanResponse",
     "QualerApiModelsAssetToAssetMaintenancePlanResponseAssignedEmployee",
     "QualerApiModelsAssetToAssetManageResponseModel",
-    "QualerApiModelsAssetToAssetManageResponseModelAsFoundResult",
-    "QualerApiModelsAssetToAssetManageResponseModelAsLeftResult",
     "QualerApiModelsAssetToAssetManageResponseModelDueStatus",
     "QualerApiModelsAssetToAssetManageResponseModelRecordType",
-    "QualerApiModelsAssetToAssetManageResponseModelResultStatus",
     "QualerApiModelsAssetToAssetManageResponseModelServiceOrderStatus",
     "QualerApiModelsAssetToAssetManageResponseModelToolRole",
-    "QualerApiModelsAssetToAssetManageResponseModelWorkStatus",
     "QualerApiModelsAssetToAssetResponseModel",
     "QualerApiModelsAssetToAssetResponseModelAssetStatus",
     "QualerApiModelsAssetToAssetServiceForecastModel",
     "QualerApiModelsAssetToAssetsCountResponseModel",
     "QualerApiModelsAssetToClientAssetCountersResponseModel",
     "QualerApiModelsAssetToClientAssetManagerResponseModel",
-    "QualerApiModelsAssetToClientAssetManagerResponseModelAsFoundResult",
-    "QualerApiModelsAssetToClientAssetManagerResponseModelAsLeftResult",
     "QualerApiModelsAssetToClientAssetManagerResponseModelDueStatus",
     "QualerApiModelsAssetToClientAssetManagerResponseModelRecordType",
-    "QualerApiModelsAssetToClientAssetManagerResponseModelResultStatus",
     "QualerApiModelsAssetToClientAssetManagerResponseModelServiceOrderStatus",
     "QualerApiModelsAssetToClientAssetManagerResponseModelToolRole",
-    "QualerApiModelsAssetToClientAssetManagerResponseModelWorkStatus",
     "QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel",
     "QualerApiModelsAssetToEmployeePreferenceResponseModel",
     "QualerApiModelsAttributesToAttributeResponse",
@@ -1137,7 +1078,6 @@ __all__ = [
     "QualerApiModelsMeasurementsFromCreateMeasurementFormModel",
     "QualerApiModelsMeasurementsFromCreateMeasurementModel",
     "QualerApiModelsMeasurementsFromCreateMeasurementPointModel",
-    "QualerApiModelsMeasurementsFromCreateMeasurementPointModelSpecificationMode",
     "QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceMode",
     "QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceUnit",
     "QualerApiModelsMeasurementsFromCreateMeasurementSetModel",
@@ -1208,10 +1148,8 @@ __all__ = [
     "QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath",
     "QualerApiModelsReportDatasetsToMeasurementChannelResultResponse",
     "QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType",
-    "QualerApiModelsReportDatasetsToMeasurementChannelResultResponseResult",
     "QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse",
     "QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseBatchType",
-    "QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseResult",
     "QualerApiModelsReportDatasetsToMeasurementChartResponse",
     "QualerApiModelsReportDatasetsToMeasurementFieldResponse",
     "QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType",
@@ -1251,10 +1189,7 @@ __all__ = [
     "QualerApiModelsServiceOrderDocumentsFromUploadDocumentsModel",
     "QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse",
     "QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType",
-    "QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseReportType",
     "QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse",
-    "QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponseDocumentType",
-    "QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponseReportType",
     "QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel",
     "QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType",
     "QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel",
@@ -1270,11 +1205,7 @@ __all__ = [
     "QualerApiModelsServiceOrdersFromItemChargeUpdateModelItemPriceModel",
     "QualerApiModelsServiceOrdersFromOrderItemUpdateModel",
     "QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck",
-    "QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundResult",
     "QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck",
-    "QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftResult",
-    "QualerApiModelsServiceOrdersFromOrderItemUpdateModelResultStatus",
-    "QualerApiModelsServiceOrdersFromOrderItemUpdateModelWorkStatus",
     "QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel",
     "QualerApiModelsServiceOrdersFromServiceOrderMetadataUpdateModel",
     "QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel",
@@ -1322,8 +1253,10 @@ __all__ = [
     "QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairUpdateModel",
     "QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel",
     "QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel",
+    "ReportType",
     "ResetInitialServiceDateResponse200",
     "SendEmployeeEmailResponse200",
+    "ServiceResultStatus",
     "SetWorkItemResponse200",
     "UpdateAssetClassResponse200",
     "UpdateAssetDepartmentResponse200",
@@ -1348,4 +1281,5 @@ __all__ = [
     "UpsertAssetAttributesPut2Response200",
     "UpsertAssetAttributesResponse200",
     "UpsertClientAttributeResponse200",
+    "WorkStatus",
 ]

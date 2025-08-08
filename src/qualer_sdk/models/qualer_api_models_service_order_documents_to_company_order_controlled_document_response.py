@@ -8,9 +8,7 @@ from attrs import field as _attrs_field
 from ..models.qualer_api_models_service_order_documents_to_company_order_controlled_document_response_document_type import (
     QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
 )
-from ..models.qualer_api_models_service_order_documents_to_company_order_controlled_document_response_report_type import (
-    QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseReportType,
-)
+from ..models.report_type import ReportType
 from ..types import UNSET, Unset
 
 T = TypeVar(
@@ -30,8 +28,7 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentRespon
         document_type (Union[Unset,
             QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType]):
         revision_number (Union[Unset, int]):
-        report_type (Union[Unset,
-            QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseReportType]):
+        report_type (Union[Unset, ReportType]):
         download_url (Union[Unset, str]):
     """
 
@@ -44,10 +41,7 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentRespon
         QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
     ] = UNSET
     revision_number: Union[Unset, int] = UNSET
-    report_type: Union[
-        Unset,
-        QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseReportType,
-    ] = UNSET
+    report_type: Union[Unset, ReportType] = UNSET
     download_url: Union[Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -127,16 +121,11 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentRespon
         revision_number = d.pop("RevisionNumber", UNSET)
 
         _report_type = d.pop("ReportType", UNSET)
-        report_type: Union[
-            Unset,
-            QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseReportType,
-        ]
+        report_type: Union[Unset, ReportType]
         if isinstance(_report_type, Unset):
             report_type = UNSET
         else:
-            report_type = QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseReportType(
-                _report_type
-            )
+            report_type = ReportType(_report_type)
 
         download_url = d.pop("DownloadUrl", UNSET)
 

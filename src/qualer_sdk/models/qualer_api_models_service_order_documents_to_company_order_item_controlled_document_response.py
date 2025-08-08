@@ -5,12 +5,7 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.qualer_api_models_service_order_documents_to_company_order_item_controlled_document_response_document_type import (
-    QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponseDocumentType,
-)
-from ..models.qualer_api_models_service_order_documents_to_company_order_item_controlled_document_response_report_type import (
-    QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponseReportType,
-)
+from ..models.report_type import ReportType
 from ..types import UNSET, Unset
 
 T = TypeVar(
@@ -28,11 +23,9 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentRe
         guid (Union[Unset, UUID]):  Example: 00000000-0000-0000-0000-000000000000.
         document_name (Union[Unset, str]):
         file_name (Union[Unset, str]):
-        document_type (Union[Unset,
-            QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponseDocumentType]):
+        document_type (Union[Unset, int]):
         revision_number (Union[Unset, int]):
-        report_type (Union[Unset,
-            QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponseReportType]):
+        report_type (Union[Unset, ReportType]):
         download_url (Union[Unset, str]):
     """
 
@@ -41,15 +34,9 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentRe
     guid: Union[Unset, UUID] = UNSET
     document_name: Union[Unset, str] = UNSET
     file_name: Union[Unset, str] = UNSET
-    document_type: Union[
-        Unset,
-        QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponseDocumentType,
-    ] = UNSET
+    document_type: Union[Unset, int] = UNSET
     revision_number: Union[Unset, int] = UNSET
-    report_type: Union[
-        Unset,
-        QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponseReportType,
-    ] = UNSET
+    report_type: Union[Unset, ReportType] = UNSET
     download_url: Union[Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -66,9 +53,7 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentRe
 
         file_name = self.file_name
 
-        document_type: Union[Unset, int] = UNSET
-        if not isinstance(self.document_type, Unset):
-            document_type = self.document_type.value
+        document_type = self.document_type
 
         revision_number = self.revision_number
 
@@ -120,31 +105,16 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentRe
 
         file_name = d.pop("FileName", UNSET)
 
-        _document_type = d.pop("DocumentType", UNSET)
-        document_type: Union[
-            Unset,
-            QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponseDocumentType,
-        ]
-        if isinstance(_document_type, Unset):
-            document_type = UNSET
-        else:
-            document_type = QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponseDocumentType(
-                _document_type
-            )
+        document_type = d.pop("DocumentType", UNSET)
 
         revision_number = d.pop("RevisionNumber", UNSET)
 
         _report_type = d.pop("ReportType", UNSET)
-        report_type: Union[
-            Unset,
-            QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponseReportType,
-        ]
+        report_type: Union[Unset, ReportType]
         if isinstance(_report_type, Unset):
             report_type = UNSET
         else:
-            report_type = QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponseReportType(
-                _report_type
-            )
+            report_type = ReportType(_report_type)
 
         download_url = d.pop("DownloadUrl", UNSET)
 

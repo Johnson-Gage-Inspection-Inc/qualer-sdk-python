@@ -6,6 +6,7 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
+from ..models.work_status import WorkStatus
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderItemResponse")
@@ -27,7 +28,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         service_charge (Union[Unset, float]):
         updated_by (Union[Unset, str]):
         updated_on (Union[Unset, datetime.datetime]):
-        work_status (Union[Unset, int]):
+        work_status (Union[Unset, WorkStatus]):
         custom_work_status (Union[Unset, str]):
         service_comments (Union[Unset, str]):
         client_notes (Union[Unset, str]):
@@ -168,7 +169,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
     service_charge: Union[Unset, float] = UNSET
     updated_by: Union[Unset, str] = UNSET
     updated_on: Union[Unset, datetime.datetime] = UNSET
-    work_status: Union[None, Unset, int] = UNSET
+    work_status: Union[None, Unset, WorkStatus] = UNSET
     custom_work_status: Union[Unset, str] = UNSET
     service_comments: Union[Unset, str] = UNSET
     client_notes: Union[Unset, str] = UNSET
@@ -330,15 +331,10 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         if not isinstance(self.updated_on, Unset):
             updated_on = self.updated_on.isoformat()
 
-        work_status: Union[None, Unset, str]
+        work_status: Union[None, Unset, int] = UNSET
+        if not isinstance(self.work_status, Unset):
+            work_status = self.work_status.value
 
-        if isinstance(self.work_status, Unset):
-
-            work_status = UNSET
-
-        else:
-
-            work_status = self.work_status
         custom_work_status = self.custom_work_status
 
         service_comments = self.service_comments
@@ -1299,7 +1295,14 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         else:
             updated_on = isoparse(_updated_on)
 
-        work_status = d.pop("WorkStatus", UNSET)
+        _work_status = d.pop("WorkStatus", UNSET)
+        work_status: Union[Unset, WorkStatus]
+        if isinstance(_work_status, Unset):
+            work_status = UNSET
+        elif _work_status is None:
+            work_status = None
+        else:
+            work_status = WorkStatus(_work_status)
 
         custom_work_status = d.pop("CustomWorkStatus", UNSET)
 
