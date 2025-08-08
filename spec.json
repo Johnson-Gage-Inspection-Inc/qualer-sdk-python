@@ -8435,6 +8435,40 @@
         "Done"
       ]
     },
+    "ReportType": {
+      "type": "integer",
+      "format": "int32",
+      "enum": [
+        0,
+        1,
+        11,
+        2,
+        21,
+        3,
+        31,
+        32,
+        5,
+        51,
+        6,
+        7,
+        71
+      ],
+      "x-enumNames": [
+        "General",
+        "AssetSummary",
+        "AssetLabel",
+        "AssetDetail",
+        "AssetCertificate",
+        "ServiceOrderSummary",
+        "ServiceOrderInvoice",
+        "ServiceOrderEstimate",
+        "ServiceOrderDetail",
+        "ServiceOrderCertificate",
+        "PurchaseOrder",
+        "InventoryItem",
+        "InventoryItemLabel"
+      ]
+    },
     "Qualer.Api.Models.Account.To.LogoutModel": {
       "type": "object",
       "properties": {
@@ -18957,38 +18991,7 @@
           "type": "integer"
         },
         "ReportType": {
-          "enum": [
-            0,
-            1,
-            11,
-            2,
-            21,
-            3,
-            31,
-            32,
-            5,
-            51,
-            6,
-            7,
-            71
-          ],
-          "x-enumNames": [
-            "General",
-            "AssetSummary",
-            "AssetLabel",
-            "AssetDetail",
-            "AssetCertificate",
-            "ServiceOrderSummary",
-            "ServiceOrderInvoice",
-            "ServiceOrderEstimate",
-            "ServiceOrderDetail",
-            "ServiceOrderCertificate",
-            "PurchaseOrder",
-            "InventoryItem",
-            "InventoryItemLabel"
-          ],
-          "type": "integer",
-          "format": "int32"
+          "$ref": "#/definitions/ReportType"
         },
         "DownloadUrl": {
           "type": "string"
@@ -19019,12 +19022,6 @@
         },
         "DocumentType": {
           "enum": [
-            0,
-            1,
-            2,
-            3
-          ],
-          "x-enumNames": [
             "ServiceRequest",
             "WorkOrder",
             "InventoryItem",
@@ -19038,38 +19035,7 @@
           "type": "integer"
         },
         "ReportType": {
-          "enum": [
-            0,
-            1,
-            11,
-            2,
-            21,
-            3,
-            31,
-            32,
-            5,
-            51,
-            6,
-            7,
-            71
-          ],
-          "x-enumNames": [
-            "General",
-            "AssetSummary",
-            "AssetLabel",
-            "AssetDetail",
-            "AssetCertificate",
-            "ServiceOrderSummary",
-            "ServiceOrderInvoice",
-            "ServiceOrderEstimate",
-            "ServiceOrderDetail",
-            "ServiceOrderCertificate",
-            "PurchaseOrder",
-            "InventoryItem",
-            "InventoryItemLabel"
-          ],
-          "type": "integer",
-          "format": "int32"
+          "$ref": "#/definitions/ReportType"
         },
         "DownloadUrl": {
           "type": "string"
@@ -19236,15 +19202,11 @@
         },
         "SpecificationMode": {
           "enum": [
-            0,
-            1
-          ],
-          "type": "integer",
-          "format": "int32",
-          "x-enumNames": [
             "Point",
             "Range"
-          ]
+          ],
+          "type": "integer",
+          "format": "int32"
         },
         "ToleranceType": {
           "type": "string"
