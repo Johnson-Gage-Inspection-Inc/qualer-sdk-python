@@ -17,6 +17,7 @@ import sys
 from collections import defaultdict
 
 from fix_binary_endpoints import fix_binary_endpoints
+from fix_cgi_imports import fix_cgi_imports
 from fix_swagger_spec import fix_swagger_spec
 from get_version import get_version_from_git_with_commits
 
@@ -278,6 +279,9 @@ def post_process_generated_files():
 
     # Fix binary endpoints to properly handle HTTP 200 responses
     fix_binary_endpoints()
+
+    # Fix deprecated cgi module imports for Python 3.13+ compatibility
+    fix_cgi_imports()
 
     # Fix nullable enums to properly handle None values
     fix_nullable_enums()
