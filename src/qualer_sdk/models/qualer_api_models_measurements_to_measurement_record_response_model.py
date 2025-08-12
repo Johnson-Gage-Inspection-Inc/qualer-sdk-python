@@ -214,7 +214,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
         forward_segment_id = self.forward_segment_id
 
         measurement_batches: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.measurement_batches, Unset):
+        if self.measurement_batches and not isinstance(self.measurement_batches, Unset):
             measurement_batches = []
             for measurement_batches_item_data in self.measurement_batches:
                 measurement_batches_item = measurement_batches_item_data.to_dict()

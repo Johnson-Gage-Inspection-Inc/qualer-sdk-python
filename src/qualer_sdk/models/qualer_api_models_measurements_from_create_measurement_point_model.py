@@ -122,11 +122,11 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
         tolerance_type = self.tolerance_type
 
         tolerance_mode: Union[Unset, int] = UNSET
-        if not isinstance(self.tolerance_mode, Unset):
+        if self.tolerance_mode and not isinstance(self.tolerance_mode, Unset):
             tolerance_mode = self.tolerance_mode.value
 
         tolerance_unit: Union[Unset, int] = UNSET
-        if not isinstance(self.tolerance_unit, Unset):
+        if self.tolerance_unit and not isinstance(self.tolerance_unit, Unset):
             tolerance_unit = self.tolerance_unit.value
 
         precision_type = self.precision_type
@@ -158,25 +158,29 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
         is_accredited = self.is_accredited
 
         measurements: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.measurements, Unset):
+        if self.measurements and not isinstance(self.measurements, Unset):
             measurements = []
             for measurements_item_data in self.measurements:
                 measurements_item = measurements_item_data.to_dict()
                 measurements.append(measurements_item)
 
         condition_factors: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.condition_factors, Unset):
+        if self.condition_factors and not isinstance(self.condition_factors, Unset):
             condition_factors = []
             for condition_factors_item_data in self.condition_factors:
                 condition_factors_item = condition_factors_item_data.to_dict()
                 condition_factors.append(condition_factors_item)
 
         primary_measurement_tool: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.primary_measurement_tool, Unset):
+        if self.primary_measurement_tool and not isinstance(
+            self.primary_measurement_tool, Unset
+        ):
             primary_measurement_tool = self.primary_measurement_tool.to_dict()
 
         secondary_measurement_tool: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.secondary_measurement_tool, Unset):
+        if self.secondary_measurement_tool and not isinstance(
+            self.secondary_measurement_tool, Unset
+        ):
             secondary_measurement_tool = self.secondary_measurement_tool.to_dict()
 
         field_dict: dict[str, Any] = {}

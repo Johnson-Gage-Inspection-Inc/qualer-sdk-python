@@ -39,7 +39,7 @@ class QualerApiModelsClientsFromClientCompanySearchModel:
         take = self.take
 
         modified_after: Union[Unset, str] = UNSET
-        if not isinstance(self.modified_after, Unset):
+        if self.modified_after and not isinstance(self.modified_after, Unset):
             modified_after = self.modified_after.isoformat()
 
         field_dict: dict[str, Any] = {}

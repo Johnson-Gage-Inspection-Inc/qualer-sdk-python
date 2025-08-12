@@ -111,7 +111,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         parts_total = self.parts_total
 
         work_status: Union[None, Unset, int] = UNSET
-        if not isinstance(self.work_status, Unset):
+        if self.work_status and not isinstance(self.work_status, Unset):
             work_status = self.work_status.value
 
         custom_work_status = self.custom_work_status
@@ -119,35 +119,35 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         is_limited = self.is_limited
 
         checked_on: Union[Unset, str] = UNSET
-        if not isinstance(self.checked_on, Unset):
+        if self.checked_on and not isinstance(self.checked_on, Unset):
             checked_on = self.checked_on.isoformat()
 
         checked_by_name = self.checked_by_name
 
         completed_on: Union[Unset, str] = UNSET
-        if not isinstance(self.completed_on, Unset):
+        if self.completed_on and not isinstance(self.completed_on, Unset):
             completed_on = self.completed_on.isoformat()
 
         completed_by_name = self.completed_by_name
 
         as_found_check: Union[Unset, str] = UNSET
-        if not isinstance(self.as_found_check, Unset):
+        if self.as_found_check and not isinstance(self.as_found_check, Unset):
             as_found_check = self.as_found_check.value
 
         as_left_check: Union[Unset, str] = UNSET
-        if not isinstance(self.as_left_check, Unset):
+        if self.as_left_check and not isinstance(self.as_left_check, Unset):
             as_left_check = self.as_left_check.value
 
         result_status: Union[None, Unset, int] = UNSET
-        if not isinstance(self.result_status, Unset):
+        if self.result_status and not isinstance(self.result_status, Unset):
             result_status = self.result_status.value
 
         as_found_result: Union[None, Unset, int] = UNSET
-        if not isinstance(self.as_found_result, Unset):
+        if self.as_found_result and not isinstance(self.as_found_result, Unset):
             as_found_result = self.as_found_result.value
 
         as_left_result: Union[None, Unset, int] = UNSET
-        if not isinstance(self.as_left_result, Unset):
+        if self.as_left_result and not isinstance(self.as_left_result, Unset):
             as_left_result = self.as_left_result.value
 
         equipment_id = self.equipment_id

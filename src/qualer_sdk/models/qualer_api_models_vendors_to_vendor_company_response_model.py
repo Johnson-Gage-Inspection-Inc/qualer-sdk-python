@@ -101,7 +101,7 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
             shipping_address = self.shipping_address
 
         updated_on_utc: Union[Unset, str] = UNSET
-        if not isinstance(self.updated_on_utc, Unset):
+        if self.updated_on_utc and not isinstance(self.updated_on_utc, Unset):
             updated_on_utc = self.updated_on_utc.isoformat()
 
         field_dict: dict[str, Any] = {}

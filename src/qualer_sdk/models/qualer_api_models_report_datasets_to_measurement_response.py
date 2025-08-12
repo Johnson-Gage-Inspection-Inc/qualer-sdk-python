@@ -957,7 +957,9 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         cv_header = self.cv_header
 
         measurement_local_time: Union[Unset, str] = UNSET
-        if not isinstance(self.measurement_local_time, Unset):
+        if self.measurement_local_time and not isinstance(
+            self.measurement_local_time, Unset
+        ):
             measurement_local_time = self.measurement_local_time.isoformat()
 
         mean = self.mean
@@ -1049,7 +1051,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         guard_band = self.guard_band
 
         guard_band_logic: Union[Unset, str] = UNSET
-        if not isinstance(self.guard_band_logic, Unset):
+        if self.guard_band_logic and not isinstance(self.guard_band_logic, Unset):
             guard_band_logic = self.guard_band_logic.value
 
         uncertainty_budget = self.uncertainty_budget
@@ -1063,13 +1065,13 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         channel = self.channel
 
         measurement_type: Union[Unset, str] = UNSET
-        if not isinstance(self.measurement_type, Unset):
+        if self.measurement_type and not isinstance(self.measurement_type, Unset):
             measurement_type = self.measurement_type.value
 
         updated_by = self.updated_by
 
         updated_on: Union[Unset, str] = UNSET
-        if not isinstance(self.updated_on, Unset):
+        if self.updated_on and not isinstance(self.updated_on, Unset):
             updated_on = self.updated_on.isoformat()
 
         error = self.error
@@ -1103,7 +1105,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         is_range_accredited = self.is_range_accredited
 
         commenced_on: Union[Unset, str] = UNSET
-        if not isinstance(self.commenced_on, Unset):
+        if self.commenced_on and not isinstance(self.commenced_on, Unset):
             commenced_on = self.commenced_on.isoformat()
 
         commenced_by = self.commenced_by
@@ -1193,15 +1195,17 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         use_expected_value = self.use_expected_value
 
         reading_entry_logic: Union[Unset, str] = UNSET
-        if not isinstance(self.reading_entry_logic, Unset):
+        if self.reading_entry_logic and not isinstance(self.reading_entry_logic, Unset):
             reading_entry_logic = self.reading_entry_logic.value
 
         reading_entry_math: Union[Unset, str] = UNSET
-        if not isinstance(self.reading_entry_math, Unset):
+        if self.reading_entry_math and not isinstance(self.reading_entry_math, Unset):
             reading_entry_math = self.reading_entry_math.value
 
         double_substitution_sequence: Union[Unset, str] = UNSET
-        if not isinstance(self.double_substitution_sequence, Unset):
+        if self.double_substitution_sequence and not isinstance(
+            self.double_substitution_sequence, Unset
+        ):
             double_substitution_sequence = self.double_substitution_sequence.value
 
         reading_entry_math_string = self.reading_entry_math_string
@@ -1229,7 +1233,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         accuracy_class_max = self.accuracy_class_max
 
         environment_mask: Union[Unset, str] = UNSET
-        if not isinstance(self.environment_mask, Unset):
+        if self.environment_mask and not isinstance(self.environment_mask, Unset):
             environment_mask = self.environment_mask.value
 
         display_name = self.display_name
@@ -1247,7 +1251,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         completed_by_name = self.completed_by_name
 
         completed_on: Union[Unset, str] = UNSET
-        if not isinstance(self.completed_on, Unset):
+        if self.completed_on and not isinstance(self.completed_on, Unset):
             completed_on = self.completed_on.isoformat()
 
         is_limited = self.is_limited
@@ -1267,7 +1271,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         certificate_number = self.certificate_number
 
         work_status: Union[None, Unset, int] = UNSET
-        if not isinstance(self.work_status, Unset):
+        if self.work_status and not isinstance(self.work_status, Unset):
             work_status = self.work_status.value
 
         service_type = self.service_type
@@ -1351,25 +1355,25 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         readings = self.readings
 
         tolerance_type: Union[Unset, str] = UNSET
-        if not isinstance(self.tolerance_type, Unset):
+        if self.tolerance_type and not isinstance(self.tolerance_type, Unset):
             tolerance_type = self.tolerance_type.value
 
         tolerance_type_string = self.tolerance_type_string
 
         precision_type: Union[Unset, str] = UNSET
-        if not isinstance(self.precision_type, Unset):
+        if self.precision_type and not isinstance(self.precision_type, Unset):
             precision_type = self.precision_type.value
 
         specification_mode: Union[Unset, int] = UNSET
-        if not isinstance(self.specification_mode, Unset):
+        if self.specification_mode and not isinstance(self.specification_mode, Unset):
             specification_mode = self.specification_mode.value
 
         tolerance_mode: Union[Unset, int] = UNSET
-        if not isinstance(self.tolerance_mode, Unset):
+        if self.tolerance_mode and not isinstance(self.tolerance_mode, Unset):
             tolerance_mode = self.tolerance_mode.value
 
         tolerance_unit: Union[Unset, int] = UNSET
-        if not isinstance(self.tolerance_unit, Unset):
+        if self.tolerance_unit and not isinstance(self.tolerance_unit, Unset):
             tolerance_unit = self.tolerance_unit.value
 
         tolerance_string = self.tolerance_string
@@ -1387,15 +1391,15 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             shipped_date = self.shipped_date
 
         shipment_status: Union[Unset, str] = UNSET
-        if not isinstance(self.shipment_status, Unset):
+        if self.shipment_status and not isinstance(self.shipment_status, Unset):
             shipment_status = self.shipment_status.value
 
         shipped_on: Union[Unset, str] = UNSET
-        if not isinstance(self.shipped_on, Unset):
+        if self.shipped_on and not isinstance(self.shipped_on, Unset):
             shipped_on = self.shipped_on.isoformat()
 
         delivered_on: Union[Unset, str] = UNSET
-        if not isinstance(self.delivered_on, Unset):
+        if self.delivered_on and not isinstance(self.delivered_on, Unset):
             delivered_on = self.delivered_on.isoformat()
 
         tracking_number = self.tracking_number
@@ -1413,7 +1417,9 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         unit_scale_factor = self.unit_scale_factor
 
         measurement_not_taken_result: Union[Unset, str] = UNSET
-        if not isinstance(self.measurement_not_taken_result, Unset):
+        if self.measurement_not_taken_result and not isinstance(
+            self.measurement_not_taken_result, Unset
+        ):
             measurement_not_taken_result = self.measurement_not_taken_result.value
 
         hide_from_certificate = self.hide_from_certificate
@@ -1683,11 +1689,13 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         )
 
         measurement_point_order: Union[Unset, str] = UNSET
-        if not isinstance(self.measurement_point_order, Unset):
+        if self.measurement_point_order and not isinstance(
+            self.measurement_point_order, Unset
+        ):
             measurement_point_order = self.measurement_point_order.value
 
         hysteresis_point: Union[Unset, str] = UNSET
-        if not isinstance(self.hysteresis_point, Unset):
+        if self.hysteresis_point and not isinstance(self.hysteresis_point, Unset):
             hysteresis_point = self.hysteresis_point.value
 
         max_hysteresis = self.max_hysteresis

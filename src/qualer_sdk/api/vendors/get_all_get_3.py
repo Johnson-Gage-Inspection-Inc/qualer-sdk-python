@@ -28,7 +28,7 @@ def _get_kwargs(
     params["model.take"] = model_take
 
     json_model_modified_after: Union[Unset, str] = UNSET
-    if not isinstance(model_modified_after, Unset):
+    if model_modified_after and not isinstance(model_modified_after, Unset):
         json_model_modified_after = model_modified_after.isoformat()
     params["model.modifiedAfter"] = json_model_modified_after
 

@@ -39,7 +39,7 @@ class QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel:
         batch_type = self.batch_type
 
         measurement_sets: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.measurement_sets, Unset):
+        if self.measurement_sets and not isinstance(self.measurement_sets, Unset):
             measurement_sets = []
             for measurement_sets_item_data in self.measurement_sets:
                 measurement_sets_item = measurement_sets_item_data.to_dict()

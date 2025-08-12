@@ -97,11 +97,11 @@ class QualerApiModelsServiceOrdersToServiceOrderPartRepairResponse:
         created_by = self.created_by
 
         created_on_utc: Union[Unset, str] = UNSET
-        if not isinstance(self.created_on_utc, Unset):
+        if self.created_on_utc and not isinstance(self.created_on_utc, Unset):
             created_on_utc = self.created_on_utc.isoformat()
 
         charge_date: Union[Unset, str] = UNSET
-        if not isinstance(self.charge_date, Unset):
+        if self.charge_date and not isinstance(self.charge_date, Unset):
             charge_date = self.charge_date.isoformat()
 
         contract_repairs_discount = self.contract_repairs_discount

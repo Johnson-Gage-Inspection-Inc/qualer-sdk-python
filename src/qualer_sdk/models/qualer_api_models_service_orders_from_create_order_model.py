@@ -37,15 +37,17 @@ class QualerApiModelsServiceOrdersFromCreateOrderModel:
         vendor_site_id = self.vendor_site_id
 
         asset_ids: Union[Unset, list[int]] = UNSET
-        if not isinstance(self.asset_ids, Unset):
+        if self.asset_ids and not isinstance(self.asset_ids, Unset):
             asset_ids = self.asset_ids
 
         schedule_segment_ids: Union[Unset, list[int]] = UNSET
-        if not isinstance(self.schedule_segment_ids, Unset):
+        if self.schedule_segment_ids and not isinstance(
+            self.schedule_segment_ids, Unset
+        ):
             schedule_segment_ids = self.schedule_segment_ids
 
         service_level_ids: Union[Unset, list[int]] = UNSET
-        if not isinstance(self.service_level_ids, Unset):
+        if self.service_level_ids and not isinstance(self.service_level_ids, Unset):
             service_level_ids = self.service_level_ids
 
         use_due_segments = self.use_due_segments

@@ -39,15 +39,15 @@ class QualerApiModelsReportDatasetsToCompanyCertificationResponse:
         logo = self.logo
 
         initial_date: Union[Unset, str] = UNSET
-        if not isinstance(self.initial_date, Unset):
+        if self.initial_date and not isinstance(self.initial_date, Unset):
             initial_date = self.initial_date.isoformat()
 
         certification_date: Union[Unset, str] = UNSET
-        if not isinstance(self.certification_date, Unset):
+        if self.certification_date and not isinstance(self.certification_date, Unset):
             certification_date = self.certification_date.isoformat()
 
         expiration_date: Union[Unset, str] = UNSET
-        if not isinstance(self.expiration_date, Unset):
+        if self.expiration_date and not isinstance(self.expiration_date, Unset):
             expiration_date = self.expiration_date.isoformat()
 
         certification_name = self.certification_name

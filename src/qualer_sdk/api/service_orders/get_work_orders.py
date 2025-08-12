@@ -29,17 +29,17 @@ def _get_kwargs(
     params["companyId"] = company_id
 
     json_from_: Union[Unset, str] = UNSET
-    if not isinstance(from_, Unset):
+    if from_ and not isinstance(from_, Unset):
         json_from_ = from_.isoformat()
     params["from"] = json_from_
 
     json_to: Union[Unset, str] = UNSET
-    if not isinstance(to, Unset):
+    if to and not isinstance(to, Unset):
         json_to = to.isoformat()
     params["to"] = json_to
 
     json_modified_after: Union[Unset, str] = UNSET
-    if not isinstance(modified_after, Unset):
+    if modified_after and not isinstance(modified_after, Unset):
         json_modified_after = modified_after.isoformat()
     params["modifiedAfter"] = json_modified_after
 

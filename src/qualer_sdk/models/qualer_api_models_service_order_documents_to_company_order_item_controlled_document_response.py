@@ -46,7 +46,7 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentRe
         service_order_item_id = self.service_order_item_id
 
         guid: Union[Unset, str] = UNSET
-        if not isinstance(self.guid, Unset):
+        if self.guid and not isinstance(self.guid, Unset):
             guid = str(self.guid)
 
         document_name = self.document_name
@@ -58,7 +58,7 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentRe
         revision_number = self.revision_number
 
         report_type: Union[Unset, int] = UNSET
-        if not isinstance(self.report_type, Unset):
+        if self.report_type and not isinstance(self.report_type, Unset):
             report_type = self.report_type.value
 
         download_url = self.download_url

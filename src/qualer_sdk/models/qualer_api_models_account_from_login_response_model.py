@@ -22,7 +22,7 @@ class QualerApiModelsAccountFromLoginResponseModel:
 
     def to_dict(self) -> dict[str, Any]:
         token: Union[Unset, str] = UNSET
-        if not isinstance(self.token, Unset):
+        if self.token and not isinstance(self.token, Unset):
             token = str(self.token)
 
         field_dict: dict[str, Any] = {}

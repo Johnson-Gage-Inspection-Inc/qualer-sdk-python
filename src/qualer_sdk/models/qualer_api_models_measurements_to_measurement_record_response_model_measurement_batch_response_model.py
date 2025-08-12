@@ -53,11 +53,11 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         batch_result = self.batch_result
 
         specification: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.specification, Unset):
+        if self.specification and not isinstance(self.specification, Unset):
             specification = self.specification.to_dict()
 
         measurement_sets: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.measurement_sets, Unset):
+        if self.measurement_sets and not isinstance(self.measurement_sets, Unset):
             measurement_sets = []
             for measurement_sets_item_data in self.measurement_sets:
                 measurement_sets_item = measurement_sets_item_data.to_dict()

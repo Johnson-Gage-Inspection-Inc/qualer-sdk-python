@@ -21,7 +21,7 @@ class QualerApiModelsCommonToCultureListResponseModel:
 
     def to_dict(self) -> dict[str, Any]:
         culture_list: Union[Unset, list[str]] = UNSET
-        if not isinstance(self.culture_list, Unset):
+        if self.culture_list and not isinstance(self.culture_list, Unset):
             culture_list = self.culture_list
 
         field_dict: dict[str, Any] = {}

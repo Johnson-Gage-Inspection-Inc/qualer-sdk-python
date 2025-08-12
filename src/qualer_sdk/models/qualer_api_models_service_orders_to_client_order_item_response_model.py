@@ -579,7 +579,7 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
             maintenance_plan = self.maintenance_plan
 
         service_options: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.service_options, Unset):
+        if self.service_options and not isinstance(self.service_options, Unset):
             service_options = []
             for service_options_item_data in self.service_options:
                 service_options_item = service_options_item_data.to_dict()

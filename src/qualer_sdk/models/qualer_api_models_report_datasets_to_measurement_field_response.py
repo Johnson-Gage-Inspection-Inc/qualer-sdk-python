@@ -62,7 +62,7 @@ class QualerApiModelsReportDatasetsToMeasurementFieldResponse:
         measurement_point_id = self.measurement_point_id
 
         batch_type: Union[Unset, int] = UNSET
-        if not isinstance(self.batch_type, Unset):
+        if self.batch_type and not isinstance(self.batch_type, Unset):
             batch_type = self.batch_type.value
 
         service_order_item_id = self.service_order_item_id

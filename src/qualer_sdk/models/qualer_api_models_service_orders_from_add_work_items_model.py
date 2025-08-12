@@ -23,11 +23,13 @@ class QualerApiModelsServiceOrdersFromAddWorkItemsModel:
 
     def to_dict(self) -> dict[str, Any]:
         asset_ids: Union[Unset, list[int]] = UNSET
-        if not isinstance(self.asset_ids, Unset):
+        if self.asset_ids and not isinstance(self.asset_ids, Unset):
             asset_ids = self.asset_ids
 
         schedule_segment_ids: Union[Unset, list[int]] = UNSET
-        if not isinstance(self.schedule_segment_ids, Unset):
+        if self.schedule_segment_ids and not isinstance(
+            self.schedule_segment_ids, Unset
+        ):
             schedule_segment_ids = self.schedule_segment_ids
 
         field_dict: dict[str, Any] = {}

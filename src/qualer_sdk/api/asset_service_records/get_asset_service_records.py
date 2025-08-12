@@ -26,12 +26,12 @@ def _get_kwargs(
     params["model.serialNumber"] = model_serial_number
 
     json_model_from: Union[Unset, str] = UNSET
-    if not isinstance(model_from, Unset):
+    if model_from and not isinstance(model_from, Unset):
         json_model_from = model_from.isoformat()
     params["model.from"] = json_model_from
 
     json_model_to: Union[Unset, str] = UNSET
-    if not isinstance(model_to, Unset):
+    if model_to and not isinstance(model_to, Unset):
         json_model_to = model_to.isoformat()
     params["model.to"] = json_model_to
 

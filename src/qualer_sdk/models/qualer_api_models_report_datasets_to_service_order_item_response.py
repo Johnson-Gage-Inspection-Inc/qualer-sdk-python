@@ -328,11 +328,11 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         updated_by = self.updated_by
 
         updated_on: Union[Unset, str] = UNSET
-        if not isinstance(self.updated_on, Unset):
+        if self.updated_on and not isinstance(self.updated_on, Unset):
             updated_on = self.updated_on.isoformat()
 
         work_status: Union[None, Unset, int] = UNSET
-        if not isinstance(self.work_status, Unset):
+        if self.work_status and not isinstance(self.work_status, Unset):
             work_status = self.work_status.value
 
         custom_work_status = self.custom_work_status

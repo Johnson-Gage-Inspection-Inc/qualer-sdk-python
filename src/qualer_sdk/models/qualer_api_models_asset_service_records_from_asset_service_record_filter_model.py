@@ -35,11 +35,11 @@ class QualerApiModelsAssetServiceRecordsFromAssetServiceRecordFilterModel:
         serial_number = self.serial_number
 
         from_: Union[Unset, str] = UNSET
-        if not isinstance(self.from_, Unset):
+        if self.from_ and not isinstance(self.from_, Unset):
             from_ = self.from_.isoformat()
 
         to: Union[Unset, str] = UNSET
-        if not isinstance(self.to, Unset):
+        if self.to and not isinstance(self.to, Unset):
             to = self.to.isoformat()
 
         field_dict: dict[str, Any] = {}

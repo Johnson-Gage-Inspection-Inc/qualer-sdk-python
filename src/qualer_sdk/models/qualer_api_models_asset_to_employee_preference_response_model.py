@@ -35,7 +35,7 @@ class QualerApiModelsAssetToEmployeePreferenceResponseModel:
         element_id = self.element_id
 
         preference: Union[Unset, list[str]] = UNSET
-        if not isinstance(self.preference, Unset):
+        if self.preference and not isinstance(self.preference, Unset):
             preference = self.preference
 
         is_pinned = self.is_pinned

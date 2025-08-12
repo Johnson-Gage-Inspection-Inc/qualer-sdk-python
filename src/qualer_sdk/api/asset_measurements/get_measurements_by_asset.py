@@ -21,12 +21,12 @@ def _get_kwargs(
     params: dict[str, Any] = {}
 
     json_from_: Union[Unset, str] = UNSET
-    if not isinstance(from_, Unset):
+    if from_ and not isinstance(from_, Unset):
         json_from_ = from_.isoformat()
     params["from"] = json_from_
 
     json_to: Union[Unset, str] = UNSET
-    if not isinstance(to, Unset):
+    if to and not isinstance(to, Unset):
         json_to = to.isoformat()
     params["to"] = json_to
 

@@ -42,7 +42,7 @@ class QualerApiModelsEnvironmentToEnvironmentModel:
         room_name = self.room_name
 
         factor_id: Union[Unset, str] = UNSET
-        if not isinstance(self.factor_id, Unset):
+        if self.factor_id and not isinstance(self.factor_id, Unset):
             factor_id = self.factor_id.value
 
         station_id = self.station_id

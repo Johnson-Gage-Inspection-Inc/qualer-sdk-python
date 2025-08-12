@@ -45,27 +45,27 @@ class QualerApiModelsAssetReservationToAssetReservationResponse:
 
     def to_dict(self) -> dict[str, Any]:
         original_begin_date: Union[Unset, str] = UNSET
-        if not isinstance(self.original_begin_date, Unset):
+        if self.original_begin_date and not isinstance(self.original_begin_date, Unset):
             original_begin_date = self.original_begin_date.isoformat()
 
         original_end_date: Union[Unset, str] = UNSET
-        if not isinstance(self.original_end_date, Unset):
+        if self.original_end_date and not isinstance(self.original_end_date, Unset):
             original_end_date = self.original_end_date.isoformat()
 
         begin_date: Union[Unset, str] = UNSET
-        if not isinstance(self.begin_date, Unset):
+        if self.begin_date and not isinstance(self.begin_date, Unset):
             begin_date = self.begin_date.isoformat()
 
         end_date: Union[Unset, str] = UNSET
-        if not isinstance(self.end_date, Unset):
+        if self.end_date and not isinstance(self.end_date, Unset):
             end_date = self.end_date.isoformat()
 
         reserved_on: Union[Unset, str] = UNSET
-        if not isinstance(self.reserved_on, Unset):
+        if self.reserved_on and not isinstance(self.reserved_on, Unset):
             reserved_on = self.reserved_on.isoformat()
 
         reserved_on_utc: Union[Unset, str] = UNSET
-        if not isinstance(self.reserved_on_utc, Unset):
+        if self.reserved_on_utc and not isinstance(self.reserved_on_utc, Unset):
             reserved_on_utc = self.reserved_on_utc.isoformat()
 
         comments = self.comments

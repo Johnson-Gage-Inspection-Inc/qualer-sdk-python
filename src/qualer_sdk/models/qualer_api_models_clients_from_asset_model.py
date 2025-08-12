@@ -92,7 +92,7 @@ class QualerApiModelsClientsFromAssetModel:
         asset_user = self.asset_user
 
         asset_status: Union[Unset, str] = UNSET
-        if not isinstance(self.asset_status, Unset):
+        if self.asset_status and not isinstance(self.asset_status, Unset):
             asset_status = self.asset_status.value
 
         asset_name = self.asset_name

@@ -136,11 +136,11 @@ class QualerApiModelsSiteToClientSiteResponse:
         time_zone_offset_minutes = self.time_zone_offset_minutes
 
         updated_on_utc: Union[Unset, str] = UNSET
-        if not isinstance(self.updated_on_utc, Unset):
+        if self.updated_on_utc and not isinstance(self.updated_on_utc, Unset):
             updated_on_utc = self.updated_on_utc.isoformat()
 
         attributes: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.attributes, Unset):
+        if self.attributes and not isinstance(self.attributes, Unset):
             attributes = []
             for attributes_item_data in self.attributes:
                 attributes_item = attributes_item_data.to_dict()

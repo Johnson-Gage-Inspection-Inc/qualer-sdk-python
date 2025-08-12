@@ -60,7 +60,7 @@ class QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairUpdateMod
         description = self.description
 
         charge_date: Union[Unset, str] = UNSET
-        if not isinstance(self.charge_date, Unset):
+        if self.charge_date and not isinstance(self.charge_date, Unset):
             charge_date = self.charge_date.isoformat()
 
         price = self.price

@@ -35,7 +35,7 @@ class QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel:
         metadata = self.metadata
 
         exhibits: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.exhibits, Unset):
+        if self.exhibits and not isinstance(self.exhibits, Unset):
             exhibits = self.exhibits.to_dict()
 
         field_dict: dict[str, Any] = {}

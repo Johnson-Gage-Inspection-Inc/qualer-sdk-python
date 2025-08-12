@@ -91,11 +91,11 @@ class QualerApiModelsSiteFromSiteCreateModel:
         company_name = self.company_name
 
         billing_address: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.billing_address, Unset):
+        if self.billing_address and not isinstance(self.billing_address, Unset):
             billing_address = self.billing_address.to_dict()
 
         shipping_address: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.shipping_address, Unset):
+        if self.shipping_address and not isinstance(self.shipping_address, Unset):
             shipping_address = self.shipping_address.to_dict()
 
         field_dict: dict[str, Any] = {}

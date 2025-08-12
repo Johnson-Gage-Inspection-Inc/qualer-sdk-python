@@ -45,7 +45,7 @@ class QualerApiModelsMaintenancePlansToMaintenancePlanResponse:
         company_name = self.company_name
 
         maintenance_tasks: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.maintenance_tasks, Unset):
+        if self.maintenance_tasks and not isinstance(self.maintenance_tasks, Unset):
             maintenance_tasks = []
             for maintenance_tasks_item_data in self.maintenance_tasks:
                 maintenance_tasks_item = maintenance_tasks_item_data.to_dict()
