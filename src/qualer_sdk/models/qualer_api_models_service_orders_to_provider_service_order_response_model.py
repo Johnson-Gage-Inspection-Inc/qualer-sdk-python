@@ -85,7 +85,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         service_order_id = self.service_order_id
 
         guid: Union[Unset, str] = UNSET
-        if not isinstance(self.guid, Unset):
+        if self.guid and not isinstance(self.guid, Unset):
             guid = str(self.guid)
 
         service_order_number = self.service_order_number
@@ -105,7 +105,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         completed_assets = self.completed_assets
 
         order_status: Union[Unset, str] = UNSET
-        if not isinstance(self.order_status, Unset):
+        if self.order_status and not isinstance(self.order_status, Unset):
             order_status = self.order_status.value
 
         is_quality_control_fail = self.is_quality_control_fail
@@ -137,7 +137,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
             business_to_time = self.business_to_time
 
         timeframe: Union[Unset, str] = UNSET
-        if not isinstance(self.timeframe, Unset):
+        if self.timeframe and not isinstance(self.timeframe, Unset):
             timeframe = self.timeframe.value
 
         site_access_notes = self.site_access_notes

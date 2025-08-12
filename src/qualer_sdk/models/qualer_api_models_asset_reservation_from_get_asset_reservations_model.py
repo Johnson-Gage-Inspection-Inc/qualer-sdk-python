@@ -37,11 +37,11 @@ class QualerApiModelsAssetReservationFromGetAssetReservationsModel:
 
     def to_dict(self) -> dict[str, Any]:
         from_: Union[Unset, str] = UNSET
-        if not isinstance(self.from_, Unset):
+        if self.from_ and not isinstance(self.from_, Unset):
             from_ = self.from_.isoformat()
 
         to: Union[Unset, str] = UNSET
-        if not isinstance(self.to, Unset):
+        if self.to and not isinstance(self.to, Unset):
             to = self.to.isoformat()
 
         asset_id = self.asset_id

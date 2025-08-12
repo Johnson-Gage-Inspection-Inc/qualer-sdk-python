@@ -73,7 +73,7 @@ class QualerApiModelsClientsToEmployeeResponseModel:
         login_email = self.login_email
 
         departments: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.departments, Unset):
+        if self.departments and not isinstance(self.departments, Unset):
             departments = []
             for departments_item_data in self.departments:
                 departments_item = departments_item_data.to_dict()

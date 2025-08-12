@@ -35,7 +35,7 @@ class QualerApiModelsAccountToEmployeeEventResponseModel:
         subject = self.subject
 
         created_on_utc: Union[Unset, str] = UNSET
-        if not isinstance(self.created_on_utc, Unset):
+        if self.created_on_utc and not isinstance(self.created_on_utc, Unset):
             created_on_utc = self.created_on_utc.isoformat()
 
         event_type_id = self.event_type_id

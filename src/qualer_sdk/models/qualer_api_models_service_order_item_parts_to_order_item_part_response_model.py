@@ -82,7 +82,9 @@ class QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel:
         free_quantity = self.free_quantity
 
         service_order_charge_type: Union[Unset, str] = UNSET
-        if not isinstance(self.service_order_charge_type, Unset):
+        if self.service_order_charge_type and not isinstance(
+            self.service_order_charge_type, Unset
+        ):
             service_order_charge_type = self.service_order_charge_type.value
 
         field_dict: dict[str, Any] = {}

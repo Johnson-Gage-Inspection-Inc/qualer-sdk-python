@@ -62,7 +62,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
         measurement_point_id = self.measurement_point_id
 
         batch_type: Union[Unset, int] = UNSET
-        if not isinstance(self.batch_type, Unset):
+        if self.batch_type and not isinstance(self.batch_type, Unset):
             batch_type = self.batch_type.value
 
         column_index = self.column_index
@@ -88,7 +88,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
         delta_result = self.delta_result
 
         result: Union[Unset, int] = UNSET
-        if not isinstance(self.result, Unset):
+        if self.result and not isinstance(self.result, Unset):
             result = self.result.value
 
         field_dict: dict[str, Any] = {}

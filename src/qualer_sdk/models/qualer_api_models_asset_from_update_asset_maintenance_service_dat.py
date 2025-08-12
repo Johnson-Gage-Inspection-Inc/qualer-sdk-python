@@ -25,7 +25,7 @@ class QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat:
 
     def to_dict(self) -> dict[str, Any]:
         reset_service_date: Union[Unset, str] = UNSET
-        if not isinstance(self.reset_service_date, Unset):
+        if self.reset_service_date and not isinstance(self.reset_service_date, Unset):
             reset_service_date = self.reset_service_date.isoformat()
 
         reset_service_task = self.reset_service_task

@@ -172,7 +172,7 @@ class QualerApiModelsAssetToAssetForecastApiResponseModel:
         equipment_id = self.equipment_id
 
         asset_status: Union[Unset, str] = UNSET
-        if not isinstance(self.asset_status, Unset):
+        if self.asset_status and not isinstance(self.asset_status, Unset):
             asset_status = self.asset_status.value
 
         asset_name = self.asset_name

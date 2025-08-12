@@ -587,7 +587,9 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
             sign_off_date = self.sign_off_date
 
         quality_control_date: Union[Unset, str] = UNSET
-        if not isinstance(self.quality_control_date, Unset):
+        if self.quality_control_date and not isinstance(
+            self.quality_control_date, Unset
+        ):
             quality_control_date = self.quality_control_date.isoformat()
 
         client_sign_off_on: Union[None, Unset, str]
@@ -625,7 +627,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         display_as_left = self.display_as_left
 
         created_on: Union[Unset, str] = UNSET
-        if not isinstance(self.created_on, Unset):
+        if self.created_on and not isinstance(self.created_on, Unset):
             created_on = self.created_on.isoformat()
 
         invoiced_on: Union[None, Unset, str]
@@ -841,7 +843,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
             deadline_date = self.deadline_date
 
         vendor_sign_off_on: Union[Unset, str] = UNSET
-        if not isinstance(self.vendor_sign_off_on, Unset):
+        if self.vendor_sign_off_on and not isinstance(self.vendor_sign_off_on, Unset):
             vendor_sign_off_on = self.vendor_sign_off_on.isoformat()
 
         vendor_sign_off_by_name = self.vendor_sign_off_by_name

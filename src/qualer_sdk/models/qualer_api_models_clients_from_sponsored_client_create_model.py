@@ -56,7 +56,7 @@ class QualerApiModelsClientsFromSponsoredClientCreateModel:
         account_number_text = self.account_number_text
 
         client_status: Union[Unset, str] = UNSET
-        if not isinstance(self.client_status, Unset):
+        if self.client_status and not isinstance(self.client_status, Unset):
             client_status = self.client_status.value
 
         domain_name = self.domain_name
@@ -76,11 +76,11 @@ class QualerApiModelsClientsFromSponsoredClientCreateModel:
         company_name = self.company_name
 
         billing_address: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.billing_address, Unset):
+        if self.billing_address and not isinstance(self.billing_address, Unset):
             billing_address = self.billing_address.to_dict()
 
         shipping_address: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.shipping_address, Unset):
+        if self.shipping_address and not isinstance(self.shipping_address, Unset):
             shipping_address = self.shipping_address.to_dict()
 
         field_dict: dict[str, Any] = {}

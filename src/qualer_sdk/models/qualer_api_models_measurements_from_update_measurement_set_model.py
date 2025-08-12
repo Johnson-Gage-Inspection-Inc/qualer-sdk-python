@@ -94,7 +94,9 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
         significant_figures = self.significant_figures
 
         influence_parameter_1_type: Union[Unset, str] = UNSET
-        if not isinstance(self.influence_parameter_1_type, Unset):
+        if self.influence_parameter_1_type and not isinstance(
+            self.influence_parameter_1_type, Unset
+        ):
             influence_parameter_1_type = self.influence_parameter_1_type.value
 
         influence_parameter_1_tool_type_id = self.influence_parameter_1_tool_type_id
@@ -106,7 +108,9 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
         influence_parameter_1_value = self.influence_parameter_1_value
 
         influence_parameter_2_type: Union[Unset, str] = UNSET
-        if not isinstance(self.influence_parameter_2_type, Unset):
+        if self.influence_parameter_2_type and not isinstance(
+            self.influence_parameter_2_type, Unset
+        ):
             influence_parameter_2_type = self.influence_parameter_2_type.value
 
         influence_parameter_2_tool_type_id = self.influence_parameter_2_tool_type_id
@@ -118,14 +122,14 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
         influence_parameter_2_value = self.influence_parameter_2_value
 
         measurement_points: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.measurement_points, Unset):
+        if self.measurement_points and not isinstance(self.measurement_points, Unset):
             measurement_points = []
             for measurement_points_item_data in self.measurement_points:
                 measurement_points_item = measurement_points_item_data.to_dict()
                 measurement_points.append(measurement_points_item)
 
         measurement_fields: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.measurement_fields, Unset):
+        if self.measurement_fields and not isinstance(self.measurement_fields, Unset):
             measurement_fields = []
             for measurement_fields_item_data in self.measurement_fields:
                 measurement_fields_item = measurement_fields_item_data.to_dict()

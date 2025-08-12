@@ -55,11 +55,11 @@ class QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse:
         is_password_reentered = self.is_password_reentered
 
         created_on: Union[Unset, str] = UNSET
-        if not isinstance(self.created_on, Unset):
+        if self.created_on and not isinstance(self.created_on, Unset):
             created_on = self.created_on.isoformat()
 
         created_on_utc: Union[Unset, str] = UNSET
-        if not isinstance(self.created_on_utc, Unset):
+        if self.created_on_utc and not isinstance(self.created_on_utc, Unset):
             created_on_utc = self.created_on_utc.isoformat()
 
         employee_id = self.employee_id

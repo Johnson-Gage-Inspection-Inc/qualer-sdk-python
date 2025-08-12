@@ -47,11 +47,11 @@ class QualerApiModelsAssetReservationFromUpsertAssetReservationModel:
         service_order_id = self.service_order_id
 
         begin_date: Union[Unset, str] = UNSET
-        if not isinstance(self.begin_date, Unset):
+        if self.begin_date and not isinstance(self.begin_date, Unset):
             begin_date = self.begin_date.isoformat()
 
         end_date: Union[Unset, str] = UNSET
-        if not isinstance(self.end_date, Unset):
+        if self.end_date and not isinstance(self.end_date, Unset):
             end_date = self.end_date.isoformat()
 
         reserved_by = self.reserved_by

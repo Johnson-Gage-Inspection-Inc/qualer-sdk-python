@@ -37,7 +37,7 @@ class QualerApiModelsMeasurementsFromCustomFields:
         result = self.result
 
         items: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.items, Unset):
+        if self.items and not isinstance(self.items, Unset):
             items = []
             for items_item_data in self.items:
                 items_item = items_item_data.to_dict()

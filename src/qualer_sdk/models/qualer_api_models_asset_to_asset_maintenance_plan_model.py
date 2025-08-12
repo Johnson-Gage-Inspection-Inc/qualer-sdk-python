@@ -132,7 +132,7 @@ class QualerApiModelsAssetToAssetMaintenancePlanModel:
 
     def to_dict(self) -> dict[str, Any]:
         maintenance_plans: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.maintenance_plans, Unset):
+        if self.maintenance_plans and not isinstance(self.maintenance_plans, Unset):
             maintenance_plans = []
             for maintenance_plans_item_data in self.maintenance_plans:
                 maintenance_plans_item = maintenance_plans_item_data.to_dict()
@@ -151,7 +151,7 @@ class QualerApiModelsAssetToAssetMaintenancePlanModel:
         equipment_id = self.equipment_id
 
         asset_status: Union[Unset, str] = UNSET
-        if not isinstance(self.asset_status, Unset):
+        if self.asset_status and not isinstance(self.asset_status, Unset):
             asset_status = self.asset_status.value
 
         asset_name = self.asset_name

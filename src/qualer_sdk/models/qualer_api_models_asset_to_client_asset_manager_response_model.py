@@ -239,7 +239,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         asset_maker = self.asset_maker
 
         record_type: Union[None, Unset, int] = UNSET
-        if not isinstance(self.record_type, Unset):
+        if self.record_type and not isinstance(self.record_type, Unset):
             record_type = self.record_type.value
 
         parent_asset_id = self.parent_asset_id
@@ -329,7 +329,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         station = self.station
 
         tool_role: Union[None, Unset, int] = UNSET
-        if not isinstance(self.tool_role, Unset):
+        if self.tool_role and not isinstance(self.tool_role, Unset):
             tool_role = self.tool_role.value
 
         tool_id = self.tool_id
@@ -395,15 +395,15 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         asset_service_record_id = self.asset_service_record_id
 
         result_status: Union[None, Unset, int] = UNSET
-        if not isinstance(self.result_status, Unset):
+        if self.result_status and not isinstance(self.result_status, Unset):
             result_status = self.result_status.value
 
         as_found_result: Union[None, Unset, int] = UNSET
-        if not isinstance(self.as_found_result, Unset):
+        if self.as_found_result and not isinstance(self.as_found_result, Unset):
             as_found_result = self.as_found_result.value
 
         as_left_result: Union[None, Unset, int] = UNSET
-        if not isinstance(self.as_left_result, Unset):
+        if self.as_left_result and not isinstance(self.as_left_result, Unset):
             as_left_result = self.as_left_result.value
 
         last_service_date: Union[None, Unset, str]
@@ -443,7 +443,9 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         service_order_id = self.service_order_id
 
         service_order_status: Union[None, Unset, str] = UNSET
-        if not isinstance(self.service_order_status, Unset):
+        if self.service_order_status and not isinstance(
+            self.service_order_status, Unset
+        ):
             service_order_status = self.service_order_status.value
 
         custom_order_number = self.custom_order_number
@@ -473,11 +475,11 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
             past_due_trigger_date = self.past_due_trigger_date
 
         due_status: Union[None, Unset, int] = UNSET
-        if not isinstance(self.due_status, Unset):
+        if self.due_status and not isinstance(self.due_status, Unset):
             due_status = self.due_status.value
 
         work_status: Union[None, Unset, int] = UNSET
-        if not isinstance(self.work_status, Unset):
+        if self.work_status and not isinstance(self.work_status, Unset):
             work_status = self.work_status.value
 
         service_tag = self.service_tag

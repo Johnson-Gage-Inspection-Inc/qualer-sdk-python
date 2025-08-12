@@ -43,11 +43,11 @@ class QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel:
         task_details = self.task_details
 
         start_time: Union[Unset, str] = UNSET
-        if not isinstance(self.start_time, Unset):
+        if self.start_time and not isinstance(self.start_time, Unset):
             start_time = self.start_time.isoformat()
 
         finish_time: Union[Unset, str] = UNSET
-        if not isinstance(self.finish_time, Unset):
+        if self.finish_time and not isinstance(self.finish_time, Unset):
             finish_time = self.finish_time.isoformat()
 
         time_spent_minutes = self.time_spent_minutes

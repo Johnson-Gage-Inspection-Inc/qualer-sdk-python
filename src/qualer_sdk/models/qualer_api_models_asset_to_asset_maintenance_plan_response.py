@@ -114,7 +114,7 @@ class QualerApiModelsAssetToAssetMaintenancePlanResponse:
         technician_department_name = self.technician_department_name
 
         assigned_employees: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.assigned_employees, Unset):
+        if self.assigned_employees and not isinstance(self.assigned_employees, Unset):
             assigned_employees = []
             for assigned_employees_item_data in self.assigned_employees:
                 assigned_employees_item = assigned_employees_item_data.to_dict()

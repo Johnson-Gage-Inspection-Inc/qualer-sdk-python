@@ -34,7 +34,9 @@ class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel:
 
     def to_dict(self) -> dict[str, Any]:
         service_order_status: Union[None, Unset, str] = UNSET
-        if not isinstance(self.service_order_status, Unset):
+        if self.service_order_status and not isinstance(
+            self.service_order_status, Unset
+        ):
             service_order_status = self.service_order_status.value
 
         reset_status = self.reset_status

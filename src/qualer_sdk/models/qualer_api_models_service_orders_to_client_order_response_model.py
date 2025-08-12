@@ -462,7 +462,7 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
             closed_on = self.closed_on
 
         last_updated_on: Union[Unset, str] = UNSET
-        if not isinstance(self.last_updated_on, Unset):
+        if self.last_updated_on and not isinstance(self.last_updated_on, Unset):
             last_updated_on = self.last_updated_on.isoformat()
 
         last_updated_by = self.last_updated_by
@@ -572,7 +572,7 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
         internal = self.internal
 
         guid: Union[Unset, str] = UNSET
-        if not isinstance(self.guid, Unset):
+        if self.guid and not isinstance(self.guid, Unset):
             guid = str(self.guid)
 
         business_from_time: Union[None, Unset, str]

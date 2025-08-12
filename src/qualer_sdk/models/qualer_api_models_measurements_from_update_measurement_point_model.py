@@ -199,26 +199,28 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
         is_accredited = self.is_accredited
 
         specification_mode: Union[Unset, int] = UNSET
-        if not isinstance(self.specification_mode, Unset):
+        if self.specification_mode and not isinstance(self.specification_mode, Unset):
             specification_mode = self.specification_mode.value
 
         tolerance_mode: Union[Unset, int] = UNSET
-        if not isinstance(self.tolerance_mode, Unset):
+        if self.tolerance_mode and not isinstance(self.tolerance_mode, Unset):
             tolerance_mode = self.tolerance_mode.value
 
         tolerance_unit: Union[Unset, int] = UNSET
-        if not isinstance(self.tolerance_unit, Unset):
+        if self.tolerance_unit and not isinstance(self.tolerance_unit, Unset):
             tolerance_unit = self.tolerance_unit.value
 
         measurements: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.measurements, Unset):
+        if self.measurements and not isinstance(self.measurements, Unset):
             measurements = []
             for measurements_item_data in self.measurements:
                 measurements_item = measurements_item_data.to_dict()
                 measurements.append(measurements_item)
 
         measurement_condition_factors: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.measurement_condition_factors, Unset):
+        if self.measurement_condition_factors and not isinstance(
+            self.measurement_condition_factors, Unset
+        ):
             measurement_condition_factors = []
             for (
                 measurement_condition_factors_item_data
@@ -229,21 +231,27 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
                 measurement_condition_factors.append(measurement_condition_factors_item)
 
         tool_application_mode: Union[Unset, str] = UNSET
-        if not isinstance(self.tool_application_mode, Unset):
+        if self.tool_application_mode and not isinstance(
+            self.tool_application_mode, Unset
+        ):
             tool_application_mode = self.tool_application_mode.value
 
         primary_measurement_tool: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.primary_measurement_tool, Unset):
+        if self.primary_measurement_tool and not isinstance(
+            self.primary_measurement_tool, Unset
+        ):
             primary_measurement_tool = self.primary_measurement_tool.to_dict()
 
         secondary_measurement_tool: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.secondary_measurement_tool, Unset):
+        if self.secondary_measurement_tool and not isinstance(
+            self.secondary_measurement_tool, Unset
+        ):
             secondary_measurement_tool = self.secondary_measurement_tool.to_dict()
 
         linked_measurement_point_id = self.linked_measurement_point_id
 
         hysteresis_point: Union[Unset, str] = UNSET
-        if not isinstance(self.hysteresis_point, Unset):
+        if self.hysteresis_point and not isinstance(self.hysteresis_point, Unset):
             hysteresis_point = self.hysteresis_point.value
 
         influence_parameter_1_parameter_id = self.influence_parameter_1_parameter_id

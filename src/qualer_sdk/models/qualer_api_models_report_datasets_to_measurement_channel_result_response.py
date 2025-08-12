@@ -63,11 +63,11 @@ class QualerApiModelsReportDatasetsToMeasurementChannelResultResponse:
         column_index = self.column_index
 
         batch_type: Union[Unset, int] = UNSET
-        if not isinstance(self.batch_type, Unset):
+        if self.batch_type and not isinstance(self.batch_type, Unset):
             batch_type = self.batch_type.value
 
         result: Union[Unset, int] = UNSET
-        if not isinstance(self.result, Unset):
+        if self.result and not isinstance(self.result, Unset):
             result = self.result.value
 
         mean_result = self.mean_result

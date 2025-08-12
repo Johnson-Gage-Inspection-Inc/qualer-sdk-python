@@ -39,7 +39,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementModel:
         updated_by = self.updated_by
 
         updated_on: Union[Unset, str] = UNSET
-        if not isinstance(self.updated_on, Unset):
+        if self.updated_on and not isinstance(self.updated_on, Unset):
             updated_on = self.updated_on.isoformat()
 
         field_dict: dict[str, Any] = {}

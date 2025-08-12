@@ -30,7 +30,7 @@ class QualerApiModelsServiceOrdersFromItemChargeUpdateModel:
 
     def to_dict(self) -> dict[str, Any]:
         charges: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.charges, Unset):
+        if self.charges and not isinstance(self.charges, Unset):
             charges = []
             for charges_item_data in self.charges:
                 charges_item = charges_item_data.to_dict()

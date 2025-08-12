@@ -1340,7 +1340,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         completed_by_name = self.completed_by_name
 
         completed_on: Union[Unset, str] = UNSET
-        if not isinstance(self.completed_on, Unset):
+        if self.completed_on and not isinstance(self.completed_on, Unset):
             completed_on = self.completed_on.isoformat()
 
         is_limited = self.is_limited
@@ -1358,7 +1358,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         certificate_number = self.certificate_number
 
         work_status: Union[None, Unset, int] = UNSET
-        if not isinstance(self.work_status, Unset):
+        if self.work_status and not isinstance(self.work_status, Unset):
             work_status = self.work_status.value
 
         service_type = self.service_type
@@ -1706,7 +1706,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         )
 
         as_found_measurement_not_taken_result: Union[Unset, str] = UNSET
-        if not isinstance(self.as_found_measurement_not_taken_result, Unset):
+        if self.as_found_measurement_not_taken_result and not isinstance(
+            self.as_found_measurement_not_taken_result, Unset
+        ):
             as_found_measurement_not_taken_result = (
                 self.as_found_measurement_not_taken_result.value
             )
@@ -1736,7 +1738,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_cv_header = self.as_found_cv_header
 
         as_found_measurement_local_time: Union[Unset, str] = UNSET
-        if not isinstance(self.as_found_measurement_local_time, Unset):
+        if self.as_found_measurement_local_time and not isinstance(
+            self.as_found_measurement_local_time, Unset
+        ):
             as_found_measurement_local_time = (
                 self.as_found_measurement_local_time.isoformat()
             )
@@ -1762,11 +1766,15 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_guard_band = self.as_left_guard_band
 
         as_found_guard_band_logic: Union[Unset, str] = UNSET
-        if not isinstance(self.as_found_guard_band_logic, Unset):
+        if self.as_found_guard_band_logic and not isinstance(
+            self.as_found_guard_band_logic, Unset
+        ):
             as_found_guard_band_logic = self.as_found_guard_band_logic.value
 
         as_left_guard_band_logic: Union[Unset, str] = UNSET
-        if not isinstance(self.as_left_guard_band_logic, Unset):
+        if self.as_left_guard_band_logic and not isinstance(
+            self.as_left_guard_band_logic, Unset
+        ):
             as_left_guard_band_logic = self.as_left_guard_band_logic.value
 
         as_found_error = self.as_found_error
@@ -1826,7 +1834,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_hysteresis = self.as_left_hysteresis
 
         as_found_reading_entry_math: Union[Unset, str] = UNSET
-        if not isinstance(self.as_found_reading_entry_math, Unset):
+        if self.as_found_reading_entry_math and not isinstance(
+            self.as_found_reading_entry_math, Unset
+        ):
             as_found_reading_entry_math = self.as_found_reading_entry_math.value
 
         as_found_reading_entry_math_string = self.as_found_reading_entry_math_string
@@ -2139,13 +2149,15 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_channel = self.as_found_channel
 
         as_found_measurement_type: Union[Unset, str] = UNSET
-        if not isinstance(self.as_found_measurement_type, Unset):
+        if self.as_found_measurement_type and not isinstance(
+            self.as_found_measurement_type, Unset
+        ):
             as_found_measurement_type = self.as_found_measurement_type.value
 
         as_found_updated_by = self.as_found_updated_by
 
         as_found_updated_on: Union[Unset, str] = UNSET
-        if not isinstance(self.as_found_updated_on, Unset):
+        if self.as_found_updated_on and not isinstance(self.as_found_updated_on, Unset):
             as_found_updated_on = self.as_found_updated_on.isoformat()
 
         as_left_abbreviated_uom = self.as_left_abbreviated_uom
@@ -2167,7 +2179,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_channel_count = self.as_found_channel_count
 
         as_found_commenced_on: Union[Unset, str] = UNSET
-        if not isinstance(self.as_found_commenced_on, Unset):
+        if self.as_found_commenced_on and not isinstance(
+            self.as_found_commenced_on, Unset
+        ):
             as_found_commenced_on = self.as_found_commenced_on.isoformat()
 
         as_found_commenced_by = self.as_found_commenced_by
@@ -2245,7 +2259,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_precision = self.as_found_precision
 
         as_found_precision_type: Union[Unset, str] = UNSET
-        if not isinstance(self.as_found_precision_type, Unset):
+        if self.as_found_precision_type and not isinstance(
+            self.as_found_precision_type, Unset
+        ):
             as_found_precision_type = self.as_found_precision_type.value
 
         as_found_minimum = self.as_found_minimum
@@ -2285,13 +2301,17 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_cv_header = self.as_left_cv_header
 
         as_left_measurement_local_time: Union[Unset, str] = UNSET
-        if not isinstance(self.as_left_measurement_local_time, Unset):
+        if self.as_left_measurement_local_time and not isinstance(
+            self.as_left_measurement_local_time, Unset
+        ):
             as_left_measurement_local_time = (
                 self.as_left_measurement_local_time.isoformat()
             )
 
         as_left_reading_entry_math: Union[Unset, str] = UNSET
-        if not isinstance(self.as_left_reading_entry_math, Unset):
+        if self.as_left_reading_entry_math and not isinstance(
+            self.as_left_reading_entry_math, Unset
+        ):
             as_left_reading_entry_math = self.as_left_reading_entry_math.value
 
         as_left_reading_entry_math_string = self.as_left_reading_entry_math_string
@@ -2608,13 +2628,15 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_channel = self.as_left_channel
 
         as_left_measurement_type: Union[Unset, str] = UNSET
-        if not isinstance(self.as_left_measurement_type, Unset):
+        if self.as_left_measurement_type and not isinstance(
+            self.as_left_measurement_type, Unset
+        ):
             as_left_measurement_type = self.as_left_measurement_type.value
 
         as_left_updated_by = self.as_left_updated_by
 
         as_left_updated_on: Union[Unset, str] = UNSET
-        if not isinstance(self.as_left_updated_on, Unset):
+        if self.as_left_updated_on and not isinstance(self.as_left_updated_on, Unset):
             as_left_updated_on = self.as_left_updated_on.isoformat()
 
         as_left_specification_title = self.as_left_specification_title
@@ -2632,7 +2654,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_channel_count = self.as_left_channel_count
 
         as_left_commenced_on: Union[Unset, str] = UNSET
-        if not isinstance(self.as_left_commenced_on, Unset):
+        if self.as_left_commenced_on and not isinstance(
+            self.as_left_commenced_on, Unset
+        ):
             as_left_commenced_on = self.as_left_commenced_on.isoformat()
 
         as_left_commenced_by = self.as_left_commenced_by
@@ -2706,7 +2730,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_precision = self.as_left_precision
 
         as_left_precision_type: Union[Unset, str] = UNSET
-        if not isinstance(self.as_left_precision_type, Unset):
+        if self.as_left_precision_type and not isinstance(
+            self.as_left_precision_type, Unset
+        ):
             as_left_precision_type = self.as_left_precision_type.value
 
         as_left_minimum = self.as_left_minimum
@@ -2728,7 +2754,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_resolution_count = self.as_left_resolution_count
 
         as_left_measurement_not_taken_result: Union[Unset, str] = UNSET
-        if not isinstance(self.as_left_measurement_not_taken_result, Unset):
+        if self.as_left_measurement_not_taken_result and not isinstance(
+            self.as_left_measurement_not_taken_result, Unset
+        ):
             as_left_measurement_not_taken_result = (
                 self.as_left_measurement_not_taken_result.value
             )

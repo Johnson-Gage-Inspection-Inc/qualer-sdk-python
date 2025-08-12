@@ -78,15 +78,15 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         significant_figures = self.significant_figures
 
         display_options: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.display_options, Unset):
+        if self.display_options and not isinstance(self.display_options, Unset):
             display_options = self.display_options.to_dict()
 
         custom_fields: Union[Unset, dict[str, Any]] = UNSET
-        if not isinstance(self.custom_fields, Unset):
+        if self.custom_fields and not isinstance(self.custom_fields, Unset):
             custom_fields = self.custom_fields.to_dict()
 
         measurement_points: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.measurement_points, Unset):
+        if self.measurement_points and not isinstance(self.measurement_points, Unset):
             measurement_points = []
             for measurement_points_item_data in self.measurement_points:
                 measurement_points_item = measurement_points_item_data.to_dict()

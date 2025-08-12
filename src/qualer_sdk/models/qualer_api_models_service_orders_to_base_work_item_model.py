@@ -51,21 +51,21 @@ class QualerApiModelsServiceOrdersToBaseWorkItemModel:
 
     def to_dict(self) -> dict[str, Any]:
         tasks: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.tasks, Unset):
+        if self.tasks and not isinstance(self.tasks, Unset):
             tasks = []
             for tasks_item_data in self.tasks:
                 tasks_item = tasks_item_data.to_dict()
                 tasks.append(tasks_item)
 
         parts: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.parts, Unset):
+        if self.parts and not isinstance(self.parts, Unset):
             parts = []
             for parts_item_data in self.parts:
                 parts_item = parts_item_data.to_dict()
                 parts.append(parts_item)
 
         repairs: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.repairs, Unset):
+        if self.repairs and not isinstance(self.repairs, Unset):
             repairs = []
             for repairs_item_data in self.repairs:
                 repairs_item = repairs_item_data.to_dict()

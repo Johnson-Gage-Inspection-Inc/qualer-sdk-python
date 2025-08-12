@@ -42,7 +42,7 @@ class QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits:
         subtitle = self.subtitle
 
         exhibits: Union[Unset, list[dict[str, Any]]] = UNSET
-        if not isinstance(self.exhibits, Unset):
+        if self.exhibits and not isinstance(self.exhibits, Unset):
             exhibits = []
             for exhibits_item_data in self.exhibits:
                 exhibits_item = exhibits_item_data.to_dict()
