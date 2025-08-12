@@ -19,6 +19,7 @@ from collections import defaultdict
 from fix_binary_endpoints import fix_binary_endpoints
 from fix_cgi_imports import fix_cgi_imports
 from fix_swagger_spec import fix_swagger_spec
+from fix_unset_checks import fix_unset_checks
 from get_version import get_version_from_git_with_commits
 
 SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
@@ -285,6 +286,9 @@ def post_process_generated_files():
 
     # Fix nullable enums to properly handle None values
     fix_nullable_enums()
+
+    # Fix Unset checks to include truthiness validation
+    fix_unset_checks()
 
 
 def create_exceptions_file():
