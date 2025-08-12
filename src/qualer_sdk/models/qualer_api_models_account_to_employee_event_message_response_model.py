@@ -13,10 +13,10 @@ T = TypeVar("T", bound="QualerApiModelsAccountToEmployeeEventMessageResponseMode
 class QualerApiModelsAccountToEmployeeEventMessageResponseModel:
     """
     Attributes:
-        message (Union[Unset, str]):
+        message (Union[None, Unset, str]):
     """
 
-    message: Union[Unset, str] = UNSET
+    message: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

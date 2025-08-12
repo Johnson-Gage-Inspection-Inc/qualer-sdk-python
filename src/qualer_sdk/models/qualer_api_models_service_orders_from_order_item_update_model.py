@@ -23,78 +23,76 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromOrderItemUpdateModel")
 class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
     """
     Attributes:
-        service_comments (Union[Unset, str]):
-        private_comments (Union[Unset, str]):
-        service_notes (Union[Unset, str]):
-        service_total (Union[Unset, float]):
-        repairs_total (Union[Unset, float]):
-        parts_total (Union[Unset, float]):
-        work_status (Union[Unset, WorkStatus]):
-        custom_work_status (Union[Unset, str]):
-        is_limited (Union[Unset, bool]):
-        checked_on (Union[Unset, datetime.datetime]):
-        checked_by_name (Union[Unset, str]):
-        completed_on (Union[Unset, datetime.datetime]):
-        completed_by_name (Union[Unset, str]):
-        as_found_check (Union[Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck]):
-        as_left_check (Union[Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck]):
-        result_status (Union[Unset, ServiceResultStatus]):
-        as_found_result (Union[Unset, ServiceResultStatus]):
-        as_left_result (Union[Unset, ServiceResultStatus]):
-        equipment_id (Union[Unset, str]):
-        legacy_id (Union[Unset, str]):
-        serial_number (Union[Unset, str]):
-        serial_number_change (Union[Unset, str]):
-        asset_tag (Union[Unset, str]):
-        asset_tag_change (Union[Unset, str]):
-        asset_user (Union[Unset, str]):
-        asset_user_change (Union[Unset, str]):
-        provider_technician (Union[Unset, str]):
-        provider_phone (Union[Unset, str]):
-        provider_company (Union[Unset, str]):
-        certificate_number (Union[Unset, str]):
+        service_comments (Union[None, Unset, str]):
+        private_comments (Union[None, Unset, str]):
+        service_notes (Union[None, Unset, str]):
+        service_total (Union[None, Unset, float]):
+        repairs_total (Union[None, Unset, float]):
+        parts_total (Union[None, Unset, float]):
+        work_status (Union[None, Unset, WorkStatus]):
+        custom_work_status (Union[None, Unset, str]):
+        is_limited (Union[None, Unset, bool]):
+        checked_on (Union[None, Unset, datetime.datetime]):
+        checked_by_name (Union[None, Unset, str]):
+        completed_on (Union[None, Unset, datetime.datetime]):
+        completed_by_name (Union[None, Unset, str]):
+        as_found_check (Union[None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck]):
+        as_left_check (Union[None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck]):
+        result_status (Union[None, Unset, ServiceResultStatus]):
+        as_found_result (Union[None, Unset, ServiceResultStatus]):
+        as_left_result (Union[None, Unset, ServiceResultStatus]):
+        equipment_id (Union[None, Unset, str]):
+        legacy_id (Union[None, Unset, str]):
+        serial_number (Union[None, Unset, str]):
+        serial_number_change (Union[None, Unset, str]):
+        asset_tag (Union[None, Unset, str]):
+        asset_tag_change (Union[None, Unset, str]):
+        asset_user (Union[None, Unset, str]):
+        asset_user_change (Union[None, Unset, str]):
+        provider_technician (Union[None, Unset, str]):
+        provider_phone (Union[None, Unset, str]):
+        provider_company (Union[None, Unset, str]):
+        certificate_number (Union[None, Unset, str]):
         service_date (Union[None, Unset, datetime.datetime]):
         next_service_date (Union[None, Unset, datetime.datetime]):
-        vendor_tag (Union[Unset, str]):
+        vendor_tag (Union[None, Unset, str]):
     """
 
-    service_comments: Union[Unset, str] = UNSET
-    private_comments: Union[Unset, str] = UNSET
-    service_notes: Union[Unset, str] = UNSET
-    service_total: Union[Unset, float] = UNSET
-    repairs_total: Union[Unset, float] = UNSET
-    parts_total: Union[Unset, float] = UNSET
+    service_comments: Union[None, Unset, str] = UNSET
+    private_comments: Union[None, Unset, str] = UNSET
+    service_notes: Union[None, Unset, str] = UNSET
+    service_total: Union[None, Unset, float] = UNSET
+    repairs_total: Union[None, Unset, float] = UNSET
+    parts_total: Union[None, Unset, float] = UNSET
     work_status: Union[None, Unset, WorkStatus] = UNSET
-    custom_work_status: Union[Unset, str] = UNSET
-    is_limited: Union[Unset, bool] = UNSET
-    checked_on: Union[Unset, datetime.datetime] = UNSET
-    checked_by_name: Union[Unset, str] = UNSET
-    completed_on: Union[Unset, datetime.datetime] = UNSET
-    completed_by_name: Union[Unset, str] = UNSET
-    as_found_check: Union[
-        Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck
+    custom_work_status: Union[None, Unset, str] = UNSET
+    is_limited: Union[None, Unset, bool] = UNSET
+    checked_on: Union[None, Unset, datetime.datetime] = UNSET
+    checked_by_name: Union[None, Unset, str] = UNSET
+    completed_on: Union[None, Unset, datetime.datetime] = UNSET
+    completed_by_name: Union[None, Unset, str] = UNSET
+    as_found_check: Union[None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck
     ] = UNSET
-    as_left_check: Union[
-        Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck
+    as_left_check: Union[None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck
     ] = UNSET
     result_status: Union[None, Unset, ServiceResultStatus] = UNSET
     as_found_result: Union[None, Unset, ServiceResultStatus] = UNSET
     as_left_result: Union[None, Unset, ServiceResultStatus] = UNSET
-    equipment_id: Union[Unset, str] = UNSET
-    legacy_id: Union[Unset, str] = UNSET
-    serial_number: Union[Unset, str] = UNSET
-    serial_number_change: Union[Unset, str] = UNSET
-    asset_tag: Union[Unset, str] = UNSET
-    asset_tag_change: Union[Unset, str] = UNSET
-    asset_user: Union[Unset, str] = UNSET
-    asset_user_change: Union[Unset, str] = UNSET
-    provider_technician: Union[Unset, str] = UNSET
-    provider_phone: Union[Unset, str] = UNSET
-    provider_company: Union[Unset, str] = UNSET
-    certificate_number: Union[Unset, str] = UNSET
+    equipment_id: Union[None, Unset, str] = UNSET
+    legacy_id: Union[None, Unset, str] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
+    serial_number_change: Union[None, Unset, str] = UNSET
+    asset_tag: Union[None, Unset, str] = UNSET
+    asset_tag_change: Union[None, Unset, str] = UNSET
+    asset_user: Union[None, Unset, str] = UNSET
+    asset_user_change: Union[None, Unset, str] = UNSET
+    provider_technician: Union[None, Unset, str] = UNSET
+    provider_phone: Union[None, Unset, str] = UNSET
+    provider_company: Union[None, Unset, str] = UNSET
+    certificate_number: Union[None, Unset, str] = UNSET
     service_date: Union[None, Unset, datetime.datetime] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    vendor_tag: Union[Unset, str] = UNSET
+    vendor_tag: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -118,23 +116,23 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
 
         is_limited = self.is_limited
 
-        checked_on: Union[Unset, str] = UNSET
+        checked_on: Union[None, Unset, str] = UNSET
         if self.checked_on and not isinstance(self.checked_on, Unset):
             checked_on = self.checked_on.isoformat()
 
         checked_by_name = self.checked_by_name
 
-        completed_on: Union[Unset, str] = UNSET
+        completed_on: Union[None, Unset, str] = UNSET
         if self.completed_on and not isinstance(self.completed_on, Unset):
             completed_on = self.completed_on.isoformat()
 
         completed_by_name = self.completed_by_name
 
-        as_found_check: Union[Unset, str] = UNSET
+        as_found_check: Union[None, Unset, str] = UNSET
         if self.as_found_check and not isinstance(self.as_found_check, Unset):
             as_found_check = self.as_found_check.value
 
-        as_left_check: Union[Unset, str] = UNSET
+        as_left_check: Union[None, Unset, str] = UNSET
         if self.as_left_check and not isinstance(self.as_left_check, Unset):
             as_left_check = self.as_left_check.value
 
@@ -280,7 +278,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         parts_total = d.pop("PartsTotal", UNSET)
 
         _work_status = d.pop("WorkStatus", UNSET)
-        work_status: Union[Unset, WorkStatus]
+        work_status: Union[None, Unset, WorkStatus]
         if isinstance(_work_status, Unset):
             work_status = UNSET
         elif _work_status is None:
@@ -293,7 +291,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         is_limited = d.pop("IsLimited", UNSET)
 
         _checked_on = d.pop("CheckedOn", UNSET)
-        checked_on: Union[Unset, datetime.datetime]
+        checked_on: Union[None, Unset, datetime.datetime]
         if isinstance(_checked_on, Unset):
             checked_on = UNSET
         else:
@@ -302,7 +300,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         checked_by_name = d.pop("CheckedByName", UNSET)
 
         _completed_on = d.pop("CompletedOn", UNSET)
-        completed_on: Union[Unset, datetime.datetime]
+        completed_on: Union[None, Unset, datetime.datetime]
         if isinstance(_completed_on, Unset):
             completed_on = UNSET
         else:
@@ -311,8 +309,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         completed_by_name = d.pop("CompletedByName", UNSET)
 
         _as_found_check = d.pop("AsFoundCheck", UNSET)
-        as_found_check: Union[
-            Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck
+        as_found_check: Union[None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck
         ]
         if isinstance(_as_found_check, Unset):
             as_found_check = UNSET
@@ -324,8 +321,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
             )
 
         _as_left_check = d.pop("AsLeftCheck", UNSET)
-        as_left_check: Union[
-            Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck
+        as_left_check: Union[None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck
         ]
         if isinstance(_as_left_check, Unset):
             as_left_check = UNSET
@@ -337,7 +333,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
             )
 
         _result_status = d.pop("ResultStatus", UNSET)
-        result_status: Union[Unset, ServiceResultStatus]
+        result_status: Union[None, Unset, ServiceResultStatus]
         if isinstance(_result_status, Unset):
             result_status = UNSET
         elif _result_status is None:
@@ -346,7 +342,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
             result_status = ServiceResultStatus(_result_status)
 
         _as_found_result = d.pop("AsFoundResult", UNSET)
-        as_found_result: Union[Unset, ServiceResultStatus]
+        as_found_result: Union[None, Unset, ServiceResultStatus]
         if isinstance(_as_found_result, Unset):
             as_found_result = UNSET
         elif _as_found_result is None:
@@ -355,7 +351,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
             as_found_result = ServiceResultStatus(_as_found_result)
 
         _as_left_result = d.pop("AsLeftResult", UNSET)
-        as_left_result: Union[Unset, ServiceResultStatus]
+        as_left_result: Union[None, Unset, ServiceResultStatus]
         if isinstance(_as_left_result, Unset):
             as_left_result = UNSET
         elif _as_left_result is None:

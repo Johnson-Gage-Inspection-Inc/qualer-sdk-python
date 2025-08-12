@@ -11,12 +11,12 @@ from ...types import UNSET, Response, Unset
 
 def _get_kwargs(
     *,
-    model_asset_id: Union[Unset, int] = UNSET,
-    model_area_id: Union[Unset, int] = UNSET,
-    model_product_id: Union[Unset, int] = UNSET,
-    model_serial_number: Union[Unset, str] = UNSET,
-    model_asset_tag: Union[Unset, str] = UNSET,
-    model_reservation_id: Union[Unset, int] = UNSET,
+    model_asset_id: Union[None, Unset, int] = UNSET,
+    model_area_id: Union[None, Unset, int] = UNSET,
+    model_product_id: Union[None, Unset, int] = UNSET,
+    model_serial_number: Union[None, Unset, str] = UNSET,
+    model_asset_tag: Union[None, Unset, str] = UNSET,
+    model_reservation_id: Union[None, Unset, int] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -70,21 +70,21 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_asset_id: Union[Unset, int] = UNSET,
-    model_area_id: Union[Unset, int] = UNSET,
-    model_product_id: Union[Unset, int] = UNSET,
-    model_serial_number: Union[Unset, str] = UNSET,
-    model_asset_tag: Union[Unset, str] = UNSET,
-    model_reservation_id: Union[Unset, int] = UNSET,
+    model_asset_id: Union[None, Unset, int] = UNSET,
+    model_area_id: Union[None, Unset, int] = UNSET,
+    model_product_id: Union[None, Unset, int] = UNSET,
+    model_serial_number: Union[None, Unset, str] = UNSET,
+    model_asset_tag: Union[None, Unset, str] = UNSET,
+    model_reservation_id: Union[None, Unset, int] = UNSET,
 ) -> Response[CloseResponse200]:
     """
     Args:
-        model_asset_id (Union[Unset, int]):
-        model_area_id (Union[Unset, int]):
-        model_product_id (Union[Unset, int]):
-        model_serial_number (Union[Unset, str]):
-        model_asset_tag (Union[Unset, str]):
-        model_reservation_id (Union[Unset, int]):
+        model_asset_id (Union[None, Unset, int]):
+        model_area_id (Union[None, Unset, int]):
+        model_product_id (Union[None, Unset, int]):
+        model_serial_number (Union[None, Unset, str]):
+        model_asset_tag (Union[None, Unset, str]):
+        model_reservation_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -113,21 +113,21 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_asset_id: Union[Unset, int] = UNSET,
-    model_area_id: Union[Unset, int] = UNSET,
-    model_product_id: Union[Unset, int] = UNSET,
-    model_serial_number: Union[Unset, str] = UNSET,
-    model_asset_tag: Union[Unset, str] = UNSET,
-    model_reservation_id: Union[Unset, int] = UNSET,
+    model_asset_id: Union[None, Unset, int] = UNSET,
+    model_area_id: Union[None, Unset, int] = UNSET,
+    model_product_id: Union[None, Unset, int] = UNSET,
+    model_serial_number: Union[None, Unset, str] = UNSET,
+    model_asset_tag: Union[None, Unset, str] = UNSET,
+    model_reservation_id: Union[None, Unset, int] = UNSET,
 ) -> Optional[CloseResponse200]:
     """
     Args:
-        model_asset_id (Union[Unset, int]):
-        model_area_id (Union[Unset, int]):
-        model_product_id (Union[Unset, int]):
-        model_serial_number (Union[Unset, str]):
-        model_asset_tag (Union[Unset, str]):
-        model_reservation_id (Union[Unset, int]):
+        model_asset_id (Union[None, Unset, int]):
+        model_area_id (Union[None, Unset, int]):
+        model_product_id (Union[None, Unset, int]):
+        model_serial_number (Union[None, Unset, str]):
+        model_asset_tag (Union[None, Unset, str]):
+        model_reservation_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -151,21 +151,21 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_asset_id: Union[Unset, int] = UNSET,
-    model_area_id: Union[Unset, int] = UNSET,
-    model_product_id: Union[Unset, int] = UNSET,
-    model_serial_number: Union[Unset, str] = UNSET,
-    model_asset_tag: Union[Unset, str] = UNSET,
-    model_reservation_id: Union[Unset, int] = UNSET,
+    model_asset_id: Union[None, Unset, int] = UNSET,
+    model_area_id: Union[None, Unset, int] = UNSET,
+    model_product_id: Union[None, Unset, int] = UNSET,
+    model_serial_number: Union[None, Unset, str] = UNSET,
+    model_asset_tag: Union[None, Unset, str] = UNSET,
+    model_reservation_id: Union[None, Unset, int] = UNSET,
 ) -> Response[CloseResponse200]:
     """
     Args:
-        model_asset_id (Union[Unset, int]):
-        model_area_id (Union[Unset, int]):
-        model_product_id (Union[Unset, int]):
-        model_serial_number (Union[Unset, str]):
-        model_asset_tag (Union[Unset, str]):
-        model_reservation_id (Union[Unset, int]):
+        model_asset_id (Union[None, Unset, int]):
+        model_area_id (Union[None, Unset, int]):
+        model_product_id (Union[None, Unset, int]):
+        model_serial_number (Union[None, Unset, str]):
+        model_asset_tag (Union[None, Unset, str]):
+        model_reservation_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -192,21 +192,21 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_asset_id: Union[Unset, int] = UNSET,
-    model_area_id: Union[Unset, int] = UNSET,
-    model_product_id: Union[Unset, int] = UNSET,
-    model_serial_number: Union[Unset, str] = UNSET,
-    model_asset_tag: Union[Unset, str] = UNSET,
-    model_reservation_id: Union[Unset, int] = UNSET,
+    model_asset_id: Union[None, Unset, int] = UNSET,
+    model_area_id: Union[None, Unset, int] = UNSET,
+    model_product_id: Union[None, Unset, int] = UNSET,
+    model_serial_number: Union[None, Unset, str] = UNSET,
+    model_asset_tag: Union[None, Unset, str] = UNSET,
+    model_reservation_id: Union[None, Unset, int] = UNSET,
 ) -> Optional[CloseResponse200]:
     """
     Args:
-        model_asset_id (Union[Unset, int]):
-        model_area_id (Union[Unset, int]):
-        model_product_id (Union[Unset, int]):
-        model_serial_number (Union[Unset, str]):
-        model_asset_tag (Union[Unset, str]):
-        model_reservation_id (Union[Unset, int]):
+        model_asset_id (Union[None, Unset, int]):
+        model_area_id (Union[None, Unset, int]):
+        model_product_id (Union[None, Unset, int]):
+        model_serial_number (Union[None, Unset, str]):
+        model_asset_tag (Union[None, Unset, str]):
+        model_reservation_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

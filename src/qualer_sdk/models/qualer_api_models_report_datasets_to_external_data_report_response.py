@@ -13,66 +13,66 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToExternalDataReportRespons
 class QualerApiModelsReportDatasetsToExternalDataReportResponse:
     """
     Attributes:
-        measurement_set_id (Union[Unset, int]):
-        service_order_item_id (Union[Unset, int]):
-        row (Union[Unset, int]):
-        a (Union[Unset, str]):
-        b (Union[Unset, str]):
-        c (Union[Unset, str]):
-        d (Union[Unset, str]):
-        e (Union[Unset, str]):
-        f (Union[Unset, str]):
-        g (Union[Unset, str]):
-        h (Union[Unset, str]):
-        i (Union[Unset, str]):
-        j (Union[Unset, str]):
-        k (Union[Unset, str]):
-        l (Union[Unset, str]):
-        m (Union[Unset, str]):
-        n (Union[Unset, str]):
-        o (Union[Unset, str]):
-        p (Union[Unset, str]):
-        q (Union[Unset, str]):
-        r (Union[Unset, str]):
-        s (Union[Unset, str]):
-        t (Union[Unset, str]):
-        u (Union[Unset, str]):
-        v (Union[Unset, str]):
-        w (Union[Unset, str]):
-        x (Union[Unset, str]):
-        y (Union[Unset, str]):
-        z (Union[Unset, str]):
+        measurement_set_id (Union[None, Unset, int]):
+        service_order_item_id (Union[None, Unset, int]):
+        row (Union[None, Unset, int]):
+        a (Union[None, Unset, str]):
+        b (Union[None, Unset, str]):
+        c (Union[None, Unset, str]):
+        d (Union[None, Unset, str]):
+        e (Union[None, Unset, str]):
+        f (Union[None, Unset, str]):
+        g (Union[None, Unset, str]):
+        h (Union[None, Unset, str]):
+        i (Union[None, Unset, str]):
+        j (Union[None, Unset, str]):
+        k (Union[None, Unset, str]):
+        l (Union[None, Unset, str]):
+        m (Union[None, Unset, str]):
+        n (Union[None, Unset, str]):
+        o (Union[None, Unset, str]):
+        p (Union[None, Unset, str]):
+        q (Union[None, Unset, str]):
+        r (Union[None, Unset, str]):
+        s (Union[None, Unset, str]):
+        t (Union[None, Unset, str]):
+        u (Union[None, Unset, str]):
+        v (Union[None, Unset, str]):
+        w (Union[None, Unset, str]):
+        x (Union[None, Unset, str]):
+        y (Union[None, Unset, str]):
+        z (Union[None, Unset, str]):
     """
 
-    measurement_set_id: Union[Unset, int] = UNSET
-    service_order_item_id: Union[Unset, int] = UNSET
-    row: Union[Unset, int] = UNSET
-    a: Union[Unset, str] = UNSET
-    b: Union[Unset, str] = UNSET
-    c: Union[Unset, str] = UNSET
-    d: Union[Unset, str] = UNSET
-    e: Union[Unset, str] = UNSET
-    f: Union[Unset, str] = UNSET
-    g: Union[Unset, str] = UNSET
-    h: Union[Unset, str] = UNSET
-    i: Union[Unset, str] = UNSET
-    j: Union[Unset, str] = UNSET
-    k: Union[Unset, str] = UNSET
-    l: Union[Unset, str] = UNSET
-    m: Union[Unset, str] = UNSET
-    n: Union[Unset, str] = UNSET
-    o: Union[Unset, str] = UNSET
-    p: Union[Unset, str] = UNSET
-    q: Union[Unset, str] = UNSET
-    r: Union[Unset, str] = UNSET
-    s: Union[Unset, str] = UNSET
-    t: Union[Unset, str] = UNSET
-    u: Union[Unset, str] = UNSET
-    v: Union[Unset, str] = UNSET
-    w: Union[Unset, str] = UNSET
-    x: Union[Unset, str] = UNSET
-    y: Union[Unset, str] = UNSET
-    z: Union[Unset, str] = UNSET
+    measurement_set_id: Union[None, Unset, int] = UNSET
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    row: Union[None, Unset, int] = UNSET
+    a: Union[None, Unset, str] = UNSET
+    b: Union[None, Unset, str] = UNSET
+    c: Union[None, Unset, str] = UNSET
+    d: Union[None, Unset, str] = UNSET
+    e: Union[None, Unset, str] = UNSET
+    f: Union[None, Unset, str] = UNSET
+    g: Union[None, Unset, str] = UNSET
+    h: Union[None, Unset, str] = UNSET
+    i: Union[None, Unset, str] = UNSET
+    j: Union[None, Unset, str] = UNSET
+    k: Union[None, Unset, str] = UNSET
+    l: Union[None, Unset, str] = UNSET
+    m: Union[None, Unset, str] = UNSET
+    n: Union[None, Unset, str] = UNSET
+    o: Union[None, Unset, str] = UNSET
+    p: Union[None, Unset, str] = UNSET
+    q: Union[None, Unset, str] = UNSET
+    r: Union[None, Unset, str] = UNSET
+    s: Union[None, Unset, str] = UNSET
+    t: Union[None, Unset, str] = UNSET
+    u: Union[None, Unset, str] = UNSET
+    v: Union[None, Unset, str] = UNSET
+    w: Union[None, Unset, str] = UNSET
+    x: Union[None, Unset, str] = UNSET
+    y: Union[None, Unset, str] = UNSET
+    z: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

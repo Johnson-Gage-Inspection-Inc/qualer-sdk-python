@@ -13,16 +13,16 @@ T = TypeVar("T", bound="QualerApiModelsReferenceToUnitOfMeasureResponse")
 class QualerApiModelsReferenceToUnitOfMeasureResponse:
     """
     Attributes:
-        measurement_quantity_id (Union[Unset, int]):
-        measurement_quantity (Union[Unset, str]):
-        unit_of_measure_id (Union[Unset, int]):
-        unit_of_measure (Union[Unset, str]):
+        measurement_quantity_id (Union[None, Unset, int]):
+        measurement_quantity (Union[None, Unset, str]):
+        unit_of_measure_id (Union[None, Unset, int]):
+        unit_of_measure (Union[None, Unset, str]):
     """
 
-    measurement_quantity_id: Union[Unset, int] = UNSET
-    measurement_quantity: Union[Unset, str] = UNSET
-    unit_of_measure_id: Union[Unset, int] = UNSET
-    unit_of_measure: Union[Unset, str] = UNSET
+    measurement_quantity_id: Union[None, Unset, int] = UNSET
+    measurement_quantity: Union[None, Unset, str] = UNSET
+    unit_of_measure_id: Union[None, Unset, int] = UNSET
+    unit_of_measure: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

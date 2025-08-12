@@ -15,38 +15,38 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToCompanyCertificationRespo
 class QualerApiModelsReportDatasetsToCompanyCertificationResponse:
     """
     Attributes:
-        logo (Union[Unset, str]):
-        initial_date (Union[Unset, datetime.datetime]):
-        certification_date (Union[Unset, datetime.datetime]):
-        expiration_date (Union[Unset, datetime.datetime]):
-        certification_name (Union[Unset, str]):
-        certificate_number (Union[Unset, str]):
-        certification_authority (Union[Unset, str]):
-        certification_standard (Union[Unset, str]):
+        logo (Union[None, Unset, str]):
+        initial_date (Union[None, Unset, datetime.datetime]):
+        certification_date (Union[None, Unset, datetime.datetime]):
+        expiration_date (Union[None, Unset, datetime.datetime]):
+        certification_name (Union[None, Unset, str]):
+        certificate_number (Union[None, Unset, str]):
+        certification_authority (Union[None, Unset, str]):
+        certification_standard (Union[None, Unset, str]):
     """
 
-    logo: Union[Unset, str] = UNSET
-    initial_date: Union[Unset, datetime.datetime] = UNSET
-    certification_date: Union[Unset, datetime.datetime] = UNSET
-    expiration_date: Union[Unset, datetime.datetime] = UNSET
-    certification_name: Union[Unset, str] = UNSET
-    certificate_number: Union[Unset, str] = UNSET
-    certification_authority: Union[Unset, str] = UNSET
-    certification_standard: Union[Unset, str] = UNSET
+    logo: Union[None, Unset, str] = UNSET
+    initial_date: Union[None, Unset, datetime.datetime] = UNSET
+    certification_date: Union[None, Unset, datetime.datetime] = UNSET
+    expiration_date: Union[None, Unset, datetime.datetime] = UNSET
+    certification_name: Union[None, Unset, str] = UNSET
+    certificate_number: Union[None, Unset, str] = UNSET
+    certification_authority: Union[None, Unset, str] = UNSET
+    certification_standard: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         logo = self.logo
 
-        initial_date: Union[Unset, str] = UNSET
+        initial_date: Union[None, Unset, str] = UNSET
         if self.initial_date and not isinstance(self.initial_date, Unset):
             initial_date = self.initial_date.isoformat()
 
-        certification_date: Union[Unset, str] = UNSET
+        certification_date: Union[None, Unset, str] = UNSET
         if self.certification_date and not isinstance(self.certification_date, Unset):
             certification_date = self.certification_date.isoformat()
 
-        expiration_date: Union[Unset, str] = UNSET
+        expiration_date: Union[None, Unset, str] = UNSET
         if self.expiration_date and not isinstance(self.expiration_date, Unset):
             expiration_date = self.expiration_date.isoformat()
 
@@ -86,21 +86,21 @@ class QualerApiModelsReportDatasetsToCompanyCertificationResponse:
         logo = d.pop("Logo", UNSET)
 
         _initial_date = d.pop("InitialDate", UNSET)
-        initial_date: Union[Unset, datetime.datetime]
+        initial_date: Union[None, Unset, datetime.datetime]
         if isinstance(_initial_date, Unset):
             initial_date = UNSET
         else:
             initial_date = isoparse(_initial_date)
 
         _certification_date = d.pop("CertificationDate", UNSET)
-        certification_date: Union[Unset, datetime.datetime]
+        certification_date: Union[None, Unset, datetime.datetime]
         if isinstance(_certification_date, Unset):
             certification_date = UNSET
         else:
             certification_date = isoparse(_certification_date)
 
         _expiration_date = d.pop("ExpirationDate", UNSET)
-        expiration_date: Union[Unset, datetime.datetime]
+        expiration_date: Union[None, Unset, datetime.datetime]
         if isinstance(_expiration_date, Unset):
             expiration_date = UNSET
         else:

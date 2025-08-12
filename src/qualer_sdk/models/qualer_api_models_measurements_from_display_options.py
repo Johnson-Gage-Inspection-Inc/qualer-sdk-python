@@ -13,34 +13,34 @@ T = TypeVar("T", bound="QualerApiModelsMeasurementsFromDisplayOptions")
 class QualerApiModelsMeasurementsFromDisplayOptions:
     """
     Attributes:
-        err (Union[Unset, bool]):
-        mean (Union[Unset, bool]):
-        max_ (Union[Unset, bool]):
-        min_ (Union[Unset, bool]):
-        sd (Union[Unset, bool]):
-        cv (Union[Unset, bool]):
-        tar (Union[Unset, bool]):
-        tur (Union[Unset, bool]):
-        mu (Union[Unset, bool]):
-        cmc (Union[Unset, bool]):
-        tol (Union[Unset, bool]):
-        delta (Union[Unset, bool]):
-        range_ (Union[Unset, bool]):
+        err (Union[None, Unset, bool]):
+        mean (Union[None, Unset, bool]):
+        max_ (Union[None, Unset, bool]):
+        min_ (Union[None, Unset, bool]):
+        sd (Union[None, Unset, bool]):
+        cv (Union[None, Unset, bool]):
+        tar (Union[None, Unset, bool]):
+        tur (Union[None, Unset, bool]):
+        mu (Union[None, Unset, bool]):
+        cmc (Union[None, Unset, bool]):
+        tol (Union[None, Unset, bool]):
+        delta (Union[None, Unset, bool]):
+        range_ (Union[None, Unset, bool]):
     """
 
-    err: Union[Unset, bool] = UNSET
-    mean: Union[Unset, bool] = UNSET
-    max_: Union[Unset, bool] = UNSET
-    min_: Union[Unset, bool] = UNSET
-    sd: Union[Unset, bool] = UNSET
-    cv: Union[Unset, bool] = UNSET
-    tar: Union[Unset, bool] = UNSET
-    tur: Union[Unset, bool] = UNSET
-    mu: Union[Unset, bool] = UNSET
-    cmc: Union[Unset, bool] = UNSET
-    tol: Union[Unset, bool] = UNSET
-    delta: Union[Unset, bool] = UNSET
-    range_: Union[Unset, bool] = UNSET
+    err: Union[None, Unset, bool] = UNSET
+    mean: Union[None, Unset, bool] = UNSET
+    max_: Union[None, Unset, bool] = UNSET
+    min_: Union[None, Unset, bool] = UNSET
+    sd: Union[None, Unset, bool] = UNSET
+    cv: Union[None, Unset, bool] = UNSET
+    tar: Union[None, Unset, bool] = UNSET
+    tur: Union[None, Unset, bool] = UNSET
+    mu: Union[None, Unset, bool] = UNSET
+    cmc: Union[None, Unset, bool] = UNSET
+    tol: Union[None, Unset, bool] = UNSET
+    delta: Union[None, Unset, bool] = UNSET
+    range_: Union[None, Unset, bool] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

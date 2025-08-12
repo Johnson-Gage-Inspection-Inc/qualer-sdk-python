@@ -40,125 +40,116 @@ T = TypeVar("T", bound="QualerApiModelsMeasurementsFromUpdateMeasurementPointMod
 class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
     """
     Attributes:
-        measurement_point_id (Union[Unset, int]):
-        specification_name (Union[Unset, str]):
-        unit_of_measure (Union[Unset, str]):
-        expected_value (Union[Unset, float]):
-        expected_value_raw (Union[Unset, str]):
-        base_value (Union[Unset, float]):
-        test_value (Union[Unset, float]):
-        nominal (Union[Unset, float]):
-        range_min (Union[Unset, float]):
-        range_max (Union[Unset, float]):
-        tolerance_type (Union[Unset, str]):
-        precision_type (Union[Unset, str]):
-        precision (Union[Unset, float]):
-        tolerance_minimum (Union[Unset, float]):
-        tolerance_maximum (Union[Unset, float]):
-        resolution (Union[Unset, float]):
-        resolution_count (Union[Unset, float]):
-        is_accredited (Union[Unset, bool]):
-        specification_mode (Union[Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelSpecificationMode]):
-        tolerance_mode (Union[Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceMode]):
-        tolerance_unit (Union[Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceUnit]):
-        measurements (Union[Unset, list['QualerApiModelsMeasurementsFromUpdateMeasurementModel']]):
-        measurement_condition_factors (Union[Unset,
+        measurement_point_id (Union[None, Unset, int]):
+        specification_name (Union[None, Unset, str]):
+        unit_of_measure (Union[None, Unset, str]):
+        expected_value (Union[None, Unset, float]):
+        expected_value_raw (Union[None, Unset, str]):
+        base_value (Union[None, Unset, float]):
+        test_value (Union[None, Unset, float]):
+        nominal (Union[None, Unset, float]):
+        range_min (Union[None, Unset, float]):
+        range_max (Union[None, Unset, float]):
+        tolerance_type (Union[None, Unset, str]):
+        precision_type (Union[None, Unset, str]):
+        precision (Union[None, Unset, float]):
+        tolerance_minimum (Union[None, Unset, float]):
+        tolerance_maximum (Union[None, Unset, float]):
+        resolution (Union[None, Unset, float]):
+        resolution_count (Union[None, Unset, float]):
+        is_accredited (Union[None, Unset, bool]):
+        specification_mode (Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelSpecificationMode]):
+        tolerance_mode (Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceMode]):
+        tolerance_unit (Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceUnit]):
+        measurements (Union[None, Unset, list['QualerApiModelsMeasurementsFromUpdateMeasurementModel']]):
+        measurement_condition_factors (Union[None, Unset,
             list['QualerApiModelsMeasurementsFromUpdateMeasurementConditionFactorModel']]):
-        tool_application_mode (Union[Unset,
+        tool_application_mode (Union[None, Unset,
             QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToolApplicationMode]):
-        primary_measurement_tool (Union[Unset, QualerApiModelsMeasurementsFromUpdateMeasurementToolModel]):
-        secondary_measurement_tool (Union[Unset, QualerApiModelsMeasurementsFromUpdateMeasurementToolModel]):
-        linked_measurement_point_id (Union[Unset, int]):
-        hysteresis_point (Union[Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelHysteresisPoint]):
-        influence_parameter_1_parameter_id (Union[Unset, int]):
-        influence_parameter_1_value (Union[Unset, str]):
-        influence_parameter_2_parameter_id (Union[Unset, int]):
-        influence_parameter_2_value (Union[Unset, str]):
-        measurement_not_taken_reason (Union[Unset, str]):
-        hide_from_certificate (Union[Unset, bool]):
-        measurement_not_taken_result (Union[Unset, str]):
-        is_measurement_not_taken (Union[Unset, bool]):
-        column_mean (Union[Unset, str]):
-        column_mean_result (Union[Unset, str]):
-        column_sd (Union[Unset, str]):
-        column_sd_result (Union[Unset, str]):
-        column_cv (Union[Unset, str]):
-        column_cv_result (Union[Unset, str]):
-        column_range (Union[Unset, str]):
-        column_range_result (Union[Unset, str]):
-        column_delta (Union[Unset, str]):
-        column_delta_result (Union[Unset, str]):
-        column_result (Union[Unset, str]):
+        primary_measurement_tool (Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementToolModel]):
+        secondary_measurement_tool (Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementToolModel]):
+        linked_measurement_point_id (Union[None, Unset, int]):
+        hysteresis_point (Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelHysteresisPoint]):
+        influence_parameter_1_parameter_id (Union[None, Unset, int]):
+        influence_parameter_1_value (Union[None, Unset, str]):
+        influence_parameter_2_parameter_id (Union[None, Unset, int]):
+        influence_parameter_2_value (Union[None, Unset, str]):
+        measurement_not_taken_reason (Union[None, Unset, str]):
+        hide_from_certificate (Union[None, Unset, bool]):
+        measurement_not_taken_result (Union[None, Unset, str]):
+        is_measurement_not_taken (Union[None, Unset, bool]):
+        column_mean (Union[None, Unset, str]):
+        column_mean_result (Union[None, Unset, str]):
+        column_sd (Union[None, Unset, str]):
+        column_sd_result (Union[None, Unset, str]):
+        column_cv (Union[None, Unset, str]):
+        column_cv_result (Union[None, Unset, str]):
+        column_range (Union[None, Unset, str]):
+        column_range_result (Union[None, Unset, str]):
+        column_delta (Union[None, Unset, str]):
+        column_delta_result (Union[None, Unset, str]):
+        column_result (Union[None, Unset, str]):
     """
 
-    measurement_point_id: Union[Unset, int] = UNSET
-    specification_name: Union[Unset, str] = UNSET
-    unit_of_measure: Union[Unset, str] = UNSET
-    expected_value: Union[Unset, float] = UNSET
-    expected_value_raw: Union[Unset, str] = UNSET
-    base_value: Union[Unset, float] = UNSET
-    test_value: Union[Unset, float] = UNSET
-    nominal: Union[Unset, float] = UNSET
-    range_min: Union[Unset, float] = UNSET
-    range_max: Union[Unset, float] = UNSET
-    tolerance_type: Union[Unset, str] = UNSET
-    precision_type: Union[Unset, str] = UNSET
-    precision: Union[Unset, float] = UNSET
-    tolerance_minimum: Union[Unset, float] = UNSET
-    tolerance_maximum: Union[Unset, float] = UNSET
-    resolution: Union[Unset, float] = UNSET
-    resolution_count: Union[Unset, float] = UNSET
-    is_accredited: Union[Unset, bool] = UNSET
-    specification_mode: Union[
-        Unset,
+    measurement_point_id: Union[None, Unset, int] = UNSET
+    specification_name: Union[None, Unset, str] = UNSET
+    unit_of_measure: Union[None, Unset, str] = UNSET
+    expected_value: Union[None, Unset, float] = UNSET
+    expected_value_raw: Union[None, Unset, str] = UNSET
+    base_value: Union[None, Unset, float] = UNSET
+    test_value: Union[None, Unset, float] = UNSET
+    nominal: Union[None, Unset, float] = UNSET
+    range_min: Union[None, Unset, float] = UNSET
+    range_max: Union[None, Unset, float] = UNSET
+    tolerance_type: Union[None, Unset, str] = UNSET
+    precision_type: Union[None, Unset, str] = UNSET
+    precision: Union[None, Unset, float] = UNSET
+    tolerance_minimum: Union[None, Unset, float] = UNSET
+    tolerance_maximum: Union[None, Unset, float] = UNSET
+    resolution: Union[None, Unset, float] = UNSET
+    resolution_count: Union[None, Unset, float] = UNSET
+    is_accredited: Union[None, Unset, bool] = UNSET
+    specification_mode: Union[None, Unset,
         QualerApiModelsMeasurementsFromUpdateMeasurementPointModelSpecificationMode,
     ] = UNSET
-    tolerance_mode: Union[
-        Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceMode
+    tolerance_mode: Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceMode
     ] = UNSET
-    tolerance_unit: Union[
-        Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceUnit
+    tolerance_unit: Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceUnit
     ] = UNSET
-    measurements: Union[
-        Unset, list["QualerApiModelsMeasurementsFromUpdateMeasurementModel"]
+    measurements: Union[None, Unset, list["QualerApiModelsMeasurementsFromUpdateMeasurementModel"]
     ] = UNSET
-    measurement_condition_factors: Union[
-        Unset,
+    measurement_condition_factors: Union[None, Unset,
         list["QualerApiModelsMeasurementsFromUpdateMeasurementConditionFactorModel"],
     ] = UNSET
-    tool_application_mode: Union[
-        Unset,
+    tool_application_mode: Union[None, Unset,
         QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToolApplicationMode,
     ] = UNSET
-    primary_measurement_tool: Union[
-        Unset, "QualerApiModelsMeasurementsFromUpdateMeasurementToolModel"
+    primary_measurement_tool: Union[None, Unset, "QualerApiModelsMeasurementsFromUpdateMeasurementToolModel"
     ] = UNSET
-    secondary_measurement_tool: Union[
-        Unset, "QualerApiModelsMeasurementsFromUpdateMeasurementToolModel"
+    secondary_measurement_tool: Union[None, Unset, "QualerApiModelsMeasurementsFromUpdateMeasurementToolModel"
     ] = UNSET
-    linked_measurement_point_id: Union[Unset, int] = UNSET
-    hysteresis_point: Union[
-        Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelHysteresisPoint
+    linked_measurement_point_id: Union[None, Unset, int] = UNSET
+    hysteresis_point: Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelHysteresisPoint
     ] = UNSET
-    influence_parameter_1_parameter_id: Union[Unset, int] = UNSET
-    influence_parameter_1_value: Union[Unset, str] = UNSET
-    influence_parameter_2_parameter_id: Union[Unset, int] = UNSET
-    influence_parameter_2_value: Union[Unset, str] = UNSET
-    measurement_not_taken_reason: Union[Unset, str] = UNSET
-    hide_from_certificate: Union[Unset, bool] = UNSET
-    measurement_not_taken_result: Union[Unset, str] = UNSET
-    is_measurement_not_taken: Union[Unset, bool] = UNSET
-    column_mean: Union[Unset, str] = UNSET
-    column_mean_result: Union[Unset, str] = UNSET
-    column_sd: Union[Unset, str] = UNSET
-    column_sd_result: Union[Unset, str] = UNSET
-    column_cv: Union[Unset, str] = UNSET
-    column_cv_result: Union[Unset, str] = UNSET
-    column_range: Union[Unset, str] = UNSET
-    column_range_result: Union[Unset, str] = UNSET
-    column_delta: Union[Unset, str] = UNSET
-    column_delta_result: Union[Unset, str] = UNSET
-    column_result: Union[Unset, str] = UNSET
+    influence_parameter_1_parameter_id: Union[None, Unset, int] = UNSET
+    influence_parameter_1_value: Union[None, Unset, str] = UNSET
+    influence_parameter_2_parameter_id: Union[None, Unset, int] = UNSET
+    influence_parameter_2_value: Union[None, Unset, str] = UNSET
+    measurement_not_taken_reason: Union[None, Unset, str] = UNSET
+    hide_from_certificate: Union[None, Unset, bool] = UNSET
+    measurement_not_taken_result: Union[None, Unset, str] = UNSET
+    is_measurement_not_taken: Union[None, Unset, bool] = UNSET
+    column_mean: Union[None, Unset, str] = UNSET
+    column_mean_result: Union[None, Unset, str] = UNSET
+    column_sd: Union[None, Unset, str] = UNSET
+    column_sd_result: Union[None, Unset, str] = UNSET
+    column_cv: Union[None, Unset, str] = UNSET
+    column_cv_result: Union[None, Unset, str] = UNSET
+    column_range: Union[None, Unset, str] = UNSET
+    column_range_result: Union[None, Unset, str] = UNSET
+    column_delta: Union[None, Unset, str] = UNSET
+    column_delta_result: Union[None, Unset, str] = UNSET
+    column_result: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -198,26 +189,26 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
 
         is_accredited = self.is_accredited
 
-        specification_mode: Union[Unset, int] = UNSET
+        specification_mode: Union[None, Unset, int] = UNSET
         if self.specification_mode and not isinstance(self.specification_mode, Unset):
             specification_mode = self.specification_mode.value
 
-        tolerance_mode: Union[Unset, int] = UNSET
+        tolerance_mode: Union[None, Unset, int] = UNSET
         if self.tolerance_mode and not isinstance(self.tolerance_mode, Unset):
             tolerance_mode = self.tolerance_mode.value
 
-        tolerance_unit: Union[Unset, int] = UNSET
+        tolerance_unit: Union[None, Unset, int] = UNSET
         if self.tolerance_unit and not isinstance(self.tolerance_unit, Unset):
             tolerance_unit = self.tolerance_unit.value
 
-        measurements: Union[Unset, list[dict[str, Any]]] = UNSET
+        measurements: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.measurements and not isinstance(self.measurements, Unset):
             measurements = []
             for measurements_item_data in self.measurements:
                 measurements_item = measurements_item_data.to_dict()
                 measurements.append(measurements_item)
 
-        measurement_condition_factors: Union[Unset, list[dict[str, Any]]] = UNSET
+        measurement_condition_factors: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.measurement_condition_factors and not isinstance(
             self.measurement_condition_factors, Unset
         ):
@@ -230,19 +221,19 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
                 )
                 measurement_condition_factors.append(measurement_condition_factors_item)
 
-        tool_application_mode: Union[Unset, str] = UNSET
+        tool_application_mode: Union[None, Unset, str] = UNSET
         if self.tool_application_mode and not isinstance(
             self.tool_application_mode, Unset
         ):
             tool_application_mode = self.tool_application_mode.value
 
-        primary_measurement_tool: Union[Unset, dict[str, Any]] = UNSET
+        primary_measurement_tool: Union[None, Unset, dict[str, Any]] = UNSET
         if self.primary_measurement_tool and not isinstance(
             self.primary_measurement_tool, Unset
         ):
             primary_measurement_tool = self.primary_measurement_tool.to_dict()
 
-        secondary_measurement_tool: Union[Unset, dict[str, Any]] = UNSET
+        secondary_measurement_tool: Union[None, Unset, dict[str, Any]] = UNSET
         if self.secondary_measurement_tool and not isinstance(
             self.secondary_measurement_tool, Unset
         ):
@@ -250,7 +241,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
 
         linked_measurement_point_id = self.linked_measurement_point_id
 
-        hysteresis_point: Union[Unset, str] = UNSET
+        hysteresis_point: Union[None, Unset, str] = UNSET
         if self.hysteresis_point and not isinstance(self.hysteresis_point, Unset):
             hysteresis_point = self.hysteresis_point.value
 
@@ -446,8 +437,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
         is_accredited = d.pop("IsAccredited", UNSET)
 
         _specification_mode = d.pop("SpecificationMode", UNSET)
-        specification_mode: Union[
-            Unset,
+        specification_mode: Union[None, Unset,
             QualerApiModelsMeasurementsFromUpdateMeasurementPointModelSpecificationMode,
         ]
         if isinstance(_specification_mode, Unset):
@@ -458,8 +448,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
             )
 
         _tolerance_mode = d.pop("ToleranceMode", UNSET)
-        tolerance_mode: Union[
-            Unset,
+        tolerance_mode: Union[None, Unset,
             QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceMode,
         ]
         if isinstance(_tolerance_mode, Unset):
@@ -472,8 +461,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
             )
 
         _tolerance_unit = d.pop("ToleranceUnit", UNSET)
-        tolerance_unit: Union[
-            Unset,
+        tolerance_unit: Union[None, Unset,
             QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceUnit,
         ]
         if isinstance(_tolerance_unit, Unset):
@@ -508,8 +496,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
             measurement_condition_factors.append(measurement_condition_factors_item)
 
         _tool_application_mode = d.pop("ToolApplicationMode", UNSET)
-        tool_application_mode: Union[
-            Unset,
+        tool_application_mode: Union[None, Unset,
             QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToolApplicationMode,
         ]
         if isinstance(_tool_application_mode, Unset):
@@ -520,8 +507,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
             )
 
         _primary_measurement_tool = d.pop("PrimaryMeasurementTool", UNSET)
-        primary_measurement_tool: Union[
-            Unset, QualerApiModelsMeasurementsFromUpdateMeasurementToolModel
+        primary_measurement_tool: Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementToolModel
         ]
         if isinstance(_primary_measurement_tool, Unset):
             primary_measurement_tool = UNSET
@@ -533,8 +519,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
             )
 
         _secondary_measurement_tool = d.pop("SecondaryMeasurementTool", UNSET)
-        secondary_measurement_tool: Union[
-            Unset, QualerApiModelsMeasurementsFromUpdateMeasurementToolModel
+        secondary_measurement_tool: Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementToolModel
         ]
         if isinstance(_secondary_measurement_tool, Unset):
             secondary_measurement_tool = UNSET
@@ -548,8 +533,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
         linked_measurement_point_id = d.pop("LinkedMeasurementPointId", UNSET)
 
         _hysteresis_point = d.pop("HysteresisPoint", UNSET)
-        hysteresis_point: Union[
-            Unset,
+        hysteresis_point: Union[None, Unset,
             QualerApiModelsMeasurementsFromUpdateMeasurementPointModelHysteresisPoint,
         ]
         if isinstance(_hysteresis_point, Unset):

@@ -16,20 +16,19 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromChangeServiceOrderStatus
 class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel:
     """
     Attributes:
-        service_order_status (Union[Unset,
+        service_order_status (Union[None, Unset,
             QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus]):
-        reset_status (Union[Unset, bool]):
-        email (Union[Unset, str]):
-        password (Union[Unset, str]):
+        reset_status (Union[None, Unset, bool]):
+        email (Union[None, Unset, str]):
+        password (Union[None, Unset, str]):
     """
 
-    service_order_status: Union[
-        Unset,
+    service_order_status: Union[None, Unset,
         QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
     ] = UNSET
-    reset_status: Union[Unset, bool] = UNSET
-    email: Union[Unset, str] = UNSET
-    password: Union[Unset, str] = UNSET
+    reset_status: Union[None, Unset, bool] = UNSET
+    email: Union[None, Unset, str] = UNSET
+    password: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -63,8 +62,7 @@ class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         _service_order_status = d.pop("ServiceOrderStatus", UNSET)
-        service_order_status: Union[
-            Unset,
+        service_order_status: Union[None, Unset,
             QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
         ]
         if isinstance(_service_order_status, Unset):

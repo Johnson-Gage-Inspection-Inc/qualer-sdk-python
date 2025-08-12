@@ -16,34 +16,33 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToMeasurementFieldResponse"
 class QualerApiModelsReportDatasetsToMeasurementFieldResponse:
     """
     Attributes:
-        field_id (Union[Unset, str]):
-        name (Union[Unset, str]):
-        value (Union[Unset, str]):
-        measurement_name (Union[Unset, str]):
-        measurement_set_id (Union[Unset, int]):
-        specification_name (Union[Unset, str]):
-        measurement_point_id (Union[Unset, int]):
-        batch_type (Union[Unset, QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType]):
-        service_order_item_id (Union[Unset, int]):
-        service_order_id (Union[Unset, int]):
-        batch_field_id (Union[Unset, str]):
-        point_field_id (Union[Unset, str]):
+        field_id (Union[None, Unset, str]):
+        name (Union[None, Unset, str]):
+        value (Union[None, Unset, str]):
+        measurement_name (Union[None, Unset, str]):
+        measurement_set_id (Union[None, Unset, int]):
+        specification_name (Union[None, Unset, str]):
+        measurement_point_id (Union[None, Unset, int]):
+        batch_type (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType]):
+        service_order_item_id (Union[None, Unset, int]):
+        service_order_id (Union[None, Unset, int]):
+        batch_field_id (Union[None, Unset, str]):
+        point_field_id (Union[None, Unset, str]):
     """
 
-    field_id: Union[Unset, str] = UNSET
-    name: Union[Unset, str] = UNSET
-    value: Union[Unset, str] = UNSET
-    measurement_name: Union[Unset, str] = UNSET
-    measurement_set_id: Union[Unset, int] = UNSET
-    specification_name: Union[Unset, str] = UNSET
-    measurement_point_id: Union[Unset, int] = UNSET
-    batch_type: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType
+    field_id: Union[None, Unset, str] = UNSET
+    name: Union[None, Unset, str] = UNSET
+    value: Union[None, Unset, str] = UNSET
+    measurement_name: Union[None, Unset, str] = UNSET
+    measurement_set_id: Union[None, Unset, int] = UNSET
+    specification_name: Union[None, Unset, str] = UNSET
+    measurement_point_id: Union[None, Unset, int] = UNSET
+    batch_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType
     ] = UNSET
-    service_order_item_id: Union[Unset, int] = UNSET
-    service_order_id: Union[Unset, int] = UNSET
-    batch_field_id: Union[Unset, str] = UNSET
-    point_field_id: Union[Unset, str] = UNSET
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    service_order_id: Union[None, Unset, int] = UNSET
+    batch_field_id: Union[None, Unset, str] = UNSET
+    point_field_id: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -61,7 +60,7 @@ class QualerApiModelsReportDatasetsToMeasurementFieldResponse:
 
         measurement_point_id = self.measurement_point_id
 
-        batch_type: Union[Unset, int] = UNSET
+        batch_type: Union[None, Unset, int] = UNSET
         if self.batch_type and not isinstance(self.batch_type, Unset):
             batch_type = self.batch_type.value
 
@@ -121,8 +120,7 @@ class QualerApiModelsReportDatasetsToMeasurementFieldResponse:
         measurement_point_id = d.pop("MeasurementPointId", UNSET)
 
         _batch_type = d.pop("BatchType", UNSET)
-        batch_type: Union[
-            Unset, QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType
+        batch_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType
         ]
         if isinstance(_batch_type, Unset):
             batch_type = UNSET

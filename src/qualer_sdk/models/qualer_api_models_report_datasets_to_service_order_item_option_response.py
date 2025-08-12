@@ -13,20 +13,20 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderItemOptionRes
 class QualerApiModelsReportDatasetsToServiceOrderItemOptionResponse:
     """
     Attributes:
-        service_order_item_id (Union[Unset, int]):
-        service_charge (Union[Unset, float]):
-        time_spent (Union[Unset, float]):
-        is_hourly (Union[Unset, bool]):
-        price (Union[Unset, float]):
-        task_name (Union[Unset, str]):
+        service_order_item_id (Union[None, Unset, int]):
+        service_charge (Union[None, Unset, float]):
+        time_spent (Union[None, Unset, float]):
+        is_hourly (Union[None, Unset, bool]):
+        price (Union[None, Unset, float]):
+        task_name (Union[None, Unset, str]):
     """
 
-    service_order_item_id: Union[Unset, int] = UNSET
-    service_charge: Union[Unset, float] = UNSET
-    time_spent: Union[Unset, float] = UNSET
-    is_hourly: Union[Unset, bool] = UNSET
-    price: Union[Unset, float] = UNSET
-    task_name: Union[Unset, str] = UNSET
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    service_charge: Union[None, Unset, float] = UNSET
+    time_spent: Union[None, Unset, float] = UNSET
+    is_hourly: Union[None, Unset, bool] = UNSET
+    price: Union[None, Unset, float] = UNSET
+    task_name: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

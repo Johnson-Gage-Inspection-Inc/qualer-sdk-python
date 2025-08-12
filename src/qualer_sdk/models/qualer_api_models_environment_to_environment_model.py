@@ -16,32 +16,32 @@ T = TypeVar("T", bound="QualerApiModelsEnvironmentToEnvironmentModel")
 class QualerApiModelsEnvironmentToEnvironmentModel:
     """
     Attributes:
-        room_name (Union[Unset, str]):
-        factor_id (Union[Unset, QualerApiModelsEnvironmentToEnvironmentModelFactorId]):
-        station_id (Union[Unset, int]):
-        factor_name (Union[Unset, str]):
-        factor_value (Union[Unset, float]):
-        valid_range_min (Union[Unset, float]):
-        valid_range_max (Union[Unset, float]):
-        unit_of_measure (Union[Unset, str]):
+        room_name (Union[None, Unset, str]):
+        factor_id (Union[None, Unset, QualerApiModelsEnvironmentToEnvironmentModelFactorId]):
+        station_id (Union[None, Unset, int]):
+        factor_name (Union[None, Unset, str]):
+        factor_value (Union[None, Unset, float]):
+        valid_range_min (Union[None, Unset, float]):
+        valid_range_max (Union[None, Unset, float]):
+        unit_of_measure (Union[None, Unset, str]):
     """
 
-    room_name: Union[Unset, str] = UNSET
-    factor_id: Union[Unset, QualerApiModelsEnvironmentToEnvironmentModelFactorId] = (
+    room_name: Union[None, Unset, str] = UNSET
+    factor_id: Union[None, Unset, QualerApiModelsEnvironmentToEnvironmentModelFactorId] = (
         UNSET
     )
-    station_id: Union[Unset, int] = UNSET
-    factor_name: Union[Unset, str] = UNSET
-    factor_value: Union[Unset, float] = UNSET
-    valid_range_min: Union[Unset, float] = UNSET
-    valid_range_max: Union[Unset, float] = UNSET
-    unit_of_measure: Union[Unset, str] = UNSET
+    station_id: Union[None, Unset, int] = UNSET
+    factor_name: Union[None, Unset, str] = UNSET
+    factor_value: Union[None, Unset, float] = UNSET
+    valid_range_min: Union[None, Unset, float] = UNSET
+    valid_range_max: Union[None, Unset, float] = UNSET
+    unit_of_measure: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         room_name = self.room_name
 
-        factor_id: Union[Unset, str] = UNSET
+        factor_id: Union[None, Unset, str] = UNSET
         if self.factor_id and not isinstance(self.factor_id, Unset):
             factor_id = self.factor_id.value
 
@@ -85,7 +85,7 @@ class QualerApiModelsEnvironmentToEnvironmentModel:
         room_name = d.pop("RoomName", UNSET)
 
         _factor_id = d.pop("FactorId", UNSET)
-        factor_id: Union[Unset, QualerApiModelsEnvironmentToEnvironmentModelFactorId]
+        factor_id: Union[None, Unset, QualerApiModelsEnvironmentToEnvironmentModelFactorId]
         if isinstance(_factor_id, Unset):
             factor_id = UNSET
         else:

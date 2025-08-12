@@ -13,10 +13,10 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentRes
 class QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse:
     """
     Attributes:
-        id (Union[Unset, int]):
+        id (Union[None, Unset, int]):
     """
 
-    id: Union[Unset, int] = UNSET
+    id: Union[None, Unset, int] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

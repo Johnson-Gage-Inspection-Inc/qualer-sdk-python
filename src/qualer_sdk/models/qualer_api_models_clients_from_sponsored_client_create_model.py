@@ -22,40 +22,39 @@ T = TypeVar("T", bound="QualerApiModelsClientsFromSponsoredClientCreateModel")
 class QualerApiModelsClientsFromSponsoredClientCreateModel:
     """
     Attributes:
-        account_number_text (Union[Unset, str]):
-        client_status (Union[Unset, QualerApiModelsClientsFromSponsoredClientCreateModelClientStatus]):
-        domain_name (Union[Unset, str]):
-        custom_client_name (Union[Unset, str]):
-        legacy_id (Union[Unset, str]):
-        currency_id (Union[Unset, int]):
-        account_representative_employee_id (Union[Unset, int]):
-        account_representative_site_id (Union[Unset, int]):
-        account_manager_employee_id (Union[Unset, int]):
-        company_name (Union[Unset, str]):
-        billing_address (Union[Unset, QualerApiModelsAddressAddressModel]):
-        shipping_address (Union[Unset, QualerApiModelsAddressAddressModel]):
+        account_number_text (Union[None, Unset, str]):
+        client_status (Union[None, Unset, QualerApiModelsClientsFromSponsoredClientCreateModelClientStatus]):
+        domain_name (Union[None, Unset, str]):
+        custom_client_name (Union[None, Unset, str]):
+        legacy_id (Union[None, Unset, str]):
+        currency_id (Union[None, Unset, int]):
+        account_representative_employee_id (Union[None, Unset, int]):
+        account_representative_site_id (Union[None, Unset, int]):
+        account_manager_employee_id (Union[None, Unset, int]):
+        company_name (Union[None, Unset, str]):
+        billing_address (Union[None, Unset, QualerApiModelsAddressAddressModel]):
+        shipping_address (Union[None, Unset, QualerApiModelsAddressAddressModel]):
     """
 
-    account_number_text: Union[Unset, str] = UNSET
-    client_status: Union[
-        Unset, QualerApiModelsClientsFromSponsoredClientCreateModelClientStatus
+    account_number_text: Union[None, Unset, str] = UNSET
+    client_status: Union[None, Unset, QualerApiModelsClientsFromSponsoredClientCreateModelClientStatus
     ] = UNSET
-    domain_name: Union[Unset, str] = UNSET
-    custom_client_name: Union[Unset, str] = UNSET
-    legacy_id: Union[Unset, str] = UNSET
-    currency_id: Union[Unset, int] = UNSET
-    account_representative_employee_id: Union[Unset, int] = UNSET
-    account_representative_site_id: Union[Unset, int] = UNSET
-    account_manager_employee_id: Union[Unset, int] = UNSET
-    company_name: Union[Unset, str] = UNSET
-    billing_address: Union[Unset, "QualerApiModelsAddressAddressModel"] = UNSET
-    shipping_address: Union[Unset, "QualerApiModelsAddressAddressModel"] = UNSET
+    domain_name: Union[None, Unset, str] = UNSET
+    custom_client_name: Union[None, Unset, str] = UNSET
+    legacy_id: Union[None, Unset, str] = UNSET
+    currency_id: Union[None, Unset, int] = UNSET
+    account_representative_employee_id: Union[None, Unset, int] = UNSET
+    account_representative_site_id: Union[None, Unset, int] = UNSET
+    account_manager_employee_id: Union[None, Unset, int] = UNSET
+    company_name: Union[None, Unset, str] = UNSET
+    billing_address: Union[None, Unset, "QualerApiModelsAddressAddressModel"] = UNSET
+    shipping_address: Union[None, Unset, "QualerApiModelsAddressAddressModel"] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         account_number_text = self.account_number_text
 
-        client_status: Union[Unset, str] = UNSET
+        client_status: Union[None, Unset, str] = UNSET
         if self.client_status and not isinstance(self.client_status, Unset):
             client_status = self.client_status.value
 
@@ -75,11 +74,11 @@ class QualerApiModelsClientsFromSponsoredClientCreateModel:
 
         company_name = self.company_name
 
-        billing_address: Union[Unset, dict[str, Any]] = UNSET
+        billing_address: Union[None, Unset, dict[str, Any]] = UNSET
         if self.billing_address and not isinstance(self.billing_address, Unset):
             billing_address = self.billing_address.to_dict()
 
-        shipping_address: Union[Unset, dict[str, Any]] = UNSET
+        shipping_address: Union[None, Unset, dict[str, Any]] = UNSET
         if self.shipping_address and not isinstance(self.shipping_address, Unset):
             shipping_address = self.shipping_address.to_dict()
 
@@ -125,8 +124,7 @@ class QualerApiModelsClientsFromSponsoredClientCreateModel:
         account_number_text = d.pop("AccountNumberText", UNSET)
 
         _client_status = d.pop("ClientStatus", UNSET)
-        client_status: Union[
-            Unset, QualerApiModelsClientsFromSponsoredClientCreateModelClientStatus
+        client_status: Union[None, Unset, QualerApiModelsClientsFromSponsoredClientCreateModelClientStatus
         ]
         if isinstance(_client_status, Unset):
             client_status = UNSET
@@ -156,7 +154,7 @@ class QualerApiModelsClientsFromSponsoredClientCreateModel:
         company_name = d.pop("CompanyName", UNSET)
 
         _billing_address = d.pop("BillingAddress", UNSET)
-        billing_address: Union[Unset, QualerApiModelsAddressAddressModel]
+        billing_address: Union[None, Unset, QualerApiModelsAddressAddressModel]
         if isinstance(_billing_address, Unset):
             billing_address = UNSET
         else:
@@ -165,7 +163,7 @@ class QualerApiModelsClientsFromSponsoredClientCreateModel:
             )
 
         _shipping_address = d.pop("ShippingAddress", UNSET)
-        shipping_address: Union[Unset, QualerApiModelsAddressAddressModel]
+        shipping_address: Union[None, Unset, QualerApiModelsAddressAddressModel]
         if isinstance(_shipping_address, Unset):
             shipping_address = UNSET
         else:

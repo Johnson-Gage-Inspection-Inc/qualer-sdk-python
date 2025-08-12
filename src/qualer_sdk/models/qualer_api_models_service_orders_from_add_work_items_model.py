@@ -13,20 +13,20 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromAddWorkItemsModel")
 class QualerApiModelsServiceOrdersFromAddWorkItemsModel:
     """
     Attributes:
-        asset_ids (Union[Unset, list[int]]):
-        schedule_segment_ids (Union[Unset, list[int]]):
+        asset_ids (Union[None, Unset, list[int]]):
+        schedule_segment_ids (Union[None, Unset, list[int]]):
     """
 
-    asset_ids: Union[Unset, list[int]] = UNSET
-    schedule_segment_ids: Union[Unset, list[int]] = UNSET
+    asset_ids: Union[None, Unset, list[int]] = UNSET
+    schedule_segment_ids: Union[None, Unset, list[int]] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        asset_ids: Union[Unset, list[int]] = UNSET
+        asset_ids: Union[None, Unset, list[int]] = UNSET
         if self.asset_ids and not isinstance(self.asset_ids, Unset):
             asset_ids = self.asset_ids
 
-        schedule_segment_ids: Union[Unset, list[int]] = UNSET
+        schedule_segment_ids: Union[None, Unset, list[int]] = UNSET
         if self.schedule_segment_ids and not isinstance(
             self.schedule_segment_ids, Unset
         ):

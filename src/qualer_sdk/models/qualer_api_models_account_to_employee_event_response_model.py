@@ -15,18 +15,18 @@ T = TypeVar("T", bound="QualerApiModelsAccountToEmployeeEventResponseModel")
 class QualerApiModelsAccountToEmployeeEventResponseModel:
     """
     Attributes:
-        id (Union[Unset, int]):
-        subject (Union[Unset, str]):
-        created_on_utc (Union[Unset, datetime.datetime]):
-        event_type_id (Union[Unset, int]):
-        event_type_group (Union[Unset, str]):
+        id (Union[None, Unset, int]):
+        subject (Union[None, Unset, str]):
+        created_on_utc (Union[None, Unset, datetime.datetime]):
+        event_type_id (Union[None, Unset, int]):
+        event_type_group (Union[None, Unset, str]):
     """
 
-    id: Union[Unset, int] = UNSET
-    subject: Union[Unset, str] = UNSET
-    created_on_utc: Union[Unset, datetime.datetime] = UNSET
-    event_type_id: Union[Unset, int] = UNSET
-    event_type_group: Union[Unset, str] = UNSET
+    id: Union[None, Unset, int] = UNSET
+    subject: Union[None, Unset, str] = UNSET
+    created_on_utc: Union[None, Unset, datetime.datetime] = UNSET
+    event_type_id: Union[None, Unset, int] = UNSET
+    event_type_group: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -34,7 +34,7 @@ class QualerApiModelsAccountToEmployeeEventResponseModel:
 
         subject = self.subject
 
-        created_on_utc: Union[Unset, str] = UNSET
+        created_on_utc: Union[None, Unset, str] = UNSET
         if self.created_on_utc and not isinstance(self.created_on_utc, Unset):
             created_on_utc = self.created_on_utc.isoformat()
 
@@ -66,7 +66,7 @@ class QualerApiModelsAccountToEmployeeEventResponseModel:
         subject = d.pop("Subject", UNSET)
 
         _created_on_utc = d.pop("CreatedOnUtc", UNSET)
-        created_on_utc: Union[Unset, datetime.datetime]
+        created_on_utc: Union[None, Unset, datetime.datetime]
         if isinstance(_created_on_utc, Unset):
             created_on_utc = UNSET
         else:

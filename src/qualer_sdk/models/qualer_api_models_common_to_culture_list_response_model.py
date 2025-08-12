@@ -13,14 +13,14 @@ T = TypeVar("T", bound="QualerApiModelsCommonToCultureListResponseModel")
 class QualerApiModelsCommonToCultureListResponseModel:
     """
     Attributes:
-        culture_list (Union[Unset, list[str]]):
+        culture_list (Union[None, Unset, list[str]]):
     """
 
-    culture_list: Union[Unset, list[str]] = UNSET
+    culture_list: Union[None, Unset, list[str]] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        culture_list: Union[Unset, list[str]] = UNSET
+        culture_list: Union[None, Unset, list[str]] = UNSET
         if self.culture_list and not isinstance(self.culture_list, Unset):
             culture_list = self.culture_list
 

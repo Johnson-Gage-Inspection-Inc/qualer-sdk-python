@@ -28,55 +28,51 @@ T = TypeVar("T", bound="QualerApiModelsMeasurementsFromUpdateMeasurementSetModel
 class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
     """
     Attributes:
-        measurement_set_id (Union[Unset, int]):
-        is_accredited (Union[Unset, bool]):
-        measurement_name (Union[Unset, str]):
-        use_expected_value (Union[Unset, bool]):
-        decimal_places (Union[Unset, int]):
-        significant_figures (Union[Unset, int]):
-        influence_parameter_1_type (Union[Unset,
+        measurement_set_id (Union[None, Unset, int]):
+        is_accredited (Union[None, Unset, bool]):
+        measurement_name (Union[None, Unset, str]):
+        use_expected_value (Union[None, Unset, bool]):
+        decimal_places (Union[None, Unset, int]):
+        significant_figures (Union[None, Unset, int]):
+        influence_parameter_1_type (Union[None, Unset,
             QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type]):
-        influence_parameter_1_tool_type_id (Union[Unset, int]):
-        influence_parameter_1_parameter_id (Union[Unset, int]):
-        influence_parameter_1_source (Union[Unset, str]):
-        influence_parameter_1_value (Union[Unset, str]):
-        influence_parameter_2_type (Union[Unset,
+        influence_parameter_1_tool_type_id (Union[None, Unset, int]):
+        influence_parameter_1_parameter_id (Union[None, Unset, int]):
+        influence_parameter_1_source (Union[None, Unset, str]):
+        influence_parameter_1_value (Union[None, Unset, str]):
+        influence_parameter_2_type (Union[None, Unset,
             QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type]):
-        influence_parameter_2_tool_type_id (Union[Unset, int]):
-        influence_parameter_2_parameter_id (Union[Unset, int]):
-        influence_parameter_2_source (Union[Unset, str]):
-        influence_parameter_2_value (Union[Unset, str]):
-        measurement_points (Union[Unset, list['QualerApiModelsMeasurementsFromUpdateMeasurementPointModel']]):
-        measurement_fields (Union[Unset, list['QualerApiModelsMeasurementsFromUpdateMeasurementFieldModel']]):
+        influence_parameter_2_tool_type_id (Union[None, Unset, int]):
+        influence_parameter_2_parameter_id (Union[None, Unset, int]):
+        influence_parameter_2_source (Union[None, Unset, str]):
+        influence_parameter_2_value (Union[None, Unset, str]):
+        measurement_points (Union[None, Unset, list['QualerApiModelsMeasurementsFromUpdateMeasurementPointModel']]):
+        measurement_fields (Union[None, Unset, list['QualerApiModelsMeasurementsFromUpdateMeasurementFieldModel']]):
     """
 
-    measurement_set_id: Union[Unset, int] = UNSET
-    is_accredited: Union[Unset, bool] = UNSET
-    measurement_name: Union[Unset, str] = UNSET
-    use_expected_value: Union[Unset, bool] = UNSET
-    decimal_places: Union[Unset, int] = UNSET
-    significant_figures: Union[Unset, int] = UNSET
-    influence_parameter_1_type: Union[
-        Unset,
+    measurement_set_id: Union[None, Unset, int] = UNSET
+    is_accredited: Union[None, Unset, bool] = UNSET
+    measurement_name: Union[None, Unset, str] = UNSET
+    use_expected_value: Union[None, Unset, bool] = UNSET
+    decimal_places: Union[None, Unset, int] = UNSET
+    significant_figures: Union[None, Unset, int] = UNSET
+    influence_parameter_1_type: Union[None, Unset,
         QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type,
     ] = UNSET
-    influence_parameter_1_tool_type_id: Union[Unset, int] = UNSET
-    influence_parameter_1_parameter_id: Union[Unset, int] = UNSET
-    influence_parameter_1_source: Union[Unset, str] = UNSET
-    influence_parameter_1_value: Union[Unset, str] = UNSET
-    influence_parameter_2_type: Union[
-        Unset,
+    influence_parameter_1_tool_type_id: Union[None, Unset, int] = UNSET
+    influence_parameter_1_parameter_id: Union[None, Unset, int] = UNSET
+    influence_parameter_1_source: Union[None, Unset, str] = UNSET
+    influence_parameter_1_value: Union[None, Unset, str] = UNSET
+    influence_parameter_2_type: Union[None, Unset,
         QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type,
     ] = UNSET
-    influence_parameter_2_tool_type_id: Union[Unset, int] = UNSET
-    influence_parameter_2_parameter_id: Union[Unset, int] = UNSET
-    influence_parameter_2_source: Union[Unset, str] = UNSET
-    influence_parameter_2_value: Union[Unset, str] = UNSET
-    measurement_points: Union[
-        Unset, list["QualerApiModelsMeasurementsFromUpdateMeasurementPointModel"]
+    influence_parameter_2_tool_type_id: Union[None, Unset, int] = UNSET
+    influence_parameter_2_parameter_id: Union[None, Unset, int] = UNSET
+    influence_parameter_2_source: Union[None, Unset, str] = UNSET
+    influence_parameter_2_value: Union[None, Unset, str] = UNSET
+    measurement_points: Union[None, Unset, list["QualerApiModelsMeasurementsFromUpdateMeasurementPointModel"]
     ] = UNSET
-    measurement_fields: Union[
-        Unset, list["QualerApiModelsMeasurementsFromUpdateMeasurementFieldModel"]
+    measurement_fields: Union[None, Unset, list["QualerApiModelsMeasurementsFromUpdateMeasurementFieldModel"]
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -93,7 +89,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
 
         significant_figures = self.significant_figures
 
-        influence_parameter_1_type: Union[Unset, str] = UNSET
+        influence_parameter_1_type: Union[None, Unset, str] = UNSET
         if self.influence_parameter_1_type and not isinstance(
             self.influence_parameter_1_type, Unset
         ):
@@ -107,7 +103,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
 
         influence_parameter_1_value = self.influence_parameter_1_value
 
-        influence_parameter_2_type: Union[Unset, str] = UNSET
+        influence_parameter_2_type: Union[None, Unset, str] = UNSET
         if self.influence_parameter_2_type and not isinstance(
             self.influence_parameter_2_type, Unset
         ):
@@ -121,14 +117,14 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
 
         influence_parameter_2_value = self.influence_parameter_2_value
 
-        measurement_points: Union[Unset, list[dict[str, Any]]] = UNSET
+        measurement_points: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.measurement_points and not isinstance(self.measurement_points, Unset):
             measurement_points = []
             for measurement_points_item_data in self.measurement_points:
                 measurement_points_item = measurement_points_item_data.to_dict()
                 measurement_points.append(measurement_points_item)
 
-        measurement_fields: Union[Unset, list[dict[str, Any]]] = UNSET
+        measurement_fields: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.measurement_fields and not isinstance(self.measurement_fields, Unset):
             measurement_fields = []
             for measurement_fields_item_data in self.measurement_fields:
@@ -208,8 +204,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
         significant_figures = d.pop("SignificantFigures", UNSET)
 
         _influence_parameter_1_type = d.pop("InfluenceParameter1Type", UNSET)
-        influence_parameter_1_type: Union[
-            Unset,
+        influence_parameter_1_type: Union[None, Unset,
             QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type,
         ]
         if isinstance(_influence_parameter_1_type, Unset):
@@ -232,8 +227,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
         influence_parameter_1_value = d.pop("InfluenceParameter1Value", UNSET)
 
         _influence_parameter_2_type = d.pop("InfluenceParameter2Type", UNSET)
-        influence_parameter_2_type: Union[
-            Unset,
+        influence_parameter_2_type: Union[None, Unset,
             QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type,
         ]
         if isinstance(_influence_parameter_2_type, Unset):

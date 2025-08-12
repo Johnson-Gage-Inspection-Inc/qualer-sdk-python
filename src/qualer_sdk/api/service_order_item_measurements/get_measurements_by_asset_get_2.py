@@ -15,17 +15,17 @@ from ...types import UNSET, Response, Unset
 def _get_kwargs(
     asset_id: int,
     *,
-    from_: Union[Unset, datetime.datetime] = UNSET,
-    to: Union[Unset, datetime.datetime] = UNSET,
+    from_: Union[None, Unset, datetime.datetime] = UNSET,
+    to: Union[None, Unset, datetime.datetime] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
-    json_from_: Union[Unset, str] = UNSET
+    json_from_: Union[None, Unset, str] = UNSET
     if from_ and not isinstance(from_, Unset):
         json_from_ = from_.isoformat()
     params["from"] = json_from_
 
-    json_to: Union[Unset, str] = UNSET
+    json_to: Union[None, Unset, str] = UNSET
     if to and not isinstance(to, Unset):
         json_to = to.isoformat()
     params["to"] = json_to
@@ -78,14 +78,14 @@ def sync_detailed(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    from_: Union[Unset, datetime.datetime] = UNSET,
-    to: Union[Unset, datetime.datetime] = UNSET,
+    from_: Union[None, Unset, datetime.datetime] = UNSET,
+    to: Union[None, Unset, datetime.datetime] = UNSET,
 ) -> Response[list["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
     """
     Args:
         asset_id (int):
-        from_ (Union[Unset, datetime.datetime]):
-        to (Union[Unset, datetime.datetime]):
+        from_ (Union[None, Unset, datetime.datetime]):
+        to (Union[None, Unset, datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -112,14 +112,14 @@ def sync(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    from_: Union[Unset, datetime.datetime] = UNSET,
-    to: Union[Unset, datetime.datetime] = UNSET,
+    from_: Union[None, Unset, datetime.datetime] = UNSET,
+    to: Union[None, Unset, datetime.datetime] = UNSET,
 ) -> Optional[list["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
     """
     Args:
         asset_id (int):
-        from_ (Union[Unset, datetime.datetime]):
-        to (Union[Unset, datetime.datetime]):
+        from_ (Union[None, Unset, datetime.datetime]):
+        to (Union[None, Unset, datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -141,14 +141,14 @@ async def asyncio_detailed(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    from_: Union[Unset, datetime.datetime] = UNSET,
-    to: Union[Unset, datetime.datetime] = UNSET,
+    from_: Union[None, Unset, datetime.datetime] = UNSET,
+    to: Union[None, Unset, datetime.datetime] = UNSET,
 ) -> Response[list["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
     """
     Args:
         asset_id (int):
-        from_ (Union[Unset, datetime.datetime]):
-        to (Union[Unset, datetime.datetime]):
+        from_ (Union[None, Unset, datetime.datetime]):
+        to (Union[None, Unset, datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -173,14 +173,14 @@ async def asyncio(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    from_: Union[Unset, datetime.datetime] = UNSET,
-    to: Union[Unset, datetime.datetime] = UNSET,
+    from_: Union[None, Unset, datetime.datetime] = UNSET,
+    to: Union[None, Unset, datetime.datetime] = UNSET,
 ) -> Optional[list["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
     """
     Args:
         asset_id (int):
-        from_ (Union[Unset, datetime.datetime]):
-        to (Union[Unset, datetime.datetime]):
+        from_ (Union[None, Unset, datetime.datetime]):
+        to (Union[None, Unset, datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

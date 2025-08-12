@@ -25,31 +25,31 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersToClientOrderResponseModel")
 class QualerApiModelsServiceOrdersToClientOrderResponseModel:
     """
     Attributes:
-        service_order_id (Union[Unset, int]):
-        parent_order_id (Union[Unset, int]):
-        client_legacy_id (Union[Unset, str]):
-        owner_name (Union[Unset, str]):
-        submited_by_name (Union[Unset, str]):
-        sign_off_by_name (Union[Unset, str]):
-        vendor_sign_off_by_name (Union[Unset, str]):
-        approved_by_name (Union[Unset, str]):
-        accepted_by_name (Union[Unset, str]):
-        ready_for_quality_control_by_name (Union[Unset, str]):
-        quality_control_by_name (Union[Unset, str]):
-        created_by_name (Union[Unset, str]):
-        completed_by_name (Union[Unset, str]):
-        shipped_by_name (Union[Unset, str]):
-        delivered_by_name (Union[Unset, str]):
-        invoiced_by_name (Union[Unset, str]):
-        paid_by_name (Union[Unset, str]):
-        cancelled_by_name (Union[Unset, str]):
-        closed_by_name (Union[Unset, str]):
-        client_company_id (Union[Unset, int]):
-        client_company_name (Union[Unset, str]):
-        client_domain_name (Union[Unset, str]):
-        client_alternative_names (Union[Unset, str]):
-        service_comments (Union[Unset, str]):
-        service_private_comments (Union[Unset, str]):
+        service_order_id (Union[None, Unset, int]):
+        parent_order_id (Union[None, Unset, int]):
+        client_legacy_id (Union[None, Unset, str]):
+        owner_name (Union[None, Unset, str]):
+        submited_by_name (Union[None, Unset, str]):
+        sign_off_by_name (Union[None, Unset, str]):
+        vendor_sign_off_by_name (Union[None, Unset, str]):
+        approved_by_name (Union[None, Unset, str]):
+        accepted_by_name (Union[None, Unset, str]):
+        ready_for_quality_control_by_name (Union[None, Unset, str]):
+        quality_control_by_name (Union[None, Unset, str]):
+        created_by_name (Union[None, Unset, str]):
+        completed_by_name (Union[None, Unset, str]):
+        shipped_by_name (Union[None, Unset, str]):
+        delivered_by_name (Union[None, Unset, str]):
+        invoiced_by_name (Union[None, Unset, str]):
+        paid_by_name (Union[None, Unset, str]):
+        cancelled_by_name (Union[None, Unset, str]):
+        closed_by_name (Union[None, Unset, str]):
+        client_company_id (Union[None, Unset, int]):
+        client_company_name (Union[None, Unset, str]):
+        client_domain_name (Union[None, Unset, str]):
+        client_alternative_names (Union[None, Unset, str]):
+        service_comments (Union[None, Unset, str]):
+        service_private_comments (Union[None, Unset, str]):
         created_on (Union[None, Unset, datetime.datetime]):
         approved_on (Union[None, Unset, datetime.datetime]):
         sign_off_on (Union[None, Unset, datetime.datetime]):
@@ -68,102 +68,102 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
         late_fee_on (Union[None, Unset, datetime.datetime]):
         cancelled_on (Union[None, Unset, datetime.datetime]):
         closed_on (Union[None, Unset, datetime.datetime]):
-        last_updated_on (Union[Unset, datetime.datetime]):
-        last_updated_by (Union[Unset, str]):
-        submited_by_id (Union[Unset, int]):
-        sign_off_by_id (Union[Unset, int]):
-        vendor_sign_off_by_id (Union[Unset, int]):
-        approved_by_id (Union[Unset, int]):
-        late_fee_by_id (Union[Unset, int]):
-        accepted_by_id (Union[Unset, int]):
-        ready_for_quality_control_by_id (Union[Unset, int]):
-        quality_control_by_id (Union[Unset, int]):
-        created_by_id (Union[Unset, int]):
-        completed_by_id (Union[Unset, int]):
-        shipped_by_id (Union[Unset, int]):
-        delivered_by_id (Union[Unset, int]):
-        invoiced_by_id (Union[Unset, int]):
-        paid_by_id (Union[Unset, int]):
-        cancelled_by_id (Union[Unset, int]):
-        closed_by_id (Union[Unset, int]):
-        po_number (Union[Unset, str]):
-        secondary_po (Union[Unset, str]):
-        service_total (Union[Unset, float]):
-        repairs_total (Union[Unset, float]):
-        parts_total (Union[Unset, float]):
-        parts_total_before_discount (Union[Unset, float]):
-        parts_discount_total (Union[Unset, float]):
-        effective_tax_rate (Union[Unset, float]):
-        tax_amount (Union[Unset, float]):
-        shipping_fee (Union[Unset, float]):
-        travel_charge (Union[Unset, float]):
-        late_fee (Union[Unset, float]):
-        is_tax_exempt (Union[Unset, bool]):
-        service_discount (Union[Unset, float]):
-        trade_in_credit (Union[Unset, float]):
-        prepaid_credit (Union[Unset, float]):
-        grand_total (Union[Unset, float]):
-        paid_amount (Union[Unset, float]):
-        remaining_balance (Union[Unset, float]):
-        service_discount_details (Union[Unset, str]):
-        trade_in_credit_details (Union[Unset, str]):
-        prepaid_credit_details (Union[Unset, str]):
-        payment_notes (Union[Unset, str]):
-        service_order_number (Union[Unset, int]):
-        legacy_order_number (Union[Unset, str]):
-        custom_order_number (Union[Unset, str]):
-        payment_status (Union[Unset, str]):
-        payment_option (Union[Unset, str]):
-        shipment_status (Union[Unset, str]):
-        order_status (Union[Unset, str]):
-        owner_id (Union[Unset, int]):
-        owner_department (Union[Unset, str]):
-        client_site (Union[Unset, str]):
-        client_site_code (Union[Unset, str]):
-        vendor_site (Union[Unset, str]):
-        internal (Union[Unset, bool]):
-        guid (Union[Unset, UUID]):  Example: 00000000-0000-0000-0000-000000000000.
+        last_updated_on (Union[None, Unset, datetime.datetime]):
+        last_updated_by (Union[None, Unset, str]):
+        submited_by_id (Union[None, Unset, int]):
+        sign_off_by_id (Union[None, Unset, int]):
+        vendor_sign_off_by_id (Union[None, Unset, int]):
+        approved_by_id (Union[None, Unset, int]):
+        late_fee_by_id (Union[None, Unset, int]):
+        accepted_by_id (Union[None, Unset, int]):
+        ready_for_quality_control_by_id (Union[None, Unset, int]):
+        quality_control_by_id (Union[None, Unset, int]):
+        created_by_id (Union[None, Unset, int]):
+        completed_by_id (Union[None, Unset, int]):
+        shipped_by_id (Union[None, Unset, int]):
+        delivered_by_id (Union[None, Unset, int]):
+        invoiced_by_id (Union[None, Unset, int]):
+        paid_by_id (Union[None, Unset, int]):
+        cancelled_by_id (Union[None, Unset, int]):
+        closed_by_id (Union[None, Unset, int]):
+        po_number (Union[None, Unset, str]):
+        secondary_po (Union[None, Unset, str]):
+        service_total (Union[None, Unset, float]):
+        repairs_total (Union[None, Unset, float]):
+        parts_total (Union[None, Unset, float]):
+        parts_total_before_discount (Union[None, Unset, float]):
+        parts_discount_total (Union[None, Unset, float]):
+        effective_tax_rate (Union[None, Unset, float]):
+        tax_amount (Union[None, Unset, float]):
+        shipping_fee (Union[None, Unset, float]):
+        travel_charge (Union[None, Unset, float]):
+        late_fee (Union[None, Unset, float]):
+        is_tax_exempt (Union[None, Unset, bool]):
+        service_discount (Union[None, Unset, float]):
+        trade_in_credit (Union[None, Unset, float]):
+        prepaid_credit (Union[None, Unset, float]):
+        grand_total (Union[None, Unset, float]):
+        paid_amount (Union[None, Unset, float]):
+        remaining_balance (Union[None, Unset, float]):
+        service_discount_details (Union[None, Unset, str]):
+        trade_in_credit_details (Union[None, Unset, str]):
+        prepaid_credit_details (Union[None, Unset, str]):
+        payment_notes (Union[None, Unset, str]):
+        service_order_number (Union[None, Unset, int]):
+        legacy_order_number (Union[None, Unset, str]):
+        custom_order_number (Union[None, Unset, str]):
+        payment_status (Union[None, Unset, str]):
+        payment_option (Union[None, Unset, str]):
+        shipment_status (Union[None, Unset, str]):
+        order_status (Union[None, Unset, str]):
+        owner_id (Union[None, Unset, int]):
+        owner_department (Union[None, Unset, str]):
+        client_site (Union[None, Unset, str]):
+        client_site_code (Union[None, Unset, str]):
+        vendor_site (Union[None, Unset, str]):
+        internal (Union[None, Unset, bool]):
+        guid (Union[None, Unset, UUID]):  Example: 00000000-0000-0000-0000-000000000000.
         business_from_time (Union[None, Unset, datetime.datetime]):
         business_to_time (Union[None, Unset, datetime.datetime]):
-        site_access_notes (Union[Unset, str]):
+        site_access_notes (Union[None, Unset, str]):
         desired_date (Union[None, Unset, datetime.datetime]):
         deadline_date (Union[None, Unset, datetime.datetime]):
         request_from_date (Union[None, Unset, datetime.datetime]):
         request_from_time (Union[None, Unset, datetime.datetime]):
         request_to_date (Union[None, Unset, datetime.datetime]):
         request_to_time (Union[None, Unset, datetime.datetime]):
-        order_notes (Union[Unset, str]):
+        order_notes (Union[None, Unset, str]):
         billing_address (Union['QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0', None,
             Unset]):
         shipping_address (Union['QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0', None,
             Unset]):
     """
 
-    service_order_id: Union[Unset, int] = UNSET
-    parent_order_id: Union[Unset, int] = UNSET
-    client_legacy_id: Union[Unset, str] = UNSET
-    owner_name: Union[Unset, str] = UNSET
-    submited_by_name: Union[Unset, str] = UNSET
-    sign_off_by_name: Union[Unset, str] = UNSET
-    vendor_sign_off_by_name: Union[Unset, str] = UNSET
-    approved_by_name: Union[Unset, str] = UNSET
-    accepted_by_name: Union[Unset, str] = UNSET
-    ready_for_quality_control_by_name: Union[Unset, str] = UNSET
-    quality_control_by_name: Union[Unset, str] = UNSET
-    created_by_name: Union[Unset, str] = UNSET
-    completed_by_name: Union[Unset, str] = UNSET
-    shipped_by_name: Union[Unset, str] = UNSET
-    delivered_by_name: Union[Unset, str] = UNSET
-    invoiced_by_name: Union[Unset, str] = UNSET
-    paid_by_name: Union[Unset, str] = UNSET
-    cancelled_by_name: Union[Unset, str] = UNSET
-    closed_by_name: Union[Unset, str] = UNSET
-    client_company_id: Union[Unset, int] = UNSET
-    client_company_name: Union[Unset, str] = UNSET
-    client_domain_name: Union[Unset, str] = UNSET
-    client_alternative_names: Union[Unset, str] = UNSET
-    service_comments: Union[Unset, str] = UNSET
-    service_private_comments: Union[Unset, str] = UNSET
+    service_order_id: Union[None, Unset, int] = UNSET
+    parent_order_id: Union[None, Unset, int] = UNSET
+    client_legacy_id: Union[None, Unset, str] = UNSET
+    owner_name: Union[None, Unset, str] = UNSET
+    submited_by_name: Union[None, Unset, str] = UNSET
+    sign_off_by_name: Union[None, Unset, str] = UNSET
+    vendor_sign_off_by_name: Union[None, Unset, str] = UNSET
+    approved_by_name: Union[None, Unset, str] = UNSET
+    accepted_by_name: Union[None, Unset, str] = UNSET
+    ready_for_quality_control_by_name: Union[None, Unset, str] = UNSET
+    quality_control_by_name: Union[None, Unset, str] = UNSET
+    created_by_name: Union[None, Unset, str] = UNSET
+    completed_by_name: Union[None, Unset, str] = UNSET
+    shipped_by_name: Union[None, Unset, str] = UNSET
+    delivered_by_name: Union[None, Unset, str] = UNSET
+    invoiced_by_name: Union[None, Unset, str] = UNSET
+    paid_by_name: Union[None, Unset, str] = UNSET
+    cancelled_by_name: Union[None, Unset, str] = UNSET
+    closed_by_name: Union[None, Unset, str] = UNSET
+    client_company_id: Union[None, Unset, int] = UNSET
+    client_company_name: Union[None, Unset, str] = UNSET
+    client_domain_name: Union[None, Unset, str] = UNSET
+    client_alternative_names: Union[None, Unset, str] = UNSET
+    service_comments: Union[None, Unset, str] = UNSET
+    service_private_comments: Union[None, Unset, str] = UNSET
     created_on: Union[None, Unset, datetime.datetime] = UNSET
     approved_on: Union[None, Unset, datetime.datetime] = UNSET
     sign_off_on: Union[None, Unset, datetime.datetime] = UNSET
@@ -182,71 +182,71 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
     late_fee_on: Union[None, Unset, datetime.datetime] = UNSET
     cancelled_on: Union[None, Unset, datetime.datetime] = UNSET
     closed_on: Union[None, Unset, datetime.datetime] = UNSET
-    last_updated_on: Union[Unset, datetime.datetime] = UNSET
-    last_updated_by: Union[Unset, str] = UNSET
-    submited_by_id: Union[Unset, int] = UNSET
-    sign_off_by_id: Union[Unset, int] = UNSET
-    vendor_sign_off_by_id: Union[Unset, int] = UNSET
-    approved_by_id: Union[Unset, int] = UNSET
-    late_fee_by_id: Union[Unset, int] = UNSET
-    accepted_by_id: Union[Unset, int] = UNSET
-    ready_for_quality_control_by_id: Union[Unset, int] = UNSET
-    quality_control_by_id: Union[Unset, int] = UNSET
-    created_by_id: Union[Unset, int] = UNSET
-    completed_by_id: Union[Unset, int] = UNSET
-    shipped_by_id: Union[Unset, int] = UNSET
-    delivered_by_id: Union[Unset, int] = UNSET
-    invoiced_by_id: Union[Unset, int] = UNSET
-    paid_by_id: Union[Unset, int] = UNSET
-    cancelled_by_id: Union[Unset, int] = UNSET
-    closed_by_id: Union[Unset, int] = UNSET
-    po_number: Union[Unset, str] = UNSET
-    secondary_po: Union[Unset, str] = UNSET
-    service_total: Union[Unset, float] = UNSET
-    repairs_total: Union[Unset, float] = UNSET
-    parts_total: Union[Unset, float] = UNSET
-    parts_total_before_discount: Union[Unset, float] = UNSET
-    parts_discount_total: Union[Unset, float] = UNSET
-    effective_tax_rate: Union[Unset, float] = UNSET
-    tax_amount: Union[Unset, float] = UNSET
-    shipping_fee: Union[Unset, float] = UNSET
-    travel_charge: Union[Unset, float] = UNSET
-    late_fee: Union[Unset, float] = UNSET
-    is_tax_exempt: Union[Unset, bool] = UNSET
-    service_discount: Union[Unset, float] = UNSET
-    trade_in_credit: Union[Unset, float] = UNSET
-    prepaid_credit: Union[Unset, float] = UNSET
-    grand_total: Union[Unset, float] = UNSET
-    paid_amount: Union[Unset, float] = UNSET
-    remaining_balance: Union[Unset, float] = UNSET
-    service_discount_details: Union[Unset, str] = UNSET
-    trade_in_credit_details: Union[Unset, str] = UNSET
-    prepaid_credit_details: Union[Unset, str] = UNSET
-    payment_notes: Union[Unset, str] = UNSET
-    service_order_number: Union[Unset, int] = UNSET
-    legacy_order_number: Union[Unset, str] = UNSET
-    custom_order_number: Union[Unset, str] = UNSET
-    payment_status: Union[Unset, str] = UNSET
-    payment_option: Union[Unset, str] = UNSET
-    shipment_status: Union[Unset, str] = UNSET
-    order_status: Union[Unset, str] = UNSET
-    owner_id: Union[Unset, int] = UNSET
-    owner_department: Union[Unset, str] = UNSET
-    client_site: Union[Unset, str] = UNSET
-    client_site_code: Union[Unset, str] = UNSET
-    vendor_site: Union[Unset, str] = UNSET
-    internal: Union[Unset, bool] = UNSET
-    guid: Union[Unset, UUID] = UNSET
+    last_updated_on: Union[None, Unset, datetime.datetime] = UNSET
+    last_updated_by: Union[None, Unset, str] = UNSET
+    submited_by_id: Union[None, Unset, int] = UNSET
+    sign_off_by_id: Union[None, Unset, int] = UNSET
+    vendor_sign_off_by_id: Union[None, Unset, int] = UNSET
+    approved_by_id: Union[None, Unset, int] = UNSET
+    late_fee_by_id: Union[None, Unset, int] = UNSET
+    accepted_by_id: Union[None, Unset, int] = UNSET
+    ready_for_quality_control_by_id: Union[None, Unset, int] = UNSET
+    quality_control_by_id: Union[None, Unset, int] = UNSET
+    created_by_id: Union[None, Unset, int] = UNSET
+    completed_by_id: Union[None, Unset, int] = UNSET
+    shipped_by_id: Union[None, Unset, int] = UNSET
+    delivered_by_id: Union[None, Unset, int] = UNSET
+    invoiced_by_id: Union[None, Unset, int] = UNSET
+    paid_by_id: Union[None, Unset, int] = UNSET
+    cancelled_by_id: Union[None, Unset, int] = UNSET
+    closed_by_id: Union[None, Unset, int] = UNSET
+    po_number: Union[None, Unset, str] = UNSET
+    secondary_po: Union[None, Unset, str] = UNSET
+    service_total: Union[None, Unset, float] = UNSET
+    repairs_total: Union[None, Unset, float] = UNSET
+    parts_total: Union[None, Unset, float] = UNSET
+    parts_total_before_discount: Union[None, Unset, float] = UNSET
+    parts_discount_total: Union[None, Unset, float] = UNSET
+    effective_tax_rate: Union[None, Unset, float] = UNSET
+    tax_amount: Union[None, Unset, float] = UNSET
+    shipping_fee: Union[None, Unset, float] = UNSET
+    travel_charge: Union[None, Unset, float] = UNSET
+    late_fee: Union[None, Unset, float] = UNSET
+    is_tax_exempt: Union[None, Unset, bool] = UNSET
+    service_discount: Union[None, Unset, float] = UNSET
+    trade_in_credit: Union[None, Unset, float] = UNSET
+    prepaid_credit: Union[None, Unset, float] = UNSET
+    grand_total: Union[None, Unset, float] = UNSET
+    paid_amount: Union[None, Unset, float] = UNSET
+    remaining_balance: Union[None, Unset, float] = UNSET
+    service_discount_details: Union[None, Unset, str] = UNSET
+    trade_in_credit_details: Union[None, Unset, str] = UNSET
+    prepaid_credit_details: Union[None, Unset, str] = UNSET
+    payment_notes: Union[None, Unset, str] = UNSET
+    service_order_number: Union[None, Unset, int] = UNSET
+    legacy_order_number: Union[None, Unset, str] = UNSET
+    custom_order_number: Union[None, Unset, str] = UNSET
+    payment_status: Union[None, Unset, str] = UNSET
+    payment_option: Union[None, Unset, str] = UNSET
+    shipment_status: Union[None, Unset, str] = UNSET
+    order_status: Union[None, Unset, str] = UNSET
+    owner_id: Union[None, Unset, int] = UNSET
+    owner_department: Union[None, Unset, str] = UNSET
+    client_site: Union[None, Unset, str] = UNSET
+    client_site_code: Union[None, Unset, str] = UNSET
+    vendor_site: Union[None, Unset, str] = UNSET
+    internal: Union[None, Unset, bool] = UNSET
+    guid: Union[None, Unset, UUID] = UNSET
     business_from_time: Union[None, Unset, datetime.datetime] = UNSET
     business_to_time: Union[None, Unset, datetime.datetime] = UNSET
-    site_access_notes: Union[Unset, str] = UNSET
+    site_access_notes: Union[None, Unset, str] = UNSET
     desired_date: Union[None, Unset, datetime.datetime] = UNSET
     deadline_date: Union[None, Unset, datetime.datetime] = UNSET
     request_from_date: Union[None, Unset, datetime.datetime] = UNSET
     request_from_time: Union[None, Unset, datetime.datetime] = UNSET
     request_to_date: Union[None, Unset, datetime.datetime] = UNSET
     request_to_time: Union[None, Unset, datetime.datetime] = UNSET
-    order_notes: Union[Unset, str] = UNSET
+    order_notes: Union[None, Unset, str] = UNSET
     billing_address: Union[
         "QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0",
         None,
@@ -461,7 +461,7 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
         else:
             closed_on = self.closed_on
 
-        last_updated_on: Union[Unset, str] = UNSET
+        last_updated_on: Union[None, Unset, str] = UNSET
         if self.last_updated_on and not isinstance(self.last_updated_on, Unset):
             last_updated_on = self.last_updated_on.isoformat()
 
@@ -571,7 +571,7 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
 
         internal = self.internal
 
-        guid: Union[Unset, str] = UNSET
+        guid: Union[None, Unset, str] = UNSET
         if self.guid and not isinstance(self.guid, Unset):
             guid = str(self.guid)
 
@@ -1272,7 +1272,7 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
         closed_on = _parse_closed_on(d.pop("ClosedOn", UNSET))
 
         _last_updated_on = d.pop("LastUpdatedOn", UNSET)
-        last_updated_on: Union[Unset, datetime.datetime]
+        last_updated_on: Union[None, Unset, datetime.datetime]
         if isinstance(_last_updated_on, Unset):
             last_updated_on = UNSET
         else:
@@ -1385,7 +1385,7 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
         internal = d.pop("Internal", UNSET)
 
         _guid = d.pop("Guid", UNSET)
-        guid: Union[Unset, UUID]
+        guid: Union[None, Unset, UUID]
         if isinstance(_guid, Unset):
             guid = UNSET
         else:

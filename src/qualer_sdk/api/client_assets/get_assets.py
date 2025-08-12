@@ -14,11 +14,11 @@ from ...types import UNSET, Response, Unset
 def _get_kwargs(
     client_company_id: int,
     *,
-    query_equipment_id: Union[Unset, str] = UNSET,
-    query_serial_number: Union[Unset, str] = UNSET,
-    query_asset_tag: Union[Unset, str] = UNSET,
-    query_barcode: Union[Unset, str] = UNSET,
-    query_legacy_id: Union[Unset, str] = UNSET,
+    query_equipment_id: Union[None, Unset, str] = UNSET,
+    query_serial_number: Union[None, Unset, str] = UNSET,
+    query_asset_tag: Union[None, Unset, str] = UNSET,
+    query_barcode: Union[None, Unset, str] = UNSET,
+    query_legacy_id: Union[None, Unset, str] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -78,20 +78,20 @@ def sync_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_equipment_id: Union[Unset, str] = UNSET,
-    query_serial_number: Union[Unset, str] = UNSET,
-    query_asset_tag: Union[Unset, str] = UNSET,
-    query_barcode: Union[Unset, str] = UNSET,
-    query_legacy_id: Union[Unset, str] = UNSET,
+    query_equipment_id: Union[None, Unset, str] = UNSET,
+    query_serial_number: Union[None, Unset, str] = UNSET,
+    query_asset_tag: Union[None, Unset, str] = UNSET,
+    query_barcode: Union[None, Unset, str] = UNSET,
+    query_legacy_id: Union[None, Unset, str] = UNSET,
 ) -> Response[list["QualerApiModelsAssetToAssetResponseModel"]]:
     """
     Args:
         client_company_id (int):
-        query_equipment_id (Union[Unset, str]):
-        query_serial_number (Union[Unset, str]):
-        query_asset_tag (Union[Unset, str]):
-        query_barcode (Union[Unset, str]):
-        query_legacy_id (Union[Unset, str]):
+        query_equipment_id (Union[None, Unset, str]):
+        query_serial_number (Union[None, Unset, str]):
+        query_asset_tag (Union[None, Unset, str]):
+        query_barcode (Union[None, Unset, str]):
+        query_legacy_id (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -121,20 +121,20 @@ def sync(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_equipment_id: Union[Unset, str] = UNSET,
-    query_serial_number: Union[Unset, str] = UNSET,
-    query_asset_tag: Union[Unset, str] = UNSET,
-    query_barcode: Union[Unset, str] = UNSET,
-    query_legacy_id: Union[Unset, str] = UNSET,
+    query_equipment_id: Union[None, Unset, str] = UNSET,
+    query_serial_number: Union[None, Unset, str] = UNSET,
+    query_asset_tag: Union[None, Unset, str] = UNSET,
+    query_barcode: Union[None, Unset, str] = UNSET,
+    query_legacy_id: Union[None, Unset, str] = UNSET,
 ) -> Optional[list["QualerApiModelsAssetToAssetResponseModel"]]:
     """
     Args:
         client_company_id (int):
-        query_equipment_id (Union[Unset, str]):
-        query_serial_number (Union[Unset, str]):
-        query_asset_tag (Union[Unset, str]):
-        query_barcode (Union[Unset, str]):
-        query_legacy_id (Union[Unset, str]):
+        query_equipment_id (Union[None, Unset, str]):
+        query_serial_number (Union[None, Unset, str]):
+        query_asset_tag (Union[None, Unset, str]):
+        query_barcode (Union[None, Unset, str]):
+        query_legacy_id (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -159,20 +159,20 @@ async def asyncio_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_equipment_id: Union[Unset, str] = UNSET,
-    query_serial_number: Union[Unset, str] = UNSET,
-    query_asset_tag: Union[Unset, str] = UNSET,
-    query_barcode: Union[Unset, str] = UNSET,
-    query_legacy_id: Union[Unset, str] = UNSET,
+    query_equipment_id: Union[None, Unset, str] = UNSET,
+    query_serial_number: Union[None, Unset, str] = UNSET,
+    query_asset_tag: Union[None, Unset, str] = UNSET,
+    query_barcode: Union[None, Unset, str] = UNSET,
+    query_legacy_id: Union[None, Unset, str] = UNSET,
 ) -> Response[list["QualerApiModelsAssetToAssetResponseModel"]]:
     """
     Args:
         client_company_id (int):
-        query_equipment_id (Union[Unset, str]):
-        query_serial_number (Union[Unset, str]):
-        query_asset_tag (Union[Unset, str]):
-        query_barcode (Union[Unset, str]):
-        query_legacy_id (Union[Unset, str]):
+        query_equipment_id (Union[None, Unset, str]):
+        query_serial_number (Union[None, Unset, str]):
+        query_asset_tag (Union[None, Unset, str]):
+        query_barcode (Union[None, Unset, str]):
+        query_legacy_id (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -200,20 +200,20 @@ async def asyncio(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_equipment_id: Union[Unset, str] = UNSET,
-    query_serial_number: Union[Unset, str] = UNSET,
-    query_asset_tag: Union[Unset, str] = UNSET,
-    query_barcode: Union[Unset, str] = UNSET,
-    query_legacy_id: Union[Unset, str] = UNSET,
+    query_equipment_id: Union[None, Unset, str] = UNSET,
+    query_serial_number: Union[None, Unset, str] = UNSET,
+    query_asset_tag: Union[None, Unset, str] = UNSET,
+    query_barcode: Union[None, Unset, str] = UNSET,
+    query_legacy_id: Union[None, Unset, str] = UNSET,
 ) -> Optional[list["QualerApiModelsAssetToAssetResponseModel"]]:
     """
     Args:
         client_company_id (int):
-        query_equipment_id (Union[Unset, str]):
-        query_serial_number (Union[Unset, str]):
-        query_asset_tag (Union[Unset, str]):
-        query_barcode (Union[Unset, str]):
-        query_legacy_id (Union[Unset, str]):
+        query_equipment_id (Union[None, Unset, str]):
+        query_serial_number (Union[None, Unset, str]):
+        query_asset_tag (Union[None, Unset, str]):
+        query_barcode (Union[None, Unset, str]):
+        query_legacy_id (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

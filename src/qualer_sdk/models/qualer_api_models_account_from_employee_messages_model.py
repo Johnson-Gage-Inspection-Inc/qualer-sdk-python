@@ -13,12 +13,12 @@ T = TypeVar("T", bound="QualerApiModelsAccountFromEmployeeMessagesModel")
 class QualerApiModelsAccountFromEmployeeMessagesModel:
     """
     Attributes:
-        period (Union[Unset, int]):
-        site_id (Union[Unset, int]):
+        period (Union[None, Unset, int]):
+        site_id (Union[None, Unset, int]):
     """
 
-    period: Union[Unset, int] = UNSET
-    site_id: Union[Unset, int] = UNSET
+    period: Union[None, Unset, int] = UNSET
+    site_id: Union[None, Unset, int] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

@@ -13,12 +13,12 @@ T = TypeVar("T", bound="QualerApiModelsAssetAttributesToAssetAttributesResponse"
 class QualerApiModelsAssetAttributesToAssetAttributesResponse:
     """
     Attributes:
-        name (Union[Unset, str]):
-        value (Union[Unset, str]):
+        name (Union[None, Unset, str]):
+        value (Union[None, Unset, str]):
     """
 
-    name: Union[Unset, str] = UNSET
-    value: Union[Unset, str] = UNSET
+    name: Union[None, Unset, str] = UNSET
+    value: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

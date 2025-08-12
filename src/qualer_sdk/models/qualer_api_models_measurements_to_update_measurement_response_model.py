@@ -15,18 +15,18 @@ T = TypeVar("T", bound="QualerApiModelsMeasurementsToUpdateMeasurementResponseMo
 class QualerApiModelsMeasurementsToUpdateMeasurementResponseModel:
     """
     Attributes:
-        measurement_id (Union[Unset, int]):
-        values (Union[Unset, str]):
-        channel (Union[Unset, int]):
-        updated_by (Union[Unset, str]):
-        updated_on (Union[Unset, datetime.datetime]):
+        measurement_id (Union[None, Unset, int]):
+        values (Union[None, Unset, str]):
+        channel (Union[None, Unset, int]):
+        updated_by (Union[None, Unset, str]):
+        updated_on (Union[None, Unset, datetime.datetime]):
     """
 
-    measurement_id: Union[Unset, int] = UNSET
-    values: Union[Unset, str] = UNSET
-    channel: Union[Unset, int] = UNSET
-    updated_by: Union[Unset, str] = UNSET
-    updated_on: Union[Unset, datetime.datetime] = UNSET
+    measurement_id: Union[None, Unset, int] = UNSET
+    values: Union[None, Unset, str] = UNSET
+    channel: Union[None, Unset, int] = UNSET
+    updated_by: Union[None, Unset, str] = UNSET
+    updated_on: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -38,7 +38,7 @@ class QualerApiModelsMeasurementsToUpdateMeasurementResponseModel:
 
         updated_by = self.updated_by
 
-        updated_on: Union[Unset, str] = UNSET
+        updated_on: Union[None, Unset, str] = UNSET
         if self.updated_on and not isinstance(self.updated_on, Unset):
             updated_on = self.updated_on.isoformat()
 
@@ -70,7 +70,7 @@ class QualerApiModelsMeasurementsToUpdateMeasurementResponseModel:
         updated_by = d.pop("UpdatedBy", UNSET)
 
         _updated_on = d.pop("UpdatedOn", UNSET)
-        updated_on: Union[Unset, datetime.datetime]
+        updated_on: Union[None, Unset, datetime.datetime]
         if isinstance(_updated_on, Unset):
             updated_on = UNSET
         else:

@@ -13,10 +13,10 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromUpdateShipmentStatusMode
 class QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel:
     """
     Attributes:
-        shipment_status (Union[Unset, str]):
+        shipment_status (Union[None, Unset, str]):
     """
 
-    shipment_status: Union[Unset, str] = UNSET
+    shipment_status: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

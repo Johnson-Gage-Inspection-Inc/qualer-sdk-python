@@ -18,40 +18,40 @@ T = TypeVar(
 class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementResponseModel:
     """
     Attributes:
-        values (Union[Unset, str]):
-        mean (Union[Unset, float]):
-        sd (Union[Unset, float]):
-        range_ (Union[Unset, float]):
-        delta (Union[Unset, float]):
-        cv (Union[Unset, float]):
-        cmc (Union[Unset, float]):
-        mu (Union[Unset, float]):
-        tur (Union[Unset, float]):
-        tar (Union[Unset, float]):
-        max_value (Union[Unset, float]):
-        min_value (Union[Unset, float]):
-        error (Union[Unset, float]):
-        result (Union[Unset, str]):
-        updated_on (Union[Unset, datetime.datetime]):
-        updated_by (Union[Unset, str]):
+        values (Union[None, Unset, str]):
+        mean (Union[None, Unset, float]):
+        sd (Union[None, Unset, float]):
+        range_ (Union[None, Unset, float]):
+        delta (Union[None, Unset, float]):
+        cv (Union[None, Unset, float]):
+        cmc (Union[None, Unset, float]):
+        mu (Union[None, Unset, float]):
+        tur (Union[None, Unset, float]):
+        tar (Union[None, Unset, float]):
+        max_value (Union[None, Unset, float]):
+        min_value (Union[None, Unset, float]):
+        error (Union[None, Unset, float]):
+        result (Union[None, Unset, str]):
+        updated_on (Union[None, Unset, datetime.datetime]):
+        updated_by (Union[None, Unset, str]):
     """
 
-    values: Union[Unset, str] = UNSET
-    mean: Union[Unset, float] = UNSET
-    sd: Union[Unset, float] = UNSET
-    range_: Union[Unset, float] = UNSET
-    delta: Union[Unset, float] = UNSET
-    cv: Union[Unset, float] = UNSET
-    cmc: Union[Unset, float] = UNSET
-    mu: Union[Unset, float] = UNSET
-    tur: Union[Unset, float] = UNSET
-    tar: Union[Unset, float] = UNSET
-    max_value: Union[Unset, float] = UNSET
-    min_value: Union[Unset, float] = UNSET
-    error: Union[Unset, float] = UNSET
-    result: Union[Unset, str] = UNSET
-    updated_on: Union[Unset, datetime.datetime] = UNSET
-    updated_by: Union[Unset, str] = UNSET
+    values: Union[None, Unset, str] = UNSET
+    mean: Union[None, Unset, float] = UNSET
+    sd: Union[None, Unset, float] = UNSET
+    range_: Union[None, Unset, float] = UNSET
+    delta: Union[None, Unset, float] = UNSET
+    cv: Union[None, Unset, float] = UNSET
+    cmc: Union[None, Unset, float] = UNSET
+    mu: Union[None, Unset, float] = UNSET
+    tur: Union[None, Unset, float] = UNSET
+    tar: Union[None, Unset, float] = UNSET
+    max_value: Union[None, Unset, float] = UNSET
+    min_value: Union[None, Unset, float] = UNSET
+    error: Union[None, Unset, float] = UNSET
+    result: Union[None, Unset, str] = UNSET
+    updated_on: Union[None, Unset, datetime.datetime] = UNSET
+    updated_by: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -83,7 +83,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
 
         result = self.result
 
-        updated_on: Union[Unset, str] = UNSET
+        updated_on: Union[None, Unset, str] = UNSET
         if self.updated_on and not isinstance(self.updated_on, Unset):
             updated_on = self.updated_on.isoformat()
 
@@ -159,7 +159,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         result = d.pop("Result", UNSET)
 
         _updated_on = d.pop("UpdatedOn", UNSET)
-        updated_on: Union[Unset, datetime.datetime]
+        updated_on: Union[None, Unset, datetime.datetime]
         if isinstance(_updated_on, Unset):
             updated_on = UNSET
         else:

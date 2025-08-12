@@ -15,26 +15,26 @@ T = TypeVar("T", bound="QualerApiModelsAssetReservationFromUpsertAssetReservatio
 class QualerApiModelsAssetReservationFromUpsertAssetReservationModel:
     """
     Attributes:
-        asset_id (Union[Unset, int]):
-        product_id (Union[Unset, int]):
-        reservation_id (Union[Unset, int]):
-        service_order_id (Union[Unset, int]):
-        begin_date (Union[Unset, datetime.datetime]):
-        end_date (Union[Unset, datetime.datetime]):
-        reserved_by (Union[Unset, int]):
-        reserved_by_name (Union[Unset, str]):
-        comments (Union[Unset, str]):
+        asset_id (Union[None, Unset, int]):
+        product_id (Union[None, Unset, int]):
+        reservation_id (Union[None, Unset, int]):
+        service_order_id (Union[None, Unset, int]):
+        begin_date (Union[None, Unset, datetime.datetime]):
+        end_date (Union[None, Unset, datetime.datetime]):
+        reserved_by (Union[None, Unset, int]):
+        reserved_by_name (Union[None, Unset, str]):
+        comments (Union[None, Unset, str]):
     """
 
-    asset_id: Union[Unset, int] = UNSET
-    product_id: Union[Unset, int] = UNSET
-    reservation_id: Union[Unset, int] = UNSET
-    service_order_id: Union[Unset, int] = UNSET
-    begin_date: Union[Unset, datetime.datetime] = UNSET
-    end_date: Union[Unset, datetime.datetime] = UNSET
-    reserved_by: Union[Unset, int] = UNSET
-    reserved_by_name: Union[Unset, str] = UNSET
-    comments: Union[Unset, str] = UNSET
+    asset_id: Union[None, Unset, int] = UNSET
+    product_id: Union[None, Unset, int] = UNSET
+    reservation_id: Union[None, Unset, int] = UNSET
+    service_order_id: Union[None, Unset, int] = UNSET
+    begin_date: Union[None, Unset, datetime.datetime] = UNSET
+    end_date: Union[None, Unset, datetime.datetime] = UNSET
+    reserved_by: Union[None, Unset, int] = UNSET
+    reserved_by_name: Union[None, Unset, str] = UNSET
+    comments: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -46,11 +46,11 @@ class QualerApiModelsAssetReservationFromUpsertAssetReservationModel:
 
         service_order_id = self.service_order_id
 
-        begin_date: Union[Unset, str] = UNSET
+        begin_date: Union[None, Unset, str] = UNSET
         if self.begin_date and not isinstance(self.begin_date, Unset):
             begin_date = self.begin_date.isoformat()
 
-        end_date: Union[Unset, str] = UNSET
+        end_date: Union[None, Unset, str] = UNSET
         if self.end_date and not isinstance(self.end_date, Unset):
             end_date = self.end_date.isoformat()
 
@@ -96,14 +96,14 @@ class QualerApiModelsAssetReservationFromUpsertAssetReservationModel:
         service_order_id = d.pop("ServiceOrderId", UNSET)
 
         _begin_date = d.pop("BeginDate", UNSET)
-        begin_date: Union[Unset, datetime.datetime]
+        begin_date: Union[None, Unset, datetime.datetime]
         if isinstance(_begin_date, Unset):
             begin_date = UNSET
         else:
             begin_date = isoparse(_begin_date)
 
         _end_date = d.pop("EndDate", UNSET)
-        end_date: Union[Unset, datetime.datetime]
+        end_date: Union[None, Unset, datetime.datetime]
         if isinstance(_end_date, Unset):
             end_date = UNSET
         else:

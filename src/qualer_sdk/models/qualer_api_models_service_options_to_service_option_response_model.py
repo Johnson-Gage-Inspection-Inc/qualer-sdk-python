@@ -13,24 +13,24 @@ T = TypeVar("T", bound="QualerApiModelsServiceOptionsToServiceOptionResponseMode
 class QualerApiModelsServiceOptionsToServiceOptionResponseModel:
     """
     Attributes:
-        name (Union[Unset, str]):
-        price (Union[Unset, float]):
-        service_charge (Union[Unset, float]):
-        time_spent (Union[Unset, float]):
-        is_hourly (Union[Unset, bool]):
-        document_number (Union[Unset, str]):
-        document_section (Union[Unset, str]):
-        service_code (Union[Unset, str]):
+        name (Union[None, Unset, str]):
+        price (Union[None, Unset, float]):
+        service_charge (Union[None, Unset, float]):
+        time_spent (Union[None, Unset, float]):
+        is_hourly (Union[None, Unset, bool]):
+        document_number (Union[None, Unset, str]):
+        document_section (Union[None, Unset, str]):
+        service_code (Union[None, Unset, str]):
     """
 
-    name: Union[Unset, str] = UNSET
-    price: Union[Unset, float] = UNSET
-    service_charge: Union[Unset, float] = UNSET
-    time_spent: Union[Unset, float] = UNSET
-    is_hourly: Union[Unset, bool] = UNSET
-    document_number: Union[Unset, str] = UNSET
-    document_section: Union[Unset, str] = UNSET
-    service_code: Union[Unset, str] = UNSET
+    name: Union[None, Unset, str] = UNSET
+    price: Union[None, Unset, float] = UNSET
+    service_charge: Union[None, Unset, float] = UNSET
+    time_spent: Union[None, Unset, float] = UNSET
+    is_hourly: Union[None, Unset, bool] = UNSET
+    document_number: Union[None, Unset, str] = UNSET
+    document_section: Union[None, Unset, str] = UNSET
+    service_code: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

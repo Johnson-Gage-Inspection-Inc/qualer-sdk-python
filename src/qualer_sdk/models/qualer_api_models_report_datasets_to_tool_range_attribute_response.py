@@ -13,22 +13,22 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToToolRangeAttributeRespons
 class QualerApiModelsReportDatasetsToToolRangeAttributeResponse:
     """
     Attributes:
-        measurement_point_id (Union[Unset, int]):
-        service_order_item_id (Union[Unset, int]):
-        tool_id (Union[Unset, int]):
-        range_title (Union[Unset, str]):
-        range_subtitle (Union[Unset, str]):
-        attribute_name (Union[Unset, str]):
-        attribute_value (Union[Unset, str]):
+        measurement_point_id (Union[None, Unset, int]):
+        service_order_item_id (Union[None, Unset, int]):
+        tool_id (Union[None, Unset, int]):
+        range_title (Union[None, Unset, str]):
+        range_subtitle (Union[None, Unset, str]):
+        attribute_name (Union[None, Unset, str]):
+        attribute_value (Union[None, Unset, str]):
     """
 
-    measurement_point_id: Union[Unset, int] = UNSET
-    service_order_item_id: Union[Unset, int] = UNSET
-    tool_id: Union[Unset, int] = UNSET
-    range_title: Union[Unset, str] = UNSET
-    range_subtitle: Union[Unset, str] = UNSET
-    attribute_name: Union[Unset, str] = UNSET
-    attribute_value: Union[Unset, str] = UNSET
+    measurement_point_id: Union[None, Unset, int] = UNSET
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    tool_id: Union[None, Unset, int] = UNSET
+    range_title: Union[None, Unset, str] = UNSET
+    range_subtitle: Union[None, Unset, str] = UNSET
+    attribute_name: Union[None, Unset, str] = UNSET
+    attribute_value: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

@@ -11,8 +11,8 @@ from ...types import UNSET, Response, Unset
 def _get_kwargs(
     asset_service_record_id_path: str,
     *,
-    asset_service_record_id_query: Union[Unset, str] = UNSET,
-    model_asset_service_record_id: Union[Unset, int] = UNSET,
+    asset_service_record_id_query: Union[None, Unset, str] = UNSET,
+    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -59,14 +59,14 @@ def sync_detailed(
     asset_service_record_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_service_record_id_query: Union[Unset, str] = UNSET,
-    model_asset_service_record_id: Union[Unset, int] = UNSET,
+    asset_service_record_id_query: Union[None, Unset, str] = UNSET,
+    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
 ) -> Response[list[str]]:
     """
     Args:
         asset_service_record_id_path (str):
-        asset_service_record_id_query (Union[Unset, str]):
-        model_asset_service_record_id (Union[Unset, int]):
+        asset_service_record_id_query (Union[None, Unset, str]):
+        model_asset_service_record_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -93,14 +93,14 @@ def sync(
     asset_service_record_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_service_record_id_query: Union[Unset, str] = UNSET,
-    model_asset_service_record_id: Union[Unset, int] = UNSET,
+    asset_service_record_id_query: Union[None, Unset, str] = UNSET,
+    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
 ) -> Optional[list[str]]:
     """
     Args:
         asset_service_record_id_path (str):
-        asset_service_record_id_query (Union[Unset, str]):
-        model_asset_service_record_id (Union[Unset, int]):
+        asset_service_record_id_query (Union[None, Unset, str]):
+        model_asset_service_record_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -122,14 +122,14 @@ async def asyncio_detailed(
     asset_service_record_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_service_record_id_query: Union[Unset, str] = UNSET,
-    model_asset_service_record_id: Union[Unset, int] = UNSET,
+    asset_service_record_id_query: Union[None, Unset, str] = UNSET,
+    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
 ) -> Response[list[str]]:
     """
     Args:
         asset_service_record_id_path (str):
-        asset_service_record_id_query (Union[Unset, str]):
-        model_asset_service_record_id (Union[Unset, int]):
+        asset_service_record_id_query (Union[None, Unset, str]):
+        model_asset_service_record_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -154,14 +154,14 @@ async def asyncio(
     asset_service_record_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_service_record_id_query: Union[Unset, str] = UNSET,
-    model_asset_service_record_id: Union[Unset, int] = UNSET,
+    asset_service_record_id_query: Union[None, Unset, str] = UNSET,
+    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
 ) -> Optional[list[str]]:
     """
     Args:
         asset_service_record_id_path (str):
-        asset_service_record_id_query (Union[Unset, str]):
-        model_asset_service_record_id (Union[Unset, int]):
+        asset_service_record_id_query (Union[None, Unset, str]):
+        model_asset_service_record_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

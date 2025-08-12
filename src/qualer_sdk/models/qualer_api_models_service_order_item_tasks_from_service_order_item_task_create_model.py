@@ -15,18 +15,18 @@ T = TypeVar(
 class QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel:
     """
     Attributes:
-        service_order_item_id (Union[Unset, int]):
-        task_name (Union[Unset, str]):
-        task_description (Union[Unset, str]):
-        as_found_details (Union[Unset, str]):
-        as_left_details (Union[Unset, str]):
+        service_order_item_id (Union[None, Unset, int]):
+        task_name (Union[None, Unset, str]):
+        task_description (Union[None, Unset, str]):
+        as_found_details (Union[None, Unset, str]):
+        as_left_details (Union[None, Unset, str]):
     """
 
-    service_order_item_id: Union[Unset, int] = UNSET
-    task_name: Union[Unset, str] = UNSET
-    task_description: Union[Unset, str] = UNSET
-    as_found_details: Union[Unset, str] = UNSET
-    as_left_details: Union[Unset, str] = UNSET
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    task_name: Union[None, Unset, str] = UNSET
+    task_description: Union[None, Unset, str] = UNSET
+    as_found_details: Union[None, Unset, str] = UNSET
+    as_left_details: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

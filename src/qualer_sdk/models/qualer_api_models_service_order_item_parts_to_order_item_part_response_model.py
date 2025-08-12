@@ -18,38 +18,37 @@ T = TypeVar(
 class QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel:
     """
     Attributes:
-        service_order_item_part_id (Union[Unset, int]):
-        service_order_item_id (Union[Unset, int]):
-        name (Union[Unset, str]):
-        description (Union[Unset, str]):
-        discount (Union[Unset, float]):
-        is_taxable (Union[Unset, bool]):
-        is_hourly_pricing (Union[Unset, bool]):
-        price (Union[Unset, float]):
-        unit_name (Union[Unset, str]):
-        quantity (Union[Unset, float]):
-        delivery_charge (Union[Unset, float]):
-        time_spent_in_minutes (Union[Unset, float]):
-        free_quantity (Union[Unset, int]):
-        service_order_charge_type (Union[Unset,
+        service_order_item_part_id (Union[None, Unset, int]):
+        service_order_item_id (Union[None, Unset, int]):
+        name (Union[None, Unset, str]):
+        description (Union[None, Unset, str]):
+        discount (Union[None, Unset, float]):
+        is_taxable (Union[None, Unset, bool]):
+        is_hourly_pricing (Union[None, Unset, bool]):
+        price (Union[None, Unset, float]):
+        unit_name (Union[None, Unset, str]):
+        quantity (Union[None, Unset, float]):
+        delivery_charge (Union[None, Unset, float]):
+        time_spent_in_minutes (Union[None, Unset, float]):
+        free_quantity (Union[None, Unset, int]):
+        service_order_charge_type (Union[None, Unset,
             QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType]):
     """
 
-    service_order_item_part_id: Union[Unset, int] = UNSET
-    service_order_item_id: Union[Unset, int] = UNSET
-    name: Union[Unset, str] = UNSET
-    description: Union[Unset, str] = UNSET
-    discount: Union[Unset, float] = UNSET
-    is_taxable: Union[Unset, bool] = UNSET
-    is_hourly_pricing: Union[Unset, bool] = UNSET
-    price: Union[Unset, float] = UNSET
-    unit_name: Union[Unset, str] = UNSET
-    quantity: Union[Unset, float] = UNSET
-    delivery_charge: Union[Unset, float] = UNSET
-    time_spent_in_minutes: Union[Unset, float] = UNSET
-    free_quantity: Union[Unset, int] = UNSET
-    service_order_charge_type: Union[
-        Unset,
+    service_order_item_part_id: Union[None, Unset, int] = UNSET
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    name: Union[None, Unset, str] = UNSET
+    description: Union[None, Unset, str] = UNSET
+    discount: Union[None, Unset, float] = UNSET
+    is_taxable: Union[None, Unset, bool] = UNSET
+    is_hourly_pricing: Union[None, Unset, bool] = UNSET
+    price: Union[None, Unset, float] = UNSET
+    unit_name: Union[None, Unset, str] = UNSET
+    quantity: Union[None, Unset, float] = UNSET
+    delivery_charge: Union[None, Unset, float] = UNSET
+    time_spent_in_minutes: Union[None, Unset, float] = UNSET
+    free_quantity: Union[None, Unset, int] = UNSET
+    service_order_charge_type: Union[None, Unset,
         QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType,
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -81,7 +80,7 @@ class QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel:
 
         free_quantity = self.free_quantity
 
-        service_order_charge_type: Union[Unset, str] = UNSET
+        service_order_charge_type: Union[None, Unset, str] = UNSET
         if self.service_order_charge_type and not isinstance(
             self.service_order_charge_type, Unset
         ):
@@ -151,8 +150,7 @@ class QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel:
         free_quantity = d.pop("FreeQuantity", UNSET)
 
         _service_order_charge_type = d.pop("ServiceOrderChargeType", UNSET)
-        service_order_charge_type: Union[
-            Unset,
+        service_order_charge_type: Union[None, Unset,
             QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType,
         ]
         if isinstance(_service_order_charge_type, Unset):

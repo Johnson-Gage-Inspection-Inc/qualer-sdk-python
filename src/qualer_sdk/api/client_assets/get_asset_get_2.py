@@ -14,8 +14,8 @@ from ...types import UNSET, Response, Unset
 def _get_kwargs(
     asset_id_path: str,
     *,
-    asset_id_query: Union[Unset, str] = UNSET,
-    model_asset_id: Union[Unset, int] = UNSET,
+    asset_id_query: Union[None, Unset, str] = UNSET,
+    model_asset_id: Union[None, Unset, int] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -64,14 +64,14 @@ def sync_detailed(
     asset_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_id_query: Union[Unset, str] = UNSET,
-    model_asset_id: Union[Unset, int] = UNSET,
+    asset_id_query: Union[None, Unset, str] = UNSET,
+    model_asset_id: Union[None, Unset, int] = UNSET,
 ) -> Response[QualerApiModelsAssetToAssetResponseModel]:
     """
     Args:
         asset_id_path (str):
-        asset_id_query (Union[Unset, str]):
-        model_asset_id (Union[Unset, int]):
+        asset_id_query (Union[None, Unset, str]):
+        model_asset_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -98,14 +98,14 @@ def sync(
     asset_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_id_query: Union[Unset, str] = UNSET,
-    model_asset_id: Union[Unset, int] = UNSET,
+    asset_id_query: Union[None, Unset, str] = UNSET,
+    model_asset_id: Union[None, Unset, int] = UNSET,
 ) -> Optional[QualerApiModelsAssetToAssetResponseModel]:
     """
     Args:
         asset_id_path (str):
-        asset_id_query (Union[Unset, str]):
-        model_asset_id (Union[Unset, int]):
+        asset_id_query (Union[None, Unset, str]):
+        model_asset_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -127,14 +127,14 @@ async def asyncio_detailed(
     asset_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_id_query: Union[Unset, str] = UNSET,
-    model_asset_id: Union[Unset, int] = UNSET,
+    asset_id_query: Union[None, Unset, str] = UNSET,
+    model_asset_id: Union[None, Unset, int] = UNSET,
 ) -> Response[QualerApiModelsAssetToAssetResponseModel]:
     """
     Args:
         asset_id_path (str):
-        asset_id_query (Union[Unset, str]):
-        model_asset_id (Union[Unset, int]):
+        asset_id_query (Union[None, Unset, str]):
+        model_asset_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -159,14 +159,14 @@ async def asyncio(
     asset_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_id_query: Union[Unset, str] = UNSET,
-    model_asset_id: Union[Unset, int] = UNSET,
+    asset_id_query: Union[None, Unset, str] = UNSET,
+    model_asset_id: Union[None, Unset, int] = UNSET,
 ) -> Optional[QualerApiModelsAssetToAssetResponseModel]:
     """
     Args:
         asset_id_path (str):
-        asset_id_query (Union[Unset, str]):
-        model_asset_id (Union[Unset, int]):
+        asset_id_query (Union[None, Unset, str]):
+        model_asset_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

@@ -15,31 +15,31 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersToOrderAssignmentResponseMod
 class QualerApiModelsServiceOrdersToOrderAssignmentResponseModel:
     """
     Attributes:
-        work_item_id (Union[Unset, int]):
-        employee_id (Union[Unset, int]):
-        company_id (Union[Unset, int]):
-        subscription_email (Union[Unset, str]):
-        subscription_phone (Union[Unset, str]):
-        office_phone (Union[Unset, str]):
-        is_locked (Union[Unset, bool]):
-        image_url (Union[Unset, str]):
-        alias (Union[Unset, str]):
-        title (Union[Unset, str]):
-        is_deleted (Union[Unset, bool]):
+        work_item_id (Union[None, Unset, int]):
+        employee_id (Union[None, Unset, int]):
+        company_id (Union[None, Unset, int]):
+        subscription_email (Union[None, Unset, str]):
+        subscription_phone (Union[None, Unset, str]):
+        office_phone (Union[None, Unset, str]):
+        is_locked (Union[None, Unset, bool]):
+        image_url (Union[None, Unset, str]):
+        alias (Union[None, Unset, str]):
+        title (Union[None, Unset, str]):
+        is_deleted (Union[None, Unset, bool]):
         last_seen_date_utc (Union[None, Unset, datetime.datetime]):
     """
 
-    work_item_id: Union[Unset, int] = UNSET
-    employee_id: Union[Unset, int] = UNSET
-    company_id: Union[Unset, int] = UNSET
-    subscription_email: Union[Unset, str] = UNSET
-    subscription_phone: Union[Unset, str] = UNSET
-    office_phone: Union[Unset, str] = UNSET
-    is_locked: Union[Unset, bool] = UNSET
-    image_url: Union[Unset, str] = UNSET
-    alias: Union[Unset, str] = UNSET
-    title: Union[Unset, str] = UNSET
-    is_deleted: Union[Unset, bool] = UNSET
+    work_item_id: Union[None, Unset, int] = UNSET
+    employee_id: Union[None, Unset, int] = UNSET
+    company_id: Union[None, Unset, int] = UNSET
+    subscription_email: Union[None, Unset, str] = UNSET
+    subscription_phone: Union[None, Unset, str] = UNSET
+    office_phone: Union[None, Unset, str] = UNSET
+    is_locked: Union[None, Unset, bool] = UNSET
+    image_url: Union[None, Unset, str] = UNSET
+    alias: Union[None, Unset, str] = UNSET
+    title: Union[None, Unset, str] = UNSET
+    is_deleted: Union[None, Unset, bool] = UNSET
     last_seen_date_utc: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 

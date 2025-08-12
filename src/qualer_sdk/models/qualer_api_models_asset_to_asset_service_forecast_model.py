@@ -15,70 +15,70 @@ T = TypeVar("T", bound="QualerApiModelsAssetToAssetServiceForecastModel")
 class QualerApiModelsAssetToAssetServiceForecastModel:
     """
     Attributes:
-        company_id (Union[Unset, int]):
-        asset_id (Union[Unset, int]):
-        site_id (Union[Unset, int]):
-        asset_service_record_id (Union[Unset, int]):
-        serial_number (Union[Unset, str]):
-        asset_user (Union[Unset, str]):
-        asset_tag (Union[Unset, str]):
-        equipment_id (Union[Unset, str]):
-        asset_name (Union[Unset, str]):
-        category_name (Union[Unset, str]):
-        manufacturer_name (Union[Unset, str]):
-        site_name (Union[Unset, str]):
-        maintenance_plan_id (Union[Unset, int]):
-        maintenance_plan_name (Union[Unset, str]):
-        maintenance_task_id (Union[Unset, int]):
-        maintenance_task_name (Union[Unset, str]):
+        company_id (Union[None, Unset, int]):
+        asset_id (Union[None, Unset, int]):
+        site_id (Union[None, Unset, int]):
+        asset_service_record_id (Union[None, Unset, int]):
+        serial_number (Union[None, Unset, str]):
+        asset_user (Union[None, Unset, str]):
+        asset_tag (Union[None, Unset, str]):
+        equipment_id (Union[None, Unset, str]):
+        asset_name (Union[None, Unset, str]):
+        category_name (Union[None, Unset, str]):
+        manufacturer_name (Union[None, Unset, str]):
+        site_name (Union[None, Unset, str]):
+        maintenance_plan_id (Union[None, Unset, int]):
+        maintenance_plan_name (Union[None, Unset, str]):
+        maintenance_task_id (Union[None, Unset, int]):
+        maintenance_task_name (Union[None, Unset, str]):
         next_service_date (Union[None, Unset, datetime.datetime]):
         advance_recall_date (Union[None, Unset, datetime.datetime]):
         grace_period_date (Union[None, Unset, datetime.datetime]):
         certificate_next_service_date (Union[None, Unset, datetime.datetime]):
-        service_interval (Union[Unset, str]):
-        interval_cycle (Union[Unset, str]):
-        interval_length (Union[Unset, int]):
-        on_day (Union[Unset, int]):
-        on_month (Union[Unset, int]):
-        on_week_days (Union[Unset, int]):
-        weekday_of_month (Union[Unset, int]):
-        advance_recall_period (Union[Unset, str]):
-        days_before_due (Union[Unset, int]):
-        past_due_grace_period (Union[Unset, str]):
-        days_after_due (Union[Unset, int]):
+        service_interval (Union[None, Unset, str]):
+        interval_cycle (Union[None, Unset, str]):
+        interval_length (Union[None, Unset, int]):
+        on_day (Union[None, Unset, int]):
+        on_month (Union[None, Unset, int]):
+        on_week_days (Union[None, Unset, int]):
+        weekday_of_month (Union[None, Unset, int]):
+        advance_recall_period (Union[None, Unset, str]):
+        days_before_due (Union[None, Unset, int]):
+        past_due_grace_period (Union[None, Unset, str]):
+        days_after_due (Union[None, Unset, int]):
     """
 
-    company_id: Union[Unset, int] = UNSET
-    asset_id: Union[Unset, int] = UNSET
-    site_id: Union[Unset, int] = UNSET
-    asset_service_record_id: Union[Unset, int] = UNSET
-    serial_number: Union[Unset, str] = UNSET
-    asset_user: Union[Unset, str] = UNSET
-    asset_tag: Union[Unset, str] = UNSET
-    equipment_id: Union[Unset, str] = UNSET
-    asset_name: Union[Unset, str] = UNSET
-    category_name: Union[Unset, str] = UNSET
-    manufacturer_name: Union[Unset, str] = UNSET
-    site_name: Union[Unset, str] = UNSET
-    maintenance_plan_id: Union[Unset, int] = UNSET
-    maintenance_plan_name: Union[Unset, str] = UNSET
-    maintenance_task_id: Union[Unset, int] = UNSET
-    maintenance_task_name: Union[Unset, str] = UNSET
+    company_id: Union[None, Unset, int] = UNSET
+    asset_id: Union[None, Unset, int] = UNSET
+    site_id: Union[None, Unset, int] = UNSET
+    asset_service_record_id: Union[None, Unset, int] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
+    asset_user: Union[None, Unset, str] = UNSET
+    asset_tag: Union[None, Unset, str] = UNSET
+    equipment_id: Union[None, Unset, str] = UNSET
+    asset_name: Union[None, Unset, str] = UNSET
+    category_name: Union[None, Unset, str] = UNSET
+    manufacturer_name: Union[None, Unset, str] = UNSET
+    site_name: Union[None, Unset, str] = UNSET
+    maintenance_plan_id: Union[None, Unset, int] = UNSET
+    maintenance_plan_name: Union[None, Unset, str] = UNSET
+    maintenance_task_id: Union[None, Unset, int] = UNSET
+    maintenance_task_name: Union[None, Unset, str] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
     advance_recall_date: Union[None, Unset, datetime.datetime] = UNSET
     grace_period_date: Union[None, Unset, datetime.datetime] = UNSET
     certificate_next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    service_interval: Union[Unset, str] = UNSET
-    interval_cycle: Union[Unset, str] = UNSET
-    interval_length: Union[Unset, int] = UNSET
-    on_day: Union[Unset, int] = UNSET
-    on_month: Union[Unset, int] = UNSET
-    on_week_days: Union[Unset, int] = UNSET
-    weekday_of_month: Union[Unset, int] = UNSET
-    advance_recall_period: Union[Unset, str] = UNSET
-    days_before_due: Union[Unset, int] = UNSET
-    past_due_grace_period: Union[Unset, str] = UNSET
-    days_after_due: Union[Unset, int] = UNSET
+    service_interval: Union[None, Unset, str] = UNSET
+    interval_cycle: Union[None, Unset, str] = UNSET
+    interval_length: Union[None, Unset, int] = UNSET
+    on_day: Union[None, Unset, int] = UNSET
+    on_month: Union[None, Unset, int] = UNSET
+    on_week_days: Union[None, Unset, int] = UNSET
+    weekday_of_month: Union[None, Unset, int] = UNSET
+    advance_recall_period: Union[None, Unset, str] = UNSET
+    days_before_due: Union[None, Unset, int] = UNSET
+    past_due_grace_period: Union[None, Unset, str] = UNSET
+    days_after_due: Union[None, Unset, int] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

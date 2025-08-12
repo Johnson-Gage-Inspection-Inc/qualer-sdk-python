@@ -21,44 +21,43 @@ T = TypeVar("T", bound="QualerApiModelsClientsToEmployeeResponseModel")
 class QualerApiModelsClientsToEmployeeResponseModel:
     """
     Attributes:
-        employee_id (Union[Unset, int]):
-        first_name (Union[Unset, str]):
-        last_name (Union[Unset, str]):
-        company_id (Union[Unset, int]):
-        login_email (Union[Unset, str]):
-        departments (Union[Unset, list['QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse']]):
-        subscription_email (Union[Unset, str]):
-        subscription_phone (Union[Unset, str]):
-        office_phone (Union[Unset, str]):
-        is_locked (Union[Unset, bool]):
-        image_url (Union[Unset, str]):
-        alias (Union[Unset, str]):
-        title (Union[Unset, str]):
-        is_deleted (Union[Unset, bool]):
+        employee_id (Union[None, Unset, int]):
+        first_name (Union[None, Unset, str]):
+        last_name (Union[None, Unset, str]):
+        company_id (Union[None, Unset, int]):
+        login_email (Union[None, Unset, str]):
+        departments (Union[None, Unset, list['QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse']]):
+        subscription_email (Union[None, Unset, str]):
+        subscription_phone (Union[None, Unset, str]):
+        office_phone (Union[None, Unset, str]):
+        is_locked (Union[None, Unset, bool]):
+        image_url (Union[None, Unset, str]):
+        alias (Union[None, Unset, str]):
+        title (Union[None, Unset, str]):
+        is_deleted (Union[None, Unset, bool]):
         last_seen_date_utc (Union[None, Unset, datetime.datetime]):
-        culture_name (Union[Unset, str]):
-        culture_ui_name (Union[Unset, str]):
+        culture_name (Union[None, Unset, str]):
+        culture_ui_name (Union[None, Unset, str]):
     """
 
-    employee_id: Union[Unset, int] = UNSET
-    first_name: Union[Unset, str] = UNSET
-    last_name: Union[Unset, str] = UNSET
-    company_id: Union[Unset, int] = UNSET
-    login_email: Union[Unset, str] = UNSET
-    departments: Union[
-        Unset, list["QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse"]
+    employee_id: Union[None, Unset, int] = UNSET
+    first_name: Union[None, Unset, str] = UNSET
+    last_name: Union[None, Unset, str] = UNSET
+    company_id: Union[None, Unset, int] = UNSET
+    login_email: Union[None, Unset, str] = UNSET
+    departments: Union[None, Unset, list["QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse"]
     ] = UNSET
-    subscription_email: Union[Unset, str] = UNSET
-    subscription_phone: Union[Unset, str] = UNSET
-    office_phone: Union[Unset, str] = UNSET
-    is_locked: Union[Unset, bool] = UNSET
-    image_url: Union[Unset, str] = UNSET
-    alias: Union[Unset, str] = UNSET
-    title: Union[Unset, str] = UNSET
-    is_deleted: Union[Unset, bool] = UNSET
+    subscription_email: Union[None, Unset, str] = UNSET
+    subscription_phone: Union[None, Unset, str] = UNSET
+    office_phone: Union[None, Unset, str] = UNSET
+    is_locked: Union[None, Unset, bool] = UNSET
+    image_url: Union[None, Unset, str] = UNSET
+    alias: Union[None, Unset, str] = UNSET
+    title: Union[None, Unset, str] = UNSET
+    is_deleted: Union[None, Unset, bool] = UNSET
     last_seen_date_utc: Union[None, Unset, datetime.datetime] = UNSET
-    culture_name: Union[Unset, str] = UNSET
-    culture_ui_name: Union[Unset, str] = UNSET
+    culture_name: Union[None, Unset, str] = UNSET
+    culture_ui_name: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -72,7 +71,7 @@ class QualerApiModelsClientsToEmployeeResponseModel:
 
         login_email = self.login_email
 
-        departments: Union[Unset, list[dict[str, Any]]] = UNSET
+        departments: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.departments and not isinstance(self.departments, Unset):
             departments = []
             for departments_item_data in self.departments:

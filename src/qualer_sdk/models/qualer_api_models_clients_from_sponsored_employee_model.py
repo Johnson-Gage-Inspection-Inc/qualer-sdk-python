@@ -13,24 +13,24 @@ T = TypeVar("T", bound="QualerApiModelsClientsFromSponsoredEmployeeModel")
 class QualerApiModelsClientsFromSponsoredEmployeeModel:
     """
     Attributes:
-        client_company_id (Union[Unset, int]):
-        first_name (Union[Unset, str]):
-        last_name (Union[Unset, str]):
-        login_email (Union[Unset, str]):
-        password (Union[Unset, str]):
-        subscription_email (Union[Unset, str]):
-        mobile_phone (Union[Unset, str]):
-        office_phone (Union[Unset, str]):
+        client_company_id (Union[None, Unset, int]):
+        first_name (Union[None, Unset, str]):
+        last_name (Union[None, Unset, str]):
+        login_email (Union[None, Unset, str]):
+        password (Union[None, Unset, str]):
+        subscription_email (Union[None, Unset, str]):
+        mobile_phone (Union[None, Unset, str]):
+        office_phone (Union[None, Unset, str]):
     """
 
-    client_company_id: Union[Unset, int] = UNSET
-    first_name: Union[Unset, str] = UNSET
-    last_name: Union[Unset, str] = UNSET
-    login_email: Union[Unset, str] = UNSET
-    password: Union[Unset, str] = UNSET
-    subscription_email: Union[Unset, str] = UNSET
-    mobile_phone: Union[Unset, str] = UNSET
-    office_phone: Union[Unset, str] = UNSET
+    client_company_id: Union[None, Unset, int] = UNSET
+    first_name: Union[None, Unset, str] = UNSET
+    last_name: Union[None, Unset, str] = UNSET
+    login_email: Union[None, Unset, str] = UNSET
+    password: Union[None, Unset, str] = UNSET
+    subscription_email: Union[None, Unset, str] = UNSET
+    mobile_phone: Union[None, Unset, str] = UNSET
+    office_phone: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

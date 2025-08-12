@@ -14,23 +14,23 @@ from ...types import UNSET, Response, Unset
 
 def _get_kwargs(
     *,
-    model_from: Union[Unset, datetime.datetime] = UNSET,
-    model_to: Union[Unset, datetime.datetime] = UNSET,
-    model_asset_id: Union[Unset, int] = UNSET,
-    model_area_id: Union[Unset, int] = UNSET,
-    model_product_id: Union[Unset, int] = UNSET,
-    model_serial_number: Union[Unset, str] = UNSET,
-    model_asset_tag: Union[Unset, str] = UNSET,
-    model_reservation_id: Union[Unset, int] = UNSET,
+    model_from: Union[None, Unset, datetime.datetime] = UNSET,
+    model_to: Union[None, Unset, datetime.datetime] = UNSET,
+    model_asset_id: Union[None, Unset, int] = UNSET,
+    model_area_id: Union[None, Unset, int] = UNSET,
+    model_product_id: Union[None, Unset, int] = UNSET,
+    model_serial_number: Union[None, Unset, str] = UNSET,
+    model_asset_tag: Union[None, Unset, str] = UNSET,
+    model_reservation_id: Union[None, Unset, int] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
-    json_model_from: Union[Unset, str] = UNSET
+    json_model_from: Union[None, Unset, str] = UNSET
     if model_from and not isinstance(model_from, Unset):
         json_model_from = model_from.isoformat()
     params["model.from"] = json_model_from
 
-    json_model_to: Union[Unset, str] = UNSET
+    json_model_to: Union[None, Unset, str] = UNSET
     if model_to and not isinstance(model_to, Unset):
         json_model_to = model_to.isoformat()
     params["model.to"] = json_model_to
@@ -94,25 +94,25 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_from: Union[Unset, datetime.datetime] = UNSET,
-    model_to: Union[Unset, datetime.datetime] = UNSET,
-    model_asset_id: Union[Unset, int] = UNSET,
-    model_area_id: Union[Unset, int] = UNSET,
-    model_product_id: Union[Unset, int] = UNSET,
-    model_serial_number: Union[Unset, str] = UNSET,
-    model_asset_tag: Union[Unset, str] = UNSET,
-    model_reservation_id: Union[Unset, int] = UNSET,
+    model_from: Union[None, Unset, datetime.datetime] = UNSET,
+    model_to: Union[None, Unset, datetime.datetime] = UNSET,
+    model_asset_id: Union[None, Unset, int] = UNSET,
+    model_area_id: Union[None, Unset, int] = UNSET,
+    model_product_id: Union[None, Unset, int] = UNSET,
+    model_serial_number: Union[None, Unset, str] = UNSET,
+    model_asset_tag: Union[None, Unset, str] = UNSET,
+    model_reservation_id: Union[None, Unset, int] = UNSET,
 ) -> Response[list["QualerApiModelsAssetReservationToAssetReservationResponse"]]:
     """
     Args:
-        model_from (Union[Unset, datetime.datetime]):
-        model_to (Union[Unset, datetime.datetime]):
-        model_asset_id (Union[Unset, int]):
-        model_area_id (Union[Unset, int]):
-        model_product_id (Union[Unset, int]):
-        model_serial_number (Union[Unset, str]):
-        model_asset_tag (Union[Unset, str]):
-        model_reservation_id (Union[Unset, int]):
+        model_from (Union[None, Unset, datetime.datetime]):
+        model_to (Union[None, Unset, datetime.datetime]):
+        model_asset_id (Union[None, Unset, int]):
+        model_area_id (Union[None, Unset, int]):
+        model_product_id (Union[None, Unset, int]):
+        model_serial_number (Union[None, Unset, str]):
+        model_asset_tag (Union[None, Unset, str]):
+        model_reservation_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -143,25 +143,25 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_from: Union[Unset, datetime.datetime] = UNSET,
-    model_to: Union[Unset, datetime.datetime] = UNSET,
-    model_asset_id: Union[Unset, int] = UNSET,
-    model_area_id: Union[Unset, int] = UNSET,
-    model_product_id: Union[Unset, int] = UNSET,
-    model_serial_number: Union[Unset, str] = UNSET,
-    model_asset_tag: Union[Unset, str] = UNSET,
-    model_reservation_id: Union[Unset, int] = UNSET,
+    model_from: Union[None, Unset, datetime.datetime] = UNSET,
+    model_to: Union[None, Unset, datetime.datetime] = UNSET,
+    model_asset_id: Union[None, Unset, int] = UNSET,
+    model_area_id: Union[None, Unset, int] = UNSET,
+    model_product_id: Union[None, Unset, int] = UNSET,
+    model_serial_number: Union[None, Unset, str] = UNSET,
+    model_asset_tag: Union[None, Unset, str] = UNSET,
+    model_reservation_id: Union[None, Unset, int] = UNSET,
 ) -> Optional[list["QualerApiModelsAssetReservationToAssetReservationResponse"]]:
     """
     Args:
-        model_from (Union[Unset, datetime.datetime]):
-        model_to (Union[Unset, datetime.datetime]):
-        model_asset_id (Union[Unset, int]):
-        model_area_id (Union[Unset, int]):
-        model_product_id (Union[Unset, int]):
-        model_serial_number (Union[Unset, str]):
-        model_asset_tag (Union[Unset, str]):
-        model_reservation_id (Union[Unset, int]):
+        model_from (Union[None, Unset, datetime.datetime]):
+        model_to (Union[None, Unset, datetime.datetime]):
+        model_asset_id (Union[None, Unset, int]):
+        model_area_id (Union[None, Unset, int]):
+        model_product_id (Union[None, Unset, int]):
+        model_serial_number (Union[None, Unset, str]):
+        model_asset_tag (Union[None, Unset, str]):
+        model_reservation_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -187,25 +187,25 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_from: Union[Unset, datetime.datetime] = UNSET,
-    model_to: Union[Unset, datetime.datetime] = UNSET,
-    model_asset_id: Union[Unset, int] = UNSET,
-    model_area_id: Union[Unset, int] = UNSET,
-    model_product_id: Union[Unset, int] = UNSET,
-    model_serial_number: Union[Unset, str] = UNSET,
-    model_asset_tag: Union[Unset, str] = UNSET,
-    model_reservation_id: Union[Unset, int] = UNSET,
+    model_from: Union[None, Unset, datetime.datetime] = UNSET,
+    model_to: Union[None, Unset, datetime.datetime] = UNSET,
+    model_asset_id: Union[None, Unset, int] = UNSET,
+    model_area_id: Union[None, Unset, int] = UNSET,
+    model_product_id: Union[None, Unset, int] = UNSET,
+    model_serial_number: Union[None, Unset, str] = UNSET,
+    model_asset_tag: Union[None, Unset, str] = UNSET,
+    model_reservation_id: Union[None, Unset, int] = UNSET,
 ) -> Response[list["QualerApiModelsAssetReservationToAssetReservationResponse"]]:
     """
     Args:
-        model_from (Union[Unset, datetime.datetime]):
-        model_to (Union[Unset, datetime.datetime]):
-        model_asset_id (Union[Unset, int]):
-        model_area_id (Union[Unset, int]):
-        model_product_id (Union[Unset, int]):
-        model_serial_number (Union[Unset, str]):
-        model_asset_tag (Union[Unset, str]):
-        model_reservation_id (Union[Unset, int]):
+        model_from (Union[None, Unset, datetime.datetime]):
+        model_to (Union[None, Unset, datetime.datetime]):
+        model_asset_id (Union[None, Unset, int]):
+        model_area_id (Union[None, Unset, int]):
+        model_product_id (Union[None, Unset, int]):
+        model_serial_number (Union[None, Unset, str]):
+        model_asset_tag (Union[None, Unset, str]):
+        model_reservation_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -234,25 +234,25 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_from: Union[Unset, datetime.datetime] = UNSET,
-    model_to: Union[Unset, datetime.datetime] = UNSET,
-    model_asset_id: Union[Unset, int] = UNSET,
-    model_area_id: Union[Unset, int] = UNSET,
-    model_product_id: Union[Unset, int] = UNSET,
-    model_serial_number: Union[Unset, str] = UNSET,
-    model_asset_tag: Union[Unset, str] = UNSET,
-    model_reservation_id: Union[Unset, int] = UNSET,
+    model_from: Union[None, Unset, datetime.datetime] = UNSET,
+    model_to: Union[None, Unset, datetime.datetime] = UNSET,
+    model_asset_id: Union[None, Unset, int] = UNSET,
+    model_area_id: Union[None, Unset, int] = UNSET,
+    model_product_id: Union[None, Unset, int] = UNSET,
+    model_serial_number: Union[None, Unset, str] = UNSET,
+    model_asset_tag: Union[None, Unset, str] = UNSET,
+    model_reservation_id: Union[None, Unset, int] = UNSET,
 ) -> Optional[list["QualerApiModelsAssetReservationToAssetReservationResponse"]]:
     """
     Args:
-        model_from (Union[Unset, datetime.datetime]):
-        model_to (Union[Unset, datetime.datetime]):
-        model_asset_id (Union[Unset, int]):
-        model_area_id (Union[Unset, int]):
-        model_product_id (Union[Unset, int]):
-        model_serial_number (Union[Unset, str]):
-        model_asset_tag (Union[Unset, str]):
-        model_reservation_id (Union[Unset, int]):
+        model_from (Union[None, Unset, datetime.datetime]):
+        model_to (Union[None, Unset, datetime.datetime]):
+        model_asset_id (Union[None, Unset, int]):
+        model_area_id (Union[None, Unset, int]):
+        model_product_id (Union[None, Unset, int]):
+        model_serial_number (Union[None, Unset, str]):
+        model_asset_tag (Union[None, Unset, str]):
+        model_reservation_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

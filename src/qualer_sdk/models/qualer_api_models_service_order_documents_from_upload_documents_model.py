@@ -13,12 +13,12 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrderDocumentsFromUploadDocumentsM
 class QualerApiModelsServiceOrderDocumentsFromUploadDocumentsModel:
     """
     Attributes:
-        report_type (Union[Unset, str]):
-        is_private (Union[Unset, bool]):
+        report_type (Union[None, Unset, str]):
+        is_private (Union[None, Unset, bool]):
     """
 
-    report_type: Union[Unset, str] = UNSET
-    is_private: Union[Unset, bool] = UNSET
+    report_type: Union[None, Unset, str] = UNSET
+    is_private: Union[None, Unset, bool] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

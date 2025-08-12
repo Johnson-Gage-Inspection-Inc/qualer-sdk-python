@@ -17,10 +17,10 @@ T = TypeVar(
 class QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel:
     """
     Attributes:
-        service_order_number (Union[Unset, int]):
-        custom_order_number (Union[Unset, str]):
-        order_item_number (Union[Unset, int]):
-        certificate_number (Union[Unset, str]):
+        service_order_number (Union[None, Unset, int]):
+        custom_order_number (Union[None, Unset, str]):
+        order_item_number (Union[None, Unset, int]):
+        certificate_number (Union[None, Unset, str]):
         result_status (Union[None, Unset, str]):
         as_found_result (Union[None, Unset, str]):
         as_left_result (Union[None, Unset, str]):
@@ -51,10 +51,10 @@ class QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel:
         schedule_name (Union[None, Unset, str]):
     """
 
-    service_order_number: Union[Unset, int] = UNSET
-    custom_order_number: Union[Unset, str] = UNSET
-    order_item_number: Union[Unset, int] = UNSET
-    certificate_number: Union[Unset, str] = UNSET
+    service_order_number: Union[None, Unset, int] = UNSET
+    custom_order_number: Union[None, Unset, str] = UNSET
+    order_item_number: Union[None, Unset, int] = UNSET
+    certificate_number: Union[None, Unset, str] = UNSET
     result_status: Union[None, Unset, str] = UNSET
     as_found_result: Union[None, Unset, str] = UNSET
     as_left_result: Union[None, Unset, str] = UNSET

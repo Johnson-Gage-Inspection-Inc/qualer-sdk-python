@@ -24,114 +24,112 @@ T = TypeVar("T", bound="QualerApiModelsAssetToAssetMaintenancePlanModel")
 class QualerApiModelsAssetToAssetMaintenancePlanModel:
     """
     Attributes:
-        maintenance_plans (Union[Unset, list['QualerApiModelsAssetToAssetMaintenancePlanResponse']]):
-        company_id (Union[Unset, int]):
-        asset_id (Union[Unset, int]):
-        serial_number (Union[Unset, str]):
-        asset_user (Union[Unset, str]):
-        asset_tag (Union[Unset, str]):
-        equipment_id (Union[Unset, str]):
-        asset_status (Union[Unset, QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus]):
-        asset_name (Union[Unset, str]):
-        asset_description (Union[Unset, str]):
-        asset_maker (Union[Unset, str]):
-        location (Union[Unset, str]):
-        room_number (Union[Unset, str]):
-        barcode (Union[Unset, str]):
-        legacy_identifier (Union[Unset, str]):
-        root_category_name (Union[Unset, str]):
-        category_name (Union[Unset, str]):
-        class_ (Union[Unset, str]):
-        custodian_email (Union[Unset, str]):
-        custodian_first_name (Union[Unset, str]):
-        custodian_last_name (Union[Unset, str]):
-        custodian_name (Union[Unset, str]):
-        department (Union[Unset, str]):
-        station (Union[Unset, str]):
-        notes (Union[Unset, str]):
-        document_number (Union[Unset, str]):
-        document_section (Union[Unset, str]):
-        cumulative_service_cost (Union[Unset, float]):
-        product_id (Union[Unset, int]):
-        manufacturer_part_number (Union[Unset, str]):
-        product_name (Union[Unset, str]):
-        product_description (Union[Unset, str]):
-        product_manufacturer (Union[Unset, str]):
-        site_name (Union[Unset, str]):
-        site_id (Union[Unset, int]):
-        condition (Union[Unset, str]):
-        criticality (Union[Unset, str]):
-        pool (Union[Unset, str]):
+        maintenance_plans (Union[None, Unset, list['QualerApiModelsAssetToAssetMaintenancePlanResponse']]):
+        company_id (Union[None, Unset, int]):
+        asset_id (Union[None, Unset, int]):
+        serial_number (Union[None, Unset, str]):
+        asset_user (Union[None, Unset, str]):
+        asset_tag (Union[None, Unset, str]):
+        equipment_id (Union[None, Unset, str]):
+        asset_status (Union[None, Unset, QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus]):
+        asset_name (Union[None, Unset, str]):
+        asset_description (Union[None, Unset, str]):
+        asset_maker (Union[None, Unset, str]):
+        location (Union[None, Unset, str]):
+        room_number (Union[None, Unset, str]):
+        barcode (Union[None, Unset, str]):
+        legacy_identifier (Union[None, Unset, str]):
+        root_category_name (Union[None, Unset, str]):
+        category_name (Union[None, Unset, str]):
+        class_ (Union[None, Unset, str]):
+        custodian_email (Union[None, Unset, str]):
+        custodian_first_name (Union[None, Unset, str]):
+        custodian_last_name (Union[None, Unset, str]):
+        custodian_name (Union[None, Unset, str]):
+        department (Union[None, Unset, str]):
+        station (Union[None, Unset, str]):
+        notes (Union[None, Unset, str]):
+        document_number (Union[None, Unset, str]):
+        document_section (Union[None, Unset, str]):
+        cumulative_service_cost (Union[None, Unset, float]):
+        product_id (Union[None, Unset, int]):
+        manufacturer_part_number (Union[None, Unset, str]):
+        product_name (Union[None, Unset, str]):
+        product_description (Union[None, Unset, str]):
+        product_manufacturer (Union[None, Unset, str]):
+        site_name (Union[None, Unset, str]):
+        site_id (Union[None, Unset, int]):
+        condition (Union[None, Unset, str]):
+        criticality (Union[None, Unset, str]):
+        pool (Union[None, Unset, str]):
         purchase_date (Union[None, Unset, datetime.datetime]):
-        purchase_cost (Union[Unset, float]):
-        life_span_months (Union[Unset, int]):
+        purchase_cost (Union[None, Unset, float]):
+        life_span_months (Union[None, Unset, int]):
         activation_date (Union[None, Unset, datetime.datetime]):
-        depreciation_basis (Union[Unset, float]):
-        depreciation_method (Union[Unset, int]):
+        depreciation_basis (Union[None, Unset, float]):
+        depreciation_method (Union[None, Unset, int]):
         retirement_date (Union[None, Unset, datetime.datetime]):
-        salvage_value (Union[Unset, float]):
-        retirment_reason (Union[Unset, str]):
-        composite_parent_id (Union[Unset, int]):
-        composite_child_count (Union[Unset, int]):
+        salvage_value (Union[None, Unset, float]):
+        retirment_reason (Union[None, Unset, str]):
+        composite_parent_id (Union[None, Unset, int]):
+        composite_child_count (Union[None, Unset, int]):
     """
 
-    maintenance_plans: Union[
-        Unset, list["QualerApiModelsAssetToAssetMaintenancePlanResponse"]
+    maintenance_plans: Union[None, Unset, list["QualerApiModelsAssetToAssetMaintenancePlanResponse"]
     ] = UNSET
-    company_id: Union[Unset, int] = UNSET
-    asset_id: Union[Unset, int] = UNSET
-    serial_number: Union[Unset, str] = UNSET
-    asset_user: Union[Unset, str] = UNSET
-    asset_tag: Union[Unset, str] = UNSET
-    equipment_id: Union[Unset, str] = UNSET
-    asset_status: Union[
-        Unset, QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus
+    company_id: Union[None, Unset, int] = UNSET
+    asset_id: Union[None, Unset, int] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
+    asset_user: Union[None, Unset, str] = UNSET
+    asset_tag: Union[None, Unset, str] = UNSET
+    equipment_id: Union[None, Unset, str] = UNSET
+    asset_status: Union[None, Unset, QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus
     ] = UNSET
-    asset_name: Union[Unset, str] = UNSET
-    asset_description: Union[Unset, str] = UNSET
-    asset_maker: Union[Unset, str] = UNSET
-    location: Union[Unset, str] = UNSET
-    room_number: Union[Unset, str] = UNSET
-    barcode: Union[Unset, str] = UNSET
-    legacy_identifier: Union[Unset, str] = UNSET
-    root_category_name: Union[Unset, str] = UNSET
-    category_name: Union[Unset, str] = UNSET
-    class_: Union[Unset, str] = UNSET
-    custodian_email: Union[Unset, str] = UNSET
-    custodian_first_name: Union[Unset, str] = UNSET
-    custodian_last_name: Union[Unset, str] = UNSET
-    custodian_name: Union[Unset, str] = UNSET
-    department: Union[Unset, str] = UNSET
-    station: Union[Unset, str] = UNSET
-    notes: Union[Unset, str] = UNSET
-    document_number: Union[Unset, str] = UNSET
-    document_section: Union[Unset, str] = UNSET
-    cumulative_service_cost: Union[Unset, float] = UNSET
-    product_id: Union[Unset, int] = UNSET
-    manufacturer_part_number: Union[Unset, str] = UNSET
-    product_name: Union[Unset, str] = UNSET
-    product_description: Union[Unset, str] = UNSET
-    product_manufacturer: Union[Unset, str] = UNSET
-    site_name: Union[Unset, str] = UNSET
-    site_id: Union[Unset, int] = UNSET
-    condition: Union[Unset, str] = UNSET
-    criticality: Union[Unset, str] = UNSET
-    pool: Union[Unset, str] = UNSET
+    asset_name: Union[None, Unset, str] = UNSET
+    asset_description: Union[None, Unset, str] = UNSET
+    asset_maker: Union[None, Unset, str] = UNSET
+    location: Union[None, Unset, str] = UNSET
+    room_number: Union[None, Unset, str] = UNSET
+    barcode: Union[None, Unset, str] = UNSET
+    legacy_identifier: Union[None, Unset, str] = UNSET
+    root_category_name: Union[None, Unset, str] = UNSET
+    category_name: Union[None, Unset, str] = UNSET
+    class_: Union[None, Unset, str] = UNSET
+    custodian_email: Union[None, Unset, str] = UNSET
+    custodian_first_name: Union[None, Unset, str] = UNSET
+    custodian_last_name: Union[None, Unset, str] = UNSET
+    custodian_name: Union[None, Unset, str] = UNSET
+    department: Union[None, Unset, str] = UNSET
+    station: Union[None, Unset, str] = UNSET
+    notes: Union[None, Unset, str] = UNSET
+    document_number: Union[None, Unset, str] = UNSET
+    document_section: Union[None, Unset, str] = UNSET
+    cumulative_service_cost: Union[None, Unset, float] = UNSET
+    product_id: Union[None, Unset, int] = UNSET
+    manufacturer_part_number: Union[None, Unset, str] = UNSET
+    product_name: Union[None, Unset, str] = UNSET
+    product_description: Union[None, Unset, str] = UNSET
+    product_manufacturer: Union[None, Unset, str] = UNSET
+    site_name: Union[None, Unset, str] = UNSET
+    site_id: Union[None, Unset, int] = UNSET
+    condition: Union[None, Unset, str] = UNSET
+    criticality: Union[None, Unset, str] = UNSET
+    pool: Union[None, Unset, str] = UNSET
     purchase_date: Union[None, Unset, datetime.datetime] = UNSET
-    purchase_cost: Union[Unset, float] = UNSET
-    life_span_months: Union[Unset, int] = UNSET
+    purchase_cost: Union[None, Unset, float] = UNSET
+    life_span_months: Union[None, Unset, int] = UNSET
     activation_date: Union[None, Unset, datetime.datetime] = UNSET
-    depreciation_basis: Union[Unset, float] = UNSET
-    depreciation_method: Union[Unset, int] = UNSET
+    depreciation_basis: Union[None, Unset, float] = UNSET
+    depreciation_method: Union[None, Unset, int] = UNSET
     retirement_date: Union[None, Unset, datetime.datetime] = UNSET
-    salvage_value: Union[Unset, float] = UNSET
-    retirment_reason: Union[Unset, str] = UNSET
-    composite_parent_id: Union[Unset, int] = UNSET
-    composite_child_count: Union[Unset, int] = UNSET
+    salvage_value: Union[None, Unset, float] = UNSET
+    retirment_reason: Union[None, Unset, str] = UNSET
+    composite_parent_id: Union[None, Unset, int] = UNSET
+    composite_child_count: Union[None, Unset, int] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        maintenance_plans: Union[Unset, list[dict[str, Any]]] = UNSET
+        maintenance_plans: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.maintenance_plans and not isinstance(self.maintenance_plans, Unset):
             maintenance_plans = []
             for maintenance_plans_item_data in self.maintenance_plans:
@@ -150,7 +148,7 @@ class QualerApiModelsAssetToAssetMaintenancePlanModel:
 
         equipment_id = self.equipment_id
 
-        asset_status: Union[Unset, str] = UNSET
+        asset_status: Union[None, Unset, str] = UNSET
         if self.asset_status and not isinstance(self.asset_status, Unset):
             asset_status = self.asset_status.value
 
@@ -389,8 +387,7 @@ class QualerApiModelsAssetToAssetMaintenancePlanModel:
         equipment_id = d.pop("EquipmentId", UNSET)
 
         _asset_status = d.pop("AssetStatus", UNSET)
-        asset_status: Union[
-            Unset, QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus
+        asset_status: Union[None, Unset, QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus
         ]
         if isinstance(_asset_status, Unset):
             asset_status = UNSET

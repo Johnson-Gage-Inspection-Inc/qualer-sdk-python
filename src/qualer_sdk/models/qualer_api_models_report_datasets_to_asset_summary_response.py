@@ -15,36 +15,36 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToAssetSummaryResponse")
 class QualerApiModelsReportDatasetsToAssetSummaryResponse:
     """
     Attributes:
-        service_order_number (Union[Unset, int]):
-        service_order_id (Union[Unset, int]):
-        service_order_item_id (Union[Unset, int]):
-        custom_order_number (Union[Unset, str]):
-        order_item_number (Union[Unset, int]):
-        is_limited (Union[Unset, bool]):
-        certificate_number (Union[Unset, str]):
-        serial_number (Union[Unset, str]):
+        service_order_number (Union[None, Unset, int]):
+        service_order_id (Union[None, Unset, int]):
+        service_order_item_id (Union[None, Unset, int]):
+        custom_order_number (Union[None, Unset, str]):
+        order_item_number (Union[None, Unset, int]):
+        is_limited (Union[None, Unset, bool]):
+        certificate_number (Union[None, Unset, str]):
+        serial_number (Union[None, Unset, str]):
         next_service_date (Union[None, Unset, datetime.datetime]):
         service_date (Union[None, Unset, datetime.datetime]):
-        part_number (Union[Unset, str]):
-        display_part_number (Union[Unset, str]):
-        asset_tag (Union[Unset, str]):
-        asset_user (Union[Unset, str]):
-        asset_name (Union[Unset, str]):
-        equipment_id (Union[Unset, str]):
-        legacy_identifier (Union[Unset, str]):
-        asset_description (Union[Unset, str]):
-        class_ (Union[Unset, str]):
-        condition (Union[Unset, str]):
-        criticality (Union[Unset, str]):
-        asset_pool (Union[Unset, str]):
-        room (Union[Unset, str]):
-        station (Union[Unset, str]):
-        service_notes (Union[Unset, str]):
-        service_level (Union[Unset, str]):
-        service_level_code (Union[Unset, str]):
-        next_service_level (Union[Unset, str]):
-        next_service_level_code (Union[Unset, str]):
-        asset_id (Union[Unset, int]):
+        part_number (Union[None, Unset, str]):
+        display_part_number (Union[None, Unset, str]):
+        asset_tag (Union[None, Unset, str]):
+        asset_user (Union[None, Unset, str]):
+        asset_name (Union[None, Unset, str]):
+        equipment_id (Union[None, Unset, str]):
+        legacy_identifier (Union[None, Unset, str]):
+        asset_description (Union[None, Unset, str]):
+        class_ (Union[None, Unset, str]):
+        condition (Union[None, Unset, str]):
+        criticality (Union[None, Unset, str]):
+        asset_pool (Union[None, Unset, str]):
+        room (Union[None, Unset, str]):
+        station (Union[None, Unset, str]):
+        service_notes (Union[None, Unset, str]):
+        service_level (Union[None, Unset, str]):
+        service_level_code (Union[None, Unset, str]):
+        next_service_level (Union[None, Unset, str]):
+        next_service_level_code (Union[None, Unset, str]):
+        asset_id (Union[None, Unset, int]):
         result_status (Union[None, Unset, int]):
         serial_number_change (Union[None, Unset, str]):
         provider_technician (Union[None, Unset, str]):
@@ -73,36 +73,36 @@ class QualerApiModelsReportDatasetsToAssetSummaryResponse:
         interval_cycle (Union[None, Unset, str]):
     """
 
-    service_order_number: Union[Unset, int] = UNSET
-    service_order_id: Union[Unset, int] = UNSET
-    service_order_item_id: Union[Unset, int] = UNSET
-    custom_order_number: Union[Unset, str] = UNSET
-    order_item_number: Union[Unset, int] = UNSET
-    is_limited: Union[Unset, bool] = UNSET
-    certificate_number: Union[Unset, str] = UNSET
-    serial_number: Union[Unset, str] = UNSET
+    service_order_number: Union[None, Unset, int] = UNSET
+    service_order_id: Union[None, Unset, int] = UNSET
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    custom_order_number: Union[None, Unset, str] = UNSET
+    order_item_number: Union[None, Unset, int] = UNSET
+    is_limited: Union[None, Unset, bool] = UNSET
+    certificate_number: Union[None, Unset, str] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
     service_date: Union[None, Unset, datetime.datetime] = UNSET
-    part_number: Union[Unset, str] = UNSET
-    display_part_number: Union[Unset, str] = UNSET
-    asset_tag: Union[Unset, str] = UNSET
-    asset_user: Union[Unset, str] = UNSET
-    asset_name: Union[Unset, str] = UNSET
-    equipment_id: Union[Unset, str] = UNSET
-    legacy_identifier: Union[Unset, str] = UNSET
-    asset_description: Union[Unset, str] = UNSET
-    class_: Union[Unset, str] = UNSET
-    condition: Union[Unset, str] = UNSET
-    criticality: Union[Unset, str] = UNSET
-    asset_pool: Union[Unset, str] = UNSET
-    room: Union[Unset, str] = UNSET
-    station: Union[Unset, str] = UNSET
-    service_notes: Union[Unset, str] = UNSET
-    service_level: Union[Unset, str] = UNSET
-    service_level_code: Union[Unset, str] = UNSET
-    next_service_level: Union[Unset, str] = UNSET
-    next_service_level_code: Union[Unset, str] = UNSET
-    asset_id: Union[Unset, int] = UNSET
+    part_number: Union[None, Unset, str] = UNSET
+    display_part_number: Union[None, Unset, str] = UNSET
+    asset_tag: Union[None, Unset, str] = UNSET
+    asset_user: Union[None, Unset, str] = UNSET
+    asset_name: Union[None, Unset, str] = UNSET
+    equipment_id: Union[None, Unset, str] = UNSET
+    legacy_identifier: Union[None, Unset, str] = UNSET
+    asset_description: Union[None, Unset, str] = UNSET
+    class_: Union[None, Unset, str] = UNSET
+    condition: Union[None, Unset, str] = UNSET
+    criticality: Union[None, Unset, str] = UNSET
+    asset_pool: Union[None, Unset, str] = UNSET
+    room: Union[None, Unset, str] = UNSET
+    station: Union[None, Unset, str] = UNSET
+    service_notes: Union[None, Unset, str] = UNSET
+    service_level: Union[None, Unset, str] = UNSET
+    service_level_code: Union[None, Unset, str] = UNSET
+    next_service_level: Union[None, Unset, str] = UNSET
+    next_service_level_code: Union[None, Unset, str] = UNSET
+    asset_id: Union[None, Unset, int] = UNSET
     result_status: Union[None, Unset, int] = UNSET
     serial_number_change: Union[None, Unset, str] = UNSET
     provider_technician: Union[None, Unset, str] = UNSET

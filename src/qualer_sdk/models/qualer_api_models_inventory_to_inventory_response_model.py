@@ -13,18 +13,18 @@ T = TypeVar("T", bound="QualerApiModelsInventoryToInventoryResponseModel")
 class QualerApiModelsInventoryToInventoryResponseModel:
     """
     Attributes:
-        product_id (Union[Unset, int]):
-        manufacturer (Union[Unset, str]):
-        part_number (Union[Unset, str]):
-        is_stock_item (Union[Unset, bool]):
-        quantity_on_hand (Union[Unset, int]):
+        product_id (Union[None, Unset, int]):
+        manufacturer (Union[None, Unset, str]):
+        part_number (Union[None, Unset, str]):
+        is_stock_item (Union[None, Unset, bool]):
+        quantity_on_hand (Union[None, Unset, int]):
     """
 
-    product_id: Union[Unset, int] = UNSET
-    manufacturer: Union[Unset, str] = UNSET
-    part_number: Union[Unset, str] = UNSET
-    is_stock_item: Union[Unset, bool] = UNSET
-    quantity_on_hand: Union[Unset, int] = UNSET
+    product_id: Union[None, Unset, int] = UNSET
+    manufacturer: Union[None, Unset, str] = UNSET
+    part_number: Union[None, Unset, str] = UNSET
+    is_stock_item: Union[None, Unset, bool] = UNSET
+    quantity_on_hand: Union[None, Unset, int] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

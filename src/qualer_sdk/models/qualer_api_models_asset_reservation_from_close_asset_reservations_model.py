@@ -13,20 +13,20 @@ T = TypeVar("T", bound="QualerApiModelsAssetReservationFromCloseAssetReservation
 class QualerApiModelsAssetReservationFromCloseAssetReservationsModel:
     """
     Attributes:
-        asset_id (Union[Unset, int]):
-        area_id (Union[Unset, int]):
-        product_id (Union[Unset, int]):
-        serial_number (Union[Unset, str]):
-        asset_tag (Union[Unset, str]):
-        reservation_id (Union[Unset, int]):
+        asset_id (Union[None, Unset, int]):
+        area_id (Union[None, Unset, int]):
+        product_id (Union[None, Unset, int]):
+        serial_number (Union[None, Unset, str]):
+        asset_tag (Union[None, Unset, str]):
+        reservation_id (Union[None, Unset, int]):
     """
 
-    asset_id: Union[Unset, int] = UNSET
-    area_id: Union[Unset, int] = UNSET
-    product_id: Union[Unset, int] = UNSET
-    serial_number: Union[Unset, str] = UNSET
-    asset_tag: Union[Unset, str] = UNSET
-    reservation_id: Union[Unset, int] = UNSET
+    asset_id: Union[None, Unset, int] = UNSET
+    area_id: Union[None, Unset, int] = UNSET
+    product_id: Union[None, Unset, int] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
+    asset_tag: Union[None, Unset, str] = UNSET
+    reservation_id: Union[None, Unset, int] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

@@ -13,16 +13,16 @@ T = TypeVar("T", bound="QualerApiModelsAssetFromClientAssetManagerListModel")
 class QualerApiModelsAssetFromClientAssetManagerListModel:
     """
     Attributes:
-        filter_type (Union[Unset, str]):
-        search_string (Union[Unset, str]):
-        page (Union[Unset, int]):
-        page_size (Union[Unset, int]):
+        filter_type (Union[None, Unset, str]):
+        search_string (Union[None, Unset, str]):
+        page (Union[None, Unset, int]):
+        page_size (Union[None, Unset, int]):
     """
 
-    filter_type: Union[Unset, str] = UNSET
-    search_string: Union[Unset, str] = UNSET
-    page: Union[Unset, int] = UNSET
-    page_size: Union[Unset, int] = UNSET
+    filter_type: Union[None, Unset, str] = UNSET
+    search_string: Union[None, Unset, str] = UNSET
+    page: Union[None, Unset, int] = UNSET
+    page_size: Union[None, Unset, int] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

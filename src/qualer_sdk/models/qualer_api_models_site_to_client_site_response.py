@@ -27,50 +27,50 @@ T = TypeVar("T", bound="QualerApiModelsSiteToClientSiteResponse")
 class QualerApiModelsSiteToClientSiteResponse:
     """
     Attributes:
-        site_id (Union[Unset, int]):
-        site_name (Union[Unset, str]):
-        site_code (Union[Unset, str]):
+        site_id (Union[None, Unset, int]):
+        site_name (Union[None, Unset, str]):
+        site_code (Union[None, Unset, str]):
         shipping_address (Union['QualerApiModelsSiteToClientSiteResponseShippingAddressType0', None, Unset]):
-        shipping_inherited (Union[Unset, bool]):
+        shipping_inherited (Union[None, Unset, bool]):
         billing_address (Union['QualerApiModelsSiteToClientSiteResponseBillingAddressType0', None, Unset]):
-        default_account_representative_employee_id (Union[Unset, int]):
-        billing_inherited (Union[Unset, bool]):
-        federal_number (Union[Unset, str]):
-        state_number (Union[Unset, str]):
-        culture_name (Union[Unset, str]):
-        is_science_facility (Union[Unset, bool]):
-        is_service_center (Union[Unset, bool]):
-        is_inventory_storage (Union[Unset, bool]):
-        is_production (Union[Unset, bool]):
-        time_zone_id (Union[Unset, str]):
-        time_zone_offset_minutes (Union[Unset, int]):
-        updated_on_utc (Union[Unset, datetime.datetime]):
-        attributes (Union[Unset, list['QualerApiModelsCommonFromAttributeModel']]):
+        default_account_representative_employee_id (Union[None, Unset, int]):
+        billing_inherited (Union[None, Unset, bool]):
+        federal_number (Union[None, Unset, str]):
+        state_number (Union[None, Unset, str]):
+        culture_name (Union[None, Unset, str]):
+        is_science_facility (Union[None, Unset, bool]):
+        is_service_center (Union[None, Unset, bool]):
+        is_inventory_storage (Union[None, Unset, bool]):
+        is_production (Union[None, Unset, bool]):
+        time_zone_id (Union[None, Unset, str]):
+        time_zone_offset_minutes (Union[None, Unset, int]):
+        updated_on_utc (Union[None, Unset, datetime.datetime]):
+        attributes (Union[None, Unset, list['QualerApiModelsCommonFromAttributeModel']]):
     """
 
-    site_id: Union[Unset, int] = UNSET
-    site_name: Union[Unset, str] = UNSET
-    site_code: Union[Unset, str] = UNSET
+    site_id: Union[None, Unset, int] = UNSET
+    site_name: Union[None, Unset, str] = UNSET
+    site_code: Union[None, Unset, str] = UNSET
     shipping_address: Union[
         "QualerApiModelsSiteToClientSiteResponseShippingAddressType0", None, Unset
     ] = UNSET
-    shipping_inherited: Union[Unset, bool] = UNSET
+    shipping_inherited: Union[None, Unset, bool] = UNSET
     billing_address: Union[
         "QualerApiModelsSiteToClientSiteResponseBillingAddressType0", None, Unset
     ] = UNSET
-    default_account_representative_employee_id: Union[Unset, int] = UNSET
-    billing_inherited: Union[Unset, bool] = UNSET
-    federal_number: Union[Unset, str] = UNSET
-    state_number: Union[Unset, str] = UNSET
-    culture_name: Union[Unset, str] = UNSET
-    is_science_facility: Union[Unset, bool] = UNSET
-    is_service_center: Union[Unset, bool] = UNSET
-    is_inventory_storage: Union[Unset, bool] = UNSET
-    is_production: Union[Unset, bool] = UNSET
-    time_zone_id: Union[Unset, str] = UNSET
-    time_zone_offset_minutes: Union[Unset, int] = UNSET
-    updated_on_utc: Union[Unset, datetime.datetime] = UNSET
-    attributes: Union[Unset, list["QualerApiModelsCommonFromAttributeModel"]] = UNSET
+    default_account_representative_employee_id: Union[None, Unset, int] = UNSET
+    billing_inherited: Union[None, Unset, bool] = UNSET
+    federal_number: Union[None, Unset, str] = UNSET
+    state_number: Union[None, Unset, str] = UNSET
+    culture_name: Union[None, Unset, str] = UNSET
+    is_science_facility: Union[None, Unset, bool] = UNSET
+    is_service_center: Union[None, Unset, bool] = UNSET
+    is_inventory_storage: Union[None, Unset, bool] = UNSET
+    is_production: Union[None, Unset, bool] = UNSET
+    time_zone_id: Union[None, Unset, str] = UNSET
+    time_zone_offset_minutes: Union[None, Unset, int] = UNSET
+    updated_on_utc: Union[None, Unset, datetime.datetime] = UNSET
+    attributes: Union[None, Unset, list["QualerApiModelsCommonFromAttributeModel"]] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -135,11 +135,11 @@ class QualerApiModelsSiteToClientSiteResponse:
 
         time_zone_offset_minutes = self.time_zone_offset_minutes
 
-        updated_on_utc: Union[Unset, str] = UNSET
+        updated_on_utc: Union[None, Unset, str] = UNSET
         if self.updated_on_utc and not isinstance(self.updated_on_utc, Unset):
             updated_on_utc = self.updated_on_utc.isoformat()
 
-        attributes: Union[Unset, list[dict[str, Any]]] = UNSET
+        attributes: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.attributes and not isinstance(self.attributes, Unset):
             attributes = []
             for attributes_item_data in self.attributes:
@@ -298,7 +298,7 @@ class QualerApiModelsSiteToClientSiteResponse:
         time_zone_offset_minutes = d.pop("TimeZoneOffsetMinutes", UNSET)
 
         _updated_on_utc = d.pop("UpdatedOnUtc", UNSET)
-        updated_on_utc: Union[Unset, datetime.datetime]
+        updated_on_utc: Union[None, Unset, datetime.datetime]
         if isinstance(_updated_on_utc, Unset):
             updated_on_utc = UNSET
         else:

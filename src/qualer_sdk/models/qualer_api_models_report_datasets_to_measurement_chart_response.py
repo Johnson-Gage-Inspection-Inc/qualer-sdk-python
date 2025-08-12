@@ -13,24 +13,24 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToMeasurementChartResponse"
 class QualerApiModelsReportDatasetsToMeasurementChartResponse:
     """
     Attributes:
-        service_order_item_id (Union[Unset, int]):
-        measurement_set_id (Union[Unset, int]):
-        chart_type (Union[Unset, int]):
-        chart_image (Union[Unset, str]):
-        nominal (Union[Unset, str]):
-        title (Union[Unset, str]):
-        unit_of_measure (Union[Unset, str]):
-        abbreviated_uom (Union[Unset, str]):
+        service_order_item_id (Union[None, Unset, int]):
+        measurement_set_id (Union[None, Unset, int]):
+        chart_type (Union[None, Unset, int]):
+        chart_image (Union[None, Unset, str]):
+        nominal (Union[None, Unset, str]):
+        title (Union[None, Unset, str]):
+        unit_of_measure (Union[None, Unset, str]):
+        abbreviated_uom (Union[None, Unset, str]):
     """
 
-    service_order_item_id: Union[Unset, int] = UNSET
-    measurement_set_id: Union[Unset, int] = UNSET
-    chart_type: Union[Unset, int] = UNSET
-    chart_image: Union[Unset, str] = UNSET
-    nominal: Union[Unset, str] = UNSET
-    title: Union[Unset, str] = UNSET
-    unit_of_measure: Union[Unset, str] = UNSET
-    abbreviated_uom: Union[Unset, str] = UNSET
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    measurement_set_id: Union[None, Unset, int] = UNSET
+    chart_type: Union[None, Unset, int] = UNSET
+    chart_image: Union[None, Unset, str] = UNSET
+    nominal: Union[None, Unset, str] = UNSET
+    title: Union[None, Unset, str] = UNSET
+    unit_of_measure: Union[None, Unset, str] = UNSET
+    abbreviated_uom: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

@@ -28,36 +28,33 @@ T = TypeVar(
 class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModel:
     """
     Attributes:
-        measurement_name (Union[Unset, str]):
-        is_accredited (Union[Unset, bool]):
-        measurement_quantity_id (Union[Unset, int]):
-        default_unit_of_measure_id (Union[Unset, int]):
-        decimal_places (Union[Unset, int]):
-        significant_figures (Union[Unset, int]):
-        display_options (Union[Unset,
+        measurement_name (Union[None, Unset, str]):
+        is_accredited (Union[None, Unset, bool]):
+        measurement_quantity_id (Union[None, Unset, int]):
+        default_unit_of_measure_id (Union[None, Unset, int]):
+        decimal_places (Union[None, Unset, int]):
+        significant_figures (Union[None, Unset, int]):
+        display_options (Union[None, Unset,
             QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions]):
-        custom_fields (Union[Unset,
+        custom_fields (Union[None, Unset,
             QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields]):
-        measurement_points (Union[Unset, list['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBat
+        measurement_points (Union[None, Unset, list['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBat
             chResponseModelMeasurementSetResponseModelMeasurementPointResponseModel']]):
     """
 
-    measurement_name: Union[Unset, str] = UNSET
-    is_accredited: Union[Unset, bool] = UNSET
-    measurement_quantity_id: Union[Unset, int] = UNSET
-    default_unit_of_measure_id: Union[Unset, int] = UNSET
-    decimal_places: Union[Unset, int] = UNSET
-    significant_figures: Union[Unset, int] = UNSET
-    display_options: Union[
-        Unset,
+    measurement_name: Union[None, Unset, str] = UNSET
+    is_accredited: Union[None, Unset, bool] = UNSET
+    measurement_quantity_id: Union[None, Unset, int] = UNSET
+    default_unit_of_measure_id: Union[None, Unset, int] = UNSET
+    decimal_places: Union[None, Unset, int] = UNSET
+    significant_figures: Union[None, Unset, int] = UNSET
+    display_options: Union[None, Unset,
         "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions",
     ] = UNSET
-    custom_fields: Union[
-        Unset,
+    custom_fields: Union[None, Unset,
         "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields",
     ] = UNSET
-    measurement_points: Union[
-        Unset,
+    measurement_points: Union[None, Unset,
         list[
             "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel"
         ],
@@ -77,15 +74,15 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
 
         significant_figures = self.significant_figures
 
-        display_options: Union[Unset, dict[str, Any]] = UNSET
+        display_options: Union[None, Unset, dict[str, Any]] = UNSET
         if self.display_options and not isinstance(self.display_options, Unset):
             display_options = self.display_options.to_dict()
 
-        custom_fields: Union[Unset, dict[str, Any]] = UNSET
+        custom_fields: Union[None, Unset, dict[str, Any]] = UNSET
         if self.custom_fields and not isinstance(self.custom_fields, Unset):
             custom_fields = self.custom_fields.to_dict()
 
-        measurement_points: Union[Unset, list[dict[str, Any]]] = UNSET
+        measurement_points: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.measurement_points and not isinstance(self.measurement_points, Unset):
             measurement_points = []
             for measurement_points_item_data in self.measurement_points:
@@ -142,8 +139,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         significant_figures = d.pop("SignificantFigures", UNSET)
 
         _display_options = d.pop("DisplayOptions", UNSET)
-        display_options: Union[
-            Unset,
+        display_options: Union[None, Unset,
             QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions,
         ]
         if isinstance(_display_options, Unset):
@@ -154,8 +150,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
             )
 
         _custom_fields = d.pop("CustomFields", UNSET)
-        custom_fields: Union[
-            Unset,
+        custom_fields: Union[None, Unset,
             QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields,
         ]
         if isinstance(_custom_fields, Unset):

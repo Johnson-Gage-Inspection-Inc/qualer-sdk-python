@@ -14,13 +14,13 @@ from ...types import UNSET, Response, Unset
 
 def _get_kwargs(
     *,
-    status: Union[Unset, str] = UNSET,
-    company_id: Union[Unset, int] = UNSET,
-    from_: Union[Unset, datetime.datetime] = UNSET,
-    to: Union[Unset, datetime.datetime] = UNSET,
-    modified_after: Union[Unset, datetime.datetime] = UNSET,
-    work_order_number: Union[Unset, str] = UNSET,
-    assigned_employees: Union[Unset, str] = UNSET,
+    status: Union[None, Unset, str] = UNSET,
+    company_id: Union[None, Unset, int] = UNSET,
+    from_: Union[None, Unset, datetime.datetime] = UNSET,
+    to: Union[None, Unset, datetime.datetime] = UNSET,
+    modified_after: Union[None, Unset, datetime.datetime] = UNSET,
+    work_order_number: Union[None, Unset, str] = UNSET,
+    assigned_employees: Union[None, Unset, str] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -28,17 +28,17 @@ def _get_kwargs(
 
     params["companyId"] = company_id
 
-    json_from_: Union[Unset, str] = UNSET
+    json_from_: Union[None, Unset, str] = UNSET
     if from_ and not isinstance(from_, Unset):
         json_from_ = from_.isoformat()
     params["from"] = json_from_
 
-    json_to: Union[Unset, str] = UNSET
+    json_to: Union[None, Unset, str] = UNSET
     if to and not isinstance(to, Unset):
         json_to = to.isoformat()
     params["to"] = json_to
 
-    json_modified_after: Union[Unset, str] = UNSET
+    json_modified_after: Union[None, Unset, str] = UNSET
     if modified_after and not isinstance(modified_after, Unset):
         json_modified_after = modified_after.isoformat()
     params["modifiedAfter"] = json_modified_after
@@ -101,13 +101,13 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    status: Union[Unset, str] = UNSET,
-    company_id: Union[Unset, int] = UNSET,
-    from_: Union[Unset, datetime.datetime] = UNSET,
-    to: Union[Unset, datetime.datetime] = UNSET,
-    modified_after: Union[Unset, datetime.datetime] = UNSET,
-    work_order_number: Union[Unset, str] = UNSET,
-    assigned_employees: Union[Unset, str] = UNSET,
+    status: Union[None, Unset, str] = UNSET,
+    company_id: Union[None, Unset, int] = UNSET,
+    from_: Union[None, Unset, datetime.datetime] = UNSET,
+    to: Union[None, Unset, datetime.datetime] = UNSET,
+    modified_after: Union[None, Unset, datetime.datetime] = UNSET,
+    work_order_number: Union[None, Unset, str] = UNSET,
+    assigned_employees: Union[None, Unset, str] = UNSET,
 ) -> Response[
     Union[Any, list["QualerApiModelsServiceOrdersToClientOrderResponseModel"]]
 ]:
@@ -124,13 +124,13 @@ def sync_detailed(
     15T10:11:12&amp;workOrderNumber=00567
 
     Args:
-        status (Union[Unset, str]):
-        company_id (Union[Unset, int]):
-        from_ (Union[Unset, datetime.datetime]):
-        to (Union[Unset, datetime.datetime]):
-        modified_after (Union[Unset, datetime.datetime]):
-        work_order_number (Union[Unset, str]):
-        assigned_employees (Union[Unset, str]):
+        status (Union[None, Unset, str]):
+        company_id (Union[None, Unset, int]):
+        from_ (Union[None, Unset, datetime.datetime]):
+        to (Union[None, Unset, datetime.datetime]):
+        modified_after (Union[None, Unset, datetime.datetime]):
+        work_order_number (Union[None, Unset, str]):
+        assigned_employees (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -160,13 +160,13 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    status: Union[Unset, str] = UNSET,
-    company_id: Union[Unset, int] = UNSET,
-    from_: Union[Unset, datetime.datetime] = UNSET,
-    to: Union[Unset, datetime.datetime] = UNSET,
-    modified_after: Union[Unset, datetime.datetime] = UNSET,
-    work_order_number: Union[Unset, str] = UNSET,
-    assigned_employees: Union[Unset, str] = UNSET,
+    status: Union[None, Unset, str] = UNSET,
+    company_id: Union[None, Unset, int] = UNSET,
+    from_: Union[None, Unset, datetime.datetime] = UNSET,
+    to: Union[None, Unset, datetime.datetime] = UNSET,
+    modified_after: Union[None, Unset, datetime.datetime] = UNSET,
+    work_order_number: Union[None, Unset, str] = UNSET,
+    assigned_employees: Union[None, Unset, str] = UNSET,
 ) -> Optional[
     Union[Any, list["QualerApiModelsServiceOrdersToClientOrderResponseModel"]]
 ]:
@@ -183,13 +183,13 @@ def sync(
     15T10:11:12&amp;workOrderNumber=00567
 
     Args:
-        status (Union[Unset, str]):
-        company_id (Union[Unset, int]):
-        from_ (Union[Unset, datetime.datetime]):
-        to (Union[Unset, datetime.datetime]):
-        modified_after (Union[Unset, datetime.datetime]):
-        work_order_number (Union[Unset, str]):
-        assigned_employees (Union[Unset, str]):
+        status (Union[None, Unset, str]):
+        company_id (Union[None, Unset, int]):
+        from_ (Union[None, Unset, datetime.datetime]):
+        to (Union[None, Unset, datetime.datetime]):
+        modified_after (Union[None, Unset, datetime.datetime]):
+        work_order_number (Union[None, Unset, str]):
+        assigned_employees (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -214,13 +214,13 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    status: Union[Unset, str] = UNSET,
-    company_id: Union[Unset, int] = UNSET,
-    from_: Union[Unset, datetime.datetime] = UNSET,
-    to: Union[Unset, datetime.datetime] = UNSET,
-    modified_after: Union[Unset, datetime.datetime] = UNSET,
-    work_order_number: Union[Unset, str] = UNSET,
-    assigned_employees: Union[Unset, str] = UNSET,
+    status: Union[None, Unset, str] = UNSET,
+    company_id: Union[None, Unset, int] = UNSET,
+    from_: Union[None, Unset, datetime.datetime] = UNSET,
+    to: Union[None, Unset, datetime.datetime] = UNSET,
+    modified_after: Union[None, Unset, datetime.datetime] = UNSET,
+    work_order_number: Union[None, Unset, str] = UNSET,
+    assigned_employees: Union[None, Unset, str] = UNSET,
 ) -> Response[
     Union[Any, list["QualerApiModelsServiceOrdersToClientOrderResponseModel"]]
 ]:
@@ -237,13 +237,13 @@ async def asyncio_detailed(
     15T10:11:12&amp;workOrderNumber=00567
 
     Args:
-        status (Union[Unset, str]):
-        company_id (Union[Unset, int]):
-        from_ (Union[Unset, datetime.datetime]):
-        to (Union[Unset, datetime.datetime]):
-        modified_after (Union[Unset, datetime.datetime]):
-        work_order_number (Union[Unset, str]):
-        assigned_employees (Union[Unset, str]):
+        status (Union[None, Unset, str]):
+        company_id (Union[None, Unset, int]):
+        from_ (Union[None, Unset, datetime.datetime]):
+        to (Union[None, Unset, datetime.datetime]):
+        modified_after (Union[None, Unset, datetime.datetime]):
+        work_order_number (Union[None, Unset, str]):
+        assigned_employees (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -271,13 +271,13 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    status: Union[Unset, str] = UNSET,
-    company_id: Union[Unset, int] = UNSET,
-    from_: Union[Unset, datetime.datetime] = UNSET,
-    to: Union[Unset, datetime.datetime] = UNSET,
-    modified_after: Union[Unset, datetime.datetime] = UNSET,
-    work_order_number: Union[Unset, str] = UNSET,
-    assigned_employees: Union[Unset, str] = UNSET,
+    status: Union[None, Unset, str] = UNSET,
+    company_id: Union[None, Unset, int] = UNSET,
+    from_: Union[None, Unset, datetime.datetime] = UNSET,
+    to: Union[None, Unset, datetime.datetime] = UNSET,
+    modified_after: Union[None, Unset, datetime.datetime] = UNSET,
+    work_order_number: Union[None, Unset, str] = UNSET,
+    assigned_employees: Union[None, Unset, str] = UNSET,
 ) -> Optional[
     Union[Any, list["QualerApiModelsServiceOrdersToClientOrderResponseModel"]]
 ]:
@@ -294,13 +294,13 @@ async def asyncio(
     15T10:11:12&amp;workOrderNumber=00567
 
     Args:
-        status (Union[Unset, str]):
-        company_id (Union[Unset, int]):
-        from_ (Union[Unset, datetime.datetime]):
-        to (Union[Unset, datetime.datetime]):
-        modified_after (Union[Unset, datetime.datetime]):
-        work_order_number (Union[Unset, str]):
-        assigned_employees (Union[Unset, str]):
+        status (Union[None, Unset, str]):
+        company_id (Union[None, Unset, int]):
+        from_ (Union[None, Unset, datetime.datetime]):
+        to (Union[None, Unset, datetime.datetime]):
+        modified_after (Union[None, Unset, datetime.datetime]):
+        work_order_number (Union[None, Unset, str]):
+        assigned_employees (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

@@ -13,38 +13,38 @@ T = TypeVar("T", bound="QualerApiModelsAddressToAddressResponseModel")
 class QualerApiModelsAddressToAddressResponseModel:
     """
     Attributes:
-        first_name (Union[Unset, str]):
-        last_name (Union[Unset, str]):
-        email (Union[Unset, str]):
-        company (Union[Unset, str]):
-        city (Union[Unset, str]):
-        address_1 (Union[Unset, str]):
-        address_2 (Union[Unset, str]):
-        zip_postal_code (Union[Unset, str]):
-        phone_number (Union[Unset, str]):
-        fax_number (Union[Unset, str]):
-        attention_1 (Union[Unset, str]):
-        attention_2 (Union[Unset, str]):
-        country (Union[Unset, str]):
-        state_province (Union[Unset, str]):
-        state_province_abbreviation (Union[Unset, str]):
+        first_name (Union[None, Unset, str]):
+        last_name (Union[None, Unset, str]):
+        email (Union[None, Unset, str]):
+        company (Union[None, Unset, str]):
+        city (Union[None, Unset, str]):
+        address_1 (Union[None, Unset, str]):
+        address_2 (Union[None, Unset, str]):
+        zip_postal_code (Union[None, Unset, str]):
+        phone_number (Union[None, Unset, str]):
+        fax_number (Union[None, Unset, str]):
+        attention_1 (Union[None, Unset, str]):
+        attention_2 (Union[None, Unset, str]):
+        country (Union[None, Unset, str]):
+        state_province (Union[None, Unset, str]):
+        state_province_abbreviation (Union[None, Unset, str]):
     """
 
-    first_name: Union[Unset, str] = UNSET
-    last_name: Union[Unset, str] = UNSET
-    email: Union[Unset, str] = UNSET
-    company: Union[Unset, str] = UNSET
-    city: Union[Unset, str] = UNSET
-    address_1: Union[Unset, str] = UNSET
-    address_2: Union[Unset, str] = UNSET
-    zip_postal_code: Union[Unset, str] = UNSET
-    phone_number: Union[Unset, str] = UNSET
-    fax_number: Union[Unset, str] = UNSET
-    attention_1: Union[Unset, str] = UNSET
-    attention_2: Union[Unset, str] = UNSET
-    country: Union[Unset, str] = UNSET
-    state_province: Union[Unset, str] = UNSET
-    state_province_abbreviation: Union[Unset, str] = UNSET
+    first_name: Union[None, Unset, str] = UNSET
+    last_name: Union[None, Unset, str] = UNSET
+    email: Union[None, Unset, str] = UNSET
+    company: Union[None, Unset, str] = UNSET
+    city: Union[None, Unset, str] = UNSET
+    address_1: Union[None, Unset, str] = UNSET
+    address_2: Union[None, Unset, str] = UNSET
+    zip_postal_code: Union[None, Unset, str] = UNSET
+    phone_number: Union[None, Unset, str] = UNSET
+    fax_number: Union[None, Unset, str] = UNSET
+    attention_1: Union[None, Unset, str] = UNSET
+    attention_2: Union[None, Unset, str] = UNSET
+    country: Union[None, Unset, str] = UNSET
+    state_province: Union[None, Unset, str] = UNSET
+    state_province_abbreviation: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

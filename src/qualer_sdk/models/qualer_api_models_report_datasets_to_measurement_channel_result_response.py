@@ -19,40 +19,39 @@ T = TypeVar(
 class QualerApiModelsReportDatasetsToMeasurementChannelResultResponse:
     """
     Attributes:
-        service_order_item_id (Union[Unset, int]):
-        measurement_point_id (Union[Unset, int]):
-        column_index (Union[Unset, int]):
-        batch_type (Union[Unset, QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType]):
-        result (Union[Unset, ServiceResultStatus]):
-        mean_result (Union[Unset, bool]):
-        range_result (Union[Unset, bool]):
-        delta_result (Union[Unset, bool]):
-        min_result (Union[Unset, bool]):
-        max_result (Union[Unset, bool]):
-        tar_result (Union[Unset, bool]):
-        tur_result (Union[Unset, bool]):
-        error_result (Union[Unset, bool]):
-        sd_result (Union[Unset, bool]):
-        cv_result (Union[Unset, bool]):
+        service_order_item_id (Union[None, Unset, int]):
+        measurement_point_id (Union[None, Unset, int]):
+        column_index (Union[None, Unset, int]):
+        batch_type (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType]):
+        result (Union[None, Unset, ServiceResultStatus]):
+        mean_result (Union[None, Unset, bool]):
+        range_result (Union[None, Unset, bool]):
+        delta_result (Union[None, Unset, bool]):
+        min_result (Union[None, Unset, bool]):
+        max_result (Union[None, Unset, bool]):
+        tar_result (Union[None, Unset, bool]):
+        tur_result (Union[None, Unset, bool]):
+        error_result (Union[None, Unset, bool]):
+        sd_result (Union[None, Unset, bool]):
+        cv_result (Union[None, Unset, bool]):
     """
 
-    service_order_item_id: Union[Unset, int] = UNSET
-    measurement_point_id: Union[Unset, int] = UNSET
-    column_index: Union[Unset, int] = UNSET
-    batch_type: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    measurement_point_id: Union[None, Unset, int] = UNSET
+    column_index: Union[None, Unset, int] = UNSET
+    batch_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType
     ] = UNSET
-    result: Union[Unset, ServiceResultStatus] = UNSET
-    mean_result: Union[Unset, bool] = UNSET
-    range_result: Union[Unset, bool] = UNSET
-    delta_result: Union[Unset, bool] = UNSET
-    min_result: Union[Unset, bool] = UNSET
-    max_result: Union[Unset, bool] = UNSET
-    tar_result: Union[Unset, bool] = UNSET
-    tur_result: Union[Unset, bool] = UNSET
-    error_result: Union[Unset, bool] = UNSET
-    sd_result: Union[Unset, bool] = UNSET
-    cv_result: Union[Unset, bool] = UNSET
+    result: Union[None, Unset, ServiceResultStatus] = UNSET
+    mean_result: Union[None, Unset, bool] = UNSET
+    range_result: Union[None, Unset, bool] = UNSET
+    delta_result: Union[None, Unset, bool] = UNSET
+    min_result: Union[None, Unset, bool] = UNSET
+    max_result: Union[None, Unset, bool] = UNSET
+    tar_result: Union[None, Unset, bool] = UNSET
+    tur_result: Union[None, Unset, bool] = UNSET
+    error_result: Union[None, Unset, bool] = UNSET
+    sd_result: Union[None, Unset, bool] = UNSET
+    cv_result: Union[None, Unset, bool] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -62,11 +61,11 @@ class QualerApiModelsReportDatasetsToMeasurementChannelResultResponse:
 
         column_index = self.column_index
 
-        batch_type: Union[Unset, int] = UNSET
+        batch_type: Union[None, Unset, int] = UNSET
         if self.batch_type and not isinstance(self.batch_type, Unset):
             batch_type = self.batch_type.value
 
-        result: Union[Unset, int] = UNSET
+        result: Union[None, Unset, int] = UNSET
         if self.result and not isinstance(self.result, Unset):
             result = self.result.value
 
@@ -136,8 +135,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelResultResponse:
         column_index = d.pop("ColumnIndex", UNSET)
 
         _batch_type = d.pop("BatchType", UNSET)
-        batch_type: Union[
-            Unset,
+        batch_type: Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType,
         ]
         if isinstance(_batch_type, Unset):
@@ -148,7 +146,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelResultResponse:
             )
 
         _result = d.pop("Result", UNSET)
-        result: Union[Unset, ServiceResultStatus]
+        result: Union[None, Unset, ServiceResultStatus]
         if isinstance(_result, Unset):
             result = UNSET
         else:

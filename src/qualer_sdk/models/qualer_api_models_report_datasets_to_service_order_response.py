@@ -15,125 +15,125 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderResponse")
 class QualerApiModelsReportDatasetsToServiceOrderResponse:
     """
     Attributes:
-        guid (Union[Unset, str]):
-        account_number (Union[Unset, str]):
-        service_order_number (Union[Unset, int]):
-        service_order_number_text (Union[Unset, str]):
-        number_of_instruments (Union[Unset, int]):
-        parts_discount_total (Union[Unset, float]):
-        po_number (Union[Unset, str]):
-        secondary_po (Union[Unset, str]):
-        location (Union[Unset, str]):
+        guid (Union[None, Unset, str]):
+        account_number (Union[None, Unset, str]):
+        service_order_number (Union[None, Unset, int]):
+        service_order_number_text (Union[None, Unset, str]):
+        number_of_instruments (Union[None, Unset, int]):
+        parts_discount_total (Union[None, Unset, float]):
+        po_number (Union[None, Unset, str]):
+        secondary_po (Union[None, Unset, str]):
+        location (Union[None, Unset, str]):
         shipped_date (Union[None, Unset, datetime.datetime]):
-        payment_terms (Union[Unset, int]):
-        site_access_notes (Union[Unset, str]):
-        grace_period (Union[Unset, int]):
-        trade_in_credit (Union[Unset, float]):
-        prepaid_credit (Union[Unset, float]):
-        interest_rate (Union[Unset, float]):
-        service_taxation (Union[Unset, int]):
-        service_order_id (Union[Unset, int]):
-        federal_number (Union[Unset, str]):
-        vendor_site_id (Union[Unset, int]):
-        vendor_site (Union[Unset, str]):
-        site_name (Union[Unset, str]):
-        site_code (Union[Unset, str]):
-        vendor_name (Union[Unset, str]):
-        domain_name (Union[Unset, str]):
-        client_company_domain (Union[Unset, str]):
-        provider_logo (Union[Unset, str]):
-        client_signature (Union[Unset, str]):
-        vendor_signature (Union[Unset, str]):
-        qr_code (Union[Unset, str]):
-        bar_code (Union[Unset, str]):
-        bar_code_string (Union[Unset, str]):
-        po_balance (Union[Unset, float]):
-        service_terms (Union[Unset, str]):
-        service_total (Union[Unset, float]):
-        repairs_total (Union[Unset, float]):
-        parts_total (Union[Unset, float]):
-        parts_total_before_discount (Union[Unset, float]):
-        effective_tax_rate (Union[Unset, float]):
-        tax_amount (Union[Unset, float]):
-        shipping_fee (Union[Unset, float]):
-        late_fee (Union[Unset, float]):
-        grand_total (Union[Unset, float]):
-        amount_paid (Union[Unset, float]):
-        balance_total (Union[Unset, float]):
-        travel_charge (Union[Unset, float]):
-        private_notes (Union[Unset, str]):
-        service_notes (Union[Unset, str]):
-        display_service_comments (Union[Unset, bool]):
-        display_part_repairs (Union[Unset, bool]):
-        print_separate_measurement (Union[Unset, bool]):
-        billing_address_1 (Union[Unset, str]):
-        billing_address_2 (Union[Unset, str]):
-        billing_first_name (Union[Unset, str]):
-        billing_last_name (Union[Unset, str]):
-        billing_company (Union[Unset, str]):
-        billing_country (Union[Unset, str]):
-        billing_city (Union[Unset, str]):
-        billing_state (Union[Unset, str]):
-        billing_zip (Union[Unset, str]):
-        billing_phone_number (Union[Unset, str]):
-        billing_fax_number (Union[Unset, str]):
-        billing_email (Union[Unset, str]):
-        shipping_address_1 (Union[Unset, str]):
-        shipping_address_2 (Union[Unset, str]):
-        shipping_first_name (Union[Unset, str]):
-        shipping_last_name (Union[Unset, str]):
-        shipping_email (Union[Unset, str]):
-        shipping_company (Union[Unset, str]):
-        shipping_city (Union[Unset, str]):
-        shipping_zip (Union[Unset, str]):
-        shipping_phone_number (Union[Unset, str]):
-        shipping_fax_number (Union[Unset, str]):
-        shipping_country (Union[Unset, str]):
-        shipping_state (Union[Unset, str]):
-        shipping_method (Union[Unset, str]):
-        return_shipping_method (Union[Unset, str]):
-        tracking_number (Union[Unset, str]):
-        provider_billing_address_1 (Union[Unset, str]):
-        provider_billing_address_2 (Union[Unset, str]):
-        provider_billing_first_name (Union[Unset, str]):
-        provider_billing_last_name (Union[Unset, str]):
-        provider_billing_email (Union[Unset, str]):
-        provider_billing_company (Union[Unset, str]):
-        provider_billing_city (Union[Unset, str]):
-        provider_billing_zip (Union[Unset, str]):
-        provider_billing_phone_number (Union[Unset, str]):
-        provider_billing_country (Union[Unset, str]):
-        provider_billing_state (Union[Unset, str]):
-        provider_billing_fax_number (Union[Unset, str]):
-        provider_shipping_address_1 (Union[Unset, str]):
-        provider_shipping_address_2 (Union[Unset, str]):
-        provider_shipping_first_name (Union[Unset, str]):
-        provider_shipping_last_name (Union[Unset, str]):
-        provider_shipping_email (Union[Unset, str]):
-        provider_shipping_company (Union[Unset, str]):
-        provider_shipping_city (Union[Unset, str]):
-        provider_shipping_zip (Union[Unset, str]):
-        provider_shipping_phone_number (Union[Unset, str]):
-        provider_shipping_country (Union[Unset, str]):
-        provider_shipping_state (Union[Unset, str]):
-        provider_shipping_fax_number (Union[Unset, str]):
-        culture_name (Union[Unset, str]):
-        vendor_company_id (Union[Unset, int]):
-        client_vendor_id (Union[Unset, int]):
+        payment_terms (Union[None, Unset, int]):
+        site_access_notes (Union[None, Unset, str]):
+        grace_period (Union[None, Unset, int]):
+        trade_in_credit (Union[None, Unset, float]):
+        prepaid_credit (Union[None, Unset, float]):
+        interest_rate (Union[None, Unset, float]):
+        service_taxation (Union[None, Unset, int]):
+        service_order_id (Union[None, Unset, int]):
+        federal_number (Union[None, Unset, str]):
+        vendor_site_id (Union[None, Unset, int]):
+        vendor_site (Union[None, Unset, str]):
+        site_name (Union[None, Unset, str]):
+        site_code (Union[None, Unset, str]):
+        vendor_name (Union[None, Unset, str]):
+        domain_name (Union[None, Unset, str]):
+        client_company_domain (Union[None, Unset, str]):
+        provider_logo (Union[None, Unset, str]):
+        client_signature (Union[None, Unset, str]):
+        vendor_signature (Union[None, Unset, str]):
+        qr_code (Union[None, Unset, str]):
+        bar_code (Union[None, Unset, str]):
+        bar_code_string (Union[None, Unset, str]):
+        po_balance (Union[None, Unset, float]):
+        service_terms (Union[None, Unset, str]):
+        service_total (Union[None, Unset, float]):
+        repairs_total (Union[None, Unset, float]):
+        parts_total (Union[None, Unset, float]):
+        parts_total_before_discount (Union[None, Unset, float]):
+        effective_tax_rate (Union[None, Unset, float]):
+        tax_amount (Union[None, Unset, float]):
+        shipping_fee (Union[None, Unset, float]):
+        late_fee (Union[None, Unset, float]):
+        grand_total (Union[None, Unset, float]):
+        amount_paid (Union[None, Unset, float]):
+        balance_total (Union[None, Unset, float]):
+        travel_charge (Union[None, Unset, float]):
+        private_notes (Union[None, Unset, str]):
+        service_notes (Union[None, Unset, str]):
+        display_service_comments (Union[None, Unset, bool]):
+        display_part_repairs (Union[None, Unset, bool]):
+        print_separate_measurement (Union[None, Unset, bool]):
+        billing_address_1 (Union[None, Unset, str]):
+        billing_address_2 (Union[None, Unset, str]):
+        billing_first_name (Union[None, Unset, str]):
+        billing_last_name (Union[None, Unset, str]):
+        billing_company (Union[None, Unset, str]):
+        billing_country (Union[None, Unset, str]):
+        billing_city (Union[None, Unset, str]):
+        billing_state (Union[None, Unset, str]):
+        billing_zip (Union[None, Unset, str]):
+        billing_phone_number (Union[None, Unset, str]):
+        billing_fax_number (Union[None, Unset, str]):
+        billing_email (Union[None, Unset, str]):
+        shipping_address_1 (Union[None, Unset, str]):
+        shipping_address_2 (Union[None, Unset, str]):
+        shipping_first_name (Union[None, Unset, str]):
+        shipping_last_name (Union[None, Unset, str]):
+        shipping_email (Union[None, Unset, str]):
+        shipping_company (Union[None, Unset, str]):
+        shipping_city (Union[None, Unset, str]):
+        shipping_zip (Union[None, Unset, str]):
+        shipping_phone_number (Union[None, Unset, str]):
+        shipping_fax_number (Union[None, Unset, str]):
+        shipping_country (Union[None, Unset, str]):
+        shipping_state (Union[None, Unset, str]):
+        shipping_method (Union[None, Unset, str]):
+        return_shipping_method (Union[None, Unset, str]):
+        tracking_number (Union[None, Unset, str]):
+        provider_billing_address_1 (Union[None, Unset, str]):
+        provider_billing_address_2 (Union[None, Unset, str]):
+        provider_billing_first_name (Union[None, Unset, str]):
+        provider_billing_last_name (Union[None, Unset, str]):
+        provider_billing_email (Union[None, Unset, str]):
+        provider_billing_company (Union[None, Unset, str]):
+        provider_billing_city (Union[None, Unset, str]):
+        provider_billing_zip (Union[None, Unset, str]):
+        provider_billing_phone_number (Union[None, Unset, str]):
+        provider_billing_country (Union[None, Unset, str]):
+        provider_billing_state (Union[None, Unset, str]):
+        provider_billing_fax_number (Union[None, Unset, str]):
+        provider_shipping_address_1 (Union[None, Unset, str]):
+        provider_shipping_address_2 (Union[None, Unset, str]):
+        provider_shipping_first_name (Union[None, Unset, str]):
+        provider_shipping_last_name (Union[None, Unset, str]):
+        provider_shipping_email (Union[None, Unset, str]):
+        provider_shipping_company (Union[None, Unset, str]):
+        provider_shipping_city (Union[None, Unset, str]):
+        provider_shipping_zip (Union[None, Unset, str]):
+        provider_shipping_phone_number (Union[None, Unset, str]):
+        provider_shipping_country (Union[None, Unset, str]):
+        provider_shipping_state (Union[None, Unset, str]):
+        provider_shipping_fax_number (Union[None, Unset, str]):
+        culture_name (Union[None, Unset, str]):
+        vendor_company_id (Union[None, Unset, int]):
+        client_vendor_id (Union[None, Unset, int]):
         sign_off_date (Union[None, Unset, datetime.datetime]):
-        quality_control_date (Union[Unset, datetime.datetime]):
+        quality_control_date (Union[None, Unset, datetime.datetime]):
         client_sign_off_on (Union[None, Unset, datetime.datetime]):
-        client_sign_off_by_name (Union[Unset, str]):
+        client_sign_off_by_name (Union[None, Unset, str]):
         client_signed_on (Union[None, Unset, datetime.datetime]):
-        client_sticker_notes (Union[Unset, str]):
-        asset_sticker_notes (Union[Unset, str]):
-        order_sticker_notes (Union[Unset, str]):
-        quality_control_name (Union[Unset, str]):
-        fulfilled_by_name (Union[Unset, str]):
-        sign_off_name (Union[Unset, str]):
-        display_as_found (Union[Unset, bool]):
-        display_as_left (Union[Unset, bool]):
-        created_on (Union[Unset, datetime.datetime]):
+        client_sticker_notes (Union[None, Unset, str]):
+        asset_sticker_notes (Union[None, Unset, str]):
+        order_sticker_notes (Union[None, Unset, str]):
+        quality_control_name (Union[None, Unset, str]):
+        fulfilled_by_name (Union[None, Unset, str]):
+        sign_off_name (Union[None, Unset, str]):
+        display_as_found (Union[None, Unset, bool]):
+        display_as_left (Union[None, Unset, bool]):
+        created_on (Union[None, Unset, datetime.datetime]):
         invoiced_on (Union[None, Unset, datetime.datetime]):
         submitted_on (Union[None, Unset, datetime.datetime]):
         shipped_on (Union[None, Unset, datetime.datetime]):
@@ -147,12 +147,12 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         sign_off_on (Union[None, Unset, datetime.datetime]):
         vendor_signed_on (Union[None, Unset, datetime.datetime]):
         client_notes (Union[None, Unset, str]):
-        order_shipping_option (Union[Unset, int]):
-        shipment_status (Union[Unset, int]):
-        payment_status (Union[Unset, int]):
-        payment_option (Union[Unset, str]):
-        order_status (Union[Unset, int]):
-        created_by_name (Union[Unset, str]):
+        order_shipping_option (Union[None, Unset, int]):
+        shipment_status (Union[None, Unset, int]):
+        payment_status (Union[None, Unset, int]):
+        payment_option (Union[None, Unset, str]):
+        order_status (Union[None, Unset, int]):
+        created_by_name (Union[None, Unset, str]):
         completed_by_name (Union[None, Unset, str]):
         shipped_by_name (Union[None, Unset, str]):
         accepted_by_name (Union[None, Unset, str]):
@@ -166,147 +166,147 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         owner_department (Union[None, Unset, str]):
         assignee_name (Union[None, Unset, str]):
         payment_due_on (Union[None, Unset, datetime.datetime]):
-        process_date_option (Union[Unset, int]):
+        process_date_option (Union[None, Unset, int]):
         desired_date (Union[None, Unset, datetime.datetime]):
         deadline_date (Union[None, Unset, datetime.datetime]):
-        vendor_sign_off_on (Union[Unset, datetime.datetime]):
-        vendor_sign_off_by_name (Union[Unset, str]):
-        service_discount (Union[Unset, float]):
-        return_account (Union[Unset, str]):
+        vendor_sign_off_on (Union[None, Unset, datetime.datetime]):
+        vendor_sign_off_by_name (Union[None, Unset, str]):
+        service_discount (Union[None, Unset, float]):
+        return_account (Union[None, Unset, str]):
         business_hours_from (Union[None, Unset, datetime.datetime]):
         business_hours_to (Union[None, Unset, datetime.datetime]):
-        client_company_alternative_names (Union[Unset, str]):
-        client_id (Union[Unset, int]):
-        client_class (Union[Unset, str]):
-        client_status (Union[Unset, str]):
-        client_invoicing (Union[Unset, str]):
-        client_standing (Union[Unset, str]):
-        client_category (Union[Unset, str]):
-        master_template_name (Union[Unset, str]):
-        client_site_code (Union[Unset, str]):
-        order_workflow_name (Union[Unset, str]):
-        request_workflow_name (Union[Unset, str]):
+        client_company_alternative_names (Union[None, Unset, str]):
+        client_id (Union[None, Unset, int]):
+        client_class (Union[None, Unset, str]):
+        client_status (Union[None, Unset, str]):
+        client_invoicing (Union[None, Unset, str]):
+        client_standing (Union[None, Unset, str]):
+        client_category (Union[None, Unset, str]):
+        master_template_name (Union[None, Unset, str]):
+        client_site_code (Union[None, Unset, str]):
+        order_workflow_name (Union[None, Unset, str]):
+        request_workflow_name (Union[None, Unset, str]):
     """
 
-    guid: Union[Unset, str] = UNSET
-    account_number: Union[Unset, str] = UNSET
-    service_order_number: Union[Unset, int] = UNSET
-    service_order_number_text: Union[Unset, str] = UNSET
-    number_of_instruments: Union[Unset, int] = UNSET
-    parts_discount_total: Union[Unset, float] = UNSET
-    po_number: Union[Unset, str] = UNSET
-    secondary_po: Union[Unset, str] = UNSET
-    location: Union[Unset, str] = UNSET
+    guid: Union[None, Unset, str] = UNSET
+    account_number: Union[None, Unset, str] = UNSET
+    service_order_number: Union[None, Unset, int] = UNSET
+    service_order_number_text: Union[None, Unset, str] = UNSET
+    number_of_instruments: Union[None, Unset, int] = UNSET
+    parts_discount_total: Union[None, Unset, float] = UNSET
+    po_number: Union[None, Unset, str] = UNSET
+    secondary_po: Union[None, Unset, str] = UNSET
+    location: Union[None, Unset, str] = UNSET
     shipped_date: Union[None, Unset, datetime.datetime] = UNSET
-    payment_terms: Union[Unset, int] = UNSET
-    site_access_notes: Union[Unset, str] = UNSET
-    grace_period: Union[Unset, int] = UNSET
-    trade_in_credit: Union[Unset, float] = UNSET
-    prepaid_credit: Union[Unset, float] = UNSET
-    interest_rate: Union[Unset, float] = UNSET
-    service_taxation: Union[Unset, int] = UNSET
-    service_order_id: Union[Unset, int] = UNSET
-    federal_number: Union[Unset, str] = UNSET
-    vendor_site_id: Union[Unset, int] = UNSET
-    vendor_site: Union[Unset, str] = UNSET
-    site_name: Union[Unset, str] = UNSET
-    site_code: Union[Unset, str] = UNSET
-    vendor_name: Union[Unset, str] = UNSET
-    domain_name: Union[Unset, str] = UNSET
-    client_company_domain: Union[Unset, str] = UNSET
-    provider_logo: Union[Unset, str] = UNSET
-    client_signature: Union[Unset, str] = UNSET
-    vendor_signature: Union[Unset, str] = UNSET
-    qr_code: Union[Unset, str] = UNSET
-    bar_code: Union[Unset, str] = UNSET
-    bar_code_string: Union[Unset, str] = UNSET
-    po_balance: Union[Unset, float] = UNSET
-    service_terms: Union[Unset, str] = UNSET
-    service_total: Union[Unset, float] = UNSET
-    repairs_total: Union[Unset, float] = UNSET
-    parts_total: Union[Unset, float] = UNSET
-    parts_total_before_discount: Union[Unset, float] = UNSET
-    effective_tax_rate: Union[Unset, float] = UNSET
-    tax_amount: Union[Unset, float] = UNSET
-    shipping_fee: Union[Unset, float] = UNSET
-    late_fee: Union[Unset, float] = UNSET
-    grand_total: Union[Unset, float] = UNSET
-    amount_paid: Union[Unset, float] = UNSET
-    balance_total: Union[Unset, float] = UNSET
-    travel_charge: Union[Unset, float] = UNSET
-    private_notes: Union[Unset, str] = UNSET
-    service_notes: Union[Unset, str] = UNSET
-    display_service_comments: Union[Unset, bool] = UNSET
-    display_part_repairs: Union[Unset, bool] = UNSET
-    print_separate_measurement: Union[Unset, bool] = UNSET
-    billing_address_1: Union[Unset, str] = UNSET
-    billing_address_2: Union[Unset, str] = UNSET
-    billing_first_name: Union[Unset, str] = UNSET
-    billing_last_name: Union[Unset, str] = UNSET
-    billing_company: Union[Unset, str] = UNSET
-    billing_country: Union[Unset, str] = UNSET
-    billing_city: Union[Unset, str] = UNSET
-    billing_state: Union[Unset, str] = UNSET
-    billing_zip: Union[Unset, str] = UNSET
-    billing_phone_number: Union[Unset, str] = UNSET
-    billing_fax_number: Union[Unset, str] = UNSET
-    billing_email: Union[Unset, str] = UNSET
-    shipping_address_1: Union[Unset, str] = UNSET
-    shipping_address_2: Union[Unset, str] = UNSET
-    shipping_first_name: Union[Unset, str] = UNSET
-    shipping_last_name: Union[Unset, str] = UNSET
-    shipping_email: Union[Unset, str] = UNSET
-    shipping_company: Union[Unset, str] = UNSET
-    shipping_city: Union[Unset, str] = UNSET
-    shipping_zip: Union[Unset, str] = UNSET
-    shipping_phone_number: Union[Unset, str] = UNSET
-    shipping_fax_number: Union[Unset, str] = UNSET
-    shipping_country: Union[Unset, str] = UNSET
-    shipping_state: Union[Unset, str] = UNSET
-    shipping_method: Union[Unset, str] = UNSET
-    return_shipping_method: Union[Unset, str] = UNSET
-    tracking_number: Union[Unset, str] = UNSET
-    provider_billing_address_1: Union[Unset, str] = UNSET
-    provider_billing_address_2: Union[Unset, str] = UNSET
-    provider_billing_first_name: Union[Unset, str] = UNSET
-    provider_billing_last_name: Union[Unset, str] = UNSET
-    provider_billing_email: Union[Unset, str] = UNSET
-    provider_billing_company: Union[Unset, str] = UNSET
-    provider_billing_city: Union[Unset, str] = UNSET
-    provider_billing_zip: Union[Unset, str] = UNSET
-    provider_billing_phone_number: Union[Unset, str] = UNSET
-    provider_billing_country: Union[Unset, str] = UNSET
-    provider_billing_state: Union[Unset, str] = UNSET
-    provider_billing_fax_number: Union[Unset, str] = UNSET
-    provider_shipping_address_1: Union[Unset, str] = UNSET
-    provider_shipping_address_2: Union[Unset, str] = UNSET
-    provider_shipping_first_name: Union[Unset, str] = UNSET
-    provider_shipping_last_name: Union[Unset, str] = UNSET
-    provider_shipping_email: Union[Unset, str] = UNSET
-    provider_shipping_company: Union[Unset, str] = UNSET
-    provider_shipping_city: Union[Unset, str] = UNSET
-    provider_shipping_zip: Union[Unset, str] = UNSET
-    provider_shipping_phone_number: Union[Unset, str] = UNSET
-    provider_shipping_country: Union[Unset, str] = UNSET
-    provider_shipping_state: Union[Unset, str] = UNSET
-    provider_shipping_fax_number: Union[Unset, str] = UNSET
-    culture_name: Union[Unset, str] = UNSET
-    vendor_company_id: Union[Unset, int] = UNSET
-    client_vendor_id: Union[Unset, int] = UNSET
+    payment_terms: Union[None, Unset, int] = UNSET
+    site_access_notes: Union[None, Unset, str] = UNSET
+    grace_period: Union[None, Unset, int] = UNSET
+    trade_in_credit: Union[None, Unset, float] = UNSET
+    prepaid_credit: Union[None, Unset, float] = UNSET
+    interest_rate: Union[None, Unset, float] = UNSET
+    service_taxation: Union[None, Unset, int] = UNSET
+    service_order_id: Union[None, Unset, int] = UNSET
+    federal_number: Union[None, Unset, str] = UNSET
+    vendor_site_id: Union[None, Unset, int] = UNSET
+    vendor_site: Union[None, Unset, str] = UNSET
+    site_name: Union[None, Unset, str] = UNSET
+    site_code: Union[None, Unset, str] = UNSET
+    vendor_name: Union[None, Unset, str] = UNSET
+    domain_name: Union[None, Unset, str] = UNSET
+    client_company_domain: Union[None, Unset, str] = UNSET
+    provider_logo: Union[None, Unset, str] = UNSET
+    client_signature: Union[None, Unset, str] = UNSET
+    vendor_signature: Union[None, Unset, str] = UNSET
+    qr_code: Union[None, Unset, str] = UNSET
+    bar_code: Union[None, Unset, str] = UNSET
+    bar_code_string: Union[None, Unset, str] = UNSET
+    po_balance: Union[None, Unset, float] = UNSET
+    service_terms: Union[None, Unset, str] = UNSET
+    service_total: Union[None, Unset, float] = UNSET
+    repairs_total: Union[None, Unset, float] = UNSET
+    parts_total: Union[None, Unset, float] = UNSET
+    parts_total_before_discount: Union[None, Unset, float] = UNSET
+    effective_tax_rate: Union[None, Unset, float] = UNSET
+    tax_amount: Union[None, Unset, float] = UNSET
+    shipping_fee: Union[None, Unset, float] = UNSET
+    late_fee: Union[None, Unset, float] = UNSET
+    grand_total: Union[None, Unset, float] = UNSET
+    amount_paid: Union[None, Unset, float] = UNSET
+    balance_total: Union[None, Unset, float] = UNSET
+    travel_charge: Union[None, Unset, float] = UNSET
+    private_notes: Union[None, Unset, str] = UNSET
+    service_notes: Union[None, Unset, str] = UNSET
+    display_service_comments: Union[None, Unset, bool] = UNSET
+    display_part_repairs: Union[None, Unset, bool] = UNSET
+    print_separate_measurement: Union[None, Unset, bool] = UNSET
+    billing_address_1: Union[None, Unset, str] = UNSET
+    billing_address_2: Union[None, Unset, str] = UNSET
+    billing_first_name: Union[None, Unset, str] = UNSET
+    billing_last_name: Union[None, Unset, str] = UNSET
+    billing_company: Union[None, Unset, str] = UNSET
+    billing_country: Union[None, Unset, str] = UNSET
+    billing_city: Union[None, Unset, str] = UNSET
+    billing_state: Union[None, Unset, str] = UNSET
+    billing_zip: Union[None, Unset, str] = UNSET
+    billing_phone_number: Union[None, Unset, str] = UNSET
+    billing_fax_number: Union[None, Unset, str] = UNSET
+    billing_email: Union[None, Unset, str] = UNSET
+    shipping_address_1: Union[None, Unset, str] = UNSET
+    shipping_address_2: Union[None, Unset, str] = UNSET
+    shipping_first_name: Union[None, Unset, str] = UNSET
+    shipping_last_name: Union[None, Unset, str] = UNSET
+    shipping_email: Union[None, Unset, str] = UNSET
+    shipping_company: Union[None, Unset, str] = UNSET
+    shipping_city: Union[None, Unset, str] = UNSET
+    shipping_zip: Union[None, Unset, str] = UNSET
+    shipping_phone_number: Union[None, Unset, str] = UNSET
+    shipping_fax_number: Union[None, Unset, str] = UNSET
+    shipping_country: Union[None, Unset, str] = UNSET
+    shipping_state: Union[None, Unset, str] = UNSET
+    shipping_method: Union[None, Unset, str] = UNSET
+    return_shipping_method: Union[None, Unset, str] = UNSET
+    tracking_number: Union[None, Unset, str] = UNSET
+    provider_billing_address_1: Union[None, Unset, str] = UNSET
+    provider_billing_address_2: Union[None, Unset, str] = UNSET
+    provider_billing_first_name: Union[None, Unset, str] = UNSET
+    provider_billing_last_name: Union[None, Unset, str] = UNSET
+    provider_billing_email: Union[None, Unset, str] = UNSET
+    provider_billing_company: Union[None, Unset, str] = UNSET
+    provider_billing_city: Union[None, Unset, str] = UNSET
+    provider_billing_zip: Union[None, Unset, str] = UNSET
+    provider_billing_phone_number: Union[None, Unset, str] = UNSET
+    provider_billing_country: Union[None, Unset, str] = UNSET
+    provider_billing_state: Union[None, Unset, str] = UNSET
+    provider_billing_fax_number: Union[None, Unset, str] = UNSET
+    provider_shipping_address_1: Union[None, Unset, str] = UNSET
+    provider_shipping_address_2: Union[None, Unset, str] = UNSET
+    provider_shipping_first_name: Union[None, Unset, str] = UNSET
+    provider_shipping_last_name: Union[None, Unset, str] = UNSET
+    provider_shipping_email: Union[None, Unset, str] = UNSET
+    provider_shipping_company: Union[None, Unset, str] = UNSET
+    provider_shipping_city: Union[None, Unset, str] = UNSET
+    provider_shipping_zip: Union[None, Unset, str] = UNSET
+    provider_shipping_phone_number: Union[None, Unset, str] = UNSET
+    provider_shipping_country: Union[None, Unset, str] = UNSET
+    provider_shipping_state: Union[None, Unset, str] = UNSET
+    provider_shipping_fax_number: Union[None, Unset, str] = UNSET
+    culture_name: Union[None, Unset, str] = UNSET
+    vendor_company_id: Union[None, Unset, int] = UNSET
+    client_vendor_id: Union[None, Unset, int] = UNSET
     sign_off_date: Union[None, Unset, datetime.datetime] = UNSET
-    quality_control_date: Union[Unset, datetime.datetime] = UNSET
+    quality_control_date: Union[None, Unset, datetime.datetime] = UNSET
     client_sign_off_on: Union[None, Unset, datetime.datetime] = UNSET
-    client_sign_off_by_name: Union[Unset, str] = UNSET
+    client_sign_off_by_name: Union[None, Unset, str] = UNSET
     client_signed_on: Union[None, Unset, datetime.datetime] = UNSET
-    client_sticker_notes: Union[Unset, str] = UNSET
-    asset_sticker_notes: Union[Unset, str] = UNSET
-    order_sticker_notes: Union[Unset, str] = UNSET
-    quality_control_name: Union[Unset, str] = UNSET
-    fulfilled_by_name: Union[Unset, str] = UNSET
-    sign_off_name: Union[Unset, str] = UNSET
-    display_as_found: Union[Unset, bool] = UNSET
-    display_as_left: Union[Unset, bool] = UNSET
-    created_on: Union[Unset, datetime.datetime] = UNSET
+    client_sticker_notes: Union[None, Unset, str] = UNSET
+    asset_sticker_notes: Union[None, Unset, str] = UNSET
+    order_sticker_notes: Union[None, Unset, str] = UNSET
+    quality_control_name: Union[None, Unset, str] = UNSET
+    fulfilled_by_name: Union[None, Unset, str] = UNSET
+    sign_off_name: Union[None, Unset, str] = UNSET
+    display_as_found: Union[None, Unset, bool] = UNSET
+    display_as_left: Union[None, Unset, bool] = UNSET
+    created_on: Union[None, Unset, datetime.datetime] = UNSET
     invoiced_on: Union[None, Unset, datetime.datetime] = UNSET
     submitted_on: Union[None, Unset, datetime.datetime] = UNSET
     shipped_on: Union[None, Unset, datetime.datetime] = UNSET
@@ -320,12 +320,12 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
     sign_off_on: Union[None, Unset, datetime.datetime] = UNSET
     vendor_signed_on: Union[None, Unset, datetime.datetime] = UNSET
     client_notes: Union[None, Unset, str] = UNSET
-    order_shipping_option: Union[Unset, int] = UNSET
-    shipment_status: Union[Unset, int] = UNSET
-    payment_status: Union[Unset, int] = UNSET
-    payment_option: Union[Unset, str] = UNSET
-    order_status: Union[Unset, int] = UNSET
-    created_by_name: Union[Unset, str] = UNSET
+    order_shipping_option: Union[None, Unset, int] = UNSET
+    shipment_status: Union[None, Unset, int] = UNSET
+    payment_status: Union[None, Unset, int] = UNSET
+    payment_option: Union[None, Unset, str] = UNSET
+    order_status: Union[None, Unset, int] = UNSET
+    created_by_name: Union[None, Unset, str] = UNSET
     completed_by_name: Union[None, Unset, str] = UNSET
     shipped_by_name: Union[None, Unset, str] = UNSET
     accepted_by_name: Union[None, Unset, str] = UNSET
@@ -339,26 +339,26 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
     owner_department: Union[None, Unset, str] = UNSET
     assignee_name: Union[None, Unset, str] = UNSET
     payment_due_on: Union[None, Unset, datetime.datetime] = UNSET
-    process_date_option: Union[Unset, int] = UNSET
+    process_date_option: Union[None, Unset, int] = UNSET
     desired_date: Union[None, Unset, datetime.datetime] = UNSET
     deadline_date: Union[None, Unset, datetime.datetime] = UNSET
-    vendor_sign_off_on: Union[Unset, datetime.datetime] = UNSET
-    vendor_sign_off_by_name: Union[Unset, str] = UNSET
-    service_discount: Union[Unset, float] = UNSET
-    return_account: Union[Unset, str] = UNSET
+    vendor_sign_off_on: Union[None, Unset, datetime.datetime] = UNSET
+    vendor_sign_off_by_name: Union[None, Unset, str] = UNSET
+    service_discount: Union[None, Unset, float] = UNSET
+    return_account: Union[None, Unset, str] = UNSET
     business_hours_from: Union[None, Unset, datetime.datetime] = UNSET
     business_hours_to: Union[None, Unset, datetime.datetime] = UNSET
-    client_company_alternative_names: Union[Unset, str] = UNSET
-    client_id: Union[Unset, int] = UNSET
-    client_class: Union[Unset, str] = UNSET
-    client_status: Union[Unset, str] = UNSET
-    client_invoicing: Union[Unset, str] = UNSET
-    client_standing: Union[Unset, str] = UNSET
-    client_category: Union[Unset, str] = UNSET
-    master_template_name: Union[Unset, str] = UNSET
-    client_site_code: Union[Unset, str] = UNSET
-    order_workflow_name: Union[Unset, str] = UNSET
-    request_workflow_name: Union[Unset, str] = UNSET
+    client_company_alternative_names: Union[None, Unset, str] = UNSET
+    client_id: Union[None, Unset, int] = UNSET
+    client_class: Union[None, Unset, str] = UNSET
+    client_status: Union[None, Unset, str] = UNSET
+    client_invoicing: Union[None, Unset, str] = UNSET
+    client_standing: Union[None, Unset, str] = UNSET
+    client_category: Union[None, Unset, str] = UNSET
+    master_template_name: Union[None, Unset, str] = UNSET
+    client_site_code: Union[None, Unset, str] = UNSET
+    order_workflow_name: Union[None, Unset, str] = UNSET
+    request_workflow_name: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -586,7 +586,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         else:
             sign_off_date = self.sign_off_date
 
-        quality_control_date: Union[Unset, str] = UNSET
+        quality_control_date: Union[None, Unset, str] = UNSET
         if self.quality_control_date and not isinstance(
             self.quality_control_date, Unset
         ):
@@ -626,7 +626,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
 
         display_as_left = self.display_as_left
 
-        created_on: Union[Unset, str] = UNSET
+        created_on: Union[None, Unset, str] = UNSET
         if self.created_on and not isinstance(self.created_on, Unset):
             created_on = self.created_on.isoformat()
 
@@ -842,7 +842,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         else:
             deadline_date = self.deadline_date
 
-        vendor_sign_off_on: Union[Unset, str] = UNSET
+        vendor_sign_off_on: Union[None, Unset, str] = UNSET
         if self.vendor_sign_off_on and not isinstance(self.vendor_sign_off_on, Unset):
             vendor_sign_off_on = self.vendor_sign_off_on.isoformat()
 
@@ -1486,7 +1486,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         sign_off_date = _parse_sign_off_date(d.pop("SignOffDate", UNSET))
 
         _quality_control_date = d.pop("QualityControlDate", UNSET)
-        quality_control_date: Union[Unset, datetime.datetime]
+        quality_control_date: Union[None, Unset, datetime.datetime]
         if isinstance(_quality_control_date, Unset):
             quality_control_date = UNSET
         else:
@@ -1549,7 +1549,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         display_as_left = d.pop("DisplayAsLeft", UNSET)
 
         _created_on = d.pop("CreatedOn", UNSET)
-        created_on: Union[Unset, datetime.datetime]
+        created_on: Union[None, Unset, datetime.datetime]
         if isinstance(_created_on, Unset):
             created_on = UNSET
         else:
@@ -1946,7 +1946,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         deadline_date = _parse_deadline_date(d.pop("DeadlineDate", UNSET))
 
         _vendor_sign_off_on = d.pop("VendorSignOffOn", UNSET)
-        vendor_sign_off_on: Union[Unset, datetime.datetime]
+        vendor_sign_off_on: Union[None, Unset, datetime.datetime]
         if isinstance(_vendor_sign_off_on, Unset):
             vendor_sign_off_on = UNSET
         else:

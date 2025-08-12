@@ -16,14 +16,14 @@ T = TypeVar(
 class QualerApiModelsMeasurementsToMeasurementRecordResponseModelSpecificationResponseModel:
     """
     Attributes:
-        title (Union[Unset, str]):
-        subtitle (Union[Unset, str]):
-        group (Union[Unset, str]):
+        title (Union[None, Unset, str]):
+        subtitle (Union[None, Unset, str]):
+        group (Union[None, Unset, str]):
     """
 
-    title: Union[Unset, str] = UNSET
-    subtitle: Union[Unset, str] = UNSET
-    group: Union[Unset, str] = UNSET
+    title: Union[None, Unset, str] = UNSET
+    subtitle: Union[None, Unset, str] = UNSET
+    group: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

@@ -16,26 +16,26 @@ T = TypeVar("T", bound="QualerApiModelsEnvironmentFromEnvironmentModel")
 class QualerApiModelsEnvironmentFromEnvironmentModel:
     """
     Attributes:
-        station_id (Union[Unset, int]):
-        factor_id (Union[Unset, QualerApiModelsEnvironmentFromEnvironmentModelFactorId]):
-        factor_name (Union[Unset, str]):
-        factor_value (Union[Unset, float]):
-        unit_of_measure (Union[Unset, str]):
+        station_id (Union[None, Unset, int]):
+        factor_id (Union[None, Unset, QualerApiModelsEnvironmentFromEnvironmentModelFactorId]):
+        factor_name (Union[None, Unset, str]):
+        factor_value (Union[None, Unset, float]):
+        unit_of_measure (Union[None, Unset, str]):
     """
 
-    station_id: Union[Unset, int] = UNSET
-    factor_id: Union[Unset, QualerApiModelsEnvironmentFromEnvironmentModelFactorId] = (
+    station_id: Union[None, Unset, int] = UNSET
+    factor_id: Union[None, Unset, QualerApiModelsEnvironmentFromEnvironmentModelFactorId] = (
         UNSET
     )
-    factor_name: Union[Unset, str] = UNSET
-    factor_value: Union[Unset, float] = UNSET
-    unit_of_measure: Union[Unset, str] = UNSET
+    factor_name: Union[None, Unset, str] = UNSET
+    factor_value: Union[None, Unset, float] = UNSET
+    unit_of_measure: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         station_id = self.station_id
 
-        factor_id: Union[Unset, str] = UNSET
+        factor_id: Union[None, Unset, str] = UNSET
         if self.factor_id and not isinstance(self.factor_id, Unset):
             factor_id = self.factor_id.value
 
@@ -67,7 +67,7 @@ class QualerApiModelsEnvironmentFromEnvironmentModel:
         station_id = d.pop("StationId", UNSET)
 
         _factor_id = d.pop("FactorId", UNSET)
-        factor_id: Union[Unset, QualerApiModelsEnvironmentFromEnvironmentModelFactorId]
+        factor_id: Union[None, Unset, QualerApiModelsEnvironmentFromEnvironmentModelFactorId]
         if isinstance(_factor_id, Unset):
             factor_id = UNSET
         else:

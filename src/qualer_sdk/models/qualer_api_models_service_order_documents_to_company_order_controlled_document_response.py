@@ -21,34 +21,33 @@ T = TypeVar(
 class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse:
     """
     Attributes:
-        service_order_id (Union[Unset, int]):
-        guid (Union[Unset, UUID]):  Example: 00000000-0000-0000-0000-000000000000.
-        document_name (Union[Unset, str]):
-        file_name (Union[Unset, str]):
-        document_type (Union[Unset,
+        service_order_id (Union[None, Unset, int]):
+        guid (Union[None, Unset, UUID]):  Example: 00000000-0000-0000-0000-000000000000.
+        document_name (Union[None, Unset, str]):
+        file_name (Union[None, Unset, str]):
+        document_type (Union[None, Unset,
             QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType]):
-        revision_number (Union[Unset, int]):
-        report_type (Union[Unset, ReportType]):
-        download_url (Union[Unset, str]):
+        revision_number (Union[None, Unset, int]):
+        report_type (Union[None, Unset, ReportType]):
+        download_url (Union[None, Unset, str]):
     """
 
-    service_order_id: Union[Unset, int] = UNSET
-    guid: Union[Unset, UUID] = UNSET
-    document_name: Union[Unset, str] = UNSET
-    file_name: Union[Unset, str] = UNSET
-    document_type: Union[
-        Unset,
+    service_order_id: Union[None, Unset, int] = UNSET
+    guid: Union[None, Unset, UUID] = UNSET
+    document_name: Union[None, Unset, str] = UNSET
+    file_name: Union[None, Unset, str] = UNSET
+    document_type: Union[None, Unset,
         QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
     ] = UNSET
-    revision_number: Union[Unset, int] = UNSET
-    report_type: Union[Unset, ReportType] = UNSET
-    download_url: Union[Unset, str] = UNSET
+    revision_number: Union[None, Unset, int] = UNSET
+    report_type: Union[None, Unset, ReportType] = UNSET
+    download_url: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         service_order_id = self.service_order_id
 
-        guid: Union[Unset, str] = UNSET
+        guid: Union[None, Unset, str] = UNSET
         if self.guid and not isinstance(self.guid, Unset):
             guid = str(self.guid)
 
@@ -56,13 +55,13 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentRespon
 
         file_name = self.file_name
 
-        document_type: Union[Unset, int] = UNSET
+        document_type: Union[None, Unset, int] = UNSET
         if self.document_type and not isinstance(self.document_type, Unset):
             document_type = self.document_type.value
 
         revision_number = self.revision_number
 
-        report_type: Union[Unset, int] = UNSET
+        report_type: Union[None, Unset, int] = UNSET
         if self.report_type and not isinstance(self.report_type, Unset):
             report_type = self.report_type.value
 
@@ -96,7 +95,7 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentRespon
         service_order_id = d.pop("ServiceOrderId", UNSET)
 
         _guid = d.pop("Guid", UNSET)
-        guid: Union[Unset, UUID]
+        guid: Union[None, Unset, UUID]
         if isinstance(_guid, Unset):
             guid = UNSET
         else:
@@ -107,8 +106,7 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentRespon
         file_name = d.pop("FileName", UNSET)
 
         _document_type = d.pop("DocumentType", UNSET)
-        document_type: Union[
-            Unset,
+        document_type: Union[None, Unset,
             QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
         ]
         if isinstance(_document_type, Unset):
@@ -121,7 +119,7 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentRespon
         revision_number = d.pop("RevisionNumber", UNSET)
 
         _report_type = d.pop("ReportType", UNSET)
-        report_type: Union[Unset, ReportType]
+        report_type: Union[None, Unset, ReportType]
         if isinstance(_report_type, Unset):
             report_type = UNSET
         else:

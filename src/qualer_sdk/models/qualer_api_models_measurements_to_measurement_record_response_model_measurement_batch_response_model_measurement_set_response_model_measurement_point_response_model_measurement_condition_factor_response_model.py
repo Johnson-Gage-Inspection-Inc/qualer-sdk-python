@@ -18,17 +18,17 @@ T = TypeVar(
 class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel:
     """
     Attributes:
-        factor_id (Union[Unset, str]):
-        factor_name (Union[Unset, str]):
-        factor_value (Union[Unset, float]):
-        factor_uom (Union[Unset, str]):
+        factor_id (Union[None, Unset, str]):
+        factor_name (Union[None, Unset, str]):
+        factor_value (Union[None, Unset, float]):
+        factor_uom (Union[None, Unset, str]):
         last_modified_on_utc (Union[None, Unset, datetime.datetime]):
     """
 
-    factor_id: Union[Unset, str] = UNSET
-    factor_name: Union[Unset, str] = UNSET
-    factor_value: Union[Unset, float] = UNSET
-    factor_uom: Union[Unset, str] = UNSET
+    factor_id: Union[None, Unset, str] = UNSET
+    factor_name: Union[None, Unset, str] = UNSET
+    factor_value: Union[None, Unset, float] = UNSET
+    factor_uom: Union[None, Unset, str] = UNSET
     last_modified_on_utc: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 

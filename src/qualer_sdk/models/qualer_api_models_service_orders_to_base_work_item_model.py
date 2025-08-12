@@ -22,49 +22,46 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersToBaseWorkItemModel")
 class QualerApiModelsServiceOrdersToBaseWorkItemModel:
     """
     Attributes:
-        tasks (Union[Unset, list['QualerApiModelsServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel']]):
-        parts (Union[Unset, list['QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel']]):
-        repairs (Union[Unset, list['QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel']]):
-        work_item_id (Union[Unset, int]):
-        vendor_tag (Union[Unset, str]):
+        tasks (Union[None, Unset, list['QualerApiModelsServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel']]):
+        parts (Union[None, Unset, list['QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel']]):
+        repairs (Union[None, Unset, list['QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel']]):
+        work_item_id (Union[None, Unset, int]):
+        vendor_tag (Union[None, Unset, str]):
     """
 
-    tasks: Union[
-        Unset,
+    tasks: Union[None, Unset,
         list["QualerApiModelsServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel"],
     ] = UNSET
-    parts: Union[
-        Unset,
+    parts: Union[None, Unset,
         list[
             "QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel"
         ],
     ] = UNSET
-    repairs: Union[
-        Unset,
+    repairs: Union[None, Unset,
         list[
             "QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel"
         ],
     ] = UNSET
-    work_item_id: Union[Unset, int] = UNSET
-    vendor_tag: Union[Unset, str] = UNSET
+    work_item_id: Union[None, Unset, int] = UNSET
+    vendor_tag: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        tasks: Union[Unset, list[dict[str, Any]]] = UNSET
+        tasks: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.tasks and not isinstance(self.tasks, Unset):
             tasks = []
             for tasks_item_data in self.tasks:
                 tasks_item = tasks_item_data.to_dict()
                 tasks.append(tasks_item)
 
-        parts: Union[Unset, list[dict[str, Any]]] = UNSET
+        parts: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.parts and not isinstance(self.parts, Unset):
             parts = []
             for parts_item_data in self.parts:
                 parts_item = parts_item_data.to_dict()
                 parts.append(parts_item)
 
-        repairs: Union[Unset, list[dict[str, Any]]] = UNSET
+        repairs: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.repairs and not isinstance(self.repairs, Unset):
             repairs = []
             for repairs_item_data in self.repairs:

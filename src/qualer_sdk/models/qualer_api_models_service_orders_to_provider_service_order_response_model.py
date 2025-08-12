@@ -24,24 +24,24 @@ T = TypeVar(
 class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
     """
     Attributes:
-        service_order_id (Union[Unset, int]):
-        guid (Union[Unset, UUID]):  Example: 00000000-0000-0000-0000-000000000000.
-        service_order_number (Union[Unset, int]):
-        custom_order_number (Union[Unset, str]):
+        service_order_id (Union[None, Unset, int]):
+        guid (Union[None, Unset, UUID]):  Example: 00000000-0000-0000-0000-000000000000.
+        service_order_number (Union[None, Unset, int]):
+        custom_order_number (Union[None, Unset, str]):
         due_date (Union[None, Unset, datetime.datetime]):
-        assets (Union[Unset, int]):
-        completed_assets (Union[Unset, int]):
-        order_status (Union[Unset, QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus]):
-        is_quality_control_fail (Union[Unset, bool]):
-        service_private_comments (Union[Unset, str]):
-        client_company_id (Union[Unset, int]):
-        client_company_name (Union[Unset, str]):
-        client_site_name (Union[Unset, str]):
-        client_legacy_id (Union[Unset, str]):
+        assets (Union[None, Unset, int]):
+        completed_assets (Union[None, Unset, int]):
+        order_status (Union[None, Unset, QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus]):
+        is_quality_control_fail (Union[None, Unset, bool]):
+        service_private_comments (Union[None, Unset, str]):
+        client_company_id (Union[None, Unset, int]):
+        client_company_name (Union[None, Unset, str]):
+        client_site_name (Union[None, Unset, str]):
+        client_legacy_id (Union[None, Unset, str]):
         business_from_time (Union[None, Unset, datetime.datetime]):
         business_to_time (Union[None, Unset, datetime.datetime]):
-        timeframe (Union[Unset, QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe]):
-        site_access_notes (Union[Unset, str]):
+        timeframe (Union[None, Unset, QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe]):
+        site_access_notes (Union[None, Unset, str]):
         desired_date (Union[None, Unset, datetime.datetime]):
         deadline_date (Union[None, Unset, datetime.datetime]):
         request_from_date (Union[None, Unset, datetime.datetime]):
@@ -50,29 +50,27 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         request_to_time (Union[None, Unset, datetime.datetime]):
     """
 
-    service_order_id: Union[Unset, int] = UNSET
-    guid: Union[Unset, UUID] = UNSET
-    service_order_number: Union[Unset, int] = UNSET
-    custom_order_number: Union[Unset, str] = UNSET
+    service_order_id: Union[None, Unset, int] = UNSET
+    guid: Union[None, Unset, UUID] = UNSET
+    service_order_number: Union[None, Unset, int] = UNSET
+    custom_order_number: Union[None, Unset, str] = UNSET
     due_date: Union[None, Unset, datetime.datetime] = UNSET
-    assets: Union[Unset, int] = UNSET
-    completed_assets: Union[Unset, int] = UNSET
-    order_status: Union[
-        Unset,
+    assets: Union[None, Unset, int] = UNSET
+    completed_assets: Union[None, Unset, int] = UNSET
+    order_status: Union[None, Unset,
         QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
     ] = UNSET
-    is_quality_control_fail: Union[Unset, bool] = UNSET
-    service_private_comments: Union[Unset, str] = UNSET
-    client_company_id: Union[Unset, int] = UNSET
-    client_company_name: Union[Unset, str] = UNSET
-    client_site_name: Union[Unset, str] = UNSET
-    client_legacy_id: Union[Unset, str] = UNSET
+    is_quality_control_fail: Union[None, Unset, bool] = UNSET
+    service_private_comments: Union[None, Unset, str] = UNSET
+    client_company_id: Union[None, Unset, int] = UNSET
+    client_company_name: Union[None, Unset, str] = UNSET
+    client_site_name: Union[None, Unset, str] = UNSET
+    client_legacy_id: Union[None, Unset, str] = UNSET
     business_from_time: Union[None, Unset, datetime.datetime] = UNSET
     business_to_time: Union[None, Unset, datetime.datetime] = UNSET
-    timeframe: Union[
-        Unset, QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe
+    timeframe: Union[None, Unset, QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe
     ] = UNSET
-    site_access_notes: Union[Unset, str] = UNSET
+    site_access_notes: Union[None, Unset, str] = UNSET
     desired_date: Union[None, Unset, datetime.datetime] = UNSET
     deadline_date: Union[None, Unset, datetime.datetime] = UNSET
     request_from_date: Union[None, Unset, datetime.datetime] = UNSET
@@ -84,7 +82,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
     def to_dict(self) -> dict[str, Any]:
         service_order_id = self.service_order_id
 
-        guid: Union[Unset, str] = UNSET
+        guid: Union[None, Unset, str] = UNSET
         if self.guid and not isinstance(self.guid, Unset):
             guid = str(self.guid)
 
@@ -104,7 +102,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
 
         completed_assets = self.completed_assets
 
-        order_status: Union[Unset, str] = UNSET
+        order_status: Union[None, Unset, str] = UNSET
         if self.order_status and not isinstance(self.order_status, Unset):
             order_status = self.order_status.value
 
@@ -136,7 +134,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         else:
             business_to_time = self.business_to_time
 
-        timeframe: Union[Unset, str] = UNSET
+        timeframe: Union[None, Unset, str] = UNSET
         if self.timeframe and not isinstance(self.timeframe, Unset):
             timeframe = self.timeframe.value
 
@@ -250,7 +248,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         service_order_id = d.pop("ServiceOrderId", UNSET)
 
         _guid = d.pop("Guid", UNSET)
-        guid: Union[Unset, UUID]
+        guid: Union[None, Unset, UUID]
         if isinstance(_guid, Unset):
             guid = UNSET
         else:
@@ -282,8 +280,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         completed_assets = d.pop("CompletedAssets", UNSET)
 
         _order_status = d.pop("OrderStatus", UNSET)
-        order_status: Union[
-            Unset,
+        order_status: Union[None, Unset,
             QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
         ]
         if isinstance(_order_status, Unset):
@@ -344,8 +341,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         business_to_time = _parse_business_to_time(d.pop("BusinessToTime", UNSET))
 
         _timeframe = d.pop("Timeframe", UNSET)
-        timeframe: Union[
-            Unset,
+        timeframe: Union[None, Unset,
             QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe,
         ]
         if isinstance(_timeframe, Unset):

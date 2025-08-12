@@ -21,43 +21,42 @@ T = TypeVar("T", bound="QualerApiModelsAssetToAssetMaintenancePlanResponse")
 class QualerApiModelsAssetToAssetMaintenancePlanResponse:
     """
     Attributes:
-        maintenance_plan_id (Union[Unset, int]):
-        maintenance_plan_name (Union[Unset, str]):
-        task_notes (Union[Unset, str]):
-        last_service_task (Union[Unset, str]):
+        maintenance_plan_id (Union[None, Unset, int]):
+        maintenance_plan_name (Union[None, Unset, str]):
+        task_notes (Union[None, Unset, str]):
+        last_service_task (Union[None, Unset, str]):
         last_service_date (Union[None, Unset, datetime.datetime]):
-        next_service_task (Union[Unset, str]):
+        next_service_task (Union[None, Unset, str]):
         next_service_date (Union[None, Unset, datetime.datetime]):
         certificate_due_date (Union[None, Unset, datetime.datetime]):
-        owner_first_name (Union[Unset, str]):
-        owner_last_name (Union[Unset, str]):
-        owner_alias (Union[Unset, str]):
-        owner_department_name (Union[Unset, str]):
-        technician_first_name (Union[Unset, str]):
-        technician_last_name (Union[Unset, str]):
-        technician_alias (Union[Unset, str]):
-        technician_department_name (Union[Unset, str]):
-        assigned_employees (Union[Unset, list['QualerApiModelsAssetToAssetMaintenancePlanResponseAssignedEmployee']]):
+        owner_first_name (Union[None, Unset, str]):
+        owner_last_name (Union[None, Unset, str]):
+        owner_alias (Union[None, Unset, str]):
+        owner_department_name (Union[None, Unset, str]):
+        technician_first_name (Union[None, Unset, str]):
+        technician_last_name (Union[None, Unset, str]):
+        technician_alias (Union[None, Unset, str]):
+        technician_department_name (Union[None, Unset, str]):
+        assigned_employees (Union[None, Unset, list['QualerApiModelsAssetToAssetMaintenancePlanResponseAssignedEmployee']]):
     """
 
-    maintenance_plan_id: Union[Unset, int] = UNSET
-    maintenance_plan_name: Union[Unset, str] = UNSET
-    task_notes: Union[Unset, str] = UNSET
-    last_service_task: Union[Unset, str] = UNSET
+    maintenance_plan_id: Union[None, Unset, int] = UNSET
+    maintenance_plan_name: Union[None, Unset, str] = UNSET
+    task_notes: Union[None, Unset, str] = UNSET
+    last_service_task: Union[None, Unset, str] = UNSET
     last_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    next_service_task: Union[Unset, str] = UNSET
+    next_service_task: Union[None, Unset, str] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
     certificate_due_date: Union[None, Unset, datetime.datetime] = UNSET
-    owner_first_name: Union[Unset, str] = UNSET
-    owner_last_name: Union[Unset, str] = UNSET
-    owner_alias: Union[Unset, str] = UNSET
-    owner_department_name: Union[Unset, str] = UNSET
-    technician_first_name: Union[Unset, str] = UNSET
-    technician_last_name: Union[Unset, str] = UNSET
-    technician_alias: Union[Unset, str] = UNSET
-    technician_department_name: Union[Unset, str] = UNSET
-    assigned_employees: Union[
-        Unset,
+    owner_first_name: Union[None, Unset, str] = UNSET
+    owner_last_name: Union[None, Unset, str] = UNSET
+    owner_alias: Union[None, Unset, str] = UNSET
+    owner_department_name: Union[None, Unset, str] = UNSET
+    technician_first_name: Union[None, Unset, str] = UNSET
+    technician_last_name: Union[None, Unset, str] = UNSET
+    technician_alias: Union[None, Unset, str] = UNSET
+    technician_department_name: Union[None, Unset, str] = UNSET
+    assigned_employees: Union[None, Unset,
         list["QualerApiModelsAssetToAssetMaintenancePlanResponseAssignedEmployee"],
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -113,7 +112,7 @@ class QualerApiModelsAssetToAssetMaintenancePlanResponse:
 
         technician_department_name = self.technician_department_name
 
-        assigned_employees: Union[Unset, list[dict[str, Any]]] = UNSET
+        assigned_employees: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.assigned_employees and not isinstance(self.assigned_employees, Unset):
             assigned_employees = []
             for assigned_employees_item_data in self.assigned_employees:

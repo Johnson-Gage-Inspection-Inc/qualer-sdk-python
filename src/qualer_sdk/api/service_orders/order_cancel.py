@@ -12,7 +12,7 @@ from ...types import UNSET, Response, Unset
 def _get_kwargs(
     service_order_id: int,
     *,
-    reason_text: Union[Unset, str] = UNSET,
+    reason_text: Union[None, Unset, str] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -57,13 +57,13 @@ def sync_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    reason_text: Union[Unset, str] = UNSET,
+    reason_text: Union[None, Unset, str] = UNSET,
 ) -> Response[OrderCancelResponse200]:
     """Cancel work order
 
     Args:
         service_order_id (int):
-        reason_text (Union[Unset, str]):
+        reason_text (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -89,13 +89,13 @@ def sync(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    reason_text: Union[Unset, str] = UNSET,
+    reason_text: Union[None, Unset, str] = UNSET,
 ) -> Optional[OrderCancelResponse200]:
     """Cancel work order
 
     Args:
         service_order_id (int):
-        reason_text (Union[Unset, str]):
+        reason_text (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -116,13 +116,13 @@ async def asyncio_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    reason_text: Union[Unset, str] = UNSET,
+    reason_text: Union[None, Unset, str] = UNSET,
 ) -> Response[OrderCancelResponse200]:
     """Cancel work order
 
     Args:
         service_order_id (int):
-        reason_text (Union[Unset, str]):
+        reason_text (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -146,13 +146,13 @@ async def asyncio(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    reason_text: Union[Unset, str] = UNSET,
+    reason_text: Union[None, Unset, str] = UNSET,
 ) -> Optional[OrderCancelResponse200]:
     """Cancel work order
 
     Args:
         service_order_id (int):
-        reason_text (Union[Unset, str]):
+        reason_text (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

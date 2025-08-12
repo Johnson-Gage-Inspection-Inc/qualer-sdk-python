@@ -21,36 +21,36 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersToClientOrderItemResponseMod
 class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
     """
     Attributes:
-        work_item_id (Union[Unset, int]):
-        client_notes (Union[Unset, str]):
-        service_comments (Union[Unset, str]):
-        private_comments (Union[Unset, str]):
-        order_item_number (Union[Unset, int]):
-        service_order_id (Union[Unset, int]):
-        channel_count (Union[Unset, int]):
-        service_total (Union[Unset, float]):
-        repairs_total (Union[Unset, float]):
-        parts_total (Union[Unset, float]):
-        parts_total_before_discount (Union[Unset, float]):
-        override_service_total (Union[Unset, bool]):
-        override_repairs_total (Union[Unset, bool]):
-        override_parts_total (Union[Unset, bool]):
-        service_type (Union[Unset, str]):
-        document_number (Union[Unset, str]):
-        document_section (Union[Unset, str]):
-        work_status (Union[Unset, str]):
-        custom_work_status (Union[Unset, str]):
-        is_limited (Union[Unset, bool]):
+        work_item_id (Union[None, Unset, int]):
+        client_notes (Union[None, Unset, str]):
+        service_comments (Union[None, Unset, str]):
+        private_comments (Union[None, Unset, str]):
+        order_item_number (Union[None, Unset, int]):
+        service_order_id (Union[None, Unset, int]):
+        channel_count (Union[None, Unset, int]):
+        service_total (Union[None, Unset, float]):
+        repairs_total (Union[None, Unset, float]):
+        parts_total (Union[None, Unset, float]):
+        parts_total_before_discount (Union[None, Unset, float]):
+        override_service_total (Union[None, Unset, bool]):
+        override_repairs_total (Union[None, Unset, bool]):
+        override_parts_total (Union[None, Unset, bool]):
+        service_type (Union[None, Unset, str]):
+        document_number (Union[None, Unset, str]):
+        document_section (Union[None, Unset, str]):
+        work_status (Union[None, Unset, str]):
+        custom_work_status (Union[None, Unset, str]):
+        is_limited (Union[None, Unset, bool]):
         checked_on (Union[None, Unset, datetime.datetime]):
-        checked_by_name (Union[Unset, str]):
-        checked_by_id (Union[Unset, int]):
+        checked_by_name (Union[None, Unset, str]):
+        checked_by_id (Union[None, Unset, int]):
         completed_on (Union[None, Unset, datetime.datetime]):
-        completed_by_name (Union[Unset, str]):
-        completed_by_id (Union[Unset, int]):
-        updated_by_id (Union[Unset, int]):
-        updated_by (Union[Unset, str]):
-        as_found_check (Union[Unset, str]):
-        as_left_check (Union[Unset, str]):
+        completed_by_name (Union[None, Unset, str]):
+        completed_by_id (Union[None, Unset, int]):
+        updated_by_id (Union[None, Unset, int]):
+        updated_by (Union[None, Unset, str]):
+        as_found_check (Union[None, Unset, str]):
+        as_left_check (Union[None, Unset, str]):
         item_result_status (Union[None, Unset, str]):
         item_as_found_result (Union[None, Unset, str]):
         item_as_left_result (Union[None, Unset, str]):
@@ -96,44 +96,44 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
         service_date (Union[None, Unset, datetime.datetime]):
         due_date (Union[None, Unset, datetime.datetime]):
         next_service_date (Union[None, Unset, datetime.datetime]):
-        maintenance_task (Union[Unset, str]):
+        maintenance_task (Union[None, Unset, str]):
         maintenance_plan (Union[None, Unset, str]):
-        service_options (Union[Unset, list['QualerApiModelsServiceOptionsToServiceOptionResponseModel']]):
-        vendor_tag (Union[Unset, str]):
-        legacy_id (Union[Unset, str]):
-        asset_ownership (Union[Unset, str]):
+        service_options (Union[None, Unset, list['QualerApiModelsServiceOptionsToServiceOptionResponseModel']]):
+        vendor_tag (Union[None, Unset, str]):
+        legacy_id (Union[None, Unset, str]):
+        asset_ownership (Union[None, Unset, str]):
     """
 
-    work_item_id: Union[Unset, int] = UNSET
-    client_notes: Union[Unset, str] = UNSET
-    service_comments: Union[Unset, str] = UNSET
-    private_comments: Union[Unset, str] = UNSET
-    order_item_number: Union[Unset, int] = UNSET
-    service_order_id: Union[Unset, int] = UNSET
-    channel_count: Union[Unset, int] = UNSET
-    service_total: Union[Unset, float] = UNSET
-    repairs_total: Union[Unset, float] = UNSET
-    parts_total: Union[Unset, float] = UNSET
-    parts_total_before_discount: Union[Unset, float] = UNSET
-    override_service_total: Union[Unset, bool] = UNSET
-    override_repairs_total: Union[Unset, bool] = UNSET
-    override_parts_total: Union[Unset, bool] = UNSET
-    service_type: Union[Unset, str] = UNSET
-    document_number: Union[Unset, str] = UNSET
-    document_section: Union[Unset, str] = UNSET
+    work_item_id: Union[None, Unset, int] = UNSET
+    client_notes: Union[None, Unset, str] = UNSET
+    service_comments: Union[None, Unset, str] = UNSET
+    private_comments: Union[None, Unset, str] = UNSET
+    order_item_number: Union[None, Unset, int] = UNSET
+    service_order_id: Union[None, Unset, int] = UNSET
+    channel_count: Union[None, Unset, int] = UNSET
+    service_total: Union[None, Unset, float] = UNSET
+    repairs_total: Union[None, Unset, float] = UNSET
+    parts_total: Union[None, Unset, float] = UNSET
+    parts_total_before_discount: Union[None, Unset, float] = UNSET
+    override_service_total: Union[None, Unset, bool] = UNSET
+    override_repairs_total: Union[None, Unset, bool] = UNSET
+    override_parts_total: Union[None, Unset, bool] = UNSET
+    service_type: Union[None, Unset, str] = UNSET
+    document_number: Union[None, Unset, str] = UNSET
+    document_section: Union[None, Unset, str] = UNSET
     work_status: Union[None, Unset, str] = UNSET
-    custom_work_status: Union[Unset, str] = UNSET
-    is_limited: Union[Unset, bool] = UNSET
+    custom_work_status: Union[None, Unset, str] = UNSET
+    is_limited: Union[None, Unset, bool] = UNSET
     checked_on: Union[None, Unset, datetime.datetime] = UNSET
-    checked_by_name: Union[Unset, str] = UNSET
-    checked_by_id: Union[Unset, int] = UNSET
+    checked_by_name: Union[None, Unset, str] = UNSET
+    checked_by_id: Union[None, Unset, int] = UNSET
     completed_on: Union[None, Unset, datetime.datetime] = UNSET
-    completed_by_name: Union[Unset, str] = UNSET
-    completed_by_id: Union[Unset, int] = UNSET
-    updated_by_id: Union[Unset, int] = UNSET
-    updated_by: Union[Unset, str] = UNSET
-    as_found_check: Union[Unset, str] = UNSET
-    as_left_check: Union[Unset, str] = UNSET
+    completed_by_name: Union[None, Unset, str] = UNSET
+    completed_by_id: Union[None, Unset, int] = UNSET
+    updated_by_id: Union[None, Unset, int] = UNSET
+    updated_by: Union[None, Unset, str] = UNSET
+    as_found_check: Union[None, Unset, str] = UNSET
+    as_left_check: Union[None, Unset, str] = UNSET
     item_result_status: Union[None, Unset, str] = UNSET
     item_as_found_result: Union[None, Unset, str] = UNSET
     item_as_left_result: Union[None, Unset, str] = UNSET
@@ -179,14 +179,13 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
     service_date: Union[None, Unset, datetime.datetime] = UNSET
     due_date: Union[None, Unset, datetime.datetime] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    maintenance_task: Union[Unset, str] = UNSET
+    maintenance_task: Union[None, Unset, str] = UNSET
     maintenance_plan: Union[None, Unset, str] = UNSET
-    service_options: Union[
-        Unset, list["QualerApiModelsServiceOptionsToServiceOptionResponseModel"]
+    service_options: Union[None, Unset, list["QualerApiModelsServiceOptionsToServiceOptionResponseModel"]
     ] = UNSET
-    vendor_tag: Union[Unset, str] = UNSET
-    legacy_id: Union[Unset, str] = UNSET
-    asset_ownership: Union[Unset, str] = UNSET
+    vendor_tag: Union[None, Unset, str] = UNSET
+    legacy_id: Union[None, Unset, str] = UNSET
+    asset_ownership: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -578,7 +577,7 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
         else:
             maintenance_plan = self.maintenance_plan
 
-        service_options: Union[Unset, list[dict[str, Any]]] = UNSET
+        service_options: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.service_options and not isinstance(self.service_options, Unset):
             service_options = []
             for service_options_item_data in self.service_options:

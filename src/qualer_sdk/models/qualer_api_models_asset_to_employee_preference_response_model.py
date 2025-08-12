@@ -13,18 +13,18 @@ T = TypeVar("T", bound="QualerApiModelsAssetToEmployeePreferenceResponseModel")
 class QualerApiModelsAssetToEmployeePreferenceResponseModel:
     """
     Attributes:
-        element_type (Union[Unset, str]):
-        element_page (Union[Unset, str]):
-        element_id (Union[Unset, str]):
-        preference (Union[Unset, list[str]]):
-        is_pinned (Union[Unset, bool]):
+        element_type (Union[None, Unset, str]):
+        element_page (Union[None, Unset, str]):
+        element_id (Union[None, Unset, str]):
+        preference (Union[None, Unset, list[str]]):
+        is_pinned (Union[None, Unset, bool]):
     """
 
-    element_type: Union[Unset, str] = UNSET
-    element_page: Union[Unset, str] = UNSET
-    element_id: Union[Unset, str] = UNSET
-    preference: Union[Unset, list[str]] = UNSET
-    is_pinned: Union[Unset, bool] = UNSET
+    element_type: Union[None, Unset, str] = UNSET
+    element_page: Union[None, Unset, str] = UNSET
+    element_id: Union[None, Unset, str] = UNSET
+    preference: Union[None, Unset, list[str]] = UNSET
+    is_pinned: Union[None, Unset, bool] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -34,7 +34,7 @@ class QualerApiModelsAssetToEmployeePreferenceResponseModel:
 
         element_id = self.element_id
 
-        preference: Union[Unset, list[str]] = UNSET
+        preference: Union[None, Unset, list[str]] = UNSET
         if self.preference and not isinstance(self.preference, Unset):
             preference = self.preference
 

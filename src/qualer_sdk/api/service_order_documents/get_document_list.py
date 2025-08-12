@@ -16,8 +16,8 @@ def _get_kwargs(
     *,
     from_: datetime.datetime,
     to: datetime.datetime,
-    report_type: Union[Unset, str] = UNSET,
-    service_order_id: Union[Unset, int] = UNSET,
+    report_type: Union[None, Unset, str] = UNSET,
+    service_order_id: Union[None, Unset, int] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -95,8 +95,8 @@ def sync_detailed(
     client: Union[AuthenticatedClient, Client],
     from_: datetime.datetime,
     to: datetime.datetime,
-    report_type: Union[Unset, str] = UNSET,
-    service_order_id: Union[Unset, int] = UNSET,
+    report_type: Union[None, Unset, str] = UNSET,
+    service_order_id: Union[None, Unset, int] = UNSET,
 ) -> Response[
     Union[
         Any,
@@ -132,8 +132,8 @@ def sync_detailed(
     Args:
         from_ (datetime.datetime):
         to (datetime.datetime):
-        report_type (Union[Unset, str]):
-        service_order_id (Union[Unset, int]):
+        report_type (Union[None, Unset, str]):
+        service_order_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -162,8 +162,8 @@ def sync(
     client: Union[AuthenticatedClient, Client],
     from_: datetime.datetime,
     to: datetime.datetime,
-    report_type: Union[Unset, str] = UNSET,
-    service_order_id: Union[Unset, int] = UNSET,
+    report_type: Union[None, Unset, str] = UNSET,
+    service_order_id: Union[None, Unset, int] = UNSET,
 ) -> Optional[
     Union[
         Any,
@@ -199,8 +199,8 @@ def sync(
     Args:
         from_ (datetime.datetime):
         to (datetime.datetime):
-        report_type (Union[Unset, str]):
-        service_order_id (Union[Unset, int]):
+        report_type (Union[None, Unset, str]):
+        service_order_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -224,8 +224,8 @@ async def asyncio_detailed(
     client: Union[AuthenticatedClient, Client],
     from_: datetime.datetime,
     to: datetime.datetime,
-    report_type: Union[Unset, str] = UNSET,
-    service_order_id: Union[Unset, int] = UNSET,
+    report_type: Union[None, Unset, str] = UNSET,
+    service_order_id: Union[None, Unset, int] = UNSET,
 ) -> Response[
     Union[
         Any,
@@ -261,8 +261,8 @@ async def asyncio_detailed(
     Args:
         from_ (datetime.datetime):
         to (datetime.datetime):
-        report_type (Union[Unset, str]):
-        service_order_id (Union[Unset, int]):
+        report_type (Union[None, Unset, str]):
+        service_order_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -289,8 +289,8 @@ async def asyncio(
     client: Union[AuthenticatedClient, Client],
     from_: datetime.datetime,
     to: datetime.datetime,
-    report_type: Union[Unset, str] = UNSET,
-    service_order_id: Union[Unset, int] = UNSET,
+    report_type: Union[None, Unset, str] = UNSET,
+    service_order_id: Union[None, Unset, int] = UNSET,
 ) -> Optional[
     Union[
         Any,
@@ -326,8 +326,8 @@ async def asyncio(
     Args:
         from_ (datetime.datetime):
         to (datetime.datetime):
-        report_type (Union[Unset, str]):
-        service_order_id (Union[Unset, int]):
+        report_type (Union[None, Unset, str]):
+        service_order_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

@@ -19,41 +19,40 @@ T = TypeVar(
 class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
     """
     Attributes:
-        service_order_item_id (Union[Unset, int]):
-        measurement_point_id (Union[Unset, int]):
-        batch_type (Union[Unset, QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseBatchType]):
-        column_index (Union[Unset, int]):
-        mean (Union[Unset, str]):
-        mean_result (Union[Unset, bool]):
-        sd (Union[Unset, str]):
-        sd_result (Union[Unset, bool]):
-        cv (Union[Unset, str]):
-        cv_result (Union[Unset, bool]):
-        range_ (Union[Unset, str]):
-        range_result (Union[Unset, bool]):
-        delta (Union[Unset, str]):
-        delta_result (Union[Unset, bool]):
-        result (Union[Unset, ServiceResultStatus]):
+        service_order_item_id (Union[None, Unset, int]):
+        measurement_point_id (Union[None, Unset, int]):
+        batch_type (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseBatchType]):
+        column_index (Union[None, Unset, int]):
+        mean (Union[None, Unset, str]):
+        mean_result (Union[None, Unset, bool]):
+        sd (Union[None, Unset, str]):
+        sd_result (Union[None, Unset, bool]):
+        cv (Union[None, Unset, str]):
+        cv_result (Union[None, Unset, bool]):
+        range_ (Union[None, Unset, str]):
+        range_result (Union[None, Unset, bool]):
+        delta (Union[None, Unset, str]):
+        delta_result (Union[None, Unset, bool]):
+        result (Union[None, Unset, ServiceResultStatus]):
     """
 
-    service_order_item_id: Union[Unset, int] = UNSET
-    measurement_point_id: Union[Unset, int] = UNSET
-    batch_type: Union[
-        Unset,
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    measurement_point_id: Union[None, Unset, int] = UNSET
+    batch_type: Union[None, Unset,
         QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseBatchType,
     ] = UNSET
-    column_index: Union[Unset, int] = UNSET
-    mean: Union[Unset, str] = UNSET
-    mean_result: Union[Unset, bool] = UNSET
-    sd: Union[Unset, str] = UNSET
-    sd_result: Union[Unset, bool] = UNSET
-    cv: Union[Unset, str] = UNSET
-    cv_result: Union[Unset, bool] = UNSET
-    range_: Union[Unset, str] = UNSET
-    range_result: Union[Unset, bool] = UNSET
-    delta: Union[Unset, str] = UNSET
-    delta_result: Union[Unset, bool] = UNSET
-    result: Union[Unset, ServiceResultStatus] = UNSET
+    column_index: Union[None, Unset, int] = UNSET
+    mean: Union[None, Unset, str] = UNSET
+    mean_result: Union[None, Unset, bool] = UNSET
+    sd: Union[None, Unset, str] = UNSET
+    sd_result: Union[None, Unset, bool] = UNSET
+    cv: Union[None, Unset, str] = UNSET
+    cv_result: Union[None, Unset, bool] = UNSET
+    range_: Union[None, Unset, str] = UNSET
+    range_result: Union[None, Unset, bool] = UNSET
+    delta: Union[None, Unset, str] = UNSET
+    delta_result: Union[None, Unset, bool] = UNSET
+    result: Union[None, Unset, ServiceResultStatus] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -61,7 +60,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
 
         measurement_point_id = self.measurement_point_id
 
-        batch_type: Union[Unset, int] = UNSET
+        batch_type: Union[None, Unset, int] = UNSET
         if self.batch_type and not isinstance(self.batch_type, Unset):
             batch_type = self.batch_type.value
 
@@ -87,7 +86,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
 
         delta_result = self.delta_result
 
-        result: Union[Unset, int] = UNSET
+        result: Union[None, Unset, int] = UNSET
         if self.result and not isinstance(self.result, Unset):
             result = self.result.value
 
@@ -135,8 +134,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
         measurement_point_id = d.pop("MeasurementPointId", UNSET)
 
         _batch_type = d.pop("BatchType", UNSET)
-        batch_type: Union[
-            Unset,
+        batch_type: Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseBatchType,
         ]
         if isinstance(_batch_type, Unset):
@@ -169,7 +167,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
         delta_result = d.pop("DeltaResult", UNSET)
 
         _result = d.pop("Result", UNSET)
-        result: Union[Unset, ServiceResultStatus]
+        result: Union[None, Unset, ServiceResultStatus]
         if isinstance(_result, Unset):
             result = UNSET
         else:

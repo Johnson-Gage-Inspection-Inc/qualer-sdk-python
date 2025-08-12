@@ -27,39 +27,39 @@ T = TypeVar("T", bound="QualerApiModelsClientsToClientCompanyResponseModel")
 class QualerApiModelsClientsToClientCompanyResponseModel:
     """
     Attributes:
-        company_id (Union[Unset, int]):
-        account_number_text (Union[Unset, str]):
-        account_number (Union[Unset, int]):
-        currency_id (Union[Unset, int]):
-        client_status (Union[Unset, str]):
-        company_name (Union[Unset, str]):
-        company_description (Union[Unset, str]):
-        domain_name (Union[Unset, str]):
-        custom_client_name (Union[Unset, str]):
-        legacy_id (Union[Unset, str]):
-        updated_on_utc (Union[Unset, datetime.datetime]):
-        account_representative_employee_id (Union[Unset, int]):
-        account_representative_site_id (Union[Unset, int]):
-        account_manager_employee_id (Union[Unset, int]):
+        company_id (Union[None, Unset, int]):
+        account_number_text (Union[None, Unset, str]):
+        account_number (Union[None, Unset, int]):
+        currency_id (Union[None, Unset, int]):
+        client_status (Union[None, Unset, str]):
+        company_name (Union[None, Unset, str]):
+        company_description (Union[None, Unset, str]):
+        domain_name (Union[None, Unset, str]):
+        custom_client_name (Union[None, Unset, str]):
+        legacy_id (Union[None, Unset, str]):
+        updated_on_utc (Union[None, Unset, datetime.datetime]):
+        account_representative_employee_id (Union[None, Unset, int]):
+        account_representative_site_id (Union[None, Unset, int]):
+        account_manager_employee_id (Union[None, Unset, int]):
         billing_address (Union['QualerApiModelsClientsToClientCompanyResponseModelBillingAddressType0', None, Unset]):
         shipping_address (Union['QualerApiModelsClientsToClientCompanyResponseModelShippingAddressType0', None, Unset]):
-        attributes (Union[Unset, list['QualerApiModelsAttributesToAttributeResponse']]):
+        attributes (Union[None, Unset, list['QualerApiModelsAttributesToAttributeResponse']]):
     """
 
-    company_id: Union[Unset, int] = UNSET
-    account_number_text: Union[Unset, str] = UNSET
-    account_number: Union[Unset, int] = UNSET
-    currency_id: Union[Unset, int] = UNSET
-    client_status: Union[Unset, str] = UNSET
-    company_name: Union[Unset, str] = UNSET
-    company_description: Union[Unset, str] = UNSET
-    domain_name: Union[Unset, str] = UNSET
-    custom_client_name: Union[Unset, str] = UNSET
-    legacy_id: Union[Unset, str] = UNSET
-    updated_on_utc: Union[Unset, datetime.datetime] = UNSET
-    account_representative_employee_id: Union[Unset, int] = UNSET
-    account_representative_site_id: Union[Unset, int] = UNSET
-    account_manager_employee_id: Union[Unset, int] = UNSET
+    company_id: Union[None, Unset, int] = UNSET
+    account_number_text: Union[None, Unset, str] = UNSET
+    account_number: Union[None, Unset, int] = UNSET
+    currency_id: Union[None, Unset, int] = UNSET
+    client_status: Union[None, Unset, str] = UNSET
+    company_name: Union[None, Unset, str] = UNSET
+    company_description: Union[None, Unset, str] = UNSET
+    domain_name: Union[None, Unset, str] = UNSET
+    custom_client_name: Union[None, Unset, str] = UNSET
+    legacy_id: Union[None, Unset, str] = UNSET
+    updated_on_utc: Union[None, Unset, datetime.datetime] = UNSET
+    account_representative_employee_id: Union[None, Unset, int] = UNSET
+    account_representative_site_id: Union[None, Unset, int] = UNSET
+    account_manager_employee_id: Union[None, Unset, int] = UNSET
     billing_address: Union[
         "QualerApiModelsClientsToClientCompanyResponseModelBillingAddressType0",
         None,
@@ -70,7 +70,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
         None,
         Unset,
     ] = UNSET
-    attributes: Union[Unset, list["QualerApiModelsAttributesToAttributeResponse"]] = (
+    attributes: Union[None, Unset, list["QualerApiModelsAttributesToAttributeResponse"]] = (
         UNSET
     )
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -103,7 +103,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
 
         legacy_id = self.legacy_id
 
-        updated_on_utc: Union[Unset, str] = UNSET
+        updated_on_utc: Union[None, Unset, str] = UNSET
         if self.updated_on_utc and not isinstance(self.updated_on_utc, Unset):
             updated_on_utc = self.updated_on_utc.isoformat()
 
@@ -135,7 +135,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
         else:
             shipping_address = self.shipping_address
 
-        attributes: Union[Unset, list[dict[str, Any]]] = UNSET
+        attributes: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.attributes and not isinstance(self.attributes, Unset):
             attributes = []
             for attributes_item_data in self.attributes:
@@ -218,7 +218,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
         legacy_id = d.pop("LegacyId", UNSET)
 
         _updated_on_utc = d.pop("UpdatedOnUtc", UNSET)
-        updated_on_utc: Union[Unset, datetime.datetime]
+        updated_on_utc: Union[None, Unset, datetime.datetime]
         if isinstance(_updated_on_utc, Unset):
             updated_on_utc = UNSET
         else:

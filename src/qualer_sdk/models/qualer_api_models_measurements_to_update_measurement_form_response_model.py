@@ -21,16 +21,15 @@ T = TypeVar(
 class QualerApiModelsMeasurementsToUpdateMeasurementFormResponseModel:
     """
     Attributes:
-        measurement_batches (Union[Unset, list['QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel']]):
+        measurement_batches (Union[None, Unset, list['QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel']]):
     """
 
-    measurement_batches: Union[
-        Unset, list["QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel"]
+    measurement_batches: Union[None, Unset, list["QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel"]
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        measurement_batches: Union[Unset, list[dict[str, Any]]] = UNSET
+        measurement_batches: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.measurement_batches and not isinstance(self.measurement_batches, Unset):
             measurement_batches = []
             for measurement_batches_item_data in self.measurement_batches:

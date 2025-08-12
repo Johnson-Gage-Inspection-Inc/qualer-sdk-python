@@ -13,14 +13,14 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToToolAttributeResponse")
 class QualerApiModelsReportDatasetsToToolAttributeResponse:
     """
     Attributes:
-        tool_id (Union[Unset, int]):
-        attribute_name (Union[Unset, str]):
-        attribute_value (Union[Unset, str]):
+        tool_id (Union[None, Unset, int]):
+        attribute_name (Union[None, Unset, str]):
+        attribute_value (Union[None, Unset, str]):
     """
 
-    tool_id: Union[Unset, int] = UNSET
-    attribute_name: Union[Unset, str] = UNSET
-    attribute_value: Union[Unset, str] = UNSET
+    tool_id: Union[None, Unset, int] = UNSET
+    attribute_name: Union[None, Unset, str] = UNSET
+    attribute_value: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

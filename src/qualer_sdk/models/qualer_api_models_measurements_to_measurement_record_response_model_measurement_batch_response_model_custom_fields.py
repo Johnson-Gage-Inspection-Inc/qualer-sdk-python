@@ -22,16 +22,15 @@ T = TypeVar(
 class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields:
     """
     Attributes:
-        description (Union[Unset, str]):
-        result (Union[Unset, str]):
-        items (Union[Unset, list['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseMod
+        description (Union[None, Unset, str]):
+        result (Union[None, Unset, str]):
+        items (Union[None, Unset, list['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseMod
             elCustomFieldsCreateMeasurementFieldResponseModel']]):
     """
 
-    description: Union[Unset, str] = UNSET
-    result: Union[Unset, str] = UNSET
-    items: Union[
-        Unset,
+    description: Union[None, Unset, str] = UNSET
+    result: Union[None, Unset, str] = UNSET
+    items: Union[None, Unset,
         list[
             "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFieldsCreateMeasurementFieldResponseModel"
         ],
@@ -43,7 +42,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
 
         result = self.result
 
-        items: Union[Unset, list[dict[str, Any]]] = UNSET
+        items: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.items and not isinstance(self.items, Unset):
             items = []
             for items_item_data in self.items:

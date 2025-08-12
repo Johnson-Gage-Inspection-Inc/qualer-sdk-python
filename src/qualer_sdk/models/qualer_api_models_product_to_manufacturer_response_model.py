@@ -13,12 +13,12 @@ T = TypeVar("T", bound="QualerApiModelsProductToManufacturerResponseModel")
 class QualerApiModelsProductToManufacturerResponseModel:
     """
     Attributes:
-        manufacturer_id (Union[Unset, int]):
-        manufacturer_name (Union[Unset, str]):
+        manufacturer_id (Union[None, Unset, int]):
+        manufacturer_name (Union[None, Unset, str]):
     """
 
-    manufacturer_id: Union[Unset, int] = UNSET
-    manufacturer_name: Union[Unset, str] = UNSET
+    manufacturer_id: Union[None, Unset, int] = UNSET
+    manufacturer_name: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

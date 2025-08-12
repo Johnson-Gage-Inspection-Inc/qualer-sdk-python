@@ -14,11 +14,11 @@ from ...types import UNSET, Response, Unset
 
 def _get_kwargs(
     *,
-    model_legacy_id: Union[Unset, str] = UNSET,
-    model_account_number_text: Union[Unset, str] = UNSET,
-    model_company_name: Union[Unset, str] = UNSET,
-    model_take: Union[Unset, int] = UNSET,
-    model_modified_after: Union[Unset, datetime.datetime] = UNSET,
+    model_legacy_id: Union[None, Unset, str] = UNSET,
+    model_account_number_text: Union[None, Unset, str] = UNSET,
+    model_company_name: Union[None, Unset, str] = UNSET,
+    model_take: Union[None, Unset, int] = UNSET,
+    model_modified_after: Union[None, Unset, datetime.datetime] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -30,7 +30,7 @@ def _get_kwargs(
 
     params["model.take"] = model_take
 
-    json_model_modified_after: Union[Unset, str] = UNSET
+    json_model_modified_after: Union[None, Unset, str] = UNSET
     if model_modified_after and not isinstance(model_modified_after, Unset):
         json_model_modified_after = model_modified_after.isoformat()
     params["model.modifiedAfter"] = json_model_modified_after
@@ -82,19 +82,19 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_legacy_id: Union[Unset, str] = UNSET,
-    model_account_number_text: Union[Unset, str] = UNSET,
-    model_company_name: Union[Unset, str] = UNSET,
-    model_take: Union[Unset, int] = UNSET,
-    model_modified_after: Union[Unset, datetime.datetime] = UNSET,
+    model_legacy_id: Union[None, Unset, str] = UNSET,
+    model_account_number_text: Union[None, Unset, str] = UNSET,
+    model_company_name: Union[None, Unset, str] = UNSET,
+    model_take: Union[None, Unset, int] = UNSET,
+    model_modified_after: Union[None, Unset, datetime.datetime] = UNSET,
 ) -> Response[list["QualerApiModelsClientsToClientCompanyResponseModel"]]:
     """
     Args:
-        model_legacy_id (Union[Unset, str]):
-        model_account_number_text (Union[Unset, str]):
-        model_company_name (Union[Unset, str]):
-        model_take (Union[Unset, int]):
-        model_modified_after (Union[Unset, datetime.datetime]):
+        model_legacy_id (Union[None, Unset, str]):
+        model_account_number_text (Union[None, Unset, str]):
+        model_company_name (Union[None, Unset, str]):
+        model_take (Union[None, Unset, int]):
+        model_modified_after (Union[None, Unset, datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -122,19 +122,19 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_legacy_id: Union[Unset, str] = UNSET,
-    model_account_number_text: Union[Unset, str] = UNSET,
-    model_company_name: Union[Unset, str] = UNSET,
-    model_take: Union[Unset, int] = UNSET,
-    model_modified_after: Union[Unset, datetime.datetime] = UNSET,
+    model_legacy_id: Union[None, Unset, str] = UNSET,
+    model_account_number_text: Union[None, Unset, str] = UNSET,
+    model_company_name: Union[None, Unset, str] = UNSET,
+    model_take: Union[None, Unset, int] = UNSET,
+    model_modified_after: Union[None, Unset, datetime.datetime] = UNSET,
 ) -> Optional[list["QualerApiModelsClientsToClientCompanyResponseModel"]]:
     """
     Args:
-        model_legacy_id (Union[Unset, str]):
-        model_account_number_text (Union[Unset, str]):
-        model_company_name (Union[Unset, str]):
-        model_take (Union[Unset, int]):
-        model_modified_after (Union[Unset, datetime.datetime]):
+        model_legacy_id (Union[None, Unset, str]):
+        model_account_number_text (Union[None, Unset, str]):
+        model_company_name (Union[None, Unset, str]):
+        model_take (Union[None, Unset, int]):
+        model_modified_after (Union[None, Unset, datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -157,19 +157,19 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_legacy_id: Union[Unset, str] = UNSET,
-    model_account_number_text: Union[Unset, str] = UNSET,
-    model_company_name: Union[Unset, str] = UNSET,
-    model_take: Union[Unset, int] = UNSET,
-    model_modified_after: Union[Unset, datetime.datetime] = UNSET,
+    model_legacy_id: Union[None, Unset, str] = UNSET,
+    model_account_number_text: Union[None, Unset, str] = UNSET,
+    model_company_name: Union[None, Unset, str] = UNSET,
+    model_take: Union[None, Unset, int] = UNSET,
+    model_modified_after: Union[None, Unset, datetime.datetime] = UNSET,
 ) -> Response[list["QualerApiModelsClientsToClientCompanyResponseModel"]]:
     """
     Args:
-        model_legacy_id (Union[Unset, str]):
-        model_account_number_text (Union[Unset, str]):
-        model_company_name (Union[Unset, str]):
-        model_take (Union[Unset, int]):
-        model_modified_after (Union[Unset, datetime.datetime]):
+        model_legacy_id (Union[None, Unset, str]):
+        model_account_number_text (Union[None, Unset, str]):
+        model_company_name (Union[None, Unset, str]):
+        model_take (Union[None, Unset, int]):
+        model_modified_after (Union[None, Unset, datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -195,19 +195,19 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_legacy_id: Union[Unset, str] = UNSET,
-    model_account_number_text: Union[Unset, str] = UNSET,
-    model_company_name: Union[Unset, str] = UNSET,
-    model_take: Union[Unset, int] = UNSET,
-    model_modified_after: Union[Unset, datetime.datetime] = UNSET,
+    model_legacy_id: Union[None, Unset, str] = UNSET,
+    model_account_number_text: Union[None, Unset, str] = UNSET,
+    model_company_name: Union[None, Unset, str] = UNSET,
+    model_take: Union[None, Unset, int] = UNSET,
+    model_modified_after: Union[None, Unset, datetime.datetime] = UNSET,
 ) -> Optional[list["QualerApiModelsClientsToClientCompanyResponseModel"]]:
     """
     Args:
-        model_legacy_id (Union[Unset, str]):
-        model_account_number_text (Union[Unset, str]):
-        model_company_name (Union[Unset, str]):
-        model_take (Union[Unset, int]):
-        model_modified_after (Union[Unset, datetime.datetime]):
+        model_legacy_id (Union[None, Unset, str]):
+        model_account_number_text (Union[None, Unset, str]):
+        model_company_name (Union[None, Unset, str]):
+        model_take (Union[None, Unset, int]):
+        model_modified_after (Union[None, Unset, datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

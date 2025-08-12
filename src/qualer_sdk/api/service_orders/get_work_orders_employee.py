@@ -14,7 +14,7 @@ from ...types import UNSET, Response, Unset
 def _get_kwargs(
     employee_id: int,
     *,
-    is_internal: Union[Unset, bool] = UNSET,
+    is_internal: Union[None, Unset, bool] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -66,12 +66,12 @@ def sync_detailed(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    is_internal: Union[Unset, bool] = UNSET,
+    is_internal: Union[None, Unset, bool] = UNSET,
 ) -> Response[list["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
     """
     Args:
         employee_id (int):
-        is_internal (Union[Unset, bool]):
+        is_internal (Union[None, Unset, bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -97,12 +97,12 @@ def sync(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    is_internal: Union[Unset, bool] = UNSET,
+    is_internal: Union[None, Unset, bool] = UNSET,
 ) -> Optional[list["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
     """
     Args:
         employee_id (int):
-        is_internal (Union[Unset, bool]):
+        is_internal (Union[None, Unset, bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -123,12 +123,12 @@ async def asyncio_detailed(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    is_internal: Union[Unset, bool] = UNSET,
+    is_internal: Union[None, Unset, bool] = UNSET,
 ) -> Response[list["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
     """
     Args:
         employee_id (int):
-        is_internal (Union[Unset, bool]):
+        is_internal (Union[None, Unset, bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -152,12 +152,12 @@ async def asyncio(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    is_internal: Union[Unset, bool] = UNSET,
+    is_internal: Union[None, Unset, bool] = UNSET,
 ) -> Optional[list["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
     """
     Args:
         employee_id (int):
-        is_internal (Union[Unset, bool]):
+        is_internal (Union[None, Unset, bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

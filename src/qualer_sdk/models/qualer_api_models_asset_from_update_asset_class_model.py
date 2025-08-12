@@ -13,10 +13,10 @@ T = TypeVar("T", bound="QualerApiModelsAssetFromUpdateAssetClassModel")
 class QualerApiModelsAssetFromUpdateAssetClassModel:
     """
     Attributes:
-        class_ (Union[Unset, str]):
+        class_ (Union[None, Unset, str]):
     """
 
-    class_: Union[Unset, str] = UNSET
+    class_: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

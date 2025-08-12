@@ -14,14 +14,14 @@ T = TypeVar("T", bound="QualerApiModelsAccountFromLoginResponseModel")
 class QualerApiModelsAccountFromLoginResponseModel:
     """
     Attributes:
-        token (Union[Unset, UUID]):  Example: 00000000-0000-0000-0000-000000000000.
+        token (Union[None, Unset, UUID]):  Example: 00000000-0000-0000-0000-000000000000.
     """
 
-    token: Union[Unset, UUID] = UNSET
+    token: Union[None, Unset, UUID] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        token: Union[Unset, str] = UNSET
+        token: Union[None, Unset, str] = UNSET
         if self.token and not isinstance(self.token, Unset):
             token = str(self.token)
 
@@ -37,7 +37,7 @@ class QualerApiModelsAccountFromLoginResponseModel:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         _token = d.pop("Token", UNSET)
-        token: Union[Unset, UUID]
+        token: Union[None, Unset, UUID]
         if isinstance(_token, Unset):
             token = UNSET
         else:

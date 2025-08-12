@@ -15,12 +15,12 @@ class QualerWebMvcAreasApiModelsAccountToLoginModel:
     Attributes:
         user_name (str):
         password (str):
-        clear_previous_tokens (Union[Unset, bool]):
+        clear_previous_tokens (Union[None, Unset, bool]):
     """
 
     user_name: str
     password: str
-    clear_previous_tokens: Union[Unset, bool] = UNSET
+    clear_previous_tokens: Union[None, Unset, bool] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

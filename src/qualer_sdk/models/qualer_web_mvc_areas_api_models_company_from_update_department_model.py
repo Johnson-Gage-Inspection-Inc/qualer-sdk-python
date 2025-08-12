@@ -13,12 +13,12 @@ T = TypeVar("T", bound="QualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentMod
 class QualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel:
     """
     Attributes:
-        name (Union[Unset, str]):
-        description (Union[Unset, str]):
+        name (Union[None, Unset, str]):
+        description (Union[None, Unset, str]):
     """
 
-    name: Union[Unset, str] = UNSET
-    description: Union[Unset, str] = UNSET
+    name: Union[None, Unset, str] = UNSET
+    description: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
