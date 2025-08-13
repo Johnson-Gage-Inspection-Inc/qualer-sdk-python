@@ -32,6 +32,14 @@ def fix_unset_checks_in_file(filepath):
 
         content = re.sub(pattern, replacement, content)
 
+        # Also update type hints: Union[Unset, T] -> Union[None, Unset, T]
+        # Avoid adding None twice if it's already present as the first member
+        content = re.sub(
+            r"Union\s*\[(?!\s*None\s*,\s*Unset)\s*Unset",
+            "Union[None, Unset",
+            content,
+        )
+
         # Only write if there were changes
         if content != original_content:
             with open(filepath, "w", encoding="utf-8") as f:
@@ -60,22 +68,22 @@ def fix_unset_checks_in_directory(directory):
 
 
 def fix_unset_checks():
-    """Fix Unset checks in the generated SDK to include truthiness validation."""
-    print("🔧 Fixing Unset checks to include truthiness validation...")
+    """Fix Unset checks and Union types in the generated SDK."""
+    print("🔧 Fixing Unset checks and Union[Unset,...] type hints (adding None)...")
 
     # Target directory for generated SDK
     sdk_dir = os.path.join("src", "qualer_sdk")
 
     if not os.path.exists(sdk_dir):
-        print(f"⚠️  SDK directory {sdk_dir} not found, skipping Unset check fixes")
+        print(f"⚠️  SDK directory {sdk_dir} not found, skipping fixes")
         return
 
     fixed_files = fix_unset_checks_in_directory(sdk_dir)
 
     if fixed_files:
-        print(f"✅ Fixed Unset checks in {len(fixed_files)} files")
+        print(f"✅ Applied fixes in {len(fixed_files)} files")
     else:
-        print("ℹ️  No Unset checks needed fixing")
+        print("ℹ️  No fixes needed")
 
 
 if __name__ == "__main__":

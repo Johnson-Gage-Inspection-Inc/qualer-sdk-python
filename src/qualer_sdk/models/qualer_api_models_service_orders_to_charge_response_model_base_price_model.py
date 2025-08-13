@@ -15,12 +15,12 @@ T = TypeVar(
 class QualerApiModelsServiceOrdersToChargeResponseModelBasePriceModel:
     """
     Attributes:
-        name (Union[Unset, str]):
-        price (Union[Unset, float]):
+        name (Union[None, Unset, str]):
+        price (Union[None, Unset, float]):
     """
 
-    name: Union[Unset, str] = UNSET
-    price: Union[Unset, float] = UNSET
+    name: Union[None, Unset, str] = UNSET
+    price: Union[None, Unset, float] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

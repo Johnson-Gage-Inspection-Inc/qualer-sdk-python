@@ -13,22 +13,22 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromCreateOrderModel")
 class QualerApiModelsServiceOrdersFromCreateOrderModel:
     """
     Attributes:
-        client_company_id (Union[Unset, int]):
-        vendor_site_id (Union[Unset, int]):
-        asset_ids (Union[Unset, list[int]]):
-        schedule_segment_ids (Union[Unset, list[int]]):
-        service_level_ids (Union[Unset, list[int]]):
-        use_due_segments (Union[Unset, bool]):
-        order_notes (Union[Unset, str]):
+        client_company_id (Union[None, Unset, int]):
+        vendor_site_id (Union[None, Unset, int]):
+        asset_ids (Union[None, Unset, list[int]]):
+        schedule_segment_ids (Union[None, Unset, list[int]]):
+        service_level_ids (Union[None, Unset, list[int]]):
+        use_due_segments (Union[None, Unset, bool]):
+        order_notes (Union[None, Unset, str]):
     """
 
-    client_company_id: Union[Unset, int] = UNSET
-    vendor_site_id: Union[Unset, int] = UNSET
-    asset_ids: Union[Unset, list[int]] = UNSET
-    schedule_segment_ids: Union[Unset, list[int]] = UNSET
-    service_level_ids: Union[Unset, list[int]] = UNSET
-    use_due_segments: Union[Unset, bool] = UNSET
-    order_notes: Union[Unset, str] = UNSET
+    client_company_id: Union[None, Unset, int] = UNSET
+    vendor_site_id: Union[None, Unset, int] = UNSET
+    asset_ids: Union[None, Unset, list[int]] = UNSET
+    schedule_segment_ids: Union[None, Unset, list[int]] = UNSET
+    service_level_ids: Union[None, Unset, list[int]] = UNSET
+    use_due_segments: Union[None, Unset, bool] = UNSET
+    order_notes: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -36,17 +36,17 @@ class QualerApiModelsServiceOrdersFromCreateOrderModel:
 
         vendor_site_id = self.vendor_site_id
 
-        asset_ids: Union[Unset, list[int]] = UNSET
+        asset_ids: Union[None, Unset, list[int]] = UNSET
         if self.asset_ids and not isinstance(self.asset_ids, Unset):
             asset_ids = self.asset_ids
 
-        schedule_segment_ids: Union[Unset, list[int]] = UNSET
+        schedule_segment_ids: Union[None, Unset, list[int]] = UNSET
         if self.schedule_segment_ids and not isinstance(
             self.schedule_segment_ids, Unset
         ):
             schedule_segment_ids = self.schedule_segment_ids
 
-        service_level_ids: Union[Unset, list[int]] = UNSET
+        service_level_ids: Union[None, Unset, list[int]] = UNSET
         if self.service_level_ids and not isinstance(self.service_level_ids, Unset):
             service_level_ids = self.service_level_ids
 

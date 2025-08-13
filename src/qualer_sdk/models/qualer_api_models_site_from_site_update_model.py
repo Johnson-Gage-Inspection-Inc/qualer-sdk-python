@@ -19,44 +19,44 @@ T = TypeVar("T", bound="QualerApiModelsSiteFromSiteUpdateModel")
 class QualerApiModelsSiteFromSiteUpdateModel:
     """
     Attributes:
-        site_id (Union[Unset, int]):
-        site_name (Union[Unset, str]):
-        site_code (Union[Unset, str]):
-        shipping_inherited (Union[Unset, bool]):
-        default_account_representative_employee_id (Union[Unset, int]):
-        billing_inherited (Union[Unset, bool]):
-        federal_number (Union[Unset, str]):
-        state_number (Union[Unset, str]):
-        culture_name (Union[Unset, str]):
-        is_science_facility (Union[Unset, bool]):
-        is_service_center (Union[Unset, bool]):
-        is_inventory_storage (Union[Unset, bool]):
-        is_production (Union[Unset, bool]):
-        time_zone_id (Union[Unset, str]):
-        time_zone_offset_minutes (Union[Unset, int]):
-        company_name (Union[Unset, str]):
-        billing_address (Union[Unset, QualerApiModelsAddressAddressModel]):
-        shipping_address (Union[Unset, QualerApiModelsAddressAddressModel]):
+        site_id (Union[None, Unset, int]):
+        site_name (Union[None, Unset, str]):
+        site_code (Union[None, Unset, str]):
+        shipping_inherited (Union[None, Unset, bool]):
+        default_account_representative_employee_id (Union[None, Unset, int]):
+        billing_inherited (Union[None, Unset, bool]):
+        federal_number (Union[None, Unset, str]):
+        state_number (Union[None, Unset, str]):
+        culture_name (Union[None, Unset, str]):
+        is_science_facility (Union[None, Unset, bool]):
+        is_service_center (Union[None, Unset, bool]):
+        is_inventory_storage (Union[None, Unset, bool]):
+        is_production (Union[None, Unset, bool]):
+        time_zone_id (Union[None, Unset, str]):
+        time_zone_offset_minutes (Union[None, Unset, int]):
+        company_name (Union[None, Unset, str]):
+        billing_address (Union[None, Unset, QualerApiModelsAddressAddressModel]):
+        shipping_address (Union[None, Unset, QualerApiModelsAddressAddressModel]):
     """
 
-    site_id: Union[Unset, int] = UNSET
-    site_name: Union[Unset, str] = UNSET
-    site_code: Union[Unset, str] = UNSET
-    shipping_inherited: Union[Unset, bool] = UNSET
-    default_account_representative_employee_id: Union[Unset, int] = UNSET
-    billing_inherited: Union[Unset, bool] = UNSET
-    federal_number: Union[Unset, str] = UNSET
-    state_number: Union[Unset, str] = UNSET
-    culture_name: Union[Unset, str] = UNSET
-    is_science_facility: Union[Unset, bool] = UNSET
-    is_service_center: Union[Unset, bool] = UNSET
-    is_inventory_storage: Union[Unset, bool] = UNSET
-    is_production: Union[Unset, bool] = UNSET
-    time_zone_id: Union[Unset, str] = UNSET
-    time_zone_offset_minutes: Union[Unset, int] = UNSET
-    company_name: Union[Unset, str] = UNSET
-    billing_address: Union[Unset, "QualerApiModelsAddressAddressModel"] = UNSET
-    shipping_address: Union[Unset, "QualerApiModelsAddressAddressModel"] = UNSET
+    site_id: Union[None, Unset, int] = UNSET
+    site_name: Union[None, Unset, str] = UNSET
+    site_code: Union[None, Unset, str] = UNSET
+    shipping_inherited: Union[None, Unset, bool] = UNSET
+    default_account_representative_employee_id: Union[None, Unset, int] = UNSET
+    billing_inherited: Union[None, Unset, bool] = UNSET
+    federal_number: Union[None, Unset, str] = UNSET
+    state_number: Union[None, Unset, str] = UNSET
+    culture_name: Union[None, Unset, str] = UNSET
+    is_science_facility: Union[None, Unset, bool] = UNSET
+    is_service_center: Union[None, Unset, bool] = UNSET
+    is_inventory_storage: Union[None, Unset, bool] = UNSET
+    is_production: Union[None, Unset, bool] = UNSET
+    time_zone_id: Union[None, Unset, str] = UNSET
+    time_zone_offset_minutes: Union[None, Unset, int] = UNSET
+    company_name: Union[None, Unset, str] = UNSET
+    billing_address: Union[None, Unset, "QualerApiModelsAddressAddressModel"] = UNSET
+    shipping_address: Union[None, Unset, "QualerApiModelsAddressAddressModel"] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -94,11 +94,11 @@ class QualerApiModelsSiteFromSiteUpdateModel:
 
         company_name = self.company_name
 
-        billing_address: Union[Unset, dict[str, Any]] = UNSET
+        billing_address: Union[None, Unset, dict[str, Any]] = UNSET
         if self.billing_address and not isinstance(self.billing_address, Unset):
             billing_address = self.billing_address.to_dict()
 
-        shipping_address: Union[Unset, dict[str, Any]] = UNSET
+        shipping_address: Union[None, Unset, dict[str, Any]] = UNSET
         if self.shipping_address and not isinstance(self.shipping_address, Unset):
             shipping_address = self.shipping_address.to_dict()
 
@@ -188,7 +188,7 @@ class QualerApiModelsSiteFromSiteUpdateModel:
         company_name = d.pop("CompanyName", UNSET)
 
         _billing_address = d.pop("BillingAddress", UNSET)
-        billing_address: Union[Unset, QualerApiModelsAddressAddressModel]
+        billing_address: Union[None, Unset, QualerApiModelsAddressAddressModel]
         if isinstance(_billing_address, Unset):
             billing_address = UNSET
         else:
@@ -197,7 +197,7 @@ class QualerApiModelsSiteFromSiteUpdateModel:
             )
 
         _shipping_address = d.pop("ShippingAddress", UNSET)
-        shipping_address: Union[Unset, QualerApiModelsAddressAddressModel]
+        shipping_address: Union[None, Unset, QualerApiModelsAddressAddressModel]
         if isinstance(_shipping_address, Unset):
             shipping_address = UNSET
         else:

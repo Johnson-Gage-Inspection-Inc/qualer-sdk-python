@@ -13,14 +13,14 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromAddPaymentModel")
 class QualerApiModelsServiceOrdersFromAddPaymentModel:
     """
     Attributes:
-        payment_type (Union[Unset, str]):
-        payment_amount (Union[Unset, float]):
-        details (Union[Unset, str]):
+        payment_type (Union[None, Unset, str]):
+        payment_amount (Union[None, Unset, float]):
+        details (Union[None, Unset, str]):
     """
 
-    payment_type: Union[Unset, str] = UNSET
-    payment_amount: Union[Unset, float] = UNSET
-    details: Union[Unset, str] = UNSET
+    payment_type: Union[None, Unset, str] = UNSET
+    payment_amount: Union[None, Unset, float] = UNSET
+    details: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

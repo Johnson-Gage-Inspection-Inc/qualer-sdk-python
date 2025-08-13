@@ -15,35 +15,35 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderChargeRespons
 class QualerApiModelsReportDatasetsToServiceOrderChargeResponse:
     """
     Attributes:
-        service_order_id (Union[Unset, int]):
-        description (Union[Unset, str]):
-        name (Union[Unset, str]):
-        unit_name (Union[Unset, str]):
-        quantity (Union[Unset, float]):
-        discount (Union[Unset, float]):
-        fixed_charge (Union[Unset, float]):
-        price (Union[Unset, float]):
-        subtotal (Union[Unset, float]):
-        is_taxable (Union[Unset, bool]):
-        time_spent_in_minutes (Union[Unset, float]):
-        is_hourly_pricing (Union[Unset, bool]):
-        created_by (Union[Unset, str]):
+        service_order_id (Union[None, Unset, int]):
+        description (Union[None, Unset, str]):
+        name (Union[None, Unset, str]):
+        unit_name (Union[None, Unset, str]):
+        quantity (Union[None, Unset, float]):
+        discount (Union[None, Unset, float]):
+        fixed_charge (Union[None, Unset, float]):
+        price (Union[None, Unset, float]):
+        subtotal (Union[None, Unset, float]):
+        is_taxable (Union[None, Unset, bool]):
+        time_spent_in_minutes (Union[None, Unset, float]):
+        is_hourly_pricing (Union[None, Unset, bool]):
+        created_by (Union[None, Unset, str]):
         charge_date (Union[None, Unset, datetime.datetime]):
     """
 
-    service_order_id: Union[Unset, int] = UNSET
-    description: Union[Unset, str] = UNSET
-    name: Union[Unset, str] = UNSET
-    unit_name: Union[Unset, str] = UNSET
-    quantity: Union[Unset, float] = UNSET
-    discount: Union[Unset, float] = UNSET
-    fixed_charge: Union[Unset, float] = UNSET
-    price: Union[Unset, float] = UNSET
-    subtotal: Union[Unset, float] = UNSET
-    is_taxable: Union[Unset, bool] = UNSET
-    time_spent_in_minutes: Union[Unset, float] = UNSET
-    is_hourly_pricing: Union[Unset, bool] = UNSET
-    created_by: Union[Unset, str] = UNSET
+    service_order_id: Union[None, Unset, int] = UNSET
+    description: Union[None, Unset, str] = UNSET
+    name: Union[None, Unset, str] = UNSET
+    unit_name: Union[None, Unset, str] = UNSET
+    quantity: Union[None, Unset, float] = UNSET
+    discount: Union[None, Unset, float] = UNSET
+    fixed_charge: Union[None, Unset, float] = UNSET
+    price: Union[None, Unset, float] = UNSET
+    subtotal: Union[None, Unset, float] = UNSET
+    is_taxable: Union[None, Unset, bool] = UNSET
+    time_spent_in_minutes: Union[None, Unset, float] = UNSET
+    is_hourly_pricing: Union[None, Unset, bool] = UNSET
+    created_by: Union[None, Unset, str] = UNSET
     charge_date: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 

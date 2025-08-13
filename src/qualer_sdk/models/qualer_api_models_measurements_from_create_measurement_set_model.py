@@ -25,29 +25,28 @@ T = TypeVar("T", bound="QualerApiModelsMeasurementsFromCreateMeasurementSetModel
 class QualerApiModelsMeasurementsFromCreateMeasurementSetModel:
     """
     Attributes:
-        measurement_name (Union[Unset, str]):
-        is_accredited (Union[Unset, bool]):
-        measurement_quantity_id (Union[Unset, int]):
-        default_unit_of_measure_id (Union[Unset, int]):
-        decimal_places (Union[Unset, int]):
-        significant_figures (Union[Unset, int]):
-        display_options (Union[Unset, QualerApiModelsMeasurementsFromDisplayOptions]):
-        custom_fields (Union[Unset, QualerApiModelsMeasurementsFromCustomFields]):
-        measurement_points (Union[Unset, list['QualerApiModelsMeasurementsFromCreateMeasurementPointModel']]):
+        measurement_name (Union[None, Unset, str]):
+        is_accredited (Union[None, Unset, bool]):
+        measurement_quantity_id (Union[None, Unset, int]):
+        default_unit_of_measure_id (Union[None, Unset, int]):
+        decimal_places (Union[None, Unset, int]):
+        significant_figures (Union[None, Unset, int]):
+        display_options (Union[None, Unset, QualerApiModelsMeasurementsFromDisplayOptions]):
+        custom_fields (Union[None, Unset, QualerApiModelsMeasurementsFromCustomFields]):
+        measurement_points (Union[None, Unset, list['QualerApiModelsMeasurementsFromCreateMeasurementPointModel']]):
     """
 
-    measurement_name: Union[Unset, str] = UNSET
-    is_accredited: Union[Unset, bool] = UNSET
-    measurement_quantity_id: Union[Unset, int] = UNSET
-    default_unit_of_measure_id: Union[Unset, int] = UNSET
-    decimal_places: Union[Unset, int] = UNSET
-    significant_figures: Union[Unset, int] = UNSET
-    display_options: Union[Unset, "QualerApiModelsMeasurementsFromDisplayOptions"] = (
+    measurement_name: Union[None, Unset, str] = UNSET
+    is_accredited: Union[None, Unset, bool] = UNSET
+    measurement_quantity_id: Union[None, Unset, int] = UNSET
+    default_unit_of_measure_id: Union[None, Unset, int] = UNSET
+    decimal_places: Union[None, Unset, int] = UNSET
+    significant_figures: Union[None, Unset, int] = UNSET
+    display_options: Union[None, Unset, "QualerApiModelsMeasurementsFromDisplayOptions"] = (
         UNSET
     )
-    custom_fields: Union[Unset, "QualerApiModelsMeasurementsFromCustomFields"] = UNSET
-    measurement_points: Union[
-        Unset, list["QualerApiModelsMeasurementsFromCreateMeasurementPointModel"]
+    custom_fields: Union[None, Unset, "QualerApiModelsMeasurementsFromCustomFields"] = UNSET
+    measurement_points: Union[None, Unset, list["QualerApiModelsMeasurementsFromCreateMeasurementPointModel"]
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -64,15 +63,15 @@ class QualerApiModelsMeasurementsFromCreateMeasurementSetModel:
 
         significant_figures = self.significant_figures
 
-        display_options: Union[Unset, dict[str, Any]] = UNSET
+        display_options: Union[None, Unset, dict[str, Any]] = UNSET
         if self.display_options and not isinstance(self.display_options, Unset):
             display_options = self.display_options.to_dict()
 
-        custom_fields: Union[Unset, dict[str, Any]] = UNSET
+        custom_fields: Union[None, Unset, dict[str, Any]] = UNSET
         if self.custom_fields and not isinstance(self.custom_fields, Unset):
             custom_fields = self.custom_fields.to_dict()
 
-        measurement_points: Union[Unset, list[dict[str, Any]]] = UNSET
+        measurement_points: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.measurement_points and not isinstance(self.measurement_points, Unset):
             measurement_points = []
             for measurement_points_item_data in self.measurement_points:
@@ -129,7 +128,7 @@ class QualerApiModelsMeasurementsFromCreateMeasurementSetModel:
         significant_figures = d.pop("SignificantFigures", UNSET)
 
         _display_options = d.pop("DisplayOptions", UNSET)
-        display_options: Union[Unset, QualerApiModelsMeasurementsFromDisplayOptions]
+        display_options: Union[None, Unset, QualerApiModelsMeasurementsFromDisplayOptions]
         if isinstance(_display_options, Unset):
             display_options = UNSET
         else:
@@ -138,7 +137,7 @@ class QualerApiModelsMeasurementsFromCreateMeasurementSetModel:
             )
 
         _custom_fields = d.pop("CustomFields", UNSET)
-        custom_fields: Union[Unset, QualerApiModelsMeasurementsFromCustomFields]
+        custom_fields: Union[None, Unset, QualerApiModelsMeasurementsFromCustomFields]
         if isinstance(_custom_fields, Unset):
             custom_fields = UNSET
         else:

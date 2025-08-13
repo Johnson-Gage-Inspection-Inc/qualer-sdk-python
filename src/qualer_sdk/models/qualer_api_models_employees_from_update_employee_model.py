@@ -13,28 +13,28 @@ T = TypeVar("T", bound="QualerApiModelsEmployeesFromUpdateEmployeeModel")
 class QualerApiModelsEmployeesFromUpdateEmployeeModel:
     """
     Attributes:
-        first_name (Union[Unset, str]):
-        last_name (Union[Unset, str]):
-        subscription_email (Union[Unset, str]):
-        mobile_phone (Union[Unset, str]):
-        office_phone (Union[Unset, str]):
-        alias (Union[Unset, str]):
-        title (Union[Unset, str]):
-        culture_name (Union[Unset, str]):
-        culture_ui_name (Union[Unset, str]):
-        image_url (Union[Unset, str]):
+        first_name (Union[None, Unset, str]):
+        last_name (Union[None, Unset, str]):
+        subscription_email (Union[None, Unset, str]):
+        mobile_phone (Union[None, Unset, str]):
+        office_phone (Union[None, Unset, str]):
+        alias (Union[None, Unset, str]):
+        title (Union[None, Unset, str]):
+        culture_name (Union[None, Unset, str]):
+        culture_ui_name (Union[None, Unset, str]):
+        image_url (Union[None, Unset, str]):
     """
 
-    first_name: Union[Unset, str] = UNSET
-    last_name: Union[Unset, str] = UNSET
-    subscription_email: Union[Unset, str] = UNSET
-    mobile_phone: Union[Unset, str] = UNSET
-    office_phone: Union[Unset, str] = UNSET
-    alias: Union[Unset, str] = UNSET
-    title: Union[Unset, str] = UNSET
-    culture_name: Union[Unset, str] = UNSET
-    culture_ui_name: Union[Unset, str] = UNSET
-    image_url: Union[Unset, str] = UNSET
+    first_name: Union[None, Unset, str] = UNSET
+    last_name: Union[None, Unset, str] = UNSET
+    subscription_email: Union[None, Unset, str] = UNSET
+    mobile_phone: Union[None, Unset, str] = UNSET
+    office_phone: Union[None, Unset, str] = UNSET
+    alias: Union[None, Unset, str] = UNSET
+    title: Union[None, Unset, str] = UNSET
+    culture_name: Union[None, Unset, str] = UNSET
+    culture_ui_name: Union[None, Unset, str] = UNSET
+    image_url: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

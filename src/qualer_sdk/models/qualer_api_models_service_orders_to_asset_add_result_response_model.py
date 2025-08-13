@@ -13,18 +13,18 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersToAssetAddResultResponseMode
 class QualerApiModelsServiceOrdersToAssetAddResultResponseModel:
     """
     Attributes:
-        asset_count (Union[Unset, int]):
-        already_added_asset_serials (Union[Unset, list[str]]):
+        asset_count (Union[None, Unset, int]):
+        already_added_asset_serials (Union[None, Unset, list[str]]):
     """
 
-    asset_count: Union[Unset, int] = UNSET
-    already_added_asset_serials: Union[Unset, list[str]] = UNSET
+    asset_count: Union[None, Unset, int] = UNSET
+    already_added_asset_serials: Union[None, Unset, list[str]] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         asset_count = self.asset_count
 
-        already_added_asset_serials: Union[Unset, list[str]] = UNSET
+        already_added_asset_serials: Union[None, Unset, list[str]] = UNSET
         if self.already_added_asset_serials and not isinstance(
             self.already_added_asset_serials, Unset
         ):

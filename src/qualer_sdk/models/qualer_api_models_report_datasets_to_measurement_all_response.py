@@ -46,1282 +46,1272 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToMeasurementAllResponse")
 class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     """
     Attributes:
-        barcode (Union[Unset, str]):
-        display_name (Union[Unset, str]):
-        display_part_number (Union[Unset, str]):
-        part_number (Union[Unset, str]):
-        vendor_company_id (Union[Unset, int]):
-        service_order_number (Union[Unset, int]):
-        completed_by_name (Union[Unset, str]):
-        completed_on (Union[Unset, datetime.datetime]):
-        is_limited (Union[Unset, bool]):
-        vendor_tag (Union[Unset, str]):
-        room (Union[Unset, str]):
-        segment_name (Union[Unset, str]):
-        schedule_name (Union[Unset, str]):
-        next_segment_name (Union[Unset, str]):
-        certificate_number (Union[Unset, str]):
-        work_status (Union[Unset, WorkStatus]):
-        service_type (Union[Unset, str]):
-        service_level (Union[Unset, str]):
-        service_comments (Union[Unset, str]):
-        order_item_number (Union[Unset, int]):
-        service_total (Union[Unset, float]):
-        repairs_total (Union[Unset, float]):
-        parts_total (Union[Unset, float]):
-        asset_tag (Union[Unset, str]):
-        asset_user (Union[Unset, str]):
-        serial_number (Union[Unset, str]):
-        equipment_id (Union[Unset, str]):
-        legacy_identifier (Union[Unset, str]):
-        asset_name (Union[Unset, str]):
-        asset_description (Union[Unset, str]):
-        product_name (Union[Unset, str]):
-        product_description (Union[Unset, str]):
-        asset_maker (Union[Unset, str]):
-        asset_tag_change (Union[Unset, str]):
-        asset_user_change (Union[Unset, str]):
-        serial_number_change (Union[Unset, str]):
+        barcode (Union[None, Unset, str]):
+        display_name (Union[None, Unset, str]):
+        display_part_number (Union[None, Unset, str]):
+        part_number (Union[None, Unset, str]):
+        vendor_company_id (Union[None, Unset, int]):
+        service_order_number (Union[None, Unset, int]):
+        completed_by_name (Union[None, Unset, str]):
+        completed_on (Union[None, Unset, datetime.datetime]):
+        is_limited (Union[None, Unset, bool]):
+        vendor_tag (Union[None, Unset, str]):
+        room (Union[None, Unset, str]):
+        segment_name (Union[None, Unset, str]):
+        schedule_name (Union[None, Unset, str]):
+        next_segment_name (Union[None, Unset, str]):
+        certificate_number (Union[None, Unset, str]):
+        work_status (Union[None, Unset, WorkStatus]):
+        service_type (Union[None, Unset, str]):
+        service_level (Union[None, Unset, str]):
+        service_comments (Union[None, Unset, str]):
+        order_item_number (Union[None, Unset, int]):
+        service_total (Union[None, Unset, float]):
+        repairs_total (Union[None, Unset, float]):
+        parts_total (Union[None, Unset, float]):
+        asset_tag (Union[None, Unset, str]):
+        asset_user (Union[None, Unset, str]):
+        serial_number (Union[None, Unset, str]):
+        equipment_id (Union[None, Unset, str]):
+        legacy_identifier (Union[None, Unset, str]):
+        asset_name (Union[None, Unset, str]):
+        asset_description (Union[None, Unset, str]):
+        product_name (Union[None, Unset, str]):
+        product_description (Union[None, Unset, str]):
+        asset_maker (Union[None, Unset, str]):
+        asset_tag_change (Union[None, Unset, str]):
+        asset_user_change (Union[None, Unset, str]):
+        serial_number_change (Union[None, Unset, str]):
         service_date (Union[None, Unset, datetime.datetime]):
         next_service_date (Union[None, Unset, datetime.datetime]):
-        service_order_item_id (Union[Unset, int]):
-        site_name (Union[Unset, str]):
-        po_number (Union[Unset, str]):
+        service_order_item_id (Union[None, Unset, int]):
+        site_name (Union[None, Unset, str]):
+        po_number (Union[None, Unset, str]):
         shipped_date (Union[None, Unset, datetime.datetime]):
-        tracking_number (Union[Unset, str]):
-        payment_terms (Union[Unset, int]):
-        shipping_method (Union[Unset, str]):
-        location (Union[Unset, str]):
-        site_access_notes (Union[Unset, str]):
-        as_left_decimal_places (Union[Unset, int]):
-        as_left_measurement_set_name (Union[Unset, str]):
-        as_left_measurement_set_id (Union[Unset, int]):
-        as_left_adjustment_threshold (Union[Unset, float]):
-        as_left_mean_extended (Union[Unset, str]):
-        as_left_sd_extended (Union[Unset, str]):
-        as_left_range_extended (Union[Unset, str]):
-        as_left_delta_extended (Union[Unset, str]):
-        as_left_cv_extended (Union[Unset, str]):
-        as_left_nominal_extended (Union[Unset, str]):
-        as_left_min_max_header (Union[Unset, str]):
-        as_left_accuracy_class (Union[Unset, str]):
-        as_left_accuracy_class_min (Union[Unset, float]):
-        as_left_accuracy_class_max (Union[Unset, float]):
-        as_left_minimum_measured_value (Union[Unset, float]):
-        as_left_maxi_mum_measured_value (Union[Unset, float]):
-        as_left_min_max_value_extended (Union[Unset, str]):
-        as_left_tool_range_name (Union[Unset, str]):
-        as_left_tool_range_uncertainty (Union[Unset, str]):
+        tracking_number (Union[None, Unset, str]):
+        payment_terms (Union[None, Unset, int]):
+        shipping_method (Union[None, Unset, str]):
+        location (Union[None, Unset, str]):
+        site_access_notes (Union[None, Unset, str]):
+        as_left_decimal_places (Union[None, Unset, int]):
+        as_left_measurement_set_name (Union[None, Unset, str]):
+        as_left_measurement_set_id (Union[None, Unset, int]):
+        as_left_adjustment_threshold (Union[None, Unset, float]):
+        as_left_mean_extended (Union[None, Unset, str]):
+        as_left_sd_extended (Union[None, Unset, str]):
+        as_left_range_extended (Union[None, Unset, str]):
+        as_left_delta_extended (Union[None, Unset, str]):
+        as_left_cv_extended (Union[None, Unset, str]):
+        as_left_nominal_extended (Union[None, Unset, str]):
+        as_left_min_max_header (Union[None, Unset, str]):
+        as_left_accuracy_class (Union[None, Unset, str]):
+        as_left_accuracy_class_min (Union[None, Unset, float]):
+        as_left_accuracy_class_max (Union[None, Unset, float]):
+        as_left_minimum_measured_value (Union[None, Unset, float]):
+        as_left_maxi_mum_measured_value (Union[None, Unset, float]):
+        as_left_min_max_value_extended (Union[None, Unset, str]):
+        as_left_tool_range_name (Union[None, Unset, str]):
+        as_left_tool_range_uncertainty (Union[None, Unset, str]):
         as_left_primary_tool_last_service_date (Union[None, Unset, datetime.datetime]):
         as_left_primary_tool_next_service_date (Union[None, Unset, datetime.datetime]):
-        as_left_primary_tool_calibrated_by (Union[Unset, str]):
-        as_left_primary_tool_tool_name (Union[Unset, str]):
-        as_left_primary_tool_tool_description (Union[Unset, str]):
-        as_left_primary_tool_tool_type_name (Union[Unset, str]):
-        as_left_primary_tool_manufacturer (Union[Unset, str]):
-        as_left_primary_tool_manufacturer_part_number (Union[Unset, str]):
-        as_left_primary_tool_serial_number (Union[Unset, str]):
-        as_found_measurement_set_name (Union[Unset, str]):
-        as_found_measurement_set_id (Union[Unset, int]):
-        as_found_adjustment_threshold (Union[Unset, float]):
-        as_found_decimal_places (Union[Unset, int]):
-        as_found_mean_extended (Union[Unset, str]):
-        as_found_sd_extended (Union[Unset, str]):
-        as_found_range_extended (Union[Unset, str]):
-        as_found_delta_extended (Union[Unset, str]):
-        as_found_cv_extended (Union[Unset, str]):
-        as_found_nominal_extended (Union[Unset, str]):
-        as_found_min_max_header (Union[Unset, str]):
-        as_found_accuracy_class (Union[Unset, str]):
-        as_found_accuracy_class_min (Union[Unset, float]):
-        as_found_accuracy_class_max (Union[Unset, float]):
-        as_found_minimum_measured_value (Union[Unset, float]):
-        as_found_maxi_mum_measured_value (Union[Unset, float]):
-        as_found_min_max_value_extended (Union[Unset, str]):
-        as_found_tool_range_name (Union[Unset, str]):
-        as_found_tool_range_uncertainty (Union[Unset, str]):
+        as_left_primary_tool_calibrated_by (Union[None, Unset, str]):
+        as_left_primary_tool_tool_name (Union[None, Unset, str]):
+        as_left_primary_tool_tool_description (Union[None, Unset, str]):
+        as_left_primary_tool_tool_type_name (Union[None, Unset, str]):
+        as_left_primary_tool_manufacturer (Union[None, Unset, str]):
+        as_left_primary_tool_manufacturer_part_number (Union[None, Unset, str]):
+        as_left_primary_tool_serial_number (Union[None, Unset, str]):
+        as_found_measurement_set_name (Union[None, Unset, str]):
+        as_found_measurement_set_id (Union[None, Unset, int]):
+        as_found_adjustment_threshold (Union[None, Unset, float]):
+        as_found_decimal_places (Union[None, Unset, int]):
+        as_found_mean_extended (Union[None, Unset, str]):
+        as_found_sd_extended (Union[None, Unset, str]):
+        as_found_range_extended (Union[None, Unset, str]):
+        as_found_delta_extended (Union[None, Unset, str]):
+        as_found_cv_extended (Union[None, Unset, str]):
+        as_found_nominal_extended (Union[None, Unset, str]):
+        as_found_min_max_header (Union[None, Unset, str]):
+        as_found_accuracy_class (Union[None, Unset, str]):
+        as_found_accuracy_class_min (Union[None, Unset, float]):
+        as_found_accuracy_class_max (Union[None, Unset, float]):
+        as_found_minimum_measured_value (Union[None, Unset, float]):
+        as_found_maxi_mum_measured_value (Union[None, Unset, float]):
+        as_found_min_max_value_extended (Union[None, Unset, str]):
+        as_found_tool_range_name (Union[None, Unset, str]):
+        as_found_tool_range_uncertainty (Union[None, Unset, str]):
         as_found_primary_tool_last_service_date (Union[None, Unset, datetime.datetime]):
         as_found_primary_tool_next_service_date (Union[None, Unset, datetime.datetime]):
-        as_found_primary_tool_calibrated_by (Union[Unset, str]):
-        as_found_primary_tool_tool_name (Union[Unset, str]):
-        as_found_primary_tool_tool_description (Union[Unset, str]):
-        as_found_primary_tool_tool_type_name (Union[Unset, str]):
-        as_found_primary_tool_manufacturer (Union[Unset, str]):
-        as_found_primary_tool_manufacturer_part_number (Union[Unset, str]):
-        as_found_primary_tool_serial_number (Union[Unset, str]):
+        as_found_primary_tool_calibrated_by (Union[None, Unset, str]):
+        as_found_primary_tool_tool_name (Union[None, Unset, str]):
+        as_found_primary_tool_tool_description (Union[None, Unset, str]):
+        as_found_primary_tool_tool_type_name (Union[None, Unset, str]):
+        as_found_primary_tool_manufacturer (Union[None, Unset, str]):
+        as_found_primary_tool_manufacturer_part_number (Union[None, Unset, str]):
+        as_found_primary_tool_serial_number (Union[None, Unset, str]):
         as_left_secondary_tool_last_service_date (Union[None, Unset, datetime.datetime]):
         as_left_secondary_tool_next_service_date (Union[None, Unset, datetime.datetime]):
-        as_left_secondary_tool_calibrated_by (Union[Unset, str]):
-        as_left_secondary_tool_tool_name (Union[Unset, str]):
-        as_left_secondary_tool_tool_description (Union[Unset, str]):
-        as_left_secondary_tool_tool_type_name (Union[Unset, str]):
-        as_left_secondary_tool_manufacturer (Union[Unset, str]):
-        as_left_secondary_tool_manufacturer_part_number (Union[Unset, str]):
-        as_left_secondary_tool_serial_number (Union[Unset, str]):
+        as_left_secondary_tool_calibrated_by (Union[None, Unset, str]):
+        as_left_secondary_tool_tool_name (Union[None, Unset, str]):
+        as_left_secondary_tool_tool_description (Union[None, Unset, str]):
+        as_left_secondary_tool_tool_type_name (Union[None, Unset, str]):
+        as_left_secondary_tool_manufacturer (Union[None, Unset, str]):
+        as_left_secondary_tool_manufacturer_part_number (Union[None, Unset, str]):
+        as_left_secondary_tool_serial_number (Union[None, Unset, str]):
         as_found_secondary_tool_last_service_date (Union[None, Unset, datetime.datetime]):
         as_found_secondary_tool_next_service_date (Union[None, Unset, datetime.datetime]):
-        as_found_secondary_tool_calibrated_by (Union[Unset, str]):
-        as_found_secondary_tool_tool_name (Union[Unset, str]):
-        as_found_secondary_tool_tool_description (Union[Unset, str]):
-        as_found_secondary_tool_tool_type_name (Union[Unset, str]):
-        as_found_secondary_tool_manufacturer (Union[Unset, str]):
-        as_found_secondary_tool_manufacturer_part_number (Union[Unset, str]):
-        as_found_secondary_tool_serial_number (Union[Unset, str]):
-        as_found_measurement_not_taken_result (Union[Unset,
+        as_found_secondary_tool_calibrated_by (Union[None, Unset, str]):
+        as_found_secondary_tool_tool_name (Union[None, Unset, str]):
+        as_found_secondary_tool_tool_description (Union[None, Unset, str]):
+        as_found_secondary_tool_tool_type_name (Union[None, Unset, str]):
+        as_found_secondary_tool_manufacturer (Union[None, Unset, str]):
+        as_found_secondary_tool_manufacturer_part_number (Union[None, Unset, str]):
+        as_found_secondary_tool_serial_number (Union[None, Unset, str]):
+        as_found_measurement_not_taken_result (Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult]):
-        as_found_hide_from_certificate (Union[Unset, bool]):
-        as_found_measurement_not_taken_reason (Union[Unset, str]):
-        as_left_values (Union[Unset, str]):
-        as_left_is_accredited (Union[Unset, bool]):
-        as_left_is_range_accredited (Union[Unset, bool]):
-        as_found_values (Union[Unset, str]):
-        as_found_is_accredited (Union[Unset, bool]):
-        as_found_is_range_accredited (Union[Unset, bool]):
-        as_found_parameter_id (Union[Unset, int]):
-        as_found_sd_header (Union[Unset, float]):
-        as_found_cv_header (Union[Unset, float]):
-        as_found_measurement_local_time (Union[Unset, datetime.datetime]):
-        as_found_tur (Union[Unset, float]):
-        as_found_tur_raw (Union[Unset, float]):
-        as_left_tur (Union[Unset, float]):
-        as_left_tur_raw (Union[Unset, float]):
-        as_found_tar (Union[Unset, float]):
-        as_found_tar_raw (Union[Unset, float]):
-        as_left_tar (Union[Unset, float]):
-        as_left_tar_raw (Union[Unset, float]):
-        as_found_guard_band (Union[Unset, str]):
-        as_left_guard_band (Union[Unset, str]):
-        as_found_guard_band_logic (Union[Unset,
+        as_found_hide_from_certificate (Union[None, Unset, bool]):
+        as_found_measurement_not_taken_reason (Union[None, Unset, str]):
+        as_left_values (Union[None, Unset, str]):
+        as_left_is_accredited (Union[None, Unset, bool]):
+        as_left_is_range_accredited (Union[None, Unset, bool]):
+        as_found_values (Union[None, Unset, str]):
+        as_found_is_accredited (Union[None, Unset, bool]):
+        as_found_is_range_accredited (Union[None, Unset, bool]):
+        as_found_parameter_id (Union[None, Unset, int]):
+        as_found_sd_header (Union[None, Unset, float]):
+        as_found_cv_header (Union[None, Unset, float]):
+        as_found_measurement_local_time (Union[None, Unset, datetime.datetime]):
+        as_found_tur (Union[None, Unset, float]):
+        as_found_tur_raw (Union[None, Unset, float]):
+        as_left_tur (Union[None, Unset, float]):
+        as_left_tur_raw (Union[None, Unset, float]):
+        as_found_tar (Union[None, Unset, float]):
+        as_found_tar_raw (Union[None, Unset, float]):
+        as_left_tar (Union[None, Unset, float]):
+        as_left_tar_raw (Union[None, Unset, float]):
+        as_found_guard_band (Union[None, Unset, str]):
+        as_left_guard_band (Union[None, Unset, str]):
+        as_found_guard_band_logic (Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic]):
-        as_left_guard_band_logic (Union[Unset,
+        as_left_guard_band_logic (Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic]):
-        as_found_error (Union[Unset, float]):
-        as_found_error_extended (Union[Unset, str]):
-        as_left_error (Union[Unset, float]):
-        as_left_error_extended (Union[Unset, str]):
-        as_found_percent_of_tolerance (Union[Unset, float]):
-        as_found_percent_of_tolerance_extended (Union[Unset, str]):
-        as_left_percent_of_tolerance (Union[Unset, float]):
-        as_left_percent_of_tolerance_extended (Union[Unset, str]):
-        as_found_tolerance_maximum (Union[Unset, float]):
-        as_found_tolerance_minimum (Union[Unset, float]):
-        as_found_tolerance_type (Union[Unset, int]):
-        as_found_tolerance_mode (Union[Unset, int]):
-        as_found_tolerance_string (Union[Unset, str]):
-        as_left_tolerance_maximum (Union[Unset, float]):
-        as_left_tolerance_minimum (Union[Unset, float]):
-        as_left_tolerance_type (Union[Unset, int]):
-        as_left_tolerance_mode (Union[Unset, int]):
-        as_left_tolerance_string (Union[Unset, str]):
-        as_found_max_hysteresis (Union[Unset, float]):
-        as_found_run (Union[Unset, int]):
-        as_found_direction (Union[Unset, int]):
-        as_found_hysteresis (Union[Unset, float]):
-        as_left_max_hysteresis (Union[Unset, float]):
-        as_left_run (Union[Unset, int]):
-        as_left_direction (Union[Unset, int]):
-        as_left_hysteresis (Union[Unset, float]):
-        as_found_reading_entry_math (Union[Unset,
+        as_found_error (Union[None, Unset, float]):
+        as_found_error_extended (Union[None, Unset, str]):
+        as_left_error (Union[None, Unset, float]):
+        as_left_error_extended (Union[None, Unset, str]):
+        as_found_percent_of_tolerance (Union[None, Unset, float]):
+        as_found_percent_of_tolerance_extended (Union[None, Unset, str]):
+        as_left_percent_of_tolerance (Union[None, Unset, float]):
+        as_left_percent_of_tolerance_extended (Union[None, Unset, str]):
+        as_found_tolerance_maximum (Union[None, Unset, float]):
+        as_found_tolerance_minimum (Union[None, Unset, float]):
+        as_found_tolerance_type (Union[None, Unset, int]):
+        as_found_tolerance_mode (Union[None, Unset, int]):
+        as_found_tolerance_string (Union[None, Unset, str]):
+        as_left_tolerance_maximum (Union[None, Unset, float]):
+        as_left_tolerance_minimum (Union[None, Unset, float]):
+        as_left_tolerance_type (Union[None, Unset, int]):
+        as_left_tolerance_mode (Union[None, Unset, int]):
+        as_left_tolerance_string (Union[None, Unset, str]):
+        as_found_max_hysteresis (Union[None, Unset, float]):
+        as_found_run (Union[None, Unset, int]):
+        as_found_direction (Union[None, Unset, int]):
+        as_found_hysteresis (Union[None, Unset, float]):
+        as_left_max_hysteresis (Union[None, Unset, float]):
+        as_left_run (Union[None, Unset, int]):
+        as_left_direction (Union[None, Unset, int]):
+        as_left_hysteresis (Union[None, Unset, float]):
+        as_found_reading_entry_math (Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath]):
-        as_found_reading_entry_math_string (Union[Unset, str]):
-        as_found_value_1 (Union[Unset, str]):
-        as_found_value_2 (Union[Unset, str]):
-        as_found_value_3 (Union[Unset, str]):
-        as_found_value_4 (Union[Unset, str]):
-        as_found_value_5 (Union[Unset, str]):
-        as_found_value_6 (Union[Unset, str]):
-        as_found_value_7 (Union[Unset, str]):
-        as_found_value_8 (Union[Unset, str]):
-        as_found_value_9 (Union[Unset, str]):
-        as_found_value_10 (Union[Unset, str]):
-        as_found_value_11 (Union[Unset, str]):
-        as_found_value_12 (Union[Unset, str]):
-        as_found_value_13 (Union[Unset, str]):
-        as_found_value_14 (Union[Unset, str]):
-        as_found_value_15 (Union[Unset, str]):
-        as_found_value_16 (Union[Unset, str]):
-        as_found_value_17 (Union[Unset, str]):
-        as_found_value_18 (Union[Unset, str]):
-        as_found_value_19 (Union[Unset, str]):
-        as_found_value_20 (Union[Unset, str]):
-        as_found_value_21 (Union[Unset, str]):
-        as_found_value_22 (Union[Unset, str]):
-        as_found_value_23 (Union[Unset, str]):
-        as_found_value_24 (Union[Unset, str]):
-        as_found_value_25 (Union[Unset, str]):
-        as_found_value_26 (Union[Unset, str]):
-        as_found_value_27 (Union[Unset, str]):
-        as_found_value_28 (Union[Unset, str]):
-        as_found_value_29 (Union[Unset, str]):
-        as_found_value_30 (Union[Unset, str]):
-        as_found_value_31 (Union[Unset, str]):
-        as_found_value_32 (Union[Unset, str]):
-        as_found_value_33 (Union[Unset, str]):
-        as_found_value_34 (Union[Unset, str]):
-        as_found_value_35 (Union[Unset, str]):
-        as_found_value_36 (Union[Unset, str]):
-        as_found_value_37 (Union[Unset, str]):
-        as_found_value_38 (Union[Unset, str]):
-        as_found_value_39 (Union[Unset, str]):
-        as_found_value_40 (Union[Unset, str]):
-        as_found_raw_value_1 (Union[Unset, str]):
-        as_found_raw_value_2 (Union[Unset, str]):
-        as_found_raw_value_3 (Union[Unset, str]):
-        as_found_raw_value_4 (Union[Unset, str]):
-        as_found_raw_value_5 (Union[Unset, str]):
-        as_found_raw_value_6 (Union[Unset, str]):
-        as_found_raw_value_7 (Union[Unset, str]):
-        as_found_raw_value_8 (Union[Unset, str]):
-        as_found_raw_value_9 (Union[Unset, str]):
-        as_found_raw_value_10 (Union[Unset, str]):
-        as_found_raw_value_11 (Union[Unset, str]):
-        as_found_raw_value_12 (Union[Unset, str]):
-        as_found_raw_value_13 (Union[Unset, str]):
-        as_found_raw_value_14 (Union[Unset, str]):
-        as_found_raw_value_15 (Union[Unset, str]):
-        as_found_raw_value_16 (Union[Unset, str]):
-        as_found_raw_value_17 (Union[Unset, str]):
-        as_found_raw_value_18 (Union[Unset, str]):
-        as_found_raw_value_19 (Union[Unset, str]):
-        as_found_raw_value_20 (Union[Unset, str]):
-        as_found_raw_value_21 (Union[Unset, str]):
-        as_found_raw_value_22 (Union[Unset, str]):
-        as_found_raw_value_23 (Union[Unset, str]):
-        as_found_raw_value_24 (Union[Unset, str]):
-        as_found_raw_value_25 (Union[Unset, str]):
-        as_found_raw_value_26 (Union[Unset, str]):
-        as_found_raw_value_27 (Union[Unset, str]):
-        as_found_raw_value_28 (Union[Unset, str]):
-        as_found_raw_value_29 (Union[Unset, str]):
-        as_found_raw_value_30 (Union[Unset, str]):
-        as_found_raw_value_31 (Union[Unset, str]):
-        as_found_raw_value_32 (Union[Unset, str]):
-        as_found_raw_value_33 (Union[Unset, str]):
-        as_found_raw_value_34 (Union[Unset, str]):
-        as_found_raw_value_35 (Union[Unset, str]):
-        as_found_raw_value_36 (Union[Unset, str]):
-        as_found_raw_value_37 (Union[Unset, str]):
-        as_found_raw_value_38 (Union[Unset, str]):
-        as_found_raw_value_39 (Union[Unset, str]):
-        as_found_raw_value_40 (Union[Unset, str]):
-        as_found_value_subtitle_1 (Union[Unset, str]):
-        as_found_value_subtitle_2 (Union[Unset, str]):
-        as_found_value_subtitle_3 (Union[Unset, str]):
-        as_found_value_subtitle_4 (Union[Unset, str]):
-        as_found_value_subtitle_5 (Union[Unset, str]):
-        as_found_value_subtitle_6 (Union[Unset, str]):
-        as_found_value_subtitle_7 (Union[Unset, str]):
-        as_found_value_subtitle_8 (Union[Unset, str]):
-        as_found_value_subtitle_9 (Union[Unset, str]):
-        as_found_value_subtitle_10 (Union[Unset, str]):
-        as_found_value_subtitle_11 (Union[Unset, str]):
-        as_found_value_subtitle_12 (Union[Unset, str]):
-        as_found_value_subtitle_13 (Union[Unset, str]):
-        as_found_value_subtitle_14 (Union[Unset, str]):
-        as_found_value_subtitle_15 (Union[Unset, str]):
-        as_found_value_subtitle_16 (Union[Unset, str]):
-        as_found_value_subtitle_17 (Union[Unset, str]):
-        as_found_value_subtitle_18 (Union[Unset, str]):
-        as_found_value_subtitle_19 (Union[Unset, str]):
-        as_found_value_subtitle_20 (Union[Unset, str]):
-        as_found_value_subtitle_21 (Union[Unset, str]):
-        as_found_value_subtitle_22 (Union[Unset, str]):
-        as_found_value_subtitle_23 (Union[Unset, str]):
-        as_found_value_subtitle_24 (Union[Unset, str]):
-        as_found_value_subtitle_25 (Union[Unset, str]):
-        as_found_value_subtitle_26 (Union[Unset, str]):
-        as_found_value_subtitle_27 (Union[Unset, str]):
-        as_found_value_subtitle_28 (Union[Unset, str]):
-        as_found_value_subtitle_29 (Union[Unset, str]):
-        as_found_value_subtitle_30 (Union[Unset, str]):
-        as_found_value_subtitle_31 (Union[Unset, str]):
-        as_found_value_subtitle_32 (Union[Unset, str]):
-        as_found_value_subtitle_33 (Union[Unset, str]):
-        as_found_value_subtitle_34 (Union[Unset, str]):
-        as_found_value_subtitle_35 (Union[Unset, str]):
-        as_found_value_subtitle_36 (Union[Unset, str]):
-        as_found_value_subtitle_37 (Union[Unset, str]):
-        as_found_value_subtitle_38 (Union[Unset, str]):
-        as_found_value_subtitle_39 (Union[Unset, str]):
-        as_found_value_subtitle_40 (Union[Unset, str]):
-        as_found_mean (Union[Unset, float]):
-        as_found_mean_raw (Union[Unset, float]):
-        as_found_sd (Union[Unset, float]):
-        as_found_sd_raw (Union[Unset, float]):
-        as_found_delta (Union[Unset, float]):
-        as_found_range (Union[Unset, float]):
-        as_found_cv (Union[Unset, float]):
-        as_found_cv_raw (Union[Unset, float]):
-        as_found_result (Union[Unset, int]):
-        as_found_range_result (Union[Unset, bool]):
-        as_found_delta_result (Union[Unset, bool]):
-        as_found_min_result (Union[Unset, bool]):
-        as_found_max_result (Union[Unset, bool]):
-        as_found_tar_result (Union[Unset, bool]):
-        as_found_tur_result (Union[Unset, bool]):
-        as_found_error_result (Union[Unset, bool]):
-        as_found_sd_result (Union[Unset, bool]):
-        as_found_cv_result (Union[Unset, bool]):
-        as_found_custom_field_result (Union[Unset, int]):
-        as_found_mu (Union[Unset, float]):
-        as_found_mu_raw (Union[Unset, float]):
-        as_found_mu_effective_dof (Union[Unset, float]):
-        as_found_mu_coverage_factor (Union[Unset, float]):
-        as_found_cmc (Union[Unset, float]):
-        as_found_cmc_comments (Union[Unset, str]):
-        as_found_calculated_uncertainty (Union[Unset, float]):
-        as_found_lab_mu (Union[Unset, float]):
-        as_found_uncertainty_budget (Union[Unset, str]):
-        as_found_mu_extended (Union[Unset, str]):
-        as_found_channel (Union[Unset, int]):
-        as_found_measurement_type (Union[Unset,
+        as_found_reading_entry_math_string (Union[None, Unset, str]):
+        as_found_value_1 (Union[None, Unset, str]):
+        as_found_value_2 (Union[None, Unset, str]):
+        as_found_value_3 (Union[None, Unset, str]):
+        as_found_value_4 (Union[None, Unset, str]):
+        as_found_value_5 (Union[None, Unset, str]):
+        as_found_value_6 (Union[None, Unset, str]):
+        as_found_value_7 (Union[None, Unset, str]):
+        as_found_value_8 (Union[None, Unset, str]):
+        as_found_value_9 (Union[None, Unset, str]):
+        as_found_value_10 (Union[None, Unset, str]):
+        as_found_value_11 (Union[None, Unset, str]):
+        as_found_value_12 (Union[None, Unset, str]):
+        as_found_value_13 (Union[None, Unset, str]):
+        as_found_value_14 (Union[None, Unset, str]):
+        as_found_value_15 (Union[None, Unset, str]):
+        as_found_value_16 (Union[None, Unset, str]):
+        as_found_value_17 (Union[None, Unset, str]):
+        as_found_value_18 (Union[None, Unset, str]):
+        as_found_value_19 (Union[None, Unset, str]):
+        as_found_value_20 (Union[None, Unset, str]):
+        as_found_value_21 (Union[None, Unset, str]):
+        as_found_value_22 (Union[None, Unset, str]):
+        as_found_value_23 (Union[None, Unset, str]):
+        as_found_value_24 (Union[None, Unset, str]):
+        as_found_value_25 (Union[None, Unset, str]):
+        as_found_value_26 (Union[None, Unset, str]):
+        as_found_value_27 (Union[None, Unset, str]):
+        as_found_value_28 (Union[None, Unset, str]):
+        as_found_value_29 (Union[None, Unset, str]):
+        as_found_value_30 (Union[None, Unset, str]):
+        as_found_value_31 (Union[None, Unset, str]):
+        as_found_value_32 (Union[None, Unset, str]):
+        as_found_value_33 (Union[None, Unset, str]):
+        as_found_value_34 (Union[None, Unset, str]):
+        as_found_value_35 (Union[None, Unset, str]):
+        as_found_value_36 (Union[None, Unset, str]):
+        as_found_value_37 (Union[None, Unset, str]):
+        as_found_value_38 (Union[None, Unset, str]):
+        as_found_value_39 (Union[None, Unset, str]):
+        as_found_value_40 (Union[None, Unset, str]):
+        as_found_raw_value_1 (Union[None, Unset, str]):
+        as_found_raw_value_2 (Union[None, Unset, str]):
+        as_found_raw_value_3 (Union[None, Unset, str]):
+        as_found_raw_value_4 (Union[None, Unset, str]):
+        as_found_raw_value_5 (Union[None, Unset, str]):
+        as_found_raw_value_6 (Union[None, Unset, str]):
+        as_found_raw_value_7 (Union[None, Unset, str]):
+        as_found_raw_value_8 (Union[None, Unset, str]):
+        as_found_raw_value_9 (Union[None, Unset, str]):
+        as_found_raw_value_10 (Union[None, Unset, str]):
+        as_found_raw_value_11 (Union[None, Unset, str]):
+        as_found_raw_value_12 (Union[None, Unset, str]):
+        as_found_raw_value_13 (Union[None, Unset, str]):
+        as_found_raw_value_14 (Union[None, Unset, str]):
+        as_found_raw_value_15 (Union[None, Unset, str]):
+        as_found_raw_value_16 (Union[None, Unset, str]):
+        as_found_raw_value_17 (Union[None, Unset, str]):
+        as_found_raw_value_18 (Union[None, Unset, str]):
+        as_found_raw_value_19 (Union[None, Unset, str]):
+        as_found_raw_value_20 (Union[None, Unset, str]):
+        as_found_raw_value_21 (Union[None, Unset, str]):
+        as_found_raw_value_22 (Union[None, Unset, str]):
+        as_found_raw_value_23 (Union[None, Unset, str]):
+        as_found_raw_value_24 (Union[None, Unset, str]):
+        as_found_raw_value_25 (Union[None, Unset, str]):
+        as_found_raw_value_26 (Union[None, Unset, str]):
+        as_found_raw_value_27 (Union[None, Unset, str]):
+        as_found_raw_value_28 (Union[None, Unset, str]):
+        as_found_raw_value_29 (Union[None, Unset, str]):
+        as_found_raw_value_30 (Union[None, Unset, str]):
+        as_found_raw_value_31 (Union[None, Unset, str]):
+        as_found_raw_value_32 (Union[None, Unset, str]):
+        as_found_raw_value_33 (Union[None, Unset, str]):
+        as_found_raw_value_34 (Union[None, Unset, str]):
+        as_found_raw_value_35 (Union[None, Unset, str]):
+        as_found_raw_value_36 (Union[None, Unset, str]):
+        as_found_raw_value_37 (Union[None, Unset, str]):
+        as_found_raw_value_38 (Union[None, Unset, str]):
+        as_found_raw_value_39 (Union[None, Unset, str]):
+        as_found_raw_value_40 (Union[None, Unset, str]):
+        as_found_value_subtitle_1 (Union[None, Unset, str]):
+        as_found_value_subtitle_2 (Union[None, Unset, str]):
+        as_found_value_subtitle_3 (Union[None, Unset, str]):
+        as_found_value_subtitle_4 (Union[None, Unset, str]):
+        as_found_value_subtitle_5 (Union[None, Unset, str]):
+        as_found_value_subtitle_6 (Union[None, Unset, str]):
+        as_found_value_subtitle_7 (Union[None, Unset, str]):
+        as_found_value_subtitle_8 (Union[None, Unset, str]):
+        as_found_value_subtitle_9 (Union[None, Unset, str]):
+        as_found_value_subtitle_10 (Union[None, Unset, str]):
+        as_found_value_subtitle_11 (Union[None, Unset, str]):
+        as_found_value_subtitle_12 (Union[None, Unset, str]):
+        as_found_value_subtitle_13 (Union[None, Unset, str]):
+        as_found_value_subtitle_14 (Union[None, Unset, str]):
+        as_found_value_subtitle_15 (Union[None, Unset, str]):
+        as_found_value_subtitle_16 (Union[None, Unset, str]):
+        as_found_value_subtitle_17 (Union[None, Unset, str]):
+        as_found_value_subtitle_18 (Union[None, Unset, str]):
+        as_found_value_subtitle_19 (Union[None, Unset, str]):
+        as_found_value_subtitle_20 (Union[None, Unset, str]):
+        as_found_value_subtitle_21 (Union[None, Unset, str]):
+        as_found_value_subtitle_22 (Union[None, Unset, str]):
+        as_found_value_subtitle_23 (Union[None, Unset, str]):
+        as_found_value_subtitle_24 (Union[None, Unset, str]):
+        as_found_value_subtitle_25 (Union[None, Unset, str]):
+        as_found_value_subtitle_26 (Union[None, Unset, str]):
+        as_found_value_subtitle_27 (Union[None, Unset, str]):
+        as_found_value_subtitle_28 (Union[None, Unset, str]):
+        as_found_value_subtitle_29 (Union[None, Unset, str]):
+        as_found_value_subtitle_30 (Union[None, Unset, str]):
+        as_found_value_subtitle_31 (Union[None, Unset, str]):
+        as_found_value_subtitle_32 (Union[None, Unset, str]):
+        as_found_value_subtitle_33 (Union[None, Unset, str]):
+        as_found_value_subtitle_34 (Union[None, Unset, str]):
+        as_found_value_subtitle_35 (Union[None, Unset, str]):
+        as_found_value_subtitle_36 (Union[None, Unset, str]):
+        as_found_value_subtitle_37 (Union[None, Unset, str]):
+        as_found_value_subtitle_38 (Union[None, Unset, str]):
+        as_found_value_subtitle_39 (Union[None, Unset, str]):
+        as_found_value_subtitle_40 (Union[None, Unset, str]):
+        as_found_mean (Union[None, Unset, float]):
+        as_found_mean_raw (Union[None, Unset, float]):
+        as_found_sd (Union[None, Unset, float]):
+        as_found_sd_raw (Union[None, Unset, float]):
+        as_found_delta (Union[None, Unset, float]):
+        as_found_range (Union[None, Unset, float]):
+        as_found_cv (Union[None, Unset, float]):
+        as_found_cv_raw (Union[None, Unset, float]):
+        as_found_result (Union[None, Unset, int]):
+        as_found_range_result (Union[None, Unset, bool]):
+        as_found_delta_result (Union[None, Unset, bool]):
+        as_found_min_result (Union[None, Unset, bool]):
+        as_found_max_result (Union[None, Unset, bool]):
+        as_found_tar_result (Union[None, Unset, bool]):
+        as_found_tur_result (Union[None, Unset, bool]):
+        as_found_error_result (Union[None, Unset, bool]):
+        as_found_sd_result (Union[None, Unset, bool]):
+        as_found_cv_result (Union[None, Unset, bool]):
+        as_found_custom_field_result (Union[None, Unset, int]):
+        as_found_mu (Union[None, Unset, float]):
+        as_found_mu_raw (Union[None, Unset, float]):
+        as_found_mu_effective_dof (Union[None, Unset, float]):
+        as_found_mu_coverage_factor (Union[None, Unset, float]):
+        as_found_cmc (Union[None, Unset, float]):
+        as_found_cmc_comments (Union[None, Unset, str]):
+        as_found_calculated_uncertainty (Union[None, Unset, float]):
+        as_found_lab_mu (Union[None, Unset, float]):
+        as_found_uncertainty_budget (Union[None, Unset, str]):
+        as_found_mu_extended (Union[None, Unset, str]):
+        as_found_channel (Union[None, Unset, int]):
+        as_found_measurement_type (Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementType]):
-        as_found_updated_by (Union[Unset, str]):
-        as_found_updated_on (Union[Unset, datetime.datetime]):
-        as_left_abbreviated_uom (Union[Unset, str]):
-        as_left_unit_scale_factor (Union[Unset, float]):
-        as_found_specification_title (Union[Unset, str]):
-        as_found_specification_subtitle (Union[Unset, str]):
-        as_found_specification_group (Union[Unset, str]):
-        as_found_batch_type (Union[Unset, int]):
-        as_found_batch_result (Union[Unset, int]):
-        as_found_is_by_channel (Union[Unset, bool]):
-        as_found_channel_count (Union[Unset, int]):
-        as_found_commenced_on (Union[Unset, datetime.datetime]):
-        as_found_commenced_by (Union[Unset, str]):
-        as_found_z_factor (Union[Unset, float]):
-        as_found_air_buoyancy (Union[Unset, float]):
-        as_found_evaporation_rate (Union[Unset, float]):
-        as_found_ambient_temperature (Union[Unset, float]):
-        as_found_air_humidity (Union[Unset, float]):
-        as_found_barometric_pressure (Union[Unset, float]):
-        as_found_altitude (Union[Unset, float]):
-        as_found_wind_speed (Union[Unset, float]):
-        as_found_solar_radiation (Union[Unset, float]):
-        as_found_light_intensity (Union[Unset, float]):
-        as_found_noise_level (Union[Unset, float]):
-        as_found_ph_level (Union[Unset, float]):
-        as_found_water_conductivity (Union[Unset, float]):
-        as_found_water_temperature (Union[Unset, float]):
-        as_found_z_factor_uom (Union[Unset, str]):
-        as_found_air_buoyancy_uom (Union[Unset, str]):
-        as_found_evaporation_rate_uom (Union[Unset, str]):
-        as_found_ambient_temperature_uom (Union[Unset, str]):
-        as_found_air_humidity_uom (Union[Unset, str]):
-        as_found_barometric_pressure_uom (Union[Unset, str]):
-        as_found_altitude_uom (Union[Unset, str]):
-        as_found_wind_speed_uom (Union[Unset, str]):
-        as_found_solar_radiation_uom (Union[Unset, str]):
-        as_found_light_intensity_uom (Union[Unset, str]):
-        as_found_noise_level_uom (Union[Unset, str]):
-        as_found_ph_level_uom (Union[Unset, str]):
-        as_found_water_conductivity_uom (Union[Unset, str]):
-        as_found_water_temperature_uom (Union[Unset, str]):
-        as_found_abbreviated_uom (Union[Unset, str]):
-        as_found_unit_scale_factor (Union[Unset, float]):
-        as_found_specification_name (Union[Unset, str]):
-        as_found_parameter_name (Union[Unset, str]):
-        as_found_display_order (Union[Unset, int]):
-        as_found_unit_of_measure (Union[Unset, str]):
-        as_found_display_format (Union[Unset, str]):
-        as_found_precision (Union[Unset, float]):
-        as_found_precision_type (Union[Unset,
+        as_found_updated_by (Union[None, Unset, str]):
+        as_found_updated_on (Union[None, Unset, datetime.datetime]):
+        as_left_abbreviated_uom (Union[None, Unset, str]):
+        as_left_unit_scale_factor (Union[None, Unset, float]):
+        as_found_specification_title (Union[None, Unset, str]):
+        as_found_specification_subtitle (Union[None, Unset, str]):
+        as_found_specification_group (Union[None, Unset, str]):
+        as_found_batch_type (Union[None, Unset, int]):
+        as_found_batch_result (Union[None, Unset, int]):
+        as_found_is_by_channel (Union[None, Unset, bool]):
+        as_found_channel_count (Union[None, Unset, int]):
+        as_found_commenced_on (Union[None, Unset, datetime.datetime]):
+        as_found_commenced_by (Union[None, Unset, str]):
+        as_found_z_factor (Union[None, Unset, float]):
+        as_found_air_buoyancy (Union[None, Unset, float]):
+        as_found_evaporation_rate (Union[None, Unset, float]):
+        as_found_ambient_temperature (Union[None, Unset, float]):
+        as_found_air_humidity (Union[None, Unset, float]):
+        as_found_barometric_pressure (Union[None, Unset, float]):
+        as_found_altitude (Union[None, Unset, float]):
+        as_found_wind_speed (Union[None, Unset, float]):
+        as_found_solar_radiation (Union[None, Unset, float]):
+        as_found_light_intensity (Union[None, Unset, float]):
+        as_found_noise_level (Union[None, Unset, float]):
+        as_found_ph_level (Union[None, Unset, float]):
+        as_found_water_conductivity (Union[None, Unset, float]):
+        as_found_water_temperature (Union[None, Unset, float]):
+        as_found_z_factor_uom (Union[None, Unset, str]):
+        as_found_air_buoyancy_uom (Union[None, Unset, str]):
+        as_found_evaporation_rate_uom (Union[None, Unset, str]):
+        as_found_ambient_temperature_uom (Union[None, Unset, str]):
+        as_found_air_humidity_uom (Union[None, Unset, str]):
+        as_found_barometric_pressure_uom (Union[None, Unset, str]):
+        as_found_altitude_uom (Union[None, Unset, str]):
+        as_found_wind_speed_uom (Union[None, Unset, str]):
+        as_found_solar_radiation_uom (Union[None, Unset, str]):
+        as_found_light_intensity_uom (Union[None, Unset, str]):
+        as_found_noise_level_uom (Union[None, Unset, str]):
+        as_found_ph_level_uom (Union[None, Unset, str]):
+        as_found_water_conductivity_uom (Union[None, Unset, str]):
+        as_found_water_temperature_uom (Union[None, Unset, str]):
+        as_found_abbreviated_uom (Union[None, Unset, str]):
+        as_found_unit_scale_factor (Union[None, Unset, float]):
+        as_found_specification_name (Union[None, Unset, str]):
+        as_found_parameter_name (Union[None, Unset, str]):
+        as_found_display_order (Union[None, Unset, int]):
+        as_found_unit_of_measure (Union[None, Unset, str]):
+        as_found_display_format (Union[None, Unset, str]):
+        as_found_precision (Union[None, Unset, float]):
+        as_found_precision_type (Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundPrecisionType]):
-        as_found_minimum (Union[Unset, float]):
-        as_found_nominal (Union[Unset, float]):
-        as_found_expected_value (Union[Unset, float]):
-        as_found_expected_value_raw (Union[Unset, str]):
-        as_found_test_value (Union[Unset, float]):
-        as_found_base_value (Union[Unset, float]):
-        as_found_maxi_mum (Union[Unset, float]):
-        as_found_resolution (Union[Unset, float]):
-        as_found_resolution_count (Union[Unset, int]):
-        as_found_measurement_batch_id (Union[Unset, int]):
-        as_found_measurement_id (Union[Unset, int]):
-        as_found_standard_id (Union[Unset, int]):
-        as_found_tool_id (Union[Unset, int]):
-        as_found_measurement_condition_id (Union[Unset, int]):
-        as_found_measurement_point_id (Union[Unset, int]):
-        as_left_parameter_id (Union[Unset, int]):
-        as_left_sd_header (Union[Unset, float]):
-        as_left_cv_header (Union[Unset, float]):
-        as_left_measurement_local_time (Union[Unset, datetime.datetime]):
-        as_left_reading_entry_math (Union[Unset,
+        as_found_minimum (Union[None, Unset, float]):
+        as_found_nominal (Union[None, Unset, float]):
+        as_found_expected_value (Union[None, Unset, float]):
+        as_found_expected_value_raw (Union[None, Unset, str]):
+        as_found_test_value (Union[None, Unset, float]):
+        as_found_base_value (Union[None, Unset, float]):
+        as_found_maxi_mum (Union[None, Unset, float]):
+        as_found_resolution (Union[None, Unset, float]):
+        as_found_resolution_count (Union[None, Unset, int]):
+        as_found_measurement_batch_id (Union[None, Unset, int]):
+        as_found_measurement_id (Union[None, Unset, int]):
+        as_found_standard_id (Union[None, Unset, int]):
+        as_found_tool_id (Union[None, Unset, int]):
+        as_found_measurement_condition_id (Union[None, Unset, int]):
+        as_found_measurement_point_id (Union[None, Unset, int]):
+        as_left_parameter_id (Union[None, Unset, int]):
+        as_left_sd_header (Union[None, Unset, float]):
+        as_left_cv_header (Union[None, Unset, float]):
+        as_left_measurement_local_time (Union[None, Unset, datetime.datetime]):
+        as_left_reading_entry_math (Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath]):
-        as_left_reading_entry_math_string (Union[Unset, str]):
-        as_left_value_1 (Union[Unset, str]):
-        as_left_value_2 (Union[Unset, str]):
-        as_left_value_3 (Union[Unset, str]):
-        as_left_value_4 (Union[Unset, str]):
-        as_left_value_5 (Union[Unset, str]):
-        as_left_value_6 (Union[Unset, str]):
-        as_left_value_7 (Union[Unset, str]):
-        as_left_value_8 (Union[Unset, str]):
-        as_left_value_9 (Union[Unset, str]):
-        as_left_value_10 (Union[Unset, str]):
-        as_left_value_11 (Union[Unset, str]):
-        as_left_value_12 (Union[Unset, str]):
-        as_left_value_13 (Union[Unset, str]):
-        as_left_value_14 (Union[Unset, str]):
-        as_left_value_15 (Union[Unset, str]):
-        as_left_value_16 (Union[Unset, str]):
-        as_left_value_17 (Union[Unset, str]):
-        as_left_value_18 (Union[Unset, str]):
-        as_left_value_19 (Union[Unset, str]):
-        as_left_value_20 (Union[Unset, str]):
-        as_left_value_21 (Union[Unset, str]):
-        as_left_value_22 (Union[Unset, str]):
-        as_left_value_23 (Union[Unset, str]):
-        as_left_value_24 (Union[Unset, str]):
-        as_left_value_25 (Union[Unset, str]):
-        as_left_value_26 (Union[Unset, str]):
-        as_left_value_27 (Union[Unset, str]):
-        as_left_value_28 (Union[Unset, str]):
-        as_left_value_29 (Union[Unset, str]):
-        as_left_value_30 (Union[Unset, str]):
-        as_left_value_31 (Union[Unset, str]):
-        as_left_value_32 (Union[Unset, str]):
-        as_left_value_33 (Union[Unset, str]):
-        as_left_value_34 (Union[Unset, str]):
-        as_left_value_35 (Union[Unset, str]):
-        as_left_value_36 (Union[Unset, str]):
-        as_left_value_37 (Union[Unset, str]):
-        as_left_value_38 (Union[Unset, str]):
-        as_left_value_39 (Union[Unset, str]):
-        as_left_value_40 (Union[Unset, str]):
-        as_left_raw_value_1 (Union[Unset, str]):
-        as_left_raw_value_2 (Union[Unset, str]):
-        as_left_raw_value_3 (Union[Unset, str]):
-        as_left_raw_value_4 (Union[Unset, str]):
-        as_left_raw_value_5 (Union[Unset, str]):
-        as_left_raw_value_6 (Union[Unset, str]):
-        as_left_raw_value_7 (Union[Unset, str]):
-        as_left_raw_value_8 (Union[Unset, str]):
-        as_left_raw_value_9 (Union[Unset, str]):
-        as_left_raw_value_10 (Union[Unset, str]):
-        as_left_raw_value_11 (Union[Unset, str]):
-        as_left_raw_value_12 (Union[Unset, str]):
-        as_left_raw_value_13 (Union[Unset, str]):
-        as_left_raw_value_14 (Union[Unset, str]):
-        as_left_raw_value_15 (Union[Unset, str]):
-        as_left_raw_value_16 (Union[Unset, str]):
-        as_left_raw_value_17 (Union[Unset, str]):
-        as_left_raw_value_18 (Union[Unset, str]):
-        as_left_raw_value_19 (Union[Unset, str]):
-        as_left_raw_value_20 (Union[Unset, str]):
-        as_left_raw_value_21 (Union[Unset, str]):
-        as_left_raw_value_22 (Union[Unset, str]):
-        as_left_raw_value_23 (Union[Unset, str]):
-        as_left_raw_value_24 (Union[Unset, str]):
-        as_left_raw_value_25 (Union[Unset, str]):
-        as_left_raw_value_26 (Union[Unset, str]):
-        as_left_raw_value_27 (Union[Unset, str]):
-        as_left_raw_value_28 (Union[Unset, str]):
-        as_left_raw_value_29 (Union[Unset, str]):
-        as_left_raw_value_30 (Union[Unset, str]):
-        as_left_raw_value_31 (Union[Unset, str]):
-        as_left_raw_value_32 (Union[Unset, str]):
-        as_left_raw_value_33 (Union[Unset, str]):
-        as_left_raw_value_34 (Union[Unset, str]):
-        as_left_raw_value_35 (Union[Unset, str]):
-        as_left_raw_value_36 (Union[Unset, str]):
-        as_left_raw_value_37 (Union[Unset, str]):
-        as_left_raw_value_38 (Union[Unset, str]):
-        as_left_raw_value_39 (Union[Unset, str]):
-        as_left_raw_value_40 (Union[Unset, str]):
-        as_left_value_subtitle_1 (Union[Unset, str]):
-        as_left_value_subtitle_2 (Union[Unset, str]):
-        as_left_value_subtitle_3 (Union[Unset, str]):
-        as_left_value_subtitle_4 (Union[Unset, str]):
-        as_left_value_subtitle_5 (Union[Unset, str]):
-        as_left_value_subtitle_6 (Union[Unset, str]):
-        as_left_value_subtitle_7 (Union[Unset, str]):
-        as_left_value_subtitle_8 (Union[Unset, str]):
-        as_left_value_subtitle_9 (Union[Unset, str]):
-        as_left_value_subtitle_10 (Union[Unset, str]):
-        as_left_value_subtitle_11 (Union[Unset, str]):
-        as_left_value_subtitle_12 (Union[Unset, str]):
-        as_left_value_subtitle_13 (Union[Unset, str]):
-        as_left_value_subtitle_14 (Union[Unset, str]):
-        as_left_value_subtitle_15 (Union[Unset, str]):
-        as_left_value_subtitle_16 (Union[Unset, str]):
-        as_left_value_subtitle_17 (Union[Unset, str]):
-        as_left_value_subtitle_18 (Union[Unset, str]):
-        as_left_value_subtitle_19 (Union[Unset, str]):
-        as_left_value_subtitle_20 (Union[Unset, str]):
-        as_left_value_subtitle_21 (Union[Unset, str]):
-        as_left_value_subtitle_22 (Union[Unset, str]):
-        as_left_value_subtitle_23 (Union[Unset, str]):
-        as_left_value_subtitle_24 (Union[Unset, str]):
-        as_left_value_subtitle_25 (Union[Unset, str]):
-        as_left_value_subtitle_26 (Union[Unset, str]):
-        as_left_value_subtitle_27 (Union[Unset, str]):
-        as_left_value_subtitle_28 (Union[Unset, str]):
-        as_left_value_subtitle_29 (Union[Unset, str]):
-        as_left_value_subtitle_30 (Union[Unset, str]):
-        as_left_value_subtitle_31 (Union[Unset, str]):
-        as_left_value_subtitle_32 (Union[Unset, str]):
-        as_left_value_subtitle_33 (Union[Unset, str]):
-        as_left_value_subtitle_34 (Union[Unset, str]):
-        as_left_value_subtitle_35 (Union[Unset, str]):
-        as_left_value_subtitle_36 (Union[Unset, str]):
-        as_left_value_subtitle_37 (Union[Unset, str]):
-        as_left_value_subtitle_38 (Union[Unset, str]):
-        as_left_value_subtitle_39 (Union[Unset, str]):
-        as_left_value_subtitle_40 (Union[Unset, str]):
-        as_left_mean (Union[Unset, float]):
-        as_left_mean_raw (Union[Unset, float]):
-        as_left_sd (Union[Unset, float]):
-        as_left_sd_raw (Union[Unset, float]):
-        as_left_cv (Union[Unset, float]):
-        as_left_cv_raw (Union[Unset, float]):
-        as_left_delta (Union[Unset, float]):
-        as_left_range (Union[Unset, float]):
+        as_left_reading_entry_math_string (Union[None, Unset, str]):
+        as_left_value_1 (Union[None, Unset, str]):
+        as_left_value_2 (Union[None, Unset, str]):
+        as_left_value_3 (Union[None, Unset, str]):
+        as_left_value_4 (Union[None, Unset, str]):
+        as_left_value_5 (Union[None, Unset, str]):
+        as_left_value_6 (Union[None, Unset, str]):
+        as_left_value_7 (Union[None, Unset, str]):
+        as_left_value_8 (Union[None, Unset, str]):
+        as_left_value_9 (Union[None, Unset, str]):
+        as_left_value_10 (Union[None, Unset, str]):
+        as_left_value_11 (Union[None, Unset, str]):
+        as_left_value_12 (Union[None, Unset, str]):
+        as_left_value_13 (Union[None, Unset, str]):
+        as_left_value_14 (Union[None, Unset, str]):
+        as_left_value_15 (Union[None, Unset, str]):
+        as_left_value_16 (Union[None, Unset, str]):
+        as_left_value_17 (Union[None, Unset, str]):
+        as_left_value_18 (Union[None, Unset, str]):
+        as_left_value_19 (Union[None, Unset, str]):
+        as_left_value_20 (Union[None, Unset, str]):
+        as_left_value_21 (Union[None, Unset, str]):
+        as_left_value_22 (Union[None, Unset, str]):
+        as_left_value_23 (Union[None, Unset, str]):
+        as_left_value_24 (Union[None, Unset, str]):
+        as_left_value_25 (Union[None, Unset, str]):
+        as_left_value_26 (Union[None, Unset, str]):
+        as_left_value_27 (Union[None, Unset, str]):
+        as_left_value_28 (Union[None, Unset, str]):
+        as_left_value_29 (Union[None, Unset, str]):
+        as_left_value_30 (Union[None, Unset, str]):
+        as_left_value_31 (Union[None, Unset, str]):
+        as_left_value_32 (Union[None, Unset, str]):
+        as_left_value_33 (Union[None, Unset, str]):
+        as_left_value_34 (Union[None, Unset, str]):
+        as_left_value_35 (Union[None, Unset, str]):
+        as_left_value_36 (Union[None, Unset, str]):
+        as_left_value_37 (Union[None, Unset, str]):
+        as_left_value_38 (Union[None, Unset, str]):
+        as_left_value_39 (Union[None, Unset, str]):
+        as_left_value_40 (Union[None, Unset, str]):
+        as_left_raw_value_1 (Union[None, Unset, str]):
+        as_left_raw_value_2 (Union[None, Unset, str]):
+        as_left_raw_value_3 (Union[None, Unset, str]):
+        as_left_raw_value_4 (Union[None, Unset, str]):
+        as_left_raw_value_5 (Union[None, Unset, str]):
+        as_left_raw_value_6 (Union[None, Unset, str]):
+        as_left_raw_value_7 (Union[None, Unset, str]):
+        as_left_raw_value_8 (Union[None, Unset, str]):
+        as_left_raw_value_9 (Union[None, Unset, str]):
+        as_left_raw_value_10 (Union[None, Unset, str]):
+        as_left_raw_value_11 (Union[None, Unset, str]):
+        as_left_raw_value_12 (Union[None, Unset, str]):
+        as_left_raw_value_13 (Union[None, Unset, str]):
+        as_left_raw_value_14 (Union[None, Unset, str]):
+        as_left_raw_value_15 (Union[None, Unset, str]):
+        as_left_raw_value_16 (Union[None, Unset, str]):
+        as_left_raw_value_17 (Union[None, Unset, str]):
+        as_left_raw_value_18 (Union[None, Unset, str]):
+        as_left_raw_value_19 (Union[None, Unset, str]):
+        as_left_raw_value_20 (Union[None, Unset, str]):
+        as_left_raw_value_21 (Union[None, Unset, str]):
+        as_left_raw_value_22 (Union[None, Unset, str]):
+        as_left_raw_value_23 (Union[None, Unset, str]):
+        as_left_raw_value_24 (Union[None, Unset, str]):
+        as_left_raw_value_25 (Union[None, Unset, str]):
+        as_left_raw_value_26 (Union[None, Unset, str]):
+        as_left_raw_value_27 (Union[None, Unset, str]):
+        as_left_raw_value_28 (Union[None, Unset, str]):
+        as_left_raw_value_29 (Union[None, Unset, str]):
+        as_left_raw_value_30 (Union[None, Unset, str]):
+        as_left_raw_value_31 (Union[None, Unset, str]):
+        as_left_raw_value_32 (Union[None, Unset, str]):
+        as_left_raw_value_33 (Union[None, Unset, str]):
+        as_left_raw_value_34 (Union[None, Unset, str]):
+        as_left_raw_value_35 (Union[None, Unset, str]):
+        as_left_raw_value_36 (Union[None, Unset, str]):
+        as_left_raw_value_37 (Union[None, Unset, str]):
+        as_left_raw_value_38 (Union[None, Unset, str]):
+        as_left_raw_value_39 (Union[None, Unset, str]):
+        as_left_raw_value_40 (Union[None, Unset, str]):
+        as_left_value_subtitle_1 (Union[None, Unset, str]):
+        as_left_value_subtitle_2 (Union[None, Unset, str]):
+        as_left_value_subtitle_3 (Union[None, Unset, str]):
+        as_left_value_subtitle_4 (Union[None, Unset, str]):
+        as_left_value_subtitle_5 (Union[None, Unset, str]):
+        as_left_value_subtitle_6 (Union[None, Unset, str]):
+        as_left_value_subtitle_7 (Union[None, Unset, str]):
+        as_left_value_subtitle_8 (Union[None, Unset, str]):
+        as_left_value_subtitle_9 (Union[None, Unset, str]):
+        as_left_value_subtitle_10 (Union[None, Unset, str]):
+        as_left_value_subtitle_11 (Union[None, Unset, str]):
+        as_left_value_subtitle_12 (Union[None, Unset, str]):
+        as_left_value_subtitle_13 (Union[None, Unset, str]):
+        as_left_value_subtitle_14 (Union[None, Unset, str]):
+        as_left_value_subtitle_15 (Union[None, Unset, str]):
+        as_left_value_subtitle_16 (Union[None, Unset, str]):
+        as_left_value_subtitle_17 (Union[None, Unset, str]):
+        as_left_value_subtitle_18 (Union[None, Unset, str]):
+        as_left_value_subtitle_19 (Union[None, Unset, str]):
+        as_left_value_subtitle_20 (Union[None, Unset, str]):
+        as_left_value_subtitle_21 (Union[None, Unset, str]):
+        as_left_value_subtitle_22 (Union[None, Unset, str]):
+        as_left_value_subtitle_23 (Union[None, Unset, str]):
+        as_left_value_subtitle_24 (Union[None, Unset, str]):
+        as_left_value_subtitle_25 (Union[None, Unset, str]):
+        as_left_value_subtitle_26 (Union[None, Unset, str]):
+        as_left_value_subtitle_27 (Union[None, Unset, str]):
+        as_left_value_subtitle_28 (Union[None, Unset, str]):
+        as_left_value_subtitle_29 (Union[None, Unset, str]):
+        as_left_value_subtitle_30 (Union[None, Unset, str]):
+        as_left_value_subtitle_31 (Union[None, Unset, str]):
+        as_left_value_subtitle_32 (Union[None, Unset, str]):
+        as_left_value_subtitle_33 (Union[None, Unset, str]):
+        as_left_value_subtitle_34 (Union[None, Unset, str]):
+        as_left_value_subtitle_35 (Union[None, Unset, str]):
+        as_left_value_subtitle_36 (Union[None, Unset, str]):
+        as_left_value_subtitle_37 (Union[None, Unset, str]):
+        as_left_value_subtitle_38 (Union[None, Unset, str]):
+        as_left_value_subtitle_39 (Union[None, Unset, str]):
+        as_left_value_subtitle_40 (Union[None, Unset, str]):
+        as_left_mean (Union[None, Unset, float]):
+        as_left_mean_raw (Union[None, Unset, float]):
+        as_left_sd (Union[None, Unset, float]):
+        as_left_sd_raw (Union[None, Unset, float]):
+        as_left_cv (Union[None, Unset, float]):
+        as_left_cv_raw (Union[None, Unset, float]):
+        as_left_delta (Union[None, Unset, float]):
+        as_left_range (Union[None, Unset, float]):
         as_left_result (Union[None, Unset, int]):
-        as_left_range_result (Union[Unset, bool]):
-        as_left_delta_result (Union[Unset, bool]):
-        as_left_min_result (Union[Unset, bool]):
-        as_left_max_result (Union[Unset, bool]):
-        as_left_tar_result (Union[Unset, bool]):
-        as_left_tur_result (Union[Unset, bool]):
-        as_left_error_result (Union[Unset, bool]):
-        as_left_sd_result (Union[Unset, bool]):
-        as_left_cv_result (Union[Unset, bool]):
-        as_left_custom_field_result (Union[Unset, int]):
-        as_left_mu (Union[Unset, float]):
-        as_left_mu_raw (Union[Unset, float]):
-        as_left_mu_effective_dof (Union[Unset, float]):
-        as_left_mu_coverage_factor (Union[Unset, float]):
-        as_left_cmc (Union[Unset, float]):
-        as_left_cmc_comments (Union[Unset, str]):
-        as_left_calculated_uncertainty (Union[Unset, float]):
-        as_left_lab_mu (Union[Unset, float]):
-        as_left_uncertainty_budget (Union[Unset, str]):
-        as_left_mu_extended (Union[Unset, str]):
-        as_left_channel (Union[Unset, int]):
-        as_left_measurement_type (Union[Unset,
+        as_left_range_result (Union[None, Unset, bool]):
+        as_left_delta_result (Union[None, Unset, bool]):
+        as_left_min_result (Union[None, Unset, bool]):
+        as_left_max_result (Union[None, Unset, bool]):
+        as_left_tar_result (Union[None, Unset, bool]):
+        as_left_tur_result (Union[None, Unset, bool]):
+        as_left_error_result (Union[None, Unset, bool]):
+        as_left_sd_result (Union[None, Unset, bool]):
+        as_left_cv_result (Union[None, Unset, bool]):
+        as_left_custom_field_result (Union[None, Unset, int]):
+        as_left_mu (Union[None, Unset, float]):
+        as_left_mu_raw (Union[None, Unset, float]):
+        as_left_mu_effective_dof (Union[None, Unset, float]):
+        as_left_mu_coverage_factor (Union[None, Unset, float]):
+        as_left_cmc (Union[None, Unset, float]):
+        as_left_cmc_comments (Union[None, Unset, str]):
+        as_left_calculated_uncertainty (Union[None, Unset, float]):
+        as_left_lab_mu (Union[None, Unset, float]):
+        as_left_uncertainty_budget (Union[None, Unset, str]):
+        as_left_mu_extended (Union[None, Unset, str]):
+        as_left_channel (Union[None, Unset, int]):
+        as_left_measurement_type (Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementType]):
-        as_left_updated_by (Union[Unset, str]):
-        as_left_updated_on (Union[Unset, datetime.datetime]):
-        as_left_specification_title (Union[Unset, str]):
-        as_left_specification_subtitle (Union[Unset, str]):
-        as_left_specification_group (Union[Unset, str]):
-        as_left_batch_type (Union[Unset, int]):
-        as_left_batch_result (Union[Unset, int]):
-        as_left_is_by_channel (Union[Unset, bool]):
-        as_left_channel_count (Union[Unset, int]):
-        as_left_commenced_on (Union[Unset, datetime.datetime]):
-        as_left_commenced_by (Union[Unset, str]):
-        as_left_z_factor (Union[Unset, float]):
-        as_left_air_buoyancy (Union[Unset, float]):
-        as_left_evaporation_rate (Union[Unset, float]):
-        as_left_ambient_temperature (Union[Unset, float]):
-        as_left_air_humidity (Union[Unset, float]):
-        as_left_barometric_pressure (Union[Unset, float]):
-        as_left_altitude (Union[Unset, float]):
-        as_left_wind_speed (Union[Unset, float]):
-        as_left_solar_radiation (Union[Unset, float]):
-        as_left_light_intensity (Union[Unset, float]):
-        as_left_noise_level (Union[Unset, float]):
-        as_left_ph_level (Union[Unset, float]):
-        as_left_water_conductivity (Union[Unset, float]):
-        as_left_water_temperature (Union[Unset, float]):
-        as_left_z_factor_uom (Union[Unset, str]):
-        as_left_air_buoyancy_uom (Union[Unset, str]):
-        as_left_evaporation_rate_uom (Union[Unset, str]):
-        as_left_ambient_temperature_uom (Union[Unset, str]):
-        as_left_air_humidity_uom (Union[Unset, str]):
-        as_left_barometric_pressure_uom (Union[Unset, str]):
-        as_left_altitude_uom (Union[Unset, str]):
-        as_left_wind_speed_uom (Union[Unset, str]):
-        as_left_solar_radiation_uom (Union[Unset, str]):
-        as_left_light_intensity_uom (Union[Unset, str]):
-        as_left_noise_level_uom (Union[Unset, str]):
-        as_left_ph_level_uom (Union[Unset, str]):
-        as_left_water_conductivity_uom (Union[Unset, str]):
-        as_left_water_temperature_uom (Union[Unset, str]):
-        as_left_specification_name (Union[Unset, str]):
-        as_left_parameter_name (Union[Unset, str]):
-        as_left_display_order (Union[Unset, int]):
-        as_left_unit_of_measure (Union[Unset, str]):
-        as_left_display_format (Union[Unset, str]):
-        as_left_precision (Union[Unset, float]):
-        as_left_precision_type (Union[Unset, QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftPrecisionType]):
-        as_left_minimum (Union[Unset, float]):
-        as_left_nominal (Union[Unset, float]):
-        as_left_expected_value (Union[Unset, float]):
-        as_left_expected_value_raw (Union[Unset, str]):
-        as_left_test_value (Union[Unset, float]):
-        as_left_base_value (Union[Unset, float]):
-        as_left_maxi_mum (Union[Unset, float]):
-        as_left_resolution (Union[Unset, float]):
-        as_left_resolution_count (Union[Unset, int]):
-        as_left_measurement_not_taken_result (Union[Unset,
+        as_left_updated_by (Union[None, Unset, str]):
+        as_left_updated_on (Union[None, Unset, datetime.datetime]):
+        as_left_specification_title (Union[None, Unset, str]):
+        as_left_specification_subtitle (Union[None, Unset, str]):
+        as_left_specification_group (Union[None, Unset, str]):
+        as_left_batch_type (Union[None, Unset, int]):
+        as_left_batch_result (Union[None, Unset, int]):
+        as_left_is_by_channel (Union[None, Unset, bool]):
+        as_left_channel_count (Union[None, Unset, int]):
+        as_left_commenced_on (Union[None, Unset, datetime.datetime]):
+        as_left_commenced_by (Union[None, Unset, str]):
+        as_left_z_factor (Union[None, Unset, float]):
+        as_left_air_buoyancy (Union[None, Unset, float]):
+        as_left_evaporation_rate (Union[None, Unset, float]):
+        as_left_ambient_temperature (Union[None, Unset, float]):
+        as_left_air_humidity (Union[None, Unset, float]):
+        as_left_barometric_pressure (Union[None, Unset, float]):
+        as_left_altitude (Union[None, Unset, float]):
+        as_left_wind_speed (Union[None, Unset, float]):
+        as_left_solar_radiation (Union[None, Unset, float]):
+        as_left_light_intensity (Union[None, Unset, float]):
+        as_left_noise_level (Union[None, Unset, float]):
+        as_left_ph_level (Union[None, Unset, float]):
+        as_left_water_conductivity (Union[None, Unset, float]):
+        as_left_water_temperature (Union[None, Unset, float]):
+        as_left_z_factor_uom (Union[None, Unset, str]):
+        as_left_air_buoyancy_uom (Union[None, Unset, str]):
+        as_left_evaporation_rate_uom (Union[None, Unset, str]):
+        as_left_ambient_temperature_uom (Union[None, Unset, str]):
+        as_left_air_humidity_uom (Union[None, Unset, str]):
+        as_left_barometric_pressure_uom (Union[None, Unset, str]):
+        as_left_altitude_uom (Union[None, Unset, str]):
+        as_left_wind_speed_uom (Union[None, Unset, str]):
+        as_left_solar_radiation_uom (Union[None, Unset, str]):
+        as_left_light_intensity_uom (Union[None, Unset, str]):
+        as_left_noise_level_uom (Union[None, Unset, str]):
+        as_left_ph_level_uom (Union[None, Unset, str]):
+        as_left_water_conductivity_uom (Union[None, Unset, str]):
+        as_left_water_temperature_uom (Union[None, Unset, str]):
+        as_left_specification_name (Union[None, Unset, str]):
+        as_left_parameter_name (Union[None, Unset, str]):
+        as_left_display_order (Union[None, Unset, int]):
+        as_left_unit_of_measure (Union[None, Unset, str]):
+        as_left_display_format (Union[None, Unset, str]):
+        as_left_precision (Union[None, Unset, float]):
+        as_left_precision_type (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftPrecisionType]):
+        as_left_minimum (Union[None, Unset, float]):
+        as_left_nominal (Union[None, Unset, float]):
+        as_left_expected_value (Union[None, Unset, float]):
+        as_left_expected_value_raw (Union[None, Unset, str]):
+        as_left_test_value (Union[None, Unset, float]):
+        as_left_base_value (Union[None, Unset, float]):
+        as_left_maxi_mum (Union[None, Unset, float]):
+        as_left_resolution (Union[None, Unset, float]):
+        as_left_resolution_count (Union[None, Unset, int]):
+        as_left_measurement_not_taken_result (Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult]):
-        as_left_hide_from_certificate (Union[Unset, bool]):
-        as_left_measurement_not_taken_reason (Union[Unset, str]):
-        as_left_measurement_batch_id (Union[Unset, int]):
-        as_left_measurement_id (Union[Unset, int]):
-        as_left_standard_id (Union[Unset, int]):
-        as_left_tool_id (Union[Unset, int]):
-        as_left_measurement_condition_id (Union[Unset, int]):
-        as_left_measurement_point_id (Union[Unset, int]):
+        as_left_hide_from_certificate (Union[None, Unset, bool]):
+        as_left_measurement_not_taken_reason (Union[None, Unset, str]):
+        as_left_measurement_batch_id (Union[None, Unset, int]):
+        as_left_measurement_id (Union[None, Unset, int]):
+        as_left_standard_id (Union[None, Unset, int]):
+        as_left_tool_id (Union[None, Unset, int]):
+        as_left_measurement_condition_id (Union[None, Unset, int]):
+        as_left_measurement_point_id (Union[None, Unset, int]):
     """
 
-    barcode: Union[Unset, str] = UNSET
-    display_name: Union[Unset, str] = UNSET
-    display_part_number: Union[Unset, str] = UNSET
-    part_number: Union[Unset, str] = UNSET
-    vendor_company_id: Union[Unset, int] = UNSET
-    service_order_number: Union[Unset, int] = UNSET
-    completed_by_name: Union[Unset, str] = UNSET
-    completed_on: Union[Unset, datetime.datetime] = UNSET
-    is_limited: Union[Unset, bool] = UNSET
-    vendor_tag: Union[Unset, str] = UNSET
-    room: Union[Unset, str] = UNSET
-    segment_name: Union[Unset, str] = UNSET
-    schedule_name: Union[Unset, str] = UNSET
-    next_segment_name: Union[Unset, str] = UNSET
-    certificate_number: Union[Unset, str] = UNSET
+    barcode: Union[None, Unset, str] = UNSET
+    display_name: Union[None, Unset, str] = UNSET
+    display_part_number: Union[None, Unset, str] = UNSET
+    part_number: Union[None, Unset, str] = UNSET
+    vendor_company_id: Union[None, Unset, int] = UNSET
+    service_order_number: Union[None, Unset, int] = UNSET
+    completed_by_name: Union[None, Unset, str] = UNSET
+    completed_on: Union[None, Unset, datetime.datetime] = UNSET
+    is_limited: Union[None, Unset, bool] = UNSET
+    vendor_tag: Union[None, Unset, str] = UNSET
+    room: Union[None, Unset, str] = UNSET
+    segment_name: Union[None, Unset, str] = UNSET
+    schedule_name: Union[None, Unset, str] = UNSET
+    next_segment_name: Union[None, Unset, str] = UNSET
+    certificate_number: Union[None, Unset, str] = UNSET
     work_status: Union[None, Unset, WorkStatus] = UNSET
-    service_type: Union[Unset, str] = UNSET
-    service_level: Union[Unset, str] = UNSET
-    service_comments: Union[Unset, str] = UNSET
-    order_item_number: Union[Unset, int] = UNSET
-    service_total: Union[Unset, float] = UNSET
-    repairs_total: Union[Unset, float] = UNSET
-    parts_total: Union[Unset, float] = UNSET
-    asset_tag: Union[Unset, str] = UNSET
-    asset_user: Union[Unset, str] = UNSET
-    serial_number: Union[Unset, str] = UNSET
-    equipment_id: Union[Unset, str] = UNSET
-    legacy_identifier: Union[Unset, str] = UNSET
-    asset_name: Union[Unset, str] = UNSET
-    asset_description: Union[Unset, str] = UNSET
-    product_name: Union[Unset, str] = UNSET
-    product_description: Union[Unset, str] = UNSET
-    asset_maker: Union[Unset, str] = UNSET
-    asset_tag_change: Union[Unset, str] = UNSET
-    asset_user_change: Union[Unset, str] = UNSET
-    serial_number_change: Union[Unset, str] = UNSET
+    service_type: Union[None, Unset, str] = UNSET
+    service_level: Union[None, Unset, str] = UNSET
+    service_comments: Union[None, Unset, str] = UNSET
+    order_item_number: Union[None, Unset, int] = UNSET
+    service_total: Union[None, Unset, float] = UNSET
+    repairs_total: Union[None, Unset, float] = UNSET
+    parts_total: Union[None, Unset, float] = UNSET
+    asset_tag: Union[None, Unset, str] = UNSET
+    asset_user: Union[None, Unset, str] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
+    equipment_id: Union[None, Unset, str] = UNSET
+    legacy_identifier: Union[None, Unset, str] = UNSET
+    asset_name: Union[None, Unset, str] = UNSET
+    asset_description: Union[None, Unset, str] = UNSET
+    product_name: Union[None, Unset, str] = UNSET
+    product_description: Union[None, Unset, str] = UNSET
+    asset_maker: Union[None, Unset, str] = UNSET
+    asset_tag_change: Union[None, Unset, str] = UNSET
+    asset_user_change: Union[None, Unset, str] = UNSET
+    serial_number_change: Union[None, Unset, str] = UNSET
     service_date: Union[None, Unset, datetime.datetime] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    service_order_item_id: Union[Unset, int] = UNSET
-    site_name: Union[Unset, str] = UNSET
-    po_number: Union[Unset, str] = UNSET
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    site_name: Union[None, Unset, str] = UNSET
+    po_number: Union[None, Unset, str] = UNSET
     shipped_date: Union[None, Unset, datetime.datetime] = UNSET
-    tracking_number: Union[Unset, str] = UNSET
-    payment_terms: Union[Unset, int] = UNSET
-    shipping_method: Union[Unset, str] = UNSET
-    location: Union[Unset, str] = UNSET
-    site_access_notes: Union[Unset, str] = UNSET
-    as_left_decimal_places: Union[Unset, int] = UNSET
-    as_left_measurement_set_name: Union[Unset, str] = UNSET
-    as_left_measurement_set_id: Union[Unset, int] = UNSET
-    as_left_adjustment_threshold: Union[Unset, float] = UNSET
-    as_left_mean_extended: Union[Unset, str] = UNSET
-    as_left_sd_extended: Union[Unset, str] = UNSET
-    as_left_range_extended: Union[Unset, str] = UNSET
-    as_left_delta_extended: Union[Unset, str] = UNSET
-    as_left_cv_extended: Union[Unset, str] = UNSET
-    as_left_nominal_extended: Union[Unset, str] = UNSET
-    as_left_min_max_header: Union[Unset, str] = UNSET
-    as_left_accuracy_class: Union[Unset, str] = UNSET
-    as_left_accuracy_class_min: Union[Unset, float] = UNSET
-    as_left_accuracy_class_max: Union[Unset, float] = UNSET
-    as_left_minimum_measured_value: Union[Unset, float] = UNSET
-    as_left_maxi_mum_measured_value: Union[Unset, float] = UNSET
-    as_left_min_max_value_extended: Union[Unset, str] = UNSET
-    as_left_tool_range_name: Union[Unset, str] = UNSET
-    as_left_tool_range_uncertainty: Union[Unset, str] = UNSET
+    tracking_number: Union[None, Unset, str] = UNSET
+    payment_terms: Union[None, Unset, int] = UNSET
+    shipping_method: Union[None, Unset, str] = UNSET
+    location: Union[None, Unset, str] = UNSET
+    site_access_notes: Union[None, Unset, str] = UNSET
+    as_left_decimal_places: Union[None, Unset, int] = UNSET
+    as_left_measurement_set_name: Union[None, Unset, str] = UNSET
+    as_left_measurement_set_id: Union[None, Unset, int] = UNSET
+    as_left_adjustment_threshold: Union[None, Unset, float] = UNSET
+    as_left_mean_extended: Union[None, Unset, str] = UNSET
+    as_left_sd_extended: Union[None, Unset, str] = UNSET
+    as_left_range_extended: Union[None, Unset, str] = UNSET
+    as_left_delta_extended: Union[None, Unset, str] = UNSET
+    as_left_cv_extended: Union[None, Unset, str] = UNSET
+    as_left_nominal_extended: Union[None, Unset, str] = UNSET
+    as_left_min_max_header: Union[None, Unset, str] = UNSET
+    as_left_accuracy_class: Union[None, Unset, str] = UNSET
+    as_left_accuracy_class_min: Union[None, Unset, float] = UNSET
+    as_left_accuracy_class_max: Union[None, Unset, float] = UNSET
+    as_left_minimum_measured_value: Union[None, Unset, float] = UNSET
+    as_left_maxi_mum_measured_value: Union[None, Unset, float] = UNSET
+    as_left_min_max_value_extended: Union[None, Unset, str] = UNSET
+    as_left_tool_range_name: Union[None, Unset, str] = UNSET
+    as_left_tool_range_uncertainty: Union[None, Unset, str] = UNSET
     as_left_primary_tool_last_service_date: Union[None, Unset, datetime.datetime] = (
         UNSET
     )
     as_left_primary_tool_next_service_date: Union[None, Unset, datetime.datetime] = (
         UNSET
     )
-    as_left_primary_tool_calibrated_by: Union[Unset, str] = UNSET
-    as_left_primary_tool_tool_name: Union[Unset, str] = UNSET
-    as_left_primary_tool_tool_description: Union[Unset, str] = UNSET
-    as_left_primary_tool_tool_type_name: Union[Unset, str] = UNSET
-    as_left_primary_tool_manufacturer: Union[Unset, str] = UNSET
-    as_left_primary_tool_manufacturer_part_number: Union[Unset, str] = UNSET
-    as_left_primary_tool_serial_number: Union[Unset, str] = UNSET
-    as_found_measurement_set_name: Union[Unset, str] = UNSET
-    as_found_measurement_set_id: Union[Unset, int] = UNSET
-    as_found_adjustment_threshold: Union[Unset, float] = UNSET
-    as_found_decimal_places: Union[Unset, int] = UNSET
-    as_found_mean_extended: Union[Unset, str] = UNSET
-    as_found_sd_extended: Union[Unset, str] = UNSET
-    as_found_range_extended: Union[Unset, str] = UNSET
-    as_found_delta_extended: Union[Unset, str] = UNSET
-    as_found_cv_extended: Union[Unset, str] = UNSET
-    as_found_nominal_extended: Union[Unset, str] = UNSET
-    as_found_min_max_header: Union[Unset, str] = UNSET
-    as_found_accuracy_class: Union[Unset, str] = UNSET
-    as_found_accuracy_class_min: Union[Unset, float] = UNSET
-    as_found_accuracy_class_max: Union[Unset, float] = UNSET
-    as_found_minimum_measured_value: Union[Unset, float] = UNSET
-    as_found_maxi_mum_measured_value: Union[Unset, float] = UNSET
-    as_found_min_max_value_extended: Union[Unset, str] = UNSET
-    as_found_tool_range_name: Union[Unset, str] = UNSET
-    as_found_tool_range_uncertainty: Union[Unset, str] = UNSET
+    as_left_primary_tool_calibrated_by: Union[None, Unset, str] = UNSET
+    as_left_primary_tool_tool_name: Union[None, Unset, str] = UNSET
+    as_left_primary_tool_tool_description: Union[None, Unset, str] = UNSET
+    as_left_primary_tool_tool_type_name: Union[None, Unset, str] = UNSET
+    as_left_primary_tool_manufacturer: Union[None, Unset, str] = UNSET
+    as_left_primary_tool_manufacturer_part_number: Union[None, Unset, str] = UNSET
+    as_left_primary_tool_serial_number: Union[None, Unset, str] = UNSET
+    as_found_measurement_set_name: Union[None, Unset, str] = UNSET
+    as_found_measurement_set_id: Union[None, Unset, int] = UNSET
+    as_found_adjustment_threshold: Union[None, Unset, float] = UNSET
+    as_found_decimal_places: Union[None, Unset, int] = UNSET
+    as_found_mean_extended: Union[None, Unset, str] = UNSET
+    as_found_sd_extended: Union[None, Unset, str] = UNSET
+    as_found_range_extended: Union[None, Unset, str] = UNSET
+    as_found_delta_extended: Union[None, Unset, str] = UNSET
+    as_found_cv_extended: Union[None, Unset, str] = UNSET
+    as_found_nominal_extended: Union[None, Unset, str] = UNSET
+    as_found_min_max_header: Union[None, Unset, str] = UNSET
+    as_found_accuracy_class: Union[None, Unset, str] = UNSET
+    as_found_accuracy_class_min: Union[None, Unset, float] = UNSET
+    as_found_accuracy_class_max: Union[None, Unset, float] = UNSET
+    as_found_minimum_measured_value: Union[None, Unset, float] = UNSET
+    as_found_maxi_mum_measured_value: Union[None, Unset, float] = UNSET
+    as_found_min_max_value_extended: Union[None, Unset, str] = UNSET
+    as_found_tool_range_name: Union[None, Unset, str] = UNSET
+    as_found_tool_range_uncertainty: Union[None, Unset, str] = UNSET
     as_found_primary_tool_last_service_date: Union[None, Unset, datetime.datetime] = (
         UNSET
     )
     as_found_primary_tool_next_service_date: Union[None, Unset, datetime.datetime] = (
         UNSET
     )
-    as_found_primary_tool_calibrated_by: Union[Unset, str] = UNSET
-    as_found_primary_tool_tool_name: Union[Unset, str] = UNSET
-    as_found_primary_tool_tool_description: Union[Unset, str] = UNSET
-    as_found_primary_tool_tool_type_name: Union[Unset, str] = UNSET
-    as_found_primary_tool_manufacturer: Union[Unset, str] = UNSET
-    as_found_primary_tool_manufacturer_part_number: Union[Unset, str] = UNSET
-    as_found_primary_tool_serial_number: Union[Unset, str] = UNSET
+    as_found_primary_tool_calibrated_by: Union[None, Unset, str] = UNSET
+    as_found_primary_tool_tool_name: Union[None, Unset, str] = UNSET
+    as_found_primary_tool_tool_description: Union[None, Unset, str] = UNSET
+    as_found_primary_tool_tool_type_name: Union[None, Unset, str] = UNSET
+    as_found_primary_tool_manufacturer: Union[None, Unset, str] = UNSET
+    as_found_primary_tool_manufacturer_part_number: Union[None, Unset, str] = UNSET
+    as_found_primary_tool_serial_number: Union[None, Unset, str] = UNSET
     as_left_secondary_tool_last_service_date: Union[None, Unset, datetime.datetime] = (
         UNSET
     )
     as_left_secondary_tool_next_service_date: Union[None, Unset, datetime.datetime] = (
         UNSET
     )
-    as_left_secondary_tool_calibrated_by: Union[Unset, str] = UNSET
-    as_left_secondary_tool_tool_name: Union[Unset, str] = UNSET
-    as_left_secondary_tool_tool_description: Union[Unset, str] = UNSET
-    as_left_secondary_tool_tool_type_name: Union[Unset, str] = UNSET
-    as_left_secondary_tool_manufacturer: Union[Unset, str] = UNSET
-    as_left_secondary_tool_manufacturer_part_number: Union[Unset, str] = UNSET
-    as_left_secondary_tool_serial_number: Union[Unset, str] = UNSET
+    as_left_secondary_tool_calibrated_by: Union[None, Unset, str] = UNSET
+    as_left_secondary_tool_tool_name: Union[None, Unset, str] = UNSET
+    as_left_secondary_tool_tool_description: Union[None, Unset, str] = UNSET
+    as_left_secondary_tool_tool_type_name: Union[None, Unset, str] = UNSET
+    as_left_secondary_tool_manufacturer: Union[None, Unset, str] = UNSET
+    as_left_secondary_tool_manufacturer_part_number: Union[None, Unset, str] = UNSET
+    as_left_secondary_tool_serial_number: Union[None, Unset, str] = UNSET
     as_found_secondary_tool_last_service_date: Union[None, Unset, datetime.datetime] = (
         UNSET
     )
     as_found_secondary_tool_next_service_date: Union[None, Unset, datetime.datetime] = (
         UNSET
     )
-    as_found_secondary_tool_calibrated_by: Union[Unset, str] = UNSET
-    as_found_secondary_tool_tool_name: Union[Unset, str] = UNSET
-    as_found_secondary_tool_tool_description: Union[Unset, str] = UNSET
-    as_found_secondary_tool_tool_type_name: Union[Unset, str] = UNSET
-    as_found_secondary_tool_manufacturer: Union[Unset, str] = UNSET
-    as_found_secondary_tool_manufacturer_part_number: Union[Unset, str] = UNSET
-    as_found_secondary_tool_serial_number: Union[Unset, str] = UNSET
-    as_found_measurement_not_taken_result: Union[
-        Unset,
+    as_found_secondary_tool_calibrated_by: Union[None, Unset, str] = UNSET
+    as_found_secondary_tool_tool_name: Union[None, Unset, str] = UNSET
+    as_found_secondary_tool_tool_description: Union[None, Unset, str] = UNSET
+    as_found_secondary_tool_tool_type_name: Union[None, Unset, str] = UNSET
+    as_found_secondary_tool_manufacturer: Union[None, Unset, str] = UNSET
+    as_found_secondary_tool_manufacturer_part_number: Union[None, Unset, str] = UNSET
+    as_found_secondary_tool_serial_number: Union[None, Unset, str] = UNSET
+    as_found_measurement_not_taken_result: Union[None, Unset,
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult,
     ] = UNSET
-    as_found_hide_from_certificate: Union[Unset, bool] = UNSET
-    as_found_measurement_not_taken_reason: Union[Unset, str] = UNSET
-    as_left_values: Union[Unset, str] = UNSET
-    as_left_is_accredited: Union[Unset, bool] = UNSET
-    as_left_is_range_accredited: Union[Unset, bool] = UNSET
-    as_found_values: Union[Unset, str] = UNSET
-    as_found_is_accredited: Union[Unset, bool] = UNSET
-    as_found_is_range_accredited: Union[Unset, bool] = UNSET
-    as_found_parameter_id: Union[Unset, int] = UNSET
-    as_found_sd_header: Union[Unset, float] = UNSET
-    as_found_cv_header: Union[Unset, float] = UNSET
-    as_found_measurement_local_time: Union[Unset, datetime.datetime] = UNSET
-    as_found_tur: Union[Unset, float] = UNSET
-    as_found_tur_raw: Union[Unset, float] = UNSET
-    as_left_tur: Union[Unset, float] = UNSET
-    as_left_tur_raw: Union[Unset, float] = UNSET
-    as_found_tar: Union[Unset, float] = UNSET
-    as_found_tar_raw: Union[Unset, float] = UNSET
-    as_left_tar: Union[Unset, float] = UNSET
-    as_left_tar_raw: Union[Unset, float] = UNSET
-    as_found_guard_band: Union[Unset, str] = UNSET
-    as_left_guard_band: Union[Unset, str] = UNSET
-    as_found_guard_band_logic: Union[
-        Unset,
+    as_found_hide_from_certificate: Union[None, Unset, bool] = UNSET
+    as_found_measurement_not_taken_reason: Union[None, Unset, str] = UNSET
+    as_left_values: Union[None, Unset, str] = UNSET
+    as_left_is_accredited: Union[None, Unset, bool] = UNSET
+    as_left_is_range_accredited: Union[None, Unset, bool] = UNSET
+    as_found_values: Union[None, Unset, str] = UNSET
+    as_found_is_accredited: Union[None, Unset, bool] = UNSET
+    as_found_is_range_accredited: Union[None, Unset, bool] = UNSET
+    as_found_parameter_id: Union[None, Unset, int] = UNSET
+    as_found_sd_header: Union[None, Unset, float] = UNSET
+    as_found_cv_header: Union[None, Unset, float] = UNSET
+    as_found_measurement_local_time: Union[None, Unset, datetime.datetime] = UNSET
+    as_found_tur: Union[None, Unset, float] = UNSET
+    as_found_tur_raw: Union[None, Unset, float] = UNSET
+    as_left_tur: Union[None, Unset, float] = UNSET
+    as_left_tur_raw: Union[None, Unset, float] = UNSET
+    as_found_tar: Union[None, Unset, float] = UNSET
+    as_found_tar_raw: Union[None, Unset, float] = UNSET
+    as_left_tar: Union[None, Unset, float] = UNSET
+    as_left_tar_raw: Union[None, Unset, float] = UNSET
+    as_found_guard_band: Union[None, Unset, str] = UNSET
+    as_left_guard_band: Union[None, Unset, str] = UNSET
+    as_found_guard_band_logic: Union[None, Unset,
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic,
     ] = UNSET
-    as_left_guard_band_logic: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic
+    as_left_guard_band_logic: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic
     ] = UNSET
-    as_found_error: Union[Unset, float] = UNSET
-    as_found_error_extended: Union[Unset, str] = UNSET
-    as_left_error: Union[Unset, float] = UNSET
-    as_left_error_extended: Union[Unset, str] = UNSET
-    as_found_percent_of_tolerance: Union[Unset, float] = UNSET
-    as_found_percent_of_tolerance_extended: Union[Unset, str] = UNSET
-    as_left_percent_of_tolerance: Union[Unset, float] = UNSET
-    as_left_percent_of_tolerance_extended: Union[Unset, str] = UNSET
-    as_found_tolerance_maximum: Union[Unset, float] = UNSET
-    as_found_tolerance_minimum: Union[Unset, float] = UNSET
-    as_found_tolerance_type: Union[Unset, int] = UNSET
-    as_found_tolerance_mode: Union[Unset, int] = UNSET
-    as_found_tolerance_string: Union[Unset, str] = UNSET
-    as_left_tolerance_maximum: Union[Unset, float] = UNSET
-    as_left_tolerance_minimum: Union[Unset, float] = UNSET
-    as_left_tolerance_type: Union[Unset, int] = UNSET
-    as_left_tolerance_mode: Union[Unset, int] = UNSET
-    as_left_tolerance_string: Union[Unset, str] = UNSET
-    as_found_max_hysteresis: Union[Unset, float] = UNSET
-    as_found_run: Union[Unset, int] = UNSET
-    as_found_direction: Union[Unset, int] = UNSET
-    as_found_hysteresis: Union[Unset, float] = UNSET
-    as_left_max_hysteresis: Union[Unset, float] = UNSET
-    as_left_run: Union[Unset, int] = UNSET
-    as_left_direction: Union[Unset, int] = UNSET
-    as_left_hysteresis: Union[Unset, float] = UNSET
-    as_found_reading_entry_math: Union[
-        Unset,
+    as_found_error: Union[None, Unset, float] = UNSET
+    as_found_error_extended: Union[None, Unset, str] = UNSET
+    as_left_error: Union[None, Unset, float] = UNSET
+    as_left_error_extended: Union[None, Unset, str] = UNSET
+    as_found_percent_of_tolerance: Union[None, Unset, float] = UNSET
+    as_found_percent_of_tolerance_extended: Union[None, Unset, str] = UNSET
+    as_left_percent_of_tolerance: Union[None, Unset, float] = UNSET
+    as_left_percent_of_tolerance_extended: Union[None, Unset, str] = UNSET
+    as_found_tolerance_maximum: Union[None, Unset, float] = UNSET
+    as_found_tolerance_minimum: Union[None, Unset, float] = UNSET
+    as_found_tolerance_type: Union[None, Unset, int] = UNSET
+    as_found_tolerance_mode: Union[None, Unset, int] = UNSET
+    as_found_tolerance_string: Union[None, Unset, str] = UNSET
+    as_left_tolerance_maximum: Union[None, Unset, float] = UNSET
+    as_left_tolerance_minimum: Union[None, Unset, float] = UNSET
+    as_left_tolerance_type: Union[None, Unset, int] = UNSET
+    as_left_tolerance_mode: Union[None, Unset, int] = UNSET
+    as_left_tolerance_string: Union[None, Unset, str] = UNSET
+    as_found_max_hysteresis: Union[None, Unset, float] = UNSET
+    as_found_run: Union[None, Unset, int] = UNSET
+    as_found_direction: Union[None, Unset, int] = UNSET
+    as_found_hysteresis: Union[None, Unset, float] = UNSET
+    as_left_max_hysteresis: Union[None, Unset, float] = UNSET
+    as_left_run: Union[None, Unset, int] = UNSET
+    as_left_direction: Union[None, Unset, int] = UNSET
+    as_left_hysteresis: Union[None, Unset, float] = UNSET
+    as_found_reading_entry_math: Union[None, Unset,
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath,
     ] = UNSET
-    as_found_reading_entry_math_string: Union[Unset, str] = UNSET
-    as_found_value_1: Union[Unset, str] = UNSET
-    as_found_value_2: Union[Unset, str] = UNSET
-    as_found_value_3: Union[Unset, str] = UNSET
-    as_found_value_4: Union[Unset, str] = UNSET
-    as_found_value_5: Union[Unset, str] = UNSET
-    as_found_value_6: Union[Unset, str] = UNSET
-    as_found_value_7: Union[Unset, str] = UNSET
-    as_found_value_8: Union[Unset, str] = UNSET
-    as_found_value_9: Union[Unset, str] = UNSET
-    as_found_value_10: Union[Unset, str] = UNSET
-    as_found_value_11: Union[Unset, str] = UNSET
-    as_found_value_12: Union[Unset, str] = UNSET
-    as_found_value_13: Union[Unset, str] = UNSET
-    as_found_value_14: Union[Unset, str] = UNSET
-    as_found_value_15: Union[Unset, str] = UNSET
-    as_found_value_16: Union[Unset, str] = UNSET
-    as_found_value_17: Union[Unset, str] = UNSET
-    as_found_value_18: Union[Unset, str] = UNSET
-    as_found_value_19: Union[Unset, str] = UNSET
-    as_found_value_20: Union[Unset, str] = UNSET
-    as_found_value_21: Union[Unset, str] = UNSET
-    as_found_value_22: Union[Unset, str] = UNSET
-    as_found_value_23: Union[Unset, str] = UNSET
-    as_found_value_24: Union[Unset, str] = UNSET
-    as_found_value_25: Union[Unset, str] = UNSET
-    as_found_value_26: Union[Unset, str] = UNSET
-    as_found_value_27: Union[Unset, str] = UNSET
-    as_found_value_28: Union[Unset, str] = UNSET
-    as_found_value_29: Union[Unset, str] = UNSET
-    as_found_value_30: Union[Unset, str] = UNSET
-    as_found_value_31: Union[Unset, str] = UNSET
-    as_found_value_32: Union[Unset, str] = UNSET
-    as_found_value_33: Union[Unset, str] = UNSET
-    as_found_value_34: Union[Unset, str] = UNSET
-    as_found_value_35: Union[Unset, str] = UNSET
-    as_found_value_36: Union[Unset, str] = UNSET
-    as_found_value_37: Union[Unset, str] = UNSET
-    as_found_value_38: Union[Unset, str] = UNSET
-    as_found_value_39: Union[Unset, str] = UNSET
-    as_found_value_40: Union[Unset, str] = UNSET
-    as_found_raw_value_1: Union[Unset, str] = UNSET
-    as_found_raw_value_2: Union[Unset, str] = UNSET
-    as_found_raw_value_3: Union[Unset, str] = UNSET
-    as_found_raw_value_4: Union[Unset, str] = UNSET
-    as_found_raw_value_5: Union[Unset, str] = UNSET
-    as_found_raw_value_6: Union[Unset, str] = UNSET
-    as_found_raw_value_7: Union[Unset, str] = UNSET
-    as_found_raw_value_8: Union[Unset, str] = UNSET
-    as_found_raw_value_9: Union[Unset, str] = UNSET
-    as_found_raw_value_10: Union[Unset, str] = UNSET
-    as_found_raw_value_11: Union[Unset, str] = UNSET
-    as_found_raw_value_12: Union[Unset, str] = UNSET
-    as_found_raw_value_13: Union[Unset, str] = UNSET
-    as_found_raw_value_14: Union[Unset, str] = UNSET
-    as_found_raw_value_15: Union[Unset, str] = UNSET
-    as_found_raw_value_16: Union[Unset, str] = UNSET
-    as_found_raw_value_17: Union[Unset, str] = UNSET
-    as_found_raw_value_18: Union[Unset, str] = UNSET
-    as_found_raw_value_19: Union[Unset, str] = UNSET
-    as_found_raw_value_20: Union[Unset, str] = UNSET
-    as_found_raw_value_21: Union[Unset, str] = UNSET
-    as_found_raw_value_22: Union[Unset, str] = UNSET
-    as_found_raw_value_23: Union[Unset, str] = UNSET
-    as_found_raw_value_24: Union[Unset, str] = UNSET
-    as_found_raw_value_25: Union[Unset, str] = UNSET
-    as_found_raw_value_26: Union[Unset, str] = UNSET
-    as_found_raw_value_27: Union[Unset, str] = UNSET
-    as_found_raw_value_28: Union[Unset, str] = UNSET
-    as_found_raw_value_29: Union[Unset, str] = UNSET
-    as_found_raw_value_30: Union[Unset, str] = UNSET
-    as_found_raw_value_31: Union[Unset, str] = UNSET
-    as_found_raw_value_32: Union[Unset, str] = UNSET
-    as_found_raw_value_33: Union[Unset, str] = UNSET
-    as_found_raw_value_34: Union[Unset, str] = UNSET
-    as_found_raw_value_35: Union[Unset, str] = UNSET
-    as_found_raw_value_36: Union[Unset, str] = UNSET
-    as_found_raw_value_37: Union[Unset, str] = UNSET
-    as_found_raw_value_38: Union[Unset, str] = UNSET
-    as_found_raw_value_39: Union[Unset, str] = UNSET
-    as_found_raw_value_40: Union[Unset, str] = UNSET
-    as_found_value_subtitle_1: Union[Unset, str] = UNSET
-    as_found_value_subtitle_2: Union[Unset, str] = UNSET
-    as_found_value_subtitle_3: Union[Unset, str] = UNSET
-    as_found_value_subtitle_4: Union[Unset, str] = UNSET
-    as_found_value_subtitle_5: Union[Unset, str] = UNSET
-    as_found_value_subtitle_6: Union[Unset, str] = UNSET
-    as_found_value_subtitle_7: Union[Unset, str] = UNSET
-    as_found_value_subtitle_8: Union[Unset, str] = UNSET
-    as_found_value_subtitle_9: Union[Unset, str] = UNSET
-    as_found_value_subtitle_10: Union[Unset, str] = UNSET
-    as_found_value_subtitle_11: Union[Unset, str] = UNSET
-    as_found_value_subtitle_12: Union[Unset, str] = UNSET
-    as_found_value_subtitle_13: Union[Unset, str] = UNSET
-    as_found_value_subtitle_14: Union[Unset, str] = UNSET
-    as_found_value_subtitle_15: Union[Unset, str] = UNSET
-    as_found_value_subtitle_16: Union[Unset, str] = UNSET
-    as_found_value_subtitle_17: Union[Unset, str] = UNSET
-    as_found_value_subtitle_18: Union[Unset, str] = UNSET
-    as_found_value_subtitle_19: Union[Unset, str] = UNSET
-    as_found_value_subtitle_20: Union[Unset, str] = UNSET
-    as_found_value_subtitle_21: Union[Unset, str] = UNSET
-    as_found_value_subtitle_22: Union[Unset, str] = UNSET
-    as_found_value_subtitle_23: Union[Unset, str] = UNSET
-    as_found_value_subtitle_24: Union[Unset, str] = UNSET
-    as_found_value_subtitle_25: Union[Unset, str] = UNSET
-    as_found_value_subtitle_26: Union[Unset, str] = UNSET
-    as_found_value_subtitle_27: Union[Unset, str] = UNSET
-    as_found_value_subtitle_28: Union[Unset, str] = UNSET
-    as_found_value_subtitle_29: Union[Unset, str] = UNSET
-    as_found_value_subtitle_30: Union[Unset, str] = UNSET
-    as_found_value_subtitle_31: Union[Unset, str] = UNSET
-    as_found_value_subtitle_32: Union[Unset, str] = UNSET
-    as_found_value_subtitle_33: Union[Unset, str] = UNSET
-    as_found_value_subtitle_34: Union[Unset, str] = UNSET
-    as_found_value_subtitle_35: Union[Unset, str] = UNSET
-    as_found_value_subtitle_36: Union[Unset, str] = UNSET
-    as_found_value_subtitle_37: Union[Unset, str] = UNSET
-    as_found_value_subtitle_38: Union[Unset, str] = UNSET
-    as_found_value_subtitle_39: Union[Unset, str] = UNSET
-    as_found_value_subtitle_40: Union[Unset, str] = UNSET
-    as_found_mean: Union[Unset, float] = UNSET
-    as_found_mean_raw: Union[Unset, float] = UNSET
-    as_found_sd: Union[Unset, float] = UNSET
-    as_found_sd_raw: Union[Unset, float] = UNSET
-    as_found_delta: Union[Unset, float] = UNSET
-    as_found_range: Union[Unset, float] = UNSET
-    as_found_cv: Union[Unset, float] = UNSET
-    as_found_cv_raw: Union[Unset, float] = UNSET
+    as_found_reading_entry_math_string: Union[None, Unset, str] = UNSET
+    as_found_value_1: Union[None, Unset, str] = UNSET
+    as_found_value_2: Union[None, Unset, str] = UNSET
+    as_found_value_3: Union[None, Unset, str] = UNSET
+    as_found_value_4: Union[None, Unset, str] = UNSET
+    as_found_value_5: Union[None, Unset, str] = UNSET
+    as_found_value_6: Union[None, Unset, str] = UNSET
+    as_found_value_7: Union[None, Unset, str] = UNSET
+    as_found_value_8: Union[None, Unset, str] = UNSET
+    as_found_value_9: Union[None, Unset, str] = UNSET
+    as_found_value_10: Union[None, Unset, str] = UNSET
+    as_found_value_11: Union[None, Unset, str] = UNSET
+    as_found_value_12: Union[None, Unset, str] = UNSET
+    as_found_value_13: Union[None, Unset, str] = UNSET
+    as_found_value_14: Union[None, Unset, str] = UNSET
+    as_found_value_15: Union[None, Unset, str] = UNSET
+    as_found_value_16: Union[None, Unset, str] = UNSET
+    as_found_value_17: Union[None, Unset, str] = UNSET
+    as_found_value_18: Union[None, Unset, str] = UNSET
+    as_found_value_19: Union[None, Unset, str] = UNSET
+    as_found_value_20: Union[None, Unset, str] = UNSET
+    as_found_value_21: Union[None, Unset, str] = UNSET
+    as_found_value_22: Union[None, Unset, str] = UNSET
+    as_found_value_23: Union[None, Unset, str] = UNSET
+    as_found_value_24: Union[None, Unset, str] = UNSET
+    as_found_value_25: Union[None, Unset, str] = UNSET
+    as_found_value_26: Union[None, Unset, str] = UNSET
+    as_found_value_27: Union[None, Unset, str] = UNSET
+    as_found_value_28: Union[None, Unset, str] = UNSET
+    as_found_value_29: Union[None, Unset, str] = UNSET
+    as_found_value_30: Union[None, Unset, str] = UNSET
+    as_found_value_31: Union[None, Unset, str] = UNSET
+    as_found_value_32: Union[None, Unset, str] = UNSET
+    as_found_value_33: Union[None, Unset, str] = UNSET
+    as_found_value_34: Union[None, Unset, str] = UNSET
+    as_found_value_35: Union[None, Unset, str] = UNSET
+    as_found_value_36: Union[None, Unset, str] = UNSET
+    as_found_value_37: Union[None, Unset, str] = UNSET
+    as_found_value_38: Union[None, Unset, str] = UNSET
+    as_found_value_39: Union[None, Unset, str] = UNSET
+    as_found_value_40: Union[None, Unset, str] = UNSET
+    as_found_raw_value_1: Union[None, Unset, str] = UNSET
+    as_found_raw_value_2: Union[None, Unset, str] = UNSET
+    as_found_raw_value_3: Union[None, Unset, str] = UNSET
+    as_found_raw_value_4: Union[None, Unset, str] = UNSET
+    as_found_raw_value_5: Union[None, Unset, str] = UNSET
+    as_found_raw_value_6: Union[None, Unset, str] = UNSET
+    as_found_raw_value_7: Union[None, Unset, str] = UNSET
+    as_found_raw_value_8: Union[None, Unset, str] = UNSET
+    as_found_raw_value_9: Union[None, Unset, str] = UNSET
+    as_found_raw_value_10: Union[None, Unset, str] = UNSET
+    as_found_raw_value_11: Union[None, Unset, str] = UNSET
+    as_found_raw_value_12: Union[None, Unset, str] = UNSET
+    as_found_raw_value_13: Union[None, Unset, str] = UNSET
+    as_found_raw_value_14: Union[None, Unset, str] = UNSET
+    as_found_raw_value_15: Union[None, Unset, str] = UNSET
+    as_found_raw_value_16: Union[None, Unset, str] = UNSET
+    as_found_raw_value_17: Union[None, Unset, str] = UNSET
+    as_found_raw_value_18: Union[None, Unset, str] = UNSET
+    as_found_raw_value_19: Union[None, Unset, str] = UNSET
+    as_found_raw_value_20: Union[None, Unset, str] = UNSET
+    as_found_raw_value_21: Union[None, Unset, str] = UNSET
+    as_found_raw_value_22: Union[None, Unset, str] = UNSET
+    as_found_raw_value_23: Union[None, Unset, str] = UNSET
+    as_found_raw_value_24: Union[None, Unset, str] = UNSET
+    as_found_raw_value_25: Union[None, Unset, str] = UNSET
+    as_found_raw_value_26: Union[None, Unset, str] = UNSET
+    as_found_raw_value_27: Union[None, Unset, str] = UNSET
+    as_found_raw_value_28: Union[None, Unset, str] = UNSET
+    as_found_raw_value_29: Union[None, Unset, str] = UNSET
+    as_found_raw_value_30: Union[None, Unset, str] = UNSET
+    as_found_raw_value_31: Union[None, Unset, str] = UNSET
+    as_found_raw_value_32: Union[None, Unset, str] = UNSET
+    as_found_raw_value_33: Union[None, Unset, str] = UNSET
+    as_found_raw_value_34: Union[None, Unset, str] = UNSET
+    as_found_raw_value_35: Union[None, Unset, str] = UNSET
+    as_found_raw_value_36: Union[None, Unset, str] = UNSET
+    as_found_raw_value_37: Union[None, Unset, str] = UNSET
+    as_found_raw_value_38: Union[None, Unset, str] = UNSET
+    as_found_raw_value_39: Union[None, Unset, str] = UNSET
+    as_found_raw_value_40: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_1: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_2: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_3: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_4: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_5: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_6: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_7: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_8: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_9: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_10: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_11: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_12: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_13: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_14: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_15: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_16: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_17: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_18: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_19: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_20: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_21: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_22: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_23: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_24: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_25: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_26: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_27: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_28: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_29: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_30: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_31: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_32: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_33: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_34: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_35: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_36: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_37: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_38: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_39: Union[None, Unset, str] = UNSET
+    as_found_value_subtitle_40: Union[None, Unset, str] = UNSET
+    as_found_mean: Union[None, Unset, float] = UNSET
+    as_found_mean_raw: Union[None, Unset, float] = UNSET
+    as_found_sd: Union[None, Unset, float] = UNSET
+    as_found_sd_raw: Union[None, Unset, float] = UNSET
+    as_found_delta: Union[None, Unset, float] = UNSET
+    as_found_range: Union[None, Unset, float] = UNSET
+    as_found_cv: Union[None, Unset, float] = UNSET
+    as_found_cv_raw: Union[None, Unset, float] = UNSET
     as_found_result: Union[None, Unset, int] = UNSET
-    as_found_range_result: Union[Unset, bool] = UNSET
-    as_found_delta_result: Union[Unset, bool] = UNSET
-    as_found_min_result: Union[Unset, bool] = UNSET
-    as_found_max_result: Union[Unset, bool] = UNSET
-    as_found_tar_result: Union[Unset, bool] = UNSET
-    as_found_tur_result: Union[Unset, bool] = UNSET
-    as_found_error_result: Union[Unset, bool] = UNSET
-    as_found_sd_result: Union[Unset, bool] = UNSET
-    as_found_cv_result: Union[Unset, bool] = UNSET
-    as_found_custom_field_result: Union[Unset, int] = UNSET
-    as_found_mu: Union[Unset, float] = UNSET
-    as_found_mu_raw: Union[Unset, float] = UNSET
-    as_found_mu_effective_dof: Union[Unset, float] = UNSET
-    as_found_mu_coverage_factor: Union[Unset, float] = UNSET
-    as_found_cmc: Union[Unset, float] = UNSET
-    as_found_cmc_comments: Union[Unset, str] = UNSET
-    as_found_calculated_uncertainty: Union[Unset, float] = UNSET
-    as_found_lab_mu: Union[Unset, float] = UNSET
-    as_found_uncertainty_budget: Union[Unset, str] = UNSET
-    as_found_mu_extended: Union[Unset, str] = UNSET
-    as_found_channel: Union[Unset, int] = UNSET
-    as_found_measurement_type: Union[
-        Unset,
+    as_found_range_result: Union[None, Unset, bool] = UNSET
+    as_found_delta_result: Union[None, Unset, bool] = UNSET
+    as_found_min_result: Union[None, Unset, bool] = UNSET
+    as_found_max_result: Union[None, Unset, bool] = UNSET
+    as_found_tar_result: Union[None, Unset, bool] = UNSET
+    as_found_tur_result: Union[None, Unset, bool] = UNSET
+    as_found_error_result: Union[None, Unset, bool] = UNSET
+    as_found_sd_result: Union[None, Unset, bool] = UNSET
+    as_found_cv_result: Union[None, Unset, bool] = UNSET
+    as_found_custom_field_result: Union[None, Unset, int] = UNSET
+    as_found_mu: Union[None, Unset, float] = UNSET
+    as_found_mu_raw: Union[None, Unset, float] = UNSET
+    as_found_mu_effective_dof: Union[None, Unset, float] = UNSET
+    as_found_mu_coverage_factor: Union[None, Unset, float] = UNSET
+    as_found_cmc: Union[None, Unset, float] = UNSET
+    as_found_cmc_comments: Union[None, Unset, str] = UNSET
+    as_found_calculated_uncertainty: Union[None, Unset, float] = UNSET
+    as_found_lab_mu: Union[None, Unset, float] = UNSET
+    as_found_uncertainty_budget: Union[None, Unset, str] = UNSET
+    as_found_mu_extended: Union[None, Unset, str] = UNSET
+    as_found_channel: Union[None, Unset, int] = UNSET
+    as_found_measurement_type: Union[None, Unset,
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
     ] = UNSET
-    as_found_updated_by: Union[Unset, str] = UNSET
-    as_found_updated_on: Union[Unset, datetime.datetime] = UNSET
-    as_left_abbreviated_uom: Union[Unset, str] = UNSET
-    as_left_unit_scale_factor: Union[Unset, float] = UNSET
-    as_found_specification_title: Union[Unset, str] = UNSET
-    as_found_specification_subtitle: Union[Unset, str] = UNSET
-    as_found_specification_group: Union[Unset, str] = UNSET
-    as_found_batch_type: Union[Unset, int] = UNSET
-    as_found_batch_result: Union[Unset, int] = UNSET
-    as_found_is_by_channel: Union[Unset, bool] = UNSET
-    as_found_channel_count: Union[Unset, int] = UNSET
-    as_found_commenced_on: Union[Unset, datetime.datetime] = UNSET
-    as_found_commenced_by: Union[Unset, str] = UNSET
-    as_found_z_factor: Union[Unset, float] = UNSET
-    as_found_air_buoyancy: Union[Unset, float] = UNSET
-    as_found_evaporation_rate: Union[Unset, float] = UNSET
-    as_found_ambient_temperature: Union[Unset, float] = UNSET
-    as_found_air_humidity: Union[Unset, float] = UNSET
-    as_found_barometric_pressure: Union[Unset, float] = UNSET
-    as_found_altitude: Union[Unset, float] = UNSET
-    as_found_wind_speed: Union[Unset, float] = UNSET
-    as_found_solar_radiation: Union[Unset, float] = UNSET
-    as_found_light_intensity: Union[Unset, float] = UNSET
-    as_found_noise_level: Union[Unset, float] = UNSET
-    as_found_ph_level: Union[Unset, float] = UNSET
-    as_found_water_conductivity: Union[Unset, float] = UNSET
-    as_found_water_temperature: Union[Unset, float] = UNSET
-    as_found_z_factor_uom: Union[Unset, str] = UNSET
-    as_found_air_buoyancy_uom: Union[Unset, str] = UNSET
-    as_found_evaporation_rate_uom: Union[Unset, str] = UNSET
-    as_found_ambient_temperature_uom: Union[Unset, str] = UNSET
-    as_found_air_humidity_uom: Union[Unset, str] = UNSET
-    as_found_barometric_pressure_uom: Union[Unset, str] = UNSET
-    as_found_altitude_uom: Union[Unset, str] = UNSET
-    as_found_wind_speed_uom: Union[Unset, str] = UNSET
-    as_found_solar_radiation_uom: Union[Unset, str] = UNSET
-    as_found_light_intensity_uom: Union[Unset, str] = UNSET
-    as_found_noise_level_uom: Union[Unset, str] = UNSET
-    as_found_ph_level_uom: Union[Unset, str] = UNSET
-    as_found_water_conductivity_uom: Union[Unset, str] = UNSET
-    as_found_water_temperature_uom: Union[Unset, str] = UNSET
-    as_found_abbreviated_uom: Union[Unset, str] = UNSET
-    as_found_unit_scale_factor: Union[Unset, float] = UNSET
-    as_found_specification_name: Union[Unset, str] = UNSET
-    as_found_parameter_name: Union[Unset, str] = UNSET
-    as_found_display_order: Union[Unset, int] = UNSET
-    as_found_unit_of_measure: Union[Unset, str] = UNSET
-    as_found_display_format: Union[Unset, str] = UNSET
-    as_found_precision: Union[Unset, float] = UNSET
-    as_found_precision_type: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundPrecisionType
+    as_found_updated_by: Union[None, Unset, str] = UNSET
+    as_found_updated_on: Union[None, Unset, datetime.datetime] = UNSET
+    as_left_abbreviated_uom: Union[None, Unset, str] = UNSET
+    as_left_unit_scale_factor: Union[None, Unset, float] = UNSET
+    as_found_specification_title: Union[None, Unset, str] = UNSET
+    as_found_specification_subtitle: Union[None, Unset, str] = UNSET
+    as_found_specification_group: Union[None, Unset, str] = UNSET
+    as_found_batch_type: Union[None, Unset, int] = UNSET
+    as_found_batch_result: Union[None, Unset, int] = UNSET
+    as_found_is_by_channel: Union[None, Unset, bool] = UNSET
+    as_found_channel_count: Union[None, Unset, int] = UNSET
+    as_found_commenced_on: Union[None, Unset, datetime.datetime] = UNSET
+    as_found_commenced_by: Union[None, Unset, str] = UNSET
+    as_found_z_factor: Union[None, Unset, float] = UNSET
+    as_found_air_buoyancy: Union[None, Unset, float] = UNSET
+    as_found_evaporation_rate: Union[None, Unset, float] = UNSET
+    as_found_ambient_temperature: Union[None, Unset, float] = UNSET
+    as_found_air_humidity: Union[None, Unset, float] = UNSET
+    as_found_barometric_pressure: Union[None, Unset, float] = UNSET
+    as_found_altitude: Union[None, Unset, float] = UNSET
+    as_found_wind_speed: Union[None, Unset, float] = UNSET
+    as_found_solar_radiation: Union[None, Unset, float] = UNSET
+    as_found_light_intensity: Union[None, Unset, float] = UNSET
+    as_found_noise_level: Union[None, Unset, float] = UNSET
+    as_found_ph_level: Union[None, Unset, float] = UNSET
+    as_found_water_conductivity: Union[None, Unset, float] = UNSET
+    as_found_water_temperature: Union[None, Unset, float] = UNSET
+    as_found_z_factor_uom: Union[None, Unset, str] = UNSET
+    as_found_air_buoyancy_uom: Union[None, Unset, str] = UNSET
+    as_found_evaporation_rate_uom: Union[None, Unset, str] = UNSET
+    as_found_ambient_temperature_uom: Union[None, Unset, str] = UNSET
+    as_found_air_humidity_uom: Union[None, Unset, str] = UNSET
+    as_found_barometric_pressure_uom: Union[None, Unset, str] = UNSET
+    as_found_altitude_uom: Union[None, Unset, str] = UNSET
+    as_found_wind_speed_uom: Union[None, Unset, str] = UNSET
+    as_found_solar_radiation_uom: Union[None, Unset, str] = UNSET
+    as_found_light_intensity_uom: Union[None, Unset, str] = UNSET
+    as_found_noise_level_uom: Union[None, Unset, str] = UNSET
+    as_found_ph_level_uom: Union[None, Unset, str] = UNSET
+    as_found_water_conductivity_uom: Union[None, Unset, str] = UNSET
+    as_found_water_temperature_uom: Union[None, Unset, str] = UNSET
+    as_found_abbreviated_uom: Union[None, Unset, str] = UNSET
+    as_found_unit_scale_factor: Union[None, Unset, float] = UNSET
+    as_found_specification_name: Union[None, Unset, str] = UNSET
+    as_found_parameter_name: Union[None, Unset, str] = UNSET
+    as_found_display_order: Union[None, Unset, int] = UNSET
+    as_found_unit_of_measure: Union[None, Unset, str] = UNSET
+    as_found_display_format: Union[None, Unset, str] = UNSET
+    as_found_precision: Union[None, Unset, float] = UNSET
+    as_found_precision_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundPrecisionType
     ] = UNSET
-    as_found_minimum: Union[Unset, float] = UNSET
-    as_found_nominal: Union[Unset, float] = UNSET
-    as_found_expected_value: Union[Unset, float] = UNSET
-    as_found_expected_value_raw: Union[Unset, str] = UNSET
-    as_found_test_value: Union[Unset, float] = UNSET
-    as_found_base_value: Union[Unset, float] = UNSET
-    as_found_maxi_mum: Union[Unset, float] = UNSET
-    as_found_resolution: Union[Unset, float] = UNSET
-    as_found_resolution_count: Union[Unset, int] = UNSET
-    as_found_measurement_batch_id: Union[Unset, int] = UNSET
-    as_found_measurement_id: Union[Unset, int] = UNSET
-    as_found_standard_id: Union[Unset, int] = UNSET
-    as_found_tool_id: Union[Unset, int] = UNSET
-    as_found_measurement_condition_id: Union[Unset, int] = UNSET
-    as_found_measurement_point_id: Union[Unset, int] = UNSET
-    as_left_parameter_id: Union[Unset, int] = UNSET
-    as_left_sd_header: Union[Unset, float] = UNSET
-    as_left_cv_header: Union[Unset, float] = UNSET
-    as_left_measurement_local_time: Union[Unset, datetime.datetime] = UNSET
-    as_left_reading_entry_math: Union[
-        Unset,
+    as_found_minimum: Union[None, Unset, float] = UNSET
+    as_found_nominal: Union[None, Unset, float] = UNSET
+    as_found_expected_value: Union[None, Unset, float] = UNSET
+    as_found_expected_value_raw: Union[None, Unset, str] = UNSET
+    as_found_test_value: Union[None, Unset, float] = UNSET
+    as_found_base_value: Union[None, Unset, float] = UNSET
+    as_found_maxi_mum: Union[None, Unset, float] = UNSET
+    as_found_resolution: Union[None, Unset, float] = UNSET
+    as_found_resolution_count: Union[None, Unset, int] = UNSET
+    as_found_measurement_batch_id: Union[None, Unset, int] = UNSET
+    as_found_measurement_id: Union[None, Unset, int] = UNSET
+    as_found_standard_id: Union[None, Unset, int] = UNSET
+    as_found_tool_id: Union[None, Unset, int] = UNSET
+    as_found_measurement_condition_id: Union[None, Unset, int] = UNSET
+    as_found_measurement_point_id: Union[None, Unset, int] = UNSET
+    as_left_parameter_id: Union[None, Unset, int] = UNSET
+    as_left_sd_header: Union[None, Unset, float] = UNSET
+    as_left_cv_header: Union[None, Unset, float] = UNSET
+    as_left_measurement_local_time: Union[None, Unset, datetime.datetime] = UNSET
+    as_left_reading_entry_math: Union[None, Unset,
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
     ] = UNSET
-    as_left_reading_entry_math_string: Union[Unset, str] = UNSET
-    as_left_value_1: Union[Unset, str] = UNSET
-    as_left_value_2: Union[Unset, str] = UNSET
-    as_left_value_3: Union[Unset, str] = UNSET
-    as_left_value_4: Union[Unset, str] = UNSET
-    as_left_value_5: Union[Unset, str] = UNSET
-    as_left_value_6: Union[Unset, str] = UNSET
-    as_left_value_7: Union[Unset, str] = UNSET
-    as_left_value_8: Union[Unset, str] = UNSET
-    as_left_value_9: Union[Unset, str] = UNSET
-    as_left_value_10: Union[Unset, str] = UNSET
-    as_left_value_11: Union[Unset, str] = UNSET
-    as_left_value_12: Union[Unset, str] = UNSET
-    as_left_value_13: Union[Unset, str] = UNSET
-    as_left_value_14: Union[Unset, str] = UNSET
-    as_left_value_15: Union[Unset, str] = UNSET
-    as_left_value_16: Union[Unset, str] = UNSET
-    as_left_value_17: Union[Unset, str] = UNSET
-    as_left_value_18: Union[Unset, str] = UNSET
-    as_left_value_19: Union[Unset, str] = UNSET
-    as_left_value_20: Union[Unset, str] = UNSET
-    as_left_value_21: Union[Unset, str] = UNSET
-    as_left_value_22: Union[Unset, str] = UNSET
-    as_left_value_23: Union[Unset, str] = UNSET
-    as_left_value_24: Union[Unset, str] = UNSET
-    as_left_value_25: Union[Unset, str] = UNSET
-    as_left_value_26: Union[Unset, str] = UNSET
-    as_left_value_27: Union[Unset, str] = UNSET
-    as_left_value_28: Union[Unset, str] = UNSET
-    as_left_value_29: Union[Unset, str] = UNSET
-    as_left_value_30: Union[Unset, str] = UNSET
-    as_left_value_31: Union[Unset, str] = UNSET
-    as_left_value_32: Union[Unset, str] = UNSET
-    as_left_value_33: Union[Unset, str] = UNSET
-    as_left_value_34: Union[Unset, str] = UNSET
-    as_left_value_35: Union[Unset, str] = UNSET
-    as_left_value_36: Union[Unset, str] = UNSET
-    as_left_value_37: Union[Unset, str] = UNSET
-    as_left_value_38: Union[Unset, str] = UNSET
-    as_left_value_39: Union[Unset, str] = UNSET
-    as_left_value_40: Union[Unset, str] = UNSET
-    as_left_raw_value_1: Union[Unset, str] = UNSET
-    as_left_raw_value_2: Union[Unset, str] = UNSET
-    as_left_raw_value_3: Union[Unset, str] = UNSET
-    as_left_raw_value_4: Union[Unset, str] = UNSET
-    as_left_raw_value_5: Union[Unset, str] = UNSET
-    as_left_raw_value_6: Union[Unset, str] = UNSET
-    as_left_raw_value_7: Union[Unset, str] = UNSET
-    as_left_raw_value_8: Union[Unset, str] = UNSET
-    as_left_raw_value_9: Union[Unset, str] = UNSET
-    as_left_raw_value_10: Union[Unset, str] = UNSET
-    as_left_raw_value_11: Union[Unset, str] = UNSET
-    as_left_raw_value_12: Union[Unset, str] = UNSET
-    as_left_raw_value_13: Union[Unset, str] = UNSET
-    as_left_raw_value_14: Union[Unset, str] = UNSET
-    as_left_raw_value_15: Union[Unset, str] = UNSET
-    as_left_raw_value_16: Union[Unset, str] = UNSET
-    as_left_raw_value_17: Union[Unset, str] = UNSET
-    as_left_raw_value_18: Union[Unset, str] = UNSET
-    as_left_raw_value_19: Union[Unset, str] = UNSET
-    as_left_raw_value_20: Union[Unset, str] = UNSET
-    as_left_raw_value_21: Union[Unset, str] = UNSET
-    as_left_raw_value_22: Union[Unset, str] = UNSET
-    as_left_raw_value_23: Union[Unset, str] = UNSET
-    as_left_raw_value_24: Union[Unset, str] = UNSET
-    as_left_raw_value_25: Union[Unset, str] = UNSET
-    as_left_raw_value_26: Union[Unset, str] = UNSET
-    as_left_raw_value_27: Union[Unset, str] = UNSET
-    as_left_raw_value_28: Union[Unset, str] = UNSET
-    as_left_raw_value_29: Union[Unset, str] = UNSET
-    as_left_raw_value_30: Union[Unset, str] = UNSET
-    as_left_raw_value_31: Union[Unset, str] = UNSET
-    as_left_raw_value_32: Union[Unset, str] = UNSET
-    as_left_raw_value_33: Union[Unset, str] = UNSET
-    as_left_raw_value_34: Union[Unset, str] = UNSET
-    as_left_raw_value_35: Union[Unset, str] = UNSET
-    as_left_raw_value_36: Union[Unset, str] = UNSET
-    as_left_raw_value_37: Union[Unset, str] = UNSET
-    as_left_raw_value_38: Union[Unset, str] = UNSET
-    as_left_raw_value_39: Union[Unset, str] = UNSET
-    as_left_raw_value_40: Union[Unset, str] = UNSET
-    as_left_value_subtitle_1: Union[Unset, str] = UNSET
-    as_left_value_subtitle_2: Union[Unset, str] = UNSET
-    as_left_value_subtitle_3: Union[Unset, str] = UNSET
-    as_left_value_subtitle_4: Union[Unset, str] = UNSET
-    as_left_value_subtitle_5: Union[Unset, str] = UNSET
-    as_left_value_subtitle_6: Union[Unset, str] = UNSET
-    as_left_value_subtitle_7: Union[Unset, str] = UNSET
-    as_left_value_subtitle_8: Union[Unset, str] = UNSET
-    as_left_value_subtitle_9: Union[Unset, str] = UNSET
-    as_left_value_subtitle_10: Union[Unset, str] = UNSET
-    as_left_value_subtitle_11: Union[Unset, str] = UNSET
-    as_left_value_subtitle_12: Union[Unset, str] = UNSET
-    as_left_value_subtitle_13: Union[Unset, str] = UNSET
-    as_left_value_subtitle_14: Union[Unset, str] = UNSET
-    as_left_value_subtitle_15: Union[Unset, str] = UNSET
-    as_left_value_subtitle_16: Union[Unset, str] = UNSET
-    as_left_value_subtitle_17: Union[Unset, str] = UNSET
-    as_left_value_subtitle_18: Union[Unset, str] = UNSET
-    as_left_value_subtitle_19: Union[Unset, str] = UNSET
-    as_left_value_subtitle_20: Union[Unset, str] = UNSET
-    as_left_value_subtitle_21: Union[Unset, str] = UNSET
-    as_left_value_subtitle_22: Union[Unset, str] = UNSET
-    as_left_value_subtitle_23: Union[Unset, str] = UNSET
-    as_left_value_subtitle_24: Union[Unset, str] = UNSET
-    as_left_value_subtitle_25: Union[Unset, str] = UNSET
-    as_left_value_subtitle_26: Union[Unset, str] = UNSET
-    as_left_value_subtitle_27: Union[Unset, str] = UNSET
-    as_left_value_subtitle_28: Union[Unset, str] = UNSET
-    as_left_value_subtitle_29: Union[Unset, str] = UNSET
-    as_left_value_subtitle_30: Union[Unset, str] = UNSET
-    as_left_value_subtitle_31: Union[Unset, str] = UNSET
-    as_left_value_subtitle_32: Union[Unset, str] = UNSET
-    as_left_value_subtitle_33: Union[Unset, str] = UNSET
-    as_left_value_subtitle_34: Union[Unset, str] = UNSET
-    as_left_value_subtitle_35: Union[Unset, str] = UNSET
-    as_left_value_subtitle_36: Union[Unset, str] = UNSET
-    as_left_value_subtitle_37: Union[Unset, str] = UNSET
-    as_left_value_subtitle_38: Union[Unset, str] = UNSET
-    as_left_value_subtitle_39: Union[Unset, str] = UNSET
-    as_left_value_subtitle_40: Union[Unset, str] = UNSET
-    as_left_mean: Union[Unset, float] = UNSET
-    as_left_mean_raw: Union[Unset, float] = UNSET
-    as_left_sd: Union[Unset, float] = UNSET
-    as_left_sd_raw: Union[Unset, float] = UNSET
-    as_left_cv: Union[Unset, float] = UNSET
-    as_left_cv_raw: Union[Unset, float] = UNSET
-    as_left_delta: Union[Unset, float] = UNSET
-    as_left_range: Union[Unset, float] = UNSET
+    as_left_reading_entry_math_string: Union[None, Unset, str] = UNSET
+    as_left_value_1: Union[None, Unset, str] = UNSET
+    as_left_value_2: Union[None, Unset, str] = UNSET
+    as_left_value_3: Union[None, Unset, str] = UNSET
+    as_left_value_4: Union[None, Unset, str] = UNSET
+    as_left_value_5: Union[None, Unset, str] = UNSET
+    as_left_value_6: Union[None, Unset, str] = UNSET
+    as_left_value_7: Union[None, Unset, str] = UNSET
+    as_left_value_8: Union[None, Unset, str] = UNSET
+    as_left_value_9: Union[None, Unset, str] = UNSET
+    as_left_value_10: Union[None, Unset, str] = UNSET
+    as_left_value_11: Union[None, Unset, str] = UNSET
+    as_left_value_12: Union[None, Unset, str] = UNSET
+    as_left_value_13: Union[None, Unset, str] = UNSET
+    as_left_value_14: Union[None, Unset, str] = UNSET
+    as_left_value_15: Union[None, Unset, str] = UNSET
+    as_left_value_16: Union[None, Unset, str] = UNSET
+    as_left_value_17: Union[None, Unset, str] = UNSET
+    as_left_value_18: Union[None, Unset, str] = UNSET
+    as_left_value_19: Union[None, Unset, str] = UNSET
+    as_left_value_20: Union[None, Unset, str] = UNSET
+    as_left_value_21: Union[None, Unset, str] = UNSET
+    as_left_value_22: Union[None, Unset, str] = UNSET
+    as_left_value_23: Union[None, Unset, str] = UNSET
+    as_left_value_24: Union[None, Unset, str] = UNSET
+    as_left_value_25: Union[None, Unset, str] = UNSET
+    as_left_value_26: Union[None, Unset, str] = UNSET
+    as_left_value_27: Union[None, Unset, str] = UNSET
+    as_left_value_28: Union[None, Unset, str] = UNSET
+    as_left_value_29: Union[None, Unset, str] = UNSET
+    as_left_value_30: Union[None, Unset, str] = UNSET
+    as_left_value_31: Union[None, Unset, str] = UNSET
+    as_left_value_32: Union[None, Unset, str] = UNSET
+    as_left_value_33: Union[None, Unset, str] = UNSET
+    as_left_value_34: Union[None, Unset, str] = UNSET
+    as_left_value_35: Union[None, Unset, str] = UNSET
+    as_left_value_36: Union[None, Unset, str] = UNSET
+    as_left_value_37: Union[None, Unset, str] = UNSET
+    as_left_value_38: Union[None, Unset, str] = UNSET
+    as_left_value_39: Union[None, Unset, str] = UNSET
+    as_left_value_40: Union[None, Unset, str] = UNSET
+    as_left_raw_value_1: Union[None, Unset, str] = UNSET
+    as_left_raw_value_2: Union[None, Unset, str] = UNSET
+    as_left_raw_value_3: Union[None, Unset, str] = UNSET
+    as_left_raw_value_4: Union[None, Unset, str] = UNSET
+    as_left_raw_value_5: Union[None, Unset, str] = UNSET
+    as_left_raw_value_6: Union[None, Unset, str] = UNSET
+    as_left_raw_value_7: Union[None, Unset, str] = UNSET
+    as_left_raw_value_8: Union[None, Unset, str] = UNSET
+    as_left_raw_value_9: Union[None, Unset, str] = UNSET
+    as_left_raw_value_10: Union[None, Unset, str] = UNSET
+    as_left_raw_value_11: Union[None, Unset, str] = UNSET
+    as_left_raw_value_12: Union[None, Unset, str] = UNSET
+    as_left_raw_value_13: Union[None, Unset, str] = UNSET
+    as_left_raw_value_14: Union[None, Unset, str] = UNSET
+    as_left_raw_value_15: Union[None, Unset, str] = UNSET
+    as_left_raw_value_16: Union[None, Unset, str] = UNSET
+    as_left_raw_value_17: Union[None, Unset, str] = UNSET
+    as_left_raw_value_18: Union[None, Unset, str] = UNSET
+    as_left_raw_value_19: Union[None, Unset, str] = UNSET
+    as_left_raw_value_20: Union[None, Unset, str] = UNSET
+    as_left_raw_value_21: Union[None, Unset, str] = UNSET
+    as_left_raw_value_22: Union[None, Unset, str] = UNSET
+    as_left_raw_value_23: Union[None, Unset, str] = UNSET
+    as_left_raw_value_24: Union[None, Unset, str] = UNSET
+    as_left_raw_value_25: Union[None, Unset, str] = UNSET
+    as_left_raw_value_26: Union[None, Unset, str] = UNSET
+    as_left_raw_value_27: Union[None, Unset, str] = UNSET
+    as_left_raw_value_28: Union[None, Unset, str] = UNSET
+    as_left_raw_value_29: Union[None, Unset, str] = UNSET
+    as_left_raw_value_30: Union[None, Unset, str] = UNSET
+    as_left_raw_value_31: Union[None, Unset, str] = UNSET
+    as_left_raw_value_32: Union[None, Unset, str] = UNSET
+    as_left_raw_value_33: Union[None, Unset, str] = UNSET
+    as_left_raw_value_34: Union[None, Unset, str] = UNSET
+    as_left_raw_value_35: Union[None, Unset, str] = UNSET
+    as_left_raw_value_36: Union[None, Unset, str] = UNSET
+    as_left_raw_value_37: Union[None, Unset, str] = UNSET
+    as_left_raw_value_38: Union[None, Unset, str] = UNSET
+    as_left_raw_value_39: Union[None, Unset, str] = UNSET
+    as_left_raw_value_40: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_1: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_2: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_3: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_4: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_5: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_6: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_7: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_8: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_9: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_10: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_11: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_12: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_13: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_14: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_15: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_16: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_17: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_18: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_19: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_20: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_21: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_22: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_23: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_24: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_25: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_26: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_27: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_28: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_29: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_30: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_31: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_32: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_33: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_34: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_35: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_36: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_37: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_38: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_39: Union[None, Unset, str] = UNSET
+    as_left_value_subtitle_40: Union[None, Unset, str] = UNSET
+    as_left_mean: Union[None, Unset, float] = UNSET
+    as_left_mean_raw: Union[None, Unset, float] = UNSET
+    as_left_sd: Union[None, Unset, float] = UNSET
+    as_left_sd_raw: Union[None, Unset, float] = UNSET
+    as_left_cv: Union[None, Unset, float] = UNSET
+    as_left_cv_raw: Union[None, Unset, float] = UNSET
+    as_left_delta: Union[None, Unset, float] = UNSET
+    as_left_range: Union[None, Unset, float] = UNSET
     as_left_result: Union[None, Unset, int] = UNSET
-    as_left_range_result: Union[Unset, bool] = UNSET
-    as_left_delta_result: Union[Unset, bool] = UNSET
-    as_left_min_result: Union[Unset, bool] = UNSET
-    as_left_max_result: Union[Unset, bool] = UNSET
-    as_left_tar_result: Union[Unset, bool] = UNSET
-    as_left_tur_result: Union[Unset, bool] = UNSET
-    as_left_error_result: Union[Unset, bool] = UNSET
-    as_left_sd_result: Union[Unset, bool] = UNSET
-    as_left_cv_result: Union[Unset, bool] = UNSET
-    as_left_custom_field_result: Union[Unset, int] = UNSET
-    as_left_mu: Union[Unset, float] = UNSET
-    as_left_mu_raw: Union[Unset, float] = UNSET
-    as_left_mu_effective_dof: Union[Unset, float] = UNSET
-    as_left_mu_coverage_factor: Union[Unset, float] = UNSET
-    as_left_cmc: Union[Unset, float] = UNSET
-    as_left_cmc_comments: Union[Unset, str] = UNSET
-    as_left_calculated_uncertainty: Union[Unset, float] = UNSET
-    as_left_lab_mu: Union[Unset, float] = UNSET
-    as_left_uncertainty_budget: Union[Unset, str] = UNSET
-    as_left_mu_extended: Union[Unset, str] = UNSET
-    as_left_channel: Union[Unset, int] = UNSET
-    as_left_measurement_type: Union[
-        Unset,
+    as_left_range_result: Union[None, Unset, bool] = UNSET
+    as_left_delta_result: Union[None, Unset, bool] = UNSET
+    as_left_min_result: Union[None, Unset, bool] = UNSET
+    as_left_max_result: Union[None, Unset, bool] = UNSET
+    as_left_tar_result: Union[None, Unset, bool] = UNSET
+    as_left_tur_result: Union[None, Unset, bool] = UNSET
+    as_left_error_result: Union[None, Unset, bool] = UNSET
+    as_left_sd_result: Union[None, Unset, bool] = UNSET
+    as_left_cv_result: Union[None, Unset, bool] = UNSET
+    as_left_custom_field_result: Union[None, Unset, int] = UNSET
+    as_left_mu: Union[None, Unset, float] = UNSET
+    as_left_mu_raw: Union[None, Unset, float] = UNSET
+    as_left_mu_effective_dof: Union[None, Unset, float] = UNSET
+    as_left_mu_coverage_factor: Union[None, Unset, float] = UNSET
+    as_left_cmc: Union[None, Unset, float] = UNSET
+    as_left_cmc_comments: Union[None, Unset, str] = UNSET
+    as_left_calculated_uncertainty: Union[None, Unset, float] = UNSET
+    as_left_lab_mu: Union[None, Unset, float] = UNSET
+    as_left_uncertainty_budget: Union[None, Unset, str] = UNSET
+    as_left_mu_extended: Union[None, Unset, str] = UNSET
+    as_left_channel: Union[None, Unset, int] = UNSET
+    as_left_measurement_type: Union[None, Unset,
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
     ] = UNSET
-    as_left_updated_by: Union[Unset, str] = UNSET
-    as_left_updated_on: Union[Unset, datetime.datetime] = UNSET
-    as_left_specification_title: Union[Unset, str] = UNSET
-    as_left_specification_subtitle: Union[Unset, str] = UNSET
-    as_left_specification_group: Union[Unset, str] = UNSET
-    as_left_batch_type: Union[Unset, int] = UNSET
-    as_left_batch_result: Union[Unset, int] = UNSET
-    as_left_is_by_channel: Union[Unset, bool] = UNSET
-    as_left_channel_count: Union[Unset, int] = UNSET
-    as_left_commenced_on: Union[Unset, datetime.datetime] = UNSET
-    as_left_commenced_by: Union[Unset, str] = UNSET
-    as_left_z_factor: Union[Unset, float] = UNSET
-    as_left_air_buoyancy: Union[Unset, float] = UNSET
-    as_left_evaporation_rate: Union[Unset, float] = UNSET
-    as_left_ambient_temperature: Union[Unset, float] = UNSET
-    as_left_air_humidity: Union[Unset, float] = UNSET
-    as_left_barometric_pressure: Union[Unset, float] = UNSET
-    as_left_altitude: Union[Unset, float] = UNSET
-    as_left_wind_speed: Union[Unset, float] = UNSET
-    as_left_solar_radiation: Union[Unset, float] = UNSET
-    as_left_light_intensity: Union[Unset, float] = UNSET
-    as_left_noise_level: Union[Unset, float] = UNSET
-    as_left_ph_level: Union[Unset, float] = UNSET
-    as_left_water_conductivity: Union[Unset, float] = UNSET
-    as_left_water_temperature: Union[Unset, float] = UNSET
-    as_left_z_factor_uom: Union[Unset, str] = UNSET
-    as_left_air_buoyancy_uom: Union[Unset, str] = UNSET
-    as_left_evaporation_rate_uom: Union[Unset, str] = UNSET
-    as_left_ambient_temperature_uom: Union[Unset, str] = UNSET
-    as_left_air_humidity_uom: Union[Unset, str] = UNSET
-    as_left_barometric_pressure_uom: Union[Unset, str] = UNSET
-    as_left_altitude_uom: Union[Unset, str] = UNSET
-    as_left_wind_speed_uom: Union[Unset, str] = UNSET
-    as_left_solar_radiation_uom: Union[Unset, str] = UNSET
-    as_left_light_intensity_uom: Union[Unset, str] = UNSET
-    as_left_noise_level_uom: Union[Unset, str] = UNSET
-    as_left_ph_level_uom: Union[Unset, str] = UNSET
-    as_left_water_conductivity_uom: Union[Unset, str] = UNSET
-    as_left_water_temperature_uom: Union[Unset, str] = UNSET
-    as_left_specification_name: Union[Unset, str] = UNSET
-    as_left_parameter_name: Union[Unset, str] = UNSET
-    as_left_display_order: Union[Unset, int] = UNSET
-    as_left_unit_of_measure: Union[Unset, str] = UNSET
-    as_left_display_format: Union[Unset, str] = UNSET
-    as_left_precision: Union[Unset, float] = UNSET
-    as_left_precision_type: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftPrecisionType
+    as_left_updated_by: Union[None, Unset, str] = UNSET
+    as_left_updated_on: Union[None, Unset, datetime.datetime] = UNSET
+    as_left_specification_title: Union[None, Unset, str] = UNSET
+    as_left_specification_subtitle: Union[None, Unset, str] = UNSET
+    as_left_specification_group: Union[None, Unset, str] = UNSET
+    as_left_batch_type: Union[None, Unset, int] = UNSET
+    as_left_batch_result: Union[None, Unset, int] = UNSET
+    as_left_is_by_channel: Union[None, Unset, bool] = UNSET
+    as_left_channel_count: Union[None, Unset, int] = UNSET
+    as_left_commenced_on: Union[None, Unset, datetime.datetime] = UNSET
+    as_left_commenced_by: Union[None, Unset, str] = UNSET
+    as_left_z_factor: Union[None, Unset, float] = UNSET
+    as_left_air_buoyancy: Union[None, Unset, float] = UNSET
+    as_left_evaporation_rate: Union[None, Unset, float] = UNSET
+    as_left_ambient_temperature: Union[None, Unset, float] = UNSET
+    as_left_air_humidity: Union[None, Unset, float] = UNSET
+    as_left_barometric_pressure: Union[None, Unset, float] = UNSET
+    as_left_altitude: Union[None, Unset, float] = UNSET
+    as_left_wind_speed: Union[None, Unset, float] = UNSET
+    as_left_solar_radiation: Union[None, Unset, float] = UNSET
+    as_left_light_intensity: Union[None, Unset, float] = UNSET
+    as_left_noise_level: Union[None, Unset, float] = UNSET
+    as_left_ph_level: Union[None, Unset, float] = UNSET
+    as_left_water_conductivity: Union[None, Unset, float] = UNSET
+    as_left_water_temperature: Union[None, Unset, float] = UNSET
+    as_left_z_factor_uom: Union[None, Unset, str] = UNSET
+    as_left_air_buoyancy_uom: Union[None, Unset, str] = UNSET
+    as_left_evaporation_rate_uom: Union[None, Unset, str] = UNSET
+    as_left_ambient_temperature_uom: Union[None, Unset, str] = UNSET
+    as_left_air_humidity_uom: Union[None, Unset, str] = UNSET
+    as_left_barometric_pressure_uom: Union[None, Unset, str] = UNSET
+    as_left_altitude_uom: Union[None, Unset, str] = UNSET
+    as_left_wind_speed_uom: Union[None, Unset, str] = UNSET
+    as_left_solar_radiation_uom: Union[None, Unset, str] = UNSET
+    as_left_light_intensity_uom: Union[None, Unset, str] = UNSET
+    as_left_noise_level_uom: Union[None, Unset, str] = UNSET
+    as_left_ph_level_uom: Union[None, Unset, str] = UNSET
+    as_left_water_conductivity_uom: Union[None, Unset, str] = UNSET
+    as_left_water_temperature_uom: Union[None, Unset, str] = UNSET
+    as_left_specification_name: Union[None, Unset, str] = UNSET
+    as_left_parameter_name: Union[None, Unset, str] = UNSET
+    as_left_display_order: Union[None, Unset, int] = UNSET
+    as_left_unit_of_measure: Union[None, Unset, str] = UNSET
+    as_left_display_format: Union[None, Unset, str] = UNSET
+    as_left_precision: Union[None, Unset, float] = UNSET
+    as_left_precision_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftPrecisionType
     ] = UNSET
-    as_left_minimum: Union[Unset, float] = UNSET
-    as_left_nominal: Union[Unset, float] = UNSET
-    as_left_expected_value: Union[Unset, float] = UNSET
-    as_left_expected_value_raw: Union[Unset, str] = UNSET
-    as_left_test_value: Union[Unset, float] = UNSET
-    as_left_base_value: Union[Unset, float] = UNSET
-    as_left_maxi_mum: Union[Unset, float] = UNSET
-    as_left_resolution: Union[Unset, float] = UNSET
-    as_left_resolution_count: Union[Unset, int] = UNSET
-    as_left_measurement_not_taken_result: Union[
-        Unset,
+    as_left_minimum: Union[None, Unset, float] = UNSET
+    as_left_nominal: Union[None, Unset, float] = UNSET
+    as_left_expected_value: Union[None, Unset, float] = UNSET
+    as_left_expected_value_raw: Union[None, Unset, str] = UNSET
+    as_left_test_value: Union[None, Unset, float] = UNSET
+    as_left_base_value: Union[None, Unset, float] = UNSET
+    as_left_maxi_mum: Union[None, Unset, float] = UNSET
+    as_left_resolution: Union[None, Unset, float] = UNSET
+    as_left_resolution_count: Union[None, Unset, int] = UNSET
+    as_left_measurement_not_taken_result: Union[None, Unset,
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult,
     ] = UNSET
-    as_left_hide_from_certificate: Union[Unset, bool] = UNSET
-    as_left_measurement_not_taken_reason: Union[Unset, str] = UNSET
-    as_left_measurement_batch_id: Union[Unset, int] = UNSET
-    as_left_measurement_id: Union[Unset, int] = UNSET
-    as_left_standard_id: Union[Unset, int] = UNSET
-    as_left_tool_id: Union[Unset, int] = UNSET
-    as_left_measurement_condition_id: Union[Unset, int] = UNSET
-    as_left_measurement_point_id: Union[Unset, int] = UNSET
+    as_left_hide_from_certificate: Union[None, Unset, bool] = UNSET
+    as_left_measurement_not_taken_reason: Union[None, Unset, str] = UNSET
+    as_left_measurement_batch_id: Union[None, Unset, int] = UNSET
+    as_left_measurement_id: Union[None, Unset, int] = UNSET
+    as_left_standard_id: Union[None, Unset, int] = UNSET
+    as_left_tool_id: Union[None, Unset, int] = UNSET
+    as_left_measurement_condition_id: Union[None, Unset, int] = UNSET
+    as_left_measurement_point_id: Union[None, Unset, int] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -1339,7 +1329,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         completed_by_name = self.completed_by_name
 
-        completed_on: Union[Unset, str] = UNSET
+        completed_on: Union[None, Unset, str] = UNSET
         if self.completed_on and not isinstance(self.completed_on, Unset):
             completed_on = self.completed_on.isoformat()
 
@@ -1705,7 +1695,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
             self.as_found_secondary_tool_serial_number
         )
 
-        as_found_measurement_not_taken_result: Union[Unset, str] = UNSET
+        as_found_measurement_not_taken_result: Union[None, Unset, str] = UNSET
         if self.as_found_measurement_not_taken_result and not isinstance(
             self.as_found_measurement_not_taken_result, Unset
         ):
@@ -1737,7 +1727,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_found_cv_header = self.as_found_cv_header
 
-        as_found_measurement_local_time: Union[Unset, str] = UNSET
+        as_found_measurement_local_time: Union[None, Unset, str] = UNSET
         if self.as_found_measurement_local_time and not isinstance(
             self.as_found_measurement_local_time, Unset
         ):
@@ -1765,13 +1755,13 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_guard_band = self.as_left_guard_band
 
-        as_found_guard_band_logic: Union[Unset, str] = UNSET
+        as_found_guard_band_logic: Union[None, Unset, str] = UNSET
         if self.as_found_guard_band_logic and not isinstance(
             self.as_found_guard_band_logic, Unset
         ):
             as_found_guard_band_logic = self.as_found_guard_band_logic.value
 
-        as_left_guard_band_logic: Union[Unset, str] = UNSET
+        as_left_guard_band_logic: Union[None, Unset, str] = UNSET
         if self.as_left_guard_band_logic and not isinstance(
             self.as_left_guard_band_logic, Unset
         ):
@@ -1833,7 +1823,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_hysteresis = self.as_left_hysteresis
 
-        as_found_reading_entry_math: Union[Unset, str] = UNSET
+        as_found_reading_entry_math: Union[None, Unset, str] = UNSET
         if self.as_found_reading_entry_math and not isinstance(
             self.as_found_reading_entry_math, Unset
         ):
@@ -2148,7 +2138,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_found_channel = self.as_found_channel
 
-        as_found_measurement_type: Union[Unset, str] = UNSET
+        as_found_measurement_type: Union[None, Unset, str] = UNSET
         if self.as_found_measurement_type and not isinstance(
             self.as_found_measurement_type, Unset
         ):
@@ -2156,7 +2146,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_found_updated_by = self.as_found_updated_by
 
-        as_found_updated_on: Union[Unset, str] = UNSET
+        as_found_updated_on: Union[None, Unset, str] = UNSET
         if self.as_found_updated_on and not isinstance(self.as_found_updated_on, Unset):
             as_found_updated_on = self.as_found_updated_on.isoformat()
 
@@ -2178,7 +2168,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_found_channel_count = self.as_found_channel_count
 
-        as_found_commenced_on: Union[Unset, str] = UNSET
+        as_found_commenced_on: Union[None, Unset, str] = UNSET
         if self.as_found_commenced_on and not isinstance(
             self.as_found_commenced_on, Unset
         ):
@@ -2258,7 +2248,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_found_precision = self.as_found_precision
 
-        as_found_precision_type: Union[Unset, str] = UNSET
+        as_found_precision_type: Union[None, Unset, str] = UNSET
         if self.as_found_precision_type and not isinstance(
             self.as_found_precision_type, Unset
         ):
@@ -2300,7 +2290,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_cv_header = self.as_left_cv_header
 
-        as_left_measurement_local_time: Union[Unset, str] = UNSET
+        as_left_measurement_local_time: Union[None, Unset, str] = UNSET
         if self.as_left_measurement_local_time and not isinstance(
             self.as_left_measurement_local_time, Unset
         ):
@@ -2308,7 +2298,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                 self.as_left_measurement_local_time.isoformat()
             )
 
-        as_left_reading_entry_math: Union[Unset, str] = UNSET
+        as_left_reading_entry_math: Union[None, Unset, str] = UNSET
         if self.as_left_reading_entry_math and not isinstance(
             self.as_left_reading_entry_math, Unset
         ):
@@ -2627,7 +2617,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_channel = self.as_left_channel
 
-        as_left_measurement_type: Union[Unset, str] = UNSET
+        as_left_measurement_type: Union[None, Unset, str] = UNSET
         if self.as_left_measurement_type and not isinstance(
             self.as_left_measurement_type, Unset
         ):
@@ -2635,7 +2625,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_updated_by = self.as_left_updated_by
 
-        as_left_updated_on: Union[Unset, str] = UNSET
+        as_left_updated_on: Union[None, Unset, str] = UNSET
         if self.as_left_updated_on and not isinstance(self.as_left_updated_on, Unset):
             as_left_updated_on = self.as_left_updated_on.isoformat()
 
@@ -2653,7 +2643,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_channel_count = self.as_left_channel_count
 
-        as_left_commenced_on: Union[Unset, str] = UNSET
+        as_left_commenced_on: Union[None, Unset, str] = UNSET
         if self.as_left_commenced_on and not isinstance(
             self.as_left_commenced_on, Unset
         ):
@@ -2729,7 +2719,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_precision = self.as_left_precision
 
-        as_left_precision_type: Union[Unset, str] = UNSET
+        as_left_precision_type: Union[None, Unset, str] = UNSET
         if self.as_left_precision_type and not isinstance(
             self.as_left_precision_type, Unset
         ):
@@ -2753,7 +2743,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
 
         as_left_resolution_count = self.as_left_resolution_count
 
-        as_left_measurement_not_taken_result: Union[Unset, str] = UNSET
+        as_left_measurement_not_taken_result: Union[None, Unset, str] = UNSET
         if self.as_left_measurement_not_taken_result and not isinstance(
             self.as_left_measurement_not_taken_result, Unset
         ):
@@ -4113,7 +4103,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         completed_by_name = d.pop("CompletedByName", UNSET)
 
         _completed_on = d.pop("CompletedOn", UNSET)
-        completed_on: Union[Unset, datetime.datetime]
+        completed_on: Union[None, Unset, datetime.datetime]
         if isinstance(_completed_on, Unset):
             completed_on = UNSET
         else:
@@ -4134,7 +4124,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         certificate_number = d.pop("CertificateNumber", UNSET)
 
         _work_status = d.pop("WorkStatus", UNSET)
-        work_status: Union[Unset, WorkStatus]
+        work_status: Union[None, Unset, WorkStatus]
         if isinstance(_work_status, Unset):
             work_status = UNSET
         elif _work_status is None:
@@ -4618,8 +4608,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         _as_found_measurement_not_taken_result = d.pop(
             "AsFoundMeasurementNotTakenResult", UNSET
         )
-        as_found_measurement_not_taken_result: Union[
-            Unset,
+        as_found_measurement_not_taken_result: Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult,
         ]
         if isinstance(_as_found_measurement_not_taken_result, Unset):
@@ -4654,7 +4643,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_cv_header = d.pop("AsFoundCvHeader", UNSET)
 
         _as_found_measurement_local_time = d.pop("AsFoundMeasurementLocalTime", UNSET)
-        as_found_measurement_local_time: Union[Unset, datetime.datetime]
+        as_found_measurement_local_time: Union[None, Unset, datetime.datetime]
         if isinstance(_as_found_measurement_local_time, Unset):
             as_found_measurement_local_time = UNSET
         else:
@@ -4681,8 +4670,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_guard_band = d.pop("AsLeftGuardBand", UNSET)
 
         _as_found_guard_band_logic = d.pop("AsFoundGuardBandLogic", UNSET)
-        as_found_guard_band_logic: Union[
-            Unset,
+        as_found_guard_band_logic: Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic,
         ]
         if isinstance(_as_found_guard_band_logic, Unset):
@@ -4693,8 +4681,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
             )
 
         _as_left_guard_band_logic = d.pop("AsLeftGuardBandLogic", UNSET)
-        as_left_guard_band_logic: Union[
-            Unset,
+        as_left_guard_band_logic: Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic,
         ]
         if isinstance(_as_left_guard_band_logic, Unset):
@@ -4761,8 +4748,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_hysteresis = d.pop("AsLeftHysteresis", UNSET)
 
         _as_found_reading_entry_math = d.pop("AsFoundReadingEntryMath", UNSET)
-        as_found_reading_entry_math: Union[
-            Unset,
+        as_found_reading_entry_math: Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath,
         ]
         if isinstance(_as_found_reading_entry_math, Unset):
@@ -5077,8 +5063,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_channel = d.pop("AsFoundChannel", UNSET)
 
         _as_found_measurement_type = d.pop("AsFoundMeasurementType", UNSET)
-        as_found_measurement_type: Union[
-            Unset,
+        as_found_measurement_type: Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
         ]
         if isinstance(_as_found_measurement_type, Unset):
@@ -5091,7 +5076,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_updated_by = d.pop("AsFoundUpdatedBy", UNSET)
 
         _as_found_updated_on = d.pop("AsFoundUpdatedOn", UNSET)
-        as_found_updated_on: Union[Unset, datetime.datetime]
+        as_found_updated_on: Union[None, Unset, datetime.datetime]
         if isinstance(_as_found_updated_on, Unset):
             as_found_updated_on = UNSET
         else:
@@ -5116,7 +5101,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_channel_count = d.pop("AsFoundChannelCount", UNSET)
 
         _as_found_commenced_on = d.pop("AsFoundCommencedOn", UNSET)
-        as_found_commenced_on: Union[Unset, datetime.datetime]
+        as_found_commenced_on: Union[None, Unset, datetime.datetime]
         if isinstance(_as_found_commenced_on, Unset):
             as_found_commenced_on = UNSET
         else:
@@ -5197,8 +5182,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_precision = d.pop("AsFoundPrecision", UNSET)
 
         _as_found_precision_type = d.pop("AsFoundPrecisionType", UNSET)
-        as_found_precision_type: Union[
-            Unset,
+        as_found_precision_type: Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundPrecisionType,
         ]
         if isinstance(_as_found_precision_type, Unset):
@@ -5247,15 +5231,14 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_cv_header = d.pop("AsLeftCvHeader", UNSET)
 
         _as_left_measurement_local_time = d.pop("AsLeftMeasurementLocalTime", UNSET)
-        as_left_measurement_local_time: Union[Unset, datetime.datetime]
+        as_left_measurement_local_time: Union[None, Unset, datetime.datetime]
         if isinstance(_as_left_measurement_local_time, Unset):
             as_left_measurement_local_time = UNSET
         else:
             as_left_measurement_local_time = isoparse(_as_left_measurement_local_time)
 
         _as_left_reading_entry_math = d.pop("AsLeftReadingEntryMath", UNSET)
-        as_left_reading_entry_math: Union[
-            Unset,
+        as_left_reading_entry_math: Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
         ]
         if isinstance(_as_left_reading_entry_math, Unset):
@@ -5575,8 +5558,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_channel = d.pop("AsLeftChannel", UNSET)
 
         _as_left_measurement_type = d.pop("AsLeftMeasurementType", UNSET)
-        as_left_measurement_type: Union[
-            Unset,
+        as_left_measurement_type: Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
         ]
         if isinstance(_as_left_measurement_type, Unset):
@@ -5589,7 +5571,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_updated_by = d.pop("AsLeftUpdatedBy", UNSET)
 
         _as_left_updated_on = d.pop("AsLeftUpdatedOn", UNSET)
-        as_left_updated_on: Union[Unset, datetime.datetime]
+        as_left_updated_on: Union[None, Unset, datetime.datetime]
         if isinstance(_as_left_updated_on, Unset):
             as_left_updated_on = UNSET
         else:
@@ -5610,7 +5592,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_channel_count = d.pop("AsLeftChannelCount", UNSET)
 
         _as_left_commenced_on = d.pop("AsLeftCommencedOn", UNSET)
-        as_left_commenced_on: Union[Unset, datetime.datetime]
+        as_left_commenced_on: Union[None, Unset, datetime.datetime]
         if isinstance(_as_left_commenced_on, Unset):
             as_left_commenced_on = UNSET
         else:
@@ -5687,8 +5669,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_precision = d.pop("AsLeftPrecision", UNSET)
 
         _as_left_precision_type = d.pop("AsLeftPrecisionType", UNSET)
-        as_left_precision_type: Union[
-            Unset,
+        as_left_precision_type: Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftPrecisionType,
         ]
         if isinstance(_as_left_precision_type, Unset):
@@ -5719,8 +5700,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         _as_left_measurement_not_taken_result = d.pop(
             "AsLeftMeasurementNotTakenResult", UNSET
         )
-        as_left_measurement_not_taken_result: Union[
-            Unset,
+        as_left_measurement_not_taken_result: Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult,
         ]
         if isinstance(_as_left_measurement_not_taken_result, Unset):

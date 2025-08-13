@@ -17,34 +17,34 @@ T = TypeVar(
 class QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel:
     """
     Attributes:
-        measurement_tool_id (Union[Unset, int]):
+        measurement_tool_id (Union[None, Unset, int]):
         last_service_date (Union[None, Unset, datetime.datetime]):
         next_service_date (Union[None, Unset, datetime.datetime]):
-        calibrated_by (Union[Unset, str]):
-        certificate_number (Union[Unset, str]):
-        tool_name (Union[Unset, str]):
-        tool_description (Union[Unset, str]):
-        manufacturer (Union[Unset, str]):
-        manufacturer_part_number (Union[Unset, str]):
-        serial_number (Union[Unset, str]):
-        asset_tag (Union[Unset, str]):
-        asset_user (Union[Unset, str]):
-        equipment_id (Union[Unset, str]):
+        calibrated_by (Union[None, Unset, str]):
+        certificate_number (Union[None, Unset, str]):
+        tool_name (Union[None, Unset, str]):
+        tool_description (Union[None, Unset, str]):
+        manufacturer (Union[None, Unset, str]):
+        manufacturer_part_number (Union[None, Unset, str]):
+        serial_number (Union[None, Unset, str]):
+        asset_tag (Union[None, Unset, str]):
+        asset_user (Union[None, Unset, str]):
+        equipment_id (Union[None, Unset, str]):
     """
 
-    measurement_tool_id: Union[Unset, int] = UNSET
+    measurement_tool_id: Union[None, Unset, int] = UNSET
     last_service_date: Union[None, Unset, datetime.datetime] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    calibrated_by: Union[Unset, str] = UNSET
-    certificate_number: Union[Unset, str] = UNSET
-    tool_name: Union[Unset, str] = UNSET
-    tool_description: Union[Unset, str] = UNSET
-    manufacturer: Union[Unset, str] = UNSET
-    manufacturer_part_number: Union[Unset, str] = UNSET
-    serial_number: Union[Unset, str] = UNSET
-    asset_tag: Union[Unset, str] = UNSET
-    asset_user: Union[Unset, str] = UNSET
-    equipment_id: Union[Unset, str] = UNSET
+    calibrated_by: Union[None, Unset, str] = UNSET
+    certificate_number: Union[None, Unset, str] = UNSET
+    tool_name: Union[None, Unset, str] = UNSET
+    tool_description: Union[None, Unset, str] = UNSET
+    manufacturer: Union[None, Unset, str] = UNSET
+    manufacturer_part_number: Union[None, Unset, str] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
+    asset_tag: Union[None, Unset, str] = UNSET
+    asset_user: Union[None, Unset, str] = UNSET
+    equipment_id: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

@@ -15,11 +15,11 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel
 class QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel:
     """
     Attributes:
-        payment_status (Union[Unset, str]):
+        payment_status (Union[None, Unset, str]):
         invoiced_on (Union[None, Unset, datetime.datetime]):
     """
 
-    payment_status: Union[Unset, str] = UNSET
+    payment_status: Union[None, Unset, str] = UNSET
     invoiced_on: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 

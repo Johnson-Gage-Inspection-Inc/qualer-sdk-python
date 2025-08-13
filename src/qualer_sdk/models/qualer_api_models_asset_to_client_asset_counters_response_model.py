@@ -13,20 +13,20 @@ T = TypeVar("T", bound="QualerApiModelsAssetToClientAssetCountersResponseModel")
 class QualerApiModelsAssetToClientAssetCountersResponseModel:
     """
     Attributes:
-        client_assets_collected (Union[Unset, int]):
-        client_unset (Union[Unset, int]):
-        client_due_for_service (Union[Unset, int]):
-        client_past_due (Union[Unset, int]):
-        client_out_of_service (Union[Unset, int]):
-        client_without_schedule (Union[Unset, int]):
+        client_assets_collected (Union[None, Unset, int]):
+        client_unset (Union[None, Unset, int]):
+        client_due_for_service (Union[None, Unset, int]):
+        client_past_due (Union[None, Unset, int]):
+        client_out_of_service (Union[None, Unset, int]):
+        client_without_schedule (Union[None, Unset, int]):
     """
 
-    client_assets_collected: Union[Unset, int] = UNSET
-    client_unset: Union[Unset, int] = UNSET
-    client_due_for_service: Union[Unset, int] = UNSET
-    client_past_due: Union[Unset, int] = UNSET
-    client_out_of_service: Union[Unset, int] = UNSET
-    client_without_schedule: Union[Unset, int] = UNSET
+    client_assets_collected: Union[None, Unset, int] = UNSET
+    client_unset: Union[None, Unset, int] = UNSET
+    client_due_for_service: Union[None, Unset, int] = UNSET
+    client_past_due: Union[None, Unset, int] = UNSET
+    client_out_of_service: Union[None, Unset, int] = UNSET
+    client_without_schedule: Union[None, Unset, int] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

@@ -19,17 +19,16 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromItemChargeUpdateModel")
 class QualerApiModelsServiceOrdersFromItemChargeUpdateModel:
     """
     Attributes:
-        charges (Union[Unset, list['QualerApiModelsServiceOrdersFromItemChargeUpdateModelItemPriceModel']]):
+        charges (Union[None, Unset, list['QualerApiModelsServiceOrdersFromItemChargeUpdateModelItemPriceModel']]):
     """
 
-    charges: Union[
-        Unset,
+    charges: Union[None, Unset,
         list["QualerApiModelsServiceOrdersFromItemChargeUpdateModelItemPriceModel"],
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        charges: Union[Unset, list[dict[str, Any]]] = UNSET
+        charges: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.charges and not isinstance(self.charges, Unset):
             charges = []
             for charges_item_data in self.charges:

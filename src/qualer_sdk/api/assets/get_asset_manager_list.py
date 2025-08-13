@@ -13,10 +13,10 @@ from ...types import UNSET, Response, Unset
 
 def _get_kwargs(
     *,
-    model_filter_type: Union[Unset, str] = UNSET,
-    model_search_string: Union[Unset, str] = UNSET,
-    model_page: Union[Unset, int] = UNSET,
-    model_page_size: Union[Unset, int] = UNSET,
+    model_filter_type: Union[None, Unset, str] = UNSET,
+    model_search_string: Union[None, Unset, str] = UNSET,
+    model_page: Union[None, Unset, int] = UNSET,
+    model_page_size: Union[None, Unset, int] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -75,10 +75,10 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_filter_type: Union[Unset, str] = UNSET,
-    model_search_string: Union[Unset, str] = UNSET,
-    model_page: Union[Unset, int] = UNSET,
-    model_page_size: Union[Unset, int] = UNSET,
+    model_filter_type: Union[None, Unset, str] = UNSET,
+    model_search_string: Union[None, Unset, str] = UNSET,
+    model_page: Union[None, Unset, int] = UNSET,
+    model_page_size: Union[None, Unset, int] = UNSET,
 ) -> Response[list["QualerApiModelsAssetToAssetManageResponseModel"]]:
     """GetAssetManagerList
 
@@ -89,10 +89,10 @@ def sync_detailed(
         NoAgreement, ExpiredAgreement, AgreementUpForRenewal
 
     Args:
-        model_filter_type (Union[Unset, str]):
-        model_search_string (Union[Unset, str]):
-        model_page (Union[Unset, int]):
-        model_page_size (Union[Unset, int]):
+        model_filter_type (Union[None, Unset, str]):
+        model_search_string (Union[None, Unset, str]):
+        model_page (Union[None, Unset, int]):
+        model_page_size (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -119,10 +119,10 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_filter_type: Union[Unset, str] = UNSET,
-    model_search_string: Union[Unset, str] = UNSET,
-    model_page: Union[Unset, int] = UNSET,
-    model_page_size: Union[Unset, int] = UNSET,
+    model_filter_type: Union[None, Unset, str] = UNSET,
+    model_search_string: Union[None, Unset, str] = UNSET,
+    model_page: Union[None, Unset, int] = UNSET,
+    model_page_size: Union[None, Unset, int] = UNSET,
 ) -> Optional[list["QualerApiModelsAssetToAssetManageResponseModel"]]:
     """GetAssetManagerList
 
@@ -133,10 +133,10 @@ def sync(
         NoAgreement, ExpiredAgreement, AgreementUpForRenewal
 
     Args:
-        model_filter_type (Union[Unset, str]):
-        model_search_string (Union[Unset, str]):
-        model_page (Union[Unset, int]):
-        model_page_size (Union[Unset, int]):
+        model_filter_type (Union[None, Unset, str]):
+        model_search_string (Union[None, Unset, str]):
+        model_page (Union[None, Unset, int]):
+        model_page_size (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -158,10 +158,10 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_filter_type: Union[Unset, str] = UNSET,
-    model_search_string: Union[Unset, str] = UNSET,
-    model_page: Union[Unset, int] = UNSET,
-    model_page_size: Union[Unset, int] = UNSET,
+    model_filter_type: Union[None, Unset, str] = UNSET,
+    model_search_string: Union[None, Unset, str] = UNSET,
+    model_page: Union[None, Unset, int] = UNSET,
+    model_page_size: Union[None, Unset, int] = UNSET,
 ) -> Response[list["QualerApiModelsAssetToAssetManageResponseModel"]]:
     """GetAssetManagerList
 
@@ -172,10 +172,10 @@ async def asyncio_detailed(
         NoAgreement, ExpiredAgreement, AgreementUpForRenewal
 
     Args:
-        model_filter_type (Union[Unset, str]):
-        model_search_string (Union[Unset, str]):
-        model_page (Union[Unset, int]):
-        model_page_size (Union[Unset, int]):
+        model_filter_type (Union[None, Unset, str]):
+        model_search_string (Union[None, Unset, str]):
+        model_page (Union[None, Unset, int]):
+        model_page_size (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -200,10 +200,10 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_filter_type: Union[Unset, str] = UNSET,
-    model_search_string: Union[Unset, str] = UNSET,
-    model_page: Union[Unset, int] = UNSET,
-    model_page_size: Union[Unset, int] = UNSET,
+    model_filter_type: Union[None, Unset, str] = UNSET,
+    model_search_string: Union[None, Unset, str] = UNSET,
+    model_page: Union[None, Unset, int] = UNSET,
+    model_page_size: Union[None, Unset, int] = UNSET,
 ) -> Optional[list["QualerApiModelsAssetToAssetManageResponseModel"]]:
     """GetAssetManagerList
 
@@ -214,10 +214,10 @@ async def asyncio(
         NoAgreement, ExpiredAgreement, AgreementUpForRenewal
 
     Args:
-        model_filter_type (Union[Unset, str]):
-        model_search_string (Union[Unset, str]):
-        model_page (Union[Unset, int]):
-        model_page_size (Union[Unset, int]):
+        model_filter_type (Union[None, Unset, str]):
+        model_search_string (Union[None, Unset, str]):
+        model_page (Union[None, Unset, int]):
+        model_page_size (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

@@ -15,32 +15,32 @@ T = TypeVar("T", bound="QualerApiModelsAssetReservationFromGetAssetReservationsM
 class QualerApiModelsAssetReservationFromGetAssetReservationsModel:
     """
     Attributes:
-        from_ (Union[Unset, datetime.datetime]):
-        to (Union[Unset, datetime.datetime]):
-        asset_id (Union[Unset, int]):
-        area_id (Union[Unset, int]):
-        product_id (Union[Unset, int]):
-        serial_number (Union[Unset, str]):
-        asset_tag (Union[Unset, str]):
-        reservation_id (Union[Unset, int]):
+        from_ (Union[None, Unset, datetime.datetime]):
+        to (Union[None, Unset, datetime.datetime]):
+        asset_id (Union[None, Unset, int]):
+        area_id (Union[None, Unset, int]):
+        product_id (Union[None, Unset, int]):
+        serial_number (Union[None, Unset, str]):
+        asset_tag (Union[None, Unset, str]):
+        reservation_id (Union[None, Unset, int]):
     """
 
-    from_: Union[Unset, datetime.datetime] = UNSET
-    to: Union[Unset, datetime.datetime] = UNSET
-    asset_id: Union[Unset, int] = UNSET
-    area_id: Union[Unset, int] = UNSET
-    product_id: Union[Unset, int] = UNSET
-    serial_number: Union[Unset, str] = UNSET
-    asset_tag: Union[Unset, str] = UNSET
-    reservation_id: Union[Unset, int] = UNSET
+    from_: Union[None, Unset, datetime.datetime] = UNSET
+    to: Union[None, Unset, datetime.datetime] = UNSET
+    asset_id: Union[None, Unset, int] = UNSET
+    area_id: Union[None, Unset, int] = UNSET
+    product_id: Union[None, Unset, int] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
+    asset_tag: Union[None, Unset, str] = UNSET
+    reservation_id: Union[None, Unset, int] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from_: Union[Unset, str] = UNSET
+        from_: Union[None, Unset, str] = UNSET
         if self.from_ and not isinstance(self.from_, Unset):
             from_ = self.from_.isoformat()
 
-        to: Union[Unset, str] = UNSET
+        to: Union[None, Unset, str] = UNSET
         if self.to and not isinstance(self.to, Unset):
             to = self.to.isoformat()
 
@@ -82,14 +82,14 @@ class QualerApiModelsAssetReservationFromGetAssetReservationsModel:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         _from_ = d.pop("From", UNSET)
-        from_: Union[Unset, datetime.datetime]
+        from_: Union[None, Unset, datetime.datetime]
         if isinstance(_from_, Unset):
             from_ = UNSET
         else:
             from_ = isoparse(_from_)
 
         _to = d.pop("To", UNSET)
-        to: Union[Unset, datetime.datetime]
+        to: Union[None, Unset, datetime.datetime]
         if isinstance(_to, Unset):
             to = UNSET
         else:

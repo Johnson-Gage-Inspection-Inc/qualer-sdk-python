@@ -21,78 +21,77 @@ T = TypeVar("T", bound="QualerApiModelsMeasurementsToMeasurementRecordResponseMo
 class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
     """
     Attributes:
-        service_order_id (Union[Unset, int]):
-        service_order_number (Union[Unset, int]):
-        custom_order_number (Union[Unset, str]):
-        order_item_number (Union[Unset, int]):
-        certificate_number (Union[Unset, str]):
+        service_order_id (Union[None, Unset, int]):
+        service_order_number (Union[None, Unset, int]):
+        custom_order_number (Union[None, Unset, str]):
+        order_item_number (Union[None, Unset, int]):
+        certificate_number (Union[None, Unset, str]):
         result_status (Union[None, Unset, str]):
-        as_found_result (Union[Unset, str]):
+        as_found_result (Union[None, Unset, str]):
         as_left_result (Union[None, Unset, str]):
         service_date (Union[None, Unset, datetime.datetime]):
-        serial_number (Union[Unset, str]):
-        asset_tag (Union[Unset, str]):
-        asset_user (Union[Unset, str]):
-        asset_tag_change (Union[Unset, str]):
-        asset_user_change (Union[Unset, str]):
-        service_notes (Union[Unset, str]):
-        serial_number_change (Union[Unset, str]):
+        serial_number (Union[None, Unset, str]):
+        asset_tag (Union[None, Unset, str]):
+        asset_user (Union[None, Unset, str]):
+        asset_tag_change (Union[None, Unset, str]):
+        asset_user_change (Union[None, Unset, str]):
+        service_notes (Union[None, Unset, str]):
+        serial_number_change (Union[None, Unset, str]):
         due_date (Union[None, Unset, datetime.datetime]):
         next_service_date (Union[None, Unset, datetime.datetime]):
-        service_level (Union[Unset, str]):
-        service_level_code (Union[Unset, str]):
-        next_service_level (Union[Unset, str]):
-        next_service_level_code (Union[Unset, str]):
-        asset_name (Union[Unset, str]):
-        asset_description (Union[Unset, str]):
-        parts_charge (Union[Unset, float]):
-        parts_charge_before_discount (Union[Unset, float]):
-        service_charge (Union[Unset, float]):
-        repairs_charge (Union[Unset, float]):
-        segment_name (Union[Unset, str]):
-        schedule_name (Union[Unset, str]):
-        service_schedule_segment_id (Union[Unset, int]):
-        forward_next_service (Union[Unset, bool]):
-        forward_segment_id (Union[Unset, int]):
-        measurement_batches (Union[Unset,
+        service_level (Union[None, Unset, str]):
+        service_level_code (Union[None, Unset, str]):
+        next_service_level (Union[None, Unset, str]):
+        next_service_level_code (Union[None, Unset, str]):
+        asset_name (Union[None, Unset, str]):
+        asset_description (Union[None, Unset, str]):
+        parts_charge (Union[None, Unset, float]):
+        parts_charge_before_discount (Union[None, Unset, float]):
+        service_charge (Union[None, Unset, float]):
+        repairs_charge (Union[None, Unset, float]):
+        segment_name (Union[None, Unset, str]):
+        schedule_name (Union[None, Unset, str]):
+        service_schedule_segment_id (Union[None, Unset, int]):
+        forward_next_service (Union[None, Unset, bool]):
+        forward_segment_id (Union[None, Unset, int]):
+        measurement_batches (Union[None, Unset,
             list['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel']]):
     """
 
-    service_order_id: Union[Unset, int] = UNSET
-    service_order_number: Union[Unset, int] = UNSET
-    custom_order_number: Union[Unset, str] = UNSET
-    order_item_number: Union[Unset, int] = UNSET
-    certificate_number: Union[Unset, str] = UNSET
+    service_order_id: Union[None, Unset, int] = UNSET
+    service_order_number: Union[None, Unset, int] = UNSET
+    custom_order_number: Union[None, Unset, str] = UNSET
+    order_item_number: Union[None, Unset, int] = UNSET
+    certificate_number: Union[None, Unset, str] = UNSET
     result_status: Union[None, Unset, str] = UNSET
     as_found_result: Union[None, Unset, str] = UNSET
     as_left_result: Union[None, Unset, str] = UNSET
     service_date: Union[None, Unset, datetime.datetime] = UNSET
-    serial_number: Union[Unset, str] = UNSET
-    asset_tag: Union[Unset, str] = UNSET
-    asset_user: Union[Unset, str] = UNSET
-    asset_tag_change: Union[Unset, str] = UNSET
-    asset_user_change: Union[Unset, str] = UNSET
-    service_notes: Union[Unset, str] = UNSET
-    serial_number_change: Union[Unset, str] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
+    asset_tag: Union[None, Unset, str] = UNSET
+    asset_user: Union[None, Unset, str] = UNSET
+    asset_tag_change: Union[None, Unset, str] = UNSET
+    asset_user_change: Union[None, Unset, str] = UNSET
+    service_notes: Union[None, Unset, str] = UNSET
+    serial_number_change: Union[None, Unset, str] = UNSET
     due_date: Union[None, Unset, datetime.datetime] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    service_level: Union[Unset, str] = UNSET
-    service_level_code: Union[Unset, str] = UNSET
-    next_service_level: Union[Unset, str] = UNSET
-    next_service_level_code: Union[Unset, str] = UNSET
-    asset_name: Union[Unset, str] = UNSET
-    asset_description: Union[Unset, str] = UNSET
-    parts_charge: Union[Unset, float] = UNSET
-    parts_charge_before_discount: Union[Unset, float] = UNSET
-    service_charge: Union[Unset, float] = UNSET
-    repairs_charge: Union[Unset, float] = UNSET
-    segment_name: Union[Unset, str] = UNSET
-    schedule_name: Union[Unset, str] = UNSET
-    service_schedule_segment_id: Union[Unset, int] = UNSET
-    forward_next_service: Union[Unset, bool] = UNSET
-    forward_segment_id: Union[Unset, int] = UNSET
-    measurement_batches: Union[
-        Unset,
+    service_level: Union[None, Unset, str] = UNSET
+    service_level_code: Union[None, Unset, str] = UNSET
+    next_service_level: Union[None, Unset, str] = UNSET
+    next_service_level_code: Union[None, Unset, str] = UNSET
+    asset_name: Union[None, Unset, str] = UNSET
+    asset_description: Union[None, Unset, str] = UNSET
+    parts_charge: Union[None, Unset, float] = UNSET
+    parts_charge_before_discount: Union[None, Unset, float] = UNSET
+    service_charge: Union[None, Unset, float] = UNSET
+    repairs_charge: Union[None, Unset, float] = UNSET
+    segment_name: Union[None, Unset, str] = UNSET
+    schedule_name: Union[None, Unset, str] = UNSET
+    service_schedule_segment_id: Union[None, Unset, int] = UNSET
+    forward_next_service: Union[None, Unset, bool] = UNSET
+    forward_segment_id: Union[None, Unset, int] = UNSET
+    measurement_batches: Union[None, Unset,
         list[
             "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel"
         ],
@@ -213,7 +212,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
 
         forward_segment_id = self.forward_segment_id
 
-        measurement_batches: Union[Unset, list[dict[str, Any]]] = UNSET
+        measurement_batches: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.measurement_batches and not isinstance(self.measurement_batches, Unset):
             measurement_batches = []
             for measurement_batches_item_data in self.measurement_batches:

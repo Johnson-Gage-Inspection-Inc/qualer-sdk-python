@@ -15,16 +15,16 @@ T = TypeVar("T", bound="QualerApiModelsVendorsFromVendorCompanySearchModel")
 class QualerApiModelsVendorsFromVendorCompanySearchModel:
     """
     Attributes:
-        account_number_text (Union[Unset, str]):
-        company_name (Union[Unset, str]):
-        take (Union[Unset, int]):
-        modified_after (Union[Unset, datetime.datetime]):
+        account_number_text (Union[None, Unset, str]):
+        company_name (Union[None, Unset, str]):
+        take (Union[None, Unset, int]):
+        modified_after (Union[None, Unset, datetime.datetime]):
     """
 
-    account_number_text: Union[Unset, str] = UNSET
-    company_name: Union[Unset, str] = UNSET
-    take: Union[Unset, int] = UNSET
-    modified_after: Union[Unset, datetime.datetime] = UNSET
+    account_number_text: Union[None, Unset, str] = UNSET
+    company_name: Union[None, Unset, str] = UNSET
+    take: Union[None, Unset, int] = UNSET
+    modified_after: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -34,7 +34,7 @@ class QualerApiModelsVendorsFromVendorCompanySearchModel:
 
         take = self.take
 
-        modified_after: Union[Unset, str] = UNSET
+        modified_after: Union[None, Unset, str] = UNSET
         if self.modified_after and not isinstance(self.modified_after, Unset):
             modified_after = self.modified_after.isoformat()
 
@@ -62,7 +62,7 @@ class QualerApiModelsVendorsFromVendorCompanySearchModel:
         take = d.pop("Take", UNSET)
 
         _modified_after = d.pop("ModifiedAfter", UNSET)
-        modified_after: Union[Unset, datetime.datetime]
+        modified_after: Union[None, Unset, datetime.datetime]
         if isinstance(_modified_after, Unset):
             modified_after = UNSET
         else:

@@ -15,16 +15,16 @@ T = TypeVar("T", bound="QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat
 class QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat:
     """
     Attributes:
-        reset_service_date (Union[Unset, datetime.datetime]):
-        reset_service_task (Union[Unset, str]):
+        reset_service_date (Union[None, Unset, datetime.datetime]):
+        reset_service_task (Union[None, Unset, str]):
     """
 
-    reset_service_date: Union[Unset, datetime.datetime] = UNSET
-    reset_service_task: Union[Unset, str] = UNSET
+    reset_service_date: Union[None, Unset, datetime.datetime] = UNSET
+    reset_service_task: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        reset_service_date: Union[Unset, str] = UNSET
+        reset_service_date: Union[None, Unset, str] = UNSET
         if self.reset_service_date and not isinstance(self.reset_service_date, Unset):
             reset_service_date = self.reset_service_date.isoformat()
 
@@ -44,7 +44,7 @@ class QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         _reset_service_date = d.pop("ResetServiceDate", UNSET)
-        reset_service_date: Union[Unset, datetime.datetime]
+        reset_service_date: Union[None, Unset, datetime.datetime]
         if isinstance(_reset_service_date, Unset):
             reset_service_date = UNSET
         else:

@@ -19,15 +19,14 @@ T = TypeVar("T", bound="QualerApiModelsMeasurementsFromCustomFields")
 class QualerApiModelsMeasurementsFromCustomFields:
     """
     Attributes:
-        description (Union[Unset, str]):
-        result (Union[Unset, str]):
-        items (Union[Unset, list['QualerApiModelsMeasurementsFromCreateMeasurementFieldModel']]):
+        description (Union[None, Unset, str]):
+        result (Union[None, Unset, str]):
+        items (Union[None, Unset, list['QualerApiModelsMeasurementsFromCreateMeasurementFieldModel']]):
     """
 
-    description: Union[Unset, str] = UNSET
-    result: Union[Unset, str] = UNSET
-    items: Union[
-        Unset, list["QualerApiModelsMeasurementsFromCreateMeasurementFieldModel"]
+    description: Union[None, Unset, str] = UNSET
+    result: Union[None, Unset, str] = UNSET
+    items: Union[None, Unset, list["QualerApiModelsMeasurementsFromCreateMeasurementFieldModel"]
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -36,7 +35,7 @@ class QualerApiModelsMeasurementsFromCustomFields:
 
         result = self.result
 
-        items: Union[Unset, list[dict[str, Any]]] = UNSET
+        items: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.items and not isinstance(self.items, Unset):
             items = []
             for items_item_data in self.items:

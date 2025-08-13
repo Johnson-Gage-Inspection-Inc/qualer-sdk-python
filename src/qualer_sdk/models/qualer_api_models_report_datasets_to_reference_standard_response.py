@@ -15,52 +15,52 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToReferenceStandardResponse
 class QualerApiModelsReportDatasetsToReferenceStandardResponse:
     """
     Attributes:
-        is_auxiliary (Union[Unset, bool]):
+        is_auxiliary (Union[None, Unset, bool]):
         last_service_date (Union[None, Unset, datetime.datetime]):
         next_service_date (Union[None, Unset, datetime.datetime]):
         certificate_number (Union[None, Unset, str]):
         calibrated_by (Union[None, Unset, str]):
-        tool_name (Union[Unset, str]):
-        tool_site (Union[Unset, str]):
-        tool_room (Union[Unset, str]):
-        tool_station (Union[Unset, str]):
-        tool_location (Union[Unset, str]):
-        asset_tag (Union[Unset, str]):
-        lot_number (Union[Unset, str]):
-        asset_user (Union[Unset, str]):
-        tool_type_name (Union[Unset, str]):
-        tool_description (Union[Unset, str]):
-        tool_id (Union[Unset, int]):
-        manufacturer (Union[Unset, str]):
-        serial_number (Union[Unset, str]):
-        area (Union[Unset, str]):
-        service_order_item_id (Union[Unset, int]):
-        manufacturer_part_number (Union[Unset, str]):
-        equipment_id (Union[Unset, str]):
+        tool_name (Union[None, Unset, str]):
+        tool_site (Union[None, Unset, str]):
+        tool_room (Union[None, Unset, str]):
+        tool_station (Union[None, Unset, str]):
+        tool_location (Union[None, Unset, str]):
+        asset_tag (Union[None, Unset, str]):
+        lot_number (Union[None, Unset, str]):
+        asset_user (Union[None, Unset, str]):
+        tool_type_name (Union[None, Unset, str]):
+        tool_description (Union[None, Unset, str]):
+        tool_id (Union[None, Unset, int]):
+        manufacturer (Union[None, Unset, str]):
+        serial_number (Union[None, Unset, str]):
+        area (Union[None, Unset, str]):
+        service_order_item_id (Union[None, Unset, int]):
+        manufacturer_part_number (Union[None, Unset, str]):
+        equipment_id (Union[None, Unset, str]):
     """
 
-    is_auxiliary: Union[Unset, bool] = UNSET
+    is_auxiliary: Union[None, Unset, bool] = UNSET
     last_service_date: Union[None, Unset, datetime.datetime] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
     certificate_number: Union[None, Unset, str] = UNSET
     calibrated_by: Union[None, Unset, str] = UNSET
-    tool_name: Union[Unset, str] = UNSET
-    tool_site: Union[Unset, str] = UNSET
-    tool_room: Union[Unset, str] = UNSET
-    tool_station: Union[Unset, str] = UNSET
-    tool_location: Union[Unset, str] = UNSET
-    asset_tag: Union[Unset, str] = UNSET
-    lot_number: Union[Unset, str] = UNSET
-    asset_user: Union[Unset, str] = UNSET
-    tool_type_name: Union[Unset, str] = UNSET
-    tool_description: Union[Unset, str] = UNSET
-    tool_id: Union[Unset, int] = UNSET
-    manufacturer: Union[Unset, str] = UNSET
-    serial_number: Union[Unset, str] = UNSET
-    area: Union[Unset, str] = UNSET
-    service_order_item_id: Union[Unset, int] = UNSET
-    manufacturer_part_number: Union[Unset, str] = UNSET
-    equipment_id: Union[Unset, str] = UNSET
+    tool_name: Union[None, Unset, str] = UNSET
+    tool_site: Union[None, Unset, str] = UNSET
+    tool_room: Union[None, Unset, str] = UNSET
+    tool_station: Union[None, Unset, str] = UNSET
+    tool_location: Union[None, Unset, str] = UNSET
+    asset_tag: Union[None, Unset, str] = UNSET
+    lot_number: Union[None, Unset, str] = UNSET
+    asset_user: Union[None, Unset, str] = UNSET
+    tool_type_name: Union[None, Unset, str] = UNSET
+    tool_description: Union[None, Unset, str] = UNSET
+    tool_id: Union[None, Unset, int] = UNSET
+    manufacturer: Union[None, Unset, str] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
+    area: Union[None, Unset, str] = UNSET
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    manufacturer_part_number: Union[None, Unset, str] = UNSET
+    equipment_id: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

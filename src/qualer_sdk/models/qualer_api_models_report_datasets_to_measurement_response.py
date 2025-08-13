@@ -61,802 +61,787 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToMeasurementResponse")
 class QualerApiModelsReportDatasetsToMeasurementResponse:
     """
     Attributes:
-        is_accredited (Union[Unset, bool]):
-        service_total (Union[Unset, float]):
-        repairs_total (Union[Unset, float]):
-        parts_total (Union[Unset, float]):
-        parameter_id (Union[Unset, int]):
-        tool_range_name (Union[Unset, str]):
-        tool_range_uncertainty (Union[Unset, str]):
+        is_accredited (Union[None, Unset, bool]):
+        service_total (Union[None, Unset, float]):
+        repairs_total (Union[None, Unset, float]):
+        parts_total (Union[None, Unset, float]):
+        parameter_id (Union[None, Unset, int]):
+        tool_range_name (Union[None, Unset, str]):
+        tool_range_uncertainty (Union[None, Unset, str]):
         primary_tool_last_service_date (Union[None, Unset, datetime.datetime]):
         primary_tool_next_service_date (Union[None, Unset, datetime.datetime]):
-        primary_tool_calibrated_by (Union[Unset, str]):
-        primary_tool_tool_name (Union[Unset, str]):
-        primary_tool_tool_description (Union[Unset, str]):
-        primary_tool_tool_type_name (Union[Unset, str]):
-        primary_tool_manufacturer (Union[Unset, str]):
-        primary_tool_manufacturer_part_number (Union[Unset, str]):
-        primary_tool_serial_number (Union[Unset, str]):
+        primary_tool_calibrated_by (Union[None, Unset, str]):
+        primary_tool_tool_name (Union[None, Unset, str]):
+        primary_tool_tool_description (Union[None, Unset, str]):
+        primary_tool_tool_type_name (Union[None, Unset, str]):
+        primary_tool_manufacturer (Union[None, Unset, str]):
+        primary_tool_manufacturer_part_number (Union[None, Unset, str]):
+        primary_tool_serial_number (Union[None, Unset, str]):
         secondary_tool_last_service_date (Union[None, Unset, datetime.datetime]):
         secondary_tool_next_service_date (Union[None, Unset, datetime.datetime]):
-        secondary_tool_calibrated_by (Union[Unset, str]):
-        secondary_tool_tool_name (Union[Unset, str]):
-        secondary_tool_tool_description (Union[Unset, str]):
-        secondary_tool_tool_type_name (Union[Unset, str]):
-        secondary_tool_manufacturer (Union[Unset, str]):
-        secondary_tool_manufacturer_part_number (Union[Unset, str]):
-        secondary_tool_serial_number (Union[Unset, str]):
-        measurement_set_name (Union[Unset, str]):
-        decimal_places (Union[Unset, int]):
-        significant_figures (Union[Unset, int]):
-        sd_header (Union[Unset, float]):
-        cv_header (Union[Unset, float]):
-        measurement_local_time (Union[Unset, datetime.datetime]):
-        mean (Union[Unset, float]):
-        mean_raw (Union[Unset, float]):
-        mean_decimal_places (Union[Unset, int]):
-        mean_extended (Union[Unset, str]):
-        sd (Union[Unset, float]):
-        sd_raw (Union[Unset, float]):
-        sd_decimal_places (Union[Unset, int]):
-        delta (Union[Unset, float]):
-        range_ (Union[Unset, float]):
-        sd_extended (Union[Unset, str]):
-        range_extended (Union[Unset, str]):
-        delta_extended (Union[Unset, str]):
-        minimum_measured_value (Union[Unset, float]):
-        maximum_measured_value (Union[Unset, float]):
-        min_max_value_extended (Union[Unset, str]):
-        cv (Union[Unset, float]):
-        cv_raw (Union[Unset, float]):
-        cv_decimal_places (Union[Unset, int]):
-        cv_extended (Union[Unset, str]):
-        result (Union[Unset, int]):
-        range_result (Union[Unset, bool]):
-        delta_result (Union[Unset, bool]):
-        min_result (Union[Unset, bool]):
-        max_result (Union[Unset, bool]):
-        tar_result (Union[Unset, bool]):
-        tur_result (Union[Unset, bool]):
-        error_result (Union[Unset, bool]):
-        sd_result (Union[Unset, bool]):
-        cv_result (Union[Unset, bool]):
-        custom_field_result (Union[Unset, int]):
-        mu (Union[Unset, float]):
-        mu_raw (Union[Unset, float]):
-        mu_effective_dof (Union[Unset, float]):
-        mu_coverage_factor (Union[Unset, float]):
-        mu_extended (Union[Unset, str]):
-        cmc (Union[Unset, float]):
-        cmc_comments (Union[Unset, str]):
-        tur (Union[Unset, float]):
-        tur_raw (Union[Unset, float]):
-        tur_decimal_places (Union[Unset, int]):
-        tar (Union[Unset, float]):
-        tar_raw (Union[Unset, float]):
-        tar_decimal_places (Union[Unset, int]):
-        guard_band (Union[Unset, str]):
-        guard_band_logic (Union[Unset, QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic]):
-        uncertainty_budget (Union[Unset, str]):
-        calculated_uncertainty (Union[Unset, float]):
-        lock_uncertainty_budget (Union[Unset, bool]):
-        lab_mu (Union[Unset, float]):
-        channel (Union[Unset, int]):
-        measurement_type (Union[Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType]):
-        updated_by (Union[Unset, str]):
-        updated_on (Union[Unset, datetime.datetime]):
-        error (Union[Unset, float]):
-        error_extended (Union[Unset, str]):
-        require_adjustment (Union[Unset, bool]):
-        adjustment_threshold (Union[Unset, float]):
-        percent_of_tolerance (Union[Unset, float]):
-        percent_of_tolerance_extended (Union[Unset, str]):
-        tol_decimal_places (Union[Unset, int]):
-        specification_title (Union[Unset, str]):
-        specification_subtitle (Union[Unset, str]):
-        specification_group (Union[Unset, str]):
-        batch_type (Union[Unset, int]):
-        batch_result (Union[Unset, int]):
-        is_by_channel (Union[Unset, bool]):
-        channel_count (Union[Unset, int]):
-        is_range_accredited (Union[Unset, bool]):
-        commenced_on (Union[Unset, datetime.datetime]):
-        commenced_by (Union[Unset, str]):
-        z_factor (Union[Unset, float]):
-        air_buoyancy (Union[Unset, float]):
-        evaporation_rate (Union[Unset, float]):
-        air_humidity (Union[Unset, float]):
-        altitude (Union[Unset, float]):
-        ambient_temperature (Union[Unset, float]):
-        barometric_pressure (Union[Unset, float]):
-        light_intensity (Union[Unset, float]):
-        noise_level (Union[Unset, float]):
-        ph_level (Union[Unset, float]):
-        water_conductivity (Union[Unset, float]):
-        water_temperature (Union[Unset, float]):
-        solar_radiation (Union[Unset, float]):
-        wind_speed (Union[Unset, float]):
-        z_factor_uom (Union[Unset, str]):
-        air_buoyancy_uom (Union[Unset, str]):
-        evaporation_rate_uom (Union[Unset, str]):
-        air_humidity_uom (Union[Unset, str]):
-        altitude_uom (Union[Unset, str]):
-        ambient_temperature_uom (Union[Unset, str]):
-        barometric_pressure_uom (Union[Unset, str]):
-        light_intensity_uom (Union[Unset, str]):
-        noise_level_uom (Union[Unset, str]):
-        ph_level_uom (Union[Unset, str]):
-        water_conductivity_uom (Union[Unset, str]):
-        water_temperature_uom (Union[Unset, str]):
-        solar_radiation_uom (Union[Unset, str]):
-        wind_speed_uom (Union[Unset, str]):
-        specification_name (Union[Unset, str]):
-        parameter_name (Union[Unset, str]):
-        measurement_set_display_order (Union[Unset, int]):
-        display_order (Union[Unset, int]):
-        unit_of_measure (Union[Unset, str]):
-        display_format (Union[Unset, str]):
-        precision (Union[Unset, float]):
-        minimum (Union[Unset, float]):
-        nominal (Union[Unset, float]):
-        expected_value (Union[Unset, float]):
-        expected_value_raw (Union[Unset, str]):
-        test_value (Union[Unset, float]):
-        base_value (Union[Unset, float]):
-        use_expected_value (Union[Unset, bool]):
-        reading_entry_logic (Union[Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic]):
-        reading_entry_math (Union[Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath]):
-        double_substitution_sequence (Union[Unset,
+        secondary_tool_calibrated_by (Union[None, Unset, str]):
+        secondary_tool_tool_name (Union[None, Unset, str]):
+        secondary_tool_tool_description (Union[None, Unset, str]):
+        secondary_tool_tool_type_name (Union[None, Unset, str]):
+        secondary_tool_manufacturer (Union[None, Unset, str]):
+        secondary_tool_manufacturer_part_number (Union[None, Unset, str]):
+        secondary_tool_serial_number (Union[None, Unset, str]):
+        measurement_set_name (Union[None, Unset, str]):
+        decimal_places (Union[None, Unset, int]):
+        significant_figures (Union[None, Unset, int]):
+        sd_header (Union[None, Unset, float]):
+        cv_header (Union[None, Unset, float]):
+        measurement_local_time (Union[None, Unset, datetime.datetime]):
+        mean (Union[None, Unset, float]):
+        mean_raw (Union[None, Unset, float]):
+        mean_decimal_places (Union[None, Unset, int]):
+        mean_extended (Union[None, Unset, str]):
+        sd (Union[None, Unset, float]):
+        sd_raw (Union[None, Unset, float]):
+        sd_decimal_places (Union[None, Unset, int]):
+        delta (Union[None, Unset, float]):
+        range_ (Union[None, Unset, float]):
+        sd_extended (Union[None, Unset, str]):
+        range_extended (Union[None, Unset, str]):
+        delta_extended (Union[None, Unset, str]):
+        minimum_measured_value (Union[None, Unset, float]):
+        maximum_measured_value (Union[None, Unset, float]):
+        min_max_value_extended (Union[None, Unset, str]):
+        cv (Union[None, Unset, float]):
+        cv_raw (Union[None, Unset, float]):
+        cv_decimal_places (Union[None, Unset, int]):
+        cv_extended (Union[None, Unset, str]):
+        result (Union[None, Unset, int]):
+        range_result (Union[None, Unset, bool]):
+        delta_result (Union[None, Unset, bool]):
+        min_result (Union[None, Unset, bool]):
+        max_result (Union[None, Unset, bool]):
+        tar_result (Union[None, Unset, bool]):
+        tur_result (Union[None, Unset, bool]):
+        error_result (Union[None, Unset, bool]):
+        sd_result (Union[None, Unset, bool]):
+        cv_result (Union[None, Unset, bool]):
+        custom_field_result (Union[None, Unset, int]):
+        mu (Union[None, Unset, float]):
+        mu_raw (Union[None, Unset, float]):
+        mu_effective_dof (Union[None, Unset, float]):
+        mu_coverage_factor (Union[None, Unset, float]):
+        mu_extended (Union[None, Unset, str]):
+        cmc (Union[None, Unset, float]):
+        cmc_comments (Union[None, Unset, str]):
+        tur (Union[None, Unset, float]):
+        tur_raw (Union[None, Unset, float]):
+        tur_decimal_places (Union[None, Unset, int]):
+        tar (Union[None, Unset, float]):
+        tar_raw (Union[None, Unset, float]):
+        tar_decimal_places (Union[None, Unset, int]):
+        guard_band (Union[None, Unset, str]):
+        guard_band_logic (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic]):
+        uncertainty_budget (Union[None, Unset, str]):
+        calculated_uncertainty (Union[None, Unset, float]):
+        lock_uncertainty_budget (Union[None, Unset, bool]):
+        lab_mu (Union[None, Unset, float]):
+        channel (Union[None, Unset, int]):
+        measurement_type (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType]):
+        updated_by (Union[None, Unset, str]):
+        updated_on (Union[None, Unset, datetime.datetime]):
+        error (Union[None, Unset, float]):
+        error_extended (Union[None, Unset, str]):
+        require_adjustment (Union[None, Unset, bool]):
+        adjustment_threshold (Union[None, Unset, float]):
+        percent_of_tolerance (Union[None, Unset, float]):
+        percent_of_tolerance_extended (Union[None, Unset, str]):
+        tol_decimal_places (Union[None, Unset, int]):
+        specification_title (Union[None, Unset, str]):
+        specification_subtitle (Union[None, Unset, str]):
+        specification_group (Union[None, Unset, str]):
+        batch_type (Union[None, Unset, int]):
+        batch_result (Union[None, Unset, int]):
+        is_by_channel (Union[None, Unset, bool]):
+        channel_count (Union[None, Unset, int]):
+        is_range_accredited (Union[None, Unset, bool]):
+        commenced_on (Union[None, Unset, datetime.datetime]):
+        commenced_by (Union[None, Unset, str]):
+        z_factor (Union[None, Unset, float]):
+        air_buoyancy (Union[None, Unset, float]):
+        evaporation_rate (Union[None, Unset, float]):
+        air_humidity (Union[None, Unset, float]):
+        altitude (Union[None, Unset, float]):
+        ambient_temperature (Union[None, Unset, float]):
+        barometric_pressure (Union[None, Unset, float]):
+        light_intensity (Union[None, Unset, float]):
+        noise_level (Union[None, Unset, float]):
+        ph_level (Union[None, Unset, float]):
+        water_conductivity (Union[None, Unset, float]):
+        water_temperature (Union[None, Unset, float]):
+        solar_radiation (Union[None, Unset, float]):
+        wind_speed (Union[None, Unset, float]):
+        z_factor_uom (Union[None, Unset, str]):
+        air_buoyancy_uom (Union[None, Unset, str]):
+        evaporation_rate_uom (Union[None, Unset, str]):
+        air_humidity_uom (Union[None, Unset, str]):
+        altitude_uom (Union[None, Unset, str]):
+        ambient_temperature_uom (Union[None, Unset, str]):
+        barometric_pressure_uom (Union[None, Unset, str]):
+        light_intensity_uom (Union[None, Unset, str]):
+        noise_level_uom (Union[None, Unset, str]):
+        ph_level_uom (Union[None, Unset, str]):
+        water_conductivity_uom (Union[None, Unset, str]):
+        water_temperature_uom (Union[None, Unset, str]):
+        solar_radiation_uom (Union[None, Unset, str]):
+        wind_speed_uom (Union[None, Unset, str]):
+        specification_name (Union[None, Unset, str]):
+        parameter_name (Union[None, Unset, str]):
+        measurement_set_display_order (Union[None, Unset, int]):
+        display_order (Union[None, Unset, int]):
+        unit_of_measure (Union[None, Unset, str]):
+        display_format (Union[None, Unset, str]):
+        precision (Union[None, Unset, float]):
+        minimum (Union[None, Unset, float]):
+        nominal (Union[None, Unset, float]):
+        expected_value (Union[None, Unset, float]):
+        expected_value_raw (Union[None, Unset, str]):
+        test_value (Union[None, Unset, float]):
+        base_value (Union[None, Unset, float]):
+        use_expected_value (Union[None, Unset, bool]):
+        reading_entry_logic (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic]):
+        reading_entry_math (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath]):
+        double_substitution_sequence (Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementResponseDoubleSubstitutionSequence]):
-        reading_entry_math_string (Union[Unset, str]):
-        nominal_extended (Union[Unset, str]):
-        expected_value_extended (Union[Unset, str]):
-        maximum (Union[Unset, float]):
-        tolerance_min (Union[Unset, float]):
-        tolerance_max (Union[Unset, float]):
-        resolution (Union[Unset, float]):
-        resolution_count (Union[Unset, float]):
-        min_max_header (Union[Unset, str]):
-        accuracy_class (Union[Unset, str]):
-        accuracy_class_min (Union[Unset, float]):
-        accuracy_class_max (Union[Unset, float]):
-        environment_mask (Union[Unset, QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask]):
-        display_name (Union[Unset, str]):
-        display_part_number (Union[Unset, str]):
-        part_number (Union[Unset, str]):
-        vendor_company_id (Union[Unset, int]):
-        service_order_number (Union[Unset, int]):
-        custom_order_number (Union[Unset, str]):
-        completed_by_name (Union[Unset, str]):
-        completed_on (Union[Unset, datetime.datetime]):
-        is_limited (Union[Unset, bool]):
-        vendor_tag (Union[Unset, str]):
-        vendor_service_notes (Union[Unset, str]):
-        room (Union[Unset, str]):
-        segment_name (Union[Unset, str]):
-        schedule_name (Union[Unset, str]):
-        next_segment_name (Union[Unset, str]):
-        certificate_number (Union[Unset, str]):
-        work_status (Union[Unset, WorkStatus]):
-        service_type (Union[Unset, str]):
-        service_level (Union[Unset, str]):
-        barcode (Union[Unset, str]):
-        service_comments (Union[Unset, str]):
-        order_item_number (Union[Unset, int]):
-        asset_tag (Union[Unset, str]):
-        asset_user (Union[Unset, str]):
-        serial_number (Union[Unset, str]):
-        equipment_id (Union[Unset, str]):
-        legacy_identifier (Union[Unset, str]):
-        site_name (Union[Unset, str]):
-        asset_name (Union[Unset, str]):
-        asset_description (Union[Unset, str]):
-        product_name (Union[Unset, str]):
-        product_description (Union[Unset, str]):
-        asset_maker (Union[Unset, str]):
-        station (Union[Unset, str]):
-        asset_tag_change (Union[Unset, str]):
-        asset_user_change (Union[Unset, str]):
-        serial_number_change (Union[Unset, str]):
+        reading_entry_math_string (Union[None, Unset, str]):
+        nominal_extended (Union[None, Unset, str]):
+        expected_value_extended (Union[None, Unset, str]):
+        maximum (Union[None, Unset, float]):
+        tolerance_min (Union[None, Unset, float]):
+        tolerance_max (Union[None, Unset, float]):
+        resolution (Union[None, Unset, float]):
+        resolution_count (Union[None, Unset, float]):
+        min_max_header (Union[None, Unset, str]):
+        accuracy_class (Union[None, Unset, str]):
+        accuracy_class_min (Union[None, Unset, float]):
+        accuracy_class_max (Union[None, Unset, float]):
+        environment_mask (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask]):
+        display_name (Union[None, Unset, str]):
+        display_part_number (Union[None, Unset, str]):
+        part_number (Union[None, Unset, str]):
+        vendor_company_id (Union[None, Unset, int]):
+        service_order_number (Union[None, Unset, int]):
+        custom_order_number (Union[None, Unset, str]):
+        completed_by_name (Union[None, Unset, str]):
+        completed_on (Union[None, Unset, datetime.datetime]):
+        is_limited (Union[None, Unset, bool]):
+        vendor_tag (Union[None, Unset, str]):
+        vendor_service_notes (Union[None, Unset, str]):
+        room (Union[None, Unset, str]):
+        segment_name (Union[None, Unset, str]):
+        schedule_name (Union[None, Unset, str]):
+        next_segment_name (Union[None, Unset, str]):
+        certificate_number (Union[None, Unset, str]):
+        work_status (Union[None, Unset, WorkStatus]):
+        service_type (Union[None, Unset, str]):
+        service_level (Union[None, Unset, str]):
+        barcode (Union[None, Unset, str]):
+        service_comments (Union[None, Unset, str]):
+        order_item_number (Union[None, Unset, int]):
+        asset_tag (Union[None, Unset, str]):
+        asset_user (Union[None, Unset, str]):
+        serial_number (Union[None, Unset, str]):
+        equipment_id (Union[None, Unset, str]):
+        legacy_identifier (Union[None, Unset, str]):
+        site_name (Union[None, Unset, str]):
+        asset_name (Union[None, Unset, str]):
+        asset_description (Union[None, Unset, str]):
+        product_name (Union[None, Unset, str]):
+        product_description (Union[None, Unset, str]):
+        asset_maker (Union[None, Unset, str]):
+        station (Union[None, Unset, str]):
+        asset_tag_change (Union[None, Unset, str]):
+        asset_user_change (Union[None, Unset, str]):
+        serial_number_change (Union[None, Unset, str]):
         service_date (Union[None, Unset, datetime.datetime]):
         next_service_date (Union[None, Unset, datetime.datetime]):
-        service_order_item_id (Union[Unset, int]):
-        service_order_id (Union[Unset, int]):
-        measurement_batch_id (Union[Unset, int]):
-        measurement_id (Union[Unset, int]):
-        standard_id (Union[Unset, int]):
-        tool_id (Union[Unset, int]):
-        measurement_tool_id (Union[Unset, int]):
-        measurement_condition_id (Union[Unset, int]):
-        measurement_point_id (Union[Unset, int]):
-        measurement_set_id (Union[Unset, int]):
-        is_hidden (Union[Unset, bool]):
-        readings (Union[Unset, int]):
-        tolerance_type (Union[Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceType]):
-        tolerance_type_string (Union[Unset, str]):
-        precision_type (Union[Unset, QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType]):
-        specification_mode (Union[Unset, QualerApiModelsReportDatasetsToMeasurementResponseSpecificationMode]):
-        tolerance_mode (Union[Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceMode]):
-        tolerance_unit (Union[Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit]):
-        tolerance_string (Union[Unset, str]):
-        po_number (Union[Unset, str]):
-        secondary_po (Union[Unset, str]):
+        service_order_item_id (Union[None, Unset, int]):
+        service_order_id (Union[None, Unset, int]):
+        measurement_batch_id (Union[None, Unset, int]):
+        measurement_id (Union[None, Unset, int]):
+        standard_id (Union[None, Unset, int]):
+        tool_id (Union[None, Unset, int]):
+        measurement_tool_id (Union[None, Unset, int]):
+        measurement_condition_id (Union[None, Unset, int]):
+        measurement_point_id (Union[None, Unset, int]):
+        measurement_set_id (Union[None, Unset, int]):
+        is_hidden (Union[None, Unset, bool]):
+        readings (Union[None, Unset, int]):
+        tolerance_type (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceType]):
+        tolerance_type_string (Union[None, Unset, str]):
+        precision_type (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType]):
+        specification_mode (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseSpecificationMode]):
+        tolerance_mode (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceMode]):
+        tolerance_unit (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit]):
+        tolerance_string (Union[None, Unset, str]):
+        po_number (Union[None, Unset, str]):
+        secondary_po (Union[None, Unset, str]):
         shipped_date (Union[None, Unset, datetime.datetime]):
-        shipment_status (Union[Unset, QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus]):
-        shipped_on (Union[Unset, datetime.datetime]):
-        delivered_on (Union[Unset, datetime.datetime]):
-        tracking_number (Union[Unset, str]):
-        payment_terms (Union[Unset, int]):
-        shipping_method (Union[Unset, str]):
-        location (Union[Unset, str]):
-        site_access_notes (Union[Unset, str]):
-        abbreviated_uom (Union[Unset, str]):
-        unit_scale_factor (Union[Unset, float]):
-        measurement_not_taken_result (Union[Unset,
+        shipment_status (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus]):
+        shipped_on (Union[None, Unset, datetime.datetime]):
+        delivered_on (Union[None, Unset, datetime.datetime]):
+        tracking_number (Union[None, Unset, str]):
+        payment_terms (Union[None, Unset, int]):
+        shipping_method (Union[None, Unset, str]):
+        location (Union[None, Unset, str]):
+        site_access_notes (Union[None, Unset, str]):
+        abbreviated_uom (Union[None, Unset, str]):
+        unit_scale_factor (Union[None, Unset, float]):
+        measurement_not_taken_result (Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementResponseMeasurementNotTakenResult]):
-        hide_from_certificate (Union[Unset, bool]):
-        measurement_not_taken_reason (Union[Unset, str]):
-        environment_text_1 (Union[Unset, str]):
-        environment_text_2 (Union[Unset, str]):
-        environment_text_3 (Union[Unset, str]):
-        environment_text_4 (Union[Unset, str]):
-        environment_text_5 (Union[Unset, str]):
-        environment_text_6 (Union[Unset, str]):
-        values (Union[Unset, str]):
-        value_1 (Union[Unset, str]):
-        value_2 (Union[Unset, str]):
-        value_3 (Union[Unset, str]):
-        value_4 (Union[Unset, str]):
-        value_5 (Union[Unset, str]):
-        value_6 (Union[Unset, str]):
-        value_7 (Union[Unset, str]):
-        value_8 (Union[Unset, str]):
-        value_9 (Union[Unset, str]):
-        value_10 (Union[Unset, str]):
-        value_11 (Union[Unset, str]):
-        value_12 (Union[Unset, str]):
-        value_13 (Union[Unset, str]):
-        value_14 (Union[Unset, str]):
-        value_15 (Union[Unset, str]):
-        value_16 (Union[Unset, str]):
-        value_17 (Union[Unset, str]):
-        value_18 (Union[Unset, str]):
-        value_19 (Union[Unset, str]):
-        value_20 (Union[Unset, str]):
-        value_21 (Union[Unset, str]):
-        value_22 (Union[Unset, str]):
-        value_23 (Union[Unset, str]):
-        value_24 (Union[Unset, str]):
-        value_25 (Union[Unset, str]):
-        value_26 (Union[Unset, str]):
-        value_27 (Union[Unset, str]):
-        value_28 (Union[Unset, str]):
-        value_29 (Union[Unset, str]):
-        value_30 (Union[Unset, str]):
-        value_31 (Union[Unset, str]):
-        value_32 (Union[Unset, str]):
-        value_33 (Union[Unset, str]):
-        value_34 (Union[Unset, str]):
-        value_35 (Union[Unset, str]):
-        value_36 (Union[Unset, str]):
-        value_37 (Union[Unset, str]):
-        value_38 (Union[Unset, str]):
-        value_39 (Union[Unset, str]):
-        value_40 (Union[Unset, str]):
-        raw_value_1 (Union[Unset, str]):
-        raw_value_2 (Union[Unset, str]):
-        raw_value_3 (Union[Unset, str]):
-        raw_value_4 (Union[Unset, str]):
-        raw_value_5 (Union[Unset, str]):
-        raw_value_6 (Union[Unset, str]):
-        raw_value_7 (Union[Unset, str]):
-        raw_value_8 (Union[Unset, str]):
-        raw_value_9 (Union[Unset, str]):
-        raw_value_10 (Union[Unset, str]):
-        raw_value_11 (Union[Unset, str]):
-        raw_value_12 (Union[Unset, str]):
-        raw_value_13 (Union[Unset, str]):
-        raw_value_14 (Union[Unset, str]):
-        raw_value_15 (Union[Unset, str]):
-        raw_value_16 (Union[Unset, str]):
-        raw_value_17 (Union[Unset, str]):
-        raw_value_18 (Union[Unset, str]):
-        raw_value_19 (Union[Unset, str]):
-        raw_value_20 (Union[Unset, str]):
-        raw_value_21 (Union[Unset, str]):
-        raw_value_22 (Union[Unset, str]):
-        raw_value_23 (Union[Unset, str]):
-        raw_value_24 (Union[Unset, str]):
-        raw_value_25 (Union[Unset, str]):
-        raw_value_26 (Union[Unset, str]):
-        raw_value_27 (Union[Unset, str]):
-        raw_value_28 (Union[Unset, str]):
-        raw_value_29 (Union[Unset, str]):
-        raw_value_30 (Union[Unset, str]):
-        raw_value_31 (Union[Unset, str]):
-        raw_value_32 (Union[Unset, str]):
-        raw_value_33 (Union[Unset, str]):
-        raw_value_34 (Union[Unset, str]):
-        raw_value_35 (Union[Unset, str]):
-        raw_value_36 (Union[Unset, str]):
-        raw_value_37 (Union[Unset, str]):
-        raw_value_38 (Union[Unset, str]):
-        raw_value_39 (Union[Unset, str]):
-        raw_value_40 (Union[Unset, str]):
-        subtitles_to_readings (Union[Unset, str]):
-        value_subtitle_1 (Union[Unset, str]):
-        value_subtitle_2 (Union[Unset, str]):
-        value_subtitle_3 (Union[Unset, str]):
-        value_subtitle_4 (Union[Unset, str]):
-        value_subtitle_5 (Union[Unset, str]):
-        value_subtitle_6 (Union[Unset, str]):
-        value_subtitle_7 (Union[Unset, str]):
-        value_subtitle_8 (Union[Unset, str]):
-        value_subtitle_9 (Union[Unset, str]):
-        value_subtitle_10 (Union[Unset, str]):
-        value_subtitle_11 (Union[Unset, str]):
-        value_subtitle_12 (Union[Unset, str]):
-        value_subtitle_13 (Union[Unset, str]):
-        value_subtitle_14 (Union[Unset, str]):
-        value_subtitle_15 (Union[Unset, str]):
-        value_subtitle_16 (Union[Unset, str]):
-        value_subtitle_17 (Union[Unset, str]):
-        value_subtitle_18 (Union[Unset, str]):
-        value_subtitle_19 (Union[Unset, str]):
-        value_subtitle_20 (Union[Unset, str]):
-        value_subtitle_21 (Union[Unset, str]):
-        value_subtitle_22 (Union[Unset, str]):
-        value_subtitle_23 (Union[Unset, str]):
-        value_subtitle_24 (Union[Unset, str]):
-        value_subtitle_25 (Union[Unset, str]):
-        value_subtitle_26 (Union[Unset, str]):
-        value_subtitle_27 (Union[Unset, str]):
-        value_subtitle_28 (Union[Unset, str]):
-        value_subtitle_29 (Union[Unset, str]):
-        value_subtitle_30 (Union[Unset, str]):
-        value_subtitle_31 (Union[Unset, str]):
-        value_subtitle_32 (Union[Unset, str]):
-        value_subtitle_33 (Union[Unset, str]):
-        value_subtitle_34 (Union[Unset, str]):
-        value_subtitle_35 (Union[Unset, str]):
-        value_subtitle_36 (Union[Unset, str]):
-        value_subtitle_37 (Union[Unset, str]):
-        value_subtitle_38 (Union[Unset, str]):
-        value_subtitle_39 (Union[Unset, str]):
-        value_subtitle_40 (Union[Unset, str]):
-        values_decimal_places (Union[Unset, int]):
-        repeat_measurement_and_calculate_hysteresis (Union[Unset, bool]):
-        measurement_point_order (Union[Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementPointOrder]):
-        hysteresis_point (Union[Unset, QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint]):
-        max_hysteresis (Union[Unset, float]):
-        run (Union[Unset, int]):
-        direction (Union[Unset, int]):
-        hysteresis (Union[Unset, float]):
-        column_mean (Union[Unset, str]):
-        column_mean_result (Union[Unset, str]):
-        column_sd (Union[Unset, str]):
-        column_sd_result (Union[Unset, str]):
-        column_cv (Union[Unset, str]):
-        column_cv_result (Union[Unset, str]):
-        column_range (Union[Unset, str]):
-        column_range_result (Union[Unset, str]):
-        column_delta (Union[Unset, str]):
-        column_delta_result (Union[Unset, str]):
-        column_result (Union[Unset, str]):
+        hide_from_certificate (Union[None, Unset, bool]):
+        measurement_not_taken_reason (Union[None, Unset, str]):
+        environment_text_1 (Union[None, Unset, str]):
+        environment_text_2 (Union[None, Unset, str]):
+        environment_text_3 (Union[None, Unset, str]):
+        environment_text_4 (Union[None, Unset, str]):
+        environment_text_5 (Union[None, Unset, str]):
+        environment_text_6 (Union[None, Unset, str]):
+        values (Union[None, Unset, str]):
+        value_1 (Union[None, Unset, str]):
+        value_2 (Union[None, Unset, str]):
+        value_3 (Union[None, Unset, str]):
+        value_4 (Union[None, Unset, str]):
+        value_5 (Union[None, Unset, str]):
+        value_6 (Union[None, Unset, str]):
+        value_7 (Union[None, Unset, str]):
+        value_8 (Union[None, Unset, str]):
+        value_9 (Union[None, Unset, str]):
+        value_10 (Union[None, Unset, str]):
+        value_11 (Union[None, Unset, str]):
+        value_12 (Union[None, Unset, str]):
+        value_13 (Union[None, Unset, str]):
+        value_14 (Union[None, Unset, str]):
+        value_15 (Union[None, Unset, str]):
+        value_16 (Union[None, Unset, str]):
+        value_17 (Union[None, Unset, str]):
+        value_18 (Union[None, Unset, str]):
+        value_19 (Union[None, Unset, str]):
+        value_20 (Union[None, Unset, str]):
+        value_21 (Union[None, Unset, str]):
+        value_22 (Union[None, Unset, str]):
+        value_23 (Union[None, Unset, str]):
+        value_24 (Union[None, Unset, str]):
+        value_25 (Union[None, Unset, str]):
+        value_26 (Union[None, Unset, str]):
+        value_27 (Union[None, Unset, str]):
+        value_28 (Union[None, Unset, str]):
+        value_29 (Union[None, Unset, str]):
+        value_30 (Union[None, Unset, str]):
+        value_31 (Union[None, Unset, str]):
+        value_32 (Union[None, Unset, str]):
+        value_33 (Union[None, Unset, str]):
+        value_34 (Union[None, Unset, str]):
+        value_35 (Union[None, Unset, str]):
+        value_36 (Union[None, Unset, str]):
+        value_37 (Union[None, Unset, str]):
+        value_38 (Union[None, Unset, str]):
+        value_39 (Union[None, Unset, str]):
+        value_40 (Union[None, Unset, str]):
+        raw_value_1 (Union[None, Unset, str]):
+        raw_value_2 (Union[None, Unset, str]):
+        raw_value_3 (Union[None, Unset, str]):
+        raw_value_4 (Union[None, Unset, str]):
+        raw_value_5 (Union[None, Unset, str]):
+        raw_value_6 (Union[None, Unset, str]):
+        raw_value_7 (Union[None, Unset, str]):
+        raw_value_8 (Union[None, Unset, str]):
+        raw_value_9 (Union[None, Unset, str]):
+        raw_value_10 (Union[None, Unset, str]):
+        raw_value_11 (Union[None, Unset, str]):
+        raw_value_12 (Union[None, Unset, str]):
+        raw_value_13 (Union[None, Unset, str]):
+        raw_value_14 (Union[None, Unset, str]):
+        raw_value_15 (Union[None, Unset, str]):
+        raw_value_16 (Union[None, Unset, str]):
+        raw_value_17 (Union[None, Unset, str]):
+        raw_value_18 (Union[None, Unset, str]):
+        raw_value_19 (Union[None, Unset, str]):
+        raw_value_20 (Union[None, Unset, str]):
+        raw_value_21 (Union[None, Unset, str]):
+        raw_value_22 (Union[None, Unset, str]):
+        raw_value_23 (Union[None, Unset, str]):
+        raw_value_24 (Union[None, Unset, str]):
+        raw_value_25 (Union[None, Unset, str]):
+        raw_value_26 (Union[None, Unset, str]):
+        raw_value_27 (Union[None, Unset, str]):
+        raw_value_28 (Union[None, Unset, str]):
+        raw_value_29 (Union[None, Unset, str]):
+        raw_value_30 (Union[None, Unset, str]):
+        raw_value_31 (Union[None, Unset, str]):
+        raw_value_32 (Union[None, Unset, str]):
+        raw_value_33 (Union[None, Unset, str]):
+        raw_value_34 (Union[None, Unset, str]):
+        raw_value_35 (Union[None, Unset, str]):
+        raw_value_36 (Union[None, Unset, str]):
+        raw_value_37 (Union[None, Unset, str]):
+        raw_value_38 (Union[None, Unset, str]):
+        raw_value_39 (Union[None, Unset, str]):
+        raw_value_40 (Union[None, Unset, str]):
+        subtitles_to_readings (Union[None, Unset, str]):
+        value_subtitle_1 (Union[None, Unset, str]):
+        value_subtitle_2 (Union[None, Unset, str]):
+        value_subtitle_3 (Union[None, Unset, str]):
+        value_subtitle_4 (Union[None, Unset, str]):
+        value_subtitle_5 (Union[None, Unset, str]):
+        value_subtitle_6 (Union[None, Unset, str]):
+        value_subtitle_7 (Union[None, Unset, str]):
+        value_subtitle_8 (Union[None, Unset, str]):
+        value_subtitle_9 (Union[None, Unset, str]):
+        value_subtitle_10 (Union[None, Unset, str]):
+        value_subtitle_11 (Union[None, Unset, str]):
+        value_subtitle_12 (Union[None, Unset, str]):
+        value_subtitle_13 (Union[None, Unset, str]):
+        value_subtitle_14 (Union[None, Unset, str]):
+        value_subtitle_15 (Union[None, Unset, str]):
+        value_subtitle_16 (Union[None, Unset, str]):
+        value_subtitle_17 (Union[None, Unset, str]):
+        value_subtitle_18 (Union[None, Unset, str]):
+        value_subtitle_19 (Union[None, Unset, str]):
+        value_subtitle_20 (Union[None, Unset, str]):
+        value_subtitle_21 (Union[None, Unset, str]):
+        value_subtitle_22 (Union[None, Unset, str]):
+        value_subtitle_23 (Union[None, Unset, str]):
+        value_subtitle_24 (Union[None, Unset, str]):
+        value_subtitle_25 (Union[None, Unset, str]):
+        value_subtitle_26 (Union[None, Unset, str]):
+        value_subtitle_27 (Union[None, Unset, str]):
+        value_subtitle_28 (Union[None, Unset, str]):
+        value_subtitle_29 (Union[None, Unset, str]):
+        value_subtitle_30 (Union[None, Unset, str]):
+        value_subtitle_31 (Union[None, Unset, str]):
+        value_subtitle_32 (Union[None, Unset, str]):
+        value_subtitle_33 (Union[None, Unset, str]):
+        value_subtitle_34 (Union[None, Unset, str]):
+        value_subtitle_35 (Union[None, Unset, str]):
+        value_subtitle_36 (Union[None, Unset, str]):
+        value_subtitle_37 (Union[None, Unset, str]):
+        value_subtitle_38 (Union[None, Unset, str]):
+        value_subtitle_39 (Union[None, Unset, str]):
+        value_subtitle_40 (Union[None, Unset, str]):
+        values_decimal_places (Union[None, Unset, int]):
+        repeat_measurement_and_calculate_hysteresis (Union[None, Unset, bool]):
+        measurement_point_order (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementPointOrder]):
+        hysteresis_point (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint]):
+        max_hysteresis (Union[None, Unset, float]):
+        run (Union[None, Unset, int]):
+        direction (Union[None, Unset, int]):
+        hysteresis (Union[None, Unset, float]):
+        column_mean (Union[None, Unset, str]):
+        column_mean_result (Union[None, Unset, str]):
+        column_sd (Union[None, Unset, str]):
+        column_sd_result (Union[None, Unset, str]):
+        column_cv (Union[None, Unset, str]):
+        column_cv_result (Union[None, Unset, str]):
+        column_range (Union[None, Unset, str]):
+        column_range_result (Union[None, Unset, str]):
+        column_delta (Union[None, Unset, str]):
+        column_delta_result (Union[None, Unset, str]):
+        column_result (Union[None, Unset, str]):
     """
 
-    is_accredited: Union[Unset, bool] = UNSET
-    service_total: Union[Unset, float] = UNSET
-    repairs_total: Union[Unset, float] = UNSET
-    parts_total: Union[Unset, float] = UNSET
-    parameter_id: Union[Unset, int] = UNSET
-    tool_range_name: Union[Unset, str] = UNSET
-    tool_range_uncertainty: Union[Unset, str] = UNSET
+    is_accredited: Union[None, Unset, bool] = UNSET
+    service_total: Union[None, Unset, float] = UNSET
+    repairs_total: Union[None, Unset, float] = UNSET
+    parts_total: Union[None, Unset, float] = UNSET
+    parameter_id: Union[None, Unset, int] = UNSET
+    tool_range_name: Union[None, Unset, str] = UNSET
+    tool_range_uncertainty: Union[None, Unset, str] = UNSET
     primary_tool_last_service_date: Union[None, Unset, datetime.datetime] = UNSET
     primary_tool_next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    primary_tool_calibrated_by: Union[Unset, str] = UNSET
-    primary_tool_tool_name: Union[Unset, str] = UNSET
-    primary_tool_tool_description: Union[Unset, str] = UNSET
-    primary_tool_tool_type_name: Union[Unset, str] = UNSET
-    primary_tool_manufacturer: Union[Unset, str] = UNSET
-    primary_tool_manufacturer_part_number: Union[Unset, str] = UNSET
-    primary_tool_serial_number: Union[Unset, str] = UNSET
+    primary_tool_calibrated_by: Union[None, Unset, str] = UNSET
+    primary_tool_tool_name: Union[None, Unset, str] = UNSET
+    primary_tool_tool_description: Union[None, Unset, str] = UNSET
+    primary_tool_tool_type_name: Union[None, Unset, str] = UNSET
+    primary_tool_manufacturer: Union[None, Unset, str] = UNSET
+    primary_tool_manufacturer_part_number: Union[None, Unset, str] = UNSET
+    primary_tool_serial_number: Union[None, Unset, str] = UNSET
     secondary_tool_last_service_date: Union[None, Unset, datetime.datetime] = UNSET
     secondary_tool_next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    secondary_tool_calibrated_by: Union[Unset, str] = UNSET
-    secondary_tool_tool_name: Union[Unset, str] = UNSET
-    secondary_tool_tool_description: Union[Unset, str] = UNSET
-    secondary_tool_tool_type_name: Union[Unset, str] = UNSET
-    secondary_tool_manufacturer: Union[Unset, str] = UNSET
-    secondary_tool_manufacturer_part_number: Union[Unset, str] = UNSET
-    secondary_tool_serial_number: Union[Unset, str] = UNSET
-    measurement_set_name: Union[Unset, str] = UNSET
-    decimal_places: Union[Unset, int] = UNSET
-    significant_figures: Union[Unset, int] = UNSET
-    sd_header: Union[Unset, float] = UNSET
-    cv_header: Union[Unset, float] = UNSET
-    measurement_local_time: Union[Unset, datetime.datetime] = UNSET
-    mean: Union[Unset, float] = UNSET
-    mean_raw: Union[Unset, float] = UNSET
-    mean_decimal_places: Union[Unset, int] = UNSET
-    mean_extended: Union[Unset, str] = UNSET
-    sd: Union[Unset, float] = UNSET
-    sd_raw: Union[Unset, float] = UNSET
-    sd_decimal_places: Union[Unset, int] = UNSET
-    delta: Union[Unset, float] = UNSET
-    range_: Union[Unset, float] = UNSET
-    sd_extended: Union[Unset, str] = UNSET
-    range_extended: Union[Unset, str] = UNSET
-    delta_extended: Union[Unset, str] = UNSET
-    minimum_measured_value: Union[Unset, float] = UNSET
-    maximum_measured_value: Union[Unset, float] = UNSET
-    min_max_value_extended: Union[Unset, str] = UNSET
-    cv: Union[Unset, float] = UNSET
-    cv_raw: Union[Unset, float] = UNSET
-    cv_decimal_places: Union[Unset, int] = UNSET
-    cv_extended: Union[Unset, str] = UNSET
-    result: Union[Unset, int] = UNSET
-    range_result: Union[Unset, bool] = UNSET
-    delta_result: Union[Unset, bool] = UNSET
-    min_result: Union[Unset, bool] = UNSET
-    max_result: Union[Unset, bool] = UNSET
-    tar_result: Union[Unset, bool] = UNSET
-    tur_result: Union[Unset, bool] = UNSET
-    error_result: Union[Unset, bool] = UNSET
-    sd_result: Union[Unset, bool] = UNSET
-    cv_result: Union[Unset, bool] = UNSET
-    custom_field_result: Union[Unset, int] = UNSET
-    mu: Union[Unset, float] = UNSET
-    mu_raw: Union[Unset, float] = UNSET
-    mu_effective_dof: Union[Unset, float] = UNSET
-    mu_coverage_factor: Union[Unset, float] = UNSET
-    mu_extended: Union[Unset, str] = UNSET
-    cmc: Union[Unset, float] = UNSET
-    cmc_comments: Union[Unset, str] = UNSET
-    tur: Union[Unset, float] = UNSET
-    tur_raw: Union[Unset, float] = UNSET
-    tur_decimal_places: Union[Unset, int] = UNSET
-    tar: Union[Unset, float] = UNSET
-    tar_raw: Union[Unset, float] = UNSET
-    tar_decimal_places: Union[Unset, int] = UNSET
-    guard_band: Union[Unset, str] = UNSET
-    guard_band_logic: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic
+    secondary_tool_calibrated_by: Union[None, Unset, str] = UNSET
+    secondary_tool_tool_name: Union[None, Unset, str] = UNSET
+    secondary_tool_tool_description: Union[None, Unset, str] = UNSET
+    secondary_tool_tool_type_name: Union[None, Unset, str] = UNSET
+    secondary_tool_manufacturer: Union[None, Unset, str] = UNSET
+    secondary_tool_manufacturer_part_number: Union[None, Unset, str] = UNSET
+    secondary_tool_serial_number: Union[None, Unset, str] = UNSET
+    measurement_set_name: Union[None, Unset, str] = UNSET
+    decimal_places: Union[None, Unset, int] = UNSET
+    significant_figures: Union[None, Unset, int] = UNSET
+    sd_header: Union[None, Unset, float] = UNSET
+    cv_header: Union[None, Unset, float] = UNSET
+    measurement_local_time: Union[None, Unset, datetime.datetime] = UNSET
+    mean: Union[None, Unset, float] = UNSET
+    mean_raw: Union[None, Unset, float] = UNSET
+    mean_decimal_places: Union[None, Unset, int] = UNSET
+    mean_extended: Union[None, Unset, str] = UNSET
+    sd: Union[None, Unset, float] = UNSET
+    sd_raw: Union[None, Unset, float] = UNSET
+    sd_decimal_places: Union[None, Unset, int] = UNSET
+    delta: Union[None, Unset, float] = UNSET
+    range_: Union[None, Unset, float] = UNSET
+    sd_extended: Union[None, Unset, str] = UNSET
+    range_extended: Union[None, Unset, str] = UNSET
+    delta_extended: Union[None, Unset, str] = UNSET
+    minimum_measured_value: Union[None, Unset, float] = UNSET
+    maximum_measured_value: Union[None, Unset, float] = UNSET
+    min_max_value_extended: Union[None, Unset, str] = UNSET
+    cv: Union[None, Unset, float] = UNSET
+    cv_raw: Union[None, Unset, float] = UNSET
+    cv_decimal_places: Union[None, Unset, int] = UNSET
+    cv_extended: Union[None, Unset, str] = UNSET
+    result: Union[None, Unset, int] = UNSET
+    range_result: Union[None, Unset, bool] = UNSET
+    delta_result: Union[None, Unset, bool] = UNSET
+    min_result: Union[None, Unset, bool] = UNSET
+    max_result: Union[None, Unset, bool] = UNSET
+    tar_result: Union[None, Unset, bool] = UNSET
+    tur_result: Union[None, Unset, bool] = UNSET
+    error_result: Union[None, Unset, bool] = UNSET
+    sd_result: Union[None, Unset, bool] = UNSET
+    cv_result: Union[None, Unset, bool] = UNSET
+    custom_field_result: Union[None, Unset, int] = UNSET
+    mu: Union[None, Unset, float] = UNSET
+    mu_raw: Union[None, Unset, float] = UNSET
+    mu_effective_dof: Union[None, Unset, float] = UNSET
+    mu_coverage_factor: Union[None, Unset, float] = UNSET
+    mu_extended: Union[None, Unset, str] = UNSET
+    cmc: Union[None, Unset, float] = UNSET
+    cmc_comments: Union[None, Unset, str] = UNSET
+    tur: Union[None, Unset, float] = UNSET
+    tur_raw: Union[None, Unset, float] = UNSET
+    tur_decimal_places: Union[None, Unset, int] = UNSET
+    tar: Union[None, Unset, float] = UNSET
+    tar_raw: Union[None, Unset, float] = UNSET
+    tar_decimal_places: Union[None, Unset, int] = UNSET
+    guard_band: Union[None, Unset, str] = UNSET
+    guard_band_logic: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic
     ] = UNSET
-    uncertainty_budget: Union[Unset, str] = UNSET
-    calculated_uncertainty: Union[Unset, float] = UNSET
-    lock_uncertainty_budget: Union[Unset, bool] = UNSET
-    lab_mu: Union[Unset, float] = UNSET
-    channel: Union[Unset, int] = UNSET
-    measurement_type: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType
+    uncertainty_budget: Union[None, Unset, str] = UNSET
+    calculated_uncertainty: Union[None, Unset, float] = UNSET
+    lock_uncertainty_budget: Union[None, Unset, bool] = UNSET
+    lab_mu: Union[None, Unset, float] = UNSET
+    channel: Union[None, Unset, int] = UNSET
+    measurement_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType
     ] = UNSET
-    updated_by: Union[Unset, str] = UNSET
-    updated_on: Union[Unset, datetime.datetime] = UNSET
-    error: Union[Unset, float] = UNSET
-    error_extended: Union[Unset, str] = UNSET
-    require_adjustment: Union[Unset, bool] = UNSET
-    adjustment_threshold: Union[Unset, float] = UNSET
-    percent_of_tolerance: Union[Unset, float] = UNSET
-    percent_of_tolerance_extended: Union[Unset, str] = UNSET
-    tol_decimal_places: Union[Unset, int] = UNSET
-    specification_title: Union[Unset, str] = UNSET
-    specification_subtitle: Union[Unset, str] = UNSET
-    specification_group: Union[Unset, str] = UNSET
-    batch_type: Union[Unset, int] = UNSET
-    batch_result: Union[Unset, int] = UNSET
-    is_by_channel: Union[Unset, bool] = UNSET
-    channel_count: Union[Unset, int] = UNSET
-    is_range_accredited: Union[Unset, bool] = UNSET
-    commenced_on: Union[Unset, datetime.datetime] = UNSET
-    commenced_by: Union[Unset, str] = UNSET
-    z_factor: Union[Unset, float] = UNSET
-    air_buoyancy: Union[Unset, float] = UNSET
-    evaporation_rate: Union[Unset, float] = UNSET
-    air_humidity: Union[Unset, float] = UNSET
-    altitude: Union[Unset, float] = UNSET
-    ambient_temperature: Union[Unset, float] = UNSET
-    barometric_pressure: Union[Unset, float] = UNSET
-    light_intensity: Union[Unset, float] = UNSET
-    noise_level: Union[Unset, float] = UNSET
-    ph_level: Union[Unset, float] = UNSET
-    water_conductivity: Union[Unset, float] = UNSET
-    water_temperature: Union[Unset, float] = UNSET
-    solar_radiation: Union[Unset, float] = UNSET
-    wind_speed: Union[Unset, float] = UNSET
-    z_factor_uom: Union[Unset, str] = UNSET
-    air_buoyancy_uom: Union[Unset, str] = UNSET
-    evaporation_rate_uom: Union[Unset, str] = UNSET
-    air_humidity_uom: Union[Unset, str] = UNSET
-    altitude_uom: Union[Unset, str] = UNSET
-    ambient_temperature_uom: Union[Unset, str] = UNSET
-    barometric_pressure_uom: Union[Unset, str] = UNSET
-    light_intensity_uom: Union[Unset, str] = UNSET
-    noise_level_uom: Union[Unset, str] = UNSET
-    ph_level_uom: Union[Unset, str] = UNSET
-    water_conductivity_uom: Union[Unset, str] = UNSET
-    water_temperature_uom: Union[Unset, str] = UNSET
-    solar_radiation_uom: Union[Unset, str] = UNSET
-    wind_speed_uom: Union[Unset, str] = UNSET
-    specification_name: Union[Unset, str] = UNSET
-    parameter_name: Union[Unset, str] = UNSET
-    measurement_set_display_order: Union[Unset, int] = UNSET
-    display_order: Union[Unset, int] = UNSET
-    unit_of_measure: Union[Unset, str] = UNSET
-    display_format: Union[Unset, str] = UNSET
-    precision: Union[Unset, float] = UNSET
-    minimum: Union[Unset, float] = UNSET
-    nominal: Union[Unset, float] = UNSET
-    expected_value: Union[Unset, float] = UNSET
-    expected_value_raw: Union[Unset, str] = UNSET
-    test_value: Union[Unset, float] = UNSET
-    base_value: Union[Unset, float] = UNSET
-    use_expected_value: Union[Unset, bool] = UNSET
-    reading_entry_logic: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic
+    updated_by: Union[None, Unset, str] = UNSET
+    updated_on: Union[None, Unset, datetime.datetime] = UNSET
+    error: Union[None, Unset, float] = UNSET
+    error_extended: Union[None, Unset, str] = UNSET
+    require_adjustment: Union[None, Unset, bool] = UNSET
+    adjustment_threshold: Union[None, Unset, float] = UNSET
+    percent_of_tolerance: Union[None, Unset, float] = UNSET
+    percent_of_tolerance_extended: Union[None, Unset, str] = UNSET
+    tol_decimal_places: Union[None, Unset, int] = UNSET
+    specification_title: Union[None, Unset, str] = UNSET
+    specification_subtitle: Union[None, Unset, str] = UNSET
+    specification_group: Union[None, Unset, str] = UNSET
+    batch_type: Union[None, Unset, int] = UNSET
+    batch_result: Union[None, Unset, int] = UNSET
+    is_by_channel: Union[None, Unset, bool] = UNSET
+    channel_count: Union[None, Unset, int] = UNSET
+    is_range_accredited: Union[None, Unset, bool] = UNSET
+    commenced_on: Union[None, Unset, datetime.datetime] = UNSET
+    commenced_by: Union[None, Unset, str] = UNSET
+    z_factor: Union[None, Unset, float] = UNSET
+    air_buoyancy: Union[None, Unset, float] = UNSET
+    evaporation_rate: Union[None, Unset, float] = UNSET
+    air_humidity: Union[None, Unset, float] = UNSET
+    altitude: Union[None, Unset, float] = UNSET
+    ambient_temperature: Union[None, Unset, float] = UNSET
+    barometric_pressure: Union[None, Unset, float] = UNSET
+    light_intensity: Union[None, Unset, float] = UNSET
+    noise_level: Union[None, Unset, float] = UNSET
+    ph_level: Union[None, Unset, float] = UNSET
+    water_conductivity: Union[None, Unset, float] = UNSET
+    water_temperature: Union[None, Unset, float] = UNSET
+    solar_radiation: Union[None, Unset, float] = UNSET
+    wind_speed: Union[None, Unset, float] = UNSET
+    z_factor_uom: Union[None, Unset, str] = UNSET
+    air_buoyancy_uom: Union[None, Unset, str] = UNSET
+    evaporation_rate_uom: Union[None, Unset, str] = UNSET
+    air_humidity_uom: Union[None, Unset, str] = UNSET
+    altitude_uom: Union[None, Unset, str] = UNSET
+    ambient_temperature_uom: Union[None, Unset, str] = UNSET
+    barometric_pressure_uom: Union[None, Unset, str] = UNSET
+    light_intensity_uom: Union[None, Unset, str] = UNSET
+    noise_level_uom: Union[None, Unset, str] = UNSET
+    ph_level_uom: Union[None, Unset, str] = UNSET
+    water_conductivity_uom: Union[None, Unset, str] = UNSET
+    water_temperature_uom: Union[None, Unset, str] = UNSET
+    solar_radiation_uom: Union[None, Unset, str] = UNSET
+    wind_speed_uom: Union[None, Unset, str] = UNSET
+    specification_name: Union[None, Unset, str] = UNSET
+    parameter_name: Union[None, Unset, str] = UNSET
+    measurement_set_display_order: Union[None, Unset, int] = UNSET
+    display_order: Union[None, Unset, int] = UNSET
+    unit_of_measure: Union[None, Unset, str] = UNSET
+    display_format: Union[None, Unset, str] = UNSET
+    precision: Union[None, Unset, float] = UNSET
+    minimum: Union[None, Unset, float] = UNSET
+    nominal: Union[None, Unset, float] = UNSET
+    expected_value: Union[None, Unset, float] = UNSET
+    expected_value_raw: Union[None, Unset, str] = UNSET
+    test_value: Union[None, Unset, float] = UNSET
+    base_value: Union[None, Unset, float] = UNSET
+    use_expected_value: Union[None, Unset, bool] = UNSET
+    reading_entry_logic: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic
     ] = UNSET
-    reading_entry_math: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath
+    reading_entry_math: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath
     ] = UNSET
-    double_substitution_sequence: Union[
-        Unset,
+    double_substitution_sequence: Union[None, Unset,
         QualerApiModelsReportDatasetsToMeasurementResponseDoubleSubstitutionSequence,
     ] = UNSET
-    reading_entry_math_string: Union[Unset, str] = UNSET
-    nominal_extended: Union[Unset, str] = UNSET
-    expected_value_extended: Union[Unset, str] = UNSET
-    maximum: Union[Unset, float] = UNSET
-    tolerance_min: Union[Unset, float] = UNSET
-    tolerance_max: Union[Unset, float] = UNSET
-    resolution: Union[Unset, float] = UNSET
-    resolution_count: Union[Unset, float] = UNSET
-    min_max_header: Union[Unset, str] = UNSET
-    accuracy_class: Union[Unset, str] = UNSET
-    accuracy_class_min: Union[Unset, float] = UNSET
-    accuracy_class_max: Union[Unset, float] = UNSET
-    environment_mask: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask
+    reading_entry_math_string: Union[None, Unset, str] = UNSET
+    nominal_extended: Union[None, Unset, str] = UNSET
+    expected_value_extended: Union[None, Unset, str] = UNSET
+    maximum: Union[None, Unset, float] = UNSET
+    tolerance_min: Union[None, Unset, float] = UNSET
+    tolerance_max: Union[None, Unset, float] = UNSET
+    resolution: Union[None, Unset, float] = UNSET
+    resolution_count: Union[None, Unset, float] = UNSET
+    min_max_header: Union[None, Unset, str] = UNSET
+    accuracy_class: Union[None, Unset, str] = UNSET
+    accuracy_class_min: Union[None, Unset, float] = UNSET
+    accuracy_class_max: Union[None, Unset, float] = UNSET
+    environment_mask: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask
     ] = UNSET
-    display_name: Union[Unset, str] = UNSET
-    display_part_number: Union[Unset, str] = UNSET
-    part_number: Union[Unset, str] = UNSET
-    vendor_company_id: Union[Unset, int] = UNSET
-    service_order_number: Union[Unset, int] = UNSET
-    custom_order_number: Union[Unset, str] = UNSET
-    completed_by_name: Union[Unset, str] = UNSET
-    completed_on: Union[Unset, datetime.datetime] = UNSET
-    is_limited: Union[Unset, bool] = UNSET
-    vendor_tag: Union[Unset, str] = UNSET
-    vendor_service_notes: Union[Unset, str] = UNSET
-    room: Union[Unset, str] = UNSET
-    segment_name: Union[Unset, str] = UNSET
-    schedule_name: Union[Unset, str] = UNSET
-    next_segment_name: Union[Unset, str] = UNSET
-    certificate_number: Union[Unset, str] = UNSET
+    display_name: Union[None, Unset, str] = UNSET
+    display_part_number: Union[None, Unset, str] = UNSET
+    part_number: Union[None, Unset, str] = UNSET
+    vendor_company_id: Union[None, Unset, int] = UNSET
+    service_order_number: Union[None, Unset, int] = UNSET
+    custom_order_number: Union[None, Unset, str] = UNSET
+    completed_by_name: Union[None, Unset, str] = UNSET
+    completed_on: Union[None, Unset, datetime.datetime] = UNSET
+    is_limited: Union[None, Unset, bool] = UNSET
+    vendor_tag: Union[None, Unset, str] = UNSET
+    vendor_service_notes: Union[None, Unset, str] = UNSET
+    room: Union[None, Unset, str] = UNSET
+    segment_name: Union[None, Unset, str] = UNSET
+    schedule_name: Union[None, Unset, str] = UNSET
+    next_segment_name: Union[None, Unset, str] = UNSET
+    certificate_number: Union[None, Unset, str] = UNSET
     work_status: Union[None, Unset, WorkStatus] = UNSET
-    service_type: Union[Unset, str] = UNSET
-    service_level: Union[Unset, str] = UNSET
-    barcode: Union[Unset, str] = UNSET
-    service_comments: Union[Unset, str] = UNSET
-    order_item_number: Union[Unset, int] = UNSET
-    asset_tag: Union[Unset, str] = UNSET
-    asset_user: Union[Unset, str] = UNSET
-    serial_number: Union[Unset, str] = UNSET
-    equipment_id: Union[Unset, str] = UNSET
-    legacy_identifier: Union[Unset, str] = UNSET
-    site_name: Union[Unset, str] = UNSET
-    asset_name: Union[Unset, str] = UNSET
-    asset_description: Union[Unset, str] = UNSET
-    product_name: Union[Unset, str] = UNSET
-    product_description: Union[Unset, str] = UNSET
-    asset_maker: Union[Unset, str] = UNSET
-    station: Union[Unset, str] = UNSET
-    asset_tag_change: Union[Unset, str] = UNSET
-    asset_user_change: Union[Unset, str] = UNSET
-    serial_number_change: Union[Unset, str] = UNSET
+    service_type: Union[None, Unset, str] = UNSET
+    service_level: Union[None, Unset, str] = UNSET
+    barcode: Union[None, Unset, str] = UNSET
+    service_comments: Union[None, Unset, str] = UNSET
+    order_item_number: Union[None, Unset, int] = UNSET
+    asset_tag: Union[None, Unset, str] = UNSET
+    asset_user: Union[None, Unset, str] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
+    equipment_id: Union[None, Unset, str] = UNSET
+    legacy_identifier: Union[None, Unset, str] = UNSET
+    site_name: Union[None, Unset, str] = UNSET
+    asset_name: Union[None, Unset, str] = UNSET
+    asset_description: Union[None, Unset, str] = UNSET
+    product_name: Union[None, Unset, str] = UNSET
+    product_description: Union[None, Unset, str] = UNSET
+    asset_maker: Union[None, Unset, str] = UNSET
+    station: Union[None, Unset, str] = UNSET
+    asset_tag_change: Union[None, Unset, str] = UNSET
+    asset_user_change: Union[None, Unset, str] = UNSET
+    serial_number_change: Union[None, Unset, str] = UNSET
     service_date: Union[None, Unset, datetime.datetime] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    service_order_item_id: Union[Unset, int] = UNSET
-    service_order_id: Union[Unset, int] = UNSET
-    measurement_batch_id: Union[Unset, int] = UNSET
-    measurement_id: Union[Unset, int] = UNSET
-    standard_id: Union[Unset, int] = UNSET
-    tool_id: Union[Unset, int] = UNSET
-    measurement_tool_id: Union[Unset, int] = UNSET
-    measurement_condition_id: Union[Unset, int] = UNSET
-    measurement_point_id: Union[Unset, int] = UNSET
-    measurement_set_id: Union[Unset, int] = UNSET
-    is_hidden: Union[Unset, bool] = UNSET
-    readings: Union[Unset, int] = UNSET
-    tolerance_type: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceType
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    service_order_id: Union[None, Unset, int] = UNSET
+    measurement_batch_id: Union[None, Unset, int] = UNSET
+    measurement_id: Union[None, Unset, int] = UNSET
+    standard_id: Union[None, Unset, int] = UNSET
+    tool_id: Union[None, Unset, int] = UNSET
+    measurement_tool_id: Union[None, Unset, int] = UNSET
+    measurement_condition_id: Union[None, Unset, int] = UNSET
+    measurement_point_id: Union[None, Unset, int] = UNSET
+    measurement_set_id: Union[None, Unset, int] = UNSET
+    is_hidden: Union[None, Unset, bool] = UNSET
+    readings: Union[None, Unset, int] = UNSET
+    tolerance_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceType
     ] = UNSET
-    tolerance_type_string: Union[Unset, str] = UNSET
-    precision_type: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType
+    tolerance_type_string: Union[None, Unset, str] = UNSET
+    precision_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType
     ] = UNSET
-    specification_mode: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementResponseSpecificationMode
+    specification_mode: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseSpecificationMode
     ] = UNSET
-    tolerance_mode: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceMode
+    tolerance_mode: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceMode
     ] = UNSET
-    tolerance_unit: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit
+    tolerance_unit: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit
     ] = UNSET
-    tolerance_string: Union[Unset, str] = UNSET
-    po_number: Union[Unset, str] = UNSET
-    secondary_po: Union[Unset, str] = UNSET
+    tolerance_string: Union[None, Unset, str] = UNSET
+    po_number: Union[None, Unset, str] = UNSET
+    secondary_po: Union[None, Unset, str] = UNSET
     shipped_date: Union[None, Unset, datetime.datetime] = UNSET
-    shipment_status: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus
+    shipment_status: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus
     ] = UNSET
-    shipped_on: Union[Unset, datetime.datetime] = UNSET
-    delivered_on: Union[Unset, datetime.datetime] = UNSET
-    tracking_number: Union[Unset, str] = UNSET
-    payment_terms: Union[Unset, int] = UNSET
-    shipping_method: Union[Unset, str] = UNSET
-    location: Union[Unset, str] = UNSET
-    site_access_notes: Union[Unset, str] = UNSET
-    abbreviated_uom: Union[Unset, str] = UNSET
-    unit_scale_factor: Union[Unset, float] = UNSET
-    measurement_not_taken_result: Union[
-        Unset,
+    shipped_on: Union[None, Unset, datetime.datetime] = UNSET
+    delivered_on: Union[None, Unset, datetime.datetime] = UNSET
+    tracking_number: Union[None, Unset, str] = UNSET
+    payment_terms: Union[None, Unset, int] = UNSET
+    shipping_method: Union[None, Unset, str] = UNSET
+    location: Union[None, Unset, str] = UNSET
+    site_access_notes: Union[None, Unset, str] = UNSET
+    abbreviated_uom: Union[None, Unset, str] = UNSET
+    unit_scale_factor: Union[None, Unset, float] = UNSET
+    measurement_not_taken_result: Union[None, Unset,
         QualerApiModelsReportDatasetsToMeasurementResponseMeasurementNotTakenResult,
     ] = UNSET
-    hide_from_certificate: Union[Unset, bool] = UNSET
-    measurement_not_taken_reason: Union[Unset, str] = UNSET
-    environment_text_1: Union[Unset, str] = UNSET
-    environment_text_2: Union[Unset, str] = UNSET
-    environment_text_3: Union[Unset, str] = UNSET
-    environment_text_4: Union[Unset, str] = UNSET
-    environment_text_5: Union[Unset, str] = UNSET
-    environment_text_6: Union[Unset, str] = UNSET
-    values: Union[Unset, str] = UNSET
-    value_1: Union[Unset, str] = UNSET
-    value_2: Union[Unset, str] = UNSET
-    value_3: Union[Unset, str] = UNSET
-    value_4: Union[Unset, str] = UNSET
-    value_5: Union[Unset, str] = UNSET
-    value_6: Union[Unset, str] = UNSET
-    value_7: Union[Unset, str] = UNSET
-    value_8: Union[Unset, str] = UNSET
-    value_9: Union[Unset, str] = UNSET
-    value_10: Union[Unset, str] = UNSET
-    value_11: Union[Unset, str] = UNSET
-    value_12: Union[Unset, str] = UNSET
-    value_13: Union[Unset, str] = UNSET
-    value_14: Union[Unset, str] = UNSET
-    value_15: Union[Unset, str] = UNSET
-    value_16: Union[Unset, str] = UNSET
-    value_17: Union[Unset, str] = UNSET
-    value_18: Union[Unset, str] = UNSET
-    value_19: Union[Unset, str] = UNSET
-    value_20: Union[Unset, str] = UNSET
-    value_21: Union[Unset, str] = UNSET
-    value_22: Union[Unset, str] = UNSET
-    value_23: Union[Unset, str] = UNSET
-    value_24: Union[Unset, str] = UNSET
-    value_25: Union[Unset, str] = UNSET
-    value_26: Union[Unset, str] = UNSET
-    value_27: Union[Unset, str] = UNSET
-    value_28: Union[Unset, str] = UNSET
-    value_29: Union[Unset, str] = UNSET
-    value_30: Union[Unset, str] = UNSET
-    value_31: Union[Unset, str] = UNSET
-    value_32: Union[Unset, str] = UNSET
-    value_33: Union[Unset, str] = UNSET
-    value_34: Union[Unset, str] = UNSET
-    value_35: Union[Unset, str] = UNSET
-    value_36: Union[Unset, str] = UNSET
-    value_37: Union[Unset, str] = UNSET
-    value_38: Union[Unset, str] = UNSET
-    value_39: Union[Unset, str] = UNSET
-    value_40: Union[Unset, str] = UNSET
-    raw_value_1: Union[Unset, str] = UNSET
-    raw_value_2: Union[Unset, str] = UNSET
-    raw_value_3: Union[Unset, str] = UNSET
-    raw_value_4: Union[Unset, str] = UNSET
-    raw_value_5: Union[Unset, str] = UNSET
-    raw_value_6: Union[Unset, str] = UNSET
-    raw_value_7: Union[Unset, str] = UNSET
-    raw_value_8: Union[Unset, str] = UNSET
-    raw_value_9: Union[Unset, str] = UNSET
-    raw_value_10: Union[Unset, str] = UNSET
-    raw_value_11: Union[Unset, str] = UNSET
-    raw_value_12: Union[Unset, str] = UNSET
-    raw_value_13: Union[Unset, str] = UNSET
-    raw_value_14: Union[Unset, str] = UNSET
-    raw_value_15: Union[Unset, str] = UNSET
-    raw_value_16: Union[Unset, str] = UNSET
-    raw_value_17: Union[Unset, str] = UNSET
-    raw_value_18: Union[Unset, str] = UNSET
-    raw_value_19: Union[Unset, str] = UNSET
-    raw_value_20: Union[Unset, str] = UNSET
-    raw_value_21: Union[Unset, str] = UNSET
-    raw_value_22: Union[Unset, str] = UNSET
-    raw_value_23: Union[Unset, str] = UNSET
-    raw_value_24: Union[Unset, str] = UNSET
-    raw_value_25: Union[Unset, str] = UNSET
-    raw_value_26: Union[Unset, str] = UNSET
-    raw_value_27: Union[Unset, str] = UNSET
-    raw_value_28: Union[Unset, str] = UNSET
-    raw_value_29: Union[Unset, str] = UNSET
-    raw_value_30: Union[Unset, str] = UNSET
-    raw_value_31: Union[Unset, str] = UNSET
-    raw_value_32: Union[Unset, str] = UNSET
-    raw_value_33: Union[Unset, str] = UNSET
-    raw_value_34: Union[Unset, str] = UNSET
-    raw_value_35: Union[Unset, str] = UNSET
-    raw_value_36: Union[Unset, str] = UNSET
-    raw_value_37: Union[Unset, str] = UNSET
-    raw_value_38: Union[Unset, str] = UNSET
-    raw_value_39: Union[Unset, str] = UNSET
-    raw_value_40: Union[Unset, str] = UNSET
-    subtitles_to_readings: Union[Unset, str] = UNSET
-    value_subtitle_1: Union[Unset, str] = UNSET
-    value_subtitle_2: Union[Unset, str] = UNSET
-    value_subtitle_3: Union[Unset, str] = UNSET
-    value_subtitle_4: Union[Unset, str] = UNSET
-    value_subtitle_5: Union[Unset, str] = UNSET
-    value_subtitle_6: Union[Unset, str] = UNSET
-    value_subtitle_7: Union[Unset, str] = UNSET
-    value_subtitle_8: Union[Unset, str] = UNSET
-    value_subtitle_9: Union[Unset, str] = UNSET
-    value_subtitle_10: Union[Unset, str] = UNSET
-    value_subtitle_11: Union[Unset, str] = UNSET
-    value_subtitle_12: Union[Unset, str] = UNSET
-    value_subtitle_13: Union[Unset, str] = UNSET
-    value_subtitle_14: Union[Unset, str] = UNSET
-    value_subtitle_15: Union[Unset, str] = UNSET
-    value_subtitle_16: Union[Unset, str] = UNSET
-    value_subtitle_17: Union[Unset, str] = UNSET
-    value_subtitle_18: Union[Unset, str] = UNSET
-    value_subtitle_19: Union[Unset, str] = UNSET
-    value_subtitle_20: Union[Unset, str] = UNSET
-    value_subtitle_21: Union[Unset, str] = UNSET
-    value_subtitle_22: Union[Unset, str] = UNSET
-    value_subtitle_23: Union[Unset, str] = UNSET
-    value_subtitle_24: Union[Unset, str] = UNSET
-    value_subtitle_25: Union[Unset, str] = UNSET
-    value_subtitle_26: Union[Unset, str] = UNSET
-    value_subtitle_27: Union[Unset, str] = UNSET
-    value_subtitle_28: Union[Unset, str] = UNSET
-    value_subtitle_29: Union[Unset, str] = UNSET
-    value_subtitle_30: Union[Unset, str] = UNSET
-    value_subtitle_31: Union[Unset, str] = UNSET
-    value_subtitle_32: Union[Unset, str] = UNSET
-    value_subtitle_33: Union[Unset, str] = UNSET
-    value_subtitle_34: Union[Unset, str] = UNSET
-    value_subtitle_35: Union[Unset, str] = UNSET
-    value_subtitle_36: Union[Unset, str] = UNSET
-    value_subtitle_37: Union[Unset, str] = UNSET
-    value_subtitle_38: Union[Unset, str] = UNSET
-    value_subtitle_39: Union[Unset, str] = UNSET
-    value_subtitle_40: Union[Unset, str] = UNSET
-    values_decimal_places: Union[Unset, int] = UNSET
-    repeat_measurement_and_calculate_hysteresis: Union[Unset, bool] = UNSET
-    measurement_point_order: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementPointOrder
+    hide_from_certificate: Union[None, Unset, bool] = UNSET
+    measurement_not_taken_reason: Union[None, Unset, str] = UNSET
+    environment_text_1: Union[None, Unset, str] = UNSET
+    environment_text_2: Union[None, Unset, str] = UNSET
+    environment_text_3: Union[None, Unset, str] = UNSET
+    environment_text_4: Union[None, Unset, str] = UNSET
+    environment_text_5: Union[None, Unset, str] = UNSET
+    environment_text_6: Union[None, Unset, str] = UNSET
+    values: Union[None, Unset, str] = UNSET
+    value_1: Union[None, Unset, str] = UNSET
+    value_2: Union[None, Unset, str] = UNSET
+    value_3: Union[None, Unset, str] = UNSET
+    value_4: Union[None, Unset, str] = UNSET
+    value_5: Union[None, Unset, str] = UNSET
+    value_6: Union[None, Unset, str] = UNSET
+    value_7: Union[None, Unset, str] = UNSET
+    value_8: Union[None, Unset, str] = UNSET
+    value_9: Union[None, Unset, str] = UNSET
+    value_10: Union[None, Unset, str] = UNSET
+    value_11: Union[None, Unset, str] = UNSET
+    value_12: Union[None, Unset, str] = UNSET
+    value_13: Union[None, Unset, str] = UNSET
+    value_14: Union[None, Unset, str] = UNSET
+    value_15: Union[None, Unset, str] = UNSET
+    value_16: Union[None, Unset, str] = UNSET
+    value_17: Union[None, Unset, str] = UNSET
+    value_18: Union[None, Unset, str] = UNSET
+    value_19: Union[None, Unset, str] = UNSET
+    value_20: Union[None, Unset, str] = UNSET
+    value_21: Union[None, Unset, str] = UNSET
+    value_22: Union[None, Unset, str] = UNSET
+    value_23: Union[None, Unset, str] = UNSET
+    value_24: Union[None, Unset, str] = UNSET
+    value_25: Union[None, Unset, str] = UNSET
+    value_26: Union[None, Unset, str] = UNSET
+    value_27: Union[None, Unset, str] = UNSET
+    value_28: Union[None, Unset, str] = UNSET
+    value_29: Union[None, Unset, str] = UNSET
+    value_30: Union[None, Unset, str] = UNSET
+    value_31: Union[None, Unset, str] = UNSET
+    value_32: Union[None, Unset, str] = UNSET
+    value_33: Union[None, Unset, str] = UNSET
+    value_34: Union[None, Unset, str] = UNSET
+    value_35: Union[None, Unset, str] = UNSET
+    value_36: Union[None, Unset, str] = UNSET
+    value_37: Union[None, Unset, str] = UNSET
+    value_38: Union[None, Unset, str] = UNSET
+    value_39: Union[None, Unset, str] = UNSET
+    value_40: Union[None, Unset, str] = UNSET
+    raw_value_1: Union[None, Unset, str] = UNSET
+    raw_value_2: Union[None, Unset, str] = UNSET
+    raw_value_3: Union[None, Unset, str] = UNSET
+    raw_value_4: Union[None, Unset, str] = UNSET
+    raw_value_5: Union[None, Unset, str] = UNSET
+    raw_value_6: Union[None, Unset, str] = UNSET
+    raw_value_7: Union[None, Unset, str] = UNSET
+    raw_value_8: Union[None, Unset, str] = UNSET
+    raw_value_9: Union[None, Unset, str] = UNSET
+    raw_value_10: Union[None, Unset, str] = UNSET
+    raw_value_11: Union[None, Unset, str] = UNSET
+    raw_value_12: Union[None, Unset, str] = UNSET
+    raw_value_13: Union[None, Unset, str] = UNSET
+    raw_value_14: Union[None, Unset, str] = UNSET
+    raw_value_15: Union[None, Unset, str] = UNSET
+    raw_value_16: Union[None, Unset, str] = UNSET
+    raw_value_17: Union[None, Unset, str] = UNSET
+    raw_value_18: Union[None, Unset, str] = UNSET
+    raw_value_19: Union[None, Unset, str] = UNSET
+    raw_value_20: Union[None, Unset, str] = UNSET
+    raw_value_21: Union[None, Unset, str] = UNSET
+    raw_value_22: Union[None, Unset, str] = UNSET
+    raw_value_23: Union[None, Unset, str] = UNSET
+    raw_value_24: Union[None, Unset, str] = UNSET
+    raw_value_25: Union[None, Unset, str] = UNSET
+    raw_value_26: Union[None, Unset, str] = UNSET
+    raw_value_27: Union[None, Unset, str] = UNSET
+    raw_value_28: Union[None, Unset, str] = UNSET
+    raw_value_29: Union[None, Unset, str] = UNSET
+    raw_value_30: Union[None, Unset, str] = UNSET
+    raw_value_31: Union[None, Unset, str] = UNSET
+    raw_value_32: Union[None, Unset, str] = UNSET
+    raw_value_33: Union[None, Unset, str] = UNSET
+    raw_value_34: Union[None, Unset, str] = UNSET
+    raw_value_35: Union[None, Unset, str] = UNSET
+    raw_value_36: Union[None, Unset, str] = UNSET
+    raw_value_37: Union[None, Unset, str] = UNSET
+    raw_value_38: Union[None, Unset, str] = UNSET
+    raw_value_39: Union[None, Unset, str] = UNSET
+    raw_value_40: Union[None, Unset, str] = UNSET
+    subtitles_to_readings: Union[None, Unset, str] = UNSET
+    value_subtitle_1: Union[None, Unset, str] = UNSET
+    value_subtitle_2: Union[None, Unset, str] = UNSET
+    value_subtitle_3: Union[None, Unset, str] = UNSET
+    value_subtitle_4: Union[None, Unset, str] = UNSET
+    value_subtitle_5: Union[None, Unset, str] = UNSET
+    value_subtitle_6: Union[None, Unset, str] = UNSET
+    value_subtitle_7: Union[None, Unset, str] = UNSET
+    value_subtitle_8: Union[None, Unset, str] = UNSET
+    value_subtitle_9: Union[None, Unset, str] = UNSET
+    value_subtitle_10: Union[None, Unset, str] = UNSET
+    value_subtitle_11: Union[None, Unset, str] = UNSET
+    value_subtitle_12: Union[None, Unset, str] = UNSET
+    value_subtitle_13: Union[None, Unset, str] = UNSET
+    value_subtitle_14: Union[None, Unset, str] = UNSET
+    value_subtitle_15: Union[None, Unset, str] = UNSET
+    value_subtitle_16: Union[None, Unset, str] = UNSET
+    value_subtitle_17: Union[None, Unset, str] = UNSET
+    value_subtitle_18: Union[None, Unset, str] = UNSET
+    value_subtitle_19: Union[None, Unset, str] = UNSET
+    value_subtitle_20: Union[None, Unset, str] = UNSET
+    value_subtitle_21: Union[None, Unset, str] = UNSET
+    value_subtitle_22: Union[None, Unset, str] = UNSET
+    value_subtitle_23: Union[None, Unset, str] = UNSET
+    value_subtitle_24: Union[None, Unset, str] = UNSET
+    value_subtitle_25: Union[None, Unset, str] = UNSET
+    value_subtitle_26: Union[None, Unset, str] = UNSET
+    value_subtitle_27: Union[None, Unset, str] = UNSET
+    value_subtitle_28: Union[None, Unset, str] = UNSET
+    value_subtitle_29: Union[None, Unset, str] = UNSET
+    value_subtitle_30: Union[None, Unset, str] = UNSET
+    value_subtitle_31: Union[None, Unset, str] = UNSET
+    value_subtitle_32: Union[None, Unset, str] = UNSET
+    value_subtitle_33: Union[None, Unset, str] = UNSET
+    value_subtitle_34: Union[None, Unset, str] = UNSET
+    value_subtitle_35: Union[None, Unset, str] = UNSET
+    value_subtitle_36: Union[None, Unset, str] = UNSET
+    value_subtitle_37: Union[None, Unset, str] = UNSET
+    value_subtitle_38: Union[None, Unset, str] = UNSET
+    value_subtitle_39: Union[None, Unset, str] = UNSET
+    value_subtitle_40: Union[None, Unset, str] = UNSET
+    values_decimal_places: Union[None, Unset, int] = UNSET
+    repeat_measurement_and_calculate_hysteresis: Union[None, Unset, bool] = UNSET
+    measurement_point_order: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementPointOrder
     ] = UNSET
-    hysteresis_point: Union[
-        Unset, QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint
+    hysteresis_point: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint
     ] = UNSET
-    max_hysteresis: Union[Unset, float] = UNSET
-    run: Union[Unset, int] = UNSET
-    direction: Union[Unset, int] = UNSET
-    hysteresis: Union[Unset, float] = UNSET
-    column_mean: Union[Unset, str] = UNSET
-    column_mean_result: Union[Unset, str] = UNSET
-    column_sd: Union[Unset, str] = UNSET
-    column_sd_result: Union[Unset, str] = UNSET
-    column_cv: Union[Unset, str] = UNSET
-    column_cv_result: Union[Unset, str] = UNSET
-    column_range: Union[Unset, str] = UNSET
-    column_range_result: Union[Unset, str] = UNSET
-    column_delta: Union[Unset, str] = UNSET
-    column_delta_result: Union[Unset, str] = UNSET
-    column_result: Union[Unset, str] = UNSET
+    max_hysteresis: Union[None, Unset, float] = UNSET
+    run: Union[None, Unset, int] = UNSET
+    direction: Union[None, Unset, int] = UNSET
+    hysteresis: Union[None, Unset, float] = UNSET
+    column_mean: Union[None, Unset, str] = UNSET
+    column_mean_result: Union[None, Unset, str] = UNSET
+    column_sd: Union[None, Unset, str] = UNSET
+    column_sd_result: Union[None, Unset, str] = UNSET
+    column_cv: Union[None, Unset, str] = UNSET
+    column_cv_result: Union[None, Unset, str] = UNSET
+    column_range: Union[None, Unset, str] = UNSET
+    column_range_result: Union[None, Unset, str] = UNSET
+    column_delta: Union[None, Unset, str] = UNSET
+    column_delta_result: Union[None, Unset, str] = UNSET
+    column_result: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -956,7 +941,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         cv_header = self.cv_header
 
-        measurement_local_time: Union[Unset, str] = UNSET
+        measurement_local_time: Union[None, Unset, str] = UNSET
         if self.measurement_local_time and not isinstance(
             self.measurement_local_time, Unset
         ):
@@ -1050,7 +1035,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         guard_band = self.guard_band
 
-        guard_band_logic: Union[Unset, str] = UNSET
+        guard_band_logic: Union[None, Unset, str] = UNSET
         if self.guard_band_logic and not isinstance(self.guard_band_logic, Unset):
             guard_band_logic = self.guard_band_logic.value
 
@@ -1064,13 +1049,13 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         channel = self.channel
 
-        measurement_type: Union[Unset, str] = UNSET
+        measurement_type: Union[None, Unset, str] = UNSET
         if self.measurement_type and not isinstance(self.measurement_type, Unset):
             measurement_type = self.measurement_type.value
 
         updated_by = self.updated_by
 
-        updated_on: Union[Unset, str] = UNSET
+        updated_on: Union[None, Unset, str] = UNSET
         if self.updated_on and not isinstance(self.updated_on, Unset):
             updated_on = self.updated_on.isoformat()
 
@@ -1104,7 +1089,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         is_range_accredited = self.is_range_accredited
 
-        commenced_on: Union[Unset, str] = UNSET
+        commenced_on: Union[None, Unset, str] = UNSET
         if self.commenced_on and not isinstance(self.commenced_on, Unset):
             commenced_on = self.commenced_on.isoformat()
 
@@ -1194,15 +1179,15 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         use_expected_value = self.use_expected_value
 
-        reading_entry_logic: Union[Unset, str] = UNSET
+        reading_entry_logic: Union[None, Unset, str] = UNSET
         if self.reading_entry_logic and not isinstance(self.reading_entry_logic, Unset):
             reading_entry_logic = self.reading_entry_logic.value
 
-        reading_entry_math: Union[Unset, str] = UNSET
+        reading_entry_math: Union[None, Unset, str] = UNSET
         if self.reading_entry_math and not isinstance(self.reading_entry_math, Unset):
             reading_entry_math = self.reading_entry_math.value
 
-        double_substitution_sequence: Union[Unset, str] = UNSET
+        double_substitution_sequence: Union[None, Unset, str] = UNSET
         if self.double_substitution_sequence and not isinstance(
             self.double_substitution_sequence, Unset
         ):
@@ -1232,7 +1217,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         accuracy_class_max = self.accuracy_class_max
 
-        environment_mask: Union[Unset, str] = UNSET
+        environment_mask: Union[None, Unset, str] = UNSET
         if self.environment_mask and not isinstance(self.environment_mask, Unset):
             environment_mask = self.environment_mask.value
 
@@ -1250,7 +1235,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         completed_by_name = self.completed_by_name
 
-        completed_on: Union[Unset, str] = UNSET
+        completed_on: Union[None, Unset, str] = UNSET
         if self.completed_on and not isinstance(self.completed_on, Unset):
             completed_on = self.completed_on.isoformat()
 
@@ -1354,25 +1339,25 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         readings = self.readings
 
-        tolerance_type: Union[Unset, str] = UNSET
+        tolerance_type: Union[None, Unset, str] = UNSET
         if self.tolerance_type and not isinstance(self.tolerance_type, Unset):
             tolerance_type = self.tolerance_type.value
 
         tolerance_type_string = self.tolerance_type_string
 
-        precision_type: Union[Unset, str] = UNSET
+        precision_type: Union[None, Unset, str] = UNSET
         if self.precision_type and not isinstance(self.precision_type, Unset):
             precision_type = self.precision_type.value
 
-        specification_mode: Union[Unset, int] = UNSET
+        specification_mode: Union[None, Unset, int] = UNSET
         if self.specification_mode and not isinstance(self.specification_mode, Unset):
             specification_mode = self.specification_mode.value
 
-        tolerance_mode: Union[Unset, int] = UNSET
+        tolerance_mode: Union[None, Unset, int] = UNSET
         if self.tolerance_mode and not isinstance(self.tolerance_mode, Unset):
             tolerance_mode = self.tolerance_mode.value
 
-        tolerance_unit: Union[Unset, int] = UNSET
+        tolerance_unit: Union[None, Unset, int] = UNSET
         if self.tolerance_unit and not isinstance(self.tolerance_unit, Unset):
             tolerance_unit = self.tolerance_unit.value
 
@@ -1390,15 +1375,15 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         else:
             shipped_date = self.shipped_date
 
-        shipment_status: Union[Unset, str] = UNSET
+        shipment_status: Union[None, Unset, str] = UNSET
         if self.shipment_status and not isinstance(self.shipment_status, Unset):
             shipment_status = self.shipment_status.value
 
-        shipped_on: Union[Unset, str] = UNSET
+        shipped_on: Union[None, Unset, str] = UNSET
         if self.shipped_on and not isinstance(self.shipped_on, Unset):
             shipped_on = self.shipped_on.isoformat()
 
-        delivered_on: Union[Unset, str] = UNSET
+        delivered_on: Union[None, Unset, str] = UNSET
         if self.delivered_on and not isinstance(self.delivered_on, Unset):
             delivered_on = self.delivered_on.isoformat()
 
@@ -1416,7 +1401,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         unit_scale_factor = self.unit_scale_factor
 
-        measurement_not_taken_result: Union[Unset, str] = UNSET
+        measurement_not_taken_result: Union[None, Unset, str] = UNSET
         if self.measurement_not_taken_result and not isinstance(
             self.measurement_not_taken_result, Unset
         ):
@@ -1688,13 +1673,13 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             self.repeat_measurement_and_calculate_hysteresis
         )
 
-        measurement_point_order: Union[Unset, str] = UNSET
+        measurement_point_order: Union[None, Unset, str] = UNSET
         if self.measurement_point_order and not isinstance(
             self.measurement_point_order, Unset
         ):
             measurement_point_order = self.measurement_point_order.value
 
-        hysteresis_point: Union[Unset, str] = UNSET
+        hysteresis_point: Union[None, Unset, str] = UNSET
         if self.hysteresis_point and not isinstance(self.hysteresis_point, Unset):
             hysteresis_point = self.hysteresis_point.value
 
@@ -2648,7 +2633,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         cv_header = d.pop("CvHeader", UNSET)
 
         _measurement_local_time = d.pop("MeasurementLocalTime", UNSET)
-        measurement_local_time: Union[Unset, datetime.datetime]
+        measurement_local_time: Union[None, Unset, datetime.datetime]
         if isinstance(_measurement_local_time, Unset):
             measurement_local_time = UNSET
         else:
@@ -2743,8 +2728,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         guard_band = d.pop("GuardBand", UNSET)
 
         _guard_band_logic = d.pop("GuardBandLogic", UNSET)
-        guard_band_logic: Union[
-            Unset, QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic
+        guard_band_logic: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic
         ]
         if isinstance(_guard_band_logic, Unset):
             guard_band_logic = UNSET
@@ -2766,8 +2750,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         channel = d.pop("Channel", UNSET)
 
         _measurement_type = d.pop("MeasurementType", UNSET)
-        measurement_type: Union[
-            Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType
+        measurement_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType
         ]
         if isinstance(_measurement_type, Unset):
             measurement_type = UNSET
@@ -2781,7 +2764,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         updated_by = d.pop("UpdatedBy", UNSET)
 
         _updated_on = d.pop("UpdatedOn", UNSET)
-        updated_on: Union[Unset, datetime.datetime]
+        updated_on: Union[None, Unset, datetime.datetime]
         if isinstance(_updated_on, Unset):
             updated_on = UNSET
         else:
@@ -2818,7 +2801,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         is_range_accredited = d.pop("IsRangeAccredited", UNSET)
 
         _commenced_on = d.pop("CommencedOn", UNSET)
-        commenced_on: Union[Unset, datetime.datetime]
+        commenced_on: Union[None, Unset, datetime.datetime]
         if isinstance(_commenced_on, Unset):
             commenced_on = UNSET
         else:
@@ -2911,8 +2894,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         use_expected_value = d.pop("UseExpectedValue", UNSET)
 
         _reading_entry_logic = d.pop("ReadingEntryLogic", UNSET)
-        reading_entry_logic: Union[
-            Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic
+        reading_entry_logic: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic
         ]
         if isinstance(_reading_entry_logic, Unset):
             reading_entry_logic = UNSET
@@ -2924,8 +2906,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             )
 
         _reading_entry_math = d.pop("ReadingEntryMath", UNSET)
-        reading_entry_math: Union[
-            Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath
+        reading_entry_math: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath
         ]
         if isinstance(_reading_entry_math, Unset):
             reading_entry_math = UNSET
@@ -2937,8 +2918,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             )
 
         _double_substitution_sequence = d.pop("DoubleSubstitutionSequence", UNSET)
-        double_substitution_sequence: Union[
-            Unset,
+        double_substitution_sequence: Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementResponseDoubleSubstitutionSequence,
         ]
         if isinstance(_double_substitution_sequence, Unset):
@@ -2973,8 +2953,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         accuracy_class_max = d.pop("AccuracyClassMax", UNSET)
 
         _environment_mask = d.pop("EnvironmentMask", UNSET)
-        environment_mask: Union[
-            Unset, QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask
+        environment_mask: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask
         ]
         if isinstance(_environment_mask, Unset):
             environment_mask = UNSET
@@ -3000,7 +2979,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         completed_by_name = d.pop("CompletedByName", UNSET)
 
         _completed_on = d.pop("CompletedOn", UNSET)
-        completed_on: Union[Unset, datetime.datetime]
+        completed_on: Union[None, Unset, datetime.datetime]
         if isinstance(_completed_on, Unset):
             completed_on = UNSET
         else:
@@ -3023,7 +3002,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         certificate_number = d.pop("CertificateNumber", UNSET)
 
         _work_status = d.pop("WorkStatus", UNSET)
-        work_status: Union[Unset, WorkStatus]
+        work_status: Union[None, Unset, WorkStatus]
         if isinstance(_work_status, Unset):
             work_status = UNSET
         elif _work_status is None:
@@ -3132,8 +3111,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         readings = d.pop("Readings", UNSET)
 
         _tolerance_type = d.pop("ToleranceType", UNSET)
-        tolerance_type: Union[
-            Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceType
+        tolerance_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceType
         ]
         if isinstance(_tolerance_type, Unset):
             tolerance_type = UNSET
@@ -3147,8 +3125,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         tolerance_type_string = d.pop("ToleranceTypeString", UNSET)
 
         _precision_type = d.pop("PrecisionType", UNSET)
-        precision_type: Union[
-            Unset, QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType
+        precision_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType
         ]
         if isinstance(_precision_type, Unset):
             precision_type = UNSET
@@ -3160,8 +3137,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             )
 
         _specification_mode = d.pop("SpecificationMode", UNSET)
-        specification_mode: Union[
-            Unset, QualerApiModelsReportDatasetsToMeasurementResponseSpecificationMode
+        specification_mode: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseSpecificationMode
         ]
         if isinstance(_specification_mode, Unset):
             specification_mode = UNSET
@@ -3173,8 +3149,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             )
 
         _tolerance_mode = d.pop("ToleranceMode", UNSET)
-        tolerance_mode: Union[
-            Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceMode
+        tolerance_mode: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceMode
         ]
         if isinstance(_tolerance_mode, Unset):
             tolerance_mode = UNSET
@@ -3186,8 +3161,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             )
 
         _tolerance_unit = d.pop("ToleranceUnit", UNSET)
-        tolerance_unit: Union[
-            Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit
+        tolerance_unit: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit
         ]
         if isinstance(_tolerance_unit, Unset):
             tolerance_unit = UNSET
@@ -3222,8 +3196,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         shipped_date = _parse_shipped_date(d.pop("ShippedDate", UNSET))
 
         _shipment_status = d.pop("ShipmentStatus", UNSET)
-        shipment_status: Union[
-            Unset, QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus
+        shipment_status: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus
         ]
         if isinstance(_shipment_status, Unset):
             shipment_status = UNSET
@@ -3235,14 +3208,14 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             )
 
         _shipped_on = d.pop("ShippedOn", UNSET)
-        shipped_on: Union[Unset, datetime.datetime]
+        shipped_on: Union[None, Unset, datetime.datetime]
         if isinstance(_shipped_on, Unset):
             shipped_on = UNSET
         else:
             shipped_on = isoparse(_shipped_on)
 
         _delivered_on = d.pop("DeliveredOn", UNSET)
-        delivered_on: Union[Unset, datetime.datetime]
+        delivered_on: Union[None, Unset, datetime.datetime]
         if isinstance(_delivered_on, Unset):
             delivered_on = UNSET
         else:
@@ -3263,8 +3236,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         unit_scale_factor = d.pop("UnitScaleFactor", UNSET)
 
         _measurement_not_taken_result = d.pop("MeasurementNotTakenResult", UNSET)
-        measurement_not_taken_result: Union[
-            Unset,
+        measurement_not_taken_result: Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementResponseMeasurementNotTakenResult,
         ]
         if isinstance(_measurement_not_taken_result, Unset):
@@ -3541,8 +3513,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         )
 
         _measurement_point_order = d.pop("MeasurementPointOrder", UNSET)
-        measurement_point_order: Union[
-            Unset,
+        measurement_point_order: Union[None, Unset,
             QualerApiModelsReportDatasetsToMeasurementResponseMeasurementPointOrder,
         ]
         if isinstance(_measurement_point_order, Unset):
@@ -3555,8 +3526,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             )
 
         _hysteresis_point = d.pop("HysteresisPoint", UNSET)
-        hysteresis_point: Union[
-            Unset, QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint
+        hysteresis_point: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint
         ]
         if isinstance(_hysteresis_point, Unset):
             hysteresis_point = UNSET

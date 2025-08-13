@@ -13,24 +13,24 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersToPaymentResponseModel")
 class QualerApiModelsServiceOrdersToPaymentResponseModel:
     """
     Attributes:
-        service_order_id (Union[Unset, int]):
-        created_by_id (Union[Unset, int]):
-        transaction_id (Union[Unset, str]):
-        transaction_status (Union[Unset, str]):
-        payment_type (Union[Unset, str]):
-        service_order_payment_id (Union[Unset, int]):
-        payment_amount (Union[Unset, float]):
-        details (Union[Unset, str]):
+        service_order_id (Union[None, Unset, int]):
+        created_by_id (Union[None, Unset, int]):
+        transaction_id (Union[None, Unset, str]):
+        transaction_status (Union[None, Unset, str]):
+        payment_type (Union[None, Unset, str]):
+        service_order_payment_id (Union[None, Unset, int]):
+        payment_amount (Union[None, Unset, float]):
+        details (Union[None, Unset, str]):
     """
 
-    service_order_id: Union[Unset, int] = UNSET
-    created_by_id: Union[Unset, int] = UNSET
-    transaction_id: Union[Unset, str] = UNSET
-    transaction_status: Union[Unset, str] = UNSET
-    payment_type: Union[Unset, str] = UNSET
-    service_order_payment_id: Union[Unset, int] = UNSET
-    payment_amount: Union[Unset, float] = UNSET
-    details: Union[Unset, str] = UNSET
+    service_order_id: Union[None, Unset, int] = UNSET
+    created_by_id: Union[None, Unset, int] = UNSET
+    transaction_id: Union[None, Unset, str] = UNSET
+    transaction_status: Union[None, Unset, str] = UNSET
+    payment_type: Union[None, Unset, str] = UNSET
+    service_order_payment_id: Union[None, Unset, int] = UNSET
+    payment_amount: Union[None, Unset, float] = UNSET
+    details: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

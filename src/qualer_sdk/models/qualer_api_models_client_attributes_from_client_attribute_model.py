@@ -13,14 +13,14 @@ T = TypeVar("T", bound="QualerApiModelsClientAttributesFromClientAttributeModel"
 class QualerApiModelsClientAttributesFromClientAttributeModel:
     """
     Attributes:
-        client_site_id (Union[Unset, int]):
-        name (Union[Unset, str]):
-        value (Union[Unset, str]):
+        client_site_id (Union[None, Unset, int]):
+        name (Union[None, Unset, str]):
+        value (Union[None, Unset, str]):
     """
 
-    client_site_id: Union[Unset, int] = UNSET
-    name: Union[Unset, str] = UNSET
-    value: Union[Unset, str] = UNSET
+    client_site_id: Union[None, Unset, int] = UNSET
+    name: Union[None, Unset, str] = UNSET
+    value: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

@@ -18,36 +18,36 @@ T = TypeVar(
 class QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateModel:
     """
     Attributes:
-        name (Union[Unset, str]):
-        description (Union[Unset, str]):
-        charge_date (Union[Unset, datetime.datetime]):
-        price (Union[Unset, float]):
-        unit_name (Union[Unset, str]):
-        is_hourly_pricing (Union[Unset, bool]):
-        time_spent_in_minutes (Union[Unset, float]):
-        quantity (Union[Unset, float]):
-        discount (Union[Unset, float]):
-        is_taxable (Union[Unset, bool]):
-        delivery_charge (Union[Unset, float]):
-        free_quantity (Union[Unset, int]):
-        created_by_id (Union[Unset, int]):
-        service_order_charge_type (Union[Unset, str]):
+        name (Union[None, Unset, str]):
+        description (Union[None, Unset, str]):
+        charge_date (Union[None, Unset, datetime.datetime]):
+        price (Union[None, Unset, float]):
+        unit_name (Union[None, Unset, str]):
+        is_hourly_pricing (Union[None, Unset, bool]):
+        time_spent_in_minutes (Union[None, Unset, float]):
+        quantity (Union[None, Unset, float]):
+        discount (Union[None, Unset, float]):
+        is_taxable (Union[None, Unset, bool]):
+        delivery_charge (Union[None, Unset, float]):
+        free_quantity (Union[None, Unset, int]):
+        created_by_id (Union[None, Unset, int]):
+        service_order_charge_type (Union[None, Unset, str]):
     """
 
-    name: Union[Unset, str] = UNSET
-    description: Union[Unset, str] = UNSET
-    charge_date: Union[Unset, datetime.datetime] = UNSET
-    price: Union[Unset, float] = UNSET
-    unit_name: Union[Unset, str] = UNSET
-    is_hourly_pricing: Union[Unset, bool] = UNSET
-    time_spent_in_minutes: Union[Unset, float] = UNSET
-    quantity: Union[Unset, float] = UNSET
-    discount: Union[Unset, float] = UNSET
-    is_taxable: Union[Unset, bool] = UNSET
-    delivery_charge: Union[Unset, float] = UNSET
-    free_quantity: Union[Unset, int] = UNSET
-    created_by_id: Union[Unset, int] = UNSET
-    service_order_charge_type: Union[Unset, str] = UNSET
+    name: Union[None, Unset, str] = UNSET
+    description: Union[None, Unset, str] = UNSET
+    charge_date: Union[None, Unset, datetime.datetime] = UNSET
+    price: Union[None, Unset, float] = UNSET
+    unit_name: Union[None, Unset, str] = UNSET
+    is_hourly_pricing: Union[None, Unset, bool] = UNSET
+    time_spent_in_minutes: Union[None, Unset, float] = UNSET
+    quantity: Union[None, Unset, float] = UNSET
+    discount: Union[None, Unset, float] = UNSET
+    is_taxable: Union[None, Unset, bool] = UNSET
+    delivery_charge: Union[None, Unset, float] = UNSET
+    free_quantity: Union[None, Unset, int] = UNSET
+    created_by_id: Union[None, Unset, int] = UNSET
+    service_order_charge_type: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -55,7 +55,7 @@ class QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateMod
 
         description = self.description
 
-        charge_date: Union[Unset, str] = UNSET
+        charge_date: Union[None, Unset, str] = UNSET
         if self.charge_date and not isinstance(self.charge_date, Unset):
             charge_date = self.charge_date.isoformat()
 
@@ -123,7 +123,7 @@ class QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateMod
         description = d.pop("Description", UNSET)
 
         _charge_date = d.pop("ChargeDate", UNSET)
-        charge_date: Union[Unset, datetime.datetime]
+        charge_date: Union[None, Unset, datetime.datetime]
         if isinstance(_charge_date, Unset):
             charge_date = UNSET
         else:

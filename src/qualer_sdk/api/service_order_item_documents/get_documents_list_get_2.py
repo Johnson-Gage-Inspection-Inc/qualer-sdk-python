@@ -14,7 +14,7 @@ from ...types import UNSET, Response, Unset
 def _get_kwargs(
     service_order_item_id: int,
     *,
-    model_report_type: Union[Unset, str] = UNSET,
+    model_report_type: Union[None, Unset, str] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -86,7 +86,7 @@ def sync_detailed(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[Unset, str] = UNSET,
+    model_report_type: Union[None, Unset, str] = UNSET,
 ) -> Response[
     Union[
         Any,
@@ -98,7 +98,7 @@ def sync_detailed(
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[Unset, str]):
+        model_report_type (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -124,7 +124,7 @@ def sync(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[Unset, str] = UNSET,
+    model_report_type: Union[None, Unset, str] = UNSET,
 ) -> Optional[
     Union[
         Any,
@@ -136,7 +136,7 @@ def sync(
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[Unset, str]):
+        model_report_type (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -157,7 +157,7 @@ async def asyncio_detailed(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[Unset, str] = UNSET,
+    model_report_type: Union[None, Unset, str] = UNSET,
 ) -> Response[
     Union[
         Any,
@@ -169,7 +169,7 @@ async def asyncio_detailed(
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[Unset, str]):
+        model_report_type (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -193,7 +193,7 @@ async def asyncio(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[Unset, str] = UNSET,
+    model_report_type: Union[None, Unset, str] = UNSET,
 ) -> Optional[
     Union[
         Any,
@@ -205,7 +205,7 @@ async def asyncio(
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[Unset, str]):
+        model_report_type (Union[None, Unset, str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

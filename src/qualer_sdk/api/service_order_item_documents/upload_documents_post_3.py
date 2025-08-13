@@ -14,8 +14,8 @@ from ...types import UNSET, Response, Unset
 def _get_kwargs(
     service_order_item_id: int,
     *,
-    model_report_type: Union[Unset, str] = UNSET,
-    model_is_private: Union[Unset, bool] = UNSET,
+    model_report_type: Union[None, Unset, str] = UNSET,
+    model_is_private: Union[None, Unset, bool] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -62,14 +62,14 @@ def sync_detailed(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[Unset, str] = UNSET,
-    model_is_private: Union[Unset, bool] = UNSET,
+    model_report_type: Union[None, Unset, str] = UNSET,
+    model_is_private: Union[None, Unset, bool] = UNSET,
 ) -> Response[UploadDocumentsPost3Response200]:
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[Unset, str]):
-        model_is_private (Union[Unset, bool]):
+        model_report_type (Union[None, Unset, str]):
+        model_is_private (Union[None, Unset, bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -96,14 +96,14 @@ def sync(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[Unset, str] = UNSET,
-    model_is_private: Union[Unset, bool] = UNSET,
+    model_report_type: Union[None, Unset, str] = UNSET,
+    model_is_private: Union[None, Unset, bool] = UNSET,
 ) -> Optional[UploadDocumentsPost3Response200]:
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[Unset, str]):
-        model_is_private (Union[Unset, bool]):
+        model_report_type (Union[None, Unset, str]):
+        model_is_private (Union[None, Unset, bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -125,14 +125,14 @@ async def asyncio_detailed(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[Unset, str] = UNSET,
-    model_is_private: Union[Unset, bool] = UNSET,
+    model_report_type: Union[None, Unset, str] = UNSET,
+    model_is_private: Union[None, Unset, bool] = UNSET,
 ) -> Response[UploadDocumentsPost3Response200]:
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[Unset, str]):
-        model_is_private (Union[Unset, bool]):
+        model_report_type (Union[None, Unset, str]):
+        model_is_private (Union[None, Unset, bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -157,14 +157,14 @@ async def asyncio(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[Unset, str] = UNSET,
-    model_is_private: Union[Unset, bool] = UNSET,
+    model_report_type: Union[None, Unset, str] = UNSET,
+    model_is_private: Union[None, Unset, bool] = UNSET,
 ) -> Optional[UploadDocumentsPost3Response200]:
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[Unset, str]):
-        model_is_private (Union[Unset, bool]):
+        model_report_type (Union[None, Unset, str]):
+        model_is_private (Union[None, Unset, bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

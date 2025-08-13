@@ -13,24 +13,24 @@ T = TypeVar("T", bound="QualerApiModelsEmployeesFromEmployeeLocationModel")
 class QualerApiModelsEmployeesFromEmployeeLocationModel:
     """
     Attributes:
-        latitude (Union[Unset, float]):
-        longitude (Union[Unset, float]):
-        accuracy (Union[Unset, float]):
-        altitude (Union[Unset, float]):
-        altitude_accuracy (Union[Unset, float]):
-        heading (Union[Unset, float]):
-        speed (Union[Unset, float]):
-        timestamp (Union[Unset, int]):
+        latitude (Union[None, Unset, float]):
+        longitude (Union[None, Unset, float]):
+        accuracy (Union[None, Unset, float]):
+        altitude (Union[None, Unset, float]):
+        altitude_accuracy (Union[None, Unset, float]):
+        heading (Union[None, Unset, float]):
+        speed (Union[None, Unset, float]):
+        timestamp (Union[None, Unset, int]):
     """
 
-    latitude: Union[Unset, float] = UNSET
-    longitude: Union[Unset, float] = UNSET
-    accuracy: Union[Unset, float] = UNSET
-    altitude: Union[Unset, float] = UNSET
-    altitude_accuracy: Union[Unset, float] = UNSET
-    heading: Union[Unset, float] = UNSET
-    speed: Union[Unset, float] = UNSET
-    timestamp: Union[Unset, int] = UNSET
+    latitude: Union[None, Unset, float] = UNSET
+    longitude: Union[None, Unset, float] = UNSET
+    accuracy: Union[None, Unset, float] = UNSET
+    altitude: Union[None, Unset, float] = UNSET
+    altitude_accuracy: Union[None, Unset, float] = UNSET
+    heading: Union[None, Unset, float] = UNSET
+    speed: Union[None, Unset, float] = UNSET
+    timestamp: Union[None, Unset, int] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

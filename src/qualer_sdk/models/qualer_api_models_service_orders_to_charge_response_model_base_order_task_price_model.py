@@ -16,20 +16,20 @@ T = TypeVar(
 class QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel:
     """
     Attributes:
-        contract_discount (Union[Unset, float]):
-        time_spent (Union[Unset, float]):
-        is_hourly (Union[Unset, bool]):
-        details (Union[Unset, str]):
-        name (Union[Unset, str]):
-        price (Union[Unset, float]):
+        contract_discount (Union[None, Unset, float]):
+        time_spent (Union[None, Unset, float]):
+        is_hourly (Union[None, Unset, bool]):
+        details (Union[None, Unset, str]):
+        name (Union[None, Unset, str]):
+        price (Union[None, Unset, float]):
     """
 
-    contract_discount: Union[Unset, float] = UNSET
-    time_spent: Union[Unset, float] = UNSET
-    is_hourly: Union[Unset, bool] = UNSET
-    details: Union[Unset, str] = UNSET
-    name: Union[Unset, str] = UNSET
-    price: Union[Unset, float] = UNSET
+    contract_discount: Union[None, Unset, float] = UNSET
+    time_spent: Union[None, Unset, float] = UNSET
+    is_hourly: Union[None, Unset, bool] = UNSET
+    details: Union[None, Unset, str] = UNSET
+    name: Union[None, Unset, str] = UNSET
+    price: Union[None, Unset, float] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

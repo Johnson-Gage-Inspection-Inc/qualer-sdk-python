@@ -13,48 +13,48 @@ T = TypeVar("T", bound="QualerApiModelsAssetToAssetsCountResponseModel")
 class QualerApiModelsAssetToAssetsCountResponseModel:
     """
     Attributes:
-        assets_all (Union[Unset, int]):
-        assets_collected (Union[Unset, int]):
-        assets_recently_serviced (Union[Unset, int]):
-        assets_due (Union[Unset, int]):
-        assets_past_due (Union[Unset, int]):
-        assets_service_pending (Union[Unset, int]):
-        assets_recently_purchased (Union[Unset, int]):
-        assets_warranty_expires (Union[Unset, int]):
-        assets_due_for_replacement (Union[Unset, int]):
-        assets_out_of_service (Union[Unset, int]):
-        assets_not_serviced (Union[Unset, int]):
-        assets_without_schedule (Union[Unset, int]):
-        assets_without_vendor (Union[Unset, int]):
-        assets_without_product (Union[Unset, int]):
-        assets_added (Union[Unset, int]):
-        assets_updated (Union[Unset, int]):
-        assets_deleted (Union[Unset, int]):
-        assets_no_agreement (Union[Unset, int]):
-        assets_expired_agreement (Union[Unset, int]):
-        assets_expiring_soon_agreement (Union[Unset, int]):
+        assets_all (Union[None, Unset, int]):
+        assets_collected (Union[None, Unset, int]):
+        assets_recently_serviced (Union[None, Unset, int]):
+        assets_due (Union[None, Unset, int]):
+        assets_past_due (Union[None, Unset, int]):
+        assets_service_pending (Union[None, Unset, int]):
+        assets_recently_purchased (Union[None, Unset, int]):
+        assets_warranty_expires (Union[None, Unset, int]):
+        assets_due_for_replacement (Union[None, Unset, int]):
+        assets_out_of_service (Union[None, Unset, int]):
+        assets_not_serviced (Union[None, Unset, int]):
+        assets_without_schedule (Union[None, Unset, int]):
+        assets_without_vendor (Union[None, Unset, int]):
+        assets_without_product (Union[None, Unset, int]):
+        assets_added (Union[None, Unset, int]):
+        assets_updated (Union[None, Unset, int]):
+        assets_deleted (Union[None, Unset, int]):
+        assets_no_agreement (Union[None, Unset, int]):
+        assets_expired_agreement (Union[None, Unset, int]):
+        assets_expiring_soon_agreement (Union[None, Unset, int]):
     """
 
-    assets_all: Union[Unset, int] = UNSET
-    assets_collected: Union[Unset, int] = UNSET
-    assets_recently_serviced: Union[Unset, int] = UNSET
-    assets_due: Union[Unset, int] = UNSET
-    assets_past_due: Union[Unset, int] = UNSET
-    assets_service_pending: Union[Unset, int] = UNSET
-    assets_recently_purchased: Union[Unset, int] = UNSET
-    assets_warranty_expires: Union[Unset, int] = UNSET
-    assets_due_for_replacement: Union[Unset, int] = UNSET
-    assets_out_of_service: Union[Unset, int] = UNSET
-    assets_not_serviced: Union[Unset, int] = UNSET
-    assets_without_schedule: Union[Unset, int] = UNSET
-    assets_without_vendor: Union[Unset, int] = UNSET
-    assets_without_product: Union[Unset, int] = UNSET
-    assets_added: Union[Unset, int] = UNSET
-    assets_updated: Union[Unset, int] = UNSET
-    assets_deleted: Union[Unset, int] = UNSET
-    assets_no_agreement: Union[Unset, int] = UNSET
-    assets_expired_agreement: Union[Unset, int] = UNSET
-    assets_expiring_soon_agreement: Union[Unset, int] = UNSET
+    assets_all: Union[None, Unset, int] = UNSET
+    assets_collected: Union[None, Unset, int] = UNSET
+    assets_recently_serviced: Union[None, Unset, int] = UNSET
+    assets_due: Union[None, Unset, int] = UNSET
+    assets_past_due: Union[None, Unset, int] = UNSET
+    assets_service_pending: Union[None, Unset, int] = UNSET
+    assets_recently_purchased: Union[None, Unset, int] = UNSET
+    assets_warranty_expires: Union[None, Unset, int] = UNSET
+    assets_due_for_replacement: Union[None, Unset, int] = UNSET
+    assets_out_of_service: Union[None, Unset, int] = UNSET
+    assets_not_serviced: Union[None, Unset, int] = UNSET
+    assets_without_schedule: Union[None, Unset, int] = UNSET
+    assets_without_vendor: Union[None, Unset, int] = UNSET
+    assets_without_product: Union[None, Unset, int] = UNSET
+    assets_added: Union[None, Unset, int] = UNSET
+    assets_updated: Union[None, Unset, int] = UNSET
+    assets_deleted: Union[None, Unset, int] = UNSET
+    assets_no_agreement: Union[None, Unset, int] = UNSET
+    assets_expired_agreement: Union[None, Unset, int] = UNSET
+    assets_expiring_soon_agreement: Union[None, Unset, int] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

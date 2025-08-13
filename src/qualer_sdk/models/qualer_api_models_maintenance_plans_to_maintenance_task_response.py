@@ -13,60 +13,60 @@ T = TypeVar("T", bound="QualerApiModelsMaintenancePlansToMaintenanceTaskResponse
 class QualerApiModelsMaintenancePlansToMaintenanceTaskResponse:
     """
     Attributes:
-        segment_name (Union[Unset, str]):
-        service_level_id (Union[Unset, int]):
-        display_order (Union[Unset, int]):
-        service_notes (Union[Unset, str]):
-        interval_cycle (Union[Unset, str]):
-        interval_length (Union[Unset, int]):
-        on_day (Union[Unset, str]):
-        on_month (Union[Unset, str]):
-        on_week_days (Union[Unset, str]):
-        weekday_of_month (Union[Unset, str]):
-        color_code (Union[Unset, int]):
-        service_interval (Union[Unset, str]):
-        on_segment_id (Union[Unset, int]):
-        document_number (Union[Unset, str]):
-        document_section (Union[Unset, str]):
-        as_found_standard_group_id (Union[Unset, int]):
-        as_left_standard_group_id (Union[Unset, int]):
-        task_notes (Union[Unset, str]):
-        advance_recall_period (Union[Unset, str]):
-        days_before_due (Union[Unset, int]):
-        past_due_grace_period (Union[Unset, str]):
-        days_after_due (Union[Unset, int]):
-        use_period_in_reports (Union[Unset, str]):
-        generate_order_automatically (Union[Unset, bool]):
-        approve_upon_generation (Union[Unset, bool]):
-        generate_separate (Union[Unset, bool]):
+        segment_name (Union[None, Unset, str]):
+        service_level_id (Union[None, Unset, int]):
+        display_order (Union[None, Unset, int]):
+        service_notes (Union[None, Unset, str]):
+        interval_cycle (Union[None, Unset, str]):
+        interval_length (Union[None, Unset, int]):
+        on_day (Union[None, Unset, str]):
+        on_month (Union[None, Unset, str]):
+        on_week_days (Union[None, Unset, str]):
+        weekday_of_month (Union[None, Unset, str]):
+        color_code (Union[None, Unset, int]):
+        service_interval (Union[None, Unset, str]):
+        on_segment_id (Union[None, Unset, int]):
+        document_number (Union[None, Unset, str]):
+        document_section (Union[None, Unset, str]):
+        as_found_standard_group_id (Union[None, Unset, int]):
+        as_left_standard_group_id (Union[None, Unset, int]):
+        task_notes (Union[None, Unset, str]):
+        advance_recall_period (Union[None, Unset, str]):
+        days_before_due (Union[None, Unset, int]):
+        past_due_grace_period (Union[None, Unset, str]):
+        days_after_due (Union[None, Unset, int]):
+        use_period_in_reports (Union[None, Unset, str]):
+        generate_order_automatically (Union[None, Unset, bool]):
+        approve_upon_generation (Union[None, Unset, bool]):
+        generate_separate (Union[None, Unset, bool]):
     """
 
-    segment_name: Union[Unset, str] = UNSET
-    service_level_id: Union[Unset, int] = UNSET
-    display_order: Union[Unset, int] = UNSET
-    service_notes: Union[Unset, str] = UNSET
-    interval_cycle: Union[Unset, str] = UNSET
-    interval_length: Union[Unset, int] = UNSET
-    on_day: Union[Unset, str] = UNSET
-    on_month: Union[Unset, str] = UNSET
-    on_week_days: Union[Unset, str] = UNSET
-    weekday_of_month: Union[Unset, str] = UNSET
-    color_code: Union[Unset, int] = UNSET
-    service_interval: Union[Unset, str] = UNSET
-    on_segment_id: Union[Unset, int] = UNSET
-    document_number: Union[Unset, str] = UNSET
-    document_section: Union[Unset, str] = UNSET
-    as_found_standard_group_id: Union[Unset, int] = UNSET
-    as_left_standard_group_id: Union[Unset, int] = UNSET
-    task_notes: Union[Unset, str] = UNSET
-    advance_recall_period: Union[Unset, str] = UNSET
-    days_before_due: Union[Unset, int] = UNSET
-    past_due_grace_period: Union[Unset, str] = UNSET
-    days_after_due: Union[Unset, int] = UNSET
-    use_period_in_reports: Union[Unset, str] = UNSET
-    generate_order_automatically: Union[Unset, bool] = UNSET
-    approve_upon_generation: Union[Unset, bool] = UNSET
-    generate_separate: Union[Unset, bool] = UNSET
+    segment_name: Union[None, Unset, str] = UNSET
+    service_level_id: Union[None, Unset, int] = UNSET
+    display_order: Union[None, Unset, int] = UNSET
+    service_notes: Union[None, Unset, str] = UNSET
+    interval_cycle: Union[None, Unset, str] = UNSET
+    interval_length: Union[None, Unset, int] = UNSET
+    on_day: Union[None, Unset, str] = UNSET
+    on_month: Union[None, Unset, str] = UNSET
+    on_week_days: Union[None, Unset, str] = UNSET
+    weekday_of_month: Union[None, Unset, str] = UNSET
+    color_code: Union[None, Unset, int] = UNSET
+    service_interval: Union[None, Unset, str] = UNSET
+    on_segment_id: Union[None, Unset, int] = UNSET
+    document_number: Union[None, Unset, str] = UNSET
+    document_section: Union[None, Unset, str] = UNSET
+    as_found_standard_group_id: Union[None, Unset, int] = UNSET
+    as_left_standard_group_id: Union[None, Unset, int] = UNSET
+    task_notes: Union[None, Unset, str] = UNSET
+    advance_recall_period: Union[None, Unset, str] = UNSET
+    days_before_due: Union[None, Unset, int] = UNSET
+    past_due_grace_period: Union[None, Unset, str] = UNSET
+    days_after_due: Union[None, Unset, int] = UNSET
+    use_period_in_reports: Union[None, Unset, str] = UNSET
+    generate_order_automatically: Union[None, Unset, bool] = UNSET
+    approve_upon_generation: Union[None, Unset, bool] = UNSET
+    generate_separate: Union[None, Unset, bool] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

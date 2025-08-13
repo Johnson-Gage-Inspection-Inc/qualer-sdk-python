@@ -14,10 +14,10 @@ from ...types import UNSET, Response, Unset
 def _get_kwargs(
     client_company_id: int,
     *,
-    query_filter_type: Union[Unset, str] = UNSET,
-    query_search_string: Union[Unset, str] = UNSET,
-    query_page: Union[Unset, int] = UNSET,
-    query_page_size: Union[Unset, int] = UNSET,
+    query_filter_type: Union[None, Unset, str] = UNSET,
+    query_search_string: Union[None, Unset, str] = UNSET,
+    query_page: Union[None, Unset, int] = UNSET,
+    query_page_size: Union[None, Unset, int] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -77,10 +77,10 @@ def sync_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Union[Unset, str] = UNSET,
-    query_search_string: Union[Unset, str] = UNSET,
-    query_page: Union[Unset, int] = UNSET,
-    query_page_size: Union[Unset, int] = UNSET,
+    query_filter_type: Union[None, Unset, str] = UNSET,
+    query_search_string: Union[None, Unset, str] = UNSET,
+    query_page: Union[None, Unset, int] = UNSET,
+    query_page_size: Union[None, Unset, int] = UNSET,
 ) -> Response[list["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
@@ -92,10 +92,10 @@ def sync_detailed(
 
     Args:
         client_company_id (int):
-        query_filter_type (Union[Unset, str]):
-        query_search_string (Union[Unset, str]):
-        query_page (Union[Unset, int]):
-        query_page_size (Union[Unset, int]):
+        query_filter_type (Union[None, Unset, str]):
+        query_search_string (Union[None, Unset, str]):
+        query_page (Union[None, Unset, int]):
+        query_page_size (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -124,10 +124,10 @@ def sync(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Union[Unset, str] = UNSET,
-    query_search_string: Union[Unset, str] = UNSET,
-    query_page: Union[Unset, int] = UNSET,
-    query_page_size: Union[Unset, int] = UNSET,
+    query_filter_type: Union[None, Unset, str] = UNSET,
+    query_search_string: Union[None, Unset, str] = UNSET,
+    query_page: Union[None, Unset, int] = UNSET,
+    query_page_size: Union[None, Unset, int] = UNSET,
 ) -> Optional[list["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
@@ -139,10 +139,10 @@ def sync(
 
     Args:
         client_company_id (int):
-        query_filter_type (Union[Unset, str]):
-        query_search_string (Union[Unset, str]):
-        query_page (Union[Unset, int]):
-        query_page_size (Union[Unset, int]):
+        query_filter_type (Union[None, Unset, str]):
+        query_search_string (Union[None, Unset, str]):
+        query_page (Union[None, Unset, int]):
+        query_page_size (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -166,10 +166,10 @@ async def asyncio_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Union[Unset, str] = UNSET,
-    query_search_string: Union[Unset, str] = UNSET,
-    query_page: Union[Unset, int] = UNSET,
-    query_page_size: Union[Unset, int] = UNSET,
+    query_filter_type: Union[None, Unset, str] = UNSET,
+    query_search_string: Union[None, Unset, str] = UNSET,
+    query_page: Union[None, Unset, int] = UNSET,
+    query_page_size: Union[None, Unset, int] = UNSET,
 ) -> Response[list["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
@@ -181,10 +181,10 @@ async def asyncio_detailed(
 
     Args:
         client_company_id (int):
-        query_filter_type (Union[Unset, str]):
-        query_search_string (Union[Unset, str]):
-        query_page (Union[Unset, int]):
-        query_page_size (Union[Unset, int]):
+        query_filter_type (Union[None, Unset, str]):
+        query_search_string (Union[None, Unset, str]):
+        query_page (Union[None, Unset, int]):
+        query_page_size (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -211,10 +211,10 @@ async def asyncio(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Union[Unset, str] = UNSET,
-    query_search_string: Union[Unset, str] = UNSET,
-    query_page: Union[Unset, int] = UNSET,
-    query_page_size: Union[Unset, int] = UNSET,
+    query_filter_type: Union[None, Unset, str] = UNSET,
+    query_search_string: Union[None, Unset, str] = UNSET,
+    query_page: Union[None, Unset, int] = UNSET,
+    query_page_size: Union[None, Unset, int] = UNSET,
 ) -> Optional[list["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
@@ -226,10 +226,10 @@ async def asyncio(
 
     Args:
         client_company_id (int):
-        query_filter_type (Union[Unset, str]):
-        query_search_string (Union[Unset, str]):
-        query_page (Union[Unset, int]):
-        query_page_size (Union[Unset, int]):
+        query_filter_type (Union[None, Unset, str]):
+        query_search_string (Union[None, Unset, str]):
+        query_page (Union[None, Unset, int]):
+        query_page_size (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

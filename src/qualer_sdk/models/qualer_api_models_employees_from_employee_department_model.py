@@ -13,12 +13,12 @@ T = TypeVar("T", bound="QualerApiModelsEmployeesFromEmployeeDepartmentModel")
 class QualerApiModelsEmployeesFromEmployeeDepartmentModel:
     """
     Attributes:
-        department_id (Union[Unset, int]):
-        position (Union[Unset, str]):
+        department_id (Union[None, Unset, int]):
+        position (Union[None, Unset, str]):
     """
 
-    department_id: Union[Unset, int] = UNSET
-    position: Union[Unset, str] = UNSET
+    department_id: Union[None, Unset, int] = UNSET
+    position: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

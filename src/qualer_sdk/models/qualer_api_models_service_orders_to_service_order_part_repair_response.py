@@ -15,54 +15,54 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersToServiceOrderPartRepairResp
 class QualerApiModelsServiceOrdersToServiceOrderPartRepairResponse:
     """
     Attributes:
-        service_order_item_part_id (Union[Unset, int]):
-        price (Union[Unset, float]):
-        description (Union[Unset, str]):
-        name (Union[Unset, str]):
-        unit_name (Union[Unset, str]):
-        quantity (Union[Unset, float]):
-        discount (Union[Unset, float]):
-        delivery_charge (Union[Unset, float]):
-        is_taxable (Union[Unset, bool]):
-        time_spent_in_minutes (Union[Unset, float]):
-        is_hourly_pricing (Union[Unset, bool]):
-        free_quantity (Union[Unset, int]):
-        currency_iso_symbol (Union[Unset, str]):
-        created_by_id (Union[Unset, int]):
-        created_by (Union[Unset, str]):
-        created_on_utc (Union[Unset, datetime.datetime]):
-        charge_date (Union[Unset, datetime.datetime]):
-        contract_repairs_discount (Union[Unset, float]):
-        contract_parts_discount (Union[Unset, float]):
-        service_order_charge_type (Union[Unset, str]):
-        total_discount (Union[Unset, float]):
-        total_price (Union[Unset, float]):
-        discount_price (Union[Unset, float]):
+        service_order_item_part_id (Union[None, Unset, int]):
+        price (Union[None, Unset, float]):
+        description (Union[None, Unset, str]):
+        name (Union[None, Unset, str]):
+        unit_name (Union[None, Unset, str]):
+        quantity (Union[None, Unset, float]):
+        discount (Union[None, Unset, float]):
+        delivery_charge (Union[None, Unset, float]):
+        is_taxable (Union[None, Unset, bool]):
+        time_spent_in_minutes (Union[None, Unset, float]):
+        is_hourly_pricing (Union[None, Unset, bool]):
+        free_quantity (Union[None, Unset, int]):
+        currency_iso_symbol (Union[None, Unset, str]):
+        created_by_id (Union[None, Unset, int]):
+        created_by (Union[None, Unset, str]):
+        created_on_utc (Union[None, Unset, datetime.datetime]):
+        charge_date (Union[None, Unset, datetime.datetime]):
+        contract_repairs_discount (Union[None, Unset, float]):
+        contract_parts_discount (Union[None, Unset, float]):
+        service_order_charge_type (Union[None, Unset, str]):
+        total_discount (Union[None, Unset, float]):
+        total_price (Union[None, Unset, float]):
+        discount_price (Union[None, Unset, float]):
     """
 
-    service_order_item_part_id: Union[Unset, int] = UNSET
-    price: Union[Unset, float] = UNSET
-    description: Union[Unset, str] = UNSET
-    name: Union[Unset, str] = UNSET
-    unit_name: Union[Unset, str] = UNSET
-    quantity: Union[Unset, float] = UNSET
-    discount: Union[Unset, float] = UNSET
-    delivery_charge: Union[Unset, float] = UNSET
-    is_taxable: Union[Unset, bool] = UNSET
-    time_spent_in_minutes: Union[Unset, float] = UNSET
-    is_hourly_pricing: Union[Unset, bool] = UNSET
-    free_quantity: Union[Unset, int] = UNSET
-    currency_iso_symbol: Union[Unset, str] = UNSET
-    created_by_id: Union[Unset, int] = UNSET
-    created_by: Union[Unset, str] = UNSET
-    created_on_utc: Union[Unset, datetime.datetime] = UNSET
-    charge_date: Union[Unset, datetime.datetime] = UNSET
-    contract_repairs_discount: Union[Unset, float] = UNSET
-    contract_parts_discount: Union[Unset, float] = UNSET
-    service_order_charge_type: Union[Unset, str] = UNSET
-    total_discount: Union[Unset, float] = UNSET
-    total_price: Union[Unset, float] = UNSET
-    discount_price: Union[Unset, float] = UNSET
+    service_order_item_part_id: Union[None, Unset, int] = UNSET
+    price: Union[None, Unset, float] = UNSET
+    description: Union[None, Unset, str] = UNSET
+    name: Union[None, Unset, str] = UNSET
+    unit_name: Union[None, Unset, str] = UNSET
+    quantity: Union[None, Unset, float] = UNSET
+    discount: Union[None, Unset, float] = UNSET
+    delivery_charge: Union[None, Unset, float] = UNSET
+    is_taxable: Union[None, Unset, bool] = UNSET
+    time_spent_in_minutes: Union[None, Unset, float] = UNSET
+    is_hourly_pricing: Union[None, Unset, bool] = UNSET
+    free_quantity: Union[None, Unset, int] = UNSET
+    currency_iso_symbol: Union[None, Unset, str] = UNSET
+    created_by_id: Union[None, Unset, int] = UNSET
+    created_by: Union[None, Unset, str] = UNSET
+    created_on_utc: Union[None, Unset, datetime.datetime] = UNSET
+    charge_date: Union[None, Unset, datetime.datetime] = UNSET
+    contract_repairs_discount: Union[None, Unset, float] = UNSET
+    contract_parts_discount: Union[None, Unset, float] = UNSET
+    service_order_charge_type: Union[None, Unset, str] = UNSET
+    total_discount: Union[None, Unset, float] = UNSET
+    total_price: Union[None, Unset, float] = UNSET
+    discount_price: Union[None, Unset, float] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -96,11 +96,11 @@ class QualerApiModelsServiceOrdersToServiceOrderPartRepairResponse:
 
         created_by = self.created_by
 
-        created_on_utc: Union[Unset, str] = UNSET
+        created_on_utc: Union[None, Unset, str] = UNSET
         if self.created_on_utc and not isinstance(self.created_on_utc, Unset):
             created_on_utc = self.created_on_utc.isoformat()
 
-        charge_date: Union[Unset, str] = UNSET
+        charge_date: Union[None, Unset, str] = UNSET
         if self.charge_date and not isinstance(self.charge_date, Unset):
             charge_date = self.charge_date.isoformat()
 
@@ -202,14 +202,14 @@ class QualerApiModelsServiceOrdersToServiceOrderPartRepairResponse:
         created_by = d.pop("CreatedBy", UNSET)
 
         _created_on_utc = d.pop("CreatedOnUtc", UNSET)
-        created_on_utc: Union[Unset, datetime.datetime]
+        created_on_utc: Union[None, Unset, datetime.datetime]
         if isinstance(_created_on_utc, Unset):
             created_on_utc = UNSET
         else:
             created_on_utc = isoparse(_created_on_utc)
 
         _charge_date = d.pop("ChargeDate", UNSET)
-        charge_date: Union[Unset, datetime.datetime]
+        charge_date: Union[None, Unset, datetime.datetime]
         if isinstance(_charge_date, Unset):
             charge_date = UNSET
         else:

@@ -15,14 +15,14 @@ T = TypeVar(
 class QualerApiModelsAssetToAssetMaintenancePlanResponseAssignedEmployee:
     """
     Attributes:
-        first_name (Union[Unset, str]):
-        last_name (Union[Unset, str]):
-        alias (Union[Unset, str]):
+        first_name (Union[None, Unset, str]):
+        last_name (Union[None, Unset, str]):
+        alias (Union[None, Unset, str]):
     """
 
-    first_name: Union[Unset, str] = UNSET
-    last_name: Union[Unset, str] = UNSET
-    alias: Union[Unset, str] = UNSET
+    first_name: Union[None, Unset, str] = UNSET
+    last_name: Union[None, Unset, str] = UNSET
+    alias: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

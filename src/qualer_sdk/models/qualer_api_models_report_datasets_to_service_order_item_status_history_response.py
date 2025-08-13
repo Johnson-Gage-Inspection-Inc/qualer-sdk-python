@@ -17,30 +17,30 @@ T = TypeVar(
 class QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse:
     """
     Attributes:
-        service_order_item_id (Union[Unset, int]):
-        previous_status_name (Union[Unset, str]):
-        selected_status_name (Union[Unset, str]):
-        explanation (Union[Unset, str]):
-        is_password_reentered (Union[Unset, bool]):
-        created_on (Union[Unset, datetime.datetime]):
-        created_on_utc (Union[Unset, datetime.datetime]):
-        employee_id (Union[Unset, int]):
-        first_name (Union[Unset, str]):
-        last_name (Union[Unset, str]):
-        alias (Union[Unset, str]):
+        service_order_item_id (Union[None, Unset, int]):
+        previous_status_name (Union[None, Unset, str]):
+        selected_status_name (Union[None, Unset, str]):
+        explanation (Union[None, Unset, str]):
+        is_password_reentered (Union[None, Unset, bool]):
+        created_on (Union[None, Unset, datetime.datetime]):
+        created_on_utc (Union[None, Unset, datetime.datetime]):
+        employee_id (Union[None, Unset, int]):
+        first_name (Union[None, Unset, str]):
+        last_name (Union[None, Unset, str]):
+        alias (Union[None, Unset, str]):
     """
 
-    service_order_item_id: Union[Unset, int] = UNSET
-    previous_status_name: Union[Unset, str] = UNSET
-    selected_status_name: Union[Unset, str] = UNSET
-    explanation: Union[Unset, str] = UNSET
-    is_password_reentered: Union[Unset, bool] = UNSET
-    created_on: Union[Unset, datetime.datetime] = UNSET
-    created_on_utc: Union[Unset, datetime.datetime] = UNSET
-    employee_id: Union[Unset, int] = UNSET
-    first_name: Union[Unset, str] = UNSET
-    last_name: Union[Unset, str] = UNSET
-    alias: Union[Unset, str] = UNSET
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    previous_status_name: Union[None, Unset, str] = UNSET
+    selected_status_name: Union[None, Unset, str] = UNSET
+    explanation: Union[None, Unset, str] = UNSET
+    is_password_reentered: Union[None, Unset, bool] = UNSET
+    created_on: Union[None, Unset, datetime.datetime] = UNSET
+    created_on_utc: Union[None, Unset, datetime.datetime] = UNSET
+    employee_id: Union[None, Unset, int] = UNSET
+    first_name: Union[None, Unset, str] = UNSET
+    last_name: Union[None, Unset, str] = UNSET
+    alias: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -54,11 +54,11 @@ class QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse:
 
         is_password_reentered = self.is_password_reentered
 
-        created_on: Union[Unset, str] = UNSET
+        created_on: Union[None, Unset, str] = UNSET
         if self.created_on and not isinstance(self.created_on, Unset):
             created_on = self.created_on.isoformat()
 
-        created_on_utc: Union[Unset, str] = UNSET
+        created_on_utc: Union[None, Unset, str] = UNSET
         if self.created_on_utc and not isinstance(self.created_on_utc, Unset):
             created_on_utc = self.created_on_utc.isoformat()
 
@@ -112,14 +112,14 @@ class QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse:
         is_password_reentered = d.pop("IsPasswordReentered", UNSET)
 
         _created_on = d.pop("CreatedOn", UNSET)
-        created_on: Union[Unset, datetime.datetime]
+        created_on: Union[None, Unset, datetime.datetime]
         if isinstance(_created_on, Unset):
             created_on = UNSET
         else:
             created_on = isoparse(_created_on)
 
         _created_on_utc = d.pop("CreatedOnUtc", UNSET)
-        created_on_utc: Union[Unset, datetime.datetime]
+        created_on_utc: Union[None, Unset, datetime.datetime]
         if isinstance(_created_on_utc, Unset):
             created_on_utc = UNSET
         else:

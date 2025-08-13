@@ -19,19 +19,18 @@ T = TypeVar("T", bound="QualerApiModelsMaintenancePlansToMaintenancePlanResponse
 class QualerApiModelsMaintenancePlansToMaintenancePlanResponse:
     """
     Attributes:
-        maintenance_plan_id (Union[Unset, int]):
-        maintenance_plan_name (Union[Unset, str]):
-        is_template (Union[Unset, bool]):
-        company_name (Union[Unset, str]):
-        maintenance_tasks (Union[Unset, list['QualerApiModelsMaintenancePlansToMaintenanceTaskResponse']]):
+        maintenance_plan_id (Union[None, Unset, int]):
+        maintenance_plan_name (Union[None, Unset, str]):
+        is_template (Union[None, Unset, bool]):
+        company_name (Union[None, Unset, str]):
+        maintenance_tasks (Union[None, Unset, list['QualerApiModelsMaintenancePlansToMaintenanceTaskResponse']]):
     """
 
-    maintenance_plan_id: Union[Unset, int] = UNSET
-    maintenance_plan_name: Union[Unset, str] = UNSET
-    is_template: Union[Unset, bool] = UNSET
-    company_name: Union[Unset, str] = UNSET
-    maintenance_tasks: Union[
-        Unset, list["QualerApiModelsMaintenancePlansToMaintenanceTaskResponse"]
+    maintenance_plan_id: Union[None, Unset, int] = UNSET
+    maintenance_plan_name: Union[None, Unset, str] = UNSET
+    is_template: Union[None, Unset, bool] = UNSET
+    company_name: Union[None, Unset, str] = UNSET
+    maintenance_tasks: Union[None, Unset, list["QualerApiModelsMaintenancePlansToMaintenanceTaskResponse"]
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -44,7 +43,7 @@ class QualerApiModelsMaintenancePlansToMaintenancePlanResponse:
 
         company_name = self.company_name
 
-        maintenance_tasks: Union[Unset, list[dict[str, Any]]] = UNSET
+        maintenance_tasks: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.maintenance_tasks and not isinstance(self.maintenance_tasks, Unset):
             maintenance_tasks = []
             for maintenance_tasks_item_data in self.maintenance_tasks:

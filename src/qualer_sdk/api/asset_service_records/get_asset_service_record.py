@@ -14,7 +14,7 @@ from ...types import UNSET, Response, Unset
 def _get_kwargs(
     asset_service_record_id: str,
     *,
-    model_asset_service_record_id: Union[Unset, int] = UNSET,
+    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -61,12 +61,12 @@ def sync_detailed(
     asset_service_record_id: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_asset_service_record_id: Union[Unset, int] = UNSET,
+    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
 ) -> Response[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]:
     """
     Args:
         asset_service_record_id (str):
-        model_asset_service_record_id (Union[Unset, int]):
+        model_asset_service_record_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -92,12 +92,12 @@ def sync(
     asset_service_record_id: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_asset_service_record_id: Union[Unset, int] = UNSET,
+    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
 ) -> Optional[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]:
     """
     Args:
         asset_service_record_id (str):
-        model_asset_service_record_id (Union[Unset, int]):
+        model_asset_service_record_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -118,12 +118,12 @@ async def asyncio_detailed(
     asset_service_record_id: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_asset_service_record_id: Union[Unset, int] = UNSET,
+    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
 ) -> Response[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]:
     """
     Args:
         asset_service_record_id (str):
-        model_asset_service_record_id (Union[Unset, int]):
+        model_asset_service_record_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -147,12 +147,12 @@ async def asyncio(
     asset_service_record_id: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_asset_service_record_id: Union[Unset, int] = UNSET,
+    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
 ) -> Optional[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]:
     """
     Args:
         asset_service_record_id (str):
-        model_asset_service_record_id (Union[Unset, int]):
+        model_asset_service_record_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

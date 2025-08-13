@@ -29,180 +29,180 @@ T = TypeVar("T", bound="QualerApiModelsAssetToAssetManageResponseModel")
 class QualerApiModelsAssetToAssetManageResponseModel:
     """
     Attributes:
-        asset_id (Union[Unset, int]):
-        asset_name (Union[Unset, str]):
-        asset_description (Union[Unset, str]):
-        asset_maker (Union[Unset, str]):
-        record_type (Union[Unset, QualerApiModelsAssetToAssetManageResponseModelRecordType]):
-        parent_asset_id (Union[Unset, int]):
-        children_count (Union[Unset, int]):
-        site_id (Union[Unset, int]):
-        serial_number (Union[Unset, str]):
-        asset_tag (Union[Unset, str]):
-        asset_user (Union[Unset, str]):
-        equipment_id (Union[Unset, str]):
-        legacy_identifier (Union[Unset, str]):
-        criticality (Union[Unset, str]):
-        condition (Union[Unset, str]):
-        asset_class (Union[Unset, str]):
+        asset_id (Union[None, Unset, int]):
+        asset_name (Union[None, Unset, str]):
+        asset_description (Union[None, Unset, str]):
+        asset_maker (Union[None, Unset, str]):
+        record_type (Union[None, Unset, QualerApiModelsAssetToAssetManageResponseModelRecordType]):
+        parent_asset_id (Union[None, Unset, int]):
+        children_count (Union[None, Unset, int]):
+        site_id (Union[None, Unset, int]):
+        serial_number (Union[None, Unset, str]):
+        asset_tag (Union[None, Unset, str]):
+        asset_user (Union[None, Unset, str]):
+        equipment_id (Union[None, Unset, str]):
+        legacy_identifier (Union[None, Unset, str]):
+        criticality (Union[None, Unset, str]):
+        condition (Union[None, Unset, str]):
+        asset_class (Union[None, Unset, str]):
         activation_date (Union[None, Unset, datetime.datetime]):
         retirment_date (Union[None, Unset, datetime.datetime]):
-        client_vendor_id (Union[Unset, int]):
-        company_name (Union[Unset, str]):
-        site_name (Union[Unset, str]):
-        asset_has_image (Union[Unset, bool]):
-        has_image (Union[Unset, bool]):
-        parent_has_image (Union[Unset, bool]):
-        pool_id (Union[Unset, int]):
-        pool (Union[Unset, str]):
-        product_id (Union[Unset, int]):
-        parent_product_id (Union[Unset, int]):
-        product_name (Union[Unset, str]):
-        parent_product_name (Union[Unset, str]):
-        category_id (Union[Unset, int]):
-        root_category_id (Union[Unset, int]):
-        category_name (Union[Unset, str]):
-        root_category_name (Union[Unset, str]):
-        manufacturer_id (Union[Unset, int]):
-        manufacturer (Union[Unset, str]):
-        display_part_number (Union[Unset, str]):
-        display_name (Union[Unset, str]):
-        manufacturer_part_number (Union[Unset, str]):
-        asset_room (Union[Unset, str]):
-        location (Union[Unset, str]):
-        station (Union[Unset, str]):
-        tool_role (Union[Unset, QualerApiModelsAssetToAssetManageResponseModelToolRole]):
-        tool_id (Union[Unset, int]):
-        department_id (Union[Unset, int]):
-        department_name (Union[Unset, str]):
-        custodian_name (Union[Unset, str]):
-        warranty (Union[Unset, str]):
+        client_vendor_id (Union[None, Unset, int]):
+        company_name (Union[None, Unset, str]):
+        site_name (Union[None, Unset, str]):
+        asset_has_image (Union[None, Unset, bool]):
+        has_image (Union[None, Unset, bool]):
+        parent_has_image (Union[None, Unset, bool]):
+        pool_id (Union[None, Unset, int]):
+        pool (Union[None, Unset, str]):
+        product_id (Union[None, Unset, int]):
+        parent_product_id (Union[None, Unset, int]):
+        product_name (Union[None, Unset, str]):
+        parent_product_name (Union[None, Unset, str]):
+        category_id (Union[None, Unset, int]):
+        root_category_id (Union[None, Unset, int]):
+        category_name (Union[None, Unset, str]):
+        root_category_name (Union[None, Unset, str]):
+        manufacturer_id (Union[None, Unset, int]):
+        manufacturer (Union[None, Unset, str]):
+        display_part_number (Union[None, Unset, str]):
+        display_name (Union[None, Unset, str]):
+        manufacturer_part_number (Union[None, Unset, str]):
+        asset_room (Union[None, Unset, str]):
+        location (Union[None, Unset, str]):
+        station (Union[None, Unset, str]):
+        tool_role (Union[None, Unset, QualerApiModelsAssetToAssetManageResponseModelToolRole]):
+        tool_id (Union[None, Unset, int]):
+        department_id (Union[None, Unset, int]):
+        department_name (Union[None, Unset, str]):
+        custodian_name (Union[None, Unset, str]):
+        warranty (Union[None, Unset, str]):
         warranty_end (Union[None, Unset, datetime.datetime]):
-        is_warranty_expired (Union[Unset, bool]):
-        depreciation_method (Union[Unset, int]):
-        depreciation_basis (Union[Unset, float]):
-        salvage_value (Union[Unset, float]):
-        total_service_cost (Union[Unset, float]):
-        life_span_months (Union[Unset, int]):
+        is_warranty_expired (Union[None, Unset, bool]):
+        depreciation_method (Union[None, Unset, int]):
+        depreciation_basis (Union[None, Unset, float]):
+        salvage_value (Union[None, Unset, float]):
+        total_service_cost (Union[None, Unset, float]):
+        life_span_months (Union[None, Unset, int]):
         due_for_replacement_date (Union[None, Unset, datetime.datetime]):
-        depreciation_proc (Union[Unset, float]):
+        depreciation_proc (Union[None, Unset, float]):
         purchase_date (Union[None, Unset, datetime.datetime]):
-        purchase_cost (Union[Unset, float]):
-        time_in_service (Union[Unset, int]):
-        retirement_reason (Union[Unset, str]):
-        residual_cost (Union[Unset, float]):
-        employee_id (Union[Unset, int]):
-        asset_service_record_id (Union[Unset, int]):
-        result_status (Union[Unset, ServiceResultStatus]):
-        as_found_result (Union[Unset, ServiceResultStatus]):
-        as_left_result (Union[Unset, ServiceResultStatus]):
+        purchase_cost (Union[None, Unset, float]):
+        time_in_service (Union[None, Unset, int]):
+        retirement_reason (Union[None, Unset, str]):
+        residual_cost (Union[None, Unset, float]):
+        employee_id (Union[None, Unset, int]):
+        asset_service_record_id (Union[None, Unset, int]):
+        result_status (Union[None, Unset, ServiceResultStatus]):
+        as_found_result (Union[None, Unset, ServiceResultStatus]):
+        as_left_result (Union[None, Unset, ServiceResultStatus]):
         last_service_date (Union[None, Unset, datetime.datetime]):
         last_service (Union[None, Unset, str]):
         next_service_date (Union[None, Unset, datetime.datetime]):
-        next_service (Union[Unset, str]):
-        service_schedule_segment_id (Union[Unset, int]):
-        service_schedule_id (Union[Unset, int]):
-        service_schedule (Union[Unset, str]):
-        service_order_id (Union[Unset, int]):
-        service_order_status (Union[Unset, QualerApiModelsAssetToAssetManageResponseModelServiceOrderStatus]):
-        custom_order_number (Union[Unset, str]):
-        service_order_item_id (Union[Unset, int]):
-        vendor (Union[Unset, str]):
-        technician (Union[Unset, str]):
-        certificate_number (Union[Unset, str]):
+        next_service (Union[None, Unset, str]):
+        service_schedule_segment_id (Union[None, Unset, int]):
+        service_schedule_id (Union[None, Unset, int]):
+        service_schedule (Union[None, Unset, str]):
+        service_order_id (Union[None, Unset, int]):
+        service_order_status (Union[None, Unset, QualerApiModelsAssetToAssetManageResponseModelServiceOrderStatus]):
+        custom_order_number (Union[None, Unset, str]):
+        service_order_item_id (Union[None, Unset, int]):
+        vendor (Union[None, Unset, str]):
+        technician (Union[None, Unset, str]):
+        certificate_number (Union[None, Unset, str]):
         due_trigger_date (Union[None, Unset, datetime.datetime]):
         past_due_trigger_date (Union[None, Unset, datetime.datetime]):
-        due_status (Union[Unset, QualerApiModelsAssetToAssetManageResponseModelDueStatus]):
-        work_status (Union[Unset, WorkStatus]):
+        due_status (Union[None, Unset, QualerApiModelsAssetToAssetManageResponseModelDueStatus]):
+        work_status (Union[None, Unset, WorkStatus]):
     """
 
-    asset_id: Union[Unset, int] = UNSET
-    asset_name: Union[Unset, str] = UNSET
-    asset_description: Union[Unset, str] = UNSET
-    asset_maker: Union[Unset, str] = UNSET
+    asset_id: Union[None, Unset, int] = UNSET
+    asset_name: Union[None, Unset, str] = UNSET
+    asset_description: Union[None, Unset, str] = UNSET
+    asset_maker: Union[None, Unset, str] = UNSET
     record_type: Union[
         None, Unset, QualerApiModelsAssetToAssetManageResponseModelRecordType
     ] = UNSET
-    parent_asset_id: Union[Unset, int] = UNSET
-    children_count: Union[Unset, int] = UNSET
-    site_id: Union[Unset, int] = UNSET
-    serial_number: Union[Unset, str] = UNSET
-    asset_tag: Union[Unset, str] = UNSET
-    asset_user: Union[Unset, str] = UNSET
-    equipment_id: Union[Unset, str] = UNSET
-    legacy_identifier: Union[Unset, str] = UNSET
-    criticality: Union[Unset, str] = UNSET
-    condition: Union[Unset, str] = UNSET
-    asset_class: Union[Unset, str] = UNSET
+    parent_asset_id: Union[None, Unset, int] = UNSET
+    children_count: Union[None, Unset, int] = UNSET
+    site_id: Union[None, Unset, int] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
+    asset_tag: Union[None, Unset, str] = UNSET
+    asset_user: Union[None, Unset, str] = UNSET
+    equipment_id: Union[None, Unset, str] = UNSET
+    legacy_identifier: Union[None, Unset, str] = UNSET
+    criticality: Union[None, Unset, str] = UNSET
+    condition: Union[None, Unset, str] = UNSET
+    asset_class: Union[None, Unset, str] = UNSET
     activation_date: Union[None, Unset, datetime.datetime] = UNSET
     retirment_date: Union[None, Unset, datetime.datetime] = UNSET
-    client_vendor_id: Union[Unset, int] = UNSET
-    company_name: Union[Unset, str] = UNSET
-    site_name: Union[Unset, str] = UNSET
-    asset_has_image: Union[Unset, bool] = UNSET
-    has_image: Union[Unset, bool] = UNSET
-    parent_has_image: Union[Unset, bool] = UNSET
-    pool_id: Union[Unset, int] = UNSET
-    pool: Union[Unset, str] = UNSET
-    product_id: Union[Unset, int] = UNSET
-    parent_product_id: Union[Unset, int] = UNSET
-    product_name: Union[Unset, str] = UNSET
-    parent_product_name: Union[Unset, str] = UNSET
-    category_id: Union[Unset, int] = UNSET
-    root_category_id: Union[Unset, int] = UNSET
-    category_name: Union[Unset, str] = UNSET
-    root_category_name: Union[Unset, str] = UNSET
-    manufacturer_id: Union[Unset, int] = UNSET
-    manufacturer: Union[Unset, str] = UNSET
-    display_part_number: Union[Unset, str] = UNSET
-    display_name: Union[Unset, str] = UNSET
-    manufacturer_part_number: Union[Unset, str] = UNSET
-    asset_room: Union[Unset, str] = UNSET
-    location: Union[Unset, str] = UNSET
-    station: Union[Unset, str] = UNSET
+    client_vendor_id: Union[None, Unset, int] = UNSET
+    company_name: Union[None, Unset, str] = UNSET
+    site_name: Union[None, Unset, str] = UNSET
+    asset_has_image: Union[None, Unset, bool] = UNSET
+    has_image: Union[None, Unset, bool] = UNSET
+    parent_has_image: Union[None, Unset, bool] = UNSET
+    pool_id: Union[None, Unset, int] = UNSET
+    pool: Union[None, Unset, str] = UNSET
+    product_id: Union[None, Unset, int] = UNSET
+    parent_product_id: Union[None, Unset, int] = UNSET
+    product_name: Union[None, Unset, str] = UNSET
+    parent_product_name: Union[None, Unset, str] = UNSET
+    category_id: Union[None, Unset, int] = UNSET
+    root_category_id: Union[None, Unset, int] = UNSET
+    category_name: Union[None, Unset, str] = UNSET
+    root_category_name: Union[None, Unset, str] = UNSET
+    manufacturer_id: Union[None, Unset, int] = UNSET
+    manufacturer: Union[None, Unset, str] = UNSET
+    display_part_number: Union[None, Unset, str] = UNSET
+    display_name: Union[None, Unset, str] = UNSET
+    manufacturer_part_number: Union[None, Unset, str] = UNSET
+    asset_room: Union[None, Unset, str] = UNSET
+    location: Union[None, Unset, str] = UNSET
+    station: Union[None, Unset, str] = UNSET
     tool_role: Union[
         None, Unset, QualerApiModelsAssetToAssetManageResponseModelToolRole
     ] = UNSET
-    tool_id: Union[Unset, int] = UNSET
-    department_id: Union[Unset, int] = UNSET
-    department_name: Union[Unset, str] = UNSET
-    custodian_name: Union[Unset, str] = UNSET
-    warranty: Union[Unset, str] = UNSET
+    tool_id: Union[None, Unset, int] = UNSET
+    department_id: Union[None, Unset, int] = UNSET
+    department_name: Union[None, Unset, str] = UNSET
+    custodian_name: Union[None, Unset, str] = UNSET
+    warranty: Union[None, Unset, str] = UNSET
     warranty_end: Union[None, Unset, datetime.datetime] = UNSET
-    is_warranty_expired: Union[Unset, bool] = UNSET
-    depreciation_method: Union[Unset, int] = UNSET
-    depreciation_basis: Union[Unset, float] = UNSET
-    salvage_value: Union[Unset, float] = UNSET
-    total_service_cost: Union[Unset, float] = UNSET
-    life_span_months: Union[Unset, int] = UNSET
+    is_warranty_expired: Union[None, Unset, bool] = UNSET
+    depreciation_method: Union[None, Unset, int] = UNSET
+    depreciation_basis: Union[None, Unset, float] = UNSET
+    salvage_value: Union[None, Unset, float] = UNSET
+    total_service_cost: Union[None, Unset, float] = UNSET
+    life_span_months: Union[None, Unset, int] = UNSET
     due_for_replacement_date: Union[None, Unset, datetime.datetime] = UNSET
-    depreciation_proc: Union[Unset, float] = UNSET
+    depreciation_proc: Union[None, Unset, float] = UNSET
     purchase_date: Union[None, Unset, datetime.datetime] = UNSET
-    purchase_cost: Union[Unset, float] = UNSET
-    time_in_service: Union[Unset, int] = UNSET
-    retirement_reason: Union[Unset, str] = UNSET
-    residual_cost: Union[Unset, float] = UNSET
-    employee_id: Union[Unset, int] = UNSET
-    asset_service_record_id: Union[Unset, int] = UNSET
+    purchase_cost: Union[None, Unset, float] = UNSET
+    time_in_service: Union[None, Unset, int] = UNSET
+    retirement_reason: Union[None, Unset, str] = UNSET
+    residual_cost: Union[None, Unset, float] = UNSET
+    employee_id: Union[None, Unset, int] = UNSET
+    asset_service_record_id: Union[None, Unset, int] = UNSET
     result_status: Union[None, Unset, ServiceResultStatus] = UNSET
     as_found_result: Union[None, Unset, ServiceResultStatus] = UNSET
     as_left_result: Union[None, Unset, ServiceResultStatus] = UNSET
     last_service_date: Union[None, Unset, datetime.datetime] = UNSET
     last_service: Union[None, Unset, str] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    next_service: Union[Unset, str] = UNSET
-    service_schedule_segment_id: Union[Unset, int] = UNSET
-    service_schedule_id: Union[Unset, int] = UNSET
-    service_schedule: Union[Unset, str] = UNSET
-    service_order_id: Union[Unset, int] = UNSET
+    next_service: Union[None, Unset, str] = UNSET
+    service_schedule_segment_id: Union[None, Unset, int] = UNSET
+    service_schedule_id: Union[None, Unset, int] = UNSET
+    service_schedule: Union[None, Unset, str] = UNSET
+    service_order_id: Union[None, Unset, int] = UNSET
     service_order_status: Union[
         None, Unset, QualerApiModelsAssetToAssetManageResponseModelServiceOrderStatus
     ] = UNSET
-    custom_order_number: Union[Unset, str] = UNSET
-    service_order_item_id: Union[Unset, int] = UNSET
-    vendor: Union[Unset, str] = UNSET
-    technician: Union[Unset, str] = UNSET
-    certificate_number: Union[Unset, str] = UNSET
+    custom_order_number: Union[None, Unset, str] = UNSET
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    vendor: Union[None, Unset, str] = UNSET
+    technician: Union[None, Unset, str] = UNSET
+    certificate_number: Union[None, Unset, str] = UNSET
     due_trigger_date: Union[None, Unset, datetime.datetime] = UNSET
     past_due_trigger_date: Union[None, Unset, datetime.datetime] = UNSET
     due_status: Union[
@@ -646,8 +646,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         asset_maker = d.pop("AssetMaker", UNSET)
 
         _record_type = d.pop("RecordType", UNSET)
-        record_type: Union[
-            Unset, QualerApiModelsAssetToAssetManageResponseModelRecordType
+        record_type: Union[None, Unset, QualerApiModelsAssetToAssetManageResponseModelRecordType
         ]
         if isinstance(_record_type, Unset):
             record_type = UNSET
@@ -767,7 +766,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         station = d.pop("Station", UNSET)
 
         _tool_role = d.pop("ToolRole", UNSET)
-        tool_role: Union[Unset, QualerApiModelsAssetToAssetManageResponseModelToolRole]
+        tool_role: Union[None, Unset, QualerApiModelsAssetToAssetManageResponseModelToolRole]
         if isinstance(_tool_role, Unset):
             tool_role = UNSET
         elif _tool_role is None:
@@ -869,7 +868,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         asset_service_record_id = d.pop("AssetServiceRecordId", UNSET)
 
         _result_status = d.pop("ResultStatus", UNSET)
-        result_status: Union[Unset, ServiceResultStatus]
+        result_status: Union[None, Unset, ServiceResultStatus]
         if isinstance(_result_status, Unset):
             result_status = UNSET
         elif _result_status is None:
@@ -878,7 +877,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
             result_status = ServiceResultStatus(_result_status)
 
         _as_found_result = d.pop("AsFoundResult", UNSET)
-        as_found_result: Union[Unset, ServiceResultStatus]
+        as_found_result: Union[None, Unset, ServiceResultStatus]
         if isinstance(_as_found_result, Unset):
             as_found_result = UNSET
         elif _as_found_result is None:
@@ -887,7 +886,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
             as_found_result = ServiceResultStatus(_as_found_result)
 
         _as_left_result = d.pop("AsLeftResult", UNSET)
-        as_left_result: Union[Unset, ServiceResultStatus]
+        as_left_result: Union[None, Unset, ServiceResultStatus]
         if isinstance(_as_left_result, Unset):
             as_left_result = UNSET
         elif _as_left_result is None:
@@ -953,8 +952,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         service_order_id = d.pop("ServiceOrderId", UNSET)
 
         _service_order_status = d.pop("ServiceOrderStatus", UNSET)
-        service_order_status: Union[
-            Unset, QualerApiModelsAssetToAssetManageResponseModelServiceOrderStatus
+        service_order_status: Union[None, Unset, QualerApiModelsAssetToAssetManageResponseModelServiceOrderStatus
         ]
         if isinstance(_service_order_status, Unset):
             service_order_status = UNSET
@@ -1018,8 +1016,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         )
 
         _due_status = d.pop("DueStatus", UNSET)
-        due_status: Union[
-            Unset, QualerApiModelsAssetToAssetManageResponseModelDueStatus
+        due_status: Union[None, Unset, QualerApiModelsAssetToAssetManageResponseModelDueStatus
         ]
         if isinstance(_due_status, Unset):
             due_status = UNSET
@@ -1031,7 +1028,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
             )
 
         _work_status = d.pop("WorkStatus", UNSET)
-        work_status: Union[Unset, WorkStatus]
+        work_status: Union[None, Unset, WorkStatus]
         if isinstance(_work_status, Unset):
             work_status = UNSET
         elif _work_status is None:

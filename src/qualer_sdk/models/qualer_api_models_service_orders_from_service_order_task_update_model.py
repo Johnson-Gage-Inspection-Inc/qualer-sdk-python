@@ -15,24 +15,24 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateMo
 class QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel:
     """
     Attributes:
-        service_order_task_id (Union[Unset, int]):
-        task_name (Union[Unset, str]):
-        task_details (Union[Unset, str]):
-        start_time (Union[Unset, datetime.datetime]):
-        finish_time (Union[Unset, datetime.datetime]):
-        time_spent_minutes (Union[Unset, int]):
-        price (Union[Unset, float]):
-        is_hourly (Union[Unset, bool]):
+        service_order_task_id (Union[None, Unset, int]):
+        task_name (Union[None, Unset, str]):
+        task_details (Union[None, Unset, str]):
+        start_time (Union[None, Unset, datetime.datetime]):
+        finish_time (Union[None, Unset, datetime.datetime]):
+        time_spent_minutes (Union[None, Unset, int]):
+        price (Union[None, Unset, float]):
+        is_hourly (Union[None, Unset, bool]):
     """
 
-    service_order_task_id: Union[Unset, int] = UNSET
-    task_name: Union[Unset, str] = UNSET
-    task_details: Union[Unset, str] = UNSET
-    start_time: Union[Unset, datetime.datetime] = UNSET
-    finish_time: Union[Unset, datetime.datetime] = UNSET
-    time_spent_minutes: Union[Unset, int] = UNSET
-    price: Union[Unset, float] = UNSET
-    is_hourly: Union[Unset, bool] = UNSET
+    service_order_task_id: Union[None, Unset, int] = UNSET
+    task_name: Union[None, Unset, str] = UNSET
+    task_details: Union[None, Unset, str] = UNSET
+    start_time: Union[None, Unset, datetime.datetime] = UNSET
+    finish_time: Union[None, Unset, datetime.datetime] = UNSET
+    time_spent_minutes: Union[None, Unset, int] = UNSET
+    price: Union[None, Unset, float] = UNSET
+    is_hourly: Union[None, Unset, bool] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -42,11 +42,11 @@ class QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel:
 
         task_details = self.task_details
 
-        start_time: Union[Unset, str] = UNSET
+        start_time: Union[None, Unset, str] = UNSET
         if self.start_time and not isinstance(self.start_time, Unset):
             start_time = self.start_time.isoformat()
 
-        finish_time: Union[Unset, str] = UNSET
+        finish_time: Union[None, Unset, str] = UNSET
         if self.finish_time and not isinstance(self.finish_time, Unset):
             finish_time = self.finish_time.isoformat()
 
@@ -88,14 +88,14 @@ class QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel:
         task_details = d.pop("TaskDetails", UNSET)
 
         _start_time = d.pop("StartTime", UNSET)
-        start_time: Union[Unset, datetime.datetime]
+        start_time: Union[None, Unset, datetime.datetime]
         if isinstance(_start_time, Unset):
             start_time = UNSET
         else:
             start_time = isoparse(_start_time)
 
         _finish_time = d.pop("FinishTime", UNSET)
-        finish_time: Union[Unset, datetime.datetime]
+        finish_time: Union[None, Unset, datetime.datetime]
         if isinstance(_finish_time, Unset):
             finish_time = UNSET
         else:

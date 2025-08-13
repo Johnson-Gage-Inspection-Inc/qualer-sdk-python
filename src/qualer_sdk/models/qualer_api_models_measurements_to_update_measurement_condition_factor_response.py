@@ -15,18 +15,18 @@ T = TypeVar(
 class QualerApiModelsMeasurementsToUpdateMeasurementConditionFactorResponse:
     """
     Attributes:
-        measurement_condition_factor_id (Union[Unset, int]):
-        factor_id (Union[Unset, str]):
-        factor_name (Union[Unset, str]):
-        factor_value (Union[Unset, float]):
-        factor_uom (Union[Unset, str]):
+        measurement_condition_factor_id (Union[None, Unset, int]):
+        factor_id (Union[None, Unset, str]):
+        factor_name (Union[None, Unset, str]):
+        factor_value (Union[None, Unset, float]):
+        factor_uom (Union[None, Unset, str]):
     """
 
-    measurement_condition_factor_id: Union[Unset, int] = UNSET
-    factor_id: Union[Unset, str] = UNSET
-    factor_name: Union[Unset, str] = UNSET
-    factor_value: Union[Unset, float] = UNSET
-    factor_uom: Union[Unset, str] = UNSET
+    measurement_condition_factor_id: Union[None, Unset, int] = UNSET
+    factor_id: Union[None, Unset, str] = UNSET
+    factor_name: Union[None, Unset, str] = UNSET
+    factor_value: Union[None, Unset, float] = UNSET
+    factor_uom: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

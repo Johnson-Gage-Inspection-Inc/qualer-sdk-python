@@ -13,44 +13,44 @@ T = TypeVar("T", bound="QualerApiModelsProductToProductApiResponseModel")
 class QualerApiModelsProductToProductApiResponseModel:
     """
     Attributes:
-        product_id (Union[Unset, int]):
-        parent_product_id (Union[Unset, int]):
-        category_id (Union[Unset, int]):
-        manufacturer_id (Union[Unset, int]):
-        manufacturer_name (Union[Unset, str]):
-        product_name (Union[Unset, str]):
-        parent_product_name (Union[Unset, str]):
-        manufacturer_part_number (Union[Unset, str]):
-        product_description (Union[Unset, str]):
-        is_family (Union[Unset, bool]):
-        is_discontinued (Union[Unset, bool]):
-        is_stock_item (Union[Unset, bool]):
-        unit_sale_price (Union[Unset, float]):
-        supplier_information (Union[Unset, str]):
-        quantity_on_hand (Union[Unset, int]):
-        product_code (Union[Unset, str]):
-        category_name (Union[Unset, str]):
-        parent_category_name (Union[Unset, str]):
+        product_id (Union[None, Unset, int]):
+        parent_product_id (Union[None, Unset, int]):
+        category_id (Union[None, Unset, int]):
+        manufacturer_id (Union[None, Unset, int]):
+        manufacturer_name (Union[None, Unset, str]):
+        product_name (Union[None, Unset, str]):
+        parent_product_name (Union[None, Unset, str]):
+        manufacturer_part_number (Union[None, Unset, str]):
+        product_description (Union[None, Unset, str]):
+        is_family (Union[None, Unset, bool]):
+        is_discontinued (Union[None, Unset, bool]):
+        is_stock_item (Union[None, Unset, bool]):
+        unit_sale_price (Union[None, Unset, float]):
+        supplier_information (Union[None, Unset, str]):
+        quantity_on_hand (Union[None, Unset, int]):
+        product_code (Union[None, Unset, str]):
+        category_name (Union[None, Unset, str]):
+        parent_category_name (Union[None, Unset, str]):
     """
 
-    product_id: Union[Unset, int] = UNSET
-    parent_product_id: Union[Unset, int] = UNSET
-    category_id: Union[Unset, int] = UNSET
-    manufacturer_id: Union[Unset, int] = UNSET
-    manufacturer_name: Union[Unset, str] = UNSET
-    product_name: Union[Unset, str] = UNSET
-    parent_product_name: Union[Unset, str] = UNSET
-    manufacturer_part_number: Union[Unset, str] = UNSET
-    product_description: Union[Unset, str] = UNSET
-    is_family: Union[Unset, bool] = UNSET
-    is_discontinued: Union[Unset, bool] = UNSET
-    is_stock_item: Union[Unset, bool] = UNSET
-    unit_sale_price: Union[Unset, float] = UNSET
-    supplier_information: Union[Unset, str] = UNSET
-    quantity_on_hand: Union[Unset, int] = UNSET
-    product_code: Union[Unset, str] = UNSET
-    category_name: Union[Unset, str] = UNSET
-    parent_category_name: Union[Unset, str] = UNSET
+    product_id: Union[None, Unset, int] = UNSET
+    parent_product_id: Union[None, Unset, int] = UNSET
+    category_id: Union[None, Unset, int] = UNSET
+    manufacturer_id: Union[None, Unset, int] = UNSET
+    manufacturer_name: Union[None, Unset, str] = UNSET
+    product_name: Union[None, Unset, str] = UNSET
+    parent_product_name: Union[None, Unset, str] = UNSET
+    manufacturer_part_number: Union[None, Unset, str] = UNSET
+    product_description: Union[None, Unset, str] = UNSET
+    is_family: Union[None, Unset, bool] = UNSET
+    is_discontinued: Union[None, Unset, bool] = UNSET
+    is_stock_item: Union[None, Unset, bool] = UNSET
+    unit_sale_price: Union[None, Unset, float] = UNSET
+    supplier_information: Union[None, Unset, str] = UNSET
+    quantity_on_hand: Union[None, Unset, int] = UNSET
+    product_code: Union[None, Unset, str] = UNSET
+    category_name: Union[None, Unset, str] = UNSET
+    parent_category_name: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

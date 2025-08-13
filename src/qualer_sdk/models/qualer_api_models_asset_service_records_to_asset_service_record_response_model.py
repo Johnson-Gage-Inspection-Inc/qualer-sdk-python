@@ -18,20 +18,20 @@ T = TypeVar(
 class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
     """
     Attributes:
-        asset_id (Union[Unset, int]):
-        asset_service_record_id (Union[Unset, int]):
-        service_schedule_segment_id (Union[Unset, int]):
-        forward_segment_id (Union[Unset, int]):
-        forward_next_service (Union[Unset, bool]):
-        service_order_number (Union[Unset, int]):
-        custom_order_number (Union[Unset, str]):
-        order_item_number (Union[Unset, int]):
-        certificate_number (Union[Unset, str]):
+        asset_id (Union[None, Unset, int]):
+        asset_service_record_id (Union[None, Unset, int]):
+        service_schedule_segment_id (Union[None, Unset, int]):
+        forward_segment_id (Union[None, Unset, int]):
+        forward_next_service (Union[None, Unset, bool]):
+        service_order_number (Union[None, Unset, int]):
+        custom_order_number (Union[None, Unset, str]):
+        order_item_number (Union[None, Unset, int]):
+        certificate_number (Union[None, Unset, str]):
         result_status (Union[None, Unset, str]):
         as_found_result (Union[None, Unset, str]):
         as_left_result (Union[None, Unset, str]):
         service_date (Union[None, Unset, datetime.datetime]):
-        serial_number (Union[Unset, str]):
+        serial_number (Union[None, Unset, str]):
         asset_tag (Union[None, Unset, str]):
         asset_user (Union[None, Unset, str]):
         asset_tag_change (Union[None, Unset, str]):
@@ -58,20 +58,20 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
         schedule_name (Union[None, Unset, str]):
     """
 
-    asset_id: Union[Unset, int] = UNSET
-    asset_service_record_id: Union[Unset, int] = UNSET
-    service_schedule_segment_id: Union[Unset, int] = UNSET
-    forward_segment_id: Union[Unset, int] = UNSET
-    forward_next_service: Union[Unset, bool] = UNSET
-    service_order_number: Union[Unset, int] = UNSET
-    custom_order_number: Union[Unset, str] = UNSET
-    order_item_number: Union[Unset, int] = UNSET
-    certificate_number: Union[Unset, str] = UNSET
+    asset_id: Union[None, Unset, int] = UNSET
+    asset_service_record_id: Union[None, Unset, int] = UNSET
+    service_schedule_segment_id: Union[None, Unset, int] = UNSET
+    forward_segment_id: Union[None, Unset, int] = UNSET
+    forward_next_service: Union[None, Unset, bool] = UNSET
+    service_order_number: Union[None, Unset, int] = UNSET
+    custom_order_number: Union[None, Unset, str] = UNSET
+    order_item_number: Union[None, Unset, int] = UNSET
+    certificate_number: Union[None, Unset, str] = UNSET
     result_status: Union[None, Unset, str] = UNSET
     as_found_result: Union[None, Unset, str] = UNSET
     as_left_result: Union[None, Unset, str] = UNSET
     service_date: Union[None, Unset, datetime.datetime] = UNSET
-    serial_number: Union[Unset, str] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
     asset_tag: Union[None, Unset, str] = UNSET
     asset_user: Union[None, Unset, str] = UNSET
     asset_tag_change: Union[None, Unset, str] = UNSET

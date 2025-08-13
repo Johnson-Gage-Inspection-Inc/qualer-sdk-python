@@ -13,24 +13,24 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderTaskResponse"
 class QualerApiModelsReportDatasetsToServiceOrderTaskResponse:
     """
     Attributes:
-        task_name (Union[Unset, str]):
-        task_order (Union[Unset, int]):
-        task_details (Union[Unset, str]):
-        time_spent (Union[Unset, float]):
-        time_spent_hours (Union[Unset, float]):
-        time_spent_minutes (Union[Unset, float]):
-        price (Union[Unset, float]):
-        is_hourly (Union[Unset, bool]):
+        task_name (Union[None, Unset, str]):
+        task_order (Union[None, Unset, int]):
+        task_details (Union[None, Unset, str]):
+        time_spent (Union[None, Unset, float]):
+        time_spent_hours (Union[None, Unset, float]):
+        time_spent_minutes (Union[None, Unset, float]):
+        price (Union[None, Unset, float]):
+        is_hourly (Union[None, Unset, bool]):
     """
 
-    task_name: Union[Unset, str] = UNSET
-    task_order: Union[Unset, int] = UNSET
-    task_details: Union[Unset, str] = UNSET
-    time_spent: Union[Unset, float] = UNSET
-    time_spent_hours: Union[Unset, float] = UNSET
-    time_spent_minutes: Union[Unset, float] = UNSET
-    price: Union[Unset, float] = UNSET
-    is_hourly: Union[Unset, bool] = UNSET
+    task_name: Union[None, Unset, str] = UNSET
+    task_order: Union[None, Unset, int] = UNSET
+    task_details: Union[None, Unset, str] = UNSET
+    time_spent: Union[None, Unset, float] = UNSET
+    time_spent_hours: Union[None, Unset, float] = UNSET
+    time_spent_minutes: Union[None, Unset, float] = UNSET
+    price: Union[None, Unset, float] = UNSET
+    is_hourly: Union[None, Unset, bool] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

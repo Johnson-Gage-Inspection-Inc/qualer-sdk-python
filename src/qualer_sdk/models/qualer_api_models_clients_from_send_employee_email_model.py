@@ -13,12 +13,12 @@ T = TypeVar("T", bound="QualerApiModelsClientsFromSendEmployeeEmailModel")
 class QualerApiModelsClientsFromSendEmployeeEmailModel:
     """
     Attributes:
-        subject (Union[Unset, str]):
-        body (Union[Unset, str]):
+        subject (Union[None, Unset, str]):
+        body (Union[None, Unset, str]):
     """
 
-    subject: Union[Unset, str] = UNSET
-    body: Union[Unset, str] = UNSET
+    subject: Union[None, Unset, str] = UNSET
+    body: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

@@ -14,7 +14,7 @@ from ...types import UNSET, Response, Unset
 def _get_kwargs(
     *,
     service_pricing_id: int,
-    service_group_id: Union[Unset, int] = UNSET,
+    service_group_id: Union[None, Unset, int] = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
@@ -70,12 +70,12 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     service_pricing_id: int,
-    service_group_id: Union[Unset, int] = UNSET,
+    service_group_id: Union[None, Unset, int] = UNSET,
 ) -> Response[list["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
     """
     Args:
         service_pricing_id (int):
-        service_group_id (Union[Unset, int]):
+        service_group_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -101,12 +101,12 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     service_pricing_id: int,
-    service_group_id: Union[Unset, int] = UNSET,
+    service_group_id: Union[None, Unset, int] = UNSET,
 ) -> Optional[list["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
     """
     Args:
         service_pricing_id (int):
-        service_group_id (Union[Unset, int]):
+        service_group_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -127,12 +127,12 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     service_pricing_id: int,
-    service_group_id: Union[Unset, int] = UNSET,
+    service_group_id: Union[None, Unset, int] = UNSET,
 ) -> Response[list["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
     """
     Args:
         service_pricing_id (int):
-        service_group_id (Union[Unset, int]):
+        service_group_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -156,12 +156,12 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     service_pricing_id: int,
-    service_group_id: Union[Unset, int] = UNSET,
+    service_group_id: Union[None, Unset, int] = UNSET,
 ) -> Optional[list["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
     """
     Args:
         service_pricing_id (int):
-        service_group_id (Union[Unset, int]):
+        service_group_id (Union[None, Unset, int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

@@ -17,10 +17,10 @@ T = TypeVar(
 class QualerApiModelsAssetServiceRecordsFromUpdateAssetServiceRecordModel:
     """
     Attributes:
-        service_order_number (Union[Unset, int]):
-        custom_order_number (Union[Unset, str]):
-        order_item_number (Union[Unset, int]):
-        certificate_number (Union[Unset, str]):
+        service_order_number (Union[None, Unset, int]):
+        custom_order_number (Union[None, Unset, str]):
+        order_item_number (Union[None, Unset, int]):
+        certificate_number (Union[None, Unset, str]):
         result_status (Union[None, Unset, str]):
         as_found_result (Union[None, Unset, str]):
         as_left_result (Union[None, Unset, str]):
@@ -28,7 +28,7 @@ class QualerApiModelsAssetServiceRecordsFromUpdateAssetServiceRecordModel:
         as_found_tolerance (Union[None, Unset, float]):
         as_left_tolerance (Union[None, Unset, float]):
         service_date (Union[None, Unset, datetime.datetime]):
-        serial_number (Union[Unset, str]):
+        serial_number (Union[None, Unset, str]):
         asset_tag (Union[None, Unset, str]):
         asset_user (Union[None, Unset, str]):
         service_notes (Union[None, Unset, str]):
@@ -51,10 +51,10 @@ class QualerApiModelsAssetServiceRecordsFromUpdateAssetServiceRecordModel:
         schedule_name (Union[None, Unset, str]):
     """
 
-    service_order_number: Union[Unset, int] = UNSET
-    custom_order_number: Union[Unset, str] = UNSET
-    order_item_number: Union[Unset, int] = UNSET
-    certificate_number: Union[Unset, str] = UNSET
+    service_order_number: Union[None, Unset, int] = UNSET
+    custom_order_number: Union[None, Unset, str] = UNSET
+    order_item_number: Union[None, Unset, int] = UNSET
+    certificate_number: Union[None, Unset, str] = UNSET
     result_status: Union[None, Unset, str] = UNSET
     as_found_result: Union[None, Unset, str] = UNSET
     as_left_result: Union[None, Unset, str] = UNSET
@@ -62,7 +62,7 @@ class QualerApiModelsAssetServiceRecordsFromUpdateAssetServiceRecordModel:
     as_found_tolerance: Union[None, Unset, float] = UNSET
     as_left_tolerance: Union[None, Unset, float] = UNSET
     service_date: Union[None, Unset, datetime.datetime] = UNSET
-    serial_number: Union[Unset, str] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
     asset_tag: Union[None, Unset, str] = UNSET
     asset_user: Union[None, Unset, str] = UNSET
     service_notes: Union[None, Unset, str] = UNSET

@@ -13,18 +13,18 @@ T = TypeVar("T", bound="QualerApiModelsClientsFromClientAssetQuery")
 class QualerApiModelsClientsFromClientAssetQuery:
     """
     Attributes:
-        equipment_id (Union[Unset, str]):
-        serial_number (Union[Unset, str]):
-        asset_tag (Union[Unset, str]):
-        barcode (Union[Unset, str]):
-        legacy_id (Union[Unset, str]):
+        equipment_id (Union[None, Unset, str]):
+        serial_number (Union[None, Unset, str]):
+        asset_tag (Union[None, Unset, str]):
+        barcode (Union[None, Unset, str]):
+        legacy_id (Union[None, Unset, str]):
     """
 
-    equipment_id: Union[Unset, str] = UNSET
-    serial_number: Union[Unset, str] = UNSET
-    asset_tag: Union[Unset, str] = UNSET
-    barcode: Union[Unset, str] = UNSET
-    legacy_id: Union[Unset, str] = UNSET
+    equipment_id: Union[None, Unset, str] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
+    asset_tag: Union[None, Unset, str] = UNSET
+    barcode: Union[None, Unset, str] = UNSET
+    legacy_id: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

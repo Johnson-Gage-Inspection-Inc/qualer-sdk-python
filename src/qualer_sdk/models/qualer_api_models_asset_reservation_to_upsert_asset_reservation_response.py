@@ -15,10 +15,10 @@ T = TypeVar(
 class QualerApiModelsAssetReservationToUpsertAssetReservationResponse:
     """
     Attributes:
-        asset_reservation_id (Union[Unset, int]):
+        asset_reservation_id (Union[None, Unset, int]):
     """
 
-    asset_reservation_id: Union[Unset, int] = UNSET
+    asset_reservation_id: Union[None, Unset, int] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

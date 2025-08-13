@@ -37,95 +37,88 @@ T = TypeVar(
 class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel:
     """
     Attributes:
-        specification_name (Union[Unset, str]):
-        measurement_quantity (Union[Unset, str]):
-        unit_of_measure_id (Union[Unset, int]):
-        unit_of_measure (Union[Unset, str]):
-        range_min (Union[Unset, float]):
-        range_max (Union[Unset, float]):
-        tolerance_type (Union[Unset, str]):
-        specification_mode (Union[Unset, QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResp
+        specification_name (Union[None, Unset, str]):
+        measurement_quantity (Union[None, Unset, str]):
+        unit_of_measure_id (Union[None, Unset, int]):
+        unit_of_measure (Union[None, Unset, str]):
+        range_min (Union[None, Unset, float]):
+        range_max (Union[None, Unset, float]):
+        tolerance_type (Union[None, Unset, str]):
+        specification_mode (Union[None, Unset, QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResp
             onseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode]):
-        tolerance_mode (Union[Unset, QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponse
+        tolerance_mode (Union[None, Unset, QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponse
             ModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode]):
-        tolerance_unit (Union[Unset, QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponse
+        tolerance_unit (Union[None, Unset, QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponse
             ModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit]):
-        precision_type (Union[Unset, str]):
-        readings (Union[Unset, int]):
-        channels_type (Union[Unset, str]):
-        channel_count (Union[Unset, int]):
-        precision (Union[Unset, float]):
-        tolerance_minimum (Union[Unset, float]):
-        tolerance_maximum (Union[Unset, float]):
-        resolution (Union[Unset, float]):
-        resolution_count (Union[Unset, float]):
-        nominal (Union[Unset, float]):
-        expected_value (Union[Unset, float]):
-        base_value (Union[Unset, float]):
-        test_value (Union[Unset, float]):
-        is_accredited (Union[Unset, bool]):
-        measurements (Union[Unset, list['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResp
+        precision_type (Union[None, Unset, str]):
+        readings (Union[None, Unset, int]):
+        channels_type (Union[None, Unset, str]):
+        channel_count (Union[None, Unset, int]):
+        precision (Union[None, Unset, float]):
+        tolerance_minimum (Union[None, Unset, float]):
+        tolerance_maximum (Union[None, Unset, float]):
+        resolution (Union[None, Unset, float]):
+        resolution_count (Union[None, Unset, float]):
+        nominal (Union[None, Unset, float]):
+        expected_value (Union[None, Unset, float]):
+        base_value (Union[None, Unset, float]):
+        test_value (Union[None, Unset, float]):
+        is_accredited (Union[None, Unset, bool]):
+        measurements (Union[None, Unset, list['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResp
             onseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementResponseModel']]):
-        condition_factors (Union[Unset, list['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
+        condition_factors (Union[None, Unset, list['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
             hResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel']]
             ):
-        primary_measurement_tool (Union[Unset, QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBat
+        primary_measurement_tool (Union[None, Unset, QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBat
             chResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel]):
-        secondary_measurement_tool (Union[Unset, QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementB
+        secondary_measurement_tool (Union[None, Unset, QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementB
             atchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel]):
     """
 
-    specification_name: Union[Unset, str] = UNSET
-    measurement_quantity: Union[Unset, str] = UNSET
-    unit_of_measure_id: Union[Unset, int] = UNSET
-    unit_of_measure: Union[Unset, str] = UNSET
-    range_min: Union[Unset, float] = UNSET
-    range_max: Union[Unset, float] = UNSET
-    tolerance_type: Union[Unset, str] = UNSET
-    specification_mode: Union[
-        Unset,
+    specification_name: Union[None, Unset, str] = UNSET
+    measurement_quantity: Union[None, Unset, str] = UNSET
+    unit_of_measure_id: Union[None, Unset, int] = UNSET
+    unit_of_measure: Union[None, Unset, str] = UNSET
+    range_min: Union[None, Unset, float] = UNSET
+    range_max: Union[None, Unset, float] = UNSET
+    tolerance_type: Union[None, Unset, str] = UNSET
+    specification_mode: Union[None, Unset,
         QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode,
     ] = UNSET
-    tolerance_mode: Union[
-        Unset,
+    tolerance_mode: Union[None, Unset,
         QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode,
     ] = UNSET
-    tolerance_unit: Union[
-        Unset,
+    tolerance_unit: Union[None, Unset,
         QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit,
     ] = UNSET
-    precision_type: Union[Unset, str] = UNSET
-    readings: Union[Unset, int] = UNSET
-    channels_type: Union[Unset, str] = UNSET
-    channel_count: Union[Unset, int] = UNSET
-    precision: Union[Unset, float] = UNSET
-    tolerance_minimum: Union[Unset, float] = UNSET
-    tolerance_maximum: Union[Unset, float] = UNSET
-    resolution: Union[Unset, float] = UNSET
-    resolution_count: Union[Unset, float] = UNSET
-    nominal: Union[Unset, float] = UNSET
-    expected_value: Union[Unset, float] = UNSET
-    base_value: Union[Unset, float] = UNSET
-    test_value: Union[Unset, float] = UNSET
-    is_accredited: Union[Unset, bool] = UNSET
-    measurements: Union[
-        Unset,
+    precision_type: Union[None, Unset, str] = UNSET
+    readings: Union[None, Unset, int] = UNSET
+    channels_type: Union[None, Unset, str] = UNSET
+    channel_count: Union[None, Unset, int] = UNSET
+    precision: Union[None, Unset, float] = UNSET
+    tolerance_minimum: Union[None, Unset, float] = UNSET
+    tolerance_maximum: Union[None, Unset, float] = UNSET
+    resolution: Union[None, Unset, float] = UNSET
+    resolution_count: Union[None, Unset, float] = UNSET
+    nominal: Union[None, Unset, float] = UNSET
+    expected_value: Union[None, Unset, float] = UNSET
+    base_value: Union[None, Unset, float] = UNSET
+    test_value: Union[None, Unset, float] = UNSET
+    is_accredited: Union[None, Unset, bool] = UNSET
+    measurements: Union[None, Unset,
         list[
             "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementResponseModel"
         ],
     ] = UNSET
-    condition_factors: Union[
-        Unset,
+    condition_factors: Union[None, Unset,
         list[
             "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel"
         ],
     ] = UNSET
-    primary_measurement_tool: Union[
-        Unset,
+    primary_measurement_tool: Union[None, Unset,
         "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel",
     ] = UNSET
-    secondary_measurement_tool: Union[
-        Unset,
+    secondary_measurement_tool: Union[None, Unset,
         "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel",
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -145,15 +138,15 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
 
         tolerance_type = self.tolerance_type
 
-        specification_mode: Union[Unset, int] = UNSET
+        specification_mode: Union[None, Unset, int] = UNSET
         if self.specification_mode and not isinstance(self.specification_mode, Unset):
             specification_mode = self.specification_mode.value
 
-        tolerance_mode: Union[Unset, int] = UNSET
+        tolerance_mode: Union[None, Unset, int] = UNSET
         if self.tolerance_mode and not isinstance(self.tolerance_mode, Unset):
             tolerance_mode = self.tolerance_mode.value
 
-        tolerance_unit: Union[Unset, int] = UNSET
+        tolerance_unit: Union[None, Unset, int] = UNSET
         if self.tolerance_unit and not isinstance(self.tolerance_unit, Unset):
             tolerance_unit = self.tolerance_unit.value
 
@@ -185,27 +178,27 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
 
         is_accredited = self.is_accredited
 
-        measurements: Union[Unset, list[dict[str, Any]]] = UNSET
+        measurements: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.measurements and not isinstance(self.measurements, Unset):
             measurements = []
             for measurements_item_data in self.measurements:
                 measurements_item = measurements_item_data.to_dict()
                 measurements.append(measurements_item)
 
-        condition_factors: Union[Unset, list[dict[str, Any]]] = UNSET
+        condition_factors: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.condition_factors and not isinstance(self.condition_factors, Unset):
             condition_factors = []
             for condition_factors_item_data in self.condition_factors:
                 condition_factors_item = condition_factors_item_data.to_dict()
                 condition_factors.append(condition_factors_item)
 
-        primary_measurement_tool: Union[Unset, dict[str, Any]] = UNSET
+        primary_measurement_tool: Union[None, Unset, dict[str, Any]] = UNSET
         if self.primary_measurement_tool and not isinstance(
             self.primary_measurement_tool, Unset
         ):
             primary_measurement_tool = self.primary_measurement_tool.to_dict()
 
-        secondary_measurement_tool: Union[Unset, dict[str, Any]] = UNSET
+        secondary_measurement_tool: Union[None, Unset, dict[str, Any]] = UNSET
         if self.secondary_measurement_tool and not isinstance(
             self.secondary_measurement_tool, Unset
         ):
@@ -301,8 +294,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         tolerance_type = d.pop("ToleranceType", UNSET)
 
         _specification_mode = d.pop("SpecificationMode", UNSET)
-        specification_mode: Union[
-            Unset,
+        specification_mode: Union[None, Unset,
             QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode,
         ]
         if isinstance(_specification_mode, Unset):
@@ -313,8 +305,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
             )
 
         _tolerance_mode = d.pop("ToleranceMode", UNSET)
-        tolerance_mode: Union[
-            Unset,
+        tolerance_mode: Union[None, Unset,
             QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode,
         ]
         if isinstance(_tolerance_mode, Unset):
@@ -325,8 +316,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
             )
 
         _tolerance_unit = d.pop("ToleranceUnit", UNSET)
-        tolerance_unit: Union[
-            Unset,
+        tolerance_unit: Union[None, Unset,
             QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit,
         ]
         if isinstance(_tolerance_unit, Unset):
@@ -383,8 +373,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
             condition_factors.append(condition_factors_item)
 
         _primary_measurement_tool = d.pop("PrimaryMeasurementTool", UNSET)
-        primary_measurement_tool: Union[
-            Unset,
+        primary_measurement_tool: Union[None, Unset,
             QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel,
         ]
         if isinstance(_primary_measurement_tool, Unset):
@@ -395,8 +384,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
             )
 
         _secondary_measurement_tool = d.pop("SecondaryMeasurementTool", UNSET)
-        secondary_measurement_tool: Union[
-            Unset,
+        secondary_measurement_tool: Union[None, Unset,
             QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel,
         ]
         if isinstance(_secondary_measurement_tool, Unset):

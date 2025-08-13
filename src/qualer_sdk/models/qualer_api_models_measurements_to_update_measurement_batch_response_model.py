@@ -21,15 +21,14 @@ T = TypeVar(
 class QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel:
     """
     Attributes:
-        batch_id (Union[Unset, int]):
-        batch_type (Union[Unset, str]):
-        measurement_sets (Union[Unset, list['QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel']]):
+        batch_id (Union[None, Unset, int]):
+        batch_type (Union[None, Unset, str]):
+        measurement_sets (Union[None, Unset, list['QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel']]):
     """
 
-    batch_id: Union[Unset, int] = UNSET
-    batch_type: Union[Unset, str] = UNSET
-    measurement_sets: Union[
-        Unset, list["QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel"]
+    batch_id: Union[None, Unset, int] = UNSET
+    batch_type: Union[None, Unset, str] = UNSET
+    measurement_sets: Union[None, Unset, list["QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel"]
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -38,7 +37,7 @@ class QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel:
 
         batch_type = self.batch_type
 
-        measurement_sets: Union[Unset, list[dict[str, Any]]] = UNSET
+        measurement_sets: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.measurement_sets and not isinstance(self.measurement_sets, Unset):
             measurement_sets = []
             for measurement_sets_item_data in self.measurement_sets:

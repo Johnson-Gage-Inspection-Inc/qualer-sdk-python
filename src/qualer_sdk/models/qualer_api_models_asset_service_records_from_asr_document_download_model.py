@@ -13,12 +13,12 @@ T = TypeVar("T", bound="QualerApiModelsAssetServiceRecordsFromAsrDocumentDownloa
 class QualerApiModelsAssetServiceRecordsFromAsrDocumentDownloadModel:
     """
     Attributes:
-        asset_service_record_id (Union[Unset, int]):
-        file_name (Union[Unset, str]):
+        asset_service_record_id (Union[None, Unset, int]):
+        file_name (Union[None, Unset, str]):
     """
 
-    asset_service_record_id: Union[Unset, int] = UNSET
-    file_name: Union[Unset, str] = UNSET
+    asset_service_record_id: Union[None, Unset, int] = UNSET
+    file_name: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

@@ -24,25 +24,25 @@ T = TypeVar("T", bound="QualerApiModelsVendorsToVendorCompanyResponseModel")
 class QualerApiModelsVendorsToVendorCompanyResponseModel:
     """
     Attributes:
-        account_number_text (Union[Unset, str]):
-        account_number (Union[Unset, int]):
-        currency_id (Union[Unset, int]):
-        company_id (Union[Unset, int]):
-        company_name (Union[Unset, str]):
-        domain_name (Union[Unset, str]):
-        custom_name (Union[Unset, str]):
+        account_number_text (Union[None, Unset, str]):
+        account_number (Union[None, Unset, int]):
+        currency_id (Union[None, Unset, int]):
+        company_id (Union[None, Unset, int]):
+        company_name (Union[None, Unset, str]):
+        domain_name (Union[None, Unset, str]):
+        custom_name (Union[None, Unset, str]):
         billing_address (Union['QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0', None, Unset]):
         shipping_address (Union['QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0', None, Unset]):
-        updated_on_utc (Union[Unset, datetime.datetime]):
+        updated_on_utc (Union[None, Unset, datetime.datetime]):
     """
 
-    account_number_text: Union[Unset, str] = UNSET
-    account_number: Union[Unset, int] = UNSET
-    currency_id: Union[Unset, int] = UNSET
-    company_id: Union[Unset, int] = UNSET
-    company_name: Union[Unset, str] = UNSET
-    domain_name: Union[Unset, str] = UNSET
-    custom_name: Union[Unset, str] = UNSET
+    account_number_text: Union[None, Unset, str] = UNSET
+    account_number: Union[None, Unset, int] = UNSET
+    currency_id: Union[None, Unset, int] = UNSET
+    company_id: Union[None, Unset, int] = UNSET
+    company_name: Union[None, Unset, str] = UNSET
+    domain_name: Union[None, Unset, str] = UNSET
+    custom_name: Union[None, Unset, str] = UNSET
     billing_address: Union[
         "QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0",
         None,
@@ -53,7 +53,7 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
         None,
         Unset,
     ] = UNSET
-    updated_on_utc: Union[Unset, datetime.datetime] = UNSET
+    updated_on_utc: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -100,7 +100,7 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
         else:
             shipping_address = self.shipping_address
 
-        updated_on_utc: Union[Unset, str] = UNSET
+        updated_on_utc: Union[None, Unset, str] = UNSET
         if self.updated_on_utc and not isinstance(self.updated_on_utc, Unset):
             updated_on_utc = self.updated_on_utc.isoformat()
 
@@ -219,7 +219,7 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
         shipping_address = _parse_shipping_address(d.pop("ShippingAddress", UNSET))
 
         _updated_on_utc = d.pop("UpdatedOnUtc", UNSET)
-        updated_on_utc: Union[Unset, datetime.datetime]
+        updated_on_utc: Union[None, Unset, datetime.datetime]
         if isinstance(_updated_on_utc, Unset):
             updated_on_utc = UNSET
         else:

@@ -15,34 +15,34 @@ T = TypeVar(
 class QualerApiModelsReportDatasetsToServiceOrderItemComponentResponse:
     """
     Attributes:
-        order_item_id (Union[Unset, int]):
-        component_asset_id (Union[Unset, int]):
-        component_serial_number (Union[Unset, str]):
-        component_asset_tag (Union[Unset, str]):
-        component_asset_user (Union[Unset, str]):
-        component_equipment_id (Union[Unset, str]):
-        component_manufacturer_part_number (Union[Unset, str]):
-        component_manufacturer (Union[Unset, str]):
-        component_root_category (Union[Unset, str]):
-        component_sub_category (Union[Unset, str]):
-        component_location (Union[Unset, str]):
-        component_display_name (Union[Unset, str]):
-        component_display_part_number (Union[Unset, str]):
+        order_item_id (Union[None, Unset, int]):
+        component_asset_id (Union[None, Unset, int]):
+        component_serial_number (Union[None, Unset, str]):
+        component_asset_tag (Union[None, Unset, str]):
+        component_asset_user (Union[None, Unset, str]):
+        component_equipment_id (Union[None, Unset, str]):
+        component_manufacturer_part_number (Union[None, Unset, str]):
+        component_manufacturer (Union[None, Unset, str]):
+        component_root_category (Union[None, Unset, str]):
+        component_sub_category (Union[None, Unset, str]):
+        component_location (Union[None, Unset, str]):
+        component_display_name (Union[None, Unset, str]):
+        component_display_part_number (Union[None, Unset, str]):
     """
 
-    order_item_id: Union[Unset, int] = UNSET
-    component_asset_id: Union[Unset, int] = UNSET
-    component_serial_number: Union[Unset, str] = UNSET
-    component_asset_tag: Union[Unset, str] = UNSET
-    component_asset_user: Union[Unset, str] = UNSET
-    component_equipment_id: Union[Unset, str] = UNSET
-    component_manufacturer_part_number: Union[Unset, str] = UNSET
-    component_manufacturer: Union[Unset, str] = UNSET
-    component_root_category: Union[Unset, str] = UNSET
-    component_sub_category: Union[Unset, str] = UNSET
-    component_location: Union[Unset, str] = UNSET
-    component_display_name: Union[Unset, str] = UNSET
-    component_display_part_number: Union[Unset, str] = UNSET
+    order_item_id: Union[None, Unset, int] = UNSET
+    component_asset_id: Union[None, Unset, int] = UNSET
+    component_serial_number: Union[None, Unset, str] = UNSET
+    component_asset_tag: Union[None, Unset, str] = UNSET
+    component_asset_user: Union[None, Unset, str] = UNSET
+    component_equipment_id: Union[None, Unset, str] = UNSET
+    component_manufacturer_part_number: Union[None, Unset, str] = UNSET
+    component_manufacturer: Union[None, Unset, str] = UNSET
+    component_root_category: Union[None, Unset, str] = UNSET
+    component_sub_category: Union[None, Unset, str] = UNSET
+    component_location: Union[None, Unset, str] = UNSET
+    component_display_name: Union[None, Unset, str] = UNSET
+    component_display_part_number: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

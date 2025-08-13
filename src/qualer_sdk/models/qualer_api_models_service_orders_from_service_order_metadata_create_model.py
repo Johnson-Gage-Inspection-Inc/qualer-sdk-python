@@ -21,20 +21,19 @@ T = TypeVar(
 class QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel:
     """
     Attributes:
-        metadata (Union[Unset, str]):
-        exhibits (Union[Unset, QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits]):
+        metadata (Union[None, Unset, str]):
+        exhibits (Union[None, Unset, QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits]):
     """
 
-    metadata: Union[Unset, str] = UNSET
-    exhibits: Union[
-        Unset, "QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits"
+    metadata: Union[None, Unset, str] = UNSET
+    exhibits: Union[None, Unset, "QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits"
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         metadata = self.metadata
 
-        exhibits: Union[Unset, dict[str, Any]] = UNSET
+        exhibits: Union[None, Unset, dict[str, Any]] = UNSET
         if self.exhibits and not isinstance(self.exhibits, Unset):
             exhibits = self.exhibits.to_dict()
 
@@ -58,8 +57,7 @@ class QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel:
         metadata = d.pop("Metadata", UNSET)
 
         _exhibits = d.pop("Exhibits", UNSET)
-        exhibits: Union[
-            Unset,
+        exhibits: Union[None, Unset,
             QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits,
         ]
         if isinstance(_exhibits, Unset):

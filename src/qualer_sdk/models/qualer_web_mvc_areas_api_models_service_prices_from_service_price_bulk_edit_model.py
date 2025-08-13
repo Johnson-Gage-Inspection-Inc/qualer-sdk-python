@@ -15,42 +15,42 @@ T = TypeVar(
 class QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel:
     """
     Attributes:
-        service_option_id (Union[Unset, int]):
-        service_option (Union[Unset, str]):
-        service_option_code (Union[Unset, str]):
-        option_type (Union[Unset, str]):
-        description (Union[Unset, str]):
-        service_task_id (Union[Unset, int]):
-        service_code (Union[Unset, str]):
-        document_number (Union[Unset, str]):
-        document_section (Union[Unset, str]):
-        capability_id (Union[Unset, int]):
-        service_type_id (Union[Unset, int]):
-        service_task_price_id (Union[Unset, int]):
-        service_pricing_id (Union[Unset, int]):
-        price (Union[Unset, float]):
-        is_hourly (Union[Unset, bool]):
-        issue (Union[Unset, str]):
-        log_error (Union[Unset, str]):
+        service_option_id (Union[None, Unset, int]):
+        service_option (Union[None, Unset, str]):
+        service_option_code (Union[None, Unset, str]):
+        option_type (Union[None, Unset, str]):
+        description (Union[None, Unset, str]):
+        service_task_id (Union[None, Unset, int]):
+        service_code (Union[None, Unset, str]):
+        document_number (Union[None, Unset, str]):
+        document_section (Union[None, Unset, str]):
+        capability_id (Union[None, Unset, int]):
+        service_type_id (Union[None, Unset, int]):
+        service_task_price_id (Union[None, Unset, int]):
+        service_pricing_id (Union[None, Unset, int]):
+        price (Union[None, Unset, float]):
+        is_hourly (Union[None, Unset, bool]):
+        issue (Union[None, Unset, str]):
+        log_error (Union[None, Unset, str]):
     """
 
-    service_option_id: Union[Unset, int] = UNSET
-    service_option: Union[Unset, str] = UNSET
-    service_option_code: Union[Unset, str] = UNSET
-    option_type: Union[Unset, str] = UNSET
-    description: Union[Unset, str] = UNSET
-    service_task_id: Union[Unset, int] = UNSET
-    service_code: Union[Unset, str] = UNSET
-    document_number: Union[Unset, str] = UNSET
-    document_section: Union[Unset, str] = UNSET
-    capability_id: Union[Unset, int] = UNSET
-    service_type_id: Union[Unset, int] = UNSET
-    service_task_price_id: Union[Unset, int] = UNSET
-    service_pricing_id: Union[Unset, int] = UNSET
-    price: Union[Unset, float] = UNSET
-    is_hourly: Union[Unset, bool] = UNSET
-    issue: Union[Unset, str] = UNSET
-    log_error: Union[Unset, str] = UNSET
+    service_option_id: Union[None, Unset, int] = UNSET
+    service_option: Union[None, Unset, str] = UNSET
+    service_option_code: Union[None, Unset, str] = UNSET
+    option_type: Union[None, Unset, str] = UNSET
+    description: Union[None, Unset, str] = UNSET
+    service_task_id: Union[None, Unset, int] = UNSET
+    service_code: Union[None, Unset, str] = UNSET
+    document_number: Union[None, Unset, str] = UNSET
+    document_section: Union[None, Unset, str] = UNSET
+    capability_id: Union[None, Unset, int] = UNSET
+    service_type_id: Union[None, Unset, int] = UNSET
+    service_task_price_id: Union[None, Unset, int] = UNSET
+    service_pricing_id: Union[None, Unset, int] = UNSET
+    price: Union[None, Unset, float] = UNSET
+    is_hourly: Union[None, Unset, bool] = UNSET
+    issue: Union[None, Unset, str] = UNSET
+    log_error: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

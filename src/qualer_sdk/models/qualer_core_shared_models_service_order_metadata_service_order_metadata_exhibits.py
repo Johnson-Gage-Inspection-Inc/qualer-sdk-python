@@ -21,15 +21,14 @@ T = TypeVar(
 class QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits:
     """
     Attributes:
-        title (Union[Unset, str]):
-        subtitle (Union[Unset, str]):
-        exhibits (Union[Unset, list['QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibitsKeyValue']]):
+        title (Union[None, Unset, str]):
+        subtitle (Union[None, Unset, str]):
+        exhibits (Union[None, Unset, list['QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibitsKeyValue']]):
     """
 
-    title: Union[Unset, str] = UNSET
-    subtitle: Union[Unset, str] = UNSET
-    exhibits: Union[
-        Unset,
+    title: Union[None, Unset, str] = UNSET
+    subtitle: Union[None, Unset, str] = UNSET
+    exhibits: Union[None, Unset,
         list[
             "QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibitsKeyValue"
         ],
@@ -41,7 +40,7 @@ class QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits:
 
         subtitle = self.subtitle
 
-        exhibits: Union[Unset, list[dict[str, Any]]] = UNSET
+        exhibits: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.exhibits and not isinstance(self.exhibits, Unset):
             exhibits = []
             for exhibits_item_data in self.exhibits:

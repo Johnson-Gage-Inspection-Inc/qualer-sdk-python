@@ -13,12 +13,12 @@ T = TypeVar("T", bound="QualerApiModelsAssetPoolsToAssetPoolModel")
 class QualerApiModelsAssetPoolsToAssetPoolModel:
     """
     Attributes:
-        asset_pool_id (Union[Unset, int]):
-        asset_pool_name (Union[Unset, str]):
+        asset_pool_id (Union[None, Unset, int]):
+        asset_pool_name (Union[None, Unset, str]):
     """
 
-    asset_pool_id: Union[Unset, int] = UNSET
-    asset_pool_name: Union[Unset, str] = UNSET
+    asset_pool_id: Union[None, Unset, int] = UNSET
+    asset_pool_name: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

@@ -13,18 +13,18 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderItemFieldResp
 class QualerApiModelsReportDatasetsToServiceOrderItemFieldResponse:
     """
     Attributes:
-        field_id (Union[Unset, str]):
-        type_ (Union[Unset, int]):
-        value (Union[Unset, str]):
-        service_order_item_id (Union[Unset, int]):
-        service_order_item_task_id (Union[Unset, int]):
+        field_id (Union[None, Unset, str]):
+        type_ (Union[None, Unset, int]):
+        value (Union[None, Unset, str]):
+        service_order_item_id (Union[None, Unset, int]):
+        service_order_item_task_id (Union[None, Unset, int]):
     """
 
-    field_id: Union[Unset, str] = UNSET
-    type_: Union[Unset, int] = UNSET
-    value: Union[Unset, str] = UNSET
-    service_order_item_id: Union[Unset, int] = UNSET
-    service_order_item_task_id: Union[Unset, int] = UNSET
+    field_id: Union[None, Unset, str] = UNSET
+    type_: Union[None, Unset, int] = UNSET
+    value: Union[None, Unset, str] = UNSET
+    service_order_item_id: Union[None, Unset, int] = UNSET
+    service_order_item_task_id: Union[None, Unset, int] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

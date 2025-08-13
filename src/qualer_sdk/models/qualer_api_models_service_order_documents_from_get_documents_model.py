@@ -13,10 +13,10 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrderDocumentsFromGetDocumentsMode
 class QualerApiModelsServiceOrderDocumentsFromGetDocumentsModel:
     """
     Attributes:
-        file_name (Union[Unset, str]):
+        file_name (Union[None, Unset, str]):
     """
 
-    file_name: Union[Unset, str] = UNSET
+    file_name: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

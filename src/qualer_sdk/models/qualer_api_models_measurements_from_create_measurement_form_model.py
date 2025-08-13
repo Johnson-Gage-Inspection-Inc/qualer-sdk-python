@@ -22,17 +22,16 @@ T = TypeVar("T", bound="QualerApiModelsMeasurementsFromCreateMeasurementFormMode
 class QualerApiModelsMeasurementsFromCreateMeasurementFormModel:
     """
     Attributes:
-        batch_type (Union[Unset, str]):
-        batch_result (Union[Unset, str]):
-        specification (Union[Unset, QualerApiModelsMeasurementsFromSpecification]):
-        measurement_sets (Union[Unset, list['QualerApiModelsMeasurementsFromCreateMeasurementSetModel']]):
+        batch_type (Union[None, Unset, str]):
+        batch_result (Union[None, Unset, str]):
+        specification (Union[None, Unset, QualerApiModelsMeasurementsFromSpecification]):
+        measurement_sets (Union[None, Unset, list['QualerApiModelsMeasurementsFromCreateMeasurementSetModel']]):
     """
 
-    batch_type: Union[Unset, str] = UNSET
-    batch_result: Union[Unset, str] = UNSET
-    specification: Union[Unset, "QualerApiModelsMeasurementsFromSpecification"] = UNSET
-    measurement_sets: Union[
-        Unset, list["QualerApiModelsMeasurementsFromCreateMeasurementSetModel"]
+    batch_type: Union[None, Unset, str] = UNSET
+    batch_result: Union[None, Unset, str] = UNSET
+    specification: Union[None, Unset, "QualerApiModelsMeasurementsFromSpecification"] = UNSET
+    measurement_sets: Union[None, Unset, list["QualerApiModelsMeasurementsFromCreateMeasurementSetModel"]
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -41,11 +40,11 @@ class QualerApiModelsMeasurementsFromCreateMeasurementFormModel:
 
         batch_result = self.batch_result
 
-        specification: Union[Unset, dict[str, Any]] = UNSET
+        specification: Union[None, Unset, dict[str, Any]] = UNSET
         if self.specification and not isinstance(self.specification, Unset):
             specification = self.specification.to_dict()
 
-        measurement_sets: Union[Unset, list[dict[str, Any]]] = UNSET
+        measurement_sets: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.measurement_sets and not isinstance(self.measurement_sets, Unset):
             measurement_sets = []
             for measurement_sets_item_data in self.measurement_sets:
@@ -81,7 +80,7 @@ class QualerApiModelsMeasurementsFromCreateMeasurementFormModel:
         batch_result = d.pop("BatchResult", UNSET)
 
         _specification = d.pop("Specification", UNSET)
-        specification: Union[Unset, QualerApiModelsMeasurementsFromSpecification]
+        specification: Union[None, Unset, QualerApiModelsMeasurementsFromSpecification]
         if isinstance(_specification, Unset):
             specification = UNSET
         else:

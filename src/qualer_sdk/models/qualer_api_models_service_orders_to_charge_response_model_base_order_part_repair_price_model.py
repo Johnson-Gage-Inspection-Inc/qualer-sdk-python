@@ -16,24 +16,24 @@ T = TypeVar(
 class QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel:
     """
     Attributes:
-        delivery_charge (Union[Unset, float]):
-        quantity (Union[Unset, float]):
-        time_spent_in_minutes (Union[Unset, float]):
-        is_hourly_pricing (Union[Unset, bool]):
-        description (Union[Unset, str]):
-        name (Union[Unset, str]):
-        price (Union[Unset, float]):
-        is_taxable (Union[Unset, bool]):
+        delivery_charge (Union[None, Unset, float]):
+        quantity (Union[None, Unset, float]):
+        time_spent_in_minutes (Union[None, Unset, float]):
+        is_hourly_pricing (Union[None, Unset, bool]):
+        description (Union[None, Unset, str]):
+        name (Union[None, Unset, str]):
+        price (Union[None, Unset, float]):
+        is_taxable (Union[None, Unset, bool]):
     """
 
-    delivery_charge: Union[Unset, float] = UNSET
-    quantity: Union[Unset, float] = UNSET
-    time_spent_in_minutes: Union[Unset, float] = UNSET
-    is_hourly_pricing: Union[Unset, bool] = UNSET
-    description: Union[Unset, str] = UNSET
-    name: Union[Unset, str] = UNSET
-    price: Union[Unset, float] = UNSET
-    is_taxable: Union[Unset, bool] = UNSET
+    delivery_charge: Union[None, Unset, float] = UNSET
+    quantity: Union[None, Unset, float] = UNSET
+    time_spent_in_minutes: Union[None, Unset, float] = UNSET
+    is_hourly_pricing: Union[None, Unset, bool] = UNSET
+    description: Union[None, Unset, str] = UNSET
+    name: Union[None, Unset, str] = UNSET
+    price: Union[None, Unset, float] = UNSET
+    is_taxable: Union[None, Unset, bool] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

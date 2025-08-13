@@ -16,18 +16,18 @@ T = TypeVar(
 class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFieldsCreateMeasurementFieldResponseModel:
     """
     Attributes:
-        name (Union[Unset, str]):
-        type_ (Union[Unset, str]):
-        value (Union[Unset, str]):
-        field_id (Union[Unset, str]):
-        valid_values (Union[Unset, str]):
+        name (Union[None, Unset, str]):
+        type_ (Union[None, Unset, str]):
+        value (Union[None, Unset, str]):
+        field_id (Union[None, Unset, str]):
+        valid_values (Union[None, Unset, str]):
     """
 
-    name: Union[Unset, str] = UNSET
-    type_: Union[Unset, str] = UNSET
-    value: Union[Unset, str] = UNSET
-    field_id: Union[Unset, str] = UNSET
-    valid_values: Union[Unset, str] = UNSET
+    name: Union[None, Unset, str] = UNSET
+    type_: Union[None, Unset, str] = UNSET
+    value: Union[None, Unset, str] = UNSET
+    field_id: Union[None, Unset, str] = UNSET
+    valid_values: Union[None, Unset, str] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

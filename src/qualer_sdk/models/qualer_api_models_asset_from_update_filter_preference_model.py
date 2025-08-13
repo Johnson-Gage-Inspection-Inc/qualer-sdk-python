@@ -15,16 +15,16 @@ T = TypeVar("T", bound="QualerApiModelsAssetFromUpdateFilterPreferenceModel")
 class QualerApiModelsAssetFromUpdateFilterPreferenceModel:
     """
     Attributes:
-        filter_type (Union[Unset, str]):
-        within_days (Union[Unset, int]):
-        use_date_range (Union[Unset, bool]):
+        filter_type (Union[None, Unset, str]):
+        within_days (Union[None, Unset, int]):
+        use_date_range (Union[None, Unset, bool]):
         start_date (Union[None, Unset, datetime.datetime]):
         end_date (Union[None, Unset, datetime.datetime]):
     """
 
-    filter_type: Union[Unset, str] = UNSET
-    within_days: Union[Unset, int] = UNSET
-    use_date_range: Union[Unset, bool] = UNSET
+    filter_type: Union[None, Unset, str] = UNSET
+    within_days: Union[None, Unset, int] = UNSET
+    use_date_range: Union[None, Unset, bool] = UNSET
     start_date: Union[None, Unset, datetime.datetime] = UNSET
     end_date: Union[None, Unset, datetime.datetime] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)

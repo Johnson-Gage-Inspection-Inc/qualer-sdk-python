@@ -19,17 +19,16 @@ T = TypeVar("T", bound="QualerApiModelsMeasurementsFromUpdateMeasurementBatchMod
 class QualerApiModelsMeasurementsFromUpdateMeasurementBatchModel:
     """
     Attributes:
-        batch_id (Union[Unset, int]):
-        batch_type (Union[Unset, str]):
-        save_and_delete_empty (Union[Unset, bool]):
-        measurement_sets (Union[Unset, list['QualerApiModelsMeasurementsFromUpdateMeasurementSetModel']]):
+        batch_id (Union[None, Unset, int]):
+        batch_type (Union[None, Unset, str]):
+        save_and_delete_empty (Union[None, Unset, bool]):
+        measurement_sets (Union[None, Unset, list['QualerApiModelsMeasurementsFromUpdateMeasurementSetModel']]):
     """
 
-    batch_id: Union[Unset, int] = UNSET
-    batch_type: Union[Unset, str] = UNSET
-    save_and_delete_empty: Union[Unset, bool] = UNSET
-    measurement_sets: Union[
-        Unset, list["QualerApiModelsMeasurementsFromUpdateMeasurementSetModel"]
+    batch_id: Union[None, Unset, int] = UNSET
+    batch_type: Union[None, Unset, str] = UNSET
+    save_and_delete_empty: Union[None, Unset, bool] = UNSET
+    measurement_sets: Union[None, Unset, list["QualerApiModelsMeasurementsFromUpdateMeasurementSetModel"]
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -40,7 +39,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementBatchModel:
 
         save_and_delete_empty = self.save_and_delete_empty
 
-        measurement_sets: Union[Unset, list[dict[str, Any]]] = UNSET
+        measurement_sets: Union[None, Unset, list[dict[str, Any]]] = UNSET
         if self.measurement_sets and not isinstance(self.measurement_sets, Unset):
             measurement_sets = []
             for measurement_sets_item_data in self.measurement_sets:

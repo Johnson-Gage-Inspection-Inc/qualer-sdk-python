@@ -18,60 +18,60 @@ T = TypeVar("T", bound="QualerApiModelsClientsFromAssetModel")
 class QualerApiModelsClientsFromAssetModel:
     """
     Attributes:
-        site_id (Union[Unset, int]):
-        product_id (Union[Unset, int]):
-        manufacturer (Union[Unset, str]):
-        manufacturer_part_number (Union[Unset, str]):
-        category_id (Union[Unset, int]):
-        serial_number (Union[Unset, str]):
-        asset_tag (Union[Unset, str]):
-        asset_user (Union[Unset, str]):
-        asset_status (Union[Unset, QualerApiModelsClientsFromAssetModelAssetStatus]):
-        asset_name (Union[Unset, str]):
-        asset_description (Union[Unset, str]):
-        asset_maker (Union[Unset, str]):
-        location (Union[Unset, str]):
-        retirement_reason (Union[Unset, str]):
-        barcode (Union[Unset, str]):
-        legacy_identifier (Union[Unset, str]):
-        condition (Union[Unset, str]):
-        criticality (Union[Unset, str]):
+        site_id (Union[None, Unset, int]):
+        product_id (Union[None, Unset, int]):
+        manufacturer (Union[None, Unset, str]):
+        manufacturer_part_number (Union[None, Unset, str]):
+        category_id (Union[None, Unset, int]):
+        serial_number (Union[None, Unset, str]):
+        asset_tag (Union[None, Unset, str]):
+        asset_user (Union[None, Unset, str]):
+        asset_status (Union[None, Unset, QualerApiModelsClientsFromAssetModelAssetStatus]):
+        asset_name (Union[None, Unset, str]):
+        asset_description (Union[None, Unset, str]):
+        asset_maker (Union[None, Unset, str]):
+        location (Union[None, Unset, str]):
+        retirement_reason (Union[None, Unset, str]):
+        barcode (Union[None, Unset, str]):
+        legacy_identifier (Union[None, Unset, str]):
+        condition (Union[None, Unset, str]):
+        criticality (Union[None, Unset, str]):
         purchase_date (Union[None, Unset, datetime.datetime]):
-        purchase_cost (Union[Unset, float]):
-        life_span_months (Union[Unset, int]):
+        purchase_cost (Union[None, Unset, float]):
+        life_span_months (Union[None, Unset, int]):
         activation_date (Union[None, Unset, datetime.datetime]):
-        depreciation_basis (Union[Unset, float]):
-        depreciation_method (Union[Unset, int]):
+        depreciation_basis (Union[None, Unset, float]):
+        depreciation_method (Union[None, Unset, int]):
         retirement_date (Union[None, Unset, datetime.datetime]):
-        salvage_value (Union[Unset, float]):
+        salvage_value (Union[None, Unset, float]):
     """
 
-    site_id: Union[Unset, int] = UNSET
-    product_id: Union[Unset, int] = UNSET
-    manufacturer: Union[Unset, str] = UNSET
-    manufacturer_part_number: Union[Unset, str] = UNSET
-    category_id: Union[Unset, int] = UNSET
-    serial_number: Union[Unset, str] = UNSET
-    asset_tag: Union[Unset, str] = UNSET
-    asset_user: Union[Unset, str] = UNSET
-    asset_status: Union[Unset, QualerApiModelsClientsFromAssetModelAssetStatus] = UNSET
-    asset_name: Union[Unset, str] = UNSET
-    asset_description: Union[Unset, str] = UNSET
-    asset_maker: Union[Unset, str] = UNSET
-    location: Union[Unset, str] = UNSET
-    retirement_reason: Union[Unset, str] = UNSET
-    barcode: Union[Unset, str] = UNSET
-    legacy_identifier: Union[Unset, str] = UNSET
-    condition: Union[Unset, str] = UNSET
-    criticality: Union[Unset, str] = UNSET
+    site_id: Union[None, Unset, int] = UNSET
+    product_id: Union[None, Unset, int] = UNSET
+    manufacturer: Union[None, Unset, str] = UNSET
+    manufacturer_part_number: Union[None, Unset, str] = UNSET
+    category_id: Union[None, Unset, int] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
+    asset_tag: Union[None, Unset, str] = UNSET
+    asset_user: Union[None, Unset, str] = UNSET
+    asset_status: Union[None, Unset, QualerApiModelsClientsFromAssetModelAssetStatus] = UNSET
+    asset_name: Union[None, Unset, str] = UNSET
+    asset_description: Union[None, Unset, str] = UNSET
+    asset_maker: Union[None, Unset, str] = UNSET
+    location: Union[None, Unset, str] = UNSET
+    retirement_reason: Union[None, Unset, str] = UNSET
+    barcode: Union[None, Unset, str] = UNSET
+    legacy_identifier: Union[None, Unset, str] = UNSET
+    condition: Union[None, Unset, str] = UNSET
+    criticality: Union[None, Unset, str] = UNSET
     purchase_date: Union[None, Unset, datetime.datetime] = UNSET
-    purchase_cost: Union[Unset, float] = UNSET
-    life_span_months: Union[Unset, int] = UNSET
+    purchase_cost: Union[None, Unset, float] = UNSET
+    life_span_months: Union[None, Unset, int] = UNSET
     activation_date: Union[None, Unset, datetime.datetime] = UNSET
-    depreciation_basis: Union[Unset, float] = UNSET
-    depreciation_method: Union[Unset, int] = UNSET
+    depreciation_basis: Union[None, Unset, float] = UNSET
+    depreciation_method: Union[None, Unset, int] = UNSET
     retirement_date: Union[None, Unset, datetime.datetime] = UNSET
-    salvage_value: Union[Unset, float] = UNSET
+    salvage_value: Union[None, Unset, float] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -91,7 +91,7 @@ class QualerApiModelsClientsFromAssetModel:
 
         asset_user = self.asset_user
 
-        asset_status: Union[Unset, str] = UNSET
+        asset_status: Union[None, Unset, str] = UNSET
         if self.asset_status and not isinstance(self.asset_status, Unset):
             asset_status = self.asset_status.value
 
@@ -225,7 +225,7 @@ class QualerApiModelsClientsFromAssetModel:
         asset_user = d.pop("AssetUser", UNSET)
 
         _asset_status = d.pop("AssetStatus", UNSET)
-        asset_status: Union[Unset, QualerApiModelsClientsFromAssetModelAssetStatus]
+        asset_status: Union[None, Unset, QualerApiModelsClientsFromAssetModelAssetStatus]
         if isinstance(_asset_status, Unset):
             asset_status = UNSET
         else:

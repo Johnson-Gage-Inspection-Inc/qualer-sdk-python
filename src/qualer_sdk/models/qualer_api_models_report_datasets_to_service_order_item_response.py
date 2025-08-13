@@ -16,58 +16,58 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderItemResponse"
 class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
     """
     Attributes:
-        certificate_number (Union[Unset, str]):
-        document_number (Union[Unset, str]):
-        revision (Union[Unset, str]):
+        certificate_number (Union[None, Unset, str]):
+        document_number (Union[None, Unset, str]):
+        revision (Union[None, Unset, str]):
         effective_date (Union[None, Unset, datetime.datetime]):
-        document_section (Union[Unset, str]):
-        service_level (Union[Unset, str]):
-        service_level_code (Union[Unset, str]):
-        service_type (Union[Unset, str]):
-        order_item_number (Union[Unset, int]):
-        service_charge (Union[Unset, float]):
-        updated_by (Union[Unset, str]):
-        updated_on (Union[Unset, datetime.datetime]):
-        work_status (Union[Unset, WorkStatus]):
-        custom_work_status (Union[Unset, str]):
-        service_comments (Union[Unset, str]):
-        client_notes (Union[Unset, str]):
-        vendor_service_notes (Union[Unset, str]):
-        display_name (Union[Unset, str]):
-        display_part_number (Union[Unset, str]):
-        part_number (Union[Unset, str]):
-        schedule_name (Union[Unset, str]):
-        segment_name (Union[Unset, str]):
-        next_segment_name (Union[Unset, str]):
-        interval_length (Union[Unset, int]):
-        interval_cycle (Union[Unset, str]):
-        service_options (Union[Unset, str]):
-        service_options_price (Union[Unset, str]):
-        service_options_document_numbers (Union[Unset, str]):
-        location (Union[Unset, str]):
-        station (Union[Unset, str]):
-        room (Union[Unset, str]):
-        site (Union[Unset, str]):
-        vendor_id (Union[Unset, int]):
-        service_order_number (Union[Unset, int]):
-        custom_order_number (Union[Unset, str]):
-        linked_order_number (Union[Unset, str]):
-        asset_id (Union[Unset, int]):
-        asset_class (Union[Unset, str]):
-        asset_condition (Union[Unset, str]):
-        asset_criticality (Union[Unset, str]):
-        asset_pool (Union[Unset, str]):
-        asset_name (Union[Unset, str]):
-        asset_description (Union[Unset, str]):
-        asset_document_number (Union[Unset, str]):
-        asset_document_section (Union[Unset, str]):
-        document_number_values (Union[Unset, str]):
-        product_name (Union[Unset, str]):
-        product_description (Union[Unset, str]):
-        asset_maker (Union[Unset, str]):
-        category_name (Union[Unset, str]):
-        root_category_name (Union[Unset, str]):
-        vendor_tag (Union[Unset, str]):
+        document_section (Union[None, Unset, str]):
+        service_level (Union[None, Unset, str]):
+        service_level_code (Union[None, Unset, str]):
+        service_type (Union[None, Unset, str]):
+        order_item_number (Union[None, Unset, int]):
+        service_charge (Union[None, Unset, float]):
+        updated_by (Union[None, Unset, str]):
+        updated_on (Union[None, Unset, datetime.datetime]):
+        work_status (Union[None, Unset, WorkStatus]):
+        custom_work_status (Union[None, Unset, str]):
+        service_comments (Union[None, Unset, str]):
+        client_notes (Union[None, Unset, str]):
+        vendor_service_notes (Union[None, Unset, str]):
+        display_name (Union[None, Unset, str]):
+        display_part_number (Union[None, Unset, str]):
+        part_number (Union[None, Unset, str]):
+        schedule_name (Union[None, Unset, str]):
+        segment_name (Union[None, Unset, str]):
+        next_segment_name (Union[None, Unset, str]):
+        interval_length (Union[None, Unset, int]):
+        interval_cycle (Union[None, Unset, str]):
+        service_options (Union[None, Unset, str]):
+        service_options_price (Union[None, Unset, str]):
+        service_options_document_numbers (Union[None, Unset, str]):
+        location (Union[None, Unset, str]):
+        station (Union[None, Unset, str]):
+        room (Union[None, Unset, str]):
+        site (Union[None, Unset, str]):
+        vendor_id (Union[None, Unset, int]):
+        service_order_number (Union[None, Unset, int]):
+        custom_order_number (Union[None, Unset, str]):
+        linked_order_number (Union[None, Unset, str]):
+        asset_id (Union[None, Unset, int]):
+        asset_class (Union[None, Unset, str]):
+        asset_condition (Union[None, Unset, str]):
+        asset_criticality (Union[None, Unset, str]):
+        asset_pool (Union[None, Unset, str]):
+        asset_name (Union[None, Unset, str]):
+        asset_description (Union[None, Unset, str]):
+        asset_document_number (Union[None, Unset, str]):
+        asset_document_section (Union[None, Unset, str]):
+        document_number_values (Union[None, Unset, str]):
+        product_name (Union[None, Unset, str]):
+        product_description (Union[None, Unset, str]):
+        asset_maker (Union[None, Unset, str]):
+        category_name (Union[None, Unset, str]):
+        root_category_name (Union[None, Unset, str]):
+        vendor_tag (Union[None, Unset, str]):
         result_status (Union[None, Unset, int]):
         service_date (Union[None, Unset, datetime.datetime]):
         next_service_date (Union[None, Unset, datetime.datetime]):
@@ -81,19 +81,19 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         purchase_date (Union[None, Unset, datetime.datetime]):
         part_name (Union[None, Unset, str]):
         part_description (Union[None, Unset, str]):
-        is_taxable (Union[Unset, bool]):
-        is_limited (Union[Unset, bool]):
+        is_taxable (Union[None, Unset, bool]):
+        is_limited (Union[None, Unset, bool]):
         quantity (Union[None, Unset, float]):
         discount (Union[None, Unset, float]):
         price (Union[None, Unset, float]):
         time_spent_in_minutes (Union[None, Unset, float]):
         is_hourly_pricing (Union[None, Unset, bool]):
         delivery_charge (Union[None, Unset, float]):
-        serial_number (Union[Unset, str]):
+        serial_number (Union[None, Unset, str]):
         part_repair_charges (Union[None, Unset, float]):
         part_repair_price (Union[None, Unset, float]):
-        override_parts_total (Union[Unset, bool]):
-        override_repairs_total (Union[Unset, bool]):
+        override_parts_total (Union[None, Unset, bool]):
+        override_repairs_total (Union[None, Unset, bool]):
         asset_custodian_name (Union[None, Unset, str]):
         as_found_specification_group_name (Union[None, Unset, str]):
         as_found_specification_company_name (Union[None, Unset, str]):
@@ -157,58 +157,58 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         service_option_service_code (Union[None, Unset, str]):
     """
 
-    certificate_number: Union[Unset, str] = UNSET
-    document_number: Union[Unset, str] = UNSET
-    revision: Union[Unset, str] = UNSET
+    certificate_number: Union[None, Unset, str] = UNSET
+    document_number: Union[None, Unset, str] = UNSET
+    revision: Union[None, Unset, str] = UNSET
     effective_date: Union[None, Unset, datetime.datetime] = UNSET
-    document_section: Union[Unset, str] = UNSET
-    service_level: Union[Unset, str] = UNSET
-    service_level_code: Union[Unset, str] = UNSET
-    service_type: Union[Unset, str] = UNSET
-    order_item_number: Union[Unset, int] = UNSET
-    service_charge: Union[Unset, float] = UNSET
-    updated_by: Union[Unset, str] = UNSET
-    updated_on: Union[Unset, datetime.datetime] = UNSET
+    document_section: Union[None, Unset, str] = UNSET
+    service_level: Union[None, Unset, str] = UNSET
+    service_level_code: Union[None, Unset, str] = UNSET
+    service_type: Union[None, Unset, str] = UNSET
+    order_item_number: Union[None, Unset, int] = UNSET
+    service_charge: Union[None, Unset, float] = UNSET
+    updated_by: Union[None, Unset, str] = UNSET
+    updated_on: Union[None, Unset, datetime.datetime] = UNSET
     work_status: Union[None, Unset, WorkStatus] = UNSET
-    custom_work_status: Union[Unset, str] = UNSET
-    service_comments: Union[Unset, str] = UNSET
-    client_notes: Union[Unset, str] = UNSET
-    vendor_service_notes: Union[Unset, str] = UNSET
-    display_name: Union[Unset, str] = UNSET
-    display_part_number: Union[Unset, str] = UNSET
-    part_number: Union[Unset, str] = UNSET
-    schedule_name: Union[Unset, str] = UNSET
-    segment_name: Union[Unset, str] = UNSET
-    next_segment_name: Union[Unset, str] = UNSET
-    interval_length: Union[Unset, int] = UNSET
-    interval_cycle: Union[Unset, str] = UNSET
-    service_options: Union[Unset, str] = UNSET
-    service_options_price: Union[Unset, str] = UNSET
-    service_options_document_numbers: Union[Unset, str] = UNSET
-    location: Union[Unset, str] = UNSET
-    station: Union[Unset, str] = UNSET
-    room: Union[Unset, str] = UNSET
-    site: Union[Unset, str] = UNSET
-    vendor_id: Union[Unset, int] = UNSET
-    service_order_number: Union[Unset, int] = UNSET
-    custom_order_number: Union[Unset, str] = UNSET
-    linked_order_number: Union[Unset, str] = UNSET
-    asset_id: Union[Unset, int] = UNSET
-    asset_class: Union[Unset, str] = UNSET
-    asset_condition: Union[Unset, str] = UNSET
-    asset_criticality: Union[Unset, str] = UNSET
-    asset_pool: Union[Unset, str] = UNSET
-    asset_name: Union[Unset, str] = UNSET
-    asset_description: Union[Unset, str] = UNSET
-    asset_document_number: Union[Unset, str] = UNSET
-    asset_document_section: Union[Unset, str] = UNSET
-    document_number_values: Union[Unset, str] = UNSET
-    product_name: Union[Unset, str] = UNSET
-    product_description: Union[Unset, str] = UNSET
-    asset_maker: Union[Unset, str] = UNSET
-    category_name: Union[Unset, str] = UNSET
-    root_category_name: Union[Unset, str] = UNSET
-    vendor_tag: Union[Unset, str] = UNSET
+    custom_work_status: Union[None, Unset, str] = UNSET
+    service_comments: Union[None, Unset, str] = UNSET
+    client_notes: Union[None, Unset, str] = UNSET
+    vendor_service_notes: Union[None, Unset, str] = UNSET
+    display_name: Union[None, Unset, str] = UNSET
+    display_part_number: Union[None, Unset, str] = UNSET
+    part_number: Union[None, Unset, str] = UNSET
+    schedule_name: Union[None, Unset, str] = UNSET
+    segment_name: Union[None, Unset, str] = UNSET
+    next_segment_name: Union[None, Unset, str] = UNSET
+    interval_length: Union[None, Unset, int] = UNSET
+    interval_cycle: Union[None, Unset, str] = UNSET
+    service_options: Union[None, Unset, str] = UNSET
+    service_options_price: Union[None, Unset, str] = UNSET
+    service_options_document_numbers: Union[None, Unset, str] = UNSET
+    location: Union[None, Unset, str] = UNSET
+    station: Union[None, Unset, str] = UNSET
+    room: Union[None, Unset, str] = UNSET
+    site: Union[None, Unset, str] = UNSET
+    vendor_id: Union[None, Unset, int] = UNSET
+    service_order_number: Union[None, Unset, int] = UNSET
+    custom_order_number: Union[None, Unset, str] = UNSET
+    linked_order_number: Union[None, Unset, str] = UNSET
+    asset_id: Union[None, Unset, int] = UNSET
+    asset_class: Union[None, Unset, str] = UNSET
+    asset_condition: Union[None, Unset, str] = UNSET
+    asset_criticality: Union[None, Unset, str] = UNSET
+    asset_pool: Union[None, Unset, str] = UNSET
+    asset_name: Union[None, Unset, str] = UNSET
+    asset_description: Union[None, Unset, str] = UNSET
+    asset_document_number: Union[None, Unset, str] = UNSET
+    asset_document_section: Union[None, Unset, str] = UNSET
+    document_number_values: Union[None, Unset, str] = UNSET
+    product_name: Union[None, Unset, str] = UNSET
+    product_description: Union[None, Unset, str] = UNSET
+    asset_maker: Union[None, Unset, str] = UNSET
+    category_name: Union[None, Unset, str] = UNSET
+    root_category_name: Union[None, Unset, str] = UNSET
+    vendor_tag: Union[None, Unset, str] = UNSET
     result_status: Union[None, Unset, int] = UNSET
     service_date: Union[None, Unset, datetime.datetime] = UNSET
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
@@ -222,19 +222,19 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
     purchase_date: Union[None, Unset, datetime.datetime] = UNSET
     part_name: Union[None, Unset, str] = UNSET
     part_description: Union[None, Unset, str] = UNSET
-    is_taxable: Union[Unset, bool] = UNSET
-    is_limited: Union[Unset, bool] = UNSET
+    is_taxable: Union[None, Unset, bool] = UNSET
+    is_limited: Union[None, Unset, bool] = UNSET
     quantity: Union[None, Unset, float] = UNSET
     discount: Union[None, Unset, float] = UNSET
     price: Union[None, Unset, float] = UNSET
     time_spent_in_minutes: Union[None, Unset, float] = UNSET
     is_hourly_pricing: Union[None, Unset, bool] = UNSET
     delivery_charge: Union[None, Unset, float] = UNSET
-    serial_number: Union[Unset, str] = UNSET
+    serial_number: Union[None, Unset, str] = UNSET
     part_repair_charges: Union[None, Unset, float] = UNSET
     part_repair_price: Union[None, Unset, float] = UNSET
-    override_parts_total: Union[Unset, bool] = UNSET
-    override_repairs_total: Union[Unset, bool] = UNSET
+    override_parts_total: Union[None, Unset, bool] = UNSET
+    override_repairs_total: Union[None, Unset, bool] = UNSET
     asset_custodian_name: Union[None, Unset, str] = UNSET
     as_found_specification_group_name: Union[None, Unset, str] = UNSET
     as_found_specification_company_name: Union[None, Unset, str] = UNSET
@@ -327,7 +327,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
 
         updated_by = self.updated_by
 
-        updated_on: Union[Unset, str] = UNSET
+        updated_on: Union[None, Unset, str] = UNSET
         if self.updated_on and not isinstance(self.updated_on, Unset):
             updated_on = self.updated_on.isoformat()
 
@@ -1289,14 +1289,14 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
         updated_by = d.pop("UpdatedBy", UNSET)
 
         _updated_on = d.pop("UpdatedOn", UNSET)
-        updated_on: Union[Unset, datetime.datetime]
+        updated_on: Union[None, Unset, datetime.datetime]
         if isinstance(_updated_on, Unset):
             updated_on = UNSET
         else:
             updated_on = isoparse(_updated_on)
 
         _work_status = d.pop("WorkStatus", UNSET)
-        work_status: Union[Unset, WorkStatus]
+        work_status: Union[None, Unset, WorkStatus]
         if isinstance(_work_status, Unset):
             work_status = UNSET
         elif _work_status is None:
