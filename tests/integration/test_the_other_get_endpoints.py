@@ -46,7 +46,7 @@ ENDPOINT_REQUIRED_PARAMS = {
     "asset_service_records.get_asset_service_record": {
         "asset_service_record_id": ASSET_SERVICE_RECORD_ID
     },
-    "asset_service_records.get_asset_service_records": {},
+    "asset_service_records.get_asset_service_records": {"model_asset_id": ASSET_ID},
     "asset_service_records.get_asset_service_records_by_asset": {"asset_id": ASSET_ID},
     # "assets.clear_collected_assets": {"body": '"BODY_PLACEHOLDER"'},
     # "assets.collect_assets": {"body": '"BODY_PLACEHOLDER"'},
