@@ -28,7 +28,10 @@ class QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel:
 
     batch_id: Union[None, Unset, int] = UNSET
     batch_type: Union[None, Unset, str] = UNSET
-    measurement_sets: Union[None, Unset, list["QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel"]
+    measurement_sets: Union[
+        None,
+        Unset,
+        list["QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel"],
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 

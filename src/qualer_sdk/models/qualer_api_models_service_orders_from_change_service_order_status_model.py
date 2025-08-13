@@ -23,7 +23,9 @@ class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel:
         password (Union[None, Unset, str]):
     """
 
-    service_order_status: Union[None, Unset,
+    service_order_status: Union[
+        None,
+        Unset,
         QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
     ] = UNSET
     reset_status: Union[None, Unset, bool] = UNSET
@@ -62,7 +64,9 @@ class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         _service_order_status = d.pop("ServiceOrderStatus", UNSET)
-        service_order_status: Union[None, Unset,
+        service_order_status: Union[
+            None,
+            Unset,
             QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
         ]
         if isinstance(_service_order_status, Unset):

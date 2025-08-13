@@ -35,10 +35,14 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
 
     batch_type: Union[None, Unset, str] = UNSET
     batch_result: Union[None, Unset, str] = UNSET
-    specification: Union[None, Unset,
+    specification: Union[
+        None,
+        Unset,
         "QualerApiModelsMeasurementsToMeasurementRecordResponseModelSpecificationResponseModel",
     ] = UNSET
-    measurement_sets: Union[None, Unset,
+    measurement_sets: Union[
+        None,
+        Unset,
         list[
             "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModel"
         ],
@@ -90,7 +94,9 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         batch_result = d.pop("BatchResult", UNSET)
 
         _specification = d.pop("Specification", UNSET)
-        specification: Union[None, Unset,
+        specification: Union[
+            None,
+            Unset,
             QualerApiModelsMeasurementsToMeasurementRecordResponseModelSpecificationResponseModel,
         ]
         if isinstance(_specification, Unset):

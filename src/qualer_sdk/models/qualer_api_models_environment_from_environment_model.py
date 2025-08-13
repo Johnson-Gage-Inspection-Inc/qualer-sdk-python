@@ -24,9 +24,9 @@ class QualerApiModelsEnvironmentFromEnvironmentModel:
     """
 
     station_id: Union[None, Unset, int] = UNSET
-    factor_id: Union[None, Unset, QualerApiModelsEnvironmentFromEnvironmentModelFactorId] = (
-        UNSET
-    )
+    factor_id: Union[
+        None, Unset, QualerApiModelsEnvironmentFromEnvironmentModelFactorId
+    ] = UNSET
     factor_name: Union[None, Unset, str] = UNSET
     factor_value: Union[None, Unset, float] = UNSET
     unit_of_measure: Union[None, Unset, str] = UNSET
@@ -67,7 +67,9 @@ class QualerApiModelsEnvironmentFromEnvironmentModel:
         station_id = d.pop("StationId", UNSET)
 
         _factor_id = d.pop("FactorId", UNSET)
-        factor_id: Union[None, Unset, QualerApiModelsEnvironmentFromEnvironmentModelFactorId]
+        factor_id: Union[
+            None, Unset, QualerApiModelsEnvironmentFromEnvironmentModelFactorId
+        ]
         if isinstance(_factor_id, Unset):
             factor_id = UNSET
         else:

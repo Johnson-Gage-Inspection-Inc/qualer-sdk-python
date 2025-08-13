@@ -30,7 +30,9 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
 
     description: Union[None, Unset, str] = UNSET
     result: Union[None, Unset, str] = UNSET
-    items: Union[None, Unset,
+    items: Union[
+        None,
+        Unset,
         list[
             "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFieldsCreateMeasurementFieldResponseModel"
         ],

@@ -56,7 +56,9 @@ class QualerApiModelsAssetToAssetMaintenancePlanResponse:
     technician_last_name: Union[None, Unset, str] = UNSET
     technician_alias: Union[None, Unset, str] = UNSET
     technician_department_name: Union[None, Unset, str] = UNSET
-    assigned_employees: Union[None, Unset,
+    assigned_employees: Union[
+        None,
+        Unset,
         list["QualerApiModelsAssetToAssetMaintenancePlanResponseAssignedEmployee"],
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)

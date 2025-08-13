@@ -70,7 +70,9 @@ class QualerApiModelsSiteToClientSiteResponse:
     time_zone_id: Union[None, Unset, str] = UNSET
     time_zone_offset_minutes: Union[None, Unset, int] = UNSET
     updated_on_utc: Union[None, Unset, datetime.datetime] = UNSET
-    attributes: Union[None, Unset, list["QualerApiModelsCommonFromAttributeModel"]] = UNSET
+    attributes: Union[None, Unset, list["QualerApiModelsCommonFromAttributeModel"]] = (
+        UNSET
+    )
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

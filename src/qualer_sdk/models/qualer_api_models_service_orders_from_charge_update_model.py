@@ -22,7 +22,8 @@ class QualerApiModelsServiceOrdersFromChargeUpdateModel:
         charges (Union[None, Unset, list['QualerApiModelsServiceOrdersFromChargeUpdateModelPriceModel']]):
     """
 
-    charges: Union[None, Unset, list["QualerApiModelsServiceOrdersFromChargeUpdateModelPriceModel"]
+    charges: Union[
+        None, Unset, list["QualerApiModelsServiceOrdersFromChargeUpdateModelPriceModel"]
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 

@@ -45,7 +45,8 @@ class QualerApiModelsClientsToEmployeeResponseModel:
     last_name: Union[None, Unset, str] = UNSET
     company_id: Union[None, Unset, int] = UNSET
     login_email: Union[None, Unset, str] = UNSET
-    departments: Union[None, Unset, list["QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse"]
+    departments: Union[
+        None, Unset, list["QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse"]
     ] = UNSET
     subscription_email: Union[None, Unset, str] = UNSET
     subscription_phone: Union[None, Unset, str] = UNSET

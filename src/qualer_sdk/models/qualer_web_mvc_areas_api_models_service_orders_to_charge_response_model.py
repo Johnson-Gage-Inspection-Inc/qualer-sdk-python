@@ -35,24 +35,34 @@ class QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel:
         work_items (Union[None, Unset, list['QualerApiModelsServiceOrdersToBaseWorkItemModel']]):
     """
 
-    charges: Union[None, Unset, list["QualerApiModelsServiceOrdersToChargeResponseModelBasePriceModel"]
+    charges: Union[
+        None,
+        Unset,
+        list["QualerApiModelsServiceOrdersToChargeResponseModelBasePriceModel"],
     ] = UNSET
-    tasks: Union[None, Unset,
+    tasks: Union[
+        None,
+        Unset,
         list[
             "QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel"
         ],
     ] = UNSET
-    parts: Union[None, Unset,
+    parts: Union[
+        None,
+        Unset,
         list[
             "QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel"
         ],
     ] = UNSET
-    repairs: Union[None, Unset,
+    repairs: Union[
+        None,
+        Unset,
         list[
             "QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel"
         ],
     ] = UNSET
-    work_items: Union[None, Unset, list["QualerApiModelsServiceOrdersToBaseWorkItemModel"]
+    work_items: Union[
+        None, Unset, list["QualerApiModelsServiceOrdersToBaseWorkItemModel"]
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 

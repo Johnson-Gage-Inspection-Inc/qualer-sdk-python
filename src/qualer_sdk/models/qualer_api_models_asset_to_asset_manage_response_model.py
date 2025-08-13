@@ -646,7 +646,8 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         asset_maker = d.pop("AssetMaker", UNSET)
 
         _record_type = d.pop("RecordType", UNSET)
-        record_type: Union[None, Unset, QualerApiModelsAssetToAssetManageResponseModelRecordType
+        record_type: Union[
+            None, Unset, QualerApiModelsAssetToAssetManageResponseModelRecordType
         ]
         if isinstance(_record_type, Unset):
             record_type = UNSET
@@ -766,7 +767,9 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         station = d.pop("Station", UNSET)
 
         _tool_role = d.pop("ToolRole", UNSET)
-        tool_role: Union[None, Unset, QualerApiModelsAssetToAssetManageResponseModelToolRole]
+        tool_role: Union[
+            None, Unset, QualerApiModelsAssetToAssetManageResponseModelToolRole
+        ]
         if isinstance(_tool_role, Unset):
             tool_role = UNSET
         elif _tool_role is None:
@@ -952,7 +955,10 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         service_order_id = d.pop("ServiceOrderId", UNSET)
 
         _service_order_status = d.pop("ServiceOrderStatus", UNSET)
-        service_order_status: Union[None, Unset, QualerApiModelsAssetToAssetManageResponseModelServiceOrderStatus
+        service_order_status: Union[
+            None,
+            Unset,
+            QualerApiModelsAssetToAssetManageResponseModelServiceOrderStatus,
         ]
         if isinstance(_service_order_status, Unset):
             service_order_status = UNSET
@@ -1016,7 +1022,8 @@ class QualerApiModelsAssetToAssetManageResponseModel:
         )
 
         _due_status = d.pop("DueStatus", UNSET)
-        due_status: Union[None, Unset, QualerApiModelsAssetToAssetManageResponseModelDueStatus
+        due_status: Union[
+            None, Unset, QualerApiModelsAssetToAssetManageResponseModelDueStatus
         ]
         if isinstance(_due_status, Unset):
             due_status = UNSET

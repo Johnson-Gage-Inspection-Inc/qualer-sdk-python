@@ -36,7 +36,9 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentRespon
     guid: Union[None, Unset, UUID] = UNSET
     document_name: Union[None, Unset, str] = UNSET
     file_name: Union[None, Unset, str] = UNSET
-    document_type: Union[None, Unset,
+    document_type: Union[
+        None,
+        Unset,
         QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
     ] = UNSET
     revision_number: Union[None, Unset, int] = UNSET
@@ -106,7 +108,9 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentRespon
         file_name = d.pop("FileName", UNSET)
 
         _document_type = d.pop("DocumentType", UNSET)
-        document_type: Union[None, Unset,
+        document_type: Union[
+            None,
+            Unset,
             QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
         ]
         if isinstance(_document_type, Unset):

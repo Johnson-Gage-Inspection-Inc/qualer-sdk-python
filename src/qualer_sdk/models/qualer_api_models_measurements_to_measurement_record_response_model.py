@@ -91,7 +91,9 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
     service_schedule_segment_id: Union[None, Unset, int] = UNSET
     forward_next_service: Union[None, Unset, bool] = UNSET
     forward_segment_id: Union[None, Unset, int] = UNSET
-    measurement_batches: Union[None, Unset,
+    measurement_batches: Union[
+        None,
+        Unset,
         list[
             "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel"
         ],

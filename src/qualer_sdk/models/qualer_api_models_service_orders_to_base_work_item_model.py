@@ -29,15 +29,21 @@ class QualerApiModelsServiceOrdersToBaseWorkItemModel:
         vendor_tag (Union[None, Unset, str]):
     """
 
-    tasks: Union[None, Unset,
+    tasks: Union[
+        None,
+        Unset,
         list["QualerApiModelsServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel"],
     ] = UNSET
-    parts: Union[None, Unset,
+    parts: Union[
+        None,
+        Unset,
         list[
             "QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel"
         ],
     ] = UNSET
-    repairs: Union[None, Unset,
+    repairs: Union[
+        None,
+        Unset,
         list[
             "QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel"
         ],

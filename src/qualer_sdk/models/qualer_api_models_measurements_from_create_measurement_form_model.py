@@ -30,8 +30,11 @@ class QualerApiModelsMeasurementsFromCreateMeasurementFormModel:
 
     batch_type: Union[None, Unset, str] = UNSET
     batch_result: Union[None, Unset, str] = UNSET
-    specification: Union[None, Unset, "QualerApiModelsMeasurementsFromSpecification"] = UNSET
-    measurement_sets: Union[None, Unset, list["QualerApiModelsMeasurementsFromCreateMeasurementSetModel"]
+    specification: Union[
+        None, Unset, "QualerApiModelsMeasurementsFromSpecification"
+    ] = UNSET
+    measurement_sets: Union[
+        None, Unset, list["QualerApiModelsMeasurementsFromCreateMeasurementSetModel"]
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 

@@ -37,7 +37,8 @@ class QualerApiModelsReportDatasetsToMeasurementFieldResponse:
     measurement_set_id: Union[None, Unset, int] = UNSET
     specification_name: Union[None, Unset, str] = UNSET
     measurement_point_id: Union[None, Unset, int] = UNSET
-    batch_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType
+    batch_type: Union[
+        None, Unset, QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType
     ] = UNSET
     service_order_item_id: Union[None, Unset, int] = UNSET
     service_order_id: Union[None, Unset, int] = UNSET
@@ -120,7 +121,10 @@ class QualerApiModelsReportDatasetsToMeasurementFieldResponse:
         measurement_point_id = d.pop("MeasurementPointId", UNSET)
 
         _batch_type = d.pop("BatchType", UNSET)
-        batch_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType
+        batch_type: Union[
+            None,
+            Unset,
+            QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType,
         ]
         if isinstance(_batch_type, Unset):
             batch_type = UNSET

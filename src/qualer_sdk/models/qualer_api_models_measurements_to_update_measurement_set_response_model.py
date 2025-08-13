@@ -56,23 +56,33 @@ class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
     use_expected_value: Union[None, Unset, bool] = UNSET
     decimal_places: Union[None, Unset, int] = UNSET
     significant_figures: Union[None, Unset, int] = UNSET
-    influence_parameter_1_type: Union[None, Unset,
+    influence_parameter_1_type: Union[
+        None,
+        Unset,
         QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type,
     ] = UNSET
     influence_parameter_1_tool_type_id: Union[None, Unset, int] = UNSET
     influence_parameter_1_parameter_id: Union[None, Unset, int] = UNSET
     influence_parameter_1_source: Union[None, Unset, str] = UNSET
     influence_parameter_1_value: Union[None, Unset, str] = UNSET
-    influence_parameter_2_type: Union[None, Unset,
+    influence_parameter_2_type: Union[
+        None,
+        Unset,
         QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type,
     ] = UNSET
     influence_parameter_2_tool_type_id: Union[None, Unset, int] = UNSET
     influence_parameter_2_parameter_id: Union[None, Unset, int] = UNSET
     influence_parameter_2_source: Union[None, Unset, str] = UNSET
     influence_parameter_2_value: Union[None, Unset, str] = UNSET
-    measurement_points: Union[None, Unset, list["QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel"]
+    measurement_points: Union[
+        None,
+        Unset,
+        list["QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel"],
     ] = UNSET
-    measurement_fields: Union[None, Unset, list["QualerApiModelsMeasurementsToUpdateMeasurementFieldResponseModel"]
+    measurement_fields: Union[
+        None,
+        Unset,
+        list["QualerApiModelsMeasurementsToUpdateMeasurementFieldResponseModel"],
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -204,7 +214,9 @@ class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
         significant_figures = d.pop("SignificantFigures", UNSET)
 
         _influence_parameter_1_type = d.pop("InfluenceParameter1Type", UNSET)
-        influence_parameter_1_type: Union[None, Unset,
+        influence_parameter_1_type: Union[
+            None,
+            Unset,
             QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type,
         ]
         if isinstance(_influence_parameter_1_type, Unset):
@@ -227,7 +239,9 @@ class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
         influence_parameter_1_value = d.pop("InfluenceParameter1Value", UNSET)
 
         _influence_parameter_2_type = d.pop("InfluenceParameter2Type", UNSET)
-        influence_parameter_2_type: Union[None, Unset,
+        influence_parameter_2_type: Union[
+            None,
+            Unset,
             QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type,
         ]
         if isinstance(_influence_parameter_2_type, Unset):

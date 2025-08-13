@@ -71,9 +71,11 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
     checked_by_name: Union[None, Unset, str] = UNSET
     completed_on: Union[None, Unset, datetime.datetime] = UNSET
     completed_by_name: Union[None, Unset, str] = UNSET
-    as_found_check: Union[None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck
+    as_found_check: Union[
+        None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck
     ] = UNSET
-    as_left_check: Union[None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck
+    as_left_check: Union[
+        None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck
     ] = UNSET
     result_status: Union[None, Unset, ServiceResultStatus] = UNSET
     as_found_result: Union[None, Unset, ServiceResultStatus] = UNSET
@@ -309,7 +311,10 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         completed_by_name = d.pop("CompletedByName", UNSET)
 
         _as_found_check = d.pop("AsFoundCheck", UNSET)
-        as_found_check: Union[None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck
+        as_found_check: Union[
+            None,
+            Unset,
+            QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck,
         ]
         if isinstance(_as_found_check, Unset):
             as_found_check = UNSET
@@ -321,7 +326,8 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
             )
 
         _as_left_check = d.pop("AsLeftCheck", UNSET)
-        as_left_check: Union[None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck
+        as_left_check: Union[
+            None, Unset, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck
         ]
         if isinstance(_as_left_check, Unset):
             as_left_check = UNSET

@@ -54,7 +54,9 @@ class QualerApiModelsClientsFromAssetModel:
     serial_number: Union[None, Unset, str] = UNSET
     asset_tag: Union[None, Unset, str] = UNSET
     asset_user: Union[None, Unset, str] = UNSET
-    asset_status: Union[None, Unset, QualerApiModelsClientsFromAssetModelAssetStatus] = UNSET
+    asset_status: Union[
+        None, Unset, QualerApiModelsClientsFromAssetModelAssetStatus
+    ] = UNSET
     asset_name: Union[None, Unset, str] = UNSET
     asset_description: Union[None, Unset, str] = UNSET
     asset_maker: Union[None, Unset, str] = UNSET
@@ -225,7 +227,9 @@ class QualerApiModelsClientsFromAssetModel:
         asset_user = d.pop("AssetUser", UNSET)
 
         _asset_status = d.pop("AssetStatus", UNSET)
-        asset_status: Union[None, Unset, QualerApiModelsClientsFromAssetModelAssetStatus]
+        asset_status: Union[
+            None, Unset, QualerApiModelsClientsFromAssetModelAssetStatus
+        ]
         if isinstance(_asset_status, Unset):
             asset_status = UNSET
         else:

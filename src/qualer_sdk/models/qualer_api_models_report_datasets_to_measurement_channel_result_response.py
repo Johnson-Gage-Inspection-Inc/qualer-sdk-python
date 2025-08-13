@@ -39,7 +39,10 @@ class QualerApiModelsReportDatasetsToMeasurementChannelResultResponse:
     service_order_item_id: Union[None, Unset, int] = UNSET
     measurement_point_id: Union[None, Unset, int] = UNSET
     column_index: Union[None, Unset, int] = UNSET
-    batch_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType
+    batch_type: Union[
+        None,
+        Unset,
+        QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType,
     ] = UNSET
     result: Union[None, Unset, ServiceResultStatus] = UNSET
     mean_result: Union[None, Unset, bool] = UNSET
@@ -135,7 +138,9 @@ class QualerApiModelsReportDatasetsToMeasurementChannelResultResponse:
         column_index = d.pop("ColumnIndex", UNSET)
 
         _batch_type = d.pop("BatchType", UNSET)
-        batch_type: Union[None, Unset,
+        batch_type: Union[
+            None,
+            Unset,
             QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType,
         ]
         if isinstance(_batch_type, Unset):
