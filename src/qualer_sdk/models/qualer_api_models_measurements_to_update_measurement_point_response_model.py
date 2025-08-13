@@ -79,10 +79,14 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
     range_min: Union[None, Unset, float] = UNSET
     range_max: Union[None, Unset, float] = UNSET
     tolerance_type: Union[None, Unset, str] = UNSET
-    tolerance_mode: Union[None, Unset,
+    tolerance_mode: Union[
+        None,
+        Unset,
         QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceMode,
     ] = UNSET
-    tolerance_unit: Union[None, Unset,
+    tolerance_unit: Union[
+        None,
+        Unset,
         QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceUnit,
     ] = UNSET
     precision_type: Union[None, Unset, str] = UNSET
@@ -102,14 +106,19 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
     influence_parameter_1_value: Union[None, Unset, str] = UNSET
     influence_parameter_2_parameter_id: Union[None, Unset, int] = UNSET
     influence_parameter_2_value: Union[None, Unset, str] = UNSET
-    measurements: Union[None, Unset, list["QualerApiModelsMeasurementsToUpdateMeasurementResponseModel"]
+    measurements: Union[
+        None, Unset, list["QualerApiModelsMeasurementsToUpdateMeasurementResponseModel"]
     ] = UNSET
-    measurement_condition_factors: Union[None, Unset,
+    measurement_condition_factors: Union[
+        None,
+        Unset,
         list["QualerApiModelsMeasurementsToUpdateMeasurementConditionFactorResponse"],
     ] = UNSET
-    primary_measurement_tool: Union[None, Unset, "QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel"
+    primary_measurement_tool: Union[
+        None, Unset, "QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel"
     ] = UNSET
-    secondary_measurement_tool: Union[None, Unset, "QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel"
+    secondary_measurement_tool: Union[
+        None, Unset, "QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel"
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -318,7 +327,9 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
         tolerance_type = d.pop("ToleranceType", UNSET)
 
         _tolerance_mode = d.pop("ToleranceMode", UNSET)
-        tolerance_mode: Union[None, Unset,
+        tolerance_mode: Union[
+            None,
+            Unset,
             QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceMode,
         ]
         if isinstance(_tolerance_mode, Unset):
@@ -329,7 +340,9 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
             )
 
         _tolerance_unit = d.pop("ToleranceUnit", UNSET)
-        tolerance_unit: Union[None, Unset,
+        tolerance_unit: Union[
+            None,
+            Unset,
             QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceUnit,
         ]
         if isinstance(_tolerance_unit, Unset):
@@ -400,7 +413,8 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
             measurement_condition_factors.append(measurement_condition_factors_item)
 
         _primary_measurement_tool = d.pop("PrimaryMeasurementTool", UNSET)
-        primary_measurement_tool: Union[None, Unset, QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel
+        primary_measurement_tool: Union[
+            None, Unset, QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel
         ]
         if isinstance(_primary_measurement_tool, Unset):
             primary_measurement_tool = UNSET
@@ -410,7 +424,8 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
             )
 
         _secondary_measurement_tool = d.pop("SecondaryMeasurementTool", UNSET)
-        secondary_measurement_tool: Union[None, Unset, QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel
+        secondary_measurement_tool: Union[
+            None, Unset, QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel
         ]
         if isinstance(_secondary_measurement_tool, Unset):
             secondary_measurement_tool = UNSET

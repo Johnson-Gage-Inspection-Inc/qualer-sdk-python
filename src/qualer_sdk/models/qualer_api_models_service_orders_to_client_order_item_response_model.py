@@ -181,7 +181,8 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
     next_service_date: Union[None, Unset, datetime.datetime] = UNSET
     maintenance_task: Union[None, Unset, str] = UNSET
     maintenance_plan: Union[None, Unset, str] = UNSET
-    service_options: Union[None, Unset, list["QualerApiModelsServiceOptionsToServiceOptionResponseModel"]
+    service_options: Union[
+        None, Unset, list["QualerApiModelsServiceOptionsToServiceOptionResponseModel"]
     ] = UNSET
     vendor_tag: Union[None, Unset, str] = UNSET
     legacy_id: Union[None, Unset, str] = UNSET

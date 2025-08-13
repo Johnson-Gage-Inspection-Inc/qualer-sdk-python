@@ -26,7 +26,8 @@ class QualerApiModelsMeasurementsFromCustomFields:
 
     description: Union[None, Unset, str] = UNSET
     result: Union[None, Unset, str] = UNSET
-    items: Union[None, Unset, list["QualerApiModelsMeasurementsFromCreateMeasurementFieldModel"]
+    items: Union[
+        None, Unset, list["QualerApiModelsMeasurementsFromCreateMeasurementFieldModel"]
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 

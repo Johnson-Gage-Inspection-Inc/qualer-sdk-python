@@ -520,14 +520,16 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     tar_raw: Union[None, Unset, float] = UNSET
     tar_decimal_places: Union[None, Unset, int] = UNSET
     guard_band: Union[None, Unset, str] = UNSET
-    guard_band_logic: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic
+    guard_band_logic: Union[
+        None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic
     ] = UNSET
     uncertainty_budget: Union[None, Unset, str] = UNSET
     calculated_uncertainty: Union[None, Unset, float] = UNSET
     lock_uncertainty_budget: Union[None, Unset, bool] = UNSET
     lab_mu: Union[None, Unset, float] = UNSET
     channel: Union[None, Unset, int] = UNSET
-    measurement_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType
+    measurement_type: Union[
+        None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType
     ] = UNSET
     updated_by: Union[None, Unset, str] = UNSET
     updated_on: Union[None, Unset, datetime.datetime] = UNSET
@@ -590,11 +592,15 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     test_value: Union[None, Unset, float] = UNSET
     base_value: Union[None, Unset, float] = UNSET
     use_expected_value: Union[None, Unset, bool] = UNSET
-    reading_entry_logic: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic
+    reading_entry_logic: Union[
+        None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic
     ] = UNSET
-    reading_entry_math: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath
+    reading_entry_math: Union[
+        None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath
     ] = UNSET
-    double_substitution_sequence: Union[None, Unset,
+    double_substitution_sequence: Union[
+        None,
+        Unset,
         QualerApiModelsReportDatasetsToMeasurementResponseDoubleSubstitutionSequence,
     ] = UNSET
     reading_entry_math_string: Union[None, Unset, str] = UNSET
@@ -609,7 +615,8 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     accuracy_class: Union[None, Unset, str] = UNSET
     accuracy_class_min: Union[None, Unset, float] = UNSET
     accuracy_class_max: Union[None, Unset, float] = UNSET
-    environment_mask: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask
+    environment_mask: Union[
+        None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask
     ] = UNSET
     display_name: Union[None, Unset, str] = UNSET
     display_part_number: Union[None, Unset, str] = UNSET
@@ -662,22 +669,28 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     measurement_set_id: Union[None, Unset, int] = UNSET
     is_hidden: Union[None, Unset, bool] = UNSET
     readings: Union[None, Unset, int] = UNSET
-    tolerance_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceType
+    tolerance_type: Union[
+        None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceType
     ] = UNSET
     tolerance_type_string: Union[None, Unset, str] = UNSET
-    precision_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType
+    precision_type: Union[
+        None, Unset, QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType
     ] = UNSET
-    specification_mode: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseSpecificationMode
+    specification_mode: Union[
+        None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseSpecificationMode
     ] = UNSET
-    tolerance_mode: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceMode
+    tolerance_mode: Union[
+        None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceMode
     ] = UNSET
-    tolerance_unit: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit
+    tolerance_unit: Union[
+        None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit
     ] = UNSET
     tolerance_string: Union[None, Unset, str] = UNSET
     po_number: Union[None, Unset, str] = UNSET
     secondary_po: Union[None, Unset, str] = UNSET
     shipped_date: Union[None, Unset, datetime.datetime] = UNSET
-    shipment_status: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus
+    shipment_status: Union[
+        None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus
     ] = UNSET
     shipped_on: Union[None, Unset, datetime.datetime] = UNSET
     delivered_on: Union[None, Unset, datetime.datetime] = UNSET
@@ -688,7 +701,9 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     site_access_notes: Union[None, Unset, str] = UNSET
     abbreviated_uom: Union[None, Unset, str] = UNSET
     unit_scale_factor: Union[None, Unset, float] = UNSET
-    measurement_not_taken_result: Union[None, Unset,
+    measurement_not_taken_result: Union[
+        None,
+        Unset,
         QualerApiModelsReportDatasetsToMeasurementResponseMeasurementNotTakenResult,
     ] = UNSET
     hide_from_certificate: Union[None, Unset, bool] = UNSET
@@ -823,9 +838,13 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     value_subtitle_40: Union[None, Unset, str] = UNSET
     values_decimal_places: Union[None, Unset, int] = UNSET
     repeat_measurement_and_calculate_hysteresis: Union[None, Unset, bool] = UNSET
-    measurement_point_order: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementPointOrder
+    measurement_point_order: Union[
+        None,
+        Unset,
+        QualerApiModelsReportDatasetsToMeasurementResponseMeasurementPointOrder,
     ] = UNSET
-    hysteresis_point: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint
+    hysteresis_point: Union[
+        None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint
     ] = UNSET
     max_hysteresis: Union[None, Unset, float] = UNSET
     run: Union[None, Unset, int] = UNSET
@@ -2728,7 +2747,10 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         guard_band = d.pop("GuardBand", UNSET)
 
         _guard_band_logic = d.pop("GuardBandLogic", UNSET)
-        guard_band_logic: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic
+        guard_band_logic: Union[
+            None,
+            Unset,
+            QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic,
         ]
         if isinstance(_guard_band_logic, Unset):
             guard_band_logic = UNSET
@@ -2750,7 +2772,10 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         channel = d.pop("Channel", UNSET)
 
         _measurement_type = d.pop("MeasurementType", UNSET)
-        measurement_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType
+        measurement_type: Union[
+            None,
+            Unset,
+            QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType,
         ]
         if isinstance(_measurement_type, Unset):
             measurement_type = UNSET
@@ -2894,7 +2919,10 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         use_expected_value = d.pop("UseExpectedValue", UNSET)
 
         _reading_entry_logic = d.pop("ReadingEntryLogic", UNSET)
-        reading_entry_logic: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic
+        reading_entry_logic: Union[
+            None,
+            Unset,
+            QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic,
         ]
         if isinstance(_reading_entry_logic, Unset):
             reading_entry_logic = UNSET
@@ -2906,7 +2934,10 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             )
 
         _reading_entry_math = d.pop("ReadingEntryMath", UNSET)
-        reading_entry_math: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath
+        reading_entry_math: Union[
+            None,
+            Unset,
+            QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath,
         ]
         if isinstance(_reading_entry_math, Unset):
             reading_entry_math = UNSET
@@ -2918,7 +2949,9 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             )
 
         _double_substitution_sequence = d.pop("DoubleSubstitutionSequence", UNSET)
-        double_substitution_sequence: Union[None, Unset,
+        double_substitution_sequence: Union[
+            None,
+            Unset,
             QualerApiModelsReportDatasetsToMeasurementResponseDoubleSubstitutionSequence,
         ]
         if isinstance(_double_substitution_sequence, Unset):
@@ -2953,7 +2986,10 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         accuracy_class_max = d.pop("AccuracyClassMax", UNSET)
 
         _environment_mask = d.pop("EnvironmentMask", UNSET)
-        environment_mask: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask
+        environment_mask: Union[
+            None,
+            Unset,
+            QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask,
         ]
         if isinstance(_environment_mask, Unset):
             environment_mask = UNSET
@@ -3111,7 +3147,8 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         readings = d.pop("Readings", UNSET)
 
         _tolerance_type = d.pop("ToleranceType", UNSET)
-        tolerance_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceType
+        tolerance_type: Union[
+            None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceType
         ]
         if isinstance(_tolerance_type, Unset):
             tolerance_type = UNSET
@@ -3125,7 +3162,8 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         tolerance_type_string = d.pop("ToleranceTypeString", UNSET)
 
         _precision_type = d.pop("PrecisionType", UNSET)
-        precision_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType
+        precision_type: Union[
+            None, Unset, QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType
         ]
         if isinstance(_precision_type, Unset):
             precision_type = UNSET
@@ -3137,7 +3175,10 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             )
 
         _specification_mode = d.pop("SpecificationMode", UNSET)
-        specification_mode: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseSpecificationMode
+        specification_mode: Union[
+            None,
+            Unset,
+            QualerApiModelsReportDatasetsToMeasurementResponseSpecificationMode,
         ]
         if isinstance(_specification_mode, Unset):
             specification_mode = UNSET
@@ -3149,7 +3190,8 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             )
 
         _tolerance_mode = d.pop("ToleranceMode", UNSET)
-        tolerance_mode: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceMode
+        tolerance_mode: Union[
+            None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceMode
         ]
         if isinstance(_tolerance_mode, Unset):
             tolerance_mode = UNSET
@@ -3161,7 +3203,8 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             )
 
         _tolerance_unit = d.pop("ToleranceUnit", UNSET)
-        tolerance_unit: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit
+        tolerance_unit: Union[
+            None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit
         ]
         if isinstance(_tolerance_unit, Unset):
             tolerance_unit = UNSET
@@ -3196,7 +3239,10 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         shipped_date = _parse_shipped_date(d.pop("ShippedDate", UNSET))
 
         _shipment_status = d.pop("ShipmentStatus", UNSET)
-        shipment_status: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus
+        shipment_status: Union[
+            None,
+            Unset,
+            QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus,
         ]
         if isinstance(_shipment_status, Unset):
             shipment_status = UNSET
@@ -3236,7 +3282,9 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         unit_scale_factor = d.pop("UnitScaleFactor", UNSET)
 
         _measurement_not_taken_result = d.pop("MeasurementNotTakenResult", UNSET)
-        measurement_not_taken_result: Union[None, Unset,
+        measurement_not_taken_result: Union[
+            None,
+            Unset,
             QualerApiModelsReportDatasetsToMeasurementResponseMeasurementNotTakenResult,
         ]
         if isinstance(_measurement_not_taken_result, Unset):
@@ -3513,7 +3561,9 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         )
 
         _measurement_point_order = d.pop("MeasurementPointOrder", UNSET)
-        measurement_point_order: Union[None, Unset,
+        measurement_point_order: Union[
+            None,
+            Unset,
             QualerApiModelsReportDatasetsToMeasurementResponseMeasurementPointOrder,
         ]
         if isinstance(_measurement_point_order, Unset):
@@ -3526,7 +3576,10 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             )
 
         _hysteresis_point = d.pop("HysteresisPoint", UNSET)
-        hysteresis_point: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint
+        hysteresis_point: Union[
+            None,
+            Unset,
+            QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint,
         ]
         if isinstance(_hysteresis_point, Unset):
             hysteresis_point = UNSET

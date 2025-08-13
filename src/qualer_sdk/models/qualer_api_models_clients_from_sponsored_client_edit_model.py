@@ -39,7 +39,8 @@ class QualerApiModelsClientsFromSponsoredClientEditModel:
 
     company_id: Union[None, Unset, int] = UNSET
     account_number_text: Union[None, Unset, str] = UNSET
-    client_status: Union[None, Unset, QualerApiModelsClientsFromSponsoredClientEditModelClientStatus
+    client_status: Union[
+        None, Unset, QualerApiModelsClientsFromSponsoredClientEditModelClientStatus
     ] = UNSET
     domain_name: Union[None, Unset, str] = UNSET
     custom_client_name: Union[None, Unset, str] = UNSET
@@ -132,7 +133,8 @@ class QualerApiModelsClientsFromSponsoredClientEditModel:
         account_number_text = d.pop("AccountNumberText", UNSET)
 
         _client_status = d.pop("ClientStatus", UNSET)
-        client_status: Union[None, Unset, QualerApiModelsClientsFromSponsoredClientEditModelClientStatus
+        client_status: Union[
+            None, Unset, QualerApiModelsClientsFromSponsoredClientEditModelClientStatus
         ]
         if isinstance(_client_status, Unset):
             client_status = UNSET

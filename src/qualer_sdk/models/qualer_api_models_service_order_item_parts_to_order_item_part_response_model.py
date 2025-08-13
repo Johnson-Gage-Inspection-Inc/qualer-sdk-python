@@ -48,7 +48,9 @@ class QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel:
     delivery_charge: Union[None, Unset, float] = UNSET
     time_spent_in_minutes: Union[None, Unset, float] = UNSET
     free_quantity: Union[None, Unset, int] = UNSET
-    service_order_charge_type: Union[None, Unset,
+    service_order_charge_type: Union[
+        None,
+        Unset,
         QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType,
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -150,7 +152,9 @@ class QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel:
         free_quantity = d.pop("FreeQuantity", UNSET)
 
         _service_order_charge_type = d.pop("ServiceOrderChargeType", UNSET)
-        service_order_charge_type: Union[None, Unset,
+        service_order_charge_type: Union[
+            None,
+            Unset,
             QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType,
         ]
         if isinstance(_service_order_charge_type, Unset):

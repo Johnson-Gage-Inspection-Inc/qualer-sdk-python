@@ -74,9 +74,9 @@ class QualerApiModelsAssetToAssetResponseModel:
     asset_user: Union[None, Unset, str] = UNSET
     asset_tag: Union[None, Unset, str] = UNSET
     equipment_id: Union[None, Unset, str] = UNSET
-    asset_status: Union[None, Unset, QualerApiModelsAssetToAssetResponseModelAssetStatus] = (
-        UNSET
-    )
+    asset_status: Union[
+        None, Unset, QualerApiModelsAssetToAssetResponseModelAssetStatus
+    ] = UNSET
     asset_name: Union[None, Unset, str] = UNSET
     asset_description: Union[None, Unset, str] = UNSET
     asset_maker: Union[None, Unset, str] = UNSET
@@ -355,7 +355,9 @@ class QualerApiModelsAssetToAssetResponseModel:
         equipment_id = d.pop("EquipmentId", UNSET)
 
         _asset_status = d.pop("AssetStatus", UNSET)
-        asset_status: Union[None, Unset, QualerApiModelsAssetToAssetResponseModelAssetStatus]
+        asset_status: Union[
+            None, Unset, QualerApiModelsAssetToAssetResponseModelAssetStatus
+        ]
         if isinstance(_asset_status, Unset):
             asset_status = UNSET
         else:

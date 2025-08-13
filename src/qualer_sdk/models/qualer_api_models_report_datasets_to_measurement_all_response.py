@@ -805,7 +805,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_found_secondary_tool_manufacturer: Union[None, Unset, str] = UNSET
     as_found_secondary_tool_manufacturer_part_number: Union[None, Unset, str] = UNSET
     as_found_secondary_tool_serial_number: Union[None, Unset, str] = UNSET
-    as_found_measurement_not_taken_result: Union[None, Unset,
+    as_found_measurement_not_taken_result: Union[
+        None,
+        Unset,
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult,
     ] = UNSET
     as_found_hide_from_certificate: Union[None, Unset, bool] = UNSET
@@ -830,10 +832,15 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_left_tar_raw: Union[None, Unset, float] = UNSET
     as_found_guard_band: Union[None, Unset, str] = UNSET
     as_left_guard_band: Union[None, Unset, str] = UNSET
-    as_found_guard_band_logic: Union[None, Unset,
+    as_found_guard_band_logic: Union[
+        None,
+        Unset,
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic,
     ] = UNSET
-    as_left_guard_band_logic: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic
+    as_left_guard_band_logic: Union[
+        None,
+        Unset,
+        QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic,
     ] = UNSET
     as_found_error: Union[None, Unset, float] = UNSET
     as_found_error_extended: Union[None, Unset, str] = UNSET
@@ -861,7 +868,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_left_run: Union[None, Unset, int] = UNSET
     as_left_direction: Union[None, Unset, int] = UNSET
     as_left_hysteresis: Union[None, Unset, float] = UNSET
-    as_found_reading_entry_math: Union[None, Unset,
+    as_found_reading_entry_math: Union[
+        None,
+        Unset,
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath,
     ] = UNSET
     as_found_reading_entry_math_string: Union[None, Unset, str] = UNSET
@@ -1015,7 +1024,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_found_uncertainty_budget: Union[None, Unset, str] = UNSET
     as_found_mu_extended: Union[None, Unset, str] = UNSET
     as_found_channel: Union[None, Unset, int] = UNSET
-    as_found_measurement_type: Union[None, Unset,
+    as_found_measurement_type: Union[
+        None,
+        Unset,
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
     ] = UNSET
     as_found_updated_by: Union[None, Unset, str] = UNSET
@@ -1067,7 +1078,10 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_found_unit_of_measure: Union[None, Unset, str] = UNSET
     as_found_display_format: Union[None, Unset, str] = UNSET
     as_found_precision: Union[None, Unset, float] = UNSET
-    as_found_precision_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundPrecisionType
+    as_found_precision_type: Union[
+        None,
+        Unset,
+        QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundPrecisionType,
     ] = UNSET
     as_found_minimum: Union[None, Unset, float] = UNSET
     as_found_nominal: Union[None, Unset, float] = UNSET
@@ -1088,7 +1102,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_left_sd_header: Union[None, Unset, float] = UNSET
     as_left_cv_header: Union[None, Unset, float] = UNSET
     as_left_measurement_local_time: Union[None, Unset, datetime.datetime] = UNSET
-    as_left_reading_entry_math: Union[None, Unset,
+    as_left_reading_entry_math: Union[
+        None,
+        Unset,
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
     ] = UNSET
     as_left_reading_entry_math_string: Union[None, Unset, str] = UNSET
@@ -1242,7 +1258,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_left_uncertainty_budget: Union[None, Unset, str] = UNSET
     as_left_mu_extended: Union[None, Unset, str] = UNSET
     as_left_channel: Union[None, Unset, int] = UNSET
-    as_left_measurement_type: Union[None, Unset,
+    as_left_measurement_type: Union[
+        None,
+        Unset,
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
     ] = UNSET
     as_left_updated_by: Union[None, Unset, str] = UNSET
@@ -1290,7 +1308,10 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_left_unit_of_measure: Union[None, Unset, str] = UNSET
     as_left_display_format: Union[None, Unset, str] = UNSET
     as_left_precision: Union[None, Unset, float] = UNSET
-    as_left_precision_type: Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftPrecisionType
+    as_left_precision_type: Union[
+        None,
+        Unset,
+        QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftPrecisionType,
     ] = UNSET
     as_left_minimum: Union[None, Unset, float] = UNSET
     as_left_nominal: Union[None, Unset, float] = UNSET
@@ -1301,7 +1322,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_left_maxi_mum: Union[None, Unset, float] = UNSET
     as_left_resolution: Union[None, Unset, float] = UNSET
     as_left_resolution_count: Union[None, Unset, int] = UNSET
-    as_left_measurement_not_taken_result: Union[None, Unset,
+    as_left_measurement_not_taken_result: Union[
+        None,
+        Unset,
         QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult,
     ] = UNSET
     as_left_hide_from_certificate: Union[None, Unset, bool] = UNSET
@@ -4608,7 +4631,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         _as_found_measurement_not_taken_result = d.pop(
             "AsFoundMeasurementNotTakenResult", UNSET
         )
-        as_found_measurement_not_taken_result: Union[None, Unset,
+        as_found_measurement_not_taken_result: Union[
+            None,
+            Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult,
         ]
         if isinstance(_as_found_measurement_not_taken_result, Unset):
@@ -4670,7 +4695,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_guard_band = d.pop("AsLeftGuardBand", UNSET)
 
         _as_found_guard_band_logic = d.pop("AsFoundGuardBandLogic", UNSET)
-        as_found_guard_band_logic: Union[None, Unset,
+        as_found_guard_band_logic: Union[
+            None,
+            Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic,
         ]
         if isinstance(_as_found_guard_band_logic, Unset):
@@ -4681,7 +4708,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
             )
 
         _as_left_guard_band_logic = d.pop("AsLeftGuardBandLogic", UNSET)
-        as_left_guard_band_logic: Union[None, Unset,
+        as_left_guard_band_logic: Union[
+            None,
+            Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic,
         ]
         if isinstance(_as_left_guard_band_logic, Unset):
@@ -4748,7 +4777,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_hysteresis = d.pop("AsLeftHysteresis", UNSET)
 
         _as_found_reading_entry_math = d.pop("AsFoundReadingEntryMath", UNSET)
-        as_found_reading_entry_math: Union[None, Unset,
+        as_found_reading_entry_math: Union[
+            None,
+            Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath,
         ]
         if isinstance(_as_found_reading_entry_math, Unset):
@@ -5063,7 +5094,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_channel = d.pop("AsFoundChannel", UNSET)
 
         _as_found_measurement_type = d.pop("AsFoundMeasurementType", UNSET)
-        as_found_measurement_type: Union[None, Unset,
+        as_found_measurement_type: Union[
+            None,
+            Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
         ]
         if isinstance(_as_found_measurement_type, Unset):
@@ -5182,7 +5215,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_precision = d.pop("AsFoundPrecision", UNSET)
 
         _as_found_precision_type = d.pop("AsFoundPrecisionType", UNSET)
-        as_found_precision_type: Union[None, Unset,
+        as_found_precision_type: Union[
+            None,
+            Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundPrecisionType,
         ]
         if isinstance(_as_found_precision_type, Unset):
@@ -5238,7 +5273,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
             as_left_measurement_local_time = isoparse(_as_left_measurement_local_time)
 
         _as_left_reading_entry_math = d.pop("AsLeftReadingEntryMath", UNSET)
-        as_left_reading_entry_math: Union[None, Unset,
+        as_left_reading_entry_math: Union[
+            None,
+            Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
         ]
         if isinstance(_as_left_reading_entry_math, Unset):
@@ -5558,7 +5595,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_channel = d.pop("AsLeftChannel", UNSET)
 
         _as_left_measurement_type = d.pop("AsLeftMeasurementType", UNSET)
-        as_left_measurement_type: Union[None, Unset,
+        as_left_measurement_type: Union[
+            None,
+            Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
         ]
         if isinstance(_as_left_measurement_type, Unset):
@@ -5669,7 +5708,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_precision = d.pop("AsLeftPrecision", UNSET)
 
         _as_left_precision_type = d.pop("AsLeftPrecisionType", UNSET)
-        as_left_precision_type: Union[None, Unset,
+        as_left_precision_type: Union[
+            None,
+            Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftPrecisionType,
         ]
         if isinstance(_as_left_precision_type, Unset):
@@ -5700,7 +5741,9 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         _as_left_measurement_not_taken_result = d.pop(
             "AsLeftMeasurementNotTakenResult", UNSET
         )
-        as_left_measurement_not_taken_result: Union[None, Unset,
+        as_left_measurement_not_taken_result: Union[
+            None,
+            Unset,
             QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult,
         ]
         if isinstance(_as_left_measurement_not_taken_result, Unset):

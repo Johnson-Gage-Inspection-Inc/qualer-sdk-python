@@ -26,7 +26,10 @@ class QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel:
     """
 
     metadata: Union[None, Unset, str] = UNSET
-    exhibits: Union[None, Unset, "QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits"
+    exhibits: Union[
+        None,
+        Unset,
+        "QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits",
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -57,7 +60,9 @@ class QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel:
         metadata = d.pop("Metadata", UNSET)
 
         _exhibits = d.pop("Exhibits", UNSET)
-        exhibits: Union[None, Unset,
+        exhibits: Union[
+            None,
+            Unset,
             QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits,
         ]
         if isinstance(_exhibits, Unset):

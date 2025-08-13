@@ -30,7 +30,8 @@ class QualerApiModelsMaintenancePlansToMaintenancePlanResponse:
     maintenance_plan_name: Union[None, Unset, str] = UNSET
     is_template: Union[None, Unset, bool] = UNSET
     company_name: Union[None, Unset, str] = UNSET
-    maintenance_tasks: Union[None, Unset, list["QualerApiModelsMaintenancePlansToMaintenanceTaskResponse"]
+    maintenance_tasks: Union[
+        None, Unset, list["QualerApiModelsMaintenancePlansToMaintenanceTaskResponse"]
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 

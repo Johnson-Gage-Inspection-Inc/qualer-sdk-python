@@ -28,7 +28,9 @@ class QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits:
 
     title: Union[None, Unset, str] = UNSET
     subtitle: Union[None, Unset, str] = UNSET
-    exhibits: Union[None, Unset,
+    exhibits: Union[
+        None,
+        Unset,
         list[
             "QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibitsKeyValue"
         ],

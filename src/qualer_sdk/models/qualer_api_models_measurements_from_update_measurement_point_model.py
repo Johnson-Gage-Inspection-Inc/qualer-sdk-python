@@ -109,27 +109,45 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
     resolution: Union[None, Unset, float] = UNSET
     resolution_count: Union[None, Unset, float] = UNSET
     is_accredited: Union[None, Unset, bool] = UNSET
-    specification_mode: Union[None, Unset,
+    specification_mode: Union[
+        None,
+        Unset,
         QualerApiModelsMeasurementsFromUpdateMeasurementPointModelSpecificationMode,
     ] = UNSET
-    tolerance_mode: Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceMode
+    tolerance_mode: Union[
+        None,
+        Unset,
+        QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceMode,
     ] = UNSET
-    tolerance_unit: Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceUnit
+    tolerance_unit: Union[
+        None,
+        Unset,
+        QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceUnit,
     ] = UNSET
-    measurements: Union[None, Unset, list["QualerApiModelsMeasurementsFromUpdateMeasurementModel"]
+    measurements: Union[
+        None, Unset, list["QualerApiModelsMeasurementsFromUpdateMeasurementModel"]
     ] = UNSET
-    measurement_condition_factors: Union[None, Unset,
+    measurement_condition_factors: Union[
+        None,
+        Unset,
         list["QualerApiModelsMeasurementsFromUpdateMeasurementConditionFactorModel"],
     ] = UNSET
-    tool_application_mode: Union[None, Unset,
+    tool_application_mode: Union[
+        None,
+        Unset,
         QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToolApplicationMode,
     ] = UNSET
-    primary_measurement_tool: Union[None, Unset, "QualerApiModelsMeasurementsFromUpdateMeasurementToolModel"
+    primary_measurement_tool: Union[
+        None, Unset, "QualerApiModelsMeasurementsFromUpdateMeasurementToolModel"
     ] = UNSET
-    secondary_measurement_tool: Union[None, Unset, "QualerApiModelsMeasurementsFromUpdateMeasurementToolModel"
+    secondary_measurement_tool: Union[
+        None, Unset, "QualerApiModelsMeasurementsFromUpdateMeasurementToolModel"
     ] = UNSET
     linked_measurement_point_id: Union[None, Unset, int] = UNSET
-    hysteresis_point: Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementPointModelHysteresisPoint
+    hysteresis_point: Union[
+        None,
+        Unset,
+        QualerApiModelsMeasurementsFromUpdateMeasurementPointModelHysteresisPoint,
     ] = UNSET
     influence_parameter_1_parameter_id: Union[None, Unset, int] = UNSET
     influence_parameter_1_value: Union[None, Unset, str] = UNSET
@@ -437,7 +455,9 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
         is_accredited = d.pop("IsAccredited", UNSET)
 
         _specification_mode = d.pop("SpecificationMode", UNSET)
-        specification_mode: Union[None, Unset,
+        specification_mode: Union[
+            None,
+            Unset,
             QualerApiModelsMeasurementsFromUpdateMeasurementPointModelSpecificationMode,
         ]
         if isinstance(_specification_mode, Unset):
@@ -448,7 +468,9 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
             )
 
         _tolerance_mode = d.pop("ToleranceMode", UNSET)
-        tolerance_mode: Union[None, Unset,
+        tolerance_mode: Union[
+            None,
+            Unset,
             QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceMode,
         ]
         if isinstance(_tolerance_mode, Unset):
@@ -461,7 +483,9 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
             )
 
         _tolerance_unit = d.pop("ToleranceUnit", UNSET)
-        tolerance_unit: Union[None, Unset,
+        tolerance_unit: Union[
+            None,
+            Unset,
             QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceUnit,
         ]
         if isinstance(_tolerance_unit, Unset):
@@ -496,7 +520,9 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
             measurement_condition_factors.append(measurement_condition_factors_item)
 
         _tool_application_mode = d.pop("ToolApplicationMode", UNSET)
-        tool_application_mode: Union[None, Unset,
+        tool_application_mode: Union[
+            None,
+            Unset,
             QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToolApplicationMode,
         ]
         if isinstance(_tool_application_mode, Unset):
@@ -507,7 +533,8 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
             )
 
         _primary_measurement_tool = d.pop("PrimaryMeasurementTool", UNSET)
-        primary_measurement_tool: Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementToolModel
+        primary_measurement_tool: Union[
+            None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementToolModel
         ]
         if isinstance(_primary_measurement_tool, Unset):
             primary_measurement_tool = UNSET
@@ -519,7 +546,8 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
             )
 
         _secondary_measurement_tool = d.pop("SecondaryMeasurementTool", UNSET)
-        secondary_measurement_tool: Union[None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementToolModel
+        secondary_measurement_tool: Union[
+            None, Unset, QualerApiModelsMeasurementsFromUpdateMeasurementToolModel
         ]
         if isinstance(_secondary_measurement_tool, Unset):
             secondary_measurement_tool = UNSET
@@ -533,7 +561,9 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
         linked_measurement_point_id = d.pop("LinkedMeasurementPointId", UNSET)
 
         _hysteresis_point = d.pop("HysteresisPoint", UNSET)
-        hysteresis_point: Union[None, Unset,
+        hysteresis_point: Union[
+            None,
+            Unset,
             QualerApiModelsMeasurementsFromUpdateMeasurementPointModelHysteresisPoint,
         ]
         if isinstance(_hysteresis_point, Unset):

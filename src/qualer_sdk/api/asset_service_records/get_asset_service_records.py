@@ -48,11 +48,18 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]:
+) -> Optional[
+    list["QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel"]
+]:
     if response.status_code == 200:
-        response_200 = QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel.from_dict(
-            response.json()
-        )
+        response_200 = []
+        _response_200 = response.json()
+        for response_200_item_data in _response_200:
+            response_200_item = QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel.from_dict(
+                response_200_item_data
+            )
+
+            response_200.append(response_200_item)
 
         return response_200
     if client.raise_on_unexpected_status:
@@ -63,7 +70,9 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]:
+) -> Response[
+    list["QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel"]
+]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -79,7 +88,9 @@ def sync_detailed(
     model_serial_number: Union[None, Unset, str] = UNSET,
     model_from: Union[None, Unset, datetime.datetime] = UNSET,
     model_to: Union[None, Unset, datetime.datetime] = UNSET,
-) -> Response[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]:
+) -> Response[
+    list["QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel"]
+]:
     """
     Args:
         model_asset_id (Union[None, Unset, int]):
@@ -92,7 +103,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]
+        Response[list['QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -116,7 +127,9 @@ def sync(
     model_serial_number: Union[None, Unset, str] = UNSET,
     model_from: Union[None, Unset, datetime.datetime] = UNSET,
     model_to: Union[None, Unset, datetime.datetime] = UNSET,
-) -> Optional[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]:
+) -> Optional[
+    list["QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel"]
+]:
     """
     Args:
         model_asset_id (Union[None, Unset, int]):
@@ -129,7 +142,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel
+        list['QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel']
     """
 
     return sync_detailed(
@@ -148,7 +161,9 @@ async def asyncio_detailed(
     model_serial_number: Union[None, Unset, str] = UNSET,
     model_from: Union[None, Unset, datetime.datetime] = UNSET,
     model_to: Union[None, Unset, datetime.datetime] = UNSET,
-) -> Response[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]:
+) -> Response[
+    list["QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel"]
+]:
     """
     Args:
         model_asset_id (Union[None, Unset, int]):
@@ -161,7 +176,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]
+        Response[list['QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -183,7 +198,9 @@ async def asyncio(
     model_serial_number: Union[None, Unset, str] = UNSET,
     model_from: Union[None, Unset, datetime.datetime] = UNSET,
     model_to: Union[None, Unset, datetime.datetime] = UNSET,
-) -> Optional[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]:
+) -> Optional[
+    list["QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel"]
+]:
     """
     Args:
         model_asset_id (Union[None, Unset, int]):
@@ -196,7 +213,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel
+        list['QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel']
     """
 
     return (

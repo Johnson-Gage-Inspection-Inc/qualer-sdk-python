@@ -42,11 +42,14 @@ class QualerApiModelsMeasurementsFromCreateMeasurementSetModel:
     default_unit_of_measure_id: Union[None, Unset, int] = UNSET
     decimal_places: Union[None, Unset, int] = UNSET
     significant_figures: Union[None, Unset, int] = UNSET
-    display_options: Union[None, Unset, "QualerApiModelsMeasurementsFromDisplayOptions"] = (
+    display_options: Union[
+        None, Unset, "QualerApiModelsMeasurementsFromDisplayOptions"
+    ] = UNSET
+    custom_fields: Union[None, Unset, "QualerApiModelsMeasurementsFromCustomFields"] = (
         UNSET
     )
-    custom_fields: Union[None, Unset, "QualerApiModelsMeasurementsFromCustomFields"] = UNSET
-    measurement_points: Union[None, Unset, list["QualerApiModelsMeasurementsFromCreateMeasurementPointModel"]
+    measurement_points: Union[
+        None, Unset, list["QualerApiModelsMeasurementsFromCreateMeasurementPointModel"]
     ] = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -128,7 +131,9 @@ class QualerApiModelsMeasurementsFromCreateMeasurementSetModel:
         significant_figures = d.pop("SignificantFigures", UNSET)
 
         _display_options = d.pop("DisplayOptions", UNSET)
-        display_options: Union[None, Unset, QualerApiModelsMeasurementsFromDisplayOptions]
+        display_options: Union[
+            None, Unset, QualerApiModelsMeasurementsFromDisplayOptions
+        ]
         if isinstance(_display_options, Unset):
             display_options = UNSET
         else:

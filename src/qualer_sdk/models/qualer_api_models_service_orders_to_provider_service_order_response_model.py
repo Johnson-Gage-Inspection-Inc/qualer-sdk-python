@@ -57,7 +57,9 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
     due_date: Union[None, Unset, datetime.datetime] = UNSET
     assets: Union[None, Unset, int] = UNSET
     completed_assets: Union[None, Unset, int] = UNSET
-    order_status: Union[None, Unset,
+    order_status: Union[
+        None,
+        Unset,
         QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
     ] = UNSET
     is_quality_control_fail: Union[None, Unset, bool] = UNSET
@@ -68,7 +70,10 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
     client_legacy_id: Union[None, Unset, str] = UNSET
     business_from_time: Union[None, Unset, datetime.datetime] = UNSET
     business_to_time: Union[None, Unset, datetime.datetime] = UNSET
-    timeframe: Union[None, Unset, QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe
+    timeframe: Union[
+        None,
+        Unset,
+        QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe,
     ] = UNSET
     site_access_notes: Union[None, Unset, str] = UNSET
     desired_date: Union[None, Unset, datetime.datetime] = UNSET
@@ -280,7 +285,9 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         completed_assets = d.pop("CompletedAssets", UNSET)
 
         _order_status = d.pop("OrderStatus", UNSET)
-        order_status: Union[None, Unset,
+        order_status: Union[
+            None,
+            Unset,
             QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
         ]
         if isinstance(_order_status, Unset):
@@ -341,7 +348,9 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         business_to_time = _parse_business_to_time(d.pop("BusinessToTime", UNSET))
 
         _timeframe = d.pop("Timeframe", UNSET)
-        timeframe: Union[None, Unset,
+        timeframe: Union[
+            None,
+            Unset,
             QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe,
         ]
         if isinstance(_timeframe, Unset):

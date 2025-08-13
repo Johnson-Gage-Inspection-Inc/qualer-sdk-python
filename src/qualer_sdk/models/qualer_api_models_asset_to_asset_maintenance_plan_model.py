@@ -75,7 +75,8 @@ class QualerApiModelsAssetToAssetMaintenancePlanModel:
         composite_child_count (Union[None, Unset, int]):
     """
 
-    maintenance_plans: Union[None, Unset, list["QualerApiModelsAssetToAssetMaintenancePlanResponse"]
+    maintenance_plans: Union[
+        None, Unset, list["QualerApiModelsAssetToAssetMaintenancePlanResponse"]
     ] = UNSET
     company_id: Union[None, Unset, int] = UNSET
     asset_id: Union[None, Unset, int] = UNSET
@@ -83,7 +84,8 @@ class QualerApiModelsAssetToAssetMaintenancePlanModel:
     asset_user: Union[None, Unset, str] = UNSET
     asset_tag: Union[None, Unset, str] = UNSET
     equipment_id: Union[None, Unset, str] = UNSET
-    asset_status: Union[None, Unset, QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus
+    asset_status: Union[
+        None, Unset, QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus
     ] = UNSET
     asset_name: Union[None, Unset, str] = UNSET
     asset_description: Union[None, Unset, str] = UNSET
@@ -387,7 +389,8 @@ class QualerApiModelsAssetToAssetMaintenancePlanModel:
         equipment_id = d.pop("EquipmentId", UNSET)
 
         _asset_status = d.pop("AssetStatus", UNSET)
-        asset_status: Union[None, Unset, QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus
+        asset_status: Union[
+            None, Unset, QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus
         ]
         if isinstance(_asset_status, Unset):
             asset_status = UNSET
