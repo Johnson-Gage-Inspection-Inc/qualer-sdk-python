@@ -205,6 +205,9 @@ ENDPOINT_REQUIRED_PARAMS = {
     "report_datasets.get_tool_range_attributes": {
         "service_order_item_id": SERVICE_ORDER_ITEM_ID
     },
+    "service_order_documents.get_document": {
+        "guid": PDF_DOCUMENT_UUID,
+    },
     "service_order_documents.get_document_list": {
         "from_": datetime.datetime(2024, 1, 1),
         "to": datetime.datetime(2024, 12, 31),
@@ -284,7 +287,10 @@ def test_the_other_get_endpoints(endpoint_name):
         api_module = importlib.import_module(
             f"qualer_sdk.api.{module_path}.{func_name}"
         )
-        sync_func = getattr(api_module, "sync")
+        try:
+            sync_func = getattr(api_module, "sync")
+        except AttributeError:
+            sync_func = getattr(api_module, "sync_detailed")
     except Exception as e:
         pytest.skip(f"Could not import endpoint {endpoint_name}: {e}")
 
