@@ -287,10 +287,9 @@ def test_the_other_get_endpoints(endpoint_name):
         api_module = importlib.import_module(
             f"qualer_sdk.api.{module_path}.{func_name}"
         )
-        try:
-            sync_func = getattr(api_module, "sync")
-        except AttributeError:
-            sync_func = getattr(api_module, "sync_detailed")
+        sync_func = getattr(api_module, "sync", None) or getattr(
+            api_module, "sync_detailed"
+        )
     except Exception as e:
         pytest.skip(f"Could not import endpoint {endpoint_name}: {e}")
 
