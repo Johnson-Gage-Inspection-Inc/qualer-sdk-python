@@ -1489,6 +1489,8 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
         quality_control_date: Union[None, Unset, datetime.datetime]
         if isinstance(_quality_control_date, Unset):
             quality_control_date = UNSET
+        elif _quality_control_date is None:
+            quality_control_date = None
         else:
             quality_control_date = isoparse(_quality_control_date)
 
