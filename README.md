@@ -37,12 +37,13 @@ python setup.py install --user
 After installing, import and use the package in your Python code:
 
 ```python
+import os
 from qualer_sdk import AuthenticatedClient
 from qualer_sdk.api.report_datasets import get_service_orders
 
-# Initialize the client with authentication token
+# Initialize the client with authentication token from environment variable
 # (base_url defaults to https://api.johnson-gage.com)
-client = AuthenticatedClient(token="your-api-token-here")
+client = AuthenticatedClient(token=os.getenv("QUALER_API_TOKEN"))
 
 # Call API endpoints directly
 service_orders = get_service_orders.sync(client=client, customer_id=12345)
@@ -64,11 +65,13 @@ For more details on each API, refer to the generated [API documentation](docs/).
 The SDK supports token-authenticated requests using the `AuthenticatedClient` class. The base URL defaults to the correct Qualer API endpoint:
 
 ```python
+import os
 from qualer_sdk import AuthenticatedClient
 from qualer_sdk.api.report_datasets import get_as_found_measurements_by_order
 
-# Initialize with token (base_url defaults to https://api.johnson-gage.com)
-client = AuthenticatedClient(token="your-api-token-here")
+# Initialize with token from environment variable (recommended)
+# (base_url defaults to https://api.johnson-gage.com)
+client = AuthenticatedClient(token=os.getenv("QUALER_API_TOKEN"))
 
 # Call authenticated endpoints
 measurements = get_as_found_measurements_by_order.sync(
@@ -76,6 +79,31 @@ measurements = get_as_found_measurements_by_order.sync(
     service_order_id=285227
 )
 print(measurements)
+```
+
+**Setting up your API token:**
+
+Set the environment variable in your shell:
+```bash
+# Linux/macOS
+export QUALER_API_TOKEN="your-actual-token-here"
+
+# Windows Command Prompt
+set QUALER_API_TOKEN=your-actual-token-here
+
+# Windows PowerShell
+$env:QUALER_API_TOKEN="your-actual-token-here"
+```
+
+Or create a `.env` file in your project root:
+```
+QUALER_API_TOKEN=your-actual-token-here
+```
+
+Then load it in your Python code using `python-dotenv`:
+```python
+from dotenv import load_dotenv
+load_dotenv()  # Load environment variables from .env file
 ```
 
 You can also override the base URL if needed:
