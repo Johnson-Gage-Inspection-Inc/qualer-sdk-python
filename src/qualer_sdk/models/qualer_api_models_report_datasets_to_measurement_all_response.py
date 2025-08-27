@@ -4702,6 +4702,8 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         ]
         if isinstance(_as_found_guard_band_logic, Unset):
             as_found_guard_band_logic = UNSET
+        elif _as_found_guard_band_logic is None:
+            as_found_guard_band_logic = None
         else:
             as_found_guard_band_logic = QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic(
                 _as_found_guard_band_logic
@@ -4715,6 +4717,8 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         ]
         if isinstance(_as_left_guard_band_logic, Unset):
             as_left_guard_band_logic = UNSET
+        elif _as_left_guard_band_logic is None:
+            as_left_guard_band_logic = None
         else:
             as_left_guard_band_logic = QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic(
                 _as_left_guard_band_logic
