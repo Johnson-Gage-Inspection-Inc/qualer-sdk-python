@@ -2754,6 +2754,8 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         ]
         if isinstance(_guard_band_logic, Unset):
             guard_band_logic = UNSET
+        elif _guard_band_logic is None:
+            guard_band_logic = None
         else:
             guard_band_logic = (
                 QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic(
