@@ -221,6 +221,8 @@ class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
         ]
         if isinstance(_influence_parameter_1_type, Unset):
             influence_parameter_1_type = UNSET
+        elif _influence_parameter_1_type is None:
+            influence_parameter_1_type = None
         else:
             influence_parameter_1_type = QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type(
                 _influence_parameter_1_type
@@ -246,6 +248,8 @@ class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
         ]
         if isinstance(_influence_parameter_2_type, Unset):
             influence_parameter_2_type = UNSET
+        elif _influence_parameter_2_type is None:
+            influence_parameter_2_type = None
         else:
             influence_parameter_2_type = QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type(
                 _influence_parameter_2_type

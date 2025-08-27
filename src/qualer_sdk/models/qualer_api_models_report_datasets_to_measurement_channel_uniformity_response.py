@@ -174,6 +174,8 @@ class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
         result: Union[None, Unset, ServiceResultStatus]
         if isinstance(_result, Unset):
             result = UNSET
+        elif _result is None:
+            result = None
         else:
             result = ServiceResultStatus(_result)
 
