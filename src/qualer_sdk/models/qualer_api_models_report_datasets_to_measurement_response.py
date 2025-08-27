@@ -3143,6 +3143,8 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         completed_on: Union[None, Unset, datetime.datetime]
         if isinstance(_completed_on, Unset):
             completed_on = UNSET
+        elif _completed_on is None:
+            completed_on = None
         else:
             completed_on = isoparse(_completed_on)
 
