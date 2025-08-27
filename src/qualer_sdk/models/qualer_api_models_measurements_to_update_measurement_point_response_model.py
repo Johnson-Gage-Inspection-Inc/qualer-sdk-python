@@ -334,7 +334,15 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
         ]
         if isinstance(_tolerance_mode, Unset):
             tolerance_mode = UNSET
+        elif _tolerance_mode is None:
+            tolerance_mode = None
         else:
+            # Handle string to integer mapping for IntEnum
+            if isinstance(_tolerance_mode, str):
+                tolerance_mode_map = {"Symmetric": 0, "Asymmetric": 1, "Range": 2}
+                _tolerance_mode = tolerance_mode_map.get(
+                    _tolerance_mode, _tolerance_mode
+                )
             tolerance_mode = QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceMode(
                 _tolerance_mode
             )
@@ -347,7 +355,19 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
         ]
         if isinstance(_tolerance_unit, Unset):
             tolerance_unit = UNSET
+        elif _tolerance_unit is None:
+            tolerance_unit = None
         else:
+            # Handle string to integer mapping for IntEnum
+            if isinstance(_tolerance_unit, str):
+                tolerance_unit_map = {
+                    "Percentage": 0,
+                    "UnitOfMeasure": 1,
+                    "Readability": 2,
+                }
+                _tolerance_unit = tolerance_unit_map.get(
+                    _tolerance_unit, _tolerance_unit
+                )
             tolerance_unit = QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceUnit(
                 _tolerance_unit
             )

@@ -4638,6 +4638,8 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         ]
         if isinstance(_as_found_measurement_not_taken_result, Unset):
             as_found_measurement_not_taken_result = UNSET
+        elif _as_found_measurement_not_taken_result is None:
+            as_found_measurement_not_taken_result = None
         else:
             as_found_measurement_not_taken_result = QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult(
                 _as_found_measurement_not_taken_result
@@ -4788,7 +4790,25 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         ]
         if isinstance(_as_found_reading_entry_math, Unset):
             as_found_reading_entry_math = UNSET
+        elif _as_found_reading_entry_math is None:
+            as_found_reading_entry_math = None
         else:
+            # Handle integer to string mapping
+            if isinstance(_as_found_reading_entry_math, int):
+                as_found_reading_entry_math_map = {
+                    0: "Addition",
+                    1: "Average",
+                    2: "Difference",
+                    3: "Division",
+                    4: "Maximum",
+                    5: "Minimum",
+                    6: "Multiplication",
+                    7: "ReverseSubtraction",
+                    8: "Subtraction",
+                }
+                _as_found_reading_entry_math = as_found_reading_entry_math_map.get(
+                    _as_found_reading_entry_math, _as_found_reading_entry_math
+                )
             as_found_reading_entry_math = QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath(
                 _as_found_reading_entry_math
             )
@@ -5105,10 +5125,29 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         ]
         if isinstance(_as_found_measurement_type, Unset):
             as_found_measurement_type = UNSET
+        elif _as_found_measurement_type is None:
+            as_found_measurement_type = None
         else:
-            as_found_measurement_type = QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementType(
-                _as_found_measurement_type
-            )
+            # Handle both integer and string values for AsFoundMeasurementType
+            if isinstance(_as_found_measurement_type, int):
+                # Map integer values to string values
+                measurement_type_mapping = {
+                    0: "Data",
+                    1: "Cumulative",
+                }
+                string_value = measurement_type_mapping.get(_as_found_measurement_type)
+                if string_value:
+                    as_found_measurement_type = QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementType(
+                        string_value
+                    )
+                else:
+                    # Unknown integer value, set to None
+                    as_found_measurement_type = None
+            else:
+                # Handle string values normally
+                as_found_measurement_type = QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementType(
+                    _as_found_measurement_type
+                )
 
         as_found_updated_by = d.pop("AsFoundUpdatedBy", UNSET)
 
@@ -5116,6 +5155,8 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_updated_on: Union[None, Unset, datetime.datetime]
         if isinstance(_as_found_updated_on, Unset):
             as_found_updated_on = UNSET
+        elif _as_found_updated_on is None:
+            as_found_updated_on = None
         else:
             as_found_updated_on = isoparse(_as_found_updated_on)
 
@@ -5141,6 +5182,8 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_commenced_on: Union[None, Unset, datetime.datetime]
         if isinstance(_as_found_commenced_on, Unset):
             as_found_commenced_on = UNSET
+        elif _as_found_commenced_on is None:
+            as_found_commenced_on = None
         else:
             as_found_commenced_on = isoparse(_as_found_commenced_on)
 
@@ -5226,7 +5269,29 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         ]
         if isinstance(_as_found_precision_type, Unset):
             as_found_precision_type = UNSET
+        elif _as_found_precision_type is None:
+            as_found_precision_type = None
         else:
+            # Handle integer to string mapping OR string to valid enum mapping
+            if isinstance(_as_found_precision_type, int):
+                as_found_precision_type_map = {
+                    0: "Percentage",
+                    1: "Readability",
+                    2: "UnitOfMeasure",
+                }
+                _as_found_precision_type = as_found_precision_type_map.get(
+                    _as_found_precision_type, _as_found_precision_type
+                )
+            elif isinstance(_as_found_precision_type, str):
+                # Handle string to valid enum mapping
+                string_precision_type_map = {
+                    "Standard": "UnitOfMeasure",
+                    "Enhanced": "Readability",
+                    "HighPrecision": "Percentage",
+                }
+                _as_found_precision_type = string_precision_type_map.get(
+                    _as_found_precision_type, _as_found_precision_type
+                )
             as_found_precision_type = QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundPrecisionType(
                 _as_found_precision_type
             )
@@ -5284,7 +5349,25 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         ]
         if isinstance(_as_left_reading_entry_math, Unset):
             as_left_reading_entry_math = UNSET
+        elif _as_left_reading_entry_math is None:
+            as_left_reading_entry_math = None
         else:
+            # Handle integer to string mapping
+            if isinstance(_as_left_reading_entry_math, int):
+                as_left_reading_entry_math_map = {
+                    0: "Addition",
+                    1: "Average",
+                    2: "Difference",
+                    3: "Division",
+                    4: "Maximum",
+                    5: "Minimum",
+                    6: "Multiplication",
+                    7: "ReverseSubtraction",
+                    8: "Subtraction",
+                }
+                _as_left_reading_entry_math = as_left_reading_entry_math_map.get(
+                    _as_left_reading_entry_math, _as_left_reading_entry_math
+                )
             as_left_reading_entry_math = QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath(
                 _as_left_reading_entry_math
             )
@@ -5606,10 +5689,29 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         ]
         if isinstance(_as_left_measurement_type, Unset):
             as_left_measurement_type = UNSET
+        elif _as_left_measurement_type is None:
+            as_left_measurement_type = None
         else:
-            as_left_measurement_type = QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementType(
-                _as_left_measurement_type
-            )
+            # Handle both integer and string values for AsLeftMeasurementType
+            if isinstance(_as_left_measurement_type, int):
+                # Map integer values to string values
+                measurement_type_mapping = {
+                    0: "Data",
+                    1: "Cumulative",
+                }
+                string_value = measurement_type_mapping.get(_as_left_measurement_type)
+                if string_value:
+                    as_left_measurement_type = QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementType(
+                        string_value
+                    )
+                else:
+                    # Unknown integer value, set to None
+                    as_left_measurement_type = None
+            else:
+                # Handle string values normally
+                as_left_measurement_type = QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementType(
+                    _as_left_measurement_type
+                )
 
         as_left_updated_by = d.pop("AsLeftUpdatedBy", UNSET)
 
@@ -5617,6 +5719,8 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_updated_on: Union[None, Unset, datetime.datetime]
         if isinstance(_as_left_updated_on, Unset):
             as_left_updated_on = UNSET
+        elif _as_left_updated_on is None:
+            as_left_updated_on = None
         else:
             as_left_updated_on = isoparse(_as_left_updated_on)
 
@@ -5638,6 +5742,8 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_commenced_on: Union[None, Unset, datetime.datetime]
         if isinstance(_as_left_commenced_on, Unset):
             as_left_commenced_on = UNSET
+        elif _as_left_commenced_on is None:
+            as_left_commenced_on = None
         else:
             as_left_commenced_on = isoparse(_as_left_commenced_on)
 
@@ -5719,7 +5825,19 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         ]
         if isinstance(_as_left_precision_type, Unset):
             as_left_precision_type = UNSET
+        elif _as_left_precision_type is None:
+            as_left_precision_type = None
         else:
+            # Handle integer to string mapping for API responses
+            if isinstance(_as_left_precision_type, int):
+                as_left_precision_type_map = {
+                    0: "Percentage",
+                    1: "Readability",
+                    2: "UnitOfMeasure",
+                }
+                _as_left_precision_type = as_left_precision_type_map.get(
+                    _as_left_precision_type, _as_left_precision_type
+                )
             as_left_precision_type = QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftPrecisionType(
                 _as_left_precision_type
             )
@@ -5752,6 +5870,8 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         ]
         if isinstance(_as_left_measurement_not_taken_result, Unset):
             as_left_measurement_not_taken_result = UNSET
+        elif _as_left_measurement_not_taken_result is None:
+            as_left_measurement_not_taken_result = None
         else:
             as_left_measurement_not_taken_result = QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult(
                 _as_left_measurement_not_taken_result

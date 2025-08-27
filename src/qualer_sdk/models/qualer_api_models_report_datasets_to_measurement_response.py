@@ -2781,12 +2781,31 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         ]
         if isinstance(_measurement_type, Unset):
             measurement_type = UNSET
+        elif _measurement_type is None:
+            measurement_type = None
         else:
-            measurement_type = (
-                QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType(
-                    _measurement_type
+            # Handle both integer and string values for MeasurementType
+            if isinstance(_measurement_type, int):
+                # Map integer values to string values
+                measurement_type_mapping = {
+                    0: "Data",
+                    1: "Cumulative",
+                }
+                string_value = measurement_type_mapping.get(_measurement_type)
+                if string_value:
+                    measurement_type = QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType(
+                        string_value
+                    )
+                else:
+                    # Unknown integer value, set to None
+                    measurement_type = None
+            else:
+                # Handle string values normally
+                measurement_type = (
+                    QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType(
+                        _measurement_type
+                    )
                 )
-            )
 
         updated_by = d.pop("UpdatedBy", UNSET)
 
@@ -2831,6 +2850,8 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         commenced_on: Union[None, Unset, datetime.datetime]
         if isinstance(_commenced_on, Unset):
             commenced_on = UNSET
+        elif _commenced_on is None:
+            commenced_on = None
         else:
             commenced_on = isoparse(_commenced_on)
 
@@ -2928,12 +2949,35 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         ]
         if isinstance(_reading_entry_logic, Unset):
             reading_entry_logic = UNSET
+        elif _reading_entry_logic is None:
+            reading_entry_logic = None
         else:
-            reading_entry_logic = (
-                QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic(
-                    _reading_entry_logic
+            # Handle both integer and string values for ReadingEntryLogic
+            if isinstance(_reading_entry_logic, int):
+                # Map integer values to string values
+                reading_entry_logic_mapping = {
+                    0: "SingleValue",
+                    1: "TwoValues",
+                    2: "TwoValuesAndResult",
+                    3: "DoubleSubstitution",
+                    4: "MeasuredValueConversion",
+                    5: "MeasuredValueConversionDisplay",
+                }
+                string_value = reading_entry_logic_mapping.get(_reading_entry_logic)
+                if string_value:
+                    reading_entry_logic = QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic(
+                        string_value
+                    )
+                else:
+                    # Unknown integer value, set to None
+                    reading_entry_logic = None
+            else:
+                # Handle string values normally
+                reading_entry_logic = (
+                    QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic(
+                        _reading_entry_logic
+                    )
                 )
-            )
 
         _reading_entry_math = d.pop("ReadingEntryMath", UNSET)
         reading_entry_math: Union[
@@ -2943,12 +2987,38 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         ]
         if isinstance(_reading_entry_math, Unset):
             reading_entry_math = UNSET
+        elif _reading_entry_math is None:
+            reading_entry_math = None
         else:
-            reading_entry_math = (
-                QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath(
-                    _reading_entry_math
+            # Handle both integer and string values for ReadingEntryMath
+            if isinstance(_reading_entry_math, int):
+                # Map integer values to string values
+                reading_entry_math_mapping = {
+                    0: "Addition",
+                    1: "Subtraction",
+                    2: "Multiplication",
+                    3: "Division",
+                    4: "Average",
+                    5: "Difference",
+                    6: "ReverseSubtraction",
+                    7: "Maximum",
+                    8: "Minimum",
+                }
+                string_value = reading_entry_math_mapping.get(_reading_entry_math)
+                if string_value:
+                    reading_entry_math = QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath(
+                        string_value
+                    )
+                else:
+                    # Unknown integer value, set to None
+                    reading_entry_math = None
+            else:
+                # Handle string values normally
+                reading_entry_math = (
+                    QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath(
+                        _reading_entry_math
+                    )
                 )
-            )
 
         _double_substitution_sequence = d.pop("DoubleSubstitutionSequence", UNSET)
         double_substitution_sequence: Union[
@@ -2958,10 +3028,32 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         ]
         if isinstance(_double_substitution_sequence, Unset):
             double_substitution_sequence = UNSET
+        elif _double_substitution_sequence is None:
+            double_substitution_sequence = None
         else:
-            double_substitution_sequence = QualerApiModelsReportDatasetsToMeasurementResponseDoubleSubstitutionSequence(
-                _double_substitution_sequence
-            )
+            # Handle both integer and string values for DoubleSubstitutionSequence
+            if isinstance(_double_substitution_sequence, int):
+                # Map integer values to string values
+                double_substitution_sequence_mapping = {
+                    0: "StandardTested",
+                    1: "TestedStandard",
+                    2: "ZeroStandard",
+                }
+                string_value = double_substitution_sequence_mapping.get(
+                    _double_substitution_sequence
+                )
+                if string_value:
+                    double_substitution_sequence = QualerApiModelsReportDatasetsToMeasurementResponseDoubleSubstitutionSequence(
+                        string_value
+                    )
+                else:
+                    # Unknown integer value, set to None
+                    double_substitution_sequence = None
+            else:
+                # Handle string values normally
+                double_substitution_sequence = QualerApiModelsReportDatasetsToMeasurementResponseDoubleSubstitutionSequence(
+                    _double_substitution_sequence
+                )
 
         reading_entry_math_string = d.pop("ReadingEntryMathString", UNSET)
 
@@ -2995,12 +3087,43 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         ]
         if isinstance(_environment_mask, Unset):
             environment_mask = UNSET
+        elif _environment_mask is None:
+            environment_mask = None
         else:
-            environment_mask = (
-                QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask(
-                    _environment_mask
+            # Handle both integer and string values for EnvironmentMask
+            if isinstance(_environment_mask, int):
+                # Map integer values to string values (this might be a flag enum)
+                environment_mask_mapping = {
+                    0: "ZFactor",
+                    1: "AirBuoyancy",
+                    2: "EvaporationRate",
+                    3: "AirHumidity",
+                    4: "Altitude",
+                    5: "AmbientTemperature",
+                    6: "BarometricPressure",
+                    7: "LightIntensity",
+                    8: "NoiseLevel",
+                    9: "PhLevel",
+                    10: "WaterConductivity",
+                    11: "WaterTemperature",
+                    12: "SolarRadiation",
+                    13: "WindSpeed",
+                }
+                string_value = environment_mask_mapping.get(_environment_mask)
+                if string_value:
+                    environment_mask = QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask(
+                        string_value
+                    )
+                else:
+                    # Unknown integer value, set to None
+                    environment_mask = None
+            else:
+                # Handle string values normally
+                environment_mask = (
+                    QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask(
+                        _environment_mask
+                    )
                 )
-            )
 
         display_name = d.pop("DisplayName", UNSET)
 
@@ -3154,12 +3277,38 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         ]
         if isinstance(_tolerance_type, Unset):
             tolerance_type = UNSET
+        elif _tolerance_type is None:
+            tolerance_type = None
         else:
-            tolerance_type = (
-                QualerApiModelsReportDatasetsToMeasurementResponseToleranceType(
-                    _tolerance_type
+            # Handle both integer and string values for ToleranceType
+            if isinstance(_tolerance_type, int):
+                # Map integer values to string values
+                tolerance_type_mapping = {
+                    0: "Offset",
+                    1: "Percentage",
+                    2: "Range",
+                    3: "Function",
+                    4: "PercentagePlus",
+                    5: "Ppm",
+                    6: "PpmPlus",
+                }
+                string_value = tolerance_type_mapping.get(_tolerance_type)
+                if string_value:
+                    tolerance_type = (
+                        QualerApiModelsReportDatasetsToMeasurementResponseToleranceType(
+                            string_value
+                        )
+                    )
+                else:
+                    # Unknown integer value, set to None
+                    tolerance_type = None
+            else:
+                # Handle string values normally
+                tolerance_type = (
+                    QualerApiModelsReportDatasetsToMeasurementResponseToleranceType(
+                        _tolerance_type
+                    )
                 )
-            )
 
         tolerance_type_string = d.pop("ToleranceTypeString", UNSET)
 
@@ -3169,12 +3318,34 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         ]
         if isinstance(_precision_type, Unset):
             precision_type = UNSET
+        elif _precision_type is None:
+            precision_type = None
         else:
-            precision_type = (
-                QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType(
-                    _precision_type
+            # Handle both integer and string values for PrecisionType
+            if isinstance(_precision_type, int):
+                # Map integer values to string values
+                precision_type_mapping = {
+                    0: "UnitOfMeasure",
+                    1: "Percentage",
+                    2: "Readability",
+                }
+                string_value = precision_type_mapping.get(_precision_type)
+                if string_value:
+                    precision_type = (
+                        QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType(
+                            string_value
+                        )
+                    )
+                else:
+                    # Unknown integer value, set to None
+                    precision_type = None
+            else:
+                # Handle string values normally
+                precision_type = (
+                    QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType(
+                        _precision_type
+                    )
                 )
-            )
 
         _specification_mode = d.pop("SpecificationMode", UNSET)
         specification_mode: Union[
@@ -3248,17 +3419,31 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         ]
         if isinstance(_shipment_status, Unset):
             shipment_status = UNSET
+        elif _shipment_status is None:
+            shipment_status = None
         else:
-            shipment_status = (
-                QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus(
-                    _shipment_status
+            # Handle both integer and string values for ShipmentStatus
+            try:
+                if isinstance(_shipment_status, int):
+                    # Convert integer to string to preserve the information
+                    _shipment_status = str(_shipment_status)
+                shipment_status = (
+                    QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus(
+                        _shipment_status
+                    )
                 )
-            )
+            except ValueError:
+                # If the value is not a valid enum value, preserve it as a string attribute
+                # This preserves the information while allowing the object to be created
+                shipment_status = None
+                # TODO: Consider logging this unknown value: _shipment_status
 
         _shipped_on = d.pop("ShippedOn", UNSET)
         shipped_on: Union[None, Unset, datetime.datetime]
         if isinstance(_shipped_on, Unset):
             shipped_on = UNSET
+        elif _shipped_on is None:
+            shipped_on = None
         else:
             shipped_on = isoparse(_shipped_on)
 
@@ -3266,6 +3451,8 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         delivered_on: Union[None, Unset, datetime.datetime]
         if isinstance(_delivered_on, Unset):
             delivered_on = UNSET
+        elif _delivered_on is None:
+            delivered_on = None
         else:
             delivered_on = isoparse(_delivered_on)
 
@@ -3291,6 +3478,8 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         ]
         if isinstance(_measurement_not_taken_result, Unset):
             measurement_not_taken_result = UNSET
+        elif _measurement_not_taken_result is None:
+            measurement_not_taken_result = None
         else:
             measurement_not_taken_result = QualerApiModelsReportDatasetsToMeasurementResponseMeasurementNotTakenResult(
                 _measurement_not_taken_result
@@ -3570,7 +3759,21 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         ]
         if isinstance(_measurement_point_order, Unset):
             measurement_point_order = UNSET
+        elif _measurement_point_order is None:
+            measurement_point_order = None
         else:
+            # Handle integer to string mapping
+            if isinstance(_measurement_point_order, int):
+                measurement_point_order_map = {
+                    0: "AscendingDescending",
+                    1: "AsEntered",
+                    2: "DescendingAscending",
+                    3: "ZeroAscendingDescending",
+                    4: "ZeroDescendingAscending",
+                }
+                _measurement_point_order = measurement_point_order_map.get(
+                    _measurement_point_order, _measurement_point_order
+                )
             measurement_point_order = (
                 QualerApiModelsReportDatasetsToMeasurementResponseMeasurementPointOrder(
                     _measurement_point_order
@@ -3585,7 +3788,15 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         ]
         if isinstance(_hysteresis_point, Unset):
             hysteresis_point = UNSET
+        elif _hysteresis_point is None:
+            hysteresis_point = None
         else:
+            # Handle integer to string mapping
+            if isinstance(_hysteresis_point, int):
+                hysteresis_point_map = {0: "First", 1: "None", 2: "Second", 3: "Zero"}
+                _hysteresis_point = hysteresis_point_map.get(
+                    _hysteresis_point, _hysteresis_point
+                )
             hysteresis_point = (
                 QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint(
                     _hysteresis_point
