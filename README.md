@@ -37,31 +37,54 @@ python setup.py install --user
 After installing, import and use the package in your Python code:
 
 ```python
-import qualer_sdk
+from qualer_sdk import AuthenticatedClient
+from qualer_sdk.api.report_datasets import get_service_orders
 
-# Initialize the API client
-api_client = qualer_sdk.ApiClient()
-# Example: call the Account API
-account_api = qualer_sdk.api.account_api.AccountApi(api_client)
-response = account_api.account_login(...)
-print(response)
+# Initialize the client with authentication token
+# (base_url defaults to https://api.johnson-gage.com)
+client = AuthenticatedClient(token="your-api-token-here")
+
+# Call API endpoints directly
+service_orders = get_service_orders.sync(client=client, customer_id=12345)
+print(service_orders)
+
+# Or use async
+import asyncio
+async def main():
+    service_orders = await get_service_orders.asyncio(client=client, customer_id=12345)
+    print(service_orders)
+
+asyncio.run(main())
 ```
 
 For more details on each API, refer to the generated [API documentation](docs/).
 
 ## Authentication
 
-The SDK supports token authenticated requests using the `AuthenticatedClient` class. By default, the SDK uses `"Api-Token"` as the authorization prefix:
+The SDK supports token-authenticated requests using the `AuthenticatedClient` class. The base URL defaults to the correct Qualer API endpoint:
 
 ```python
-from qualer_sdk.client import AuthenticatedClient
+from qualer_sdk import AuthenticatedClient
+from qualer_sdk.api.report_datasets import get_as_found_measurements_by_order
 
-# Default usage with Api-Token prefix
+# Initialize with token (base_url defaults to https://api.johnson-gage.com)
+client = AuthenticatedClient(token="your-api-token-here")
+
+# Call authenticated endpoints
+measurements = get_as_found_measurements_by_order.sync(
+    client=client, 
+    service_order_id=285227
+)
+print(measurements)
+```
+
+You can also override the base URL if needed:
+
+```python
 client = AuthenticatedClient(
-    base_url="https://api.qualer.com",
+    base_url="https://custom-api-endpoint.com",
     token="your-api-token-here"
 )
-# This sends: Authorization: Api-Token your-api-token-here
 ```
 
 
