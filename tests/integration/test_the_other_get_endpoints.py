@@ -9,7 +9,7 @@ from qualer_sdk.client import AuthenticatedClient
 ASSET_ID = 1235564  # valid asset ID for testing
 ASSET_POOL_ID = 620646  # valid asset pool ID for testing
 CLIENT_COMPANY_ID = 57613  # valid client company id
-SERVICE_ORDER_ID = 1235369  # valid service order ID
+SERVICE_ORDER_ID = 281552  # valid service order ID
 SERVICE_ORDER_ITEM_ID = 3662396  # valid work item ID
 ASSET_SERVICE_RECORD_ID = 2325444  # valid record ID
 PDF_DOCUMENT_UUID = "c4ab6a7c-e2f1-4984-837f-9390f9a84dfc"  # known PDF

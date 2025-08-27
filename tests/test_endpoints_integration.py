@@ -449,9 +449,9 @@ def discover_service_order_item_id_endpoints() -> List[Tuple[str, Any]]:
 
 # Test data for Asset Service Record ID endpoints
 try:
-    import qualer_sdk.api.asset_service_records.get_asset_service_record
     import qualer_sdk.api.asset_service_records.document_list
     import qualer_sdk.api.asset_service_records.download_documents
+    import qualer_sdk.api.asset_service_records.get_asset_service_record
     import qualer_sdk.api.asset_service_records.upload_documents
 
     ASSET_SERVICE_RECORD_ID_ONLY_ENDPOINTS = [
@@ -484,9 +484,9 @@ PROBLEMATIC_ASSET_SERVICE_RECORD_ENDPOINTS = [
 
 # Test data for Employee ID endpoints
 try:
+    import qualer_sdk.api.client_employees.get_employee
     import qualer_sdk.api.employees.get_employee_get_2
     import qualer_sdk.api.service_orders.get_work_orders_employee
-    import qualer_sdk.api.client_employees.get_employee
 
     EMPLOYEE_ID_ONLY_ENDPOINTS = [
         (
@@ -553,8 +553,8 @@ try:
     ]
 
     # Maintenance Plan ID endpoints (the GET ones only)
-    import qualer_sdk.api.maintenance_plans.get_maintenance_plan_assets_get_2
     import qualer_sdk.api.client_maintenance_plans.get_maintenance_plan_assets
+    import qualer_sdk.api.maintenance_plans.get_maintenance_plan_assets_get_2
 
     MAINTENANCE_PLAN_ID_ENDPOINTS = [
         (
@@ -922,17 +922,17 @@ def test_service_order_id_endpoint_response_parsing(
     3. No parsing/enum/date errors occur
     """
     # Skip problematic endpoints with known OpenAPI generator issues
-    problematic_endpoints = [
-        "report_datasets.get_all_measurements_by_order",  # AsFoundMeasurementNotTakenResult enum doesn't handle None
-        "report_datasets.get_as_found_measurements_by_order",  # GuardBandLogic enum doesn't handle None
-        "report_datasets.get_as_left_measurements_by_order",  # GuardBandLogic enum doesn't handle None
-        "report_datasets.get_service_orders",  # Date parsing error with None values
-    ]
+    # problematic_endpoints = [
+    #     "report_datasets.get_all_measurements_by_order",  # AsFoundMeasurementNotTakenResult enum doesn't handle None
+    #     "report_datasets.get_as_found_measurements_by_order",  # GuardBandLogic enum doesn't handle None
+    #     "report_datasets.get_as_left_measurements_by_order",  # GuardBandLogic enum doesn't handle None
+    #     "report_datasets.get_service_orders",  # Date parsing error with None values
+    # ]
 
-    if endpoint_name in problematic_endpoints:
-        pytest.skip(
-            f"Skipping {endpoint_name} - known OpenAPI generator issue with nullable enums"
-        )
+    # if endpoint_name in problematic_endpoints:
+    #     pytest.skip(
+    #         f"Skipping {endpoint_name} - known OpenAPI generator issue with nullable enums"
+    #     )
     # Get the service order ID parameter name from the function signature
     sig = inspect.signature(endpoint_func)
     service_order_param_name = None
