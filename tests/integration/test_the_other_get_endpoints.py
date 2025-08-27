@@ -226,9 +226,9 @@ ENDPOINT_REQUIRED_PARAMS = {
     "service_order_item_documents.get_documents_list_get_2": {
         "service_order_item_id": SERVICE_ORDER_ITEM_ID
     },
-    # "service_order_item_measurements.get_measurement_form": {
-    #     "work_item_id": SERVICE_ORDER_ITEM_ID
-    # },  # TODO: fix this endpoint
+    "service_order_item_measurements.get_measurement_form": {
+        "work_item_id": SERVICE_ORDER_ITEM_ID
+    },
     "service_order_item_measurements.get_measurements_by_asset_get_2": {
         "asset_id": ASSET_ID
     },
