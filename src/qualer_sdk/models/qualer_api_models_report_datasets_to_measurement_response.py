@@ -51,6 +51,7 @@ from ..models.qualer_api_models_report_datasets_to_measurement_response_toleranc
 from ..models.qualer_api_models_report_datasets_to_measurement_response_tolerance_unit import (
     QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit,
 )
+from ..models.service_result_status import ServiceResultStatus
 from ..models.work_status import WorkStatus
 from ..types import UNSET, Unset
 
@@ -111,7 +112,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         cv_raw (Union[None, Unset, float]):
         cv_decimal_places (Union[None, Unset, int]):
         cv_extended (Union[None, Unset, str]):
-        result (Union[None, Unset, int]):
+        result (Union[None, Unset, ServiceResultStatus]):
         range_result (Union[None, Unset, bool]):
         delta_result (Union[None, Unset, bool]):
         min_result (Union[None, Unset, bool]):
@@ -495,7 +496,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     cv_raw: Union[None, Unset, float] = UNSET
     cv_decimal_places: Union[None, Unset, int] = UNSET
     cv_extended: Union[None, Unset, str] = UNSET
-    result: Union[None, Unset, int] = UNSET
+    result: Union[None, Unset, ServiceResultStatus] = UNSET
     range_result: Union[None, Unset, bool] = UNSET
     delta_result: Union[None, Unset, bool] = UNSET
     min_result: Union[None, Unset, bool] = UNSET
@@ -1004,7 +1005,9 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         cv_extended = self.cv_extended
 
-        result = self.result
+        result: Union[None, Unset, int] = UNSET
+        if self.result and not isinstance(self.result, Unset):
+            result = self.result.value
 
         range_result = self.range_result
 
@@ -2696,7 +2699,12 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
         cv_extended = d.pop("CvExtended", UNSET)
 
-        result = d.pop("Result", UNSET)
+        _result = d.pop("Result", UNSET)
+        result: Union[None, Unset, ServiceResultStatus]
+        if isinstance(_result, Unset):
+            result = UNSET
+        else:
+            result = ServiceResultStatus(_result)
 
         range_result = d.pop("RangeResult", UNSET)
 
