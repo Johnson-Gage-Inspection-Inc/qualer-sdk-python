@@ -15350,8 +15350,7 @@
           "type": "string"
         },
         "Result": {
-          "format": "int32",
-          "type": "integer"
+          "$ref": "#/definitions/ServiceResultStatus"
         },
         "RangeResult": {
           "type": "boolean"
