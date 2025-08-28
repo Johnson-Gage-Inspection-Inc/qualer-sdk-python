@@ -3483,9 +3483,20 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         elif _measurement_not_taken_result is None:
             measurement_not_taken_result = None
         else:
-            measurement_not_taken_result = QualerApiModelsReportDatasetsToMeasurementResponseMeasurementNotTakenResult(
-                _measurement_not_taken_result
-            )
+            # Handle integer to string mapping for MeasurementNotTakenResult enum
+            if isinstance(_measurement_not_taken_result, int):
+                int_to_str_map = {0: "Fail", 1: "Pass", 2: "Limited"}
+                _measurement_not_taken_result = int_to_str_map.get(
+                    _measurement_not_taken_result, str(_measurement_not_taken_result)
+                )
+
+            try:
+                measurement_not_taken_result = QualerApiModelsReportDatasetsToMeasurementResponseMeasurementNotTakenResult(
+                    _measurement_not_taken_result
+                )
+            except ValueError:
+                # If the value is not recognized, use None as fallback
+                measurement_not_taken_result = None
 
         hide_from_certificate = d.pop("HideFromCertificate", UNSET)
 
