@@ -3795,7 +3795,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         elif _as_left_measurement_not_taken_result is None:
             as_left_measurement_not_taken_result = None
         else:
-            as_left_measurement_not_taken_result = QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult(
+            as_left_measurement_not_taken_result = QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult(  # noqa: E501
                 _as_left_measurement_not_taken_result
             )
         as_left_hide_from_certificate = d.pop("AsLeftHideFromCertificate", None)
