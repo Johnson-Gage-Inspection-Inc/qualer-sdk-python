@@ -4,8 +4,9 @@ We no longer use a custom ``Unset`` sentinel. ``None`` represents both
 "missing" and "null" values across the SDK.
 """
 
-from collections.abc import Mapping
-from typing import IO, BinaryIO, List, Optional, Tuple, TypeVar, Union
+from collections.abc import Mapping, MutableMapping
+from http import HTTPStatus
+from typing import IO, BinaryIO, Generic, List, Optional, Tuple, TypeVar, Union
 
 from attrs import define
 
@@ -37,8 +38,19 @@ class File:
         return self.file_name, self.payload, self.mime_type
 
 
+@define
+class Response(Generic[T]):
+    """A response from an endpoint"""
+
+    status_code: HTTPStatus
+    content: bytes
+    headers: MutableMapping[str, str]
+    parsed: Optional[T]
+
+
 __all__ = [
     "File",
     "FileTypes",
     "RequestFiles",
+    "Response",
 ]
