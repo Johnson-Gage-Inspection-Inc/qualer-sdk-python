@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
@@ -8,9 +8,7 @@ from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_asset_from_update_asset_department_model import (
     QualerApiModelsAssetFromUpdateAssetDepartmentModel,
 )
-from ...models.update_asset_department_response_200 import (
-    UpdateAssetDepartmentResponse200,
-)
+from ...models.update_asset_department_response_200 import UpdateAssetDepartmentResponse200
 from ...types import Response
 
 
@@ -18,10 +16,10 @@ def _get_kwargs(
     id: int,
     *,
     body: QualerApiModelsAssetFromUpdateAssetDepartmentModel,
-) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+) -> Dict[str, Any]:
+    headers: Dict[str, Any] = {}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "put",
         "url": f"/api/assets/{id}/department",
     }

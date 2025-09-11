@@ -1,12 +1,10 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsAssetReservationFromUpsertAssetReservationModel")
 
@@ -15,29 +13,29 @@ T = TypeVar("T", bound="QualerApiModelsAssetReservationFromUpsertAssetReservatio
 class QualerApiModelsAssetReservationFromUpsertAssetReservationModel:
     """
     Attributes:
-        asset_id (Union[None, Unset, int]):
-        product_id (Union[None, Unset, int]):
-        reservation_id (Union[None, Unset, int]):
-        service_order_id (Union[None, Unset, int]):
-        begin_date (Union[None, Unset, datetime.datetime]):
-        end_date (Union[None, Unset, datetime.datetime]):
-        reserved_by (Union[None, Unset, int]):
-        reserved_by_name (Union[None, Unset, str]):
-        comments (Union[None, Unset, str]):
+        asset_id (Optional[int]):
+        product_id (Optional[int]):
+        reservation_id (Optional[int]):
+        service_order_id (Optional[int]):
+        begin_date (Optional[datetime.datetime]):
+        end_date (Optional[datetime.datetime]):
+        reserved_by (Optional[int]):
+        reserved_by_name (Optional[str]):
+        comments (Optional[str]):
     """
 
-    asset_id: Union[None, Unset, int] = UNSET
-    product_id: Union[None, Unset, int] = UNSET
-    reservation_id: Union[None, Unset, int] = UNSET
-    service_order_id: Union[None, Unset, int] = UNSET
-    begin_date: Union[None, Unset, datetime.datetime] = UNSET
-    end_date: Union[None, Unset, datetime.datetime] = UNSET
-    reserved_by: Union[None, Unset, int] = UNSET
-    reserved_by_name: Union[None, Unset, str] = UNSET
-    comments: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    asset_id: Optional[int] = None
+    product_id: Optional[int] = None
+    reservation_id: Optional[int] = None
+    service_order_id: Optional[int] = None
+    begin_date: Optional[datetime.datetime] = None
+    end_date: Optional[datetime.datetime] = None
+    reserved_by: Optional[int] = None
+    reserved_by_name: Optional[str] = None
+    comments: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         asset_id = self.asset_id
 
         product_id = self.product_id
@@ -46,12 +44,12 @@ class QualerApiModelsAssetReservationFromUpsertAssetReservationModel:
 
         service_order_id = self.service_order_id
 
-        begin_date: Union[None, Unset, str] = UNSET
-        if self.begin_date and not isinstance(self.begin_date, Unset):
+        begin_date: Optional[str] = None
+        if self.begin_date:
             begin_date = self.begin_date.isoformat()
 
-        end_date: Union[None, Unset, str] = UNSET
-        if self.end_date and not isinstance(self.end_date, Unset):
+        end_date: Optional[str] = None
+        if self.end_date:
             end_date = self.end_date.isoformat()
 
         reserved_by = self.reserved_by
@@ -60,26 +58,26 @@ class QualerApiModelsAssetReservationFromUpsertAssetReservationModel:
 
         comments = self.comments
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if asset_id is not UNSET:
+        if asset_id is not None:
             field_dict["AssetId"] = asset_id
-        if product_id is not UNSET:
+        if product_id is not None:
             field_dict["ProductId"] = product_id
-        if reservation_id is not UNSET:
+        if reservation_id is not None:
             field_dict["ReservationId"] = reservation_id
-        if service_order_id is not UNSET:
+        if service_order_id is not None:
             field_dict["ServiceOrderId"] = service_order_id
-        if begin_date is not UNSET:
+        if begin_date is not None:
             field_dict["BeginDate"] = begin_date
-        if end_date is not UNSET:
+        if end_date is not None:
             field_dict["EndDate"] = end_date
-        if reserved_by is not UNSET:
+        if reserved_by is not None:
             field_dict["ReservedBy"] = reserved_by
-        if reserved_by_name is not UNSET:
+        if reserved_by_name is not None:
             field_dict["ReservedByName"] = reserved_by_name
-        if comments is not UNSET:
+        if comments is not None:
             field_dict["Comments"] = comments
 
         return field_dict
@@ -87,33 +85,33 @@ class QualerApiModelsAssetReservationFromUpsertAssetReservationModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        asset_id = d.pop("AssetId", UNSET)
+        asset_id = d.pop("AssetId", None)
 
-        product_id = d.pop("ProductId", UNSET)
+        product_id = d.pop("ProductId", None)
 
-        reservation_id = d.pop("ReservationId", UNSET)
+        reservation_id = d.pop("ReservationId", None)
 
-        service_order_id = d.pop("ServiceOrderId", UNSET)
+        service_order_id = d.pop("ServiceOrderId", None)
 
-        _begin_date = d.pop("BeginDate", UNSET)
-        begin_date: Union[None, Unset, datetime.datetime]
-        if isinstance(_begin_date, Unset):
-            begin_date = UNSET
+        _begin_date = d.pop("BeginDate", None)
+        begin_date: Optional[datetime.datetime]
+        if not _begin_date:
+            begin_date = None
         else:
             begin_date = isoparse(_begin_date)
 
-        _end_date = d.pop("EndDate", UNSET)
-        end_date: Union[None, Unset, datetime.datetime]
-        if isinstance(_end_date, Unset):
-            end_date = UNSET
+        _end_date = d.pop("EndDate", None)
+        end_date: Optional[datetime.datetime]
+        if not _end_date:
+            end_date = None
         else:
             end_date = isoparse(_end_date)
 
-        reserved_by = d.pop("ReservedBy", UNSET)
+        reserved_by = d.pop("ReservedBy", None)
 
-        reserved_by_name = d.pop("ReservedByName", UNSET)
+        reserved_by_name = d.pop("ReservedByName", None)
 
-        comments = d.pop("Comments", UNSET)
+        comments = d.pop("Comments", None)
 
         qualer_api_models_asset_reservation_from_upsert_asset_reservation_model = cls(
             asset_id=asset_id,
@@ -133,7 +131,7 @@ class QualerApiModelsAssetReservationFromUpsertAssetReservationModel:
         return qualer_api_models_asset_reservation_from_upsert_asset_reservation_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

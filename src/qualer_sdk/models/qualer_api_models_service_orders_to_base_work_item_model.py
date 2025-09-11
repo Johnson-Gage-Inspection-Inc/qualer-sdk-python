@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_service_orders_to_base_work_item_model_order_item_task_price_model import (
@@ -22,53 +20,49 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersToBaseWorkItemModel")
 class QualerApiModelsServiceOrdersToBaseWorkItemModel:
     """
     Attributes:
-        tasks (Union[None, Unset, list['QualerApiModelsServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel']]):
-        parts (Union[None, Unset, list['QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel']]):
-        repairs (Union[None, Unset, list['QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel']]):
-        work_item_id (Union[None, Unset, int]):
-        vendor_tag (Union[None, Unset, str]):
+        tasks (Optional[List['QualerApiModelsServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel']]):
+        parts (Optional[List['QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel']]):
+        repairs (Optional[List['QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel']]):
+        work_item_id (Optional[int]):
+        vendor_tag (Optional[str]):
     """
 
     tasks: Union[
         None,
-        Unset,
-        list["QualerApiModelsServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel"],
-    ] = UNSET
+        None,
+        List["QualerApiModelsServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel"],
+    ] = None
     parts: Union[
         None,
-        Unset,
-        list[
-            "QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel"
-        ],
-    ] = UNSET
+        None,
+        List["QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel"],
+    ] = None
     repairs: Union[
         None,
-        Unset,
-        list[
-            "QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel"
-        ],
-    ] = UNSET
-    work_item_id: Union[None, Unset, int] = UNSET
-    vendor_tag: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+        None,
+        List["QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel"],
+    ] = None
+    work_item_id: Optional[int] = None
+    vendor_tag: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
-        tasks: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.tasks and not isinstance(self.tasks, Unset):
+    def to_dict(self) -> Dict[str, Any]:
+        tasks: Optional[List[Dict[str, Any]]] = None
+        if self.tasks:
             tasks = []
             for tasks_item_data in self.tasks:
                 tasks_item = tasks_item_data.to_dict()
                 tasks.append(tasks_item)
 
-        parts: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.parts and not isinstance(self.parts, Unset):
+        parts: Optional[List[Dict[str, Any]]] = None
+        if self.parts:
             parts = []
             for parts_item_data in self.parts:
                 parts_item = parts_item_data.to_dict()
                 parts.append(parts_item)
 
-        repairs: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.repairs and not isinstance(self.repairs, Unset):
+        repairs: Optional[List[Dict[str, Any]]] = None
+        if self.repairs:
             repairs = []
             for repairs_item_data in self.repairs:
                 repairs_item = repairs_item_data.to_dict()
@@ -78,18 +72,18 @@ class QualerApiModelsServiceOrdersToBaseWorkItemModel:
 
         vendor_tag = self.vendor_tag
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if tasks is not UNSET:
+        if tasks is not None:
             field_dict["Tasks"] = tasks
-        if parts is not UNSET:
+        if parts is not None:
             field_dict["Parts"] = parts
-        if repairs is not UNSET:
+        if repairs is not None:
             field_dict["Repairs"] = repairs
-        if work_item_id is not UNSET:
+        if work_item_id is not None:
             field_dict["WorkItemId"] = work_item_id
-        if vendor_tag is not UNSET:
+        if vendor_tag is not None:
             field_dict["VendorTag"] = vendor_tag
 
         return field_dict
@@ -105,35 +99,41 @@ class QualerApiModelsServiceOrdersToBaseWorkItemModel:
 
         d = dict(src_dict)
         tasks = []
-        _tasks = d.pop("Tasks", UNSET)
+        _tasks = d.pop("Tasks", None)
         for tasks_item_data in _tasks or []:
-            tasks_item = QualerApiModelsServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel.from_dict(
-                tasks_item_data
+            tasks_item = (
+                QualerApiModelsServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel.from_dict(
+                    tasks_item_data
+                )
             )
 
             tasks.append(tasks_item)
 
         parts = []
-        _parts = d.pop("Parts", UNSET)
+        _parts = d.pop("Parts", None)
         for parts_item_data in _parts or []:
-            parts_item = QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel.from_dict(
-                parts_item_data
+            parts_item = (
+                QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel.from_dict(
+                    parts_item_data
+                )
             )
 
             parts.append(parts_item)
 
         repairs = []
-        _repairs = d.pop("Repairs", UNSET)
+        _repairs = d.pop("Repairs", None)
         for repairs_item_data in _repairs or []:
-            repairs_item = QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel.from_dict(
-                repairs_item_data
+            repairs_item = (
+                QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel.from_dict(
+                    repairs_item_data
+                )
             )
 
             repairs.append(repairs_item)
 
-        work_item_id = d.pop("WorkItemId", UNSET)
+        work_item_id = d.pop("WorkItemId", None)
 
-        vendor_tag = d.pop("VendorTag", UNSET)
+        vendor_tag = d.pop("VendorTag", None)
 
         qualer_api_models_service_orders_to_base_work_item_model = cls(
             tasks=tasks,
@@ -143,13 +143,11 @@ class QualerApiModelsServiceOrdersToBaseWorkItemModel:
             vendor_tag=vendor_tag,
         )
 
-        qualer_api_models_service_orders_to_base_work_item_model.additional_properties = (
-            d
-        )
+        qualer_api_models_service_orders_to_base_work_item_model.additional_properties = d
         return qualer_api_models_service_orders_to_base_work_item_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

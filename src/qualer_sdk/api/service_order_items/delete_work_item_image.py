@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
@@ -12,8 +12,8 @@ from ...types import Response
 def _get_kwargs(
     work_item_id: int,
     image_name: str,
-) -> dict[str, Any]:
-    _kwargs: dict[str, Any] = {
+) -> Dict[str, Any]:
+    _kwargs: Dict[str, Any] = {
         "method": "delete",
         "url": f"/api/service/workitems/{work_item_id}/images/{image_name}",
     }

@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsAccountFromEmployeeMessagesModel")
 
@@ -13,25 +11,25 @@ T = TypeVar("T", bound="QualerApiModelsAccountFromEmployeeMessagesModel")
 class QualerApiModelsAccountFromEmployeeMessagesModel:
     """
     Attributes:
-        period (Union[None, Unset, int]):
-        site_id (Union[None, Unset, int]):
+        period (Optional[int]):
+        site_id (Optional[int]):
     """
 
-    period: Union[None, Unset, int] = UNSET
-    site_id: Union[None, Unset, int] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    period: Optional[int] = None
+    site_id: Optional[int] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         period = self.period
 
         site_id = self.site_id
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if period is not UNSET:
+        if period is not None:
             field_dict["Period"] = period
-        if site_id is not UNSET:
+        if site_id is not None:
             field_dict["SiteId"] = site_id
 
         return field_dict
@@ -39,9 +37,9 @@ class QualerApiModelsAccountFromEmployeeMessagesModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        period = d.pop("Period", UNSET)
+        period = d.pop("Period", None)
 
-        site_id = d.pop("SiteId", UNSET)
+        site_id = d.pop("SiteId", None)
 
         qualer_api_models_account_from_employee_messages_model = cls(
             period=period,
@@ -52,7 +50,7 @@ class QualerApiModelsAccountFromEmployeeMessagesModel:
         return qualer_api_models_account_from_employee_messages_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

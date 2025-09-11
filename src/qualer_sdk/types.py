@@ -1,28 +1,48 @@
-"""Contains some shared types for properties"""
+"""Core types and utilities for the Qualer SDK
+
+We no longer use a custom ``Unset`` sentinel. ``None`` represents both
+"missing" and "null" values across the SDK.
+"""
 
 from collections.abc import Mapping, MutableMapping
 from http import HTTPStatus
-from typing import IO, BinaryIO, Generic, Literal, Optional, TypeVar, Union
+from typing import IO, BinaryIO, Generic, List, Optional, Tuple, TypeVar, Union
 
 from attrs import define
+from typing_extensions import TypeAlias
+
+# Back-compat names for projects that imported these from the SDK.
+# Unset is just the type of None; UNSET is simply None.
+Unset = type(None)
+UNSET: None = None
+
+# Public type aliases to simplify annotations in user code.
+# MaybeUnset[T] expresses a value that may be absent (None) or present.
+T = TypeVar("T")
+MaybeUnset: TypeAlias = Optional[T]
 
 
-class Unset:
-    def __bool__(self) -> Literal[False]:
-        return False
+def require_set(value: Optional[T], /, message: str | None = None) -> T:
+    """Assert that ``value`` is set and return it.
 
+    Raises a ``ValueError`` if the value is ``None``. Useful to convert an
+    ``Optional[T]`` into a ``T`` in places where a value is required.
+    """
 
-UNSET: Unset = Unset()
+    if value is None:
+        raise ValueError(message or "Expected a set value, got None")
+    return value
+
 
 # The types that `httpx.Client(files=)` can accept, copied from that library.
 FileContent = Union[IO[bytes], bytes, str]
 FileTypes = Union[
     # (filename, file (or bytes), content_type)
-    tuple[Optional[str], FileContent, Optional[str]],
+    Tuple[Optional[str], FileContent, Optional[str]],
     # (filename, file (or bytes), content_type, headers)
-    tuple[Optional[str], FileContent, Optional[str], Mapping[str, str]],
+    Tuple[Optional[str], FileContent, Optional[str], Mapping[str, str]],
 ]
-RequestFiles = list[tuple[str, FileTypes]]
+RequestFiles = List[Tuple[str, FileTypes]]
 
 
 @define
@@ -38,9 +58,6 @@ class File:
         return self.file_name, self.payload, self.mime_type
 
 
-T = TypeVar("T")
-
-
 @define
 class Response(Generic[T]):
     """A response from an endpoint"""
@@ -51,4 +68,13 @@ class Response(Generic[T]):
     parsed: Optional[T]
 
 
-__all__ = ["UNSET", "File", "FileTypes", "RequestFiles", "Response", "Unset"]
+__all__ = [
+    "UNSET",
+    "Unset",
+    "MaybeUnset",
+    "require_set",
+    "File",
+    "FileTypes",
+    "RequestFiles",
+    "Response",
+]

@@ -1,13 +1,12 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union, cast
+from typing import Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.work_status import WorkStatus
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderItemResponse")
 
@@ -16,298 +15,298 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderItemResponse"
 class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
     """
     Attributes:
-        certificate_number (Union[None, Unset, str]):
-        document_number (Union[None, Unset, str]):
-        revision (Union[None, Unset, str]):
-        effective_date (Union[None, Unset, datetime.datetime]):
-        document_section (Union[None, Unset, str]):
-        service_level (Union[None, Unset, str]):
-        service_level_code (Union[None, Unset, str]):
-        service_type (Union[None, Unset, str]):
-        order_item_number (Union[None, Unset, int]):
-        service_charge (Union[None, Unset, float]):
-        updated_by (Union[None, Unset, str]):
-        updated_on (Union[None, Unset, datetime.datetime]):
-        work_status (Union[None, Unset, WorkStatus]):
-        custom_work_status (Union[None, Unset, str]):
-        service_comments (Union[None, Unset, str]):
-        client_notes (Union[None, Unset, str]):
-        vendor_service_notes (Union[None, Unset, str]):
-        display_name (Union[None, Unset, str]):
-        display_part_number (Union[None, Unset, str]):
-        part_number (Union[None, Unset, str]):
-        schedule_name (Union[None, Unset, str]):
-        segment_name (Union[None, Unset, str]):
-        next_segment_name (Union[None, Unset, str]):
-        interval_length (Union[None, Unset, int]):
-        interval_cycle (Union[None, Unset, str]):
-        service_options (Union[None, Unset, str]):
-        service_options_price (Union[None, Unset, str]):
-        service_options_document_numbers (Union[None, Unset, str]):
-        location (Union[None, Unset, str]):
-        station (Union[None, Unset, str]):
-        room (Union[None, Unset, str]):
-        site (Union[None, Unset, str]):
-        vendor_id (Union[None, Unset, int]):
-        service_order_number (Union[None, Unset, int]):
-        custom_order_number (Union[None, Unset, str]):
-        linked_order_number (Union[None, Unset, str]):
-        asset_id (Union[None, Unset, int]):
-        asset_class (Union[None, Unset, str]):
-        asset_condition (Union[None, Unset, str]):
-        asset_criticality (Union[None, Unset, str]):
-        asset_pool (Union[None, Unset, str]):
-        asset_name (Union[None, Unset, str]):
-        asset_description (Union[None, Unset, str]):
-        asset_document_number (Union[None, Unset, str]):
-        asset_document_section (Union[None, Unset, str]):
-        document_number_values (Union[None, Unset, str]):
-        product_name (Union[None, Unset, str]):
-        product_description (Union[None, Unset, str]):
-        asset_maker (Union[None, Unset, str]):
-        category_name (Union[None, Unset, str]):
-        root_category_name (Union[None, Unset, str]):
-        vendor_tag (Union[None, Unset, str]):
-        result_status (Union[None, Unset, int]):
-        service_date (Union[None, Unset, datetime.datetime]):
-        next_service_date (Union[None, Unset, datetime.datetime]):
-        original_due_date (Union[None, Unset, datetime.datetime]):
-        asset_tag (Union[None, Unset, str]):
-        department (Union[None, Unset, str]):
-        asset_user (Union[None, Unset, str]):
-        equipment_id (Union[None, Unset, str]):
-        legacy_identifier (Union[None, Unset, str]):
-        activation_date (Union[None, Unset, datetime.datetime]):
-        purchase_date (Union[None, Unset, datetime.datetime]):
-        part_name (Union[None, Unset, str]):
-        part_description (Union[None, Unset, str]):
-        is_taxable (Union[None, Unset, bool]):
-        is_limited (Union[None, Unset, bool]):
-        quantity (Union[None, Unset, float]):
-        discount (Union[None, Unset, float]):
-        price (Union[None, Unset, float]):
-        time_spent_in_minutes (Union[None, Unset, float]):
-        is_hourly_pricing (Union[None, Unset, bool]):
-        delivery_charge (Union[None, Unset, float]):
-        serial_number (Union[None, Unset, str]):
-        part_repair_charges (Union[None, Unset, float]):
-        part_repair_price (Union[None, Unset, float]):
-        override_parts_total (Union[None, Unset, bool]):
-        override_repairs_total (Union[None, Unset, bool]):
-        asset_custodian_name (Union[None, Unset, str]):
-        as_found_specification_group_name (Union[None, Unset, str]):
-        as_found_specification_company_name (Union[None, Unset, str]):
-        as_left_specification_group_name (Union[None, Unset, str]):
-        as_left_specification_company_name (Union[None, Unset, str]):
-        order_id (Union[None, Unset, int]):
-        parent_order_id (Union[None, Unset, int]):
-        order_item_id (Union[None, Unset, int]):
-        order_item_part_id (Union[None, Unset, int]):
-        as_found_specification_group_id (Union[None, Unset, int]):
-        as_left_specification_group_id (Union[None, Unset, int]):
-        as_found_status (Union[None, Unset, int]):
-        as_left_status (Union[None, Unset, int]):
-        as_found_result (Union[None, Unset, int]):
-        as_left_result (Union[None, Unset, int]):
-        completed_on (Union[None, Unset, datetime.datetime]):
-        received_on (Union[None, Unset, datetime.datetime]):
-        completed_by_name (Union[None, Unset, str]):
-        service_charge_base (Union[None, Unset, float]):
-        service_total (Union[None, Unset, float]):
-        repairs_total (Union[None, Unset, float]):
-        parts_total (Union[None, Unset, float]):
-        parts_total_before_discount (Union[None, Unset, float]):
-        parent_manufacturer (Union[None, Unset, str]):
-        parent_location (Union[None, Unset, str]):
-        parent_manufacturer_part_number (Union[None, Unset, str]):
-        parent_display_part_number (Union[None, Unset, str]):
-        parent_asset_id (Union[None, Unset, int]):
-        parent_category_name (Union[None, Unset, str]):
-        parent_root_category_name (Union[None, Unset, str]):
-        parent_serial_number (Union[None, Unset, str]):
-        parent_asset_tag (Union[None, Unset, str]):
-        parent_asset_user (Union[None, Unset, str]):
-        parent_display_name (Union[None, Unset, str]):
-        parent_equipment_id (Union[None, Unset, str]):
-        asset_shipping_address_1 (Union[None, Unset, str]):
-        asset_shipping_address_2 (Union[None, Unset, str]):
-        asset_shipping_first_name (Union[None, Unset, str]):
-        asset_shipping_last_name (Union[None, Unset, str]):
-        asset_shipping_email (Union[None, Unset, str]):
-        asset_shipping_company (Union[None, Unset, str]):
-        asset_shipping_city (Union[None, Unset, str]):
-        asset_shipping_zip (Union[None, Unset, str]):
-        asset_shipping_phone_number (Union[None, Unset, str]):
-        asset_shipping_fax_number (Union[None, Unset, str]):
-        asset_shipping_country (Union[None, Unset, str]):
-        asset_shipping_state (Union[None, Unset, str]):
-        shipping_address_1 (Union[None, Unset, str]):
-        shipping_address_2 (Union[None, Unset, str]):
-        shipping_first_name (Union[None, Unset, str]):
-        shipping_last_name (Union[None, Unset, str]):
-        shipping_email (Union[None, Unset, str]):
-        shipping_company (Union[None, Unset, str]):
-        shipping_city (Union[None, Unset, str]):
-        shipping_zip (Union[None, Unset, str]):
-        shipping_phone_number (Union[None, Unset, str]):
-        shipping_fax_number (Union[None, Unset, str]):
-        shipping_country (Union[None, Unset, str]):
-        shipping_state (Union[None, Unset, str]):
-        asset_service_notes (Union[None, Unset, str]):
-        service_option_service_code (Union[None, Unset, str]):
+        certificate_number (Optional[str]):
+        document_number (Optional[str]):
+        revision (Optional[str]):
+        effective_date (Optional[datetime.datetime]):
+        document_section (Optional[str]):
+        service_level (Optional[str]):
+        service_level_code (Optional[str]):
+        service_type (Optional[str]):
+        order_item_number (Optional[int]):
+        service_charge (Optional[float]):
+        updated_by (Optional[str]):
+        updated_on (Optional[datetime.datetime]):
+        work_status (Optional[WorkStatus]):
+        custom_work_status (Optional[str]):
+        service_comments (Optional[str]):
+        client_notes (Optional[str]):
+        vendor_service_notes (Optional[str]):
+        display_name (Optional[str]):
+        display_part_number (Optional[str]):
+        part_number (Optional[str]):
+        schedule_name (Optional[str]):
+        segment_name (Optional[str]):
+        next_segment_name (Optional[str]):
+        interval_length (Optional[int]):
+        interval_cycle (Optional[str]):
+        service_options (Optional[str]):
+        service_options_price (Optional[str]):
+        service_options_document_numbers (Optional[str]):
+        location (Optional[str]):
+        station (Optional[str]):
+        room (Optional[str]):
+        site (Optional[str]):
+        vendor_id (Optional[int]):
+        service_order_number (Optional[int]):
+        custom_order_number (Optional[str]):
+        linked_order_number (Optional[str]):
+        asset_id (Optional[int]):
+        asset_class (Optional[str]):
+        asset_condition (Optional[str]):
+        asset_criticality (Optional[str]):
+        asset_pool (Optional[str]):
+        asset_name (Optional[str]):
+        asset_description (Optional[str]):
+        asset_document_number (Optional[str]):
+        asset_document_section (Optional[str]):
+        document_number_values (Optional[str]):
+        product_name (Optional[str]):
+        product_description (Optional[str]):
+        asset_maker (Optional[str]):
+        category_name (Optional[str]):
+        root_category_name (Optional[str]):
+        vendor_tag (Optional[str]):
+        result_status (Optional[int]):
+        service_date (Optional[datetime.datetime]):
+        next_service_date (Optional[datetime.datetime]):
+        original_due_date (Optional[datetime.datetime]):
+        asset_tag (Optional[str]):
+        department (Optional[str]):
+        asset_user (Optional[str]):
+        equipment_id (Optional[str]):
+        legacy_identifier (Optional[str]):
+        activation_date (Optional[datetime.datetime]):
+        purchase_date (Optional[datetime.datetime]):
+        part_name (Optional[str]):
+        part_description (Optional[str]):
+        is_taxable (Optional[bool]):
+        is_limited (Optional[bool]):
+        quantity (Optional[float]):
+        discount (Optional[float]):
+        price (Optional[float]):
+        time_spent_in_minutes (Optional[float]):
+        is_hourly_pricing (Optional[bool]):
+        delivery_charge (Optional[float]):
+        serial_number (Optional[str]):
+        part_repair_charges (Optional[float]):
+        part_repair_price (Optional[float]):
+        override_parts_total (Optional[bool]):
+        override_repairs_total (Optional[bool]):
+        asset_custodian_name (Optional[str]):
+        as_found_specification_group_name (Optional[str]):
+        as_found_specification_company_name (Optional[str]):
+        as_left_specification_group_name (Optional[str]):
+        as_left_specification_company_name (Optional[str]):
+        order_id (Optional[int]):
+        parent_order_id (Optional[int]):
+        order_item_id (Optional[int]):
+        order_item_part_id (Optional[int]):
+        as_found_specification_group_id (Optional[int]):
+        as_left_specification_group_id (Optional[int]):
+        as_found_status (Optional[int]):
+        as_left_status (Optional[int]):
+        as_found_result (Optional[int]):
+        as_left_result (Optional[int]):
+        completed_on (Optional[datetime.datetime]):
+        received_on (Optional[datetime.datetime]):
+        completed_by_name (Optional[str]):
+        service_charge_base (Optional[float]):
+        service_total (Optional[float]):
+        repairs_total (Optional[float]):
+        parts_total (Optional[float]):
+        parts_total_before_discount (Optional[float]):
+        parent_manufacturer (Optional[str]):
+        parent_location (Optional[str]):
+        parent_manufacturer_part_number (Optional[str]):
+        parent_display_part_number (Optional[str]):
+        parent_asset_id (Optional[int]):
+        parent_category_name (Optional[str]):
+        parent_root_category_name (Optional[str]):
+        parent_serial_number (Optional[str]):
+        parent_asset_tag (Optional[str]):
+        parent_asset_user (Optional[str]):
+        parent_display_name (Optional[str]):
+        parent_equipment_id (Optional[str]):
+        asset_shipping_address_1 (Optional[str]):
+        asset_shipping_address_2 (Optional[str]):
+        asset_shipping_first_name (Optional[str]):
+        asset_shipping_last_name (Optional[str]):
+        asset_shipping_email (Optional[str]):
+        asset_shipping_company (Optional[str]):
+        asset_shipping_city (Optional[str]):
+        asset_shipping_zip (Optional[str]):
+        asset_shipping_phone_number (Optional[str]):
+        asset_shipping_fax_number (Optional[str]):
+        asset_shipping_country (Optional[str]):
+        asset_shipping_state (Optional[str]):
+        shipping_address_1 (Optional[str]):
+        shipping_address_2 (Optional[str]):
+        shipping_first_name (Optional[str]):
+        shipping_last_name (Optional[str]):
+        shipping_email (Optional[str]):
+        shipping_company (Optional[str]):
+        shipping_city (Optional[str]):
+        shipping_zip (Optional[str]):
+        shipping_phone_number (Optional[str]):
+        shipping_fax_number (Optional[str]):
+        shipping_country (Optional[str]):
+        shipping_state (Optional[str]):
+        asset_service_notes (Optional[str]):
+        service_option_service_code (Optional[str]):
     """
 
-    certificate_number: Union[None, Unset, str] = UNSET
-    document_number: Union[None, Unset, str] = UNSET
-    revision: Union[None, Unset, str] = UNSET
-    effective_date: Union[None, Unset, datetime.datetime] = UNSET
-    document_section: Union[None, Unset, str] = UNSET
-    service_level: Union[None, Unset, str] = UNSET
-    service_level_code: Union[None, Unset, str] = UNSET
-    service_type: Union[None, Unset, str] = UNSET
-    order_item_number: Union[None, Unset, int] = UNSET
-    service_charge: Union[None, Unset, float] = UNSET
-    updated_by: Union[None, Unset, str] = UNSET
-    updated_on: Union[None, Unset, datetime.datetime] = UNSET
-    work_status: Union[None, Unset, WorkStatus] = UNSET
-    custom_work_status: Union[None, Unset, str] = UNSET
-    service_comments: Union[None, Unset, str] = UNSET
-    client_notes: Union[None, Unset, str] = UNSET
-    vendor_service_notes: Union[None, Unset, str] = UNSET
-    display_name: Union[None, Unset, str] = UNSET
-    display_part_number: Union[None, Unset, str] = UNSET
-    part_number: Union[None, Unset, str] = UNSET
-    schedule_name: Union[None, Unset, str] = UNSET
-    segment_name: Union[None, Unset, str] = UNSET
-    next_segment_name: Union[None, Unset, str] = UNSET
-    interval_length: Union[None, Unset, int] = UNSET
-    interval_cycle: Union[None, Unset, str] = UNSET
-    service_options: Union[None, Unset, str] = UNSET
-    service_options_price: Union[None, Unset, str] = UNSET
-    service_options_document_numbers: Union[None, Unset, str] = UNSET
-    location: Union[None, Unset, str] = UNSET
-    station: Union[None, Unset, str] = UNSET
-    room: Union[None, Unset, str] = UNSET
-    site: Union[None, Unset, str] = UNSET
-    vendor_id: Union[None, Unset, int] = UNSET
-    service_order_number: Union[None, Unset, int] = UNSET
-    custom_order_number: Union[None, Unset, str] = UNSET
-    linked_order_number: Union[None, Unset, str] = UNSET
-    asset_id: Union[None, Unset, int] = UNSET
-    asset_class: Union[None, Unset, str] = UNSET
-    asset_condition: Union[None, Unset, str] = UNSET
-    asset_criticality: Union[None, Unset, str] = UNSET
-    asset_pool: Union[None, Unset, str] = UNSET
-    asset_name: Union[None, Unset, str] = UNSET
-    asset_description: Union[None, Unset, str] = UNSET
-    asset_document_number: Union[None, Unset, str] = UNSET
-    asset_document_section: Union[None, Unset, str] = UNSET
-    document_number_values: Union[None, Unset, str] = UNSET
-    product_name: Union[None, Unset, str] = UNSET
-    product_description: Union[None, Unset, str] = UNSET
-    asset_maker: Union[None, Unset, str] = UNSET
-    category_name: Union[None, Unset, str] = UNSET
-    root_category_name: Union[None, Unset, str] = UNSET
-    vendor_tag: Union[None, Unset, str] = UNSET
-    result_status: Union[None, Unset, int] = UNSET
-    service_date: Union[None, Unset, datetime.datetime] = UNSET
-    next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    original_due_date: Union[None, Unset, datetime.datetime] = UNSET
-    asset_tag: Union[None, Unset, str] = UNSET
-    department: Union[None, Unset, str] = UNSET
-    asset_user: Union[None, Unset, str] = UNSET
-    equipment_id: Union[None, Unset, str] = UNSET
-    legacy_identifier: Union[None, Unset, str] = UNSET
-    activation_date: Union[None, Unset, datetime.datetime] = UNSET
-    purchase_date: Union[None, Unset, datetime.datetime] = UNSET
-    part_name: Union[None, Unset, str] = UNSET
-    part_description: Union[None, Unset, str] = UNSET
-    is_taxable: Union[None, Unset, bool] = UNSET
-    is_limited: Union[None, Unset, bool] = UNSET
-    quantity: Union[None, Unset, float] = UNSET
-    discount: Union[None, Unset, float] = UNSET
-    price: Union[None, Unset, float] = UNSET
-    time_spent_in_minutes: Union[None, Unset, float] = UNSET
-    is_hourly_pricing: Union[None, Unset, bool] = UNSET
-    delivery_charge: Union[None, Unset, float] = UNSET
-    serial_number: Union[None, Unset, str] = UNSET
-    part_repair_charges: Union[None, Unset, float] = UNSET
-    part_repair_price: Union[None, Unset, float] = UNSET
-    override_parts_total: Union[None, Unset, bool] = UNSET
-    override_repairs_total: Union[None, Unset, bool] = UNSET
-    asset_custodian_name: Union[None, Unset, str] = UNSET
-    as_found_specification_group_name: Union[None, Unset, str] = UNSET
-    as_found_specification_company_name: Union[None, Unset, str] = UNSET
-    as_left_specification_group_name: Union[None, Unset, str] = UNSET
-    as_left_specification_company_name: Union[None, Unset, str] = UNSET
-    order_id: Union[None, Unset, int] = UNSET
-    parent_order_id: Union[None, Unset, int] = UNSET
-    order_item_id: Union[None, Unset, int] = UNSET
-    order_item_part_id: Union[None, Unset, int] = UNSET
-    as_found_specification_group_id: Union[None, Unset, int] = UNSET
-    as_left_specification_group_id: Union[None, Unset, int] = UNSET
-    as_found_status: Union[None, Unset, int] = UNSET
-    as_left_status: Union[None, Unset, int] = UNSET
-    as_found_result: Union[None, Unset, int] = UNSET
-    as_left_result: Union[None, Unset, int] = UNSET
-    completed_on: Union[None, Unset, datetime.datetime] = UNSET
-    received_on: Union[None, Unset, datetime.datetime] = UNSET
-    completed_by_name: Union[None, Unset, str] = UNSET
-    service_charge_base: Union[None, Unset, float] = UNSET
-    service_total: Union[None, Unset, float] = UNSET
-    repairs_total: Union[None, Unset, float] = UNSET
-    parts_total: Union[None, Unset, float] = UNSET
-    parts_total_before_discount: Union[None, Unset, float] = UNSET
-    parent_manufacturer: Union[None, Unset, str] = UNSET
-    parent_location: Union[None, Unset, str] = UNSET
-    parent_manufacturer_part_number: Union[None, Unset, str] = UNSET
-    parent_display_part_number: Union[None, Unset, str] = UNSET
-    parent_asset_id: Union[None, Unset, int] = UNSET
-    parent_category_name: Union[None, Unset, str] = UNSET
-    parent_root_category_name: Union[None, Unset, str] = UNSET
-    parent_serial_number: Union[None, Unset, str] = UNSET
-    parent_asset_tag: Union[None, Unset, str] = UNSET
-    parent_asset_user: Union[None, Unset, str] = UNSET
-    parent_display_name: Union[None, Unset, str] = UNSET
-    parent_equipment_id: Union[None, Unset, str] = UNSET
-    asset_shipping_address_1: Union[None, Unset, str] = UNSET
-    asset_shipping_address_2: Union[None, Unset, str] = UNSET
-    asset_shipping_first_name: Union[None, Unset, str] = UNSET
-    asset_shipping_last_name: Union[None, Unset, str] = UNSET
-    asset_shipping_email: Union[None, Unset, str] = UNSET
-    asset_shipping_company: Union[None, Unset, str] = UNSET
-    asset_shipping_city: Union[None, Unset, str] = UNSET
-    asset_shipping_zip: Union[None, Unset, str] = UNSET
-    asset_shipping_phone_number: Union[None, Unset, str] = UNSET
-    asset_shipping_fax_number: Union[None, Unset, str] = UNSET
-    asset_shipping_country: Union[None, Unset, str] = UNSET
-    asset_shipping_state: Union[None, Unset, str] = UNSET
-    shipping_address_1: Union[None, Unset, str] = UNSET
-    shipping_address_2: Union[None, Unset, str] = UNSET
-    shipping_first_name: Union[None, Unset, str] = UNSET
-    shipping_last_name: Union[None, Unset, str] = UNSET
-    shipping_email: Union[None, Unset, str] = UNSET
-    shipping_company: Union[None, Unset, str] = UNSET
-    shipping_city: Union[None, Unset, str] = UNSET
-    shipping_zip: Union[None, Unset, str] = UNSET
-    shipping_phone_number: Union[None, Unset, str] = UNSET
-    shipping_fax_number: Union[None, Unset, str] = UNSET
-    shipping_country: Union[None, Unset, str] = UNSET
-    shipping_state: Union[None, Unset, str] = UNSET
-    asset_service_notes: Union[None, Unset, str] = UNSET
-    service_option_service_code: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    certificate_number: Optional[str] = None
+    document_number: Optional[str] = None
+    revision: Optional[str] = None
+    effective_date: Optional[datetime.datetime] = None
+    document_section: Optional[str] = None
+    service_level: Optional[str] = None
+    service_level_code: Optional[str] = None
+    service_type: Optional[str] = None
+    order_item_number: Optional[int] = None
+    service_charge: Optional[float] = None
+    updated_by: Optional[str] = None
+    updated_on: Optional[datetime.datetime] = None
+    work_status: Optional[WorkStatus] = None
+    custom_work_status: Optional[str] = None
+    service_comments: Optional[str] = None
+    client_notes: Optional[str] = None
+    vendor_service_notes: Optional[str] = None
+    display_name: Optional[str] = None
+    display_part_number: Optional[str] = None
+    part_number: Optional[str] = None
+    schedule_name: Optional[str] = None
+    segment_name: Optional[str] = None
+    next_segment_name: Optional[str] = None
+    interval_length: Optional[int] = None
+    interval_cycle: Optional[str] = None
+    service_options: Optional[str] = None
+    service_options_price: Optional[str] = None
+    service_options_document_numbers: Optional[str] = None
+    location: Optional[str] = None
+    station: Optional[str] = None
+    room: Optional[str] = None
+    site: Optional[str] = None
+    vendor_id: Optional[int] = None
+    service_order_number: Optional[int] = None
+    custom_order_number: Optional[str] = None
+    linked_order_number: Optional[str] = None
+    asset_id: Optional[int] = None
+    asset_class: Optional[str] = None
+    asset_condition: Optional[str] = None
+    asset_criticality: Optional[str] = None
+    asset_pool: Optional[str] = None
+    asset_name: Optional[str] = None
+    asset_description: Optional[str] = None
+    asset_document_number: Optional[str] = None
+    asset_document_section: Optional[str] = None
+    document_number_values: Optional[str] = None
+    product_name: Optional[str] = None
+    product_description: Optional[str] = None
+    asset_maker: Optional[str] = None
+    category_name: Optional[str] = None
+    root_category_name: Optional[str] = None
+    vendor_tag: Optional[str] = None
+    result_status: Optional[int] = None
+    service_date: Optional[datetime.datetime] = None
+    next_service_date: Optional[datetime.datetime] = None
+    original_due_date: Optional[datetime.datetime] = None
+    asset_tag: Optional[str] = None
+    department: Optional[str] = None
+    asset_user: Optional[str] = None
+    equipment_id: Optional[str] = None
+    legacy_identifier: Optional[str] = None
+    activation_date: Optional[datetime.datetime] = None
+    purchase_date: Optional[datetime.datetime] = None
+    part_name: Optional[str] = None
+    part_description: Optional[str] = None
+    is_taxable: Optional[bool] = None
+    is_limited: Optional[bool] = None
+    quantity: Optional[float] = None
+    discount: Optional[float] = None
+    price: Optional[float] = None
+    time_spent_in_minutes: Optional[float] = None
+    is_hourly_pricing: Optional[bool] = None
+    delivery_charge: Optional[float] = None
+    serial_number: Optional[str] = None
+    part_repair_charges: Optional[float] = None
+    part_repair_price: Optional[float] = None
+    override_parts_total: Optional[bool] = None
+    override_repairs_total: Optional[bool] = None
+    asset_custodian_name: Optional[str] = None
+    as_found_specification_group_name: Optional[str] = None
+    as_found_specification_company_name: Optional[str] = None
+    as_left_specification_group_name: Optional[str] = None
+    as_left_specification_company_name: Optional[str] = None
+    order_id: Optional[int] = None
+    parent_order_id: Optional[int] = None
+    order_item_id: Optional[int] = None
+    order_item_part_id: Optional[int] = None
+    as_found_specification_group_id: Optional[int] = None
+    as_left_specification_group_id: Optional[int] = None
+    as_found_status: Optional[int] = None
+    as_left_status: Optional[int] = None
+    as_found_result: Optional[int] = None
+    as_left_result: Optional[int] = None
+    completed_on: Optional[datetime.datetime] = None
+    received_on: Optional[datetime.datetime] = None
+    completed_by_name: Optional[str] = None
+    service_charge_base: Optional[float] = None
+    service_total: Optional[float] = None
+    repairs_total: Optional[float] = None
+    parts_total: Optional[float] = None
+    parts_total_before_discount: Optional[float] = None
+    parent_manufacturer: Optional[str] = None
+    parent_location: Optional[str] = None
+    parent_manufacturer_part_number: Optional[str] = None
+    parent_display_part_number: Optional[str] = None
+    parent_asset_id: Optional[int] = None
+    parent_category_name: Optional[str] = None
+    parent_root_category_name: Optional[str] = None
+    parent_serial_number: Optional[str] = None
+    parent_asset_tag: Optional[str] = None
+    parent_asset_user: Optional[str] = None
+    parent_display_name: Optional[str] = None
+    parent_equipment_id: Optional[str] = None
+    asset_shipping_address_1: Optional[str] = None
+    asset_shipping_address_2: Optional[str] = None
+    asset_shipping_first_name: Optional[str] = None
+    asset_shipping_last_name: Optional[str] = None
+    asset_shipping_email: Optional[str] = None
+    asset_shipping_company: Optional[str] = None
+    asset_shipping_city: Optional[str] = None
+    asset_shipping_zip: Optional[str] = None
+    asset_shipping_phone_number: Optional[str] = None
+    asset_shipping_fax_number: Optional[str] = None
+    asset_shipping_country: Optional[str] = None
+    asset_shipping_state: Optional[str] = None
+    shipping_address_1: Optional[str] = None
+    shipping_address_2: Optional[str] = None
+    shipping_first_name: Optional[str] = None
+    shipping_last_name: Optional[str] = None
+    shipping_email: Optional[str] = None
+    shipping_company: Optional[str] = None
+    shipping_city: Optional[str] = None
+    shipping_zip: Optional[str] = None
+    shipping_phone_number: Optional[str] = None
+    shipping_fax_number: Optional[str] = None
+    shipping_country: Optional[str] = None
+    shipping_state: Optional[str] = None
+    asset_service_notes: Optional[str] = None
+    service_option_service_code: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         certificate_number = self.certificate_number
 
         document_number = self.document_number
 
         revision = self.revision
 
-        effective_date: Union[None, Unset, str]
-        if isinstance(self.effective_date, Unset):
-            effective_date = UNSET
+        effective_date: Optional[str]
+        if not self.effective_date:
+            effective_date = None
         elif isinstance(self.effective_date, datetime.datetime):
             effective_date = self.effective_date.isoformat()
         else:
@@ -327,12 +326,12 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
 
         updated_by = self.updated_by
 
-        updated_on: Union[None, Unset, str] = UNSET
-        if self.updated_on and not isinstance(self.updated_on, Unset):
+        updated_on: Optional[str] = None
+        if self.updated_on:
             updated_on = self.updated_on.isoformat()
 
-        work_status: Union[None, Unset, int] = UNSET
-        if self.work_status and not isinstance(self.work_status, Unset):
+        work_status: Optional[int] = None
+        if self.work_status:
             work_status = self.work_status.value
 
         custom_work_status = self.custom_work_status
@@ -413,98 +412,98 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
 
         vendor_tag = self.vendor_tag
 
-        result_status: Union[None, Unset, int]
-        if isinstance(self.result_status, Unset):
-            result_status = UNSET
+        result_status: Optional[int]
+        if not self.result_status:
+            result_status = None
         else:
-            result_status: Union[None, Unset, str]
+            result_status: Optional[str]
 
-            if isinstance(self.result_status, Unset):
+            if not self.result_status:
 
-                result_status = UNSET
+                result_status = None
 
             else:
 
                 result_status = self.result_status
-        service_date: Union[None, Unset, str]
-        if isinstance(self.service_date, Unset):
-            service_date = UNSET
+        service_date: Optional[str]
+        if not self.service_date:
+            service_date = None
         elif isinstance(self.service_date, datetime.datetime):
             service_date = self.service_date.isoformat()
         else:
             service_date = self.service_date
 
-        next_service_date: Union[None, Unset, str]
-        if isinstance(self.next_service_date, Unset):
-            next_service_date = UNSET
+        next_service_date: Optional[str]
+        if not self.next_service_date:
+            next_service_date = None
         elif isinstance(self.next_service_date, datetime.datetime):
             next_service_date = self.next_service_date.isoformat()
         else:
             next_service_date = self.next_service_date
 
-        original_due_date: Union[None, Unset, str]
-        if isinstance(self.original_due_date, Unset):
-            original_due_date = UNSET
+        original_due_date: Optional[str]
+        if not self.original_due_date:
+            original_due_date = None
         elif isinstance(self.original_due_date, datetime.datetime):
             original_due_date = self.original_due_date.isoformat()
         else:
             original_due_date = self.original_due_date
 
-        asset_tag: Union[None, Unset, str]
-        if isinstance(self.asset_tag, Unset):
-            asset_tag = UNSET
+        asset_tag: Optional[str]
+        if not self.asset_tag:
+            asset_tag = None
         else:
             asset_tag = self.asset_tag
 
-        department: Union[None, Unset, str]
-        if isinstance(self.department, Unset):
-            department = UNSET
+        department: Optional[str]
+        if not self.department:
+            department = None
         else:
             department = self.department
 
-        asset_user: Union[None, Unset, str]
-        if isinstance(self.asset_user, Unset):
-            asset_user = UNSET
+        asset_user: Optional[str]
+        if not self.asset_user:
+            asset_user = None
         else:
             asset_user = self.asset_user
 
-        equipment_id: Union[None, Unset, str]
-        if isinstance(self.equipment_id, Unset):
-            equipment_id = UNSET
+        equipment_id: Optional[str]
+        if not self.equipment_id:
+            equipment_id = None
         else:
             equipment_id = self.equipment_id
 
-        legacy_identifier: Union[None, Unset, str]
-        if isinstance(self.legacy_identifier, Unset):
-            legacy_identifier = UNSET
+        legacy_identifier: Optional[str]
+        if not self.legacy_identifier:
+            legacy_identifier = None
         else:
             legacy_identifier = self.legacy_identifier
 
-        activation_date: Union[None, Unset, str]
-        if isinstance(self.activation_date, Unset):
-            activation_date = UNSET
+        activation_date: Optional[str]
+        if not self.activation_date:
+            activation_date = None
         elif isinstance(self.activation_date, datetime.datetime):
             activation_date = self.activation_date.isoformat()
         else:
             activation_date = self.activation_date
 
-        purchase_date: Union[None, Unset, str]
-        if isinstance(self.purchase_date, Unset):
-            purchase_date = UNSET
+        purchase_date: Optional[str]
+        if not self.purchase_date:
+            purchase_date = None
         elif isinstance(self.purchase_date, datetime.datetime):
             purchase_date = self.purchase_date.isoformat()
         else:
             purchase_date = self.purchase_date
 
-        part_name: Union[None, Unset, str]
-        if isinstance(self.part_name, Unset):
-            part_name = UNSET
+        part_name: Optional[str]
+        if not self.part_name:
+            part_name = None
         else:
             part_name = self.part_name
 
-        part_description: Union[None, Unset, str]
-        if isinstance(self.part_description, Unset):
-            part_description = UNSET
+        part_description: Optional[str]
+        if not self.part_description:
+            part_description = None
         else:
             part_description = self.part_description
 
@@ -512,53 +511,53 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
 
         is_limited = self.is_limited
 
-        quantity: Union[None, Unset, float]
-        if isinstance(self.quantity, Unset):
-            quantity = UNSET
+        quantity: Optional[float]
+        if not self.quantity:
+            quantity = None
         else:
             quantity = self.quantity
 
-        discount: Union[None, Unset, float]
-        if isinstance(self.discount, Unset):
-            discount = UNSET
+        discount: Optional[float]
+        if not self.discount:
+            discount = None
         else:
             discount = self.discount
 
-        price: Union[None, Unset, float]
-        if isinstance(self.price, Unset):
-            price = UNSET
+        price: Optional[float]
+        if not self.price:
+            price = None
         else:
             price = self.price
 
-        time_spent_in_minutes: Union[None, Unset, float]
-        if isinstance(self.time_spent_in_minutes, Unset):
-            time_spent_in_minutes = UNSET
+        time_spent_in_minutes: Optional[float]
+        if not self.time_spent_in_minutes:
+            time_spent_in_minutes = None
         else:
             time_spent_in_minutes = self.time_spent_in_minutes
 
-        is_hourly_pricing: Union[None, Unset, bool]
-        if isinstance(self.is_hourly_pricing, Unset):
-            is_hourly_pricing = UNSET
+        is_hourly_pricing: Optional[bool]
+        if not self.is_hourly_pricing:
+            is_hourly_pricing = None
         else:
             is_hourly_pricing = self.is_hourly_pricing
 
-        delivery_charge: Union[None, Unset, float]
-        if isinstance(self.delivery_charge, Unset):
-            delivery_charge = UNSET
+        delivery_charge: Optional[float]
+        if not self.delivery_charge:
+            delivery_charge = None
         else:
             delivery_charge = self.delivery_charge
 
         serial_number = self.serial_number
 
-        part_repair_charges: Union[None, Unset, float]
-        if isinstance(self.part_repair_charges, Unset):
-            part_repair_charges = UNSET
+        part_repair_charges: Optional[float]
+        if not self.part_repair_charges:
+            part_repair_charges = None
         else:
             part_repair_charges = self.part_repair_charges
 
-        part_repair_price: Union[None, Unset, float]
-        if isinstance(self.part_repair_price, Unset):
-            part_repair_price = UNSET
+        part_repair_price: Optional[float]
+        if not self.part_repair_price:
+            part_repair_price = None
         else:
             part_repair_price = self.part_repair_price
 
@@ -566,682 +565,670 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
 
         override_repairs_total = self.override_repairs_total
 
-        asset_custodian_name: Union[None, Unset, str]
-        if isinstance(self.asset_custodian_name, Unset):
-            asset_custodian_name = UNSET
+        asset_custodian_name: Optional[str]
+        if not self.asset_custodian_name:
+            asset_custodian_name = None
         else:
             asset_custodian_name = self.asset_custodian_name
 
-        as_found_specification_group_name: Union[None, Unset, str]
-        if isinstance(self.as_found_specification_group_name, Unset):
-            as_found_specification_group_name = UNSET
+        as_found_specification_group_name: Optional[str]
+        if not self.as_found_specification_group_name:
+            as_found_specification_group_name = None
         else:
             as_found_specification_group_name = self.as_found_specification_group_name
 
-        as_found_specification_company_name: Union[None, Unset, str]
-        if isinstance(self.as_found_specification_company_name, Unset):
-            as_found_specification_company_name = UNSET
+        as_found_specification_company_name: Optional[str]
+        if not self.as_found_specification_company_name:
+            as_found_specification_company_name = None
         else:
-            as_found_specification_company_name = (
-                self.as_found_specification_company_name
-            )
+            as_found_specification_company_name = self.as_found_specification_company_name
 
-        as_left_specification_group_name: Union[None, Unset, str]
-        if isinstance(self.as_left_specification_group_name, Unset):
-            as_left_specification_group_name = UNSET
+        as_left_specification_group_name: Optional[str]
+        if not self.as_left_specification_group_name:
+            as_left_specification_group_name = None
         else:
             as_left_specification_group_name = self.as_left_specification_group_name
 
-        as_left_specification_company_name: Union[None, Unset, str]
-        if isinstance(self.as_left_specification_company_name, Unset):
-            as_left_specification_company_name = UNSET
+        as_left_specification_company_name: Optional[str]
+        if not self.as_left_specification_company_name:
+            as_left_specification_company_name = None
         else:
             as_left_specification_company_name = self.as_left_specification_company_name
 
-        order_id: Union[None, Unset, int]
-        if isinstance(self.order_id, Unset):
-            order_id = UNSET
+        order_id: Optional[int]
+        if not self.order_id:
+            order_id = None
         else:
             order_id = self.order_id
 
-        parent_order_id: Union[None, Unset, int]
-        if isinstance(self.parent_order_id, Unset):
-            parent_order_id = UNSET
+        parent_order_id: Optional[int]
+        if not self.parent_order_id:
+            parent_order_id = None
         else:
             parent_order_id = self.parent_order_id
 
-        order_item_id: Union[None, Unset, int]
-        if isinstance(self.order_item_id, Unset):
-            order_item_id = UNSET
+        order_item_id: Optional[int]
+        if not self.order_item_id:
+            order_item_id = None
         else:
             order_item_id = self.order_item_id
 
-        order_item_part_id: Union[None, Unset, int]
-        if isinstance(self.order_item_part_id, Unset):
-            order_item_part_id = UNSET
+        order_item_part_id: Optional[int]
+        if not self.order_item_part_id:
+            order_item_part_id = None
         else:
             order_item_part_id = self.order_item_part_id
 
-        as_found_specification_group_id: Union[None, Unset, int]
-        if isinstance(self.as_found_specification_group_id, Unset):
-            as_found_specification_group_id = UNSET
+        as_found_specification_group_id: Optional[int]
+        if not self.as_found_specification_group_id:
+            as_found_specification_group_id = None
         else:
             as_found_specification_group_id = self.as_found_specification_group_id
 
-        as_left_specification_group_id: Union[None, Unset, int]
-        if isinstance(self.as_left_specification_group_id, Unset):
-            as_left_specification_group_id = UNSET
+        as_left_specification_group_id: Optional[int]
+        if not self.as_left_specification_group_id:
+            as_left_specification_group_id = None
         else:
             as_left_specification_group_id = self.as_left_specification_group_id
 
-        as_found_status: Union[None, Unset, int]
-        if isinstance(self.as_found_status, Unset):
-            as_found_status = UNSET
+        as_found_status: Optional[int]
+        if not self.as_found_status:
+            as_found_status = None
         else:
             as_found_status = self.as_found_status
 
-        as_left_status: Union[None, Unset, int]
-        if isinstance(self.as_left_status, Unset):
-            as_left_status = UNSET
+        as_left_status: Optional[int]
+        if not self.as_left_status:
+            as_left_status = None
         else:
             as_left_status = self.as_left_status
 
-        as_found_result: Union[None, Unset, int]
-        if isinstance(self.as_found_result, Unset):
-            as_found_result = UNSET
+        as_found_result: Optional[int]
+        if not self.as_found_result:
+            as_found_result = None
         else:
-            as_found_result: Union[None, Unset, str]
+            as_found_result: Optional[str]
 
-            if isinstance(self.as_found_result, Unset):
+            if not self.as_found_result:
 
-                as_found_result = UNSET
+                as_found_result = None
 
             else:
 
                 as_found_result = self.as_found_result
-        as_left_result: Union[None, Unset, int]
-        if isinstance(self.as_left_result, Unset):
-            as_left_result = UNSET
+        as_left_result: Optional[int]
+        if not self.as_left_result:
+            as_left_result = None
         else:
-            as_left_result: Union[None, Unset, str]
+            as_left_result: Optional[str]
 
-            if isinstance(self.as_left_result, Unset):
+            if not self.as_left_result:
 
-                as_left_result = UNSET
+                as_left_result = None
 
             else:
 
                 as_left_result = self.as_left_result
-        completed_on: Union[None, Unset, str]
-        if isinstance(self.completed_on, Unset):
-            completed_on = UNSET
+        completed_on: Optional[str]
+        if not self.completed_on:
+            completed_on = None
         elif isinstance(self.completed_on, datetime.datetime):
             completed_on = self.completed_on.isoformat()
         else:
             completed_on = self.completed_on
 
-        received_on: Union[None, Unset, str]
-        if isinstance(self.received_on, Unset):
-            received_on = UNSET
+        received_on: Optional[str]
+        if not self.received_on:
+            received_on = None
         elif isinstance(self.received_on, datetime.datetime):
             received_on = self.received_on.isoformat()
         else:
             received_on = self.received_on
 
-        completed_by_name: Union[None, Unset, str]
-        if isinstance(self.completed_by_name, Unset):
-            completed_by_name = UNSET
+        completed_by_name: Optional[str]
+        if not self.completed_by_name:
+            completed_by_name = None
         else:
             completed_by_name = self.completed_by_name
 
-        service_charge_base: Union[None, Unset, float]
-        if isinstance(self.service_charge_base, Unset):
-            service_charge_base = UNSET
+        service_charge_base: Optional[float]
+        if not self.service_charge_base:
+            service_charge_base = None
         else:
             service_charge_base = self.service_charge_base
 
-        service_total: Union[None, Unset, float]
-        if isinstance(self.service_total, Unset):
-            service_total = UNSET
+        service_total: Optional[float]
+        if not self.service_total:
+            service_total = None
         else:
             service_total = self.service_total
 
-        repairs_total: Union[None, Unset, float]
-        if isinstance(self.repairs_total, Unset):
-            repairs_total = UNSET
+        repairs_total: Optional[float]
+        if not self.repairs_total:
+            repairs_total = None
         else:
             repairs_total = self.repairs_total
 
-        parts_total: Union[None, Unset, float]
-        if isinstance(self.parts_total, Unset):
-            parts_total = UNSET
+        parts_total: Optional[float]
+        if not self.parts_total:
+            parts_total = None
         else:
             parts_total = self.parts_total
 
-        parts_total_before_discount: Union[None, Unset, float]
-        if isinstance(self.parts_total_before_discount, Unset):
-            parts_total_before_discount = UNSET
+        parts_total_before_discount: Optional[float]
+        if not self.parts_total_before_discount:
+            parts_total_before_discount = None
         else:
             parts_total_before_discount = self.parts_total_before_discount
 
-        parent_manufacturer: Union[None, Unset, str]
-        if isinstance(self.parent_manufacturer, Unset):
-            parent_manufacturer = UNSET
+        parent_manufacturer: Optional[str]
+        if not self.parent_manufacturer:
+            parent_manufacturer = None
         else:
             parent_manufacturer = self.parent_manufacturer
 
-        parent_location: Union[None, Unset, str]
-        if isinstance(self.parent_location, Unset):
-            parent_location = UNSET
+        parent_location: Optional[str]
+        if not self.parent_location:
+            parent_location = None
         else:
             parent_location = self.parent_location
 
-        parent_manufacturer_part_number: Union[None, Unset, str]
-        if isinstance(self.parent_manufacturer_part_number, Unset):
-            parent_manufacturer_part_number = UNSET
+        parent_manufacturer_part_number: Optional[str]
+        if not self.parent_manufacturer_part_number:
+            parent_manufacturer_part_number = None
         else:
             parent_manufacturer_part_number = self.parent_manufacturer_part_number
 
-        parent_display_part_number: Union[None, Unset, str]
-        if isinstance(self.parent_display_part_number, Unset):
-            parent_display_part_number = UNSET
+        parent_display_part_number: Optional[str]
+        if not self.parent_display_part_number:
+            parent_display_part_number = None
         else:
             parent_display_part_number = self.parent_display_part_number
 
-        parent_asset_id: Union[None, Unset, int]
-        if isinstance(self.parent_asset_id, Unset):
-            parent_asset_id = UNSET
+        parent_asset_id: Optional[int]
+        if not self.parent_asset_id:
+            parent_asset_id = None
         else:
             parent_asset_id = self.parent_asset_id
 
-        parent_category_name: Union[None, Unset, str]
-        if isinstance(self.parent_category_name, Unset):
-            parent_category_name = UNSET
+        parent_category_name: Optional[str]
+        if not self.parent_category_name:
+            parent_category_name = None
         else:
             parent_category_name = self.parent_category_name
 
-        parent_root_category_name: Union[None, Unset, str]
-        if isinstance(self.parent_root_category_name, Unset):
-            parent_root_category_name = UNSET
+        parent_root_category_name: Optional[str]
+        if not self.parent_root_category_name:
+            parent_root_category_name = None
         else:
             parent_root_category_name = self.parent_root_category_name
 
-        parent_serial_number: Union[None, Unset, str]
-        if isinstance(self.parent_serial_number, Unset):
-            parent_serial_number = UNSET
+        parent_serial_number: Optional[str]
+        if not self.parent_serial_number:
+            parent_serial_number = None
         else:
             parent_serial_number = self.parent_serial_number
 
-        parent_asset_tag: Union[None, Unset, str]
-        if isinstance(self.parent_asset_tag, Unset):
-            parent_asset_tag = UNSET
+        parent_asset_tag: Optional[str]
+        if not self.parent_asset_tag:
+            parent_asset_tag = None
         else:
             parent_asset_tag = self.parent_asset_tag
 
-        parent_asset_user: Union[None, Unset, str]
-        if isinstance(self.parent_asset_user, Unset):
-            parent_asset_user = UNSET
+        parent_asset_user: Optional[str]
+        if not self.parent_asset_user:
+            parent_asset_user = None
         else:
             parent_asset_user = self.parent_asset_user
 
-        parent_display_name: Union[None, Unset, str]
-        if isinstance(self.parent_display_name, Unset):
-            parent_display_name = UNSET
+        parent_display_name: Optional[str]
+        if not self.parent_display_name:
+            parent_display_name = None
         else:
             parent_display_name = self.parent_display_name
 
-        parent_equipment_id: Union[None, Unset, str]
-        if isinstance(self.parent_equipment_id, Unset):
-            parent_equipment_id = UNSET
+        parent_equipment_id: Optional[str]
+        if not self.parent_equipment_id:
+            parent_equipment_id = None
         else:
             parent_equipment_id = self.parent_equipment_id
 
-        asset_shipping_address_1: Union[None, Unset, str]
-        if isinstance(self.asset_shipping_address_1, Unset):
-            asset_shipping_address_1 = UNSET
+        asset_shipping_address_1: Optional[str]
+        if not self.asset_shipping_address_1:
+            asset_shipping_address_1 = None
         else:
             asset_shipping_address_1 = self.asset_shipping_address_1
 
-        asset_shipping_address_2: Union[None, Unset, str]
-        if isinstance(self.asset_shipping_address_2, Unset):
-            asset_shipping_address_2 = UNSET
+        asset_shipping_address_2: Optional[str]
+        if not self.asset_shipping_address_2:
+            asset_shipping_address_2 = None
         else:
             asset_shipping_address_2 = self.asset_shipping_address_2
 
-        asset_shipping_first_name: Union[None, Unset, str]
-        if isinstance(self.asset_shipping_first_name, Unset):
-            asset_shipping_first_name = UNSET
+        asset_shipping_first_name: Optional[str]
+        if not self.asset_shipping_first_name:
+            asset_shipping_first_name = None
         else:
             asset_shipping_first_name = self.asset_shipping_first_name
 
-        asset_shipping_last_name: Union[None, Unset, str]
-        if isinstance(self.asset_shipping_last_name, Unset):
-            asset_shipping_last_name = UNSET
+        asset_shipping_last_name: Optional[str]
+        if not self.asset_shipping_last_name:
+            asset_shipping_last_name = None
         else:
             asset_shipping_last_name = self.asset_shipping_last_name
 
-        asset_shipping_email: Union[None, Unset, str]
-        if isinstance(self.asset_shipping_email, Unset):
-            asset_shipping_email = UNSET
+        asset_shipping_email: Optional[str]
+        if not self.asset_shipping_email:
+            asset_shipping_email = None
         else:
             asset_shipping_email = self.asset_shipping_email
 
-        asset_shipping_company: Union[None, Unset, str]
-        if isinstance(self.asset_shipping_company, Unset):
-            asset_shipping_company = UNSET
+        asset_shipping_company: Optional[str]
+        if not self.asset_shipping_company:
+            asset_shipping_company = None
         else:
             asset_shipping_company = self.asset_shipping_company
 
-        asset_shipping_city: Union[None, Unset, str]
-        if isinstance(self.asset_shipping_city, Unset):
-            asset_shipping_city = UNSET
+        asset_shipping_city: Optional[str]
+        if not self.asset_shipping_city:
+            asset_shipping_city = None
         else:
             asset_shipping_city = self.asset_shipping_city
 
-        asset_shipping_zip: Union[None, Unset, str]
-        if isinstance(self.asset_shipping_zip, Unset):
-            asset_shipping_zip = UNSET
+        asset_shipping_zip: Optional[str]
+        if not self.asset_shipping_zip:
+            asset_shipping_zip = None
         else:
             asset_shipping_zip = self.asset_shipping_zip
 
-        asset_shipping_phone_number: Union[None, Unset, str]
-        if isinstance(self.asset_shipping_phone_number, Unset):
-            asset_shipping_phone_number = UNSET
+        asset_shipping_phone_number: Optional[str]
+        if not self.asset_shipping_phone_number:
+            asset_shipping_phone_number = None
         else:
             asset_shipping_phone_number = self.asset_shipping_phone_number
 
-        asset_shipping_fax_number: Union[None, Unset, str]
-        if isinstance(self.asset_shipping_fax_number, Unset):
-            asset_shipping_fax_number = UNSET
+        asset_shipping_fax_number: Optional[str]
+        if not self.asset_shipping_fax_number:
+            asset_shipping_fax_number = None
         else:
             asset_shipping_fax_number = self.asset_shipping_fax_number
 
-        asset_shipping_country: Union[None, Unset, str]
-        if isinstance(self.asset_shipping_country, Unset):
-            asset_shipping_country = UNSET
+        asset_shipping_country: Optional[str]
+        if not self.asset_shipping_country:
+            asset_shipping_country = None
         else:
             asset_shipping_country = self.asset_shipping_country
 
-        asset_shipping_state: Union[None, Unset, str]
-        if isinstance(self.asset_shipping_state, Unset):
-            asset_shipping_state = UNSET
+        asset_shipping_state: Optional[str]
+        if not self.asset_shipping_state:
+            asset_shipping_state = None
         else:
             asset_shipping_state = self.asset_shipping_state
 
-        shipping_address_1: Union[None, Unset, str]
-        if isinstance(self.shipping_address_1, Unset):
-            shipping_address_1 = UNSET
+        shipping_address_1: Optional[str]
+        if not self.shipping_address_1:
+            shipping_address_1 = None
         else:
             shipping_address_1 = self.shipping_address_1
 
-        shipping_address_2: Union[None, Unset, str]
-        if isinstance(self.shipping_address_2, Unset):
-            shipping_address_2 = UNSET
+        shipping_address_2: Optional[str]
+        if not self.shipping_address_2:
+            shipping_address_2 = None
         else:
             shipping_address_2 = self.shipping_address_2
 
-        shipping_first_name: Union[None, Unset, str]
-        if isinstance(self.shipping_first_name, Unset):
-            shipping_first_name = UNSET
+        shipping_first_name: Optional[str]
+        if not self.shipping_first_name:
+            shipping_first_name = None
         else:
             shipping_first_name = self.shipping_first_name
 
-        shipping_last_name: Union[None, Unset, str]
-        if isinstance(self.shipping_last_name, Unset):
-            shipping_last_name = UNSET
+        shipping_last_name: Optional[str]
+        if not self.shipping_last_name:
+            shipping_last_name = None
         else:
             shipping_last_name = self.shipping_last_name
 
-        shipping_email: Union[None, Unset, str]
-        if isinstance(self.shipping_email, Unset):
-            shipping_email = UNSET
+        shipping_email: Optional[str]
+        if not self.shipping_email:
+            shipping_email = None
         else:
             shipping_email = self.shipping_email
 
-        shipping_company: Union[None, Unset, str]
-        if isinstance(self.shipping_company, Unset):
-            shipping_company = UNSET
+        shipping_company: Optional[str]
+        if not self.shipping_company:
+            shipping_company = None
         else:
             shipping_company = self.shipping_company
 
-        shipping_city: Union[None, Unset, str]
-        if isinstance(self.shipping_city, Unset):
-            shipping_city = UNSET
+        shipping_city: Optional[str]
+        if not self.shipping_city:
+            shipping_city = None
         else:
             shipping_city = self.shipping_city
 
-        shipping_zip: Union[None, Unset, str]
-        if isinstance(self.shipping_zip, Unset):
-            shipping_zip = UNSET
+        shipping_zip: Optional[str]
+        if not self.shipping_zip:
+            shipping_zip = None
         else:
             shipping_zip = self.shipping_zip
 
-        shipping_phone_number: Union[None, Unset, str]
-        if isinstance(self.shipping_phone_number, Unset):
-            shipping_phone_number = UNSET
+        shipping_phone_number: Optional[str]
+        if not self.shipping_phone_number:
+            shipping_phone_number = None
         else:
             shipping_phone_number = self.shipping_phone_number
 
-        shipping_fax_number: Union[None, Unset, str]
-        if isinstance(self.shipping_fax_number, Unset):
-            shipping_fax_number = UNSET
+        shipping_fax_number: Optional[str]
+        if not self.shipping_fax_number:
+            shipping_fax_number = None
         else:
             shipping_fax_number = self.shipping_fax_number
 
-        shipping_country: Union[None, Unset, str]
-        if isinstance(self.shipping_country, Unset):
-            shipping_country = UNSET
+        shipping_country: Optional[str]
+        if not self.shipping_country:
+            shipping_country = None
         else:
             shipping_country = self.shipping_country
 
-        shipping_state: Union[None, Unset, str]
-        if isinstance(self.shipping_state, Unset):
-            shipping_state = UNSET
+        shipping_state: Optional[str]
+        if not self.shipping_state:
+            shipping_state = None
         else:
             shipping_state = self.shipping_state
 
-        asset_service_notes: Union[None, Unset, str]
-        if isinstance(self.asset_service_notes, Unset):
-            asset_service_notes = UNSET
+        asset_service_notes: Optional[str]
+        if not self.asset_service_notes:
+            asset_service_notes = None
         else:
             asset_service_notes = self.asset_service_notes
 
-        service_option_service_code: Union[None, Unset, str]
-        if isinstance(self.service_option_service_code, Unset):
-            service_option_service_code = UNSET
+        service_option_service_code: Optional[str]
+        if not self.service_option_service_code:
+            service_option_service_code = None
         else:
             service_option_service_code = self.service_option_service_code
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if certificate_number is not UNSET:
+        if certificate_number is not None:
             field_dict["CertificateNumber"] = certificate_number
-        if document_number is not UNSET:
+        if document_number is not None:
             field_dict["DocumentNumber"] = document_number
-        if revision is not UNSET:
+        if revision is not None:
             field_dict["Revision"] = revision
-        if effective_date is not UNSET:
+        if effective_date is not None:
             field_dict["EffectiveDate"] = effective_date
-        if document_section is not UNSET:
+        if document_section is not None:
             field_dict["DocumentSection"] = document_section
-        if service_level is not UNSET:
+        if service_level is not None:
             field_dict["ServiceLevel"] = service_level
-        if service_level_code is not UNSET:
+        if service_level_code is not None:
             field_dict["ServiceLevelCode"] = service_level_code
-        if service_type is not UNSET:
+        if service_type is not None:
             field_dict["ServiceType"] = service_type
-        if order_item_number is not UNSET:
+        if order_item_number is not None:
             field_dict["OrderItemNumber"] = order_item_number
-        if service_charge is not UNSET:
+        if service_charge is not None:
             field_dict["ServiceCharge"] = service_charge
-        if updated_by is not UNSET:
+        if updated_by is not None:
             field_dict["UpdatedBy"] = updated_by
-        if updated_on is not UNSET:
+        if updated_on is not None:
             field_dict["UpdatedOn"] = updated_on
-        if work_status is not UNSET:
+        if work_status is not None:
             field_dict["WorkStatus"] = work_status
-        if custom_work_status is not UNSET:
+        if custom_work_status is not None:
             field_dict["CustomWorkStatus"] = custom_work_status
-        if service_comments is not UNSET:
+        if service_comments is not None:
             field_dict["ServiceComments"] = service_comments
-        if client_notes is not UNSET:
+        if client_notes is not None:
             field_dict["ClientNotes"] = client_notes
-        if vendor_service_notes is not UNSET:
+        if vendor_service_notes is not None:
             field_dict["VendorServiceNotes"] = vendor_service_notes
-        if display_name is not UNSET:
+        if display_name is not None:
             field_dict["DisplayName"] = display_name
-        if display_part_number is not UNSET:
+        if display_part_number is not None:
             field_dict["DisplayPartNumber"] = display_part_number
-        if part_number is not UNSET:
+        if part_number is not None:
             field_dict["PartNumber"] = part_number
-        if schedule_name is not UNSET:
+        if schedule_name is not None:
             field_dict["ScheduleName"] = schedule_name
-        if segment_name is not UNSET:
+        if segment_name is not None:
             field_dict["SegmentName"] = segment_name
-        if next_segment_name is not UNSET:
+        if next_segment_name is not None:
             field_dict["NextSegmentName"] = next_segment_name
-        if interval_length is not UNSET:
+        if interval_length is not None:
             field_dict["IntervalLength"] = interval_length
-        if interval_cycle is not UNSET:
+        if interval_cycle is not None:
             field_dict["IntervalCycle"] = interval_cycle
-        if service_options is not UNSET:
+        if service_options is not None:
             field_dict["ServiceOptions"] = service_options
-        if service_options_price is not UNSET:
+        if service_options_price is not None:
             field_dict["ServiceOptionsPrice"] = service_options_price
-        if service_options_document_numbers is not UNSET:
-            field_dict["ServiceOptionsDocumentNumbers"] = (
-                service_options_document_numbers
-            )
-        if location is not UNSET:
+        if service_options_document_numbers is not None:
+            field_dict["ServiceOptionsDocumentNumbers"] = service_options_document_numbers
+        if location is not None:
             field_dict["Location"] = location
-        if station is not UNSET:
+        if station is not None:
             field_dict["Station"] = station
-        if room is not UNSET:
+        if room is not None:
             field_dict["Room"] = room
-        if site is not UNSET:
+        if site is not None:
             field_dict["Site"] = site
-        if vendor_id is not UNSET:
+        if vendor_id is not None:
             field_dict["VendorId"] = vendor_id
-        if service_order_number is not UNSET:
+        if service_order_number is not None:
             field_dict["ServiceOrderNumber"] = service_order_number
-        if custom_order_number is not UNSET:
+        if custom_order_number is not None:
             field_dict["CustomOrderNumber"] = custom_order_number
-        if linked_order_number is not UNSET:
+        if linked_order_number is not None:
             field_dict["LinkedOrderNumber"] = linked_order_number
-        if asset_id is not UNSET:
+        if asset_id is not None:
             field_dict["AssetId"] = asset_id
-        if asset_class is not UNSET:
+        if asset_class is not None:
             field_dict["AssetClass"] = asset_class
-        if asset_condition is not UNSET:
+        if asset_condition is not None:
             field_dict["AssetCondition"] = asset_condition
-        if asset_criticality is not UNSET:
+        if asset_criticality is not None:
             field_dict["AssetCriticality"] = asset_criticality
-        if asset_pool is not UNSET:
+        if asset_pool is not None:
             field_dict["AssetPool"] = asset_pool
-        if asset_name is not UNSET:
+        if asset_name is not None:
             field_dict["AssetName"] = asset_name
-        if asset_description is not UNSET:
+        if asset_description is not None:
             field_dict["AssetDescription"] = asset_description
-        if asset_document_number is not UNSET:
+        if asset_document_number is not None:
             field_dict["AssetDocumentNumber"] = asset_document_number
-        if asset_document_section is not UNSET:
+        if asset_document_section is not None:
             field_dict["AssetDocumentSection"] = asset_document_section
-        if document_number_values is not UNSET:
+        if document_number_values is not None:
             field_dict["DocumentNumberValues"] = document_number_values
-        if product_name is not UNSET:
+        if product_name is not None:
             field_dict["ProductName"] = product_name
-        if product_description is not UNSET:
+        if product_description is not None:
             field_dict["ProductDescription"] = product_description
-        if asset_maker is not UNSET:
+        if asset_maker is not None:
             field_dict["AssetMaker"] = asset_maker
-        if category_name is not UNSET:
+        if category_name is not None:
             field_dict["CategoryName"] = category_name
-        if root_category_name is not UNSET:
+        if root_category_name is not None:
             field_dict["RootCategoryName"] = root_category_name
-        if vendor_tag is not UNSET:
+        if vendor_tag is not None:
             field_dict["VendorTag"] = vendor_tag
-        if result_status is not UNSET:
+        if result_status is not None:
             field_dict["ResultStatus"] = result_status
-        if service_date is not UNSET:
+        if service_date is not None:
             field_dict["ServiceDate"] = service_date
-        if next_service_date is not UNSET:
+        if next_service_date is not None:
             field_dict["NextServiceDate"] = next_service_date
-        if original_due_date is not UNSET:
+        if original_due_date is not None:
             field_dict["OriginalDueDate"] = original_due_date
-        if asset_tag is not UNSET:
+        if asset_tag is not None:
             field_dict["AssetTag"] = asset_tag
-        if department is not UNSET:
+        if department is not None:
             field_dict["Department"] = department
-        if asset_user is not UNSET:
+        if asset_user is not None:
             field_dict["AssetUser"] = asset_user
-        if equipment_id is not UNSET:
+        if equipment_id is not None:
             field_dict["EquipmentId"] = equipment_id
-        if legacy_identifier is not UNSET:
+        if legacy_identifier is not None:
             field_dict["LegacyIdentifier"] = legacy_identifier
-        if activation_date is not UNSET:
+        if activation_date is not None:
             field_dict["ActivationDate"] = activation_date
-        if purchase_date is not UNSET:
+        if purchase_date is not None:
             field_dict["PurchaseDate"] = purchase_date
-        if part_name is not UNSET:
+        if part_name is not None:
             field_dict["PartName"] = part_name
-        if part_description is not UNSET:
+        if part_description is not None:
             field_dict["PartDescription"] = part_description
-        if is_taxable is not UNSET:
+        if is_taxable is not None:
             field_dict["IsTaxable"] = is_taxable
-        if is_limited is not UNSET:
+        if is_limited is not None:
             field_dict["IsLimited"] = is_limited
-        if quantity is not UNSET:
+        if quantity is not None:
             field_dict["Quantity"] = quantity
-        if discount is not UNSET:
+        if discount is not None:
             field_dict["Discount"] = discount
-        if price is not UNSET:
+        if price is not None:
             field_dict["Price"] = price
-        if time_spent_in_minutes is not UNSET:
+        if time_spent_in_minutes is not None:
             field_dict["TimeSpentInMinutes"] = time_spent_in_minutes
-        if is_hourly_pricing is not UNSET:
+        if is_hourly_pricing is not None:
             field_dict["IsHourlyPricing"] = is_hourly_pricing
-        if delivery_charge is not UNSET:
+        if delivery_charge is not None:
             field_dict["DeliveryCharge"] = delivery_charge
-        if serial_number is not UNSET:
+        if serial_number is not None:
             field_dict["SerialNumber"] = serial_number
-        if part_repair_charges is not UNSET:
+        if part_repair_charges is not None:
             field_dict["PartRepairCharges"] = part_repair_charges
-        if part_repair_price is not UNSET:
+        if part_repair_price is not None:
             field_dict["PartRepairPrice"] = part_repair_price
-        if override_parts_total is not UNSET:
+        if override_parts_total is not None:
             field_dict["OverridePartsTotal"] = override_parts_total
-        if override_repairs_total is not UNSET:
+        if override_repairs_total is not None:
             field_dict["OverrideRepairsTotal"] = override_repairs_total
-        if asset_custodian_name is not UNSET:
+        if asset_custodian_name is not None:
             field_dict["AssetCustodianName"] = asset_custodian_name
-        if as_found_specification_group_name is not UNSET:
-            field_dict["AsFoundSpecificationGroupName"] = (
-                as_found_specification_group_name
-            )
-        if as_found_specification_company_name is not UNSET:
-            field_dict["AsFoundSpecificationCompanyName"] = (
-                as_found_specification_company_name
-            )
-        if as_left_specification_group_name is not UNSET:
-            field_dict["AsLeftSpecificationGroupName"] = (
-                as_left_specification_group_name
-            )
-        if as_left_specification_company_name is not UNSET:
-            field_dict["AsLeftSpecificationCompanyName"] = (
-                as_left_specification_company_name
-            )
-        if order_id is not UNSET:
+        if as_found_specification_group_name is not None:
+            field_dict["AsFoundSpecificationGroupName"] = as_found_specification_group_name
+        if as_found_specification_company_name is not None:
+            field_dict["AsFoundSpecificationCompanyName"] = as_found_specification_company_name
+        if as_left_specification_group_name is not None:
+            field_dict["AsLeftSpecificationGroupName"] = as_left_specification_group_name
+        if as_left_specification_company_name is not None:
+            field_dict["AsLeftSpecificationCompanyName"] = as_left_specification_company_name
+        if order_id is not None:
             field_dict["OrderId"] = order_id
-        if parent_order_id is not UNSET:
+        if parent_order_id is not None:
             field_dict["ParentOrderId"] = parent_order_id
-        if order_item_id is not UNSET:
+        if order_item_id is not None:
             field_dict["OrderItemId"] = order_item_id
-        if order_item_part_id is not UNSET:
+        if order_item_part_id is not None:
             field_dict["OrderItemPartId"] = order_item_part_id
-        if as_found_specification_group_id is not UNSET:
+        if as_found_specification_group_id is not None:
             field_dict["AsFoundSpecificationGroupId"] = as_found_specification_group_id
-        if as_left_specification_group_id is not UNSET:
+        if as_left_specification_group_id is not None:
             field_dict["AsLeftSpecificationGroupId"] = as_left_specification_group_id
-        if as_found_status is not UNSET:
+        if as_found_status is not None:
             field_dict["AsFoundStatus"] = as_found_status
-        if as_left_status is not UNSET:
+        if as_left_status is not None:
             field_dict["AsLeftStatus"] = as_left_status
-        if as_found_result is not UNSET:
+        if as_found_result is not None:
             field_dict["AsFoundResult"] = as_found_result
-        if as_left_result is not UNSET:
+        if as_left_result is not None:
             field_dict["AsLeftResult"] = as_left_result
-        if completed_on is not UNSET:
+        if completed_on is not None:
             field_dict["CompletedOn"] = completed_on
-        if received_on is not UNSET:
+        if received_on is not None:
             field_dict["ReceivedOn"] = received_on
-        if completed_by_name is not UNSET:
+        if completed_by_name is not None:
             field_dict["CompletedByName"] = completed_by_name
-        if service_charge_base is not UNSET:
+        if service_charge_base is not None:
             field_dict["ServiceChargeBase"] = service_charge_base
-        if service_total is not UNSET:
+        if service_total is not None:
             field_dict["ServiceTotal"] = service_total
-        if repairs_total is not UNSET:
+        if repairs_total is not None:
             field_dict["RepairsTotal"] = repairs_total
-        if parts_total is not UNSET:
+        if parts_total is not None:
             field_dict["PartsTotal"] = parts_total
-        if parts_total_before_discount is not UNSET:
+        if parts_total_before_discount is not None:
             field_dict["PartsTotalBeforeDiscount"] = parts_total_before_discount
-        if parent_manufacturer is not UNSET:
+        if parent_manufacturer is not None:
             field_dict["ParentManufacturer"] = parent_manufacturer
-        if parent_location is not UNSET:
+        if parent_location is not None:
             field_dict["ParentLocation"] = parent_location
-        if parent_manufacturer_part_number is not UNSET:
+        if parent_manufacturer_part_number is not None:
             field_dict["ParentManufacturerPartNumber"] = parent_manufacturer_part_number
-        if parent_display_part_number is not UNSET:
+        if parent_display_part_number is not None:
             field_dict["ParentDisplayPartNumber"] = parent_display_part_number
-        if parent_asset_id is not UNSET:
+        if parent_asset_id is not None:
             field_dict["ParentAssetId"] = parent_asset_id
-        if parent_category_name is not UNSET:
+        if parent_category_name is not None:
             field_dict["ParentCategoryName"] = parent_category_name
-        if parent_root_category_name is not UNSET:
+        if parent_root_category_name is not None:
             field_dict["ParentRootCategoryName"] = parent_root_category_name
-        if parent_serial_number is not UNSET:
+        if parent_serial_number is not None:
             field_dict["ParentSerialNumber"] = parent_serial_number
-        if parent_asset_tag is not UNSET:
+        if parent_asset_tag is not None:
             field_dict["ParentAssetTag"] = parent_asset_tag
-        if parent_asset_user is not UNSET:
+        if parent_asset_user is not None:
             field_dict["ParentAssetUser"] = parent_asset_user
-        if parent_display_name is not UNSET:
+        if parent_display_name is not None:
             field_dict["ParentDisplayName"] = parent_display_name
-        if parent_equipment_id is not UNSET:
+        if parent_equipment_id is not None:
             field_dict["ParentEquipmentId"] = parent_equipment_id
-        if asset_shipping_address_1 is not UNSET:
+        if asset_shipping_address_1 is not None:
             field_dict["AssetShippingAddress1"] = asset_shipping_address_1
-        if asset_shipping_address_2 is not UNSET:
+        if asset_shipping_address_2 is not None:
             field_dict["AssetShippingAddress2"] = asset_shipping_address_2
-        if asset_shipping_first_name is not UNSET:
+        if asset_shipping_first_name is not None:
             field_dict["AssetShippingFirstName"] = asset_shipping_first_name
-        if asset_shipping_last_name is not UNSET:
+        if asset_shipping_last_name is not None:
             field_dict["AssetShippingLastName"] = asset_shipping_last_name
-        if asset_shipping_email is not UNSET:
+        if asset_shipping_email is not None:
             field_dict["AssetShippingEmail"] = asset_shipping_email
-        if asset_shipping_company is not UNSET:
+        if asset_shipping_company is not None:
             field_dict["AssetShippingCompany"] = asset_shipping_company
-        if asset_shipping_city is not UNSET:
+        if asset_shipping_city is not None:
             field_dict["AssetShippingCity"] = asset_shipping_city
-        if asset_shipping_zip is not UNSET:
+        if asset_shipping_zip is not None:
             field_dict["AssetShippingZip"] = asset_shipping_zip
-        if asset_shipping_phone_number is not UNSET:
+        if asset_shipping_phone_number is not None:
             field_dict["AssetShippingPhoneNumber"] = asset_shipping_phone_number
-        if asset_shipping_fax_number is not UNSET:
+        if asset_shipping_fax_number is not None:
             field_dict["AssetShippingFaxNumber"] = asset_shipping_fax_number
-        if asset_shipping_country is not UNSET:
+        if asset_shipping_country is not None:
             field_dict["AssetShippingCountry"] = asset_shipping_country
-        if asset_shipping_state is not UNSET:
+        if asset_shipping_state is not None:
             field_dict["AssetShippingState"] = asset_shipping_state
-        if shipping_address_1 is not UNSET:
+        if shipping_address_1 is not None:
             field_dict["ShippingAddress1"] = shipping_address_1
-        if shipping_address_2 is not UNSET:
+        if shipping_address_2 is not None:
             field_dict["ShippingAddress2"] = shipping_address_2
-        if shipping_first_name is not UNSET:
+        if shipping_first_name is not None:
             field_dict["ShippingFirstName"] = shipping_first_name
-        if shipping_last_name is not UNSET:
+        if shipping_last_name is not None:
             field_dict["ShippingLastName"] = shipping_last_name
-        if shipping_email is not UNSET:
+        if shipping_email is not None:
             field_dict["ShippingEmail"] = shipping_email
-        if shipping_company is not UNSET:
+        if shipping_company is not None:
             field_dict["ShippingCompany"] = shipping_company
-        if shipping_city is not UNSET:
+        if shipping_city is not None:
             field_dict["ShippingCity"] = shipping_city
-        if shipping_zip is not UNSET:
+        if shipping_zip is not None:
             field_dict["ShippingZip"] = shipping_zip
-        if shipping_phone_number is not UNSET:
+        if shipping_phone_number is not None:
             field_dict["ShippingPhoneNumber"] = shipping_phone_number
-        if shipping_fax_number is not UNSET:
+        if shipping_fax_number is not None:
             field_dict["ShippingFaxNumber"] = shipping_fax_number
-        if shipping_country is not UNSET:
+        if shipping_country is not None:
             field_dict["ShippingCountry"] = shipping_country
-        if shipping_state is not UNSET:
+        if shipping_state is not None:
             field_dict["ShippingState"] = shipping_state
-        if asset_service_notes is not UNSET:
+        if asset_service_notes is not None:
             field_dict["AssetServiceNotes"] = asset_service_notes
-        if service_option_service_code is not UNSET:
+        if service_option_service_code is not None:
             field_dict["ServiceOptionServiceCode"] = service_option_service_code
 
         return field_dict
@@ -1249,19 +1236,17 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        certificate_number = d.pop("CertificateNumber", UNSET)
+        certificate_number = d.pop("CertificateNumber", None)
 
-        document_number = d.pop("DocumentNumber", UNSET)
+        document_number = d.pop("DocumentNumber", None)
 
-        revision = d.pop("Revision", UNSET)
+        revision = d.pop("Revision", None)
 
         def _parse_effective_date(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1270,132 +1255,128 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
                 return effective_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        effective_date = _parse_effective_date(d.pop("EffectiveDate", UNSET))
+        effective_date = _parse_effective_date(d.pop("EffectiveDate", None))
 
-        document_section = d.pop("DocumentSection", UNSET)
+        document_section = d.pop("DocumentSection", None)
 
-        service_level = d.pop("ServiceLevel", UNSET)
+        service_level = d.pop("ServiceLevel", None)
 
-        service_level_code = d.pop("ServiceLevelCode", UNSET)
+        service_level_code = d.pop("ServiceLevelCode", None)
 
-        service_type = d.pop("ServiceType", UNSET)
+        service_type = d.pop("ServiceType", None)
 
-        order_item_number = d.pop("OrderItemNumber", UNSET)
+        order_item_number = d.pop("OrderItemNumber", None)
 
-        service_charge = d.pop("ServiceCharge", UNSET)
+        service_charge = d.pop("ServiceCharge", None)
 
-        updated_by = d.pop("UpdatedBy", UNSET)
+        updated_by = d.pop("UpdatedBy", None)
 
-        _updated_on = d.pop("UpdatedOn", UNSET)
-        updated_on: Union[None, Unset, datetime.datetime]
-        if isinstance(_updated_on, Unset):
-            updated_on = UNSET
+        _updated_on = d.pop("UpdatedOn", None)
+        updated_on: Optional[datetime.datetime]
+        if not _updated_on:
+            updated_on = None
         else:
             updated_on = isoparse(_updated_on)
 
-        _work_status = d.pop("WorkStatus", UNSET)
-        work_status: Union[None, Unset, WorkStatus]
-        if isinstance(_work_status, Unset):
-            work_status = UNSET
+        _work_status = d.pop("WorkStatus", None)
+        work_status: Optional[WorkStatus]
+        if not _work_status:
+            work_status = None
         elif _work_status is None:
             work_status = None
         else:
             work_status = WorkStatus(_work_status)
 
-        custom_work_status = d.pop("CustomWorkStatus", UNSET)
+        custom_work_status = d.pop("CustomWorkStatus", None)
 
-        service_comments = d.pop("ServiceComments", UNSET)
+        service_comments = d.pop("ServiceComments", None)
 
-        client_notes = d.pop("ClientNotes", UNSET)
+        client_notes = d.pop("ClientNotes", None)
 
-        vendor_service_notes = d.pop("VendorServiceNotes", UNSET)
+        vendor_service_notes = d.pop("VendorServiceNotes", None)
 
-        display_name = d.pop("DisplayName", UNSET)
+        display_name = d.pop("DisplayName", None)
 
-        display_part_number = d.pop("DisplayPartNumber", UNSET)
+        display_part_number = d.pop("DisplayPartNumber", None)
 
-        part_number = d.pop("PartNumber", UNSET)
+        part_number = d.pop("PartNumber", None)
 
-        schedule_name = d.pop("ScheduleName", UNSET)
+        schedule_name = d.pop("ScheduleName", None)
 
-        segment_name = d.pop("SegmentName", UNSET)
+        segment_name = d.pop("SegmentName", None)
 
-        next_segment_name = d.pop("NextSegmentName", UNSET)
+        next_segment_name = d.pop("NextSegmentName", None)
 
-        interval_length = d.pop("IntervalLength", UNSET)
+        interval_length = d.pop("IntervalLength", None)
 
-        interval_cycle = d.pop("IntervalCycle", UNSET)
+        interval_cycle = d.pop("IntervalCycle", None)
 
-        service_options = d.pop("ServiceOptions", UNSET)
+        service_options = d.pop("ServiceOptions", None)
 
-        service_options_price = d.pop("ServiceOptionsPrice", UNSET)
+        service_options_price = d.pop("ServiceOptionsPrice", None)
 
-        service_options_document_numbers = d.pop("ServiceOptionsDocumentNumbers", UNSET)
+        service_options_document_numbers = d.pop("ServiceOptionsDocumentNumbers", None)
 
-        location = d.pop("Location", UNSET)
+        location = d.pop("Location", None)
 
-        station = d.pop("Station", UNSET)
+        station = d.pop("Station", None)
 
-        room = d.pop("Room", UNSET)
+        room = d.pop("Room", None)
 
-        site = d.pop("Site", UNSET)
+        site = d.pop("Site", None)
 
-        vendor_id = d.pop("VendorId", UNSET)
+        vendor_id = d.pop("VendorId", None)
 
-        service_order_number = d.pop("ServiceOrderNumber", UNSET)
+        service_order_number = d.pop("ServiceOrderNumber", None)
 
-        custom_order_number = d.pop("CustomOrderNumber", UNSET)
+        custom_order_number = d.pop("CustomOrderNumber", None)
 
-        linked_order_number = d.pop("LinkedOrderNumber", UNSET)
+        linked_order_number = d.pop("LinkedOrderNumber", None)
 
-        asset_id = d.pop("AssetId", UNSET)
+        asset_id = d.pop("AssetId", None)
 
-        asset_class = d.pop("AssetClass", UNSET)
+        asset_class = d.pop("AssetClass", None)
 
-        asset_condition = d.pop("AssetCondition", UNSET)
+        asset_condition = d.pop("AssetCondition", None)
 
-        asset_criticality = d.pop("AssetCriticality", UNSET)
+        asset_criticality = d.pop("AssetCriticality", None)
 
-        asset_pool = d.pop("AssetPool", UNSET)
+        asset_pool = d.pop("AssetPool", None)
 
-        asset_name = d.pop("AssetName", UNSET)
+        asset_name = d.pop("AssetName", None)
 
-        asset_description = d.pop("AssetDescription", UNSET)
+        asset_description = d.pop("AssetDescription", None)
 
-        asset_document_number = d.pop("AssetDocumentNumber", UNSET)
+        asset_document_number = d.pop("AssetDocumentNumber", None)
 
-        asset_document_section = d.pop("AssetDocumentSection", UNSET)
+        asset_document_section = d.pop("AssetDocumentSection", None)
 
-        document_number_values = d.pop("DocumentNumberValues", UNSET)
+        document_number_values = d.pop("DocumentNumberValues", None)
 
-        product_name = d.pop("ProductName", UNSET)
+        product_name = d.pop("ProductName", None)
 
-        product_description = d.pop("ProductDescription", UNSET)
+        product_description = d.pop("ProductDescription", None)
 
-        asset_maker = d.pop("AssetMaker", UNSET)
+        asset_maker = d.pop("AssetMaker", None)
 
-        category_name = d.pop("CategoryName", UNSET)
+        category_name = d.pop("CategoryName", None)
 
-        root_category_name = d.pop("RootCategoryName", UNSET)
+        root_category_name = d.pop("RootCategoryName", None)
 
-        vendor_tag = d.pop("VendorTag", UNSET)
+        vendor_tag = d.pop("VendorTag", None)
 
-        def _parse_result_status(data: object) -> Union[None, Unset, int]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, int], data)
+        def _parse_result_status(data: object) -> Optional[int]:
+            if not data:
+                return None
+            return cast(Optional[int], data)
 
-        result_status = _parse_result_status(d.pop("ResultStatus", UNSET))
+        result_status = _parse_result_status(d.pop("ResultStatus", None))
 
-        def _parse_service_date(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_service_date(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1404,17 +1385,15 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
                 return service_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        service_date = _parse_service_date(d.pop("ServiceDate", UNSET))
+        service_date = _parse_service_date(d.pop("ServiceDate", None))
 
         def _parse_next_service_date(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1423,17 +1402,15 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
                 return next_service_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        next_service_date = _parse_next_service_date(d.pop("NextServiceDate", UNSET))
+        next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
 
         def _parse_original_due_date(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1442,62 +1419,50 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
                 return original_due_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        original_due_date = _parse_original_due_date(d.pop("OriginalDueDate", UNSET))
+        original_due_date = _parse_original_due_date(d.pop("OriginalDueDate", None))
 
-        def _parse_asset_tag(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_tag(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        asset_tag = _parse_asset_tag(d.pop("AssetTag", UNSET))
+        asset_tag = _parse_asset_tag(d.pop("AssetTag", None))
 
-        def _parse_department(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_department(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        department = _parse_department(d.pop("Department", UNSET))
+        department = _parse_department(d.pop("Department", None))
 
-        def _parse_asset_user(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_user(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        asset_user = _parse_asset_user(d.pop("AssetUser", UNSET))
+        asset_user = _parse_asset_user(d.pop("AssetUser", None))
 
-        def _parse_equipment_id(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_equipment_id(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        equipment_id = _parse_equipment_id(d.pop("EquipmentId", UNSET))
+        equipment_id = _parse_equipment_id(d.pop("EquipmentId", None))
 
-        def _parse_legacy_identifier(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_legacy_identifier(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        legacy_identifier = _parse_legacy_identifier(d.pop("LegacyIdentifier", UNSET))
+        legacy_identifier = _parse_legacy_identifier(d.pop("LegacyIdentifier", None))
 
         def _parse_activation_date(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1506,15 +1471,13 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
                 return activation_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        activation_date = _parse_activation_date(d.pop("ActivationDate", UNSET))
+        activation_date = _parse_activation_date(d.pop("ActivationDate", None))
 
-        def _parse_purchase_date(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_purchase_date(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1523,282 +1486,222 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
                 return purchase_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        purchase_date = _parse_purchase_date(d.pop("PurchaseDate", UNSET))
+        purchase_date = _parse_purchase_date(d.pop("PurchaseDate", None))
 
-        def _parse_part_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_part_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        part_name = _parse_part_name(d.pop("PartName", UNSET))
+        part_name = _parse_part_name(d.pop("PartName", None))
 
-        def _parse_part_description(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_part_description(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        part_description = _parse_part_description(d.pop("PartDescription", UNSET))
+        part_description = _parse_part_description(d.pop("PartDescription", None))
 
-        is_taxable = d.pop("IsTaxable", UNSET)
+        is_taxable = d.pop("IsTaxable", None)
 
-        is_limited = d.pop("IsLimited", UNSET)
+        is_limited = d.pop("IsLimited", None)
 
-        def _parse_quantity(data: object) -> Union[None, Unset, float]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, float], data)
+        def _parse_quantity(data: object) -> Optional[float]:
+            if not data:
+                return None
+            return cast(Optional[float], data)
 
-        quantity = _parse_quantity(d.pop("Quantity", UNSET))
+        quantity = _parse_quantity(d.pop("Quantity", None))
 
-        def _parse_discount(data: object) -> Union[None, Unset, float]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, float], data)
+        def _parse_discount(data: object) -> Optional[float]:
+            if not data:
+                return None
+            return cast(Optional[float], data)
 
-        discount = _parse_discount(d.pop("Discount", UNSET))
+        discount = _parse_discount(d.pop("Discount", None))
 
-        def _parse_price(data: object) -> Union[None, Unset, float]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, float], data)
+        def _parse_price(data: object) -> Optional[float]:
+            if not data:
+                return None
+            return cast(Optional[float], data)
 
-        price = _parse_price(d.pop("Price", UNSET))
+        price = _parse_price(d.pop("Price", None))
 
-        def _parse_time_spent_in_minutes(data: object) -> Union[None, Unset, float]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, float], data)
+        def _parse_time_spent_in_minutes(data: object) -> Optional[float]:
+            if not data:
+                return None
+            return cast(Optional[float], data)
 
-        time_spent_in_minutes = _parse_time_spent_in_minutes(
-            d.pop("TimeSpentInMinutes", UNSET)
-        )
+        time_spent_in_minutes = _parse_time_spent_in_minutes(d.pop("TimeSpentInMinutes", None))
 
-        def _parse_is_hourly_pricing(data: object) -> Union[None, Unset, bool]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, bool], data)
+        def _parse_is_hourly_pricing(data: object) -> Optional[bool]:
+            if not data:
+                return None
+            return cast(Optional[bool], data)
 
-        is_hourly_pricing = _parse_is_hourly_pricing(d.pop("IsHourlyPricing", UNSET))
+        is_hourly_pricing = _parse_is_hourly_pricing(d.pop("IsHourlyPricing", None))
 
-        def _parse_delivery_charge(data: object) -> Union[None, Unset, float]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, float], data)
+        def _parse_delivery_charge(data: object) -> Optional[float]:
+            if not data:
+                return None
+            return cast(Optional[float], data)
 
-        delivery_charge = _parse_delivery_charge(d.pop("DeliveryCharge", UNSET))
+        delivery_charge = _parse_delivery_charge(d.pop("DeliveryCharge", None))
 
-        serial_number = d.pop("SerialNumber", UNSET)
+        serial_number = d.pop("SerialNumber", None)
 
-        def _parse_part_repair_charges(data: object) -> Union[None, Unset, float]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, float], data)
+        def _parse_part_repair_charges(data: object) -> Optional[float]:
+            if not data:
+                return None
+            return cast(Optional[float], data)
 
-        part_repair_charges = _parse_part_repair_charges(
-            d.pop("PartRepairCharges", UNSET)
-        )
+        part_repair_charges = _parse_part_repair_charges(d.pop("PartRepairCharges", None))
 
-        def _parse_part_repair_price(data: object) -> Union[None, Unset, float]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, float], data)
+        def _parse_part_repair_price(data: object) -> Optional[float]:
+            if not data:
+                return None
+            return cast(Optional[float], data)
 
-        part_repair_price = _parse_part_repair_price(d.pop("PartRepairPrice", UNSET))
+        part_repair_price = _parse_part_repair_price(d.pop("PartRepairPrice", None))
 
-        override_parts_total = d.pop("OverridePartsTotal", UNSET)
+        override_parts_total = d.pop("OverridePartsTotal", None)
 
-        override_repairs_total = d.pop("OverrideRepairsTotal", UNSET)
+        override_repairs_total = d.pop("OverrideRepairsTotal", None)
 
-        def _parse_asset_custodian_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_custodian_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        asset_custodian_name = _parse_asset_custodian_name(
-            d.pop("AssetCustodianName", UNSET)
-        )
+        asset_custodian_name = _parse_asset_custodian_name(d.pop("AssetCustodianName", None))
 
         def _parse_as_found_specification_group_name(
             data: object,
-        ) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        ) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
         as_found_specification_group_name = _parse_as_found_specification_group_name(
-            d.pop("AsFoundSpecificationGroupName", UNSET)
+            d.pop("AsFoundSpecificationGroupName", None)
         )
 
         def _parse_as_found_specification_company_name(
             data: object,
-        ) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        ) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        as_found_specification_company_name = (
-            _parse_as_found_specification_company_name(
-                d.pop("AsFoundSpecificationCompanyName", UNSET)
-            )
+        as_found_specification_company_name = _parse_as_found_specification_company_name(
+            d.pop("AsFoundSpecificationCompanyName", None)
         )
 
         def _parse_as_left_specification_group_name(
             data: object,
-        ) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        ) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
         as_left_specification_group_name = _parse_as_left_specification_group_name(
-            d.pop("AsLeftSpecificationGroupName", UNSET)
+            d.pop("AsLeftSpecificationGroupName", None)
         )
 
         def _parse_as_left_specification_company_name(
             data: object,
-        ) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        ) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
         as_left_specification_company_name = _parse_as_left_specification_company_name(
-            d.pop("AsLeftSpecificationCompanyName", UNSET)
+            d.pop("AsLeftSpecificationCompanyName", None)
         )
 
-        def _parse_order_id(data: object) -> Union[None, Unset, int]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, int], data)
+        def _parse_order_id(data: object) -> Optional[int]:
+            if not data:
+                return None
+            return cast(Optional[int], data)
 
-        order_id = _parse_order_id(d.pop("OrderId", UNSET))
+        order_id = _parse_order_id(d.pop("OrderId", None))
 
-        def _parse_parent_order_id(data: object) -> Union[None, Unset, int]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, int], data)
+        def _parse_parent_order_id(data: object) -> Optional[int]:
+            if not data:
+                return None
+            return cast(Optional[int], data)
 
-        parent_order_id = _parse_parent_order_id(d.pop("ParentOrderId", UNSET))
+        parent_order_id = _parse_parent_order_id(d.pop("ParentOrderId", None))
 
-        def _parse_order_item_id(data: object) -> Union[None, Unset, int]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, int], data)
+        def _parse_order_item_id(data: object) -> Optional[int]:
+            if not data:
+                return None
+            return cast(Optional[int], data)
 
-        order_item_id = _parse_order_item_id(d.pop("OrderItemId", UNSET))
+        order_item_id = _parse_order_item_id(d.pop("OrderItemId", None))
 
-        def _parse_order_item_part_id(data: object) -> Union[None, Unset, int]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, int], data)
+        def _parse_order_item_part_id(data: object) -> Optional[int]:
+            if not data:
+                return None
+            return cast(Optional[int], data)
 
-        order_item_part_id = _parse_order_item_part_id(d.pop("OrderItemPartId", UNSET))
+        order_item_part_id = _parse_order_item_part_id(d.pop("OrderItemPartId", None))
 
         def _parse_as_found_specification_group_id(
             data: object,
-        ) -> Union[None, Unset, int]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, int], data)
+        ) -> Optional[int]:
+            if not data:
+                return None
+            return cast(Optional[int], data)
 
         as_found_specification_group_id = _parse_as_found_specification_group_id(
-            d.pop("AsFoundSpecificationGroupId", UNSET)
+            d.pop("AsFoundSpecificationGroupId", None)
         )
 
         def _parse_as_left_specification_group_id(
             data: object,
-        ) -> Union[None, Unset, int]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, int], data)
+        ) -> Optional[int]:
+            if not data:
+                return None
+            return cast(Optional[int], data)
 
         as_left_specification_group_id = _parse_as_left_specification_group_id(
-            d.pop("AsLeftSpecificationGroupId", UNSET)
+            d.pop("AsLeftSpecificationGroupId", None)
         )
 
-        def _parse_as_found_status(data: object) -> Union[None, Unset, int]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, int], data)
+        def _parse_as_found_status(data: object) -> Optional[int]:
+            if not data:
+                return None
+            return cast(Optional[int], data)
 
-        as_found_status = _parse_as_found_status(d.pop("AsFoundStatus", UNSET))
+        as_found_status = _parse_as_found_status(d.pop("AsFoundStatus", None))
 
-        def _parse_as_left_status(data: object) -> Union[None, Unset, int]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, int], data)
+        def _parse_as_left_status(data: object) -> Optional[int]:
+            if not data:
+                return None
+            return cast(Optional[int], data)
 
-        as_left_status = _parse_as_left_status(d.pop("AsLeftStatus", UNSET))
+        as_left_status = _parse_as_left_status(d.pop("AsLeftStatus", None))
 
-        def _parse_as_found_result(data: object) -> Union[None, Unset, int]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, int], data)
+        def _parse_as_found_result(data: object) -> Optional[int]:
+            if not data:
+                return None
+            return cast(Optional[int], data)
 
-        as_found_result = _parse_as_found_result(d.pop("AsFoundResult", UNSET))
+        as_found_result = _parse_as_found_result(d.pop("AsFoundResult", None))
 
-        def _parse_as_left_result(data: object) -> Union[None, Unset, int]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, int], data)
+        def _parse_as_left_result(data: object) -> Optional[int]:
+            if not data:
+                return None
+            return cast(Optional[int], data)
 
-        as_left_result = _parse_as_left_result(d.pop("AsLeftResult", UNSET))
+        as_left_result = _parse_as_left_result(d.pop("AsLeftResult", None))
 
-        def _parse_completed_on(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_completed_on(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1807,15 +1710,13 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
                 return completed_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        completed_on = _parse_completed_on(d.pop("CompletedOn", UNSET))
+        completed_on = _parse_completed_on(d.pop("CompletedOn", None))
 
-        def _parse_received_on(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_received_on(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1824,460 +1725,342 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
                 return received_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        received_on = _parse_received_on(d.pop("ReceivedOn", UNSET))
+        received_on = _parse_received_on(d.pop("ReceivedOn", None))
 
-        def _parse_completed_by_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_completed_by_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        completed_by_name = _parse_completed_by_name(d.pop("CompletedByName", UNSET))
+        completed_by_name = _parse_completed_by_name(d.pop("CompletedByName", None))
 
-        def _parse_service_charge_base(data: object) -> Union[None, Unset, float]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, float], data)
+        def _parse_service_charge_base(data: object) -> Optional[float]:
+            if not data:
+                return None
+            return cast(Optional[float], data)
 
-        service_charge_base = _parse_service_charge_base(
-            d.pop("ServiceChargeBase", UNSET)
-        )
+        service_charge_base = _parse_service_charge_base(d.pop("ServiceChargeBase", None))
 
-        def _parse_service_total(data: object) -> Union[None, Unset, float]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, float], data)
+        def _parse_service_total(data: object) -> Optional[float]:
+            if not data:
+                return None
+            return cast(Optional[float], data)
 
-        service_total = _parse_service_total(d.pop("ServiceTotal", UNSET))
+        service_total = _parse_service_total(d.pop("ServiceTotal", None))
 
-        def _parse_repairs_total(data: object) -> Union[None, Unset, float]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, float], data)
+        def _parse_repairs_total(data: object) -> Optional[float]:
+            if not data:
+                return None
+            return cast(Optional[float], data)
 
-        repairs_total = _parse_repairs_total(d.pop("RepairsTotal", UNSET))
+        repairs_total = _parse_repairs_total(d.pop("RepairsTotal", None))
 
-        def _parse_parts_total(data: object) -> Union[None, Unset, float]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, float], data)
+        def _parse_parts_total(data: object) -> Optional[float]:
+            if not data:
+                return None
+            return cast(Optional[float], data)
 
-        parts_total = _parse_parts_total(d.pop("PartsTotal", UNSET))
+        parts_total = _parse_parts_total(d.pop("PartsTotal", None))
 
         def _parse_parts_total_before_discount(
             data: object,
-        ) -> Union[None, Unset, float]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, float], data)
+        ) -> Optional[float]:
+            if not data:
+                return None
+            return cast(Optional[float], data)
 
         parts_total_before_discount = _parse_parts_total_before_discount(
-            d.pop("PartsTotalBeforeDiscount", UNSET)
+            d.pop("PartsTotalBeforeDiscount", None)
         )
 
-        def _parse_parent_manufacturer(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_parent_manufacturer(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        parent_manufacturer = _parse_parent_manufacturer(
-            d.pop("ParentManufacturer", UNSET)
-        )
+        parent_manufacturer = _parse_parent_manufacturer(d.pop("ParentManufacturer", None))
 
-        def _parse_parent_location(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_parent_location(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        parent_location = _parse_parent_location(d.pop("ParentLocation", UNSET))
+        parent_location = _parse_parent_location(d.pop("ParentLocation", None))
 
         def _parse_parent_manufacturer_part_number(
             data: object,
-        ) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        ) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
         parent_manufacturer_part_number = _parse_parent_manufacturer_part_number(
-            d.pop("ParentManufacturerPartNumber", UNSET)
+            d.pop("ParentManufacturerPartNumber", None)
         )
 
-        def _parse_parent_display_part_number(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_parent_display_part_number(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
         parent_display_part_number = _parse_parent_display_part_number(
-            d.pop("ParentDisplayPartNumber", UNSET)
+            d.pop("ParentDisplayPartNumber", None)
         )
 
-        def _parse_parent_asset_id(data: object) -> Union[None, Unset, int]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, int], data)
+        def _parse_parent_asset_id(data: object) -> Optional[int]:
+            if not data:
+                return None
+            return cast(Optional[int], data)
 
-        parent_asset_id = _parse_parent_asset_id(d.pop("ParentAssetId", UNSET))
+        parent_asset_id = _parse_parent_asset_id(d.pop("ParentAssetId", None))
 
-        def _parse_parent_category_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_parent_category_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        parent_category_name = _parse_parent_category_name(
-            d.pop("ParentCategoryName", UNSET)
-        )
+        parent_category_name = _parse_parent_category_name(d.pop("ParentCategoryName", None))
 
-        def _parse_parent_root_category_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_parent_root_category_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
         parent_root_category_name = _parse_parent_root_category_name(
-            d.pop("ParentRootCategoryName", UNSET)
+            d.pop("ParentRootCategoryName", None)
         )
 
-        def _parse_parent_serial_number(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_parent_serial_number(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        parent_serial_number = _parse_parent_serial_number(
-            d.pop("ParentSerialNumber", UNSET)
-        )
+        parent_serial_number = _parse_parent_serial_number(d.pop("ParentSerialNumber", None))
 
-        def _parse_parent_asset_tag(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_parent_asset_tag(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        parent_asset_tag = _parse_parent_asset_tag(d.pop("ParentAssetTag", UNSET))
+        parent_asset_tag = _parse_parent_asset_tag(d.pop("ParentAssetTag", None))
 
-        def _parse_parent_asset_user(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_parent_asset_user(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        parent_asset_user = _parse_parent_asset_user(d.pop("ParentAssetUser", UNSET))
+        parent_asset_user = _parse_parent_asset_user(d.pop("ParentAssetUser", None))
 
-        def _parse_parent_display_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_parent_display_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        parent_display_name = _parse_parent_display_name(
-            d.pop("ParentDisplayName", UNSET)
-        )
+        parent_display_name = _parse_parent_display_name(d.pop("ParentDisplayName", None))
 
-        def _parse_parent_equipment_id(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_parent_equipment_id(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        parent_equipment_id = _parse_parent_equipment_id(
-            d.pop("ParentEquipmentId", UNSET)
-        )
+        parent_equipment_id = _parse_parent_equipment_id(d.pop("ParentEquipmentId", None))
 
-        def _parse_asset_shipping_address_1(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_shipping_address_1(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
         asset_shipping_address_1 = _parse_asset_shipping_address_1(
-            d.pop("AssetShippingAddress1", UNSET)
+            d.pop("AssetShippingAddress1", None)
         )
 
-        def _parse_asset_shipping_address_2(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_shipping_address_2(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
         asset_shipping_address_2 = _parse_asset_shipping_address_2(
-            d.pop("AssetShippingAddress2", UNSET)
+            d.pop("AssetShippingAddress2", None)
         )
 
-        def _parse_asset_shipping_first_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_shipping_first_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
         asset_shipping_first_name = _parse_asset_shipping_first_name(
-            d.pop("AssetShippingFirstName", UNSET)
+            d.pop("AssetShippingFirstName", None)
         )
 
-        def _parse_asset_shipping_last_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_shipping_last_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
         asset_shipping_last_name = _parse_asset_shipping_last_name(
-            d.pop("AssetShippingLastName", UNSET)
+            d.pop("AssetShippingLastName", None)
         )
 
-        def _parse_asset_shipping_email(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_shipping_email(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        asset_shipping_email = _parse_asset_shipping_email(
-            d.pop("AssetShippingEmail", UNSET)
-        )
+        asset_shipping_email = _parse_asset_shipping_email(d.pop("AssetShippingEmail", None))
 
-        def _parse_asset_shipping_company(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_shipping_company(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        asset_shipping_company = _parse_asset_shipping_company(
-            d.pop("AssetShippingCompany", UNSET)
-        )
+        asset_shipping_company = _parse_asset_shipping_company(d.pop("AssetShippingCompany", None))
 
-        def _parse_asset_shipping_city(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_shipping_city(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        asset_shipping_city = _parse_asset_shipping_city(
-            d.pop("AssetShippingCity", UNSET)
-        )
+        asset_shipping_city = _parse_asset_shipping_city(d.pop("AssetShippingCity", None))
 
-        def _parse_asset_shipping_zip(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_shipping_zip(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        asset_shipping_zip = _parse_asset_shipping_zip(d.pop("AssetShippingZip", UNSET))
+        asset_shipping_zip = _parse_asset_shipping_zip(d.pop("AssetShippingZip", None))
 
-        def _parse_asset_shipping_phone_number(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_shipping_phone_number(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
         asset_shipping_phone_number = _parse_asset_shipping_phone_number(
-            d.pop("AssetShippingPhoneNumber", UNSET)
+            d.pop("AssetShippingPhoneNumber", None)
         )
 
-        def _parse_asset_shipping_fax_number(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_shipping_fax_number(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
         asset_shipping_fax_number = _parse_asset_shipping_fax_number(
-            d.pop("AssetShippingFaxNumber", UNSET)
+            d.pop("AssetShippingFaxNumber", None)
         )
 
-        def _parse_asset_shipping_country(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_shipping_country(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        asset_shipping_country = _parse_asset_shipping_country(
-            d.pop("AssetShippingCountry", UNSET)
-        )
+        asset_shipping_country = _parse_asset_shipping_country(d.pop("AssetShippingCountry", None))
 
-        def _parse_asset_shipping_state(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_shipping_state(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        asset_shipping_state = _parse_asset_shipping_state(
-            d.pop("AssetShippingState", UNSET)
-        )
+        asset_shipping_state = _parse_asset_shipping_state(d.pop("AssetShippingState", None))
 
-        def _parse_shipping_address_1(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_shipping_address_1(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        shipping_address_1 = _parse_shipping_address_1(d.pop("ShippingAddress1", UNSET))
+        shipping_address_1 = _parse_shipping_address_1(d.pop("ShippingAddress1", None))
 
-        def _parse_shipping_address_2(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_shipping_address_2(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        shipping_address_2 = _parse_shipping_address_2(d.pop("ShippingAddress2", UNSET))
+        shipping_address_2 = _parse_shipping_address_2(d.pop("ShippingAddress2", None))
 
-        def _parse_shipping_first_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_shipping_first_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        shipping_first_name = _parse_shipping_first_name(
-            d.pop("ShippingFirstName", UNSET)
-        )
+        shipping_first_name = _parse_shipping_first_name(d.pop("ShippingFirstName", None))
 
-        def _parse_shipping_last_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_shipping_last_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        shipping_last_name = _parse_shipping_last_name(d.pop("ShippingLastName", UNSET))
+        shipping_last_name = _parse_shipping_last_name(d.pop("ShippingLastName", None))
 
-        def _parse_shipping_email(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_shipping_email(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        shipping_email = _parse_shipping_email(d.pop("ShippingEmail", UNSET))
+        shipping_email = _parse_shipping_email(d.pop("ShippingEmail", None))
 
-        def _parse_shipping_company(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_shipping_company(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        shipping_company = _parse_shipping_company(d.pop("ShippingCompany", UNSET))
+        shipping_company = _parse_shipping_company(d.pop("ShippingCompany", None))
 
-        def _parse_shipping_city(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_shipping_city(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        shipping_city = _parse_shipping_city(d.pop("ShippingCity", UNSET))
+        shipping_city = _parse_shipping_city(d.pop("ShippingCity", None))
 
-        def _parse_shipping_zip(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_shipping_zip(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        shipping_zip = _parse_shipping_zip(d.pop("ShippingZip", UNSET))
+        shipping_zip = _parse_shipping_zip(d.pop("ShippingZip", None))
 
-        def _parse_shipping_phone_number(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_shipping_phone_number(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        shipping_phone_number = _parse_shipping_phone_number(
-            d.pop("ShippingPhoneNumber", UNSET)
-        )
+        shipping_phone_number = _parse_shipping_phone_number(d.pop("ShippingPhoneNumber", None))
 
-        def _parse_shipping_fax_number(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_shipping_fax_number(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        shipping_fax_number = _parse_shipping_fax_number(
-            d.pop("ShippingFaxNumber", UNSET)
-        )
+        shipping_fax_number = _parse_shipping_fax_number(d.pop("ShippingFaxNumber", None))
 
-        def _parse_shipping_country(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_shipping_country(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        shipping_country = _parse_shipping_country(d.pop("ShippingCountry", UNSET))
+        shipping_country = _parse_shipping_country(d.pop("ShippingCountry", None))
 
-        def _parse_shipping_state(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_shipping_state(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        shipping_state = _parse_shipping_state(d.pop("ShippingState", UNSET))
+        shipping_state = _parse_shipping_state(d.pop("ShippingState", None))
 
-        def _parse_asset_service_notes(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_asset_service_notes(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        asset_service_notes = _parse_asset_service_notes(
-            d.pop("AssetServiceNotes", UNSET)
-        )
+        asset_service_notes = _parse_asset_service_notes(d.pop("AssetServiceNotes", None))
 
-        def _parse_service_option_service_code(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_service_option_service_code(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
         service_option_service_code = _parse_service_option_service_code(
-            d.pop("ServiceOptionServiceCode", UNSET)
+            d.pop("ServiceOptionServiceCode", None)
         )
 
         qualer_api_models_report_datasets_to_service_order_item_response = cls(
@@ -2422,13 +2205,11 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
             service_option_service_code=service_option_service_code,
         )
 
-        qualer_api_models_report_datasets_to_service_order_item_response.additional_properties = (
-            d
-        )
+        qualer_api_models_report_datasets_to_service_order_item_response.additional_properties = d
         return qualer_api_models_report_datasets_to_service_order_item_response
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

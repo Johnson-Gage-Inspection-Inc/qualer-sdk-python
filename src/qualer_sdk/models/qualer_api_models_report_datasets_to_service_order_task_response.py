@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderTaskResponse")
 
@@ -13,27 +11,27 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderTaskResponse"
 class QualerApiModelsReportDatasetsToServiceOrderTaskResponse:
     """
     Attributes:
-        task_name (Union[None, Unset, str]):
-        task_order (Union[None, Unset, int]):
-        task_details (Union[None, Unset, str]):
-        time_spent (Union[None, Unset, float]):
-        time_spent_hours (Union[None, Unset, float]):
-        time_spent_minutes (Union[None, Unset, float]):
-        price (Union[None, Unset, float]):
-        is_hourly (Union[None, Unset, bool]):
+        task_name (Optional[str]):
+        task_order (Optional[int]):
+        task_details (Optional[str]):
+        time_spent (Optional[float]):
+        time_spent_hours (Optional[float]):
+        time_spent_minutes (Optional[float]):
+        price (Optional[float]):
+        is_hourly (Optional[bool]):
     """
 
-    task_name: Union[None, Unset, str] = UNSET
-    task_order: Union[None, Unset, int] = UNSET
-    task_details: Union[None, Unset, str] = UNSET
-    time_spent: Union[None, Unset, float] = UNSET
-    time_spent_hours: Union[None, Unset, float] = UNSET
-    time_spent_minutes: Union[None, Unset, float] = UNSET
-    price: Union[None, Unset, float] = UNSET
-    is_hourly: Union[None, Unset, bool] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    task_name: Optional[str] = None
+    task_order: Optional[int] = None
+    task_details: Optional[str] = None
+    time_spent: Optional[float] = None
+    time_spent_hours: Optional[float] = None
+    time_spent_minutes: Optional[float] = None
+    price: Optional[float] = None
+    is_hourly: Optional[bool] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         task_name = self.task_name
 
         task_order = self.task_order
@@ -50,24 +48,24 @@ class QualerApiModelsReportDatasetsToServiceOrderTaskResponse:
 
         is_hourly = self.is_hourly
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if task_name is not UNSET:
+        if task_name is not None:
             field_dict["TaskName"] = task_name
-        if task_order is not UNSET:
+        if task_order is not None:
             field_dict["TaskOrder"] = task_order
-        if task_details is not UNSET:
+        if task_details is not None:
             field_dict["TaskDetails"] = task_details
-        if time_spent is not UNSET:
+        if time_spent is not None:
             field_dict["TimeSpent"] = time_spent
-        if time_spent_hours is not UNSET:
+        if time_spent_hours is not None:
             field_dict["TimeSpentHours"] = time_spent_hours
-        if time_spent_minutes is not UNSET:
+        if time_spent_minutes is not None:
             field_dict["TimeSpentMinutes"] = time_spent_minutes
-        if price is not UNSET:
+        if price is not None:
             field_dict["Price"] = price
-        if is_hourly is not UNSET:
+        if is_hourly is not None:
             field_dict["IsHourly"] = is_hourly
 
         return field_dict
@@ -75,21 +73,21 @@ class QualerApiModelsReportDatasetsToServiceOrderTaskResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        task_name = d.pop("TaskName", UNSET)
+        task_name = d.pop("TaskName", None)
 
-        task_order = d.pop("TaskOrder", UNSET)
+        task_order = d.pop("TaskOrder", None)
 
-        task_details = d.pop("TaskDetails", UNSET)
+        task_details = d.pop("TaskDetails", None)
 
-        time_spent = d.pop("TimeSpent", UNSET)
+        time_spent = d.pop("TimeSpent", None)
 
-        time_spent_hours = d.pop("TimeSpentHours", UNSET)
+        time_spent_hours = d.pop("TimeSpentHours", None)
 
-        time_spent_minutes = d.pop("TimeSpentMinutes", UNSET)
+        time_spent_minutes = d.pop("TimeSpentMinutes", None)
 
-        price = d.pop("Price", UNSET)
+        price = d.pop("Price", None)
 
-        is_hourly = d.pop("IsHourly", UNSET)
+        is_hourly = d.pop("IsHourly", None)
 
         qualer_api_models_report_datasets_to_service_order_task_response = cls(
             task_name=task_name,
@@ -102,13 +100,11 @@ class QualerApiModelsReportDatasetsToServiceOrderTaskResponse:
             is_hourly=is_hourly,
         )
 
-        qualer_api_models_report_datasets_to_service_order_task_response.additional_properties = (
-            d
-        )
+        qualer_api_models_report_datasets_to_service_order_task_response.additional_properties = d
         return qualer_api_models_report_datasets_to_service_order_task_response
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

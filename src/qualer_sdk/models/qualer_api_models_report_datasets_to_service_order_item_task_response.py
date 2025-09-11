@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderItemTaskResponse")
 
@@ -13,35 +11,35 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderItemTaskRespo
 class QualerApiModelsReportDatasetsToServiceOrderItemTaskResponse:
     """
     Attributes:
-        id (Union[None, Unset, int]):
-        service_order_item_id (Union[None, Unset, int]):
-        service_charge (Union[None, Unset, float]):
-        time_spent (Union[None, Unset, float]):
-        is_hourly (Union[None, Unset, bool]):
-        as_found_details (Union[None, Unset, str]):
-        as_left_details (Union[None, Unset, str]):
-        price (Union[None, Unset, float]):
-        task_name (Union[None, Unset, str]):
-        task_description (Union[None, Unset, str]):
-        level_description (Union[None, Unset, str]):
-        custom_text_value (Union[None, Unset, str]):
+        id (Optional[int]):
+        service_order_item_id (Optional[int]):
+        service_charge (Optional[float]):
+        time_spent (Optional[float]):
+        is_hourly (Optional[bool]):
+        as_found_details (Optional[str]):
+        as_left_details (Optional[str]):
+        price (Optional[float]):
+        task_name (Optional[str]):
+        task_description (Optional[str]):
+        level_description (Optional[str]):
+        custom_text_value (Optional[str]):
     """
 
-    id: Union[None, Unset, int] = UNSET
-    service_order_item_id: Union[None, Unset, int] = UNSET
-    service_charge: Union[None, Unset, float] = UNSET
-    time_spent: Union[None, Unset, float] = UNSET
-    is_hourly: Union[None, Unset, bool] = UNSET
-    as_found_details: Union[None, Unset, str] = UNSET
-    as_left_details: Union[None, Unset, str] = UNSET
-    price: Union[None, Unset, float] = UNSET
-    task_name: Union[None, Unset, str] = UNSET
-    task_description: Union[None, Unset, str] = UNSET
-    level_description: Union[None, Unset, str] = UNSET
-    custom_text_value: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    id: Optional[int] = None
+    service_order_item_id: Optional[int] = None
+    service_charge: Optional[float] = None
+    time_spent: Optional[float] = None
+    is_hourly: Optional[bool] = None
+    as_found_details: Optional[str] = None
+    as_left_details: Optional[str] = None
+    price: Optional[float] = None
+    task_name: Optional[str] = None
+    task_description: Optional[str] = None
+    level_description: Optional[str] = None
+    custom_text_value: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         id = self.id
 
         service_order_item_id = self.service_order_item_id
@@ -66,32 +64,32 @@ class QualerApiModelsReportDatasetsToServiceOrderItemTaskResponse:
 
         custom_text_value = self.custom_text_value
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if id is not UNSET:
+        if id is not None:
             field_dict["Id"] = id
-        if service_order_item_id is not UNSET:
+        if service_order_item_id is not None:
             field_dict["ServiceOrderItemId"] = service_order_item_id
-        if service_charge is not UNSET:
+        if service_charge is not None:
             field_dict["ServiceCharge"] = service_charge
-        if time_spent is not UNSET:
+        if time_spent is not None:
             field_dict["TimeSpent"] = time_spent
-        if is_hourly is not UNSET:
+        if is_hourly is not None:
             field_dict["IsHourly"] = is_hourly
-        if as_found_details is not UNSET:
+        if as_found_details is not None:
             field_dict["AsFoundDetails"] = as_found_details
-        if as_left_details is not UNSET:
+        if as_left_details is not None:
             field_dict["AsLeftDetails"] = as_left_details
-        if price is not UNSET:
+        if price is not None:
             field_dict["Price"] = price
-        if task_name is not UNSET:
+        if task_name is not None:
             field_dict["TaskName"] = task_name
-        if task_description is not UNSET:
+        if task_description is not None:
             field_dict["TaskDescription"] = task_description
-        if level_description is not UNSET:
+        if level_description is not None:
             field_dict["LevelDescription"] = level_description
-        if custom_text_value is not UNSET:
+        if custom_text_value is not None:
             field_dict["CustomTextValue"] = custom_text_value
 
         return field_dict
@@ -99,29 +97,29 @@ class QualerApiModelsReportDatasetsToServiceOrderItemTaskResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        id = d.pop("Id", UNSET)
+        id = d.pop("Id", None)
 
-        service_order_item_id = d.pop("ServiceOrderItemId", UNSET)
+        service_order_item_id = d.pop("ServiceOrderItemId", None)
 
-        service_charge = d.pop("ServiceCharge", UNSET)
+        service_charge = d.pop("ServiceCharge", None)
 
-        time_spent = d.pop("TimeSpent", UNSET)
+        time_spent = d.pop("TimeSpent", None)
 
-        is_hourly = d.pop("IsHourly", UNSET)
+        is_hourly = d.pop("IsHourly", None)
 
-        as_found_details = d.pop("AsFoundDetails", UNSET)
+        as_found_details = d.pop("AsFoundDetails", None)
 
-        as_left_details = d.pop("AsLeftDetails", UNSET)
+        as_left_details = d.pop("AsLeftDetails", None)
 
-        price = d.pop("Price", UNSET)
+        price = d.pop("Price", None)
 
-        task_name = d.pop("TaskName", UNSET)
+        task_name = d.pop("TaskName", None)
 
-        task_description = d.pop("TaskDescription", UNSET)
+        task_description = d.pop("TaskDescription", None)
 
-        level_description = d.pop("LevelDescription", UNSET)
+        level_description = d.pop("LevelDescription", None)
 
-        custom_text_value = d.pop("CustomTextValue", UNSET)
+        custom_text_value = d.pop("CustomTextValue", None)
 
         qualer_api_models_report_datasets_to_service_order_item_task_response = cls(
             id=id,
@@ -144,7 +142,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemTaskResponse:
         return qualer_api_models_report_datasets_to_service_order_item_task_response
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

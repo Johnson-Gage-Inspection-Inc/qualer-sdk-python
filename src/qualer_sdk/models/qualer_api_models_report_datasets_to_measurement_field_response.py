@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar, Union
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -7,7 +7,6 @@ from attrs import field as _attrs_field
 from ..models.qualer_api_models_report_datasets_to_measurement_field_response_batch_type import (
     QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType,
 )
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsReportDatasetsToMeasurementFieldResponse")
 
@@ -16,37 +15,35 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToMeasurementFieldResponse"
 class QualerApiModelsReportDatasetsToMeasurementFieldResponse:
     """
     Attributes:
-        field_id (Union[None, Unset, str]):
-        name (Union[None, Unset, str]):
-        value (Union[None, Unset, str]):
-        measurement_name (Union[None, Unset, str]):
-        measurement_set_id (Union[None, Unset, int]):
-        specification_name (Union[None, Unset, str]):
-        measurement_point_id (Union[None, Unset, int]):
-        batch_type (Union[None, Unset, QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType]):
-        service_order_item_id (Union[None, Unset, int]):
-        service_order_id (Union[None, Unset, int]):
-        batch_field_id (Union[None, Unset, str]):
-        point_field_id (Union[None, Unset, str]):
+        field_id (Optional[str]):
+        name (Optional[str]):
+        value (Optional[str]):
+        measurement_name (Optional[str]):
+        measurement_set_id (Optional[int]):
+        specification_name (Optional[str]):
+        measurement_point_id (Optional[int]):
+        batch_type (Optional[QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType]):
+        service_order_item_id (Optional[int]):
+        service_order_id (Optional[int]):
+        batch_field_id (Optional[str]):
+        point_field_id (Optional[str]):
     """
 
-    field_id: Union[None, Unset, str] = UNSET
-    name: Union[None, Unset, str] = UNSET
-    value: Union[None, Unset, str] = UNSET
-    measurement_name: Union[None, Unset, str] = UNSET
-    measurement_set_id: Union[None, Unset, int] = UNSET
-    specification_name: Union[None, Unset, str] = UNSET
-    measurement_point_id: Union[None, Unset, int] = UNSET
-    batch_type: Union[
-        None, Unset, QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType
-    ] = UNSET
-    service_order_item_id: Union[None, Unset, int] = UNSET
-    service_order_id: Union[None, Unset, int] = UNSET
-    batch_field_id: Union[None, Unset, str] = UNSET
-    point_field_id: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    field_id: Optional[str] = None
+    name: Optional[str] = None
+    value: Optional[str] = None
+    measurement_name: Optional[str] = None
+    measurement_set_id: Optional[int] = None
+    specification_name: Optional[str] = None
+    measurement_point_id: Optional[int] = None
+    batch_type: Optional["QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType"] = None
+    service_order_item_id: Optional[int] = None
+    service_order_id: Optional[int] = None
+    batch_field_id: Optional[str] = None
+    point_field_id: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         field_id = self.field_id
 
         name = self.name
@@ -61,8 +58,8 @@ class QualerApiModelsReportDatasetsToMeasurementFieldResponse:
 
         measurement_point_id = self.measurement_point_id
 
-        batch_type: Union[None, Unset, int] = UNSET
-        if self.batch_type and not isinstance(self.batch_type, Unset):
+        batch_type: Optional[int] = None
+        if self.batch_type:
             batch_type = self.batch_type.value
 
         service_order_item_id = self.service_order_item_id
@@ -73,32 +70,32 @@ class QualerApiModelsReportDatasetsToMeasurementFieldResponse:
 
         point_field_id = self.point_field_id
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if field_id is not UNSET:
+        if field_id is not None:
             field_dict["FieldId"] = field_id
-        if name is not UNSET:
+        if name is not None:
             field_dict["Name"] = name
-        if value is not UNSET:
+        if value is not None:
             field_dict["Value"] = value
-        if measurement_name is not UNSET:
+        if measurement_name is not None:
             field_dict["MeasurementName"] = measurement_name
-        if measurement_set_id is not UNSET:
+        if measurement_set_id is not None:
             field_dict["MeasurementSetId"] = measurement_set_id
-        if specification_name is not UNSET:
+        if specification_name is not None:
             field_dict["SpecificationName"] = specification_name
-        if measurement_point_id is not UNSET:
+        if measurement_point_id is not None:
             field_dict["MeasurementPointId"] = measurement_point_id
-        if batch_type is not UNSET:
+        if batch_type is not None:
             field_dict["BatchType"] = batch_type
-        if service_order_item_id is not UNSET:
+        if service_order_item_id is not None:
             field_dict["ServiceOrderItemId"] = service_order_item_id
-        if service_order_id is not UNSET:
+        if service_order_id is not None:
             field_dict["ServiceOrderId"] = service_order_id
-        if batch_field_id is not UNSET:
+        if batch_field_id is not None:
             field_dict["BatchFieldId"] = batch_field_id
-        if point_field_id is not UNSET:
+        if point_field_id is not None:
             field_dict["PointFieldId"] = point_field_id
 
         return field_dict
@@ -106,42 +103,40 @@ class QualerApiModelsReportDatasetsToMeasurementFieldResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        field_id = d.pop("FieldId", UNSET)
+        field_id = d.pop("FieldId", None)
 
-        name = d.pop("Name", UNSET)
+        name = d.pop("Name", None)
 
-        value = d.pop("Value", UNSET)
+        value = d.pop("Value", None)
 
-        measurement_name = d.pop("MeasurementName", UNSET)
+        measurement_name = d.pop("MeasurementName", None)
 
-        measurement_set_id = d.pop("MeasurementSetId", UNSET)
+        measurement_set_id = d.pop("MeasurementSetId", None)
 
-        specification_name = d.pop("SpecificationName", UNSET)
+        specification_name = d.pop("SpecificationName", None)
 
-        measurement_point_id = d.pop("MeasurementPointId", UNSET)
+        measurement_point_id = d.pop("MeasurementPointId", None)
 
-        _batch_type = d.pop("BatchType", UNSET)
+        _batch_type = d.pop("BatchType", None)
         batch_type: Union[
             None,
-            Unset,
+            None,
             QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType,
         ]
-        if isinstance(_batch_type, Unset):
-            batch_type = UNSET
+        if not _batch_type:
+            batch_type = None
         else:
-            batch_type = (
-                QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType(
-                    _batch_type
-                )
+            batch_type = QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType(
+                _batch_type
             )
 
-        service_order_item_id = d.pop("ServiceOrderItemId", UNSET)
+        service_order_item_id = d.pop("ServiceOrderItemId", None)
 
-        service_order_id = d.pop("ServiceOrderId", UNSET)
+        service_order_id = d.pop("ServiceOrderId", None)
 
-        batch_field_id = d.pop("BatchFieldId", UNSET)
+        batch_field_id = d.pop("BatchFieldId", None)
 
-        point_field_id = d.pop("PointFieldId", UNSET)
+        point_field_id = d.pop("PointFieldId", None)
 
         qualer_api_models_report_datasets_to_measurement_field_response = cls(
             field_id=field_id,
@@ -158,13 +153,11 @@ class QualerApiModelsReportDatasetsToMeasurementFieldResponse:
             point_field_id=point_field_id,
         )
 
-        qualer_api_models_report_datasets_to_measurement_field_response.additional_properties = (
-            d
-        )
+        qualer_api_models_report_datasets_to_measurement_field_response.additional_properties = d
         return qualer_api_models_report_datasets_to_measurement_field_response
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

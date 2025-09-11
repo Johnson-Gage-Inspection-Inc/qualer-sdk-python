@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsProductToProductApiResponseModel")
 
@@ -13,47 +11,47 @@ T = TypeVar("T", bound="QualerApiModelsProductToProductApiResponseModel")
 class QualerApiModelsProductToProductApiResponseModel:
     """
     Attributes:
-        product_id (Union[None, Unset, int]):
-        parent_product_id (Union[None, Unset, int]):
-        category_id (Union[None, Unset, int]):
-        manufacturer_id (Union[None, Unset, int]):
-        manufacturer_name (Union[None, Unset, str]):
-        product_name (Union[None, Unset, str]):
-        parent_product_name (Union[None, Unset, str]):
-        manufacturer_part_number (Union[None, Unset, str]):
-        product_description (Union[None, Unset, str]):
-        is_family (Union[None, Unset, bool]):
-        is_discontinued (Union[None, Unset, bool]):
-        is_stock_item (Union[None, Unset, bool]):
-        unit_sale_price (Union[None, Unset, float]):
-        supplier_information (Union[None, Unset, str]):
-        quantity_on_hand (Union[None, Unset, int]):
-        product_code (Union[None, Unset, str]):
-        category_name (Union[None, Unset, str]):
-        parent_category_name (Union[None, Unset, str]):
+        product_id (Optional[int]):
+        parent_product_id (Optional[int]):
+        category_id (Optional[int]):
+        manufacturer_id (Optional[int]):
+        manufacturer_name (Optional[str]):
+        product_name (Optional[str]):
+        parent_product_name (Optional[str]):
+        manufacturer_part_number (Optional[str]):
+        product_description (Optional[str]):
+        is_family (Optional[bool]):
+        is_discontinued (Optional[bool]):
+        is_stock_item (Optional[bool]):
+        unit_sale_price (Optional[float]):
+        supplier_information (Optional[str]):
+        quantity_on_hand (Optional[int]):
+        product_code (Optional[str]):
+        category_name (Optional[str]):
+        parent_category_name (Optional[str]):
     """
 
-    product_id: Union[None, Unset, int] = UNSET
-    parent_product_id: Union[None, Unset, int] = UNSET
-    category_id: Union[None, Unset, int] = UNSET
-    manufacturer_id: Union[None, Unset, int] = UNSET
-    manufacturer_name: Union[None, Unset, str] = UNSET
-    product_name: Union[None, Unset, str] = UNSET
-    parent_product_name: Union[None, Unset, str] = UNSET
-    manufacturer_part_number: Union[None, Unset, str] = UNSET
-    product_description: Union[None, Unset, str] = UNSET
-    is_family: Union[None, Unset, bool] = UNSET
-    is_discontinued: Union[None, Unset, bool] = UNSET
-    is_stock_item: Union[None, Unset, bool] = UNSET
-    unit_sale_price: Union[None, Unset, float] = UNSET
-    supplier_information: Union[None, Unset, str] = UNSET
-    quantity_on_hand: Union[None, Unset, int] = UNSET
-    product_code: Union[None, Unset, str] = UNSET
-    category_name: Union[None, Unset, str] = UNSET
-    parent_category_name: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    product_id: Optional[int] = None
+    parent_product_id: Optional[int] = None
+    category_id: Optional[int] = None
+    manufacturer_id: Optional[int] = None
+    manufacturer_name: Optional[str] = None
+    product_name: Optional[str] = None
+    parent_product_name: Optional[str] = None
+    manufacturer_part_number: Optional[str] = None
+    product_description: Optional[str] = None
+    is_family: Optional[bool] = None
+    is_discontinued: Optional[bool] = None
+    is_stock_item: Optional[bool] = None
+    unit_sale_price: Optional[float] = None
+    supplier_information: Optional[str] = None
+    quantity_on_hand: Optional[int] = None
+    product_code: Optional[str] = None
+    category_name: Optional[str] = None
+    parent_category_name: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         product_id = self.product_id
 
         parent_product_id = self.parent_product_id
@@ -90,44 +88,44 @@ class QualerApiModelsProductToProductApiResponseModel:
 
         parent_category_name = self.parent_category_name
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if product_id is not UNSET:
+        if product_id is not None:
             field_dict["ProductId"] = product_id
-        if parent_product_id is not UNSET:
+        if parent_product_id is not None:
             field_dict["ParentProductId"] = parent_product_id
-        if category_id is not UNSET:
+        if category_id is not None:
             field_dict["CategoryId"] = category_id
-        if manufacturer_id is not UNSET:
+        if manufacturer_id is not None:
             field_dict["ManufacturerId"] = manufacturer_id
-        if manufacturer_name is not UNSET:
+        if manufacturer_name is not None:
             field_dict["ManufacturerName"] = manufacturer_name
-        if product_name is not UNSET:
+        if product_name is not None:
             field_dict["ProductName"] = product_name
-        if parent_product_name is not UNSET:
+        if parent_product_name is not None:
             field_dict["ParentProductName"] = parent_product_name
-        if manufacturer_part_number is not UNSET:
+        if manufacturer_part_number is not None:
             field_dict["ManufacturerPartNumber"] = manufacturer_part_number
-        if product_description is not UNSET:
+        if product_description is not None:
             field_dict["ProductDescription"] = product_description
-        if is_family is not UNSET:
+        if is_family is not None:
             field_dict["IsFamily"] = is_family
-        if is_discontinued is not UNSET:
+        if is_discontinued is not None:
             field_dict["IsDiscontinued"] = is_discontinued
-        if is_stock_item is not UNSET:
+        if is_stock_item is not None:
             field_dict["IsStockItem"] = is_stock_item
-        if unit_sale_price is not UNSET:
+        if unit_sale_price is not None:
             field_dict["UnitSalePrice"] = unit_sale_price
-        if supplier_information is not UNSET:
+        if supplier_information is not None:
             field_dict["SupplierInformation"] = supplier_information
-        if quantity_on_hand is not UNSET:
+        if quantity_on_hand is not None:
             field_dict["QuantityOnHand"] = quantity_on_hand
-        if product_code is not UNSET:
+        if product_code is not None:
             field_dict["ProductCode"] = product_code
-        if category_name is not UNSET:
+        if category_name is not None:
             field_dict["CategoryName"] = category_name
-        if parent_category_name is not UNSET:
+        if parent_category_name is not None:
             field_dict["ParentCategoryName"] = parent_category_name
 
         return field_dict
@@ -135,41 +133,41 @@ class QualerApiModelsProductToProductApiResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        product_id = d.pop("ProductId", UNSET)
+        product_id = d.pop("ProductId", None)
 
-        parent_product_id = d.pop("ParentProductId", UNSET)
+        parent_product_id = d.pop("ParentProductId", None)
 
-        category_id = d.pop("CategoryId", UNSET)
+        category_id = d.pop("CategoryId", None)
 
-        manufacturer_id = d.pop("ManufacturerId", UNSET)
+        manufacturer_id = d.pop("ManufacturerId", None)
 
-        manufacturer_name = d.pop("ManufacturerName", UNSET)
+        manufacturer_name = d.pop("ManufacturerName", None)
 
-        product_name = d.pop("ProductName", UNSET)
+        product_name = d.pop("ProductName", None)
 
-        parent_product_name = d.pop("ParentProductName", UNSET)
+        parent_product_name = d.pop("ParentProductName", None)
 
-        manufacturer_part_number = d.pop("ManufacturerPartNumber", UNSET)
+        manufacturer_part_number = d.pop("ManufacturerPartNumber", None)
 
-        product_description = d.pop("ProductDescription", UNSET)
+        product_description = d.pop("ProductDescription", None)
 
-        is_family = d.pop("IsFamily", UNSET)
+        is_family = d.pop("IsFamily", None)
 
-        is_discontinued = d.pop("IsDiscontinued", UNSET)
+        is_discontinued = d.pop("IsDiscontinued", None)
 
-        is_stock_item = d.pop("IsStockItem", UNSET)
+        is_stock_item = d.pop("IsStockItem", None)
 
-        unit_sale_price = d.pop("UnitSalePrice", UNSET)
+        unit_sale_price = d.pop("UnitSalePrice", None)
 
-        supplier_information = d.pop("SupplierInformation", UNSET)
+        supplier_information = d.pop("SupplierInformation", None)
 
-        quantity_on_hand = d.pop("QuantityOnHand", UNSET)
+        quantity_on_hand = d.pop("QuantityOnHand", None)
 
-        product_code = d.pop("ProductCode", UNSET)
+        product_code = d.pop("ProductCode", None)
 
-        category_name = d.pop("CategoryName", UNSET)
+        category_name = d.pop("CategoryName", None)
 
-        parent_category_name = d.pop("ParentCategoryName", UNSET)
+        parent_category_name = d.pop("ParentCategoryName", None)
 
         qualer_api_models_product_to_product_api_response_model = cls(
             product_id=product_id,
@@ -192,13 +190,11 @@ class QualerApiModelsProductToProductApiResponseModel:
             parent_category_name=parent_category_name,
         )
 
-        qualer_api_models_product_to_product_api_response_model.additional_properties = (
-            d
-        )
+        qualer_api_models_product_to_product_api_response_model.additional_properties = d
         return qualer_api_models_product_to_product_api_response_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

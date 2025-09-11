@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderItemOptionResponse")
 
@@ -13,23 +11,23 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderItemOptionRes
 class QualerApiModelsReportDatasetsToServiceOrderItemOptionResponse:
     """
     Attributes:
-        service_order_item_id (Union[None, Unset, int]):
-        service_charge (Union[None, Unset, float]):
-        time_spent (Union[None, Unset, float]):
-        is_hourly (Union[None, Unset, bool]):
-        price (Union[None, Unset, float]):
-        task_name (Union[None, Unset, str]):
+        service_order_item_id (Optional[int]):
+        service_charge (Optional[float]):
+        time_spent (Optional[float]):
+        is_hourly (Optional[bool]):
+        price (Optional[float]):
+        task_name (Optional[str]):
     """
 
-    service_order_item_id: Union[None, Unset, int] = UNSET
-    service_charge: Union[None, Unset, float] = UNSET
-    time_spent: Union[None, Unset, float] = UNSET
-    is_hourly: Union[None, Unset, bool] = UNSET
-    price: Union[None, Unset, float] = UNSET
-    task_name: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    service_order_item_id: Optional[int] = None
+    service_charge: Optional[float] = None
+    time_spent: Optional[float] = None
+    is_hourly: Optional[bool] = None
+    price: Optional[float] = None
+    task_name: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         service_order_item_id = self.service_order_item_id
 
         service_charge = self.service_charge
@@ -42,20 +40,20 @@ class QualerApiModelsReportDatasetsToServiceOrderItemOptionResponse:
 
         task_name = self.task_name
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if service_order_item_id is not UNSET:
+        if service_order_item_id is not None:
             field_dict["ServiceOrderItemId"] = service_order_item_id
-        if service_charge is not UNSET:
+        if service_charge is not None:
             field_dict["ServiceCharge"] = service_charge
-        if time_spent is not UNSET:
+        if time_spent is not None:
             field_dict["TimeSpent"] = time_spent
-        if is_hourly is not UNSET:
+        if is_hourly is not None:
             field_dict["IsHourly"] = is_hourly
-        if price is not UNSET:
+        if price is not None:
             field_dict["Price"] = price
-        if task_name is not UNSET:
+        if task_name is not None:
             field_dict["TaskName"] = task_name
 
         return field_dict
@@ -63,17 +61,17 @@ class QualerApiModelsReportDatasetsToServiceOrderItemOptionResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        service_order_item_id = d.pop("ServiceOrderItemId", UNSET)
+        service_order_item_id = d.pop("ServiceOrderItemId", None)
 
-        service_charge = d.pop("ServiceCharge", UNSET)
+        service_charge = d.pop("ServiceCharge", None)
 
-        time_spent = d.pop("TimeSpent", UNSET)
+        time_spent = d.pop("TimeSpent", None)
 
-        is_hourly = d.pop("IsHourly", UNSET)
+        is_hourly = d.pop("IsHourly", None)
 
-        price = d.pop("Price", UNSET)
+        price = d.pop("Price", None)
 
-        task_name = d.pop("TaskName", UNSET)
+        task_name = d.pop("TaskName", None)
 
         qualer_api_models_report_datasets_to_service_order_item_option_response = cls(
             service_order_item_id=service_order_item_id,
@@ -90,7 +88,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemOptionResponse:
         return qualer_api_models_report_datasets_to_service_order_item_option_response
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

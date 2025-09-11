@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_to_update_measurement_batch_response_model import (
@@ -12,37 +10,35 @@ if TYPE_CHECKING:
     )
 
 
-T = TypeVar(
-    "T", bound="QualerApiModelsMeasurementsToUpdateMeasurementFormResponseModel"
-)
+T = TypeVar("T", bound="QualerApiModelsMeasurementsToUpdateMeasurementFormResponseModel")
 
 
 @_attrs_define
 class QualerApiModelsMeasurementsToUpdateMeasurementFormResponseModel:
     """
     Attributes:
-        measurement_batches (Union[None, Unset, list['QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel']]):
+        measurement_batches (Optional[List['QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel']]):
     """
 
     measurement_batches: Union[
         None,
-        Unset,
-        list["QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel"],
-    ] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+        None,
+        List["QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel"],
+    ] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
-        measurement_batches: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.measurement_batches and not isinstance(self.measurement_batches, Unset):
+    def to_dict(self) -> Dict[str, Any]:
+        measurement_batches: Optional[List[Dict[str, Any]]] = None
+        if self.measurement_batches:
             measurement_batches = []
             for measurement_batches_item_data in self.measurement_batches:
                 measurement_batches_item = measurement_batches_item_data.to_dict()
                 measurement_batches.append(measurement_batches_item)
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if measurement_batches is not UNSET:
+        if measurement_batches is not None:
             field_dict["MeasurementBatches"] = measurement_batches
 
         return field_dict
@@ -55,10 +51,12 @@ class QualerApiModelsMeasurementsToUpdateMeasurementFormResponseModel:
 
         d = dict(src_dict)
         measurement_batches = []
-        _measurement_batches = d.pop("MeasurementBatches", UNSET)
+        _measurement_batches = d.pop("MeasurementBatches", None)
         for measurement_batches_item_data in _measurement_batches or []:
-            measurement_batches_item = QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel.from_dict(
-                measurement_batches_item_data
+            measurement_batches_item = (
+                QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel.from_dict(
+                    measurement_batches_item_data
+                )
             )
 
             measurement_batches.append(measurement_batches_item)
@@ -73,7 +71,7 @@ class QualerApiModelsMeasurementsToUpdateMeasurementFormResponseModel:
         return qualer_api_models_measurements_to_update_measurement_form_response_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

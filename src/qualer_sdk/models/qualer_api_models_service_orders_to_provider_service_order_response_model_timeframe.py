@@ -1,9 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe(
-    str, Enum
-):
+class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe(str, Enum):
     ASSOONASPOSSIBLE = "AsSoonAsPossible"
     BEFOREDATE = "BeforeDate"
     ONDATETIME = "OnDateTime"

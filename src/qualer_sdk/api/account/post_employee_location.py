@@ -1,13 +1,11 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.post_employee_location_response_200 import (
-    PostEmployeeLocationResponse200,
-)
+from ...models.post_employee_location_response_200 import PostEmployeeLocationResponse200
 from ...models.qualer_api_models_employees_from_employee_location_model import (
     QualerApiModelsEmployeesFromEmployeeLocationModel,
 )
@@ -17,10 +15,10 @@ from ...types import Response
 def _get_kwargs(
     *,
     body: QualerApiModelsEmployeesFromEmployeeLocationModel,
-) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+) -> Dict[str, Any]:
+    headers: Dict[str, Any] = {}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "post",
         "url": "/api/user/location",
     }

@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union, cast
+from typing import Any, Dict, Optional, Union, cast
 
 import httpx
 
@@ -17,10 +17,10 @@ from ...types import Response
 def _get_kwargs(
     *,
     body: QualerApiModelsEmployeesFromCreateEmployeeModel,
-) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+) -> Dict[str, Any]:
+    headers: Dict[str, Any] = {}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "post",
         "url": "/api/employees",
     }
@@ -37,9 +37,7 @@ def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
 ) -> Optional[Union[Any, QualerApiModelsEmployeesToCreatedEmployeeResponse]]:
     if response.status_code == 201:
-        response_201 = QualerApiModelsEmployeesToCreatedEmployeeResponse.from_dict(
-            response.json()
-        )
+        response_201 = QualerApiModelsEmployeesToCreatedEmployeeResponse.from_dict(response.json())
 
         return response_201
     if response.status_code == 400:

@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsMeasurementsFromCreateMeasurementFieldModel")
 
@@ -13,21 +11,21 @@ T = TypeVar("T", bound="QualerApiModelsMeasurementsFromCreateMeasurementFieldMod
 class QualerApiModelsMeasurementsFromCreateMeasurementFieldModel:
     """
     Attributes:
-        field_id (Union[None, Unset, str]):
-        valid_values (Union[None, Unset, str]):
-        name (Union[None, Unset, str]):
-        type_ (Union[None, Unset, str]):
-        value (Union[None, Unset, str]):
+        field_id (Optional[str]):
+        valid_values (Optional[str]):
+        name (Optional[str]):
+        type_ (Optional[str]):
+        value (Optional[str]):
     """
 
-    field_id: Union[None, Unset, str] = UNSET
-    valid_values: Union[None, Unset, str] = UNSET
-    name: Union[None, Unset, str] = UNSET
-    type_: Union[None, Unset, str] = UNSET
-    value: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    field_id: Optional[str] = None
+    valid_values: Optional[str] = None
+    name: Optional[str] = None
+    type_: Optional[str] = None
+    value: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         field_id = self.field_id
 
         valid_values = self.valid_values
@@ -38,18 +36,18 @@ class QualerApiModelsMeasurementsFromCreateMeasurementFieldModel:
 
         value = self.value
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if field_id is not UNSET:
+        if field_id is not None:
             field_dict["FieldId"] = field_id
-        if valid_values is not UNSET:
+        if valid_values is not None:
             field_dict["ValidValues"] = valid_values
-        if name is not UNSET:
+        if name is not None:
             field_dict["Name"] = name
-        if type_ is not UNSET:
+        if type_ is not None:
             field_dict["Type"] = type_
-        if value is not UNSET:
+        if value is not None:
             field_dict["Value"] = value
 
         return field_dict
@@ -57,15 +55,15 @@ class QualerApiModelsMeasurementsFromCreateMeasurementFieldModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        field_id = d.pop("FieldId", UNSET)
+        field_id = d.pop("FieldId", None)
 
-        valid_values = d.pop("ValidValues", UNSET)
+        valid_values = d.pop("ValidValues", None)
 
-        name = d.pop("Name", UNSET)
+        name = d.pop("Name", None)
 
-        type_ = d.pop("Type", UNSET)
+        type_ = d.pop("Type", None)
 
-        value = d.pop("Value", UNSET)
+        value = d.pop("Value", None)
 
         qualer_api_models_measurements_from_create_measurement_field_model = cls(
             field_id=field_id,
@@ -75,13 +73,11 @@ class QualerApiModelsMeasurementsFromCreateMeasurementFieldModel:
             value=value,
         )
 
-        qualer_api_models_measurements_from_create_measurement_field_model.additional_properties = (
-            d
-        )
+        qualer_api_models_measurements_from_create_measurement_field_model.additional_properties = d
         return qualer_api_models_measurements_from_create_measurement_field_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

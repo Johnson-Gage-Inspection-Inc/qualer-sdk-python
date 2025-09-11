@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
@@ -18,10 +18,10 @@ def _get_kwargs(
     service_order_id: int,
     *,
     body: QualerApiModelsServiceOrdersFromAppendTrackingNumberModel,
-) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+) -> Dict[str, Any]:
+    headers: Dict[str, Any] = {}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "put",
         "url": f"/api/service/workorders/{service_order_id}/shipments/trackingnumber",
     }
@@ -38,9 +38,7 @@ def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
 ) -> Optional[AppendShipmentTrackingNumberResponse200]:
     if response.status_code == 200:
-        response_200 = AppendShipmentTrackingNumberResponse200.from_dict(
-            response.json()
-        )
+        response_200 = AppendShipmentTrackingNumberResponse200.from_dict(response.json())
 
         return response_200
     if client.raise_on_unexpected_status:

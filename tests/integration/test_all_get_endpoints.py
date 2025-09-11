@@ -45,9 +45,7 @@ def discover_get_endpoints() -> List[Tuple[str, Any]]:
 
                         function_module_name = f"{module_name}.{py_file.stem}"
                         try:
-                            function_module = __import__(
-                                function_module_name, fromlist=[""]
-                            )
+                            function_module = __import__(function_module_name, fromlist=[""])
 
                             # Look for 'sync' function (the main API function)
                             if hasattr(function_module, "sync"):
@@ -118,9 +116,7 @@ def authenticated_client():
 
 
 @pytest.mark.integration
-def test_get_endpoint_without_parameters(
-    authenticated_client, endpoint_name, func, sig_info
-):
+def test_get_endpoint_without_parameters(authenticated_client, endpoint_name, func, sig_info):
     """Test that GET endpoints that don't require parameters can be called successfully."""
 
     try:
@@ -158,9 +154,7 @@ def test_endpoint_discovery():
 
     # Should have at least some common endpoints
     assert any("assets" in name for name in endpoint_names), "No assets endpoints found"
-    assert any(
-        "clients" in name for name in endpoint_names
-    ), "No clients endpoints found"
+    assert any("clients" in name for name in endpoint_names), "No clients endpoints found"
 
 
 @pytest.mark.integration
@@ -187,9 +181,7 @@ def test_testable_endpoints_exist():
 
     # Log a few examples
     for i, (endpoint_name, _, sig_info) in enumerate(testable[:5]):
-        print(
-            f"  Example {i+1}: {endpoint_name} (optional params: {sig_info['optional_params']})"
-        )
+        print(f"  Example {i+1}: {endpoint_name} (optional params: {sig_info['optional_params']})")
 
 
 # Custom pytest collection to make parametrized tests work with fixtures

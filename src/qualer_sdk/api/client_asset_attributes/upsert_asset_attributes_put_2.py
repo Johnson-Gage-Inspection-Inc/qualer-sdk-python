@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 import httpx
 
@@ -17,11 +17,11 @@ from ...types import Response
 def _get_kwargs(
     asset_id: int,
     *,
-    body: list["QualerApiModelsCommonFromAttributeModel"],
-) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+    body: List["QualerApiModelsCommonFromAttributeModel"],
+) -> Dict[str, Any]:
+    headers: Dict[str, Any] = {}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "put",
         "url": f"/api/service/clients/assets/{asset_id}/attributes",
     }
@@ -65,12 +65,12 @@ def sync_detailed(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list["QualerApiModelsCommonFromAttributeModel"],
+    body: List["QualerApiModelsCommonFromAttributeModel"],
 ) -> Response[UpsertAssetAttributesPut2Response200]:
     """
     Args:
         asset_id (int):
-        body (list['QualerApiModelsCommonFromAttributeModel']):
+        body (List['QualerApiModelsCommonFromAttributeModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -96,12 +96,12 @@ def sync(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list["QualerApiModelsCommonFromAttributeModel"],
+    body: List["QualerApiModelsCommonFromAttributeModel"],
 ) -> Optional[UpsertAssetAttributesPut2Response200]:
     """
     Args:
         asset_id (int):
-        body (list['QualerApiModelsCommonFromAttributeModel']):
+        body (List['QualerApiModelsCommonFromAttributeModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -122,12 +122,12 @@ async def asyncio_detailed(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list["QualerApiModelsCommonFromAttributeModel"],
+    body: List["QualerApiModelsCommonFromAttributeModel"],
 ) -> Response[UpsertAssetAttributesPut2Response200]:
     """
     Args:
         asset_id (int):
-        body (list['QualerApiModelsCommonFromAttributeModel']):
+        body (List['QualerApiModelsCommonFromAttributeModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -151,12 +151,12 @@ async def asyncio(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list["QualerApiModelsCommonFromAttributeModel"],
+    body: List["QualerApiModelsCommonFromAttributeModel"],
 ) -> Optional[UpsertAssetAttributesPut2Response200]:
     """
     Args:
         asset_id (int):
-        body (list['QualerApiModelsCommonFromAttributeModel']):
+        body (List['QualerApiModelsCommonFromAttributeModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

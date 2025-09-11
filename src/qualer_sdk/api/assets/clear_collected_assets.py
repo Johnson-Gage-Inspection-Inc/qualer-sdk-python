@@ -1,23 +1,21 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.clear_collected_assets_response_200 import (
-    ClearCollectedAssetsResponse200,
-)
+from ...models.clear_collected_assets_response_200 import ClearCollectedAssetsResponse200
 from ...types import Response
 
 
 def _get_kwargs(
     *,
-    body: list[int],
-) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+    body: List[int],
+) -> Dict[str, Any]:
+    headers: Dict[str, Any] = {}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "put",
         "url": "/api/assets/collection/remove",
     }
@@ -57,7 +55,7 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list[int],
+    body: List[int],
 ) -> Response[ClearCollectedAssetsResponse200]:
     """ClearCollectedAssets(int[] assetIds)
 
@@ -66,7 +64,7 @@ def sync_detailed(
     [] removes all assets from QuickCollection
 
     Args:
-        body (list[int]):
+        body (List[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -90,7 +88,7 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list[int],
+    body: List[int],
 ) -> Optional[ClearCollectedAssetsResponse200]:
     """ClearCollectedAssets(int[] assetIds)
 
@@ -99,7 +97,7 @@ def sync(
     [] removes all assets from QuickCollection
 
     Args:
-        body (list[int]):
+        body (List[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -118,7 +116,7 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list[int],
+    body: List[int],
 ) -> Response[ClearCollectedAssetsResponse200]:
     """ClearCollectedAssets(int[] assetIds)
 
@@ -127,7 +125,7 @@ async def asyncio_detailed(
     [] removes all assets from QuickCollection
 
     Args:
-        body (list[int]):
+        body (List[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -149,7 +147,7 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list[int],
+    body: List[int],
 ) -> Optional[ClearCollectedAssetsResponse200]:
     """ClearCollectedAssets(int[] assetIds)
 
@@ -158,7 +156,7 @@ async def asyncio(
     [] removes all assets from QuickCollection
 
     Args:
-        body (list[int]):
+        body (List[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

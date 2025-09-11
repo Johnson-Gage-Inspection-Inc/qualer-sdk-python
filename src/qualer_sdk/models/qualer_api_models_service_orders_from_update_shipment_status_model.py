@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel")
 
@@ -13,19 +11,19 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromUpdateShipmentStatusMode
 class QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel:
     """
     Attributes:
-        shipment_status (Union[None, Unset, str]):
+        shipment_status (Optional[str]):
     """
 
-    shipment_status: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    shipment_status: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         shipment_status = self.shipment_status
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if shipment_status is not UNSET:
+        if shipment_status is not None:
             field_dict["ShipmentStatus"] = shipment_status
 
         return field_dict
@@ -33,19 +31,17 @@ class QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        shipment_status = d.pop("ShipmentStatus", UNSET)
+        shipment_status = d.pop("ShipmentStatus", None)
 
         qualer_api_models_service_orders_from_update_shipment_status_model = cls(
             shipment_status=shipment_status,
         )
 
-        qualer_api_models_service_orders_from_update_shipment_status_model.additional_properties = (
-            d
-        )
+        qualer_api_models_service_orders_from_update_shipment_status_model.additional_properties = d
         return qualer_api_models_service_orders_from_update_shipment_status_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

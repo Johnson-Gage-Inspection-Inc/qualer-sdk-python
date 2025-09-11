@@ -1,12 +1,10 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union, cast
+from typing import Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderResponse")
 
@@ -15,353 +13,353 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderResponse")
 class QualerApiModelsReportDatasetsToServiceOrderResponse:
     """
     Attributes:
-        guid (Union[None, Unset, str]):
-        account_number (Union[None, Unset, str]):
-        service_order_number (Union[None, Unset, int]):
-        service_order_number_text (Union[None, Unset, str]):
-        number_of_instruments (Union[None, Unset, int]):
-        parts_discount_total (Union[None, Unset, float]):
-        po_number (Union[None, Unset, str]):
-        secondary_po (Union[None, Unset, str]):
-        location (Union[None, Unset, str]):
-        shipped_date (Union[None, Unset, datetime.datetime]):
-        payment_terms (Union[None, Unset, int]):
-        site_access_notes (Union[None, Unset, str]):
-        grace_period (Union[None, Unset, int]):
-        trade_in_credit (Union[None, Unset, float]):
-        prepaid_credit (Union[None, Unset, float]):
-        interest_rate (Union[None, Unset, float]):
-        service_taxation (Union[None, Unset, int]):
-        service_order_id (Union[None, Unset, int]):
-        federal_number (Union[None, Unset, str]):
-        vendor_site_id (Union[None, Unset, int]):
-        vendor_site (Union[None, Unset, str]):
-        site_name (Union[None, Unset, str]):
-        site_code (Union[None, Unset, str]):
-        vendor_name (Union[None, Unset, str]):
-        domain_name (Union[None, Unset, str]):
-        client_company_domain (Union[None, Unset, str]):
-        provider_logo (Union[None, Unset, str]):
-        client_signature (Union[None, Unset, str]):
-        vendor_signature (Union[None, Unset, str]):
-        qr_code (Union[None, Unset, str]):
-        bar_code (Union[None, Unset, str]):
-        bar_code_string (Union[None, Unset, str]):
-        po_balance (Union[None, Unset, float]):
-        service_terms (Union[None, Unset, str]):
-        service_total (Union[None, Unset, float]):
-        repairs_total (Union[None, Unset, float]):
-        parts_total (Union[None, Unset, float]):
-        parts_total_before_discount (Union[None, Unset, float]):
-        effective_tax_rate (Union[None, Unset, float]):
-        tax_amount (Union[None, Unset, float]):
-        shipping_fee (Union[None, Unset, float]):
-        late_fee (Union[None, Unset, float]):
-        grand_total (Union[None, Unset, float]):
-        amount_paid (Union[None, Unset, float]):
-        balance_total (Union[None, Unset, float]):
-        travel_charge (Union[None, Unset, float]):
-        private_notes (Union[None, Unset, str]):
-        service_notes (Union[None, Unset, str]):
-        display_service_comments (Union[None, Unset, bool]):
-        display_part_repairs (Union[None, Unset, bool]):
-        print_separate_measurement (Union[None, Unset, bool]):
-        billing_address_1 (Union[None, Unset, str]):
-        billing_address_2 (Union[None, Unset, str]):
-        billing_first_name (Union[None, Unset, str]):
-        billing_last_name (Union[None, Unset, str]):
-        billing_company (Union[None, Unset, str]):
-        billing_country (Union[None, Unset, str]):
-        billing_city (Union[None, Unset, str]):
-        billing_state (Union[None, Unset, str]):
-        billing_zip (Union[None, Unset, str]):
-        billing_phone_number (Union[None, Unset, str]):
-        billing_fax_number (Union[None, Unset, str]):
-        billing_email (Union[None, Unset, str]):
-        shipping_address_1 (Union[None, Unset, str]):
-        shipping_address_2 (Union[None, Unset, str]):
-        shipping_first_name (Union[None, Unset, str]):
-        shipping_last_name (Union[None, Unset, str]):
-        shipping_email (Union[None, Unset, str]):
-        shipping_company (Union[None, Unset, str]):
-        shipping_city (Union[None, Unset, str]):
-        shipping_zip (Union[None, Unset, str]):
-        shipping_phone_number (Union[None, Unset, str]):
-        shipping_fax_number (Union[None, Unset, str]):
-        shipping_country (Union[None, Unset, str]):
-        shipping_state (Union[None, Unset, str]):
-        shipping_method (Union[None, Unset, str]):
-        return_shipping_method (Union[None, Unset, str]):
-        tracking_number (Union[None, Unset, str]):
-        provider_billing_address_1 (Union[None, Unset, str]):
-        provider_billing_address_2 (Union[None, Unset, str]):
-        provider_billing_first_name (Union[None, Unset, str]):
-        provider_billing_last_name (Union[None, Unset, str]):
-        provider_billing_email (Union[None, Unset, str]):
-        provider_billing_company (Union[None, Unset, str]):
-        provider_billing_city (Union[None, Unset, str]):
-        provider_billing_zip (Union[None, Unset, str]):
-        provider_billing_phone_number (Union[None, Unset, str]):
-        provider_billing_country (Union[None, Unset, str]):
-        provider_billing_state (Union[None, Unset, str]):
-        provider_billing_fax_number (Union[None, Unset, str]):
-        provider_shipping_address_1 (Union[None, Unset, str]):
-        provider_shipping_address_2 (Union[None, Unset, str]):
-        provider_shipping_first_name (Union[None, Unset, str]):
-        provider_shipping_last_name (Union[None, Unset, str]):
-        provider_shipping_email (Union[None, Unset, str]):
-        provider_shipping_company (Union[None, Unset, str]):
-        provider_shipping_city (Union[None, Unset, str]):
-        provider_shipping_zip (Union[None, Unset, str]):
-        provider_shipping_phone_number (Union[None, Unset, str]):
-        provider_shipping_country (Union[None, Unset, str]):
-        provider_shipping_state (Union[None, Unset, str]):
-        provider_shipping_fax_number (Union[None, Unset, str]):
-        culture_name (Union[None, Unset, str]):
-        vendor_company_id (Union[None, Unset, int]):
-        client_vendor_id (Union[None, Unset, int]):
-        sign_off_date (Union[None, Unset, datetime.datetime]):
-        quality_control_date (Union[None, Unset, datetime.datetime]):
-        client_sign_off_on (Union[None, Unset, datetime.datetime]):
-        client_sign_off_by_name (Union[None, Unset, str]):
-        client_signed_on (Union[None, Unset, datetime.datetime]):
-        client_sticker_notes (Union[None, Unset, str]):
-        asset_sticker_notes (Union[None, Unset, str]):
-        order_sticker_notes (Union[None, Unset, str]):
-        quality_control_name (Union[None, Unset, str]):
-        fulfilled_by_name (Union[None, Unset, str]):
-        sign_off_name (Union[None, Unset, str]):
-        display_as_found (Union[None, Unset, bool]):
-        display_as_left (Union[None, Unset, bool]):
-        created_on (Union[None, Unset, datetime.datetime]):
-        invoiced_on (Union[None, Unset, datetime.datetime]):
-        submitted_on (Union[None, Unset, datetime.datetime]):
-        shipped_on (Union[None, Unset, datetime.datetime]):
-        completed_on (Union[None, Unset, datetime.datetime]):
-        accepted_on (Union[None, Unset, datetime.datetime]):
-        approved_on (Union[None, Unset, datetime.datetime]):
-        delivered_on (Union[None, Unset, datetime.datetime]):
-        paid_on (Union[None, Unset, datetime.datetime]):
-        cancelled_on (Union[None, Unset, datetime.datetime]):
-        fulfilled_on (Union[None, Unset, datetime.datetime]):
-        sign_off_on (Union[None, Unset, datetime.datetime]):
-        vendor_signed_on (Union[None, Unset, datetime.datetime]):
-        client_notes (Union[None, Unset, str]):
-        order_shipping_option (Union[None, Unset, int]):
-        shipment_status (Union[None, Unset, int]):
-        payment_status (Union[None, Unset, int]):
-        payment_option (Union[None, Unset, str]):
-        order_status (Union[None, Unset, int]):
-        created_by_name (Union[None, Unset, str]):
-        completed_by_name (Union[None, Unset, str]):
-        shipped_by_name (Union[None, Unset, str]):
-        accepted_by_name (Union[None, Unset, str]):
-        approve_by_name (Union[None, Unset, str]):
-        invoiced_by_name (Union[None, Unset, str]):
-        delivered_by_name (Union[None, Unset, str]):
-        paid_by_name (Union[None, Unset, str]):
-        cancelled_by_name (Union[None, Unset, str]):
-        sign_off_by_name (Union[None, Unset, str]):
-        owner_name (Union[None, Unset, str]):
-        owner_department (Union[None, Unset, str]):
-        assignee_name (Union[None, Unset, str]):
-        payment_due_on (Union[None, Unset, datetime.datetime]):
-        process_date_option (Union[None, Unset, int]):
-        desired_date (Union[None, Unset, datetime.datetime]):
-        deadline_date (Union[None, Unset, datetime.datetime]):
-        vendor_sign_off_on (Union[None, Unset, datetime.datetime]):
-        vendor_sign_off_by_name (Union[None, Unset, str]):
-        service_discount (Union[None, Unset, float]):
-        return_account (Union[None, Unset, str]):
-        business_hours_from (Union[None, Unset, datetime.datetime]):
-        business_hours_to (Union[None, Unset, datetime.datetime]):
-        client_company_alternative_names (Union[None, Unset, str]):
-        client_id (Union[None, Unset, int]):
-        client_class (Union[None, Unset, str]):
-        client_status (Union[None, Unset, str]):
-        client_invoicing (Union[None, Unset, str]):
-        client_standing (Union[None, Unset, str]):
-        client_category (Union[None, Unset, str]):
-        master_template_name (Union[None, Unset, str]):
-        client_site_code (Union[None, Unset, str]):
-        order_workflow_name (Union[None, Unset, str]):
-        request_workflow_name (Union[None, Unset, str]):
+        guid (Optional[str]):
+        account_number (Optional[str]):
+        service_order_number (Optional[int]):
+        service_order_number_text (Optional[str]):
+        number_of_instruments (Optional[int]):
+        parts_discount_total (Optional[float]):
+        po_number (Optional[str]):
+        secondary_po (Optional[str]):
+        location (Optional[str]):
+        shipped_date (Optional[datetime.datetime]):
+        payment_terms (Optional[int]):
+        site_access_notes (Optional[str]):
+        grace_period (Optional[int]):
+        trade_in_credit (Optional[float]):
+        prepaid_credit (Optional[float]):
+        interest_rate (Optional[float]):
+        service_taxation (Optional[int]):
+        service_order_id (Optional[int]):
+        federal_number (Optional[str]):
+        vendor_site_id (Optional[int]):
+        vendor_site (Optional[str]):
+        site_name (Optional[str]):
+        site_code (Optional[str]):
+        vendor_name (Optional[str]):
+        domain_name (Optional[str]):
+        client_company_domain (Optional[str]):
+        provider_logo (Optional[str]):
+        client_signature (Optional[str]):
+        vendor_signature (Optional[str]):
+        qr_code (Optional[str]):
+        bar_code (Optional[str]):
+        bar_code_string (Optional[str]):
+        po_balance (Optional[float]):
+        service_terms (Optional[str]):
+        service_total (Optional[float]):
+        repairs_total (Optional[float]):
+        parts_total (Optional[float]):
+        parts_total_before_discount (Optional[float]):
+        effective_tax_rate (Optional[float]):
+        tax_amount (Optional[float]):
+        shipping_fee (Optional[float]):
+        late_fee (Optional[float]):
+        grand_total (Optional[float]):
+        amount_paid (Optional[float]):
+        balance_total (Optional[float]):
+        travel_charge (Optional[float]):
+        private_notes (Optional[str]):
+        service_notes (Optional[str]):
+        display_service_comments (Optional[bool]):
+        display_part_repairs (Optional[bool]):
+        print_separate_measurement (Optional[bool]):
+        billing_address_1 (Optional[str]):
+        billing_address_2 (Optional[str]):
+        billing_first_name (Optional[str]):
+        billing_last_name (Optional[str]):
+        billing_company (Optional[str]):
+        billing_country (Optional[str]):
+        billing_city (Optional[str]):
+        billing_state (Optional[str]):
+        billing_zip (Optional[str]):
+        billing_phone_number (Optional[str]):
+        billing_fax_number (Optional[str]):
+        billing_email (Optional[str]):
+        shipping_address_1 (Optional[str]):
+        shipping_address_2 (Optional[str]):
+        shipping_first_name (Optional[str]):
+        shipping_last_name (Optional[str]):
+        shipping_email (Optional[str]):
+        shipping_company (Optional[str]):
+        shipping_city (Optional[str]):
+        shipping_zip (Optional[str]):
+        shipping_phone_number (Optional[str]):
+        shipping_fax_number (Optional[str]):
+        shipping_country (Optional[str]):
+        shipping_state (Optional[str]):
+        shipping_method (Optional[str]):
+        return_shipping_method (Optional[str]):
+        tracking_number (Optional[str]):
+        provider_billing_address_1 (Optional[str]):
+        provider_billing_address_2 (Optional[str]):
+        provider_billing_first_name (Optional[str]):
+        provider_billing_last_name (Optional[str]):
+        provider_billing_email (Optional[str]):
+        provider_billing_company (Optional[str]):
+        provider_billing_city (Optional[str]):
+        provider_billing_zip (Optional[str]):
+        provider_billing_phone_number (Optional[str]):
+        provider_billing_country (Optional[str]):
+        provider_billing_state (Optional[str]):
+        provider_billing_fax_number (Optional[str]):
+        provider_shipping_address_1 (Optional[str]):
+        provider_shipping_address_2 (Optional[str]):
+        provider_shipping_first_name (Optional[str]):
+        provider_shipping_last_name (Optional[str]):
+        provider_shipping_email (Optional[str]):
+        provider_shipping_company (Optional[str]):
+        provider_shipping_city (Optional[str]):
+        provider_shipping_zip (Optional[str]):
+        provider_shipping_phone_number (Optional[str]):
+        provider_shipping_country (Optional[str]):
+        provider_shipping_state (Optional[str]):
+        provider_shipping_fax_number (Optional[str]):
+        culture_name (Optional[str]):
+        vendor_company_id (Optional[int]):
+        client_vendor_id (Optional[int]):
+        sign_off_date (Optional[datetime.datetime]):
+        quality_control_date (Optional[datetime.datetime]):
+        client_sign_off_on (Optional[datetime.datetime]):
+        client_sign_off_by_name (Optional[str]):
+        client_signed_on (Optional[datetime.datetime]):
+        client_sticker_notes (Optional[str]):
+        asset_sticker_notes (Optional[str]):
+        order_sticker_notes (Optional[str]):
+        quality_control_name (Optional[str]):
+        fulfilled_by_name (Optional[str]):
+        sign_off_name (Optional[str]):
+        display_as_found (Optional[bool]):
+        display_as_left (Optional[bool]):
+        created_on (Optional[datetime.datetime]):
+        invoiced_on (Optional[datetime.datetime]):
+        submitted_on (Optional[datetime.datetime]):
+        shipped_on (Optional[datetime.datetime]):
+        completed_on (Optional[datetime.datetime]):
+        accepted_on (Optional[datetime.datetime]):
+        approved_on (Optional[datetime.datetime]):
+        delivered_on (Optional[datetime.datetime]):
+        paid_on (Optional[datetime.datetime]):
+        cancelled_on (Optional[datetime.datetime]):
+        fulfilled_on (Optional[datetime.datetime]):
+        sign_off_on (Optional[datetime.datetime]):
+        vendor_signed_on (Optional[datetime.datetime]):
+        client_notes (Optional[str]):
+        order_shipping_option (Optional[int]):
+        shipment_status (Optional[int]):
+        payment_status (Optional[int]):
+        payment_option (Optional[str]):
+        order_status (Optional[int]):
+        created_by_name (Optional[str]):
+        completed_by_name (Optional[str]):
+        shipped_by_name (Optional[str]):
+        accepted_by_name (Optional[str]):
+        approve_by_name (Optional[str]):
+        invoiced_by_name (Optional[str]):
+        delivered_by_name (Optional[str]):
+        paid_by_name (Optional[str]):
+        cancelled_by_name (Optional[str]):
+        sign_off_by_name (Optional[str]):
+        owner_name (Optional[str]):
+        owner_department (Optional[str]):
+        assignee_name (Optional[str]):
+        payment_due_on (Optional[datetime.datetime]):
+        process_date_option (Optional[int]):
+        desired_date (Optional[datetime.datetime]):
+        deadline_date (Optional[datetime.datetime]):
+        vendor_sign_off_on (Optional[datetime.datetime]):
+        vendor_sign_off_by_name (Optional[str]):
+        service_discount (Optional[float]):
+        return_account (Optional[str]):
+        business_hours_from (Optional[datetime.datetime]):
+        business_hours_to (Optional[datetime.datetime]):
+        client_company_alternative_names (Optional[str]):
+        client_id (Optional[int]):
+        client_class (Optional[str]):
+        client_status (Optional[str]):
+        client_invoicing (Optional[str]):
+        client_standing (Optional[str]):
+        client_category (Optional[str]):
+        master_template_name (Optional[str]):
+        client_site_code (Optional[str]):
+        order_workflow_name (Optional[str]):
+        request_workflow_name (Optional[str]):
     """
 
-    guid: Union[None, Unset, str] = UNSET
-    account_number: Union[None, Unset, str] = UNSET
-    service_order_number: Union[None, Unset, int] = UNSET
-    service_order_number_text: Union[None, Unset, str] = UNSET
-    number_of_instruments: Union[None, Unset, int] = UNSET
-    parts_discount_total: Union[None, Unset, float] = UNSET
-    po_number: Union[None, Unset, str] = UNSET
-    secondary_po: Union[None, Unset, str] = UNSET
-    location: Union[None, Unset, str] = UNSET
-    shipped_date: Union[None, Unset, datetime.datetime] = UNSET
-    payment_terms: Union[None, Unset, int] = UNSET
-    site_access_notes: Union[None, Unset, str] = UNSET
-    grace_period: Union[None, Unset, int] = UNSET
-    trade_in_credit: Union[None, Unset, float] = UNSET
-    prepaid_credit: Union[None, Unset, float] = UNSET
-    interest_rate: Union[None, Unset, float] = UNSET
-    service_taxation: Union[None, Unset, int] = UNSET
-    service_order_id: Union[None, Unset, int] = UNSET
-    federal_number: Union[None, Unset, str] = UNSET
-    vendor_site_id: Union[None, Unset, int] = UNSET
-    vendor_site: Union[None, Unset, str] = UNSET
-    site_name: Union[None, Unset, str] = UNSET
-    site_code: Union[None, Unset, str] = UNSET
-    vendor_name: Union[None, Unset, str] = UNSET
-    domain_name: Union[None, Unset, str] = UNSET
-    client_company_domain: Union[None, Unset, str] = UNSET
-    provider_logo: Union[None, Unset, str] = UNSET
-    client_signature: Union[None, Unset, str] = UNSET
-    vendor_signature: Union[None, Unset, str] = UNSET
-    qr_code: Union[None, Unset, str] = UNSET
-    bar_code: Union[None, Unset, str] = UNSET
-    bar_code_string: Union[None, Unset, str] = UNSET
-    po_balance: Union[None, Unset, float] = UNSET
-    service_terms: Union[None, Unset, str] = UNSET
-    service_total: Union[None, Unset, float] = UNSET
-    repairs_total: Union[None, Unset, float] = UNSET
-    parts_total: Union[None, Unset, float] = UNSET
-    parts_total_before_discount: Union[None, Unset, float] = UNSET
-    effective_tax_rate: Union[None, Unset, float] = UNSET
-    tax_amount: Union[None, Unset, float] = UNSET
-    shipping_fee: Union[None, Unset, float] = UNSET
-    late_fee: Union[None, Unset, float] = UNSET
-    grand_total: Union[None, Unset, float] = UNSET
-    amount_paid: Union[None, Unset, float] = UNSET
-    balance_total: Union[None, Unset, float] = UNSET
-    travel_charge: Union[None, Unset, float] = UNSET
-    private_notes: Union[None, Unset, str] = UNSET
-    service_notes: Union[None, Unset, str] = UNSET
-    display_service_comments: Union[None, Unset, bool] = UNSET
-    display_part_repairs: Union[None, Unset, bool] = UNSET
-    print_separate_measurement: Union[None, Unset, bool] = UNSET
-    billing_address_1: Union[None, Unset, str] = UNSET
-    billing_address_2: Union[None, Unset, str] = UNSET
-    billing_first_name: Union[None, Unset, str] = UNSET
-    billing_last_name: Union[None, Unset, str] = UNSET
-    billing_company: Union[None, Unset, str] = UNSET
-    billing_country: Union[None, Unset, str] = UNSET
-    billing_city: Union[None, Unset, str] = UNSET
-    billing_state: Union[None, Unset, str] = UNSET
-    billing_zip: Union[None, Unset, str] = UNSET
-    billing_phone_number: Union[None, Unset, str] = UNSET
-    billing_fax_number: Union[None, Unset, str] = UNSET
-    billing_email: Union[None, Unset, str] = UNSET
-    shipping_address_1: Union[None, Unset, str] = UNSET
-    shipping_address_2: Union[None, Unset, str] = UNSET
-    shipping_first_name: Union[None, Unset, str] = UNSET
-    shipping_last_name: Union[None, Unset, str] = UNSET
-    shipping_email: Union[None, Unset, str] = UNSET
-    shipping_company: Union[None, Unset, str] = UNSET
-    shipping_city: Union[None, Unset, str] = UNSET
-    shipping_zip: Union[None, Unset, str] = UNSET
-    shipping_phone_number: Union[None, Unset, str] = UNSET
-    shipping_fax_number: Union[None, Unset, str] = UNSET
-    shipping_country: Union[None, Unset, str] = UNSET
-    shipping_state: Union[None, Unset, str] = UNSET
-    shipping_method: Union[None, Unset, str] = UNSET
-    return_shipping_method: Union[None, Unset, str] = UNSET
-    tracking_number: Union[None, Unset, str] = UNSET
-    provider_billing_address_1: Union[None, Unset, str] = UNSET
-    provider_billing_address_2: Union[None, Unset, str] = UNSET
-    provider_billing_first_name: Union[None, Unset, str] = UNSET
-    provider_billing_last_name: Union[None, Unset, str] = UNSET
-    provider_billing_email: Union[None, Unset, str] = UNSET
-    provider_billing_company: Union[None, Unset, str] = UNSET
-    provider_billing_city: Union[None, Unset, str] = UNSET
-    provider_billing_zip: Union[None, Unset, str] = UNSET
-    provider_billing_phone_number: Union[None, Unset, str] = UNSET
-    provider_billing_country: Union[None, Unset, str] = UNSET
-    provider_billing_state: Union[None, Unset, str] = UNSET
-    provider_billing_fax_number: Union[None, Unset, str] = UNSET
-    provider_shipping_address_1: Union[None, Unset, str] = UNSET
-    provider_shipping_address_2: Union[None, Unset, str] = UNSET
-    provider_shipping_first_name: Union[None, Unset, str] = UNSET
-    provider_shipping_last_name: Union[None, Unset, str] = UNSET
-    provider_shipping_email: Union[None, Unset, str] = UNSET
-    provider_shipping_company: Union[None, Unset, str] = UNSET
-    provider_shipping_city: Union[None, Unset, str] = UNSET
-    provider_shipping_zip: Union[None, Unset, str] = UNSET
-    provider_shipping_phone_number: Union[None, Unset, str] = UNSET
-    provider_shipping_country: Union[None, Unset, str] = UNSET
-    provider_shipping_state: Union[None, Unset, str] = UNSET
-    provider_shipping_fax_number: Union[None, Unset, str] = UNSET
-    culture_name: Union[None, Unset, str] = UNSET
-    vendor_company_id: Union[None, Unset, int] = UNSET
-    client_vendor_id: Union[None, Unset, int] = UNSET
-    sign_off_date: Union[None, Unset, datetime.datetime] = UNSET
-    quality_control_date: Union[None, Unset, datetime.datetime] = UNSET
-    client_sign_off_on: Union[None, Unset, datetime.datetime] = UNSET
-    client_sign_off_by_name: Union[None, Unset, str] = UNSET
-    client_signed_on: Union[None, Unset, datetime.datetime] = UNSET
-    client_sticker_notes: Union[None, Unset, str] = UNSET
-    asset_sticker_notes: Union[None, Unset, str] = UNSET
-    order_sticker_notes: Union[None, Unset, str] = UNSET
-    quality_control_name: Union[None, Unset, str] = UNSET
-    fulfilled_by_name: Union[None, Unset, str] = UNSET
-    sign_off_name: Union[None, Unset, str] = UNSET
-    display_as_found: Union[None, Unset, bool] = UNSET
-    display_as_left: Union[None, Unset, bool] = UNSET
-    created_on: Union[None, Unset, datetime.datetime] = UNSET
-    invoiced_on: Union[None, Unset, datetime.datetime] = UNSET
-    submitted_on: Union[None, Unset, datetime.datetime] = UNSET
-    shipped_on: Union[None, Unset, datetime.datetime] = UNSET
-    completed_on: Union[None, Unset, datetime.datetime] = UNSET
-    accepted_on: Union[None, Unset, datetime.datetime] = UNSET
-    approved_on: Union[None, Unset, datetime.datetime] = UNSET
-    delivered_on: Union[None, Unset, datetime.datetime] = UNSET
-    paid_on: Union[None, Unset, datetime.datetime] = UNSET
-    cancelled_on: Union[None, Unset, datetime.datetime] = UNSET
-    fulfilled_on: Union[None, Unset, datetime.datetime] = UNSET
-    sign_off_on: Union[None, Unset, datetime.datetime] = UNSET
-    vendor_signed_on: Union[None, Unset, datetime.datetime] = UNSET
-    client_notes: Union[None, Unset, str] = UNSET
-    order_shipping_option: Union[None, Unset, int] = UNSET
-    shipment_status: Union[None, Unset, int] = UNSET
-    payment_status: Union[None, Unset, int] = UNSET
-    payment_option: Union[None, Unset, str] = UNSET
-    order_status: Union[None, Unset, int] = UNSET
-    created_by_name: Union[None, Unset, str] = UNSET
-    completed_by_name: Union[None, Unset, str] = UNSET
-    shipped_by_name: Union[None, Unset, str] = UNSET
-    accepted_by_name: Union[None, Unset, str] = UNSET
-    approve_by_name: Union[None, Unset, str] = UNSET
-    invoiced_by_name: Union[None, Unset, str] = UNSET
-    delivered_by_name: Union[None, Unset, str] = UNSET
-    paid_by_name: Union[None, Unset, str] = UNSET
-    cancelled_by_name: Union[None, Unset, str] = UNSET
-    sign_off_by_name: Union[None, Unset, str] = UNSET
-    owner_name: Union[None, Unset, str] = UNSET
-    owner_department: Union[None, Unset, str] = UNSET
-    assignee_name: Union[None, Unset, str] = UNSET
-    payment_due_on: Union[None, Unset, datetime.datetime] = UNSET
-    process_date_option: Union[None, Unset, int] = UNSET
-    desired_date: Union[None, Unset, datetime.datetime] = UNSET
-    deadline_date: Union[None, Unset, datetime.datetime] = UNSET
-    vendor_sign_off_on: Union[None, Unset, datetime.datetime] = UNSET
-    vendor_sign_off_by_name: Union[None, Unset, str] = UNSET
-    service_discount: Union[None, Unset, float] = UNSET
-    return_account: Union[None, Unset, str] = UNSET
-    business_hours_from: Union[None, Unset, datetime.datetime] = UNSET
-    business_hours_to: Union[None, Unset, datetime.datetime] = UNSET
-    client_company_alternative_names: Union[None, Unset, str] = UNSET
-    client_id: Union[None, Unset, int] = UNSET
-    client_class: Union[None, Unset, str] = UNSET
-    client_status: Union[None, Unset, str] = UNSET
-    client_invoicing: Union[None, Unset, str] = UNSET
-    client_standing: Union[None, Unset, str] = UNSET
-    client_category: Union[None, Unset, str] = UNSET
-    master_template_name: Union[None, Unset, str] = UNSET
-    client_site_code: Union[None, Unset, str] = UNSET
-    order_workflow_name: Union[None, Unset, str] = UNSET
-    request_workflow_name: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    guid: Optional[str] = None
+    account_number: Optional[str] = None
+    service_order_number: Optional[int] = None
+    service_order_number_text: Optional[str] = None
+    number_of_instruments: Optional[int] = None
+    parts_discount_total: Optional[float] = None
+    po_number: Optional[str] = None
+    secondary_po: Optional[str] = None
+    location: Optional[str] = None
+    shipped_date: Optional[datetime.datetime] = None
+    payment_terms: Optional[int] = None
+    site_access_notes: Optional[str] = None
+    grace_period: Optional[int] = None
+    trade_in_credit: Optional[float] = None
+    prepaid_credit: Optional[float] = None
+    interest_rate: Optional[float] = None
+    service_taxation: Optional[int] = None
+    service_order_id: Optional[int] = None
+    federal_number: Optional[str] = None
+    vendor_site_id: Optional[int] = None
+    vendor_site: Optional[str] = None
+    site_name: Optional[str] = None
+    site_code: Optional[str] = None
+    vendor_name: Optional[str] = None
+    domain_name: Optional[str] = None
+    client_company_domain: Optional[str] = None
+    provider_logo: Optional[str] = None
+    client_signature: Optional[str] = None
+    vendor_signature: Optional[str] = None
+    qr_code: Optional[str] = None
+    bar_code: Optional[str] = None
+    bar_code_string: Optional[str] = None
+    po_balance: Optional[float] = None
+    service_terms: Optional[str] = None
+    service_total: Optional[float] = None
+    repairs_total: Optional[float] = None
+    parts_total: Optional[float] = None
+    parts_total_before_discount: Optional[float] = None
+    effective_tax_rate: Optional[float] = None
+    tax_amount: Optional[float] = None
+    shipping_fee: Optional[float] = None
+    late_fee: Optional[float] = None
+    grand_total: Optional[float] = None
+    amount_paid: Optional[float] = None
+    balance_total: Optional[float] = None
+    travel_charge: Optional[float] = None
+    private_notes: Optional[str] = None
+    service_notes: Optional[str] = None
+    display_service_comments: Optional[bool] = None
+    display_part_repairs: Optional[bool] = None
+    print_separate_measurement: Optional[bool] = None
+    billing_address_1: Optional[str] = None
+    billing_address_2: Optional[str] = None
+    billing_first_name: Optional[str] = None
+    billing_last_name: Optional[str] = None
+    billing_company: Optional[str] = None
+    billing_country: Optional[str] = None
+    billing_city: Optional[str] = None
+    billing_state: Optional[str] = None
+    billing_zip: Optional[str] = None
+    billing_phone_number: Optional[str] = None
+    billing_fax_number: Optional[str] = None
+    billing_email: Optional[str] = None
+    shipping_address_1: Optional[str] = None
+    shipping_address_2: Optional[str] = None
+    shipping_first_name: Optional[str] = None
+    shipping_last_name: Optional[str] = None
+    shipping_email: Optional[str] = None
+    shipping_company: Optional[str] = None
+    shipping_city: Optional[str] = None
+    shipping_zip: Optional[str] = None
+    shipping_phone_number: Optional[str] = None
+    shipping_fax_number: Optional[str] = None
+    shipping_country: Optional[str] = None
+    shipping_state: Optional[str] = None
+    shipping_method: Optional[str] = None
+    return_shipping_method: Optional[str] = None
+    tracking_number: Optional[str] = None
+    provider_billing_address_1: Optional[str] = None
+    provider_billing_address_2: Optional[str] = None
+    provider_billing_first_name: Optional[str] = None
+    provider_billing_last_name: Optional[str] = None
+    provider_billing_email: Optional[str] = None
+    provider_billing_company: Optional[str] = None
+    provider_billing_city: Optional[str] = None
+    provider_billing_zip: Optional[str] = None
+    provider_billing_phone_number: Optional[str] = None
+    provider_billing_country: Optional[str] = None
+    provider_billing_state: Optional[str] = None
+    provider_billing_fax_number: Optional[str] = None
+    provider_shipping_address_1: Optional[str] = None
+    provider_shipping_address_2: Optional[str] = None
+    provider_shipping_first_name: Optional[str] = None
+    provider_shipping_last_name: Optional[str] = None
+    provider_shipping_email: Optional[str] = None
+    provider_shipping_company: Optional[str] = None
+    provider_shipping_city: Optional[str] = None
+    provider_shipping_zip: Optional[str] = None
+    provider_shipping_phone_number: Optional[str] = None
+    provider_shipping_country: Optional[str] = None
+    provider_shipping_state: Optional[str] = None
+    provider_shipping_fax_number: Optional[str] = None
+    culture_name: Optional[str] = None
+    vendor_company_id: Optional[int] = None
+    client_vendor_id: Optional[int] = None
+    sign_off_date: Optional[datetime.datetime] = None
+    quality_control_date: Optional[datetime.datetime] = None
+    client_sign_off_on: Optional[datetime.datetime] = None
+    client_sign_off_by_name: Optional[str] = None
+    client_signed_on: Optional[datetime.datetime] = None
+    client_sticker_notes: Optional[str] = None
+    asset_sticker_notes: Optional[str] = None
+    order_sticker_notes: Optional[str] = None
+    quality_control_name: Optional[str] = None
+    fulfilled_by_name: Optional[str] = None
+    sign_off_name: Optional[str] = None
+    display_as_found: Optional[bool] = None
+    display_as_left: Optional[bool] = None
+    created_on: Optional[datetime.datetime] = None
+    invoiced_on: Optional[datetime.datetime] = None
+    submitted_on: Optional[datetime.datetime] = None
+    shipped_on: Optional[datetime.datetime] = None
+    completed_on: Optional[datetime.datetime] = None
+    accepted_on: Optional[datetime.datetime] = None
+    approved_on: Optional[datetime.datetime] = None
+    delivered_on: Optional[datetime.datetime] = None
+    paid_on: Optional[datetime.datetime] = None
+    cancelled_on: Optional[datetime.datetime] = None
+    fulfilled_on: Optional[datetime.datetime] = None
+    sign_off_on: Optional[datetime.datetime] = None
+    vendor_signed_on: Optional[datetime.datetime] = None
+    client_notes: Optional[str] = None
+    order_shipping_option: Optional[int] = None
+    shipment_status: Optional[int] = None
+    payment_status: Optional[int] = None
+    payment_option: Optional[str] = None
+    order_status: Optional[int] = None
+    created_by_name: Optional[str] = None
+    completed_by_name: Optional[str] = None
+    shipped_by_name: Optional[str] = None
+    accepted_by_name: Optional[str] = None
+    approve_by_name: Optional[str] = None
+    invoiced_by_name: Optional[str] = None
+    delivered_by_name: Optional[str] = None
+    paid_by_name: Optional[str] = None
+    cancelled_by_name: Optional[str] = None
+    sign_off_by_name: Optional[str] = None
+    owner_name: Optional[str] = None
+    owner_department: Optional[str] = None
+    assignee_name: Optional[str] = None
+    payment_due_on: Optional[datetime.datetime] = None
+    process_date_option: Optional[int] = None
+    desired_date: Optional[datetime.datetime] = None
+    deadline_date: Optional[datetime.datetime] = None
+    vendor_sign_off_on: Optional[datetime.datetime] = None
+    vendor_sign_off_by_name: Optional[str] = None
+    service_discount: Optional[float] = None
+    return_account: Optional[str] = None
+    business_hours_from: Optional[datetime.datetime] = None
+    business_hours_to: Optional[datetime.datetime] = None
+    client_company_alternative_names: Optional[str] = None
+    client_id: Optional[int] = None
+    client_class: Optional[str] = None
+    client_status: Optional[str] = None
+    client_invoicing: Optional[str] = None
+    client_standing: Optional[str] = None
+    client_category: Optional[str] = None
+    master_template_name: Optional[str] = None
+    client_site_code: Optional[str] = None
+    order_workflow_name: Optional[str] = None
+    request_workflow_name: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         guid = self.guid
 
         account_number = self.account_number
@@ -380,9 +378,9 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
 
         location = self.location
 
-        shipped_date: Union[None, Unset, str]
-        if isinstance(self.shipped_date, Unset):
-            shipped_date = UNSET
+        shipped_date: Optional[str]
+        if not self.shipped_date:
+            shipped_date = None
         elif isinstance(self.shipped_date, datetime.datetime):
             shipped_date = self.shipped_date.isoformat()
         else:
@@ -578,23 +576,21 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
 
         client_vendor_id = self.client_vendor_id
 
-        sign_off_date: Union[None, Unset, str]
-        if isinstance(self.sign_off_date, Unset):
-            sign_off_date = UNSET
+        sign_off_date: Optional[str]
+        if not self.sign_off_date:
+            sign_off_date = None
         elif isinstance(self.sign_off_date, datetime.datetime):
             sign_off_date = self.sign_off_date.isoformat()
         else:
             sign_off_date = self.sign_off_date
 
-        quality_control_date: Union[None, Unset, str] = UNSET
-        if self.quality_control_date and not isinstance(
-            self.quality_control_date, Unset
-        ):
+        quality_control_date: Optional[str] = None
+        if self.quality_control_date and not isinstance(self.quality_control_date, None):
             quality_control_date = self.quality_control_date.isoformat()
 
-        client_sign_off_on: Union[None, Unset, str]
-        if isinstance(self.client_sign_off_on, Unset):
-            client_sign_off_on = UNSET
+        client_sign_off_on: Optional[str]
+        if not self.client_sign_off_on:
+            client_sign_off_on = None
         elif isinstance(self.client_sign_off_on, datetime.datetime):
             client_sign_off_on = self.client_sign_off_on.isoformat()
         else:
@@ -602,9 +598,9 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
 
         client_sign_off_by_name = self.client_sign_off_by_name
 
-        client_signed_on: Union[None, Unset, str]
-        if isinstance(self.client_signed_on, Unset):
-            client_signed_on = UNSET
+        client_signed_on: Optional[str]
+        if not self.client_signed_on:
+            client_signed_on = None
         elif isinstance(self.client_signed_on, datetime.datetime):
             client_signed_on = self.client_signed_on.isoformat()
         else:
@@ -626,109 +622,109 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
 
         display_as_left = self.display_as_left
 
-        created_on: Union[None, Unset, str] = UNSET
-        if self.created_on and not isinstance(self.created_on, Unset):
+        created_on: Optional[str] = None
+        if self.created_on:
             created_on = self.created_on.isoformat()
 
-        invoiced_on: Union[None, Unset, str]
-        if isinstance(self.invoiced_on, Unset):
-            invoiced_on = UNSET
+        invoiced_on: Optional[str]
+        if not self.invoiced_on:
+            invoiced_on = None
         elif isinstance(self.invoiced_on, datetime.datetime):
             invoiced_on = self.invoiced_on.isoformat()
         else:
             invoiced_on = self.invoiced_on
 
-        submitted_on: Union[None, Unset, str]
-        if isinstance(self.submitted_on, Unset):
-            submitted_on = UNSET
+        submitted_on: Optional[str]
+        if not self.submitted_on:
+            submitted_on = None
         elif isinstance(self.submitted_on, datetime.datetime):
             submitted_on = self.submitted_on.isoformat()
         else:
             submitted_on = self.submitted_on
 
-        shipped_on: Union[None, Unset, str]
-        if isinstance(self.shipped_on, Unset):
-            shipped_on = UNSET
+        shipped_on: Optional[str]
+        if not self.shipped_on:
+            shipped_on = None
         elif isinstance(self.shipped_on, datetime.datetime):
             shipped_on = self.shipped_on.isoformat()
         else:
             shipped_on = self.shipped_on
 
-        completed_on: Union[None, Unset, str]
-        if isinstance(self.completed_on, Unset):
-            completed_on = UNSET
+        completed_on: Optional[str]
+        if not self.completed_on:
+            completed_on = None
         elif isinstance(self.completed_on, datetime.datetime):
             completed_on = self.completed_on.isoformat()
         else:
             completed_on = self.completed_on
 
-        accepted_on: Union[None, Unset, str]
-        if isinstance(self.accepted_on, Unset):
-            accepted_on = UNSET
+        accepted_on: Optional[str]
+        if not self.accepted_on:
+            accepted_on = None
         elif isinstance(self.accepted_on, datetime.datetime):
             accepted_on = self.accepted_on.isoformat()
         else:
             accepted_on = self.accepted_on
 
-        approved_on: Union[None, Unset, str]
-        if isinstance(self.approved_on, Unset):
-            approved_on = UNSET
+        approved_on: Optional[str]
+        if not self.approved_on:
+            approved_on = None
         elif isinstance(self.approved_on, datetime.datetime):
             approved_on = self.approved_on.isoformat()
         else:
             approved_on = self.approved_on
 
-        delivered_on: Union[None, Unset, str]
-        if isinstance(self.delivered_on, Unset):
-            delivered_on = UNSET
+        delivered_on: Optional[str]
+        if not self.delivered_on:
+            delivered_on = None
         elif isinstance(self.delivered_on, datetime.datetime):
             delivered_on = self.delivered_on.isoformat()
         else:
             delivered_on = self.delivered_on
 
-        paid_on: Union[None, Unset, str]
-        if isinstance(self.paid_on, Unset):
-            paid_on = UNSET
+        paid_on: Optional[str]
+        if not self.paid_on:
+            paid_on = None
         elif isinstance(self.paid_on, datetime.datetime):
             paid_on = self.paid_on.isoformat()
         else:
             paid_on = self.paid_on
 
-        cancelled_on: Union[None, Unset, str]
-        if isinstance(self.cancelled_on, Unset):
-            cancelled_on = UNSET
+        cancelled_on: Optional[str]
+        if not self.cancelled_on:
+            cancelled_on = None
         elif isinstance(self.cancelled_on, datetime.datetime):
             cancelled_on = self.cancelled_on.isoformat()
         else:
             cancelled_on = self.cancelled_on
 
-        fulfilled_on: Union[None, Unset, str]
-        if isinstance(self.fulfilled_on, Unset):
-            fulfilled_on = UNSET
+        fulfilled_on: Optional[str]
+        if not self.fulfilled_on:
+            fulfilled_on = None
         elif isinstance(self.fulfilled_on, datetime.datetime):
             fulfilled_on = self.fulfilled_on.isoformat()
         else:
             fulfilled_on = self.fulfilled_on
 
-        sign_off_on: Union[None, Unset, str]
-        if isinstance(self.sign_off_on, Unset):
-            sign_off_on = UNSET
+        sign_off_on: Optional[str]
+        if not self.sign_off_on:
+            sign_off_on = None
         elif isinstance(self.sign_off_on, datetime.datetime):
             sign_off_on = self.sign_off_on.isoformat()
         else:
             sign_off_on = self.sign_off_on
 
-        vendor_signed_on: Union[None, Unset, str]
-        if isinstance(self.vendor_signed_on, Unset):
-            vendor_signed_on = UNSET
+        vendor_signed_on: Optional[str]
+        if not self.vendor_signed_on:
+            vendor_signed_on = None
         elif isinstance(self.vendor_signed_on, datetime.datetime):
             vendor_signed_on = self.vendor_signed_on.isoformat()
         else:
             vendor_signed_on = self.vendor_signed_on
 
-        client_notes: Union[None, Unset, str]
-        if isinstance(self.client_notes, Unset):
-            client_notes = UNSET
+        client_notes: Optional[str]
+        if not self.client_notes:
+            client_notes = None
         else:
             client_notes = self.client_notes
 
@@ -744,81 +740,81 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
 
         created_by_name = self.created_by_name
 
-        completed_by_name: Union[None, Unset, str]
-        if isinstance(self.completed_by_name, Unset):
-            completed_by_name = UNSET
+        completed_by_name: Optional[str]
+        if not self.completed_by_name:
+            completed_by_name = None
         else:
             completed_by_name = self.completed_by_name
 
-        shipped_by_name: Union[None, Unset, str]
-        if isinstance(self.shipped_by_name, Unset):
-            shipped_by_name = UNSET
+        shipped_by_name: Optional[str]
+        if not self.shipped_by_name:
+            shipped_by_name = None
         else:
             shipped_by_name = self.shipped_by_name
 
-        accepted_by_name: Union[None, Unset, str]
-        if isinstance(self.accepted_by_name, Unset):
-            accepted_by_name = UNSET
+        accepted_by_name: Optional[str]
+        if not self.accepted_by_name:
+            accepted_by_name = None
         else:
             accepted_by_name = self.accepted_by_name
 
-        approve_by_name: Union[None, Unset, str]
-        if isinstance(self.approve_by_name, Unset):
-            approve_by_name = UNSET
+        approve_by_name: Optional[str]
+        if not self.approve_by_name:
+            approve_by_name = None
         else:
             approve_by_name = self.approve_by_name
 
-        invoiced_by_name: Union[None, Unset, str]
-        if isinstance(self.invoiced_by_name, Unset):
-            invoiced_by_name = UNSET
+        invoiced_by_name: Optional[str]
+        if not self.invoiced_by_name:
+            invoiced_by_name = None
         else:
             invoiced_by_name = self.invoiced_by_name
 
-        delivered_by_name: Union[None, Unset, str]
-        if isinstance(self.delivered_by_name, Unset):
-            delivered_by_name = UNSET
+        delivered_by_name: Optional[str]
+        if not self.delivered_by_name:
+            delivered_by_name = None
         else:
             delivered_by_name = self.delivered_by_name
 
-        paid_by_name: Union[None, Unset, str]
-        if isinstance(self.paid_by_name, Unset):
-            paid_by_name = UNSET
+        paid_by_name: Optional[str]
+        if not self.paid_by_name:
+            paid_by_name = None
         else:
             paid_by_name = self.paid_by_name
 
-        cancelled_by_name: Union[None, Unset, str]
-        if isinstance(self.cancelled_by_name, Unset):
-            cancelled_by_name = UNSET
+        cancelled_by_name: Optional[str]
+        if not self.cancelled_by_name:
+            cancelled_by_name = None
         else:
             cancelled_by_name = self.cancelled_by_name
 
-        sign_off_by_name: Union[None, Unset, str]
-        if isinstance(self.sign_off_by_name, Unset):
-            sign_off_by_name = UNSET
+        sign_off_by_name: Optional[str]
+        if not self.sign_off_by_name:
+            sign_off_by_name = None
         else:
             sign_off_by_name = self.sign_off_by_name
 
-        owner_name: Union[None, Unset, str]
-        if isinstance(self.owner_name, Unset):
-            owner_name = UNSET
+        owner_name: Optional[str]
+        if not self.owner_name:
+            owner_name = None
         else:
             owner_name = self.owner_name
 
-        owner_department: Union[None, Unset, str]
-        if isinstance(self.owner_department, Unset):
-            owner_department = UNSET
+        owner_department: Optional[str]
+        if not self.owner_department:
+            owner_department = None
         else:
             owner_department = self.owner_department
 
-        assignee_name: Union[None, Unset, str]
-        if isinstance(self.assignee_name, Unset):
-            assignee_name = UNSET
+        assignee_name: Optional[str]
+        if not self.assignee_name:
+            assignee_name = None
         else:
             assignee_name = self.assignee_name
 
-        payment_due_on: Union[None, Unset, str]
-        if isinstance(self.payment_due_on, Unset):
-            payment_due_on = UNSET
+        payment_due_on: Optional[str]
+        if not self.payment_due_on:
+            payment_due_on = None
         elif isinstance(self.payment_due_on, datetime.datetime):
             payment_due_on = self.payment_due_on.isoformat()
         else:
@@ -826,24 +822,24 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
 
         process_date_option = self.process_date_option
 
-        desired_date: Union[None, Unset, str]
-        if isinstance(self.desired_date, Unset):
-            desired_date = UNSET
+        desired_date: Optional[str]
+        if not self.desired_date:
+            desired_date = None
         elif isinstance(self.desired_date, datetime.datetime):
             desired_date = self.desired_date.isoformat()
         else:
             desired_date = self.desired_date
 
-        deadline_date: Union[None, Unset, str]
-        if isinstance(self.deadline_date, Unset):
-            deadline_date = UNSET
+        deadline_date: Optional[str]
+        if not self.deadline_date:
+            deadline_date = None
         elif isinstance(self.deadline_date, datetime.datetime):
             deadline_date = self.deadline_date.isoformat()
         else:
             deadline_date = self.deadline_date
 
-        vendor_sign_off_on: Union[None, Unset, str] = UNSET
-        if self.vendor_sign_off_on and not isinstance(self.vendor_sign_off_on, Unset):
+        vendor_sign_off_on: Optional[str] = None
+        if self.vendor_sign_off_on:
             vendor_sign_off_on = self.vendor_sign_off_on.isoformat()
 
         vendor_sign_off_by_name = self.vendor_sign_off_by_name
@@ -852,17 +848,17 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
 
         return_account = self.return_account
 
-        business_hours_from: Union[None, Unset, str]
-        if isinstance(self.business_hours_from, Unset):
-            business_hours_from = UNSET
+        business_hours_from: Optional[str]
+        if not self.business_hours_from:
+            business_hours_from = None
         elif isinstance(self.business_hours_from, datetime.datetime):
             business_hours_from = self.business_hours_from.isoformat()
         else:
             business_hours_from = self.business_hours_from
 
-        business_hours_to: Union[None, Unset, str]
-        if isinstance(self.business_hours_to, Unset):
-            business_hours_to = UNSET
+        business_hours_to: Optional[str]
+        if not self.business_hours_to:
+            business_hours_to = None
         elif isinstance(self.business_hours_to, datetime.datetime):
             business_hours_to = self.business_hours_to.isoformat()
         else:
@@ -890,352 +886,350 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
 
         request_workflow_name = self.request_workflow_name
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if guid is not UNSET:
+        if guid is not None:
             field_dict["Guid"] = guid
-        if account_number is not UNSET:
+        if account_number is not None:
             field_dict["AccountNumber"] = account_number
-        if service_order_number is not UNSET:
+        if service_order_number is not None:
             field_dict["ServiceOrderNumber"] = service_order_number
-        if service_order_number_text is not UNSET:
+        if service_order_number_text is not None:
             field_dict["ServiceOrderNumberText"] = service_order_number_text
-        if number_of_instruments is not UNSET:
+        if number_of_instruments is not None:
             field_dict["NumberOfInstruments"] = number_of_instruments
-        if parts_discount_total is not UNSET:
+        if parts_discount_total is not None:
             field_dict["PartsDiscountTotal"] = parts_discount_total
-        if po_number is not UNSET:
+        if po_number is not None:
             field_dict["PoNumber"] = po_number
-        if secondary_po is not UNSET:
+        if secondary_po is not None:
             field_dict["SecondaryPo"] = secondary_po
-        if location is not UNSET:
+        if location is not None:
             field_dict["Location"] = location
-        if shipped_date is not UNSET:
+        if shipped_date is not None:
             field_dict["ShippedDate"] = shipped_date
-        if payment_terms is not UNSET:
+        if payment_terms is not None:
             field_dict["PaymentTerms"] = payment_terms
-        if site_access_notes is not UNSET:
+        if site_access_notes is not None:
             field_dict["SiteAccessNotes"] = site_access_notes
-        if grace_period is not UNSET:
+        if grace_period is not None:
             field_dict["GracePeriod"] = grace_period
-        if trade_in_credit is not UNSET:
+        if trade_in_credit is not None:
             field_dict["TradeInCredit"] = trade_in_credit
-        if prepaid_credit is not UNSET:
+        if prepaid_credit is not None:
             field_dict["PrepaidCredit"] = prepaid_credit
-        if interest_rate is not UNSET:
+        if interest_rate is not None:
             field_dict["InterestRate"] = interest_rate
-        if service_taxation is not UNSET:
+        if service_taxation is not None:
             field_dict["ServiceTaxation"] = service_taxation
-        if service_order_id is not UNSET:
+        if service_order_id is not None:
             field_dict["ServiceOrderId"] = service_order_id
-        if federal_number is not UNSET:
+        if federal_number is not None:
             field_dict["FederalNumber"] = federal_number
-        if vendor_site_id is not UNSET:
+        if vendor_site_id is not None:
             field_dict["VendorSiteId"] = vendor_site_id
-        if vendor_site is not UNSET:
+        if vendor_site is not None:
             field_dict["VendorSite"] = vendor_site
-        if site_name is not UNSET:
+        if site_name is not None:
             field_dict["SiteName"] = site_name
-        if site_code is not UNSET:
+        if site_code is not None:
             field_dict["SiteCode"] = site_code
-        if vendor_name is not UNSET:
+        if vendor_name is not None:
             field_dict["VendorName"] = vendor_name
-        if domain_name is not UNSET:
+        if domain_name is not None:
             field_dict["DomainName"] = domain_name
-        if client_company_domain is not UNSET:
+        if client_company_domain is not None:
             field_dict["ClientCompanyDomain"] = client_company_domain
-        if provider_logo is not UNSET:
+        if provider_logo is not None:
             field_dict["ProviderLogo"] = provider_logo
-        if client_signature is not UNSET:
+        if client_signature is not None:
             field_dict["ClientSignature"] = client_signature
-        if vendor_signature is not UNSET:
+        if vendor_signature is not None:
             field_dict["VendorSignature"] = vendor_signature
-        if qr_code is not UNSET:
+        if qr_code is not None:
             field_dict["QrCode"] = qr_code
-        if bar_code is not UNSET:
+        if bar_code is not None:
             field_dict["BarCode"] = bar_code
-        if bar_code_string is not UNSET:
+        if bar_code_string is not None:
             field_dict["BarCodeString"] = bar_code_string
-        if po_balance is not UNSET:
+        if po_balance is not None:
             field_dict["PoBalance"] = po_balance
-        if service_terms is not UNSET:
+        if service_terms is not None:
             field_dict["ServiceTerms"] = service_terms
-        if service_total is not UNSET:
+        if service_total is not None:
             field_dict["ServiceTotal"] = service_total
-        if repairs_total is not UNSET:
+        if repairs_total is not None:
             field_dict["RepairsTotal"] = repairs_total
-        if parts_total is not UNSET:
+        if parts_total is not None:
             field_dict["PartsTotal"] = parts_total
-        if parts_total_before_discount is not UNSET:
+        if parts_total_before_discount is not None:
             field_dict["PartsTotalBeforeDiscount"] = parts_total_before_discount
-        if effective_tax_rate is not UNSET:
+        if effective_tax_rate is not None:
             field_dict["EffectiveTaxRate"] = effective_tax_rate
-        if tax_amount is not UNSET:
+        if tax_amount is not None:
             field_dict["TaxAmount"] = tax_amount
-        if shipping_fee is not UNSET:
+        if shipping_fee is not None:
             field_dict["ShippingFee"] = shipping_fee
-        if late_fee is not UNSET:
+        if late_fee is not None:
             field_dict["LateFee"] = late_fee
-        if grand_total is not UNSET:
+        if grand_total is not None:
             field_dict["GrandTotal"] = grand_total
-        if amount_paid is not UNSET:
+        if amount_paid is not None:
             field_dict["AmountPaid"] = amount_paid
-        if balance_total is not UNSET:
+        if balance_total is not None:
             field_dict["BalanceTotal"] = balance_total
-        if travel_charge is not UNSET:
+        if travel_charge is not None:
             field_dict["TravelCharge"] = travel_charge
-        if private_notes is not UNSET:
+        if private_notes is not None:
             field_dict["PrivateNotes"] = private_notes
-        if service_notes is not UNSET:
+        if service_notes is not None:
             field_dict["ServiceNotes"] = service_notes
-        if display_service_comments is not UNSET:
+        if display_service_comments is not None:
             field_dict["DisplayServiceComments"] = display_service_comments
-        if display_part_repairs is not UNSET:
+        if display_part_repairs is not None:
             field_dict["DisplayPartRepairs"] = display_part_repairs
-        if print_separate_measurement is not UNSET:
+        if print_separate_measurement is not None:
             field_dict["PrintSeparateMeasurement"] = print_separate_measurement
-        if billing_address_1 is not UNSET:
+        if billing_address_1 is not None:
             field_dict["BillingAddress1"] = billing_address_1
-        if billing_address_2 is not UNSET:
+        if billing_address_2 is not None:
             field_dict["BillingAddress2"] = billing_address_2
-        if billing_first_name is not UNSET:
+        if billing_first_name is not None:
             field_dict["BillingFirstName"] = billing_first_name
-        if billing_last_name is not UNSET:
+        if billing_last_name is not None:
             field_dict["BillingLastName"] = billing_last_name
-        if billing_company is not UNSET:
+        if billing_company is not None:
             field_dict["BillingCompany"] = billing_company
-        if billing_country is not UNSET:
+        if billing_country is not None:
             field_dict["BillingCountry"] = billing_country
-        if billing_city is not UNSET:
+        if billing_city is not None:
             field_dict["BillingCity"] = billing_city
-        if billing_state is not UNSET:
+        if billing_state is not None:
             field_dict["BillingState"] = billing_state
-        if billing_zip is not UNSET:
+        if billing_zip is not None:
             field_dict["BillingZip"] = billing_zip
-        if billing_phone_number is not UNSET:
+        if billing_phone_number is not None:
             field_dict["BillingPhoneNumber"] = billing_phone_number
-        if billing_fax_number is not UNSET:
+        if billing_fax_number is not None:
             field_dict["BillingFaxNumber"] = billing_fax_number
-        if billing_email is not UNSET:
+        if billing_email is not None:
             field_dict["BillingEmail"] = billing_email
-        if shipping_address_1 is not UNSET:
+        if shipping_address_1 is not None:
             field_dict["ShippingAddress1"] = shipping_address_1
-        if shipping_address_2 is not UNSET:
+        if shipping_address_2 is not None:
             field_dict["ShippingAddress2"] = shipping_address_2
-        if shipping_first_name is not UNSET:
+        if shipping_first_name is not None:
             field_dict["ShippingFirstName"] = shipping_first_name
-        if shipping_last_name is not UNSET:
+        if shipping_last_name is not None:
             field_dict["ShippingLastName"] = shipping_last_name
-        if shipping_email is not UNSET:
+        if shipping_email is not None:
             field_dict["ShippingEmail"] = shipping_email
-        if shipping_company is not UNSET:
+        if shipping_company is not None:
             field_dict["ShippingCompany"] = shipping_company
-        if shipping_city is not UNSET:
+        if shipping_city is not None:
             field_dict["ShippingCity"] = shipping_city
-        if shipping_zip is not UNSET:
+        if shipping_zip is not None:
             field_dict["ShippingZip"] = shipping_zip
-        if shipping_phone_number is not UNSET:
+        if shipping_phone_number is not None:
             field_dict["ShippingPhoneNumber"] = shipping_phone_number
-        if shipping_fax_number is not UNSET:
+        if shipping_fax_number is not None:
             field_dict["ShippingFaxNumber"] = shipping_fax_number
-        if shipping_country is not UNSET:
+        if shipping_country is not None:
             field_dict["ShippingCountry"] = shipping_country
-        if shipping_state is not UNSET:
+        if shipping_state is not None:
             field_dict["ShippingState"] = shipping_state
-        if shipping_method is not UNSET:
+        if shipping_method is not None:
             field_dict["ShippingMethod"] = shipping_method
-        if return_shipping_method is not UNSET:
+        if return_shipping_method is not None:
             field_dict["ReturnShippingMethod"] = return_shipping_method
-        if tracking_number is not UNSET:
+        if tracking_number is not None:
             field_dict["TrackingNumber"] = tracking_number
-        if provider_billing_address_1 is not UNSET:
+        if provider_billing_address_1 is not None:
             field_dict["ProviderBillingAddress1"] = provider_billing_address_1
-        if provider_billing_address_2 is not UNSET:
+        if provider_billing_address_2 is not None:
             field_dict["ProviderBillingAddress2"] = provider_billing_address_2
-        if provider_billing_first_name is not UNSET:
+        if provider_billing_first_name is not None:
             field_dict["ProviderBillingFirstName"] = provider_billing_first_name
-        if provider_billing_last_name is not UNSET:
+        if provider_billing_last_name is not None:
             field_dict["ProviderBillingLastName"] = provider_billing_last_name
-        if provider_billing_email is not UNSET:
+        if provider_billing_email is not None:
             field_dict["ProviderBillingEmail"] = provider_billing_email
-        if provider_billing_company is not UNSET:
+        if provider_billing_company is not None:
             field_dict["ProviderBillingCompany"] = provider_billing_company
-        if provider_billing_city is not UNSET:
+        if provider_billing_city is not None:
             field_dict["ProviderBillingCity"] = provider_billing_city
-        if provider_billing_zip is not UNSET:
+        if provider_billing_zip is not None:
             field_dict["ProviderBillingZip"] = provider_billing_zip
-        if provider_billing_phone_number is not UNSET:
+        if provider_billing_phone_number is not None:
             field_dict["ProviderBillingPhoneNumber"] = provider_billing_phone_number
-        if provider_billing_country is not UNSET:
+        if provider_billing_country is not None:
             field_dict["ProviderBillingCountry"] = provider_billing_country
-        if provider_billing_state is not UNSET:
+        if provider_billing_state is not None:
             field_dict["ProviderBillingState"] = provider_billing_state
-        if provider_billing_fax_number is not UNSET:
+        if provider_billing_fax_number is not None:
             field_dict["ProviderBillingFaxNumber"] = provider_billing_fax_number
-        if provider_shipping_address_1 is not UNSET:
+        if provider_shipping_address_1 is not None:
             field_dict["ProviderShippingAddress1"] = provider_shipping_address_1
-        if provider_shipping_address_2 is not UNSET:
+        if provider_shipping_address_2 is not None:
             field_dict["ProviderShippingAddress2"] = provider_shipping_address_2
-        if provider_shipping_first_name is not UNSET:
+        if provider_shipping_first_name is not None:
             field_dict["ProviderShippingFirstName"] = provider_shipping_first_name
-        if provider_shipping_last_name is not UNSET:
+        if provider_shipping_last_name is not None:
             field_dict["ProviderShippingLastName"] = provider_shipping_last_name
-        if provider_shipping_email is not UNSET:
+        if provider_shipping_email is not None:
             field_dict["ProviderShippingEmail"] = provider_shipping_email
-        if provider_shipping_company is not UNSET:
+        if provider_shipping_company is not None:
             field_dict["ProviderShippingCompany"] = provider_shipping_company
-        if provider_shipping_city is not UNSET:
+        if provider_shipping_city is not None:
             field_dict["ProviderShippingCity"] = provider_shipping_city
-        if provider_shipping_zip is not UNSET:
+        if provider_shipping_zip is not None:
             field_dict["ProviderShippingZip"] = provider_shipping_zip
-        if provider_shipping_phone_number is not UNSET:
+        if provider_shipping_phone_number is not None:
             field_dict["ProviderShippingPhoneNumber"] = provider_shipping_phone_number
-        if provider_shipping_country is not UNSET:
+        if provider_shipping_country is not None:
             field_dict["ProviderShippingCountry"] = provider_shipping_country
-        if provider_shipping_state is not UNSET:
+        if provider_shipping_state is not None:
             field_dict["ProviderShippingState"] = provider_shipping_state
-        if provider_shipping_fax_number is not UNSET:
+        if provider_shipping_fax_number is not None:
             field_dict["ProviderShippingFaxNumber"] = provider_shipping_fax_number
-        if culture_name is not UNSET:
+        if culture_name is not None:
             field_dict["CultureName"] = culture_name
-        if vendor_company_id is not UNSET:
+        if vendor_company_id is not None:
             field_dict["VendorCompanyId"] = vendor_company_id
-        if client_vendor_id is not UNSET:
+        if client_vendor_id is not None:
             field_dict["ClientVendorId"] = client_vendor_id
-        if sign_off_date is not UNSET:
+        if sign_off_date is not None:
             field_dict["SignOffDate"] = sign_off_date
-        if quality_control_date is not UNSET:
+        if quality_control_date is not None:
             field_dict["QualityControlDate"] = quality_control_date
-        if client_sign_off_on is not UNSET:
+        if client_sign_off_on is not None:
             field_dict["ClientSignOffOn"] = client_sign_off_on
-        if client_sign_off_by_name is not UNSET:
+        if client_sign_off_by_name is not None:
             field_dict["ClientSignOffByName"] = client_sign_off_by_name
-        if client_signed_on is not UNSET:
+        if client_signed_on is not None:
             field_dict["ClientSignedOn"] = client_signed_on
-        if client_sticker_notes is not UNSET:
+        if client_sticker_notes is not None:
             field_dict["ClientStickerNotes"] = client_sticker_notes
-        if asset_sticker_notes is not UNSET:
+        if asset_sticker_notes is not None:
             field_dict["AssetStickerNotes"] = asset_sticker_notes
-        if order_sticker_notes is not UNSET:
+        if order_sticker_notes is not None:
             field_dict["OrderStickerNotes"] = order_sticker_notes
-        if quality_control_name is not UNSET:
+        if quality_control_name is not None:
             field_dict["QualityControlName"] = quality_control_name
-        if fulfilled_by_name is not UNSET:
+        if fulfilled_by_name is not None:
             field_dict["FulfilledByName"] = fulfilled_by_name
-        if sign_off_name is not UNSET:
+        if sign_off_name is not None:
             field_dict["SignOffName"] = sign_off_name
-        if display_as_found is not UNSET:
+        if display_as_found is not None:
             field_dict["DisplayAsFound"] = display_as_found
-        if display_as_left is not UNSET:
+        if display_as_left is not None:
             field_dict["DisplayAsLeft"] = display_as_left
-        if created_on is not UNSET:
+        if created_on is not None:
             field_dict["CreatedOn"] = created_on
-        if invoiced_on is not UNSET:
+        if invoiced_on is not None:
             field_dict["InvoicedOn"] = invoiced_on
-        if submitted_on is not UNSET:
+        if submitted_on is not None:
             field_dict["SubmittedOn"] = submitted_on
-        if shipped_on is not UNSET:
+        if shipped_on is not None:
             field_dict["ShippedOn"] = shipped_on
-        if completed_on is not UNSET:
+        if completed_on is not None:
             field_dict["CompletedOn"] = completed_on
-        if accepted_on is not UNSET:
+        if accepted_on is not None:
             field_dict["AcceptedOn"] = accepted_on
-        if approved_on is not UNSET:
+        if approved_on is not None:
             field_dict["ApprovedOn"] = approved_on
-        if delivered_on is not UNSET:
+        if delivered_on is not None:
             field_dict["DeliveredOn"] = delivered_on
-        if paid_on is not UNSET:
+        if paid_on is not None:
             field_dict["PaidOn"] = paid_on
-        if cancelled_on is not UNSET:
+        if cancelled_on is not None:
             field_dict["CancelledOn"] = cancelled_on
-        if fulfilled_on is not UNSET:
+        if fulfilled_on is not None:
             field_dict["FulfilledOn"] = fulfilled_on
-        if sign_off_on is not UNSET:
+        if sign_off_on is not None:
             field_dict["SignOffOn"] = sign_off_on
-        if vendor_signed_on is not UNSET:
+        if vendor_signed_on is not None:
             field_dict["VendorSignedOn"] = vendor_signed_on
-        if client_notes is not UNSET:
+        if client_notes is not None:
             field_dict["ClientNotes"] = client_notes
-        if order_shipping_option is not UNSET:
+        if order_shipping_option is not None:
             field_dict["OrderShippingOption"] = order_shipping_option
-        if shipment_status is not UNSET:
+        if shipment_status is not None:
             field_dict["ShipmentStatus"] = shipment_status
-        if payment_status is not UNSET:
+        if payment_status is not None:
             field_dict["PaymentStatus"] = payment_status
-        if payment_option is not UNSET:
+        if payment_option is not None:
             field_dict["PaymentOption"] = payment_option
-        if order_status is not UNSET:
+        if order_status is not None:
             field_dict["OrderStatus"] = order_status
-        if created_by_name is not UNSET:
+        if created_by_name is not None:
             field_dict["CreatedByName"] = created_by_name
-        if completed_by_name is not UNSET:
+        if completed_by_name is not None:
             field_dict["CompletedByName"] = completed_by_name
-        if shipped_by_name is not UNSET:
+        if shipped_by_name is not None:
             field_dict["ShippedByName"] = shipped_by_name
-        if accepted_by_name is not UNSET:
+        if accepted_by_name is not None:
             field_dict["AcceptedByName"] = accepted_by_name
-        if approve_by_name is not UNSET:
+        if approve_by_name is not None:
             field_dict["ApproveByName"] = approve_by_name
-        if invoiced_by_name is not UNSET:
+        if invoiced_by_name is not None:
             field_dict["InvoicedByName"] = invoiced_by_name
-        if delivered_by_name is not UNSET:
+        if delivered_by_name is not None:
             field_dict["DeliveredByName"] = delivered_by_name
-        if paid_by_name is not UNSET:
+        if paid_by_name is not None:
             field_dict["PaidByName"] = paid_by_name
-        if cancelled_by_name is not UNSET:
+        if cancelled_by_name is not None:
             field_dict["CancelledByName"] = cancelled_by_name
-        if sign_off_by_name is not UNSET:
+        if sign_off_by_name is not None:
             field_dict["SignOffByName"] = sign_off_by_name
-        if owner_name is not UNSET:
+        if owner_name is not None:
             field_dict["OwnerName"] = owner_name
-        if owner_department is not UNSET:
+        if owner_department is not None:
             field_dict["OwnerDepartment"] = owner_department
-        if assignee_name is not UNSET:
+        if assignee_name is not None:
             field_dict["AssigneeName"] = assignee_name
-        if payment_due_on is not UNSET:
+        if payment_due_on is not None:
             field_dict["PaymentDueOn"] = payment_due_on
-        if process_date_option is not UNSET:
+        if process_date_option is not None:
             field_dict["ProcessDateOption"] = process_date_option
-        if desired_date is not UNSET:
+        if desired_date is not None:
             field_dict["DesiredDate"] = desired_date
-        if deadline_date is not UNSET:
+        if deadline_date is not None:
             field_dict["DeadlineDate"] = deadline_date
-        if vendor_sign_off_on is not UNSET:
+        if vendor_sign_off_on is not None:
             field_dict["VendorSignOffOn"] = vendor_sign_off_on
-        if vendor_sign_off_by_name is not UNSET:
+        if vendor_sign_off_by_name is not None:
             field_dict["VendorSignOffByName"] = vendor_sign_off_by_name
-        if service_discount is not UNSET:
+        if service_discount is not None:
             field_dict["ServiceDiscount"] = service_discount
-        if return_account is not UNSET:
+        if return_account is not None:
             field_dict["ReturnAccount"] = return_account
-        if business_hours_from is not UNSET:
+        if business_hours_from is not None:
             field_dict["BusinessHoursFrom"] = business_hours_from
-        if business_hours_to is not UNSET:
+        if business_hours_to is not None:
             field_dict["BusinessHoursTo"] = business_hours_to
-        if client_company_alternative_names is not UNSET:
-            field_dict["ClientCompanyAlternativeNames"] = (
-                client_company_alternative_names
-            )
-        if client_id is not UNSET:
+        if client_company_alternative_names is not None:
+            field_dict["ClientCompanyAlternativeNames"] = client_company_alternative_names
+        if client_id is not None:
             field_dict["ClientId"] = client_id
-        if client_class is not UNSET:
+        if client_class is not None:
             field_dict["ClientClass"] = client_class
-        if client_status is not UNSET:
+        if client_status is not None:
             field_dict["ClientStatus"] = client_status
-        if client_invoicing is not UNSET:
+        if client_invoicing is not None:
             field_dict["ClientInvoicing"] = client_invoicing
-        if client_standing is not UNSET:
+        if client_standing is not None:
             field_dict["ClientStanding"] = client_standing
-        if client_category is not UNSET:
+        if client_category is not None:
             field_dict["ClientCategory"] = client_category
-        if master_template_name is not UNSET:
+        if master_template_name is not None:
             field_dict["MasterTemplateName"] = master_template_name
-        if client_site_code is not UNSET:
+        if client_site_code is not None:
             field_dict["ClientSiteCode"] = client_site_code
-        if order_workflow_name is not UNSET:
+        if order_workflow_name is not None:
             field_dict["OrderWorkflowName"] = order_workflow_name
-        if request_workflow_name is not UNSET:
+        if request_workflow_name is not None:
             field_dict["RequestWorkflowName"] = request_workflow_name
 
         return field_dict
@@ -1243,29 +1237,27 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        guid = d.pop("Guid", UNSET)
+        guid = d.pop("Guid", None)
 
-        account_number = d.pop("AccountNumber", UNSET)
+        account_number = d.pop("AccountNumber", None)
 
-        service_order_number = d.pop("ServiceOrderNumber", UNSET)
+        service_order_number = d.pop("ServiceOrderNumber", None)
 
-        service_order_number_text = d.pop("ServiceOrderNumberText", UNSET)
+        service_order_number_text = d.pop("ServiceOrderNumberText", None)
 
-        number_of_instruments = d.pop("NumberOfInstruments", UNSET)
+        number_of_instruments = d.pop("NumberOfInstruments", None)
 
-        parts_discount_total = d.pop("PartsDiscountTotal", UNSET)
+        parts_discount_total = d.pop("PartsDiscountTotal", None)
 
-        po_number = d.pop("PoNumber", UNSET)
+        po_number = d.pop("PoNumber", None)
 
-        secondary_po = d.pop("SecondaryPo", UNSET)
+        secondary_po = d.pop("SecondaryPo", None)
 
-        location = d.pop("Location", UNSET)
+        location = d.pop("Location", None)
 
-        def _parse_shipped_date(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_shipped_date(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1274,205 +1266,203 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return shipped_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        shipped_date = _parse_shipped_date(d.pop("ShippedDate", UNSET))
+        shipped_date = _parse_shipped_date(d.pop("ShippedDate", None))
 
-        payment_terms = d.pop("PaymentTerms", UNSET)
+        payment_terms = d.pop("PaymentTerms", None)
 
-        site_access_notes = d.pop("SiteAccessNotes", UNSET)
+        site_access_notes = d.pop("SiteAccessNotes", None)
 
-        grace_period = d.pop("GracePeriod", UNSET)
+        grace_period = d.pop("GracePeriod", None)
 
-        trade_in_credit = d.pop("TradeInCredit", UNSET)
+        trade_in_credit = d.pop("TradeInCredit", None)
 
-        prepaid_credit = d.pop("PrepaidCredit", UNSET)
+        prepaid_credit = d.pop("PrepaidCredit", None)
 
-        interest_rate = d.pop("InterestRate", UNSET)
+        interest_rate = d.pop("InterestRate", None)
 
-        service_taxation = d.pop("ServiceTaxation", UNSET)
+        service_taxation = d.pop("ServiceTaxation", None)
 
-        service_order_id = d.pop("ServiceOrderId", UNSET)
+        service_order_id = d.pop("ServiceOrderId", None)
 
-        federal_number = d.pop("FederalNumber", UNSET)
+        federal_number = d.pop("FederalNumber", None)
 
-        vendor_site_id = d.pop("VendorSiteId", UNSET)
+        vendor_site_id = d.pop("VendorSiteId", None)
 
-        vendor_site = d.pop("VendorSite", UNSET)
+        vendor_site = d.pop("VendorSite", None)
 
-        site_name = d.pop("SiteName", UNSET)
+        site_name = d.pop("SiteName", None)
 
-        site_code = d.pop("SiteCode", UNSET)
+        site_code = d.pop("SiteCode", None)
 
-        vendor_name = d.pop("VendorName", UNSET)
+        vendor_name = d.pop("VendorName", None)
 
-        domain_name = d.pop("DomainName", UNSET)
+        domain_name = d.pop("DomainName", None)
 
-        client_company_domain = d.pop("ClientCompanyDomain", UNSET)
+        client_company_domain = d.pop("ClientCompanyDomain", None)
 
-        provider_logo = d.pop("ProviderLogo", UNSET)
+        provider_logo = d.pop("ProviderLogo", None)
 
-        client_signature = d.pop("ClientSignature", UNSET)
+        client_signature = d.pop("ClientSignature", None)
 
-        vendor_signature = d.pop("VendorSignature", UNSET)
+        vendor_signature = d.pop("VendorSignature", None)
 
-        qr_code = d.pop("QrCode", UNSET)
+        qr_code = d.pop("QrCode", None)
 
-        bar_code = d.pop("BarCode", UNSET)
+        bar_code = d.pop("BarCode", None)
 
-        bar_code_string = d.pop("BarCodeString", UNSET)
+        bar_code_string = d.pop("BarCodeString", None)
 
-        po_balance = d.pop("PoBalance", UNSET)
+        po_balance = d.pop("PoBalance", None)
 
-        service_terms = d.pop("ServiceTerms", UNSET)
+        service_terms = d.pop("ServiceTerms", None)
 
-        service_total = d.pop("ServiceTotal", UNSET)
+        service_total = d.pop("ServiceTotal", None)
 
-        repairs_total = d.pop("RepairsTotal", UNSET)
+        repairs_total = d.pop("RepairsTotal", None)
 
-        parts_total = d.pop("PartsTotal", UNSET)
+        parts_total = d.pop("PartsTotal", None)
 
-        parts_total_before_discount = d.pop("PartsTotalBeforeDiscount", UNSET)
+        parts_total_before_discount = d.pop("PartsTotalBeforeDiscount", None)
 
-        effective_tax_rate = d.pop("EffectiveTaxRate", UNSET)
+        effective_tax_rate = d.pop("EffectiveTaxRate", None)
 
-        tax_amount = d.pop("TaxAmount", UNSET)
+        tax_amount = d.pop("TaxAmount", None)
 
-        shipping_fee = d.pop("ShippingFee", UNSET)
+        shipping_fee = d.pop("ShippingFee", None)
 
-        late_fee = d.pop("LateFee", UNSET)
+        late_fee = d.pop("LateFee", None)
 
-        grand_total = d.pop("GrandTotal", UNSET)
+        grand_total = d.pop("GrandTotal", None)
 
-        amount_paid = d.pop("AmountPaid", UNSET)
+        amount_paid = d.pop("AmountPaid", None)
 
-        balance_total = d.pop("BalanceTotal", UNSET)
+        balance_total = d.pop("BalanceTotal", None)
 
-        travel_charge = d.pop("TravelCharge", UNSET)
+        travel_charge = d.pop("TravelCharge", None)
 
-        private_notes = d.pop("PrivateNotes", UNSET)
+        private_notes = d.pop("PrivateNotes", None)
 
-        service_notes = d.pop("ServiceNotes", UNSET)
+        service_notes = d.pop("ServiceNotes", None)
 
-        display_service_comments = d.pop("DisplayServiceComments", UNSET)
+        display_service_comments = d.pop("DisplayServiceComments", None)
 
-        display_part_repairs = d.pop("DisplayPartRepairs", UNSET)
+        display_part_repairs = d.pop("DisplayPartRepairs", None)
 
-        print_separate_measurement = d.pop("PrintSeparateMeasurement", UNSET)
+        print_separate_measurement = d.pop("PrintSeparateMeasurement", None)
 
-        billing_address_1 = d.pop("BillingAddress1", UNSET)
+        billing_address_1 = d.pop("BillingAddress1", None)
 
-        billing_address_2 = d.pop("BillingAddress2", UNSET)
+        billing_address_2 = d.pop("BillingAddress2", None)
 
-        billing_first_name = d.pop("BillingFirstName", UNSET)
+        billing_first_name = d.pop("BillingFirstName", None)
 
-        billing_last_name = d.pop("BillingLastName", UNSET)
+        billing_last_name = d.pop("BillingLastName", None)
 
-        billing_company = d.pop("BillingCompany", UNSET)
+        billing_company = d.pop("BillingCompany", None)
 
-        billing_country = d.pop("BillingCountry", UNSET)
+        billing_country = d.pop("BillingCountry", None)
 
-        billing_city = d.pop("BillingCity", UNSET)
+        billing_city = d.pop("BillingCity", None)
 
-        billing_state = d.pop("BillingState", UNSET)
+        billing_state = d.pop("BillingState", None)
 
-        billing_zip = d.pop("BillingZip", UNSET)
+        billing_zip = d.pop("BillingZip", None)
 
-        billing_phone_number = d.pop("BillingPhoneNumber", UNSET)
+        billing_phone_number = d.pop("BillingPhoneNumber", None)
 
-        billing_fax_number = d.pop("BillingFaxNumber", UNSET)
+        billing_fax_number = d.pop("BillingFaxNumber", None)
 
-        billing_email = d.pop("BillingEmail", UNSET)
+        billing_email = d.pop("BillingEmail", None)
 
-        shipping_address_1 = d.pop("ShippingAddress1", UNSET)
+        shipping_address_1 = d.pop("ShippingAddress1", None)
 
-        shipping_address_2 = d.pop("ShippingAddress2", UNSET)
+        shipping_address_2 = d.pop("ShippingAddress2", None)
 
-        shipping_first_name = d.pop("ShippingFirstName", UNSET)
+        shipping_first_name = d.pop("ShippingFirstName", None)
 
-        shipping_last_name = d.pop("ShippingLastName", UNSET)
+        shipping_last_name = d.pop("ShippingLastName", None)
 
-        shipping_email = d.pop("ShippingEmail", UNSET)
+        shipping_email = d.pop("ShippingEmail", None)
 
-        shipping_company = d.pop("ShippingCompany", UNSET)
+        shipping_company = d.pop("ShippingCompany", None)
 
-        shipping_city = d.pop("ShippingCity", UNSET)
+        shipping_city = d.pop("ShippingCity", None)
 
-        shipping_zip = d.pop("ShippingZip", UNSET)
+        shipping_zip = d.pop("ShippingZip", None)
 
-        shipping_phone_number = d.pop("ShippingPhoneNumber", UNSET)
+        shipping_phone_number = d.pop("ShippingPhoneNumber", None)
 
-        shipping_fax_number = d.pop("ShippingFaxNumber", UNSET)
+        shipping_fax_number = d.pop("ShippingFaxNumber", None)
 
-        shipping_country = d.pop("ShippingCountry", UNSET)
+        shipping_country = d.pop("ShippingCountry", None)
 
-        shipping_state = d.pop("ShippingState", UNSET)
+        shipping_state = d.pop("ShippingState", None)
 
-        shipping_method = d.pop("ShippingMethod", UNSET)
+        shipping_method = d.pop("ShippingMethod", None)
 
-        return_shipping_method = d.pop("ReturnShippingMethod", UNSET)
+        return_shipping_method = d.pop("ReturnShippingMethod", None)
 
-        tracking_number = d.pop("TrackingNumber", UNSET)
+        tracking_number = d.pop("TrackingNumber", None)
 
-        provider_billing_address_1 = d.pop("ProviderBillingAddress1", UNSET)
+        provider_billing_address_1 = d.pop("ProviderBillingAddress1", None)
 
-        provider_billing_address_2 = d.pop("ProviderBillingAddress2", UNSET)
+        provider_billing_address_2 = d.pop("ProviderBillingAddress2", None)
 
-        provider_billing_first_name = d.pop("ProviderBillingFirstName", UNSET)
+        provider_billing_first_name = d.pop("ProviderBillingFirstName", None)
 
-        provider_billing_last_name = d.pop("ProviderBillingLastName", UNSET)
+        provider_billing_last_name = d.pop("ProviderBillingLastName", None)
 
-        provider_billing_email = d.pop("ProviderBillingEmail", UNSET)
+        provider_billing_email = d.pop("ProviderBillingEmail", None)
 
-        provider_billing_company = d.pop("ProviderBillingCompany", UNSET)
+        provider_billing_company = d.pop("ProviderBillingCompany", None)
 
-        provider_billing_city = d.pop("ProviderBillingCity", UNSET)
+        provider_billing_city = d.pop("ProviderBillingCity", None)
 
-        provider_billing_zip = d.pop("ProviderBillingZip", UNSET)
+        provider_billing_zip = d.pop("ProviderBillingZip", None)
 
-        provider_billing_phone_number = d.pop("ProviderBillingPhoneNumber", UNSET)
+        provider_billing_phone_number = d.pop("ProviderBillingPhoneNumber", None)
 
-        provider_billing_country = d.pop("ProviderBillingCountry", UNSET)
+        provider_billing_country = d.pop("ProviderBillingCountry", None)
 
-        provider_billing_state = d.pop("ProviderBillingState", UNSET)
+        provider_billing_state = d.pop("ProviderBillingState", None)
 
-        provider_billing_fax_number = d.pop("ProviderBillingFaxNumber", UNSET)
+        provider_billing_fax_number = d.pop("ProviderBillingFaxNumber", None)
 
-        provider_shipping_address_1 = d.pop("ProviderShippingAddress1", UNSET)
+        provider_shipping_address_1 = d.pop("ProviderShippingAddress1", None)
 
-        provider_shipping_address_2 = d.pop("ProviderShippingAddress2", UNSET)
+        provider_shipping_address_2 = d.pop("ProviderShippingAddress2", None)
 
-        provider_shipping_first_name = d.pop("ProviderShippingFirstName", UNSET)
+        provider_shipping_first_name = d.pop("ProviderShippingFirstName", None)
 
-        provider_shipping_last_name = d.pop("ProviderShippingLastName", UNSET)
+        provider_shipping_last_name = d.pop("ProviderShippingLastName", None)
 
-        provider_shipping_email = d.pop("ProviderShippingEmail", UNSET)
+        provider_shipping_email = d.pop("ProviderShippingEmail", None)
 
-        provider_shipping_company = d.pop("ProviderShippingCompany", UNSET)
+        provider_shipping_company = d.pop("ProviderShippingCompany", None)
 
-        provider_shipping_city = d.pop("ProviderShippingCity", UNSET)
+        provider_shipping_city = d.pop("ProviderShippingCity", None)
 
-        provider_shipping_zip = d.pop("ProviderShippingZip", UNSET)
+        provider_shipping_zip = d.pop("ProviderShippingZip", None)
 
-        provider_shipping_phone_number = d.pop("ProviderShippingPhoneNumber", UNSET)
+        provider_shipping_phone_number = d.pop("ProviderShippingPhoneNumber", None)
 
-        provider_shipping_country = d.pop("ProviderShippingCountry", UNSET)
+        provider_shipping_country = d.pop("ProviderShippingCountry", None)
 
-        provider_shipping_state = d.pop("ProviderShippingState", UNSET)
+        provider_shipping_state = d.pop("ProviderShippingState", None)
 
-        provider_shipping_fax_number = d.pop("ProviderShippingFaxNumber", UNSET)
+        provider_shipping_fax_number = d.pop("ProviderShippingFaxNumber", None)
 
-        culture_name = d.pop("CultureName", UNSET)
+        culture_name = d.pop("CultureName", None)
 
-        vendor_company_id = d.pop("VendorCompanyId", UNSET)
+        vendor_company_id = d.pop("VendorCompanyId", None)
 
-        client_vendor_id = d.pop("ClientVendorId", UNSET)
+        client_vendor_id = d.pop("ClientVendorId", None)
 
-        def _parse_sign_off_date(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_sign_off_date(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1481,14 +1471,14 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return sign_off_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        sign_off_date = _parse_sign_off_date(d.pop("SignOffDate", UNSET))
+        sign_off_date = _parse_sign_off_date(d.pop("SignOffDate", None))
 
-        _quality_control_date = d.pop("QualityControlDate", UNSET)
-        quality_control_date: Union[None, Unset, datetime.datetime]
-        if isinstance(_quality_control_date, Unset):
-            quality_control_date = UNSET
+        _quality_control_date = d.pop("QualityControlDate", None)
+        quality_control_date: Optional[datetime.datetime]
+        if not _quality_control_date:
+            quality_control_date = None
         elif _quality_control_date is None:
             quality_control_date = None
         else:
@@ -1496,11 +1486,9 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
 
         def _parse_client_sign_off_on(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1509,19 +1497,17 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return client_sign_off_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        client_sign_off_on = _parse_client_sign_off_on(d.pop("ClientSignOffOn", UNSET))
+        client_sign_off_on = _parse_client_sign_off_on(d.pop("ClientSignOffOn", None))
 
-        client_sign_off_by_name = d.pop("ClientSignOffByName", UNSET)
+        client_sign_off_by_name = d.pop("ClientSignOffByName", None)
 
         def _parse_client_signed_on(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1530,38 +1516,36 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return client_signed_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        client_signed_on = _parse_client_signed_on(d.pop("ClientSignedOn", UNSET))
+        client_signed_on = _parse_client_signed_on(d.pop("ClientSignedOn", None))
 
-        client_sticker_notes = d.pop("ClientStickerNotes", UNSET)
+        client_sticker_notes = d.pop("ClientStickerNotes", None)
 
-        asset_sticker_notes = d.pop("AssetStickerNotes", UNSET)
+        asset_sticker_notes = d.pop("AssetStickerNotes", None)
 
-        order_sticker_notes = d.pop("OrderStickerNotes", UNSET)
+        order_sticker_notes = d.pop("OrderStickerNotes", None)
 
-        quality_control_name = d.pop("QualityControlName", UNSET)
+        quality_control_name = d.pop("QualityControlName", None)
 
-        fulfilled_by_name = d.pop("FulfilledByName", UNSET)
+        fulfilled_by_name = d.pop("FulfilledByName", None)
 
-        sign_off_name = d.pop("SignOffName", UNSET)
+        sign_off_name = d.pop("SignOffName", None)
 
-        display_as_found = d.pop("DisplayAsFound", UNSET)
+        display_as_found = d.pop("DisplayAsFound", None)
 
-        display_as_left = d.pop("DisplayAsLeft", UNSET)
+        display_as_left = d.pop("DisplayAsLeft", None)
 
-        _created_on = d.pop("CreatedOn", UNSET)
-        created_on: Union[None, Unset, datetime.datetime]
-        if isinstance(_created_on, Unset):
-            created_on = UNSET
+        _created_on = d.pop("CreatedOn", None)
+        created_on: Optional[datetime.datetime]
+        if not _created_on:
+            created_on = None
         else:
             created_on = isoparse(_created_on)
 
-        def _parse_invoiced_on(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_invoiced_on(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1570,15 +1554,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return invoiced_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        invoiced_on = _parse_invoiced_on(d.pop("InvoicedOn", UNSET))
+        invoiced_on = _parse_invoiced_on(d.pop("InvoicedOn", None))
 
-        def _parse_submitted_on(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_submitted_on(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1587,15 +1569,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return submitted_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        submitted_on = _parse_submitted_on(d.pop("SubmittedOn", UNSET))
+        submitted_on = _parse_submitted_on(d.pop("SubmittedOn", None))
 
-        def _parse_shipped_on(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_shipped_on(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1604,15 +1584,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return shipped_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        shipped_on = _parse_shipped_on(d.pop("ShippedOn", UNSET))
+        shipped_on = _parse_shipped_on(d.pop("ShippedOn", None))
 
-        def _parse_completed_on(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_completed_on(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1621,15 +1599,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return completed_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        completed_on = _parse_completed_on(d.pop("CompletedOn", UNSET))
+        completed_on = _parse_completed_on(d.pop("CompletedOn", None))
 
-        def _parse_accepted_on(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_accepted_on(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1638,15 +1614,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return accepted_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        accepted_on = _parse_accepted_on(d.pop("AcceptedOn", UNSET))
+        accepted_on = _parse_accepted_on(d.pop("AcceptedOn", None))
 
-        def _parse_approved_on(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_approved_on(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1655,15 +1629,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return approved_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        approved_on = _parse_approved_on(d.pop("ApprovedOn", UNSET))
+        approved_on = _parse_approved_on(d.pop("ApprovedOn", None))
 
-        def _parse_delivered_on(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_delivered_on(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1672,15 +1644,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return delivered_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        delivered_on = _parse_delivered_on(d.pop("DeliveredOn", UNSET))
+        delivered_on = _parse_delivered_on(d.pop("DeliveredOn", None))
 
-        def _parse_paid_on(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_paid_on(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1689,15 +1659,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return paid_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        paid_on = _parse_paid_on(d.pop("PaidOn", UNSET))
+        paid_on = _parse_paid_on(d.pop("PaidOn", None))
 
-        def _parse_cancelled_on(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_cancelled_on(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1706,15 +1674,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return cancelled_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        cancelled_on = _parse_cancelled_on(d.pop("CancelledOn", UNSET))
+        cancelled_on = _parse_cancelled_on(d.pop("CancelledOn", None))
 
-        def _parse_fulfilled_on(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_fulfilled_on(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1723,15 +1689,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return fulfilled_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        fulfilled_on = _parse_fulfilled_on(d.pop("FulfilledOn", UNSET))
+        fulfilled_on = _parse_fulfilled_on(d.pop("FulfilledOn", None))
 
-        def _parse_sign_off_on(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_sign_off_on(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1740,17 +1704,15 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return sign_off_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        sign_off_on = _parse_sign_off_on(d.pop("SignOffOn", UNSET))
+        sign_off_on = _parse_sign_off_on(d.pop("SignOffOn", None))
 
         def _parse_vendor_signed_on(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1759,146 +1721,118 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return vendor_signed_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        vendor_signed_on = _parse_vendor_signed_on(d.pop("VendorSignedOn", UNSET))
+        vendor_signed_on = _parse_vendor_signed_on(d.pop("VendorSignedOn", None))
 
-        def _parse_client_notes(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_client_notes(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        client_notes = _parse_client_notes(d.pop("ClientNotes", UNSET))
+        client_notes = _parse_client_notes(d.pop("ClientNotes", None))
 
-        order_shipping_option = d.pop("OrderShippingOption", UNSET)
+        order_shipping_option = d.pop("OrderShippingOption", None)
 
-        shipment_status = d.pop("ShipmentStatus", UNSET)
+        shipment_status = d.pop("ShipmentStatus", None)
 
-        payment_status = d.pop("PaymentStatus", UNSET)
+        payment_status = d.pop("PaymentStatus", None)
 
-        payment_option = d.pop("PaymentOption", UNSET)
+        payment_option = d.pop("PaymentOption", None)
 
-        order_status = d.pop("OrderStatus", UNSET)
+        order_status = d.pop("OrderStatus", None)
 
-        created_by_name = d.pop("CreatedByName", UNSET)
+        created_by_name = d.pop("CreatedByName", None)
 
-        def _parse_completed_by_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_completed_by_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        completed_by_name = _parse_completed_by_name(d.pop("CompletedByName", UNSET))
+        completed_by_name = _parse_completed_by_name(d.pop("CompletedByName", None))
 
-        def _parse_shipped_by_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_shipped_by_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        shipped_by_name = _parse_shipped_by_name(d.pop("ShippedByName", UNSET))
+        shipped_by_name = _parse_shipped_by_name(d.pop("ShippedByName", None))
 
-        def _parse_accepted_by_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_accepted_by_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        accepted_by_name = _parse_accepted_by_name(d.pop("AcceptedByName", UNSET))
+        accepted_by_name = _parse_accepted_by_name(d.pop("AcceptedByName", None))
 
-        def _parse_approve_by_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_approve_by_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        approve_by_name = _parse_approve_by_name(d.pop("ApproveByName", UNSET))
+        approve_by_name = _parse_approve_by_name(d.pop("ApproveByName", None))
 
-        def _parse_invoiced_by_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_invoiced_by_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        invoiced_by_name = _parse_invoiced_by_name(d.pop("InvoicedByName", UNSET))
+        invoiced_by_name = _parse_invoiced_by_name(d.pop("InvoicedByName", None))
 
-        def _parse_delivered_by_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_delivered_by_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        delivered_by_name = _parse_delivered_by_name(d.pop("DeliveredByName", UNSET))
+        delivered_by_name = _parse_delivered_by_name(d.pop("DeliveredByName", None))
 
-        def _parse_paid_by_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_paid_by_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        paid_by_name = _parse_paid_by_name(d.pop("PaidByName", UNSET))
+        paid_by_name = _parse_paid_by_name(d.pop("PaidByName", None))
 
-        def _parse_cancelled_by_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_cancelled_by_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        cancelled_by_name = _parse_cancelled_by_name(d.pop("CancelledByName", UNSET))
+        cancelled_by_name = _parse_cancelled_by_name(d.pop("CancelledByName", None))
 
-        def _parse_sign_off_by_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_sign_off_by_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        sign_off_by_name = _parse_sign_off_by_name(d.pop("SignOffByName", UNSET))
+        sign_off_by_name = _parse_sign_off_by_name(d.pop("SignOffByName", None))
 
-        def _parse_owner_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_owner_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        owner_name = _parse_owner_name(d.pop("OwnerName", UNSET))
+        owner_name = _parse_owner_name(d.pop("OwnerName", None))
 
-        def _parse_owner_department(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_owner_department(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        owner_department = _parse_owner_department(d.pop("OwnerDepartment", UNSET))
+        owner_department = _parse_owner_department(d.pop("OwnerDepartment", None))
 
-        def _parse_assignee_name(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_assignee_name(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        assignee_name = _parse_assignee_name(d.pop("AssigneeName", UNSET))
+        assignee_name = _parse_assignee_name(d.pop("AssigneeName", None))
 
         def _parse_payment_due_on(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1907,17 +1841,15 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return payment_due_on_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        payment_due_on = _parse_payment_due_on(d.pop("PaymentDueOn", UNSET))
+        payment_due_on = _parse_payment_due_on(d.pop("PaymentDueOn", None))
 
-        process_date_option = d.pop("ProcessDateOption", UNSET)
+        process_date_option = d.pop("ProcessDateOption", None)
 
-        def _parse_desired_date(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_desired_date(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1926,15 +1858,13 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return desired_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        desired_date = _parse_desired_date(d.pop("DesiredDate", UNSET))
+        desired_date = _parse_desired_date(d.pop("DesiredDate", None))
 
-        def _parse_deadline_date(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_deadline_date(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1943,30 +1873,28 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return deadline_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        deadline_date = _parse_deadline_date(d.pop("DeadlineDate", UNSET))
+        deadline_date = _parse_deadline_date(d.pop("DeadlineDate", None))
 
-        _vendor_sign_off_on = d.pop("VendorSignOffOn", UNSET)
-        vendor_sign_off_on: Union[None, Unset, datetime.datetime]
-        if isinstance(_vendor_sign_off_on, Unset):
-            vendor_sign_off_on = UNSET
+        _vendor_sign_off_on = d.pop("VendorSignOffOn", None)
+        vendor_sign_off_on: Optional[datetime.datetime]
+        if not _vendor_sign_off_on:
+            vendor_sign_off_on = None
         else:
             vendor_sign_off_on = isoparse(_vendor_sign_off_on)
 
-        vendor_sign_off_by_name = d.pop("VendorSignOffByName", UNSET)
+        vendor_sign_off_by_name = d.pop("VendorSignOffByName", None)
 
-        service_discount = d.pop("ServiceDiscount", UNSET)
+        service_discount = d.pop("ServiceDiscount", None)
 
-        return_account = d.pop("ReturnAccount", UNSET)
+        return_account = d.pop("ReturnAccount", None)
 
         def _parse_business_hours_from(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1975,19 +1903,15 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return business_hours_from_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        business_hours_from = _parse_business_hours_from(
-            d.pop("BusinessHoursFrom", UNSET)
-        )
+        business_hours_from = _parse_business_hours_from(d.pop("BusinessHoursFrom", None))
 
         def _parse_business_hours_to(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -1996,31 +1920,31 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 return business_hours_to_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        business_hours_to = _parse_business_hours_to(d.pop("BusinessHoursTo", UNSET))
+        business_hours_to = _parse_business_hours_to(d.pop("BusinessHoursTo", None))
 
-        client_company_alternative_names = d.pop("ClientCompanyAlternativeNames", UNSET)
+        client_company_alternative_names = d.pop("ClientCompanyAlternativeNames", None)
 
-        client_id = d.pop("ClientId", UNSET)
+        client_id = d.pop("ClientId", None)
 
-        client_class = d.pop("ClientClass", UNSET)
+        client_class = d.pop("ClientClass", None)
 
-        client_status = d.pop("ClientStatus", UNSET)
+        client_status = d.pop("ClientStatus", None)
 
-        client_invoicing = d.pop("ClientInvoicing", UNSET)
+        client_invoicing = d.pop("ClientInvoicing", None)
 
-        client_standing = d.pop("ClientStanding", UNSET)
+        client_standing = d.pop("ClientStanding", None)
 
-        client_category = d.pop("ClientCategory", UNSET)
+        client_category = d.pop("ClientCategory", None)
 
-        master_template_name = d.pop("MasterTemplateName", UNSET)
+        master_template_name = d.pop("MasterTemplateName", None)
 
-        client_site_code = d.pop("ClientSiteCode", UNSET)
+        client_site_code = d.pop("ClientSiteCode", None)
 
-        order_workflow_name = d.pop("OrderWorkflowName", UNSET)
+        order_workflow_name = d.pop("OrderWorkflowName", None)
 
-        request_workflow_name = d.pop("RequestWorkflowName", UNSET)
+        request_workflow_name = d.pop("RequestWorkflowName", None)
 
         qualer_api_models_report_datasets_to_service_order_response = cls(
             guid=guid,
@@ -2196,13 +2120,11 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
             request_workflow_name=request_workflow_name,
         )
 
-        qualer_api_models_report_datasets_to_service_order_response.additional_properties = (
-            d
-        )
+        qualer_api_models_report_datasets_to_service_order_response.additional_properties = d
         return qualer_api_models_report_datasets_to_service_order_response
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

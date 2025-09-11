@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsServiceOrderDocumentsFromGetDocumentsModel")
 
@@ -13,19 +11,19 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrderDocumentsFromGetDocumentsMode
 class QualerApiModelsServiceOrderDocumentsFromGetDocumentsModel:
     """
     Attributes:
-        file_name (Union[None, Unset, str]):
+        file_name (Optional[str]):
     """
 
-    file_name: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    file_name: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         file_name = self.file_name
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if file_name is not UNSET:
+        if file_name is not None:
             field_dict["FileName"] = file_name
 
         return field_dict
@@ -33,19 +31,17 @@ class QualerApiModelsServiceOrderDocumentsFromGetDocumentsModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        file_name = d.pop("FileName", UNSET)
+        file_name = d.pop("FileName", None)
 
         qualer_api_models_service_order_documents_from_get_documents_model = cls(
             file_name=file_name,
         )
 
-        qualer_api_models_service_order_documents_from_get_documents_model.additional_properties = (
-            d
-        )
+        qualer_api_models_service_order_documents_from_get_documents_model.additional_properties = d
         return qualer_api_models_service_order_documents_from_get_documents_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

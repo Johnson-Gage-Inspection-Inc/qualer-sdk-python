@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 import httpx
 
@@ -15,11 +15,11 @@ from ...types import Response
 def _get_kwargs(
     work_item_id: int,
     *,
-    body: list["QualerApiModelsMeasurementsFromCreateMeasurementToolModel"],
-) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+    body: List["QualerApiModelsMeasurementsFromCreateMeasurementToolModel"],
+) -> Dict[str, Any]:
+    headers: Dict[str, Any] = {}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "post",
         "url": f"/api/service/workitems/{work_item_id}/AuxiliaryTools",
     }
@@ -63,12 +63,12 @@ def sync_detailed(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list["QualerApiModelsMeasurementsFromCreateMeasurementToolModel"],
+    body: List["QualerApiModelsMeasurementsFromCreateMeasurementToolModel"],
 ) -> Response[AddAuxiliaryToolsResponse200]:
     """
     Args:
         work_item_id (int):
-        body (list['QualerApiModelsMeasurementsFromCreateMeasurementToolModel']):
+        body (List['QualerApiModelsMeasurementsFromCreateMeasurementToolModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -94,12 +94,12 @@ def sync(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list["QualerApiModelsMeasurementsFromCreateMeasurementToolModel"],
+    body: List["QualerApiModelsMeasurementsFromCreateMeasurementToolModel"],
 ) -> Optional[AddAuxiliaryToolsResponse200]:
     """
     Args:
         work_item_id (int):
-        body (list['QualerApiModelsMeasurementsFromCreateMeasurementToolModel']):
+        body (List['QualerApiModelsMeasurementsFromCreateMeasurementToolModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -120,12 +120,12 @@ async def asyncio_detailed(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list["QualerApiModelsMeasurementsFromCreateMeasurementToolModel"],
+    body: List["QualerApiModelsMeasurementsFromCreateMeasurementToolModel"],
 ) -> Response[AddAuxiliaryToolsResponse200]:
     """
     Args:
         work_item_id (int):
-        body (list['QualerApiModelsMeasurementsFromCreateMeasurementToolModel']):
+        body (List['QualerApiModelsMeasurementsFromCreateMeasurementToolModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -149,12 +149,12 @@ async def asyncio(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list["QualerApiModelsMeasurementsFromCreateMeasurementToolModel"],
+    body: List["QualerApiModelsMeasurementsFromCreateMeasurementToolModel"],
 ) -> Optional[AddAuxiliaryToolsResponse200]:
     """
     Args:
         work_item_id (int):
-        body (list['QualerApiModelsMeasurementsFromCreateMeasurementToolModel']):
+        body (List['QualerApiModelsMeasurementsFromCreateMeasurementToolModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_from_update_measurement_set_model import (
@@ -19,44 +17,44 @@ T = TypeVar("T", bound="QualerApiModelsMeasurementsFromUpdateMeasurementBatchMod
 class QualerApiModelsMeasurementsFromUpdateMeasurementBatchModel:
     """
     Attributes:
-        batch_id (Union[None, Unset, int]):
-        batch_type (Union[None, Unset, str]):
-        save_and_delete_empty (Union[None, Unset, bool]):
-        measurement_sets (Union[None, Unset, list['QualerApiModelsMeasurementsFromUpdateMeasurementSetModel']]):
+        batch_id (Optional[int]):
+        batch_type (Optional[str]):
+        save_and_delete_empty (Optional[bool]):
+        measurement_sets (Optional[List['QualerApiModelsMeasurementsFromUpdateMeasurementSetModel']]):
     """
 
-    batch_id: Union[None, Unset, int] = UNSET
-    batch_type: Union[None, Unset, str] = UNSET
-    save_and_delete_empty: Union[None, Unset, bool] = UNSET
+    batch_id: Optional[int] = None
+    batch_type: Optional[str] = None
+    save_and_delete_empty: Optional[bool] = None
     measurement_sets: Union[
-        None, Unset, list["QualerApiModelsMeasurementsFromUpdateMeasurementSetModel"]
-    ] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+        None, List["QualerApiModelsMeasurementsFromUpdateMeasurementSetModel"]
+    ] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         batch_id = self.batch_id
 
         batch_type = self.batch_type
 
         save_and_delete_empty = self.save_and_delete_empty
 
-        measurement_sets: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.measurement_sets and not isinstance(self.measurement_sets, Unset):
+        measurement_sets: Optional[List[Dict[str, Any]]] = None
+        if self.measurement_sets:
             measurement_sets = []
             for measurement_sets_item_data in self.measurement_sets:
                 measurement_sets_item = measurement_sets_item_data.to_dict()
                 measurement_sets.append(measurement_sets_item)
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if batch_id is not UNSET:
+        if batch_id is not None:
             field_dict["BatchId"] = batch_id
-        if batch_type is not UNSET:
+        if batch_type is not None:
             field_dict["BatchType"] = batch_type
-        if save_and_delete_empty is not UNSET:
+        if save_and_delete_empty is not None:
             field_dict["SaveAndDeleteEmpty"] = save_and_delete_empty
-        if measurement_sets is not UNSET:
+        if measurement_sets is not None:
             field_dict["MeasurementSets"] = measurement_sets
 
         return field_dict
@@ -68,14 +66,14 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementBatchModel:
         )
 
         d = dict(src_dict)
-        batch_id = d.pop("BatchId", UNSET)
+        batch_id = d.pop("BatchId", None)
 
-        batch_type = d.pop("BatchType", UNSET)
+        batch_type = d.pop("BatchType", None)
 
-        save_and_delete_empty = d.pop("SaveAndDeleteEmpty", UNSET)
+        save_and_delete_empty = d.pop("SaveAndDeleteEmpty", None)
 
         measurement_sets = []
-        _measurement_sets = d.pop("MeasurementSets", UNSET)
+        _measurement_sets = d.pop("MeasurementSets", None)
         for measurement_sets_item_data in _measurement_sets or []:
             measurement_sets_item = (
                 QualerApiModelsMeasurementsFromUpdateMeasurementSetModel.from_dict(
@@ -92,13 +90,11 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementBatchModel:
             measurement_sets=measurement_sets,
         )
 
-        qualer_api_models_measurements_from_update_measurement_batch_model.additional_properties = (
-            d
-        )
+        qualer_api_models_measurements_from_update_measurement_batch_model.additional_properties = d
         return qualer_api_models_measurements_from_update_measurement_batch_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

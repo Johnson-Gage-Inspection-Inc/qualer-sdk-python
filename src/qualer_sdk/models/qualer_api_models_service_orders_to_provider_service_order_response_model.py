@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union, cast
+from typing import Any, Dict, List, Optional, TypeVar, Union, cast
 from uuid import UUID
 
 from attrs import define as _attrs_define
@@ -13,91 +13,88 @@ from ..models.qualer_api_models_service_orders_to_provider_service_order_respons
 from ..models.qualer_api_models_service_orders_to_provider_service_order_response_model_timeframe import (
     QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe,
 )
-from ..types import UNSET, Unset
 
-T = TypeVar(
-    "T", bound="QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"
-)
+T = TypeVar("T", bound="QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel")
 
 
 @_attrs_define
 class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
     """
     Attributes:
-        service_order_id (Union[None, Unset, int]):
-        guid (Union[None, Unset, UUID]):  Example: 00000000-0000-0000-0000-000000000000.
-        service_order_number (Union[None, Unset, int]):
-        custom_order_number (Union[None, Unset, str]):
-        due_date (Union[None, Unset, datetime.datetime]):
-        assets (Union[None, Unset, int]):
-        completed_assets (Union[None, Unset, int]):
-        order_status (Union[None, Unset, QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus]):
-        is_quality_control_fail (Union[None, Unset, bool]):
-        service_private_comments (Union[None, Unset, str]):
-        client_company_id (Union[None, Unset, int]):
-        client_company_name (Union[None, Unset, str]):
-        client_site_name (Union[None, Unset, str]):
-        client_legacy_id (Union[None, Unset, str]):
-        business_from_time (Union[None, Unset, datetime.datetime]):
-        business_to_time (Union[None, Unset, datetime.datetime]):
-        timeframe (Union[None, Unset, QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe]):
-        site_access_notes (Union[None, Unset, str]):
-        desired_date (Union[None, Unset, datetime.datetime]):
-        deadline_date (Union[None, Unset, datetime.datetime]):
-        request_from_date (Union[None, Unset, datetime.datetime]):
-        request_from_time (Union[None, Unset, datetime.datetime]):
-        request_to_date (Union[None, Unset, datetime.datetime]):
-        request_to_time (Union[None, Unset, datetime.datetime]):
+        service_order_id (Optional[int]):
+        guid (Optional[UUID]):  Example: 00000000-0000-0000-0000-000000000000.
+        service_order_number (Optional[int]):
+        custom_order_number (Optional[str]):
+        due_date (Optional[datetime.datetime]):
+        assets (Optional[int]):
+        completed_assets (Optional[int]):
+        order_status (Optional[QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus]):
+        is_quality_control_fail (Optional[bool]):
+        service_private_comments (Optional[str]):
+        client_company_id (Optional[int]):
+        client_company_name (Optional[str]):
+        client_site_name (Optional[str]):
+        client_legacy_id (Optional[str]):
+        business_from_time (Optional[datetime.datetime]):
+        business_to_time (Optional[datetime.datetime]):
+        timeframe (Optional[QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe]):
+        site_access_notes (Optional[str]):
+        desired_date (Optional[datetime.datetime]):
+        deadline_date (Optional[datetime.datetime]):
+        request_from_date (Optional[datetime.datetime]):
+        request_from_time (Optional[datetime.datetime]):
+        request_to_date (Optional[datetime.datetime]):
+        request_to_time (Optional[datetime.datetime]):
     """
 
-    service_order_id: Union[None, Unset, int] = UNSET
-    guid: Union[None, Unset, UUID] = UNSET
-    service_order_number: Union[None, Unset, int] = UNSET
-    custom_order_number: Union[None, Unset, str] = UNSET
-    due_date: Union[None, Unset, datetime.datetime] = UNSET
-    assets: Union[None, Unset, int] = UNSET
-    completed_assets: Union[None, Unset, int] = UNSET
+    service_order_id: Optional[int] = None
+    guid: Optional[UUID] = None
+    service_order_number: Optional[int] = None
+    custom_order_number: Optional[str] = None
+    due_date: Optional[datetime.datetime] = None
+    assets: Optional[int] = None
+    completed_assets: Optional[int] = None
     order_status: Union[
         None,
-        Unset,
+        None,
         QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
-    ] = UNSET
-    is_quality_control_fail: Union[None, Unset, bool] = UNSET
-    service_private_comments: Union[None, Unset, str] = UNSET
-    client_company_id: Union[None, Unset, int] = UNSET
-    client_company_name: Union[None, Unset, str] = UNSET
-    client_site_name: Union[None, Unset, str] = UNSET
-    client_legacy_id: Union[None, Unset, str] = UNSET
-    business_from_time: Union[None, Unset, datetime.datetime] = UNSET
-    business_to_time: Union[None, Unset, datetime.datetime] = UNSET
+    ] = None
+    is_quality_control_fail: Optional[bool] = None
+    service_private_comments: Optional[str] = None
+    client_company_id: Optional[int] = None
+    client_company_name: Optional[str] = None
+    client_site_name: Optional[str] = None
+    client_legacy_id: Optional[str] = None
+    business_from_time: Optional[datetime.datetime] = None
+    business_to_time: Optional[datetime.datetime] = None
     timeframe: Union[
         None,
-        Unset,
+        None,
         QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe,
-    ] = UNSET
-    site_access_notes: Union[None, Unset, str] = UNSET
-    desired_date: Union[None, Unset, datetime.datetime] = UNSET
-    deadline_date: Union[None, Unset, datetime.datetime] = UNSET
-    request_from_date: Union[None, Unset, datetime.datetime] = UNSET
-    request_from_time: Union[None, Unset, datetime.datetime] = UNSET
-    request_to_date: Union[None, Unset, datetime.datetime] = UNSET
-    request_to_time: Union[None, Unset, datetime.datetime] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    ] = None
+    site_access_notes: Optional[str] = None
+    desired_date: Optional[datetime.datetime] = None
+    deadline_date: Optional[datetime.datetime] = None
+    request_from_date: Optional[datetime.datetime] = None
+    request_from_time: Optional[datetime.datetime] = None
+    request_to_date: Optional[datetime.datetime] = None
+    request_to_time: Optional[datetime.datetime] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         service_order_id = self.service_order_id
 
-        guid: Union[None, Unset, str] = UNSET
-        if self.guid and not isinstance(self.guid, Unset):
+        guid: Optional[str] = None
+        if self.guid:
             guid = str(self.guid)
 
         service_order_number = self.service_order_number
 
         custom_order_number = self.custom_order_number
 
-        due_date: Union[None, Unset, str]
-        if isinstance(self.due_date, Unset):
-            due_date = UNSET
+        due_date: Optional[str]
+        if not self.due_date:
+            due_date = None
         elif isinstance(self.due_date, datetime.datetime):
             due_date = self.due_date.isoformat()
         else:
@@ -107,8 +104,8 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
 
         completed_assets = self.completed_assets
 
-        order_status: Union[None, Unset, str] = UNSET
-        if self.order_status and not isinstance(self.order_status, Unset):
+        order_status: Optional[str] = None
+        if self.order_status:
             order_status = self.order_status.value
 
         is_quality_control_fail = self.is_quality_control_fail
@@ -123,126 +120,126 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
 
         client_legacy_id = self.client_legacy_id
 
-        business_from_time: Union[None, Unset, str]
-        if isinstance(self.business_from_time, Unset):
-            business_from_time = UNSET
+        business_from_time: Optional[str]
+        if not self.business_from_time:
+            business_from_time = None
         elif isinstance(self.business_from_time, datetime.datetime):
             business_from_time = self.business_from_time.isoformat()
         else:
             business_from_time = self.business_from_time
 
-        business_to_time: Union[None, Unset, str]
-        if isinstance(self.business_to_time, Unset):
-            business_to_time = UNSET
+        business_to_time: Optional[str]
+        if not self.business_to_time:
+            business_to_time = None
         elif isinstance(self.business_to_time, datetime.datetime):
             business_to_time = self.business_to_time.isoformat()
         else:
             business_to_time = self.business_to_time
 
-        timeframe: Union[None, Unset, str] = UNSET
-        if self.timeframe and not isinstance(self.timeframe, Unset):
+        timeframe: Optional[str] = None
+        if self.timeframe:
             timeframe = self.timeframe.value
 
         site_access_notes = self.site_access_notes
 
-        desired_date: Union[None, Unset, str]
-        if isinstance(self.desired_date, Unset):
-            desired_date = UNSET
+        desired_date: Optional[str]
+        if not self.desired_date:
+            desired_date = None
         elif isinstance(self.desired_date, datetime.datetime):
             desired_date = self.desired_date.isoformat()
         else:
             desired_date = self.desired_date
 
-        deadline_date: Union[None, Unset, str]
-        if isinstance(self.deadline_date, Unset):
-            deadline_date = UNSET
+        deadline_date: Optional[str]
+        if not self.deadline_date:
+            deadline_date = None
         elif isinstance(self.deadline_date, datetime.datetime):
             deadline_date = self.deadline_date.isoformat()
         else:
             deadline_date = self.deadline_date
 
-        request_from_date: Union[None, Unset, str]
-        if isinstance(self.request_from_date, Unset):
-            request_from_date = UNSET
+        request_from_date: Optional[str]
+        if not self.request_from_date:
+            request_from_date = None
         elif isinstance(self.request_from_date, datetime.datetime):
             request_from_date = self.request_from_date.isoformat()
         else:
             request_from_date = self.request_from_date
 
-        request_from_time: Union[None, Unset, str]
-        if isinstance(self.request_from_time, Unset):
-            request_from_time = UNSET
+        request_from_time: Optional[str]
+        if not self.request_from_time:
+            request_from_time = None
         elif isinstance(self.request_from_time, datetime.datetime):
             request_from_time = self.request_from_time.isoformat()
         else:
             request_from_time = self.request_from_time
 
-        request_to_date: Union[None, Unset, str]
-        if isinstance(self.request_to_date, Unset):
-            request_to_date = UNSET
+        request_to_date: Optional[str]
+        if not self.request_to_date:
+            request_to_date = None
         elif isinstance(self.request_to_date, datetime.datetime):
             request_to_date = self.request_to_date.isoformat()
         else:
             request_to_date = self.request_to_date
 
-        request_to_time: Union[None, Unset, str]
-        if isinstance(self.request_to_time, Unset):
-            request_to_time = UNSET
+        request_to_time: Optional[str]
+        if not self.request_to_time:
+            request_to_time = None
         elif isinstance(self.request_to_time, datetime.datetime):
             request_to_time = self.request_to_time.isoformat()
         else:
             request_to_time = self.request_to_time
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if service_order_id is not UNSET:
+        if service_order_id is not None:
             field_dict["ServiceOrderId"] = service_order_id
-        if guid is not UNSET:
+        if guid is not None:
             field_dict["Guid"] = guid
-        if service_order_number is not UNSET:
+        if service_order_number is not None:
             field_dict["ServiceOrderNumber"] = service_order_number
-        if custom_order_number is not UNSET:
+        if custom_order_number is not None:
             field_dict["CustomOrderNumber"] = custom_order_number
-        if due_date is not UNSET:
+        if due_date is not None:
             field_dict["DueDate"] = due_date
-        if assets is not UNSET:
+        if assets is not None:
             field_dict["Assets"] = assets
-        if completed_assets is not UNSET:
+        if completed_assets is not None:
             field_dict["CompletedAssets"] = completed_assets
-        if order_status is not UNSET:
+        if order_status is not None:
             field_dict["OrderStatus"] = order_status
-        if is_quality_control_fail is not UNSET:
+        if is_quality_control_fail is not None:
             field_dict["IsQualityControlFail"] = is_quality_control_fail
-        if service_private_comments is not UNSET:
+        if service_private_comments is not None:
             field_dict["ServicePrivateComments"] = service_private_comments
-        if client_company_id is not UNSET:
+        if client_company_id is not None:
             field_dict["ClientCompanyId"] = client_company_id
-        if client_company_name is not UNSET:
+        if client_company_name is not None:
             field_dict["ClientCompanyName"] = client_company_name
-        if client_site_name is not UNSET:
+        if client_site_name is not None:
             field_dict["ClientSiteName"] = client_site_name
-        if client_legacy_id is not UNSET:
+        if client_legacy_id is not None:
             field_dict["ClientLegacyId"] = client_legacy_id
-        if business_from_time is not UNSET:
+        if business_from_time is not None:
             field_dict["BusinessFromTime"] = business_from_time
-        if business_to_time is not UNSET:
+        if business_to_time is not None:
             field_dict["BusinessToTime"] = business_to_time
-        if timeframe is not UNSET:
+        if timeframe is not None:
             field_dict["Timeframe"] = timeframe
-        if site_access_notes is not UNSET:
+        if site_access_notes is not None:
             field_dict["SiteAccessNotes"] = site_access_notes
-        if desired_date is not UNSET:
+        if desired_date is not None:
             field_dict["DesiredDate"] = desired_date
-        if deadline_date is not UNSET:
+        if deadline_date is not None:
             field_dict["DeadlineDate"] = deadline_date
-        if request_from_date is not UNSET:
+        if request_from_date is not None:
             field_dict["RequestFromDate"] = request_from_date
-        if request_from_time is not UNSET:
+        if request_from_time is not None:
             field_dict["RequestFromTime"] = request_from_time
-        if request_to_date is not UNSET:
+        if request_to_date is not None:
             field_dict["RequestToDate"] = request_to_date
-        if request_to_time is not UNSET:
+        if request_to_time is not None:
             field_dict["RequestToTime"] = request_to_time
 
         return field_dict
@@ -250,24 +247,22 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        service_order_id = d.pop("ServiceOrderId", UNSET)
+        service_order_id = d.pop("ServiceOrderId", None)
 
-        _guid = d.pop("Guid", UNSET)
-        guid: Union[None, Unset, UUID]
-        if isinstance(_guid, Unset):
-            guid = UNSET
+        _guid = d.pop("Guid", None)
+        guid: Optional[UUID]
+        if not _guid:
+            guid = None
         else:
             guid = UUID(_guid)
 
-        service_order_number = d.pop("ServiceOrderNumber", UNSET)
+        service_order_number = d.pop("ServiceOrderNumber", None)
 
-        custom_order_number = d.pop("CustomOrderNumber", UNSET)
+        custom_order_number = d.pop("CustomOrderNumber", None)
 
-        def _parse_due_date(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_due_date(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -276,46 +271,46 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 return due_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        due_date = _parse_due_date(d.pop("DueDate", UNSET))
+        due_date = _parse_due_date(d.pop("DueDate", None))
 
-        assets = d.pop("Assets", UNSET)
+        assets = d.pop("Assets", None)
 
-        completed_assets = d.pop("CompletedAssets", UNSET)
+        completed_assets = d.pop("CompletedAssets", None)
 
-        _order_status = d.pop("OrderStatus", UNSET)
+        _order_status = d.pop("OrderStatus", None)
         order_status: Union[
             None,
-            Unset,
+            None,
             QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
         ]
-        if isinstance(_order_status, Unset):
-            order_status = UNSET
+        if not _order_status:
+            order_status = None
         else:
-            order_status = QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus(
-                _order_status
+            order_status = (
+                QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus(
+                    _order_status
+                )
             )
 
-        is_quality_control_fail = d.pop("IsQualityControlFail", UNSET)
+        is_quality_control_fail = d.pop("IsQualityControlFail", None)
 
-        service_private_comments = d.pop("ServicePrivateComments", UNSET)
+        service_private_comments = d.pop("ServicePrivateComments", None)
 
-        client_company_id = d.pop("ClientCompanyId", UNSET)
+        client_company_id = d.pop("ClientCompanyId", None)
 
-        client_company_name = d.pop("ClientCompanyName", UNSET)
+        client_company_name = d.pop("ClientCompanyName", None)
 
-        client_site_name = d.pop("ClientSiteName", UNSET)
+        client_site_name = d.pop("ClientSiteName", None)
 
-        client_legacy_id = d.pop("ClientLegacyId", UNSET)
+        client_legacy_id = d.pop("ClientLegacyId", None)
 
         def _parse_business_from_time(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -324,17 +319,15 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 return business_from_time_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        business_from_time = _parse_business_from_time(d.pop("BusinessFromTime", UNSET))
+        business_from_time = _parse_business_from_time(d.pop("BusinessFromTime", None))
 
         def _parse_business_to_time(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -343,30 +336,28 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 return business_to_time_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        business_to_time = _parse_business_to_time(d.pop("BusinessToTime", UNSET))
+        business_to_time = _parse_business_to_time(d.pop("BusinessToTime", None))
 
-        _timeframe = d.pop("Timeframe", UNSET)
+        _timeframe = d.pop("Timeframe", None)
         timeframe: Union[
             None,
-            Unset,
+            None,
             QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe,
         ]
-        if isinstance(_timeframe, Unset):
-            timeframe = UNSET
+        if not _timeframe:
+            timeframe = None
         else:
             timeframe = QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe(
                 _timeframe
             )
 
-        site_access_notes = d.pop("SiteAccessNotes", UNSET)
+        site_access_notes = d.pop("SiteAccessNotes", None)
 
-        def _parse_desired_date(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_desired_date(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -375,15 +366,13 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 return desired_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        desired_date = _parse_desired_date(d.pop("DesiredDate", UNSET))
+        desired_date = _parse_desired_date(d.pop("DesiredDate", None))
 
-        def _parse_deadline_date(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_deadline_date(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -392,17 +381,15 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 return deadline_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        deadline_date = _parse_deadline_date(d.pop("DeadlineDate", UNSET))
+        deadline_date = _parse_deadline_date(d.pop("DeadlineDate", None))
 
         def _parse_request_from_date(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -411,17 +398,15 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 return request_from_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        request_from_date = _parse_request_from_date(d.pop("RequestFromDate", UNSET))
+        request_from_date = _parse_request_from_date(d.pop("RequestFromDate", None))
 
         def _parse_request_from_time(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -430,17 +415,15 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 return request_from_time_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        request_from_time = _parse_request_from_time(d.pop("RequestFromTime", UNSET))
+        request_from_time = _parse_request_from_time(d.pop("RequestFromTime", None))
 
         def _parse_request_to_date(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -449,17 +432,15 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 return request_to_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        request_to_date = _parse_request_to_date(d.pop("RequestToDate", UNSET))
+        request_to_date = _parse_request_to_date(d.pop("RequestToDate", None))
 
         def _parse_request_to_time(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -468,9 +449,9 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 return request_to_time_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        request_to_time = _parse_request_to_time(d.pop("RequestToTime", UNSET))
+        request_to_time = _parse_request_to_time(d.pop("RequestToTime", None))
 
         qualer_api_models_service_orders_to_provider_service_order_response_model = cls(
             service_order_id=service_order_id,
@@ -505,7 +486,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         return qualer_api_models_service_orders_to_provider_service_order_response_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

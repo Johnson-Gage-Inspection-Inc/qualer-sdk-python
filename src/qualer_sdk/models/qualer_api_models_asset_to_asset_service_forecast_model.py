@@ -1,12 +1,10 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union, cast
+from typing import Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsAssetToAssetServiceForecastModel")
 
@@ -15,73 +13,73 @@ T = TypeVar("T", bound="QualerApiModelsAssetToAssetServiceForecastModel")
 class QualerApiModelsAssetToAssetServiceForecastModel:
     """
     Attributes:
-        company_id (Union[None, Unset, int]):
-        asset_id (Union[None, Unset, int]):
-        site_id (Union[None, Unset, int]):
-        asset_service_record_id (Union[None, Unset, int]):
-        serial_number (Union[None, Unset, str]):
-        asset_user (Union[None, Unset, str]):
-        asset_tag (Union[None, Unset, str]):
-        equipment_id (Union[None, Unset, str]):
-        asset_name (Union[None, Unset, str]):
-        category_name (Union[None, Unset, str]):
-        manufacturer_name (Union[None, Unset, str]):
-        site_name (Union[None, Unset, str]):
-        maintenance_plan_id (Union[None, Unset, int]):
-        maintenance_plan_name (Union[None, Unset, str]):
-        maintenance_task_id (Union[None, Unset, int]):
-        maintenance_task_name (Union[None, Unset, str]):
-        next_service_date (Union[None, Unset, datetime.datetime]):
-        advance_recall_date (Union[None, Unset, datetime.datetime]):
-        grace_period_date (Union[None, Unset, datetime.datetime]):
-        certificate_next_service_date (Union[None, Unset, datetime.datetime]):
-        service_interval (Union[None, Unset, str]):
-        interval_cycle (Union[None, Unset, str]):
-        interval_length (Union[None, Unset, int]):
-        on_day (Union[None, Unset, int]):
-        on_month (Union[None, Unset, int]):
-        on_week_days (Union[None, Unset, int]):
-        weekday_of_month (Union[None, Unset, int]):
-        advance_recall_period (Union[None, Unset, str]):
-        days_before_due (Union[None, Unset, int]):
-        past_due_grace_period (Union[None, Unset, str]):
-        days_after_due (Union[None, Unset, int]):
+        company_id (Optional[int]):
+        asset_id (Optional[int]):
+        site_id (Optional[int]):
+        asset_service_record_id (Optional[int]):
+        serial_number (Optional[str]):
+        asset_user (Optional[str]):
+        asset_tag (Optional[str]):
+        equipment_id (Optional[str]):
+        asset_name (Optional[str]):
+        category_name (Optional[str]):
+        manufacturer_name (Optional[str]):
+        site_name (Optional[str]):
+        maintenance_plan_id (Optional[int]):
+        maintenance_plan_name (Optional[str]):
+        maintenance_task_id (Optional[int]):
+        maintenance_task_name (Optional[str]):
+        next_service_date (Optional[datetime.datetime]):
+        advance_recall_date (Optional[datetime.datetime]):
+        grace_period_date (Optional[datetime.datetime]):
+        certificate_next_service_date (Optional[datetime.datetime]):
+        service_interval (Optional[str]):
+        interval_cycle (Optional[str]):
+        interval_length (Optional[int]):
+        on_day (Optional[int]):
+        on_month (Optional[int]):
+        on_week_days (Optional[int]):
+        weekday_of_month (Optional[int]):
+        advance_recall_period (Optional[str]):
+        days_before_due (Optional[int]):
+        past_due_grace_period (Optional[str]):
+        days_after_due (Optional[int]):
     """
 
-    company_id: Union[None, Unset, int] = UNSET
-    asset_id: Union[None, Unset, int] = UNSET
-    site_id: Union[None, Unset, int] = UNSET
-    asset_service_record_id: Union[None, Unset, int] = UNSET
-    serial_number: Union[None, Unset, str] = UNSET
-    asset_user: Union[None, Unset, str] = UNSET
-    asset_tag: Union[None, Unset, str] = UNSET
-    equipment_id: Union[None, Unset, str] = UNSET
-    asset_name: Union[None, Unset, str] = UNSET
-    category_name: Union[None, Unset, str] = UNSET
-    manufacturer_name: Union[None, Unset, str] = UNSET
-    site_name: Union[None, Unset, str] = UNSET
-    maintenance_plan_id: Union[None, Unset, int] = UNSET
-    maintenance_plan_name: Union[None, Unset, str] = UNSET
-    maintenance_task_id: Union[None, Unset, int] = UNSET
-    maintenance_task_name: Union[None, Unset, str] = UNSET
-    next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    advance_recall_date: Union[None, Unset, datetime.datetime] = UNSET
-    grace_period_date: Union[None, Unset, datetime.datetime] = UNSET
-    certificate_next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    service_interval: Union[None, Unset, str] = UNSET
-    interval_cycle: Union[None, Unset, str] = UNSET
-    interval_length: Union[None, Unset, int] = UNSET
-    on_day: Union[None, Unset, int] = UNSET
-    on_month: Union[None, Unset, int] = UNSET
-    on_week_days: Union[None, Unset, int] = UNSET
-    weekday_of_month: Union[None, Unset, int] = UNSET
-    advance_recall_period: Union[None, Unset, str] = UNSET
-    days_before_due: Union[None, Unset, int] = UNSET
-    past_due_grace_period: Union[None, Unset, str] = UNSET
-    days_after_due: Union[None, Unset, int] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    company_id: Optional[int] = None
+    asset_id: Optional[int] = None
+    site_id: Optional[int] = None
+    asset_service_record_id: Optional[int] = None
+    serial_number: Optional[str] = None
+    asset_user: Optional[str] = None
+    asset_tag: Optional[str] = None
+    equipment_id: Optional[str] = None
+    asset_name: Optional[str] = None
+    category_name: Optional[str] = None
+    manufacturer_name: Optional[str] = None
+    site_name: Optional[str] = None
+    maintenance_plan_id: Optional[int] = None
+    maintenance_plan_name: Optional[str] = None
+    maintenance_task_id: Optional[int] = None
+    maintenance_task_name: Optional[str] = None
+    next_service_date: Optional[datetime.datetime] = None
+    advance_recall_date: Optional[datetime.datetime] = None
+    grace_period_date: Optional[datetime.datetime] = None
+    certificate_next_service_date: Optional[datetime.datetime] = None
+    service_interval: Optional[str] = None
+    interval_cycle: Optional[str] = None
+    interval_length: Optional[int] = None
+    on_day: Optional[int] = None
+    on_month: Optional[int] = None
+    on_week_days: Optional[int] = None
+    weekday_of_month: Optional[int] = None
+    advance_recall_period: Optional[str] = None
+    days_before_due: Optional[int] = None
+    past_due_grace_period: Optional[str] = None
+    days_after_due: Optional[int] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         company_id = self.company_id
 
         asset_id = self.asset_id
@@ -114,37 +112,35 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
 
         maintenance_task_name = self.maintenance_task_name
 
-        next_service_date: Union[None, Unset, str]
-        if isinstance(self.next_service_date, Unset):
-            next_service_date = UNSET
+        next_service_date: Optional[str]
+        if not self.next_service_date:
+            next_service_date = None
         elif isinstance(self.next_service_date, datetime.datetime):
             next_service_date = self.next_service_date.isoformat()
         else:
             next_service_date = self.next_service_date
 
-        advance_recall_date: Union[None, Unset, str]
-        if isinstance(self.advance_recall_date, Unset):
-            advance_recall_date = UNSET
+        advance_recall_date: Optional[str]
+        if not self.advance_recall_date:
+            advance_recall_date = None
         elif isinstance(self.advance_recall_date, datetime.datetime):
             advance_recall_date = self.advance_recall_date.isoformat()
         else:
             advance_recall_date = self.advance_recall_date
 
-        grace_period_date: Union[None, Unset, str]
-        if isinstance(self.grace_period_date, Unset):
-            grace_period_date = UNSET
+        grace_period_date: Optional[str]
+        if not self.grace_period_date:
+            grace_period_date = None
         elif isinstance(self.grace_period_date, datetime.datetime):
             grace_period_date = self.grace_period_date.isoformat()
         else:
             grace_period_date = self.grace_period_date
 
-        certificate_next_service_date: Union[None, Unset, str]
-        if isinstance(self.certificate_next_service_date, Unset):
-            certificate_next_service_date = UNSET
+        certificate_next_service_date: Optional[str]
+        if not self.certificate_next_service_date:
+            certificate_next_service_date = None
         elif isinstance(self.certificate_next_service_date, datetime.datetime):
-            certificate_next_service_date = (
-                self.certificate_next_service_date.isoformat()
-            )
+            certificate_next_service_date = self.certificate_next_service_date.isoformat()
         else:
             certificate_next_service_date = self.certificate_next_service_date
 
@@ -170,70 +166,70 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
 
         days_after_due = self.days_after_due
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if company_id is not UNSET:
+        if company_id is not None:
             field_dict["CompanyId"] = company_id
-        if asset_id is not UNSET:
+        if asset_id is not None:
             field_dict["AssetId"] = asset_id
-        if site_id is not UNSET:
+        if site_id is not None:
             field_dict["SiteId"] = site_id
-        if asset_service_record_id is not UNSET:
+        if asset_service_record_id is not None:
             field_dict["AssetServiceRecordId"] = asset_service_record_id
-        if serial_number is not UNSET:
+        if serial_number is not None:
             field_dict["SerialNumber"] = serial_number
-        if asset_user is not UNSET:
+        if asset_user is not None:
             field_dict["AssetUser"] = asset_user
-        if asset_tag is not UNSET:
+        if asset_tag is not None:
             field_dict["AssetTag"] = asset_tag
-        if equipment_id is not UNSET:
+        if equipment_id is not None:
             field_dict["EquipmentId"] = equipment_id
-        if asset_name is not UNSET:
+        if asset_name is not None:
             field_dict["AssetName"] = asset_name
-        if category_name is not UNSET:
+        if category_name is not None:
             field_dict["CategoryName"] = category_name
-        if manufacturer_name is not UNSET:
+        if manufacturer_name is not None:
             field_dict["ManufacturerName"] = manufacturer_name
-        if site_name is not UNSET:
+        if site_name is not None:
             field_dict["SiteName"] = site_name
-        if maintenance_plan_id is not UNSET:
+        if maintenance_plan_id is not None:
             field_dict["MaintenancePlanId"] = maintenance_plan_id
-        if maintenance_plan_name is not UNSET:
+        if maintenance_plan_name is not None:
             field_dict["MaintenancePlanName"] = maintenance_plan_name
-        if maintenance_task_id is not UNSET:
+        if maintenance_task_id is not None:
             field_dict["MaintenanceTaskId"] = maintenance_task_id
-        if maintenance_task_name is not UNSET:
+        if maintenance_task_name is not None:
             field_dict["MaintenanceTaskName"] = maintenance_task_name
-        if next_service_date is not UNSET:
+        if next_service_date is not None:
             field_dict["NextServiceDate"] = next_service_date
-        if advance_recall_date is not UNSET:
+        if advance_recall_date is not None:
             field_dict["AdvanceRecallDate"] = advance_recall_date
-        if grace_period_date is not UNSET:
+        if grace_period_date is not None:
             field_dict["GracePeriodDate"] = grace_period_date
-        if certificate_next_service_date is not UNSET:
+        if certificate_next_service_date is not None:
             field_dict["CertificateNextServiceDate"] = certificate_next_service_date
-        if service_interval is not UNSET:
+        if service_interval is not None:
             field_dict["ServiceInterval"] = service_interval
-        if interval_cycle is not UNSET:
+        if interval_cycle is not None:
             field_dict["IntervalCycle"] = interval_cycle
-        if interval_length is not UNSET:
+        if interval_length is not None:
             field_dict["IntervalLength"] = interval_length
-        if on_day is not UNSET:
+        if on_day is not None:
             field_dict["OnDay"] = on_day
-        if on_month is not UNSET:
+        if on_month is not None:
             field_dict["OnMonth"] = on_month
-        if on_week_days is not UNSET:
+        if on_week_days is not None:
             field_dict["OnWeekDays"] = on_week_days
-        if weekday_of_month is not UNSET:
+        if weekday_of_month is not None:
             field_dict["WeekdayOfMonth"] = weekday_of_month
-        if advance_recall_period is not UNSET:
+        if advance_recall_period is not None:
             field_dict["AdvanceRecallPeriod"] = advance_recall_period
-        if days_before_due is not UNSET:
+        if days_before_due is not None:
             field_dict["DaysBeforeDue"] = days_before_due
-        if past_due_grace_period is not UNSET:
+        if past_due_grace_period is not None:
             field_dict["PastDueGracePeriod"] = past_due_grace_period
-        if days_after_due is not UNSET:
+        if days_after_due is not None:
             field_dict["DaysAfterDue"] = days_after_due
 
         return field_dict
@@ -241,45 +237,43 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        company_id = d.pop("CompanyId", UNSET)
+        company_id = d.pop("CompanyId", None)
 
-        asset_id = d.pop("AssetId", UNSET)
+        asset_id = d.pop("AssetId", None)
 
-        site_id = d.pop("SiteId", UNSET)
+        site_id = d.pop("SiteId", None)
 
-        asset_service_record_id = d.pop("AssetServiceRecordId", UNSET)
+        asset_service_record_id = d.pop("AssetServiceRecordId", None)
 
-        serial_number = d.pop("SerialNumber", UNSET)
+        serial_number = d.pop("SerialNumber", None)
 
-        asset_user = d.pop("AssetUser", UNSET)
+        asset_user = d.pop("AssetUser", None)
 
-        asset_tag = d.pop("AssetTag", UNSET)
+        asset_tag = d.pop("AssetTag", None)
 
-        equipment_id = d.pop("EquipmentId", UNSET)
+        equipment_id = d.pop("EquipmentId", None)
 
-        asset_name = d.pop("AssetName", UNSET)
+        asset_name = d.pop("AssetName", None)
 
-        category_name = d.pop("CategoryName", UNSET)
+        category_name = d.pop("CategoryName", None)
 
-        manufacturer_name = d.pop("ManufacturerName", UNSET)
+        manufacturer_name = d.pop("ManufacturerName", None)
 
-        site_name = d.pop("SiteName", UNSET)
+        site_name = d.pop("SiteName", None)
 
-        maintenance_plan_id = d.pop("MaintenancePlanId", UNSET)
+        maintenance_plan_id = d.pop("MaintenancePlanId", None)
 
-        maintenance_plan_name = d.pop("MaintenancePlanName", UNSET)
+        maintenance_plan_name = d.pop("MaintenancePlanName", None)
 
-        maintenance_task_id = d.pop("MaintenanceTaskId", UNSET)
+        maintenance_task_id = d.pop("MaintenanceTaskId", None)
 
-        maintenance_task_name = d.pop("MaintenanceTaskName", UNSET)
+        maintenance_task_name = d.pop("MaintenanceTaskName", None)
 
         def _parse_next_service_date(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -288,17 +282,15 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
                 return next_service_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        next_service_date = _parse_next_service_date(d.pop("NextServiceDate", UNSET))
+        next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
 
         def _parse_advance_recall_date(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -307,19 +299,15 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
                 return advance_recall_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        advance_recall_date = _parse_advance_recall_date(
-            d.pop("AdvanceRecallDate", UNSET)
-        )
+        advance_recall_date = _parse_advance_recall_date(d.pop("AdvanceRecallDate", None))
 
         def _parse_grace_period_date(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -328,17 +316,15 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
                 return grace_period_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        grace_period_date = _parse_grace_period_date(d.pop("GracePeriodDate", UNSET))
+        grace_period_date = _parse_grace_period_date(d.pop("GracePeriodDate", None))
 
         def _parse_certificate_next_service_date(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -347,33 +333,33 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
                 return certificate_next_service_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
         certificate_next_service_date = _parse_certificate_next_service_date(
-            d.pop("CertificateNextServiceDate", UNSET)
+            d.pop("CertificateNextServiceDate", None)
         )
 
-        service_interval = d.pop("ServiceInterval", UNSET)
+        service_interval = d.pop("ServiceInterval", None)
 
-        interval_cycle = d.pop("IntervalCycle", UNSET)
+        interval_cycle = d.pop("IntervalCycle", None)
 
-        interval_length = d.pop("IntervalLength", UNSET)
+        interval_length = d.pop("IntervalLength", None)
 
-        on_day = d.pop("OnDay", UNSET)
+        on_day = d.pop("OnDay", None)
 
-        on_month = d.pop("OnMonth", UNSET)
+        on_month = d.pop("OnMonth", None)
 
-        on_week_days = d.pop("OnWeekDays", UNSET)
+        on_week_days = d.pop("OnWeekDays", None)
 
-        weekday_of_month = d.pop("WeekdayOfMonth", UNSET)
+        weekday_of_month = d.pop("WeekdayOfMonth", None)
 
-        advance_recall_period = d.pop("AdvanceRecallPeriod", UNSET)
+        advance_recall_period = d.pop("AdvanceRecallPeriod", None)
 
-        days_before_due = d.pop("DaysBeforeDue", UNSET)
+        days_before_due = d.pop("DaysBeforeDue", None)
 
-        past_due_grace_period = d.pop("PastDueGracePeriod", UNSET)
+        past_due_grace_period = d.pop("PastDueGracePeriod", None)
 
-        days_after_due = d.pop("DaysAfterDue", UNSET)
+        days_after_due = d.pop("DaysAfterDue", None)
 
         qualer_api_models_asset_to_asset_service_forecast_model = cls(
             company_id=company_id,
@@ -409,13 +395,11 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
             days_after_due=days_after_due,
         )
 
-        qualer_api_models_asset_to_asset_service_forecast_model.additional_properties = (
-            d
-        )
+        qualer_api_models_asset_to_asset_service_forecast_model.additional_properties = d
         return qualer_api_models_asset_to_asset_service_forecast_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

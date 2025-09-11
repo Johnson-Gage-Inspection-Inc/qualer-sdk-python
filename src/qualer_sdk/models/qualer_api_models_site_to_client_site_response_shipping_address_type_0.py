@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, Dict, List, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -11,10 +11,10 @@ T = TypeVar("T", bound="QualerApiModelsSiteToClientSiteResponseShippingAddressTy
 class QualerApiModelsSiteToClientSiteResponseShippingAddressType0:
     """ """
 
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
-        field_dict: dict[str, Any] = {}
+    def to_dict(self) -> Dict[str, Any]:
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
 
         return field_dict
@@ -30,7 +30,7 @@ class QualerApiModelsSiteToClientSiteResponseShippingAddressType0:
         return qualer_api_models_site_to_client_site_response_shipping_address_type_0
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

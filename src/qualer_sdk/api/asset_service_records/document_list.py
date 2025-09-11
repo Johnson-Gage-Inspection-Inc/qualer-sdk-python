@@ -1,28 +1,28 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union, cast
+from typing import Any, Dict, List, Optional, Union, cast
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...types import UNSET, Response, Unset
+from ...types import Response
 
 
 def _get_kwargs(
     asset_service_record_id_path: str,
     *,
-    asset_service_record_id_query: Union[None, Unset, str] = UNSET,
-    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+    asset_service_record_id_query: Optional[str] = None,
+    model_asset_service_record_id: Optional[int] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
     params["assetServiceRecordId"] = asset_service_record_id_query
 
     params["model.assetServiceRecordId"] = model_asset_service_record_id
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None and v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": f"/api/assetservicerecords/{asset_service_record_id_path}/documents/files",
         "params": params,
@@ -33,9 +33,9 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[list[str]]:
+) -> Optional[List[str]]:
     if response.status_code == 200:
-        response_200 = cast(list[str], response.json())
+        response_200 = cast(List[str], response.json())
 
         return response_200
     if client.raise_on_unexpected_status:
@@ -46,7 +46,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[list[str]]:
+) -> Response[List[str]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -59,21 +59,21 @@ def sync_detailed(
     asset_service_record_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_service_record_id_query: Union[None, Unset, str] = UNSET,
-    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
-) -> Response[list[str]]:
+    asset_service_record_id_query: Optional[str] = None,
+    model_asset_service_record_id: Optional[int] = None,
+) -> Response[List[str]]:
     """
     Args:
         asset_service_record_id_path (str):
-        asset_service_record_id_query (Union[None, Unset, str]):
-        model_asset_service_record_id (Union[None, Unset, int]):
+        asset_service_record_id_query (Optional[str]):
+        model_asset_service_record_id (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list[str]]
+        Response[List[str]]
     """
 
     kwargs = _get_kwargs(
@@ -93,21 +93,21 @@ def sync(
     asset_service_record_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_service_record_id_query: Union[None, Unset, str] = UNSET,
-    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
-) -> Optional[list[str]]:
+    asset_service_record_id_query: Optional[str] = None,
+    model_asset_service_record_id: Optional[int] = None,
+) -> Optional[List[str]]:
     """
     Args:
         asset_service_record_id_path (str):
-        asset_service_record_id_query (Union[None, Unset, str]):
-        model_asset_service_record_id (Union[None, Unset, int]):
+        asset_service_record_id_query (Optional[str]):
+        model_asset_service_record_id (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list[str]
+        List[str]
     """
 
     return sync_detailed(
@@ -122,21 +122,21 @@ async def asyncio_detailed(
     asset_service_record_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_service_record_id_query: Union[None, Unset, str] = UNSET,
-    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
-) -> Response[list[str]]:
+    asset_service_record_id_query: Optional[str] = None,
+    model_asset_service_record_id: Optional[int] = None,
+) -> Response[List[str]]:
     """
     Args:
         asset_service_record_id_path (str):
-        asset_service_record_id_query (Union[None, Unset, str]):
-        model_asset_service_record_id (Union[None, Unset, int]):
+        asset_service_record_id_query (Optional[str]):
+        model_asset_service_record_id (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list[str]]
+        Response[List[str]]
     """
 
     kwargs = _get_kwargs(
@@ -154,21 +154,21 @@ async def asyncio(
     asset_service_record_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_service_record_id_query: Union[None, Unset, str] = UNSET,
-    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
-) -> Optional[list[str]]:
+    asset_service_record_id_query: Optional[str] = None,
+    model_asset_service_record_id: Optional[int] = None,
+) -> Optional[List[str]]:
     """
     Args:
         asset_service_record_id_path (str):
-        asset_service_record_id_query (Union[None, Unset, str]):
-        model_asset_service_record_id (Union[None, Unset, int]):
+        asset_service_record_id_query (Optional[str]):
+        model_asset_service_record_id (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list[str]
+        List[str]
     """
 
     return (

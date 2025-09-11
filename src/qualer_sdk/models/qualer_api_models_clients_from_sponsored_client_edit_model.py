@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -7,12 +7,9 @@ from attrs import field as _attrs_field
 from ..models.qualer_api_models_clients_from_sponsored_client_edit_model_client_status import (
     QualerApiModelsClientsFromSponsoredClientEditModelClientStatus,
 )
-from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.qualer_api_models_address_address_model import (
-        QualerApiModelsAddressAddressModel,
-    )
+    from ..models.qualer_api_models_address_address_model import QualerApiModelsAddressAddressModel
 
 
 T = TypeVar("T", bound="QualerApiModelsClientsFromSponsoredClientEditModel")
@@ -22,45 +19,43 @@ T = TypeVar("T", bound="QualerApiModelsClientsFromSponsoredClientEditModel")
 class QualerApiModelsClientsFromSponsoredClientEditModel:
     """
     Attributes:
-        company_id (Union[None, Unset, int]):
-        account_number_text (Union[None, Unset, str]):
-        client_status (Union[None, Unset, QualerApiModelsClientsFromSponsoredClientEditModelClientStatus]):
-        domain_name (Union[None, Unset, str]):
-        custom_client_name (Union[None, Unset, str]):
-        legacy_id (Union[None, Unset, str]):
-        currency_id (Union[None, Unset, int]):
-        account_representative_employee_id (Union[None, Unset, int]):
-        account_representative_site_id (Union[None, Unset, int]):
-        account_manager_employee_id (Union[None, Unset, int]):
-        company_name (Union[None, Unset, str]):
-        billing_address (Union[None, Unset, QualerApiModelsAddressAddressModel]):
-        shipping_address (Union[None, Unset, QualerApiModelsAddressAddressModel]):
+        company_id (Optional[int]):
+        account_number_text (Optional[str]):
+        client_status (Optional[QualerApiModelsClientsFromSponsoredClientEditModelClientStatus]):
+        domain_name (Optional[str]):
+        custom_client_name (Optional[str]):
+        legacy_id (Optional[str]):
+        currency_id (Optional[int]):
+        account_representative_employee_id (Optional[int]):
+        account_representative_site_id (Optional[int]):
+        account_manager_employee_id (Optional[int]):
+        company_name (Optional[str]):
+        billing_address (Optional[QualerApiModelsAddressAddressModel]):
+        shipping_address (Optional[QualerApiModelsAddressAddressModel]):
     """
 
-    company_id: Union[None, Unset, int] = UNSET
-    account_number_text: Union[None, Unset, str] = UNSET
-    client_status: Union[
-        None, Unset, QualerApiModelsClientsFromSponsoredClientEditModelClientStatus
-    ] = UNSET
-    domain_name: Union[None, Unset, str] = UNSET
-    custom_client_name: Union[None, Unset, str] = UNSET
-    legacy_id: Union[None, Unset, str] = UNSET
-    currency_id: Union[None, Unset, int] = UNSET
-    account_representative_employee_id: Union[None, Unset, int] = UNSET
-    account_representative_site_id: Union[None, Unset, int] = UNSET
-    account_manager_employee_id: Union[None, Unset, int] = UNSET
-    company_name: Union[None, Unset, str] = UNSET
-    billing_address: Union[None, Unset, "QualerApiModelsAddressAddressModel"] = UNSET
-    shipping_address: Union[None, Unset, "QualerApiModelsAddressAddressModel"] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    company_id: Optional[int] = None
+    account_number_text: Optional[str] = None
+    client_status: Optional["QualerApiModelsClientsFromSponsoredClientEditModelClientStatus"] = None
+    domain_name: Optional[str] = None
+    custom_client_name: Optional[str] = None
+    legacy_id: Optional[str] = None
+    currency_id: Optional[int] = None
+    account_representative_employee_id: Optional[int] = None
+    account_representative_site_id: Optional[int] = None
+    account_manager_employee_id: Optional[int] = None
+    company_name: Optional[str] = None
+    billing_address: Optional["QualerApiModelsAddressAddressModel"] = None
+    shipping_address: Optional["QualerApiModelsAddressAddressModel"] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         company_id = self.company_id
 
         account_number_text = self.account_number_text
 
-        client_status: Union[None, Unset, str] = UNSET
-        if self.client_status and not isinstance(self.client_status, Unset):
+        client_status: Optional[str] = None
+        if self.client_status:
             client_status = self.client_status.value
 
         domain_name = self.domain_name
@@ -79,44 +74,42 @@ class QualerApiModelsClientsFromSponsoredClientEditModel:
 
         company_name = self.company_name
 
-        billing_address: Union[None, Unset, dict[str, Any]] = UNSET
-        if self.billing_address and not isinstance(self.billing_address, Unset):
+        billing_address: Optional[Dict[str, Any]] = None
+        if self.billing_address:
             billing_address = self.billing_address.to_dict()
 
-        shipping_address: Union[None, Unset, dict[str, Any]] = UNSET
-        if self.shipping_address and not isinstance(self.shipping_address, Unset):
+        shipping_address: Optional[Dict[str, Any]] = None
+        if self.shipping_address:
             shipping_address = self.shipping_address.to_dict()
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if company_id is not UNSET:
+        if company_id is not None:
             field_dict["CompanyId"] = company_id
-        if account_number_text is not UNSET:
+        if account_number_text is not None:
             field_dict["AccountNumberText"] = account_number_text
-        if client_status is not UNSET:
+        if client_status is not None:
             field_dict["ClientStatus"] = client_status
-        if domain_name is not UNSET:
+        if domain_name is not None:
             field_dict["DomainName"] = domain_name
-        if custom_client_name is not UNSET:
+        if custom_client_name is not None:
             field_dict["CustomClientName"] = custom_client_name
-        if legacy_id is not UNSET:
+        if legacy_id is not None:
             field_dict["LegacyId"] = legacy_id
-        if currency_id is not UNSET:
+        if currency_id is not None:
             field_dict["CurrencyId"] = currency_id
-        if account_representative_employee_id is not UNSET:
-            field_dict["AccountRepresentativeEmployeeId"] = (
-                account_representative_employee_id
-            )
-        if account_representative_site_id is not UNSET:
+        if account_representative_employee_id is not None:
+            field_dict["AccountRepresentativeEmployeeId"] = account_representative_employee_id
+        if account_representative_site_id is not None:
             field_dict["AccountRepresentativeSiteId"] = account_representative_site_id
-        if account_manager_employee_id is not UNSET:
+        if account_manager_employee_id is not None:
             field_dict["AccountManagerEmployeeId"] = account_manager_employee_id
-        if company_name is not UNSET:
+        if company_name is not None:
             field_dict["CompanyName"] = company_name
-        if billing_address is not UNSET:
+        if billing_address is not None:
             field_dict["BillingAddress"] = billing_address
-        if shipping_address is not UNSET:
+        if shipping_address is not None:
             field_dict["ShippingAddress"] = shipping_address
 
         return field_dict
@@ -128,58 +121,48 @@ class QualerApiModelsClientsFromSponsoredClientEditModel:
         )
 
         d = dict(src_dict)
-        company_id = d.pop("CompanyId", UNSET)
+        company_id = d.pop("CompanyId", None)
 
-        account_number_text = d.pop("AccountNumberText", UNSET)
+        account_number_text = d.pop("AccountNumberText", None)
 
-        _client_status = d.pop("ClientStatus", UNSET)
-        client_status: Union[
-            None, Unset, QualerApiModelsClientsFromSponsoredClientEditModelClientStatus
-        ]
-        if isinstance(_client_status, Unset):
-            client_status = UNSET
+        _client_status = d.pop("ClientStatus", None)
+        client_status: Optional[QualerApiModelsClientsFromSponsoredClientEditModelClientStatus]
+        if not _client_status:
+            client_status = None
         else:
-            client_status = (
-                QualerApiModelsClientsFromSponsoredClientEditModelClientStatus(
-                    _client_status
-                )
+            client_status = QualerApiModelsClientsFromSponsoredClientEditModelClientStatus(
+                _client_status
             )
 
-        domain_name = d.pop("DomainName", UNSET)
+        domain_name = d.pop("DomainName", None)
 
-        custom_client_name = d.pop("CustomClientName", UNSET)
+        custom_client_name = d.pop("CustomClientName", None)
 
-        legacy_id = d.pop("LegacyId", UNSET)
+        legacy_id = d.pop("LegacyId", None)
 
-        currency_id = d.pop("CurrencyId", UNSET)
+        currency_id = d.pop("CurrencyId", None)
 
-        account_representative_employee_id = d.pop(
-            "AccountRepresentativeEmployeeId", UNSET
-        )
+        account_representative_employee_id = d.pop("AccountRepresentativeEmployeeId", None)
 
-        account_representative_site_id = d.pop("AccountRepresentativeSiteId", UNSET)
+        account_representative_site_id = d.pop("AccountRepresentativeSiteId", None)
 
-        account_manager_employee_id = d.pop("AccountManagerEmployeeId", UNSET)
+        account_manager_employee_id = d.pop("AccountManagerEmployeeId", None)
 
-        company_name = d.pop("CompanyName", UNSET)
+        company_name = d.pop("CompanyName", None)
 
-        _billing_address = d.pop("BillingAddress", UNSET)
-        billing_address: Union[None, Unset, QualerApiModelsAddressAddressModel]
-        if isinstance(_billing_address, Unset):
-            billing_address = UNSET
+        _billing_address = d.pop("BillingAddress", None)
+        billing_address: Optional[QualerApiModelsAddressAddressModel]
+        if not _billing_address:
+            billing_address = None
         else:
-            billing_address = QualerApiModelsAddressAddressModel.from_dict(
-                _billing_address
-            )
+            billing_address = QualerApiModelsAddressAddressModel.from_dict(_billing_address)
 
-        _shipping_address = d.pop("ShippingAddress", UNSET)
-        shipping_address: Union[None, Unset, QualerApiModelsAddressAddressModel]
-        if isinstance(_shipping_address, Unset):
-            shipping_address = UNSET
+        _shipping_address = d.pop("ShippingAddress", None)
+        shipping_address: Optional[QualerApiModelsAddressAddressModel]
+        if not _shipping_address:
+            shipping_address = None
         else:
-            shipping_address = QualerApiModelsAddressAddressModel.from_dict(
-                _shipping_address
-            )
+            shipping_address = QualerApiModelsAddressAddressModel.from_dict(_shipping_address)
 
         qualer_api_models_clients_from_sponsored_client_edit_model = cls(
             company_id=company_id,
@@ -197,13 +180,11 @@ class QualerApiModelsClientsFromSponsoredClientEditModel:
             shipping_address=shipping_address,
         )
 
-        qualer_api_models_clients_from_sponsored_client_edit_model.additional_properties = (
-            d
-        )
+        qualer_api_models_clients_from_sponsored_client_edit_model.additional_properties = d
         return qualer_api_models_clients_from_sponsored_client_edit_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

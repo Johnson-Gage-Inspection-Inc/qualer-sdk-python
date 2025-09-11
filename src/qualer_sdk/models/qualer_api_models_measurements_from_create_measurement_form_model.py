@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_from_create_measurement_set_model import (
@@ -22,48 +20,45 @@ T = TypeVar("T", bound="QualerApiModelsMeasurementsFromCreateMeasurementFormMode
 class QualerApiModelsMeasurementsFromCreateMeasurementFormModel:
     """
     Attributes:
-        batch_type (Union[None, Unset, str]):
-        batch_result (Union[None, Unset, str]):
-        specification (Union[None, Unset, QualerApiModelsMeasurementsFromSpecification]):
-        measurement_sets (Union[None, Unset, list['QualerApiModelsMeasurementsFromCreateMeasurementSetModel']]):
+        batch_type (Optional[str]):
+        batch_result (Optional[str]):
+        specification (Optional[QualerApiModelsMeasurementsFromSpecification]):
+        measurement_sets (Optional[List['QualerApiModelsMeasurementsFromCreateMeasurementSetModel']]):
     """
 
-    batch_type: Union[None, Unset, str] = UNSET
-    batch_result: Union[None, Unset, str] = UNSET
-    specification: Union[
-        None, Unset, "QualerApiModelsMeasurementsFromSpecification"
-    ] = UNSET
+    batch_type: Optional[str] = None
+    batch_result: Optional[str] = None
+    specification: Optional["QualerApiModelsMeasurementsFromSpecification"] = None
     measurement_sets: Union[
-        None, Unset, list["QualerApiModelsMeasurementsFromCreateMeasurementSetModel"]
-    ] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+        None, List["QualerApiModelsMeasurementsFromCreateMeasurementSetModel"]
+    ] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         batch_type = self.batch_type
-
         batch_result = self.batch_result
 
-        specification: Union[None, Unset, dict[str, Any]] = UNSET
-        if self.specification and not isinstance(self.specification, Unset):
+        specification: Optional[Dict[str, Any]] = None
+        if self.specification is not None:
             specification = self.specification.to_dict()
 
-        measurement_sets: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.measurement_sets and not isinstance(self.measurement_sets, Unset):
+        measurement_sets: Optional[List[Dict[str, Any]]] = None
+        if self.measurement_sets is not None:
             measurement_sets = []
             for measurement_sets_item_data in self.measurement_sets:
                 measurement_sets_item = measurement_sets_item_data.to_dict()
                 measurement_sets.append(measurement_sets_item)
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if batch_type is not UNSET:
+        if batch_type is not None:
             field_dict["BatchType"] = batch_type
-        if batch_result is not UNSET:
+        if batch_result is not None:
             field_dict["BatchResult"] = batch_result
-        if specification is not UNSET:
+        if specification is not None:
             field_dict["Specification"] = specification
-        if measurement_sets is not UNSET:
+        if measurement_sets is not None:
             field_dict["MeasurementSets"] = measurement_sets
 
         return field_dict
@@ -78,28 +73,24 @@ class QualerApiModelsMeasurementsFromCreateMeasurementFormModel:
         )
 
         d = dict(src_dict)
-        batch_type = d.pop("BatchType", UNSET)
+        batch_type = d.pop("BatchType", None)
+        batch_result = d.pop("BatchResult", None)
 
-        batch_result = d.pop("BatchResult", UNSET)
-
-        _specification = d.pop("Specification", UNSET)
-        specification: Union[None, Unset, QualerApiModelsMeasurementsFromSpecification]
-        if isinstance(_specification, Unset):
-            specification = UNSET
+        _specification = d.pop("Specification", None)
+        specification: Optional[QualerApiModelsMeasurementsFromSpecification]
+        if _specification is None:
+            specification = None
         else:
-            specification = QualerApiModelsMeasurementsFromSpecification.from_dict(
-                _specification
-            )
+            specification = QualerApiModelsMeasurementsFromSpecification.from_dict(_specification)
 
-        measurement_sets = []
-        _measurement_sets = d.pop("MeasurementSets", UNSET)
+        measurement_sets: List[QualerApiModelsMeasurementsFromCreateMeasurementSetModel] = []
+        _measurement_sets = d.pop("MeasurementSets", None)
         for measurement_sets_item_data in _measurement_sets or []:
             measurement_sets_item = (
                 QualerApiModelsMeasurementsFromCreateMeasurementSetModel.from_dict(
                     measurement_sets_item_data
                 )
             )
-
             measurement_sets.append(measurement_sets_item)
 
         qualer_api_models_measurements_from_create_measurement_form_model = cls(
@@ -109,13 +100,11 @@ class QualerApiModelsMeasurementsFromCreateMeasurementFormModel:
             measurement_sets=measurement_sets,
         )
 
-        qualer_api_models_measurements_from_create_measurement_form_model.additional_properties = (
-            d
-        )
+        qualer_api_models_measurements_from_create_measurement_form_model.additional_properties = d
         return qualer_api_models_measurements_from_create_measurement_form_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

@@ -1,13 +1,11 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union, cast
+from typing import Any, Dict, Optional, Union, cast
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.create_measurement_form_response_200 import (
-    CreateMeasurementFormResponse200,
-)
+from ...models.create_measurement_form_response_200 import CreateMeasurementFormResponse200
 from ...models.qualer_api_models_measurements_from_create_measurement_form_model import (
     QualerApiModelsMeasurementsFromCreateMeasurementFormModel,
 )
@@ -18,10 +16,10 @@ def _get_kwargs(
     work_item_id: int,
     *,
     body: QualerApiModelsMeasurementsFromCreateMeasurementFormModel,
-) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+) -> Dict[str, Any]:
+    headers: Dict[str, Any] = {}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "post",
         "url": f"/api/service/workitems/{work_item_id}/measurements",
     }

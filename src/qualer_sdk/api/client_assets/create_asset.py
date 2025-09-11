@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
@@ -18,10 +18,10 @@ from ...types import Response
 def _get_kwargs(
     *,
     body: QualerApiModelsClientsFromAssetModel,
-) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+) -> Dict[str, Any]:
+    headers: Dict[str, Any] = {}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "post",
         "url": "/api/service/clients/assets",
     }
@@ -36,17 +36,13 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[
-    Union[CreateAssetResponse200, QualerApiModelsClientsToCreatedClientAssetResponse]
-]:
+) -> Optional[Union[CreateAssetResponse200, QualerApiModelsClientsToCreatedClientAssetResponse]]:
     if response.status_code == 200:
         response_200 = CreateAssetResponse200.from_dict(response.json())
 
         return response_200
     if response.status_code == 201:
-        response_201 = QualerApiModelsClientsToCreatedClientAssetResponse.from_dict(
-            response.json()
-        )
+        response_201 = QualerApiModelsClientsToCreatedClientAssetResponse.from_dict(response.json())
 
         return response_201
     if client.raise_on_unexpected_status:
@@ -57,9 +53,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[
-    Union[CreateAssetResponse200, QualerApiModelsClientsToCreatedClientAssetResponse]
-]:
+) -> Response[Union[CreateAssetResponse200, QualerApiModelsClientsToCreatedClientAssetResponse]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -72,9 +66,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerApiModelsClientsFromAssetModel,
-) -> Response[
-    Union[CreateAssetResponse200, QualerApiModelsClientsToCreatedClientAssetResponse]
-]:
+) -> Response[Union[CreateAssetResponse200, QualerApiModelsClientsToCreatedClientAssetResponse]]:
     """
     Args:
         body (QualerApiModelsClientsFromAssetModel):
@@ -102,9 +94,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerApiModelsClientsFromAssetModel,
-) -> Optional[
-    Union[CreateAssetResponse200, QualerApiModelsClientsToCreatedClientAssetResponse]
-]:
+) -> Optional[Union[CreateAssetResponse200, QualerApiModelsClientsToCreatedClientAssetResponse]]:
     """
     Args:
         body (QualerApiModelsClientsFromAssetModel):
@@ -127,9 +117,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerApiModelsClientsFromAssetModel,
-) -> Response[
-    Union[CreateAssetResponse200, QualerApiModelsClientsToCreatedClientAssetResponse]
-]:
+) -> Response[Union[CreateAssetResponse200, QualerApiModelsClientsToCreatedClientAssetResponse]]:
     """
     Args:
         body (QualerApiModelsClientsFromAssetModel):
@@ -155,9 +143,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerApiModelsClientsFromAssetModel,
-) -> Optional[
-    Union[CreateAssetResponse200, QualerApiModelsClientsToCreatedClientAssetResponse]
-]:
+) -> Optional[Union[CreateAssetResponse200, QualerApiModelsClientsToCreatedClientAssetResponse]]:
     """
     Args:
         body (QualerApiModelsClientsFromAssetModel):

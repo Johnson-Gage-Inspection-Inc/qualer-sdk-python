@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_service_orders_to_base_work_item_model import (
@@ -28,92 +26,84 @@ T = TypeVar("T", bound="QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseM
 class QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel:
     """
     Attributes:
-        charges (Union[None, Unset, list['QualerApiModelsServiceOrdersToChargeResponseModelBasePriceModel']]):
-        tasks (Union[None, Unset, list['QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel']]):
-        parts (Union[None, Unset, list['QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel']]):
-        repairs (Union[None, Unset, list['QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel']]):
-        work_items (Union[None, Unset, list['QualerApiModelsServiceOrdersToBaseWorkItemModel']]):
+        charges (Optional[List['QualerApiModelsServiceOrdersToChargeResponseModelBasePriceModel']]):
+        tasks (Optional[List['QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel']]):
+        parts (Optional[List['QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel']]):
+        repairs (Optional[List['QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel']]):
+        work_items (Optional[List['QualerApiModelsServiceOrdersToBaseWorkItemModel']]):
     """
 
     charges: Union[
         None,
-        Unset,
-        list["QualerApiModelsServiceOrdersToChargeResponseModelBasePriceModel"],
-    ] = UNSET
+        None,
+        List["QualerApiModelsServiceOrdersToChargeResponseModelBasePriceModel"],
+    ] = None
     tasks: Union[
         None,
-        Unset,
-        list[
-            "QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel"
-        ],
-    ] = UNSET
+        None,
+        List["QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel"],
+    ] = None
     parts: Union[
         None,
-        Unset,
-        list[
-            "QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel"
-        ],
-    ] = UNSET
+        None,
+        List["QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel"],
+    ] = None
     repairs: Union[
         None,
-        Unset,
-        list[
-            "QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel"
-        ],
-    ] = UNSET
-    work_items: Union[
-        None, Unset, list["QualerApiModelsServiceOrdersToBaseWorkItemModel"]
-    ] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+        None,
+        List["QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel"],
+    ] = None
+    work_items: Optional[List["QualerApiModelsServiceOrdersToBaseWorkItemModel"]] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
-        charges: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.charges and not isinstance(self.charges, Unset):
+    def to_dict(self) -> Dict[str, Any]:
+        charges: Optional[List[Dict[str, Any]]] = None
+        if self.charges:
             charges = []
             for charges_item_data in self.charges:
                 charges_item = charges_item_data.to_dict()
                 charges.append(charges_item)
 
-        tasks: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.tasks and not isinstance(self.tasks, Unset):
+        tasks: Optional[List[Dict[str, Any]]] = None
+        if self.tasks:
             tasks = []
             for tasks_item_data in self.tasks:
                 tasks_item = tasks_item_data.to_dict()
                 tasks.append(tasks_item)
 
-        parts: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.parts and not isinstance(self.parts, Unset):
+        parts: Optional[List[Dict[str, Any]]] = None
+        if self.parts:
             parts = []
             for parts_item_data in self.parts:
                 parts_item = parts_item_data.to_dict()
                 parts.append(parts_item)
 
-        repairs: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.repairs and not isinstance(self.repairs, Unset):
+        repairs: Optional[List[Dict[str, Any]]] = None
+        if self.repairs:
             repairs = []
             for repairs_item_data in self.repairs:
                 repairs_item = repairs_item_data.to_dict()
                 repairs.append(repairs_item)
 
-        work_items: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.work_items and not isinstance(self.work_items, Unset):
+        work_items: Optional[List[Dict[str, Any]]] = None
+        if self.work_items:
             work_items = []
             for work_items_item_data in self.work_items:
                 work_items_item = work_items_item_data.to_dict()
                 work_items.append(work_items_item)
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if charges is not UNSET:
+        if charges is not None:
             field_dict["Charges"] = charges
-        if tasks is not UNSET:
+        if tasks is not None:
             field_dict["Tasks"] = tasks
-        if parts is not UNSET:
+        if parts is not None:
             field_dict["Parts"] = parts
-        if repairs is not UNSET:
+        if repairs is not None:
             field_dict["Repairs"] = repairs
-        if work_items is not UNSET:
+        if work_items is not None:
             field_dict["WorkItems"] = work_items
 
         return field_dict
@@ -135,25 +125,29 @@ class QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel:
 
         d = dict(src_dict)
         charges = []
-        _charges = d.pop("Charges", UNSET)
+        _charges = d.pop("Charges", None)
         for charges_item_data in _charges or []:
-            charges_item = QualerApiModelsServiceOrdersToChargeResponseModelBasePriceModel.from_dict(
-                charges_item_data
+            charges_item = (
+                QualerApiModelsServiceOrdersToChargeResponseModelBasePriceModel.from_dict(
+                    charges_item_data
+                )
             )
 
             charges.append(charges_item)
 
         tasks = []
-        _tasks = d.pop("Tasks", UNSET)
+        _tasks = d.pop("Tasks", None)
         for tasks_item_data in _tasks or []:
-            tasks_item = QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel.from_dict(
-                tasks_item_data
+            tasks_item = (
+                QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel.from_dict(
+                    tasks_item_data
+                )
             )
 
             tasks.append(tasks_item)
 
         parts = []
-        _parts = d.pop("Parts", UNSET)
+        _parts = d.pop("Parts", None)
         for parts_item_data in _parts or []:
             parts_item = QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel.from_dict(
                 parts_item_data
@@ -162,7 +156,7 @@ class QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel:
             parts.append(parts_item)
 
         repairs = []
-        _repairs = d.pop("Repairs", UNSET)
+        _repairs = d.pop("Repairs", None)
         for repairs_item_data in _repairs or []:
             repairs_item = QualerApiModelsServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel.from_dict(
                 repairs_item_data
@@ -171,7 +165,7 @@ class QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel:
             repairs.append(repairs_item)
 
         work_items = []
-        _work_items = d.pop("WorkItems", UNSET)
+        _work_items = d.pop("WorkItems", None)
         for work_items_item_data in _work_items or []:
             work_items_item = QualerApiModelsServiceOrdersToBaseWorkItemModel.from_dict(
                 work_items_item_data
@@ -193,7 +187,7 @@ class QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel:
         return qualer_web_mvc_areas_api_models_service_orders_to_charge_response_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

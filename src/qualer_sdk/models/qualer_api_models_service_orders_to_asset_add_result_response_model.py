@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union, cast
+from typing import Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsServiceOrdersToAssetAddResultResponseModel")
 
@@ -13,29 +11,29 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersToAssetAddResultResponseMode
 class QualerApiModelsServiceOrdersToAssetAddResultResponseModel:
     """
     Attributes:
-        asset_count (Union[None, Unset, int]):
-        already_added_asset_serials (Union[None, Unset, list[str]]):
+        asset_count (Optional[int]):
+        already_added_asset_serials (Optional[List[str]]):
     """
 
-    asset_count: Union[None, Unset, int] = UNSET
-    already_added_asset_serials: Union[None, Unset, list[str]] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    asset_count: Optional[int] = None
+    already_added_asset_serials: Optional[List[str]] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         asset_count = self.asset_count
 
-        already_added_asset_serials: Union[None, Unset, list[str]] = UNSET
+        already_added_asset_serials: Optional[List[str]] = None
         if self.already_added_asset_serials and not isinstance(
-            self.already_added_asset_serials, Unset
+            self.already_added_asset_serials, None
         ):
             already_added_asset_serials = self.already_added_asset_serials
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if asset_count is not UNSET:
+        if asset_count is not None:
             field_dict["AssetCount"] = asset_count
-        if already_added_asset_serials is not UNSET:
+        if already_added_asset_serials is not None:
             field_dict["AlreadyAddedAssetSerials"] = already_added_asset_serials
 
         return field_dict
@@ -43,11 +41,9 @@ class QualerApiModelsServiceOrdersToAssetAddResultResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        asset_count = d.pop("AssetCount", UNSET)
+        asset_count = d.pop("AssetCount", None)
 
-        already_added_asset_serials = cast(
-            list[str], d.pop("AlreadyAddedAssetSerials", UNSET)
-        )
+        already_added_asset_serials = cast(List[str], d.pop("AlreadyAddedAssetSerials", None))
 
         qualer_api_models_service_orders_to_asset_add_result_response_model = cls(
             asset_count=asset_count,
@@ -60,7 +56,7 @@ class QualerApiModelsServiceOrdersToAssetAddResultResponseModel:
         return qualer_api_models_service_orders_to_asset_add_result_response_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

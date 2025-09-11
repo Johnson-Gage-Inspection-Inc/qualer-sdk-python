@@ -1,25 +1,25 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.add_manufacturer_response_200 import AddManufacturerResponse200
-from ...types import UNSET, Response
+from ...types import Response
 
 
 def _get_kwargs(
     *,
     manufacturer_name: str,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
     params["manufacturerName"] = manufacturer_name
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None and v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "post",
         "url": "/api/manufacturers/add",
         "params": params,

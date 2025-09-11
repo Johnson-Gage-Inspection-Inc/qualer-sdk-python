@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsReportDatasetsToMeasurementChartResponse")
 
@@ -13,27 +11,27 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToMeasurementChartResponse"
 class QualerApiModelsReportDatasetsToMeasurementChartResponse:
     """
     Attributes:
-        service_order_item_id (Union[None, Unset, int]):
-        measurement_set_id (Union[None, Unset, int]):
-        chart_type (Union[None, Unset, int]):
-        chart_image (Union[None, Unset, str]):
-        nominal (Union[None, Unset, str]):
-        title (Union[None, Unset, str]):
-        unit_of_measure (Union[None, Unset, str]):
-        abbreviated_uom (Union[None, Unset, str]):
+        service_order_item_id (Optional[int]):
+        measurement_set_id (Optional[int]):
+        chart_type (Optional[int]):
+        chart_image (Optional[str]):
+        nominal (Optional[str]):
+        title (Optional[str]):
+        unit_of_measure (Optional[str]):
+        abbreviated_uom (Optional[str]):
     """
 
-    service_order_item_id: Union[None, Unset, int] = UNSET
-    measurement_set_id: Union[None, Unset, int] = UNSET
-    chart_type: Union[None, Unset, int] = UNSET
-    chart_image: Union[None, Unset, str] = UNSET
-    nominal: Union[None, Unset, str] = UNSET
-    title: Union[None, Unset, str] = UNSET
-    unit_of_measure: Union[None, Unset, str] = UNSET
-    abbreviated_uom: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    service_order_item_id: Optional[int] = None
+    measurement_set_id: Optional[int] = None
+    chart_type: Optional[int] = None
+    chart_image: Optional[str] = None
+    nominal: Optional[str] = None
+    title: Optional[str] = None
+    unit_of_measure: Optional[str] = None
+    abbreviated_uom: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         service_order_item_id = self.service_order_item_id
 
         measurement_set_id = self.measurement_set_id
@@ -50,24 +48,24 @@ class QualerApiModelsReportDatasetsToMeasurementChartResponse:
 
         abbreviated_uom = self.abbreviated_uom
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if service_order_item_id is not UNSET:
+        if service_order_item_id is not None:
             field_dict["ServiceOrderItemId"] = service_order_item_id
-        if measurement_set_id is not UNSET:
+        if measurement_set_id is not None:
             field_dict["MeasurementSetId"] = measurement_set_id
-        if chart_type is not UNSET:
+        if chart_type is not None:
             field_dict["ChartType"] = chart_type
-        if chart_image is not UNSET:
+        if chart_image is not None:
             field_dict["ChartImage"] = chart_image
-        if nominal is not UNSET:
+        if nominal is not None:
             field_dict["Nominal"] = nominal
-        if title is not UNSET:
+        if title is not None:
             field_dict["Title"] = title
-        if unit_of_measure is not UNSET:
+        if unit_of_measure is not None:
             field_dict["UnitOfMeasure"] = unit_of_measure
-        if abbreviated_uom is not UNSET:
+        if abbreviated_uom is not None:
             field_dict["AbbreviatedUOM"] = abbreviated_uom
 
         return field_dict
@@ -75,21 +73,21 @@ class QualerApiModelsReportDatasetsToMeasurementChartResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        service_order_item_id = d.pop("ServiceOrderItemId", UNSET)
+        service_order_item_id = d.pop("ServiceOrderItemId", None)
 
-        measurement_set_id = d.pop("MeasurementSetId", UNSET)
+        measurement_set_id = d.pop("MeasurementSetId", None)
 
-        chart_type = d.pop("ChartType", UNSET)
+        chart_type = d.pop("ChartType", None)
 
-        chart_image = d.pop("ChartImage", UNSET)
+        chart_image = d.pop("ChartImage", None)
 
-        nominal = d.pop("Nominal", UNSET)
+        nominal = d.pop("Nominal", None)
 
-        title = d.pop("Title", UNSET)
+        title = d.pop("Title", None)
 
-        unit_of_measure = d.pop("UnitOfMeasure", UNSET)
+        unit_of_measure = d.pop("UnitOfMeasure", None)
 
-        abbreviated_uom = d.pop("AbbreviatedUOM", UNSET)
+        abbreviated_uom = d.pop("AbbreviatedUOM", None)
 
         qualer_api_models_report_datasets_to_measurement_chart_response = cls(
             service_order_item_id=service_order_item_id,
@@ -102,13 +100,11 @@ class QualerApiModelsReportDatasetsToMeasurementChartResponse:
             abbreviated_uom=abbreviated_uom,
         )
 
-        qualer_api_models_report_datasets_to_measurement_chart_response.additional_properties = (
-            d
-        )
+        qualer_api_models_report_datasets_to_measurement_chart_response.additional_properties = d
         return qualer_api_models_report_datasets_to_measurement_chart_response
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsCommonToSettingResponseModel")
 
@@ -13,19 +11,19 @@ T = TypeVar("T", bound="QualerApiModelsCommonToSettingResponseModel")
 class QualerApiModelsCommonToSettingResponseModel:
     """
     Attributes:
-        value (Union[None, Unset, str]):
+        value (Optional[str]):
     """
 
-    value: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    value: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         value = self.value
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if value is not UNSET:
+        if value is not None:
             field_dict["Value"] = value
 
         return field_dict
@@ -33,7 +31,7 @@ class QualerApiModelsCommonToSettingResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        value = d.pop("Value", UNSET)
+        value = d.pop("Value", None)
 
         qualer_api_models_common_to_setting_response_model = cls(
             value=value,
@@ -43,7 +41,7 @@ class QualerApiModelsCommonToSettingResponseModel:
         return qualer_api_models_common_to_setting_response_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

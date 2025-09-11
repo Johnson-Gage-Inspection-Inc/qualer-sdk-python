@@ -1,13 +1,11 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union, cast
+from typing import Any, Dict, Optional, Union, cast
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.create_work_order_parts_response_204 import (
-    CreateWorkOrderPartsResponse204,
-)
+from ...models.create_work_order_parts_response_204 import CreateWorkOrderPartsResponse204
 from ...models.qualer_web_mvc_areas_api_models_service_orders_from_service_order_part_repair_create_model import (
     QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateModel,
 )
@@ -18,10 +16,10 @@ def _get_kwargs(
     service_order_id: int,
     *,
     body: QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateModel,
-) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+) -> Dict[str, Any]:
+    headers: Dict[str, Any] = {}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "post",
         "url": f"/api/service/workorders/{service_order_id}/parts",
     }

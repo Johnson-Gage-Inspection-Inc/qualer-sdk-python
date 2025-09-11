@@ -1,13 +1,11 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.add_asset_service_record_response_200 import (
-    AddAssetServiceRecordResponse200,
-)
+from ...models.add_asset_service_record_response_200 import AddAssetServiceRecordResponse200
 from ...models.qualer_api_models_asset_service_records_from_add_asset_service_record_model import (
     QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel,
 )
@@ -21,10 +19,10 @@ def _get_kwargs(
     asset_id: int,
     *,
     body: QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel,
-) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+) -> Dict[str, Any]:
+    headers: Dict[str, Any] = {}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "post",
         "url": f"/api/assets/{asset_id}/assetservicerecords",
     }
@@ -50,10 +48,8 @@ def _parse_response(
 
         return response_200
     if response.status_code == 201:
-        response_201 = (
-            QualerApiModelsAssetServiceRecordsToAddAssetServiceRecordResponse.from_dict(
-                response.json()
-            )
+        response_201 = QualerApiModelsAssetServiceRecordsToAddAssetServiceRecordResponse.from_dict(
+            response.json()
         )
 
         return response_201

@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 import httpx
 
@@ -8,19 +8,19 @@ from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_asset_to_asset_response_model import (
     QualerApiModelsAssetToAssetResponseModel,
 )
-from ...types import UNSET, Response, Unset
+from ...types import Response
 
 
 def _get_kwargs(
     client_company_id: int,
     *,
-    query_equipment_id: Union[None, Unset, str] = UNSET,
-    query_serial_number: Union[None, Unset, str] = UNSET,
-    query_asset_tag: Union[None, Unset, str] = UNSET,
-    query_barcode: Union[None, Unset, str] = UNSET,
-    query_legacy_id: Union[None, Unset, str] = UNSET,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+    query_equipment_id: Optional[str] = None,
+    query_serial_number: Optional[str] = None,
+    query_asset_tag: Optional[str] = None,
+    query_barcode: Optional[str] = None,
+    query_legacy_id: Optional[str] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
     params["query.equipmentId"] = query_equipment_id
 
@@ -32,9 +32,9 @@ def _get_kwargs(
 
     params["query.legacyId"] = query_legacy_id
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None and v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": f"/api/service/clients/{client_company_id}/assets",
         "params": params,
@@ -45,7 +45,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[list["QualerApiModelsAssetToAssetResponseModel"]]:
+) -> Optional[List["QualerApiModelsAssetToAssetResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
@@ -65,7 +65,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[list["QualerApiModelsAssetToAssetResponseModel"]]:
+) -> Response[List["QualerApiModelsAssetToAssetResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -78,27 +78,27 @@ def sync_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_equipment_id: Union[None, Unset, str] = UNSET,
-    query_serial_number: Union[None, Unset, str] = UNSET,
-    query_asset_tag: Union[None, Unset, str] = UNSET,
-    query_barcode: Union[None, Unset, str] = UNSET,
-    query_legacy_id: Union[None, Unset, str] = UNSET,
-) -> Response[list["QualerApiModelsAssetToAssetResponseModel"]]:
+    query_equipment_id: Optional[str] = None,
+    query_serial_number: Optional[str] = None,
+    query_asset_tag: Optional[str] = None,
+    query_barcode: Optional[str] = None,
+    query_legacy_id: Optional[str] = None,
+) -> Response[List["QualerApiModelsAssetToAssetResponseModel"]]:
     """
     Args:
         client_company_id (int):
-        query_equipment_id (Union[None, Unset, str]):
-        query_serial_number (Union[None, Unset, str]):
-        query_asset_tag (Union[None, Unset, str]):
-        query_barcode (Union[None, Unset, str]):
-        query_legacy_id (Union[None, Unset, str]):
+        query_equipment_id (Optional[str]):
+        query_serial_number (Optional[str]):
+        query_asset_tag (Optional[str]):
+        query_barcode (Optional[str]):
+        query_legacy_id (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsAssetToAssetResponseModel']]
+        Response[List['QualerApiModelsAssetToAssetResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -121,27 +121,27 @@ def sync(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_equipment_id: Union[None, Unset, str] = UNSET,
-    query_serial_number: Union[None, Unset, str] = UNSET,
-    query_asset_tag: Union[None, Unset, str] = UNSET,
-    query_barcode: Union[None, Unset, str] = UNSET,
-    query_legacy_id: Union[None, Unset, str] = UNSET,
-) -> Optional[list["QualerApiModelsAssetToAssetResponseModel"]]:
+    query_equipment_id: Optional[str] = None,
+    query_serial_number: Optional[str] = None,
+    query_asset_tag: Optional[str] = None,
+    query_barcode: Optional[str] = None,
+    query_legacy_id: Optional[str] = None,
+) -> Optional[List["QualerApiModelsAssetToAssetResponseModel"]]:
     """
     Args:
         client_company_id (int):
-        query_equipment_id (Union[None, Unset, str]):
-        query_serial_number (Union[None, Unset, str]):
-        query_asset_tag (Union[None, Unset, str]):
-        query_barcode (Union[None, Unset, str]):
-        query_legacy_id (Union[None, Unset, str]):
+        query_equipment_id (Optional[str]):
+        query_serial_number (Optional[str]):
+        query_asset_tag (Optional[str]):
+        query_barcode (Optional[str]):
+        query_legacy_id (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsAssetToAssetResponseModel']
+        List['QualerApiModelsAssetToAssetResponseModel']
     """
 
     return sync_detailed(
@@ -159,27 +159,27 @@ async def asyncio_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_equipment_id: Union[None, Unset, str] = UNSET,
-    query_serial_number: Union[None, Unset, str] = UNSET,
-    query_asset_tag: Union[None, Unset, str] = UNSET,
-    query_barcode: Union[None, Unset, str] = UNSET,
-    query_legacy_id: Union[None, Unset, str] = UNSET,
-) -> Response[list["QualerApiModelsAssetToAssetResponseModel"]]:
+    query_equipment_id: Optional[str] = None,
+    query_serial_number: Optional[str] = None,
+    query_asset_tag: Optional[str] = None,
+    query_barcode: Optional[str] = None,
+    query_legacy_id: Optional[str] = None,
+) -> Response[List["QualerApiModelsAssetToAssetResponseModel"]]:
     """
     Args:
         client_company_id (int):
-        query_equipment_id (Union[None, Unset, str]):
-        query_serial_number (Union[None, Unset, str]):
-        query_asset_tag (Union[None, Unset, str]):
-        query_barcode (Union[None, Unset, str]):
-        query_legacy_id (Union[None, Unset, str]):
+        query_equipment_id (Optional[str]):
+        query_serial_number (Optional[str]):
+        query_asset_tag (Optional[str]):
+        query_barcode (Optional[str]):
+        query_legacy_id (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsAssetToAssetResponseModel']]
+        Response[List['QualerApiModelsAssetToAssetResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -200,27 +200,27 @@ async def asyncio(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_equipment_id: Union[None, Unset, str] = UNSET,
-    query_serial_number: Union[None, Unset, str] = UNSET,
-    query_asset_tag: Union[None, Unset, str] = UNSET,
-    query_barcode: Union[None, Unset, str] = UNSET,
-    query_legacy_id: Union[None, Unset, str] = UNSET,
-) -> Optional[list["QualerApiModelsAssetToAssetResponseModel"]]:
+    query_equipment_id: Optional[str] = None,
+    query_serial_number: Optional[str] = None,
+    query_asset_tag: Optional[str] = None,
+    query_barcode: Optional[str] = None,
+    query_legacy_id: Optional[str] = None,
+) -> Optional[List["QualerApiModelsAssetToAssetResponseModel"]]:
     """
     Args:
         client_company_id (int):
-        query_equipment_id (Union[None, Unset, str]):
-        query_serial_number (Union[None, Unset, str]):
-        query_asset_tag (Union[None, Unset, str]):
-        query_barcode (Union[None, Unset, str]):
-        query_legacy_id (Union[None, Unset, str]):
+        query_equipment_id (Optional[str]):
+        query_serial_number (Optional[str]):
+        query_asset_tag (Optional[str]):
+        query_barcode (Optional[str]):
+        query_legacy_id (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsAssetToAssetResponseModel']
+        List['QualerApiModelsAssetToAssetResponseModel']
     """
 
     return (

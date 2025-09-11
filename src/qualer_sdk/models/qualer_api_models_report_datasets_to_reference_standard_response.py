@@ -1,12 +1,10 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union, cast
+from typing import Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsReportDatasetsToReferenceStandardResponse")
 
@@ -15,82 +13,82 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToReferenceStandardResponse
 class QualerApiModelsReportDatasetsToReferenceStandardResponse:
     """
     Attributes:
-        is_auxiliary (Union[None, Unset, bool]):
-        last_service_date (Union[None, Unset, datetime.datetime]):
-        next_service_date (Union[None, Unset, datetime.datetime]):
-        certificate_number (Union[None, Unset, str]):
-        calibrated_by (Union[None, Unset, str]):
-        tool_name (Union[None, Unset, str]):
-        tool_site (Union[None, Unset, str]):
-        tool_room (Union[None, Unset, str]):
-        tool_station (Union[None, Unset, str]):
-        tool_location (Union[None, Unset, str]):
-        asset_tag (Union[None, Unset, str]):
-        lot_number (Union[None, Unset, str]):
-        asset_user (Union[None, Unset, str]):
-        tool_type_name (Union[None, Unset, str]):
-        tool_description (Union[None, Unset, str]):
-        tool_id (Union[None, Unset, int]):
-        manufacturer (Union[None, Unset, str]):
-        serial_number (Union[None, Unset, str]):
-        area (Union[None, Unset, str]):
-        service_order_item_id (Union[None, Unset, int]):
-        manufacturer_part_number (Union[None, Unset, str]):
-        equipment_id (Union[None, Unset, str]):
+        is_auxiliary (Optional[bool]):
+        last_service_date (Optional[datetime.datetime]):
+        next_service_date (Optional[datetime.datetime]):
+        certificate_number (Optional[str]):
+        calibrated_by (Optional[str]):
+        tool_name (Optional[str]):
+        tool_site (Optional[str]):
+        tool_room (Optional[str]):
+        tool_station (Optional[str]):
+        tool_location (Optional[str]):
+        asset_tag (Optional[str]):
+        lot_number (Optional[str]):
+        asset_user (Optional[str]):
+        tool_type_name (Optional[str]):
+        tool_description (Optional[str]):
+        tool_id (Optional[int]):
+        manufacturer (Optional[str]):
+        serial_number (Optional[str]):
+        area (Optional[str]):
+        service_order_item_id (Optional[int]):
+        manufacturer_part_number (Optional[str]):
+        equipment_id (Optional[str]):
     """
 
-    is_auxiliary: Union[None, Unset, bool] = UNSET
-    last_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    certificate_number: Union[None, Unset, str] = UNSET
-    calibrated_by: Union[None, Unset, str] = UNSET
-    tool_name: Union[None, Unset, str] = UNSET
-    tool_site: Union[None, Unset, str] = UNSET
-    tool_room: Union[None, Unset, str] = UNSET
-    tool_station: Union[None, Unset, str] = UNSET
-    tool_location: Union[None, Unset, str] = UNSET
-    asset_tag: Union[None, Unset, str] = UNSET
-    lot_number: Union[None, Unset, str] = UNSET
-    asset_user: Union[None, Unset, str] = UNSET
-    tool_type_name: Union[None, Unset, str] = UNSET
-    tool_description: Union[None, Unset, str] = UNSET
-    tool_id: Union[None, Unset, int] = UNSET
-    manufacturer: Union[None, Unset, str] = UNSET
-    serial_number: Union[None, Unset, str] = UNSET
-    area: Union[None, Unset, str] = UNSET
-    service_order_item_id: Union[None, Unset, int] = UNSET
-    manufacturer_part_number: Union[None, Unset, str] = UNSET
-    equipment_id: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    is_auxiliary: Optional[bool] = None
+    last_service_date: Optional[datetime.datetime] = None
+    next_service_date: Optional[datetime.datetime] = None
+    certificate_number: Optional[str] = None
+    calibrated_by: Optional[str] = None
+    tool_name: Optional[str] = None
+    tool_site: Optional[str] = None
+    tool_room: Optional[str] = None
+    tool_station: Optional[str] = None
+    tool_location: Optional[str] = None
+    asset_tag: Optional[str] = None
+    lot_number: Optional[str] = None
+    asset_user: Optional[str] = None
+    tool_type_name: Optional[str] = None
+    tool_description: Optional[str] = None
+    tool_id: Optional[int] = None
+    manufacturer: Optional[str] = None
+    serial_number: Optional[str] = None
+    area: Optional[str] = None
+    service_order_item_id: Optional[int] = None
+    manufacturer_part_number: Optional[str] = None
+    equipment_id: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         is_auxiliary = self.is_auxiliary
 
-        last_service_date: Union[None, Unset, str]
-        if isinstance(self.last_service_date, Unset):
-            last_service_date = UNSET
+        last_service_date: Optional[str]
+        if not self.last_service_date:
+            last_service_date = None
         elif isinstance(self.last_service_date, datetime.datetime):
             last_service_date = self.last_service_date.isoformat()
         else:
             last_service_date = self.last_service_date
 
-        next_service_date: Union[None, Unset, str]
-        if isinstance(self.next_service_date, Unset):
-            next_service_date = UNSET
+        next_service_date: Optional[str]
+        if not self.next_service_date:
+            next_service_date = None
         elif isinstance(self.next_service_date, datetime.datetime):
             next_service_date = self.next_service_date.isoformat()
         else:
             next_service_date = self.next_service_date
 
-        certificate_number: Union[None, Unset, str]
-        if isinstance(self.certificate_number, Unset):
-            certificate_number = UNSET
+        certificate_number: Optional[str]
+        if not self.certificate_number:
+            certificate_number = None
         else:
             certificate_number = self.certificate_number
 
-        calibrated_by: Union[None, Unset, str]
-        if isinstance(self.calibrated_by, Unset):
-            calibrated_by = UNSET
+        calibrated_by: Optional[str]
+        if not self.calibrated_by:
+            calibrated_by = None
         else:
             calibrated_by = self.calibrated_by
 
@@ -128,52 +126,52 @@ class QualerApiModelsReportDatasetsToReferenceStandardResponse:
 
         equipment_id = self.equipment_id
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if is_auxiliary is not UNSET:
+        if is_auxiliary is not None:
             field_dict["IsAuxiliary"] = is_auxiliary
-        if last_service_date is not UNSET:
+        if last_service_date is not None:
             field_dict["LastServiceDate"] = last_service_date
-        if next_service_date is not UNSET:
+        if next_service_date is not None:
             field_dict["NextServiceDate"] = next_service_date
-        if certificate_number is not UNSET:
+        if certificate_number is not None:
             field_dict["CertificateNumber"] = certificate_number
-        if calibrated_by is not UNSET:
+        if calibrated_by is not None:
             field_dict["CalibratedBy"] = calibrated_by
-        if tool_name is not UNSET:
+        if tool_name is not None:
             field_dict["ToolName"] = tool_name
-        if tool_site is not UNSET:
+        if tool_site is not None:
             field_dict["ToolSite"] = tool_site
-        if tool_room is not UNSET:
+        if tool_room is not None:
             field_dict["ToolRoom"] = tool_room
-        if tool_station is not UNSET:
+        if tool_station is not None:
             field_dict["ToolStation"] = tool_station
-        if tool_location is not UNSET:
+        if tool_location is not None:
             field_dict["ToolLocation"] = tool_location
-        if asset_tag is not UNSET:
+        if asset_tag is not None:
             field_dict["AssetTag"] = asset_tag
-        if lot_number is not UNSET:
+        if lot_number is not None:
             field_dict["LotNumber"] = lot_number
-        if asset_user is not UNSET:
+        if asset_user is not None:
             field_dict["AssetUser"] = asset_user
-        if tool_type_name is not UNSET:
+        if tool_type_name is not None:
             field_dict["ToolTypeName"] = tool_type_name
-        if tool_description is not UNSET:
+        if tool_description is not None:
             field_dict["ToolDescription"] = tool_description
-        if tool_id is not UNSET:
+        if tool_id is not None:
             field_dict["ToolId"] = tool_id
-        if manufacturer is not UNSET:
+        if manufacturer is not None:
             field_dict["Manufacturer"] = manufacturer
-        if serial_number is not UNSET:
+        if serial_number is not None:
             field_dict["SerialNumber"] = serial_number
-        if area is not UNSET:
+        if area is not None:
             field_dict["Area"] = area
-        if service_order_item_id is not UNSET:
+        if service_order_item_id is not None:
             field_dict["ServiceOrderItemId"] = service_order_item_id
-        if manufacturer_part_number is not UNSET:
+        if manufacturer_part_number is not None:
             field_dict["ManufacturerPartNumber"] = manufacturer_part_number
-        if equipment_id is not UNSET:
+        if equipment_id is not None:
             field_dict["EquipmentId"] = equipment_id
 
         return field_dict
@@ -181,15 +179,13 @@ class QualerApiModelsReportDatasetsToReferenceStandardResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        is_auxiliary = d.pop("IsAuxiliary", UNSET)
+        is_auxiliary = d.pop("IsAuxiliary", None)
 
         def _parse_last_service_date(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -198,17 +194,15 @@ class QualerApiModelsReportDatasetsToReferenceStandardResponse:
                 return last_service_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        last_service_date = _parse_last_service_date(d.pop("LastServiceDate", UNSET))
+        last_service_date = _parse_last_service_date(d.pop("LastServiceDate", None))
 
         def _parse_next_service_date(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -217,63 +211,57 @@ class QualerApiModelsReportDatasetsToReferenceStandardResponse:
                 return next_service_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        next_service_date = _parse_next_service_date(d.pop("NextServiceDate", UNSET))
+        next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
 
-        def _parse_certificate_number(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_certificate_number(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        certificate_number = _parse_certificate_number(
-            d.pop("CertificateNumber", UNSET)
-        )
+        certificate_number = _parse_certificate_number(d.pop("CertificateNumber", None))
 
-        def _parse_calibrated_by(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_calibrated_by(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        calibrated_by = _parse_calibrated_by(d.pop("CalibratedBy", UNSET))
+        calibrated_by = _parse_calibrated_by(d.pop("CalibratedBy", None))
 
-        tool_name = d.pop("ToolName", UNSET)
+        tool_name = d.pop("ToolName", None)
 
-        tool_site = d.pop("ToolSite", UNSET)
+        tool_site = d.pop("ToolSite", None)
 
-        tool_room = d.pop("ToolRoom", UNSET)
+        tool_room = d.pop("ToolRoom", None)
 
-        tool_station = d.pop("ToolStation", UNSET)
+        tool_station = d.pop("ToolStation", None)
 
-        tool_location = d.pop("ToolLocation", UNSET)
+        tool_location = d.pop("ToolLocation", None)
 
-        asset_tag = d.pop("AssetTag", UNSET)
+        asset_tag = d.pop("AssetTag", None)
 
-        lot_number = d.pop("LotNumber", UNSET)
+        lot_number = d.pop("LotNumber", None)
 
-        asset_user = d.pop("AssetUser", UNSET)
+        asset_user = d.pop("AssetUser", None)
 
-        tool_type_name = d.pop("ToolTypeName", UNSET)
+        tool_type_name = d.pop("ToolTypeName", None)
 
-        tool_description = d.pop("ToolDescription", UNSET)
+        tool_description = d.pop("ToolDescription", None)
 
-        tool_id = d.pop("ToolId", UNSET)
+        tool_id = d.pop("ToolId", None)
 
-        manufacturer = d.pop("Manufacturer", UNSET)
+        manufacturer = d.pop("Manufacturer", None)
 
-        serial_number = d.pop("SerialNumber", UNSET)
+        serial_number = d.pop("SerialNumber", None)
 
-        area = d.pop("Area", UNSET)
+        area = d.pop("Area", None)
 
-        service_order_item_id = d.pop("ServiceOrderItemId", UNSET)
+        service_order_item_id = d.pop("ServiceOrderItemId", None)
 
-        manufacturer_part_number = d.pop("ManufacturerPartNumber", UNSET)
+        manufacturer_part_number = d.pop("ManufacturerPartNumber", None)
 
-        equipment_id = d.pop("EquipmentId", UNSET)
+        equipment_id = d.pop("EquipmentId", None)
 
         qualer_api_models_report_datasets_to_reference_standard_response = cls(
             is_auxiliary=is_auxiliary,
@@ -300,13 +288,11 @@ class QualerApiModelsReportDatasetsToReferenceStandardResponse:
             equipment_id=equipment_id,
         )
 
-        qualer_api_models_report_datasets_to_reference_standard_response.additional_properties = (
-            d
-        )
+        qualer_api_models_report_datasets_to_reference_standard_response.additional_properties = d
         return qualer_api_models_report_datasets_to_reference_standard_response
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

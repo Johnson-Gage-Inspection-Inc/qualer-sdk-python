@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsServiceOrdersToPaymentResponseModel")
 
@@ -13,27 +11,27 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersToPaymentResponseModel")
 class QualerApiModelsServiceOrdersToPaymentResponseModel:
     """
     Attributes:
-        service_order_id (Union[None, Unset, int]):
-        created_by_id (Union[None, Unset, int]):
-        transaction_id (Union[None, Unset, str]):
-        transaction_status (Union[None, Unset, str]):
-        payment_type (Union[None, Unset, str]):
-        service_order_payment_id (Union[None, Unset, int]):
-        payment_amount (Union[None, Unset, float]):
-        details (Union[None, Unset, str]):
+        service_order_id (Optional[int]):
+        created_by_id (Optional[int]):
+        transaction_id (Optional[str]):
+        transaction_status (Optional[str]):
+        payment_type (Optional[str]):
+        service_order_payment_id (Optional[int]):
+        payment_amount (Optional[float]):
+        details (Optional[str]):
     """
 
-    service_order_id: Union[None, Unset, int] = UNSET
-    created_by_id: Union[None, Unset, int] = UNSET
-    transaction_id: Union[None, Unset, str] = UNSET
-    transaction_status: Union[None, Unset, str] = UNSET
-    payment_type: Union[None, Unset, str] = UNSET
-    service_order_payment_id: Union[None, Unset, int] = UNSET
-    payment_amount: Union[None, Unset, float] = UNSET
-    details: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    service_order_id: Optional[int] = None
+    created_by_id: Optional[int] = None
+    transaction_id: Optional[str] = None
+    transaction_status: Optional[str] = None
+    payment_type: Optional[str] = None
+    service_order_payment_id: Optional[int] = None
+    payment_amount: Optional[float] = None
+    details: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         service_order_id = self.service_order_id
 
         created_by_id = self.created_by_id
@@ -50,24 +48,24 @@ class QualerApiModelsServiceOrdersToPaymentResponseModel:
 
         details = self.details
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if service_order_id is not UNSET:
+        if service_order_id is not None:
             field_dict["ServiceOrderId"] = service_order_id
-        if created_by_id is not UNSET:
+        if created_by_id is not None:
             field_dict["CreatedById"] = created_by_id
-        if transaction_id is not UNSET:
+        if transaction_id is not None:
             field_dict["TransactionId"] = transaction_id
-        if transaction_status is not UNSET:
+        if transaction_status is not None:
             field_dict["TransactionStatus"] = transaction_status
-        if payment_type is not UNSET:
+        if payment_type is not None:
             field_dict["PaymentType"] = payment_type
-        if service_order_payment_id is not UNSET:
+        if service_order_payment_id is not None:
             field_dict["ServiceOrderPaymentId"] = service_order_payment_id
-        if payment_amount is not UNSET:
+        if payment_amount is not None:
             field_dict["PaymentAmount"] = payment_amount
-        if details is not UNSET:
+        if details is not None:
             field_dict["Details"] = details
 
         return field_dict
@@ -75,21 +73,21 @@ class QualerApiModelsServiceOrdersToPaymentResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        service_order_id = d.pop("ServiceOrderId", UNSET)
+        service_order_id = d.pop("ServiceOrderId", None)
 
-        created_by_id = d.pop("CreatedById", UNSET)
+        created_by_id = d.pop("CreatedById", None)
 
-        transaction_id = d.pop("TransactionId", UNSET)
+        transaction_id = d.pop("TransactionId", None)
 
-        transaction_status = d.pop("TransactionStatus", UNSET)
+        transaction_status = d.pop("TransactionStatus", None)
 
-        payment_type = d.pop("PaymentType", UNSET)
+        payment_type = d.pop("PaymentType", None)
 
-        service_order_payment_id = d.pop("ServiceOrderPaymentId", UNSET)
+        service_order_payment_id = d.pop("ServiceOrderPaymentId", None)
 
-        payment_amount = d.pop("PaymentAmount", UNSET)
+        payment_amount = d.pop("PaymentAmount", None)
 
-        details = d.pop("Details", UNSET)
+        details = d.pop("Details", None)
 
         qualer_api_models_service_orders_to_payment_response_model = cls(
             service_order_id=service_order_id,
@@ -102,13 +100,11 @@ class QualerApiModelsServiceOrdersToPaymentResponseModel:
             details=details,
         )
 
-        qualer_api_models_service_orders_to_payment_response_model.additional_properties = (
-            d
-        )
+        qualer_api_models_service_orders_to_payment_response_model.additional_properties = d
         return qualer_api_models_service_orders_to_payment_response_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

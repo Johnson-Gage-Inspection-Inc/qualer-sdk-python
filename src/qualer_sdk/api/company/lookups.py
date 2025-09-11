@@ -1,26 +1,26 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union, cast
+from typing import Any, Dict, List, Optional, Union, cast
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.lookups_lookup_type import LookupsLookupType
-from ...types import UNSET, Response
+from ...types import Response
 
 
 def _get_kwargs(
     *,
     lookup_type: LookupsLookupType,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
     json_lookup_type = lookup_type.value
     params["lookupType"] = json_lookup_type
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None and v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": "/api/company/lookups",
         "params": params,
@@ -31,9 +31,9 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[list[str]]:
+) -> Optional[List[str]]:
     if response.status_code == 200:
-        response_200 = cast(list[str], response.json())
+        response_200 = cast(List[str], response.json())
 
         return response_200
     if client.raise_on_unexpected_status:
@@ -44,7 +44,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[list[str]]:
+) -> Response[List[str]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -57,7 +57,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     lookup_type: LookupsLookupType,
-) -> Response[list[str]]:
+) -> Response[List[str]]:
     """lookupName:
     AssetClass = 1
     AssetCriticality = 2
@@ -83,7 +83,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list[str]]
+        Response[List[str]]
     """
 
     kwargs = _get_kwargs(
@@ -101,7 +101,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     lookup_type: LookupsLookupType,
-) -> Optional[list[str]]:
+) -> Optional[List[str]]:
     """lookupName:
     AssetClass = 1
     AssetCriticality = 2
@@ -127,7 +127,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list[str]
+        List[str]
     """
 
     return sync_detailed(
@@ -140,7 +140,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     lookup_type: LookupsLookupType,
-) -> Response[list[str]]:
+) -> Response[List[str]]:
     """lookupName:
     AssetClass = 1
     AssetCriticality = 2
@@ -166,7 +166,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list[str]]
+        Response[List[str]]
     """
 
     kwargs = _get_kwargs(
@@ -182,7 +182,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     lookup_type: LookupsLookupType,
-) -> Optional[list[str]]:
+) -> Optional[List[str]]:
     """lookupName:
     AssetClass = 1
     AssetCriticality = 2
@@ -208,7 +208,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list[str]
+        List[str]
     """
 
     return (

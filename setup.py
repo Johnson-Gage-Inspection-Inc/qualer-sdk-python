@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 from setuptools_scm import get_version  # noqa: F401
 
 # Read long description from README
-with open("README.md", "r", encoding="utf-8") as fh:
+with open("README.md", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(

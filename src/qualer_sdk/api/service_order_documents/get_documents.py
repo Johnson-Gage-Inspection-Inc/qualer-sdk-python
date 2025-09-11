@@ -1,25 +1,25 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union, cast
+from typing import Any, Dict, Optional, Union, cast
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...types import UNSET, File, Response, Unset
+from ...types import File, Response
 
 
 def _get_kwargs(
     service_order_id: int,
     *,
-    model_file_name: Union[None, Unset, str] = UNSET,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+    model_file_name: Optional[str] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
     params["model.fileName"] = model_file_name
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None and v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": f"/api/service/workorders/{service_order_id}/documents",
         "params": params,
@@ -104,7 +104,7 @@ def sync_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_file_name: Union[None, Unset, str] = UNSET,
+    model_file_name: Optional[str] = None,
 ) -> Response[Union[Any, File]]:
     """Retrieve work order documents
 
@@ -114,7 +114,7 @@ def sync_detailed(
 
     Args:
         service_order_id (int):
-        model_file_name (Union[None, Unset, str]):
+        model_file_name (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -140,7 +140,7 @@ def sync(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_file_name: Union[None, Unset, str] = UNSET,
+    model_file_name: Optional[str] = None,
 ) -> Optional[Union[Any, File]]:
     """Retrieve work order documents
 
@@ -150,7 +150,7 @@ def sync(
 
     Args:
         service_order_id (int):
-        model_file_name (Union[None, Unset, str]):
+        model_file_name (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -171,7 +171,7 @@ async def asyncio_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_file_name: Union[None, Unset, str] = UNSET,
+    model_file_name: Optional[str] = None,
 ) -> Response[Union[Any, File]]:
     """Retrieve work order documents
 
@@ -181,7 +181,7 @@ async def asyncio_detailed(
 
     Args:
         service_order_id (int):
-        model_file_name (Union[None, Unset, str]):
+        model_file_name (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -205,7 +205,7 @@ async def asyncio(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_file_name: Union[None, Unset, str] = UNSET,
+    model_file_name: Optional[str] = None,
 ) -> Optional[Union[Any, File]]:
     """Retrieve work order documents
 
@@ -215,7 +215,7 @@ async def asyncio(
 
     Args:
         service_order_id (int):
-        model_file_name (Union[None, Unset, str]):
+        model_file_name (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

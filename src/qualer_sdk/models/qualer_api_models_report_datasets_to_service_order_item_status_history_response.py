@@ -1,49 +1,45 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..types import UNSET, Unset
-
-T = TypeVar(
-    "T", bound="QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse"
-)
+T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse")
 
 
 @_attrs_define
 class QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse:
     """
     Attributes:
-        service_order_item_id (Union[None, Unset, int]):
-        previous_status_name (Union[None, Unset, str]):
-        selected_status_name (Union[None, Unset, str]):
-        explanation (Union[None, Unset, str]):
-        is_password_reentered (Union[None, Unset, bool]):
-        created_on (Union[None, Unset, datetime.datetime]):
-        created_on_utc (Union[None, Unset, datetime.datetime]):
-        employee_id (Union[None, Unset, int]):
-        first_name (Union[None, Unset, str]):
-        last_name (Union[None, Unset, str]):
-        alias (Union[None, Unset, str]):
+        service_order_item_id (Optional[int]):
+        previous_status_name (Optional[str]):
+        selected_status_name (Optional[str]):
+        explanation (Optional[str]):
+        is_password_reentered (Optional[bool]):
+        created_on (Optional[datetime.datetime]):
+        created_on_utc (Optional[datetime.datetime]):
+        employee_id (Optional[int]):
+        first_name (Optional[str]):
+        last_name (Optional[str]):
+        alias (Optional[str]):
     """
 
-    service_order_item_id: Union[None, Unset, int] = UNSET
-    previous_status_name: Union[None, Unset, str] = UNSET
-    selected_status_name: Union[None, Unset, str] = UNSET
-    explanation: Union[None, Unset, str] = UNSET
-    is_password_reentered: Union[None, Unset, bool] = UNSET
-    created_on: Union[None, Unset, datetime.datetime] = UNSET
-    created_on_utc: Union[None, Unset, datetime.datetime] = UNSET
-    employee_id: Union[None, Unset, int] = UNSET
-    first_name: Union[None, Unset, str] = UNSET
-    last_name: Union[None, Unset, str] = UNSET
-    alias: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    service_order_item_id: Optional[int] = None
+    previous_status_name: Optional[str] = None
+    selected_status_name: Optional[str] = None
+    explanation: Optional[str] = None
+    is_password_reentered: Optional[bool] = None
+    created_on: Optional[datetime.datetime] = None
+    created_on_utc: Optional[datetime.datetime] = None
+    employee_id: Optional[int] = None
+    first_name: Optional[str] = None
+    last_name: Optional[str] = None
+    alias: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         service_order_item_id = self.service_order_item_id
 
         previous_status_name = self.previous_status_name
@@ -54,12 +50,12 @@ class QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse:
 
         is_password_reentered = self.is_password_reentered
 
-        created_on: Union[None, Unset, str] = UNSET
-        if self.created_on and not isinstance(self.created_on, Unset):
+        created_on: Optional[str] = None
+        if self.created_on:
             created_on = self.created_on.isoformat()
 
-        created_on_utc: Union[None, Unset, str] = UNSET
-        if self.created_on_utc and not isinstance(self.created_on_utc, Unset):
+        created_on_utc: Optional[str] = None
+        if self.created_on_utc:
             created_on_utc = self.created_on_utc.isoformat()
 
         employee_id = self.employee_id
@@ -70,30 +66,30 @@ class QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse:
 
         alias = self.alias
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if service_order_item_id is not UNSET:
+        if service_order_item_id is not None:
             field_dict["ServiceOrderItemId"] = service_order_item_id
-        if previous_status_name is not UNSET:
+        if previous_status_name is not None:
             field_dict["PreviousStatusName"] = previous_status_name
-        if selected_status_name is not UNSET:
+        if selected_status_name is not None:
             field_dict["SelectedStatusName"] = selected_status_name
-        if explanation is not UNSET:
+        if explanation is not None:
             field_dict["Explanation"] = explanation
-        if is_password_reentered is not UNSET:
+        if is_password_reentered is not None:
             field_dict["IsPasswordReentered"] = is_password_reentered
-        if created_on is not UNSET:
+        if created_on is not None:
             field_dict["CreatedOn"] = created_on
-        if created_on_utc is not UNSET:
+        if created_on_utc is not None:
             field_dict["CreatedOnUtc"] = created_on_utc
-        if employee_id is not UNSET:
+        if employee_id is not None:
             field_dict["EmployeeId"] = employee_id
-        if first_name is not UNSET:
+        if first_name is not None:
             field_dict["FirstName"] = first_name
-        if last_name is not UNSET:
+        if last_name is not None:
             field_dict["LastName"] = last_name
-        if alias is not UNSET:
+        if alias is not None:
             field_dict["Alias"] = alias
 
         return field_dict
@@ -101,37 +97,37 @@ class QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        service_order_item_id = d.pop("ServiceOrderItemId", UNSET)
+        service_order_item_id = d.pop("ServiceOrderItemId", None)
 
-        previous_status_name = d.pop("PreviousStatusName", UNSET)
+        previous_status_name = d.pop("PreviousStatusName", None)
 
-        selected_status_name = d.pop("SelectedStatusName", UNSET)
+        selected_status_name = d.pop("SelectedStatusName", None)
 
-        explanation = d.pop("Explanation", UNSET)
+        explanation = d.pop("Explanation", None)
 
-        is_password_reentered = d.pop("IsPasswordReentered", UNSET)
+        is_password_reentered = d.pop("IsPasswordReentered", None)
 
-        _created_on = d.pop("CreatedOn", UNSET)
-        created_on: Union[None, Unset, datetime.datetime]
-        if isinstance(_created_on, Unset):
-            created_on = UNSET
+        _created_on = d.pop("CreatedOn", None)
+        created_on: Optional[datetime.datetime]
+        if not _created_on:
+            created_on = None
         else:
             created_on = isoparse(_created_on)
 
-        _created_on_utc = d.pop("CreatedOnUtc", UNSET)
-        created_on_utc: Union[None, Unset, datetime.datetime]
-        if isinstance(_created_on_utc, Unset):
-            created_on_utc = UNSET
+        _created_on_utc = d.pop("CreatedOnUtc", None)
+        created_on_utc: Optional[datetime.datetime]
+        if not _created_on_utc:
+            created_on_utc = None
         else:
             created_on_utc = isoparse(_created_on_utc)
 
-        employee_id = d.pop("EmployeeId", UNSET)
+        employee_id = d.pop("EmployeeId", None)
 
-        first_name = d.pop("FirstName", UNSET)
+        first_name = d.pop("FirstName", None)
 
-        last_name = d.pop("LastName", UNSET)
+        last_name = d.pop("LastName", None)
 
-        alias = d.pop("Alias", UNSET)
+        alias = d.pop("Alias", None)
 
         qualer_api_models_report_datasets_to_service_order_item_status_history_response = cls(
             service_order_item_id=service_order_item_id,
@@ -153,7 +149,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse:
         return qualer_api_models_report_datasets_to_service_order_item_status_history_response
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

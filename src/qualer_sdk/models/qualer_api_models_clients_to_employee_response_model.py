@@ -1,12 +1,10 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
-
-from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_clients_to_employee_employee_department_response import (
@@ -21,47 +19,47 @@ T = TypeVar("T", bound="QualerApiModelsClientsToEmployeeResponseModel")
 class QualerApiModelsClientsToEmployeeResponseModel:
     """
     Attributes:
-        employee_id (Union[None, Unset, int]):
-        first_name (Union[None, Unset, str]):
-        last_name (Union[None, Unset, str]):
-        company_id (Union[None, Unset, int]):
-        login_email (Union[None, Unset, str]):
-        departments (Union[None, Unset, list['QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse']]):
-        subscription_email (Union[None, Unset, str]):
-        subscription_phone (Union[None, Unset, str]):
-        office_phone (Union[None, Unset, str]):
-        is_locked (Union[None, Unset, bool]):
-        image_url (Union[None, Unset, str]):
-        alias (Union[None, Unset, str]):
-        title (Union[None, Unset, str]):
-        is_deleted (Union[None, Unset, bool]):
-        last_seen_date_utc (Union[None, Unset, datetime.datetime]):
-        culture_name (Union[None, Unset, str]):
-        culture_ui_name (Union[None, Unset, str]):
+        employee_id (Optional[int]):
+        first_name (Optional[str]):
+        last_name (Optional[str]):
+        company_id (Optional[int]):
+        login_email (Optional[str]):
+        departments (Optional[List['QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse']]):
+        subscription_email (Optional[str]):
+        subscription_phone (Optional[str]):
+        office_phone (Optional[str]):
+        is_locked (Optional[bool]):
+        image_url (Optional[str]):
+        alias (Optional[str]):
+        title (Optional[str]):
+        is_deleted (Optional[bool]):
+        last_seen_date_utc (Optional[datetime.datetime]):
+        culture_name (Optional[str]):
+        culture_ui_name (Optional[str]):
     """
 
-    employee_id: Union[None, Unset, int] = UNSET
-    first_name: Union[None, Unset, str] = UNSET
-    last_name: Union[None, Unset, str] = UNSET
-    company_id: Union[None, Unset, int] = UNSET
-    login_email: Union[None, Unset, str] = UNSET
-    departments: Union[
-        None, Unset, list["QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse"]
-    ] = UNSET
-    subscription_email: Union[None, Unset, str] = UNSET
-    subscription_phone: Union[None, Unset, str] = UNSET
-    office_phone: Union[None, Unset, str] = UNSET
-    is_locked: Union[None, Unset, bool] = UNSET
-    image_url: Union[None, Unset, str] = UNSET
-    alias: Union[None, Unset, str] = UNSET
-    title: Union[None, Unset, str] = UNSET
-    is_deleted: Union[None, Unset, bool] = UNSET
-    last_seen_date_utc: Union[None, Unset, datetime.datetime] = UNSET
-    culture_name: Union[None, Unset, str] = UNSET
-    culture_ui_name: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    employee_id: Optional[int] = None
+    first_name: Optional[str] = None
+    last_name: Optional[str] = None
+    company_id: Optional[int] = None
+    login_email: Optional[str] = None
+    departments: Union[None, List["QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse"]] = (
+        None
+    )
+    subscription_email: Optional[str] = None
+    subscription_phone: Optional[str] = None
+    office_phone: Optional[str] = None
+    is_locked: Optional[bool] = None
+    image_url: Optional[str] = None
+    alias: Optional[str] = None
+    title: Optional[str] = None
+    is_deleted: Optional[bool] = None
+    last_seen_date_utc: Optional[datetime.datetime] = None
+    culture_name: Optional[str] = None
+    culture_ui_name: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         employee_id = self.employee_id
 
         first_name = self.first_name
@@ -72,8 +70,8 @@ class QualerApiModelsClientsToEmployeeResponseModel:
 
         login_email = self.login_email
 
-        departments: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.departments and not isinstance(self.departments, Unset):
+        departments: Optional[List[Dict[str, Any]]] = None
+        if self.departments:
             departments = []
             for departments_item_data in self.departments:
                 departments_item = departments_item_data.to_dict()
@@ -95,9 +93,9 @@ class QualerApiModelsClientsToEmployeeResponseModel:
 
         is_deleted = self.is_deleted
 
-        last_seen_date_utc: Union[None, Unset, str]
-        if isinstance(self.last_seen_date_utc, Unset):
-            last_seen_date_utc = UNSET
+        last_seen_date_utc: Optional[str]
+        if not self.last_seen_date_utc:
+            last_seen_date_utc = None
         elif isinstance(self.last_seen_date_utc, datetime.datetime):
             last_seen_date_utc = self.last_seen_date_utc.isoformat()
         else:
@@ -107,42 +105,42 @@ class QualerApiModelsClientsToEmployeeResponseModel:
 
         culture_ui_name = self.culture_ui_name
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if employee_id is not UNSET:
+        if employee_id is not None:
             field_dict["EmployeeId"] = employee_id
-        if first_name is not UNSET:
+        if first_name is not None:
             field_dict["FirstName"] = first_name
-        if last_name is not UNSET:
+        if last_name is not None:
             field_dict["LastName"] = last_name
-        if company_id is not UNSET:
+        if company_id is not None:
             field_dict["CompanyId"] = company_id
-        if login_email is not UNSET:
+        if login_email is not None:
             field_dict["LoginEmail"] = login_email
-        if departments is not UNSET:
+        if departments is not None:
             field_dict["Departments"] = departments
-        if subscription_email is not UNSET:
+        if subscription_email is not None:
             field_dict["SubscriptionEmail"] = subscription_email
-        if subscription_phone is not UNSET:
+        if subscription_phone is not None:
             field_dict["SubscriptionPhone"] = subscription_phone
-        if office_phone is not UNSET:
+        if office_phone is not None:
             field_dict["OfficePhone"] = office_phone
-        if is_locked is not UNSET:
+        if is_locked is not None:
             field_dict["IsLocked"] = is_locked
-        if image_url is not UNSET:
+        if image_url is not None:
             field_dict["ImageUrl"] = image_url
-        if alias is not UNSET:
+        if alias is not None:
             field_dict["Alias"] = alias
-        if title is not UNSET:
+        if title is not None:
             field_dict["Title"] = title
-        if is_deleted is not UNSET:
+        if is_deleted is not None:
             field_dict["IsDeleted"] = is_deleted
-        if last_seen_date_utc is not UNSET:
+        if last_seen_date_utc is not None:
             field_dict["LastSeenDateUtc"] = last_seen_date_utc
-        if culture_name is not UNSET:
+        if culture_name is not None:
             field_dict["CultureName"] = culture_name
-        if culture_ui_name is not UNSET:
+        if culture_ui_name is not None:
             field_dict["CultureUiName"] = culture_ui_name
 
         return field_dict
@@ -154,50 +152,46 @@ class QualerApiModelsClientsToEmployeeResponseModel:
         )
 
         d = dict(src_dict)
-        employee_id = d.pop("EmployeeId", UNSET)
+        employee_id = d.pop("EmployeeId", None)
 
-        first_name = d.pop("FirstName", UNSET)
+        first_name = d.pop("FirstName", None)
 
-        last_name = d.pop("LastName", UNSET)
+        last_name = d.pop("LastName", None)
 
-        company_id = d.pop("CompanyId", UNSET)
+        company_id = d.pop("CompanyId", None)
 
-        login_email = d.pop("LoginEmail", UNSET)
+        login_email = d.pop("LoginEmail", None)
 
         departments = []
-        _departments = d.pop("Departments", UNSET)
+        _departments = d.pop("Departments", None)
         for departments_item_data in _departments or []:
-            departments_item = (
-                QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse.from_dict(
-                    departments_item_data
-                )
+            departments_item = QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse.from_dict(
+                departments_item_data
             )
 
             departments.append(departments_item)
 
-        subscription_email = d.pop("SubscriptionEmail", UNSET)
+        subscription_email = d.pop("SubscriptionEmail", None)
 
-        subscription_phone = d.pop("SubscriptionPhone", UNSET)
+        subscription_phone = d.pop("SubscriptionPhone", None)
 
-        office_phone = d.pop("OfficePhone", UNSET)
+        office_phone = d.pop("OfficePhone", None)
 
-        is_locked = d.pop("IsLocked", UNSET)
+        is_locked = d.pop("IsLocked", None)
 
-        image_url = d.pop("ImageUrl", UNSET)
+        image_url = d.pop("ImageUrl", None)
 
-        alias = d.pop("Alias", UNSET)
+        alias = d.pop("Alias", None)
 
-        title = d.pop("Title", UNSET)
+        title = d.pop("Title", None)
 
-        is_deleted = d.pop("IsDeleted", UNSET)
+        is_deleted = d.pop("IsDeleted", None)
 
         def _parse_last_seen_date_utc(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -206,13 +200,13 @@ class QualerApiModelsClientsToEmployeeResponseModel:
                 return last_seen_date_utc_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        last_seen_date_utc = _parse_last_seen_date_utc(d.pop("LastSeenDateUtc", UNSET))
+        last_seen_date_utc = _parse_last_seen_date_utc(d.pop("LastSeenDateUtc", None))
 
-        culture_name = d.pop("CultureName", UNSET)
+        culture_name = d.pop("CultureName", None)
 
-        culture_ui_name = d.pop("CultureUiName", UNSET)
+        culture_ui_name = d.pop("CultureUiName", None)
 
         qualer_api_models_clients_to_employee_response_model = cls(
             employee_id=employee_id,
@@ -238,7 +232,7 @@ class QualerApiModelsClientsToEmployeeResponseModel:
         return qualer_api_models_clients_to_employee_response_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

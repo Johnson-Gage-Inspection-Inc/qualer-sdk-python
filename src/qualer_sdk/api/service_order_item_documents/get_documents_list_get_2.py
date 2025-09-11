@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union, cast
+from typing import Any, Dict, List, Optional, Union, cast
 
 import httpx
 
@@ -8,21 +8,21 @@ from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_service_order_documents_to_company_order_item_controlled_document_response import (
     QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse,
 )
-from ...types import UNSET, Response, Unset
+from ...types import Response
 
 
 def _get_kwargs(
     service_order_item_id: int,
     *,
-    model_report_type: Union[None, Unset, str] = UNSET,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+    model_report_type: Optional[str] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
     params["model.reportType"] = model_report_type
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None and v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": f"/api/service/workitems/{service_order_item_id}/documents/list",
         "params": params,
@@ -36,9 +36,7 @@ def _parse_response(
 ) -> Optional[
     Union[
         Any,
-        list[
-            "QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"
-        ],
+        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"],
     ]
 ]:
     if response.status_code == 200:
@@ -69,9 +67,7 @@ def _build_response(
 ) -> Response[
     Union[
         Any,
-        list[
-            "QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"
-        ],
+        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"],
     ]
 ]:
     return Response(
@@ -86,26 +82,24 @@ def sync_detailed(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[None, Unset, str] = UNSET,
+    model_report_type: Optional[str] = None,
 ) -> Response[
     Union[
         Any,
-        list[
-            "QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"
-        ],
+        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"],
     ]
 ]:
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[None, Unset, str]):
+        model_report_type (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, list['QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]]
+        Response[Union[Any, List['QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]]
     """
 
     kwargs = _get_kwargs(
@@ -124,26 +118,24 @@ def sync(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[None, Unset, str] = UNSET,
+    model_report_type: Optional[str] = None,
 ) -> Optional[
     Union[
         Any,
-        list[
-            "QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"
-        ],
+        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"],
     ]
 ]:
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[None, Unset, str]):
+        model_report_type (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, list['QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]
+        Union[Any, List['QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]
     """
 
     return sync_detailed(
@@ -157,26 +149,24 @@ async def asyncio_detailed(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[None, Unset, str] = UNSET,
+    model_report_type: Optional[str] = None,
 ) -> Response[
     Union[
         Any,
-        list[
-            "QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"
-        ],
+        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"],
     ]
 ]:
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[None, Unset, str]):
+        model_report_type (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, list['QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]]
+        Response[Union[Any, List['QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]]
     """
 
     kwargs = _get_kwargs(
@@ -193,26 +183,24 @@ async def asyncio(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[None, Unset, str] = UNSET,
+    model_report_type: Optional[str] = None,
 ) -> Optional[
     Union[
         Any,
-        list[
-            "QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"
-        ],
+        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"],
     ]
 ]:
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[None, Unset, str]):
+        model_report_type (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, list['QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]
+        Union[Any, List['QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]
     """
 
     return (

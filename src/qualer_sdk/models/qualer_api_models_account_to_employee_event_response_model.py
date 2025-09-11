@@ -1,12 +1,10 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsAccountToEmployeeEventResponseModel")
 
@@ -15,45 +13,45 @@ T = TypeVar("T", bound="QualerApiModelsAccountToEmployeeEventResponseModel")
 class QualerApiModelsAccountToEmployeeEventResponseModel:
     """
     Attributes:
-        id (Union[None, Unset, int]):
-        subject (Union[None, Unset, str]):
-        created_on_utc (Union[None, Unset, datetime.datetime]):
-        event_type_id (Union[None, Unset, int]):
-        event_type_group (Union[None, Unset, str]):
+        id (Optional[int]):
+        subject (Optional[str]):
+        created_on_utc (Optional[datetime.datetime]):
+        event_type_id (Optional[int]):
+        event_type_group (Optional[str]):
     """
 
-    id: Union[None, Unset, int] = UNSET
-    subject: Union[None, Unset, str] = UNSET
-    created_on_utc: Union[None, Unset, datetime.datetime] = UNSET
-    event_type_id: Union[None, Unset, int] = UNSET
-    event_type_group: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    id: Optional[int] = None
+    subject: Optional[str] = None
+    created_on_utc: Optional[datetime.datetime] = None
+    event_type_id: Optional[int] = None
+    event_type_group: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         id = self.id
 
         subject = self.subject
 
-        created_on_utc: Union[None, Unset, str] = UNSET
-        if self.created_on_utc and not isinstance(self.created_on_utc, Unset):
+        created_on_utc: Optional[str] = None
+        if self.created_on_utc:
             created_on_utc = self.created_on_utc.isoformat()
 
         event_type_id = self.event_type_id
 
         event_type_group = self.event_type_group
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if id is not UNSET:
+        if id is not None:
             field_dict["Id"] = id
-        if subject is not UNSET:
+        if subject is not None:
             field_dict["Subject"] = subject
-        if created_on_utc is not UNSET:
+        if created_on_utc is not None:
             field_dict["CreatedOnUtc"] = created_on_utc
-        if event_type_id is not UNSET:
+        if event_type_id is not None:
             field_dict["EventTypeId"] = event_type_id
-        if event_type_group is not UNSET:
+        if event_type_group is not None:
             field_dict["EventTypeGroup"] = event_type_group
 
         return field_dict
@@ -61,20 +59,20 @@ class QualerApiModelsAccountToEmployeeEventResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        id = d.pop("Id", UNSET)
+        id = d.pop("Id", None)
 
-        subject = d.pop("Subject", UNSET)
+        subject = d.pop("Subject", None)
 
-        _created_on_utc = d.pop("CreatedOnUtc", UNSET)
-        created_on_utc: Union[None, Unset, datetime.datetime]
-        if isinstance(_created_on_utc, Unset):
-            created_on_utc = UNSET
+        _created_on_utc = d.pop("CreatedOnUtc", None)
+        created_on_utc: Optional[datetime.datetime]
+        if not _created_on_utc:
+            created_on_utc = None
         else:
             created_on_utc = isoparse(_created_on_utc)
 
-        event_type_id = d.pop("EventTypeId", UNSET)
+        event_type_id = d.pop("EventTypeId", None)
 
-        event_type_group = d.pop("EventTypeGroup", UNSET)
+        event_type_group = d.pop("EventTypeGroup", None)
 
         qualer_api_models_account_to_employee_event_response_model = cls(
             id=id,
@@ -84,13 +82,11 @@ class QualerApiModelsAccountToEmployeeEventResponseModel:
             event_type_group=event_type_group,
         )
 
-        qualer_api_models_account_to_employee_event_response_model.additional_properties = (
-            d
-        )
+        qualer_api_models_account_to_employee_event_response_model.additional_properties = d
         return qualer_api_models_account_to_employee_event_response_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

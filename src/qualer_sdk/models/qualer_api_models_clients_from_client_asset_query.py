@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsClientsFromClientAssetQuery")
 
@@ -13,21 +11,21 @@ T = TypeVar("T", bound="QualerApiModelsClientsFromClientAssetQuery")
 class QualerApiModelsClientsFromClientAssetQuery:
     """
     Attributes:
-        equipment_id (Union[None, Unset, str]):
-        serial_number (Union[None, Unset, str]):
-        asset_tag (Union[None, Unset, str]):
-        barcode (Union[None, Unset, str]):
-        legacy_id (Union[None, Unset, str]):
+        equipment_id (Optional[str]):
+        serial_number (Optional[str]):
+        asset_tag (Optional[str]):
+        barcode (Optional[str]):
+        legacy_id (Optional[str]):
     """
 
-    equipment_id: Union[None, Unset, str] = UNSET
-    serial_number: Union[None, Unset, str] = UNSET
-    asset_tag: Union[None, Unset, str] = UNSET
-    barcode: Union[None, Unset, str] = UNSET
-    legacy_id: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    equipment_id: Optional[str] = None
+    serial_number: Optional[str] = None
+    asset_tag: Optional[str] = None
+    barcode: Optional[str] = None
+    legacy_id: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         equipment_id = self.equipment_id
 
         serial_number = self.serial_number
@@ -38,18 +36,18 @@ class QualerApiModelsClientsFromClientAssetQuery:
 
         legacy_id = self.legacy_id
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if equipment_id is not UNSET:
+        if equipment_id is not None:
             field_dict["EquipmentId"] = equipment_id
-        if serial_number is not UNSET:
+        if serial_number is not None:
             field_dict["SerialNumber"] = serial_number
-        if asset_tag is not UNSET:
+        if asset_tag is not None:
             field_dict["AssetTag"] = asset_tag
-        if barcode is not UNSET:
+        if barcode is not None:
             field_dict["Barcode"] = barcode
-        if legacy_id is not UNSET:
+        if legacy_id is not None:
             field_dict["LegacyId"] = legacy_id
 
         return field_dict
@@ -57,15 +55,15 @@ class QualerApiModelsClientsFromClientAssetQuery:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        equipment_id = d.pop("EquipmentId", UNSET)
+        equipment_id = d.pop("EquipmentId", None)
 
-        serial_number = d.pop("SerialNumber", UNSET)
+        serial_number = d.pop("SerialNumber", None)
 
-        asset_tag = d.pop("AssetTag", UNSET)
+        asset_tag = d.pop("AssetTag", None)
 
-        barcode = d.pop("Barcode", UNSET)
+        barcode = d.pop("Barcode", None)
 
-        legacy_id = d.pop("LegacyId", UNSET)
+        legacy_id = d.pop("LegacyId", None)
 
         qualer_api_models_clients_from_client_asset_query = cls(
             equipment_id=equipment_id,
@@ -79,7 +77,7 @@ class QualerApiModelsClientsFromClientAssetQuery:
         return qualer_api_models_clients_from_client_asset_query
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

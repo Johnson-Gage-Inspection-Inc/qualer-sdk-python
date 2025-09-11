@@ -1,12 +1,10 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsVendorsFromVendorCompanySearchModel")
 
@@ -15,39 +13,39 @@ T = TypeVar("T", bound="QualerApiModelsVendorsFromVendorCompanySearchModel")
 class QualerApiModelsVendorsFromVendorCompanySearchModel:
     """
     Attributes:
-        account_number_text (Union[None, Unset, str]):
-        company_name (Union[None, Unset, str]):
-        take (Union[None, Unset, int]):
-        modified_after (Union[None, Unset, datetime.datetime]):
+        account_number_text (Optional[str]):
+        company_name (Optional[str]):
+        take (Optional[int]):
+        modified_after (Optional[datetime.datetime]):
     """
 
-    account_number_text: Union[None, Unset, str] = UNSET
-    company_name: Union[None, Unset, str] = UNSET
-    take: Union[None, Unset, int] = UNSET
-    modified_after: Union[None, Unset, datetime.datetime] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    account_number_text: Optional[str] = None
+    company_name: Optional[str] = None
+    take: Optional[int] = None
+    modified_after: Optional[datetime.datetime] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         account_number_text = self.account_number_text
 
         company_name = self.company_name
 
         take = self.take
 
-        modified_after: Union[None, Unset, str] = UNSET
-        if self.modified_after and not isinstance(self.modified_after, Unset):
+        modified_after: Optional[str] = None
+        if self.modified_after:
             modified_after = self.modified_after.isoformat()
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if account_number_text is not UNSET:
+        if account_number_text is not None:
             field_dict["AccountNumberText"] = account_number_text
-        if company_name is not UNSET:
+        if company_name is not None:
             field_dict["CompanyName"] = company_name
-        if take is not UNSET:
+        if take is not None:
             field_dict["Take"] = take
-        if modified_after is not UNSET:
+        if modified_after is not None:
             field_dict["ModifiedAfter"] = modified_after
 
         return field_dict
@@ -55,16 +53,16 @@ class QualerApiModelsVendorsFromVendorCompanySearchModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        account_number_text = d.pop("AccountNumberText", UNSET)
+        account_number_text = d.pop("AccountNumberText", None)
 
-        company_name = d.pop("CompanyName", UNSET)
+        company_name = d.pop("CompanyName", None)
 
-        take = d.pop("Take", UNSET)
+        take = d.pop("Take", None)
 
-        _modified_after = d.pop("ModifiedAfter", UNSET)
-        modified_after: Union[None, Unset, datetime.datetime]
-        if isinstance(_modified_after, Unset):
-            modified_after = UNSET
+        _modified_after = d.pop("ModifiedAfter", None)
+        modified_after: Optional[datetime.datetime]
+        if not _modified_after:
+            modified_after = None
         else:
             modified_after = isoparse(_modified_after)
 
@@ -75,13 +73,11 @@ class QualerApiModelsVendorsFromVendorCompanySearchModel:
             modified_after=modified_after,
         )
 
-        qualer_api_models_vendors_from_vendor_company_search_model.additional_properties = (
-            d
-        )
+        qualer_api_models_vendors_from_vendor_company_search_model.additional_properties = d
         return qualer_api_models_vendors_from_vendor_company_search_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

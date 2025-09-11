@@ -1,15 +1,11 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
 if TYPE_CHECKING:
-    from ..models.qualer_api_models_address_address_model import (
-        QualerApiModelsAddressAddressModel,
-    )
+    from ..models.qualer_api_models_address_address_model import QualerApiModelsAddressAddressModel
 
 
 T = TypeVar("T", bound="QualerApiModelsSiteFromSiteCreateModel")
@@ -19,54 +15,52 @@ T = TypeVar("T", bound="QualerApiModelsSiteFromSiteCreateModel")
 class QualerApiModelsSiteFromSiteCreateModel:
     """
     Attributes:
-        site_name (Union[None, Unset, str]):
-        site_code (Union[None, Unset, str]):
-        shipping_inherited (Union[None, Unset, bool]):
-        default_account_representative_employee_id (Union[None, Unset, int]):
-        billing_inherited (Union[None, Unset, bool]):
-        federal_number (Union[None, Unset, str]):
-        state_number (Union[None, Unset, str]):
-        culture_name (Union[None, Unset, str]):
-        is_science_facility (Union[None, Unset, bool]):
-        is_service_center (Union[None, Unset, bool]):
-        is_inventory_storage (Union[None, Unset, bool]):
-        is_production (Union[None, Unset, bool]):
-        time_zone_id (Union[None, Unset, str]):
-        time_zone_offset_minutes (Union[None, Unset, int]):
-        company_name (Union[None, Unset, str]):
-        billing_address (Union[None, Unset, QualerApiModelsAddressAddressModel]):
-        shipping_address (Union[None, Unset, QualerApiModelsAddressAddressModel]):
+        site_name (Optional[str]):
+        site_code (Optional[str]):
+        shipping_inherited (Optional[bool]):
+        default_account_representative_employee_id (Optional[int]):
+        billing_inherited (Optional[bool]):
+        federal_number (Optional[str]):
+        state_number (Optional[str]):
+        culture_name (Optional[str]):
+        is_science_facility (Optional[bool]):
+        is_service_center (Optional[bool]):
+        is_inventory_storage (Optional[bool]):
+        is_production (Optional[bool]):
+        time_zone_id (Optional[str]):
+        time_zone_offset_minutes (Optional[int]):
+        company_name (Optional[str]):
+        billing_address (Optional[QualerApiModelsAddressAddressModel]):
+        shipping_address (Optional[QualerApiModelsAddressAddressModel]):
     """
 
-    site_name: Union[None, Unset, str] = UNSET
-    site_code: Union[None, Unset, str] = UNSET
-    shipping_inherited: Union[None, Unset, bool] = UNSET
-    default_account_representative_employee_id: Union[None, Unset, int] = UNSET
-    billing_inherited: Union[None, Unset, bool] = UNSET
-    federal_number: Union[None, Unset, str] = UNSET
-    state_number: Union[None, Unset, str] = UNSET
-    culture_name: Union[None, Unset, str] = UNSET
-    is_science_facility: Union[None, Unset, bool] = UNSET
-    is_service_center: Union[None, Unset, bool] = UNSET
-    is_inventory_storage: Union[None, Unset, bool] = UNSET
-    is_production: Union[None, Unset, bool] = UNSET
-    time_zone_id: Union[None, Unset, str] = UNSET
-    time_zone_offset_minutes: Union[None, Unset, int] = UNSET
-    company_name: Union[None, Unset, str] = UNSET
-    billing_address: Union[None, Unset, "QualerApiModelsAddressAddressModel"] = UNSET
-    shipping_address: Union[None, Unset, "QualerApiModelsAddressAddressModel"] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    site_name: Optional[str] = None
+    site_code: Optional[str] = None
+    shipping_inherited: Optional[bool] = None
+    default_account_representative_employee_id: Optional[int] = None
+    billing_inherited: Optional[bool] = None
+    federal_number: Optional[str] = None
+    state_number: Optional[str] = None
+    culture_name: Optional[str] = None
+    is_science_facility: Optional[bool] = None
+    is_service_center: Optional[bool] = None
+    is_inventory_storage: Optional[bool] = None
+    is_production: Optional[bool] = None
+    time_zone_id: Optional[str] = None
+    time_zone_offset_minutes: Optional[int] = None
+    company_name: Optional[str] = None
+    billing_address: Optional["QualerApiModelsAddressAddressModel"] = None
+    shipping_address: Optional["QualerApiModelsAddressAddressModel"] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         site_name = self.site_name
 
         site_code = self.site_code
 
         shipping_inherited = self.shipping_inherited
 
-        default_account_representative_employee_id = (
-            self.default_account_representative_employee_id
-        )
+        default_account_representative_employee_id = self.default_account_representative_employee_id
 
         billing_inherited = self.billing_inherited
 
@@ -90,52 +84,52 @@ class QualerApiModelsSiteFromSiteCreateModel:
 
         company_name = self.company_name
 
-        billing_address: Union[None, Unset, dict[str, Any]] = UNSET
-        if self.billing_address and not isinstance(self.billing_address, Unset):
+        billing_address: Optional[Dict[str, Any]] = None
+        if self.billing_address:
             billing_address = self.billing_address.to_dict()
 
-        shipping_address: Union[None, Unset, dict[str, Any]] = UNSET
-        if self.shipping_address and not isinstance(self.shipping_address, Unset):
+        shipping_address: Optional[Dict[str, Any]] = None
+        if self.shipping_address:
             shipping_address = self.shipping_address.to_dict()
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if site_name is not UNSET:
+        if site_name is not None:
             field_dict["SiteName"] = site_name
-        if site_code is not UNSET:
+        if site_code is not None:
             field_dict["SiteCode"] = site_code
-        if shipping_inherited is not UNSET:
+        if shipping_inherited is not None:
             field_dict["ShippingInherited"] = shipping_inherited
-        if default_account_representative_employee_id is not UNSET:
+        if default_account_representative_employee_id is not None:
             field_dict["DefaultAccountRepresentativeEmployeeId"] = (
                 default_account_representative_employee_id
             )
-        if billing_inherited is not UNSET:
+        if billing_inherited is not None:
             field_dict["BillingInherited"] = billing_inherited
-        if federal_number is not UNSET:
+        if federal_number is not None:
             field_dict["FederalNumber"] = federal_number
-        if state_number is not UNSET:
+        if state_number is not None:
             field_dict["StateNumber"] = state_number
-        if culture_name is not UNSET:
+        if culture_name is not None:
             field_dict["CultureName"] = culture_name
-        if is_science_facility is not UNSET:
+        if is_science_facility is not None:
             field_dict["IsScienceFacility"] = is_science_facility
-        if is_service_center is not UNSET:
+        if is_service_center is not None:
             field_dict["IsServiceCenter"] = is_service_center
-        if is_inventory_storage is not UNSET:
+        if is_inventory_storage is not None:
             field_dict["IsInventoryStorage"] = is_inventory_storage
-        if is_production is not UNSET:
+        if is_production is not None:
             field_dict["IsProduction"] = is_production
-        if time_zone_id is not UNSET:
+        if time_zone_id is not None:
             field_dict["TimeZoneId"] = time_zone_id
-        if time_zone_offset_minutes is not UNSET:
+        if time_zone_offset_minutes is not None:
             field_dict["TimeZoneOffsetMinutes"] = time_zone_offset_minutes
-        if company_name is not UNSET:
+        if company_name is not None:
             field_dict["CompanyName"] = company_name
-        if billing_address is not UNSET:
+        if billing_address is not None:
             field_dict["BillingAddress"] = billing_address
-        if shipping_address is not UNSET:
+        if shipping_address is not None:
             field_dict["ShippingAddress"] = shipping_address
 
         return field_dict
@@ -147,55 +141,51 @@ class QualerApiModelsSiteFromSiteCreateModel:
         )
 
         d = dict(src_dict)
-        site_name = d.pop("SiteName", UNSET)
+        site_name = d.pop("SiteName", None)
 
-        site_code = d.pop("SiteCode", UNSET)
+        site_code = d.pop("SiteCode", None)
 
-        shipping_inherited = d.pop("ShippingInherited", UNSET)
+        shipping_inherited = d.pop("ShippingInherited", None)
 
         default_account_representative_employee_id = d.pop(
-            "DefaultAccountRepresentativeEmployeeId", UNSET
+            "DefaultAccountRepresentativeEmployeeId", None
         )
 
-        billing_inherited = d.pop("BillingInherited", UNSET)
+        billing_inherited = d.pop("BillingInherited", None)
 
-        federal_number = d.pop("FederalNumber", UNSET)
+        federal_number = d.pop("FederalNumber", None)
 
-        state_number = d.pop("StateNumber", UNSET)
+        state_number = d.pop("StateNumber", None)
 
-        culture_name = d.pop("CultureName", UNSET)
+        culture_name = d.pop("CultureName", None)
 
-        is_science_facility = d.pop("IsScienceFacility", UNSET)
+        is_science_facility = d.pop("IsScienceFacility", None)
 
-        is_service_center = d.pop("IsServiceCenter", UNSET)
+        is_service_center = d.pop("IsServiceCenter", None)
 
-        is_inventory_storage = d.pop("IsInventoryStorage", UNSET)
+        is_inventory_storage = d.pop("IsInventoryStorage", None)
 
-        is_production = d.pop("IsProduction", UNSET)
+        is_production = d.pop("IsProduction", None)
 
-        time_zone_id = d.pop("TimeZoneId", UNSET)
+        time_zone_id = d.pop("TimeZoneId", None)
 
-        time_zone_offset_minutes = d.pop("TimeZoneOffsetMinutes", UNSET)
+        time_zone_offset_minutes = d.pop("TimeZoneOffsetMinutes", None)
 
-        company_name = d.pop("CompanyName", UNSET)
+        company_name = d.pop("CompanyName", None)
 
-        _billing_address = d.pop("BillingAddress", UNSET)
-        billing_address: Union[None, Unset, QualerApiModelsAddressAddressModel]
-        if isinstance(_billing_address, Unset):
-            billing_address = UNSET
+        _billing_address = d.pop("BillingAddress", None)
+        billing_address: Optional[QualerApiModelsAddressAddressModel]
+        if not _billing_address:
+            billing_address = None
         else:
-            billing_address = QualerApiModelsAddressAddressModel.from_dict(
-                _billing_address
-            )
+            billing_address = QualerApiModelsAddressAddressModel.from_dict(_billing_address)
 
-        _shipping_address = d.pop("ShippingAddress", UNSET)
-        shipping_address: Union[None, Unset, QualerApiModelsAddressAddressModel]
-        if isinstance(_shipping_address, Unset):
-            shipping_address = UNSET
+        _shipping_address = d.pop("ShippingAddress", None)
+        shipping_address: Optional[QualerApiModelsAddressAddressModel]
+        if not _shipping_address:
+            shipping_address = None
         else:
-            shipping_address = QualerApiModelsAddressAddressModel.from_dict(
-                _shipping_address
-            )
+            shipping_address = QualerApiModelsAddressAddressModel.from_dict(_shipping_address)
 
         qualer_api_models_site_from_site_create_model = cls(
             site_name=site_name,
@@ -221,7 +211,7 @@ class QualerApiModelsSiteFromSiteCreateModel:
         return qualer_api_models_site_from_site_create_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

@@ -1,9 +1,7 @@
 from enum import IntEnum
 
 
-class QualerApiModelsMeasurementsFromUpdateMeasurementPointModelSpecificationMode(
-    IntEnum
-):
+class QualerApiModelsMeasurementsFromUpdateMeasurementPointModelSpecificationMode(IntEnum):
     VALUE_0 = 0
     VALUE_1 = 1
 

@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 import httpx
 
@@ -8,21 +8,21 @@ from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_service_orders_to_provider_service_order_response_model import (
     QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel,
 )
-from ...types import UNSET, Response, Unset
+from ...types import Response
 
 
 def _get_kwargs(
     employee_id: int,
     *,
-    is_internal: Union[None, Unset, bool] = UNSET,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+    is_internal: Optional[bool] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
     params["isInternal"] = is_internal
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None and v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": f"/api/employee/{employee_id}/workorders",
         "params": params,
@@ -33,13 +33,15 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[list["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
+) -> Optional[List["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel.from_dict(
-                response_200_item_data
+            response_200_item = (
+                QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel.from_dict(
+                    response_200_item_data
+                )
             )
 
             response_200.append(response_200_item)
@@ -53,7 +55,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[list["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
+) -> Response[List["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -66,19 +68,19 @@ def sync_detailed(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    is_internal: Union[None, Unset, bool] = UNSET,
-) -> Response[list["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
+    is_internal: Optional[bool] = None,
+) -> Response[List["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
     """
     Args:
         employee_id (int):
-        is_internal (Union[None, Unset, bool]):
+        is_internal (Optional[bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel']]
+        Response[List['QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -97,19 +99,19 @@ def sync(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    is_internal: Union[None, Unset, bool] = UNSET,
-) -> Optional[list["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
+    is_internal: Optional[bool] = None,
+) -> Optional[List["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
     """
     Args:
         employee_id (int):
-        is_internal (Union[None, Unset, bool]):
+        is_internal (Optional[bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel']
+        List['QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel']
     """
 
     return sync_detailed(
@@ -123,19 +125,19 @@ async def asyncio_detailed(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    is_internal: Union[None, Unset, bool] = UNSET,
-) -> Response[list["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
+    is_internal: Optional[bool] = None,
+) -> Response[List["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
     """
     Args:
         employee_id (int):
-        is_internal (Union[None, Unset, bool]):
+        is_internal (Optional[bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel']]
+        Response[List['QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -152,19 +154,19 @@ async def asyncio(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    is_internal: Union[None, Unset, bool] = UNSET,
-) -> Optional[list["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
+    is_internal: Optional[bool] = None,
+) -> Optional[List["QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel"]]:
     """
     Args:
         employee_id (int):
-        is_internal (Union[None, Unset, bool]):
+        is_internal (Optional[bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel']
+        List['QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel']
     """
 
     return (

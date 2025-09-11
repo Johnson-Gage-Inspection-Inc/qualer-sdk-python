@@ -1,6 +1,6 @@
 import datetime
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 import httpx
 
@@ -9,30 +9,30 @@ from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_measurements_to_measurement_record_response_model import (
     QualerApiModelsMeasurementsToMeasurementRecordResponseModel,
 )
-from ...types import UNSET, Response, Unset
+from ...types import Response
 
 
 def _get_kwargs(
     asset_id: int,
     *,
-    from_: Union[None, Unset, datetime.datetime] = UNSET,
-    to: Union[None, Unset, datetime.datetime] = UNSET,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+    from_: Optional[datetime.datetime] = None,
+    to: Optional[datetime.datetime] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
-    json_from_: Union[None, Unset, str] = UNSET
-    if from_ and not isinstance(from_, Unset):
+    json_from_: Optional[str] = None
+    if from_:
         json_from_ = from_.isoformat()
     params["from"] = json_from_
 
-    json_to: Union[None, Unset, str] = UNSET
-    if to and not isinstance(to, Unset):
+    json_to: Optional[str] = None
+    if to:
         json_to = to.isoformat()
     params["to"] = json_to
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None and v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": f"/api/assets/{asset_id}/measurements",
         "params": params,
@@ -43,7 +43,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[list["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
+) -> Optional[List["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
@@ -65,7 +65,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[list["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
+) -> Response[List["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -78,21 +78,21 @@ def sync_detailed(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    from_: Union[None, Unset, datetime.datetime] = UNSET,
-    to: Union[None, Unset, datetime.datetime] = UNSET,
-) -> Response[list["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
+    from_: Optional[datetime.datetime] = None,
+    to: Optional[datetime.datetime] = None,
+) -> Response[List["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
     """
     Args:
         asset_id (int):
-        from_ (Union[None, Unset, datetime.datetime]):
-        to (Union[None, Unset, datetime.datetime]):
+        from_ (Optional[datetime.datetime]):
+        to (Optional[datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsMeasurementsToMeasurementRecordResponseModel']]
+        Response[List['QualerApiModelsMeasurementsToMeasurementRecordResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -112,21 +112,21 @@ def sync(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    from_: Union[None, Unset, datetime.datetime] = UNSET,
-    to: Union[None, Unset, datetime.datetime] = UNSET,
-) -> Optional[list["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
+    from_: Optional[datetime.datetime] = None,
+    to: Optional[datetime.datetime] = None,
+) -> Optional[List["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
     """
     Args:
         asset_id (int):
-        from_ (Union[None, Unset, datetime.datetime]):
-        to (Union[None, Unset, datetime.datetime]):
+        from_ (Optional[datetime.datetime]):
+        to (Optional[datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsMeasurementsToMeasurementRecordResponseModel']
+        List['QualerApiModelsMeasurementsToMeasurementRecordResponseModel']
     """
 
     return sync_detailed(
@@ -141,21 +141,21 @@ async def asyncio_detailed(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    from_: Union[None, Unset, datetime.datetime] = UNSET,
-    to: Union[None, Unset, datetime.datetime] = UNSET,
-) -> Response[list["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
+    from_: Optional[datetime.datetime] = None,
+    to: Optional[datetime.datetime] = None,
+) -> Response[List["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
     """
     Args:
         asset_id (int):
-        from_ (Union[None, Unset, datetime.datetime]):
-        to (Union[None, Unset, datetime.datetime]):
+        from_ (Optional[datetime.datetime]):
+        to (Optional[datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsMeasurementsToMeasurementRecordResponseModel']]
+        Response[List['QualerApiModelsMeasurementsToMeasurementRecordResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -173,21 +173,21 @@ async def asyncio(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    from_: Union[None, Unset, datetime.datetime] = UNSET,
-    to: Union[None, Unset, datetime.datetime] = UNSET,
-) -> Optional[list["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
+    from_: Optional[datetime.datetime] = None,
+    to: Optional[datetime.datetime] = None,
+) -> Optional[List["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
     """
     Args:
         asset_id (int):
-        from_ (Union[None, Unset, datetime.datetime]):
-        to (Union[None, Unset, datetime.datetime]):
+        from_ (Optional[datetime.datetime]):
+        to (Optional[datetime.datetime]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsMeasurementsToMeasurementRecordResponseModel']
+        List['QualerApiModelsMeasurementsToMeasurementRecordResponseModel']
     """
 
     return (

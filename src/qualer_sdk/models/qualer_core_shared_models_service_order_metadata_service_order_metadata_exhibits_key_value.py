@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar(
     "T",
@@ -16,25 +14,25 @@ T = TypeVar(
 class QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibitsKeyValue:
     """
     Attributes:
-        name (Union[None, Unset, str]):
-        value (Union[None, Unset, str]):
+        name (Optional[str]):
+        value (Optional[str]):
     """
 
-    name: Union[None, Unset, str] = UNSET
-    value: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    name: Optional[str] = None
+    value: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         name = self.name
 
         value = self.value
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if name is not UNSET:
+        if name is not None:
             field_dict["Name"] = name
-        if value is not UNSET:
+        if value is not None:
             field_dict["Value"] = value
 
         return field_dict
@@ -42,9 +40,9 @@ class QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibitsKeyV
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        name = d.pop("Name", UNSET)
+        name = d.pop("Name", None)
 
-        value = d.pop("Value", UNSET)
+        value = d.pop("Value", None)
 
         qualer_core_shared_models_service_order_metadata_service_order_metadata_exhibits_key_value = cls(
             name=name,
@@ -57,7 +55,7 @@ class QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibitsKeyV
         return qualer_core_shared_models_service_order_metadata_service_order_metadata_exhibits_key_value
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

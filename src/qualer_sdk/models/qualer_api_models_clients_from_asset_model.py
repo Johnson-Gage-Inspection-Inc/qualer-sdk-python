@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union, cast
+from typing import Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -9,7 +9,6 @@ from dateutil.parser import isoparse
 from ..models.qualer_api_models_clients_from_asset_model_asset_status import (
     QualerApiModelsClientsFromAssetModelAssetStatus,
 )
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsClientsFromAssetModel")
 
@@ -18,130 +17,113 @@ T = TypeVar("T", bound="QualerApiModelsClientsFromAssetModel")
 class QualerApiModelsClientsFromAssetModel:
     """
     Attributes:
-        site_id (Union[None, Unset, int]):
-        product_id (Union[None, Unset, int]):
-        manufacturer (Union[None, Unset, str]):
-        manufacturer_part_number (Union[None, Unset, str]):
-        category_id (Union[None, Unset, int]):
-        serial_number (Union[None, Unset, str]):
-        asset_tag (Union[None, Unset, str]):
-        asset_user (Union[None, Unset, str]):
-        asset_status (Union[None, Unset, QualerApiModelsClientsFromAssetModelAssetStatus]):
-        asset_name (Union[None, Unset, str]):
-        asset_description (Union[None, Unset, str]):
-        asset_maker (Union[None, Unset, str]):
-        location (Union[None, Unset, str]):
-        retirement_reason (Union[None, Unset, str]):
-        barcode (Union[None, Unset, str]):
-        legacy_identifier (Union[None, Unset, str]):
-        condition (Union[None, Unset, str]):
-        criticality (Union[None, Unset, str]):
-        purchase_date (Union[None, Unset, datetime.datetime]):
-        purchase_cost (Union[None, Unset, float]):
-        life_span_months (Union[None, Unset, int]):
-        activation_date (Union[None, Unset, datetime.datetime]):
-        depreciation_basis (Union[None, Unset, float]):
-        depreciation_method (Union[None, Unset, int]):
-        retirement_date (Union[None, Unset, datetime.datetime]):
-        salvage_value (Union[None, Unset, float]):
+        site_id (Optional[int]):
+        product_id (Optional[int]):
+        manufacturer (Optional[str]):
+        manufacturer_part_number (Optional[str]):
+        category_id (Optional[int]):
+        serial_number (Optional[str]):
+        asset_tag (Optional[str]):
+        asset_user (Optional[str]):
+        asset_status (Optional[QualerApiModelsClientsFromAssetModelAssetStatus]):
+        asset_name (Optional[str]):
+        asset_description (Optional[str]):
+        asset_maker (Optional[str]):
+        location (Optional[str]):
+        retirement_reason (Optional[str]):
+        barcode (Optional[str]):
+        legacy_identifier (Optional[str]):
+        condition (Optional[str]):
+        criticality (Optional[str]):
+        purchase_date (Optional[datetime.datetime]):
+        purchase_cost (Optional[float]):
+        life_span_months (Optional[int]):
+        activation_date (Optional[datetime.datetime]):
+        depreciation_basis (Optional[float]):
+        depreciation_method (Optional[int]):
+        retirement_date (Optional[datetime.datetime]):
+        salvage_value (Optional[float]):
     """
 
-    site_id: Union[None, Unset, int] = UNSET
-    product_id: Union[None, Unset, int] = UNSET
-    manufacturer: Union[None, Unset, str] = UNSET
-    manufacturer_part_number: Union[None, Unset, str] = UNSET
-    category_id: Union[None, Unset, int] = UNSET
-    serial_number: Union[None, Unset, str] = UNSET
-    asset_tag: Union[None, Unset, str] = UNSET
-    asset_user: Union[None, Unset, str] = UNSET
-    asset_status: Union[
-        None, Unset, QualerApiModelsClientsFromAssetModelAssetStatus
-    ] = UNSET
-    asset_name: Union[None, Unset, str] = UNSET
-    asset_description: Union[None, Unset, str] = UNSET
-    asset_maker: Union[None, Unset, str] = UNSET
-    location: Union[None, Unset, str] = UNSET
-    retirement_reason: Union[None, Unset, str] = UNSET
-    barcode: Union[None, Unset, str] = UNSET
-    legacy_identifier: Union[None, Unset, str] = UNSET
-    condition: Union[None, Unset, str] = UNSET
-    criticality: Union[None, Unset, str] = UNSET
-    purchase_date: Union[None, Unset, datetime.datetime] = UNSET
-    purchase_cost: Union[None, Unset, float] = UNSET
-    life_span_months: Union[None, Unset, int] = UNSET
-    activation_date: Union[None, Unset, datetime.datetime] = UNSET
-    depreciation_basis: Union[None, Unset, float] = UNSET
-    depreciation_method: Union[None, Unset, int] = UNSET
-    retirement_date: Union[None, Unset, datetime.datetime] = UNSET
-    salvage_value: Union[None, Unset, float] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    site_id: Optional[int] = None
+    product_id: Optional[int] = None
+    manufacturer: Optional[str] = None
+    manufacturer_part_number: Optional[str] = None
+    category_id: Optional[int] = None
+    serial_number: Optional[str] = None
+    asset_tag: Optional[str] = None
+    asset_user: Optional[str] = None
+    asset_status: Optional[QualerApiModelsClientsFromAssetModelAssetStatus] = None
+    asset_name: Optional[str] = None
+    asset_description: Optional[str] = None
+    asset_maker: Optional[str] = None
+    location: Optional[str] = None
+    retirement_reason: Optional[str] = None
+    barcode: Optional[str] = None
+    legacy_identifier: Optional[str] = None
+    condition: Optional[str] = None
+    criticality: Optional[str] = None
+    purchase_date: Optional[datetime.datetime] = None
+    purchase_cost: Optional[float] = None
+    life_span_months: Optional[int] = None
+    activation_date: Optional[datetime.datetime] = None
+    depreciation_basis: Optional[float] = None
+    depreciation_method: Optional[int] = None
+    retirement_date: Optional[datetime.datetime] = None
+    salvage_value: Optional[float] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
+        # Simple value copies
         site_id = self.site_id
-
         product_id = self.product_id
-
         manufacturer = self.manufacturer
-
         manufacturer_part_number = self.manufacturer_part_number
-
         category_id = self.category_id
-
         serial_number = self.serial_number
-
         asset_tag = self.asset_tag
-
         asset_user = self.asset_user
 
-        asset_status: Union[None, Unset, str] = UNSET
-        if self.asset_status and not isinstance(self.asset_status, Unset):
-            asset_status = self.asset_status.value
-
+        # Enum and optional string fields
+        asset_status: Optional[str] = (
+            self.asset_status.value if self.asset_status is not None else None
+        )
         asset_name = self.asset_name
-
         asset_description = self.asset_description
-
         asset_maker = self.asset_maker
-
         location = self.location
-
         retirement_reason = self.retirement_reason
-
         barcode = self.barcode
-
         legacy_identifier = self.legacy_identifier
-
         condition = self.condition
-
         criticality = self.criticality
 
-        purchase_date: Union[None, Unset, str]
-        if isinstance(self.purchase_date, Unset):
-            purchase_date = UNSET
+        # Datetime fields to ISO8601 strings
+        purchase_date: Optional[str]
+        if self.purchase_date is None:
+            purchase_date = None
         elif isinstance(self.purchase_date, datetime.datetime):
             purchase_date = self.purchase_date.isoformat()
         else:
             purchase_date = self.purchase_date
 
         purchase_cost = self.purchase_cost
-
         life_span_months = self.life_span_months
 
-        activation_date: Union[None, Unset, str]
-        if isinstance(self.activation_date, Unset):
-            activation_date = UNSET
+        activation_date: Optional[str]
+        if self.activation_date is None:
+            activation_date = None
         elif isinstance(self.activation_date, datetime.datetime):
             activation_date = self.activation_date.isoformat()
         else:
             activation_date = self.activation_date
 
         depreciation_basis = self.depreciation_basis
-
         depreciation_method = self.depreciation_method
 
-        retirement_date: Union[None, Unset, str]
-        if isinstance(self.retirement_date, Unset):
-            retirement_date = UNSET
+        retirement_date: Optional[str]
+        if self.retirement_date is None:
+            retirement_date = None
         elif isinstance(self.retirement_date, datetime.datetime):
             retirement_date = self.retirement_date.isoformat()
         else:
@@ -149,60 +131,60 @@ class QualerApiModelsClientsFromAssetModel:
 
         salvage_value = self.salvage_value
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if site_id is not UNSET:
+        if site_id is not None:
             field_dict["SiteId"] = site_id
-        if product_id is not UNSET:
+        if product_id is not None:
             field_dict["ProductId"] = product_id
-        if manufacturer is not UNSET:
+        if manufacturer is not None:
             field_dict["Manufacturer"] = manufacturer
-        if manufacturer_part_number is not UNSET:
+        if manufacturer_part_number is not None:
             field_dict["ManufacturerPartNumber"] = manufacturer_part_number
-        if category_id is not UNSET:
+        if category_id is not None:
             field_dict["CategoryId"] = category_id
-        if serial_number is not UNSET:
+        if serial_number is not None:
             field_dict["SerialNumber"] = serial_number
-        if asset_tag is not UNSET:
+        if asset_tag is not None:
             field_dict["AssetTag"] = asset_tag
-        if asset_user is not UNSET:
+        if asset_user is not None:
             field_dict["AssetUser"] = asset_user
-        if asset_status is not UNSET:
+        if asset_status is not None:
             field_dict["AssetStatus"] = asset_status
-        if asset_name is not UNSET:
+        if asset_name is not None:
             field_dict["AssetName"] = asset_name
-        if asset_description is not UNSET:
+        if asset_description is not None:
             field_dict["AssetDescription"] = asset_description
-        if asset_maker is not UNSET:
+        if asset_maker is not None:
             field_dict["AssetMaker"] = asset_maker
-        if location is not UNSET:
+        if location is not None:
             field_dict["Location"] = location
-        if retirement_reason is not UNSET:
+        if retirement_reason is not None:
             field_dict["RetirementReason"] = retirement_reason
-        if barcode is not UNSET:
+        if barcode is not None:
             field_dict["Barcode"] = barcode
-        if legacy_identifier is not UNSET:
+        if legacy_identifier is not None:
             field_dict["LegacyIdentifier"] = legacy_identifier
-        if condition is not UNSET:
+        if condition is not None:
             field_dict["Condition"] = condition
-        if criticality is not UNSET:
+        if criticality is not None:
             field_dict["Criticality"] = criticality
-        if purchase_date is not UNSET:
+        if purchase_date is not None:
             field_dict["PurchaseDate"] = purchase_date
-        if purchase_cost is not UNSET:
+        if purchase_cost is not None:
             field_dict["PurchaseCost"] = purchase_cost
-        if life_span_months is not UNSET:
+        if life_span_months is not None:
             field_dict["LifeSpanMonths"] = life_span_months
-        if activation_date is not UNSET:
+        if activation_date is not None:
             field_dict["ActivationDate"] = activation_date
-        if depreciation_basis is not UNSET:
+        if depreciation_basis is not None:
             field_dict["DepreciationBasis"] = depreciation_basis
-        if depreciation_method is not UNSET:
+        if depreciation_method is not None:
             field_dict["DepreciationMethod"] = depreciation_method
-        if retirement_date is not UNSET:
+        if retirement_date is not None:
             field_dict["RetirementDate"] = retirement_date
-        if salvage_value is not UNSET:
+        if salvage_value is not None:
             field_dict["SalvageValue"] = salvage_value
 
         return field_dict
@@ -210,115 +192,78 @@ class QualerApiModelsClientsFromAssetModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        site_id = d.pop("SiteId", UNSET)
+        site_id = d.pop("SiteId", None)
+        product_id = d.pop("ProductId", None)
+        manufacturer = d.pop("Manufacturer", None)
+        manufacturer_part_number = d.pop("ManufacturerPartNumber", None)
+        category_id = d.pop("CategoryId", None)
+        serial_number = d.pop("SerialNumber", None)
+        asset_tag = d.pop("AssetTag", None)
+        asset_user = d.pop("AssetUser", None)
 
-        product_id = d.pop("ProductId", UNSET)
-
-        manufacturer = d.pop("Manufacturer", UNSET)
-
-        manufacturer_part_number = d.pop("ManufacturerPartNumber", UNSET)
-
-        category_id = d.pop("CategoryId", UNSET)
-
-        serial_number = d.pop("SerialNumber", UNSET)
-
-        asset_tag = d.pop("AssetTag", UNSET)
-
-        asset_user = d.pop("AssetUser", UNSET)
-
-        _asset_status = d.pop("AssetStatus", UNSET)
-        asset_status: Union[
-            None, Unset, QualerApiModelsClientsFromAssetModelAssetStatus
-        ]
-        if isinstance(_asset_status, Unset):
-            asset_status = UNSET
+        _asset_status = d.pop("AssetStatus", None)
+        asset_status: Optional[QualerApiModelsClientsFromAssetModelAssetStatus]
+        if _asset_status is None:
+            asset_status = None
         else:
-            asset_status = QualerApiModelsClientsFromAssetModelAssetStatus(
-                _asset_status
-            )
+            asset_status = QualerApiModelsClientsFromAssetModelAssetStatus(_asset_status)
 
-        asset_name = d.pop("AssetName", UNSET)
+        asset_name = d.pop("AssetName", None)
+        asset_description = d.pop("AssetDescription", None)
+        asset_maker = d.pop("AssetMaker", None)
+        location = d.pop("Location", None)
+        retirement_reason = d.pop("RetirementReason", None)
+        barcode = d.pop("Barcode", None)
+        legacy_identifier = d.pop("LegacyIdentifier", None)
+        condition = d.pop("Condition", None)
+        criticality = d.pop("Criticality", None)
 
-        asset_description = d.pop("AssetDescription", UNSET)
-
-        asset_maker = d.pop("AssetMaker", UNSET)
-
-        location = d.pop("Location", UNSET)
-
-        retirement_reason = d.pop("RetirementReason", UNSET)
-
-        barcode = d.pop("Barcode", UNSET)
-
-        legacy_identifier = d.pop("LegacyIdentifier", UNSET)
-
-        condition = d.pop("Condition", UNSET)
-
-        criticality = d.pop("Criticality", UNSET)
-
-        def _parse_purchase_date(data: object) -> Union[None, Unset, datetime.datetime]:
+        def _parse_purchase_date(data: object) -> Optional[datetime.datetime]:
             if data is None:
-                return data
-            if isinstance(data, Unset):
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 purchase_date_type_0 = isoparse(data)
-
                 return purchase_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        purchase_date = _parse_purchase_date(d.pop("PurchaseDate", UNSET))
+        purchase_date = _parse_purchase_date(d.pop("PurchaseDate", None))
+        purchase_cost = d.pop("PurchaseCost", None)
+        life_span_months = d.pop("LifeSpanMonths", None)
 
-        purchase_cost = d.pop("PurchaseCost", UNSET)
-
-        life_span_months = d.pop("LifeSpanMonths", UNSET)
-
-        def _parse_activation_date(
-            data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
+        def _parse_activation_date(data: object) -> Optional[datetime.datetime]:
             if data is None:
-                return data
-            if isinstance(data, Unset):
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 activation_date_type_0 = isoparse(data)
-
                 return activation_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        activation_date = _parse_activation_date(d.pop("ActivationDate", UNSET))
+        activation_date = _parse_activation_date(d.pop("ActivationDate", None))
+        depreciation_basis = d.pop("DepreciationBasis", None)
+        depreciation_method = d.pop("DepreciationMethod", None)
 
-        depreciation_basis = d.pop("DepreciationBasis", UNSET)
-
-        depreciation_method = d.pop("DepreciationMethod", UNSET)
-
-        def _parse_retirement_date(
-            data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
+        def _parse_retirement_date(data: object) -> Optional[datetime.datetime]:
             if data is None:
-                return data
-            if isinstance(data, Unset):
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 retirement_date_type_0 = isoparse(data)
-
                 return retirement_date_type_0
             except:  # noqa: E722
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        retirement_date = _parse_retirement_date(d.pop("RetirementDate", UNSET))
-
-        salvage_value = d.pop("SalvageValue", UNSET)
+        retirement_date = _parse_retirement_date(d.pop("RetirementDate", None))
+        salvage_value = d.pop("SalvageValue", None)
 
         qualer_api_models_clients_from_asset_model = cls(
             site_id=site_id,
@@ -353,7 +298,7 @@ class QualerApiModelsClientsFromAssetModel:
         return qualer_api_models_clients_from_asset_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

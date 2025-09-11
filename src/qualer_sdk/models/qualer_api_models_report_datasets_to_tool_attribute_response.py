@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsReportDatasetsToToolAttributeResponse")
 
@@ -13,31 +11,31 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToToolAttributeResponse")
 class QualerApiModelsReportDatasetsToToolAttributeResponse:
     """
     Attributes:
-        tool_id (Union[None, Unset, int]):
-        attribute_name (Union[None, Unset, str]):
-        attribute_value (Union[None, Unset, str]):
+        tool_id (Optional[int]):
+        attribute_name (Optional[str]):
+        attribute_value (Optional[str]):
     """
 
-    tool_id: Union[None, Unset, int] = UNSET
-    attribute_name: Union[None, Unset, str] = UNSET
-    attribute_value: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    tool_id: Optional[int] = None
+    attribute_name: Optional[str] = None
+    attribute_value: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         tool_id = self.tool_id
 
         attribute_name = self.attribute_name
 
         attribute_value = self.attribute_value
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if tool_id is not UNSET:
+        if tool_id is not None:
             field_dict["ToolId"] = tool_id
-        if attribute_name is not UNSET:
+        if attribute_name is not None:
             field_dict["AttributeName"] = attribute_name
-        if attribute_value is not UNSET:
+        if attribute_value is not None:
             field_dict["AttributeValue"] = attribute_value
 
         return field_dict
@@ -45,11 +43,11 @@ class QualerApiModelsReportDatasetsToToolAttributeResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        tool_id = d.pop("ToolId", UNSET)
+        tool_id = d.pop("ToolId", None)
 
-        attribute_name = d.pop("AttributeName", UNSET)
+        attribute_name = d.pop("AttributeName", None)
 
-        attribute_value = d.pop("AttributeValue", UNSET)
+        attribute_value = d.pop("AttributeValue", None)
 
         qualer_api_models_report_datasets_to_tool_attribute_response = cls(
             tool_id=tool_id,
@@ -57,13 +55,11 @@ class QualerApiModelsReportDatasetsToToolAttributeResponse:
             attribute_value=attribute_value,
         )
 
-        qualer_api_models_report_datasets_to_tool_attribute_response.additional_properties = (
-            d
-        )
+        qualer_api_models_report_datasets_to_tool_attribute_response.additional_properties = d
         return qualer_api_models_report_datasets_to_tool_attribute_response
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

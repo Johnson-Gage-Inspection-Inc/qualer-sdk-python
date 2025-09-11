@@ -1,6 +1,6 @@
 import datetime
 from http import HTTPStatus
-from typing import Any, Optional, Union, cast
+from typing import Any, Dict, List, Optional, Union, cast
 
 import httpx
 
@@ -9,17 +9,17 @@ from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_service_order_documents_to_company_order_controlled_document_response import (
     QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse,
 )
-from ...types import UNSET, Response, Unset
+from ...types import Response
 
 
 def _get_kwargs(
     *,
     from_: datetime.datetime,
     to: datetime.datetime,
-    report_type: Union[None, Unset, str] = UNSET,
-    service_order_id: Union[None, Unset, int] = UNSET,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+    report_type: Optional[str] = None,
+    service_order_id: Optional[int] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
     json_from_ = from_.isoformat()
     params["from"] = json_from_
@@ -31,9 +31,9 @@ def _get_kwargs(
 
     params["serviceOrderId"] = service_order_id
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None and v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": "/api/service/workorders/documents/list",
         "params": params,
@@ -47,9 +47,7 @@ def _parse_response(
 ) -> Optional[
     Union[
         Any,
-        list[
-            "QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"
-        ],
+        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
     ]
 ]:
     if response.status_code == 200:
@@ -77,9 +75,7 @@ def _build_response(
 ) -> Response[
     Union[
         Any,
-        list[
-            "QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"
-        ],
+        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
     ]
 ]:
     return Response(
@@ -95,14 +91,12 @@ def sync_detailed(
     client: Union[AuthenticatedClient, Client],
     from_: datetime.datetime,
     to: datetime.datetime,
-    report_type: Union[None, Unset, str] = UNSET,
-    service_order_id: Union[None, Unset, int] = UNSET,
+    report_type: Optional[str] = None,
+    service_order_id: Optional[int] = None,
 ) -> Response[
     Union[
         Any,
-        list[
-            "QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"
-        ],
+        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
     ]
 ]:
     """Retrieve work order documents
@@ -117,7 +111,7 @@ def sync_detailed(
     01T10:11:12&amp;reportType=OrderInvoice&amp;ServiceOrderId=1
 
     reportType:<br />
-    Unset = 0,<br />
+    None = 0,<br />
     AssetSummary = 1,<br />
     AssetLabel = 11,<br />
     AssetDetail = 2,<br />
@@ -132,15 +126,15 @@ def sync_detailed(
     Args:
         from_ (datetime.datetime):
         to (datetime.datetime):
-        report_type (Union[None, Unset, str]):
-        service_order_id (Union[None, Unset, int]):
+        report_type (Optional[str]):
+        service_order_id (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, list['QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]]
+        Response[Union[Any, List['QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]]
     """
 
     kwargs = _get_kwargs(
@@ -162,14 +156,12 @@ def sync(
     client: Union[AuthenticatedClient, Client],
     from_: datetime.datetime,
     to: datetime.datetime,
-    report_type: Union[None, Unset, str] = UNSET,
-    service_order_id: Union[None, Unset, int] = UNSET,
+    report_type: Optional[str] = None,
+    service_order_id: Optional[int] = None,
 ) -> Optional[
     Union[
         Any,
-        list[
-            "QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"
-        ],
+        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
     ]
 ]:
     """Retrieve work order documents
@@ -184,7 +176,7 @@ def sync(
     01T10:11:12&amp;reportType=OrderInvoice&amp;ServiceOrderId=1
 
     reportType:<br />
-    Unset = 0,<br />
+    None = 0,<br />
     AssetSummary = 1,<br />
     AssetLabel = 11,<br />
     AssetDetail = 2,<br />
@@ -199,15 +191,15 @@ def sync(
     Args:
         from_ (datetime.datetime):
         to (datetime.datetime):
-        report_type (Union[None, Unset, str]):
-        service_order_id (Union[None, Unset, int]):
+        report_type (Optional[str]):
+        service_order_id (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, list['QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]
+        Union[Any, List['QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]
     """
 
     return sync_detailed(
@@ -224,14 +216,12 @@ async def asyncio_detailed(
     client: Union[AuthenticatedClient, Client],
     from_: datetime.datetime,
     to: datetime.datetime,
-    report_type: Union[None, Unset, str] = UNSET,
-    service_order_id: Union[None, Unset, int] = UNSET,
+    report_type: Optional[str] = None,
+    service_order_id: Optional[int] = None,
 ) -> Response[
     Union[
         Any,
-        list[
-            "QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"
-        ],
+        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
     ]
 ]:
     """Retrieve work order documents
@@ -246,7 +236,7 @@ async def asyncio_detailed(
     01T10:11:12&amp;reportType=OrderInvoice&amp;ServiceOrderId=1
 
     reportType:<br />
-    Unset = 0,<br />
+    None = 0,<br />
     AssetSummary = 1,<br />
     AssetLabel = 11,<br />
     AssetDetail = 2,<br />
@@ -261,15 +251,15 @@ async def asyncio_detailed(
     Args:
         from_ (datetime.datetime):
         to (datetime.datetime):
-        report_type (Union[None, Unset, str]):
-        service_order_id (Union[None, Unset, int]):
+        report_type (Optional[str]):
+        service_order_id (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, list['QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]]
+        Response[Union[Any, List['QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]]
     """
 
     kwargs = _get_kwargs(
@@ -289,14 +279,12 @@ async def asyncio(
     client: Union[AuthenticatedClient, Client],
     from_: datetime.datetime,
     to: datetime.datetime,
-    report_type: Union[None, Unset, str] = UNSET,
-    service_order_id: Union[None, Unset, int] = UNSET,
+    report_type: Optional[str] = None,
+    service_order_id: Optional[int] = None,
 ) -> Optional[
     Union[
         Any,
-        list[
-            "QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"
-        ],
+        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
     ]
 ]:
     """Retrieve work order documents
@@ -311,7 +299,7 @@ async def asyncio(
     01T10:11:12&amp;reportType=OrderInvoice&amp;ServiceOrderId=1
 
     reportType:<br />
-    Unset = 0,<br />
+    None = 0,<br />
     AssetSummary = 1,<br />
     AssetLabel = 11,<br />
     AssetDetail = 2,<br />
@@ -326,15 +314,15 @@ async def asyncio(
     Args:
         from_ (datetime.datetime):
         to (datetime.datetime):
-        report_type (Union[None, Unset, str]):
-        service_order_id (Union[None, Unset, int]):
+        report_type (Optional[str]):
+        service_order_id (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, list['QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]
+        Union[Any, List['QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]
     """
 
     return (

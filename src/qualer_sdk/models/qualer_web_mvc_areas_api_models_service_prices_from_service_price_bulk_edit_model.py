@@ -1,59 +1,55 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-T = TypeVar(
-    "T", bound="QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"
-)
+T = TypeVar("T", bound="QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel")
 
 
 @_attrs_define
 class QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel:
     """
     Attributes:
-        service_option_id (Union[None, Unset, int]):
-        service_option (Union[None, Unset, str]):
-        service_option_code (Union[None, Unset, str]):
-        option_type (Union[None, Unset, str]):
-        description (Union[None, Unset, str]):
-        service_task_id (Union[None, Unset, int]):
-        service_code (Union[None, Unset, str]):
-        document_number (Union[None, Unset, str]):
-        document_section (Union[None, Unset, str]):
-        capability_id (Union[None, Unset, int]):
-        service_type_id (Union[None, Unset, int]):
-        service_task_price_id (Union[None, Unset, int]):
-        service_pricing_id (Union[None, Unset, int]):
-        price (Union[None, Unset, float]):
-        is_hourly (Union[None, Unset, bool]):
-        issue (Union[None, Unset, str]):
-        log_error (Union[None, Unset, str]):
+        service_option_id (Optional[int]):
+        service_option (Optional[str]):
+        service_option_code (Optional[str]):
+        option_type (Optional[str]):
+        description (Optional[str]):
+        service_task_id (Optional[int]):
+        service_code (Optional[str]):
+        document_number (Optional[str]):
+        document_section (Optional[str]):
+        capability_id (Optional[int]):
+        service_type_id (Optional[int]):
+        service_task_price_id (Optional[int]):
+        service_pricing_id (Optional[int]):
+        price (Optional[float]):
+        is_hourly (Optional[bool]):
+        issue (Optional[str]):
+        log_error (Optional[str]):
     """
 
-    service_option_id: Union[None, Unset, int] = UNSET
-    service_option: Union[None, Unset, str] = UNSET
-    service_option_code: Union[None, Unset, str] = UNSET
-    option_type: Union[None, Unset, str] = UNSET
-    description: Union[None, Unset, str] = UNSET
-    service_task_id: Union[None, Unset, int] = UNSET
-    service_code: Union[None, Unset, str] = UNSET
-    document_number: Union[None, Unset, str] = UNSET
-    document_section: Union[None, Unset, str] = UNSET
-    capability_id: Union[None, Unset, int] = UNSET
-    service_type_id: Union[None, Unset, int] = UNSET
-    service_task_price_id: Union[None, Unset, int] = UNSET
-    service_pricing_id: Union[None, Unset, int] = UNSET
-    price: Union[None, Unset, float] = UNSET
-    is_hourly: Union[None, Unset, bool] = UNSET
-    issue: Union[None, Unset, str] = UNSET
-    log_error: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    service_option_id: Optional[int] = None
+    service_option: Optional[str] = None
+    service_option_code: Optional[str] = None
+    option_type: Optional[str] = None
+    description: Optional[str] = None
+    service_task_id: Optional[int] = None
+    service_code: Optional[str] = None
+    document_number: Optional[str] = None
+    document_section: Optional[str] = None
+    capability_id: Optional[int] = None
+    service_type_id: Optional[int] = None
+    service_task_price_id: Optional[int] = None
+    service_pricing_id: Optional[int] = None
+    price: Optional[float] = None
+    is_hourly: Optional[bool] = None
+    issue: Optional[str] = None
+    log_error: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         service_option_id = self.service_option_id
 
         service_option = self.service_option
@@ -88,42 +84,42 @@ class QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel:
 
         log_error = self.log_error
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if service_option_id is not UNSET:
+        if service_option_id is not None:
             field_dict["ServiceOptionId"] = service_option_id
-        if service_option is not UNSET:
+        if service_option is not None:
             field_dict["ServiceOption"] = service_option
-        if service_option_code is not UNSET:
+        if service_option_code is not None:
             field_dict["ServiceOptionCode"] = service_option_code
-        if option_type is not UNSET:
+        if option_type is not None:
             field_dict["OptionType"] = option_type
-        if description is not UNSET:
+        if description is not None:
             field_dict["Description"] = description
-        if service_task_id is not UNSET:
+        if service_task_id is not None:
             field_dict["ServiceTaskId"] = service_task_id
-        if service_code is not UNSET:
+        if service_code is not None:
             field_dict["ServiceCode"] = service_code
-        if document_number is not UNSET:
+        if document_number is not None:
             field_dict["DocumentNumber"] = document_number
-        if document_section is not UNSET:
+        if document_section is not None:
             field_dict["DocumentSection"] = document_section
-        if capability_id is not UNSET:
+        if capability_id is not None:
             field_dict["CapabilityId"] = capability_id
-        if service_type_id is not UNSET:
+        if service_type_id is not None:
             field_dict["ServiceTypeId"] = service_type_id
-        if service_task_price_id is not UNSET:
+        if service_task_price_id is not None:
             field_dict["ServiceTaskPriceId"] = service_task_price_id
-        if service_pricing_id is not UNSET:
+        if service_pricing_id is not None:
             field_dict["ServicePricingId"] = service_pricing_id
-        if price is not UNSET:
+        if price is not None:
             field_dict["Price"] = price
-        if is_hourly is not UNSET:
+        if is_hourly is not None:
             field_dict["IsHourly"] = is_hourly
-        if issue is not UNSET:
+        if issue is not None:
             field_dict["Issue"] = issue
-        if log_error is not UNSET:
+        if log_error is not None:
             field_dict["LogError"] = log_error
 
         return field_dict
@@ -131,39 +127,39 @@ class QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        service_option_id = d.pop("ServiceOptionId", UNSET)
+        service_option_id = d.pop("ServiceOptionId", None)
 
-        service_option = d.pop("ServiceOption", UNSET)
+        service_option = d.pop("ServiceOption", None)
 
-        service_option_code = d.pop("ServiceOptionCode", UNSET)
+        service_option_code = d.pop("ServiceOptionCode", None)
 
-        option_type = d.pop("OptionType", UNSET)
+        option_type = d.pop("OptionType", None)
 
-        description = d.pop("Description", UNSET)
+        description = d.pop("Description", None)
 
-        service_task_id = d.pop("ServiceTaskId", UNSET)
+        service_task_id = d.pop("ServiceTaskId", None)
 
-        service_code = d.pop("ServiceCode", UNSET)
+        service_code = d.pop("ServiceCode", None)
 
-        document_number = d.pop("DocumentNumber", UNSET)
+        document_number = d.pop("DocumentNumber", None)
 
-        document_section = d.pop("DocumentSection", UNSET)
+        document_section = d.pop("DocumentSection", None)
 
-        capability_id = d.pop("CapabilityId", UNSET)
+        capability_id = d.pop("CapabilityId", None)
 
-        service_type_id = d.pop("ServiceTypeId", UNSET)
+        service_type_id = d.pop("ServiceTypeId", None)
 
-        service_task_price_id = d.pop("ServiceTaskPriceId", UNSET)
+        service_task_price_id = d.pop("ServiceTaskPriceId", None)
 
-        service_pricing_id = d.pop("ServicePricingId", UNSET)
+        service_pricing_id = d.pop("ServicePricingId", None)
 
-        price = d.pop("Price", UNSET)
+        price = d.pop("Price", None)
 
-        is_hourly = d.pop("IsHourly", UNSET)
+        is_hourly = d.pop("IsHourly", None)
 
-        issue = d.pop("Issue", UNSET)
+        issue = d.pop("Issue", None)
 
-        log_error = d.pop("LogError", UNSET)
+        log_error = d.pop("LogError", None)
 
         qualer_web_mvc_areas_api_models_service_prices_from_service_price_bulk_edit_model = cls(
             service_option_id=service_option_id,
@@ -191,7 +187,7 @@ class QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel:
         return qualer_web_mvc_areas_api_models_service_prices_from_service_price_bulk_edit_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

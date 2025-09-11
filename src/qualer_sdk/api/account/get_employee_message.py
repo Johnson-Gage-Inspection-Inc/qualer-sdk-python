@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
@@ -13,8 +13,8 @@ from ...types import Response
 
 def _get_kwargs(
     message_id: int,
-) -> dict[str, Any]:
-    _kwargs: dict[str, Any] = {
+) -> Dict[str, Any]:
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": f"/api/user/messages/{message_id}",
     }
@@ -26,10 +26,8 @@ def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
 ) -> Optional[QualerApiModelsAccountToEmployeeEventMessageResponseModel]:
     if response.status_code == 200:
-        response_200 = (
-            QualerApiModelsAccountToEmployeeEventMessageResponseModel.from_dict(
-                response.json()
-            )
+        response_200 = QualerApiModelsAccountToEmployeeEventMessageResponseModel.from_dict(
+            response.json()
         )
 
         return response_200

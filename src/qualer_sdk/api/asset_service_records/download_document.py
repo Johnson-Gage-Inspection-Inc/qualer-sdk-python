@@ -1,24 +1,24 @@
 from http import HTTPStatus
 from io import BytesIO
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...types import UNSET, File, Response, Unset
+from ...types import File, Response
 
 
 def _get_kwargs(
     asset_service_record_id_path: str,
     file_name_path: str,
     *,
-    asset_service_record_id_query: Union[None, Unset, str] = UNSET,
-    file_name_query: Union[None, Unset, str] = UNSET,
-    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
-    model_file_name: Union[None, Unset, str] = UNSET,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+    asset_service_record_id_query: Optional[str] = None,
+    file_name_query: Optional[str] = None,
+    model_asset_service_record_id: Optional[int] = None,
+    model_file_name: Optional[str] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
     params["assetServiceRecordId"] = asset_service_record_id_query
 
@@ -28,9 +28,9 @@ def _get_kwargs(
 
     params["model.fileName"] = model_file_name
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None and v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": f"/api/assetservicerecords/{asset_service_record_id_path}/documents/{file_name_path}",
         "params": params,
@@ -68,19 +68,19 @@ def sync_detailed(
     file_name_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_service_record_id_query: Union[None, Unset, str] = UNSET,
-    file_name_query: Union[None, Unset, str] = UNSET,
-    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
-    model_file_name: Union[None, Unset, str] = UNSET,
+    asset_service_record_id_query: Optional[str] = None,
+    file_name_query: Optional[str] = None,
+    model_asset_service_record_id: Optional[int] = None,
+    model_file_name: Optional[str] = None,
 ) -> Response[File]:
     """
     Args:
         asset_service_record_id_path (str):
         file_name_path (str):
-        asset_service_record_id_query (Union[None, Unset, str]):
-        file_name_query (Union[None, Unset, str]):
-        model_asset_service_record_id (Union[None, Unset, int]):
-        model_file_name (Union[None, Unset, str]):
+        asset_service_record_id_query (Optional[str]):
+        file_name_query (Optional[str]):
+        model_asset_service_record_id (Optional[int]):
+        model_file_name (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -111,19 +111,19 @@ def sync(
     file_name_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_service_record_id_query: Union[None, Unset, str] = UNSET,
-    file_name_query: Union[None, Unset, str] = UNSET,
-    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
-    model_file_name: Union[None, Unset, str] = UNSET,
+    asset_service_record_id_query: Optional[str] = None,
+    file_name_query: Optional[str] = None,
+    model_asset_service_record_id: Optional[int] = None,
+    model_file_name: Optional[str] = None,
 ) -> Optional[File]:
     """
     Args:
         asset_service_record_id_path (str):
         file_name_path (str):
-        asset_service_record_id_query (Union[None, Unset, str]):
-        file_name_query (Union[None, Unset, str]):
-        model_asset_service_record_id (Union[None, Unset, int]):
-        model_file_name (Union[None, Unset, str]):
+        asset_service_record_id_query (Optional[str]):
+        file_name_query (Optional[str]):
+        model_asset_service_record_id (Optional[int]):
+        model_file_name (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -149,19 +149,19 @@ async def asyncio_detailed(
     file_name_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_service_record_id_query: Union[None, Unset, str] = UNSET,
-    file_name_query: Union[None, Unset, str] = UNSET,
-    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
-    model_file_name: Union[None, Unset, str] = UNSET,
+    asset_service_record_id_query: Optional[str] = None,
+    file_name_query: Optional[str] = None,
+    model_asset_service_record_id: Optional[int] = None,
+    model_file_name: Optional[str] = None,
 ) -> Response[File]:
     """
     Args:
         asset_service_record_id_path (str):
         file_name_path (str):
-        asset_service_record_id_query (Union[None, Unset, str]):
-        file_name_query (Union[None, Unset, str]):
-        model_asset_service_record_id (Union[None, Unset, int]):
-        model_file_name (Union[None, Unset, str]):
+        asset_service_record_id_query (Optional[str]):
+        file_name_query (Optional[str]):
+        model_asset_service_record_id (Optional[int]):
+        model_file_name (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -190,19 +190,19 @@ async def asyncio(
     file_name_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    asset_service_record_id_query: Union[None, Unset, str] = UNSET,
-    file_name_query: Union[None, Unset, str] = UNSET,
-    model_asset_service_record_id: Union[None, Unset, int] = UNSET,
-    model_file_name: Union[None, Unset, str] = UNSET,
+    asset_service_record_id_query: Optional[str] = None,
+    file_name_query: Optional[str] = None,
+    model_asset_service_record_id: Optional[int] = None,
+    model_file_name: Optional[str] = None,
 ) -> Optional[File]:
     """
     Args:
         asset_service_record_id_path (str):
         file_name_path (str):
-        asset_service_record_id_query (Union[None, Unset, str]):
-        file_name_query (Union[None, Unset, str]):
-        model_asset_service_record_id (Union[None, Unset, int]):
-        model_file_name (Union[None, Unset, str]):
+        asset_service_record_id_query (Optional[str]):
+        file_name_query (Optional[str]):
+        model_asset_service_record_id (Optional[int]):
+        model_file_name (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

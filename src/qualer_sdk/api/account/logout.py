@@ -1,24 +1,22 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union, cast
+from typing import Any, Dict, Optional, Union, cast
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.logout_response_200 import LogoutResponse200
-from ...models.qualer_api_models_account_to_logout_model import (
-    QualerApiModelsAccountToLogoutModel,
-)
+from ...models.qualer_api_models_account_to_logout_model import QualerApiModelsAccountToLogoutModel
 from ...types import Response
 
 
 def _get_kwargs(
     *,
     body: QualerApiModelsAccountToLogoutModel,
-) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+) -> Dict[str, Any]:
+    headers: Dict[str, Any] = {}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "post",
         "url": "/api/logout",
     }
