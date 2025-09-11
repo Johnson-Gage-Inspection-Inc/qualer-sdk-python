@@ -64,3 +64,6 @@ qualer_sdk.egg-info/*
 temp_test_gen/*
 .env
 .vscode/settings.json
+
+.venv/
+venv/
