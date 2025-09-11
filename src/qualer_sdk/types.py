@@ -11,28 +11,10 @@ from typing import IO, BinaryIO, Generic, List, Optional, Tuple, TypeVar, Union
 from attrs import define
 from typing_extensions import TypeAlias
 
-# Back-compat names for projects that imported these from the SDK.
-# Unset is just the type of None; UNSET is simply None.
-Unset = type(None)
-UNSET: None = None
 
 # Public type aliases to simplify annotations in user code.
 # MaybeUnset[T] expresses a value that may be absent (None) or present.
 T = TypeVar("T")
-MaybeUnset: TypeAlias = Optional[T]
-
-
-def require_set(value: Optional[T], /, message: str | None = None) -> T:
-    """Assert that ``value`` is set and return it.
-
-    Raises a ``ValueError`` if the value is ``None``. Useful to convert an
-    ``Optional[T]`` into a ``T`` in places where a value is required.
-    """
-
-    if value is None:
-        raise ValueError(message or "Expected a set value, got None")
-    return value
-
 
 # The types that `httpx.Client(files=)` can accept, copied from that library.
 FileContent = Union[IO[bytes], bytes, str]
@@ -58,23 +40,9 @@ class File:
         return self.file_name, self.payload, self.mime_type
 
 
-@define
-class Response(Generic[T]):
-    """A response from an endpoint"""
-
-    status_code: HTTPStatus
-    content: bytes
-    headers: MutableMapping[str, str]
-    parsed: Optional[T]
-
 
 __all__ = [
-    "UNSET",
-    "Unset",
-    "MaybeUnset",
-    "require_set",
     "File",
     "FileTypes",
     "RequestFiles",
-    "Response",
 ]
