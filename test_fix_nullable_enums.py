@@ -7,7 +7,6 @@ This allows us to test the regex patterns and replacements without regenerating 
 import os
 import re
 import tempfile
-import shutil
 
 
 def test_fix_nullable_enums():
