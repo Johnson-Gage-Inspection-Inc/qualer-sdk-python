@@ -47,7 +47,6 @@ coverage.xml
 dmypy.json
 
 # IDE files
-.vscode/
 .idea/
 *.swp
 *.swo
