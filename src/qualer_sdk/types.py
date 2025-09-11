@@ -4,13 +4,10 @@ We no longer use a custom ``Unset`` sentinel. ``None`` represents both
 "missing" and "null" values across the SDK.
 """
 
-from collections.abc import Mapping, MutableMapping
-from http import HTTPStatus
-from typing import IO, BinaryIO, Generic, List, Optional, Tuple, TypeVar, Union
+from collections.abc import Mapping
+from typing import IO, BinaryIO, List, Optional, Tuple, TypeVar, Union
 
 from attrs import define
-from typing_extensions import TypeAlias
-
 
 # Public type aliases to simplify annotations in user code.
 # MaybeUnset[T] expresses a value that may be absent (None) or present.
@@ -38,7 +35,6 @@ class File:
     def to_tuple(self) -> FileTypes:
         """Return a tuple representation that httpx will accept for multipart/form-data"""
         return self.file_name, self.payload, self.mime_type
-
 
 
 __all__ = [
