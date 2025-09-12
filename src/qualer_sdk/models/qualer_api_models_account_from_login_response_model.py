@@ -1,11 +1,9 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 from uuid import UUID
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsAccountFromLoginResponseModel")
 
@@ -14,21 +12,21 @@ T = TypeVar("T", bound="QualerApiModelsAccountFromLoginResponseModel")
 class QualerApiModelsAccountFromLoginResponseModel:
     """
     Attributes:
-        token (Union[None, Unset, UUID]):  Example: 00000000-0000-0000-0000-000000000000.
+        token (Optional[UUID]):  Example: 00000000-0000-0000-0000-000000000000.
     """
 
-    token: Union[None, Unset, UUID] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    token: Optional[UUID] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
-        token: Union[None, Unset, str] = UNSET
-        if self.token and not isinstance(self.token, Unset):
+    def to_dict(self) -> Dict[str, Any]:
+        token: Optional[str] = None
+        if self.token:
             token = str(self.token)
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if token is not UNSET:
+        if token is not None:
             field_dict["Token"] = token
 
         return field_dict
@@ -36,10 +34,10 @@ class QualerApiModelsAccountFromLoginResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        _token = d.pop("Token", UNSET)
-        token: Union[None, Unset, UUID]
-        if isinstance(_token, Unset):
-            token = UNSET
+        _token = d.pop("Token", None)
+        token: Optional[UUID]
+        if not _token:
+            token = None
         else:
             token = UUID(_token)
 
@@ -51,7 +49,7 @@ class QualerApiModelsAccountFromLoginResponseModel:
         return qualer_api_models_account_from_login_response_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

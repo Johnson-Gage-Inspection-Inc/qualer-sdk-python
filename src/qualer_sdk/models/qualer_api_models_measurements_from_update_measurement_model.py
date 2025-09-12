@@ -1,12 +1,10 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsMeasurementsFromUpdateMeasurementModel")
 
@@ -15,21 +13,21 @@ T = TypeVar("T", bound="QualerApiModelsMeasurementsFromUpdateMeasurementModel")
 class QualerApiModelsMeasurementsFromUpdateMeasurementModel:
     """
     Attributes:
-        measurement_id (Union[None, Unset, int]):
-        values (Union[None, Unset, str]):
-        channel (Union[None, Unset, int]):
-        updated_by (Union[None, Unset, str]):
-        updated_on (Union[None, Unset, datetime.datetime]):
+        measurement_id (Optional[int]):
+        values (Optional[str]):
+        channel (Optional[int]):
+        updated_by (Optional[str]):
+        updated_on (Optional[datetime.datetime]):
     """
 
-    measurement_id: Union[None, Unset, int] = UNSET
-    values: Union[None, Unset, str] = UNSET
-    channel: Union[None, Unset, int] = UNSET
-    updated_by: Union[None, Unset, str] = UNSET
-    updated_on: Union[None, Unset, datetime.datetime] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    measurement_id: Optional[int] = None
+    values: Optional[str] = None
+    channel: Optional[int] = None
+    updated_by: Optional[str] = None
+    updated_on: Optional[datetime.datetime] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         measurement_id = self.measurement_id
 
         values = self.values
@@ -38,22 +36,22 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementModel:
 
         updated_by = self.updated_by
 
-        updated_on: Union[None, Unset, str] = UNSET
-        if self.updated_on and not isinstance(self.updated_on, Unset):
+        updated_on: Optional[str] = None
+        if self.updated_on:
             updated_on = self.updated_on.isoformat()
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if measurement_id is not UNSET:
+        if measurement_id is not None:
             field_dict["MeasurementId"] = measurement_id
-        if values is not UNSET:
+        if values is not None:
             field_dict["Values"] = values
-        if channel is not UNSET:
+        if channel is not None:
             field_dict["Channel"] = channel
-        if updated_by is not UNSET:
+        if updated_by is not None:
             field_dict["UpdatedBy"] = updated_by
-        if updated_on is not UNSET:
+        if updated_on is not None:
             field_dict["UpdatedOn"] = updated_on
 
         return field_dict
@@ -61,18 +59,18 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        measurement_id = d.pop("MeasurementId", UNSET)
+        measurement_id = d.pop("MeasurementId", None)
 
-        values = d.pop("Values", UNSET)
+        values = d.pop("Values", None)
 
-        channel = d.pop("Channel", UNSET)
+        channel = d.pop("Channel", None)
 
-        updated_by = d.pop("UpdatedBy", UNSET)
+        updated_by = d.pop("UpdatedBy", None)
 
-        _updated_on = d.pop("UpdatedOn", UNSET)
-        updated_on: Union[None, Unset, datetime.datetime]
-        if isinstance(_updated_on, Unset):
-            updated_on = UNSET
+        _updated_on = d.pop("UpdatedOn", None)
+        updated_on: Optional[datetime.datetime]
+        if not _updated_on:
+            updated_on = None
         else:
             updated_on = isoparse(_updated_on)
 
@@ -84,13 +82,11 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementModel:
             updated_on=updated_on,
         )
 
-        qualer_api_models_measurements_from_update_measurement_model.additional_properties = (
-            d
-        )
+        qualer_api_models_measurements_from_update_measurement_model.additional_properties = d
         return qualer_api_models_measurements_from_update_measurement_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

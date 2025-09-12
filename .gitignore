@@ -47,7 +47,6 @@ coverage.xml
 dmypy.json
 
 # IDE files
-.vscode/
 .idea/
 *.swp
 *.swo
@@ -64,3 +63,10 @@ swagger-codegen-cli-*.jar
 qualer_sdk.egg-info/*
 temp_test_gen/*
 .env
+.vscode/settings.json
+
+.venv/
+venv/
+
+# VCR cassettes
+tests/integration/cassettes/

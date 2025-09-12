@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
@@ -8,24 +8,24 @@ from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_clients_to_employee_response_model import (
     QualerApiModelsClientsToEmployeeResponseModel,
 )
-from ...types import UNSET, Response, Unset
+from ...types import Response
 
 
 def _get_kwargs(
     employee_id_path: str,
     *,
-    employee_id_query: Union[None, Unset, str] = UNSET,
-    model_employee_id: Union[None, Unset, int] = UNSET,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+    employee_id_query: Optional[str] = None,
+    model_employee_id: Optional[int] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
     params["employeeId"] = employee_id_query
 
     params["model.employeeId"] = model_employee_id
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": f"/api/service/clients/employees/{employee_id_path}",
         "params": params,
@@ -38,9 +38,7 @@ def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
 ) -> Optional[QualerApiModelsClientsToEmployeeResponseModel]:
     if response.status_code == 200:
-        response_200 = QualerApiModelsClientsToEmployeeResponseModel.from_dict(
-            response.json()
-        )
+        response_200 = QualerApiModelsClientsToEmployeeResponseModel.from_dict(response.json())
 
         return response_200
     if client.raise_on_unexpected_status:
@@ -64,14 +62,14 @@ def sync_detailed(
     employee_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    employee_id_query: Union[None, Unset, str] = UNSET,
-    model_employee_id: Union[None, Unset, int] = UNSET,
+    employee_id_query: Optional[str] = None,
+    model_employee_id: Optional[int] = None,
 ) -> Response[QualerApiModelsClientsToEmployeeResponseModel]:
     """
     Args:
         employee_id_path (str):
-        employee_id_query (Union[None, Unset, str]):
-        model_employee_id (Union[None, Unset, int]):
+        employee_id_query (Optional[str]):
+        model_employee_id (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -98,14 +96,14 @@ def sync(
     employee_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    employee_id_query: Union[None, Unset, str] = UNSET,
-    model_employee_id: Union[None, Unset, int] = UNSET,
+    employee_id_query: Optional[str] = None,
+    model_employee_id: Optional[int] = None,
 ) -> Optional[QualerApiModelsClientsToEmployeeResponseModel]:
     """
     Args:
         employee_id_path (str):
-        employee_id_query (Union[None, Unset, str]):
-        model_employee_id (Union[None, Unset, int]):
+        employee_id_query (Optional[str]):
+        model_employee_id (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -127,14 +125,14 @@ async def asyncio_detailed(
     employee_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    employee_id_query: Union[None, Unset, str] = UNSET,
-    model_employee_id: Union[None, Unset, int] = UNSET,
+    employee_id_query: Optional[str] = None,
+    model_employee_id: Optional[int] = None,
 ) -> Response[QualerApiModelsClientsToEmployeeResponseModel]:
     """
     Args:
         employee_id_path (str):
-        employee_id_query (Union[None, Unset, str]):
-        model_employee_id (Union[None, Unset, int]):
+        employee_id_query (Optional[str]):
+        model_employee_id (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -159,14 +157,14 @@ async def asyncio(
     employee_id_path: str,
     *,
     client: Union[AuthenticatedClient, Client],
-    employee_id_query: Union[None, Unset, str] = UNSET,
-    model_employee_id: Union[None, Unset, int] = UNSET,
+    employee_id_query: Optional[str] = None,
+    model_employee_id: Optional[int] = None,
 ) -> Optional[QualerApiModelsClientsToEmployeeResponseModel]:
     """
     Args:
         employee_id_path (str):
-        employee_id_query (Union[None, Unset, str]):
-        model_employee_id (Union[None, Unset, int]):
+        employee_id_query (Optional[str]):
+        model_employee_id (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

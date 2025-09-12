@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsAssetFromUpdateAssetClassModel")
 
@@ -13,19 +11,19 @@ T = TypeVar("T", bound="QualerApiModelsAssetFromUpdateAssetClassModel")
 class QualerApiModelsAssetFromUpdateAssetClassModel:
     """
     Attributes:
-        class_ (Union[None, Unset, str]):
+        class_ (Optional[str]):
     """
 
-    class_: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    class_: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         class_ = self.class_
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if class_ is not UNSET:
+        if class_ is not None:
             field_dict["Class"] = class_
 
         return field_dict
@@ -33,7 +31,7 @@ class QualerApiModelsAssetFromUpdateAssetClassModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        class_ = d.pop("Class", UNSET)
+        class_ = d.pop("Class", None)
 
         qualer_api_models_asset_from_update_asset_class_model = cls(
             class_=class_,
@@ -43,7 +41,7 @@ class QualerApiModelsAssetFromUpdateAssetClassModel:
         return qualer_api_models_asset_from_update_asset_class_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

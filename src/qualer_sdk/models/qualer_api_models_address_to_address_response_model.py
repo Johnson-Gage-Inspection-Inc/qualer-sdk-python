@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsAddressToAddressResponseModel")
 
@@ -13,41 +11,41 @@ T = TypeVar("T", bound="QualerApiModelsAddressToAddressResponseModel")
 class QualerApiModelsAddressToAddressResponseModel:
     """
     Attributes:
-        first_name (Union[None, Unset, str]):
-        last_name (Union[None, Unset, str]):
-        email (Union[None, Unset, str]):
-        company (Union[None, Unset, str]):
-        city (Union[None, Unset, str]):
-        address_1 (Union[None, Unset, str]):
-        address_2 (Union[None, Unset, str]):
-        zip_postal_code (Union[None, Unset, str]):
-        phone_number (Union[None, Unset, str]):
-        fax_number (Union[None, Unset, str]):
-        attention_1 (Union[None, Unset, str]):
-        attention_2 (Union[None, Unset, str]):
-        country (Union[None, Unset, str]):
-        state_province (Union[None, Unset, str]):
-        state_province_abbreviation (Union[None, Unset, str]):
+        first_name (Optional[str]):
+        last_name (Optional[str]):
+        email (Optional[str]):
+        company (Optional[str]):
+        city (Optional[str]):
+        address_1 (Optional[str]):
+        address_2 (Optional[str]):
+        zip_postal_code (Optional[str]):
+        phone_number (Optional[str]):
+        fax_number (Optional[str]):
+        attention_1 (Optional[str]):
+        attention_2 (Optional[str]):
+        country (Optional[str]):
+        state_province (Optional[str]):
+        state_province_abbreviation (Optional[str]):
     """
 
-    first_name: Union[None, Unset, str] = UNSET
-    last_name: Union[None, Unset, str] = UNSET
-    email: Union[None, Unset, str] = UNSET
-    company: Union[None, Unset, str] = UNSET
-    city: Union[None, Unset, str] = UNSET
-    address_1: Union[None, Unset, str] = UNSET
-    address_2: Union[None, Unset, str] = UNSET
-    zip_postal_code: Union[None, Unset, str] = UNSET
-    phone_number: Union[None, Unset, str] = UNSET
-    fax_number: Union[None, Unset, str] = UNSET
-    attention_1: Union[None, Unset, str] = UNSET
-    attention_2: Union[None, Unset, str] = UNSET
-    country: Union[None, Unset, str] = UNSET
-    state_province: Union[None, Unset, str] = UNSET
-    state_province_abbreviation: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    first_name: Optional[str] = None
+    last_name: Optional[str] = None
+    email: Optional[str] = None
+    company: Optional[str] = None
+    city: Optional[str] = None
+    address_1: Optional[str] = None
+    address_2: Optional[str] = None
+    zip_postal_code: Optional[str] = None
+    phone_number: Optional[str] = None
+    fax_number: Optional[str] = None
+    attention_1: Optional[str] = None
+    attention_2: Optional[str] = None
+    country: Optional[str] = None
+    state_province: Optional[str] = None
+    state_province_abbreviation: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         first_name = self.first_name
 
         last_name = self.last_name
@@ -78,38 +76,38 @@ class QualerApiModelsAddressToAddressResponseModel:
 
         state_province_abbreviation = self.state_province_abbreviation
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if first_name is not UNSET:
+        if first_name is not None:
             field_dict["FirstName"] = first_name
-        if last_name is not UNSET:
+        if last_name is not None:
             field_dict["LastName"] = last_name
-        if email is not UNSET:
+        if email is not None:
             field_dict["Email"] = email
-        if company is not UNSET:
+        if company is not None:
             field_dict["Company"] = company
-        if city is not UNSET:
+        if city is not None:
             field_dict["City"] = city
-        if address_1 is not UNSET:
+        if address_1 is not None:
             field_dict["Address1"] = address_1
-        if address_2 is not UNSET:
+        if address_2 is not None:
             field_dict["Address2"] = address_2
-        if zip_postal_code is not UNSET:
+        if zip_postal_code is not None:
             field_dict["ZipPostalCode"] = zip_postal_code
-        if phone_number is not UNSET:
+        if phone_number is not None:
             field_dict["PhoneNumber"] = phone_number
-        if fax_number is not UNSET:
+        if fax_number is not None:
             field_dict["FaxNumber"] = fax_number
-        if attention_1 is not UNSET:
+        if attention_1 is not None:
             field_dict["Attention1"] = attention_1
-        if attention_2 is not UNSET:
+        if attention_2 is not None:
             field_dict["Attention2"] = attention_2
-        if country is not UNSET:
+        if country is not None:
             field_dict["Country"] = country
-        if state_province is not UNSET:
+        if state_province is not None:
             field_dict["StateProvince"] = state_province
-        if state_province_abbreviation is not UNSET:
+        if state_province_abbreviation is not None:
             field_dict["StateProvinceAbbreviation"] = state_province_abbreviation
 
         return field_dict
@@ -117,35 +115,35 @@ class QualerApiModelsAddressToAddressResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        first_name = d.pop("FirstName", UNSET)
+        first_name = d.pop("FirstName", None)
 
-        last_name = d.pop("LastName", UNSET)
+        last_name = d.pop("LastName", None)
 
-        email = d.pop("Email", UNSET)
+        email = d.pop("Email", None)
 
-        company = d.pop("Company", UNSET)
+        company = d.pop("Company", None)
 
-        city = d.pop("City", UNSET)
+        city = d.pop("City", None)
 
-        address_1 = d.pop("Address1", UNSET)
+        address_1 = d.pop("Address1", None)
 
-        address_2 = d.pop("Address2", UNSET)
+        address_2 = d.pop("Address2", None)
 
-        zip_postal_code = d.pop("ZipPostalCode", UNSET)
+        zip_postal_code = d.pop("ZipPostalCode", None)
 
-        phone_number = d.pop("PhoneNumber", UNSET)
+        phone_number = d.pop("PhoneNumber", None)
 
-        fax_number = d.pop("FaxNumber", UNSET)
+        fax_number = d.pop("FaxNumber", None)
 
-        attention_1 = d.pop("Attention1", UNSET)
+        attention_1 = d.pop("Attention1", None)
 
-        attention_2 = d.pop("Attention2", UNSET)
+        attention_2 = d.pop("Attention2", None)
 
-        country = d.pop("Country", UNSET)
+        country = d.pop("Country", None)
 
-        state_province = d.pop("StateProvince", UNSET)
+        state_province = d.pop("StateProvince", None)
 
-        state_province_abbreviation = d.pop("StateProvinceAbbreviation", UNSET)
+        state_province_abbreviation = d.pop("StateProvinceAbbreviation", None)
 
         qualer_api_models_address_to_address_response_model = cls(
             first_name=first_name,
@@ -169,7 +167,7 @@ class QualerApiModelsAddressToAddressResponseModel:
         return qualer_api_models_address_to_address_response_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

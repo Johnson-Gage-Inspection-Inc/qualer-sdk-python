@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsAssetFromUpdateAssetRoomModel")
 
@@ -13,19 +11,19 @@ T = TypeVar("T", bound="QualerApiModelsAssetFromUpdateAssetRoomModel")
 class QualerApiModelsAssetFromUpdateAssetRoomModel:
     """
     Attributes:
-        room_number (Union[None, Unset, str]):
+        room_number (Optional[str]):
     """
 
-    room_number: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    room_number: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         room_number = self.room_number
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if room_number is not UNSET:
+        if room_number is not None:
             field_dict["RoomNumber"] = room_number
 
         return field_dict
@@ -33,7 +31,7 @@ class QualerApiModelsAssetFromUpdateAssetRoomModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        room_number = d.pop("RoomNumber", UNSET)
+        room_number = d.pop("RoomNumber", None)
 
         qualer_api_models_asset_from_update_asset_room_model = cls(
             room_number=room_number,
@@ -43,7 +41,7 @@ class QualerApiModelsAssetFromUpdateAssetRoomModel:
         return qualer_api_models_asset_from_update_asset_room_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

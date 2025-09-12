@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsServiceOptionsToServiceOptionResponseModel")
 
@@ -13,27 +11,27 @@ T = TypeVar("T", bound="QualerApiModelsServiceOptionsToServiceOptionResponseMode
 class QualerApiModelsServiceOptionsToServiceOptionResponseModel:
     """
     Attributes:
-        name (Union[None, Unset, str]):
-        price (Union[None, Unset, float]):
-        service_charge (Union[None, Unset, float]):
-        time_spent (Union[None, Unset, float]):
-        is_hourly (Union[None, Unset, bool]):
-        document_number (Union[None, Unset, str]):
-        document_section (Union[None, Unset, str]):
-        service_code (Union[None, Unset, str]):
+        name (Optional[str]):
+        price (Optional[float]):
+        service_charge (Optional[float]):
+        time_spent (Optional[float]):
+        is_hourly (Optional[bool]):
+        document_number (Optional[str]):
+        document_section (Optional[str]):
+        service_code (Optional[str]):
     """
 
-    name: Union[None, Unset, str] = UNSET
-    price: Union[None, Unset, float] = UNSET
-    service_charge: Union[None, Unset, float] = UNSET
-    time_spent: Union[None, Unset, float] = UNSET
-    is_hourly: Union[None, Unset, bool] = UNSET
-    document_number: Union[None, Unset, str] = UNSET
-    document_section: Union[None, Unset, str] = UNSET
-    service_code: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    name: Optional[str] = None
+    price: Optional[float] = None
+    service_charge: Optional[float] = None
+    time_spent: Optional[float] = None
+    is_hourly: Optional[bool] = None
+    document_number: Optional[str] = None
+    document_section: Optional[str] = None
+    service_code: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         name = self.name
 
         price = self.price
@@ -50,24 +48,24 @@ class QualerApiModelsServiceOptionsToServiceOptionResponseModel:
 
         service_code = self.service_code
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if name is not UNSET:
+        if name is not None:
             field_dict["Name"] = name
-        if price is not UNSET:
+        if price is not None:
             field_dict["Price"] = price
-        if service_charge is not UNSET:
+        if service_charge is not None:
             field_dict["ServiceCharge"] = service_charge
-        if time_spent is not UNSET:
+        if time_spent is not None:
             field_dict["TimeSpent"] = time_spent
-        if is_hourly is not UNSET:
+        if is_hourly is not None:
             field_dict["IsHourly"] = is_hourly
-        if document_number is not UNSET:
+        if document_number is not None:
             field_dict["DocumentNumber"] = document_number
-        if document_section is not UNSET:
+        if document_section is not None:
             field_dict["DocumentSection"] = document_section
-        if service_code is not UNSET:
+        if service_code is not None:
             field_dict["ServiceCode"] = service_code
 
         return field_dict
@@ -75,21 +73,21 @@ class QualerApiModelsServiceOptionsToServiceOptionResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        name = d.pop("Name", UNSET)
+        name = d.pop("Name", None)
 
-        price = d.pop("Price", UNSET)
+        price = d.pop("Price", None)
 
-        service_charge = d.pop("ServiceCharge", UNSET)
+        service_charge = d.pop("ServiceCharge", None)
 
-        time_spent = d.pop("TimeSpent", UNSET)
+        time_spent = d.pop("TimeSpent", None)
 
-        is_hourly = d.pop("IsHourly", UNSET)
+        is_hourly = d.pop("IsHourly", None)
 
-        document_number = d.pop("DocumentNumber", UNSET)
+        document_number = d.pop("DocumentNumber", None)
 
-        document_section = d.pop("DocumentSection", UNSET)
+        document_section = d.pop("DocumentSection", None)
 
-        service_code = d.pop("ServiceCode", UNSET)
+        service_code = d.pop("ServiceCode", None)
 
         qualer_api_models_service_options_to_service_option_response_model = cls(
             name=name,
@@ -102,13 +100,11 @@ class QualerApiModelsServiceOptionsToServiceOptionResponseModel:
             service_code=service_code,
         )
 
-        qualer_api_models_service_options_to_service_option_response_model.additional_properties = (
-            d
-        )
+        qualer_api_models_service_options_to_service_option_response_model.additional_properties = d
         return qualer_api_models_service_options_to_service_option_response_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

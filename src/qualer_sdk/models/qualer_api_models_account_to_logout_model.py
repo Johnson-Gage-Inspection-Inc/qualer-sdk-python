@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsAccountToLogoutModel")
 
@@ -13,19 +11,19 @@ T = TypeVar("T", bound="QualerApiModelsAccountToLogoutModel")
 class QualerApiModelsAccountToLogoutModel:
     """
     Attributes:
-        logout_action (Union[None, Unset, str]):
+        logout_action (Optional[str]):
     """
 
-    logout_action: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    logout_action: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         logout_action = self.logout_action
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if logout_action is not UNSET:
+        if logout_action is not None:
             field_dict["LogoutAction"] = logout_action
 
         return field_dict
@@ -33,7 +31,7 @@ class QualerApiModelsAccountToLogoutModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        logout_action = d.pop("LogoutAction", UNSET)
+        logout_action = d.pop("LogoutAction", None)
 
         qualer_api_models_account_to_logout_model = cls(
             logout_action=logout_action,
@@ -43,7 +41,7 @@ class QualerApiModelsAccountToLogoutModel:
         return qualer_api_models_account_to_logout_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

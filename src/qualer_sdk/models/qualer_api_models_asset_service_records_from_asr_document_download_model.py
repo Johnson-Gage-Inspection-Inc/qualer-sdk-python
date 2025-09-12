@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsAssetServiceRecordsFromAsrDocumentDownloadModel")
 
@@ -13,25 +11,25 @@ T = TypeVar("T", bound="QualerApiModelsAssetServiceRecordsFromAsrDocumentDownloa
 class QualerApiModelsAssetServiceRecordsFromAsrDocumentDownloadModel:
     """
     Attributes:
-        asset_service_record_id (Union[None, Unset, int]):
-        file_name (Union[None, Unset, str]):
+        asset_service_record_id (Optional[int]):
+        file_name (Optional[str]):
     """
 
-    asset_service_record_id: Union[None, Unset, int] = UNSET
-    file_name: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    asset_service_record_id: Optional[int] = None
+    file_name: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         asset_service_record_id = self.asset_service_record_id
 
         file_name = self.file_name
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if asset_service_record_id is not UNSET:
+        if asset_service_record_id is not None:
             field_dict["AssetServiceRecordId"] = asset_service_record_id
-        if file_name is not UNSET:
+        if file_name is not None:
             field_dict["FileName"] = file_name
 
         return field_dict
@@ -39,9 +37,9 @@ class QualerApiModelsAssetServiceRecordsFromAsrDocumentDownloadModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        asset_service_record_id = d.pop("AssetServiceRecordId", UNSET)
+        asset_service_record_id = d.pop("AssetServiceRecordId", None)
 
-        file_name = d.pop("FileName", UNSET)
+        file_name = d.pop("FileName", None)
 
         qualer_api_models_asset_service_records_from_asr_document_download_model = cls(
             asset_service_record_id=asset_service_record_id,
@@ -54,7 +52,7 @@ class QualerApiModelsAssetServiceRecordsFromAsrDocumentDownloadModel:
         return qualer_api_models_asset_service_records_from_asr_document_download_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

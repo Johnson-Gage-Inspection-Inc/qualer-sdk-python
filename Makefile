@@ -21,8 +21,8 @@ lint:  ## Run linting checks
 	flake8 src/qualer_sdk --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
 format:  ## Format code with black and isort
-	black src/qualer_sdk tests/ regenerate_sdk.py
-	isort src/qualer_sdk tests/ regenerate_sdk.py
+	black src/qualer_sdk tests/
+	isort src/qualer_sdk tests/
 
 type-check:  ## Run type checking with mypy
 	mypy src/qualer_sdk
@@ -40,8 +40,7 @@ clean:  ## Clean build artifacts
 	find . -type d -name __pycache__ -exec rm -rf {} +
 	find . -type f -name "*.pyc" -delete
 
-regenerate:  ## Regenerate SDK from OpenAPI spec
-	python regenerate_sdk.py
+
 
 check-all: lint type-check test  ## Run all checks (lint, type-check, test)
 

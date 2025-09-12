@@ -17,4 +17,3 @@ paths-ignore:
 # Paths to analyze (optional - by default analyzes everything)
 paths:
   - "src/**"
-  - "regenerate_sdk.py"

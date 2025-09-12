@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderItemFieldResponse")
 
@@ -13,21 +11,21 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderItemFieldResp
 class QualerApiModelsReportDatasetsToServiceOrderItemFieldResponse:
     """
     Attributes:
-        field_id (Union[None, Unset, str]):
-        type_ (Union[None, Unset, int]):
-        value (Union[None, Unset, str]):
-        service_order_item_id (Union[None, Unset, int]):
-        service_order_item_task_id (Union[None, Unset, int]):
+        field_id (Optional[str]):
+        type_ (Optional[int]):
+        value (Optional[str]):
+        service_order_item_id (Optional[int]):
+        service_order_item_task_id (Optional[int]):
     """
 
-    field_id: Union[None, Unset, str] = UNSET
-    type_: Union[None, Unset, int] = UNSET
-    value: Union[None, Unset, str] = UNSET
-    service_order_item_id: Union[None, Unset, int] = UNSET
-    service_order_item_task_id: Union[None, Unset, int] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    field_id: Optional[str] = None
+    type_: Optional[int] = None
+    value: Optional[str] = None
+    service_order_item_id: Optional[int] = None
+    service_order_item_task_id: Optional[int] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         field_id = self.field_id
 
         type_ = self.type_
@@ -38,18 +36,18 @@ class QualerApiModelsReportDatasetsToServiceOrderItemFieldResponse:
 
         service_order_item_task_id = self.service_order_item_task_id
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if field_id is not UNSET:
+        if field_id is not None:
             field_dict["FieldId"] = field_id
-        if type_ is not UNSET:
+        if type_ is not None:
             field_dict["Type"] = type_
-        if value is not UNSET:
+        if value is not None:
             field_dict["Value"] = value
-        if service_order_item_id is not UNSET:
+        if service_order_item_id is not None:
             field_dict["ServiceOrderItemId"] = service_order_item_id
-        if service_order_item_task_id is not UNSET:
+        if service_order_item_task_id is not None:
             field_dict["ServiceOrderItemTaskId"] = service_order_item_task_id
 
         return field_dict
@@ -57,15 +55,15 @@ class QualerApiModelsReportDatasetsToServiceOrderItemFieldResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        field_id = d.pop("FieldId", UNSET)
+        field_id = d.pop("FieldId", None)
 
-        type_ = d.pop("Type", UNSET)
+        type_ = d.pop("Type", None)
 
-        value = d.pop("Value", UNSET)
+        value = d.pop("Value", None)
 
-        service_order_item_id = d.pop("ServiceOrderItemId", UNSET)
+        service_order_item_id = d.pop("ServiceOrderItemId", None)
 
-        service_order_item_task_id = d.pop("ServiceOrderItemTaskId", UNSET)
+        service_order_item_task_id = d.pop("ServiceOrderItemTaskId", None)
 
         qualer_api_models_report_datasets_to_service_order_item_field_response = cls(
             field_id=field_id,
@@ -81,7 +79,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemFieldResponse:
         return qualer_api_models_report_datasets_to_service_order_item_field_response
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

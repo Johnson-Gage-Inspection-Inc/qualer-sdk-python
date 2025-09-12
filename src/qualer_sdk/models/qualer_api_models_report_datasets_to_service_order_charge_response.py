@@ -1,12 +1,10 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union, cast
+from typing import Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderChargeResponse")
 
@@ -15,39 +13,39 @@ T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderChargeRespons
 class QualerApiModelsReportDatasetsToServiceOrderChargeResponse:
     """
     Attributes:
-        service_order_id (Union[None, Unset, int]):
-        description (Union[None, Unset, str]):
-        name (Union[None, Unset, str]):
-        unit_name (Union[None, Unset, str]):
-        quantity (Union[None, Unset, float]):
-        discount (Union[None, Unset, float]):
-        fixed_charge (Union[None, Unset, float]):
-        price (Union[None, Unset, float]):
-        subtotal (Union[None, Unset, float]):
-        is_taxable (Union[None, Unset, bool]):
-        time_spent_in_minutes (Union[None, Unset, float]):
-        is_hourly_pricing (Union[None, Unset, bool]):
-        created_by (Union[None, Unset, str]):
-        charge_date (Union[None, Unset, datetime.datetime]):
+        service_order_id (Optional[int]):
+        description (Optional[str]):
+        name (Optional[str]):
+        unit_name (Optional[str]):
+        quantity (Optional[float]):
+        discount (Optional[float]):
+        fixed_charge (Optional[float]):
+        price (Optional[float]):
+        subtotal (Optional[float]):
+        is_taxable (Optional[bool]):
+        time_spent_in_minutes (Optional[float]):
+        is_hourly_pricing (Optional[bool]):
+        created_by (Optional[str]):
+        charge_date (Optional[datetime.datetime]):
     """
 
-    service_order_id: Union[None, Unset, int] = UNSET
-    description: Union[None, Unset, str] = UNSET
-    name: Union[None, Unset, str] = UNSET
-    unit_name: Union[None, Unset, str] = UNSET
-    quantity: Union[None, Unset, float] = UNSET
-    discount: Union[None, Unset, float] = UNSET
-    fixed_charge: Union[None, Unset, float] = UNSET
-    price: Union[None, Unset, float] = UNSET
-    subtotal: Union[None, Unset, float] = UNSET
-    is_taxable: Union[None, Unset, bool] = UNSET
-    time_spent_in_minutes: Union[None, Unset, float] = UNSET
-    is_hourly_pricing: Union[None, Unset, bool] = UNSET
-    created_by: Union[None, Unset, str] = UNSET
-    charge_date: Union[None, Unset, datetime.datetime] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    service_order_id: Optional[int] = None
+    description: Optional[str] = None
+    name: Optional[str] = None
+    unit_name: Optional[str] = None
+    quantity: Optional[float] = None
+    discount: Optional[float] = None
+    fixed_charge: Optional[float] = None
+    price: Optional[float] = None
+    subtotal: Optional[float] = None
+    is_taxable: Optional[bool] = None
+    time_spent_in_minutes: Optional[float] = None
+    is_hourly_pricing: Optional[bool] = None
+    created_by: Optional[str] = None
+    charge_date: Optional[datetime.datetime] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         service_order_id = self.service_order_id
 
         description = self.description
@@ -74,44 +72,44 @@ class QualerApiModelsReportDatasetsToServiceOrderChargeResponse:
 
         created_by = self.created_by
 
-        charge_date: Union[None, Unset, str]
-        if isinstance(self.charge_date, Unset):
-            charge_date = UNSET
+        charge_date: Optional[str]
+        if not self.charge_date:
+            charge_date = None
         elif isinstance(self.charge_date, datetime.datetime):
             charge_date = self.charge_date.isoformat()
         else:
             charge_date = self.charge_date
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if service_order_id is not UNSET:
+        if service_order_id is not None:
             field_dict["ServiceOrderId"] = service_order_id
-        if description is not UNSET:
+        if description is not None:
             field_dict["Description"] = description
-        if name is not UNSET:
+        if name is not None:
             field_dict["Name"] = name
-        if unit_name is not UNSET:
+        if unit_name is not None:
             field_dict["UnitName"] = unit_name
-        if quantity is not UNSET:
+        if quantity is not None:
             field_dict["Quantity"] = quantity
-        if discount is not UNSET:
+        if discount is not None:
             field_dict["Discount"] = discount
-        if fixed_charge is not UNSET:
+        if fixed_charge is not None:
             field_dict["FixedCharge"] = fixed_charge
-        if price is not UNSET:
+        if price is not None:
             field_dict["Price"] = price
-        if subtotal is not UNSET:
+        if subtotal is not None:
             field_dict["Subtotal"] = subtotal
-        if is_taxable is not UNSET:
+        if is_taxable is not None:
             field_dict["IsTaxable"] = is_taxable
-        if time_spent_in_minutes is not UNSET:
+        if time_spent_in_minutes is not None:
             field_dict["TimeSpentInMinutes"] = time_spent_in_minutes
-        if is_hourly_pricing is not UNSET:
+        if is_hourly_pricing is not None:
             field_dict["IsHourlyPricing"] = is_hourly_pricing
-        if created_by is not UNSET:
+        if created_by is not None:
             field_dict["CreatedBy"] = created_by
-        if charge_date is not UNSET:
+        if charge_date is not None:
             field_dict["ChargeDate"] = charge_date
 
         return field_dict
@@ -119,48 +117,46 @@ class QualerApiModelsReportDatasetsToServiceOrderChargeResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        service_order_id = d.pop("ServiceOrderId", UNSET)
+        service_order_id = d.pop("ServiceOrderId", None)
 
-        description = d.pop("Description", UNSET)
+        description = d.pop("Description", None)
 
-        name = d.pop("Name", UNSET)
+        name = d.pop("Name", None)
 
-        unit_name = d.pop("UnitName", UNSET)
+        unit_name = d.pop("UnitName", None)
 
-        quantity = d.pop("Quantity", UNSET)
+        quantity = d.pop("Quantity", None)
 
-        discount = d.pop("Discount", UNSET)
+        discount = d.pop("Discount", None)
 
-        fixed_charge = d.pop("FixedCharge", UNSET)
+        fixed_charge = d.pop("FixedCharge", None)
 
-        price = d.pop("Price", UNSET)
+        price = d.pop("Price", None)
 
-        subtotal = d.pop("Subtotal", UNSET)
+        subtotal = d.pop("Subtotal", None)
 
-        is_taxable = d.pop("IsTaxable", UNSET)
+        is_taxable = d.pop("IsTaxable", None)
 
-        time_spent_in_minutes = d.pop("TimeSpentInMinutes", UNSET)
+        time_spent_in_minutes = d.pop("TimeSpentInMinutes", None)
 
-        is_hourly_pricing = d.pop("IsHourlyPricing", UNSET)
+        is_hourly_pricing = d.pop("IsHourlyPricing", None)
 
-        created_by = d.pop("CreatedBy", UNSET)
+        created_by = d.pop("CreatedBy", None)
 
-        def _parse_charge_date(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_charge_date(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 charge_date_type_0 = isoparse(data)
 
                 return charge_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        charge_date = _parse_charge_date(d.pop("ChargeDate", UNSET))
+        charge_date = _parse_charge_date(d.pop("ChargeDate", None))
 
         qualer_api_models_report_datasets_to_service_order_charge_response = cls(
             service_order_id=service_order_id,
@@ -179,13 +175,11 @@ class QualerApiModelsReportDatasetsToServiceOrderChargeResponse:
             charge_date=charge_date,
         )
 
-        qualer_api_models_report_datasets_to_service_order_charge_response.additional_properties = (
-            d
-        )
+        qualer_api_models_report_datasets_to_service_order_charge_response.additional_properties = d
         return qualer_api_models_report_datasets_to_service_order_charge_response
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

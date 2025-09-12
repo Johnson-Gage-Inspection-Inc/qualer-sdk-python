@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_maintenance_plans_to_maintenance_task_response import (
@@ -19,23 +17,23 @@ T = TypeVar("T", bound="QualerApiModelsMaintenancePlansToMaintenancePlanResponse
 class QualerApiModelsMaintenancePlansToMaintenancePlanResponse:
     """
     Attributes:
-        maintenance_plan_id (Union[None, Unset, int]):
-        maintenance_plan_name (Union[None, Unset, str]):
-        is_template (Union[None, Unset, bool]):
-        company_name (Union[None, Unset, str]):
-        maintenance_tasks (Union[None, Unset, list['QualerApiModelsMaintenancePlansToMaintenanceTaskResponse']]):
+        maintenance_plan_id (Optional[int]):
+        maintenance_plan_name (Optional[str]):
+        is_template (Optional[bool]):
+        company_name (Optional[str]):
+        maintenance_tasks (Optional[List['QualerApiModelsMaintenancePlansToMaintenanceTaskResponse']]):
     """
 
-    maintenance_plan_id: Union[None, Unset, int] = UNSET
-    maintenance_plan_name: Union[None, Unset, str] = UNSET
-    is_template: Union[None, Unset, bool] = UNSET
-    company_name: Union[None, Unset, str] = UNSET
+    maintenance_plan_id: Optional[int] = None
+    maintenance_plan_name: Optional[str] = None
+    is_template: Optional[bool] = None
+    company_name: Optional[str] = None
     maintenance_tasks: Union[
-        None, Unset, list["QualerApiModelsMaintenancePlansToMaintenanceTaskResponse"]
-    ] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+        None, List["QualerApiModelsMaintenancePlansToMaintenanceTaskResponse"]
+    ] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         maintenance_plan_id = self.maintenance_plan_id
 
         maintenance_plan_name = self.maintenance_plan_name
@@ -44,25 +42,25 @@ class QualerApiModelsMaintenancePlansToMaintenancePlanResponse:
 
         company_name = self.company_name
 
-        maintenance_tasks: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.maintenance_tasks and not isinstance(self.maintenance_tasks, Unset):
+        maintenance_tasks: Optional[List[Dict[str, Any]]] = None
+        if self.maintenance_tasks:
             maintenance_tasks = []
             for maintenance_tasks_item_data in self.maintenance_tasks:
                 maintenance_tasks_item = maintenance_tasks_item_data.to_dict()
                 maintenance_tasks.append(maintenance_tasks_item)
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if maintenance_plan_id is not UNSET:
+        if maintenance_plan_id is not None:
             field_dict["MaintenancePlanId"] = maintenance_plan_id
-        if maintenance_plan_name is not UNSET:
+        if maintenance_plan_name is not None:
             field_dict["MaintenancePlanName"] = maintenance_plan_name
-        if is_template is not UNSET:
+        if is_template is not None:
             field_dict["IsTemplate"] = is_template
-        if company_name is not UNSET:
+        if company_name is not None:
             field_dict["CompanyName"] = company_name
-        if maintenance_tasks is not UNSET:
+        if maintenance_tasks is not None:
             field_dict["MaintenanceTasks"] = maintenance_tasks
 
         return field_dict
@@ -74,16 +72,16 @@ class QualerApiModelsMaintenancePlansToMaintenancePlanResponse:
         )
 
         d = dict(src_dict)
-        maintenance_plan_id = d.pop("MaintenancePlanId", UNSET)
+        maintenance_plan_id = d.pop("MaintenancePlanId", None)
 
-        maintenance_plan_name = d.pop("MaintenancePlanName", UNSET)
+        maintenance_plan_name = d.pop("MaintenancePlanName", None)
 
-        is_template = d.pop("IsTemplate", UNSET)
+        is_template = d.pop("IsTemplate", None)
 
-        company_name = d.pop("CompanyName", UNSET)
+        company_name = d.pop("CompanyName", None)
 
         maintenance_tasks = []
-        _maintenance_tasks = d.pop("MaintenanceTasks", UNSET)
+        _maintenance_tasks = d.pop("MaintenanceTasks", None)
         for maintenance_tasks_item_data in _maintenance_tasks or []:
             maintenance_tasks_item = (
                 QualerApiModelsMaintenancePlansToMaintenanceTaskResponse.from_dict(
@@ -101,13 +99,11 @@ class QualerApiModelsMaintenancePlansToMaintenancePlanResponse:
             maintenance_tasks=maintenance_tasks,
         )
 
-        qualer_api_models_maintenance_plans_to_maintenance_plan_response.additional_properties = (
-            d
-        )
+        qualer_api_models_maintenance_plans_to_maintenance_plan_response.additional_properties = d
         return qualer_api_models_maintenance_plans_to_maintenance_plan_response
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_from_create_measurement_point_model import (
@@ -25,35 +23,31 @@ T = TypeVar("T", bound="QualerApiModelsMeasurementsFromCreateMeasurementSetModel
 class QualerApiModelsMeasurementsFromCreateMeasurementSetModel:
     """
     Attributes:
-        measurement_name (Union[None, Unset, str]):
-        is_accredited (Union[None, Unset, bool]):
-        measurement_quantity_id (Union[None, Unset, int]):
-        default_unit_of_measure_id (Union[None, Unset, int]):
-        decimal_places (Union[None, Unset, int]):
-        significant_figures (Union[None, Unset, int]):
-        display_options (Union[None, Unset, QualerApiModelsMeasurementsFromDisplayOptions]):
-        custom_fields (Union[None, Unset, QualerApiModelsMeasurementsFromCustomFields]):
-        measurement_points (Union[None, Unset, list['QualerApiModelsMeasurementsFromCreateMeasurementPointModel']]):
+        measurement_name (Optional[str]):
+        is_accredited (Optional[bool]):
+        measurement_quantity_id (Optional[int]):
+        default_unit_of_measure_id (Optional[int]):
+        decimal_places (Optional[int]):
+        significant_figures (Optional[int]):
+        display_options (Optional[QualerApiModelsMeasurementsFromDisplayOptions]):
+        custom_fields (Optional[QualerApiModelsMeasurementsFromCustomFields]):
+        measurement_points (Optional[List['QualerApiModelsMeasurementsFromCreateMeasurementPointModel']]):
     """
 
-    measurement_name: Union[None, Unset, str] = UNSET
-    is_accredited: Union[None, Unset, bool] = UNSET
-    measurement_quantity_id: Union[None, Unset, int] = UNSET
-    default_unit_of_measure_id: Union[None, Unset, int] = UNSET
-    decimal_places: Union[None, Unset, int] = UNSET
-    significant_figures: Union[None, Unset, int] = UNSET
-    display_options: Union[
-        None, Unset, "QualerApiModelsMeasurementsFromDisplayOptions"
-    ] = UNSET
-    custom_fields: Union[None, Unset, "QualerApiModelsMeasurementsFromCustomFields"] = (
-        UNSET
-    )
+    measurement_name: Optional[str] = None
+    is_accredited: Optional[bool] = None
+    measurement_quantity_id: Optional[int] = None
+    default_unit_of_measure_id: Optional[int] = None
+    decimal_places: Optional[int] = None
+    significant_figures: Optional[int] = None
+    display_options: Optional["QualerApiModelsMeasurementsFromDisplayOptions"] = None
+    custom_fields: Optional["QualerApiModelsMeasurementsFromCustomFields"] = None
     measurement_points: Union[
-        None, Unset, list["QualerApiModelsMeasurementsFromCreateMeasurementPointModel"]
-    ] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+        None, List["QualerApiModelsMeasurementsFromCreateMeasurementPointModel"]
+    ] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         measurement_name = self.measurement_name
 
         is_accredited = self.is_accredited
@@ -66,41 +60,41 @@ class QualerApiModelsMeasurementsFromCreateMeasurementSetModel:
 
         significant_figures = self.significant_figures
 
-        display_options: Union[None, Unset, dict[str, Any]] = UNSET
-        if self.display_options and not isinstance(self.display_options, Unset):
+        display_options: Optional[Dict[str, Any]] = None
+        if self.display_options:
             display_options = self.display_options.to_dict()
 
-        custom_fields: Union[None, Unset, dict[str, Any]] = UNSET
-        if self.custom_fields and not isinstance(self.custom_fields, Unset):
+        custom_fields: Optional[Dict[str, Any]] = None
+        if self.custom_fields:
             custom_fields = self.custom_fields.to_dict()
 
-        measurement_points: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.measurement_points and not isinstance(self.measurement_points, Unset):
+        measurement_points: Optional[List[Dict[str, Any]]] = None
+        if self.measurement_points:
             measurement_points = []
             for measurement_points_item_data in self.measurement_points:
                 measurement_points_item = measurement_points_item_data.to_dict()
                 measurement_points.append(measurement_points_item)
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if measurement_name is not UNSET:
+        if measurement_name is not None:
             field_dict["MeasurementName"] = measurement_name
-        if is_accredited is not UNSET:
+        if is_accredited is not None:
             field_dict["IsAccredited"] = is_accredited
-        if measurement_quantity_id is not UNSET:
+        if measurement_quantity_id is not None:
             field_dict["MeasurementQuantityId"] = measurement_quantity_id
-        if default_unit_of_measure_id is not UNSET:
+        if default_unit_of_measure_id is not None:
             field_dict["DefaultUnitOfMeasureId"] = default_unit_of_measure_id
-        if decimal_places is not UNSET:
+        if decimal_places is not None:
             field_dict["DecimalPlaces"] = decimal_places
-        if significant_figures is not UNSET:
+        if significant_figures is not None:
             field_dict["SignificantFigures"] = significant_figures
-        if display_options is not UNSET:
+        if display_options is not None:
             field_dict["DisplayOptions"] = display_options
-        if custom_fields is not UNSET:
+        if custom_fields is not None:
             field_dict["CustomFields"] = custom_fields
-        if measurement_points is not UNSET:
+        if measurement_points is not None:
             field_dict["MeasurementPoints"] = measurement_points
 
         return field_dict
@@ -118,40 +112,36 @@ class QualerApiModelsMeasurementsFromCreateMeasurementSetModel:
         )
 
         d = dict(src_dict)
-        measurement_name = d.pop("MeasurementName", UNSET)
+        measurement_name = d.pop("MeasurementName", None)
 
-        is_accredited = d.pop("IsAccredited", UNSET)
+        is_accredited = d.pop("IsAccredited", None)
 
-        measurement_quantity_id = d.pop("MeasurementQuantityId", UNSET)
+        measurement_quantity_id = d.pop("MeasurementQuantityId", None)
 
-        default_unit_of_measure_id = d.pop("DefaultUnitOfMeasureId", UNSET)
+        default_unit_of_measure_id = d.pop("DefaultUnitOfMeasureId", None)
 
-        decimal_places = d.pop("DecimalPlaces", UNSET)
+        decimal_places = d.pop("DecimalPlaces", None)
 
-        significant_figures = d.pop("SignificantFigures", UNSET)
+        significant_figures = d.pop("SignificantFigures", None)
 
-        _display_options = d.pop("DisplayOptions", UNSET)
-        display_options: Union[
-            None, Unset, QualerApiModelsMeasurementsFromDisplayOptions
-        ]
-        if isinstance(_display_options, Unset):
-            display_options = UNSET
+        _display_options = d.pop("DisplayOptions", None)
+        display_options: Optional[QualerApiModelsMeasurementsFromDisplayOptions]
+        if not _display_options:
+            display_options = None
         else:
             display_options = QualerApiModelsMeasurementsFromDisplayOptions.from_dict(
                 _display_options
             )
 
-        _custom_fields = d.pop("CustomFields", UNSET)
-        custom_fields: Union[None, Unset, QualerApiModelsMeasurementsFromCustomFields]
-        if isinstance(_custom_fields, Unset):
-            custom_fields = UNSET
+        _custom_fields = d.pop("CustomFields", None)
+        custom_fields: Optional[QualerApiModelsMeasurementsFromCustomFields]
+        if not _custom_fields:
+            custom_fields = None
         else:
-            custom_fields = QualerApiModelsMeasurementsFromCustomFields.from_dict(
-                _custom_fields
-            )
+            custom_fields = QualerApiModelsMeasurementsFromCustomFields.from_dict(_custom_fields)
 
         measurement_points = []
-        _measurement_points = d.pop("MeasurementPoints", UNSET)
+        _measurement_points = d.pop("MeasurementPoints", None)
         for measurement_points_item_data in _measurement_points or []:
             measurement_points_item = (
                 QualerApiModelsMeasurementsFromCreateMeasurementPointModel.from_dict(
@@ -173,13 +163,11 @@ class QualerApiModelsMeasurementsFromCreateMeasurementSetModel:
             measurement_points=measurement_points,
         )
 
-        qualer_api_models_measurements_from_create_measurement_set_model.additional_properties = (
-            d
-        )
+        qualer_api_models_measurements_from_create_measurement_set_model.additional_properties = d
         return qualer_api_models_measurements_from_create_measurement_set_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

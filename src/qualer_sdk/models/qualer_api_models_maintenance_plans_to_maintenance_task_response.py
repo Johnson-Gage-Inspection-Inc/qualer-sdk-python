@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsMaintenancePlansToMaintenanceTaskResponse")
 
@@ -13,63 +11,63 @@ T = TypeVar("T", bound="QualerApiModelsMaintenancePlansToMaintenanceTaskResponse
 class QualerApiModelsMaintenancePlansToMaintenanceTaskResponse:
     """
     Attributes:
-        segment_name (Union[None, Unset, str]):
-        service_level_id (Union[None, Unset, int]):
-        display_order (Union[None, Unset, int]):
-        service_notes (Union[None, Unset, str]):
-        interval_cycle (Union[None, Unset, str]):
-        interval_length (Union[None, Unset, int]):
-        on_day (Union[None, Unset, str]):
-        on_month (Union[None, Unset, str]):
-        on_week_days (Union[None, Unset, str]):
-        weekday_of_month (Union[None, Unset, str]):
-        color_code (Union[None, Unset, int]):
-        service_interval (Union[None, Unset, str]):
-        on_segment_id (Union[None, Unset, int]):
-        document_number (Union[None, Unset, str]):
-        document_section (Union[None, Unset, str]):
-        as_found_standard_group_id (Union[None, Unset, int]):
-        as_left_standard_group_id (Union[None, Unset, int]):
-        task_notes (Union[None, Unset, str]):
-        advance_recall_period (Union[None, Unset, str]):
-        days_before_due (Union[None, Unset, int]):
-        past_due_grace_period (Union[None, Unset, str]):
-        days_after_due (Union[None, Unset, int]):
-        use_period_in_reports (Union[None, Unset, str]):
-        generate_order_automatically (Union[None, Unset, bool]):
-        approve_upon_generation (Union[None, Unset, bool]):
-        generate_separate (Union[None, Unset, bool]):
+        segment_name (Optional[str]):
+        service_level_id (Optional[int]):
+        display_order (Optional[int]):
+        service_notes (Optional[str]):
+        interval_cycle (Optional[str]):
+        interval_length (Optional[int]):
+        on_day (Optional[str]):
+        on_month (Optional[str]):
+        on_week_days (Optional[str]):
+        weekday_of_month (Optional[str]):
+        color_code (Optional[int]):
+        service_interval (Optional[str]):
+        on_segment_id (Optional[int]):
+        document_number (Optional[str]):
+        document_section (Optional[str]):
+        as_found_standard_group_id (Optional[int]):
+        as_left_standard_group_id (Optional[int]):
+        task_notes (Optional[str]):
+        advance_recall_period (Optional[str]):
+        days_before_due (Optional[int]):
+        past_due_grace_period (Optional[str]):
+        days_after_due (Optional[int]):
+        use_period_in_reports (Optional[str]):
+        generate_order_automatically (Optional[bool]):
+        approve_upon_generation (Optional[bool]):
+        generate_separate (Optional[bool]):
     """
 
-    segment_name: Union[None, Unset, str] = UNSET
-    service_level_id: Union[None, Unset, int] = UNSET
-    display_order: Union[None, Unset, int] = UNSET
-    service_notes: Union[None, Unset, str] = UNSET
-    interval_cycle: Union[None, Unset, str] = UNSET
-    interval_length: Union[None, Unset, int] = UNSET
-    on_day: Union[None, Unset, str] = UNSET
-    on_month: Union[None, Unset, str] = UNSET
-    on_week_days: Union[None, Unset, str] = UNSET
-    weekday_of_month: Union[None, Unset, str] = UNSET
-    color_code: Union[None, Unset, int] = UNSET
-    service_interval: Union[None, Unset, str] = UNSET
-    on_segment_id: Union[None, Unset, int] = UNSET
-    document_number: Union[None, Unset, str] = UNSET
-    document_section: Union[None, Unset, str] = UNSET
-    as_found_standard_group_id: Union[None, Unset, int] = UNSET
-    as_left_standard_group_id: Union[None, Unset, int] = UNSET
-    task_notes: Union[None, Unset, str] = UNSET
-    advance_recall_period: Union[None, Unset, str] = UNSET
-    days_before_due: Union[None, Unset, int] = UNSET
-    past_due_grace_period: Union[None, Unset, str] = UNSET
-    days_after_due: Union[None, Unset, int] = UNSET
-    use_period_in_reports: Union[None, Unset, str] = UNSET
-    generate_order_automatically: Union[None, Unset, bool] = UNSET
-    approve_upon_generation: Union[None, Unset, bool] = UNSET
-    generate_separate: Union[None, Unset, bool] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    segment_name: Optional[str] = None
+    service_level_id: Optional[int] = None
+    display_order: Optional[int] = None
+    service_notes: Optional[str] = None
+    interval_cycle: Optional[str] = None
+    interval_length: Optional[int] = None
+    on_day: Optional[str] = None
+    on_month: Optional[str] = None
+    on_week_days: Optional[str] = None
+    weekday_of_month: Optional[str] = None
+    color_code: Optional[int] = None
+    service_interval: Optional[str] = None
+    on_segment_id: Optional[int] = None
+    document_number: Optional[str] = None
+    document_section: Optional[str] = None
+    as_found_standard_group_id: Optional[int] = None
+    as_left_standard_group_id: Optional[int] = None
+    task_notes: Optional[str] = None
+    advance_recall_period: Optional[str] = None
+    days_before_due: Optional[int] = None
+    past_due_grace_period: Optional[str] = None
+    days_after_due: Optional[int] = None
+    use_period_in_reports: Optional[str] = None
+    generate_order_automatically: Optional[bool] = None
+    approve_upon_generation: Optional[bool] = None
+    generate_separate: Optional[bool] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         segment_name = self.segment_name
 
         service_level_id = self.service_level_id
@@ -122,60 +120,60 @@ class QualerApiModelsMaintenancePlansToMaintenanceTaskResponse:
 
         generate_separate = self.generate_separate
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if segment_name is not UNSET:
+        if segment_name is not None:
             field_dict["SegmentName"] = segment_name
-        if service_level_id is not UNSET:
+        if service_level_id is not None:
             field_dict["ServiceLevelId"] = service_level_id
-        if display_order is not UNSET:
+        if display_order is not None:
             field_dict["DisplayOrder"] = display_order
-        if service_notes is not UNSET:
+        if service_notes is not None:
             field_dict["ServiceNotes"] = service_notes
-        if interval_cycle is not UNSET:
+        if interval_cycle is not None:
             field_dict["IntervalCycle"] = interval_cycle
-        if interval_length is not UNSET:
+        if interval_length is not None:
             field_dict["IntervalLength"] = interval_length
-        if on_day is not UNSET:
+        if on_day is not None:
             field_dict["OnDay"] = on_day
-        if on_month is not UNSET:
+        if on_month is not None:
             field_dict["OnMonth"] = on_month
-        if on_week_days is not UNSET:
+        if on_week_days is not None:
             field_dict["OnWeekDays"] = on_week_days
-        if weekday_of_month is not UNSET:
+        if weekday_of_month is not None:
             field_dict["WeekdayOfMonth"] = weekday_of_month
-        if color_code is not UNSET:
+        if color_code is not None:
             field_dict["ColorCode"] = color_code
-        if service_interval is not UNSET:
+        if service_interval is not None:
             field_dict["ServiceInterval"] = service_interval
-        if on_segment_id is not UNSET:
+        if on_segment_id is not None:
             field_dict["OnSegmentId"] = on_segment_id
-        if document_number is not UNSET:
+        if document_number is not None:
             field_dict["DocumentNumber"] = document_number
-        if document_section is not UNSET:
+        if document_section is not None:
             field_dict["DocumentSection"] = document_section
-        if as_found_standard_group_id is not UNSET:
+        if as_found_standard_group_id is not None:
             field_dict["AsFoundStandardGroupId"] = as_found_standard_group_id
-        if as_left_standard_group_id is not UNSET:
+        if as_left_standard_group_id is not None:
             field_dict["AsLeftStandardGroupId"] = as_left_standard_group_id
-        if task_notes is not UNSET:
+        if task_notes is not None:
             field_dict["TaskNotes"] = task_notes
-        if advance_recall_period is not UNSET:
+        if advance_recall_period is not None:
             field_dict["AdvanceRecallPeriod"] = advance_recall_period
-        if days_before_due is not UNSET:
+        if days_before_due is not None:
             field_dict["DaysBeforeDue"] = days_before_due
-        if past_due_grace_period is not UNSET:
+        if past_due_grace_period is not None:
             field_dict["PastDueGracePeriod"] = past_due_grace_period
-        if days_after_due is not UNSET:
+        if days_after_due is not None:
             field_dict["DaysAfterDue"] = days_after_due
-        if use_period_in_reports is not UNSET:
+        if use_period_in_reports is not None:
             field_dict["UsePeriodInReports"] = use_period_in_reports
-        if generate_order_automatically is not UNSET:
+        if generate_order_automatically is not None:
             field_dict["GenerateOrderAutomatically"] = generate_order_automatically
-        if approve_upon_generation is not UNSET:
+        if approve_upon_generation is not None:
             field_dict["ApproveUponGeneration"] = approve_upon_generation
-        if generate_separate is not UNSET:
+        if generate_separate is not None:
             field_dict["GenerateSeparate"] = generate_separate
 
         return field_dict
@@ -183,57 +181,57 @@ class QualerApiModelsMaintenancePlansToMaintenanceTaskResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        segment_name = d.pop("SegmentName", UNSET)
+        segment_name = d.pop("SegmentName", None)
 
-        service_level_id = d.pop("ServiceLevelId", UNSET)
+        service_level_id = d.pop("ServiceLevelId", None)
 
-        display_order = d.pop("DisplayOrder", UNSET)
+        display_order = d.pop("DisplayOrder", None)
 
-        service_notes = d.pop("ServiceNotes", UNSET)
+        service_notes = d.pop("ServiceNotes", None)
 
-        interval_cycle = d.pop("IntervalCycle", UNSET)
+        interval_cycle = d.pop("IntervalCycle", None)
 
-        interval_length = d.pop("IntervalLength", UNSET)
+        interval_length = d.pop("IntervalLength", None)
 
-        on_day = d.pop("OnDay", UNSET)
+        on_day = d.pop("OnDay", None)
 
-        on_month = d.pop("OnMonth", UNSET)
+        on_month = d.pop("OnMonth", None)
 
-        on_week_days = d.pop("OnWeekDays", UNSET)
+        on_week_days = d.pop("OnWeekDays", None)
 
-        weekday_of_month = d.pop("WeekdayOfMonth", UNSET)
+        weekday_of_month = d.pop("WeekdayOfMonth", None)
 
-        color_code = d.pop("ColorCode", UNSET)
+        color_code = d.pop("ColorCode", None)
 
-        service_interval = d.pop("ServiceInterval", UNSET)
+        service_interval = d.pop("ServiceInterval", None)
 
-        on_segment_id = d.pop("OnSegmentId", UNSET)
+        on_segment_id = d.pop("OnSegmentId", None)
 
-        document_number = d.pop("DocumentNumber", UNSET)
+        document_number = d.pop("DocumentNumber", None)
 
-        document_section = d.pop("DocumentSection", UNSET)
+        document_section = d.pop("DocumentSection", None)
 
-        as_found_standard_group_id = d.pop("AsFoundStandardGroupId", UNSET)
+        as_found_standard_group_id = d.pop("AsFoundStandardGroupId", None)
 
-        as_left_standard_group_id = d.pop("AsLeftStandardGroupId", UNSET)
+        as_left_standard_group_id = d.pop("AsLeftStandardGroupId", None)
 
-        task_notes = d.pop("TaskNotes", UNSET)
+        task_notes = d.pop("TaskNotes", None)
 
-        advance_recall_period = d.pop("AdvanceRecallPeriod", UNSET)
+        advance_recall_period = d.pop("AdvanceRecallPeriod", None)
 
-        days_before_due = d.pop("DaysBeforeDue", UNSET)
+        days_before_due = d.pop("DaysBeforeDue", None)
 
-        past_due_grace_period = d.pop("PastDueGracePeriod", UNSET)
+        past_due_grace_period = d.pop("PastDueGracePeriod", None)
 
-        days_after_due = d.pop("DaysAfterDue", UNSET)
+        days_after_due = d.pop("DaysAfterDue", None)
 
-        use_period_in_reports = d.pop("UsePeriodInReports", UNSET)
+        use_period_in_reports = d.pop("UsePeriodInReports", None)
 
-        generate_order_automatically = d.pop("GenerateOrderAutomatically", UNSET)
+        generate_order_automatically = d.pop("GenerateOrderAutomatically", None)
 
-        approve_upon_generation = d.pop("ApproveUponGeneration", UNSET)
+        approve_upon_generation = d.pop("ApproveUponGeneration", None)
 
-        generate_separate = d.pop("GenerateSeparate", UNSET)
+        generate_separate = d.pop("GenerateSeparate", None)
 
         qualer_api_models_maintenance_plans_to_maintenance_task_response = cls(
             segment_name=segment_name,
@@ -264,13 +262,11 @@ class QualerApiModelsMaintenancePlansToMaintenanceTaskResponse:
             generate_separate=generate_separate,
         )
 
-        qualer_api_models_maintenance_plans_to_maintenance_task_response.additional_properties = (
-            d
-        )
+        qualer_api_models_maintenance_plans_to_maintenance_task_response.additional_properties = d
         return qualer_api_models_maintenance_plans_to_maintenance_task_response
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

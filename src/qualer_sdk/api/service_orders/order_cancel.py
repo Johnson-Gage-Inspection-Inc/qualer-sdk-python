@@ -1,26 +1,26 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.order_cancel_response_200 import OrderCancelResponse200
-from ...types import UNSET, Response, Unset
+from ...types import Response
 
 
 def _get_kwargs(
     service_order_id: int,
     *,
-    reason_text: Union[None, Unset, str] = UNSET,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+    reason_text: Optional[str] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
     params["reasonText"] = reason_text
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "put",
         "url": f"/api/service/workorders/{service_order_id}/cancel",
         "params": params,
@@ -57,13 +57,13 @@ def sync_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    reason_text: Union[None, Unset, str] = UNSET,
+    reason_text: Optional[str] = None,
 ) -> Response[OrderCancelResponse200]:
     """Cancel work order
 
     Args:
         service_order_id (int):
-        reason_text (Union[None, Unset, str]):
+        reason_text (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -89,13 +89,13 @@ def sync(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    reason_text: Union[None, Unset, str] = UNSET,
+    reason_text: Optional[str] = None,
 ) -> Optional[OrderCancelResponse200]:
     """Cancel work order
 
     Args:
         service_order_id (int):
-        reason_text (Union[None, Unset, str]):
+        reason_text (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -116,13 +116,13 @@ async def asyncio_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    reason_text: Union[None, Unset, str] = UNSET,
+    reason_text: Optional[str] = None,
 ) -> Response[OrderCancelResponse200]:
     """Cancel work order
 
     Args:
         service_order_id (int):
-        reason_text (Union[None, Unset, str]):
+        reason_text (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -146,13 +146,13 @@ async def asyncio(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    reason_text: Union[None, Unset, str] = UNSET,
+    reason_text: Optional[str] = None,
 ) -> Optional[OrderCancelResponse200]:
     """Cancel work order
 
     Args:
         service_order_id (int):
-        reason_text (Union[None, Unset, str]):
+        reason_text (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

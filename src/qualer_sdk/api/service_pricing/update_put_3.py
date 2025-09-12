@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 import httpx
 
@@ -16,11 +16,11 @@ from ...types import Response
 
 def _get_kwargs(
     *,
-    body: list["QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"],
-) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+    body: List["QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"],
+) -> Dict[str, Any]:
+    headers: Dict[str, Any] = {}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "put",
         "url": "/api/service/pricing",
     }
@@ -38,15 +38,13 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[list["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
+) -> Optional[List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = (
-                QualerApiModelsServiceOrdersToServiceOrderTaskResponse.from_dict(
-                    response_200_item_data
-                )
+            response_200_item = QualerApiModelsServiceOrdersToServiceOrderTaskResponse.from_dict(
+                response_200_item_data
             )
 
             response_200.append(response_200_item)
@@ -60,7 +58,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[list["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
+) -> Response[List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -72,18 +70,18 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list["QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"],
-) -> Response[list["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
+    body: List["QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"],
+) -> Response[List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
     """
     Args:
-        body (list['QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel']):
+        body (List['QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']]
+        Response[List['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']]
     """
 
     kwargs = _get_kwargs(
@@ -100,18 +98,18 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list["QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"],
-) -> Optional[list["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
+    body: List["QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"],
+) -> Optional[List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
     """
     Args:
-        body (list['QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel']):
+        body (List['QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']
+        List['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']
     """
 
     return sync_detailed(
@@ -123,18 +121,18 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list["QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"],
-) -> Response[list["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
+    body: List["QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"],
+) -> Response[List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
     """
     Args:
-        body (list['QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel']):
+        body (List['QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']]
+        Response[List['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']]
     """
 
     kwargs = _get_kwargs(
@@ -149,18 +147,18 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: list["QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"],
-) -> Optional[list["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
+    body: List["QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"],
+) -> Optional[List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
     """
     Args:
-        body (list['QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel']):
+        body (List['QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']
+        List['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']
     """
 
     return (

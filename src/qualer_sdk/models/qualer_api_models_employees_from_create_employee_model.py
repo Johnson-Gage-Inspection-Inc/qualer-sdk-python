@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsEmployeesFromCreateEmployeeModel")
 
@@ -13,35 +11,35 @@ T = TypeVar("T", bound="QualerApiModelsEmployeesFromCreateEmployeeModel")
 class QualerApiModelsEmployeesFromCreateEmployeeModel:
     """
     Attributes:
-        login_email (Union[None, Unset, str]):
-        password (Union[None, Unset, str]):
-        first_name (Union[None, Unset, str]):
-        last_name (Union[None, Unset, str]):
-        subscription_email (Union[None, Unset, str]):
-        mobile_phone (Union[None, Unset, str]):
-        office_phone (Union[None, Unset, str]):
-        alias (Union[None, Unset, str]):
-        title (Union[None, Unset, str]):
-        culture_name (Union[None, Unset, str]):
-        culture_ui_name (Union[None, Unset, str]):
-        image_url (Union[None, Unset, str]):
+        login_email (Optional[str]):
+        password (Optional[str]):
+        first_name (Optional[str]):
+        last_name (Optional[str]):
+        subscription_email (Optional[str]):
+        mobile_phone (Optional[str]):
+        office_phone (Optional[str]):
+        alias (Optional[str]):
+        title (Optional[str]):
+        culture_name (Optional[str]):
+        culture_ui_name (Optional[str]):
+        image_url (Optional[str]):
     """
 
-    login_email: Union[None, Unset, str] = UNSET
-    password: Union[None, Unset, str] = UNSET
-    first_name: Union[None, Unset, str] = UNSET
-    last_name: Union[None, Unset, str] = UNSET
-    subscription_email: Union[None, Unset, str] = UNSET
-    mobile_phone: Union[None, Unset, str] = UNSET
-    office_phone: Union[None, Unset, str] = UNSET
-    alias: Union[None, Unset, str] = UNSET
-    title: Union[None, Unset, str] = UNSET
-    culture_name: Union[None, Unset, str] = UNSET
-    culture_ui_name: Union[None, Unset, str] = UNSET
-    image_url: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    login_email: Optional[str] = None
+    password: Optional[str] = None
+    first_name: Optional[str] = None
+    last_name: Optional[str] = None
+    subscription_email: Optional[str] = None
+    mobile_phone: Optional[str] = None
+    office_phone: Optional[str] = None
+    alias: Optional[str] = None
+    title: Optional[str] = None
+    culture_name: Optional[str] = None
+    culture_ui_name: Optional[str] = None
+    image_url: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         login_email = self.login_email
 
         password = self.password
@@ -66,32 +64,32 @@ class QualerApiModelsEmployeesFromCreateEmployeeModel:
 
         image_url = self.image_url
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if login_email is not UNSET:
+        if login_email is not None:
             field_dict["LoginEmail"] = login_email
-        if password is not UNSET:
+        if password is not None:
             field_dict["Password"] = password
-        if first_name is not UNSET:
+        if first_name is not None:
             field_dict["FirstName"] = first_name
-        if last_name is not UNSET:
+        if last_name is not None:
             field_dict["LastName"] = last_name
-        if subscription_email is not UNSET:
+        if subscription_email is not None:
             field_dict["SubscriptionEmail"] = subscription_email
-        if mobile_phone is not UNSET:
+        if mobile_phone is not None:
             field_dict["MobilePhone"] = mobile_phone
-        if office_phone is not UNSET:
+        if office_phone is not None:
             field_dict["OfficePhone"] = office_phone
-        if alias is not UNSET:
+        if alias is not None:
             field_dict["Alias"] = alias
-        if title is not UNSET:
+        if title is not None:
             field_dict["Title"] = title
-        if culture_name is not UNSET:
+        if culture_name is not None:
             field_dict["CultureName"] = culture_name
-        if culture_ui_name is not UNSET:
+        if culture_ui_name is not None:
             field_dict["CultureUiName"] = culture_ui_name
-        if image_url is not UNSET:
+        if image_url is not None:
             field_dict["ImageUrl"] = image_url
 
         return field_dict
@@ -99,29 +97,29 @@ class QualerApiModelsEmployeesFromCreateEmployeeModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        login_email = d.pop("LoginEmail", UNSET)
+        login_email = d.pop("LoginEmail", None)
 
-        password = d.pop("Password", UNSET)
+        password = d.pop("Password", None)
 
-        first_name = d.pop("FirstName", UNSET)
+        first_name = d.pop("FirstName", None)
 
-        last_name = d.pop("LastName", UNSET)
+        last_name = d.pop("LastName", None)
 
-        subscription_email = d.pop("SubscriptionEmail", UNSET)
+        subscription_email = d.pop("SubscriptionEmail", None)
 
-        mobile_phone = d.pop("MobilePhone", UNSET)
+        mobile_phone = d.pop("MobilePhone", None)
 
-        office_phone = d.pop("OfficePhone", UNSET)
+        office_phone = d.pop("OfficePhone", None)
 
-        alias = d.pop("Alias", UNSET)
+        alias = d.pop("Alias", None)
 
-        title = d.pop("Title", UNSET)
+        title = d.pop("Title", None)
 
-        culture_name = d.pop("CultureName", UNSET)
+        culture_name = d.pop("CultureName", None)
 
-        culture_ui_name = d.pop("CultureUiName", UNSET)
+        culture_ui_name = d.pop("CultureUiName", None)
 
-        image_url = d.pop("ImageUrl", UNSET)
+        image_url = d.pop("ImageUrl", None)
 
         qualer_api_models_employees_from_create_employee_model = cls(
             login_email=login_email,
@@ -142,7 +140,7 @@ class QualerApiModelsEmployeesFromCreateEmployeeModel:
         return qualer_api_models_employees_from_create_employee_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

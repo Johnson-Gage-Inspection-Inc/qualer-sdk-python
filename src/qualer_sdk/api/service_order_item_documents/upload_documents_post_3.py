@@ -1,31 +1,29 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.upload_documents_post_3_response_200 import (
-    UploadDocumentsPost3Response200,
-)
-from ...types import UNSET, Response, Unset
+from ...models.upload_documents_post_3_response_200 import UploadDocumentsPost3Response200
+from ...types import Response
 
 
 def _get_kwargs(
     service_order_item_id: int,
     *,
-    model_report_type: Union[None, Unset, str] = UNSET,
-    model_is_private: Union[None, Unset, bool] = UNSET,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+    model_report_type: Optional[str] = None,
+    model_is_private: Optional[bool] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
     params["model.reportType"] = model_report_type
 
     params["model.isPrivate"] = model_is_private
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "post",
         "url": f"/api/service/workitems/{service_order_item_id}/documents",
         "params": params,
@@ -62,14 +60,14 @@ def sync_detailed(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[None, Unset, str] = UNSET,
-    model_is_private: Union[None, Unset, bool] = UNSET,
+    model_report_type: Optional[str] = None,
+    model_is_private: Optional[bool] = None,
 ) -> Response[UploadDocumentsPost3Response200]:
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[None, Unset, str]):
-        model_is_private (Union[None, Unset, bool]):
+        model_report_type (Optional[str]):
+        model_is_private (Optional[bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -96,14 +94,14 @@ def sync(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[None, Unset, str] = UNSET,
-    model_is_private: Union[None, Unset, bool] = UNSET,
+    model_report_type: Optional[str] = None,
+    model_is_private: Optional[bool] = None,
 ) -> Optional[UploadDocumentsPost3Response200]:
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[None, Unset, str]):
-        model_is_private (Union[None, Unset, bool]):
+        model_report_type (Optional[str]):
+        model_is_private (Optional[bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -125,14 +123,14 @@ async def asyncio_detailed(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[None, Unset, str] = UNSET,
-    model_is_private: Union[None, Unset, bool] = UNSET,
+    model_report_type: Optional[str] = None,
+    model_is_private: Optional[bool] = None,
 ) -> Response[UploadDocumentsPost3Response200]:
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[None, Unset, str]):
-        model_is_private (Union[None, Unset, bool]):
+        model_report_type (Optional[str]):
+        model_is_private (Optional[bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -157,14 +155,14 @@ async def asyncio(
     service_order_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    model_report_type: Union[None, Unset, str] = UNSET,
-    model_is_private: Union[None, Unset, bool] = UNSET,
+    model_report_type: Optional[str] = None,
+    model_is_private: Optional[bool] = None,
 ) -> Optional[UploadDocumentsPost3Response200]:
     """
     Args:
         service_order_item_id (int):
-        model_report_type (Union[None, Unset, str]):
-        model_is_private (Union[None, Unset, bool]):
+        model_report_type (Optional[str]):
+        model_is_private (Optional[bool]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

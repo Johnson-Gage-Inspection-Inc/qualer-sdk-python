@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
@@ -8,20 +8,20 @@ from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_asset_to_assets_count_response_model import (
     QualerApiModelsAssetToAssetsCountResponseModel,
 )
-from ...types import UNSET, Response, Unset
+from ...types import Response
 
 
 def _get_kwargs(
     *,
-    model_search_string: Union[None, Unset, str] = UNSET,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+    model_search_string: Optional[str] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
     params["model.searchString"] = model_search_string
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": "/api/assets/counters",
         "params": params,
@@ -34,9 +34,7 @@ def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
 ) -> Optional[QualerApiModelsAssetToAssetsCountResponseModel]:
     if response.status_code == 200:
-        response_200 = QualerApiModelsAssetToAssetsCountResponseModel.from_dict(
-            response.json()
-        )
+        response_200 = QualerApiModelsAssetToAssetsCountResponseModel.from_dict(response.json())
 
         return response_200
     if client.raise_on_unexpected_status:
@@ -59,12 +57,12 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_search_string: Union[None, Unset, str] = UNSET,
+    model_search_string: Optional[str] = None,
 ) -> Response[QualerApiModelsAssetToAssetsCountResponseModel]:
     """GetAssetManagerCounters
 
     Args:
-        model_search_string (Union[None, Unset, str]):
+        model_search_string (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -88,12 +86,12 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_search_string: Union[None, Unset, str] = UNSET,
+    model_search_string: Optional[str] = None,
 ) -> Optional[QualerApiModelsAssetToAssetsCountResponseModel]:
     """GetAssetManagerCounters
 
     Args:
-        model_search_string (Union[None, Unset, str]):
+        model_search_string (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -112,12 +110,12 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_search_string: Union[None, Unset, str] = UNSET,
+    model_search_string: Optional[str] = None,
 ) -> Response[QualerApiModelsAssetToAssetsCountResponseModel]:
     """GetAssetManagerCounters
 
     Args:
-        model_search_string (Union[None, Unset, str]):
+        model_search_string (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -139,12 +137,12 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_search_string: Union[None, Unset, str] = UNSET,
+    model_search_string: Optional[str] = None,
 ) -> Optional[QualerApiModelsAssetToAssetsCountResponseModel]:
     """GetAssetManagerCounters
 
     Args:
-        model_search_string (Union[None, Unset, str]):
+        model_search_string (Optional[str]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

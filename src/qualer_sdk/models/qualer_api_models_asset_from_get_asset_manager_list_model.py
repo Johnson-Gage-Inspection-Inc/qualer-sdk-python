@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsAssetFromGetAssetManagerListModel")
 
@@ -13,19 +11,19 @@ T = TypeVar("T", bound="QualerApiModelsAssetFromGetAssetManagerListModel")
 class QualerApiModelsAssetFromGetAssetManagerListModel:
     """
     Attributes:
-        filter_type (Union[None, Unset, str]):
-        search_string (Union[None, Unset, str]):
-        page (Union[None, Unset, int]):
-        page_size (Union[None, Unset, int]):
+        filter_type (Optional[str]):
+        search_string (Optional[str]):
+        page (Optional[int]):
+        page_size (Optional[int]):
     """
 
-    filter_type: Union[None, Unset, str] = UNSET
-    search_string: Union[None, Unset, str] = UNSET
-    page: Union[None, Unset, int] = UNSET
-    page_size: Union[None, Unset, int] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    filter_type: Optional[str] = None
+    search_string: Optional[str] = None
+    page: Optional[int] = None
+    page_size: Optional[int] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         filter_type = self.filter_type
 
         search_string = self.search_string
@@ -34,16 +32,16 @@ class QualerApiModelsAssetFromGetAssetManagerListModel:
 
         page_size = self.page_size
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if filter_type is not UNSET:
+        if filter_type is not None:
             field_dict["FilterType"] = filter_type
-        if search_string is not UNSET:
+        if search_string is not None:
             field_dict["SearchString"] = search_string
-        if page is not UNSET:
+        if page is not None:
             field_dict["Page"] = page
-        if page_size is not UNSET:
+        if page_size is not None:
             field_dict["PageSize"] = page_size
 
         return field_dict
@@ -51,13 +49,13 @@ class QualerApiModelsAssetFromGetAssetManagerListModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        filter_type = d.pop("FilterType", UNSET)
+        filter_type = d.pop("FilterType", None)
 
-        search_string = d.pop("SearchString", UNSET)
+        search_string = d.pop("SearchString", None)
 
-        page = d.pop("Page", UNSET)
+        page = d.pop("Page", None)
 
-        page_size = d.pop("PageSize", UNSET)
+        page_size = d.pop("PageSize", None)
 
         qualer_api_models_asset_from_get_asset_manager_list_model = cls(
             filter_type=filter_type,
@@ -66,13 +64,11 @@ class QualerApiModelsAssetFromGetAssetManagerListModel:
             page_size=page_size,
         )
 
-        qualer_api_models_asset_from_get_asset_manager_list_model.additional_properties = (
-            d
-        )
+        qualer_api_models_asset_from_get_asset_manager_list_model.additional_properties = d
         return qualer_api_models_asset_from_get_asset_manager_list_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

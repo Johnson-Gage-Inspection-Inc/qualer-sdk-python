@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
@@ -8,9 +8,7 @@ from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_client_attributes_from_client_attribute_model import (
     QualerApiModelsClientAttributesFromClientAttributeModel,
 )
-from ...models.upsert_client_attribute_response_200 import (
-    UpsertClientAttributeResponse200,
-)
+from ...models.upsert_client_attribute_response_200 import UpsertClientAttributeResponse200
 from ...types import Response
 
 
@@ -18,10 +16,10 @@ def _get_kwargs(
     client_company_id: int,
     *,
     body: QualerApiModelsClientAttributesFromClientAttributeModel,
-) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+) -> Dict[str, Any]:
+    headers: Dict[str, Any] = {}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "post",
         "url": f"/api/service/clients/{client_company_id}/attributes",
     }

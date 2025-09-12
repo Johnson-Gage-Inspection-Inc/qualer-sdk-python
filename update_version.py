@@ -5,6 +5,7 @@ This script updates version strings in template files to match the current Git t
 """
 import os
 import re
+
 from get_version import get_version_from_git_with_commits
 
 
@@ -21,13 +22,11 @@ def update_template_version():
         if os.path.exists(template_file):
             print(f"Updating {template_file}...")
 
-            with open(template_file, "r", encoding="utf-8") as f:
+            with open(template_file, encoding="utf-8") as f:
                 content = f.read()
 
             # Update hardcoded version strings if any exist
-            content = re.sub(
-                r'__version__ = "[^"]*"', f'__version__ = "{clean_version}"', content
-            )
+            content = re.sub(r'__version__ = "[^"]*"', f'__version__ = "{clean_version}"', content)
 
             with open(template_file, "w", encoding="utf-8") as f:
                 f.write(content)

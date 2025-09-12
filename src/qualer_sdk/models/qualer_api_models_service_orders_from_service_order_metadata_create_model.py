@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.qualer_core_shared_models_service_order_metadata_service_order_metadata_exhibits import (
@@ -12,40 +10,38 @@ if TYPE_CHECKING:
     )
 
 
-T = TypeVar(
-    "T", bound="QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel"
-)
+T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel")
 
 
 @_attrs_define
 class QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel:
     """
     Attributes:
-        metadata (Union[None, Unset, str]):
-        exhibits (Union[None, Unset, QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits]):
+        metadata (Optional[str]):
+        exhibits (Optional[QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits]):
     """
 
-    metadata: Union[None, Unset, str] = UNSET
+    metadata: Optional[str] = None
     exhibits: Union[
         None,
-        Unset,
+        None,
         "QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits",
-    ] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    ] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         metadata = self.metadata
 
-        exhibits: Union[None, Unset, dict[str, Any]] = UNSET
-        if self.exhibits and not isinstance(self.exhibits, Unset):
+        exhibits: Optional[Dict[str, Any]] = None
+        if self.exhibits:
             exhibits = self.exhibits.to_dict()
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if metadata is not UNSET:
+        if metadata is not None:
             field_dict["Metadata"] = metadata
-        if exhibits is not UNSET:
+        if exhibits is not None:
             field_dict["Exhibits"] = exhibits
 
         return field_dict
@@ -57,19 +53,21 @@ class QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel:
         )
 
         d = dict(src_dict)
-        metadata = d.pop("Metadata", UNSET)
+        metadata = d.pop("Metadata", None)
 
-        _exhibits = d.pop("Exhibits", UNSET)
+        _exhibits = d.pop("Exhibits", None)
         exhibits: Union[
             None,
-            Unset,
+            None,
             QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits,
         ]
-        if isinstance(_exhibits, Unset):
-            exhibits = UNSET
+        if not _exhibits:
+            exhibits = None
         else:
-            exhibits = QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits.from_dict(
-                _exhibits
+            exhibits = (
+                QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits.from_dict(
+                    _exhibits
+                )
             )
 
         qualer_api_models_service_orders_from_service_order_metadata_create_model = cls(
@@ -83,7 +81,7 @@ class QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel:
         return qualer_api_models_service_orders_from_service_order_metadata_create_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

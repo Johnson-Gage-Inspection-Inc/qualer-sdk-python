@@ -1,12 +1,10 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union, cast
+from typing import Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel")
 
@@ -15,31 +13,31 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel
 class QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel:
     """
     Attributes:
-        payment_status (Union[None, Unset, str]):
-        invoiced_on (Union[None, Unset, datetime.datetime]):
+        payment_status (Optional[str]):
+        invoiced_on (Optional[datetime.datetime]):
     """
 
-    payment_status: Union[None, Unset, str] = UNSET
-    invoiced_on: Union[None, Unset, datetime.datetime] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    payment_status: Optional[str] = None
+    invoiced_on: Optional[datetime.datetime] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         payment_status = self.payment_status
 
-        invoiced_on: Union[None, Unset, str]
-        if isinstance(self.invoiced_on, Unset):
-            invoiced_on = UNSET
+        invoiced_on: Optional[str]
+        if not self.invoiced_on:
+            invoiced_on = None
         elif isinstance(self.invoiced_on, datetime.datetime):
             invoiced_on = self.invoiced_on.isoformat()
         else:
             invoiced_on = self.invoiced_on
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if payment_status is not UNSET:
+        if payment_status is not None:
             field_dict["PaymentStatus"] = payment_status
-        if invoiced_on is not UNSET:
+        if invoiced_on is not None:
             field_dict["InvoicedOn"] = invoiced_on
 
         return field_dict
@@ -47,37 +45,33 @@ class QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        payment_status = d.pop("PaymentStatus", UNSET)
+        payment_status = d.pop("PaymentStatus", None)
 
-        def _parse_invoiced_on(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_invoiced_on(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 invoiced_on_type_0 = isoparse(data)
 
                 return invoiced_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        invoiced_on = _parse_invoiced_on(d.pop("InvoicedOn", UNSET))
+        invoiced_on = _parse_invoiced_on(d.pop("InvoicedOn", None))
 
         qualer_api_models_service_orders_from_update_payment_status_model = cls(
             payment_status=payment_status,
             invoiced_on=invoiced_on,
         )
 
-        qualer_api_models_service_orders_from_update_payment_status_model.additional_properties = (
-            d
-        )
+        qualer_api_models_service_orders_from_update_payment_status_model.additional_properties = d
         return qualer_api_models_service_orders_from_update_payment_status_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

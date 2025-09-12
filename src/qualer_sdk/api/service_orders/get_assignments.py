@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 import httpx
 
@@ -13,8 +13,8 @@ from ...types import Response
 
 def _get_kwargs(
     service_order_id: int,
-) -> dict[str, Any]:
-    _kwargs: dict[str, Any] = {
+) -> Dict[str, Any]:
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": f"/api/service/workorders/{service_order_id}/assignments",
     }
@@ -24,7 +24,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[list["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
+) -> Optional[List["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
@@ -46,7 +46,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[list["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
+) -> Response[List["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -59,7 +59,7 @@ def sync_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[list["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
+) -> Response[List["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
     """
     Args:
         service_order_id (int):
@@ -69,7 +69,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsServiceOrdersToOrderAssignmentResponseModel']]
+        Response[List['QualerApiModelsServiceOrdersToOrderAssignmentResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -87,7 +87,7 @@ def sync(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[list["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
+) -> Optional[List["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
     """
     Args:
         service_order_id (int):
@@ -97,7 +97,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsServiceOrdersToOrderAssignmentResponseModel']
+        List['QualerApiModelsServiceOrdersToOrderAssignmentResponseModel']
     """
 
     return sync_detailed(
@@ -110,7 +110,7 @@ async def asyncio_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[list["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
+) -> Response[List["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
     """
     Args:
         service_order_id (int):
@@ -120,7 +120,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsServiceOrdersToOrderAssignmentResponseModel']]
+        Response[List['QualerApiModelsServiceOrdersToOrderAssignmentResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -136,7 +136,7 @@ async def asyncio(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[list["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
+) -> Optional[List["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
     """
     Args:
         service_order_id (int):
@@ -146,7 +146,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsServiceOrdersToOrderAssignmentResponseModel']
+        List['QualerApiModelsServiceOrdersToOrderAssignmentResponseModel']
     """
 
     return (

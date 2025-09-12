@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
@@ -8,20 +8,20 @@ from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_common_to_setting_response_model import (
     QualerApiModelsCommonToSettingResponseModel,
 )
-from ...types import UNSET, Response
+from ...types import Response
 
 
 def _get_kwargs(
     *,
     setting_key: str,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
     params["settingKey"] = setting_key
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": "/api/common/settings",
         "params": params,
@@ -34,9 +34,7 @@ def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
 ) -> Optional[QualerApiModelsCommonToSettingResponseModel]:
     if response.status_code == 200:
-        response_200 = QualerApiModelsCommonToSettingResponseModel.from_dict(
-            response.json()
-        )
+        response_200 = QualerApiModelsCommonToSettingResponseModel.from_dict(response.json())
 
         return response_200
     if client.raise_on_unexpected_status:

@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 import httpx
 
@@ -8,18 +8,18 @@ from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_asset_to_client_asset_manager_response_model import (
     QualerApiModelsAssetToClientAssetManagerResponseModel,
 )
-from ...types import UNSET, Response, Unset
+from ...types import Response
 
 
 def _get_kwargs(
     client_company_id: int,
     *,
-    query_filter_type: Union[None, Unset, str] = UNSET,
-    query_search_string: Union[None, Unset, str] = UNSET,
-    query_page: Union[None, Unset, int] = UNSET,
-    query_page_size: Union[None, Unset, int] = UNSET,
-) -> dict[str, Any]:
-    params: dict[str, Any] = {}
+    query_filter_type: Optional[str] = None,
+    query_search_string: Optional[str] = None,
+    query_page: Optional[int] = None,
+    query_page_size: Optional[int] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
 
     params["query.filterType"] = query_filter_type
 
@@ -29,9 +29,9 @@ def _get_kwargs(
 
     params["query.pageSize"] = query_page_size
 
-    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+    params = {k: v for k, v in params.items() if v is not None}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": f"/api/service/clients/{client_company_id}/assets/byfilter",
         "params": params,
@@ -42,15 +42,13 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[list["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
+) -> Optional[List["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = (
-                QualerApiModelsAssetToClientAssetManagerResponseModel.from_dict(
-                    response_200_item_data
-                )
+            response_200_item = QualerApiModelsAssetToClientAssetManagerResponseModel.from_dict(
+                response_200_item_data
             )
 
             response_200.append(response_200_item)
@@ -64,7 +62,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[list["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
+) -> Response[List["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -77,11 +75,11 @@ def sync_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Union[None, Unset, str] = UNSET,
-    query_search_string: Union[None, Unset, str] = UNSET,
-    query_page: Union[None, Unset, int] = UNSET,
-    query_page_size: Union[None, Unset, int] = UNSET,
-) -> Response[list["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
+    query_filter_type: Optional[str] = None,
+    query_search_string: Optional[str] = None,
+    query_page: Optional[int] = None,
+    query_page_size: Optional[int] = None,
+) -> Response[List["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
      assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService,
@@ -92,17 +90,17 @@ def sync_detailed(
 
     Args:
         client_company_id (int):
-        query_filter_type (Union[None, Unset, str]):
-        query_search_string (Union[None, Unset, str]):
-        query_page (Union[None, Unset, int]):
-        query_page_size (Union[None, Unset, int]):
+        query_filter_type (Optional[str]):
+        query_search_string (Optional[str]):
+        query_page (Optional[int]):
+        query_page_size (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsAssetToClientAssetManagerResponseModel']]
+        Response[List['QualerApiModelsAssetToClientAssetManagerResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -124,11 +122,11 @@ def sync(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Union[None, Unset, str] = UNSET,
-    query_search_string: Union[None, Unset, str] = UNSET,
-    query_page: Union[None, Unset, int] = UNSET,
-    query_page_size: Union[None, Unset, int] = UNSET,
-) -> Optional[list["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
+    query_filter_type: Optional[str] = None,
+    query_search_string: Optional[str] = None,
+    query_page: Optional[int] = None,
+    query_page_size: Optional[int] = None,
+) -> Optional[List["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
      assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService,
@@ -139,17 +137,17 @@ def sync(
 
     Args:
         client_company_id (int):
-        query_filter_type (Union[None, Unset, str]):
-        query_search_string (Union[None, Unset, str]):
-        query_page (Union[None, Unset, int]):
-        query_page_size (Union[None, Unset, int]):
+        query_filter_type (Optional[str]):
+        query_search_string (Optional[str]):
+        query_page (Optional[int]):
+        query_page_size (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsAssetToClientAssetManagerResponseModel']
+        List['QualerApiModelsAssetToClientAssetManagerResponseModel']
     """
 
     return sync_detailed(
@@ -166,11 +164,11 @@ async def asyncio_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Union[None, Unset, str] = UNSET,
-    query_search_string: Union[None, Unset, str] = UNSET,
-    query_page: Union[None, Unset, int] = UNSET,
-    query_page_size: Union[None, Unset, int] = UNSET,
-) -> Response[list["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
+    query_filter_type: Optional[str] = None,
+    query_search_string: Optional[str] = None,
+    query_page: Optional[int] = None,
+    query_page_size: Optional[int] = None,
+) -> Response[List["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
      assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService,
@@ -181,17 +179,17 @@ async def asyncio_detailed(
 
     Args:
         client_company_id (int):
-        query_filter_type (Union[None, Unset, str]):
-        query_search_string (Union[None, Unset, str]):
-        query_page (Union[None, Unset, int]):
-        query_page_size (Union[None, Unset, int]):
+        query_filter_type (Optional[str]):
+        query_search_string (Optional[str]):
+        query_page (Optional[int]):
+        query_page_size (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsAssetToClientAssetManagerResponseModel']]
+        Response[List['QualerApiModelsAssetToClientAssetManagerResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -211,11 +209,11 @@ async def asyncio(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Union[None, Unset, str] = UNSET,
-    query_search_string: Union[None, Unset, str] = UNSET,
-    query_page: Union[None, Unset, int] = UNSET,
-    query_page_size: Union[None, Unset, int] = UNSET,
-) -> Optional[list["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
+    query_filter_type: Optional[str] = None,
+    query_search_string: Optional[str] = None,
+    query_page: Optional[int] = None,
+    query_page_size: Optional[int] = None,
+) -> Optional[List["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
      assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService,
@@ -226,17 +224,17 @@ async def asyncio(
 
     Args:
         client_company_id (int):
-        query_filter_type (Union[None, Unset, str]):
-        query_search_string (Union[None, Unset, str]):
-        query_page (Union[None, Unset, int]):
-        query_page_size (Union[None, Unset, int]):
+        query_filter_type (Optional[str]):
+        query_search_string (Optional[str]):
+        query_page (Optional[int]):
+        query_page_size (Optional[int]):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsAssetToClientAssetManagerResponseModel']
+        List['QualerApiModelsAssetToClientAssetManagerResponseModel']
     """
 
     return (

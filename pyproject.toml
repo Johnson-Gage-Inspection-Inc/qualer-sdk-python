@@ -64,16 +64,18 @@ local_scheme = "dirty-tag"
 tag_regex = "^v(?P<version>.*)$"
 
 [tool.black]
-line-length = 88
-target-version = ['py37']
+line-length = 100
+# The codebase uses PEP 585 generics (list[str], dict[str, Any], ...),
+# so format using Python 3.9+ grammar.
+target-version = ['py39']
 
 [tool.isort]
 profile = "black"
 multi_line_output = 3
-line_length = 88
+line_length = 100
 
 [tool.mypy]
-python_version = "3.8"
+python_version = "3.13"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = false
@@ -138,3 +140,12 @@ typeCheckingMode = "basic"
 reportMissingImports = true
 reportMissingTypeStubs = false
 pythonVersion = "3.13"
+stubPath = "typings"
+
+[tool.ruff]
+target-version = "py38"  # or your true floor
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]   # add others you use
+fixable = ["ALL"]

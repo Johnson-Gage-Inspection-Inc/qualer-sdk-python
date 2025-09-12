@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar(
     "T",
@@ -16,37 +14,37 @@ T = TypeVar(
 class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions:
     """
     Attributes:
-        err (Union[None, Unset, bool]):
-        mean (Union[None, Unset, bool]):
-        max_ (Union[None, Unset, bool]):
-        min_ (Union[None, Unset, bool]):
-        sd (Union[None, Unset, bool]):
-        cv (Union[None, Unset, bool]):
-        tar (Union[None, Unset, bool]):
-        tur (Union[None, Unset, bool]):
-        mu (Union[None, Unset, bool]):
-        cmc (Union[None, Unset, bool]):
-        tol (Union[None, Unset, bool]):
-        delta (Union[None, Unset, bool]):
-        range_ (Union[None, Unset, bool]):
+        err (Optional[bool]):
+        mean (Optional[bool]):
+        max_ (Optional[bool]):
+        min_ (Optional[bool]):
+        sd (Optional[bool]):
+        cv (Optional[bool]):
+        tar (Optional[bool]):
+        tur (Optional[bool]):
+        mu (Optional[bool]):
+        cmc (Optional[bool]):
+        tol (Optional[bool]):
+        delta (Optional[bool]):
+        range_ (Optional[bool]):
     """
 
-    err: Union[None, Unset, bool] = UNSET
-    mean: Union[None, Unset, bool] = UNSET
-    max_: Union[None, Unset, bool] = UNSET
-    min_: Union[None, Unset, bool] = UNSET
-    sd: Union[None, Unset, bool] = UNSET
-    cv: Union[None, Unset, bool] = UNSET
-    tar: Union[None, Unset, bool] = UNSET
-    tur: Union[None, Unset, bool] = UNSET
-    mu: Union[None, Unset, bool] = UNSET
-    cmc: Union[None, Unset, bool] = UNSET
-    tol: Union[None, Unset, bool] = UNSET
-    delta: Union[None, Unset, bool] = UNSET
-    range_: Union[None, Unset, bool] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    err: Optional[bool] = None
+    mean: Optional[bool] = None
+    max_: Optional[bool] = None
+    min_: Optional[bool] = None
+    sd: Optional[bool] = None
+    cv: Optional[bool] = None
+    tar: Optional[bool] = None
+    tur: Optional[bool] = None
+    mu: Optional[bool] = None
+    cmc: Optional[bool] = None
+    tol: Optional[bool] = None
+    delta: Optional[bool] = None
+    range_: Optional[bool] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         err = self.err
 
         mean = self.mean
@@ -73,34 +71,34 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
 
         range_ = self.range_
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if err is not UNSET:
+        if err is not None:
             field_dict["Err"] = err
-        if mean is not UNSET:
+        if mean is not None:
             field_dict["Mean"] = mean
-        if max_ is not UNSET:
+        if max_ is not None:
             field_dict["Max"] = max_
-        if min_ is not UNSET:
+        if min_ is not None:
             field_dict["Min"] = min_
-        if sd is not UNSET:
+        if sd is not None:
             field_dict["Sd"] = sd
-        if cv is not UNSET:
+        if cv is not None:
             field_dict["Cv"] = cv
-        if tar is not UNSET:
+        if tar is not None:
             field_dict["Tar"] = tar
-        if tur is not UNSET:
+        if tur is not None:
             field_dict["Tur"] = tur
-        if mu is not UNSET:
+        if mu is not None:
             field_dict["Mu"] = mu
-        if cmc is not UNSET:
+        if cmc is not None:
             field_dict["Cmc"] = cmc
-        if tol is not UNSET:
+        if tol is not None:
             field_dict["Tol"] = tol
-        if delta is not UNSET:
+        if delta is not None:
             field_dict["Delta"] = delta
-        if range_ is not UNSET:
+        if range_ is not None:
             field_dict["Range"] = range_
 
         return field_dict
@@ -108,31 +106,31 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        err = d.pop("Err", UNSET)
+        err = d.pop("Err", None)
 
-        mean = d.pop("Mean", UNSET)
+        mean = d.pop("Mean", None)
 
-        max_ = d.pop("Max", UNSET)
+        max_ = d.pop("Max", None)
 
-        min_ = d.pop("Min", UNSET)
+        min_ = d.pop("Min", None)
 
-        sd = d.pop("Sd", UNSET)
+        sd = d.pop("Sd", None)
 
-        cv = d.pop("Cv", UNSET)
+        cv = d.pop("Cv", None)
 
-        tar = d.pop("Tar", UNSET)
+        tar = d.pop("Tar", None)
 
-        tur = d.pop("Tur", UNSET)
+        tur = d.pop("Tur", None)
 
-        mu = d.pop("Mu", UNSET)
+        mu = d.pop("Mu", None)
 
-        cmc = d.pop("Cmc", UNSET)
+        cmc = d.pop("Cmc", None)
 
-        tol = d.pop("Tol", UNSET)
+        tol = d.pop("Tol", None)
 
-        delta = d.pop("Delta", UNSET)
+        delta = d.pop("Delta", None)
 
-        range_ = d.pop("Range", UNSET)
+        range_ = d.pop("Range", None)
 
         qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_display_options = cls(
             err=err,
@@ -156,7 +154,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         return qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_display_options
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

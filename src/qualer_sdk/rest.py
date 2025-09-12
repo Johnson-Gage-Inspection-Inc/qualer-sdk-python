@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
 REST module compatibility layer for legacy test imports.
 

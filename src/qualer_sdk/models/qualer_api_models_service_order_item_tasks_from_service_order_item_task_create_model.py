@@ -1,35 +1,31 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-T = TypeVar(
-    "T", bound="QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel"
-)
+T = TypeVar("T", bound="QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel")
 
 
 @_attrs_define
 class QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel:
     """
     Attributes:
-        service_order_item_id (Union[None, Unset, int]):
-        task_name (Union[None, Unset, str]):
-        task_description (Union[None, Unset, str]):
-        as_found_details (Union[None, Unset, str]):
-        as_left_details (Union[None, Unset, str]):
+        service_order_item_id (Optional[int]):
+        task_name (Optional[str]):
+        task_description (Optional[str]):
+        as_found_details (Optional[str]):
+        as_left_details (Optional[str]):
     """
 
-    service_order_item_id: Union[None, Unset, int] = UNSET
-    task_name: Union[None, Unset, str] = UNSET
-    task_description: Union[None, Unset, str] = UNSET
-    as_found_details: Union[None, Unset, str] = UNSET
-    as_left_details: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    service_order_item_id: Optional[int] = None
+    task_name: Optional[str] = None
+    task_description: Optional[str] = None
+    as_found_details: Optional[str] = None
+    as_left_details: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         service_order_item_id = self.service_order_item_id
 
         task_name = self.task_name
@@ -40,18 +36,18 @@ class QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel:
 
         as_left_details = self.as_left_details
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if service_order_item_id is not UNSET:
+        if service_order_item_id is not None:
             field_dict["ServiceOrderItemId"] = service_order_item_id
-        if task_name is not UNSET:
+        if task_name is not None:
             field_dict["TaskName"] = task_name
-        if task_description is not UNSET:
+        if task_description is not None:
             field_dict["TaskDescription"] = task_description
-        if as_found_details is not UNSET:
+        if as_found_details is not None:
             field_dict["AsFoundDetails"] = as_found_details
-        if as_left_details is not UNSET:
+        if as_left_details is not None:
             field_dict["AsLeftDetails"] = as_left_details
 
         return field_dict
@@ -59,15 +55,15 @@ class QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        service_order_item_id = d.pop("ServiceOrderItemId", UNSET)
+        service_order_item_id = d.pop("ServiceOrderItemId", None)
 
-        task_name = d.pop("TaskName", UNSET)
+        task_name = d.pop("TaskName", None)
 
-        task_description = d.pop("TaskDescription", UNSET)
+        task_description = d.pop("TaskDescription", None)
 
-        as_found_details = d.pop("AsFoundDetails", UNSET)
+        as_found_details = d.pop("AsFoundDetails", None)
 
-        as_left_details = d.pop("AsLeftDetails", UNSET)
+        as_left_details = d.pop("AsLeftDetails", None)
 
         qualer_api_models_service_order_item_tasks_from_service_order_item_task_create_model = cls(
             service_order_item_id=service_order_item_id,
@@ -83,7 +79,7 @@ class QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel:
         return qualer_api_models_service_order_item_tasks_from_service_order_item_task_create_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

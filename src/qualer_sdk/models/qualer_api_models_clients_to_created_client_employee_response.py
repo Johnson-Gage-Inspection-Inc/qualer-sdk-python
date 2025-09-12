@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsClientsToCreatedClientEmployeeResponse")
 
@@ -13,19 +11,19 @@ T = TypeVar("T", bound="QualerApiModelsClientsToCreatedClientEmployeeResponse")
 class QualerApiModelsClientsToCreatedClientEmployeeResponse:
     """
     Attributes:
-        id (Union[None, Unset, int]):
+        id (Optional[int]):
     """
 
-    id: Union[None, Unset, int] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    id: Optional[int] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         id = self.id
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if id is not UNSET:
+        if id is not None:
             field_dict["Id"] = id
 
         return field_dict
@@ -33,19 +31,17 @@ class QualerApiModelsClientsToCreatedClientEmployeeResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        id = d.pop("Id", UNSET)
+        id = d.pop("Id", None)
 
         qualer_api_models_clients_to_created_client_employee_response = cls(
             id=id,
         )
 
-        qualer_api_models_clients_to_created_client_employee_response.additional_properties = (
-            d
-        )
+        qualer_api_models_clients_to_created_client_employee_response.additional_properties = d
         return qualer_api_models_clients_to_created_client_employee_response
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

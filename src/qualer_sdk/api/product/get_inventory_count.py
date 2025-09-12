@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 import httpx
 
@@ -11,8 +11,8 @@ from ...models.qualer_api_models_inventory_to_inventory_response_model import (
 from ...types import Response
 
 
-def _get_kwargs() -> dict[str, Any]:
-    _kwargs: dict[str, Any] = {
+def _get_kwargs() -> Dict[str, Any]:
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": "/api/products/inventorycount",
     }
@@ -22,15 +22,13 @@ def _get_kwargs() -> dict[str, Any]:
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[list["QualerApiModelsInventoryToInventoryResponseModel"]]:
+) -> Optional[List["QualerApiModelsInventoryToInventoryResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = (
-                QualerApiModelsInventoryToInventoryResponseModel.from_dict(
-                    response_200_item_data
-                )
+            response_200_item = QualerApiModelsInventoryToInventoryResponseModel.from_dict(
+                response_200_item_data
             )
 
             response_200.append(response_200_item)
@@ -44,7 +42,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[list["QualerApiModelsInventoryToInventoryResponseModel"]]:
+) -> Response[List["QualerApiModelsInventoryToInventoryResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -56,14 +54,14 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[list["QualerApiModelsInventoryToInventoryResponseModel"]]:
+) -> Response[List["QualerApiModelsInventoryToInventoryResponseModel"]]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsInventoryToInventoryResponseModel']]
+        Response[List['QualerApiModelsInventoryToInventoryResponseModel']]
     """
 
     kwargs = _get_kwargs()
@@ -78,14 +76,14 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[list["QualerApiModelsInventoryToInventoryResponseModel"]]:
+) -> Optional[List["QualerApiModelsInventoryToInventoryResponseModel"]]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsInventoryToInventoryResponseModel']
+        List['QualerApiModelsInventoryToInventoryResponseModel']
     """
 
     return sync_detailed(
@@ -96,14 +94,14 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[list["QualerApiModelsInventoryToInventoryResponseModel"]]:
+) -> Response[List["QualerApiModelsInventoryToInventoryResponseModel"]]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsInventoryToInventoryResponseModel']]
+        Response[List['QualerApiModelsInventoryToInventoryResponseModel']]
     """
 
     kwargs = _get_kwargs()
@@ -116,14 +114,14 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[list["QualerApiModelsInventoryToInventoryResponseModel"]]:
+) -> Optional[List["QualerApiModelsInventoryToInventoryResponseModel"]]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsInventoryToInventoryResponseModel']
+        List['QualerApiModelsInventoryToInventoryResponseModel']
     """
 
     return (

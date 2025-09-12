@@ -1,28 +1,28 @@
-"""Contains some shared types for properties"""
+"""Core types and utilities for the Qualer SDK
+
+We no longer use a custom ``Unset`` sentinel. ``None`` represents both
+"missing" and "null" values across the SDK.
+"""
 
 from collections.abc import Mapping, MutableMapping
 from http import HTTPStatus
-from typing import IO, BinaryIO, Generic, Literal, Optional, TypeVar, Union
+from typing import IO, BinaryIO, Generic, List, Optional, Tuple, TypeVar, Union
 
 from attrs import define
 
-
-class Unset:
-    def __bool__(self) -> Literal[False]:
-        return False
-
-
-UNSET: Unset = Unset()
+# Public type aliases to simplify annotations in user code.
+# MaybeUnset[T] expresses a value that may be absent (None) or present.
+T = TypeVar("T")
 
 # The types that `httpx.Client(files=)` can accept, copied from that library.
 FileContent = Union[IO[bytes], bytes, str]
 FileTypes = Union[
     # (filename, file (or bytes), content_type)
-    tuple[Optional[str], FileContent, Optional[str]],
+    Tuple[Optional[str], FileContent, Optional[str]],
     # (filename, file (or bytes), content_type, headers)
-    tuple[Optional[str], FileContent, Optional[str], Mapping[str, str]],
+    Tuple[Optional[str], FileContent, Optional[str], Mapping[str, str]],
 ]
-RequestFiles = list[tuple[str, FileTypes]]
+RequestFiles = List[Tuple[str, FileTypes]]
 
 
 @define
@@ -38,9 +38,6 @@ class File:
         return self.file_name, self.payload, self.mime_type
 
 
-T = TypeVar("T")
-
-
 @define
 class Response(Generic[T]):
     """A response from an endpoint"""
@@ -51,4 +48,9 @@ class Response(Generic[T]):
     parsed: Optional[T]
 
 
-__all__ = ["UNSET", "File", "FileTypes", "RequestFiles", "Response", "Unset"]
+__all__ = [
+    "File",
+    "FileTypes",
+    "RequestFiles",
+    "Response",
+]

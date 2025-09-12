@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_service_orders_from_charge_update_model_price_model import (
@@ -19,26 +17,24 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromChargeUpdateModel")
 class QualerApiModelsServiceOrdersFromChargeUpdateModel:
     """
     Attributes:
-        charges (Union[None, Unset, list['QualerApiModelsServiceOrdersFromChargeUpdateModelPriceModel']]):
+        charges (Optional[List['QualerApiModelsServiceOrdersFromChargeUpdateModelPriceModel']]):
     """
 
-    charges: Union[
-        None, Unset, list["QualerApiModelsServiceOrdersFromChargeUpdateModelPriceModel"]
-    ] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    charges: Union[None, List["QualerApiModelsServiceOrdersFromChargeUpdateModelPriceModel"]] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
-        charges: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.charges and not isinstance(self.charges, Unset):
+    def to_dict(self) -> Dict[str, Any]:
+        charges: Optional[List[Dict[str, Any]]] = None
+        if self.charges:
             charges = []
             for charges_item_data in self.charges:
                 charges_item = charges_item_data.to_dict()
                 charges.append(charges_item)
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if charges is not UNSET:
+        if charges is not None:
             field_dict["Charges"] = charges
 
         return field_dict
@@ -51,12 +47,10 @@ class QualerApiModelsServiceOrdersFromChargeUpdateModel:
 
         d = dict(src_dict)
         charges = []
-        _charges = d.pop("Charges", UNSET)
+        _charges = d.pop("Charges", None)
         for charges_item_data in _charges or []:
-            charges_item = (
-                QualerApiModelsServiceOrdersFromChargeUpdateModelPriceModel.from_dict(
-                    charges_item_data
-                )
+            charges_item = QualerApiModelsServiceOrdersFromChargeUpdateModelPriceModel.from_dict(
+                charges_item_data
             )
 
             charges.append(charges_item)
@@ -65,13 +59,11 @@ class QualerApiModelsServiceOrdersFromChargeUpdateModel:
             charges=charges,
         )
 
-        qualer_api_models_service_orders_from_charge_update_model.additional_properties = (
-            d
-        )
+        qualer_api_models_service_orders_from_charge_update_model.additional_properties = d
         return qualer_api_models_service_orders_from_charge_update_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerWebMvcAreasApiModelsAccountToLoginModel")
 
@@ -15,22 +13,22 @@ class QualerWebMvcAreasApiModelsAccountToLoginModel:
     Attributes:
         user_name (str):
         password (str):
-        clear_previous_tokens (Union[None, Unset, bool]):
+        clear_previous_tokens (Optional[bool]):
     """
 
     user_name: str
     password: str
-    clear_previous_tokens: Union[None, Unset, bool] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    clear_previous_tokens: Optional[bool] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         user_name = self.user_name
 
         password = self.password
 
         clear_previous_tokens = self.clear_previous_tokens
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
@@ -38,7 +36,7 @@ class QualerWebMvcAreasApiModelsAccountToLoginModel:
                 "Password": password,
             }
         )
-        if clear_previous_tokens is not UNSET:
+        if clear_previous_tokens is not None:
             field_dict["ClearPreviousTokens"] = clear_previous_tokens
 
         return field_dict
@@ -50,7 +48,7 @@ class QualerWebMvcAreasApiModelsAccountToLoginModel:
 
         password = d.pop("Password")
 
-        clear_previous_tokens = d.pop("ClearPreviousTokens", UNSET)
+        clear_previous_tokens = d.pop("ClearPreviousTokens", None)
 
         qualer_web_mvc_areas_api_models_account_to_login_model = cls(
             user_name=user_name,
@@ -62,7 +60,7 @@ class QualerWebMvcAreasApiModelsAccountToLoginModel:
         return qualer_web_mvc_areas_api_models_account_to_login_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

@@ -1,12 +1,10 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, Union, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
-
-from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model import (
@@ -21,86 +19,86 @@ T = TypeVar("T", bound="QualerApiModelsMeasurementsToMeasurementRecordResponseMo
 class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
     """
     Attributes:
-        service_order_id (Union[None, Unset, int]):
-        service_order_number (Union[None, Unset, int]):
-        custom_order_number (Union[None, Unset, str]):
-        order_item_number (Union[None, Unset, int]):
-        certificate_number (Union[None, Unset, str]):
-        result_status (Union[None, Unset, str]):
-        as_found_result (Union[None, Unset, str]):
-        as_left_result (Union[None, Unset, str]):
-        service_date (Union[None, Unset, datetime.datetime]):
-        serial_number (Union[None, Unset, str]):
-        asset_tag (Union[None, Unset, str]):
-        asset_user (Union[None, Unset, str]):
-        asset_tag_change (Union[None, Unset, str]):
-        asset_user_change (Union[None, Unset, str]):
-        service_notes (Union[None, Unset, str]):
-        serial_number_change (Union[None, Unset, str]):
-        due_date (Union[None, Unset, datetime.datetime]):
-        next_service_date (Union[None, Unset, datetime.datetime]):
-        service_level (Union[None, Unset, str]):
-        service_level_code (Union[None, Unset, str]):
-        next_service_level (Union[None, Unset, str]):
-        next_service_level_code (Union[None, Unset, str]):
-        asset_name (Union[None, Unset, str]):
-        asset_description (Union[None, Unset, str]):
-        parts_charge (Union[None, Unset, float]):
-        parts_charge_before_discount (Union[None, Unset, float]):
-        service_charge (Union[None, Unset, float]):
-        repairs_charge (Union[None, Unset, float]):
-        segment_name (Union[None, Unset, str]):
-        schedule_name (Union[None, Unset, str]):
-        service_schedule_segment_id (Union[None, Unset, int]):
-        forward_next_service (Union[None, Unset, bool]):
-        forward_segment_id (Union[None, Unset, int]):
-        measurement_batches (Union[None, Unset,
-            list['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel']]):
+        service_order_id (Optional[int]):
+        service_order_number (Optional[int]):
+        custom_order_number (Optional[str]):
+        order_item_number (Optional[int]):
+        certificate_number (Optional[str]):
+        result_status (Optional[str]):
+        as_found_result (Optional[str]):
+        as_left_result (Optional[str]):
+        service_date (Optional[datetime.datetime]):
+        serial_number (Optional[str]):
+        asset_tag (Optional[str]):
+        asset_user (Optional[str]):
+        asset_tag_change (Optional[str]):
+        asset_user_change (Optional[str]):
+        service_notes (Optional[str]):
+        serial_number_change (Optional[str]):
+        due_date (Optional[datetime.datetime]):
+        next_service_date (Optional[datetime.datetime]):
+        service_level (Optional[str]):
+        service_level_code (Optional[str]):
+        next_service_level (Optional[str]):
+        next_service_level_code (Optional[str]):
+        asset_name (Optional[str]):
+        asset_description (Optional[str]):
+        parts_charge (Optional[float]):
+        parts_charge_before_discount (Optional[float]):
+        service_charge (Optional[float]):
+        repairs_charge (Optional[float]):
+        segment_name (Optional[str]):
+        schedule_name (Optional[str]):
+        service_schedule_segment_id (Optional[int]):
+        forward_next_service (Optional[bool]):
+        forward_segment_id (Optional[int]):
+        measurement_batches (Union[None,
+            List['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel']]):
     """
 
-    service_order_id: Union[None, Unset, int] = UNSET
-    service_order_number: Union[None, Unset, int] = UNSET
-    custom_order_number: Union[None, Unset, str] = UNSET
-    order_item_number: Union[None, Unset, int] = UNSET
-    certificate_number: Union[None, Unset, str] = UNSET
-    result_status: Union[None, Unset, str] = UNSET
-    as_found_result: Union[None, Unset, str] = UNSET
-    as_left_result: Union[None, Unset, str] = UNSET
-    service_date: Union[None, Unset, datetime.datetime] = UNSET
-    serial_number: Union[None, Unset, str] = UNSET
-    asset_tag: Union[None, Unset, str] = UNSET
-    asset_user: Union[None, Unset, str] = UNSET
-    asset_tag_change: Union[None, Unset, str] = UNSET
-    asset_user_change: Union[None, Unset, str] = UNSET
-    service_notes: Union[None, Unset, str] = UNSET
-    serial_number_change: Union[None, Unset, str] = UNSET
-    due_date: Union[None, Unset, datetime.datetime] = UNSET
-    next_service_date: Union[None, Unset, datetime.datetime] = UNSET
-    service_level: Union[None, Unset, str] = UNSET
-    service_level_code: Union[None, Unset, str] = UNSET
-    next_service_level: Union[None, Unset, str] = UNSET
-    next_service_level_code: Union[None, Unset, str] = UNSET
-    asset_name: Union[None, Unset, str] = UNSET
-    asset_description: Union[None, Unset, str] = UNSET
-    parts_charge: Union[None, Unset, float] = UNSET
-    parts_charge_before_discount: Union[None, Unset, float] = UNSET
-    service_charge: Union[None, Unset, float] = UNSET
-    repairs_charge: Union[None, Unset, float] = UNSET
-    segment_name: Union[None, Unset, str] = UNSET
-    schedule_name: Union[None, Unset, str] = UNSET
-    service_schedule_segment_id: Union[None, Unset, int] = UNSET
-    forward_next_service: Union[None, Unset, bool] = UNSET
-    forward_segment_id: Union[None, Unset, int] = UNSET
+    service_order_id: Optional[int] = None
+    service_order_number: Optional[int] = None
+    custom_order_number: Optional[str] = None
+    order_item_number: Optional[int] = None
+    certificate_number: Optional[str] = None
+    result_status: Optional[str] = None
+    as_found_result: Optional[str] = None
+    as_left_result: Optional[str] = None
+    service_date: Optional[datetime.datetime] = None
+    serial_number: Optional[str] = None
+    asset_tag: Optional[str] = None
+    asset_user: Optional[str] = None
+    asset_tag_change: Optional[str] = None
+    asset_user_change: Optional[str] = None
+    service_notes: Optional[str] = None
+    serial_number_change: Optional[str] = None
+    due_date: Optional[datetime.datetime] = None
+    next_service_date: Optional[datetime.datetime] = None
+    service_level: Optional[str] = None
+    service_level_code: Optional[str] = None
+    next_service_level: Optional[str] = None
+    next_service_level_code: Optional[str] = None
+    asset_name: Optional[str] = None
+    asset_description: Optional[str] = None
+    parts_charge: Optional[float] = None
+    parts_charge_before_discount: Optional[float] = None
+    service_charge: Optional[float] = None
+    repairs_charge: Optional[float] = None
+    segment_name: Optional[str] = None
+    schedule_name: Optional[str] = None
+    service_schedule_segment_id: Optional[int] = None
+    forward_next_service: Optional[bool] = None
+    forward_segment_id: Optional[int] = None
     measurement_batches: Union[
         None,
-        Unset,
-        list[
+        None,
+        List[
             "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel"
         ],
-    ] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    ] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         service_order_id = self.service_order_id
 
         service_order_number = self.service_order_number
@@ -111,44 +109,40 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
 
         certificate_number = self.certificate_number
 
-        result_status: Union[None, Unset, str]
-        if isinstance(self.result_status, Unset):
-            result_status = UNSET
+        result_status: Optional[str]
+        if not self.result_status:
+            result_status = None
         else:
-            result_status: Union[None, Unset, str]
+            result_status: Optional[str]
 
-            if isinstance(self.result_status, Unset):
+            if not self.result_status:
 
-                result_status = UNSET
-
+                result_status = None
             else:
-
                 result_status = self.result_status
-        as_found_result: Union[None, Unset, str]
+        as_found_result: Optional[str]
 
-        if isinstance(self.as_found_result, Unset):
+        if not self.as_found_result:
 
-            as_found_result = UNSET
+            as_found_result = None
 
         else:
 
             as_found_result = self.as_found_result
-        as_left_result: Union[None, Unset, str]
-        if isinstance(self.as_left_result, Unset):
-            as_left_result = UNSET
+        as_left_result: Optional[str]
+        if not self.as_left_result:
+            as_left_result = None
         else:
-            as_left_result: Union[None, Unset, str]
+            as_left_result: Optional[str]
 
-            if isinstance(self.as_left_result, Unset):
+            if not self.as_left_result:
 
-                as_left_result = UNSET
-
+                as_left_result = None
             else:
-
                 as_left_result = self.as_left_result
-        service_date: Union[None, Unset, str]
-        if isinstance(self.service_date, Unset):
-            service_date = UNSET
+        service_date: Optional[str]
+        if not self.service_date:
+            service_date = None
         elif isinstance(self.service_date, datetime.datetime):
             service_date = self.service_date.isoformat()
         else:
@@ -168,17 +162,17 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
 
         serial_number_change = self.serial_number_change
 
-        due_date: Union[None, Unset, str]
-        if isinstance(self.due_date, Unset):
-            due_date = UNSET
+        due_date: Optional[str]
+        if not self.due_date:
+            due_date = None
         elif isinstance(self.due_date, datetime.datetime):
             due_date = self.due_date.isoformat()
         else:
             due_date = self.due_date
 
-        next_service_date: Union[None, Unset, str]
-        if isinstance(self.next_service_date, Unset):
-            next_service_date = UNSET
+        next_service_date: Optional[str]
+        if not self.next_service_date:
+            next_service_date = None
         elif isinstance(self.next_service_date, datetime.datetime):
             next_service_date = self.next_service_date.isoformat()
         else:
@@ -214,83 +208,83 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
 
         forward_segment_id = self.forward_segment_id
 
-        measurement_batches: Union[None, Unset, list[dict[str, Any]]] = UNSET
-        if self.measurement_batches and not isinstance(self.measurement_batches, Unset):
+        measurement_batches: Optional[List[Dict[str, Any]]] = None
+        if self.measurement_batches:
             measurement_batches = []
             for measurement_batches_item_data in self.measurement_batches:
                 measurement_batches_item = measurement_batches_item_data.to_dict()
                 measurement_batches.append(measurement_batches_item)
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if service_order_id is not UNSET:
+        if service_order_id is not None:
             field_dict["ServiceOrderId"] = service_order_id
-        if service_order_number is not UNSET:
+        if service_order_number is not None:
             field_dict["ServiceOrderNumber"] = service_order_number
-        if custom_order_number is not UNSET:
+        if custom_order_number is not None:
             field_dict["CustomOrderNumber"] = custom_order_number
-        if order_item_number is not UNSET:
+        if order_item_number is not None:
             field_dict["OrderItemNumber"] = order_item_number
-        if certificate_number is not UNSET:
+        if certificate_number is not None:
             field_dict["CertificateNumber"] = certificate_number
-        if result_status is not UNSET:
+        if result_status is not None:
             field_dict["ResultStatus"] = result_status
-        if as_found_result is not UNSET:
+        if as_found_result is not None:
             field_dict["AsFoundResult"] = as_found_result
-        if as_left_result is not UNSET:
+        if as_left_result is not None:
             field_dict["AsLeftResult"] = as_left_result
-        if service_date is not UNSET:
+        if service_date is not None:
             field_dict["ServiceDate"] = service_date
-        if serial_number is not UNSET:
+        if serial_number is not None:
             field_dict["SerialNumber"] = serial_number
-        if asset_tag is not UNSET:
+        if asset_tag is not None:
             field_dict["AssetTag"] = asset_tag
-        if asset_user is not UNSET:
+        if asset_user is not None:
             field_dict["AssetUser"] = asset_user
-        if asset_tag_change is not UNSET:
+        if asset_tag_change is not None:
             field_dict["AssetTagChange"] = asset_tag_change
-        if asset_user_change is not UNSET:
+        if asset_user_change is not None:
             field_dict["AssetUserChange"] = asset_user_change
-        if service_notes is not UNSET:
+        if service_notes is not None:
             field_dict["ServiceNotes"] = service_notes
-        if serial_number_change is not UNSET:
+        if serial_number_change is not None:
             field_dict["SerialNumberChange"] = serial_number_change
-        if due_date is not UNSET:
+        if due_date is not None:
             field_dict["DueDate"] = due_date
-        if next_service_date is not UNSET:
+        if next_service_date is not None:
             field_dict["NextServiceDate"] = next_service_date
-        if service_level is not UNSET:
+        if service_level is not None:
             field_dict["ServiceLevel"] = service_level
-        if service_level_code is not UNSET:
+        if service_level_code is not None:
             field_dict["ServiceLevelCode"] = service_level_code
-        if next_service_level is not UNSET:
+        if next_service_level is not None:
             field_dict["NextServiceLevel"] = next_service_level
-        if next_service_level_code is not UNSET:
+        if next_service_level_code is not None:
             field_dict["NextServiceLevelCode"] = next_service_level_code
-        if asset_name is not UNSET:
+        if asset_name is not None:
             field_dict["AssetName"] = asset_name
-        if asset_description is not UNSET:
+        if asset_description is not None:
             field_dict["AssetDescription"] = asset_description
-        if parts_charge is not UNSET:
+        if parts_charge is not None:
             field_dict["PartsCharge"] = parts_charge
-        if parts_charge_before_discount is not UNSET:
+        if parts_charge_before_discount is not None:
             field_dict["PartsChargeBeforeDiscount"] = parts_charge_before_discount
-        if service_charge is not UNSET:
+        if service_charge is not None:
             field_dict["ServiceCharge"] = service_charge
-        if repairs_charge is not UNSET:
+        if repairs_charge is not None:
             field_dict["RepairsCharge"] = repairs_charge
-        if segment_name is not UNSET:
+        if segment_name is not None:
             field_dict["SegmentName"] = segment_name
-        if schedule_name is not UNSET:
+        if schedule_name is not None:
             field_dict["ScheduleName"] = schedule_name
-        if service_schedule_segment_id is not UNSET:
+        if service_schedule_segment_id is not None:
             field_dict["ServiceScheduleSegmentId"] = service_schedule_segment_id
-        if forward_next_service is not UNSET:
+        if forward_next_service is not None:
             field_dict["ForwardNextService"] = forward_next_service
-        if forward_segment_id is not UNSET:
+        if forward_segment_id is not None:
             field_dict["ForwardSegmentId"] = forward_segment_id
-        if measurement_batches is not UNSET:
+        if measurement_batches is not None:
             field_dict["MeasurementBatches"] = measurement_batches
 
         return field_dict
@@ -302,135 +296,125 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
         )
 
         d = dict(src_dict)
-        service_order_id = d.pop("ServiceOrderId", UNSET)
+        service_order_id = d.pop("ServiceOrderId", None)
 
-        service_order_number = d.pop("ServiceOrderNumber", UNSET)
+        service_order_number = d.pop("ServiceOrderNumber", None)
 
-        custom_order_number = d.pop("CustomOrderNumber", UNSET)
+        custom_order_number = d.pop("CustomOrderNumber", None)
 
-        order_item_number = d.pop("OrderItemNumber", UNSET)
+        order_item_number = d.pop("OrderItemNumber", None)
 
-        certificate_number = d.pop("CertificateNumber", UNSET)
+        certificate_number = d.pop("CertificateNumber", None)
 
-        def _parse_result_status(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_result_status(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        result_status = _parse_result_status(d.pop("ResultStatus", UNSET))
+        result_status = _parse_result_status(d.pop("ResultStatus", None))
 
-        as_found_result = d.pop("AsFoundResult", UNSET)
+        as_found_result = d.pop("AsFoundResult", None)
 
-        def _parse_as_left_result(data: object) -> Union[None, Unset, str]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(Union[None, Unset, str], data)
+        def _parse_as_left_result(data: object) -> Optional[str]:
+            if not data:
+                return None
+            return cast(Optional[str], data)
 
-        as_left_result = _parse_as_left_result(d.pop("AsLeftResult", UNSET))
+        as_left_result = _parse_as_left_result(d.pop("AsLeftResult", None))
 
-        def _parse_service_date(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_service_date(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 service_date_type_0 = isoparse(data)
 
                 return service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        service_date = _parse_service_date(d.pop("ServiceDate", UNSET))
+        service_date = _parse_service_date(d.pop("ServiceDate", None))
 
-        serial_number = d.pop("SerialNumber", UNSET)
+        serial_number = d.pop("SerialNumber", None)
 
-        asset_tag = d.pop("AssetTag", UNSET)
+        asset_tag = d.pop("AssetTag", None)
 
-        asset_user = d.pop("AssetUser", UNSET)
+        asset_user = d.pop("AssetUser", None)
 
-        asset_tag_change = d.pop("AssetTagChange", UNSET)
+        asset_tag_change = d.pop("AssetTagChange", None)
 
-        asset_user_change = d.pop("AssetUserChange", UNSET)
+        asset_user_change = d.pop("AssetUserChange", None)
 
-        service_notes = d.pop("ServiceNotes", UNSET)
+        service_notes = d.pop("ServiceNotes", None)
 
-        serial_number_change = d.pop("SerialNumberChange", UNSET)
+        serial_number_change = d.pop("SerialNumberChange", None)
 
-        def _parse_due_date(data: object) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        def _parse_due_date(data: object) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 due_date_type_0 = isoparse(data)
 
                 return due_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        due_date = _parse_due_date(d.pop("DueDate", UNSET))
+        due_date = _parse_due_date(d.pop("DueDate", None))
 
         def _parse_next_service_date(
             data: object,
-        ) -> Union[None, Unset, datetime.datetime]:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
+        ) -> Optional[datetime.datetime]:
+            if not data:
+                return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 next_service_date_type_0 = isoparse(data)
 
                 return next_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
-            return cast(Union[None, Unset, datetime.datetime], data)
+            return cast(Optional[datetime.datetime], data)
 
-        next_service_date = _parse_next_service_date(d.pop("NextServiceDate", UNSET))
+        next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
 
-        service_level = d.pop("ServiceLevel", UNSET)
+        service_level = d.pop("ServiceLevel", None)
 
-        service_level_code = d.pop("ServiceLevelCode", UNSET)
+        service_level_code = d.pop("ServiceLevelCode", None)
 
-        next_service_level = d.pop("NextServiceLevel", UNSET)
+        next_service_level = d.pop("NextServiceLevel", None)
 
-        next_service_level_code = d.pop("NextServiceLevelCode", UNSET)
+        next_service_level_code = d.pop("NextServiceLevelCode", None)
 
-        asset_name = d.pop("AssetName", UNSET)
+        asset_name = d.pop("AssetName", None)
 
-        asset_description = d.pop("AssetDescription", UNSET)
+        asset_description = d.pop("AssetDescription", None)
 
-        parts_charge = d.pop("PartsCharge", UNSET)
+        parts_charge = d.pop("PartsCharge", None)
 
-        parts_charge_before_discount = d.pop("PartsChargeBeforeDiscount", UNSET)
+        parts_charge_before_discount = d.pop("PartsChargeBeforeDiscount", None)
 
-        service_charge = d.pop("ServiceCharge", UNSET)
+        service_charge = d.pop("ServiceCharge", None)
 
-        repairs_charge = d.pop("RepairsCharge", UNSET)
+        repairs_charge = d.pop("RepairsCharge", None)
 
-        segment_name = d.pop("SegmentName", UNSET)
+        segment_name = d.pop("SegmentName", None)
 
-        schedule_name = d.pop("ScheduleName", UNSET)
+        schedule_name = d.pop("ScheduleName", None)
 
-        service_schedule_segment_id = d.pop("ServiceScheduleSegmentId", UNSET)
+        service_schedule_segment_id = d.pop("ServiceScheduleSegmentId", None)
 
-        forward_next_service = d.pop("ForwardNextService", UNSET)
+        forward_next_service = d.pop("ForwardNextService", None)
 
-        forward_segment_id = d.pop("ForwardSegmentId", UNSET)
+        forward_segment_id = d.pop("ForwardSegmentId", None)
 
         measurement_batches = []
-        _measurement_batches = d.pop("MeasurementBatches", UNSET)
+        _measurement_batches = d.pop("MeasurementBatches", None)
         for measurement_batches_item_data in _measurement_batches or []:
             measurement_batches_item = QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel.from_dict(
                 measurement_batches_item_data
@@ -481,7 +465,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
         return qualer_api_models_measurements_to_measurement_record_response_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

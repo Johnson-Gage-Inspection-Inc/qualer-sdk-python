@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 import httpx
 
@@ -14,8 +14,8 @@ from ...types import Response
 
 def _get_kwargs(
     element_page: GetGet4ElementPage,
-) -> dict[str, Any]:
-    _kwargs: dict[str, Any] = {
+) -> Dict[str, Any]:
+    _kwargs: Dict[str, Any] = {
         "method": "get",
         "url": f"/api/user/preferences/{element_page}",
     }
@@ -25,15 +25,13 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[list["QualerApiModelsAssetToEmployeePreferenceResponseModel"]]:
+) -> Optional[List["QualerApiModelsAssetToEmployeePreferenceResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = (
-                QualerApiModelsAssetToEmployeePreferenceResponseModel.from_dict(
-                    response_200_item_data
-                )
+            response_200_item = QualerApiModelsAssetToEmployeePreferenceResponseModel.from_dict(
+                response_200_item_data
             )
 
             response_200.append(response_200_item)
@@ -47,7 +45,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[list["QualerApiModelsAssetToEmployeePreferenceResponseModel"]]:
+) -> Response[List["QualerApiModelsAssetToEmployeePreferenceResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -60,7 +58,7 @@ def sync_detailed(
     element_page: GetGet4ElementPage,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[list["QualerApiModelsAssetToEmployeePreferenceResponseModel"]]:
+) -> Response[List["QualerApiModelsAssetToEmployeePreferenceResponseModel"]]:
     """elementPage:
     AssetManager = 1,
     WorkOrders = 2,
@@ -86,7 +84,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsAssetToEmployeePreferenceResponseModel']]
+        Response[List['QualerApiModelsAssetToEmployeePreferenceResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -104,7 +102,7 @@ def sync(
     element_page: GetGet4ElementPage,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[list["QualerApiModelsAssetToEmployeePreferenceResponseModel"]]:
+) -> Optional[List["QualerApiModelsAssetToEmployeePreferenceResponseModel"]]:
     """elementPage:
     AssetManager = 1,
     WorkOrders = 2,
@@ -130,7 +128,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsAssetToEmployeePreferenceResponseModel']
+        List['QualerApiModelsAssetToEmployeePreferenceResponseModel']
     """
 
     return sync_detailed(
@@ -143,7 +141,7 @@ async def asyncio_detailed(
     element_page: GetGet4ElementPage,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[list["QualerApiModelsAssetToEmployeePreferenceResponseModel"]]:
+) -> Response[List["QualerApiModelsAssetToEmployeePreferenceResponseModel"]]:
     """elementPage:
     AssetManager = 1,
     WorkOrders = 2,
@@ -169,7 +167,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[list['QualerApiModelsAssetToEmployeePreferenceResponseModel']]
+        Response[List['QualerApiModelsAssetToEmployeePreferenceResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -185,7 +183,7 @@ async def asyncio(
     element_page: GetGet4ElementPage,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[list["QualerApiModelsAssetToEmployeePreferenceResponseModel"]]:
+) -> Optional[List["QualerApiModelsAssetToEmployeePreferenceResponseModel"]]:
     """elementPage:
     AssetManager = 1,
     WorkOrders = 2,
@@ -211,7 +209,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        list['QualerApiModelsAssetToEmployeePreferenceResponseModel']
+        List['QualerApiModelsAssetToEmployeePreferenceResponseModel']
     """
 
     return (

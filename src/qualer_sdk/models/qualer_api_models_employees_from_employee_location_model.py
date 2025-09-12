@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsEmployeesFromEmployeeLocationModel")
 
@@ -13,27 +11,27 @@ T = TypeVar("T", bound="QualerApiModelsEmployeesFromEmployeeLocationModel")
 class QualerApiModelsEmployeesFromEmployeeLocationModel:
     """
     Attributes:
-        latitude (Union[None, Unset, float]):
-        longitude (Union[None, Unset, float]):
-        accuracy (Union[None, Unset, float]):
-        altitude (Union[None, Unset, float]):
-        altitude_accuracy (Union[None, Unset, float]):
-        heading (Union[None, Unset, float]):
-        speed (Union[None, Unset, float]):
-        timestamp (Union[None, Unset, int]):
+        latitude (Optional[float]):
+        longitude (Optional[float]):
+        accuracy (Optional[float]):
+        altitude (Optional[float]):
+        altitude_accuracy (Optional[float]):
+        heading (Optional[float]):
+        speed (Optional[float]):
+        timestamp (Optional[int]):
     """
 
-    latitude: Union[None, Unset, float] = UNSET
-    longitude: Union[None, Unset, float] = UNSET
-    accuracy: Union[None, Unset, float] = UNSET
-    altitude: Union[None, Unset, float] = UNSET
-    altitude_accuracy: Union[None, Unset, float] = UNSET
-    heading: Union[None, Unset, float] = UNSET
-    speed: Union[None, Unset, float] = UNSET
-    timestamp: Union[None, Unset, int] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
+    accuracy: Optional[float] = None
+    altitude: Optional[float] = None
+    altitude_accuracy: Optional[float] = None
+    heading: Optional[float] = None
+    speed: Optional[float] = None
+    timestamp: Optional[int] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         latitude = self.latitude
 
         longitude = self.longitude
@@ -50,24 +48,24 @@ class QualerApiModelsEmployeesFromEmployeeLocationModel:
 
         timestamp = self.timestamp
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if latitude is not UNSET:
+        if latitude is not None:
             field_dict["Latitude"] = latitude
-        if longitude is not UNSET:
+        if longitude is not None:
             field_dict["Longitude"] = longitude
-        if accuracy is not UNSET:
+        if accuracy is not None:
             field_dict["Accuracy"] = accuracy
-        if altitude is not UNSET:
+        if altitude is not None:
             field_dict["Altitude"] = altitude
-        if altitude_accuracy is not UNSET:
+        if altitude_accuracy is not None:
             field_dict["AltitudeAccuracy"] = altitude_accuracy
-        if heading is not UNSET:
+        if heading is not None:
             field_dict["Heading"] = heading
-        if speed is not UNSET:
+        if speed is not None:
             field_dict["Speed"] = speed
-        if timestamp is not UNSET:
+        if timestamp is not None:
             field_dict["Timestamp"] = timestamp
 
         return field_dict
@@ -75,21 +73,21 @@ class QualerApiModelsEmployeesFromEmployeeLocationModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        latitude = d.pop("Latitude", UNSET)
+        latitude = d.pop("Latitude", None)
 
-        longitude = d.pop("Longitude", UNSET)
+        longitude = d.pop("Longitude", None)
 
-        accuracy = d.pop("Accuracy", UNSET)
+        accuracy = d.pop("Accuracy", None)
 
-        altitude = d.pop("Altitude", UNSET)
+        altitude = d.pop("Altitude", None)
 
-        altitude_accuracy = d.pop("AltitudeAccuracy", UNSET)
+        altitude_accuracy = d.pop("AltitudeAccuracy", None)
 
-        heading = d.pop("Heading", UNSET)
+        heading = d.pop("Heading", None)
 
-        speed = d.pop("Speed", UNSET)
+        speed = d.pop("Speed", None)
 
-        timestamp = d.pop("Timestamp", UNSET)
+        timestamp = d.pop("Timestamp", None)
 
         qualer_api_models_employees_from_employee_location_model = cls(
             latitude=latitude,
@@ -102,13 +100,11 @@ class QualerApiModelsEmployeesFromEmployeeLocationModel:
             timestamp=timestamp,
         )
 
-        qualer_api_models_employees_from_employee_location_model.additional_properties = (
-            d
-        )
+        qualer_api_models_employees_from_employee_location_model.additional_properties = d
         return qualer_api_models_employees_from_employee_location_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

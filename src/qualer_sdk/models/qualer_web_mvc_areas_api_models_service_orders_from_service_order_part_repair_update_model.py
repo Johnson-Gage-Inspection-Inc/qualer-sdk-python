@@ -1,12 +1,10 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
-
-from ..types import UNSET, Unset
 
 T = TypeVar(
     "T",
@@ -18,49 +16,49 @@ T = TypeVar(
 class QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairUpdateModel:
     """
     Attributes:
-        service_order_item_part_id (Union[None, Unset, int]):
-        name (Union[None, Unset, str]):
-        description (Union[None, Unset, str]):
-        charge_date (Union[None, Unset, datetime.datetime]):
-        price (Union[None, Unset, float]):
-        unit_name (Union[None, Unset, str]):
-        is_hourly_pricing (Union[None, Unset, bool]):
-        time_spent_in_minutes (Union[None, Unset, float]):
-        quantity (Union[None, Unset, float]):
-        discount (Union[None, Unset, float]):
-        is_taxable (Union[None, Unset, bool]):
-        delivery_charge (Union[None, Unset, float]):
-        free_quantity (Union[None, Unset, int]):
-        created_by_id (Union[None, Unset, int]):
-        service_order_charge_type (Union[None, Unset, str]):
+        service_order_item_part_id (Optional[int]):
+        name (Optional[str]):
+        description (Optional[str]):
+        charge_date (Optional[datetime.datetime]):
+        price (Optional[float]):
+        unit_name (Optional[str]):
+        is_hourly_pricing (Optional[bool]):
+        time_spent_in_minutes (Optional[float]):
+        quantity (Optional[float]):
+        discount (Optional[float]):
+        is_taxable (Optional[bool]):
+        delivery_charge (Optional[float]):
+        free_quantity (Optional[int]):
+        created_by_id (Optional[int]):
+        service_order_charge_type (Optional[str]):
     """
 
-    service_order_item_part_id: Union[None, Unset, int] = UNSET
-    name: Union[None, Unset, str] = UNSET
-    description: Union[None, Unset, str] = UNSET
-    charge_date: Union[None, Unset, datetime.datetime] = UNSET
-    price: Union[None, Unset, float] = UNSET
-    unit_name: Union[None, Unset, str] = UNSET
-    is_hourly_pricing: Union[None, Unset, bool] = UNSET
-    time_spent_in_minutes: Union[None, Unset, float] = UNSET
-    quantity: Union[None, Unset, float] = UNSET
-    discount: Union[None, Unset, float] = UNSET
-    is_taxable: Union[None, Unset, bool] = UNSET
-    delivery_charge: Union[None, Unset, float] = UNSET
-    free_quantity: Union[None, Unset, int] = UNSET
-    created_by_id: Union[None, Unset, int] = UNSET
-    service_order_charge_type: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    service_order_item_part_id: Optional[int] = None
+    name: Optional[str] = None
+    description: Optional[str] = None
+    charge_date: Optional[datetime.datetime] = None
+    price: Optional[float] = None
+    unit_name: Optional[str] = None
+    is_hourly_pricing: Optional[bool] = None
+    time_spent_in_minutes: Optional[float] = None
+    quantity: Optional[float] = None
+    discount: Optional[float] = None
+    is_taxable: Optional[bool] = None
+    delivery_charge: Optional[float] = None
+    free_quantity: Optional[int] = None
+    created_by_id: Optional[int] = None
+    service_order_charge_type: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         service_order_item_part_id = self.service_order_item_part_id
 
         name = self.name
 
         description = self.description
 
-        charge_date: Union[None, Unset, str] = UNSET
-        if self.charge_date and not isinstance(self.charge_date, Unset):
+        charge_date: Optional[str] = None
+        if self.charge_date:
             charge_date = self.charge_date.isoformat()
 
         price = self.price
@@ -85,38 +83,38 @@ class QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairUpdateMod
 
         service_order_charge_type = self.service_order_charge_type
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if service_order_item_part_id is not UNSET:
+        if service_order_item_part_id is not None:
             field_dict["ServiceOrderItemPartId"] = service_order_item_part_id
-        if name is not UNSET:
+        if name is not None:
             field_dict["Name"] = name
-        if description is not UNSET:
+        if description is not None:
             field_dict["Description"] = description
-        if charge_date is not UNSET:
+        if charge_date is not None:
             field_dict["ChargeDate"] = charge_date
-        if price is not UNSET:
+        if price is not None:
             field_dict["Price"] = price
-        if unit_name is not UNSET:
+        if unit_name is not None:
             field_dict["UnitName"] = unit_name
-        if is_hourly_pricing is not UNSET:
+        if is_hourly_pricing is not None:
             field_dict["IsHourlyPricing"] = is_hourly_pricing
-        if time_spent_in_minutes is not UNSET:
+        if time_spent_in_minutes is not None:
             field_dict["TimeSpentInMinutes"] = time_spent_in_minutes
-        if quantity is not UNSET:
+        if quantity is not None:
             field_dict["Quantity"] = quantity
-        if discount is not UNSET:
+        if discount is not None:
             field_dict["Discount"] = discount
-        if is_taxable is not UNSET:
+        if is_taxable is not None:
             field_dict["IsTaxable"] = is_taxable
-        if delivery_charge is not UNSET:
+        if delivery_charge is not None:
             field_dict["DeliveryCharge"] = delivery_charge
-        if free_quantity is not UNSET:
+        if free_quantity is not None:
             field_dict["FreeQuantity"] = free_quantity
-        if created_by_id is not UNSET:
+        if created_by_id is not None:
             field_dict["CreatedById"] = created_by_id
-        if service_order_charge_type is not UNSET:
+        if service_order_charge_type is not None:
             field_dict["ServiceOrderChargeType"] = service_order_charge_type
 
         return field_dict
@@ -124,40 +122,40 @@ class QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairUpdateMod
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        service_order_item_part_id = d.pop("ServiceOrderItemPartId", UNSET)
+        service_order_item_part_id = d.pop("ServiceOrderItemPartId", None)
 
-        name = d.pop("Name", UNSET)
+        name = d.pop("Name", None)
 
-        description = d.pop("Description", UNSET)
+        description = d.pop("Description", None)
 
-        _charge_date = d.pop("ChargeDate", UNSET)
-        charge_date: Union[None, Unset, datetime.datetime]
-        if isinstance(_charge_date, Unset):
-            charge_date = UNSET
+        _charge_date = d.pop("ChargeDate", None)
+        charge_date: Optional[datetime.datetime]
+        if not _charge_date:
+            charge_date = None
         else:
             charge_date = isoparse(_charge_date)
 
-        price = d.pop("Price", UNSET)
+        price = d.pop("Price", None)
 
-        unit_name = d.pop("UnitName", UNSET)
+        unit_name = d.pop("UnitName", None)
 
-        is_hourly_pricing = d.pop("IsHourlyPricing", UNSET)
+        is_hourly_pricing = d.pop("IsHourlyPricing", None)
 
-        time_spent_in_minutes = d.pop("TimeSpentInMinutes", UNSET)
+        time_spent_in_minutes = d.pop("TimeSpentInMinutes", None)
 
-        quantity = d.pop("Quantity", UNSET)
+        quantity = d.pop("Quantity", None)
 
-        discount = d.pop("Discount", UNSET)
+        discount = d.pop("Discount", None)
 
-        is_taxable = d.pop("IsTaxable", UNSET)
+        is_taxable = d.pop("IsTaxable", None)
 
-        delivery_charge = d.pop("DeliveryCharge", UNSET)
+        delivery_charge = d.pop("DeliveryCharge", None)
 
-        free_quantity = d.pop("FreeQuantity", UNSET)
+        free_quantity = d.pop("FreeQuantity", None)
 
-        created_by_id = d.pop("CreatedById", UNSET)
+        created_by_id = d.pop("CreatedById", None)
 
-        service_order_charge_type = d.pop("ServiceOrderChargeType", UNSET)
+        service_order_charge_type = d.pop("ServiceOrderChargeType", None)
 
         qualer_web_mvc_areas_api_models_service_orders_from_service_order_part_repair_update_model = cls(
             service_order_item_part_id=service_order_item_part_id,
@@ -183,7 +181,7 @@ class QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairUpdateMod
         return qualer_web_mvc_areas_api_models_service_orders_from_service_order_part_repair_update_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

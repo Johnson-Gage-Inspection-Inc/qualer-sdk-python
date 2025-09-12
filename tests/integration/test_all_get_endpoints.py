@@ -45,9 +45,7 @@ def discover_get_endpoints() -> List[Tuple[str, Any]]:
 
                         function_module_name = f"{module_name}.{py_file.stem}"
                         try:
-                            function_module = __import__(
-                                function_module_name, fromlist=[""]
-                            )
+                            function_module = __import__(function_module_name, fromlist=[""])
 
                             # Look for 'sync' function (the main API function)
                             if hasattr(function_module, "sync"):
@@ -117,10 +115,8 @@ def authenticated_client():
     return AuthenticatedClient(api_token)
 
 
-@pytest.mark.integration
-def test_get_endpoint_without_parameters(
-    authenticated_client, endpoint_name, func, sig_info
-):
+@pytest.mark.vcr()
+def test_get_endpoint_without_parameters(authenticated_client, endpoint_name, func, sig_info):
     """Test that GET endpoints that don't require parameters can be called successfully."""
 
     try:
@@ -147,7 +143,6 @@ def test_get_endpoint_without_parameters(
         pytest.fail(f"Endpoint {endpoint_name} raised exception: {e}")
 
 
-@pytest.mark.integration
 def test_endpoint_discovery():
     """Test that we can discover API endpoints."""
     endpoints = discover_get_endpoints()
@@ -158,12 +153,9 @@ def test_endpoint_discovery():
 
     # Should have at least some common endpoints
     assert any("assets" in name for name in endpoint_names), "No assets endpoints found"
-    assert any(
-        "clients" in name for name in endpoint_names
-    ), "No clients endpoints found"
+    assert any("clients" in name for name in endpoint_names), "No clients endpoints found"
 
 
-@pytest.mark.integration
 def test_client_authentication(authenticated_client):
     """Test that the authenticated client is properly configured."""
     assert authenticated_client is not None
@@ -171,7 +163,6 @@ def test_client_authentication(authenticated_client):
     assert hasattr(authenticated_client, "token")
 
 
-@pytest.mark.integration
 def test_testable_endpoints_exist():
     """Test that there are endpoints that can be tested without parameters."""
     all_endpoints = discover_get_endpoints()
@@ -187,9 +178,7 @@ def test_testable_endpoints_exist():
 
     # Log a few examples
     for i, (endpoint_name, _, sig_info) in enumerate(testable[:5]):
-        print(
-            f"  Example {i+1}: {endpoint_name} (optional params: {sig_info['optional_params']})"
-        )
+        print(f"  Example {i+1}: {endpoint_name} (optional params: {sig_info['optional_params']})")
 
 
 # Custom pytest collection to make parametrized tests work with fixtures

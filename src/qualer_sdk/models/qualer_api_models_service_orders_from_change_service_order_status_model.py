@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar, Union
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -7,7 +7,6 @@ from attrs import field as _attrs_field
 from ..models.qualer_api_models_service_orders_from_change_service_order_status_model_service_order_status import (
     QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
 )
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel")
 
@@ -16,28 +15,26 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromChangeServiceOrderStatus
 class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel:
     """
     Attributes:
-        service_order_status (Union[None, Unset,
+        service_order_status (Union[None,
             QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus]):
-        reset_status (Union[None, Unset, bool]):
-        email (Union[None, Unset, str]):
-        password (Union[None, Unset, str]):
+        reset_status (Optional[bool]):
+        email (Optional[str]):
+        password (Optional[str]):
     """
 
     service_order_status: Union[
         None,
-        Unset,
+        None,
         QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
-    ] = UNSET
-    reset_status: Union[None, Unset, bool] = UNSET
-    email: Union[None, Unset, str] = UNSET
-    password: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    ] = None
+    reset_status: Optional[bool] = None
+    email: Optional[str] = None
+    password: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
-        service_order_status: Union[None, Unset, str] = UNSET
-        if self.service_order_status and not isinstance(
-            self.service_order_status, Unset
-        ):
+    def to_dict(self) -> Dict[str, Any]:
+        service_order_status: Optional[str] = None
+        if self.service_order_status and not isinstance(self.service_order_status, None):
             service_order_status = self.service_order_status.value
 
         reset_status = self.reset_status
@@ -46,16 +43,16 @@ class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel:
 
         password = self.password
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if service_order_status is not UNSET:
+        if service_order_status is not None:
             field_dict["ServiceOrderStatus"] = service_order_status
-        if reset_status is not UNSET:
+        if reset_status is not None:
             field_dict["ResetStatus"] = reset_status
-        if email is not UNSET:
+        if email is not None:
             field_dict["Email"] = email
-        if password is not UNSET:
+        if password is not None:
             field_dict["Password"] = password
 
         return field_dict
@@ -63,26 +60,28 @@ class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        _service_order_status = d.pop("ServiceOrderStatus", UNSET)
+        _service_order_status = d.pop("ServiceOrderStatus", None)
         service_order_status: Union[
             None,
-            Unset,
+            None,
             QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
         ]
-        if isinstance(_service_order_status, Unset):
-            service_order_status = UNSET
+        if not _service_order_status:
+            service_order_status = None
         elif _service_order_status is None:
             service_order_status = None
         else:
-            service_order_status = QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus(
-                _service_order_status
+            service_order_status = (
+                QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus(
+                    _service_order_status
+                )
             )
 
-        reset_status = d.pop("ResetStatus", UNSET)
+        reset_status = d.pop("ResetStatus", None)
 
-        email = d.pop("Email", UNSET)
+        email = d.pop("Email", None)
 
-        password = d.pop("Password", UNSET)
+        password = d.pop("Password", None)
 
         qualer_api_models_service_orders_from_change_service_order_status_model = cls(
             service_order_status=service_order_status,
@@ -97,7 +96,7 @@ class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel:
         return qualer_api_models_service_orders_from_change_service_order_status_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

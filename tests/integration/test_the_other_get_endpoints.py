@@ -62,15 +62,11 @@ ENDPOINT_REQUIRED_PARAMS = {
     "assets.get_asset_manager_list": {},
     "assets.get_assets_by_equipment_id": {"equipment_id": "EQUIPMENT_ID"},
     "client_asset_attributes.get_asset_attributes_get_2": {"asset_id": ASSET_ID},
-    "client_asset_service_records.get_asset_service_records_by_asset_get_2": {
-        "asset_id": ASSET_ID
-    },
+    "client_asset_service_records.get_asset_service_records_by_asset_get_2": {"asset_id": ASSET_ID},
     "client_assets.get_all_assets_get_2": {},
     "client_assets.get_asset_counters": {"client_company_id": CLIENT_COMPANY_ID},
     "client_assets.get_asset_get_2": {"asset_id_path": ASSET_ID},
-    "client_assets.get_asset_manager_list_get_2": {
-        "client_company_id": CLIENT_COMPANY_ID
-    },
+    "client_assets.get_asset_manager_list_get_2": {"client_company_id": CLIENT_COMPANY_ID},
     "client_assets.get_assets": {"client_company_id": CLIENT_COMPANY_ID},
     "client_attribute.get_client_attributes": {"client_company_id": CLIENT_COMPANY_ID},
     "client_employees.get_employee": {"employee_id_path": EMPLOYEE_ID},
@@ -104,71 +100,33 @@ ENDPOINT_REQUIRED_PARAMS = {
     "product.get_product": {"product_id": "PRODUCT_ID"},
     "reference.get_measurement_quantities": {},
     "reference.get_units_of_measure": {},
-    "report_datasets.get_all_measurements": {
-        "service_order_item_id": SERVICE_ORDER_ITEM_ID
-    },
-    "report_datasets.get_all_measurements_by_order": {
-        "service_order_id": SERVICE_ORDER_ID
-    },
-    "report_datasets.get_as_found_measurements": {
-        "service_order_item_id": SERVICE_ORDER_ITEM_ID
-    },
-    "report_datasets.get_as_found_measurements_by_order": {
-        "service_order_id": SERVICE_ORDER_ID
-    },
-    "report_datasets.get_as_left_measurements": {
-        "service_order_item_id": SERVICE_ORDER_ITEM_ID
-    },
-    "report_datasets.get_as_left_measurements_by_order": {
-        "service_order_id": SERVICE_ORDER_ID
-    },
-    "report_datasets.get_asset_attributes_get_3": {
-        "service_order_item_id": SERVICE_ORDER_ITEM_ID
-    },
+    "report_datasets.get_all_measurements": {"service_order_item_id": SERVICE_ORDER_ITEM_ID},
+    "report_datasets.get_all_measurements_by_order": {"service_order_id": SERVICE_ORDER_ID},
+    "report_datasets.get_as_found_measurements": {"service_order_item_id": SERVICE_ORDER_ITEM_ID},
+    "report_datasets.get_as_found_measurements_by_order": {"service_order_id": SERVICE_ORDER_ID},
+    "report_datasets.get_as_left_measurements": {"service_order_item_id": SERVICE_ORDER_ITEM_ID},
+    "report_datasets.get_as_left_measurements_by_order": {"service_order_id": SERVICE_ORDER_ID},
+    "report_datasets.get_asset_attributes_get_3": {"service_order_item_id": SERVICE_ORDER_ITEM_ID},
     "report_datasets.get_asset_service_records_get_2": {
         "service_order_item_id": SERVICE_ORDER_ITEM_ID
     },
-    "report_datasets.get_channel_results": {
-        "service_order_item_id": SERVICE_ORDER_ITEM_ID
-    },
-    "report_datasets.get_channel_results_by_order": {
-        "service_order_id": SERVICE_ORDER_ID
-    },
-    "report_datasets.get_channel_uniformity": {
-        "service_order_item_id": SERVICE_ORDER_ITEM_ID
-    },
-    "report_datasets.get_client_attributes_get_2": {
-        "service_order_id": SERVICE_ORDER_ID
-    },
+    "report_datasets.get_channel_results": {"service_order_item_id": SERVICE_ORDER_ITEM_ID},
+    "report_datasets.get_channel_results_by_order": {"service_order_id": SERVICE_ORDER_ID},
+    "report_datasets.get_channel_uniformity": {"service_order_item_id": SERVICE_ORDER_ITEM_ID},
+    "report_datasets.get_client_attributes_get_2": {"service_order_id": SERVICE_ORDER_ID},
     "report_datasets.get_company_certifications": {},
     "report_datasets.get_external_data_reports": {
         "service_order_id": SERVICE_ORDER_ID,
         "service_order_item_ids": "[SERVICE_ORDER_ITEM_ID]",
     },
-    "report_datasets.get_measurement_charts": {
-        "service_order_item_id": SERVICE_ORDER_ITEM_ID
-    },
-    "report_datasets.get_measurement_fields": {
-        "service_order_item_id": SERVICE_ORDER_ITEM_ID
-    },
-    "report_datasets.get_measurement_fields_by_order": {
-        "service_order_id": SERVICE_ORDER_ID
-    },
-    "report_datasets.get_order_item_documents": {
-        "service_order_item_id": SERVICE_ORDER_ITEM_ID
-    },
-    "report_datasets.get_order_item_images": {
-        "service_order_item_id": SERVICE_ORDER_ITEM_ID
-    },
-    "report_datasets.get_reference_standards": {
-        "service_order_item_id": SERVICE_ORDER_ITEM_ID
-    },
-    "report_datasets.get_reference_standards_by_order": {
-        "service_order_id": SERVICE_ORDER_ID
-    },
-    "report_datasets.get_service_order_assignees": {
-        "service_order_id": SERVICE_ORDER_ID
-    },
+    "report_datasets.get_measurement_charts": {"service_order_item_id": SERVICE_ORDER_ITEM_ID},
+    "report_datasets.get_measurement_fields": {"service_order_item_id": SERVICE_ORDER_ITEM_ID},
+    "report_datasets.get_measurement_fields_by_order": {"service_order_id": SERVICE_ORDER_ID},
+    "report_datasets.get_order_item_documents": {"service_order_item_id": SERVICE_ORDER_ITEM_ID},
+    "report_datasets.get_order_item_images": {"service_order_item_id": SERVICE_ORDER_ITEM_ID},
+    "report_datasets.get_reference_standards": {"service_order_item_id": SERVICE_ORDER_ITEM_ID},
+    "report_datasets.get_reference_standards_by_order": {"service_order_id": SERVICE_ORDER_ID},
+    "report_datasets.get_service_order_assignees": {"service_order_id": SERVICE_ORDER_ID},
     "report_datasets.get_service_order_charges": {"service_order_id": SERVICE_ORDER_ID},
     "report_datasets.get_service_order_item_components": {
         "service_order_item_id": SERVICE_ORDER_ITEM_ID
@@ -185,26 +143,16 @@ ENDPOINT_REQUIRED_PARAMS = {
     "report_datasets.get_service_order_item_status_history_async": {
         "service_order_item_id": SERVICE_ORDER_ITEM_ID
     },
-    "report_datasets.get_service_order_item_tasks_by_order": {
-        "service_order_id": SERVICE_ORDER_ID
-    },
+    "report_datasets.get_service_order_item_tasks_by_order": {"service_order_id": SERVICE_ORDER_ID},
     "report_datasets.get_service_order_item_tasks_by_order_items": {
         "service_order_item_id": SERVICE_ORDER_ITEM_ID
     },
-    "report_datasets.get_service_order_items": {
-        "service_order_item_id": SERVICE_ORDER_ITEM_ID
-    },
-    "report_datasets.get_service_order_items_by_order": {
-        "service_order_id": SERVICE_ORDER_ID
-    },
+    "report_datasets.get_service_order_items": {"service_order_item_id": SERVICE_ORDER_ITEM_ID},
+    "report_datasets.get_service_order_items_by_order": {"service_order_id": SERVICE_ORDER_ID},
     "report_datasets.get_service_order_tasks": {"service_order_id": SERVICE_ORDER_ID},
     "report_datasets.get_service_orders": {"service_order_id": SERVICE_ORDER_ID},
-    "report_datasets.get_tool_attributes": {
-        "service_order_item_id": SERVICE_ORDER_ITEM_ID
-    },
-    "report_datasets.get_tool_range_attributes": {
-        "service_order_item_id": SERVICE_ORDER_ITEM_ID
-    },
+    "report_datasets.get_tool_attributes": {"service_order_item_id": SERVICE_ORDER_ITEM_ID},
+    "report_datasets.get_tool_range_attributes": {"service_order_item_id": SERVICE_ORDER_ITEM_ID},
     "service_order_documents.get_document": {
         "guid": PDF_DOCUMENT_UUID,
     },
@@ -213,9 +161,7 @@ ENDPOINT_REQUIRED_PARAMS = {
         "to": datetime.datetime(2024, 12, 31),
     },
     "service_order_documents.get_documents": {"service_order_id": SERVICE_ORDER_ID},
-    "service_order_documents.get_documents_list": {
-        "service_order_id": SERVICE_ORDER_ID
-    },
+    "service_order_documents.get_documents_list": {"service_order_id": SERVICE_ORDER_ID},
     "service_order_item_documents.get_document_list_get_2": {
         "from_": datetime.datetime(2024, 1, 1),
         "to": datetime.datetime(2024, 12, 31),
@@ -226,34 +172,22 @@ ENDPOINT_REQUIRED_PARAMS = {
     "service_order_item_documents.get_documents_list_get_2": {
         "service_order_item_id": SERVICE_ORDER_ITEM_ID
     },
-    "service_order_item_measurements.get_measurement_form": {
-        "work_item_id": SERVICE_ORDER_ITEM_ID
-    },
-    "service_order_item_measurements.get_measurements_by_asset_get_2": {
-        "asset_id": ASSET_ID
-    },
-    "service_order_item_parts.get_work_item_parts": {
-        "work_item_id": SERVICE_ORDER_ITEM_ID
-    },
+    "service_order_item_measurements.get_measurement_form": {"work_item_id": SERVICE_ORDER_ITEM_ID},
+    "service_order_item_measurements.get_measurements_by_asset_get_2": {"asset_id": ASSET_ID},
+    "service_order_item_parts.get_work_item_parts": {"work_item_id": SERVICE_ORDER_ITEM_ID},
     "service_order_item_tasks.get_work_item_task": {
         "task_id": "",
         "work_item_id": SERVICE_ORDER_ITEM_ID,
     },
-    "service_order_item_tasks.get_work_item_tasks": {
-        "work_item_id": SERVICE_ORDER_ITEM_ID
-    },
+    "service_order_item_tasks.get_work_item_tasks": {"work_item_id": SERVICE_ORDER_ITEM_ID},
     "service_order_items.get_work_item": {"work_item_id": SERVICE_ORDER_ITEM_ID},
-    "service_order_items.get_work_item_charges": {
-        "work_item_id": SERVICE_ORDER_ITEM_ID
-    },
+    "service_order_items.get_work_item_charges": {"work_item_id": SERVICE_ORDER_ITEM_ID},
     "service_order_items.get_work_item_images": {"work_item_id": SERVICE_ORDER_ITEM_ID},
     "service_order_items.get_work_items": {"service_order_id": SERVICE_ORDER_ID},
     "service_order_items.get_work_items_workitems": {},
     "service_order_metadata.get_get_6": {"service_order_id": SERVICE_ORDER_ID},
     "service_order_parts.get_work_order_parts": {"service_order_id": SERVICE_ORDER_ID},
-    "service_order_payments.get_all_work_order_payments": {
-        "service_order_id": SERVICE_ORDER_ID
-    },
+    "service_order_payments.get_all_work_order_payments": {"service_order_id": SERVICE_ORDER_ID},
     "service_order_payments.get_work_order_payment": {"service_order_payment_id": "1"},
     "service_order_tasks.get_work_order_tasks": {"service_order_id": SERVICE_ORDER_ID},
     "service_orders.get_assignments": {"service_order_id": SERVICE_ORDER_ID},
@@ -268,7 +202,7 @@ ENDPOINT_REQUIRED_PARAMS = {
 }
 
 
-@pytest.mark.integration
+@pytest.mark.vcr()
 @pytest.mark.parametrize(
     "endpoint_name",
     ENDPOINT_REQUIRED_PARAMS.keys(),
@@ -284,12 +218,8 @@ def test_the_other_get_endpoints(endpoint_name):
     # Import the sync function for the endpoint
     try:
         module_path, func_name = endpoint_name.split(".")
-        api_module = importlib.import_module(
-            f"qualer_sdk.api.{module_path}.{func_name}"
-        )
-        sync_func = getattr(api_module, "sync", None) or getattr(
-            api_module, "sync_detailed"
-        )
+        api_module = importlib.import_module(f"qualer_sdk.api.{module_path}.{func_name}")
+        sync_func = getattr(api_module, "sync", None) or getattr(api_module, "sync_detailed")
     except Exception as e:
         pytest.skip(f"Could not import endpoint {endpoint_name}: {e}")
 

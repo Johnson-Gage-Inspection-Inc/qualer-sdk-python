@@ -1,57 +1,53 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..types import UNSET, Unset
-
-T = TypeVar(
-    "T", bound="QualerApiModelsAssetServiceRecordsFromAssetServiceRecordFilterModel"
-)
+T = TypeVar("T", bound="QualerApiModelsAssetServiceRecordsFromAssetServiceRecordFilterModel")
 
 
 @_attrs_define
 class QualerApiModelsAssetServiceRecordsFromAssetServiceRecordFilterModel:
     """
     Attributes:
-        asset_id (Union[None, Unset, int]):
-        serial_number (Union[None, Unset, str]):
-        from_ (Union[None, Unset, datetime.datetime]):
-        to (Union[None, Unset, datetime.datetime]):
+        asset_id (Optional[int]):
+        serial_number (Optional[str]):
+        from_ (Optional[datetime.datetime]):
+        to (Optional[datetime.datetime]):
     """
 
-    asset_id: Union[None, Unset, int] = UNSET
-    serial_number: Union[None, Unset, str] = UNSET
-    from_: Union[None, Unset, datetime.datetime] = UNSET
-    to: Union[None, Unset, datetime.datetime] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    asset_id: Optional[int] = None
+    serial_number: Optional[str] = None
+    from_: Optional[datetime.datetime] = None
+    to: Optional[datetime.datetime] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         asset_id = self.asset_id
 
         serial_number = self.serial_number
 
-        from_: Union[None, Unset, str] = UNSET
-        if self.from_ and not isinstance(self.from_, Unset):
+        from_: Optional[str] = None
+        if self.from_:
             from_ = self.from_.isoformat()
 
-        to: Union[None, Unset, str] = UNSET
-        if self.to and not isinstance(self.to, Unset):
+        to: Optional[str] = None
+        if self.to:
             to = self.to.isoformat()
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if asset_id is not UNSET:
+        if asset_id is not None:
             field_dict["AssetId"] = asset_id
-        if serial_number is not UNSET:
+        if serial_number is not None:
             field_dict["SerialNumber"] = serial_number
-        if from_ is not UNSET:
+        if from_ is not None:
             field_dict["From"] = from_
-        if to is not UNSET:
+        if to is not None:
             field_dict["To"] = to
 
         return field_dict
@@ -59,21 +55,21 @@ class QualerApiModelsAssetServiceRecordsFromAssetServiceRecordFilterModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        asset_id = d.pop("AssetId", UNSET)
+        asset_id = d.pop("AssetId", None)
 
-        serial_number = d.pop("SerialNumber", UNSET)
+        serial_number = d.pop("SerialNumber", None)
 
-        _from_ = d.pop("From", UNSET)
-        from_: Union[None, Unset, datetime.datetime]
-        if isinstance(_from_, Unset):
-            from_ = UNSET
+        _from_ = d.pop("From", None)
+        from_: Optional[datetime.datetime]
+        if not _from_:
+            from_ = None
         else:
             from_ = isoparse(_from_)
 
-        _to = d.pop("To", UNSET)
-        to: Union[None, Unset, datetime.datetime]
-        if isinstance(_to, Unset):
-            to = UNSET
+        _to = d.pop("To", None)
+        to: Optional[datetime.datetime]
+        if not _to:
+            to = None
         else:
             to = isoparse(_to)
 
@@ -90,7 +86,7 @@ class QualerApiModelsAssetServiceRecordsFromAssetServiceRecordFilterModel:
         return qualer_api_models_asset_service_records_from_asset_service_record_filter_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

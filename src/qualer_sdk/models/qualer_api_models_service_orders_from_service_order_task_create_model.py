@@ -1,12 +1,10 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel")
 
@@ -15,35 +13,35 @@ T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromServiceOrderTaskCreateMo
 class QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel:
     """
     Attributes:
-        task_name (Union[None, Unset, str]):
-        task_details (Union[None, Unset, str]):
-        start_time (Union[None, Unset, datetime.datetime]):
-        finish_time (Union[None, Unset, datetime.datetime]):
-        time_spent_minutes (Union[None, Unset, int]):
-        price (Union[None, Unset, float]):
-        is_hourly (Union[None, Unset, bool]):
+        task_name (Optional[str]):
+        task_details (Optional[str]):
+        start_time (Optional[datetime.datetime]):
+        finish_time (Optional[datetime.datetime]):
+        time_spent_minutes (Optional[int]):
+        price (Optional[float]):
+        is_hourly (Optional[bool]):
     """
 
-    task_name: Union[None, Unset, str] = UNSET
-    task_details: Union[None, Unset, str] = UNSET
-    start_time: Union[None, Unset, datetime.datetime] = UNSET
-    finish_time: Union[None, Unset, datetime.datetime] = UNSET
-    time_spent_minutes: Union[None, Unset, int] = UNSET
-    price: Union[None, Unset, float] = UNSET
-    is_hourly: Union[None, Unset, bool] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    task_name: Optional[str] = None
+    task_details: Optional[str] = None
+    start_time: Optional[datetime.datetime] = None
+    finish_time: Optional[datetime.datetime] = None
+    time_spent_minutes: Optional[int] = None
+    price: Optional[float] = None
+    is_hourly: Optional[bool] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         task_name = self.task_name
 
         task_details = self.task_details
 
-        start_time: Union[None, Unset, str] = UNSET
-        if self.start_time and not isinstance(self.start_time, Unset):
+        start_time: Optional[str] = None
+        if self.start_time:
             start_time = self.start_time.isoformat()
 
-        finish_time: Union[None, Unset, str] = UNSET
-        if self.finish_time and not isinstance(self.finish_time, Unset):
+        finish_time: Optional[str] = None
+        if self.finish_time:
             finish_time = self.finish_time.isoformat()
 
         time_spent_minutes = self.time_spent_minutes
@@ -52,22 +50,22 @@ class QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel:
 
         is_hourly = self.is_hourly
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if task_name is not UNSET:
+        if task_name is not None:
             field_dict["TaskName"] = task_name
-        if task_details is not UNSET:
+        if task_details is not None:
             field_dict["TaskDetails"] = task_details
-        if start_time is not UNSET:
+        if start_time is not None:
             field_dict["StartTime"] = start_time
-        if finish_time is not UNSET:
+        if finish_time is not None:
             field_dict["FinishTime"] = finish_time
-        if time_spent_minutes is not UNSET:
+        if time_spent_minutes is not None:
             field_dict["TimeSpentMinutes"] = time_spent_minutes
-        if price is not UNSET:
+        if price is not None:
             field_dict["Price"] = price
-        if is_hourly is not UNSET:
+        if is_hourly is not None:
             field_dict["IsHourly"] = is_hourly
 
         return field_dict
@@ -75,29 +73,29 @@ class QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        task_name = d.pop("TaskName", UNSET)
+        task_name = d.pop("TaskName", None)
 
-        task_details = d.pop("TaskDetails", UNSET)
+        task_details = d.pop("TaskDetails", None)
 
-        _start_time = d.pop("StartTime", UNSET)
-        start_time: Union[None, Unset, datetime.datetime]
-        if isinstance(_start_time, Unset):
-            start_time = UNSET
+        _start_time = d.pop("StartTime", None)
+        start_time: Optional[datetime.datetime]
+        if not _start_time:
+            start_time = None
         else:
             start_time = isoparse(_start_time)
 
-        _finish_time = d.pop("FinishTime", UNSET)
-        finish_time: Union[None, Unset, datetime.datetime]
-        if isinstance(_finish_time, Unset):
-            finish_time = UNSET
+        _finish_time = d.pop("FinishTime", None)
+        finish_time: Optional[datetime.datetime]
+        if not _finish_time:
+            finish_time = None
         else:
             finish_time = isoparse(_finish_time)
 
-        time_spent_minutes = d.pop("TimeSpentMinutes", UNSET)
+        time_spent_minutes = d.pop("TimeSpentMinutes", None)
 
-        price = d.pop("Price", UNSET)
+        price = d.pop("Price", None)
 
-        is_hourly = d.pop("IsHourly", UNSET)
+        is_hourly = d.pop("IsHourly", None)
 
         qualer_api_models_service_orders_from_service_order_task_create_model = cls(
             task_name=task_name,
@@ -115,7 +113,7 @@ class QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel:
         return qualer_api_models_service_orders_from_service_order_task_create_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsAssetReservationFromCloseAssetReservationsModel")
 
@@ -13,23 +11,23 @@ T = TypeVar("T", bound="QualerApiModelsAssetReservationFromCloseAssetReservation
 class QualerApiModelsAssetReservationFromCloseAssetReservationsModel:
     """
     Attributes:
-        asset_id (Union[None, Unset, int]):
-        area_id (Union[None, Unset, int]):
-        product_id (Union[None, Unset, int]):
-        serial_number (Union[None, Unset, str]):
-        asset_tag (Union[None, Unset, str]):
-        reservation_id (Union[None, Unset, int]):
+        asset_id (Optional[int]):
+        area_id (Optional[int]):
+        product_id (Optional[int]):
+        serial_number (Optional[str]):
+        asset_tag (Optional[str]):
+        reservation_id (Optional[int]):
     """
 
-    asset_id: Union[None, Unset, int] = UNSET
-    area_id: Union[None, Unset, int] = UNSET
-    product_id: Union[None, Unset, int] = UNSET
-    serial_number: Union[None, Unset, str] = UNSET
-    asset_tag: Union[None, Unset, str] = UNSET
-    reservation_id: Union[None, Unset, int] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    asset_id: Optional[int] = None
+    area_id: Optional[int] = None
+    product_id: Optional[int] = None
+    serial_number: Optional[str] = None
+    asset_tag: Optional[str] = None
+    reservation_id: Optional[int] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         asset_id = self.asset_id
 
         area_id = self.area_id
@@ -42,20 +40,20 @@ class QualerApiModelsAssetReservationFromCloseAssetReservationsModel:
 
         reservation_id = self.reservation_id
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if asset_id is not UNSET:
+        if asset_id is not None:
             field_dict["AssetId"] = asset_id
-        if area_id is not UNSET:
+        if area_id is not None:
             field_dict["AreaId"] = area_id
-        if product_id is not UNSET:
+        if product_id is not None:
             field_dict["ProductId"] = product_id
-        if serial_number is not UNSET:
+        if serial_number is not None:
             field_dict["SerialNumber"] = serial_number
-        if asset_tag is not UNSET:
+        if asset_tag is not None:
             field_dict["AssetTag"] = asset_tag
-        if reservation_id is not UNSET:
+        if reservation_id is not None:
             field_dict["ReservationId"] = reservation_id
 
         return field_dict
@@ -63,17 +61,17 @@ class QualerApiModelsAssetReservationFromCloseAssetReservationsModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        asset_id = d.pop("AssetId", UNSET)
+        asset_id = d.pop("AssetId", None)
 
-        area_id = d.pop("AreaId", UNSET)
+        area_id = d.pop("AreaId", None)
 
-        product_id = d.pop("ProductId", UNSET)
+        product_id = d.pop("ProductId", None)
 
-        serial_number = d.pop("SerialNumber", UNSET)
+        serial_number = d.pop("SerialNumber", None)
 
-        asset_tag = d.pop("AssetTag", UNSET)
+        asset_tag = d.pop("AssetTag", None)
 
-        reservation_id = d.pop("ReservationId", UNSET)
+        reservation_id = d.pop("ReservationId", None)
 
         qualer_api_models_asset_reservation_from_close_asset_reservations_model = cls(
             asset_id=asset_id,
@@ -90,7 +88,7 @@ class QualerApiModelsAssetReservationFromCloseAssetReservationsModel:
         return qualer_api_models_asset_reservation_from_close_asset_reservations_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:

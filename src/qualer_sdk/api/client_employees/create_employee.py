@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
@@ -18,10 +18,10 @@ from ...types import Response
 def _get_kwargs(
     *,
     body: QualerApiModelsClientsFromSponsoredEmployeeModel,
-) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+) -> Dict[str, Any]:
+    headers: Dict[str, Any] = {}
 
-    _kwargs: dict[str, Any] = {
+    _kwargs: Dict[str, Any] = {
         "method": "post",
         "url": "/api/service/clients/employees",
     }
@@ -37,9 +37,7 @@ def _get_kwargs(
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
 ) -> Optional[
-    Union[
-        CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse
-    ]
+    Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]
 ]:
     if response.status_code == 200:
         response_200 = CreateEmployeeResponse200.from_dict(response.json())
@@ -60,9 +58,7 @@ def _parse_response(
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
 ) -> Response[
-    Union[
-        CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse
-    ]
+    Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]
 ]:
     return Response(
         status_code=HTTPStatus(response.status_code),
@@ -77,9 +73,7 @@ def sync_detailed(
     client: Union[AuthenticatedClient, Client],
     body: QualerApiModelsClientsFromSponsoredEmployeeModel,
 ) -> Response[
-    Union[
-        CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse
-    ]
+    Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]
 ]:
     """
     Args:
@@ -109,9 +103,7 @@ def sync(
     client: Union[AuthenticatedClient, Client],
     body: QualerApiModelsClientsFromSponsoredEmployeeModel,
 ) -> Optional[
-    Union[
-        CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse
-    ]
+    Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]
 ]:
     """
     Args:
@@ -136,9 +128,7 @@ async def asyncio_detailed(
     client: Union[AuthenticatedClient, Client],
     body: QualerApiModelsClientsFromSponsoredEmployeeModel,
 ) -> Response[
-    Union[
-        CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse
-    ]
+    Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]
 ]:
     """
     Args:
@@ -166,9 +156,7 @@ async def asyncio(
     client: Union[AuthenticatedClient, Client],
     body: QualerApiModelsClientsFromSponsoredEmployeeModel,
 ) -> Optional[
-    Union[
-        CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse
-    ]
+    Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]
 ]:
     """
     Args:

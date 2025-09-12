@@ -1,10 +1,8 @@
 from collections.abc import Mapping
-from typing import Any, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-
-from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="QualerApiModelsClientsFromSendEmployeeEmailModel")
 
@@ -13,25 +11,25 @@ T = TypeVar("T", bound="QualerApiModelsClientsFromSendEmployeeEmailModel")
 class QualerApiModelsClientsFromSendEmployeeEmailModel:
     """
     Attributes:
-        subject (Union[None, Unset, str]):
-        body (Union[None, Unset, str]):
+        subject (Optional[str]):
+        body (Optional[str]):
     """
 
-    subject: Union[None, Unset, str] = UNSET
-    body: Union[None, Unset, str] = UNSET
-    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+    subject: Optional[str] = None
+    body: Optional[str] = None
+    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         subject = self.subject
 
         body = self.body
 
-        field_dict: dict[str, Any] = {}
+        field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
-        if subject is not UNSET:
+        if subject is not None:
             field_dict["Subject"] = subject
-        if body is not UNSET:
+        if body is not None:
             field_dict["Body"] = body
 
         return field_dict
@@ -39,22 +37,20 @@ class QualerApiModelsClientsFromSendEmployeeEmailModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        subject = d.pop("Subject", UNSET)
+        subject = d.pop("Subject", None)
 
-        body = d.pop("Body", UNSET)
+        body = d.pop("Body", None)
 
         qualer_api_models_clients_from_send_employee_email_model = cls(
             subject=subject,
             body=body,
         )
 
-        qualer_api_models_clients_from_send_employee_email_model.additional_properties = (
-            d
-        )
+        qualer_api_models_clients_from_send_employee_email_model.additional_properties = d
         return qualer_api_models_clients_from_send_employee_email_model
 
     @property
-    def additional_keys(self) -> list[str]:
+    def additional_keys(self) -> List[str]:
         return list(self.additional_properties.keys())
 
     def __getitem__(self, key: str) -> Any:
