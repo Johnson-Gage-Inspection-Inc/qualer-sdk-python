@@ -30,7 +30,7 @@ def _get_kwargs(
         json_to = to.isoformat()
     params["to"] = json_to
 
-    params = {k: v for k, v in params.items() if v is not None and v is not None}
+    params = {k: v for k, v in params.items() if v is not None}
 
     _kwargs: Dict[str, Any] = {
         "method": "get",
