@@ -185,7 +185,7 @@ class QualerApiModelsAssetToAssetMaintenancePlanResponse:
                 last_service_date_type_0 = isoparse(data)
 
                 return last_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -204,7 +204,7 @@ class QualerApiModelsAssetToAssetMaintenancePlanResponse:
                 next_service_date_type_0 = isoparse(data)
 
                 return next_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -221,7 +221,7 @@ class QualerApiModelsAssetToAssetMaintenancePlanResponse:
                 certificate_due_date_type_0 = isoparse(data)
 
                 return certificate_due_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 

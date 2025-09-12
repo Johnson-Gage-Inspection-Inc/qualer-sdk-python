@@ -523,7 +523,7 @@ class QualerApiModelsReportDatasetsToAssetSummaryResponse:
                 next_service_date_type_0 = isoparse(data)
 
                 return next_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -538,7 +538,7 @@ class QualerApiModelsReportDatasetsToAssetSummaryResponse:
                 service_date_type_0 = isoparse(data)
 
                 return service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -700,7 +700,7 @@ class QualerApiModelsReportDatasetsToAssetSummaryResponse:
                 due_date_type_0 = isoparse(data)
 
                 return due_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 

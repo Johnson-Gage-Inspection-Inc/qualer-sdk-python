@@ -678,7 +678,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
                 activation_date_type_0 = isoparse(data)
 
                 return activation_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -695,7 +695,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
                 retirment_date_type_0 = isoparse(data)
 
                 return retirment_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -777,7 +777,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
                 warranty_end_type_0 = isoparse(data)
 
                 return warranty_end_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -806,7 +806,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
                 due_for_replacement_date_type_0 = isoparse(data)
 
                 return due_for_replacement_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -825,7 +825,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
                 purchase_date_type_0 = isoparse(data)
 
                 return purchase_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -881,7 +881,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
                 last_service_date_type_0 = isoparse(data)
 
                 return last_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -905,7 +905,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
                 next_service_date_type_0 = isoparse(data)
 
                 return next_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -957,7 +957,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
                 due_trigger_date_type_0 = isoparse(data)
 
                 return due_trigger_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -974,7 +974,7 @@ class QualerApiModelsAssetToAssetManageResponseModel:
                 past_due_trigger_date_type_0 = isoparse(data)
 
                 return past_due_trigger_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 

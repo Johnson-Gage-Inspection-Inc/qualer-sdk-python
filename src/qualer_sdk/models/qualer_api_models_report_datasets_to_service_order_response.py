@@ -1264,7 +1264,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 shipped_date_type_0 = isoparse(data)
 
                 return shipped_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1469,7 +1469,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 sign_off_date_type_0 = isoparse(data)
 
                 return sign_off_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1495,7 +1495,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 client_sign_off_on_type_0 = isoparse(data)
 
                 return client_sign_off_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1514,7 +1514,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 client_signed_on_type_0 = isoparse(data)
 
                 return client_signed_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1552,7 +1552,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 invoiced_on_type_0 = isoparse(data)
 
                 return invoiced_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1567,7 +1567,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 submitted_on_type_0 = isoparse(data)
 
                 return submitted_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1582,7 +1582,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 shipped_on_type_0 = isoparse(data)
 
                 return shipped_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1597,7 +1597,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 completed_on_type_0 = isoparse(data)
 
                 return completed_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1612,7 +1612,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 accepted_on_type_0 = isoparse(data)
 
                 return accepted_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1627,7 +1627,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 approved_on_type_0 = isoparse(data)
 
                 return approved_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1642,7 +1642,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 delivered_on_type_0 = isoparse(data)
 
                 return delivered_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1657,7 +1657,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 paid_on_type_0 = isoparse(data)
 
                 return paid_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1672,7 +1672,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 cancelled_on_type_0 = isoparse(data)
 
                 return cancelled_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1687,7 +1687,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 fulfilled_on_type_0 = isoparse(data)
 
                 return fulfilled_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1702,7 +1702,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 sign_off_on_type_0 = isoparse(data)
 
                 return sign_off_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1719,7 +1719,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 vendor_signed_on_type_0 = isoparse(data)
 
                 return vendor_signed_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1839,7 +1839,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 payment_due_on_type_0 = isoparse(data)
 
                 return payment_due_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1856,7 +1856,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 desired_date_type_0 = isoparse(data)
 
                 return desired_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1871,7 +1871,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 deadline_date_type_0 = isoparse(data)
 
                 return deadline_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1901,7 +1901,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 business_hours_from_type_0 = isoparse(data)
 
                 return business_hours_from_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1918,7 +1918,7 @@ class QualerApiModelsReportDatasetsToServiceOrderResponse:
                 business_hours_to_type_0 = isoparse(data)
 
                 return business_hours_to_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 

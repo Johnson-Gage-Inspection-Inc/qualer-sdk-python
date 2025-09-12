@@ -280,7 +280,7 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
                 next_service_date_type_0 = isoparse(data)
 
                 return next_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -297,7 +297,7 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
                 advance_recall_date_type_0 = isoparse(data)
 
                 return advance_recall_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -314,7 +314,7 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
                 grace_period_date_type_0 = isoparse(data)
 
                 return grace_period_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -331,7 +331,7 @@ class QualerApiModelsAssetToAssetServiceForecastModel:
                 certificate_next_service_date_type_0 = isoparse(data)
 
                 return certificate_next_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 

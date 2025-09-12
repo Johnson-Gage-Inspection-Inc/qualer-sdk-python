@@ -807,7 +807,7 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
                 checked_on_type_0 = isoparse(data)
 
                 return checked_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -826,7 +826,7 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
                 completed_on_type_0 = isoparse(data)
 
                 return completed_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -890,7 +890,7 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
                 created_on_utc_type_0 = isoparse(data)
 
                 return created_on_utc_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -907,7 +907,7 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
                 updated_on_utc_type_0 = isoparse(data)
 
                 return updated_on_utc_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1181,7 +1181,7 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
                 service_date_type_0 = isoparse(data)
 
                 return service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1196,7 +1196,7 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
                 due_date_type_0 = isoparse(data)
 
                 return due_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -1213,7 +1213,7 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
                 next_service_date_type_0 = isoparse(data)
 
                 return next_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 

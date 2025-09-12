@@ -130,7 +130,7 @@ class QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel:
                 last_service_date_type_0 = isoparse(data)
 
                 return last_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -147,7 +147,7 @@ class QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel:
                 next_service_date_type_0 = isoparse(data)
 
                 return next_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 

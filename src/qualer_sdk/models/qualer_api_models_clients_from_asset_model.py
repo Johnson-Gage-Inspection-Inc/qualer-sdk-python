@@ -226,7 +226,7 @@ class QualerApiModelsClientsFromAssetModel:
                     raise TypeError()
                 purchase_date_type_0 = isoparse(data)
                 return purchase_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -242,7 +242,7 @@ class QualerApiModelsClientsFromAssetModel:
                     raise TypeError()
                 activation_date_type_0 = isoparse(data)
                 return activation_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -258,7 +258,7 @@ class QualerApiModelsClientsFromAssetModel:
                     raise TypeError()
                 retirement_date_type_0 = isoparse(data)
                 return retirement_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 

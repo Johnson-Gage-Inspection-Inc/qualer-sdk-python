@@ -56,7 +56,7 @@ class QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel:
                 invoiced_on_type_0 = isoparse(data)
 
                 return invoiced_on_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 

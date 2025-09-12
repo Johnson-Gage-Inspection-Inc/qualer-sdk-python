@@ -243,7 +243,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
                 )
 
                 return billing_address_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(
                 Union[
@@ -273,7 +273,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
                 )
 
                 return shipping_address_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(
                 Union[

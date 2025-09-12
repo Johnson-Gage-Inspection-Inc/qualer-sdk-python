@@ -2759,7 +2759,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                     raise TypeError()
                 service_date_type_0 = isoparse(data)
                 return service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -2775,7 +2775,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                     raise TypeError()
                 next_service_date_type_0 = isoparse(data)
                 return next_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -2792,7 +2792,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                     raise TypeError()
                 shipped_date_type_0 = isoparse(data)
                 return shipped_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -2832,7 +2832,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                     raise TypeError()
                 as_left_primary_tool_last_service_date_type_0 = isoparse(data)
                 return as_left_primary_tool_last_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -2850,7 +2850,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                     raise TypeError()
                 as_left_primary_tool_next_service_date_type_0 = isoparse(data)
                 return as_left_primary_tool_next_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -2896,7 +2896,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                     raise TypeError()
                 as_found_primary_tool_last_service_date_type_0 = isoparse(data)
                 return as_found_primary_tool_last_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -2914,7 +2914,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                     raise TypeError()
                 as_found_primary_tool_next_service_date_type_0 = isoparse(data)
                 return as_found_primary_tool_next_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -2941,7 +2941,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                     raise TypeError()
                 as_left_secondary_tool_last_service_date_type_0 = isoparse(data)
                 return as_left_secondary_tool_last_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -2959,7 +2959,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                     raise TypeError()
                 as_left_secondary_tool_next_service_date_type_0 = isoparse(data)
                 return as_left_secondary_tool_next_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -2986,7 +2986,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                     raise TypeError()
                 as_found_secondary_tool_last_service_date_type_0 = isoparse(data)
                 return as_found_secondary_tool_last_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -3006,7 +3006,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                     raise TypeError()
                 as_found_secondary_tool_next_service_date_type_0 = isoparse(data)
                 return as_found_secondary_tool_next_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 

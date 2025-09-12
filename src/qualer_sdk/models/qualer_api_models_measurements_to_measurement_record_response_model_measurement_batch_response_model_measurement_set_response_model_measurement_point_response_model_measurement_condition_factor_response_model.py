@@ -85,7 +85,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
                 last_modified_on_utc_type_0 = isoparse(data)
 
                 return last_modified_on_utc_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 

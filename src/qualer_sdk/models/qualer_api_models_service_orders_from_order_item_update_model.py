@@ -391,7 +391,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
                 service_date_type_0 = isoparse(data)
 
                 return service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -408,7 +408,7 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
                 next_service_date_type_0 = isoparse(data)
 
                 return next_service_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 

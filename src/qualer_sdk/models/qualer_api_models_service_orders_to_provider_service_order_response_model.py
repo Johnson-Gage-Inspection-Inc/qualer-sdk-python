@@ -269,7 +269,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 due_date_type_0 = isoparse(data)
 
                 return due_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -317,7 +317,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 business_from_time_type_0 = isoparse(data)
 
                 return business_from_time_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -334,7 +334,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 business_to_time_type_0 = isoparse(data)
 
                 return business_to_time_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -364,7 +364,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 desired_date_type_0 = isoparse(data)
 
                 return desired_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -379,7 +379,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 deadline_date_type_0 = isoparse(data)
 
                 return deadline_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -396,7 +396,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 request_from_date_type_0 = isoparse(data)
 
                 return request_from_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -413,7 +413,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 request_from_time_type_0 = isoparse(data)
 
                 return request_from_time_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -430,7 +430,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 request_to_date_type_0 = isoparse(data)
 
                 return request_to_date_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
@@ -447,7 +447,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
                 request_to_time_type_0 = isoparse(data)
 
                 return request_to_time_type_0
-            except:  # noqa: E722
+            except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
