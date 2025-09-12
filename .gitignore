@@ -67,3 +67,6 @@ temp_test_gen/*
 
 .venv/
 venv/
+
+# VCR cassettes
+tests/integration/cassettes/

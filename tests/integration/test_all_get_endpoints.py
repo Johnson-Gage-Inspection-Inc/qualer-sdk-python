@@ -115,7 +115,7 @@ def authenticated_client():
     return AuthenticatedClient(api_token)
 
 
-@pytest.mark.integration
+@pytest.mark.vcr()
 def test_get_endpoint_without_parameters(authenticated_client, endpoint_name, func, sig_info):
     """Test that GET endpoints that don't require parameters can be called successfully."""
 
@@ -143,7 +143,6 @@ def test_get_endpoint_without_parameters(authenticated_client, endpoint_name, fu
         pytest.fail(f"Endpoint {endpoint_name} raised exception: {e}")
 
 
-@pytest.mark.integration
 def test_endpoint_discovery():
     """Test that we can discover API endpoints."""
     endpoints = discover_get_endpoints()
@@ -157,7 +156,6 @@ def test_endpoint_discovery():
     assert any("clients" in name for name in endpoint_names), "No clients endpoints found"
 
 
-@pytest.mark.integration
 def test_client_authentication(authenticated_client):
     """Test that the authenticated client is properly configured."""
     assert authenticated_client is not None
@@ -165,7 +163,6 @@ def test_client_authentication(authenticated_client):
     assert hasattr(authenticated_client, "token")
 
 
-@pytest.mark.integration
 def test_testable_endpoints_exist():
     """Test that there are endpoints that can be tested without parameters."""
     all_endpoints = discover_get_endpoints()

@@ -202,7 +202,7 @@ ENDPOINT_REQUIRED_PARAMS = {
 }
 
 
-@pytest.mark.integration
+@pytest.mark.vcr()
 @pytest.mark.parametrize(
     "endpoint_name",
     ENDPOINT_REQUIRED_PARAMS.keys(),

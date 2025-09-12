@@ -49,7 +49,7 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
         parts_charge_before_discount (Optional[float]):
         service_charge (Optional[float]):
         repairs_charge (Optional[float]):
-        guid (Optional[UUID, None]):  Example: 00000000-0000-0000-0000-000000000000.
+        guid (Optional[UUID]):  Example: 00000000-0000-0000-0000-000000000000.
         segment_name (Optional[str]):
         schedule_name (Optional[str]):
     """
@@ -89,7 +89,7 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
     parts_charge_before_discount: Optional[float] = None
     service_charge: Optional[float] = None
     repairs_charge: Optional[float] = None
-    guid: Optional[UUID, None] = None
+    guid: Optional[UUID] = None
     segment_name: Optional[str] = None
     schedule_name: Optional[str] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -398,21 +398,13 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         asset_id = d.pop("AssetId", None)
-
         asset_service_record_id = d.pop("AssetServiceRecordId", None)
-
         service_schedule_segment_id = d.pop("ServiceScheduleSegmentId", None)
-
         forward_segment_id = d.pop("ForwardSegmentId", None)
-
         forward_next_service = d.pop("ForwardNextService", None)
-
         service_order_number = d.pop("ServiceOrderNumber", None)
-
         custom_order_number = d.pop("CustomOrderNumber", None)
-
         order_item_number = d.pop("OrderItemNumber", None)
-
         certificate_number = d.pop("CertificateNumber", None)
 
         def _parse_result_status(data: object) -> Optional[str]:
@@ -443,14 +435,12 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 service_date_type_0 = isoparse(data)
-
                 return service_date_type_0
             except:  # noqa: E722
                 pass
             return cast(Optional[datetime.datetime], data)
 
         service_date = _parse_service_date(d.pop("ServiceDate", None))
-
         serial_number = d.pop("SerialNumber", None)
 
         def _parse_asset_tag(data: object) -> Optional[str]:
@@ -502,7 +492,6 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 due_date_type_0 = isoparse(data)
-
                 return due_date_type_0
             except:  # noqa: E722
                 pass
@@ -510,16 +499,13 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
 
         due_date = _parse_due_date(d.pop("DueDate", None))
 
-        def _parse_next_service_date(
-            data: object,
-        ) -> Optional[datetime.datetime]:
+        def _parse_next_service_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 next_service_date_type_0 = isoparse(data)
-
                 return next_service_date_type_0
             except:  # noqa: E722
                 pass
@@ -599,9 +585,7 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
 
         parts_charge = _parse_parts_charge(d.pop("PartsCharge", None))
 
-        def _parse_parts_charge_before_discount(
-            data: object,
-        ) -> Optional[float]:
+        def _parse_parts_charge_before_discount(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
@@ -624,18 +608,17 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
 
         repairs_charge = _parse_repairs_charge(d.pop("RepairsCharge", None))
 
-        def _parse_guid(data: object) -> Optional[UUID, None]:
+        def _parse_guid(data: object) -> Optional[UUID]:
             if not data:
                 return None
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 guid_type_0 = UUID(data)
-
                 return guid_type_0
             except:  # noqa: E722
                 pass
-            return cast(Optional[UUID, None], data)
+            return cast(Optional[UUID], data)
 
         guid = _parse_guid(d.pop("Guid", None))
 
@@ -653,7 +636,7 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
 
         schedule_name = _parse_schedule_name(d.pop("ScheduleName", None))
 
-        qualer_api_models_asset_service_records_to_asset_service_record_response_model = cls(
+        model_obj = cls(
             asset_id=asset_id,
             asset_service_record_id=asset_service_record_id,
             service_schedule_segment_id=service_schedule_segment_id,
@@ -694,10 +677,8 @@ class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
             schedule_name=schedule_name,
         )
 
-        qualer_api_models_asset_service_records_to_asset_service_record_response_model.additional_properties = (
-            d
-        )
-        return qualer_api_models_asset_service_records_to_asset_service_record_response_model
+        model_obj.additional_properties = d
+        return model_obj
 
     @property
     def additional_keys(self) -> List[str]:
