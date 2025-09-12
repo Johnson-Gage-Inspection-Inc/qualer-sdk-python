@@ -421,9 +421,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
             if not self.result_status:
 
                 result_status = None
-
             else:
-
                 result_status = self.result_status
         service_date: Optional[str]
         if not self.service_date:
@@ -652,9 +650,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
             if not self.as_found_result:
 
                 as_found_result = None
-
             else:
-
                 as_found_result = self.as_found_result
         as_left_result: Optional[int]
         if not self.as_left_result:
@@ -665,9 +661,7 @@ class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
             if not self.as_left_result:
 
                 as_left_result = None
-
             else:
-
                 as_left_result = self.as_left_result
         completed_on: Optional[str]
         if not self.completed_on:

@@ -118,9 +118,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
             if not self.result_status:
 
                 result_status = None
-
             else:
-
                 result_status = self.result_status
         as_found_result: Optional[str]
 
@@ -140,9 +138,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
             if not self.as_left_result:
 
                 as_left_result = None
-
             else:
-
                 as_left_result = self.as_left_result
         service_date: Optional[str]
         if not self.service_date:
