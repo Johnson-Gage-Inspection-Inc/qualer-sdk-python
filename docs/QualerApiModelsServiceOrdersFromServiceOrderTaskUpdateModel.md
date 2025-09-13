@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel
+# ServiceOrdersFromServiceOrderTaskUpdateModel
 
 ## Properties
 Name | Type | Description | Notes

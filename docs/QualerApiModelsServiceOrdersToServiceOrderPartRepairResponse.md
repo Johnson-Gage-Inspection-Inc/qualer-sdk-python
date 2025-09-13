@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrdersToServiceOrderPartRepairResponse
+# ServiceOrdersToServiceOrderPartRepairResponse
 
 ## Properties
 Name | Type | Description | Notes

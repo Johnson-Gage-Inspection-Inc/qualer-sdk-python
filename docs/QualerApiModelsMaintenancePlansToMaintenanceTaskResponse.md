@@ -1,4 +1,4 @@
-# QualerApiModelsMaintenancePlansToMaintenanceTaskResponse
+# MaintenancePlansToMaintenanceTaskResponse
 
 ## Properties
 Name | Type | Description | Notes

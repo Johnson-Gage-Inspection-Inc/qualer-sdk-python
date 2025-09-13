@@ -5,14 +5,14 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.qualer_api_models_report_datasets_to_measurement_field_response_batch_type import (
-    QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType,
+    ReportDatasetsToMeasurementFieldResponseBatchType,
 )
 
-T = TypeVar("T", bound="QualerApiModelsReportDatasetsToMeasurementFieldResponse")
+T = TypeVar("T", bound="ReportDatasetsToMeasurementFieldResponse")
 
 
 @_attrs_define
-class QualerApiModelsReportDatasetsToMeasurementFieldResponse:
+class ReportDatasetsToMeasurementFieldResponse:
     """
     Attributes:
         field_id (Optional[str]):
@@ -22,7 +22,7 @@ class QualerApiModelsReportDatasetsToMeasurementFieldResponse:
         measurement_set_id (Optional[int]):
         specification_name (Optional[str]):
         measurement_point_id (Optional[int]):
-        batch_type (Optional[QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType]):
+        batch_type (Optional[ReportDatasetsToMeasurementFieldResponseBatchType]):
         service_order_item_id (Optional[int]):
         service_order_id (Optional[int]):
         batch_field_id (Optional[str]):
@@ -36,7 +36,7 @@ class QualerApiModelsReportDatasetsToMeasurementFieldResponse:
     measurement_set_id: Optional[int] = None
     specification_name: Optional[str] = None
     measurement_point_id: Optional[int] = None
-    batch_type: Optional["QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType"] = None
+    batch_type: Optional["ReportDatasetsToMeasurementFieldResponseBatchType"] = None
     service_order_item_id: Optional[int] = None
     service_order_id: Optional[int] = None
     batch_field_id: Optional[str] = None
@@ -121,14 +121,12 @@ class QualerApiModelsReportDatasetsToMeasurementFieldResponse:
         batch_type: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType,
+            ReportDatasetsToMeasurementFieldResponseBatchType,
         ]
         if not _batch_type:
             batch_type = None
         else:
-            batch_type = QualerApiModelsReportDatasetsToMeasurementFieldResponseBatchType(
-                _batch_type
-            )
+            batch_type = ReportDatasetsToMeasurementFieldResponseBatchType(_batch_type)
 
         service_order_item_id = d.pop("ServiceOrderItemId", None)
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **create**
-> QualerApiModelsClientsToCreatedClientCompanyResponse create(model)
+> ClientsToCreatedClientCompanyResponse create(model)
 
 Create Client information.
 
@@ -27,7 +27,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = qualer_sdk.ClientsApi()
-model = qualer_sdk.QualerApiModelsClientsFromSponsoredClientCreateModel() # QualerApiModelsClientsFromSponsoredClientCreateModel | Client update model
+model = qualer_sdk.ClientsFromSponsoredClientCreateModel() # ClientsFromSponsoredClientCreateModel | Client update model
 
 try:
     # Create Client information.
@@ -41,11 +41,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**QualerApiModelsClientsFromSponsoredClientCreateModel**](QualerApiModelsClientsFromSponsoredClientCreateModel.md)| Client update model | 
+ **model** | [**ClientsFromSponsoredClientCreateModel**](ClientsFromSponsoredClientCreateModel.md)| Client update model | 
 
 ### Return type
 
-[**QualerApiModelsClientsToCreatedClientCompanyResponse**](QualerApiModelsClientsToCreatedClientCompanyResponse.md)
+[**ClientsToCreatedClientCompanyResponse**](ClientsToCreatedClientCompanyResponse.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get**
-> QualerApiModelsClientsToClientCompanyResponseModel get(client_company_id)
+> ClientsToClientCompanyResponseModel get(client_company_id)
 
 
 
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsClientsToClientCompanyResponseModel**](QualerApiModelsClientsToClientCompanyResponseModel.md)
+[**ClientsToClientCompanyResponseModel**](ClientsToClientCompanyResponseModel.md)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all**
-> list[QualerApiModelsClientsToClientCompanyResponseModel] get_all(model_legacy_id=model_legacy_id, model_account_number_text=model_account_number_text, model_company_name=model_company_name, model_take=model_take, model_modified_after=model_modified_after)
+> list[ClientsToClientCompanyResponseModel] get_all(model_legacy_id=model_legacy_id, model_account_number_text=model_account_number_text, model_company_name=model_company_name, model_take=model_take, model_modified_after=model_modified_after)
 
 
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsClientsToClientCompanyResponseModel]**](QualerApiModelsClientsToClientCompanyResponseModel.md)
+[**list[ClientsToClientCompanyResponseModel]**](ClientsToClientCompanyResponseModel.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = qualer_sdk.ClientsApi()
-model = qualer_sdk.QualerApiModelsClientsFromSponsoredClientEditModel() # QualerApiModelsClientsFromSponsoredClientEditModel | Client update model
+model = qualer_sdk.ClientsFromSponsoredClientEditModel() # ClientsFromSponsoredClientEditModel | Client update model
 
 try:
     # Update Client information.
@@ -187,7 +187,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**QualerApiModelsClientsFromSponsoredClientEditModel**](QualerApiModelsClientsFromSponsoredClientEditModel.md)| Client update model | 
+ **model** | [**ClientsFromSponsoredClientEditModel**](ClientsFromSponsoredClientEditModel.md)| Client update model | 
 
 ### Return type
 

@@ -1,4 +1,4 @@
-# QualerApiModelsAssetPoolsToAssetPoolModel
+# AssetPoolsToAssetPoolModel
 
 ## Properties
 Name | Type | Description | Notes

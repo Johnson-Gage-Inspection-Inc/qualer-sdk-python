@@ -6,17 +6,17 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_clients_from_sponsored_client_create_model import (
-    QualerApiModelsClientsFromSponsoredClientCreateModel,
+    ClientsFromSponsoredClientCreateModel,
 )
 from ...models.qualer_api_models_clients_to_created_client_company_response import (
-    QualerApiModelsClientsToCreatedClientCompanyResponse,
+    ClientsToCreatedClientCompanyResponse,
 )
 from ...types import Response
 
 
 def _get_kwargs(
     *,
-    body: QualerApiModelsClientsFromSponsoredClientCreateModel,
+    body: ClientsFromSponsoredClientCreateModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -35,11 +35,9 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, QualerApiModelsClientsToCreatedClientCompanyResponse]]:
+) -> Optional[Union[Any, ClientsToCreatedClientCompanyResponse]]:
     if response.status_code == 201:
-        response_201 = QualerApiModelsClientsToCreatedClientCompanyResponse.from_dict(
-            response.json()
-        )
+        response_201 = ClientsToCreatedClientCompanyResponse.from_dict(response.json())
 
         return response_201
     if response.status_code == 400:
@@ -53,7 +51,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, QualerApiModelsClientsToCreatedClientCompanyResponse]]:
+) -> Response[Union[Any, ClientsToCreatedClientCompanyResponse]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -65,21 +63,21 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSponsoredClientCreateModel,
-) -> Response[Union[Any, QualerApiModelsClientsToCreatedClientCompanyResponse]]:
+    body: ClientsFromSponsoredClientCreateModel,
+) -> Response[Union[Any, ClientsToCreatedClientCompanyResponse]]:
     """Create Client information.
 
      ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3
 
     Args:
-        body (QualerApiModelsClientsFromSponsoredClientCreateModel):
+        body (ClientsFromSponsoredClientCreateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, QualerApiModelsClientsToCreatedClientCompanyResponse]]
+        Response[Union[Any, ClientsToCreatedClientCompanyResponse]]
     """
 
     kwargs = _get_kwargs(
@@ -96,21 +94,21 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSponsoredClientCreateModel,
-) -> Optional[Union[Any, QualerApiModelsClientsToCreatedClientCompanyResponse]]:
+    body: ClientsFromSponsoredClientCreateModel,
+) -> Optional[Union[Any, ClientsToCreatedClientCompanyResponse]]:
     """Create Client information.
 
      ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3
 
     Args:
-        body (QualerApiModelsClientsFromSponsoredClientCreateModel):
+        body (ClientsFromSponsoredClientCreateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, QualerApiModelsClientsToCreatedClientCompanyResponse]
+        Union[Any, ClientsToCreatedClientCompanyResponse]
     """
 
     return sync_detailed(
@@ -122,21 +120,21 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSponsoredClientCreateModel,
-) -> Response[Union[Any, QualerApiModelsClientsToCreatedClientCompanyResponse]]:
+    body: ClientsFromSponsoredClientCreateModel,
+) -> Response[Union[Any, ClientsToCreatedClientCompanyResponse]]:
     """Create Client information.
 
      ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3
 
     Args:
-        body (QualerApiModelsClientsFromSponsoredClientCreateModel):
+        body (ClientsFromSponsoredClientCreateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, QualerApiModelsClientsToCreatedClientCompanyResponse]]
+        Response[Union[Any, ClientsToCreatedClientCompanyResponse]]
     """
 
     kwargs = _get_kwargs(
@@ -151,21 +149,21 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSponsoredClientCreateModel,
-) -> Optional[Union[Any, QualerApiModelsClientsToCreatedClientCompanyResponse]]:
+    body: ClientsFromSponsoredClientCreateModel,
+) -> Optional[Union[Any, ClientsToCreatedClientCompanyResponse]]:
     """Create Client information.
 
      ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3
 
     Args:
-        body (QualerApiModelsClientsFromSponsoredClientCreateModel):
+        body (ClientsFromSponsoredClientCreateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, QualerApiModelsClientsToCreatedClientCompanyResponse]
+        Union[Any, ClientsToCreatedClientCompanyResponse]
     """
 
     return (

@@ -1,9 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType(
-    str, Enum
-):
+class ServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType(str, Enum):
     CHARGE = "Charge"
     LABOR = "Labor"
     PART = "Part"

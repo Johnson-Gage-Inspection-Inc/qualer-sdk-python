@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_employees_from_update_employee_model import (
-    QualerApiModelsEmployeesFromUpdateEmployeeModel,
+    EmployeesFromUpdateEmployeeModel,
 )
 from ...models.update_employee_response_201 import UpdateEmployeeResponse201
 from ...types import Response
@@ -15,7 +15,7 @@ from ...types import Response
 def _get_kwargs(
     employee_id: int,
     *,
-    body: QualerApiModelsEmployeesFromUpdateEmployeeModel,
+    body: EmployeesFromUpdateEmployeeModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -63,7 +63,7 @@ def sync_detailed(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromUpdateEmployeeModel,
+    body: EmployeesFromUpdateEmployeeModel,
 ) -> Response[Union[Any, UpdateEmployeeResponse201]]:
     r"""Update Employee
 
@@ -74,7 +74,7 @@ def sync_detailed(
 
     Args:
         employee_id (int):
-        body (QualerApiModelsEmployeesFromUpdateEmployeeModel):
+        body (EmployeesFromUpdateEmployeeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -100,7 +100,7 @@ def sync(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromUpdateEmployeeModel,
+    body: EmployeesFromUpdateEmployeeModel,
 ) -> Optional[Union[Any, UpdateEmployeeResponse201]]:
     r"""Update Employee
 
@@ -111,7 +111,7 @@ def sync(
 
     Args:
         employee_id (int):
-        body (QualerApiModelsEmployeesFromUpdateEmployeeModel):
+        body (EmployeesFromUpdateEmployeeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -132,7 +132,7 @@ async def asyncio_detailed(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromUpdateEmployeeModel,
+    body: EmployeesFromUpdateEmployeeModel,
 ) -> Response[Union[Any, UpdateEmployeeResponse201]]:
     r"""Update Employee
 
@@ -143,7 +143,7 @@ async def asyncio_detailed(
 
     Args:
         employee_id (int):
-        body (QualerApiModelsEmployeesFromUpdateEmployeeModel):
+        body (EmployeesFromUpdateEmployeeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -167,7 +167,7 @@ async def asyncio(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromUpdateEmployeeModel,
+    body: EmployeesFromUpdateEmployeeModel,
 ) -> Optional[Union[Any, UpdateEmployeeResponse201]]:
     r"""Update Employee
 
@@ -178,7 +178,7 @@ async def asyncio(
 
     Args:
         employee_id (int):
-        body (QualerApiModelsEmployeesFromUpdateEmployeeModel):
+        body (EmployeesFromUpdateEmployeeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

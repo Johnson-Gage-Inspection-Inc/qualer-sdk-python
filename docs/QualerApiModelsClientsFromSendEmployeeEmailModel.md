@@ -1,4 +1,4 @@
-# QualerApiModelsClientsFromSendEmployeeEmailModel
+# ClientsFromSendEmployeeEmailModel
 
 ## Properties
 Name | Type | Description | Notes

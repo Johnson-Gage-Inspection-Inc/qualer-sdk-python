@@ -4,11 +4,11 @@ from typing import Any, Dict, List, Optional, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-T = TypeVar("T", bound="QualerApiModelsEmployeesFromSearchEmployeeModel")
+T = TypeVar("T", bound="EmployeesFromSearchEmployeeModel")
 
 
 @_attrs_define
-class QualerApiModelsEmployeesFromSearchEmployeeModel:
+class EmployeesFromSearchEmployeeModel:
     """
     Attributes:
         search_string (Optional[str]):

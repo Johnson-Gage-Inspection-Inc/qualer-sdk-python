@@ -7,19 +7,19 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.qualer_api_models_service_orders_from_order_item_update_model_as_found_check import (
-    QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck,
+    ServiceOrdersFromOrderItemUpdateModelAsFoundCheck,
 )
 from ..models.qualer_api_models_service_orders_from_order_item_update_model_as_left_check import (
-    QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck,
+    ServiceOrdersFromOrderItemUpdateModelAsLeftCheck,
 )
 from ..models.service_result_status import ServiceResultStatus
 from ..models.work_status import WorkStatus
 
-T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromOrderItemUpdateModel")
+T = TypeVar("T", bound="ServiceOrdersFromOrderItemUpdateModel")
 
 
 @_attrs_define
-class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
+class ServiceOrdersFromOrderItemUpdateModel:
     """
     Attributes:
         service_comments (Optional[str]):
@@ -35,8 +35,8 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         checked_by_name (Optional[str]):
         completed_on (Optional[datetime.datetime]):
         completed_by_name (Optional[str]):
-        as_found_check (Optional[QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck]):
-        as_left_check (Optional[QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck]):
+        as_found_check (Optional[ServiceOrdersFromOrderItemUpdateModelAsFoundCheck]):
+        as_left_check (Optional[ServiceOrdersFromOrderItemUpdateModelAsLeftCheck]):
         result_status (Optional[ServiceResultStatus]):
         as_found_result (Optional[ServiceResultStatus]):
         as_left_result (Optional[ServiceResultStatus]):
@@ -70,12 +70,8 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
     checked_by_name: Optional[str] = None
     completed_on: Optional[datetime.datetime] = None
     completed_by_name: Optional[str] = None
-    as_found_check: Union[
-        None, QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck
-    ] = None
-    as_left_check: Optional["QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck"] = (
-        None
-    )
+    as_found_check: Union[None, ServiceOrdersFromOrderItemUpdateModelAsFoundCheck] = None
+    as_left_check: Optional["ServiceOrdersFromOrderItemUpdateModelAsLeftCheck"] = None
     result_status: Optional[ServiceResultStatus] = None
     as_found_result: Optional[ServiceResultStatus] = None
     as_left_result: Optional[ServiceResultStatus] = None
@@ -313,23 +309,19 @@ class QualerApiModelsServiceOrdersFromOrderItemUpdateModel:
         as_found_check: Union[
             None,
             None,
-            QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck,
+            ServiceOrdersFromOrderItemUpdateModelAsFoundCheck,
         ]
         if not _as_found_check:
             as_found_check = None
         else:
-            as_found_check = QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsFoundCheck(
-                _as_found_check
-            )
+            as_found_check = ServiceOrdersFromOrderItemUpdateModelAsFoundCheck(_as_found_check)
 
         _as_left_check = d.pop("AsLeftCheck", None)
-        as_left_check: Optional[QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck]
+        as_left_check: Optional[ServiceOrdersFromOrderItemUpdateModelAsLeftCheck]
         if not _as_left_check:
             as_left_check = None
         else:
-            as_left_check = QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck(
-                _as_left_check
-            )
+            as_left_check = ServiceOrdersFromOrderItemUpdateModelAsLeftCheck(_as_left_check)
 
         _result_status = d.pop("ResultStatus", None)
         result_status: Optional[ServiceResultStatus]

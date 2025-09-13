@@ -1,4 +1,4 @@
-# QualerApiModelsEmployeesFromSearchEmployeeModel
+# EmployeesFromSearchEmployeeModel
 
 ## Properties
 Name | Type | Description | Notes

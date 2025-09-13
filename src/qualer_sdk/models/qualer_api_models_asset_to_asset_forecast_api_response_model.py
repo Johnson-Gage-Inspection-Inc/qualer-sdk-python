@@ -7,14 +7,14 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.qualer_api_models_asset_to_asset_forecast_api_response_model_asset_status import (
-    QualerApiModelsAssetToAssetForecastApiResponseModelAssetStatus,
+    AssetToAssetForecastApiResponseModelAssetStatus,
 )
 
-T = TypeVar("T", bound="QualerApiModelsAssetToAssetForecastApiResponseModel")
+T = TypeVar("T", bound="AssetToAssetForecastApiResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsAssetToAssetForecastApiResponseModel:
+class AssetToAssetForecastApiResponseModel:
     """
     Attributes:
         last_due_date (Optional[datetime.datetime]):
@@ -27,7 +27,7 @@ class QualerApiModelsAssetToAssetForecastApiResponseModel:
         asset_user (Optional[str]):
         asset_tag (Optional[str]):
         equipment_id (Optional[str]):
-        asset_status (Optional[QualerApiModelsAssetToAssetForecastApiResponseModelAssetStatus]):
+        asset_status (Optional[AssetToAssetForecastApiResponseModelAssetStatus]):
         asset_name (Optional[str]):
         asset_description (Optional[str]):
         asset_maker (Optional[str]):
@@ -81,7 +81,7 @@ class QualerApiModelsAssetToAssetForecastApiResponseModel:
     asset_user: Optional[str] = None
     asset_tag: Optional[str] = None
     equipment_id: Optional[str] = None
-    asset_status: Optional["QualerApiModelsAssetToAssetForecastApiResponseModelAssetStatus"] = None
+    asset_status: Optional["AssetToAssetForecastApiResponseModelAssetStatus"] = None
     asset_name: Optional[str] = None
     asset_description: Optional[str] = None
     asset_maker: Optional[str] = None
@@ -455,13 +455,11 @@ class QualerApiModelsAssetToAssetForecastApiResponseModel:
         equipment_id = d.pop("EquipmentId", None)
 
         _asset_status = d.pop("AssetStatus", None)
-        asset_status: Optional[QualerApiModelsAssetToAssetForecastApiResponseModelAssetStatus]
+        asset_status: Optional[AssetToAssetForecastApiResponseModelAssetStatus]
         if not _asset_status:
             asset_status = None
         else:
-            asset_status = QualerApiModelsAssetToAssetForecastApiResponseModelAssetStatus(
-                _asset_status
-            )
+            asset_status = AssetToAssetForecastApiResponseModelAssetStatus(_asset_status)
 
         asset_name = d.pop("AssetName", None)
 

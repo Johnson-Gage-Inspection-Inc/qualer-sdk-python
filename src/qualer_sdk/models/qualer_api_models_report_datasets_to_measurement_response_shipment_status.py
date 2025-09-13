@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus(str, Enum):
+class ReportDatasetsToMeasurementResponseShipmentStatus(str, Enum):
     DELIVERED = "Delivered"
     NOTSHIPPED = "NotShipped"
     ONSITE = "OnSite"

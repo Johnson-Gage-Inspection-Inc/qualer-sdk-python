@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_measurement_quantities**
-> list[QualerApiModelsReferenceToMeasurementQuantityResponse] get_measurement_quantities()
+> list[ReferenceToMeasurementQuantityResponse] get_measurement_quantities()
 
 
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[QualerApiModelsReferenceToMeasurementQuantityResponse]**](QualerApiModelsReferenceToMeasurementQuantityResponse.md)
+[**list[ReferenceToMeasurementQuantityResponse]**](ReferenceToMeasurementQuantityResponse.md)
 
 ### Authorization
 
@@ -50,7 +50,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_units_of_measure**
-> list[QualerApiModelsReferenceToUnitOfMeasureResponse] get_units_of_measure()
+> list[ReferenceToUnitOfMeasureResponse] get_units_of_measure()
 
 
 
@@ -77,7 +77,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[QualerApiModelsReferenceToUnitOfMeasureResponse]**](QualerApiModelsReferenceToUnitOfMeasureResponse.md)
+[**list[ReferenceToUnitOfMeasureResponse]**](ReferenceToUnitOfMeasureResponse.md)
 
 ### Authorization
 

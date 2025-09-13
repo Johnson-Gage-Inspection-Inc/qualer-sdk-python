@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_service_orders_from_update_shipment_status_model import (
-    QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel,
+    ServiceOrdersFromUpdateShipmentStatusModel,
 )
 from ...models.update_shipment_status_response_200 import UpdateShipmentStatusResponse200
 from ...types import Response
@@ -15,7 +15,7 @@ from ...types import Response
 def _get_kwargs(
     service_order_id: int,
     *,
-    body: QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel,
+    body: ServiceOrdersFromUpdateShipmentStatusModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -60,12 +60,12 @@ def sync_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel,
+    body: ServiceOrdersFromUpdateShipmentStatusModel,
 ) -> Response[UpdateShipmentStatusResponse200]:
     """
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel):
+        body (ServiceOrdersFromUpdateShipmentStatusModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -91,12 +91,12 @@ def sync(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel,
+    body: ServiceOrdersFromUpdateShipmentStatusModel,
 ) -> Optional[UpdateShipmentStatusResponse200]:
     """
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel):
+        body (ServiceOrdersFromUpdateShipmentStatusModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -117,12 +117,12 @@ async def asyncio_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel,
+    body: ServiceOrdersFromUpdateShipmentStatusModel,
 ) -> Response[UpdateShipmentStatusResponse200]:
     """
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel):
+        body (ServiceOrdersFromUpdateShipmentStatusModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -146,12 +146,12 @@ async def asyncio(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel,
+    body: ServiceOrdersFromUpdateShipmentStatusModel,
 ) -> Optional[UpdateShipmentStatusResponse200]:
     """
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel):
+        body (ServiceOrdersFromUpdateShipmentStatusModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

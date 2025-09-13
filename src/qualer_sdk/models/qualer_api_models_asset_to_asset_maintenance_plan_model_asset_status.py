@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus(str, Enum):
+class AssetToAssetMaintenancePlanModelAssetStatus(str, Enum):
     ACTIVE = "Active"
     FAILED = "Failed"
     INACTIVE = "Inactive"

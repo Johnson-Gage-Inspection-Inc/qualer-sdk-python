@@ -8,12 +8,12 @@ from dateutil.parser import isoparse
 
 T = TypeVar(
     "T",
-    bound="QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel",
+    bound="MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel",
 )
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel:
+class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel:
     """
     Attributes:
         factor_id (Optional[str]):

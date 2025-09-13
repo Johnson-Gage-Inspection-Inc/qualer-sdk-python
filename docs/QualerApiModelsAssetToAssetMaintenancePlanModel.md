@@ -1,9 +1,9 @@
-# QualerApiModelsAssetToAssetMaintenancePlanModel
+# AssetToAssetMaintenancePlanModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**maintenance_plans** | [**list[QualerApiModelsAssetToAssetMaintenancePlanResponse]**](QualerApiModelsAssetToAssetMaintenancePlanResponse.md) |  | [optional] 
+**maintenance_plans** | [**list[AssetToAssetMaintenancePlanResponse]**](AssetToAssetMaintenancePlanResponse.md) |  | [optional] 
 **company_id** | **int** |  | [optional] 
 **asset_id** | **int** |  | [optional] 
 **serial_number** | **str** |  | [optional] 

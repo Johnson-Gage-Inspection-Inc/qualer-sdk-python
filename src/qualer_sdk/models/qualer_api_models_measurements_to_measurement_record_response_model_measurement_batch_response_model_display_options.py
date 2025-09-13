@@ -6,12 +6,12 @@ from attrs import field as _attrs_field
 
 T = TypeVar(
     "T",
-    bound="QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions",
+    bound="MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions",
 )
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions:
+class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions:
     """
     Attributes:
         err (Optional[bool]):

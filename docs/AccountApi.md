@@ -58,7 +58,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_employee_message**
-> QualerApiModelsAccountToEmployeeEventMessageResponseModel get_employee_message(message_id)
+> AccountToEmployeeEventMessageResponseModel get_employee_message(message_id)
 
 
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsAccountToEmployeeEventMessageResponseModel**](QualerApiModelsAccountToEmployeeEventMessageResponseModel.md)
+[**AccountToEmployeeEventMessageResponseModel**](AccountToEmployeeEventMessageResponseModel.md)
 
 ### Authorization
 
@@ -103,7 +103,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_employee_messages**
-> list[QualerApiModelsAccountToEmployeeEventResponseModel] get_employee_messages(model_period=model_period, model_site_id=model_site_id)
+> list[AccountToEmployeeEventResponseModel] get_employee_messages(model_period=model_period, model_site_id=model_site_id)
 
 
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAccountToEmployeeEventResponseModel]**](QualerApiModelsAccountToEmployeeEventResponseModel.md)
+[**list[AccountToEmployeeEventResponseModel]**](AccountToEmployeeEventResponseModel.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **login**
-> QualerApiModelsAccountFromLoginResponseModel login(model)
+> AccountFromLoginResponseModel login(model)
 
 Login
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsAccountFromLoginResponseModel**](QualerApiModelsAccountFromLoginResponseModel.md)
+[**AccountFromLoginResponseModel**](AccountFromLoginResponseModel.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = qualer_sdk.AccountApi()
-model = qualer_sdk.QualerApiModelsAccountToLogoutModel() # QualerApiModelsAccountToLogoutModel | 
+model = qualer_sdk.AccountToLogoutModel() # AccountToLogoutModel | 
 
 try:
     # Logout
@@ -226,7 +226,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**QualerApiModelsAccountToLogoutModel**](QualerApiModelsAccountToLogoutModel.md)|  | 
+ **model** | [**AccountToLogoutModel**](AccountToLogoutModel.md)|  | 
 
 ### Return type
 
@@ -260,7 +260,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = qualer_sdk.AccountApi()
-model = qualer_sdk.QualerApiModelsEmployeesFromEmployeeLocationModel() # QualerApiModelsEmployeesFromEmployeeLocationModel | 
+model = qualer_sdk.EmployeesFromEmployeeLocationModel() # EmployeesFromEmployeeLocationModel | 
 
 try:
     # Post Employee Location
@@ -274,7 +274,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**QualerApiModelsEmployeesFromEmployeeLocationModel**](QualerApiModelsEmployeesFromEmployeeLocationModel.md)|  | 
+ **model** | [**EmployeesFromEmployeeLocationModel**](EmployeesFromEmployeeLocationModel.md)|  | 
 
 ### Return type
 

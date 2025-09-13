@@ -31,7 +31,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.AssetServiceRecordsApi()
 asset_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel() # QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel | 
+model = qualer_sdk.AssetServiceRecordsFromAddAssetServiceRecordModel() # AssetServiceRecordsFromAddAssetServiceRecordModel | 
 
 try:
     api_response = api_instance.add_asset_service_record(asset_id, model)
@@ -45,7 +45,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **asset_id** | **int**|  | 
- **model** | [**QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel**](QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel.md)|  | 
+ **model** | [**AssetServiceRecordsFromAddAssetServiceRecordModel**](AssetServiceRecordsFromAddAssetServiceRecordModel.md)|  | 
 
 ### Return type
 
@@ -206,7 +206,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_service_record**
-> QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel get_asset_service_record(asset_service_record_id, model_asset_service_record_id=model_asset_service_record_id)
+> AssetServiceRecordsToAssetServiceRecordResponseModel get_asset_service_record(asset_service_record_id, model_asset_service_record_id=model_asset_service_record_id)
 
 
 
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel**](QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel.md)
+[**AssetServiceRecordsToAssetServiceRecordResponseModel**](AssetServiceRecordsToAssetServiceRecordResponseModel.md)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_service_records**
-> QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel get_asset_service_records(model_asset_id=model_asset_id, model_serial_number=model_serial_number, model_from=model_from, model_to=model_to)
+> AssetServiceRecordsToAssetServiceRecordResponseModel get_asset_service_records(model_asset_id=model_asset_id, model_serial_number=model_serial_number, model_from=model_from, model_to=model_to)
 
 
 
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel**](QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel.md)
+[**AssetServiceRecordsToAssetServiceRecordResponseModel**](AssetServiceRecordsToAssetServiceRecordResponseModel.md)
 
 ### Authorization
 
@@ -304,7 +304,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_service_records_by_asset**
-> list[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel] get_asset_service_records_by_asset(asset_id)
+> list[AssetServiceRecordsToAssetServiceRecordResponseModel] get_asset_service_records_by_asset(asset_id)
 
 
 
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]**](QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel.md)
+[**list[AssetServiceRecordsToAssetServiceRecordResponseModel]**](AssetServiceRecordsToAssetServiceRecordResponseModel.md)
 
 ### Authorization
 
@@ -364,7 +364,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.AssetServiceRecordsApi()
 asset_service_record_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsAssetServiceRecordsFromUpdateAssetServiceRecordModel() # QualerApiModelsAssetServiceRecordsFromUpdateAssetServiceRecordModel | 
+model = qualer_sdk.AssetServiceRecordsFromUpdateAssetServiceRecordModel() # AssetServiceRecordsFromUpdateAssetServiceRecordModel | 
 
 try:
     api_response = api_instance.update_asset_service_record(asset_service_record_id, model)
@@ -378,7 +378,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **asset_service_record_id** | **int**|  | 
- **model** | [**QualerApiModelsAssetServiceRecordsFromUpdateAssetServiceRecordModel**](QualerApiModelsAssetServiceRecordsFromUpdateAssetServiceRecordModel.md)|  | 
+ **model** | [**AssetServiceRecordsFromUpdateAssetServiceRecordModel**](AssetServiceRecordsFromUpdateAssetServiceRecordModel.md)|  | 
 
 ### Return type
 

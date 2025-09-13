@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel
+# MeasurementsToUpdateMeasurementPointResponseModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -32,10 +32,10 @@ Name | Type | Description | Notes
 **influence_parameter1_value** | **str** |  | [optional] 
 **influence_parameter2_parameter_id** | **int** |  | [optional] 
 **influence_parameter2_value** | **str** |  | [optional] 
-**measurements** | [**list[QualerApiModelsMeasurementsToUpdateMeasurementResponseModel]**](QualerApiModelsMeasurementsToUpdateMeasurementResponseModel.md) |  | [optional] 
-**measurement_condition_factors** | [**list[QualerApiModelsMeasurementsToUpdateMeasurementConditionFactorResponse]**](QualerApiModelsMeasurementsToUpdateMeasurementConditionFactorResponse.md) |  | [optional] 
-**primary_measurement_tool** | [**QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel**](QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel.md) |  | [optional] 
-**secondary_measurement_tool** | [**QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel**](QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel.md) |  | [optional] 
+**measurements** | [**list[MeasurementsToUpdateMeasurementResponseModel]**](MeasurementsToUpdateMeasurementResponseModel.md) |  | [optional] 
+**measurement_condition_factors** | [**list[MeasurementsToUpdateMeasurementConditionFactorResponse]**](MeasurementsToUpdateMeasurementConditionFactorResponse.md) |  | [optional] 
+**primary_measurement_tool** | [**MeasurementsToUpdateMeasurementToolResponseModel**](MeasurementsToUpdateMeasurementToolResponseModel.md) |  | [optional] 
+**secondary_measurement_tool** | [**MeasurementsToUpdateMeasurementToolResponseModel**](MeasurementsToUpdateMeasurementToolResponseModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

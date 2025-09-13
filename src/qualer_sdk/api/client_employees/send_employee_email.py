@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_clients_from_send_employee_email_model import (
-    QualerApiModelsClientsFromSendEmployeeEmailModel,
+    ClientsFromSendEmployeeEmailModel,
 )
 from ...models.send_employee_email_response_200 import SendEmployeeEmailResponse200
 from ...types import Response
@@ -15,7 +15,7 @@ from ...types import Response
 def _get_kwargs(
     employee_id: int,
     *,
-    body: QualerApiModelsClientsFromSendEmployeeEmailModel,
+    body: ClientsFromSendEmployeeEmailModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -60,12 +60,12 @@ def sync_detailed(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSendEmployeeEmailModel,
+    body: ClientsFromSendEmployeeEmailModel,
 ) -> Response[SendEmployeeEmailResponse200]:
     """
     Args:
         employee_id (int):
-        body (QualerApiModelsClientsFromSendEmployeeEmailModel):
+        body (ClientsFromSendEmployeeEmailModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -91,12 +91,12 @@ def sync(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSendEmployeeEmailModel,
+    body: ClientsFromSendEmployeeEmailModel,
 ) -> Optional[SendEmployeeEmailResponse200]:
     """
     Args:
         employee_id (int):
-        body (QualerApiModelsClientsFromSendEmployeeEmailModel):
+        body (ClientsFromSendEmployeeEmailModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -117,12 +117,12 @@ async def asyncio_detailed(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSendEmployeeEmailModel,
+    body: ClientsFromSendEmployeeEmailModel,
 ) -> Response[SendEmployeeEmailResponse200]:
     """
     Args:
         employee_id (int):
-        body (QualerApiModelsClientsFromSendEmployeeEmailModel):
+        body (ClientsFromSendEmployeeEmailModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -146,12 +146,12 @@ async def asyncio(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSendEmployeeEmailModel,
+    body: ClientsFromSendEmployeeEmailModel,
 ) -> Optional[SendEmployeeEmailResponse200]:
     """
     Args:
         employee_id (int):
-        body (QualerApiModelsClientsFromSendEmployeeEmailModel):
+        body (ClientsFromSendEmployeeEmailModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

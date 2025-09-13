@@ -6,18 +6,18 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.qualer_api_models_service_order_documents_to_company_order_controlled_document_response_document_type import (
-    QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
+    ServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
 )
 from ..models.report_type import ReportType
 
 T = TypeVar(
     "T",
-    bound="QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse",
+    bound="ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse",
 )
 
 
 @_attrs_define
-class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse:
+class ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse:
     """
     Attributes:
         service_order_id (Optional[int]):
@@ -25,7 +25,7 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentRespon
         document_name (Optional[str]):
         file_name (Optional[str]):
         document_type (Union[None,
-            QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType]):
+            ServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType]):
         revision_number (Optional[int]):
         report_type (Optional[ReportType]):
         download_url (Optional[str]):
@@ -38,7 +38,7 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentRespon
     document_type: Union[
         None,
         None,
-        QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
+        ServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
     ] = None
     revision_number: Optional[int] = None
     report_type: Optional[ReportType] = None
@@ -110,13 +110,15 @@ class QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentRespon
         document_type: Union[
             None,
             None,
-            QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
+            ServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
         ]
         if not _document_type:
             document_type = None
         else:
-            document_type = QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType(
-                _document_type
+            document_type = (
+                ServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType(
+                    _document_type
+                )
             )
 
         revision_number = d.pop("RevisionNumber", None)

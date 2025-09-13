@@ -6,31 +6,29 @@ from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_maintenance_plans_to_maintenance_task_response import (
-        QualerApiModelsMaintenancePlansToMaintenanceTaskResponse,
+        MaintenancePlansToMaintenanceTaskResponse,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsMaintenancePlansToMaintenancePlanResponse")
+T = TypeVar("T", bound="MaintenancePlansToMaintenancePlanResponse")
 
 
 @_attrs_define
-class QualerApiModelsMaintenancePlansToMaintenancePlanResponse:
+class MaintenancePlansToMaintenancePlanResponse:
     """
     Attributes:
         maintenance_plan_id (Optional[int]):
         maintenance_plan_name (Optional[str]):
         is_template (Optional[bool]):
         company_name (Optional[str]):
-        maintenance_tasks (Optional[List['QualerApiModelsMaintenancePlansToMaintenanceTaskResponse']]):
+        maintenance_tasks (Optional[List['MaintenancePlansToMaintenanceTaskResponse']]):
     """
 
     maintenance_plan_id: Optional[int] = None
     maintenance_plan_name: Optional[str] = None
     is_template: Optional[bool] = None
     company_name: Optional[str] = None
-    maintenance_tasks: Union[
-        None, List["QualerApiModelsMaintenancePlansToMaintenanceTaskResponse"]
-    ] = None
+    maintenance_tasks: Union[None, List["MaintenancePlansToMaintenanceTaskResponse"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -68,7 +66,7 @@ class QualerApiModelsMaintenancePlansToMaintenancePlanResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_maintenance_plans_to_maintenance_task_response import (
-            QualerApiModelsMaintenancePlansToMaintenanceTaskResponse,
+            MaintenancePlansToMaintenanceTaskResponse,
         )
 
         d = dict(src_dict)
@@ -83,10 +81,8 @@ class QualerApiModelsMaintenancePlansToMaintenancePlanResponse:
         maintenance_tasks = []
         _maintenance_tasks = d.pop("MaintenanceTasks", None)
         for maintenance_tasks_item_data in _maintenance_tasks or []:
-            maintenance_tasks_item = (
-                QualerApiModelsMaintenancePlansToMaintenanceTaskResponse.from_dict(
-                    maintenance_tasks_item_data
-                )
+            maintenance_tasks_item = MaintenancePlansToMaintenanceTaskResponse.from_dict(
+                maintenance_tasks_item_data
             )
 
             maintenance_tasks.append(maintenance_tasks_item)

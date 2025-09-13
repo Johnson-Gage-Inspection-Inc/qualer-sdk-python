@@ -4,11 +4,11 @@ from typing import Any, Dict, List, Optional, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-T = TypeVar("T", bound="QualerApiModelsEmployeesFromEmployeeLocationModel")
+T = TypeVar("T", bound="EmployeesFromEmployeeLocationModel")
 
 
 @_attrs_define
-class QualerApiModelsEmployeesFromEmployeeLocationModel:
+class EmployeesFromEmployeeLocationModel:
     """
     Attributes:
         latitude (Optional[float]):

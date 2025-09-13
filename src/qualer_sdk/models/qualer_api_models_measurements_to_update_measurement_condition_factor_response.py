@@ -4,11 +4,11 @@ from typing import Any, Dict, List, Optional, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-T = TypeVar("T", bound="QualerApiModelsMeasurementsToUpdateMeasurementConditionFactorResponse")
+T = TypeVar("T", bound="MeasurementsToUpdateMeasurementConditionFactorResponse")
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsToUpdateMeasurementConditionFactorResponse:
+class MeasurementsToUpdateMeasurementConditionFactorResponse:
     """
     Attributes:
         measurement_condition_factor_id (Optional[int]):

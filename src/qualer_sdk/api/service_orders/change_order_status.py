@@ -7,7 +7,7 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.change_order_status_response_200 import ChangeOrderStatusResponse200
 from ...models.qualer_api_models_service_orders_from_change_service_order_status_model import (
-    QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel,
+    ServiceOrdersFromChangeServiceOrderStatusModel,
 )
 from ...types import Response
 
@@ -15,7 +15,7 @@ from ...types import Response
 def _get_kwargs(
     service_order_id: int,
     *,
-    body: QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel,
+    body: ServiceOrdersFromChangeServiceOrderStatusModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -69,13 +69,13 @@ def sync_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel,
+    body: ServiceOrdersFromChangeServiceOrderStatusModel,
 ) -> Response[Union[Any, ChangeOrderStatusResponse200]]:
     """Change Work Order Status
 
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel):
+        body (ServiceOrdersFromChangeServiceOrderStatusModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -101,13 +101,13 @@ def sync(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel,
+    body: ServiceOrdersFromChangeServiceOrderStatusModel,
 ) -> Optional[Union[Any, ChangeOrderStatusResponse200]]:
     """Change Work Order Status
 
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel):
+        body (ServiceOrdersFromChangeServiceOrderStatusModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -128,13 +128,13 @@ async def asyncio_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel,
+    body: ServiceOrdersFromChangeServiceOrderStatusModel,
 ) -> Response[Union[Any, ChangeOrderStatusResponse200]]:
     """Change Work Order Status
 
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel):
+        body (ServiceOrdersFromChangeServiceOrderStatusModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -158,13 +158,13 @@ async def asyncio(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel,
+    body: ServiceOrdersFromChangeServiceOrderStatusModel,
 ) -> Optional[Union[Any, ChangeOrderStatusResponse200]]:
     """Change Work Order Status
 
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel):
+        body (ServiceOrdersFromChangeServiceOrderStatusModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

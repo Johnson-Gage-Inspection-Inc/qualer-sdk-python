@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_asset_to_assets_count_response_model import (
-    QualerApiModelsAssetToAssetsCountResponseModel,
+    AssetToAssetsCountResponseModel,
 )
 from ...types import Response
 
@@ -32,9 +32,9 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[QualerApiModelsAssetToAssetsCountResponseModel]:
+) -> Optional[AssetToAssetsCountResponseModel]:
     if response.status_code == 200:
-        response_200 = QualerApiModelsAssetToAssetsCountResponseModel.from_dict(response.json())
+        response_200 = AssetToAssetsCountResponseModel.from_dict(response.json())
 
         return response_200
     if client.raise_on_unexpected_status:
@@ -45,7 +45,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[QualerApiModelsAssetToAssetsCountResponseModel]:
+) -> Response[AssetToAssetsCountResponseModel]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -58,7 +58,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     model_search_string: Optional[str] = None,
-) -> Response[QualerApiModelsAssetToAssetsCountResponseModel]:
+) -> Response[AssetToAssetsCountResponseModel]:
     """GetAssetManagerCounters
 
     Args:
@@ -69,7 +69,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[QualerApiModelsAssetToAssetsCountResponseModel]
+        Response[AssetToAssetsCountResponseModel]
     """
 
     kwargs = _get_kwargs(
@@ -87,7 +87,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     model_search_string: Optional[str] = None,
-) -> Optional[QualerApiModelsAssetToAssetsCountResponseModel]:
+) -> Optional[AssetToAssetsCountResponseModel]:
     """GetAssetManagerCounters
 
     Args:
@@ -98,7 +98,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        QualerApiModelsAssetToAssetsCountResponseModel
+        AssetToAssetsCountResponseModel
     """
 
     return sync_detailed(
@@ -111,7 +111,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     model_search_string: Optional[str] = None,
-) -> Response[QualerApiModelsAssetToAssetsCountResponseModel]:
+) -> Response[AssetToAssetsCountResponseModel]:
     """GetAssetManagerCounters
 
     Args:
@@ -122,7 +122,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[QualerApiModelsAssetToAssetsCountResponseModel]
+        Response[AssetToAssetsCountResponseModel]
     """
 
     kwargs = _get_kwargs(
@@ -138,7 +138,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     model_search_string: Optional[str] = None,
-) -> Optional[QualerApiModelsAssetToAssetsCountResponseModel]:
+) -> Optional[AssetToAssetsCountResponseModel]:
     """GetAssetManagerCounters
 
     Args:
@@ -149,7 +149,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        QualerApiModelsAssetToAssetsCountResponseModel
+        AssetToAssetsCountResponseModel
     """
 
     return (

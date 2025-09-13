@@ -1,11 +1,11 @@
-# QualerApiModelsServiceOrdersToBaseWorkItemModel
+# ServiceOrdersToBaseWorkItemModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tasks** | [**list[QualerApiModelsServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel]**](QualerApiModelsServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel.md) |  | [optional] 
-**parts** | [**list[QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel]**](QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel.md) |  | [optional] 
-**repairs** | [**list[QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel]**](QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel.md) |  | [optional] 
+**tasks** | [**list[ServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel]**](ServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel.md) |  | [optional] 
+**parts** | [**list[ServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel]**](ServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel.md) |  | [optional] 
+**repairs** | [**list[ServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel]**](ServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel.md) |  | [optional] 
 **work_item_id** | **int** |  | [optional] 
 **vendor_tag** | **str** |  | [optional] 
 

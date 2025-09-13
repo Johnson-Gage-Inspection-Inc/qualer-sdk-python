@@ -8,15 +8,15 @@ from dateutil.parser import isoparse
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_asset_to_asset_maintenance_plan_response_assigned_employee import (
-        QualerApiModelsAssetToAssetMaintenancePlanResponseAssignedEmployee,
+        AssetToAssetMaintenancePlanResponseAssignedEmployee,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsAssetToAssetMaintenancePlanResponse")
+T = TypeVar("T", bound="AssetToAssetMaintenancePlanResponse")
 
 
 @_attrs_define
-class QualerApiModelsAssetToAssetMaintenancePlanResponse:
+class AssetToAssetMaintenancePlanResponse:
     """
     Attributes:
         maintenance_plan_id (Optional[int]):
@@ -35,7 +35,7 @@ class QualerApiModelsAssetToAssetMaintenancePlanResponse:
         technician_last_name (Optional[str]):
         technician_alias (Optional[str]):
         technician_department_name (Optional[str]):
-        assigned_employees (Optional[List['QualerApiModelsAssetToAssetMaintenancePlanResponseAssignedEmployee']]):
+        assigned_employees (Optional[List['AssetToAssetMaintenancePlanResponseAssignedEmployee']]):
     """
 
     maintenance_plan_id: Optional[int] = None
@@ -57,7 +57,7 @@ class QualerApiModelsAssetToAssetMaintenancePlanResponse:
     assigned_employees: Union[
         None,
         None,
-        List["QualerApiModelsAssetToAssetMaintenancePlanResponseAssignedEmployee"],
+        List["AssetToAssetMaintenancePlanResponseAssignedEmployee"],
     ] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -162,7 +162,7 @@ class QualerApiModelsAssetToAssetMaintenancePlanResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_asset_to_asset_maintenance_plan_response_assigned_employee import (
-            QualerApiModelsAssetToAssetMaintenancePlanResponseAssignedEmployee,
+            AssetToAssetMaintenancePlanResponseAssignedEmployee,
         )
 
         d = dict(src_dict)
@@ -246,10 +246,8 @@ class QualerApiModelsAssetToAssetMaintenancePlanResponse:
         assigned_employees = []
         _assigned_employees = d.pop("AssignedEmployees", None)
         for assigned_employees_item_data in _assigned_employees or []:
-            assigned_employees_item = (
-                QualerApiModelsAssetToAssetMaintenancePlanResponseAssignedEmployee.from_dict(
-                    assigned_employees_item_data
-                )
+            assigned_employees_item = AssetToAssetMaintenancePlanResponseAssignedEmployee.from_dict(
+                assigned_employees_item_data
             )
 
             assigned_employees.append(assigned_employees_item)

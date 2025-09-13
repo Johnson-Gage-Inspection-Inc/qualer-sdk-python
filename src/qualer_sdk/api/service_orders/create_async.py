@@ -7,14 +7,14 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.create_async_response_201 import CreateAsyncResponse201
 from ...models.qualer_api_models_service_orders_from_create_order_model import (
-    QualerApiModelsServiceOrdersFromCreateOrderModel,
+    ServiceOrdersFromCreateOrderModel,
 )
 from ...types import Response
 
 
 def _get_kwargs(
     *,
-    body: QualerApiModelsServiceOrdersFromCreateOrderModel,
+    body: ServiceOrdersFromCreateOrderModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -61,12 +61,12 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromCreateOrderModel,
+    body: ServiceOrdersFromCreateOrderModel,
 ) -> Response[Union[Any, CreateAsyncResponse201]]:
     """Create service order.
 
     Args:
-        body (QualerApiModelsServiceOrdersFromCreateOrderModel):
+        body (ServiceOrdersFromCreateOrderModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -90,12 +90,12 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromCreateOrderModel,
+    body: ServiceOrdersFromCreateOrderModel,
 ) -> Optional[Union[Any, CreateAsyncResponse201]]:
     """Create service order.
 
     Args:
-        body (QualerApiModelsServiceOrdersFromCreateOrderModel):
+        body (ServiceOrdersFromCreateOrderModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -114,12 +114,12 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromCreateOrderModel,
+    body: ServiceOrdersFromCreateOrderModel,
 ) -> Response[Union[Any, CreateAsyncResponse201]]:
     """Create service order.
 
     Args:
-        body (QualerApiModelsServiceOrdersFromCreateOrderModel):
+        body (ServiceOrdersFromCreateOrderModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -141,12 +141,12 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromCreateOrderModel,
+    body: ServiceOrdersFromCreateOrderModel,
 ) -> Optional[Union[Any, CreateAsyncResponse201]]:
     """Create service order.
 
     Args:
-        body (QualerApiModelsServiceOrdersFromCreateOrderModel):
+        body (ServiceOrdersFromCreateOrderModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_maintenance_plan_assets**
-> list[QualerApiModelsAssetToAssetForecastApiResponseModel] get_maintenance_plan_assets(maintenance_plan_id)
+> list[AssetToAssetForecastApiResponseModel] get_maintenance_plan_assets(maintenance_plan_id)
 
 
 
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetToAssetForecastApiResponseModel]**](QualerApiModelsAssetToAssetForecastApiResponseModel.md)
+[**list[AssetToAssetForecastApiResponseModel]**](AssetToAssetForecastApiResponseModel.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_maintenance_plans**
-> list[QualerApiModelsMaintenancePlansToMaintenancePlanResponse] get_maintenance_plans(client_company_id)
+> list[MaintenancePlansToMaintenancePlanResponse] get_maintenance_plans(client_company_id)
 
 
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsMaintenancePlansToMaintenancePlanResponse]**](QualerApiModelsMaintenancePlansToMaintenancePlanResponse.md)
+[**list[MaintenancePlansToMaintenancePlanResponse]**](MaintenancePlansToMaintenancePlanResponse.md)
 
 ### Authorization
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get**
-> list[QualerApiModelsServiceOrdersToServiceOrderTaskResponse] get(service_pricing_id, service_group_id=service_group_id)
+> list[ServiceOrdersToServiceOrderTaskResponse] get(service_pricing_id, service_group_id=service_group_id)
 
 
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsServiceOrdersToServiceOrderTaskResponse]**](QualerApiModelsServiceOrdersToServiceOrderTaskResponse.md)
+[**list[ServiceOrdersToServiceOrderTaskResponse]**](ServiceOrdersToServiceOrderTaskResponse.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update**
-> list[QualerApiModelsServiceOrdersToServiceOrderTaskResponse] update(models)
+> list[ServiceOrdersToServiceOrderTaskResponse] update(models)
 
 
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsServiceOrdersToServiceOrderTaskResponse]**](QualerApiModelsServiceOrdersToServiceOrderTaskResponse.md)
+[**list[ServiceOrdersToServiceOrderTaskResponse]**](ServiceOrdersToServiceOrderTaskResponse.md)
 
 ### Authorization
 

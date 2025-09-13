@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_service_orders_to_order_assignment_response_model import (
-    QualerApiModelsServiceOrdersToOrderAssignmentResponseModel,
+    ServiceOrdersToOrderAssignmentResponseModel,
 )
 from ...types import Response
 
@@ -24,15 +24,13 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[List["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
+) -> Optional[List["ServiceOrdersToOrderAssignmentResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = (
-                QualerApiModelsServiceOrdersToOrderAssignmentResponseModel.from_dict(
-                    response_200_item_data
-                )
+            response_200_item = ServiceOrdersToOrderAssignmentResponseModel.from_dict(
+                response_200_item_data
             )
 
             response_200.append(response_200_item)
@@ -46,7 +44,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[List["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
+) -> Response[List["ServiceOrdersToOrderAssignmentResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -59,7 +57,7 @@ def sync_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[List["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
+) -> Response[List["ServiceOrdersToOrderAssignmentResponseModel"]]:
     """
     Args:
         service_order_id (int):
@@ -69,7 +67,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsServiceOrdersToOrderAssignmentResponseModel']]
+        Response[List['ServiceOrdersToOrderAssignmentResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -87,7 +85,7 @@ def sync(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[List["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
+) -> Optional[List["ServiceOrdersToOrderAssignmentResponseModel"]]:
     """
     Args:
         service_order_id (int):
@@ -97,7 +95,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsServiceOrdersToOrderAssignmentResponseModel']
+        List['ServiceOrdersToOrderAssignmentResponseModel']
     """
 
     return sync_detailed(
@@ -110,7 +108,7 @@ async def asyncio_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[List["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
+) -> Response[List["ServiceOrdersToOrderAssignmentResponseModel"]]:
     """
     Args:
         service_order_id (int):
@@ -120,7 +118,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsServiceOrdersToOrderAssignmentResponseModel']]
+        Response[List['ServiceOrdersToOrderAssignmentResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -136,7 +134,7 @@ async def asyncio(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[List["QualerApiModelsServiceOrdersToOrderAssignmentResponseModel"]]:
+) -> Optional[List["ServiceOrdersToOrderAssignmentResponseModel"]]:
     """
     Args:
         service_order_id (int):
@@ -146,7 +144,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsServiceOrdersToOrderAssignmentResponseModel']
+        List['ServiceOrdersToOrderAssignmentResponseModel']
     """
 
     return (

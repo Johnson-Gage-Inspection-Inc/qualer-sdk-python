@@ -104,7 +104,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_inventory_count**
-> list[QualerApiModelsInventoryToInventoryResponseModel] get_inventory_count()
+> list[InventoryToInventoryResponseModel] get_inventory_count()
 
 
 
@@ -131,7 +131,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[QualerApiModelsInventoryToInventoryResponseModel]**](QualerApiModelsInventoryToInventoryResponseModel.md)
+[**list[InventoryToInventoryResponseModel]**](InventoryToInventoryResponseModel.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_manufacturers**
-> list[QualerApiModelsProductToManufacturerResponseModel] get_manufacturers()
+> list[ProductToManufacturerResponseModel] get_manufacturers()
 
 
 
@@ -172,7 +172,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[QualerApiModelsProductToManufacturerResponseModel]**](QualerApiModelsProductToManufacturerResponseModel.md)
+[**list[ProductToManufacturerResponseModel]**](ProductToManufacturerResponseModel.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_product**
-> QualerApiModelsProductToProductApiResponseModel get_product(product_id)
+> ProductToProductApiResponseModel get_product(product_id)
 
 
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsProductToProductApiResponseModel**](QualerApiModelsProductToProductApiResponseModel.md)
+[**ProductToProductApiResponseModel**](ProductToProductApiResponseModel.md)
 
 ### Authorization
 
@@ -292,7 +292,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = qualer_sdk.ProductApi()
-models = [qualer_sdk.QualerApiModelsInventoryFromInventoryCountModel()] # list[QualerApiModelsInventoryFromInventoryCountModel] | 
+models = [qualer_sdk.InventoryFromInventoryCountModel()] # list[InventoryFromInventoryCountModel] | 
 
 try:
     api_response = api_instance.put_inventory_count(models)
@@ -305,7 +305,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **models** | [**list[QualerApiModelsInventoryFromInventoryCountModel]**](QualerApiModelsInventoryFromInventoryCountModel.md)|  | 
+ **models** | [**list[InventoryFromInventoryCountModel]**](InventoryFromInventoryCountModel.md)|  | 
 
 ### Return type
 

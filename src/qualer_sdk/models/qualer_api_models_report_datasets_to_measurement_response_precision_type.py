@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType(str, Enum):
+class ReportDatasetsToMeasurementResponsePrecisionType(str, Enum):
     PERCENTAGE = "Percentage"
     READABILITY = "Readability"
     UNITOFMEASURE = "UnitOfMeasure"

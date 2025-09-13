@@ -7,58 +7,58 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.qualer_api_models_report_datasets_to_measurement_response_double_substitution_sequence import (
-    QualerApiModelsReportDatasetsToMeasurementResponseDoubleSubstitutionSequence,
+    ReportDatasetsToMeasurementResponseDoubleSubstitutionSequence,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_environment_mask import (
-    QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask,
+    ReportDatasetsToMeasurementResponseEnvironmentMask,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_guard_band_logic import (
-    QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic,
+    ReportDatasetsToMeasurementResponseGuardBandLogic,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_hysteresis_point import (
-    QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint,
+    ReportDatasetsToMeasurementResponseHysteresisPoint,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_measurement_not_taken_result import (
-    QualerApiModelsReportDatasetsToMeasurementResponseMeasurementNotTakenResult,
+    ReportDatasetsToMeasurementResponseMeasurementNotTakenResult,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_measurement_point_order import (
-    QualerApiModelsReportDatasetsToMeasurementResponseMeasurementPointOrder,
+    ReportDatasetsToMeasurementResponseMeasurementPointOrder,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_measurement_type import (
-    QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType,
+    ReportDatasetsToMeasurementResponseMeasurementType,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_precision_type import (
-    QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType,
+    ReportDatasetsToMeasurementResponsePrecisionType,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_reading_entry_logic import (
-    QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic,
+    ReportDatasetsToMeasurementResponseReadingEntryLogic,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_reading_entry_math import (
-    QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath,
+    ReportDatasetsToMeasurementResponseReadingEntryMath,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_shipment_status import (
-    QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus,
+    ReportDatasetsToMeasurementResponseShipmentStatus,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_specification_mode import (
-    QualerApiModelsReportDatasetsToMeasurementResponseSpecificationMode,
+    ReportDatasetsToMeasurementResponseSpecificationMode,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_tolerance_mode import (
-    QualerApiModelsReportDatasetsToMeasurementResponseToleranceMode,
+    ReportDatasetsToMeasurementResponseToleranceMode,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_tolerance_type import (
-    QualerApiModelsReportDatasetsToMeasurementResponseToleranceType,
+    ReportDatasetsToMeasurementResponseToleranceType,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_tolerance_unit import (
-    QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit,
+    ReportDatasetsToMeasurementResponseToleranceUnit,
 )
 from ..models.service_result_status import ServiceResultStatus
 from ..models.work_status import WorkStatus
 
-T = TypeVar("T", bound="QualerApiModelsReportDatasetsToMeasurementResponse")
+T = TypeVar("T", bound="ReportDatasetsToMeasurementResponse")
 
 
 @_attrs_define
-class QualerApiModelsReportDatasetsToMeasurementResponse:
+class ReportDatasetsToMeasurementResponse:
     """
     Attributes:
         is_accredited (Optional[bool]):
@@ -136,13 +136,13 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         tar_raw (Optional[float]):
         tar_decimal_places (Optional[int]):
         guard_band (Optional[str]):
-        guard_band_logic (Optional[QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic]):
+        guard_band_logic (Optional[ReportDatasetsToMeasurementResponseGuardBandLogic]):
         uncertainty_budget (Optional[str]):
         calculated_uncertainty (Optional[float]):
         lock_uncertainty_budget (Optional[bool]):
         lab_mu (Optional[float]):
         channel (Optional[int]):
-        measurement_type (Optional[QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType]):
+        measurement_type (Optional[ReportDatasetsToMeasurementResponseMeasurementType]):
         updated_by (Optional[str]):
         updated_on (Optional[datetime.datetime]):
         error (Optional[float]):
@@ -204,10 +204,10 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         test_value (Optional[float]):
         base_value (Optional[float]):
         use_expected_value (Optional[bool]):
-        reading_entry_logic (Optional[QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic]):
-        reading_entry_math (Optional[QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath]):
+        reading_entry_logic (Optional[ReportDatasetsToMeasurementResponseReadingEntryLogic]):
+        reading_entry_math (Optional[ReportDatasetsToMeasurementResponseReadingEntryMath]):
         double_substitution_sequence (Union[None,
-            QualerApiModelsReportDatasetsToMeasurementResponseDoubleSubstitutionSequence]):
+            ReportDatasetsToMeasurementResponseDoubleSubstitutionSequence]):
         reading_entry_math_string (Optional[str]):
         nominal_extended (Optional[str]):
         expected_value_extended (Optional[str]):
@@ -220,7 +220,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         accuracy_class (Optional[str]):
         accuracy_class_min (Optional[float]):
         accuracy_class_max (Optional[float]):
-        environment_mask (Optional[QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask]):
+        environment_mask (Optional[ReportDatasetsToMeasurementResponseEnvironmentMask]):
         display_name (Optional[str]):
         display_part_number (Optional[str]):
         part_number (Optional[str]):
@@ -272,17 +272,17 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         measurement_set_id (Optional[int]):
         is_hidden (Optional[bool]):
         readings (Optional[int]):
-        tolerance_type (Optional[QualerApiModelsReportDatasetsToMeasurementResponseToleranceType]):
+        tolerance_type (Optional[ReportDatasetsToMeasurementResponseToleranceType]):
         tolerance_type_string (Optional[str]):
-        precision_type (Optional[QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType]):
-        specification_mode (Optional[QualerApiModelsReportDatasetsToMeasurementResponseSpecificationMode]):
-        tolerance_mode (Optional[QualerApiModelsReportDatasetsToMeasurementResponseToleranceMode]):
-        tolerance_unit (Optional[QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit]):
+        precision_type (Optional[ReportDatasetsToMeasurementResponsePrecisionType]):
+        specification_mode (Optional[ReportDatasetsToMeasurementResponseSpecificationMode]):
+        tolerance_mode (Optional[ReportDatasetsToMeasurementResponseToleranceMode]):
+        tolerance_unit (Optional[ReportDatasetsToMeasurementResponseToleranceUnit]):
         tolerance_string (Optional[str]):
         po_number (Optional[str]):
         secondary_po (Optional[str]):
         shipped_date (Optional[datetime.datetime]):
-        shipment_status (Optional[QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus]):
+        shipment_status (Optional[ReportDatasetsToMeasurementResponseShipmentStatus]):
         shipped_on (Optional[datetime.datetime]):
         delivered_on (Optional[datetime.datetime]):
         tracking_number (Optional[str]):
@@ -293,7 +293,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         abbreviated_uom (Optional[str]):
         unit_scale_factor (Optional[float]):
         measurement_not_taken_result (Union[None,
-            QualerApiModelsReportDatasetsToMeasurementResponseMeasurementNotTakenResult]):
+            ReportDatasetsToMeasurementResponseMeasurementNotTakenResult]):
         hide_from_certificate (Optional[bool]):
         measurement_not_taken_reason (Optional[str]):
         environment_text_1 (Optional[str]):
@@ -426,8 +426,8 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         value_subtitle_40 (Optional[str]):
         values_decimal_places (Optional[int]):
         repeat_measurement_and_calculate_hysteresis (Optional[bool]):
-        measurement_point_order (Optional[QualerApiModelsReportDatasetsToMeasurementResponseMeasurementPointOrder]):
-        hysteresis_point (Optional[QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint]):
+        measurement_point_order (Optional[ReportDatasetsToMeasurementResponseMeasurementPointOrder]):
+        hysteresis_point (Optional[ReportDatasetsToMeasurementResponseHysteresisPoint]):
         max_hysteresis (Optional[float]):
         run (Optional[int]):
         direction (Optional[int]):
@@ -520,17 +520,13 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     tar_raw: Optional[float] = None
     tar_decimal_places: Optional[int] = None
     guard_band: Optional[str] = None
-    guard_band_logic: Union[
-        None, QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic
-    ] = None
+    guard_band_logic: Union[None, ReportDatasetsToMeasurementResponseGuardBandLogic] = None
     uncertainty_budget: Optional[str] = None
     calculated_uncertainty: Optional[float] = None
     lock_uncertainty_budget: Optional[bool] = None
     lab_mu: Optional[float] = None
     channel: Optional[int] = None
-    measurement_type: Union[
-        None, QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType
-    ] = None
+    measurement_type: Union[None, ReportDatasetsToMeasurementResponseMeasurementType] = None
     updated_by: Optional[str] = None
     updated_on: Optional[datetime.datetime] = None
     error: Optional[float] = None
@@ -592,16 +588,12 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     test_value: Optional[float] = None
     base_value: Optional[float] = None
     use_expected_value: Optional[bool] = None
-    reading_entry_logic: Union[
-        None, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic
-    ] = None
-    reading_entry_math: Union[
-        None, QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath
-    ] = None
+    reading_entry_logic: Union[None, ReportDatasetsToMeasurementResponseReadingEntryLogic] = None
+    reading_entry_math: Union[None, ReportDatasetsToMeasurementResponseReadingEntryMath] = None
     double_substitution_sequence: Union[
         None,
         None,
-        QualerApiModelsReportDatasetsToMeasurementResponseDoubleSubstitutionSequence,
+        ReportDatasetsToMeasurementResponseDoubleSubstitutionSequence,
     ] = None
     reading_entry_math_string: Optional[str] = None
     nominal_extended: Optional[str] = None
@@ -615,9 +607,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     accuracy_class: Optional[str] = None
     accuracy_class_min: Optional[float] = None
     accuracy_class_max: Optional[float] = None
-    environment_mask: Union[
-        None, QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask
-    ] = None
+    environment_mask: Union[None, ReportDatasetsToMeasurementResponseEnvironmentMask] = None
     display_name: Optional[str] = None
     display_part_number: Optional[str] = None
     part_number: Optional[str] = None
@@ -669,29 +659,17 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     measurement_set_id: Optional[int] = None
     is_hidden: Optional[bool] = None
     readings: Optional[int] = None
-    tolerance_type: Optional["QualerApiModelsReportDatasetsToMeasurementResponseToleranceType"] = (
-        None
-    )
+    tolerance_type: Optional["ReportDatasetsToMeasurementResponseToleranceType"] = None
     tolerance_type_string: Optional[str] = None
-    precision_type: Optional["QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType"] = (
-        None
-    )
-    specification_mode: Union[
-        None, QualerApiModelsReportDatasetsToMeasurementResponseSpecificationMode
-    ] = None
-    tolerance_mode: Optional["QualerApiModelsReportDatasetsToMeasurementResponseToleranceMode"] = (
-        None
-    )
-    tolerance_unit: Optional["QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit"] = (
-        None
-    )
+    precision_type: Optional["ReportDatasetsToMeasurementResponsePrecisionType"] = None
+    specification_mode: Union[None, ReportDatasetsToMeasurementResponseSpecificationMode] = None
+    tolerance_mode: Optional["ReportDatasetsToMeasurementResponseToleranceMode"] = None
+    tolerance_unit: Optional["ReportDatasetsToMeasurementResponseToleranceUnit"] = None
     tolerance_string: Optional[str] = None
     po_number: Optional[str] = None
     secondary_po: Optional[str] = None
     shipped_date: Optional[datetime.datetime] = None
-    shipment_status: Union[
-        None, QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus
-    ] = None
+    shipment_status: Union[None, ReportDatasetsToMeasurementResponseShipmentStatus] = None
     shipped_on: Optional[datetime.datetime] = None
     delivered_on: Optional[datetime.datetime] = None
     tracking_number: Optional[str] = None
@@ -704,7 +682,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     measurement_not_taken_result: Union[
         None,
         None,
-        QualerApiModelsReportDatasetsToMeasurementResponseMeasurementNotTakenResult,
+        ReportDatasetsToMeasurementResponseMeasurementNotTakenResult,
     ] = None
     hide_from_certificate: Optional[bool] = None
     measurement_not_taken_reason: Optional[str] = None
@@ -841,11 +819,9 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
     measurement_point_order: Union[
         None,
         None,
-        QualerApiModelsReportDatasetsToMeasurementResponseMeasurementPointOrder,
+        ReportDatasetsToMeasurementResponseMeasurementPointOrder,
     ] = None
-    hysteresis_point: Union[
-        None, QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint
-    ] = None
+    hysteresis_point: Union[None, ReportDatasetsToMeasurementResponseHysteresisPoint] = None
     max_hysteresis: Optional[float] = None
     run: Optional[int] = None
     direction: Optional[int] = None
@@ -2723,16 +2699,14 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         guard_band_logic: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic,
+            ReportDatasetsToMeasurementResponseGuardBandLogic,
         ]
         if not _guard_band_logic:
             guard_band_logic = None
         elif _guard_band_logic is None:
             guard_band_logic = None
         else:
-            guard_band_logic = QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic(
-                _guard_band_logic
-            )
+            guard_band_logic = ReportDatasetsToMeasurementResponseGuardBandLogic(_guard_band_logic)
 
         uncertainty_budget = d.pop("UncertaintyBudget", None)
 
@@ -2748,7 +2722,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         measurement_type: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType,
+            ReportDatasetsToMeasurementResponseMeasurementType,
         ]
         if not _measurement_type:
             measurement_type = None
@@ -2764,20 +2738,16 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
                 }
                 string_value = measurement_type_mapping.get(_measurement_type)
                 if string_value:
-                    measurement_type = (
-                        QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType(
-                            string_value
-                        )
+                    measurement_type = ReportDatasetsToMeasurementResponseMeasurementType(
+                        string_value
                     )
                 else:
                     # Unknown integer value, set to None
                     measurement_type = None
             else:
                 # Handle string values normally
-                measurement_type = (
-                    QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType(
-                        _measurement_type
-                    )
+                measurement_type = ReportDatasetsToMeasurementResponseMeasurementType(
+                    _measurement_type
                 )
 
         updated_by = d.pop("UpdatedBy", None)
@@ -2918,7 +2888,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         reading_entry_logic: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic,
+            ReportDatasetsToMeasurementResponseReadingEntryLogic,
         ]
         if not _reading_entry_logic:
             reading_entry_logic = None
@@ -2938,27 +2908,23 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
                 }
                 string_value = reading_entry_logic_mapping.get(_reading_entry_logic)
                 if string_value:
-                    reading_entry_logic = (
-                        QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic(
-                            string_value
-                        )
+                    reading_entry_logic = ReportDatasetsToMeasurementResponseReadingEntryLogic(
+                        string_value
                     )
                 else:
                     # Unknown integer value, set to None
                     reading_entry_logic = None
             else:
                 # Handle string values normally
-                reading_entry_logic = (
-                    QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic(
-                        _reading_entry_logic
-                    )
+                reading_entry_logic = ReportDatasetsToMeasurementResponseReadingEntryLogic(
+                    _reading_entry_logic
                 )
 
         _reading_entry_math = d.pop("ReadingEntryMath", None)
         reading_entry_math: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath,
+            ReportDatasetsToMeasurementResponseReadingEntryMath,
         ]
         if not _reading_entry_math:
             reading_entry_math = None
@@ -2981,27 +2947,23 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
                 }
                 string_value = reading_entry_math_mapping.get(_reading_entry_math)
                 if string_value:
-                    reading_entry_math = (
-                        QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath(
-                            string_value
-                        )
+                    reading_entry_math = ReportDatasetsToMeasurementResponseReadingEntryMath(
+                        string_value
                     )
                 else:
                     # Unknown integer value, set to None
                     reading_entry_math = None
             else:
                 # Handle string values normally
-                reading_entry_math = (
-                    QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryMath(
-                        _reading_entry_math
-                    )
+                reading_entry_math = ReportDatasetsToMeasurementResponseReadingEntryMath(
+                    _reading_entry_math
                 )
 
         _double_substitution_sequence = d.pop("DoubleSubstitutionSequence", None)
         double_substitution_sequence: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementResponseDoubleSubstitutionSequence,
+            ReportDatasetsToMeasurementResponseDoubleSubstitutionSequence,
         ]
         if not _double_substitution_sequence:
             double_substitution_sequence = None
@@ -3020,8 +2982,8 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
                     _double_substitution_sequence
                 )
                 if string_value:
-                    double_substitution_sequence = QualerApiModelsReportDatasetsToMeasurementResponseDoubleSubstitutionSequence(
-                        string_value
+                    double_substitution_sequence = (
+                        ReportDatasetsToMeasurementResponseDoubleSubstitutionSequence(string_value)
                     )
                 else:
                     # Unknown integer value, set to None
@@ -3029,7 +2991,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             else:
                 # Handle string values normally
                 double_substitution_sequence = (
-                    QualerApiModelsReportDatasetsToMeasurementResponseDoubleSubstitutionSequence(
+                    ReportDatasetsToMeasurementResponseDoubleSubstitutionSequence(
                         _double_substitution_sequence
                     )
                 )
@@ -3062,7 +3024,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         environment_mask: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask,
+            ReportDatasetsToMeasurementResponseEnvironmentMask,
         ]
         if not _environment_mask:
             environment_mask = None
@@ -3090,20 +3052,16 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
                 }
                 string_value = environment_mask_mapping.get(_environment_mask)
                 if string_value:
-                    environment_mask = (
-                        QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask(
-                            string_value
-                        )
+                    environment_mask = ReportDatasetsToMeasurementResponseEnvironmentMask(
+                        string_value
                     )
                 else:
                     # Unknown integer value, set to None
                     environment_mask = None
             else:
                 # Handle string values normally
-                environment_mask = (
-                    QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask(
-                        _environment_mask
-                    )
+                environment_mask = ReportDatasetsToMeasurementResponseEnvironmentMask(
+                    _environment_mask
                 )
 
         display_name = d.pop("DisplayName", None)
@@ -3251,7 +3209,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         readings = d.pop("Readings", None)
 
         _tolerance_type = d.pop("ToleranceType", None)
-        tolerance_type: Optional[QualerApiModelsReportDatasetsToMeasurementResponseToleranceType]
+        tolerance_type: Optional[ReportDatasetsToMeasurementResponseToleranceType]
         if not _tolerance_type:
             tolerance_type = None
         elif _tolerance_type is None:
@@ -3271,24 +3229,18 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
                 }
                 string_value = tolerance_type_mapping.get(_tolerance_type)
                 if string_value:
-                    tolerance_type = (
-                        QualerApiModelsReportDatasetsToMeasurementResponseToleranceType(
-                            string_value
-                        )
-                    )
+                    tolerance_type = ReportDatasetsToMeasurementResponseToleranceType(string_value)
                 else:
                     # Unknown integer value, set to None
                     tolerance_type = None
             else:
                 # Handle string values normally
-                tolerance_type = QualerApiModelsReportDatasetsToMeasurementResponseToleranceType(
-                    _tolerance_type
-                )
+                tolerance_type = ReportDatasetsToMeasurementResponseToleranceType(_tolerance_type)
 
         tolerance_type_string = d.pop("ToleranceTypeString", None)
 
         _precision_type = d.pop("PrecisionType", None)
-        precision_type: Optional[QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType]
+        precision_type: Optional[ReportDatasetsToMeasurementResponsePrecisionType]
         if not _precision_type:
             precision_type = None
         elif _precision_type is None:
@@ -3304,52 +3256,40 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
                 }
                 string_value = precision_type_mapping.get(_precision_type)
                 if string_value:
-                    precision_type = (
-                        QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType(
-                            string_value
-                        )
-                    )
+                    precision_type = ReportDatasetsToMeasurementResponsePrecisionType(string_value)
                 else:
                     # Unknown integer value, set to None
                     precision_type = None
             else:
                 # Handle string values normally
-                precision_type = QualerApiModelsReportDatasetsToMeasurementResponsePrecisionType(
-                    _precision_type
-                )
+                precision_type = ReportDatasetsToMeasurementResponsePrecisionType(_precision_type)
 
         _specification_mode = d.pop("SpecificationMode", None)
         specification_mode: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementResponseSpecificationMode,
+            ReportDatasetsToMeasurementResponseSpecificationMode,
         ]
         if not _specification_mode:
             specification_mode = None
         else:
-            specification_mode = (
-                QualerApiModelsReportDatasetsToMeasurementResponseSpecificationMode(
-                    _specification_mode
-                )
+            specification_mode = ReportDatasetsToMeasurementResponseSpecificationMode(
+                _specification_mode
             )
 
         _tolerance_mode = d.pop("ToleranceMode", None)
-        tolerance_mode: Optional[QualerApiModelsReportDatasetsToMeasurementResponseToleranceMode]
+        tolerance_mode: Optional[ReportDatasetsToMeasurementResponseToleranceMode]
         if not _tolerance_mode:
             tolerance_mode = None
         else:
-            tolerance_mode = QualerApiModelsReportDatasetsToMeasurementResponseToleranceMode(
-                _tolerance_mode
-            )
+            tolerance_mode = ReportDatasetsToMeasurementResponseToleranceMode(_tolerance_mode)
 
         _tolerance_unit = d.pop("ToleranceUnit", None)
-        tolerance_unit: Optional[QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit]
+        tolerance_unit: Optional[ReportDatasetsToMeasurementResponseToleranceUnit]
         if not _tolerance_unit:
             tolerance_unit = None
         else:
-            tolerance_unit = QualerApiModelsReportDatasetsToMeasurementResponseToleranceUnit(
-                _tolerance_unit
-            )
+            tolerance_unit = ReportDatasetsToMeasurementResponseToleranceUnit(_tolerance_unit)
 
         tolerance_string = d.pop("ToleranceString", None)
 
@@ -3376,7 +3316,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         shipment_status: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus,
+            ReportDatasetsToMeasurementResponseShipmentStatus,
         ]
         if not _shipment_status:
             shipment_status = None
@@ -3388,7 +3328,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
                 if isinstance(_shipment_status, int):
                     # Convert integer to string to preserve the information
                     _shipment_status = str(_shipment_status)
-                shipment_status = QualerApiModelsReportDatasetsToMeasurementResponseShipmentStatus(
+                shipment_status = ReportDatasetsToMeasurementResponseShipmentStatus(
                     _shipment_status
                 )
             except ValueError:
@@ -3433,7 +3373,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         measurement_not_taken_result: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementResponseMeasurementNotTakenResult,
+            ReportDatasetsToMeasurementResponseMeasurementNotTakenResult,
         ]
         if not _measurement_not_taken_result:
             measurement_not_taken_result = None
@@ -3449,7 +3389,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
 
             try:
                 measurement_not_taken_result = (
-                    QualerApiModelsReportDatasetsToMeasurementResponseMeasurementNotTakenResult(
+                    ReportDatasetsToMeasurementResponseMeasurementNotTakenResult(
                         _measurement_not_taken_result
                     )
                 )
@@ -3727,7 +3667,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
         measurement_point_order: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementResponseMeasurementPointOrder,
+            ReportDatasetsToMeasurementResponseMeasurementPointOrder,
         ]
         if not _measurement_point_order:
             measurement_point_order = None
@@ -3746,17 +3686,15 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
                 _measurement_point_order = measurement_point_order_map.get(
                     _measurement_point_order, _measurement_point_order
                 )
-            measurement_point_order = (
-                QualerApiModelsReportDatasetsToMeasurementResponseMeasurementPointOrder(
-                    _measurement_point_order
-                )
+            measurement_point_order = ReportDatasetsToMeasurementResponseMeasurementPointOrder(
+                _measurement_point_order
             )
 
         _hysteresis_point = d.pop("HysteresisPoint", None)
         hysteresis_point: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint,
+            ReportDatasetsToMeasurementResponseHysteresisPoint,
         ]
         if not _hysteresis_point:
             hysteresis_point = None
@@ -3767,9 +3705,7 @@ class QualerApiModelsReportDatasetsToMeasurementResponse:
             if isinstance(_hysteresis_point, int):
                 hysteresis_point_map = {0: "First", 1: "None", 2: "Second", 3: "Zero"}
                 _hysteresis_point = hysteresis_point_map.get(_hysteresis_point, _hysteresis_point)
-            hysteresis_point = QualerApiModelsReportDatasetsToMeasurementResponseHysteresisPoint(
-                _hysteresis_point
-            )
+            hysteresis_point = ReportDatasetsToMeasurementResponseHysteresisPoint(_hysteresis_point)
 
         max_hysteresis = d.pop("MaxHysteresis", None)
 

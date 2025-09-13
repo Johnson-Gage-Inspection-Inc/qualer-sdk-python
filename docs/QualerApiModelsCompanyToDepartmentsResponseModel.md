@@ -1,4 +1,4 @@
-# QualerApiModelsCompanyToDepartmentsResponseModel
+# CompanyToDepartmentsResponseModel
 
 ## Properties
 Name | Type | Description | Notes

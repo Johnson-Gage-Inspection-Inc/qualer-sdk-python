@@ -1,4 +1,4 @@
-# QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse
+# ReportDatasetsToServiceOrderItemStatusHistoryResponse
 
 ## Properties
 Name | Type | Description | Notes

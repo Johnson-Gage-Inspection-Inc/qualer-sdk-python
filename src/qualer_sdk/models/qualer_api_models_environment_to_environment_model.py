@@ -5,18 +5,18 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.qualer_api_models_environment_to_environment_model_factor_id import (
-    QualerApiModelsEnvironmentToEnvironmentModelFactorId,
+    EnvironmentToEnvironmentModelFactorId,
 )
 
-T = TypeVar("T", bound="QualerApiModelsEnvironmentToEnvironmentModel")
+T = TypeVar("T", bound="EnvironmentToEnvironmentModel")
 
 
 @_attrs_define
-class QualerApiModelsEnvironmentToEnvironmentModel:
+class EnvironmentToEnvironmentModel:
     """
     Attributes:
         room_name (Optional[str]):
-        factor_id (Optional[QualerApiModelsEnvironmentToEnvironmentModelFactorId]):
+        factor_id (Optional[EnvironmentToEnvironmentModelFactorId]):
         station_id (Optional[int]):
         factor_name (Optional[str]):
         factor_value (Optional[float]):
@@ -26,7 +26,7 @@ class QualerApiModelsEnvironmentToEnvironmentModel:
     """
 
     room_name: Optional[str] = None
-    factor_id: Optional[QualerApiModelsEnvironmentToEnvironmentModelFactorId] = None
+    factor_id: Optional[EnvironmentToEnvironmentModelFactorId] = None
     station_id: Optional[int] = None
     factor_name: Optional[str] = None
     factor_value: Optional[float] = None
@@ -82,11 +82,11 @@ class QualerApiModelsEnvironmentToEnvironmentModel:
         room_name = d.pop("RoomName", None)
 
         _factor_id = d.pop("FactorId", None)
-        factor_id: Optional[QualerApiModelsEnvironmentToEnvironmentModelFactorId]
+        factor_id: Optional[EnvironmentToEnvironmentModelFactorId]
         if not _factor_id:
             factor_id = None
         else:
-            factor_id = QualerApiModelsEnvironmentToEnvironmentModelFactorId(_factor_id)
+            factor_id = EnvironmentToEnvironmentModelFactorId(_factor_id)
 
         station_id = d.pop("StationId", None)
 

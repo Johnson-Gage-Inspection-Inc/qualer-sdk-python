@@ -7,7 +7,7 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.put_charges_put_2_response_200 import PutChargesPut2Response200
 from ...models.qualer_api_models_service_orders_from_charge_update_model import (
-    QualerApiModelsServiceOrdersFromChargeUpdateModel,
+    ServiceOrdersFromChargeUpdateModel,
 )
 from ...types import Response
 
@@ -15,7 +15,7 @@ from ...types import Response
 def _get_kwargs(
     service_order_id: int,
     *,
-    body: QualerApiModelsServiceOrdersFromChargeUpdateModel,
+    body: ServiceOrdersFromChargeUpdateModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -60,14 +60,14 @@ def sync_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromChargeUpdateModel,
+    body: ServiceOrdersFromChargeUpdateModel,
 ) -> Response[PutChargesPut2Response200]:
     """Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount,
     ShippingFee
 
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromChargeUpdateModel):
+        body (ServiceOrdersFromChargeUpdateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -93,14 +93,14 @@ def sync(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromChargeUpdateModel,
+    body: ServiceOrdersFromChargeUpdateModel,
 ) -> Optional[PutChargesPut2Response200]:
     """Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount,
     ShippingFee
 
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromChargeUpdateModel):
+        body (ServiceOrdersFromChargeUpdateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -121,14 +121,14 @@ async def asyncio_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromChargeUpdateModel,
+    body: ServiceOrdersFromChargeUpdateModel,
 ) -> Response[PutChargesPut2Response200]:
     """Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount,
     ShippingFee
 
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromChargeUpdateModel):
+        body (ServiceOrdersFromChargeUpdateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -152,14 +152,14 @@ async def asyncio(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromChargeUpdateModel,
+    body: ServiceOrdersFromChargeUpdateModel,
 ) -> Optional[PutChargesPut2Response200]:
     """Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount,
     ShippingFee
 
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromChargeUpdateModel):
+        body (ServiceOrdersFromChargeUpdateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

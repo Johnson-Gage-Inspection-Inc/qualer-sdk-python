@@ -7,14 +7,14 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.post_employee_location_response_200 import PostEmployeeLocationResponse200
 from ...models.qualer_api_models_employees_from_employee_location_model import (
-    QualerApiModelsEmployeesFromEmployeeLocationModel,
+    EmployeesFromEmployeeLocationModel,
 )
 from ...types import Response
 
 
 def _get_kwargs(
     *,
-    body: QualerApiModelsEmployeesFromEmployeeLocationModel,
+    body: EmployeesFromEmployeeLocationModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -58,7 +58,7 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromEmployeeLocationModel,
+    body: EmployeesFromEmployeeLocationModel,
 ) -> Response[PostEmployeeLocationResponse200]:
     """Post Employee Location
 
@@ -78,7 +78,7 @@ def sync_detailed(
     Timestamp - The time at which this position information was obtained, in seconds.
 
     Args:
-        body (QualerApiModelsEmployeesFromEmployeeLocationModel):
+        body (EmployeesFromEmployeeLocationModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -102,7 +102,7 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromEmployeeLocationModel,
+    body: EmployeesFromEmployeeLocationModel,
 ) -> Optional[PostEmployeeLocationResponse200]:
     """Post Employee Location
 
@@ -122,7 +122,7 @@ def sync(
     Timestamp - The time at which this position information was obtained, in seconds.
 
     Args:
-        body (QualerApiModelsEmployeesFromEmployeeLocationModel):
+        body (EmployeesFromEmployeeLocationModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -141,7 +141,7 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromEmployeeLocationModel,
+    body: EmployeesFromEmployeeLocationModel,
 ) -> Response[PostEmployeeLocationResponse200]:
     """Post Employee Location
 
@@ -161,7 +161,7 @@ async def asyncio_detailed(
     Timestamp - The time at which this position information was obtained, in seconds.
 
     Args:
-        body (QualerApiModelsEmployeesFromEmployeeLocationModel):
+        body (EmployeesFromEmployeeLocationModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -183,7 +183,7 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromEmployeeLocationModel,
+    body: EmployeesFromEmployeeLocationModel,
 ) -> Optional[PostEmployeeLocationResponse200]:
     """Post Employee Location
 
@@ -203,7 +203,7 @@ async def asyncio(
     Timestamp - The time at which this position information was obtained, in seconds.
 
     Args:
-        body (QualerApiModelsEmployeesFromEmployeeLocationModel):
+        body (EmployeesFromEmployeeLocationModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

@@ -4,11 +4,11 @@ from typing import Any, Dict, List, Optional, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-T = TypeVar("T", bound="QualerApiModelsReferenceToUnitOfMeasureResponse")
+T = TypeVar("T", bound="ReferenceToUnitOfMeasureResponse")
 
 
 @_attrs_define
-class QualerApiModelsReferenceToUnitOfMeasureResponse:
+class ReferenceToUnitOfMeasureResponse:
     """
     Attributes:
         measurement_quantity_id (Optional[int]):

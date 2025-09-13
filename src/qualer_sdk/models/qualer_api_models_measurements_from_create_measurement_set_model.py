@@ -6,21 +6,21 @@ from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_from_create_measurement_point_model import (
-        QualerApiModelsMeasurementsFromCreateMeasurementPointModel,
+        MeasurementsFromCreateMeasurementPointModel,
     )
     from ..models.qualer_api_models_measurements_from_custom_fields import (
-        QualerApiModelsMeasurementsFromCustomFields,
+        MeasurementsFromCustomFields,
     )
     from ..models.qualer_api_models_measurements_from_display_options import (
-        QualerApiModelsMeasurementsFromDisplayOptions,
+        MeasurementsFromDisplayOptions,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsMeasurementsFromCreateMeasurementSetModel")
+T = TypeVar("T", bound="MeasurementsFromCreateMeasurementSetModel")
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsFromCreateMeasurementSetModel:
+class MeasurementsFromCreateMeasurementSetModel:
     """
     Attributes:
         measurement_name (Optional[str]):
@@ -29,9 +29,9 @@ class QualerApiModelsMeasurementsFromCreateMeasurementSetModel:
         default_unit_of_measure_id (Optional[int]):
         decimal_places (Optional[int]):
         significant_figures (Optional[int]):
-        display_options (Optional[QualerApiModelsMeasurementsFromDisplayOptions]):
-        custom_fields (Optional[QualerApiModelsMeasurementsFromCustomFields]):
-        measurement_points (Optional[List['QualerApiModelsMeasurementsFromCreateMeasurementPointModel']]):
+        display_options (Optional[MeasurementsFromDisplayOptions]):
+        custom_fields (Optional[MeasurementsFromCustomFields]):
+        measurement_points (Optional[List['MeasurementsFromCreateMeasurementPointModel']]):
     """
 
     measurement_name: Optional[str] = None
@@ -40,11 +40,9 @@ class QualerApiModelsMeasurementsFromCreateMeasurementSetModel:
     default_unit_of_measure_id: Optional[int] = None
     decimal_places: Optional[int] = None
     significant_figures: Optional[int] = None
-    display_options: Optional["QualerApiModelsMeasurementsFromDisplayOptions"] = None
-    custom_fields: Optional["QualerApiModelsMeasurementsFromCustomFields"] = None
-    measurement_points: Union[
-        None, List["QualerApiModelsMeasurementsFromCreateMeasurementPointModel"]
-    ] = None
+    display_options: Optional["MeasurementsFromDisplayOptions"] = None
+    custom_fields: Optional["MeasurementsFromCustomFields"] = None
+    measurement_points: Union[None, List["MeasurementsFromCreateMeasurementPointModel"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -102,13 +100,13 @@ class QualerApiModelsMeasurementsFromCreateMeasurementSetModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_measurements_from_create_measurement_point_model import (
-            QualerApiModelsMeasurementsFromCreateMeasurementPointModel,
+            MeasurementsFromCreateMeasurementPointModel,
         )
         from ..models.qualer_api_models_measurements_from_custom_fields import (
-            QualerApiModelsMeasurementsFromCustomFields,
+            MeasurementsFromCustomFields,
         )
         from ..models.qualer_api_models_measurements_from_display_options import (
-            QualerApiModelsMeasurementsFromDisplayOptions,
+            MeasurementsFromDisplayOptions,
         )
 
         d = dict(src_dict)
@@ -125,28 +123,24 @@ class QualerApiModelsMeasurementsFromCreateMeasurementSetModel:
         significant_figures = d.pop("SignificantFigures", None)
 
         _display_options = d.pop("DisplayOptions", None)
-        display_options: Optional[QualerApiModelsMeasurementsFromDisplayOptions]
+        display_options: Optional[MeasurementsFromDisplayOptions]
         if not _display_options:
             display_options = None
         else:
-            display_options = QualerApiModelsMeasurementsFromDisplayOptions.from_dict(
-                _display_options
-            )
+            display_options = MeasurementsFromDisplayOptions.from_dict(_display_options)
 
         _custom_fields = d.pop("CustomFields", None)
-        custom_fields: Optional[QualerApiModelsMeasurementsFromCustomFields]
+        custom_fields: Optional[MeasurementsFromCustomFields]
         if not _custom_fields:
             custom_fields = None
         else:
-            custom_fields = QualerApiModelsMeasurementsFromCustomFields.from_dict(_custom_fields)
+            custom_fields = MeasurementsFromCustomFields.from_dict(_custom_fields)
 
         measurement_points = []
         _measurement_points = d.pop("MeasurementPoints", None)
         for measurement_points_item_data in _measurement_points or []:
-            measurement_points_item = (
-                QualerApiModelsMeasurementsFromCreateMeasurementPointModel.from_dict(
-                    measurement_points_item_data
-                )
+            measurement_points_item = MeasurementsFromCreateMeasurementPointModel.from_dict(
+                measurement_points_item_data
             )
 
             measurement_points.append(measurement_points_item)

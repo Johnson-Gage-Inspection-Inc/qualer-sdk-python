@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel
+# ServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel
 
 ## Properties
 Name | Type | Description | Notes

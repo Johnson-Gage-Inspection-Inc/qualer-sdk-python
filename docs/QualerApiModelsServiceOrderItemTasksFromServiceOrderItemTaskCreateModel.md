@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel
+# ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel
 
 ## Properties
 Name | Type | Description | Notes

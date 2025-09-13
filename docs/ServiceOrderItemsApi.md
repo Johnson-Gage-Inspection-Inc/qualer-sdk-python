@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **add_work_items**
-> QualerApiModelsServiceOrdersToAssetAddResultResponseModel add_work_items(service_order_id, model)
+> ServiceOrdersToAssetAddResultResponseModel add_work_items(service_order_id, model)
 
 Add work items
 
@@ -33,7 +33,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrderItemsApi()
 service_order_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsServiceOrdersFromAddWorkItemsModel() # QualerApiModelsServiceOrdersFromAddWorkItemsModel | 
+model = qualer_sdk.ServiceOrdersFromAddWorkItemsModel() # ServiceOrdersFromAddWorkItemsModel | 
 
 try:
     # Add work items
@@ -48,11 +48,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **service_order_id** | **int**|  | 
- **model** | [**QualerApiModelsServiceOrdersFromAddWorkItemsModel**](QualerApiModelsServiceOrdersFromAddWorkItemsModel.md)|  | 
+ **model** | [**ServiceOrdersFromAddWorkItemsModel**](ServiceOrdersFromAddWorkItemsModel.md)|  | 
 
 ### Return type
 
-[**QualerApiModelsServiceOrdersToAssetAddResultResponseModel**](QualerApiModelsServiceOrdersToAssetAddResultResponseModel.md)
+[**ServiceOrdersToAssetAddResultResponseModel**](ServiceOrdersToAssetAddResultResponseModel.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_work_item**
-> QualerApiModelsServiceOrdersToClientOrderItemResponseModel get_work_item(work_item_id)
+> ServiceOrdersToClientOrderItemResponseModel get_work_item(work_item_id)
 
 
 
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsServiceOrdersToClientOrderItemResponseModel**](QualerApiModelsServiceOrdersToClientOrderItemResponseModel.md)
+[**ServiceOrdersToClientOrderItemResponseModel**](ServiceOrdersToClientOrderItemResponseModel.md)
 
 ### Authorization
 
@@ -295,7 +295,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_work_items**
-> list[QualerApiModelsServiceOrdersToClientOrderItemResponseModel] get_work_items(service_order_id)
+> list[ServiceOrdersToClientOrderItemResponseModel] get_work_items(service_order_id)
 
 
 
@@ -326,7 +326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsServiceOrdersToClientOrderItemResponseModel]**](QualerApiModelsServiceOrdersToClientOrderItemResponseModel.md)
+[**list[ServiceOrdersToClientOrderItemResponseModel]**](ServiceOrdersToClientOrderItemResponseModel.md)
 
 ### Authorization
 
@@ -340,7 +340,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_work_items_0**
-> list[QualerApiModelsServiceOrdersToClientOrderItemResponseModel] get_work_items_0(status=status, company_id=company_id, _from=_from, to=to, work_item_number=work_item_number, asset_search=asset_search)
+> list[ServiceOrdersToClientOrderItemResponseModel] get_work_items_0(status=status, company_id=company_id, _from=_from, to=to, work_item_number=work_item_number, asset_search=asset_search)
 
 Retrieve work items
 
@@ -384,7 +384,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsServiceOrdersToClientOrderItemResponseModel]**](QualerApiModelsServiceOrdersToClientOrderItemResponseModel.md)
+[**list[ServiceOrdersToClientOrderItemResponseModel]**](ServiceOrdersToClientOrderItemResponseModel.md)
 
 ### Authorization
 
@@ -415,7 +415,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrderItemsApi()
 work_item_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsServiceOrdersFromItemChargeUpdateModel() # QualerApiModelsServiceOrdersFromItemChargeUpdateModel | 
+model = qualer_sdk.ServiceOrdersFromItemChargeUpdateModel() # ServiceOrdersFromItemChargeUpdateModel | 
 
 try:
     # Apply Service Order Item Charges
@@ -430,7 +430,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **work_item_id** | **int**|  | 
- **model** | [**QualerApiModelsServiceOrdersFromItemChargeUpdateModel**](QualerApiModelsServiceOrdersFromItemChargeUpdateModel.md)|  | 
+ **model** | [**ServiceOrdersFromItemChargeUpdateModel**](ServiceOrdersFromItemChargeUpdateModel.md)|  | 
 
 ### Return type
 
@@ -465,7 +465,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrderItemsApi()
 work_item_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsServiceOrdersFromOrderItemUpdateModel() # QualerApiModelsServiceOrdersFromOrderItemUpdateModel | 
+model = qualer_sdk.ServiceOrdersFromOrderItemUpdateModel() # ServiceOrdersFromOrderItemUpdateModel | 
 
 try:
     # Update work item
@@ -480,7 +480,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **work_item_id** | **int**|  | 
- **model** | [**QualerApiModelsServiceOrdersFromOrderItemUpdateModel**](QualerApiModelsServiceOrdersFromOrderItemUpdateModel.md)|  | 
+ **model** | [**ServiceOrdersFromOrderItemUpdateModel**](ServiceOrdersFromOrderItemUpdateModel.md)|  | 
 
 ### Return type
 

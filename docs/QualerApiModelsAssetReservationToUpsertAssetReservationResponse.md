@@ -1,4 +1,4 @@
-# QualerApiModelsAssetReservationToUpsertAssetReservationResponse
+# AssetReservationToUpsertAssetReservationResponse
 
 ## Properties
 Name | Type | Description | Notes

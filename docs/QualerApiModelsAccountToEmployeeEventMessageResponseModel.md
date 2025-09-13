@@ -1,4 +1,4 @@
-# QualerApiModelsAccountToEmployeeEventMessageResponseModel
+# AccountToEmployeeEventMessageResponseModel
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsFromCreateMeasurementConditionFactorModel
+# MeasurementsFromCreateMeasurementConditionFactorModel
 
 ## Properties
 Name | Type | Description | Notes

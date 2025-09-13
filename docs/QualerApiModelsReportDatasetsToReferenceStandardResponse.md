@@ -1,4 +1,4 @@
-# QualerApiModelsReportDatasetsToReferenceStandardResponse
+# ReportDatasetsToReferenceStandardResponse
 
 ## Properties
 Name | Type | Description | Notes

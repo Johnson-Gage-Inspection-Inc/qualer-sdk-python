@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_clients_from_sponsored_client_edit_model import (
-    QualerApiModelsClientsFromSponsoredClientEditModel,
+    ClientsFromSponsoredClientEditModel,
 )
 from ...models.update_response_200 import UpdateResponse200
 from ...types import Response
@@ -14,7 +14,7 @@ from ...types import Response
 
 def _get_kwargs(
     *,
-    body: QualerApiModelsClientsFromSponsoredClientEditModel,
+    body: ClientsFromSponsoredClientEditModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -64,14 +64,14 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSponsoredClientEditModel,
+    body: ClientsFromSponsoredClientEditModel,
 ) -> Response[Union[Any, UpdateResponse200]]:
     """Update Client information.
 
      ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3
 
     Args:
-        body (QualerApiModelsClientsFromSponsoredClientEditModel):
+        body (ClientsFromSponsoredClientEditModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -95,14 +95,14 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSponsoredClientEditModel,
+    body: ClientsFromSponsoredClientEditModel,
 ) -> Optional[Union[Any, UpdateResponse200]]:
     """Update Client information.
 
      ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3
 
     Args:
-        body (QualerApiModelsClientsFromSponsoredClientEditModel):
+        body (ClientsFromSponsoredClientEditModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -121,14 +121,14 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSponsoredClientEditModel,
+    body: ClientsFromSponsoredClientEditModel,
 ) -> Response[Union[Any, UpdateResponse200]]:
     """Update Client information.
 
      ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3
 
     Args:
-        body (QualerApiModelsClientsFromSponsoredClientEditModel):
+        body (ClientsFromSponsoredClientEditModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -150,14 +150,14 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSponsoredClientEditModel,
+    body: ClientsFromSponsoredClientEditModel,
 ) -> Optional[Union[Any, UpdateResponse200]]:
     """Update Client information.
 
      ClientStatus: Prospect = 0, Approved = 1, NotApproved = 2, Hidden = 3
 
     Args:
-        body (QualerApiModelsClientsFromSponsoredClientEditModel):
+        body (ClientsFromSponsoredClientEditModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

@@ -7,7 +7,7 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.create_work_item_task_response_200 import CreateWorkItemTaskResponse200
 from ...models.qualer_api_models_service_order_item_tasks_from_service_order_item_task_create_model import (
-    QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel,
+    ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel,
 )
 from ...types import Response
 
@@ -15,7 +15,7 @@ from ...types import Response
 def _get_kwargs(
     work_item_id: int,
     *,
-    body: QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel,
+    body: ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -60,12 +60,12 @@ def sync_detailed(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel,
+    body: ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel,
 ) -> Response[CreateWorkItemTaskResponse200]:
     """
     Args:
         work_item_id (int):
-        body (QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel):
+        body (ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -91,12 +91,12 @@ def sync(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel,
+    body: ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel,
 ) -> Optional[CreateWorkItemTaskResponse200]:
     """
     Args:
         work_item_id (int):
-        body (QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel):
+        body (ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -117,12 +117,12 @@ async def asyncio_detailed(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel,
+    body: ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel,
 ) -> Response[CreateWorkItemTaskResponse200]:
     """
     Args:
         work_item_id (int):
-        body (QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel):
+        body (ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -146,12 +146,12 @@ async def asyncio(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel,
+    body: ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel,
 ) -> Optional[CreateWorkItemTaskResponse200]:
     """
     Args:
         work_item_id (int):
-        body (QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel):
+        body (ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

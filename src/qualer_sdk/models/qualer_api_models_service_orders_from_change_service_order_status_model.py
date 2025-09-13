@@ -5,18 +5,18 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.qualer_api_models_service_orders_from_change_service_order_status_model_service_order_status import (
-    QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
+    ServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
 )
 
-T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel")
+T = TypeVar("T", bound="ServiceOrdersFromChangeServiceOrderStatusModel")
 
 
 @_attrs_define
-class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel:
+class ServiceOrdersFromChangeServiceOrderStatusModel:
     """
     Attributes:
         service_order_status (Union[None,
-            QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus]):
+            ServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus]):
         reset_status (Optional[bool]):
         email (Optional[str]):
         password (Optional[str]):
@@ -25,7 +25,7 @@ class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel:
     service_order_status: Union[
         None,
         None,
-        QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
+        ServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
     ] = None
     reset_status: Optional[bool] = None
     email: Optional[str] = None
@@ -64,17 +64,15 @@ class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel:
         service_order_status: Union[
             None,
             None,
-            QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
+            ServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
         ]
         if not _service_order_status:
             service_order_status = None
         elif _service_order_status is None:
             service_order_status = None
         else:
-            service_order_status = (
-                QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus(
-                    _service_order_status
-                )
+            service_order_status = ServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus(
+                _service_order_status
             )
 
         reset_status = d.pop("ResetStatus", None)

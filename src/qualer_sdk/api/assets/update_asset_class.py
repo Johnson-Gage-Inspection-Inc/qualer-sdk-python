@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_asset_from_update_asset_class_model import (
-    QualerApiModelsAssetFromUpdateAssetClassModel,
+    AssetFromUpdateAssetClassModel,
 )
 from ...models.update_asset_class_response_200 import UpdateAssetClassResponse200
 from ...types import Response
@@ -15,7 +15,7 @@ from ...types import Response
 def _get_kwargs(
     id: int,
     *,
-    body: QualerApiModelsAssetFromUpdateAssetClassModel,
+    body: AssetFromUpdateAssetClassModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -60,12 +60,12 @@ def sync_detailed(
     id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetFromUpdateAssetClassModel,
+    body: AssetFromUpdateAssetClassModel,
 ) -> Response[UpdateAssetClassResponse200]:
     """
     Args:
         id (int):
-        body (QualerApiModelsAssetFromUpdateAssetClassModel):
+        body (AssetFromUpdateAssetClassModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -91,12 +91,12 @@ def sync(
     id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetFromUpdateAssetClassModel,
+    body: AssetFromUpdateAssetClassModel,
 ) -> Optional[UpdateAssetClassResponse200]:
     """
     Args:
         id (int):
-        body (QualerApiModelsAssetFromUpdateAssetClassModel):
+        body (AssetFromUpdateAssetClassModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -117,12 +117,12 @@ async def asyncio_detailed(
     id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetFromUpdateAssetClassModel,
+    body: AssetFromUpdateAssetClassModel,
 ) -> Response[UpdateAssetClassResponse200]:
     """
     Args:
         id (int):
-        body (QualerApiModelsAssetFromUpdateAssetClassModel):
+        body (AssetFromUpdateAssetClassModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -146,12 +146,12 @@ async def asyncio(
     id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetFromUpdateAssetClassModel,
+    body: AssetFromUpdateAssetClassModel,
 ) -> Optional[UpdateAssetClassResponse200]:
     """
     Args:
         id (int):
-        body (QualerApiModelsAssetFromUpdateAssetClassModel):
+        body (AssetFromUpdateAssetClassModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

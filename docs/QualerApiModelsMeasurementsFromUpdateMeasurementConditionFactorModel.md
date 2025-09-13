@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsFromUpdateMeasurementConditionFactorModel
+# MeasurementsFromUpdateMeasurementConditionFactorModel
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# QualerApiModelsReportDatasetsToToolRangeAttributeResponse
+# ReportDatasetsToToolRangeAttributeResponse
 
 ## Properties
 Name | Type | Description | Notes

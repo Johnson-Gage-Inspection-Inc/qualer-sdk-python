@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_service_orders_from_service_order_task_update_model import (
-    QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel,
+    ServiceOrdersFromServiceOrderTaskUpdateModel,
 )
 from ...models.update_work_order_task_response_204 import UpdateWorkOrderTaskResponse204
 from ...types import Response
@@ -15,7 +15,7 @@ from ...types import Response
 def _get_kwargs(
     service_order_id: int,
     *,
-    body: QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel,
+    body: ServiceOrdersFromServiceOrderTaskUpdateModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -66,7 +66,7 @@ def sync_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel,
+    body: ServiceOrdersFromServiceOrderTaskUpdateModel,
 ) -> Response[Union[Any, UpdateWorkOrderTaskResponse204]]:
     """- If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their
     difference
@@ -76,7 +76,7 @@ def sync_detailed(
 
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel):
+        body (ServiceOrdersFromServiceOrderTaskUpdateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -102,7 +102,7 @@ def sync(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel,
+    body: ServiceOrdersFromServiceOrderTaskUpdateModel,
 ) -> Optional[Union[Any, UpdateWorkOrderTaskResponse204]]:
     """- If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their
     difference
@@ -112,7 +112,7 @@ def sync(
 
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel):
+        body (ServiceOrdersFromServiceOrderTaskUpdateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -133,7 +133,7 @@ async def asyncio_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel,
+    body: ServiceOrdersFromServiceOrderTaskUpdateModel,
 ) -> Response[Union[Any, UpdateWorkOrderTaskResponse204]]:
     """- If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their
     difference
@@ -143,7 +143,7 @@ async def asyncio_detailed(
 
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel):
+        body (ServiceOrdersFromServiceOrderTaskUpdateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -167,7 +167,7 @@ async def asyncio(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel,
+    body: ServiceOrdersFromServiceOrderTaskUpdateModel,
 ) -> Optional[Union[Any, UpdateWorkOrderTaskResponse204]]:
     """- If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their
     difference
@@ -177,7 +177,7 @@ async def asyncio(
 
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel):
+        body (ServiceOrdersFromServiceOrderTaskUpdateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

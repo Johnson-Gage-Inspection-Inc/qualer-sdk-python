@@ -6,11 +6,11 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-T = TypeVar("T", bound="QualerApiModelsAssetReservationToAssetReservationResponse")
+T = TypeVar("T", bound="AssetReservationToAssetReservationResponse")
 
 
 @_attrs_define
-class QualerApiModelsAssetReservationToAssetReservationResponse:
+class AssetReservationToAssetReservationResponse:
     """
     Attributes:
         original_begin_date (Optional[datetime.datetime]):

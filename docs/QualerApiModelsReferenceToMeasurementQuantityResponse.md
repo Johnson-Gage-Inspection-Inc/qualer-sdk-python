@@ -1,4 +1,4 @@
-# QualerApiModelsReferenceToMeasurementQuantityResponse
+# ReferenceToMeasurementQuantityResponse
 
 ## Properties
 Name | Type | Description | Notes

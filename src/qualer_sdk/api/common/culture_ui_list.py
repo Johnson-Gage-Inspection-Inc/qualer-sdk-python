@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_common_to_culture_list_response_model import (
-    QualerApiModelsCommonToCultureListResponseModel,
+    CommonToCultureListResponseModel,
 )
 from ...types import Response
 
@@ -22,9 +22,9 @@ def _get_kwargs() -> Dict[str, Any]:
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[QualerApiModelsCommonToCultureListResponseModel]:
+) -> Optional[CommonToCultureListResponseModel]:
     if response.status_code == 200:
-        response_200 = QualerApiModelsCommonToCultureListResponseModel.from_dict(response.json())
+        response_200 = CommonToCultureListResponseModel.from_dict(response.json())
 
         return response_200
     if client.raise_on_unexpected_status:
@@ -35,7 +35,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[QualerApiModelsCommonToCultureListResponseModel]:
+) -> Response[CommonToCultureListResponseModel]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -47,14 +47,14 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[QualerApiModelsCommonToCultureListResponseModel]:
+) -> Response[CommonToCultureListResponseModel]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[QualerApiModelsCommonToCultureListResponseModel]
+        Response[CommonToCultureListResponseModel]
     """
 
     kwargs = _get_kwargs()
@@ -69,14 +69,14 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[QualerApiModelsCommonToCultureListResponseModel]:
+) -> Optional[CommonToCultureListResponseModel]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        QualerApiModelsCommonToCultureListResponseModel
+        CommonToCultureListResponseModel
     """
 
     return sync_detailed(
@@ -87,14 +87,14 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[QualerApiModelsCommonToCultureListResponseModel]:
+) -> Response[CommonToCultureListResponseModel]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[QualerApiModelsCommonToCultureListResponseModel]
+        Response[CommonToCultureListResponseModel]
     """
 
     kwargs = _get_kwargs()
@@ -107,14 +107,14 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[QualerApiModelsCommonToCultureListResponseModel]:
+) -> Optional[CommonToCultureListResponseModel]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        QualerApiModelsCommonToCultureListResponseModel
+        CommonToCultureListResponseModel
     """
 
     return (

@@ -27,7 +27,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ClientSiteApi()
 client_company_id = 56 # int | Client Company Id
-model = qualer_sdk.QualerApiModelsSiteFromSiteCreateModel() # QualerApiModelsSiteFromSiteCreateModel | Site create model
+model = qualer_sdk.SiteFromSiteCreateModel() # SiteFromSiteCreateModel | Site create model
 
 try:
     # Create Client Site.
@@ -42,7 +42,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **client_company_id** | **int**| Client Company Id | 
- **model** | [**QualerApiModelsSiteFromSiteCreateModel**](QualerApiModelsSiteFromSiteCreateModel.md)| Site create model | 
+ **model** | [**SiteFromSiteCreateModel**](SiteFromSiteCreateModel.md)| Site create model | 
 
 ### Return type
 
@@ -60,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_client_sites**
-> list[QualerApiModelsSiteToClientSiteResponse] get_client_sites(client_company_id)
+> list[SiteToClientSiteResponse] get_client_sites(client_company_id)
 
 
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsSiteToClientSiteResponse]**](QualerApiModelsSiteToClientSiteResponse.md)
+[**list[SiteToClientSiteResponse]**](SiteToClientSiteResponse.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ClientSiteApi()
 client_company_id = 56 # int | Client Company Id
-model = qualer_sdk.QualerApiModelsSiteFromSiteUpdateModel() # QualerApiModelsSiteFromSiteUpdateModel | Site update model
+model = qualer_sdk.SiteFromSiteUpdateModel() # SiteFromSiteUpdateModel | Site update model
 
 try:
     # Update Client Site.
@@ -137,7 +137,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **client_company_id** | **int**| Client Company Id | 
- **model** | [**QualerApiModelsSiteFromSiteUpdateModel**](QualerApiModelsSiteFromSiteUpdateModel.md)| Site update model | 
+ **model** | [**SiteFromSiteUpdateModel**](SiteFromSiteUpdateModel.md)| Site update model | 
 
 ### Return type
 

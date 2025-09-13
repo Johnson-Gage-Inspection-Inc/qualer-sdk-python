@@ -1,4 +1,4 @@
-# QualerApiModelsAccountFromLoginResponseModel
+# AccountFromLoginResponseModel
 
 ## Properties
 Name | Type | Description | Notes

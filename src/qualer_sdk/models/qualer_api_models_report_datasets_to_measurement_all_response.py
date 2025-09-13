@@ -7,42 +7,42 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_found_guard_band_logic import (
-    QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic,
+    ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_found_measurement_not_taken_result import (
-    QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult,
+    ReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_found_measurement_type import (
-    QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
+    ReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_found_precision_type import (
-    QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundPrecisionType,
+    ReportDatasetsToMeasurementAllResponseAsFoundPrecisionType,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_found_reading_entry_math import (
-    QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath,
+    ReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_guard_band_logic import (
-    QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic,
+    ReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_measurement_not_taken_result import (
-    QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult,
+    ReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_measurement_type import (
-    QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
+    ReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_precision_type import (
-    QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftPrecisionType,
+    ReportDatasetsToMeasurementAllResponseAsLeftPrecisionType,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_reading_entry_math import (
-    QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
+    ReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
 )
 from ..models.work_status import WorkStatus
 
-T = TypeVar("T", bound="QualerApiModelsReportDatasetsToMeasurementAllResponse")
+T = TypeVar("T", bound="ReportDatasetsToMeasurementAllResponse")
 
 
 @_attrs_define
-class QualerApiModelsReportDatasetsToMeasurementAllResponse:
+class ReportDatasetsToMeasurementAllResponse:
     barcode: Optional[str] = None
     display_name: Optional[str] = None
     display_part_number: Optional[str] = None
@@ -167,7 +167,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_found_measurement_not_taken_result: Union[
         None,
         None,
-        QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult,
+        ReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult,
     ] = None
     as_found_hide_from_certificate: Optional[bool] = None
     as_found_measurement_not_taken_reason: Optional[str] = None
@@ -194,12 +194,12 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_found_guard_band_logic: Union[
         None,
         None,
-        QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic,
+        ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic,
     ] = None
     as_left_guard_band_logic: Union[
         None,
         None,
-        QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic,
+        ReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic,
     ] = None
     as_found_error: Optional[float] = None
     as_found_error_extended: Optional[str] = None
@@ -230,7 +230,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_found_reading_entry_math: Union[
         None,
         None,
-        QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath,
+        ReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath,
     ] = None
     as_found_reading_entry_math_string: Optional[str] = None
     as_found_value_1: Optional[str] = None
@@ -386,7 +386,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_found_measurement_type: Union[
         None,
         None,
-        QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
+        ReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
     ] = None
     as_found_updated_by: Optional[str] = None
     as_found_updated_on: Optional[datetime.datetime] = None
@@ -440,7 +440,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_found_precision_type: Union[
         None,
         None,
-        QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundPrecisionType,
+        ReportDatasetsToMeasurementAllResponseAsFoundPrecisionType,
     ] = None
     as_found_minimum: Optional[float] = None
     as_found_nominal: Optional[float] = None
@@ -464,7 +464,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_left_reading_entry_math: Union[
         None,
         None,
-        QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
+        ReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
     ] = None
     as_left_reading_entry_math_string: Optional[str] = None
     as_left_value_1: Optional[str] = None
@@ -620,7 +620,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_left_measurement_type: Union[
         None,
         None,
-        QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
+        ReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
     ] = None
     as_left_updated_by: Optional[str] = None
     as_left_updated_on: Optional[datetime.datetime] = None
@@ -670,7 +670,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_left_precision_type: Union[
         None,
         None,
-        QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftPrecisionType,
+        ReportDatasetsToMeasurementAllResponseAsLeftPrecisionType,
     ] = None
     as_left_minimum: Optional[float] = None
     as_left_nominal: Optional[float] = None
@@ -684,7 +684,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
     as_left_measurement_not_taken_result: Union[
         None,
         None,
-        QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult,
+        ReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult,
     ] = None
     as_left_hide_from_certificate: Optional[bool] = None
     as_left_measurement_not_taken_reason: Optional[str] = None
@@ -3030,14 +3030,14 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_measurement_not_taken_result: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult,
+            ReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult,
         ]
         if not _as_found_measurement_not_taken_result:
             as_found_measurement_not_taken_result = None
         elif _as_found_measurement_not_taken_result is None:
             as_found_measurement_not_taken_result = None
         else:
-            as_found_measurement_not_taken_result = QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult(  # noqa: E501
+            as_found_measurement_not_taken_result = ReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult(  # noqa: E501
                 _as_found_measurement_not_taken_result
             )
         as_found_hide_from_certificate = d.pop("AsFoundHideFromCertificate", None)
@@ -3071,33 +3071,29 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_guard_band_logic: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic,
+            ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic,
         ]
         if not _as_found_guard_band_logic:
             as_found_guard_band_logic = None
         elif _as_found_guard_band_logic is None:
             as_found_guard_band_logic = None
         else:
-            as_found_guard_band_logic = (
-                QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic(
-                    _as_found_guard_band_logic
-                )
+            as_found_guard_band_logic = ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic(
+                _as_found_guard_band_logic
             )
         _as_left_guard_band_logic = d.pop("AsLeftGuardBandLogic", None)
         as_left_guard_band_logic: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic,
+            ReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic,
         ]
         if not _as_left_guard_band_logic:
             as_left_guard_band_logic = None
         elif _as_left_guard_band_logic is None:
             as_left_guard_band_logic = None
         else:
-            as_left_guard_band_logic = (
-                QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic(
-                    _as_left_guard_band_logic
-                )
+            as_left_guard_band_logic = ReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic(
+                _as_left_guard_band_logic
             )
         as_found_error = d.pop("AsFoundError", None)
         as_found_error_extended = d.pop("AsFoundErrorExtended", None)
@@ -3129,7 +3125,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_reading_entry_math: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath,
+            ReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath,
         ]
         if not _as_found_reading_entry_math:
             as_found_reading_entry_math = None
@@ -3153,7 +3149,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                     _as_found_reading_entry_math, _as_found_reading_entry_math
                 )
             as_found_reading_entry_math = (
-                QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath(
+                ReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath(
                     _as_found_reading_entry_math
                 )
             )
@@ -3312,7 +3308,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_measurement_type: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
+            ReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
         ]
         if not _as_found_measurement_type:
             as_found_measurement_type = None
@@ -3329,9 +3325,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                 string_value = measurement_type_mapping.get(_as_found_measurement_type)
                 if string_value:
                     as_found_measurement_type = (
-                        QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementType(
-                            string_value
-                        )
+                        ReportDatasetsToMeasurementAllResponseAsFoundMeasurementType(string_value)
                     )
                 else:
                     # Unknown integer value, set to None
@@ -3339,7 +3333,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
             else:
                 # Handle string values normally
                 as_found_measurement_type = (
-                    QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementType(
+                    ReportDatasetsToMeasurementAllResponseAsFoundMeasurementType(
                         _as_found_measurement_type
                     )
                 )
@@ -3410,7 +3404,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_found_precision_type: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundPrecisionType,
+            ReportDatasetsToMeasurementAllResponseAsFoundPrecisionType,
         ]
         if not _as_found_precision_type:
             as_found_precision_type = None
@@ -3437,10 +3431,8 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                 _as_found_precision_type = string_precision_type_map.get(
                     _as_found_precision_type, _as_found_precision_type
                 )
-            as_found_precision_type = (
-                QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundPrecisionType(
-                    _as_found_precision_type
-                )
+            as_found_precision_type = ReportDatasetsToMeasurementAllResponseAsFoundPrecisionType(
+                _as_found_precision_type
             )
         as_found_minimum = d.pop("AsFoundMinimum", None)
         as_found_nominal = d.pop("AsFoundNominal", None)
@@ -3470,7 +3462,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_reading_entry_math: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
+            ReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
         ]
         if not _as_left_reading_entry_math:
             as_left_reading_entry_math = None
@@ -3494,7 +3486,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                     _as_left_reading_entry_math, _as_left_reading_entry_math
                 )
             as_left_reading_entry_math = (
-                QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath(
+                ReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath(
                     _as_left_reading_entry_math
                 )
             )
@@ -3659,7 +3651,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_measurement_type: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
+            ReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
         ]
         if not _as_left_measurement_type:
             as_left_measurement_type = None
@@ -3676,9 +3668,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                 string_value = measurement_type_mapping.get(_as_left_measurement_type)
                 if string_value:
                     as_left_measurement_type = (
-                        QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementType(
-                            string_value
-                        )
+                        ReportDatasetsToMeasurementAllResponseAsLeftMeasurementType(string_value)
                     )
                 else:
                     # Unknown integer value, set to None
@@ -3686,7 +3676,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
             else:
                 # Handle string values normally
                 as_left_measurement_type = (
-                    QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementType(
+                    ReportDatasetsToMeasurementAllResponseAsLeftMeasurementType(
                         _as_left_measurement_type
                     )
                 )
@@ -3753,7 +3743,7 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_precision_type: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftPrecisionType,
+            ReportDatasetsToMeasurementAllResponseAsLeftPrecisionType,
         ]
         if not _as_left_precision_type:
             as_left_precision_type = None
@@ -3770,10 +3760,8 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
                 _as_left_precision_type = as_left_precision_type_map.get(
                     _as_left_precision_type, _as_left_precision_type
                 )
-            as_left_precision_type = (
-                QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftPrecisionType(
-                    _as_left_precision_type
-                )
+            as_left_precision_type = ReportDatasetsToMeasurementAllResponseAsLeftPrecisionType(
+                _as_left_precision_type
             )
         as_left_minimum = d.pop("AsLeftMinimum", None)
         as_left_nominal = d.pop("AsLeftNominal", None)
@@ -3788,15 +3776,17 @@ class QualerApiModelsReportDatasetsToMeasurementAllResponse:
         as_left_measurement_not_taken_result: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult,
+            ReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult,
         ]
         if not _as_left_measurement_not_taken_result:
             as_left_measurement_not_taken_result = None
         elif _as_left_measurement_not_taken_result is None:
             as_left_measurement_not_taken_result = None
         else:
-            as_left_measurement_not_taken_result = QualerApiModelsReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult(  # noqa: E501
-                _as_left_measurement_not_taken_result
+            as_left_measurement_not_taken_result = (
+                ReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult(  # noqa: E501
+                    _as_left_measurement_not_taken_result
+                )
             )
         as_left_hide_from_certificate = d.pop("AsLeftHideFromCertificate", None)
         as_left_measurement_not_taken_reason = d.pop("AsLeftMeasurementNotTakenReason", None)

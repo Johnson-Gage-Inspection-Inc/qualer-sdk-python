@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_vendors_from_sponsored_vendor_edit_model import (
-    QualerApiModelsVendorsFromSponsoredVendorEditModel,
+    VendorsFromSponsoredVendorEditModel,
 )
 from ...models.update_put_4_response_200 import UpdatePut4Response200
 from ...types import Response
@@ -14,7 +14,7 @@ from ...types import Response
 
 def _get_kwargs(
     *,
-    body: QualerApiModelsVendorsFromSponsoredVendorEditModel,
+    body: VendorsFromSponsoredVendorEditModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -64,12 +64,12 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsVendorsFromSponsoredVendorEditModel,
+    body: VendorsFromSponsoredVendorEditModel,
 ) -> Response[Union[Any, UpdatePut4Response200]]:
     """Update Vendor information.
 
     Args:
-        body (QualerApiModelsVendorsFromSponsoredVendorEditModel):
+        body (VendorsFromSponsoredVendorEditModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -93,12 +93,12 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsVendorsFromSponsoredVendorEditModel,
+    body: VendorsFromSponsoredVendorEditModel,
 ) -> Optional[Union[Any, UpdatePut4Response200]]:
     """Update Vendor information.
 
     Args:
-        body (QualerApiModelsVendorsFromSponsoredVendorEditModel):
+        body (VendorsFromSponsoredVendorEditModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -117,12 +117,12 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsVendorsFromSponsoredVendorEditModel,
+    body: VendorsFromSponsoredVendorEditModel,
 ) -> Response[Union[Any, UpdatePut4Response200]]:
     """Update Vendor information.
 
     Args:
-        body (QualerApiModelsVendorsFromSponsoredVendorEditModel):
+        body (VendorsFromSponsoredVendorEditModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -144,12 +144,12 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsVendorsFromSponsoredVendorEditModel,
+    body: VendorsFromSponsoredVendorEditModel,
 ) -> Optional[Union[Any, UpdatePut4Response200]]:
     """Update Vendor information.
 
     Args:
-        body (QualerApiModelsVendorsFromSponsoredVendorEditModel):
+        body (VendorsFromSponsoredVendorEditModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

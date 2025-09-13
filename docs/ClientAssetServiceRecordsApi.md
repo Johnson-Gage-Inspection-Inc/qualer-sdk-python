@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_asset_service_records_by_asset**
-> list[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel] get_asset_service_records_by_asset(asset_id)
+> list[AssetServiceRecordsToAssetServiceRecordResponseModel] get_asset_service_records_by_asset(asset_id)
 
 
 
@@ -39,7 +39,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel]**](QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel.md)
+[**list[AssetServiceRecordsToAssetServiceRecordResponseModel]**](AssetServiceRecordsToAssetServiceRecordResponseModel.md)
 
 ### Authorization
 

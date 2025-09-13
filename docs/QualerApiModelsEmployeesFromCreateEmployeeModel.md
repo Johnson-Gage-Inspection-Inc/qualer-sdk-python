@@ -1,4 +1,4 @@
-# QualerApiModelsEmployeesFromCreateEmployeeModel
+# EmployeesFromCreateEmployeeModel
 
 ## Properties
 Name | Type | Description | Notes

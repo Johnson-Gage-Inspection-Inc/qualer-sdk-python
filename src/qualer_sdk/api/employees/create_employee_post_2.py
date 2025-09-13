@@ -6,17 +6,17 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_employees_from_create_employee_model import (
-    QualerApiModelsEmployeesFromCreateEmployeeModel,
+    EmployeesFromCreateEmployeeModel,
 )
 from ...models.qualer_api_models_employees_to_created_employee_response import (
-    QualerApiModelsEmployeesToCreatedEmployeeResponse,
+    EmployeesToCreatedEmployeeResponse,
 )
 from ...types import Response
 
 
 def _get_kwargs(
     *,
-    body: QualerApiModelsEmployeesFromCreateEmployeeModel,
+    body: EmployeesFromCreateEmployeeModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -35,9 +35,9 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, QualerApiModelsEmployeesToCreatedEmployeeResponse]]:
+) -> Optional[Union[Any, EmployeesToCreatedEmployeeResponse]]:
     if response.status_code == 201:
-        response_201 = QualerApiModelsEmployeesToCreatedEmployeeResponse.from_dict(response.json())
+        response_201 = EmployeesToCreatedEmployeeResponse.from_dict(response.json())
 
         return response_201
     if response.status_code == 400:
@@ -51,7 +51,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, QualerApiModelsEmployeesToCreatedEmployeeResponse]]:
+) -> Response[Union[Any, EmployeesToCreatedEmployeeResponse]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -63,8 +63,8 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromCreateEmployeeModel,
-) -> Response[Union[Any, QualerApiModelsEmployeesToCreatedEmployeeResponse]]:
+    body: EmployeesFromCreateEmployeeModel,
+) -> Response[Union[Any, EmployeesToCreatedEmployeeResponse]]:
     r"""Create Employee
 
      CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />
@@ -73,14 +73,14 @@ def sync_detailed(
     List of UI culture codes: GET /api/common/cultureuilist\"
 
     Args:
-        body (QualerApiModelsEmployeesFromCreateEmployeeModel):
+        body (EmployeesFromCreateEmployeeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, QualerApiModelsEmployeesToCreatedEmployeeResponse]]
+        Response[Union[Any, EmployeesToCreatedEmployeeResponse]]
     """
 
     kwargs = _get_kwargs(
@@ -97,8 +97,8 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromCreateEmployeeModel,
-) -> Optional[Union[Any, QualerApiModelsEmployeesToCreatedEmployeeResponse]]:
+    body: EmployeesFromCreateEmployeeModel,
+) -> Optional[Union[Any, EmployeesToCreatedEmployeeResponse]]:
     r"""Create Employee
 
      CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />
@@ -107,14 +107,14 @@ def sync(
     List of UI culture codes: GET /api/common/cultureuilist\"
 
     Args:
-        body (QualerApiModelsEmployeesFromCreateEmployeeModel):
+        body (EmployeesFromCreateEmployeeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, QualerApiModelsEmployeesToCreatedEmployeeResponse]
+        Union[Any, EmployeesToCreatedEmployeeResponse]
     """
 
     return sync_detailed(
@@ -126,8 +126,8 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromCreateEmployeeModel,
-) -> Response[Union[Any, QualerApiModelsEmployeesToCreatedEmployeeResponse]]:
+    body: EmployeesFromCreateEmployeeModel,
+) -> Response[Union[Any, EmployeesToCreatedEmployeeResponse]]:
     r"""Create Employee
 
      CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />
@@ -136,14 +136,14 @@ async def asyncio_detailed(
     List of UI culture codes: GET /api/common/cultureuilist\"
 
     Args:
-        body (QualerApiModelsEmployeesFromCreateEmployeeModel):
+        body (EmployeesFromCreateEmployeeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, QualerApiModelsEmployeesToCreatedEmployeeResponse]]
+        Response[Union[Any, EmployeesToCreatedEmployeeResponse]]
     """
 
     kwargs = _get_kwargs(
@@ -158,8 +158,8 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromCreateEmployeeModel,
-) -> Optional[Union[Any, QualerApiModelsEmployeesToCreatedEmployeeResponse]]:
+    body: EmployeesFromCreateEmployeeModel,
+) -> Optional[Union[Any, EmployeesToCreatedEmployeeResponse]]:
     r"""Create Employee
 
      CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />
@@ -168,14 +168,14 @@ async def asyncio(
     List of UI culture codes: GET /api/common/cultureuilist\"
 
     Args:
-        body (QualerApiModelsEmployeesFromCreateEmployeeModel):
+        body (EmployeesFromCreateEmployeeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, QualerApiModelsEmployeesToCreatedEmployeeResponse]
+        Union[Any, EmployeesToCreatedEmployeeResponse]
     """
 
     return (

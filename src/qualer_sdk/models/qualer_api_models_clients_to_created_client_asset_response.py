@@ -4,11 +4,11 @@ from typing import Any, Dict, List, Optional, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-T = TypeVar("T", bound="QualerApiModelsClientsToCreatedClientAssetResponse")
+T = TypeVar("T", bound="ClientsToCreatedClientAssetResponse")
 
 
 @_attrs_define
-class QualerApiModelsClientsToCreatedClientAssetResponse:
+class ClientsToCreatedClientAssetResponse:
     """
     Attributes:
         id (Optional[int]):

@@ -5,29 +5,29 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.qualer_api_models_measurements_from_create_measurement_point_model_tolerance_mode import (
-    QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceMode,
+    MeasurementsFromCreateMeasurementPointModelToleranceMode,
 )
 from ..models.qualer_api_models_measurements_from_create_measurement_point_model_tolerance_unit import (
-    QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceUnit,
+    MeasurementsFromCreateMeasurementPointModelToleranceUnit,
 )
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_from_create_measurement_condition_factor_model import (
-        QualerApiModelsMeasurementsFromCreateMeasurementConditionFactorModel,
+        MeasurementsFromCreateMeasurementConditionFactorModel,
     )
     from ..models.qualer_api_models_measurements_from_create_measurement_model import (
-        QualerApiModelsMeasurementsFromCreateMeasurementModel,
+        MeasurementsFromCreateMeasurementModel,
     )
     from ..models.qualer_api_models_measurements_from_create_measurement_tool_model import (
-        QualerApiModelsMeasurementsFromCreateMeasurementToolModel,
+        MeasurementsFromCreateMeasurementToolModel,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsMeasurementsFromCreateMeasurementPointModel")
+T = TypeVar("T", bound="MeasurementsFromCreateMeasurementPointModel")
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
+class MeasurementsFromCreateMeasurementPointModel:
     """
     Attributes:
         specification_name (Optional[str]):
@@ -38,8 +38,8 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
         range_max (Optional[float]):
         specification_mode (Optional[int]):
         tolerance_type (Optional[str]):
-        tolerance_mode (Optional[QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceMode]):
-        tolerance_unit (Optional[QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceUnit]):
+        tolerance_mode (Optional[MeasurementsFromCreateMeasurementPointModelToleranceMode]):
+        tolerance_unit (Optional[MeasurementsFromCreateMeasurementPointModelToleranceUnit]):
         precision_type (Optional[str]):
         readings (Optional[int]):
         channels_type (Optional[str]):
@@ -54,10 +54,10 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
         base_value (Optional[float]):
         test_value (Optional[float]):
         is_accredited (Optional[bool]):
-        measurements (Optional[List['QualerApiModelsMeasurementsFromCreateMeasurementModel']]):
-        condition_factors (Optional[List['QualerApiModelsMeasurementsFromCreateMeasurementConditionFactorModel']]):
-        primary_measurement_tool (Optional[QualerApiModelsMeasurementsFromCreateMeasurementToolModel]):
-        secondary_measurement_tool (Optional[QualerApiModelsMeasurementsFromCreateMeasurementToolModel]):
+        measurements (Optional[List['MeasurementsFromCreateMeasurementModel']]):
+        condition_factors (Optional[List['MeasurementsFromCreateMeasurementConditionFactorModel']]):
+        primary_measurement_tool (Optional[MeasurementsFromCreateMeasurementToolModel]):
+        secondary_measurement_tool (Optional[MeasurementsFromCreateMeasurementToolModel]):
     """
 
     specification_name: Optional[str] = None
@@ -71,12 +71,12 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
     tolerance_mode: Union[
         None,
         None,
-        QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceMode,
+        MeasurementsFromCreateMeasurementPointModelToleranceMode,
     ] = None
     tolerance_unit: Union[
         None,
         None,
-        QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceUnit,
+        MeasurementsFromCreateMeasurementPointModelToleranceUnit,
     ] = None
     precision_type: Optional[str] = None
     readings: Optional[int] = None
@@ -92,18 +92,14 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
     base_value: Optional[float] = None
     test_value: Optional[float] = None
     is_accredited: Optional[bool] = None
-    measurements: Union[None, List["QualerApiModelsMeasurementsFromCreateMeasurementModel"]] = None
+    measurements: Union[None, List["MeasurementsFromCreateMeasurementModel"]] = None
     condition_factors: Union[
         None,
         None,
-        List["QualerApiModelsMeasurementsFromCreateMeasurementConditionFactorModel"],
+        List["MeasurementsFromCreateMeasurementConditionFactorModel"],
     ] = None
-    primary_measurement_tool: Union[
-        None, "QualerApiModelsMeasurementsFromCreateMeasurementToolModel"
-    ] = None
-    secondary_measurement_tool: Union[
-        None, "QualerApiModelsMeasurementsFromCreateMeasurementToolModel"
-    ] = None
+    primary_measurement_tool: Union[None, "MeasurementsFromCreateMeasurementToolModel"] = None
+    secondary_measurement_tool: Union[None, "MeasurementsFromCreateMeasurementToolModel"] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -248,13 +244,13 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_measurements_from_create_measurement_condition_factor_model import (
-            QualerApiModelsMeasurementsFromCreateMeasurementConditionFactorModel,
+            MeasurementsFromCreateMeasurementConditionFactorModel,
         )
         from ..models.qualer_api_models_measurements_from_create_measurement_model import (
-            QualerApiModelsMeasurementsFromCreateMeasurementModel,
+            MeasurementsFromCreateMeasurementModel,
         )
         from ..models.qualer_api_models_measurements_from_create_measurement_tool_model import (
-            QualerApiModelsMeasurementsFromCreateMeasurementToolModel,
+            MeasurementsFromCreateMeasurementToolModel,
         )
 
         d = dict(src_dict)
@@ -278,30 +274,26 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
         tolerance_mode: Union[
             None,
             None,
-            QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceMode,
+            MeasurementsFromCreateMeasurementPointModelToleranceMode,
         ]
         if not _tolerance_mode:
             tolerance_mode = None
         else:
-            tolerance_mode = (
-                QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceMode(
-                    _tolerance_mode
-                )
+            tolerance_mode = MeasurementsFromCreateMeasurementPointModelToleranceMode(
+                _tolerance_mode
             )
 
         _tolerance_unit = d.pop("ToleranceUnit", None)
         tolerance_unit: Union[
             None,
             None,
-            QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceUnit,
+            MeasurementsFromCreateMeasurementPointModelToleranceUnit,
         ]
         if not _tolerance_unit:
             tolerance_unit = None
         else:
-            tolerance_unit = (
-                QualerApiModelsMeasurementsFromCreateMeasurementPointModelToleranceUnit(
-                    _tolerance_unit
-                )
+            tolerance_unit = MeasurementsFromCreateMeasurementPointModelToleranceUnit(
+                _tolerance_unit
             )
 
         precision_type = d.pop("PrecisionType", None)
@@ -335,7 +327,7 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
         measurements = []
         _measurements = d.pop("Measurements", None)
         for measurements_item_data in _measurements or []:
-            measurements_item = QualerApiModelsMeasurementsFromCreateMeasurementModel.from_dict(
+            measurements_item = MeasurementsFromCreateMeasurementModel.from_dict(
                 measurements_item_data
             )
 
@@ -345,7 +337,7 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
         _condition_factors = d.pop("ConditionFactors", None)
         for condition_factors_item_data in _condition_factors or []:
             condition_factors_item = (
-                QualerApiModelsMeasurementsFromCreateMeasurementConditionFactorModel.from_dict(
+                MeasurementsFromCreateMeasurementConditionFactorModel.from_dict(
                     condition_factors_item_data
                 )
             )
@@ -353,29 +345,21 @@ class QualerApiModelsMeasurementsFromCreateMeasurementPointModel:
             condition_factors.append(condition_factors_item)
 
         _primary_measurement_tool = d.pop("PrimaryMeasurementTool", None)
-        primary_measurement_tool: Union[
-            None, QualerApiModelsMeasurementsFromCreateMeasurementToolModel
-        ]
+        primary_measurement_tool: Union[None, MeasurementsFromCreateMeasurementToolModel]
         if not _primary_measurement_tool:
             primary_measurement_tool = None
         else:
-            primary_measurement_tool = (
-                QualerApiModelsMeasurementsFromCreateMeasurementToolModel.from_dict(
-                    _primary_measurement_tool
-                )
+            primary_measurement_tool = MeasurementsFromCreateMeasurementToolModel.from_dict(
+                _primary_measurement_tool
             )
 
         _secondary_measurement_tool = d.pop("SecondaryMeasurementTool", None)
-        secondary_measurement_tool: Union[
-            None, QualerApiModelsMeasurementsFromCreateMeasurementToolModel
-        ]
+        secondary_measurement_tool: Union[None, MeasurementsFromCreateMeasurementToolModel]
         if not _secondary_measurement_tool:
             secondary_measurement_tool = None
         else:
-            secondary_measurement_tool = (
-                QualerApiModelsMeasurementsFromCreateMeasurementToolModel.from_dict(
-                    _secondary_measurement_tool
-                )
+            secondary_measurement_tool = MeasurementsFromCreateMeasurementToolModel.from_dict(
+                _secondary_measurement_tool
             )
 
         qualer_api_models_measurements_from_create_measurement_point_model = cls(

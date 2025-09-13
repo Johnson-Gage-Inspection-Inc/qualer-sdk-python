@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsFromSpecification
+# MeasurementsFromSpecification
 
 ## Properties
 Name | Type | Description | Notes

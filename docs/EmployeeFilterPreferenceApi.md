@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_employee_filter_preferences**
-> list[QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel] get_employee_filter_preferences()
+> list[AssetToEmployeeFilterPreferenceResponseModel] get_employee_filter_preferences()
 
 GetEmployeeFilterPreferences
 
@@ -37,7 +37,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel]**](QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel.md)
+[**list[AssetToEmployeeFilterPreferenceResponseModel]**](AssetToEmployeeFilterPreferenceResponseModel.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = qualer_sdk.EmployeeFilterPreferenceApi()
-model = qualer_sdk.QualerApiModelsAssetFromUpdateFilterPreferenceModel() # QualerApiModelsAssetFromUpdateFilterPreferenceModel | FilterType: \\  DueForService(AssetsDue), RecentlyServiced(AssetsRecentlyServiced), NotServiced(AssetsNotServiced), \\  RecentlyPurchased(AssetsRecentlyPurchased), WarrantyExpiring(AssetsWarrantyExpires), \\  DueForReplacement(AssetsDueForReplacement), ServicePending(AssetsServicePending) \\                WithinDays: 30                UseDateRange: true, false                StartDate: '2020-01-01' optional                EndDate: '2020-05-31' optional
+model = qualer_sdk.AssetFromUpdateFilterPreferenceModel() # AssetFromUpdateFilterPreferenceModel | FilterType: \\  DueForService(AssetsDue), RecentlyServiced(AssetsRecentlyServiced), NotServiced(AssetsNotServiced), \\  RecentlyPurchased(AssetsRecentlyPurchased), WarrantyExpiring(AssetsWarrantyExpires), \\  DueForReplacement(AssetsDueForReplacement), ServicePending(AssetsServicePending) \\                WithinDays: 30                UseDateRange: true, false                StartDate: '2020-01-01' optional                EndDate: '2020-05-31' optional
 
 try:
     # UpdateEmployeeFilterPreference
@@ -79,7 +79,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**QualerApiModelsAssetFromUpdateFilterPreferenceModel**](QualerApiModelsAssetFromUpdateFilterPreferenceModel.md)| FilterType: \\  DueForService(AssetsDue), RecentlyServiced(AssetsRecentlyServiced), NotServiced(AssetsNotServiced), \\  RecentlyPurchased(AssetsRecentlyPurchased), WarrantyExpiring(AssetsWarrantyExpires), \\  DueForReplacement(AssetsDueForReplacement), ServicePending(AssetsServicePending) \\                WithinDays: 30                UseDateRange: true, false                StartDate: &#39;2020-01-01&#39; optional                EndDate: &#39;2020-05-31&#39; optional | 
+ **model** | [**AssetFromUpdateFilterPreferenceModel**](AssetFromUpdateFilterPreferenceModel.md)| FilterType: \\  DueForService(AssetsDue), RecentlyServiced(AssetsRecentlyServiced), NotServiced(AssetsNotServiced), \\  RecentlyPurchased(AssetsRecentlyPurchased), WarrantyExpiring(AssetsWarrantyExpires), \\  DueForReplacement(AssetsDueForReplacement), ServicePending(AssetsServicePending) \\                WithinDays: 30                UseDateRange: true, false                StartDate: &#39;2020-01-01&#39; optional                EndDate: &#39;2020-05-31&#39; optional | 
 
 ### Return type
 

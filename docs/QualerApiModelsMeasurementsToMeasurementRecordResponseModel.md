@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsToMeasurementRecordResponseModel
+# MeasurementsToMeasurementRecordResponseModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -36,7 +36,7 @@ Name | Type | Description | Notes
 **service_schedule_segment_id** | **int** |  | [optional] 
 **forward_next_service** | **bool** |  | [optional] 
 **forward_segment_id** | **int** |  | [optional] 
-**measurement_batches** | [**list[QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel]**](QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel.md) |  | [optional] 
+**measurement_batches** | [**list[MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel]**](MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_asset_attributes**
-> list[QualerApiModelsAssetAttributesToAssetAttributesResponse] get_asset_attributes(asset_id)
+> list[AssetAttributesToAssetAttributesResponse] get_asset_attributes(asset_id)
 
 
 
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetAttributesToAssetAttributesResponse]**](QualerApiModelsAssetAttributesToAssetAttributesResponse.md)
+[**list[AssetAttributesToAssetAttributesResponse]**](AssetAttributesToAssetAttributesResponse.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.AssetAttributesApi()
 asset_id = 56 # int | 
-model = [qualer_sdk.QualerApiModelsCommonFromAttributeModel()] # list[QualerApiModelsCommonFromAttributeModel] | 
+model = [qualer_sdk.CommonFromAttributeModel()] # list[CommonFromAttributeModel] | 
 
 try:
     api_response = api_instance.upsert_asset_attributes(asset_id, model)
@@ -83,7 +83,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **asset_id** | **int**|  | 
- **model** | [**list[QualerApiModelsCommonFromAttributeModel]**](QualerApiModelsCommonFromAttributeModel.md)|  | 
+ **model** | [**list[CommonFromAttributeModel]**](CommonFromAttributeModel.md)|  | 
 
 ### Return type
 

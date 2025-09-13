@@ -7,7 +7,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_vendors_to_vendor_company_response_model import (
-    QualerApiModelsVendorsToVendorCompanyResponseModel,
+    VendorsToVendorCompanyResponseModel,
 )
 from ...types import Response
 
@@ -45,12 +45,12 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[List["QualerApiModelsVendorsToVendorCompanyResponseModel"]]:
+) -> Optional[List["VendorsToVendorCompanyResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = QualerApiModelsVendorsToVendorCompanyResponseModel.from_dict(
+            response_200_item = VendorsToVendorCompanyResponseModel.from_dict(
                 response_200_item_data
             )
 
@@ -65,7 +65,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[List["QualerApiModelsVendorsToVendorCompanyResponseModel"]]:
+) -> Response[List["VendorsToVendorCompanyResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -81,7 +81,7 @@ def sync_detailed(
     model_company_name: Optional[str] = None,
     model_take: Optional[int] = None,
     model_modified_after: Optional[datetime.datetime] = None,
-) -> Response[List["QualerApiModelsVendorsToVendorCompanyResponseModel"]]:
+) -> Response[List["VendorsToVendorCompanyResponseModel"]]:
     """
     Args:
         model_account_number_text (Optional[str]):
@@ -94,7 +94,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsVendorsToVendorCompanyResponseModel']]
+        Response[List['VendorsToVendorCompanyResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -118,7 +118,7 @@ def sync(
     model_company_name: Optional[str] = None,
     model_take: Optional[int] = None,
     model_modified_after: Optional[datetime.datetime] = None,
-) -> Optional[List["QualerApiModelsVendorsToVendorCompanyResponseModel"]]:
+) -> Optional[List["VendorsToVendorCompanyResponseModel"]]:
     """
     Args:
         model_account_number_text (Optional[str]):
@@ -131,7 +131,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsVendorsToVendorCompanyResponseModel']
+        List['VendorsToVendorCompanyResponseModel']
     """
 
     return sync_detailed(
@@ -150,7 +150,7 @@ async def asyncio_detailed(
     model_company_name: Optional[str] = None,
     model_take: Optional[int] = None,
     model_modified_after: Optional[datetime.datetime] = None,
-) -> Response[List["QualerApiModelsVendorsToVendorCompanyResponseModel"]]:
+) -> Response[List["VendorsToVendorCompanyResponseModel"]]:
     """
     Args:
         model_account_number_text (Optional[str]):
@@ -163,7 +163,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsVendorsToVendorCompanyResponseModel']]
+        Response[List['VendorsToVendorCompanyResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -185,7 +185,7 @@ async def asyncio(
     model_company_name: Optional[str] = None,
     model_take: Optional[int] = None,
     model_modified_after: Optional[datetime.datetime] = None,
-) -> Optional[List["QualerApiModelsVendorsToVendorCompanyResponseModel"]]:
+) -> Optional[List["VendorsToVendorCompanyResponseModel"]]:
     """
     Args:
         model_account_number_text (Optional[str]):
@@ -198,7 +198,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsVendorsToVendorCompanyResponseModel']
+        List['VendorsToVendorCompanyResponseModel']
     """
 
     return (

@@ -5,38 +5,38 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.qualer_api_models_measurements_from_update_measurement_point_model_hysteresis_point import (
-    QualerApiModelsMeasurementsFromUpdateMeasurementPointModelHysteresisPoint,
+    MeasurementsFromUpdateMeasurementPointModelHysteresisPoint,
 )
 from ..models.qualer_api_models_measurements_from_update_measurement_point_model_specification_mode import (
-    QualerApiModelsMeasurementsFromUpdateMeasurementPointModelSpecificationMode,
+    MeasurementsFromUpdateMeasurementPointModelSpecificationMode,
 )
 from ..models.qualer_api_models_measurements_from_update_measurement_point_model_tolerance_mode import (
-    QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceMode,
+    MeasurementsFromUpdateMeasurementPointModelToleranceMode,
 )
 from ..models.qualer_api_models_measurements_from_update_measurement_point_model_tolerance_unit import (
-    QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceUnit,
+    MeasurementsFromUpdateMeasurementPointModelToleranceUnit,
 )
 from ..models.qualer_api_models_measurements_from_update_measurement_point_model_tool_application_mode import (
-    QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToolApplicationMode,
+    MeasurementsFromUpdateMeasurementPointModelToolApplicationMode,
 )
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_from_update_measurement_condition_factor_model import (
-        QualerApiModelsMeasurementsFromUpdateMeasurementConditionFactorModel,
+        MeasurementsFromUpdateMeasurementConditionFactorModel,
     )
     from ..models.qualer_api_models_measurements_from_update_measurement_model import (
-        QualerApiModelsMeasurementsFromUpdateMeasurementModel,
+        MeasurementsFromUpdateMeasurementModel,
     )
     from ..models.qualer_api_models_measurements_from_update_measurement_tool_model import (
-        QualerApiModelsMeasurementsFromUpdateMeasurementToolModel,
+        MeasurementsFromUpdateMeasurementToolModel,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsMeasurementsFromUpdateMeasurementPointModel")
+T = TypeVar("T", bound="MeasurementsFromUpdateMeasurementPointModel")
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
+class MeasurementsFromUpdateMeasurementPointModel:
     """
     Attributes:
         measurement_point_id (Optional[int]):
@@ -57,18 +57,18 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
         resolution (Optional[float]):
         resolution_count (Optional[float]):
         is_accredited (Optional[bool]):
-        specification_mode (Optional[QualerApiModelsMeasurementsFromUpdateMeasurementPointModelSpecificationMode]):
-        tolerance_mode (Optional[QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceMode]):
-        tolerance_unit (Optional[QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceUnit]):
-        measurements (Optional[List['QualerApiModelsMeasurementsFromUpdateMeasurementModel']]):
+        specification_mode (Optional[MeasurementsFromUpdateMeasurementPointModelSpecificationMode]):
+        tolerance_mode (Optional[MeasurementsFromUpdateMeasurementPointModelToleranceMode]):
+        tolerance_unit (Optional[MeasurementsFromUpdateMeasurementPointModelToleranceUnit]):
+        measurements (Optional[List['MeasurementsFromUpdateMeasurementModel']]):
         measurement_condition_factors (Union[None,
-            List['QualerApiModelsMeasurementsFromUpdateMeasurementConditionFactorModel']]):
+            List['MeasurementsFromUpdateMeasurementConditionFactorModel']]):
         tool_application_mode (Union[None,
-            QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToolApplicationMode]):
-        primary_measurement_tool (Optional[QualerApiModelsMeasurementsFromUpdateMeasurementToolModel]):
-        secondary_measurement_tool (Optional[QualerApiModelsMeasurementsFromUpdateMeasurementToolModel]):
+            MeasurementsFromUpdateMeasurementPointModelToolApplicationMode]):
+        primary_measurement_tool (Optional[MeasurementsFromUpdateMeasurementToolModel]):
+        secondary_measurement_tool (Optional[MeasurementsFromUpdateMeasurementToolModel]):
         linked_measurement_point_id (Optional[int]):
-        hysteresis_point (Optional[QualerApiModelsMeasurementsFromUpdateMeasurementPointModelHysteresisPoint]):
+        hysteresis_point (Optional[MeasurementsFromUpdateMeasurementPointModelHysteresisPoint]):
         influence_parameter_1_parameter_id (Optional[int]):
         influence_parameter_1_value (Optional[str]):
         influence_parameter_2_parameter_id (Optional[int]):
@@ -111,40 +111,36 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
     specification_mode: Union[
         None,
         None,
-        QualerApiModelsMeasurementsFromUpdateMeasurementPointModelSpecificationMode,
+        MeasurementsFromUpdateMeasurementPointModelSpecificationMode,
     ] = None
     tolerance_mode: Union[
         None,
         None,
-        QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceMode,
+        MeasurementsFromUpdateMeasurementPointModelToleranceMode,
     ] = None
     tolerance_unit: Union[
         None,
         None,
-        QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceUnit,
+        MeasurementsFromUpdateMeasurementPointModelToleranceUnit,
     ] = None
-    measurements: Union[None, List["QualerApiModelsMeasurementsFromUpdateMeasurementModel"]] = None
+    measurements: Union[None, List["MeasurementsFromUpdateMeasurementModel"]] = None
     measurement_condition_factors: Union[
         None,
         None,
-        List["QualerApiModelsMeasurementsFromUpdateMeasurementConditionFactorModel"],
+        List["MeasurementsFromUpdateMeasurementConditionFactorModel"],
     ] = None
     tool_application_mode: Union[
         None,
         None,
-        QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToolApplicationMode,
+        MeasurementsFromUpdateMeasurementPointModelToolApplicationMode,
     ] = None
-    primary_measurement_tool: Union[
-        None, "QualerApiModelsMeasurementsFromUpdateMeasurementToolModel"
-    ] = None
-    secondary_measurement_tool: Union[
-        None, "QualerApiModelsMeasurementsFromUpdateMeasurementToolModel"
-    ] = None
+    primary_measurement_tool: Union[None, "MeasurementsFromUpdateMeasurementToolModel"] = None
+    secondary_measurement_tool: Union[None, "MeasurementsFromUpdateMeasurementToolModel"] = None
     linked_measurement_point_id: Optional[int] = None
     hysteresis_point: Union[
         None,
         None,
-        QualerApiModelsMeasurementsFromUpdateMeasurementPointModelHysteresisPoint,
+        MeasurementsFromUpdateMeasurementPointModelHysteresisPoint,
     ] = None
     influence_parameter_1_parameter_id: Optional[int] = None
     influence_parameter_1_value: Optional[str] = None
@@ -395,13 +391,13 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_measurements_from_update_measurement_condition_factor_model import (
-            QualerApiModelsMeasurementsFromUpdateMeasurementConditionFactorModel,
+            MeasurementsFromUpdateMeasurementConditionFactorModel,
         )
         from ..models.qualer_api_models_measurements_from_update_measurement_model import (
-            QualerApiModelsMeasurementsFromUpdateMeasurementModel,
+            MeasurementsFromUpdateMeasurementModel,
         )
         from ..models.qualer_api_models_measurements_from_update_measurement_tool_model import (
-            QualerApiModelsMeasurementsFromUpdateMeasurementToolModel,
+            MeasurementsFromUpdateMeasurementToolModel,
         )
 
         d = dict(src_dict)
@@ -445,51 +441,45 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
         specification_mode: Union[
             None,
             None,
-            QualerApiModelsMeasurementsFromUpdateMeasurementPointModelSpecificationMode,
+            MeasurementsFromUpdateMeasurementPointModelSpecificationMode,
         ]
         if not _specification_mode:
             specification_mode = None
         else:
-            specification_mode = (
-                QualerApiModelsMeasurementsFromUpdateMeasurementPointModelSpecificationMode(
-                    _specification_mode
-                )
+            specification_mode = MeasurementsFromUpdateMeasurementPointModelSpecificationMode(
+                _specification_mode
             )
 
         _tolerance_mode = d.pop("ToleranceMode", None)
         tolerance_mode: Union[
             None,
             None,
-            QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceMode,
+            MeasurementsFromUpdateMeasurementPointModelToleranceMode,
         ]
         if not _tolerance_mode:
             tolerance_mode = None
         else:
-            tolerance_mode = (
-                QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceMode(
-                    _tolerance_mode
-                )
+            tolerance_mode = MeasurementsFromUpdateMeasurementPointModelToleranceMode(
+                _tolerance_mode
             )
 
         _tolerance_unit = d.pop("ToleranceUnit", None)
         tolerance_unit: Union[
             None,
             None,
-            QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceUnit,
+            MeasurementsFromUpdateMeasurementPointModelToleranceUnit,
         ]
         if not _tolerance_unit:
             tolerance_unit = None
         else:
-            tolerance_unit = (
-                QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToleranceUnit(
-                    _tolerance_unit
-                )
+            tolerance_unit = MeasurementsFromUpdateMeasurementPointModelToleranceUnit(
+                _tolerance_unit
             )
 
         measurements = []
         _measurements = d.pop("Measurements", None)
         for measurements_item_data in _measurements or []:
-            measurements_item = QualerApiModelsMeasurementsFromUpdateMeasurementModel.from_dict(
+            measurements_item = MeasurementsFromUpdateMeasurementModel.from_dict(
                 measurements_item_data
             )
 
@@ -499,7 +489,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
         _measurement_condition_factors = d.pop("MeasurementConditionFactors", None)
         for measurement_condition_factors_item_data in _measurement_condition_factors or []:
             measurement_condition_factors_item = (
-                QualerApiModelsMeasurementsFromUpdateMeasurementConditionFactorModel.from_dict(
+                MeasurementsFromUpdateMeasurementConditionFactorModel.from_dict(
                     measurement_condition_factors_item_data
                 )
             )
@@ -510,41 +500,31 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
         tool_application_mode: Union[
             None,
             None,
-            QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToolApplicationMode,
+            MeasurementsFromUpdateMeasurementPointModelToolApplicationMode,
         ]
         if not _tool_application_mode:
             tool_application_mode = None
         else:
-            tool_application_mode = (
-                QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToolApplicationMode(
-                    _tool_application_mode
-                )
+            tool_application_mode = MeasurementsFromUpdateMeasurementPointModelToolApplicationMode(
+                _tool_application_mode
             )
 
         _primary_measurement_tool = d.pop("PrimaryMeasurementTool", None)
-        primary_measurement_tool: Union[
-            None, QualerApiModelsMeasurementsFromUpdateMeasurementToolModel
-        ]
+        primary_measurement_tool: Union[None, MeasurementsFromUpdateMeasurementToolModel]
         if not _primary_measurement_tool:
             primary_measurement_tool = None
         else:
-            primary_measurement_tool = (
-                QualerApiModelsMeasurementsFromUpdateMeasurementToolModel.from_dict(
-                    _primary_measurement_tool
-                )
+            primary_measurement_tool = MeasurementsFromUpdateMeasurementToolModel.from_dict(
+                _primary_measurement_tool
             )
 
         _secondary_measurement_tool = d.pop("SecondaryMeasurementTool", None)
-        secondary_measurement_tool: Union[
-            None, QualerApiModelsMeasurementsFromUpdateMeasurementToolModel
-        ]
+        secondary_measurement_tool: Union[None, MeasurementsFromUpdateMeasurementToolModel]
         if not _secondary_measurement_tool:
             secondary_measurement_tool = None
         else:
-            secondary_measurement_tool = (
-                QualerApiModelsMeasurementsFromUpdateMeasurementToolModel.from_dict(
-                    _secondary_measurement_tool
-                )
+            secondary_measurement_tool = MeasurementsFromUpdateMeasurementToolModel.from_dict(
+                _secondary_measurement_tool
             )
 
         linked_measurement_point_id = d.pop("LinkedMeasurementPointId", None)
@@ -553,15 +533,13 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementPointModel:
         hysteresis_point: Union[
             None,
             None,
-            QualerApiModelsMeasurementsFromUpdateMeasurementPointModelHysteresisPoint,
+            MeasurementsFromUpdateMeasurementPointModelHysteresisPoint,
         ]
         if not _hysteresis_point:
             hysteresis_point = None
         else:
-            hysteresis_point = (
-                QualerApiModelsMeasurementsFromUpdateMeasurementPointModelHysteresisPoint(
-                    _hysteresis_point
-                )
+            hysteresis_point = MeasurementsFromUpdateMeasurementPointModelHysteresisPoint(
+                _hysteresis_point
             )
 
         influence_parameter_1_parameter_id = d.pop("InfluenceParameter1ParameterId", None)

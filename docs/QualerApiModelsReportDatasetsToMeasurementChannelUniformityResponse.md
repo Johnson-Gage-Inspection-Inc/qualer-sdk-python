@@ -1,4 +1,4 @@
-# QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse
+# ReportDatasetsToMeasurementChannelUniformityResponse
 
 ## Properties
 Name | Type | Description | Notes

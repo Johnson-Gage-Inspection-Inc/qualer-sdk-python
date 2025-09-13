@@ -1,4 +1,4 @@
-# QualerApiModelsAssetToAssetMaintenancePlanResponseAssignedEmployee
+# AssetToAssetMaintenancePlanResponseAssignedEmployee
 
 ## Properties
 Name | Type | Description | Notes

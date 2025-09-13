@@ -6,24 +6,24 @@ from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_custom_fields import (
-        QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields,
+        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields,
     )
     from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_display_options import (
-        QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions,
+        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions,
     )
     from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model import (
-        QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel,
+        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel,
     )
 
 
 T = TypeVar(
     "T",
-    bound="QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModel",
+    bound="MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModel",
 )
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModel:
+class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModel:
     """
     Attributes:
         measurement_name (Optional[str]):
@@ -33,10 +33,10 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         decimal_places (Optional[int]):
         significant_figures (Optional[int]):
         display_options (Union[None,
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions]):
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions]):
         custom_fields (Union[None,
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields]):
-        measurement_points (Optional[List['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBat
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields]):
+        measurement_points (Optional[List['MeasurementsToMeasurementRecordResponseModelMeasurementBat
             chResponseModelMeasurementSetResponseModelMeasurementPointResponseModel']]):
     """
 
@@ -49,18 +49,18 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
     display_options: Union[
         None,
         None,
-        "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions",
+        "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions",
     ] = None
     custom_fields: Union[
         None,
         None,
-        "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields",
+        "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields",
     ] = None
     measurement_points: Union[
         None,
         None,
         List[
-            "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel"
+            "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel"
         ],
     ] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -120,13 +120,13 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_custom_fields import (
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields,
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields,
         )
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_display_options import (
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions,
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions,
         )
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model import (
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel,
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel,
         )
 
         d = dict(src_dict)
@@ -146,12 +146,12 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         display_options: Union[
             None,
             None,
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions,
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions,
         ]
         if not _display_options:
             display_options = None
         else:
-            display_options = QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions.from_dict(
+            display_options = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions.from_dict(
                 _display_options
             )
 
@@ -159,19 +159,19 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         custom_fields: Union[
             None,
             None,
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields,
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields,
         ]
         if not _custom_fields:
             custom_fields = None
         else:
-            custom_fields = QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields.from_dict(
+            custom_fields = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields.from_dict(
                 _custom_fields
             )
 
         measurement_points = []
         _measurement_points = d.pop("MeasurementPoints", None)
         for measurement_points_item_data in _measurement_points or []:
-            measurement_points_item = QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel.from_dict(
+            measurement_points_item = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel.from_dict(
                 measurement_points_item_data
             )
 

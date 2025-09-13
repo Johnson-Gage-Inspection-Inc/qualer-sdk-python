@@ -6,12 +6,12 @@ from attrs import field as _attrs_field
 
 T = TypeVar(
     "T",
-    bound="QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0",
+    bound="ServiceOrdersToClientOrderResponseModelBillingAddressType0",
 )
 
 
 @_attrs_define
-class QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0:
+class ServiceOrdersToClientOrderResponseModelBillingAddressType0:
     """ """
 
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)

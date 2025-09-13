@@ -1,4 +1,4 @@
-# QualerApiModelsReportDatasetsToClientAttributeResponse
+# ReportDatasetsToClientAttributeResponse
 
 ## Properties
 Name | Type | Description | Notes

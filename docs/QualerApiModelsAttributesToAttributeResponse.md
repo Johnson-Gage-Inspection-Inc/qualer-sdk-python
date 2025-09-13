@@ -1,4 +1,4 @@
-# QualerApiModelsAttributesToAttributeResponse
+# AttributesToAttributeResponse
 
 ## Properties
 Name | Type | Description | Notes

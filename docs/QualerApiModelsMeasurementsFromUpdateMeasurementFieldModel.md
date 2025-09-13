@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsFromUpdateMeasurementFieldModel
+# MeasurementsFromUpdateMeasurementFieldModel
 
 ## Properties
 Name | Type | Description | Notes

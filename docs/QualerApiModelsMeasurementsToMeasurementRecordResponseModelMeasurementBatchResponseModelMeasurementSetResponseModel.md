@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModel
+# MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 **default_unit_of_measure_id** | **int** |  | [optional] 
 **decimal_places** | **int** |  | [optional] 
 **significant_figures** | **int** |  | [optional] 
-**display_options** | [**QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions**](QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions.md) |  | [optional] 
-**custom_fields** | [**QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields**](QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields.md) |  | [optional] 
-**measurement_points** | [**list[QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel]**](QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel.md) |  | [optional] 
+**display_options** | [**MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions**](MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions.md) |  | [optional] 
+**custom_fields** | [**MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields**](MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields.md) |  | [optional] 
+**measurement_points** | [**list[MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel]**](MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

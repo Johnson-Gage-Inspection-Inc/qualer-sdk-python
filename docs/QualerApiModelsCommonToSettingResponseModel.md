@@ -1,4 +1,4 @@
-# QualerApiModelsCommonToSettingResponseModel
+# CommonToSettingResponseModel
 
 ## Properties
 Name | Type | Description | Notes

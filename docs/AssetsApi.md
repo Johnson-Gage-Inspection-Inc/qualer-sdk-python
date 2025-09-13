@@ -121,7 +121,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all_assets**
-> list[QualerApiModelsAssetToAssetResponseModel] get_all_assets()
+> list[AssetToAssetResponseModel] get_all_assets()
 
 
 
@@ -148,7 +148,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[QualerApiModelsAssetToAssetResponseModel]**](QualerApiModelsAssetToAssetResponseModel.md)
+[**list[AssetToAssetResponseModel]**](AssetToAssetResponseModel.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset**
-> QualerApiModelsAssetToAssetResponseModel get_asset(id)
+> AssetToAssetResponseModel get_asset(id)
 
 
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsAssetToAssetResponseModel**](QualerApiModelsAssetToAssetResponseModel.md)
+[**AssetToAssetResponseModel**](AssetToAssetResponseModel.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_by_asset_pool**
-> list[QualerApiModelsAssetToAssetResponseModel] get_asset_by_asset_pool(asset_pool_id)
+> list[AssetToAssetResponseModel] get_asset_by_asset_pool(asset_pool_id)
 
 
 
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetToAssetResponseModel]**](QualerApiModelsAssetToAssetResponseModel.md)
+[**list[AssetToAssetResponseModel]**](AssetToAssetResponseModel.md)
 
 ### Authorization
 
@@ -252,7 +252,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_by_asset_tag**
-> list[QualerApiModelsAssetToAssetResponseModel] get_asset_by_asset_tag(asset_tag)
+> list[AssetToAssetResponseModel] get_asset_by_asset_tag(asset_tag)
 
 
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetToAssetResponseModel]**](QualerApiModelsAssetToAssetResponseModel.md)
+[**list[AssetToAssetResponseModel]**](AssetToAssetResponseModel.md)
 
 ### Authorization
 
@@ -297,7 +297,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_by_attribute**
-> list[QualerApiModelsAssetToAssetResponseModel] get_asset_by_attribute(model_name=model_name, model_value=model_value)
+> list[AssetToAssetResponseModel] get_asset_by_attribute(model_name=model_name, model_value=model_value)
 
 
 
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetToAssetResponseModel]**](QualerApiModelsAssetToAssetResponseModel.md)
+[**list[AssetToAssetResponseModel]**](AssetToAssetResponseModel.md)
 
 ### Authorization
 
@@ -344,7 +344,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_by_barcode**
-> list[QualerApiModelsAssetToAssetResponseModel] get_asset_by_barcode(barcode)
+> list[AssetToAssetResponseModel] get_asset_by_barcode(barcode)
 
 
 
@@ -375,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetToAssetResponseModel]**](QualerApiModelsAssetToAssetResponseModel.md)
+[**list[AssetToAssetResponseModel]**](AssetToAssetResponseModel.md)
 
 ### Authorization
 
@@ -389,7 +389,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_by_serial_number**
-> list[QualerApiModelsAssetToAssetResponseModel] get_asset_by_serial_number(serial_number)
+> list[AssetToAssetResponseModel] get_asset_by_serial_number(serial_number)
 
 
 
@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetToAssetResponseModel]**](QualerApiModelsAssetToAssetResponseModel.md)
+[**list[AssetToAssetResponseModel]**](AssetToAssetResponseModel.md)
 
 ### Authorization
 
@@ -482,7 +482,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_manager_counters**
-> QualerApiModelsAssetToAssetsCountResponseModel get_asset_manager_counters(model_search_string=model_search_string)
+> AssetToAssetsCountResponseModel get_asset_manager_counters(model_search_string=model_search_string)
 
 GetAssetManagerCounters
 
@@ -514,7 +514,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsAssetToAssetsCountResponseModel**](QualerApiModelsAssetToAssetsCountResponseModel.md)
+[**AssetToAssetsCountResponseModel**](AssetToAssetsCountResponseModel.md)
 
 ### Authorization
 
@@ -528,7 +528,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_manager_list**
-> list[QualerApiModelsAssetToAssetManageResponseModel] get_asset_manager_list(model_filter_type=model_filter_type, model_search_string=model_search_string, model_page=model_page, model_page_size=model_page_size)
+> list[AssetToAssetManageResponseModel] get_asset_manager_list(model_filter_type=model_filter_type, model_search_string=model_search_string, model_page=model_page, model_page_size=model_page_size)
 
 GetAssetManagerList
 
@@ -568,7 +568,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetToAssetManageResponseModel]**](QualerApiModelsAssetToAssetManageResponseModel.md)
+[**list[AssetToAssetManageResponseModel]**](AssetToAssetManageResponseModel.md)
 
 ### Authorization
 
@@ -582,7 +582,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_assets_by_equipment_id**
-> list[QualerApiModelsAssetToAssetResponseModel] get_assets_by_equipment_id(equipment_id)
+> list[AssetToAssetResponseModel] get_assets_by_equipment_id(equipment_id)
 
 
 
@@ -613,7 +613,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetToAssetResponseModel]**](QualerApiModelsAssetToAssetResponseModel.md)
+[**list[AssetToAssetResponseModel]**](AssetToAssetResponseModel.md)
 
 ### Authorization
 
@@ -690,7 +690,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.AssetsApi()
 id = 56 # int | 
-model = qualer_sdk.QualerApiModelsAssetFromUpdateAssetClassModel() # QualerApiModelsAssetFromUpdateAssetClassModel | 
+model = qualer_sdk.AssetFromUpdateAssetClassModel() # AssetFromUpdateAssetClassModel | 
 
 try:
     api_response = api_instance.update_asset_class(id, model)
@@ -704,7 +704,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **model** | [**QualerApiModelsAssetFromUpdateAssetClassModel**](QualerApiModelsAssetFromUpdateAssetClassModel.md)|  | 
+ **model** | [**AssetFromUpdateAssetClassModel**](AssetFromUpdateAssetClassModel.md)|  | 
 
 ### Return type
 
@@ -737,7 +737,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.AssetsApi()
 id = 56 # int | 
-model = qualer_sdk.QualerApiModelsAssetFromUpdateAssetDepartmentModel() # QualerApiModelsAssetFromUpdateAssetDepartmentModel | 
+model = qualer_sdk.AssetFromUpdateAssetDepartmentModel() # AssetFromUpdateAssetDepartmentModel | 
 
 try:
     api_response = api_instance.update_asset_department(id, model)
@@ -751,7 +751,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **model** | [**QualerApiModelsAssetFromUpdateAssetDepartmentModel**](QualerApiModelsAssetFromUpdateAssetDepartmentModel.md)|  | 
+ **model** | [**AssetFromUpdateAssetDepartmentModel**](AssetFromUpdateAssetDepartmentModel.md)|  | 
 
 ### Return type
 
@@ -784,7 +784,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.AssetsApi()
 id = 56 # int | 
-model = qualer_sdk.QualerApiModelsAssetFromUpdateAssetRoomModel() # QualerApiModelsAssetFromUpdateAssetRoomModel | 
+model = qualer_sdk.AssetFromUpdateAssetRoomModel() # AssetFromUpdateAssetRoomModel | 
 
 try:
     api_response = api_instance.update_asset_room(id, model)
@@ -798,7 +798,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **model** | [**QualerApiModelsAssetFromUpdateAssetRoomModel**](QualerApiModelsAssetFromUpdateAssetRoomModel.md)|  | 
+ **model** | [**AssetFromUpdateAssetRoomModel**](AssetFromUpdateAssetRoomModel.md)|  | 
 
 ### Return type
 
@@ -830,7 +830,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = qualer_sdk.AssetsApi()
-model = qualer_sdk.QualerApiModelsAssetFromUpdateRoomModel() # QualerApiModelsAssetFromUpdateRoomModel | 
+model = qualer_sdk.AssetFromUpdateRoomModel() # AssetFromUpdateRoomModel | 
 
 try:
     api_response = api_instance.update_room(model)
@@ -843,7 +843,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**QualerApiModelsAssetFromUpdateRoomModel**](QualerApiModelsAssetFromUpdateRoomModel.md)|  | 
+ **model** | [**AssetFromUpdateRoomModel**](AssetFromUpdateRoomModel.md)|  | 
 
 ### Return type
 

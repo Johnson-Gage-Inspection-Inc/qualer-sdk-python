@@ -5,23 +5,23 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.qualer_api_models_clients_from_sponsored_client_edit_model_client_status import (
-    QualerApiModelsClientsFromSponsoredClientEditModelClientStatus,
+    ClientsFromSponsoredClientEditModelClientStatus,
 )
 
 if TYPE_CHECKING:
-    from ..models.qualer_api_models_address_address_model import QualerApiModelsAddressAddressModel
+    from ..models.qualer_api_models_address_address_model import AddressAddressModel
 
 
-T = TypeVar("T", bound="QualerApiModelsClientsFromSponsoredClientEditModel")
+T = TypeVar("T", bound="ClientsFromSponsoredClientEditModel")
 
 
 @_attrs_define
-class QualerApiModelsClientsFromSponsoredClientEditModel:
+class ClientsFromSponsoredClientEditModel:
     """
     Attributes:
         company_id (Optional[int]):
         account_number_text (Optional[str]):
-        client_status (Optional[QualerApiModelsClientsFromSponsoredClientEditModelClientStatus]):
+        client_status (Optional[ClientsFromSponsoredClientEditModelClientStatus]):
         domain_name (Optional[str]):
         custom_client_name (Optional[str]):
         legacy_id (Optional[str]):
@@ -30,13 +30,13 @@ class QualerApiModelsClientsFromSponsoredClientEditModel:
         account_representative_site_id (Optional[int]):
         account_manager_employee_id (Optional[int]):
         company_name (Optional[str]):
-        billing_address (Optional[QualerApiModelsAddressAddressModel]):
-        shipping_address (Optional[QualerApiModelsAddressAddressModel]):
+        billing_address (Optional[AddressAddressModel]):
+        shipping_address (Optional[AddressAddressModel]):
     """
 
     company_id: Optional[int] = None
     account_number_text: Optional[str] = None
-    client_status: Optional["QualerApiModelsClientsFromSponsoredClientEditModelClientStatus"] = None
+    client_status: Optional["ClientsFromSponsoredClientEditModelClientStatus"] = None
     domain_name: Optional[str] = None
     custom_client_name: Optional[str] = None
     legacy_id: Optional[str] = None
@@ -45,8 +45,8 @@ class QualerApiModelsClientsFromSponsoredClientEditModel:
     account_representative_site_id: Optional[int] = None
     account_manager_employee_id: Optional[int] = None
     company_name: Optional[str] = None
-    billing_address: Optional["QualerApiModelsAddressAddressModel"] = None
-    shipping_address: Optional["QualerApiModelsAddressAddressModel"] = None
+    billing_address: Optional["AddressAddressModel"] = None
+    shipping_address: Optional["AddressAddressModel"] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -117,7 +117,7 @@ class QualerApiModelsClientsFromSponsoredClientEditModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_address_address_model import (
-            QualerApiModelsAddressAddressModel,
+            AddressAddressModel,
         )
 
         d = dict(src_dict)
@@ -126,13 +126,11 @@ class QualerApiModelsClientsFromSponsoredClientEditModel:
         account_number_text = d.pop("AccountNumberText", None)
 
         _client_status = d.pop("ClientStatus", None)
-        client_status: Optional[QualerApiModelsClientsFromSponsoredClientEditModelClientStatus]
+        client_status: Optional[ClientsFromSponsoredClientEditModelClientStatus]
         if not _client_status:
             client_status = None
         else:
-            client_status = QualerApiModelsClientsFromSponsoredClientEditModelClientStatus(
-                _client_status
-            )
+            client_status = ClientsFromSponsoredClientEditModelClientStatus(_client_status)
 
         domain_name = d.pop("DomainName", None)
 
@@ -151,18 +149,18 @@ class QualerApiModelsClientsFromSponsoredClientEditModel:
         company_name = d.pop("CompanyName", None)
 
         _billing_address = d.pop("BillingAddress", None)
-        billing_address: Optional[QualerApiModelsAddressAddressModel]
+        billing_address: Optional[AddressAddressModel]
         if not _billing_address:
             billing_address = None
         else:
-            billing_address = QualerApiModelsAddressAddressModel.from_dict(_billing_address)
+            billing_address = AddressAddressModel.from_dict(_billing_address)
 
         _shipping_address = d.pop("ShippingAddress", None)
-        shipping_address: Optional[QualerApiModelsAddressAddressModel]
+        shipping_address: Optional[AddressAddressModel]
         if not _shipping_address:
             shipping_address = None
         else:
-            shipping_address = QualerApiModelsAddressAddressModel.from_dict(_shipping_address)
+            shipping_address = AddressAddressModel.from_dict(_shipping_address)
 
         qualer_api_models_clients_from_sponsored_client_edit_model = cls(
             company_id=company_id,

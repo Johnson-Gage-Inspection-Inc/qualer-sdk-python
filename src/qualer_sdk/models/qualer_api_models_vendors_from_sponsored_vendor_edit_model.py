@@ -5,14 +5,14 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.qualer_api_models_address_address_model import QualerApiModelsAddressAddressModel
+    from ..models.qualer_api_models_address_address_model import AddressAddressModel
 
 
-T = TypeVar("T", bound="QualerApiModelsVendorsFromSponsoredVendorEditModel")
+T = TypeVar("T", bound="VendorsFromSponsoredVendorEditModel")
 
 
 @_attrs_define
-class QualerApiModelsVendorsFromSponsoredVendorEditModel:
+class VendorsFromSponsoredVendorEditModel:
     """
     Attributes:
         company_id (Optional[int]):
@@ -21,8 +21,8 @@ class QualerApiModelsVendorsFromSponsoredVendorEditModel:
         custom_vendor_name (Optional[str]):
         currency_id (Optional[int]):
         company_name (Optional[str]):
-        billing_address (Optional[QualerApiModelsAddressAddressModel]):
-        shipping_address (Optional[QualerApiModelsAddressAddressModel]):
+        billing_address (Optional[AddressAddressModel]):
+        shipping_address (Optional[AddressAddressModel]):
     """
 
     company_id: Optional[int] = None
@@ -31,8 +31,8 @@ class QualerApiModelsVendorsFromSponsoredVendorEditModel:
     custom_vendor_name: Optional[str] = None
     currency_id: Optional[int] = None
     company_name: Optional[str] = None
-    billing_address: Optional["QualerApiModelsAddressAddressModel"] = None
-    shipping_address: Optional["QualerApiModelsAddressAddressModel"] = None
+    billing_address: Optional["AddressAddressModel"] = None
+    shipping_address: Optional["AddressAddressModel"] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -81,7 +81,7 @@ class QualerApiModelsVendorsFromSponsoredVendorEditModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_address_address_model import (
-            QualerApiModelsAddressAddressModel,
+            AddressAddressModel,
         )
 
         d = dict(src_dict)
@@ -98,18 +98,18 @@ class QualerApiModelsVendorsFromSponsoredVendorEditModel:
         company_name = d.pop("CompanyName", None)
 
         _billing_address = d.pop("BillingAddress", None)
-        billing_address: Optional[QualerApiModelsAddressAddressModel]
+        billing_address: Optional[AddressAddressModel]
         if not _billing_address:
             billing_address = None
         else:
-            billing_address = QualerApiModelsAddressAddressModel.from_dict(_billing_address)
+            billing_address = AddressAddressModel.from_dict(_billing_address)
 
         _shipping_address = d.pop("ShippingAddress", None)
-        shipping_address: Optional[QualerApiModelsAddressAddressModel]
+        shipping_address: Optional[AddressAddressModel]
         if not _shipping_address:
             shipping_address = None
         else:
-            shipping_address = QualerApiModelsAddressAddressModel.from_dict(_shipping_address)
+            shipping_address = AddressAddressModel.from_dict(_shipping_address)
 
         qualer_api_models_vendors_from_sponsored_vendor_edit_model = cls(
             company_id=company_id,

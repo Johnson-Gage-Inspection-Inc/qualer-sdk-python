@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrdersToClientOrderItemResponseModel
+# ServiceOrdersToClientOrderItemResponseModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -80,7 +80,7 @@ Name | Type | Description | Notes
 **next_service_date** | **datetime** |  | [optional] 
 **maintenance_task** | **str** |  | [optional] 
 **maintenance_plan** | **str** |  | [optional] 
-**service_options** | [**list[QualerApiModelsServiceOptionsToServiceOptionResponseModel]**](QualerApiModelsServiceOptionsToServiceOptionResponseModel.md) |  | [optional] 
+**service_options** | [**list[ServiceOptionsToServiceOptionResponseModel]**](ServiceOptionsToServiceOptionResponseModel.md) |  | [optional] 
 **vendor_tag** | **str** |  | [optional] 
 **legacy_id** | **str** |  | [optional] 
 **asset_ownership** | **str** |  | [optional] 

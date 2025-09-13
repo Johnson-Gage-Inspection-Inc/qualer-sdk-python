@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsReportDatasetsToMeasurementResponseEnvironmentMask(str, Enum):
+class ReportDatasetsToMeasurementResponseEnvironmentMask(str, Enum):
     AIRBUOYANCY = "AirBuoyancy"
     AIRHUMIDITY = "AirHumidity"
     ALTITUDE = "Altitude"

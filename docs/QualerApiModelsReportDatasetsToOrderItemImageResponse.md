@@ -1,4 +1,4 @@
-# QualerApiModelsReportDatasetsToOrderItemImageResponse
+# ReportDatasetsToOrderItemImageResponse
 
 ## Properties
 Name | Type | Description | Notes

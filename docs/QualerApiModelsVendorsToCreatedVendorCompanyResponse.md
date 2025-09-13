@@ -1,4 +1,4 @@
-# QualerApiModelsVendorsToCreatedVendorCompanyResponse
+# VendorsToCreatedVendorCompanyResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -26,7 +26,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrderMetadataApi()
 service_order_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel() # QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel | 
+model = qualer_sdk.ServiceOrdersFromServiceOrderMetadataCreateModel() # ServiceOrdersFromServiceOrderMetadataCreateModel | 
 
 try:
     # Create metadata
@@ -41,7 +41,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **service_order_id** | **int**|  | 
- **model** | [**QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel**](QualerApiModelsServiceOrdersFromServiceOrderMetadataCreateModel.md)|  | 
+ **model** | [**ServiceOrdersFromServiceOrderMetadataCreateModel**](ServiceOrdersFromServiceOrderMetadataCreateModel.md)|  | 
 
 ### Return type
 
@@ -168,7 +168,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrderMetadataApi()
 service_order_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsServiceOrdersFromServiceOrderMetadataUpdateModel() # QualerApiModelsServiceOrdersFromServiceOrderMetadataUpdateModel | 
+model = qualer_sdk.ServiceOrdersFromServiceOrderMetadataUpdateModel() # ServiceOrdersFromServiceOrderMetadataUpdateModel | 
 
 try:
     # Update metadata
@@ -183,7 +183,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **service_order_id** | **int**|  | 
- **model** | [**QualerApiModelsServiceOrdersFromServiceOrderMetadataUpdateModel**](QualerApiModelsServiceOrdersFromServiceOrderMetadataUpdateModel.md)|  | 
+ **model** | [**ServiceOrdersFromServiceOrderMetadataUpdateModel**](ServiceOrdersFromServiceOrderMetadataUpdateModel.md)|  | 
 
 ### Return type
 

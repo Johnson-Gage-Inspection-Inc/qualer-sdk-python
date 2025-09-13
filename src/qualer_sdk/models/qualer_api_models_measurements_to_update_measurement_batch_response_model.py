@@ -6,20 +6,20 @@ from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_to_update_measurement_set_response_model import (
-        QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel,
+        MeasurementsToUpdateMeasurementSetResponseModel,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel")
+T = TypeVar("T", bound="MeasurementsToUpdateMeasurementBatchResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel:
+class MeasurementsToUpdateMeasurementBatchResponseModel:
     """
     Attributes:
         batch_id (Optional[int]):
         batch_type (Optional[str]):
-        measurement_sets (Optional[List['QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel']]):
+        measurement_sets (Optional[List['MeasurementsToUpdateMeasurementSetResponseModel']]):
     """
 
     batch_id: Optional[int] = None
@@ -27,7 +27,7 @@ class QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel:
     measurement_sets: Union[
         None,
         None,
-        List["QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel"],
+        List["MeasurementsToUpdateMeasurementSetResponseModel"],
     ] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -58,7 +58,7 @@ class QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_measurements_to_update_measurement_set_response_model import (
-            QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel,
+            MeasurementsToUpdateMeasurementSetResponseModel,
         )
 
         d = dict(src_dict)
@@ -69,10 +69,8 @@ class QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel:
         measurement_sets = []
         _measurement_sets = d.pop("MeasurementSets", None)
         for measurement_sets_item_data in _measurement_sets or []:
-            measurement_sets_item = (
-                QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel.from_dict(
-                    measurement_sets_item_data
-                )
+            measurement_sets_item = MeasurementsToUpdateMeasurementSetResponseModel.from_dict(
+                measurement_sets_item_data
             )
 
             measurement_sets.append(measurement_sets_item)

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_measurements_by_asset**
-> list[QualerApiModelsMeasurementsToMeasurementRecordResponseModel] get_measurements_by_asset(asset_id, _from=_from, to=to)
+> list[MeasurementsToMeasurementRecordResponseModel] get_measurements_by_asset(asset_id, _from=_from, to=to)
 
 
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsMeasurementsToMeasurementRecordResponseModel]**](QualerApiModelsMeasurementsToMeasurementRecordResponseModel.md)
+[**list[MeasurementsToMeasurementRecordResponseModel]**](MeasurementsToMeasurementRecordResponseModel.md)
 
 ### Authorization
 

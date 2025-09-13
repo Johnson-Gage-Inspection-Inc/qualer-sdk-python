@@ -6,11 +6,11 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-T = TypeVar("T", bound="QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat")
+T = TypeVar("T", bound="AssetFromUpdateAssetMaintenanceServiceDat")
 
 
 @_attrs_define
-class QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat:
+class AssetFromUpdateAssetMaintenanceServiceDat:
     """
     Attributes:
         reset_service_date (Optional[datetime.datetime]):

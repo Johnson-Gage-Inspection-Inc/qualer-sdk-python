@@ -6,25 +6,25 @@ from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_from_create_measurement_field_model import (
-        QualerApiModelsMeasurementsFromCreateMeasurementFieldModel,
+        MeasurementsFromCreateMeasurementFieldModel,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsMeasurementsFromCustomFields")
+T = TypeVar("T", bound="MeasurementsFromCustomFields")
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsFromCustomFields:
+class MeasurementsFromCustomFields:
     """
     Attributes:
         description (Optional[str]):
         result (Optional[str]):
-        items (Optional[List['QualerApiModelsMeasurementsFromCreateMeasurementFieldModel']]):
+        items (Optional[List['MeasurementsFromCreateMeasurementFieldModel']]):
     """
 
     description: Optional[str] = None
     result: Optional[str] = None
-    items: Union[None, List["QualerApiModelsMeasurementsFromCreateMeasurementFieldModel"]] = None
+    items: Union[None, List["MeasurementsFromCreateMeasurementFieldModel"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -54,7 +54,7 @@ class QualerApiModelsMeasurementsFromCustomFields:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_measurements_from_create_measurement_field_model import (
-            QualerApiModelsMeasurementsFromCreateMeasurementFieldModel,
+            MeasurementsFromCreateMeasurementFieldModel,
         )
 
         d = dict(src_dict)
@@ -65,9 +65,7 @@ class QualerApiModelsMeasurementsFromCustomFields:
         items = []
         _items = d.pop("Items", None)
         for items_item_data in _items or []:
-            items_item = QualerApiModelsMeasurementsFromCreateMeasurementFieldModel.from_dict(
-                items_item_data
-            )
+            items_item = MeasurementsFromCreateMeasurementFieldModel.from_dict(items_item_data)
 
             items.append(items_item)
 

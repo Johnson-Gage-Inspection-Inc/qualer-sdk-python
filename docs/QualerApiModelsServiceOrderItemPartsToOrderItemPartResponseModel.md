@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel
+# ServiceOrderItemPartsToOrderItemPartResponseModel
 
 ## Properties
 Name | Type | Description | Notes

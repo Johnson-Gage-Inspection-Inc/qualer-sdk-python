@@ -7,7 +7,7 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.create_client_site_response_200 import CreateClientSiteResponse200
 from ...models.qualer_api_models_site_from_site_create_model import (
-    QualerApiModelsSiteFromSiteCreateModel,
+    SiteFromSiteCreateModel,
 )
 from ...types import Response
 
@@ -15,7 +15,7 @@ from ...types import Response
 def _get_kwargs(
     client_company_id: int,
     *,
-    body: QualerApiModelsSiteFromSiteCreateModel,
+    body: SiteFromSiteCreateModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -66,7 +66,7 @@ def sync_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsSiteFromSiteCreateModel,
+    body: SiteFromSiteCreateModel,
 ) -> Response[Union[Any, CreateClientSiteResponse200]]:
     r"""Create Client Site.
 
@@ -74,7 +74,7 @@ def sync_detailed(
 
     Args:
         client_company_id (int):
-        body (QualerApiModelsSiteFromSiteCreateModel):
+        body (SiteFromSiteCreateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -100,7 +100,7 @@ def sync(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsSiteFromSiteCreateModel,
+    body: SiteFromSiteCreateModel,
 ) -> Optional[Union[Any, CreateClientSiteResponse200]]:
     r"""Create Client Site.
 
@@ -108,7 +108,7 @@ def sync(
 
     Args:
         client_company_id (int):
-        body (QualerApiModelsSiteFromSiteCreateModel):
+        body (SiteFromSiteCreateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -129,7 +129,7 @@ async def asyncio_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsSiteFromSiteCreateModel,
+    body: SiteFromSiteCreateModel,
 ) -> Response[Union[Any, CreateClientSiteResponse200]]:
     r"""Create Client Site.
 
@@ -137,7 +137,7 @@ async def asyncio_detailed(
 
     Args:
         client_company_id (int):
-        body (QualerApiModelsSiteFromSiteCreateModel):
+        body (SiteFromSiteCreateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -161,7 +161,7 @@ async def asyncio(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsSiteFromSiteCreateModel,
+    body: SiteFromSiteCreateModel,
 ) -> Optional[Union[Any, CreateClientSiteResponse200]]:
     r"""Create Client Site.
 
@@ -169,7 +169,7 @@ async def asyncio(
 
     Args:
         client_company_id (int):
-        body (QualerApiModelsSiteFromSiteCreateModel):
+        body (SiteFromSiteCreateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

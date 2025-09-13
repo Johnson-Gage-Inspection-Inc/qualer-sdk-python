@@ -7,7 +7,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_clients_to_client_company_response_model import (
-    QualerApiModelsClientsToClientCompanyResponseModel,
+    ClientsToClientCompanyResponseModel,
 )
 from ...types import Response
 
@@ -48,12 +48,12 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[List["QualerApiModelsClientsToClientCompanyResponseModel"]]:
+) -> Optional[List["ClientsToClientCompanyResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = QualerApiModelsClientsToClientCompanyResponseModel.from_dict(
+            response_200_item = ClientsToClientCompanyResponseModel.from_dict(
                 response_200_item_data
             )
 
@@ -68,7 +68,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[List["QualerApiModelsClientsToClientCompanyResponseModel"]]:
+) -> Response[List["ClientsToClientCompanyResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -85,7 +85,7 @@ def sync_detailed(
     model_company_name: Optional[str] = None,
     model_take: Optional[int] = None,
     model_modified_after: Optional[datetime.datetime] = None,
-) -> Response[List["QualerApiModelsClientsToClientCompanyResponseModel"]]:
+) -> Response[List["ClientsToClientCompanyResponseModel"]]:
     """
     Args:
         model_legacy_id (Optional[str]):
@@ -99,7 +99,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsClientsToClientCompanyResponseModel']]
+        Response[List['ClientsToClientCompanyResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -125,7 +125,7 @@ def sync(
     model_company_name: Optional[str] = None,
     model_take: Optional[int] = None,
     model_modified_after: Optional[datetime.datetime] = None,
-) -> Optional[List["QualerApiModelsClientsToClientCompanyResponseModel"]]:
+) -> Optional[List["ClientsToClientCompanyResponseModel"]]:
     """
     Args:
         model_legacy_id (Optional[str]):
@@ -139,7 +139,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsClientsToClientCompanyResponseModel']
+        List['ClientsToClientCompanyResponseModel']
     """
 
     return sync_detailed(
@@ -160,7 +160,7 @@ async def asyncio_detailed(
     model_company_name: Optional[str] = None,
     model_take: Optional[int] = None,
     model_modified_after: Optional[datetime.datetime] = None,
-) -> Response[List["QualerApiModelsClientsToClientCompanyResponseModel"]]:
+) -> Response[List["ClientsToClientCompanyResponseModel"]]:
     """
     Args:
         model_legacy_id (Optional[str]):
@@ -174,7 +174,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsClientsToClientCompanyResponseModel']]
+        Response[List['ClientsToClientCompanyResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -198,7 +198,7 @@ async def asyncio(
     model_company_name: Optional[str] = None,
     model_take: Optional[int] = None,
     model_modified_after: Optional[datetime.datetime] = None,
-) -> Optional[List["QualerApiModelsClientsToClientCompanyResponseModel"]]:
+) -> Optional[List["ClientsToClientCompanyResponseModel"]]:
     """
     Args:
         model_legacy_id (Optional[str]):
@@ -212,7 +212,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsClientsToClientCompanyResponseModel']
+        List['ClientsToClientCompanyResponseModel']
     """
 
     return (

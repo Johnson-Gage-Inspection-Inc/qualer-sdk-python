@@ -6,32 +6,30 @@ from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_from_create_measurement_set_model import (
-        QualerApiModelsMeasurementsFromCreateMeasurementSetModel,
+        MeasurementsFromCreateMeasurementSetModel,
     )
     from ..models.qualer_api_models_measurements_from_specification import (
-        QualerApiModelsMeasurementsFromSpecification,
+        MeasurementsFromSpecification,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsMeasurementsFromCreateMeasurementFormModel")
+T = TypeVar("T", bound="MeasurementsFromCreateMeasurementFormModel")
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsFromCreateMeasurementFormModel:
+class MeasurementsFromCreateMeasurementFormModel:
     """
     Attributes:
         batch_type (Optional[str]):
         batch_result (Optional[str]):
-        specification (Optional[QualerApiModelsMeasurementsFromSpecification]):
-        measurement_sets (Optional[List['QualerApiModelsMeasurementsFromCreateMeasurementSetModel']]):
+        specification (Optional[MeasurementsFromSpecification]):
+        measurement_sets (Optional[List['MeasurementsFromCreateMeasurementSetModel']]):
     """
 
     batch_type: Optional[str] = None
     batch_result: Optional[str] = None
-    specification: Optional["QualerApiModelsMeasurementsFromSpecification"] = None
-    measurement_sets: Union[
-        None, List["QualerApiModelsMeasurementsFromCreateMeasurementSetModel"]
-    ] = None
+    specification: Optional["MeasurementsFromSpecification"] = None
+    measurement_sets: Union[None, List["MeasurementsFromCreateMeasurementSetModel"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -66,10 +64,10 @@ class QualerApiModelsMeasurementsFromCreateMeasurementFormModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_measurements_from_create_measurement_set_model import (
-            QualerApiModelsMeasurementsFromCreateMeasurementSetModel,
+            MeasurementsFromCreateMeasurementSetModel,
         )
         from ..models.qualer_api_models_measurements_from_specification import (
-            QualerApiModelsMeasurementsFromSpecification,
+            MeasurementsFromSpecification,
         )
 
         d = dict(src_dict)
@@ -77,19 +75,17 @@ class QualerApiModelsMeasurementsFromCreateMeasurementFormModel:
         batch_result = d.pop("BatchResult", None)
 
         _specification = d.pop("Specification", None)
-        specification: Optional[QualerApiModelsMeasurementsFromSpecification]
+        specification: Optional[MeasurementsFromSpecification]
         if _specification is None:
             specification = None
         else:
-            specification = QualerApiModelsMeasurementsFromSpecification.from_dict(_specification)
+            specification = MeasurementsFromSpecification.from_dict(_specification)
 
-        measurement_sets: List[QualerApiModelsMeasurementsFromCreateMeasurementSetModel] = []
+        measurement_sets: List[MeasurementsFromCreateMeasurementSetModel] = []
         _measurement_sets = d.pop("MeasurementSets", None)
         for measurement_sets_item_data in _measurement_sets or []:
-            measurement_sets_item = (
-                QualerApiModelsMeasurementsFromCreateMeasurementSetModel.from_dict(
-                    measurement_sets_item_data
-                )
+            measurement_sets_item = MeasurementsFromCreateMeasurementSetModel.from_dict(
+                measurement_sets_item_data
             )
             measurement_sets.append(measurement_sets_item)
 

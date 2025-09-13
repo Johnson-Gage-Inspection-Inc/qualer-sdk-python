@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsFromUpdateMeasurementPointModel
+# MeasurementsFromUpdateMeasurementPointModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -24,11 +24,11 @@ Name | Type | Description | Notes
 **specification_mode** | **str** |  | [optional] 
 **tolerance_mode** | **str** |  | [optional] 
 **tolerance_unit** | **str** |  | [optional] 
-**measurements** | [**list[QualerApiModelsMeasurementsFromUpdateMeasurementModel]**](QualerApiModelsMeasurementsFromUpdateMeasurementModel.md) |  | [optional] 
-**measurement_condition_factors** | [**list[QualerApiModelsMeasurementsFromUpdateMeasurementConditionFactorModel]**](QualerApiModelsMeasurementsFromUpdateMeasurementConditionFactorModel.md) |  | [optional] 
+**measurements** | [**list[MeasurementsFromUpdateMeasurementModel]**](MeasurementsFromUpdateMeasurementModel.md) |  | [optional] 
+**measurement_condition_factors** | [**list[MeasurementsFromUpdateMeasurementConditionFactorModel]**](MeasurementsFromUpdateMeasurementConditionFactorModel.md) |  | [optional] 
 **tool_application_mode** | **str** |  | [optional] 
-**primary_measurement_tool** | [**QualerApiModelsMeasurementsFromUpdateMeasurementToolModel**](QualerApiModelsMeasurementsFromUpdateMeasurementToolModel.md) |  | [optional] 
-**secondary_measurement_tool** | [**QualerApiModelsMeasurementsFromUpdateMeasurementToolModel**](QualerApiModelsMeasurementsFromUpdateMeasurementToolModel.md) |  | [optional] 
+**primary_measurement_tool** | [**MeasurementsFromUpdateMeasurementToolModel**](MeasurementsFromUpdateMeasurementToolModel.md) |  | [optional] 
+**secondary_measurement_tool** | [**MeasurementsFromUpdateMeasurementToolModel**](MeasurementsFromUpdateMeasurementToolModel.md) |  | [optional] 
 **linked_measurement_point_id** | **int** |  | [optional] 
 **hysteresis_point** | **str** |  | [optional] 
 **influence_parameter1_parameter_id** | **int** |  | [optional] 

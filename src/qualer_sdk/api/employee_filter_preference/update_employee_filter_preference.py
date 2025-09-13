@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_asset_from_update_filter_preference_model import (
-    QualerApiModelsAssetFromUpdateFilterPreferenceModel,
+    AssetFromUpdateFilterPreferenceModel,
 )
 from ...models.update_employee_filter_preference_response_200 import (
     UpdateEmployeeFilterPreferenceResponse200,
@@ -16,7 +16,7 @@ from ...types import Response
 
 def _get_kwargs(
     *,
-    body: QualerApiModelsAssetFromUpdateFilterPreferenceModel,
+    body: AssetFromUpdateFilterPreferenceModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -60,12 +60,12 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetFromUpdateFilterPreferenceModel,
+    body: AssetFromUpdateFilterPreferenceModel,
 ) -> Response[UpdateEmployeeFilterPreferenceResponse200]:
     """UpdateEmployeeFilterPreference
 
     Args:
-        body (QualerApiModelsAssetFromUpdateFilterPreferenceModel):
+        body (AssetFromUpdateFilterPreferenceModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -89,12 +89,12 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetFromUpdateFilterPreferenceModel,
+    body: AssetFromUpdateFilterPreferenceModel,
 ) -> Optional[UpdateEmployeeFilterPreferenceResponse200]:
     """UpdateEmployeeFilterPreference
 
     Args:
-        body (QualerApiModelsAssetFromUpdateFilterPreferenceModel):
+        body (AssetFromUpdateFilterPreferenceModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -113,12 +113,12 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetFromUpdateFilterPreferenceModel,
+    body: AssetFromUpdateFilterPreferenceModel,
 ) -> Response[UpdateEmployeeFilterPreferenceResponse200]:
     """UpdateEmployeeFilterPreference
 
     Args:
-        body (QualerApiModelsAssetFromUpdateFilterPreferenceModel):
+        body (AssetFromUpdateFilterPreferenceModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -140,12 +140,12 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetFromUpdateFilterPreferenceModel,
+    body: AssetFromUpdateFilterPreferenceModel,
 ) -> Optional[UpdateEmployeeFilterPreferenceResponse200]:
     """UpdateEmployeeFilterPreference
 
     Args:
-        body (QualerApiModelsAssetFromUpdateFilterPreferenceModel):
+        body (AssetFromUpdateFilterPreferenceModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

@@ -1,4 +1,4 @@
-# QualerApiModelsReportDatasetsToMeasurementFieldResponse
+# ReportDatasetsToMeasurementFieldResponse
 
 ## Properties
 Name | Type | Description | Notes

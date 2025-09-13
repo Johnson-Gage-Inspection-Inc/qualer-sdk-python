@@ -25,7 +25,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = qualer_sdk.ClientEmployeesApi()
-model = qualer_sdk.QualerApiModelsClientsFromSponsoredEmployeeModel() # QualerApiModelsClientsFromSponsoredEmployeeModel | 
+model = qualer_sdk.ClientsFromSponsoredEmployeeModel() # ClientsFromSponsoredEmployeeModel | 
 
 try:
     api_response = api_instance.create_employee(model)
@@ -38,7 +38,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**QualerApiModelsClientsFromSponsoredEmployeeModel**](QualerApiModelsClientsFromSponsoredEmployeeModel.md)|  | 
+ **model** | [**ClientsFromSponsoredEmployeeModel**](ClientsFromSponsoredEmployeeModel.md)|  | 
 
 ### Return type
 
@@ -56,7 +56,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_employee**
-> QualerApiModelsClientsToEmployeeResponseModel get_employee(employee_id, model_employee_id=model_employee_id)
+> ClientsToEmployeeResponseModel get_employee(employee_id, model_employee_id=model_employee_id)
 
 
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsClientsToEmployeeResponseModel**](QualerApiModelsClientsToEmployeeResponseModel.md)
+[**ClientsToEmployeeResponseModel**](ClientsToEmployeeResponseModel.md)
 
 ### Authorization
 
@@ -103,7 +103,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_employees**
-> list[QualerApiModelsClientsToEmployeeResponseModel] get_employees(client_company_id)
+> list[ClientsToEmployeeResponseModel] get_employees(client_company_id)
 
 
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsClientsToEmployeeResponseModel]**](QualerApiModelsClientsToEmployeeResponseModel.md)
+[**list[ClientsToEmployeeResponseModel]**](ClientsToEmployeeResponseModel.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ClientEmployeesApi()
 employee_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsClientsFromSendEmployeeEmailModel() # QualerApiModelsClientsFromSendEmployeeEmailModel | 
+model = qualer_sdk.ClientsFromSendEmployeeEmailModel() # ClientsFromSendEmployeeEmailModel | 
 
 try:
     api_response = api_instance.send_employee_email(employee_id, model)
@@ -177,7 +177,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **employee_id** | **int**|  | 
- **model** | [**QualerApiModelsClientsFromSendEmployeeEmailModel**](QualerApiModelsClientsFromSendEmployeeEmailModel.md)|  | 
+ **model** | [**ClientsFromSendEmployeeEmailModel**](ClientsFromSendEmployeeEmailModel.md)|  | 
 
 ### Return type
 

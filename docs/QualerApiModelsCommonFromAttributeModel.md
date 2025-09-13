@@ -1,4 +1,4 @@
-# QualerApiModelsCommonFromAttributeModel
+# CommonFromAttributeModel
 
 ## Properties
 Name | Type | Description | Notes

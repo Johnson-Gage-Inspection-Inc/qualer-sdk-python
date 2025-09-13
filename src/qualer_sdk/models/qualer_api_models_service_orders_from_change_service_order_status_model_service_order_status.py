@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus(str, Enum):
+class ServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus(str, Enum):
     CANCELLED = "Cancelled"
     CLOSED = "Closed"
     COMPLETED = "Completed"

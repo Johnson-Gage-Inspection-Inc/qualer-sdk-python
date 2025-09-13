@@ -7,17 +7,17 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.create_employee_response_200 import CreateEmployeeResponse200
 from ...models.qualer_api_models_clients_from_sponsored_employee_model import (
-    QualerApiModelsClientsFromSponsoredEmployeeModel,
+    ClientsFromSponsoredEmployeeModel,
 )
 from ...models.qualer_api_models_clients_to_created_client_employee_response import (
-    QualerApiModelsClientsToCreatedClientEmployeeResponse,
+    ClientsToCreatedClientEmployeeResponse,
 )
 from ...types import Response
 
 
 def _get_kwargs(
     *,
-    body: QualerApiModelsClientsFromSponsoredEmployeeModel,
+    body: ClientsFromSponsoredEmployeeModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -36,17 +36,13 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[
-    Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]
-]:
+) -> Optional[Union[CreateEmployeeResponse200, ClientsToCreatedClientEmployeeResponse]]:
     if response.status_code == 200:
         response_200 = CreateEmployeeResponse200.from_dict(response.json())
 
         return response_200
     if response.status_code == 201:
-        response_201 = QualerApiModelsClientsToCreatedClientEmployeeResponse.from_dict(
-            response.json()
-        )
+        response_201 = ClientsToCreatedClientEmployeeResponse.from_dict(response.json())
 
         return response_201
     if client.raise_on_unexpected_status:
@@ -57,9 +53,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[
-    Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]
-]:
+) -> Response[Union[CreateEmployeeResponse200, ClientsToCreatedClientEmployeeResponse]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -71,20 +65,18 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSponsoredEmployeeModel,
-) -> Response[
-    Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]
-]:
+    body: ClientsFromSponsoredEmployeeModel,
+) -> Response[Union[CreateEmployeeResponse200, ClientsToCreatedClientEmployeeResponse]]:
     """
     Args:
-        body (QualerApiModelsClientsFromSponsoredEmployeeModel):
+        body (ClientsFromSponsoredEmployeeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]]
+        Response[Union[CreateEmployeeResponse200, ClientsToCreatedClientEmployeeResponse]]
     """
 
     kwargs = _get_kwargs(
@@ -101,20 +93,18 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSponsoredEmployeeModel,
-) -> Optional[
-    Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]
-]:
+    body: ClientsFromSponsoredEmployeeModel,
+) -> Optional[Union[CreateEmployeeResponse200, ClientsToCreatedClientEmployeeResponse]]:
     """
     Args:
-        body (QualerApiModelsClientsFromSponsoredEmployeeModel):
+        body (ClientsFromSponsoredEmployeeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]
+        Union[CreateEmployeeResponse200, ClientsToCreatedClientEmployeeResponse]
     """
 
     return sync_detailed(
@@ -126,20 +116,18 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSponsoredEmployeeModel,
-) -> Response[
-    Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]
-]:
+    body: ClientsFromSponsoredEmployeeModel,
+) -> Response[Union[CreateEmployeeResponse200, ClientsToCreatedClientEmployeeResponse]]:
     """
     Args:
-        body (QualerApiModelsClientsFromSponsoredEmployeeModel):
+        body (ClientsFromSponsoredEmployeeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]]
+        Response[Union[CreateEmployeeResponse200, ClientsToCreatedClientEmployeeResponse]]
     """
 
     kwargs = _get_kwargs(
@@ -154,20 +142,18 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientsFromSponsoredEmployeeModel,
-) -> Optional[
-    Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]
-]:
+    body: ClientsFromSponsoredEmployeeModel,
+) -> Optional[Union[CreateEmployeeResponse200, ClientsToCreatedClientEmployeeResponse]]:
     """
     Args:
-        body (QualerApiModelsClientsFromSponsoredEmployeeModel):
+        body (ClientsFromSponsoredEmployeeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[CreateEmployeeResponse200, QualerApiModelsClientsToCreatedClientEmployeeResponse]
+        Union[CreateEmployeeResponse200, ClientsToCreatedClientEmployeeResponse]
     """
 
     return (

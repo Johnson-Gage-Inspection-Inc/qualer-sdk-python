@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_report_datasets_to_company_certification_response import (
-    QualerApiModelsReportDatasetsToCompanyCertificationResponse,
+    ReportDatasetsToCompanyCertificationResponse,
 )
 from ...types import Response
 
@@ -22,15 +22,13 @@ def _get_kwargs() -> Dict[str, Any]:
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[List["QualerApiModelsReportDatasetsToCompanyCertificationResponse"]]:
+) -> Optional[List["ReportDatasetsToCompanyCertificationResponse"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = (
-                QualerApiModelsReportDatasetsToCompanyCertificationResponse.from_dict(
-                    response_200_item_data
-                )
+            response_200_item = ReportDatasetsToCompanyCertificationResponse.from_dict(
+                response_200_item_data
             )
 
             response_200.append(response_200_item)
@@ -44,7 +42,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[List["QualerApiModelsReportDatasetsToCompanyCertificationResponse"]]:
+) -> Response[List["ReportDatasetsToCompanyCertificationResponse"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -56,14 +54,14 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[List["QualerApiModelsReportDatasetsToCompanyCertificationResponse"]]:
+) -> Response[List["ReportDatasetsToCompanyCertificationResponse"]]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsReportDatasetsToCompanyCertificationResponse']]
+        Response[List['ReportDatasetsToCompanyCertificationResponse']]
     """
 
     kwargs = _get_kwargs()
@@ -78,14 +76,14 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[List["QualerApiModelsReportDatasetsToCompanyCertificationResponse"]]:
+) -> Optional[List["ReportDatasetsToCompanyCertificationResponse"]]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsReportDatasetsToCompanyCertificationResponse']
+        List['ReportDatasetsToCompanyCertificationResponse']
     """
 
     return sync_detailed(
@@ -96,14 +94,14 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[List["QualerApiModelsReportDatasetsToCompanyCertificationResponse"]]:
+) -> Response[List["ReportDatasetsToCompanyCertificationResponse"]]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsReportDatasetsToCompanyCertificationResponse']]
+        Response[List['ReportDatasetsToCompanyCertificationResponse']]
     """
 
     kwargs = _get_kwargs()
@@ -116,14 +114,14 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[List["QualerApiModelsReportDatasetsToCompanyCertificationResponse"]]:
+) -> Optional[List["ReportDatasetsToCompanyCertificationResponse"]]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsReportDatasetsToCompanyCertificationResponse']
+        List['ReportDatasetsToCompanyCertificationResponse']
     """
 
     return (

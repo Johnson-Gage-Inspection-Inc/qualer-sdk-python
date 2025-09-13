@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_service_orders_to_service_order_task_response import (
-    QualerApiModelsServiceOrdersToServiceOrderTaskResponse,
+    ServiceOrdersToServiceOrderTaskResponse,
 )
 from ...types import Response
 
@@ -24,12 +24,12 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]]:
+) -> Optional[Union[Any, List["ServiceOrdersToServiceOrderTaskResponse"]]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = QualerApiModelsServiceOrdersToServiceOrderTaskResponse.from_dict(
+            response_200_item = ServiceOrdersToServiceOrderTaskResponse.from_dict(
                 response_200_item_data
             )
 
@@ -50,7 +50,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]]:
+) -> Response[Union[Any, List["ServiceOrdersToServiceOrderTaskResponse"]]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -63,7 +63,7 @@ def sync_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[Union[Any, List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]]:
+) -> Response[Union[Any, List["ServiceOrdersToServiceOrderTaskResponse"]]]:
     """TimeSpent
     Integer part (before dot) is hours
     Fractional part (after dot) is minutes
@@ -79,7 +79,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, List['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']]]
+        Response[Union[Any, List['ServiceOrdersToServiceOrderTaskResponse']]]
     """
 
     kwargs = _get_kwargs(
@@ -97,7 +97,7 @@ def sync(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[Union[Any, List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]]:
+) -> Optional[Union[Any, List["ServiceOrdersToServiceOrderTaskResponse"]]]:
     """TimeSpent
     Integer part (before dot) is hours
     Fractional part (after dot) is minutes
@@ -113,7 +113,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, List['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']]
+        Union[Any, List['ServiceOrdersToServiceOrderTaskResponse']]
     """
 
     return sync_detailed(
@@ -126,7 +126,7 @@ async def asyncio_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[Union[Any, List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]]:
+) -> Response[Union[Any, List["ServiceOrdersToServiceOrderTaskResponse"]]]:
     """TimeSpent
     Integer part (before dot) is hours
     Fractional part (after dot) is minutes
@@ -142,7 +142,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, List['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']]]
+        Response[Union[Any, List['ServiceOrdersToServiceOrderTaskResponse']]]
     """
 
     kwargs = _get_kwargs(
@@ -158,7 +158,7 @@ async def asyncio(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[Union[Any, List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]]:
+) -> Optional[Union[Any, List["ServiceOrdersToServiceOrderTaskResponse"]]]:
     """TimeSpent
     Integer part (before dot) is hours
     Fractional part (after dot) is minutes
@@ -174,7 +174,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, List['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']]
+        Union[Any, List['ServiceOrdersToServiceOrderTaskResponse']]
     """
 
     return (

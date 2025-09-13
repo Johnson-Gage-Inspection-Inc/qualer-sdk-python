@@ -1,4 +1,4 @@
-# QualerApiModelsCompanyToEnvironmentResponseModel
+# CompanyToEnvironmentResponseModel
 
 ## Properties
 Name | Type | Description | Notes

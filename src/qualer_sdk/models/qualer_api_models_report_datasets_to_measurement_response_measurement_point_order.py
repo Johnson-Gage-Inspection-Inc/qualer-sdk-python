@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsReportDatasetsToMeasurementResponseMeasurementPointOrder(str, Enum):
+class ReportDatasetsToMeasurementResponseMeasurementPointOrder(str, Enum):
     ASCENDINGDESCENDING = "AscendingDescending"
     ASENTERED = "AsEntered"
     DESCENDINGASCENDING = "DescendingAscending"

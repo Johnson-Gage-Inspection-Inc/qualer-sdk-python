@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsClientsFromSponsoredClientEditModelClientStatus(str, Enum):
+class ClientsFromSponsoredClientEditModelClientStatus(str, Enum):
     APPROVED = "Approved"
     HIDDEN = "Hidden"
     NOTAPPROVED = "NotApproved"

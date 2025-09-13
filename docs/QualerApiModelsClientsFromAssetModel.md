@@ -1,4 +1,4 @@
-# QualerApiModelsClientsFromAssetModel
+# ClientsFromAssetModel
 
 ## Properties
 Name | Type | Description | Notes

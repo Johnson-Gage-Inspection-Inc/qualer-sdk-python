@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_clients_to_employee_response_model import (
-    QualerApiModelsClientsToEmployeeResponseModel,
+    ClientsToEmployeeResponseModel,
 )
 from ...types import Response
 
@@ -32,14 +32,12 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[List["QualerApiModelsClientsToEmployeeResponseModel"]]:
+) -> Optional[List["ClientsToEmployeeResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = QualerApiModelsClientsToEmployeeResponseModel.from_dict(
-                response_200_item_data
-            )
+            response_200_item = ClientsToEmployeeResponseModel.from_dict(response_200_item_data)
 
             response_200.append(response_200_item)
 
@@ -52,7 +50,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[List["QualerApiModelsClientsToEmployeeResponseModel"]]:
+) -> Response[List["ClientsToEmployeeResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -65,7 +63,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     model_search_string: Optional[str] = None,
-) -> Response[List["QualerApiModelsClientsToEmployeeResponseModel"]]:
+) -> Response[List["ClientsToEmployeeResponseModel"]]:
     """
     Args:
         model_search_string (Optional[str]):
@@ -75,7 +73,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsClientsToEmployeeResponseModel']]
+        Response[List['ClientsToEmployeeResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -93,7 +91,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     model_search_string: Optional[str] = None,
-) -> Optional[List["QualerApiModelsClientsToEmployeeResponseModel"]]:
+) -> Optional[List["ClientsToEmployeeResponseModel"]]:
     """
     Args:
         model_search_string (Optional[str]):
@@ -103,7 +101,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsClientsToEmployeeResponseModel']
+        List['ClientsToEmployeeResponseModel']
     """
 
     return sync_detailed(
@@ -116,7 +114,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     model_search_string: Optional[str] = None,
-) -> Response[List["QualerApiModelsClientsToEmployeeResponseModel"]]:
+) -> Response[List["ClientsToEmployeeResponseModel"]]:
     """
     Args:
         model_search_string (Optional[str]):
@@ -126,7 +124,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsClientsToEmployeeResponseModel']]
+        Response[List['ClientsToEmployeeResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -142,7 +140,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     model_search_string: Optional[str] = None,
-) -> Optional[List["QualerApiModelsClientsToEmployeeResponseModel"]]:
+) -> Optional[List["ClientsToEmployeeResponseModel"]]:
     """
     Args:
         model_search_string (Optional[str]):
@@ -152,7 +150,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsClientsToEmployeeResponseModel']
+        List['ClientsToEmployeeResponseModel']
     """
 
     return (

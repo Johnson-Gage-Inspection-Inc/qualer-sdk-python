@@ -5,20 +5,20 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.qualer_api_models_report_datasets_to_measurement_channel_uniformity_response_batch_type import (
-    QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseBatchType,
+    ReportDatasetsToMeasurementChannelUniformityResponseBatchType,
 )
 from ..models.service_result_status import ServiceResultStatus
 
-T = TypeVar("T", bound="QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse")
+T = TypeVar("T", bound="ReportDatasetsToMeasurementChannelUniformityResponse")
 
 
 @_attrs_define
-class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
+class ReportDatasetsToMeasurementChannelUniformityResponse:
     """
     Attributes:
         service_order_item_id (Optional[int]):
         measurement_point_id (Optional[int]):
-        batch_type (Optional[QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseBatchType]):
+        batch_type (Optional[ReportDatasetsToMeasurementChannelUniformityResponseBatchType]):
         column_index (Optional[int]):
         mean (Optional[str]):
         mean_result (Optional[bool]):
@@ -38,7 +38,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
     batch_type: Union[
         None,
         None,
-        QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseBatchType,
+        ReportDatasetsToMeasurementChannelUniformityResponseBatchType,
     ] = None
     column_index: Optional[int] = None
     mean: Optional[str] = None
@@ -136,16 +136,12 @@ class QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse:
         batch_type: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseBatchType,
+            ReportDatasetsToMeasurementChannelUniformityResponseBatchType,
         ]
         if not _batch_type:
             batch_type = None
         else:
-            batch_type = (
-                QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponseBatchType(
-                    _batch_type
-                )
-            )
+            batch_type = ReportDatasetsToMeasurementChannelUniformityResponseBatchType(_batch_type)
 
         column_index = d.pop("ColumnIndex", None)
 

@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_asset_from_update_asset_maintenance_service_dat import (
-    QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat,
+    AssetFromUpdateAssetMaintenanceServiceDat,
 )
 from ...models.reset_initial_service_date_response_200 import ResetInitialServiceDateResponse200
 from ...types import Response
@@ -16,7 +16,7 @@ def _get_kwargs(
     asset_id: int,
     maintenance_plan_id: int,
     *,
-    body: QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat,
+    body: AssetFromUpdateAssetMaintenanceServiceDat,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -62,13 +62,13 @@ def sync_detailed(
     maintenance_plan_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat,
+    body: AssetFromUpdateAssetMaintenanceServiceDat,
 ) -> Response[ResetInitialServiceDateResponse200]:
     """
     Args:
         asset_id (int):
         maintenance_plan_id (int):
-        body (QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat):
+        body (AssetFromUpdateAssetMaintenanceServiceDat):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -96,13 +96,13 @@ def sync(
     maintenance_plan_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat,
+    body: AssetFromUpdateAssetMaintenanceServiceDat,
 ) -> Optional[ResetInitialServiceDateResponse200]:
     """
     Args:
         asset_id (int):
         maintenance_plan_id (int):
-        body (QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat):
+        body (AssetFromUpdateAssetMaintenanceServiceDat):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -125,13 +125,13 @@ async def asyncio_detailed(
     maintenance_plan_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat,
+    body: AssetFromUpdateAssetMaintenanceServiceDat,
 ) -> Response[ResetInitialServiceDateResponse200]:
     """
     Args:
         asset_id (int):
         maintenance_plan_id (int):
-        body (QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat):
+        body (AssetFromUpdateAssetMaintenanceServiceDat):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -157,13 +157,13 @@ async def asyncio(
     maintenance_plan_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat,
+    body: AssetFromUpdateAssetMaintenanceServiceDat,
 ) -> Optional[ResetInitialServiceDateResponse200]:
     """
     Args:
         asset_id (int):
         maintenance_plan_id (int):
-        body (QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat):
+        body (AssetFromUpdateAssetMaintenanceServiceDat):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

@@ -6,10 +6,10 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_service_orders_from_add_payment_model import (
-    QualerApiModelsServiceOrdersFromAddPaymentModel,
+    ServiceOrdersFromAddPaymentModel,
 )
 from ...models.qualer_api_models_service_orders_to_created_work_order_payment_response import (
-    QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse,
+    ServiceOrdersToCreatedWorkOrderPaymentResponse,
 )
 from ...types import Response
 
@@ -17,7 +17,7 @@ from ...types import Response
 def _get_kwargs(
     service_order_id: int,
     *,
-    body: QualerApiModelsServiceOrdersFromAddPaymentModel,
+    body: ServiceOrdersFromAddPaymentModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -36,11 +36,9 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse]:
+) -> Optional[ServiceOrdersToCreatedWorkOrderPaymentResponse]:
     if response.status_code == 200:
-        response_200 = QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse.from_dict(
-            response.json()
-        )
+        response_200 = ServiceOrdersToCreatedWorkOrderPaymentResponse.from_dict(response.json())
 
         return response_200
     if client.raise_on_unexpected_status:
@@ -51,7 +49,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse]:
+) -> Response[ServiceOrdersToCreatedWorkOrderPaymentResponse]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -64,19 +62,19 @@ def sync_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromAddPaymentModel,
-) -> Response[QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse]:
+    body: ServiceOrdersFromAddPaymentModel,
+) -> Response[ServiceOrdersToCreatedWorkOrderPaymentResponse]:
     """
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromAddPaymentModel):
+        body (ServiceOrdersFromAddPaymentModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse]
+        Response[ServiceOrdersToCreatedWorkOrderPaymentResponse]
     """
 
     kwargs = _get_kwargs(
@@ -95,19 +93,19 @@ def sync(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromAddPaymentModel,
-) -> Optional[QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse]:
+    body: ServiceOrdersFromAddPaymentModel,
+) -> Optional[ServiceOrdersToCreatedWorkOrderPaymentResponse]:
     """
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromAddPaymentModel):
+        body (ServiceOrdersFromAddPaymentModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse
+        ServiceOrdersToCreatedWorkOrderPaymentResponse
     """
 
     return sync_detailed(
@@ -121,19 +119,19 @@ async def asyncio_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromAddPaymentModel,
-) -> Response[QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse]:
+    body: ServiceOrdersFromAddPaymentModel,
+) -> Response[ServiceOrdersToCreatedWorkOrderPaymentResponse]:
     """
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromAddPaymentModel):
+        body (ServiceOrdersFromAddPaymentModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse]
+        Response[ServiceOrdersToCreatedWorkOrderPaymentResponse]
     """
 
     kwargs = _get_kwargs(
@@ -150,19 +148,19 @@ async def asyncio(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromAddPaymentModel,
-) -> Optional[QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse]:
+    body: ServiceOrdersFromAddPaymentModel,
+) -> Optional[ServiceOrdersToCreatedWorkOrderPaymentResponse]:
     """
     Args:
         service_order_id (int):
-        body (QualerApiModelsServiceOrdersFromAddPaymentModel):
+        body (ServiceOrdersFromAddPaymentModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse
+        ServiceOrdersToCreatedWorkOrderPaymentResponse
     """
 
     return (

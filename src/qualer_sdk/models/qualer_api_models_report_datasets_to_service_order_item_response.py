@@ -8,11 +8,11 @@ from dateutil.parser import isoparse
 
 from ..models.work_status import WorkStatus
 
-T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderItemResponse")
+T = TypeVar("T", bound="ReportDatasetsToServiceOrderItemResponse")
 
 
 @_attrs_define
-class QualerApiModelsReportDatasetsToServiceOrderItemResponse:
+class ReportDatasetsToServiceOrderItemResponse:
     """
     Attributes:
         certificate_number (Optional[str]):

@@ -5,35 +5,35 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model_specification_mode import (
-    QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode,
+    MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode,
 )
 from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model_tolerance_mode import (
-    QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode,
+    MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode,
 )
 from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model_tolerance_unit import (
-    QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit,
+    MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit,
 )
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model_measurement_condition_factor_response_model import (
-        QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel,
+        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel,
     )
     from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model_measurement_response_model import (
-        QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementResponseModel,
+        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementResponseModel,
     )
     from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model_measurement_tool_response_model import (
-        QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel,
+        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel,
     )
 
 
 T = TypeVar(
     "T",
-    bound="QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel",
+    bound="MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel",
 )
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel:
+class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel:
     """
     Attributes:
         specification_name (Optional[str]):
@@ -43,11 +43,11 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         range_min (Optional[float]):
         range_max (Optional[float]):
         tolerance_type (Optional[str]):
-        specification_mode (Optional[QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResp
+        specification_mode (Optional[MeasurementsToMeasurementRecordResponseModelMeasurementBatchResp
             onseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode]):
-        tolerance_mode (Optional[QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponse
+        tolerance_mode (Optional[MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponse
             ModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode]):
-        tolerance_unit (Optional[QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponse
+        tolerance_unit (Optional[MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponse
             ModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit]):
         precision_type (Optional[str]):
         readings (Optional[int]):
@@ -63,14 +63,14 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         base_value (Optional[float]):
         test_value (Optional[float]):
         is_accredited (Optional[bool]):
-        measurements (Optional[List['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResp
+        measurements (Optional[List['MeasurementsToMeasurementRecordResponseModelMeasurementBatchResp
             onseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementResponseModel']]):
-        condition_factors (Optional[List['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
+        condition_factors (Optional[List['MeasurementsToMeasurementRecordResponseModelMeasurementBatc
             hResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel']]
             ):
-        primary_measurement_tool (Optional[QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBat
+        primary_measurement_tool (Optional[MeasurementsToMeasurementRecordResponseModelMeasurementBat
             chResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel]):
-        secondary_measurement_tool (Optional[QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementB
+        secondary_measurement_tool (Optional[MeasurementsToMeasurementRecordResponseModelMeasurementB
             atchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel]):
     """
 
@@ -84,17 +84,17 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
     specification_mode: Union[
         None,
         None,
-        QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode,
+        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode,
     ] = None
     tolerance_mode: Union[
         None,
         None,
-        QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode,
+        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode,
     ] = None
     tolerance_unit: Union[
         None,
         None,
-        QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit,
+        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit,
     ] = None
     precision_type: Optional[str] = None
     readings: Optional[int] = None
@@ -114,25 +114,25 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         None,
         None,
         List[
-            "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementResponseModel"
+            "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementResponseModel"
         ],
     ] = None
     condition_factors: Union[
         None,
         None,
         List[
-            "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel"
+            "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel"
         ],
     ] = None
     primary_measurement_tool: Union[
         None,
         None,
-        "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel",
+        "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel",
     ] = None
     secondary_measurement_tool: Union[
         None,
         None,
-        "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel",
+        "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel",
     ] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -280,13 +280,13 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model_measurement_condition_factor_response_model import (
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel,
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel,
         )
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model_measurement_response_model import (
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementResponseModel,
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementResponseModel,
         )
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model_measurement_tool_response_model import (
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel,
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel,
         )
 
         d = dict(src_dict)
@@ -308,12 +308,12 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         specification_mode: Union[
             None,
             None,
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode,
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode,
         ]
         if not _specification_mode:
             specification_mode = None
         else:
-            specification_mode = QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode(
+            specification_mode = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode(
                 _specification_mode
             )
 
@@ -321,12 +321,12 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         tolerance_mode: Union[
             None,
             None,
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode,
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode,
         ]
         if not _tolerance_mode:
             tolerance_mode = None
         else:
-            tolerance_mode = QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode(
+            tolerance_mode = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode(
                 _tolerance_mode
             )
 
@@ -334,12 +334,12 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         tolerance_unit: Union[
             None,
             None,
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit,
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit,
         ]
         if not _tolerance_unit:
             tolerance_unit = None
         else:
-            tolerance_unit = QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit(
+            tolerance_unit = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit(
                 _tolerance_unit
             )
 
@@ -374,7 +374,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         measurements = []
         _measurements = d.pop("Measurements", None)
         for measurements_item_data in _measurements or []:
-            measurements_item = QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementResponseModel.from_dict(
+            measurements_item = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementResponseModel.from_dict(
                 measurements_item_data
             )
 
@@ -383,7 +383,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         condition_factors = []
         _condition_factors = d.pop("ConditionFactors", None)
         for condition_factors_item_data in _condition_factors or []:
-            condition_factors_item = QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel.from_dict(
+            condition_factors_item = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel.from_dict(
                 condition_factors_item_data
             )
 
@@ -393,12 +393,12 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         primary_measurement_tool: Union[
             None,
             None,
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel,
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel,
         ]
         if not _primary_measurement_tool:
             primary_measurement_tool = None
         else:
-            primary_measurement_tool = QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel.from_dict(
+            primary_measurement_tool = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel.from_dict(
                 _primary_measurement_tool
             )
 
@@ -406,12 +406,12 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         secondary_measurement_tool: Union[
             None,
             None,
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel,
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel,
         ]
         if not _secondary_measurement_tool:
             secondary_measurement_tool = None
         else:
-            secondary_measurement_tool = QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel.from_dict(
+            secondary_measurement_tool = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel.from_dict(
                 _secondary_measurement_tool
             )
 

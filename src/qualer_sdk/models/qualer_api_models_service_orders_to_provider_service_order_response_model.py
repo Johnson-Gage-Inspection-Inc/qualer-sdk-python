@@ -8,17 +8,17 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.qualer_api_models_service_orders_to_provider_service_order_response_model_order_status import (
-    QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
+    ServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
 )
 from ..models.qualer_api_models_service_orders_to_provider_service_order_response_model_timeframe import (
-    QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe,
+    ServiceOrdersToProviderServiceOrderResponseModelTimeframe,
 )
 
-T = TypeVar("T", bound="QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel")
+T = TypeVar("T", bound="ServiceOrdersToProviderServiceOrderResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
+class ServiceOrdersToProviderServiceOrderResponseModel:
     """
     Attributes:
         service_order_id (Optional[int]):
@@ -28,7 +28,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         due_date (Optional[datetime.datetime]):
         assets (Optional[int]):
         completed_assets (Optional[int]):
-        order_status (Optional[QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus]):
+        order_status (Optional[ServiceOrdersToProviderServiceOrderResponseModelOrderStatus]):
         is_quality_control_fail (Optional[bool]):
         service_private_comments (Optional[str]):
         client_company_id (Optional[int]):
@@ -37,7 +37,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         client_legacy_id (Optional[str]):
         business_from_time (Optional[datetime.datetime]):
         business_to_time (Optional[datetime.datetime]):
-        timeframe (Optional[QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe]):
+        timeframe (Optional[ServiceOrdersToProviderServiceOrderResponseModelTimeframe]):
         site_access_notes (Optional[str]):
         desired_date (Optional[datetime.datetime]):
         deadline_date (Optional[datetime.datetime]):
@@ -57,7 +57,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
     order_status: Union[
         None,
         None,
-        QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
+        ServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
     ] = None
     is_quality_control_fail: Optional[bool] = None
     service_private_comments: Optional[str] = None
@@ -70,7 +70,7 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
     timeframe: Union[
         None,
         None,
-        QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe,
+        ServiceOrdersToProviderServiceOrderResponseModelTimeframe,
     ] = None
     site_access_notes: Optional[str] = None
     desired_date: Optional[datetime.datetime] = None
@@ -283,15 +283,13 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         order_status: Union[
             None,
             None,
-            QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
+            ServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
         ]
         if not _order_status:
             order_status = None
         else:
-            order_status = (
-                QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelOrderStatus(
-                    _order_status
-                )
+            order_status = ServiceOrdersToProviderServiceOrderResponseModelOrderStatus(
+                _order_status
             )
 
         is_quality_control_fail = d.pop("IsQualityControlFail", None)
@@ -344,14 +342,12 @@ class QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel:
         timeframe: Union[
             None,
             None,
-            QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe,
+            ServiceOrdersToProviderServiceOrderResponseModelTimeframe,
         ]
         if not _timeframe:
             timeframe = None
         else:
-            timeframe = QualerApiModelsServiceOrdersToProviderServiceOrderResponseModelTimeframe(
-                _timeframe
-            )
+            timeframe = ServiceOrdersToProviderServiceOrderResponseModelTimeframe(_timeframe)
 
         site_access_notes = d.pop("SiteAccessNotes", None)
 

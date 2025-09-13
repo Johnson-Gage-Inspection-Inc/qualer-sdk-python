@@ -1,4 +1,4 @@
-# QualerApiModelsAddressAddressModel
+# AddressAddressModel
 
 ## Properties
 Name | Type | Description | Notes

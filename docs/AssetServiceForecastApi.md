@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_asset_forecast_list**
-> list[QualerApiModelsAssetToAssetServiceForecastModel] get_asset_forecast_list()
+> list[AssetToAssetServiceForecastModel] get_asset_forecast_list()
 
 
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[QualerApiModelsAssetToAssetServiceForecastModel]**](QualerApiModelsAssetToAssetServiceForecastModel.md)
+[**list[AssetToAssetServiceForecastModel]**](AssetToAssetServiceForecastModel.md)
 
 ### Authorization
 
@@ -50,7 +50,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_client_asset_forecast_list**
-> list[QualerApiModelsAssetToAssetServiceForecastModel] get_client_asset_forecast_list(client_company_id)
+> list[AssetToAssetServiceForecastModel] get_client_asset_forecast_list(client_company_id)
 
 
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetToAssetServiceForecastModel]**](QualerApiModelsAssetToAssetServiceForecastModel.md)
+[**list[AssetToAssetServiceForecastModel]**](AssetToAssetServiceForecastModel.md)
 
 ### Authorization
 

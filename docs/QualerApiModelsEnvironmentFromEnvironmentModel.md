@@ -1,4 +1,4 @@
-# QualerApiModelsEnvironmentFromEnvironmentModel
+# EnvironmentFromEnvironmentModel
 
 ## Properties
 Name | Type | Description | Notes

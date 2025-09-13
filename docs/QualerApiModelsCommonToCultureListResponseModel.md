@@ -1,4 +1,4 @@
-# QualerApiModelsCommonToCultureListResponseModel
+# CommonToCultureListResponseModel
 
 ## Properties
 Name | Type | Description | Notes

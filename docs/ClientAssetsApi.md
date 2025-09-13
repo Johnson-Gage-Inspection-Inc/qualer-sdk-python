@@ -27,7 +27,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = qualer_sdk.ClientAssetsApi()
-model = qualer_sdk.QualerApiModelsClientsFromAssetModel() # QualerApiModelsClientsFromAssetModel | 
+model = qualer_sdk.ClientsFromAssetModel() # ClientsFromAssetModel | 
 
 try:
     api_response = api_instance.create_asset(model)
@@ -40,7 +40,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**QualerApiModelsClientsFromAssetModel**](QualerApiModelsClientsFromAssetModel.md)|  | 
+ **model** | [**ClientsFromAssetModel**](ClientsFromAssetModel.md)|  | 
 
 ### Return type
 
@@ -58,7 +58,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all_assets**
-> list[QualerApiModelsAssetToAssetResponseModel] get_all_assets(query_equipment_id=query_equipment_id, query_serial_number=query_serial_number, query_asset_tag=query_asset_tag, query_barcode=query_barcode, query_legacy_id=query_legacy_id)
+> list[AssetToAssetResponseModel] get_all_assets(query_equipment_id=query_equipment_id, query_serial_number=query_serial_number, query_asset_tag=query_asset_tag, query_barcode=query_barcode, query_legacy_id=query_legacy_id)
 
 
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetToAssetResponseModel]**](QualerApiModelsAssetToAssetResponseModel.md)
+[**list[AssetToAssetResponseModel]**](AssetToAssetResponseModel.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset**
-> QualerApiModelsAssetToAssetResponseModel get_asset(asset_id, model_asset_id=model_asset_id)
+> AssetToAssetResponseModel get_asset(asset_id, model_asset_id=model_asset_id)
 
 
 
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsAssetToAssetResponseModel**](QualerApiModelsAssetToAssetResponseModel.md)
+[**AssetToAssetResponseModel**](AssetToAssetResponseModel.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_counters**
-> QualerApiModelsAssetToClientAssetCountersResponseModel get_asset_counters(client_company_id)
+> AssetToClientAssetCountersResponseModel get_asset_counters(client_company_id)
 
 
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsAssetToClientAssetCountersResponseModel**](QualerApiModelsAssetToClientAssetCountersResponseModel.md)
+[**AssetToClientAssetCountersResponseModel**](AssetToClientAssetCountersResponseModel.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_manager_list**
-> list[QualerApiModelsAssetToClientAssetManagerResponseModel] get_asset_manager_list(client_company_id, query_filter_type=query_filter_type, query_search_string=query_search_string, query_page=query_page, query_page_size=query_page_size)
+> list[AssetToClientAssetManagerResponseModel] get_asset_manager_list(client_company_id, query_filter_type=query_filter_type, query_search_string=query_search_string, query_page=query_page, query_page_size=query_page_size)
 
 GetAssetManagerList
 
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetToClientAssetManagerResponseModel]**](QualerApiModelsAssetToClientAssetManagerResponseModel.md)
+[**list[AssetToClientAssetManagerResponseModel]**](AssetToClientAssetManagerResponseModel.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_assets**
-> list[QualerApiModelsAssetToAssetResponseModel] get_assets(client_company_id, query_equipment_id=query_equipment_id, query_serial_number=query_serial_number, query_asset_tag=query_asset_tag, query_barcode=query_barcode, query_legacy_id=query_legacy_id)
+> list[AssetToAssetResponseModel] get_assets(client_company_id, query_equipment_id=query_equipment_id, query_serial_number=query_serial_number, query_asset_tag=query_asset_tag, query_barcode=query_barcode, query_legacy_id=query_legacy_id)
 
 
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetToAssetResponseModel]**](QualerApiModelsAssetToAssetResponseModel.md)
+[**list[AssetToAssetResponseModel]**](AssetToAssetResponseModel.md)
 
 ### Authorization
 

@@ -28,7 +28,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrderTasksApi()
 service_order_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel() # QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel | 
+model = qualer_sdk.ServiceOrdersFromServiceOrderTaskCreateModel() # ServiceOrdersFromServiceOrderTaskCreateModel | 
 
 try:
     api_response = api_instance.create_work_order_task(service_order_id, model)
@@ -42,7 +42,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **service_order_id** | **int**|  | 
- **model** | [**QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel**](QualerApiModelsServiceOrdersFromServiceOrderTaskCreateModel.md)|  | 
+ **model** | [**ServiceOrdersFromServiceOrderTaskCreateModel**](ServiceOrdersFromServiceOrderTaskCreateModel.md)|  | 
 
 ### Return type
 
@@ -109,7 +109,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_work_order_tasks**
-> list[QualerApiModelsServiceOrdersToServiceOrderTaskResponse] get_work_order_tasks(service_order_id)
+> list[ServiceOrdersToServiceOrderTaskResponse] get_work_order_tasks(service_order_id)
 
 
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsServiceOrdersToServiceOrderTaskResponse]**](QualerApiModelsServiceOrdersToServiceOrderTaskResponse.md)
+[**list[ServiceOrdersToServiceOrderTaskResponse]**](ServiceOrdersToServiceOrderTaskResponse.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrderTasksApi()
 service_order_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel() # QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel | 
+model = qualer_sdk.ServiceOrdersFromServiceOrderTaskUpdateModel() # ServiceOrdersFromServiceOrderTaskUpdateModel | 
 
 try:
     api_response = api_instance.update_work_order_task(service_order_id, model)
@@ -187,7 +187,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **service_order_id** | **int**|  | 
- **model** | [**QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel**](QualerApiModelsServiceOrdersFromServiceOrderTaskUpdateModel.md)|  | 
+ **model** | [**ServiceOrdersFromServiceOrderTaskUpdateModel**](ServiceOrdersFromServiceOrderTaskUpdateModel.md)|  | 
 
 ### Return type
 

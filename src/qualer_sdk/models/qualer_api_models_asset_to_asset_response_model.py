@@ -7,14 +7,14 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.qualer_api_models_asset_to_asset_response_model_asset_status import (
-    QualerApiModelsAssetToAssetResponseModelAssetStatus,
+    AssetToAssetResponseModelAssetStatus,
 )
 
-T = TypeVar("T", bound="QualerApiModelsAssetToAssetResponseModel")
+T = TypeVar("T", bound="AssetToAssetResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsAssetToAssetResponseModel:
+class AssetToAssetResponseModel:
     """
     Attributes:
         company_id (Optional[int]):
@@ -23,7 +23,7 @@ class QualerApiModelsAssetToAssetResponseModel:
         asset_user (Optional[str]):
         asset_tag (Optional[str]):
         equipment_id (Optional[str]):
-        asset_status (Optional[QualerApiModelsAssetToAssetResponseModelAssetStatus]):
+        asset_status (Optional[AssetToAssetResponseModelAssetStatus]):
         asset_name (Optional[str]):
         asset_description (Optional[str]):
         asset_maker (Optional[str]):
@@ -73,7 +73,7 @@ class QualerApiModelsAssetToAssetResponseModel:
     asset_user: Optional[str] = None
     asset_tag: Optional[str] = None
     equipment_id: Optional[str] = None
-    asset_status: Optional[QualerApiModelsAssetToAssetResponseModelAssetStatus] = None
+    asset_status: Optional[AssetToAssetResponseModelAssetStatus] = None
     asset_name: Optional[str] = None
     asset_description: Optional[str] = None
     asset_maker: Optional[str] = None
@@ -352,11 +352,11 @@ class QualerApiModelsAssetToAssetResponseModel:
         equipment_id = d.pop("EquipmentId", None)
 
         _asset_status = d.pop("AssetStatus", None)
-        asset_status: Optional[QualerApiModelsAssetToAssetResponseModelAssetStatus]
+        asset_status: Optional[AssetToAssetResponseModelAssetStatus]
         if not _asset_status:
             asset_status = None
         else:
-            asset_status = QualerApiModelsAssetToAssetResponseModelAssetStatus(_asset_status)
+            asset_status = AssetToAssetResponseModelAssetStatus(_asset_status)
 
         asset_name = d.pop("AssetName", None)
 

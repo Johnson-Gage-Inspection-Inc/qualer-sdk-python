@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_service_orders_to_service_order_task_response import (
-    QualerApiModelsServiceOrdersToServiceOrderTaskResponse,
+    ServiceOrdersToServiceOrderTaskResponse,
 )
 from ...models.qualer_web_mvc_areas_api_models_service_prices_from_service_price_bulk_edit_model import (
     QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel,
@@ -38,12 +38,12 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
+) -> Optional[List["ServiceOrdersToServiceOrderTaskResponse"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = QualerApiModelsServiceOrdersToServiceOrderTaskResponse.from_dict(
+            response_200_item = ServiceOrdersToServiceOrderTaskResponse.from_dict(
                 response_200_item_data
             )
 
@@ -58,7 +58,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
+) -> Response[List["ServiceOrdersToServiceOrderTaskResponse"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -71,7 +71,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: List["QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"],
-) -> Response[List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
+) -> Response[List["ServiceOrdersToServiceOrderTaskResponse"]]:
     """
     Args:
         body (List['QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel']):
@@ -81,7 +81,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']]
+        Response[List['ServiceOrdersToServiceOrderTaskResponse']]
     """
 
     kwargs = _get_kwargs(
@@ -99,7 +99,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     body: List["QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"],
-) -> Optional[List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
+) -> Optional[List["ServiceOrdersToServiceOrderTaskResponse"]]:
     """
     Args:
         body (List['QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel']):
@@ -109,7 +109,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']
+        List['ServiceOrdersToServiceOrderTaskResponse']
     """
 
     return sync_detailed(
@@ -122,7 +122,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: List["QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"],
-) -> Response[List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
+) -> Response[List["ServiceOrdersToServiceOrderTaskResponse"]]:
     """
     Args:
         body (List['QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel']):
@@ -132,7 +132,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']]
+        Response[List['ServiceOrdersToServiceOrderTaskResponse']]
     """
 
     kwargs = _get_kwargs(
@@ -148,7 +148,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     body: List["QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel"],
-) -> Optional[List["QualerApiModelsServiceOrdersToServiceOrderTaskResponse"]]:
+) -> Optional[List["ServiceOrdersToServiceOrderTaskResponse"]]:
     """
     Args:
         body (List['QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel']):
@@ -158,7 +158,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsServiceOrdersToServiceOrderTaskResponse']
+        List['ServiceOrdersToServiceOrderTaskResponse']
     """
 
     return (

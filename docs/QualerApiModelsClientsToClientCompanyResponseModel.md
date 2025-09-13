@@ -1,4 +1,4 @@
-# QualerApiModelsClientsToClientCompanyResponseModel
+# ClientsToClientCompanyResponseModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -17,9 +17,9 @@ Name | Type | Description | Notes
 **account_representative_employee_id** | **int** |  | [optional] 
 **account_representative_site_id** | **int** |  | [optional] 
 **account_manager_employee_id** | **int** |  | [optional] 
-**billing_address** | [**QualerApiModelsAddressToAddressResponseModel**](QualerApiModelsAddressToAddressResponseModel.md) |  | [optional] 
-**shipping_address** | [**QualerApiModelsAddressToAddressResponseModel**](QualerApiModelsAddressToAddressResponseModel.md) |  | [optional] 
-**attributes** | [**list[QualerApiModelsAttributesToAttributeResponse]**](QualerApiModelsAttributesToAttributeResponse.md) |  | [optional] 
+**billing_address** | [**AddressToAddressResponseModel**](AddressToAddressResponseModel.md) |  | [optional] 
+**shipping_address** | [**AddressToAddressResponseModel**](AddressToAddressResponseModel.md) |  | [optional] 
+**attributes** | [**list[AttributesToAttributeResponse]**](AttributesToAttributeResponse.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

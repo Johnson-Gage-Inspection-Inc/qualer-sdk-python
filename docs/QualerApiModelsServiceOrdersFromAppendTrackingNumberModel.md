@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrdersFromAppendTrackingNumberModel
+# ServiceOrdersFromAppendTrackingNumberModel
 
 ## Properties
 Name | Type | Description | Notes

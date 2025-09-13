@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **get_maintenance_plan**
-> QualerApiModelsAssetToAssetMaintenancePlanModel get_maintenance_plan(asset_id, maintenance_plan_id)
+> AssetToAssetMaintenancePlanModel get_maintenance_plan(asset_id, maintenance_plan_id)
 
 
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsAssetToAssetMaintenancePlanModel**](QualerApiModelsAssetToAssetMaintenancePlanModel.md)
+[**AssetToAssetMaintenancePlanModel**](AssetToAssetMaintenancePlanModel.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_maintenance_plans**
-> QualerApiModelsAssetToAssetMaintenancePlanModel get_maintenance_plans(asset_id)
+> AssetToAssetMaintenancePlanModel get_maintenance_plans(asset_id)
 
 
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsAssetToAssetMaintenancePlanModel**](QualerApiModelsAssetToAssetMaintenancePlanModel.md)
+[**AssetToAssetMaintenancePlanModel**](AssetToAssetMaintenancePlanModel.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ from pprint import pprint
 api_instance = qualer_sdk.AssetMaintenancePlansApi()
 asset_id = 56 # int | 
 maintenance_plan_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat() # QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat | 
+model = qualer_sdk.AssetFromUpdateAssetMaintenanceServiceDat() # AssetFromUpdateAssetMaintenanceServiceDat | 
 
 try:
     api_response = api_instance.reset_initial_service_date(asset_id, maintenance_plan_id, model)
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **asset_id** | **int**|  | 
  **maintenance_plan_id** | **int**|  | 
- **model** | [**QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat**](QualerApiModelsAssetFromUpdateAssetMaintenanceServiceDat.md)|  | 
+ **model** | [**AssetFromUpdateAssetMaintenanceServiceDat**](AssetFromUpdateAssetMaintenanceServiceDat.md)|  | 
 
 ### Return type
 

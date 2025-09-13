@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsMeasurementsFromUpdateMeasurementPointModelToolApplicationMode(str, Enum):
+class MeasurementsFromUpdateMeasurementPointModelToolApplicationMode(str, Enum):
     COMBINE = "Combine"
     POINT = "Point"
     RANGE = "Range"

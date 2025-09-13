@@ -10,11 +10,11 @@ if TYPE_CHECKING:
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromServiceOrderMetadataUpdateModel")
+T = TypeVar("T", bound="ServiceOrdersFromServiceOrderMetadataUpdateModel")
 
 
 @_attrs_define
-class QualerApiModelsServiceOrdersFromServiceOrderMetadataUpdateModel:
+class ServiceOrdersFromServiceOrderMetadataUpdateModel:
     """
     Attributes:
         service_order_metadata_id (Optional[int]):
