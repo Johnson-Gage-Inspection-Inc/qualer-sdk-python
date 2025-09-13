@@ -1,4 +1,4 @@
-# QualerApiModelsClientsFromSponsoredEmployeeModel
+# ClientsFromSponsoredEmployeeModel
 
 ## Properties
 Name | Type | Description | Notes

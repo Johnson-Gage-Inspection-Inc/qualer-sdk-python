@@ -1,4 +1,4 @@
-# QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel
+# AssetToEmployeeFilterPreferenceResponseModel
 
 ## Properties
 Name | Type | Description | Notes

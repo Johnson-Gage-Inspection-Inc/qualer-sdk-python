@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel
+# ServiceOrdersFromChangeServiceOrderStatusModel
 
 ## Properties
 Name | Type | Description | Notes

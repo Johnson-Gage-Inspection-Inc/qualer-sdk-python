@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_account_from_login_response_model import (
-    QualerApiModelsAccountFromLoginResponseModel,
+    AccountFromLoginResponseModel,
 )
 from ...models.qualer_web_mvc_areas_api_models_account_to_login_model import (
     QualerWebMvcAreasApiModelsAccountToLoginModel,
@@ -35,9 +35,9 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, QualerApiModelsAccountFromLoginResponseModel]]:
+) -> Optional[Union[Any, AccountFromLoginResponseModel]]:
     if response.status_code == 200:
-        response_200 = QualerApiModelsAccountFromLoginResponseModel.from_dict(response.json())
+        response_200 = AccountFromLoginResponseModel.from_dict(response.json())
 
         return response_200
     if response.status_code == 401:
@@ -51,7 +51,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, QualerApiModelsAccountFromLoginResponseModel]]:
+) -> Response[Union[Any, AccountFromLoginResponseModel]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -64,7 +64,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerWebMvcAreasApiModelsAccountToLoginModel,
-) -> Response[Union[Any, QualerApiModelsAccountFromLoginResponseModel]]:
+) -> Response[Union[Any, AccountFromLoginResponseModel]]:
     """Login
 
     Args:
@@ -75,7 +75,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, QualerApiModelsAccountFromLoginResponseModel]]
+        Response[Union[Any, AccountFromLoginResponseModel]]
     """
 
     kwargs = _get_kwargs(
@@ -93,7 +93,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerWebMvcAreasApiModelsAccountToLoginModel,
-) -> Optional[Union[Any, QualerApiModelsAccountFromLoginResponseModel]]:
+) -> Optional[Union[Any, AccountFromLoginResponseModel]]:
     """Login
 
     Args:
@@ -104,7 +104,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, QualerApiModelsAccountFromLoginResponseModel]
+        Union[Any, AccountFromLoginResponseModel]
     """
 
     return sync_detailed(
@@ -117,7 +117,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerWebMvcAreasApiModelsAccountToLoginModel,
-) -> Response[Union[Any, QualerApiModelsAccountFromLoginResponseModel]]:
+) -> Response[Union[Any, AccountFromLoginResponseModel]]:
     """Login
 
     Args:
@@ -128,7 +128,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, QualerApiModelsAccountFromLoginResponseModel]]
+        Response[Union[Any, AccountFromLoginResponseModel]]
     """
 
     kwargs = _get_kwargs(
@@ -144,7 +144,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerWebMvcAreasApiModelsAccountToLoginModel,
-) -> Optional[Union[Any, QualerApiModelsAccountFromLoginResponseModel]]:
+) -> Optional[Union[Any, AccountFromLoginResponseModel]]:
     """Login
 
     Args:
@@ -155,7 +155,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, QualerApiModelsAccountFromLoginResponseModel]
+        Union[Any, AccountFromLoginResponseModel]
     """
 
     return (

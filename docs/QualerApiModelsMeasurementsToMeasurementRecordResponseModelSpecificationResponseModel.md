@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsToMeasurementRecordResponseModelSpecificationResponseModel
+# MeasurementsToMeasurementRecordResponseModelSpecificationResponseModel
 
 ## Properties
 Name | Type | Description | Notes

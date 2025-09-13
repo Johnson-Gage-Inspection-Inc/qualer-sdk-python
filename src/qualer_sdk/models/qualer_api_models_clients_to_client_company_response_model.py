@@ -8,21 +8,21 @@ from dateutil.parser import isoparse
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_attributes_to_attribute_response import (
-        QualerApiModelsAttributesToAttributeResponse,
+        AttributesToAttributeResponse,
     )
     from ..models.qualer_api_models_clients_to_client_company_response_model_billing_address_type_0 import (
-        QualerApiModelsClientsToClientCompanyResponseModelBillingAddressType0,
+        ClientsToClientCompanyResponseModelBillingAddressType0,
     )
     from ..models.qualer_api_models_clients_to_client_company_response_model_shipping_address_type_0 import (
-        QualerApiModelsClientsToClientCompanyResponseModelShippingAddressType0,
+        ClientsToClientCompanyResponseModelShippingAddressType0,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsClientsToClientCompanyResponseModel")
+T = TypeVar("T", bound="ClientsToClientCompanyResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsClientsToClientCompanyResponseModel:
+class ClientsToClientCompanyResponseModel:
     """
     Attributes:
         company_id (Optional[int]):
@@ -39,9 +39,9 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
         account_representative_employee_id (Optional[int]):
         account_representative_site_id (Optional[int]):
         account_manager_employee_id (Optional[int]):
-        billing_address (Union['QualerApiModelsClientsToClientCompanyResponseModelBillingAddressType0', None]):
-        shipping_address (Union['QualerApiModelsClientsToClientCompanyResponseModelShippingAddressType0', None]):
-        attributes (Optional[List['QualerApiModelsAttributesToAttributeResponse']]):
+        billing_address (Union['ClientsToClientCompanyResponseModelBillingAddressType0', None]):
+        shipping_address (Union['ClientsToClientCompanyResponseModelShippingAddressType0', None]):
+        attributes (Optional[List['AttributesToAttributeResponse']]):
     """
 
     company_id: Optional[int] = None
@@ -59,24 +59,24 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
     account_representative_site_id: Optional[int] = None
     account_manager_employee_id: Optional[int] = None
     billing_address: Union[
-        "QualerApiModelsClientsToClientCompanyResponseModelBillingAddressType0",
+        "ClientsToClientCompanyResponseModelBillingAddressType0",
         None,
         None,
     ] = None
     shipping_address: Union[
-        "QualerApiModelsClientsToClientCompanyResponseModelShippingAddressType0",
+        "ClientsToClientCompanyResponseModelShippingAddressType0",
         None,
         None,
     ] = None
-    attributes: Optional[List["QualerApiModelsAttributesToAttributeResponse"]] = None
+    attributes: Optional[List["AttributesToAttributeResponse"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
         from ..models.qualer_api_models_clients_to_client_company_response_model_billing_address_type_0 import (
-            QualerApiModelsClientsToClientCompanyResponseModelBillingAddressType0,
+            ClientsToClientCompanyResponseModelBillingAddressType0,
         )
         from ..models.qualer_api_models_clients_to_client_company_response_model_shipping_address_type_0 import (
-            QualerApiModelsClientsToClientCompanyResponseModelShippingAddressType0,
+            ClientsToClientCompanyResponseModelShippingAddressType0,
         )
 
         company_id = self.company_id
@@ -114,7 +114,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
             billing_address = None
         elif isinstance(
             self.billing_address,
-            QualerApiModelsClientsToClientCompanyResponseModelBillingAddressType0,
+            ClientsToClientCompanyResponseModelBillingAddressType0,
         ):
             billing_address = self.billing_address.to_dict()
         else:
@@ -125,7 +125,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
             shipping_address = None
         elif isinstance(
             self.shipping_address,
-            QualerApiModelsClientsToClientCompanyResponseModelShippingAddressType0,
+            ClientsToClientCompanyResponseModelShippingAddressType0,
         ):
             shipping_address = self.shipping_address.to_dict()
         else:
@@ -181,13 +181,13 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_attributes_to_attribute_response import (
-            QualerApiModelsAttributesToAttributeResponse,
+            AttributesToAttributeResponse,
         )
         from ..models.qualer_api_models_clients_to_client_company_response_model_billing_address_type_0 import (
-            QualerApiModelsClientsToClientCompanyResponseModelBillingAddressType0,
+            ClientsToClientCompanyResponseModelBillingAddressType0,
         )
         from ..models.qualer_api_models_clients_to_client_company_response_model_shipping_address_type_0 import (
-            QualerApiModelsClientsToClientCompanyResponseModelShippingAddressType0,
+            ClientsToClientCompanyResponseModelShippingAddressType0,
         )
 
         d = dict(src_dict)
@@ -227,7 +227,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
         def _parse_billing_address(
             data: object,
         ) -> Union[
-            "QualerApiModelsClientsToClientCompanyResponseModelBillingAddressType0",
+            "ClientsToClientCompanyResponseModelBillingAddressType0",
             None,
             None,
         ]:
@@ -237,9 +237,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
                 if not isinstance(data, dict):
                     raise TypeError()
                 billing_address_type_0 = (
-                    QualerApiModelsClientsToClientCompanyResponseModelBillingAddressType0.from_dict(
-                        data
-                    )
+                    ClientsToClientCompanyResponseModelBillingAddressType0.from_dict(data)
                 )
 
                 return billing_address_type_0
@@ -247,7 +245,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
                 pass
             return cast(
                 Union[
-                    "QualerApiModelsClientsToClientCompanyResponseModelBillingAddressType0",
+                    "ClientsToClientCompanyResponseModelBillingAddressType0",
                     None,
                     None,
                 ],
@@ -259,7 +257,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
         def _parse_shipping_address(
             data: object,
         ) -> Union[
-            "QualerApiModelsClientsToClientCompanyResponseModelShippingAddressType0",
+            "ClientsToClientCompanyResponseModelShippingAddressType0",
             None,
             None,
         ]:
@@ -268,8 +266,8 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                shipping_address_type_0 = QualerApiModelsClientsToClientCompanyResponseModelShippingAddressType0.from_dict(
-                    data
+                shipping_address_type_0 = (
+                    ClientsToClientCompanyResponseModelShippingAddressType0.from_dict(data)
                 )
 
                 return shipping_address_type_0
@@ -277,7 +275,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
                 pass
             return cast(
                 Union[
-                    "QualerApiModelsClientsToClientCompanyResponseModelShippingAddressType0",
+                    "ClientsToClientCompanyResponseModelShippingAddressType0",
                     None,
                     None,
                 ],
@@ -289,9 +287,7 @@ class QualerApiModelsClientsToClientCompanyResponseModel:
         attributes = []
         _attributes = d.pop("Attributes", None)
         for attributes_item_data in _attributes or []:
-            attributes_item = QualerApiModelsAttributesToAttributeResponse.from_dict(
-                attributes_item_data
-            )
+            attributes_item = AttributesToAttributeResponse.from_dict(attributes_item_data)
 
             attributes.append(attributes_item)
 

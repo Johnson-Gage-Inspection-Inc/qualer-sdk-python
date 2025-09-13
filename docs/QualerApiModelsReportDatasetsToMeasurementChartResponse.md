@@ -1,4 +1,4 @@
-# QualerApiModelsReportDatasetsToMeasurementChartResponse
+# ReportDatasetsToMeasurementChartResponse
 
 ## Properties
 Name | Type | Description | Notes

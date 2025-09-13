@@ -1,4 +1,4 @@
-# QualerApiModelsReportDatasetsToServiceOrderAssigneeResponse
+# ReportDatasetsToServiceOrderAssigneeResponse
 
 ## Properties
 Name | Type | Description | Notes

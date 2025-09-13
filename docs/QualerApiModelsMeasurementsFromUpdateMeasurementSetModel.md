@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsFromUpdateMeasurementSetModel
+# MeasurementsFromUpdateMeasurementSetModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -19,8 +19,8 @@ Name | Type | Description | Notes
 **influence_parameter2_parameter_id** | **int** |  | [optional] 
 **influence_parameter2_source** | **str** |  | [optional] 
 **influence_parameter2_value** | **str** |  | [optional] 
-**measurement_points** | [**list[QualerApiModelsMeasurementsFromUpdateMeasurementPointModel]**](QualerApiModelsMeasurementsFromUpdateMeasurementPointModel.md) |  | [optional] 
-**measurement_fields** | [**list[QualerApiModelsMeasurementsFromUpdateMeasurementFieldModel]**](QualerApiModelsMeasurementsFromUpdateMeasurementFieldModel.md) |  | [optional] 
+**measurement_points** | [**list[MeasurementsFromUpdateMeasurementPointModel]**](MeasurementsFromUpdateMeasurementPointModel.md) |  | [optional] 
+**measurement_fields** | [**list[MeasurementsFromUpdateMeasurementFieldModel]**](MeasurementsFromUpdateMeasurementFieldModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

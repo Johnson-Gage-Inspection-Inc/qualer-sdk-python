@@ -8,29 +8,29 @@ from dateutil.parser import isoparse
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_common_from_attribute_model import (
-        QualerApiModelsCommonFromAttributeModel,
+        CommonFromAttributeModel,
     )
     from ..models.qualer_api_models_site_to_client_site_response_billing_address_type_0 import (
-        QualerApiModelsSiteToClientSiteResponseBillingAddressType0,
+        SiteToClientSiteResponseBillingAddressType0,
     )
     from ..models.qualer_api_models_site_to_client_site_response_shipping_address_type_0 import (
-        QualerApiModelsSiteToClientSiteResponseShippingAddressType0,
+        SiteToClientSiteResponseShippingAddressType0,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsSiteToClientSiteResponse")
+T = TypeVar("T", bound="SiteToClientSiteResponse")
 
 
 @_attrs_define
-class QualerApiModelsSiteToClientSiteResponse:
+class SiteToClientSiteResponse:
     """
     Attributes:
         site_id (Optional[int]):
         site_name (Optional[str]):
         site_code (Optional[str]):
-        shipping_address (Union['QualerApiModelsSiteToClientSiteResponseShippingAddressType0', None]):
+        shipping_address (Union['SiteToClientSiteResponseShippingAddressType0', None]):
         shipping_inherited (Optional[bool]):
-        billing_address (Union['QualerApiModelsSiteToClientSiteResponseBillingAddressType0', None]):
+        billing_address (Union['SiteToClientSiteResponseBillingAddressType0', None]):
         default_account_representative_employee_id (Optional[int]):
         billing_inherited (Optional[bool]):
         federal_number (Optional[str]):
@@ -43,15 +43,15 @@ class QualerApiModelsSiteToClientSiteResponse:
         time_zone_id (Optional[str]):
         time_zone_offset_minutes (Optional[int]):
         updated_on_utc (Optional[datetime.datetime]):
-        attributes (Optional[List['QualerApiModelsCommonFromAttributeModel']]):
+        attributes (Optional[List['CommonFromAttributeModel']]):
     """
 
     site_id: Optional[int] = None
     site_name: Optional[str] = None
     site_code: Optional[str] = None
-    shipping_address: Optional["QualerApiModelsSiteToClientSiteResponseShippingAddressType0"] = None
+    shipping_address: Optional["SiteToClientSiteResponseShippingAddressType0"] = None
     shipping_inherited: Optional[bool] = None
-    billing_address: Optional["QualerApiModelsSiteToClientSiteResponseBillingAddressType0"] = None
+    billing_address: Optional["SiteToClientSiteResponseBillingAddressType0"] = None
     default_account_representative_employee_id: Optional[int] = None
     billing_inherited: Optional[bool] = None
     federal_number: Optional[str] = None
@@ -64,15 +64,15 @@ class QualerApiModelsSiteToClientSiteResponse:
     time_zone_id: Optional[str] = None
     time_zone_offset_minutes: Optional[int] = None
     updated_on_utc: Optional[datetime.datetime] = None
-    attributes: Optional[List["QualerApiModelsCommonFromAttributeModel"]] = None
+    attributes: Optional[List["CommonFromAttributeModel"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
         from ..models.qualer_api_models_site_to_client_site_response_billing_address_type_0 import (
-            QualerApiModelsSiteToClientSiteResponseBillingAddressType0,
+            SiteToClientSiteResponseBillingAddressType0,
         )
         from ..models.qualer_api_models_site_to_client_site_response_shipping_address_type_0 import (
-            QualerApiModelsSiteToClientSiteResponseShippingAddressType0,
+            SiteToClientSiteResponseShippingAddressType0,
         )
 
         site_id = self.site_id
@@ -86,7 +86,7 @@ class QualerApiModelsSiteToClientSiteResponse:
             shipping_address = None
         elif isinstance(
             self.shipping_address,
-            QualerApiModelsSiteToClientSiteResponseShippingAddressType0,
+            SiteToClientSiteResponseShippingAddressType0,
         ):
             shipping_address = self.shipping_address.to_dict()
         else:
@@ -99,7 +99,7 @@ class QualerApiModelsSiteToClientSiteResponse:
             billing_address = None
         elif isinstance(
             self.billing_address,
-            QualerApiModelsSiteToClientSiteResponseBillingAddressType0,
+            SiteToClientSiteResponseBillingAddressType0,
         ):
             billing_address = self.billing_address.to_dict()
         else:
@@ -187,13 +187,13 @@ class QualerApiModelsSiteToClientSiteResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_common_from_attribute_model import (
-            QualerApiModelsCommonFromAttributeModel,
+            CommonFromAttributeModel,
         )
         from ..models.qualer_api_models_site_to_client_site_response_billing_address_type_0 import (
-            QualerApiModelsSiteToClientSiteResponseBillingAddressType0,
+            SiteToClientSiteResponseBillingAddressType0,
         )
         from ..models.qualer_api_models_site_to_client_site_response_shipping_address_type_0 import (
-            QualerApiModelsSiteToClientSiteResponseShippingAddressType0,
+            SiteToClientSiteResponseShippingAddressType0,
         )
 
         d = dict(src_dict)
@@ -205,14 +205,14 @@ class QualerApiModelsSiteToClientSiteResponse:
 
         def _parse_shipping_address(
             data: object,
-        ) -> Optional["QualerApiModelsSiteToClientSiteResponseShippingAddressType0"]:
+        ) -> Optional["SiteToClientSiteResponseShippingAddressType0"]:
             if not data:
                 return None
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                shipping_address_type_0 = (
-                    QualerApiModelsSiteToClientSiteResponseShippingAddressType0.from_dict(data)
+                shipping_address_type_0 = SiteToClientSiteResponseShippingAddressType0.from_dict(
+                    data
                 )
 
                 return shipping_address_type_0
@@ -220,7 +220,7 @@ class QualerApiModelsSiteToClientSiteResponse:
                 pass
             return cast(
                 Union[
-                    "QualerApiModelsSiteToClientSiteResponseShippingAddressType0",
+                    "SiteToClientSiteResponseShippingAddressType0",
                     None,
                     None,
                 ],
@@ -233,22 +233,20 @@ class QualerApiModelsSiteToClientSiteResponse:
 
         def _parse_billing_address(
             data: object,
-        ) -> Optional["QualerApiModelsSiteToClientSiteResponseBillingAddressType0"]:
+        ) -> Optional["SiteToClientSiteResponseBillingAddressType0"]:
             if not data:
                 return None
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                billing_address_type_0 = (
-                    QualerApiModelsSiteToClientSiteResponseBillingAddressType0.from_dict(data)
-                )
+                billing_address_type_0 = SiteToClientSiteResponseBillingAddressType0.from_dict(data)
 
                 return billing_address_type_0
             except Exception:
                 pass
             return cast(
                 Union[
-                    "QualerApiModelsSiteToClientSiteResponseBillingAddressType0",
+                    "SiteToClientSiteResponseBillingAddressType0",
                     None,
                     None,
                 ],
@@ -291,9 +289,7 @@ class QualerApiModelsSiteToClientSiteResponse:
         attributes = []
         _attributes = d.pop("Attributes", None)
         for attributes_item_data in _attributes or []:
-            attributes_item = QualerApiModelsCommonFromAttributeModel.from_dict(
-                attributes_item_data
-            )
+            attributes_item = CommonFromAttributeModel.from_dict(attributes_item_data)
 
             attributes.append(attributes_item)
 

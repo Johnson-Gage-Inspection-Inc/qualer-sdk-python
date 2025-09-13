@@ -8,15 +8,15 @@ from dateutil.parser import isoparse
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model import (
-        QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel,
+        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsMeasurementsToMeasurementRecordResponseModel")
+T = TypeVar("T", bound="MeasurementsToMeasurementRecordResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
+class MeasurementsToMeasurementRecordResponseModel:
     """
     Attributes:
         service_order_id (Optional[int]):
@@ -53,7 +53,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
         forward_next_service (Optional[bool]):
         forward_segment_id (Optional[int]):
         measurement_batches (Union[None,
-            List['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel']]):
+            List['MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel']]):
     """
 
     service_order_id: Optional[int] = None
@@ -92,9 +92,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
     measurement_batches: Union[
         None,
         None,
-        List[
-            "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel"
-        ],
+        List["MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel"],
     ] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -292,7 +290,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model import (
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel,
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel,
         )
 
         d = dict(src_dict)
@@ -416,8 +414,10 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModel:
         measurement_batches = []
         _measurement_batches = d.pop("MeasurementBatches", None)
         for measurement_batches_item_data in _measurement_batches or []:
-            measurement_batches_item = QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel.from_dict(
-                measurement_batches_item_data
+            measurement_batches_item = (
+                MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel.from_dict(
+                    measurement_batches_item_data
+                )
             )
 
             measurement_batches.append(measurement_batches_item)

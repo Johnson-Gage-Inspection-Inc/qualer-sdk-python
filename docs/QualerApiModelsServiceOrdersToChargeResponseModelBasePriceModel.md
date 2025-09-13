@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrdersToChargeResponseModelBasePriceModel
+# ServiceOrdersToChargeResponseModelBasePriceModel
 
 ## Properties
 Name | Type | Description | Notes

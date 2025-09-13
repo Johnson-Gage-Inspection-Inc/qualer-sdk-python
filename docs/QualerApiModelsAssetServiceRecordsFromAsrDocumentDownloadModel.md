@@ -1,4 +1,4 @@
-# QualerApiModelsAssetServiceRecordsFromAsrDocumentDownloadModel
+# AssetServiceRecordsFromAsrDocumentDownloadModel
 
 ## Properties
 Name | Type | Description | Notes

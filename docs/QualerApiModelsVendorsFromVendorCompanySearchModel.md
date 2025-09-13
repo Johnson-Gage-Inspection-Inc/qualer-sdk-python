@@ -1,4 +1,4 @@
-# QualerApiModelsVendorsFromVendorCompanySearchModel
+# VendorsFromVendorCompanySearchModel
 
 ## Properties
 Name | Type | Description | Notes

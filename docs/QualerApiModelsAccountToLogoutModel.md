@@ -1,4 +1,4 @@
-# QualerApiModelsAccountToLogoutModel
+# AccountToLogoutModel
 
 ## Properties
 Name | Type | Description | Notes

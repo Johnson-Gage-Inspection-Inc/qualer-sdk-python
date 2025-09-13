@@ -1,7 +1,7 @@
 from enum import IntEnum
 
 
-class QualerApiModelsAssetToAssetManageResponseModelRecordType(IntEnum):
+class AssetToAssetManageResponseModelRecordType(IntEnum):
     VALUE_0 = 0
     VALUE_1 = 1
     VALUE_2 = 2

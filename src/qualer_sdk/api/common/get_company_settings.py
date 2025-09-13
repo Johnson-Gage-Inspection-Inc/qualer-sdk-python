@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_common_to_setting_response_model import (
-    QualerApiModelsCommonToSettingResponseModel,
+    CommonToSettingResponseModel,
 )
 from ...types import Response
 
@@ -32,9 +32,9 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[QualerApiModelsCommonToSettingResponseModel]:
+) -> Optional[CommonToSettingResponseModel]:
     if response.status_code == 200:
-        response_200 = QualerApiModelsCommonToSettingResponseModel.from_dict(response.json())
+        response_200 = CommonToSettingResponseModel.from_dict(response.json())
 
         return response_200
     if client.raise_on_unexpected_status:
@@ -45,7 +45,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[QualerApiModelsCommonToSettingResponseModel]:
+) -> Response[CommonToSettingResponseModel]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -58,7 +58,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     setting_key: str,
-) -> Response[QualerApiModelsCommonToSettingResponseModel]:
+) -> Response[CommonToSettingResponseModel]:
     """
     Args:
         setting_key (str):
@@ -68,7 +68,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[QualerApiModelsCommonToSettingResponseModel]
+        Response[CommonToSettingResponseModel]
     """
 
     kwargs = _get_kwargs(
@@ -86,7 +86,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     setting_key: str,
-) -> Optional[QualerApiModelsCommonToSettingResponseModel]:
+) -> Optional[CommonToSettingResponseModel]:
     """
     Args:
         setting_key (str):
@@ -96,7 +96,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        QualerApiModelsCommonToSettingResponseModel
+        CommonToSettingResponseModel
     """
 
     return sync_detailed(
@@ -109,7 +109,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     setting_key: str,
-) -> Response[QualerApiModelsCommonToSettingResponseModel]:
+) -> Response[CommonToSettingResponseModel]:
     """
     Args:
         setting_key (str):
@@ -119,7 +119,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[QualerApiModelsCommonToSettingResponseModel]
+        Response[CommonToSettingResponseModel]
     """
 
     kwargs = _get_kwargs(
@@ -135,7 +135,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     setting_key: str,
-) -> Optional[QualerApiModelsCommonToSettingResponseModel]:
+) -> Optional[CommonToSettingResponseModel]:
     """
     Args:
         setting_key (str):
@@ -145,7 +145,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        QualerApiModelsCommonToSettingResponseModel
+        CommonToSettingResponseModel
     """
 
     return (

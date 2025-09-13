@@ -8,15 +8,15 @@ from dateutil.parser import isoparse
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_service_options_to_service_option_response_model import (
-        QualerApiModelsServiceOptionsToServiceOptionResponseModel,
+        ServiceOptionsToServiceOptionResponseModel,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsServiceOrdersToClientOrderItemResponseModel")
+T = TypeVar("T", bound="ServiceOrdersToClientOrderItemResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
+class ServiceOrdersToClientOrderItemResponseModel:
     """
     Attributes:
         work_item_id (Optional[int]):
@@ -96,7 +96,7 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
         next_service_date (Optional[datetime.datetime]):
         maintenance_task (Optional[str]):
         maintenance_plan (Optional[str]):
-        service_options (Optional[List['QualerApiModelsServiceOptionsToServiceOptionResponseModel']]):
+        service_options (Optional[List['ServiceOptionsToServiceOptionResponseModel']]):
         vendor_tag (Optional[str]):
         legacy_id (Optional[str]):
         asset_ownership (Optional[str]):
@@ -179,9 +179,7 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
     next_service_date: Optional[datetime.datetime] = None
     maintenance_task: Optional[str] = None
     maintenance_plan: Optional[str] = None
-    service_options: Union[
-        None, List["QualerApiModelsServiceOptionsToServiceOptionResponseModel"]
-    ] = None
+    service_options: Union[None, List["ServiceOptionsToServiceOptionResponseModel"]] = None
     vendor_tag: Optional[str] = None
     legacy_id: Optional[str] = None
     asset_ownership: Optional[str] = None
@@ -754,7 +752,7 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_service_options_to_service_option_response_model import (
-            QualerApiModelsServiceOptionsToServiceOptionResponseModel,
+            ServiceOptionsToServiceOptionResponseModel,
         )
 
         d = dict(src_dict)
@@ -1231,10 +1229,8 @@ class QualerApiModelsServiceOrdersToClientOrderItemResponseModel:
         service_options = []
         _service_options = d.pop("ServiceOptions", None)
         for service_options_item_data in _service_options or []:
-            service_options_item = (
-                QualerApiModelsServiceOptionsToServiceOptionResponseModel.from_dict(
-                    service_options_item_data
-                )
+            service_options_item = ServiceOptionsToServiceOptionResponseModel.from_dict(
+                service_options_item_data
             )
 
             service_options.append(service_options_item)

@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel
+# ServiceOrdersFromUpdatePaymentStatusModel
 
 ## Properties
 Name | Type | Description | Notes

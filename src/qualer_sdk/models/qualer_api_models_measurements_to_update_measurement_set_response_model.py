@@ -5,26 +5,26 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.qualer_api_models_measurements_to_update_measurement_set_response_model_influence_parameter_1_type import (
-    QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type,
+    MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type,
 )
 from ..models.qualer_api_models_measurements_to_update_measurement_set_response_model_influence_parameter_2_type import (
-    QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type,
+    MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type,
 )
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_to_update_measurement_field_response_model import (
-        QualerApiModelsMeasurementsToUpdateMeasurementFieldResponseModel,
+        MeasurementsToUpdateMeasurementFieldResponseModel,
     )
     from ..models.qualer_api_models_measurements_to_update_measurement_point_response_model import (
-        QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel,
+        MeasurementsToUpdateMeasurementPointResponseModel,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel")
+T = TypeVar("T", bound="MeasurementsToUpdateMeasurementSetResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
+class MeasurementsToUpdateMeasurementSetResponseModel:
     """
     Attributes:
         measurement_set_id (Optional[int]):
@@ -34,19 +34,19 @@ class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
         decimal_places (Optional[int]):
         significant_figures (Optional[int]):
         influence_parameter_1_type (Union[None,
-            QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type]):
+            MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type]):
         influence_parameter_1_tool_type_id (Optional[int]):
         influence_parameter_1_parameter_id (Optional[int]):
         influence_parameter_1_source (Optional[str]):
         influence_parameter_1_value (Optional[str]):
         influence_parameter_2_type (Union[None,
-            QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type]):
+            MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type]):
         influence_parameter_2_tool_type_id (Optional[int]):
         influence_parameter_2_parameter_id (Optional[int]):
         influence_parameter_2_source (Optional[str]):
         influence_parameter_2_value (Optional[str]):
-        measurement_points (Optional[List['QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel']]):
-        measurement_fields (Optional[List['QualerApiModelsMeasurementsToUpdateMeasurementFieldResponseModel']]):
+        measurement_points (Optional[List['MeasurementsToUpdateMeasurementPointResponseModel']]):
+        measurement_fields (Optional[List['MeasurementsToUpdateMeasurementFieldResponseModel']]):
     """
 
     measurement_set_id: Optional[int] = None
@@ -58,7 +58,7 @@ class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
     influence_parameter_1_type: Union[
         None,
         None,
-        QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type,
+        MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type,
     ] = None
     influence_parameter_1_tool_type_id: Optional[int] = None
     influence_parameter_1_parameter_id: Optional[int] = None
@@ -67,7 +67,7 @@ class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
     influence_parameter_2_type: Union[
         None,
         None,
-        QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type,
+        MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type,
     ] = None
     influence_parameter_2_tool_type_id: Optional[int] = None
     influence_parameter_2_parameter_id: Optional[int] = None
@@ -76,12 +76,12 @@ class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
     measurement_points: Union[
         None,
         None,
-        List["QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel"],
+        List["MeasurementsToUpdateMeasurementPointResponseModel"],
     ] = None
     measurement_fields: Union[
         None,
         None,
-        List["QualerApiModelsMeasurementsToUpdateMeasurementFieldResponseModel"],
+        List["MeasurementsToUpdateMeasurementFieldResponseModel"],
     ] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -185,10 +185,10 @@ class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_measurements_to_update_measurement_field_response_model import (
-            QualerApiModelsMeasurementsToUpdateMeasurementFieldResponseModel,
+            MeasurementsToUpdateMeasurementFieldResponseModel,
         )
         from ..models.qualer_api_models_measurements_to_update_measurement_point_response_model import (
-            QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel,
+            MeasurementsToUpdateMeasurementPointResponseModel,
         )
 
         d = dict(src_dict)
@@ -208,15 +208,17 @@ class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
         influence_parameter_1_type: Union[
             None,
             None,
-            QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type,
+            MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type,
         ]
         if not _influence_parameter_1_type:
             influence_parameter_1_type = None
         elif _influence_parameter_1_type is None:
             influence_parameter_1_type = None
         else:
-            influence_parameter_1_type = QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type(
-                _influence_parameter_1_type
+            influence_parameter_1_type = (
+                MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type(
+                    _influence_parameter_1_type
+                )
             )
 
         influence_parameter_1_tool_type_id = d.pop("InfluenceParameter1ToolTypeId", None)
@@ -231,15 +233,17 @@ class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
         influence_parameter_2_type: Union[
             None,
             None,
-            QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type,
+            MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type,
         ]
         if not _influence_parameter_2_type:
             influence_parameter_2_type = None
         elif _influence_parameter_2_type is None:
             influence_parameter_2_type = None
         else:
-            influence_parameter_2_type = QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type(
-                _influence_parameter_2_type
+            influence_parameter_2_type = (
+                MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type(
+                    _influence_parameter_2_type
+                )
             )
 
         influence_parameter_2_tool_type_id = d.pop("InfluenceParameter2ToolTypeId", None)
@@ -253,10 +257,8 @@ class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
         measurement_points = []
         _measurement_points = d.pop("MeasurementPoints", None)
         for measurement_points_item_data in _measurement_points or []:
-            measurement_points_item = (
-                QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel.from_dict(
-                    measurement_points_item_data
-                )
+            measurement_points_item = MeasurementsToUpdateMeasurementPointResponseModel.from_dict(
+                measurement_points_item_data
             )
 
             measurement_points.append(measurement_points_item)
@@ -264,10 +266,8 @@ class QualerApiModelsMeasurementsToUpdateMeasurementSetResponseModel:
         measurement_fields = []
         _measurement_fields = d.pop("MeasurementFields", None)
         for measurement_fields_item_data in _measurement_fields or []:
-            measurement_fields_item = (
-                QualerApiModelsMeasurementsToUpdateMeasurementFieldResponseModel.from_dict(
-                    measurement_fields_item_data
-                )
+            measurement_fields_item = MeasurementsToUpdateMeasurementFieldResponseModel.from_dict(
+                measurement_fields_item_data
             )
 
             measurement_fields.append(measurement_fields_item)

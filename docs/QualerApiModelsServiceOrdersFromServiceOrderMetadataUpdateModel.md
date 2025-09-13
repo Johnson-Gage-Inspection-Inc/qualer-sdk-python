@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrdersFromServiceOrderMetadataUpdateModel
+# ServiceOrdersFromServiceOrderMetadataUpdateModel
 
 ## Properties
 Name | Type | Description | Notes

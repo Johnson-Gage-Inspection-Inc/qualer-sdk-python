@@ -7,7 +7,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_measurements_to_measurement_record_response_model import (
-    QualerApiModelsMeasurementsToMeasurementRecordResponseModel,
+    MeasurementsToMeasurementRecordResponseModel,
 )
 from ...types import Response
 
@@ -43,15 +43,13 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[List["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
+) -> Optional[List["MeasurementsToMeasurementRecordResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = (
-                QualerApiModelsMeasurementsToMeasurementRecordResponseModel.from_dict(
-                    response_200_item_data
-                )
+            response_200_item = MeasurementsToMeasurementRecordResponseModel.from_dict(
+                response_200_item_data
             )
 
             response_200.append(response_200_item)
@@ -65,7 +63,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[List["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
+) -> Response[List["MeasurementsToMeasurementRecordResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -80,7 +78,7 @@ def sync_detailed(
     client: Union[AuthenticatedClient, Client],
     from_: Optional[datetime.datetime] = None,
     to: Optional[datetime.datetime] = None,
-) -> Response[List["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
+) -> Response[List["MeasurementsToMeasurementRecordResponseModel"]]:
     """
     Args:
         asset_id (int):
@@ -92,7 +90,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsMeasurementsToMeasurementRecordResponseModel']]
+        Response[List['MeasurementsToMeasurementRecordResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -114,7 +112,7 @@ def sync(
     client: Union[AuthenticatedClient, Client],
     from_: Optional[datetime.datetime] = None,
     to: Optional[datetime.datetime] = None,
-) -> Optional[List["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
+) -> Optional[List["MeasurementsToMeasurementRecordResponseModel"]]:
     """
     Args:
         asset_id (int):
@@ -126,7 +124,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsMeasurementsToMeasurementRecordResponseModel']
+        List['MeasurementsToMeasurementRecordResponseModel']
     """
 
     return sync_detailed(
@@ -143,7 +141,7 @@ async def asyncio_detailed(
     client: Union[AuthenticatedClient, Client],
     from_: Optional[datetime.datetime] = None,
     to: Optional[datetime.datetime] = None,
-) -> Response[List["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
+) -> Response[List["MeasurementsToMeasurementRecordResponseModel"]]:
     """
     Args:
         asset_id (int):
@@ -155,7 +153,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsMeasurementsToMeasurementRecordResponseModel']]
+        Response[List['MeasurementsToMeasurementRecordResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -175,7 +173,7 @@ async def asyncio(
     client: Union[AuthenticatedClient, Client],
     from_: Optional[datetime.datetime] = None,
     to: Optional[datetime.datetime] = None,
-) -> Optional[List["QualerApiModelsMeasurementsToMeasurementRecordResponseModel"]]:
+) -> Optional[List["MeasurementsToMeasurementRecordResponseModel"]]:
     """
     Args:
         asset_id (int):
@@ -187,7 +185,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsMeasurementsToMeasurementRecordResponseModel']
+        List['MeasurementsToMeasurementRecordResponseModel']
     """
 
     return (

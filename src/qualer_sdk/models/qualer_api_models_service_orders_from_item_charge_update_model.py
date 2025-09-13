@@ -6,24 +6,24 @@ from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_service_orders_from_item_charge_update_model_item_price_model import (
-        QualerApiModelsServiceOrdersFromItemChargeUpdateModelItemPriceModel,
+        ServiceOrdersFromItemChargeUpdateModelItemPriceModel,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromItemChargeUpdateModel")
+T = TypeVar("T", bound="ServiceOrdersFromItemChargeUpdateModel")
 
 
 @_attrs_define
-class QualerApiModelsServiceOrdersFromItemChargeUpdateModel:
+class ServiceOrdersFromItemChargeUpdateModel:
     """
     Attributes:
-        charges (Optional[List['QualerApiModelsServiceOrdersFromItemChargeUpdateModelItemPriceModel']]):
+        charges (Optional[List['ServiceOrdersFromItemChargeUpdateModelItemPriceModel']]):
     """
 
     charges: Union[
         None,
         None,
-        List["QualerApiModelsServiceOrdersFromItemChargeUpdateModelItemPriceModel"],
+        List["ServiceOrdersFromItemChargeUpdateModelItemPriceModel"],
     ] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -46,17 +46,15 @@ class QualerApiModelsServiceOrdersFromItemChargeUpdateModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_service_orders_from_item_charge_update_model_item_price_model import (
-            QualerApiModelsServiceOrdersFromItemChargeUpdateModelItemPriceModel,
+            ServiceOrdersFromItemChargeUpdateModelItemPriceModel,
         )
 
         d = dict(src_dict)
         charges = []
         _charges = d.pop("Charges", None)
         for charges_item_data in _charges or []:
-            charges_item = (
-                QualerApiModelsServiceOrdersFromItemChargeUpdateModelItemPriceModel.from_dict(
-                    charges_item_data
-                )
+            charges_item = ServiceOrdersFromItemChargeUpdateModelItemPriceModel.from_dict(
+                charges_item_data
             )
 
             charges.append(charges_item)

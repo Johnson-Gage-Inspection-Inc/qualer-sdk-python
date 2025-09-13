@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_measurements_from_update_measurement_form_model import (
-    QualerApiModelsMeasurementsFromUpdateMeasurementFormModel,
+    MeasurementsFromUpdateMeasurementFormModel,
 )
 from ...models.update_measurement_form_response_200 import UpdateMeasurementFormResponse200
 from ...types import Response
@@ -15,7 +15,7 @@ from ...types import Response
 def _get_kwargs(
     work_item_id: int,
     *,
-    body: QualerApiModelsMeasurementsFromUpdateMeasurementFormModel,
+    body: MeasurementsFromUpdateMeasurementFormModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -69,13 +69,13 @@ def sync_detailed(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsMeasurementsFromUpdateMeasurementFormModel,
+    body: MeasurementsFromUpdateMeasurementFormModel,
 ) -> Response[Union[Any, UpdateMeasurementFormResponse200]]:
     """Update Measurement Form.
 
     Args:
         work_item_id (int):
-        body (QualerApiModelsMeasurementsFromUpdateMeasurementFormModel):
+        body (MeasurementsFromUpdateMeasurementFormModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -101,13 +101,13 @@ def sync(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsMeasurementsFromUpdateMeasurementFormModel,
+    body: MeasurementsFromUpdateMeasurementFormModel,
 ) -> Optional[Union[Any, UpdateMeasurementFormResponse200]]:
     """Update Measurement Form.
 
     Args:
         work_item_id (int):
-        body (QualerApiModelsMeasurementsFromUpdateMeasurementFormModel):
+        body (MeasurementsFromUpdateMeasurementFormModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -128,13 +128,13 @@ async def asyncio_detailed(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsMeasurementsFromUpdateMeasurementFormModel,
+    body: MeasurementsFromUpdateMeasurementFormModel,
 ) -> Response[Union[Any, UpdateMeasurementFormResponse200]]:
     """Update Measurement Form.
 
     Args:
         work_item_id (int):
-        body (QualerApiModelsMeasurementsFromUpdateMeasurementFormModel):
+        body (MeasurementsFromUpdateMeasurementFormModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -158,13 +158,13 @@ async def asyncio(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsMeasurementsFromUpdateMeasurementFormModel,
+    body: MeasurementsFromUpdateMeasurementFormModel,
 ) -> Optional[Union[Any, UpdateMeasurementFormResponse200]]:
     """Update Measurement Form.
 
     Args:
         work_item_id (int):
-        body (QualerApiModelsMeasurementsFromUpdateMeasurementFormModel):
+        body (MeasurementsFromUpdateMeasurementFormModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

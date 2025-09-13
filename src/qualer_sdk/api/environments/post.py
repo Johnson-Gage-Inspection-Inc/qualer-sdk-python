@@ -8,7 +8,7 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.post_response_200 import PostResponse200
 from ...models.qualer_api_models_environment_from_environment_model import (
-    QualerApiModelsEnvironmentFromEnvironmentModel,
+    EnvironmentFromEnvironmentModel,
 )
 from ...types import Response
 
@@ -16,7 +16,7 @@ from ...types import Response
 def _get_kwargs(
     id: UUID,
     *,
-    body: QualerApiModelsEnvironmentFromEnvironmentModel,
+    body: EnvironmentFromEnvironmentModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -61,12 +61,12 @@ def sync_detailed(
     id: UUID,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEnvironmentFromEnvironmentModel,
+    body: EnvironmentFromEnvironmentModel,
 ) -> Response[PostResponse200]:
     """
     Args:
         id (UUID):
-        body (QualerApiModelsEnvironmentFromEnvironmentModel):
+        body (EnvironmentFromEnvironmentModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -92,12 +92,12 @@ def sync(
     id: UUID,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEnvironmentFromEnvironmentModel,
+    body: EnvironmentFromEnvironmentModel,
 ) -> Optional[PostResponse200]:
     """
     Args:
         id (UUID):
-        body (QualerApiModelsEnvironmentFromEnvironmentModel):
+        body (EnvironmentFromEnvironmentModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -118,12 +118,12 @@ async def asyncio_detailed(
     id: UUID,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEnvironmentFromEnvironmentModel,
+    body: EnvironmentFromEnvironmentModel,
 ) -> Response[PostResponse200]:
     """
     Args:
         id (UUID):
-        body (QualerApiModelsEnvironmentFromEnvironmentModel):
+        body (EnvironmentFromEnvironmentModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -147,12 +147,12 @@ async def asyncio(
     id: UUID,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEnvironmentFromEnvironmentModel,
+    body: EnvironmentFromEnvironmentModel,
 ) -> Optional[PostResponse200]:
     """
     Args:
         id (UUID):
-        body (QualerApiModelsEnvironmentFromEnvironmentModel):
+        body (EnvironmentFromEnvironmentModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

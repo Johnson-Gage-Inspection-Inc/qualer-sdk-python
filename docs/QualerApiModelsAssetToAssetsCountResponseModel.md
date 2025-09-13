@@ -1,4 +1,4 @@
-# QualerApiModelsAssetToAssetsCountResponseModel
+# AssetToAssetsCountResponseModel
 
 ## Properties
 Name | Type | Description | Notes

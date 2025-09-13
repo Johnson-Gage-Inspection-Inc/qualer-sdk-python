@@ -1,4 +1,4 @@
-# QualerApiModelsProductToProductApiResponseModel
+# ProductToProductApiResponseModel
 
 ## Properties
 Name | Type | Description | Notes

@@ -6,11 +6,11 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-T = TypeVar("T", bound="QualerApiModelsAssetFromUpdateFilterPreferenceModel")
+T = TypeVar("T", bound="AssetFromUpdateFilterPreferenceModel")
 
 
 @_attrs_define
-class QualerApiModelsAssetFromUpdateFilterPreferenceModel:
+class AssetFromUpdateFilterPreferenceModel:
     """
     Attributes:
         filter_type (Optional[str]):

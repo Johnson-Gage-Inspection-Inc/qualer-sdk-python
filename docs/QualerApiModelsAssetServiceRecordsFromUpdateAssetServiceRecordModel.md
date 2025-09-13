@@ -1,4 +1,4 @@
-# QualerApiModelsAssetServiceRecordsFromUpdateAssetServiceRecordModel
+# AssetServiceRecordsFromUpdateAssetServiceRecordModel
 
 ## Properties
 Name | Type | Description | Notes

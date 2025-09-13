@@ -7,10 +7,10 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.add_asset_service_record_response_200 import AddAssetServiceRecordResponse200
 from ...models.qualer_api_models_asset_service_records_from_add_asset_service_record_model import (
-    QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel,
+    AssetServiceRecordsFromAddAssetServiceRecordModel,
 )
 from ...models.qualer_api_models_asset_service_records_to_add_asset_service_record_response import (
-    QualerApiModelsAssetServiceRecordsToAddAssetServiceRecordResponse,
+    AssetServiceRecordsToAddAssetServiceRecordResponse,
 )
 from ...types import Response
 
@@ -18,7 +18,7 @@ from ...types import Response
 def _get_kwargs(
     asset_id: int,
     *,
-    body: QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel,
+    body: AssetServiceRecordsFromAddAssetServiceRecordModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -40,7 +40,7 @@ def _parse_response(
 ) -> Optional[
     Union[
         AddAssetServiceRecordResponse200,
-        QualerApiModelsAssetServiceRecordsToAddAssetServiceRecordResponse,
+        AssetServiceRecordsToAddAssetServiceRecordResponse,
     ]
 ]:
     if response.status_code == 200:
@@ -48,9 +48,7 @@ def _parse_response(
 
         return response_200
     if response.status_code == 201:
-        response_201 = QualerApiModelsAssetServiceRecordsToAddAssetServiceRecordResponse.from_dict(
-            response.json()
-        )
+        response_201 = AssetServiceRecordsToAddAssetServiceRecordResponse.from_dict(response.json())
 
         return response_201
     if client.raise_on_unexpected_status:
@@ -64,7 +62,7 @@ def _build_response(
 ) -> Response[
     Union[
         AddAssetServiceRecordResponse200,
-        QualerApiModelsAssetServiceRecordsToAddAssetServiceRecordResponse,
+        AssetServiceRecordsToAddAssetServiceRecordResponse,
     ]
 ]:
     return Response(
@@ -79,24 +77,24 @@ def sync_detailed(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel,
+    body: AssetServiceRecordsFromAddAssetServiceRecordModel,
 ) -> Response[
     Union[
         AddAssetServiceRecordResponse200,
-        QualerApiModelsAssetServiceRecordsToAddAssetServiceRecordResponse,
+        AssetServiceRecordsToAddAssetServiceRecordResponse,
     ]
 ]:
     """
     Args:
         asset_id (int):
-        body (QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel):
+        body (AssetServiceRecordsFromAddAssetServiceRecordModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[AddAssetServiceRecordResponse200, QualerApiModelsAssetServiceRecordsToAddAssetServiceRecordResponse]]
+        Response[Union[AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse]]
     """
 
     kwargs = _get_kwargs(
@@ -115,24 +113,24 @@ def sync(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel,
+    body: AssetServiceRecordsFromAddAssetServiceRecordModel,
 ) -> Optional[
     Union[
         AddAssetServiceRecordResponse200,
-        QualerApiModelsAssetServiceRecordsToAddAssetServiceRecordResponse,
+        AssetServiceRecordsToAddAssetServiceRecordResponse,
     ]
 ]:
     """
     Args:
         asset_id (int):
-        body (QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel):
+        body (AssetServiceRecordsFromAddAssetServiceRecordModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[AddAssetServiceRecordResponse200, QualerApiModelsAssetServiceRecordsToAddAssetServiceRecordResponse]
+        Union[AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse]
     """
 
     return sync_detailed(
@@ -146,24 +144,24 @@ async def asyncio_detailed(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel,
+    body: AssetServiceRecordsFromAddAssetServiceRecordModel,
 ) -> Response[
     Union[
         AddAssetServiceRecordResponse200,
-        QualerApiModelsAssetServiceRecordsToAddAssetServiceRecordResponse,
+        AssetServiceRecordsToAddAssetServiceRecordResponse,
     ]
 ]:
     """
     Args:
         asset_id (int):
-        body (QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel):
+        body (AssetServiceRecordsFromAddAssetServiceRecordModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[AddAssetServiceRecordResponse200, QualerApiModelsAssetServiceRecordsToAddAssetServiceRecordResponse]]
+        Response[Union[AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse]]
     """
 
     kwargs = _get_kwargs(
@@ -180,24 +178,24 @@ async def asyncio(
     asset_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel,
+    body: AssetServiceRecordsFromAddAssetServiceRecordModel,
 ) -> Optional[
     Union[
         AddAssetServiceRecordResponse200,
-        QualerApiModelsAssetServiceRecordsToAddAssetServiceRecordResponse,
+        AssetServiceRecordsToAddAssetServiceRecordResponse,
     ]
 ]:
     """
     Args:
         asset_id (int):
-        body (QualerApiModelsAssetServiceRecordsFromAddAssetServiceRecordModel):
+        body (AssetServiceRecordsFromAddAssetServiceRecordModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[AddAssetServiceRecordResponse200, QualerApiModelsAssetServiceRecordsToAddAssetServiceRecordResponse]
+        Union[AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse]
     """
 
     return (

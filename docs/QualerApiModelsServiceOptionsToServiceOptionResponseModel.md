@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOptionsToServiceOptionResponseModel
+# ServiceOptionsToServiceOptionResponseModel
 
 ## Properties
 Name | Type | Description | Notes

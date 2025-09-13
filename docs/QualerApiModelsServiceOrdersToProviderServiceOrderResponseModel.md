@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel
+# ServiceOrdersToProviderServiceOrderResponseModel
 
 ## Properties
 Name | Type | Description | Notes

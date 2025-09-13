@@ -8,15 +8,15 @@ from dateutil.parser import isoparse
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_clients_to_employee_employee_department_response import (
-        QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse,
+        ClientsToEmployeeEmployeeDepartmentResponse,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsClientsToEmployeeResponseModel")
+T = TypeVar("T", bound="ClientsToEmployeeResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsClientsToEmployeeResponseModel:
+class ClientsToEmployeeResponseModel:
     """
     Attributes:
         employee_id (Optional[int]):
@@ -24,7 +24,7 @@ class QualerApiModelsClientsToEmployeeResponseModel:
         last_name (Optional[str]):
         company_id (Optional[int]):
         login_email (Optional[str]):
-        departments (Optional[List['QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse']]):
+        departments (Optional[List['ClientsToEmployeeEmployeeDepartmentResponse']]):
         subscription_email (Optional[str]):
         subscription_phone (Optional[str]):
         office_phone (Optional[str]):
@@ -43,9 +43,7 @@ class QualerApiModelsClientsToEmployeeResponseModel:
     last_name: Optional[str] = None
     company_id: Optional[int] = None
     login_email: Optional[str] = None
-    departments: Union[None, List["QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse"]] = (
-        None
-    )
+    departments: Union[None, List["ClientsToEmployeeEmployeeDepartmentResponse"]] = None
     subscription_email: Optional[str] = None
     subscription_phone: Optional[str] = None
     office_phone: Optional[str] = None
@@ -148,7 +146,7 @@ class QualerApiModelsClientsToEmployeeResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_clients_to_employee_employee_department_response import (
-            QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse,
+            ClientsToEmployeeEmployeeDepartmentResponse,
         )
 
         d = dict(src_dict)
@@ -165,7 +163,7 @@ class QualerApiModelsClientsToEmployeeResponseModel:
         departments = []
         _departments = d.pop("Departments", None)
         for departments_item_data in _departments or []:
-            departments_item = QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse.from_dict(
+            departments_item = ClientsToEmployeeEmployeeDepartmentResponse.from_dict(
                 departments_item_data
             )
 

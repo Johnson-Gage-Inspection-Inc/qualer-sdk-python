@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrderDocumentsFromGetDocumentsModel
+# ServiceOrderDocumentsFromGetDocumentsModel
 
 ## Properties
 Name | Type | Description | Notes

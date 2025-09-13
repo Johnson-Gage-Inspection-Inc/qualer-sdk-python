@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsAssetToAssetManageResponseModelServiceOrderStatus(str, Enum):
+class AssetToAssetManageResponseModelServiceOrderStatus(str, Enum):
     CANCELLED = "Cancelled"
     CLOSED = "Closed"
     COMPLETED = "Completed"

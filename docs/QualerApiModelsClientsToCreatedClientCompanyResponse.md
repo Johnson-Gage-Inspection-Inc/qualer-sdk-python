@@ -1,4 +1,4 @@
-# QualerApiModelsClientsToCreatedClientCompanyResponse
+# ClientsToCreatedClientCompanyResponse
 
 ## Properties
 Name | Type | Description | Notes

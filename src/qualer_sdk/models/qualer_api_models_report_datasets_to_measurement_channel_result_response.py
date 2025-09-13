@@ -5,21 +5,21 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.qualer_api_models_report_datasets_to_measurement_channel_result_response_batch_type import (
-    QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType,
+    ReportDatasetsToMeasurementChannelResultResponseBatchType,
 )
 from ..models.service_result_status import ServiceResultStatus
 
-T = TypeVar("T", bound="QualerApiModelsReportDatasetsToMeasurementChannelResultResponse")
+T = TypeVar("T", bound="ReportDatasetsToMeasurementChannelResultResponse")
 
 
 @_attrs_define
-class QualerApiModelsReportDatasetsToMeasurementChannelResultResponse:
+class ReportDatasetsToMeasurementChannelResultResponse:
     """
     Attributes:
         service_order_item_id (Optional[int]):
         measurement_point_id (Optional[int]):
         column_index (Optional[int]):
-        batch_type (Optional[QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType]):
+        batch_type (Optional[ReportDatasetsToMeasurementChannelResultResponseBatchType]):
         result (Optional[ServiceResultStatus]):
         mean_result (Optional[bool]):
         range_result (Optional[bool]):
@@ -39,7 +39,7 @@ class QualerApiModelsReportDatasetsToMeasurementChannelResultResponse:
     batch_type: Union[
         None,
         None,
-        QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType,
+        ReportDatasetsToMeasurementChannelResultResponseBatchType,
     ] = None
     result: Optional[ServiceResultStatus] = None
     mean_result: Optional[bool] = None
@@ -138,14 +138,12 @@ class QualerApiModelsReportDatasetsToMeasurementChannelResultResponse:
         batch_type: Union[
             None,
             None,
-            QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType,
+            ReportDatasetsToMeasurementChannelResultResponseBatchType,
         ]
         if not _batch_type:
             batch_type = None
         else:
-            batch_type = QualerApiModelsReportDatasetsToMeasurementChannelResultResponseBatchType(
-                _batch_type
-            )
+            batch_type = ReportDatasetsToMeasurementChannelResultResponseBatchType(_batch_type)
 
         _result = d.pop("Result", None)
         result: Optional[ServiceResultStatus]

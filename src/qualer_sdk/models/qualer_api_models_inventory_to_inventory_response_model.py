@@ -4,11 +4,11 @@ from typing import Any, Dict, List, Optional, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-T = TypeVar("T", bound="QualerApiModelsInventoryToInventoryResponseModel")
+T = TypeVar("T", bound="InventoryToInventoryResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsInventoryToInventoryResponseModel:
+class InventoryToInventoryResponseModel:
     """
     Attributes:
         product_id (Optional[int]):

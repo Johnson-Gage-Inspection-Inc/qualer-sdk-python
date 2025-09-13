@@ -1,4 +1,4 @@
-# QualerApiModelsReportDatasetsToCompanyCertificationResponse
+# ReportDatasetsToCompanyCertificationResponse
 
 ## Properties
 Name | Type | Description | Notes

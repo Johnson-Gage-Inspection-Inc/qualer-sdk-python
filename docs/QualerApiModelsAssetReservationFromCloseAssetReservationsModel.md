@@ -1,4 +1,4 @@
-# QualerApiModelsAssetReservationFromCloseAssetReservationsModel
+# AssetReservationFromCloseAssetReservationsModel
 
 ## Properties
 Name | Type | Description | Notes

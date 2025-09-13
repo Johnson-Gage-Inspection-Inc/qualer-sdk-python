@@ -1,4 +1,4 @@
-# QualerApiModelsCompanyToSitesResponseModel
+# CompanyToSitesResponseModel
 
 ## Properties
 Name | Type | Description | Notes

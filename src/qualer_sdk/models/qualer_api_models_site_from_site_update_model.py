@@ -5,14 +5,14 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.qualer_api_models_address_address_model import QualerApiModelsAddressAddressModel
+    from ..models.qualer_api_models_address_address_model import AddressAddressModel
 
 
-T = TypeVar("T", bound="QualerApiModelsSiteFromSiteUpdateModel")
+T = TypeVar("T", bound="SiteFromSiteUpdateModel")
 
 
 @_attrs_define
-class QualerApiModelsSiteFromSiteUpdateModel:
+class SiteFromSiteUpdateModel:
     """
     Attributes:
         site_id (Optional[int]):
@@ -31,8 +31,8 @@ class QualerApiModelsSiteFromSiteUpdateModel:
         time_zone_id (Optional[str]):
         time_zone_offset_minutes (Optional[int]):
         company_name (Optional[str]):
-        billing_address (Optional[QualerApiModelsAddressAddressModel]):
-        shipping_address (Optional[QualerApiModelsAddressAddressModel]):
+        billing_address (Optional[AddressAddressModel]):
+        shipping_address (Optional[AddressAddressModel]):
     """
 
     site_id: Optional[int] = None
@@ -51,8 +51,8 @@ class QualerApiModelsSiteFromSiteUpdateModel:
     time_zone_id: Optional[str] = None
     time_zone_offset_minutes: Optional[int] = None
     company_name: Optional[str] = None
-    billing_address: Optional["QualerApiModelsAddressAddressModel"] = None
-    shipping_address: Optional["QualerApiModelsAddressAddressModel"] = None
+    billing_address: Optional["AddressAddressModel"] = None
+    shipping_address: Optional["AddressAddressModel"] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -143,7 +143,7 @@ class QualerApiModelsSiteFromSiteUpdateModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_address_address_model import (
-            QualerApiModelsAddressAddressModel,
+            AddressAddressModel,
         )
 
         d = dict(src_dict)
@@ -182,18 +182,18 @@ class QualerApiModelsSiteFromSiteUpdateModel:
         company_name = d.pop("CompanyName", None)
 
         _billing_address = d.pop("BillingAddress", None)
-        billing_address: Optional[QualerApiModelsAddressAddressModel]
+        billing_address: Optional[AddressAddressModel]
         if not _billing_address:
             billing_address = None
         else:
-            billing_address = QualerApiModelsAddressAddressModel.from_dict(_billing_address)
+            billing_address = AddressAddressModel.from_dict(_billing_address)
 
         _shipping_address = d.pop("ShippingAddress", None)
-        shipping_address: Optional[QualerApiModelsAddressAddressModel]
+        shipping_address: Optional[AddressAddressModel]
         if not _shipping_address:
             shipping_address = None
         else:
-            shipping_address = QualerApiModelsAddressAddressModel.from_dict(_shipping_address)
+            shipping_address = AddressAddressModel.from_dict(_shipping_address)
 
         qualer_api_models_site_from_site_update_model = cls(
             site_id=site_id,

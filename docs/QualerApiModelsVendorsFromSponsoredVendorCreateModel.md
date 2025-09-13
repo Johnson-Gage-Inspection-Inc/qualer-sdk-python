@@ -1,4 +1,4 @@
-# QualerApiModelsVendorsFromSponsoredVendorCreateModel
+# VendorsFromSponsoredVendorCreateModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **custom_vendor_name** | **str** |  | [optional] 
 **currency_id** | **int** |  | [optional] 
 **company_name** | **str** |  | [optional] 
-**billing_address** | [**QualerApiModelsAddressAddressModel**](QualerApiModelsAddressAddressModel.md) |  | [optional] 
-**shipping_address** | [**QualerApiModelsAddressAddressModel**](QualerApiModelsAddressAddressModel.md) |  | [optional] 
+**billing_address** | [**AddressAddressModel**](AddressAddressModel.md) |  | [optional] 
+**shipping_address** | [**AddressAddressModel**](AddressAddressModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

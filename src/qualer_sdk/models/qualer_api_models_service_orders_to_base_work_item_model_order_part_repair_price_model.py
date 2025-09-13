@@ -6,12 +6,12 @@ from attrs import field as _attrs_field
 
 T = TypeVar(
     "T",
-    bound="QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel",
+    bound="ServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel",
 )
 
 
 @_attrs_define
-class QualerApiModelsServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel:
+class ServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel:
     """
     Attributes:
         delivery_charge (Optional[float]):

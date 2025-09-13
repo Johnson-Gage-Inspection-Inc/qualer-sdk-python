@@ -26,7 +26,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrderItemTasksApi()
 work_item_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel() # QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel | 
+model = qualer_sdk.ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel() # ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel | 
 
 try:
     api_response = api_instance.create_work_item_task(work_item_id, model)
@@ -40,7 +40,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **work_item_id** | **int**|  | 
- **model** | [**QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel**](QualerApiModelsServiceOrderItemTasksFromServiceOrderItemTaskCreateModel.md)|  | 
+ **model** | [**ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel**](ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel.md)|  | 
 
 ### Return type
 

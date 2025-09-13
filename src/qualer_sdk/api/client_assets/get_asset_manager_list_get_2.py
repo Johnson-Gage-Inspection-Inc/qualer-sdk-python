@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_asset_to_client_asset_manager_response_model import (
-    QualerApiModelsAssetToClientAssetManagerResponseModel,
+    AssetToClientAssetManagerResponseModel,
 )
 from ...types import Response
 
@@ -42,12 +42,12 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[List["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
+) -> Optional[List["AssetToClientAssetManagerResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = QualerApiModelsAssetToClientAssetManagerResponseModel.from_dict(
+            response_200_item = AssetToClientAssetManagerResponseModel.from_dict(
                 response_200_item_data
             )
 
@@ -62,7 +62,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[List["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
+) -> Response[List["AssetToClientAssetManagerResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -79,7 +79,7 @@ def sync_detailed(
     query_search_string: Optional[str] = None,
     query_page: Optional[int] = None,
     query_page_size: Optional[int] = None,
-) -> Response[List["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
+) -> Response[List["AssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
      assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService,
@@ -100,7 +100,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsAssetToClientAssetManagerResponseModel']]
+        Response[List['AssetToClientAssetManagerResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -126,7 +126,7 @@ def sync(
     query_search_string: Optional[str] = None,
     query_page: Optional[int] = None,
     query_page_size: Optional[int] = None,
-) -> Optional[List["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
+) -> Optional[List["AssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
      assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService,
@@ -147,7 +147,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsAssetToClientAssetManagerResponseModel']
+        List['AssetToClientAssetManagerResponseModel']
     """
 
     return sync_detailed(
@@ -168,7 +168,7 @@ async def asyncio_detailed(
     query_search_string: Optional[str] = None,
     query_page: Optional[int] = None,
     query_page_size: Optional[int] = None,
-) -> Response[List["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
+) -> Response[List["AssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
      assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService,
@@ -189,7 +189,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsAssetToClientAssetManagerResponseModel']]
+        Response[List['AssetToClientAssetManagerResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -213,7 +213,7 @@ async def asyncio(
     query_search_string: Optional[str] = None,
     query_page: Optional[int] = None,
     query_page_size: Optional[int] = None,
-) -> Optional[List["QualerApiModelsAssetToClientAssetManagerResponseModel"]]:
+) -> Optional[List["AssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
      assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService,
@@ -234,7 +234,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsAssetToClientAssetManagerResponseModel']
+        List['AssetToClientAssetManagerResponseModel']
     """
 
     return (

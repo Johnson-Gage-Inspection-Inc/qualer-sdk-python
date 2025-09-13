@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrdersFromOrderItemUpdateModel
+# ServiceOrdersFromOrderItemUpdateModel
 
 ## Properties
 Name | Type | Description | Notes

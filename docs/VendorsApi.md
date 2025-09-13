@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **create**
-> QualerApiModelsVendorsToCreatedVendorCompanyResponse create(model)
+> VendorsToCreatedVendorCompanyResponse create(model)
 
 Create Vendor information.
 
@@ -27,7 +27,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = qualer_sdk.VendorsApi()
-model = qualer_sdk.QualerApiModelsVendorsFromSponsoredVendorCreateModel() # QualerApiModelsVendorsFromSponsoredVendorCreateModel | Vendor update model
+model = qualer_sdk.VendorsFromSponsoredVendorCreateModel() # VendorsFromSponsoredVendorCreateModel | Vendor update model
 
 try:
     # Create Vendor information.
@@ -41,11 +41,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**QualerApiModelsVendorsFromSponsoredVendorCreateModel**](QualerApiModelsVendorsFromSponsoredVendorCreateModel.md)| Vendor update model | 
+ **model** | [**VendorsFromSponsoredVendorCreateModel**](VendorsFromSponsoredVendorCreateModel.md)| Vendor update model | 
 
 ### Return type
 
-[**QualerApiModelsVendorsToCreatedVendorCompanyResponse**](QualerApiModelsVendorsToCreatedVendorCompanyResponse.md)
+[**VendorsToCreatedVendorCompanyResponse**](VendorsToCreatedVendorCompanyResponse.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get**
-> QualerApiModelsVendorsToVendorCompanyResponseModel get(vendor_company_id)
+> VendorsToVendorCompanyResponseModel get(vendor_company_id)
 
 
 
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsVendorsToVendorCompanyResponseModel**](QualerApiModelsVendorsToVendorCompanyResponseModel.md)
+[**VendorsToVendorCompanyResponseModel**](VendorsToVendorCompanyResponseModel.md)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all**
-> list[QualerApiModelsVendorsToVendorCompanyResponseModel] get_all(model_account_number_text=model_account_number_text, model_company_name=model_company_name, model_take=model_take, model_modified_after=model_modified_after)
+> list[VendorsToVendorCompanyResponseModel] get_all(model_account_number_text=model_account_number_text, model_company_name=model_company_name, model_take=model_take, model_modified_after=model_modified_after)
 
 
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsVendorsToVendorCompanyResponseModel]**](QualerApiModelsVendorsToVendorCompanyResponseModel.md)
+[**list[VendorsToVendorCompanyResponseModel]**](VendorsToVendorCompanyResponseModel.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = qualer_sdk.VendorsApi()
-model = qualer_sdk.QualerApiModelsVendorsFromSponsoredVendorEditModel() # QualerApiModelsVendorsFromSponsoredVendorEditModel | Vendor update model
+model = qualer_sdk.VendorsFromSponsoredVendorEditModel() # VendorsFromSponsoredVendorEditModel | Vendor update model
 
 try:
     # Update Vendor information.
@@ -185,7 +185,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**QualerApiModelsVendorsFromSponsoredVendorEditModel**](QualerApiModelsVendorsFromSponsoredVendorEditModel.md)| Vendor update model | 
+ **model** | [**VendorsFromSponsoredVendorEditModel**](VendorsFromSponsoredVendorEditModel.md)| Vendor update model | 
 
 ### Return type
 

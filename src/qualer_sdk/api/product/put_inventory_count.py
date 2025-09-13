@@ -7,14 +7,14 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.put_inventory_count_response_200 import PutInventoryCountResponse200
 from ...models.qualer_api_models_inventory_from_inventory_count_model import (
-    QualerApiModelsInventoryFromInventoryCountModel,
+    InventoryFromInventoryCountModel,
 )
 from ...types import Response
 
 
 def _get_kwargs(
     *,
-    body: List["QualerApiModelsInventoryFromInventoryCountModel"],
+    body: List["InventoryFromInventoryCountModel"],
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -61,11 +61,11 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: List["QualerApiModelsInventoryFromInventoryCountModel"],
+    body: List["InventoryFromInventoryCountModel"],
 ) -> Response[PutInventoryCountResponse200]:
     """
     Args:
-        body (List['QualerApiModelsInventoryFromInventoryCountModel']):
+        body (List['InventoryFromInventoryCountModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -89,11 +89,11 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: List["QualerApiModelsInventoryFromInventoryCountModel"],
+    body: List["InventoryFromInventoryCountModel"],
 ) -> Optional[PutInventoryCountResponse200]:
     """
     Args:
-        body (List['QualerApiModelsInventoryFromInventoryCountModel']):
+        body (List['InventoryFromInventoryCountModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -112,11 +112,11 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: List["QualerApiModelsInventoryFromInventoryCountModel"],
+    body: List["InventoryFromInventoryCountModel"],
 ) -> Response[PutInventoryCountResponse200]:
     """
     Args:
-        body (List['QualerApiModelsInventoryFromInventoryCountModel']):
+        body (List['InventoryFromInventoryCountModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -138,11 +138,11 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: List["QualerApiModelsInventoryFromInventoryCountModel"],
+    body: List["InventoryFromInventoryCountModel"],
 ) -> Optional[PutInventoryCountResponse200]:
     """
     Args:
-        body (List['QualerApiModelsInventoryFromInventoryCountModel']):
+        body (List['InventoryFromInventoryCountModel']):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

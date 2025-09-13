@@ -1,4 +1,4 @@
-# QualerApiModelsAssetToAssetMaintenancePlanResponse
+# AssetToAssetMaintenancePlanResponse
 
 ## Properties
 Name | Type | Description | Notes
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **technician_last_name** | **str** |  | [optional] 
 **technician_alias** | **str** |  | [optional] 
 **technician_department_name** | **str** |  | [optional] 
-**assigned_employees** | [**list[QualerApiModelsAssetToAssetMaintenancePlanResponseAssignedEmployee]**](QualerApiModelsAssetToAssetMaintenancePlanResponseAssignedEmployee.md) |  | [optional] 
+**assigned_employees** | [**list[AssetToAssetMaintenancePlanResponseAssignedEmployee]**](AssetToAssetMaintenancePlanResponseAssignedEmployee.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

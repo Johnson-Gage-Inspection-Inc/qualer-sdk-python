@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsFromCreateMeasurementPointModel
+# MeasurementsFromCreateMeasurementPointModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -27,10 +27,10 @@ Name | Type | Description | Notes
 **base_value** | **float** |  | [optional] 
 **test_value** | **float** |  | [optional] 
 **is_accredited** | **bool** |  | [optional] 
-**measurements** | [**list[QualerApiModelsMeasurementsFromCreateMeasurementModel]**](QualerApiModelsMeasurementsFromCreateMeasurementModel.md) |  | [optional] 
-**condition_factors** | [**list[QualerApiModelsMeasurementsFromCreateMeasurementConditionFactorModel]**](QualerApiModelsMeasurementsFromCreateMeasurementConditionFactorModel.md) |  | [optional] 
-**primary_measurement_tool** | [**QualerApiModelsMeasurementsFromCreateMeasurementToolModel**](QualerApiModelsMeasurementsFromCreateMeasurementToolModel.md) |  | [optional] 
-**secondary_measurement_tool** | [**QualerApiModelsMeasurementsFromCreateMeasurementToolModel**](QualerApiModelsMeasurementsFromCreateMeasurementToolModel.md) |  | [optional] 
+**measurements** | [**list[MeasurementsFromCreateMeasurementModel]**](MeasurementsFromCreateMeasurementModel.md) |  | [optional] 
+**condition_factors** | [**list[MeasurementsFromCreateMeasurementConditionFactorModel]**](MeasurementsFromCreateMeasurementConditionFactorModel.md) |  | [optional] 
+**primary_measurement_tool** | [**MeasurementsFromCreateMeasurementToolModel**](MeasurementsFromCreateMeasurementToolModel.md) |  | [optional] 
+**secondary_measurement_tool** | [**MeasurementsFromCreateMeasurementToolModel**](MeasurementsFromCreateMeasurementToolModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

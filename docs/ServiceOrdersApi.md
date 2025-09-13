@@ -33,7 +33,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrdersApi()
 service_order_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel() # QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel | 
+model = qualer_sdk.ServiceOrdersFromChangeServiceOrderStatusModel() # ServiceOrdersFromChangeServiceOrderStatusModel | 
 
 try:
     # Change Work Order Status
@@ -48,7 +48,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **service_order_id** | **int**|  | 
- **model** | [**QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel**](QualerApiModelsServiceOrdersFromChangeServiceOrderStatusModel.md)|  | 
+ **model** | [**ServiceOrdersFromChangeServiceOrderStatusModel**](ServiceOrdersFromChangeServiceOrderStatusModel.md)|  | 
 
 ### Return type
 
@@ -82,7 +82,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrdersApi()
-model = qualer_sdk.QualerApiModelsServiceOrdersFromCreateOrderModel() # QualerApiModelsServiceOrdersFromCreateOrderModel | Vendor update model
+model = qualer_sdk.ServiceOrdersFromCreateOrderModel() # ServiceOrdersFromCreateOrderModel | Vendor update model
 
 try:
     # Create service order.
@@ -96,7 +96,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**QualerApiModelsServiceOrdersFromCreateOrderModel**](QualerApiModelsServiceOrdersFromCreateOrderModel.md)| Vendor update model | 
+ **model** | [**ServiceOrdersFromCreateOrderModel**](ServiceOrdersFromCreateOrderModel.md)| Vendor update model | 
 
 ### Return type
 
@@ -159,7 +159,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_assignments**
-> list[QualerApiModelsServiceOrdersToOrderAssignmentResponseModel] get_assignments(service_order_id)
+> list[ServiceOrdersToOrderAssignmentResponseModel] get_assignments(service_order_id)
 
 
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsServiceOrdersToOrderAssignmentResponseModel]**](QualerApiModelsServiceOrdersToOrderAssignmentResponseModel.md)
+[**list[ServiceOrdersToOrderAssignmentResponseModel]**](ServiceOrdersToOrderAssignmentResponseModel.md)
 
 ### Authorization
 
@@ -295,7 +295,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_work_order**
-> QualerApiModelsServiceOrdersToClientOrderResponseModel get_work_order(service_order_id)
+> ServiceOrdersToClientOrderResponseModel get_work_order(service_order_id)
 
 
 
@@ -326,7 +326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsServiceOrdersToClientOrderResponseModel**](QualerApiModelsServiceOrdersToClientOrderResponseModel.md)
+[**ServiceOrdersToClientOrderResponseModel**](ServiceOrdersToClientOrderResponseModel.md)
 
 ### Authorization
 
@@ -340,7 +340,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_work_orders**
-> list[QualerApiModelsServiceOrdersToClientOrderResponseModel] get_work_orders(status=status, company_id=company_id, _from=_from, to=to, modified_after=modified_after, work_order_number=work_order_number, assigned_employees=assigned_employees)
+> list[ServiceOrdersToClientOrderResponseModel] get_work_orders(status=status, company_id=company_id, _from=_from, to=to, modified_after=modified_after, work_order_number=work_order_number, assigned_employees=assigned_employees)
 
 Retrieve work orders by filters
 
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsServiceOrdersToClientOrderResponseModel]**](QualerApiModelsServiceOrdersToClientOrderResponseModel.md)
+[**list[ServiceOrdersToClientOrderResponseModel]**](ServiceOrdersToClientOrderResponseModel.md)
 
 ### Authorization
 
@@ -400,7 +400,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_work_orders_0**
-> list[QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel] get_work_orders_0(employee_id, is_internal=is_internal)
+> list[ServiceOrdersToProviderServiceOrderResponseModel] get_work_orders_0(employee_id, is_internal=is_internal)
 
 
 
@@ -433,7 +433,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel]**](QualerApiModelsServiceOrdersToProviderServiceOrderResponseModel.md)
+[**list[ServiceOrdersToProviderServiceOrderResponseModel]**](ServiceOrdersToProviderServiceOrderResponseModel.md)
 
 ### Authorization
 
@@ -510,7 +510,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrdersApi()
 service_order_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsServiceOrdersFromChargeUpdateModel() # QualerApiModelsServiceOrdersFromChargeUpdateModel | 
+model = qualer_sdk.ServiceOrdersFromChargeUpdateModel() # ServiceOrdersFromChargeUpdateModel | 
 
 try:
     # Charge Names: LateFee, ServiceDiscount, PrepaidCredit, TradeInCredit, TravelCharge, TaxAmount, ShippingFee
@@ -525,7 +525,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **service_order_id** | **int**|  | 
- **model** | [**QualerApiModelsServiceOrdersFromChargeUpdateModel**](QualerApiModelsServiceOrdersFromChargeUpdateModel.md)|  | 
+ **model** | [**ServiceOrdersFromChargeUpdateModel**](ServiceOrdersFromChargeUpdateModel.md)|  | 
 
 ### Return type
 

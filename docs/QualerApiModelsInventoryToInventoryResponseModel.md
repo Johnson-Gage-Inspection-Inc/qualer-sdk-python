@@ -1,4 +1,4 @@
-# QualerApiModelsInventoryToInventoryResponseModel
+# InventoryToInventoryResponseModel
 
 ## Properties
 Name | Type | Description | Notes

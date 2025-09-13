@@ -7,7 +7,7 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.add_employee_department_response_204 import AddEmployeeDepartmentResponse204
 from ...models.qualer_api_models_employees_from_employee_department_model import (
-    QualerApiModelsEmployeesFromEmployeeDepartmentModel,
+    EmployeesFromEmployeeDepartmentModel,
 )
 from ...types import Response
 
@@ -15,7 +15,7 @@ from ...types import Response
 def _get_kwargs(
     employee_id: int,
     *,
-    body: QualerApiModelsEmployeesFromEmployeeDepartmentModel,
+    body: EmployeesFromEmployeeDepartmentModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -63,12 +63,12 @@ def sync_detailed(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromEmployeeDepartmentModel,
+    body: EmployeesFromEmployeeDepartmentModel,
 ) -> Response[Union[AddEmployeeDepartmentResponse204, Any]]:
     """
     Args:
         employee_id (int):
-        body (QualerApiModelsEmployeesFromEmployeeDepartmentModel):
+        body (EmployeesFromEmployeeDepartmentModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -94,12 +94,12 @@ def sync(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromEmployeeDepartmentModel,
+    body: EmployeesFromEmployeeDepartmentModel,
 ) -> Optional[Union[AddEmployeeDepartmentResponse204, Any]]:
     """
     Args:
         employee_id (int):
-        body (QualerApiModelsEmployeesFromEmployeeDepartmentModel):
+        body (EmployeesFromEmployeeDepartmentModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -120,12 +120,12 @@ async def asyncio_detailed(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromEmployeeDepartmentModel,
+    body: EmployeesFromEmployeeDepartmentModel,
 ) -> Response[Union[AddEmployeeDepartmentResponse204, Any]]:
     """
     Args:
         employee_id (int):
-        body (QualerApiModelsEmployeesFromEmployeeDepartmentModel):
+        body (EmployeesFromEmployeeDepartmentModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -149,12 +149,12 @@ async def asyncio(
     employee_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsEmployeesFromEmployeeDepartmentModel,
+    body: EmployeesFromEmployeeDepartmentModel,
 ) -> Optional[Union[AddEmployeeDepartmentResponse204, Any]]:
     """
     Args:
         employee_id (int):
-        body (QualerApiModelsEmployeesFromEmployeeDepartmentModel):
+        body (EmployeesFromEmployeeDepartmentModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

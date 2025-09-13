@@ -6,11 +6,11 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-T = TypeVar("T", bound="QualerApiModelsMeasurementsFromCreateMeasurementConditionFactorModel")
+T = TypeVar("T", bound="MeasurementsFromCreateMeasurementConditionFactorModel")
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsFromCreateMeasurementConditionFactorModel:
+class MeasurementsFromCreateMeasurementConditionFactorModel:
     """
     Attributes:
         factor_id (Optional[str]):

@@ -5,29 +5,29 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.qualer_api_models_measurements_to_update_measurement_point_response_model_tolerance_mode import (
-    QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceMode,
+    MeasurementsToUpdateMeasurementPointResponseModelToleranceMode,
 )
 from ..models.qualer_api_models_measurements_to_update_measurement_point_response_model_tolerance_unit import (
-    QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceUnit,
+    MeasurementsToUpdateMeasurementPointResponseModelToleranceUnit,
 )
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_to_update_measurement_condition_factor_response import (
-        QualerApiModelsMeasurementsToUpdateMeasurementConditionFactorResponse,
+        MeasurementsToUpdateMeasurementConditionFactorResponse,
     )
     from ..models.qualer_api_models_measurements_to_update_measurement_response_model import (
-        QualerApiModelsMeasurementsToUpdateMeasurementResponseModel,
+        MeasurementsToUpdateMeasurementResponseModel,
     )
     from ..models.qualer_api_models_measurements_to_update_measurement_tool_response_model import (
-        QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel,
+        MeasurementsToUpdateMeasurementToolResponseModel,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel")
+T = TypeVar("T", bound="MeasurementsToUpdateMeasurementPointResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
+class MeasurementsToUpdateMeasurementPointResponseModel:
     """
     Attributes:
         measurement_point_id (Optional[int]):
@@ -40,8 +40,8 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
         range_min (Optional[float]):
         range_max (Optional[float]):
         tolerance_type (Optional[str]):
-        tolerance_mode (Optional[QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceMode]):
-        tolerance_unit (Optional[QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceUnit]):
+        tolerance_mode (Optional[MeasurementsToUpdateMeasurementPointResponseModelToleranceMode]):
+        tolerance_unit (Optional[MeasurementsToUpdateMeasurementPointResponseModelToleranceUnit]):
         precision_type (Optional[str]):
         precision (Optional[float]):
         tolerance_minimum (Optional[float]):
@@ -59,11 +59,11 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
         influence_parameter_1_value (Optional[str]):
         influence_parameter_2_parameter_id (Optional[int]):
         influence_parameter_2_value (Optional[str]):
-        measurements (Optional[List['QualerApiModelsMeasurementsToUpdateMeasurementResponseModel']]):
+        measurements (Optional[List['MeasurementsToUpdateMeasurementResponseModel']]):
         measurement_condition_factors (Union[None,
-            List['QualerApiModelsMeasurementsToUpdateMeasurementConditionFactorResponse']]):
-        primary_measurement_tool (Optional[QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel]):
-        secondary_measurement_tool (Optional[QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel]):
+            List['MeasurementsToUpdateMeasurementConditionFactorResponse']]):
+        primary_measurement_tool (Optional[MeasurementsToUpdateMeasurementToolResponseModel]):
+        secondary_measurement_tool (Optional[MeasurementsToUpdateMeasurementToolResponseModel]):
     """
 
     measurement_point_id: Optional[int] = None
@@ -79,12 +79,12 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
     tolerance_mode: Union[
         None,
         None,
-        QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceMode,
+        MeasurementsToUpdateMeasurementPointResponseModelToleranceMode,
     ] = None
     tolerance_unit: Union[
         None,
         None,
-        QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceUnit,
+        MeasurementsToUpdateMeasurementPointResponseModelToleranceUnit,
     ] = None
     precision_type: Optional[str] = None
     precision: Optional[float] = None
@@ -103,20 +103,16 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
     influence_parameter_1_value: Optional[str] = None
     influence_parameter_2_parameter_id: Optional[int] = None
     influence_parameter_2_value: Optional[str] = None
-    measurements: Union[
-        None, List["QualerApiModelsMeasurementsToUpdateMeasurementResponseModel"]
-    ] = None
+    measurements: Union[None, List["MeasurementsToUpdateMeasurementResponseModel"]] = None
     measurement_condition_factors: Union[
         None,
         None,
-        List["QualerApiModelsMeasurementsToUpdateMeasurementConditionFactorResponse"],
+        List["MeasurementsToUpdateMeasurementConditionFactorResponse"],
     ] = None
-    primary_measurement_tool: Union[
-        None, "QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel"
-    ] = None
-    secondary_measurement_tool: Union[
-        None, "QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel"
-    ] = None
+    primary_measurement_tool: Union[None, "MeasurementsToUpdateMeasurementToolResponseModel"] = None
+    secondary_measurement_tool: Union[None, "MeasurementsToUpdateMeasurementToolResponseModel"] = (
+        None
+    )
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -285,13 +281,13 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_measurements_to_update_measurement_condition_factor_response import (
-            QualerApiModelsMeasurementsToUpdateMeasurementConditionFactorResponse,
+            MeasurementsToUpdateMeasurementConditionFactorResponse,
         )
         from ..models.qualer_api_models_measurements_to_update_measurement_response_model import (
-            QualerApiModelsMeasurementsToUpdateMeasurementResponseModel,
+            MeasurementsToUpdateMeasurementResponseModel,
         )
         from ..models.qualer_api_models_measurements_to_update_measurement_tool_response_model import (
-            QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel,
+            MeasurementsToUpdateMeasurementToolResponseModel,
         )
 
         d = dict(src_dict)
@@ -319,7 +315,7 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
         tolerance_mode: Union[
             None,
             None,
-            QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceMode,
+            MeasurementsToUpdateMeasurementPointResponseModelToleranceMode,
         ]
         if not _tolerance_mode:
             tolerance_mode = None
@@ -330,17 +326,15 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
             if isinstance(_tolerance_mode, str):
                 tolerance_mode_map = {"Symmetric": 0, "Asymmetric": 1, "Range": 2}
                 _tolerance_mode = tolerance_mode_map.get(_tolerance_mode, _tolerance_mode)
-            tolerance_mode = (
-                QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceMode(
-                    _tolerance_mode
-                )
+            tolerance_mode = MeasurementsToUpdateMeasurementPointResponseModelToleranceMode(
+                _tolerance_mode
             )
 
         _tolerance_unit = d.pop("ToleranceUnit", None)
         tolerance_unit: Union[
             None,
             None,
-            QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceUnit,
+            MeasurementsToUpdateMeasurementPointResponseModelToleranceUnit,
         ]
         if not _tolerance_unit:
             tolerance_unit = None
@@ -355,10 +349,8 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
                     "Readability": 2,
                 }
                 _tolerance_unit = tolerance_unit_map.get(_tolerance_unit, _tolerance_unit)
-            tolerance_unit = (
-                QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModelToleranceUnit(
-                    _tolerance_unit
-                )
+            tolerance_unit = MeasurementsToUpdateMeasurementPointResponseModelToleranceUnit(
+                _tolerance_unit
             )
 
         precision_type = d.pop("PrecisionType", None)
@@ -398,10 +390,8 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
         measurements = []
         _measurements = d.pop("Measurements", None)
         for measurements_item_data in _measurements or []:
-            measurements_item = (
-                QualerApiModelsMeasurementsToUpdateMeasurementResponseModel.from_dict(
-                    measurements_item_data
-                )
+            measurements_item = MeasurementsToUpdateMeasurementResponseModel.from_dict(
+                measurements_item_data
             )
 
             measurements.append(measurements_item)
@@ -410,7 +400,7 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
         _measurement_condition_factors = d.pop("MeasurementConditionFactors", None)
         for measurement_condition_factors_item_data in _measurement_condition_factors or []:
             measurement_condition_factors_item = (
-                QualerApiModelsMeasurementsToUpdateMeasurementConditionFactorResponse.from_dict(
+                MeasurementsToUpdateMeasurementConditionFactorResponse.from_dict(
                     measurement_condition_factors_item_data
                 )
             )
@@ -418,29 +408,21 @@ class QualerApiModelsMeasurementsToUpdateMeasurementPointResponseModel:
             measurement_condition_factors.append(measurement_condition_factors_item)
 
         _primary_measurement_tool = d.pop("PrimaryMeasurementTool", None)
-        primary_measurement_tool: Union[
-            None, QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel
-        ]
+        primary_measurement_tool: Union[None, MeasurementsToUpdateMeasurementToolResponseModel]
         if not _primary_measurement_tool:
             primary_measurement_tool = None
         else:
-            primary_measurement_tool = (
-                QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel.from_dict(
-                    _primary_measurement_tool
-                )
+            primary_measurement_tool = MeasurementsToUpdateMeasurementToolResponseModel.from_dict(
+                _primary_measurement_tool
             )
 
         _secondary_measurement_tool = d.pop("SecondaryMeasurementTool", None)
-        secondary_measurement_tool: Union[
-            None, QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel
-        ]
+        secondary_measurement_tool: Union[None, MeasurementsToUpdateMeasurementToolResponseModel]
         if not _secondary_measurement_tool:
             secondary_measurement_tool = None
         else:
-            secondary_measurement_tool = (
-                QualerApiModelsMeasurementsToUpdateMeasurementToolResponseModel.from_dict(
-                    _secondary_measurement_tool
-                )
+            secondary_measurement_tool = MeasurementsToUpdateMeasurementToolResponseModel.from_dict(
+                _secondary_measurement_tool
             )
 
         qualer_api_models_measurements_to_update_measurement_point_response_model = cls(

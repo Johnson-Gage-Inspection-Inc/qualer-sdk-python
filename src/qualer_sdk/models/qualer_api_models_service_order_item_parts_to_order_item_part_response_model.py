@@ -5,14 +5,14 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.qualer_api_models_service_order_item_parts_to_order_item_part_response_model_service_order_charge_type import (
-    QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType,
+    ServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType,
 )
 
-T = TypeVar("T", bound="QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel")
+T = TypeVar("T", bound="ServiceOrderItemPartsToOrderItemPartResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel:
+class ServiceOrderItemPartsToOrderItemPartResponseModel:
     """
     Attributes:
         service_order_item_part_id (Optional[int]):
@@ -29,7 +29,7 @@ class QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel:
         time_spent_in_minutes (Optional[float]):
         free_quantity (Optional[int]):
         service_order_charge_type (Union[None,
-            QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType]):
+            ServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType]):
     """
 
     service_order_item_part_id: Optional[int] = None
@@ -48,7 +48,7 @@ class QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel:
     service_order_charge_type: Union[
         None,
         None,
-        QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType,
+        ServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType,
     ] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -150,13 +150,15 @@ class QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel:
         service_order_charge_type: Union[
             None,
             None,
-            QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType,
+            ServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType,
         ]
         if not _service_order_charge_type:
             service_order_charge_type = None
         else:
-            service_order_charge_type = QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType(
-                _service_order_charge_type
+            service_order_charge_type = (
+                ServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType(
+                    _service_order_charge_type
+                )
             )
 
         qualer_api_models_service_order_item_parts_to_order_item_part_response_model = cls(

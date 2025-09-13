@@ -1,4 +1,4 @@
-# QualerApiModelsClientsFromClientCompanySearchModel
+# ClientsFromClientCompanySearchModel
 
 ## Properties
 Name | Type | Description | Notes

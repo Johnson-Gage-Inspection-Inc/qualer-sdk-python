@@ -1,4 +1,4 @@
-# QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel
+# AssetServiceRecordsToAssetServiceRecordResponseModel
 
 ## Properties
 Name | Type | Description | Notes

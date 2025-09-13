@@ -6,11 +6,11 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-T = TypeVar("T", bound="QualerApiModelsReportDatasetsToReferenceStandardResponse")
+T = TypeVar("T", bound="ReportDatasetsToReferenceStandardResponse")
 
 
 @_attrs_define
-class QualerApiModelsReportDatasetsToReferenceStandardResponse:
+class ReportDatasetsToReferenceStandardResponse:
     """
     Attributes:
         is_auxiliary (Optional[bool]):

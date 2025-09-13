@@ -1,7 +1,7 @@
 from enum import IntEnum
 
 
-class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit(
+class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit(
     IntEnum
 ):
     VALUE_0 = 0

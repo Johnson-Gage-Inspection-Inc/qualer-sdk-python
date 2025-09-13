@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrdersFromAddWorkItemsModel
+# ServiceOrdersFromAddWorkItemsModel
 
 ## Properties
 Name | Type | Description | Notes

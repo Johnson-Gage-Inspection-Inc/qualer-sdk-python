@@ -1,4 +1,4 @@
-# QualerApiModelsClientsToCreatedClientAssetResponse
+# ClientsToCreatedClientAssetResponse
 
 ## Properties
 Name | Type | Description | Notes

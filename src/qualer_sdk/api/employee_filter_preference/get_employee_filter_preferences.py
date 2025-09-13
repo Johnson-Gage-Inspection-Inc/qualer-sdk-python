@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_asset_to_employee_filter_preference_response_model import (
-    QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel,
+    AssetToEmployeeFilterPreferenceResponseModel,
 )
 from ...types import Response
 
@@ -22,15 +22,13 @@ def _get_kwargs() -> Dict[str, Any]:
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[List["QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel"]]:
+) -> Optional[List["AssetToEmployeeFilterPreferenceResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = (
-                QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel.from_dict(
-                    response_200_item_data
-                )
+            response_200_item = AssetToEmployeeFilterPreferenceResponseModel.from_dict(
+                response_200_item_data
             )
 
             response_200.append(response_200_item)
@@ -44,7 +42,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[List["QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel"]]:
+) -> Response[List["AssetToEmployeeFilterPreferenceResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -56,7 +54,7 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[List["QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel"]]:
+) -> Response[List["AssetToEmployeeFilterPreferenceResponseModel"]]:
     """GetEmployeeFilterPreferences
 
     Raises:
@@ -64,7 +62,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel']]
+        Response[List['AssetToEmployeeFilterPreferenceResponseModel']]
     """
 
     kwargs = _get_kwargs()
@@ -79,7 +77,7 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[List["QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel"]]:
+) -> Optional[List["AssetToEmployeeFilterPreferenceResponseModel"]]:
     """GetEmployeeFilterPreferences
 
     Raises:
@@ -87,7 +85,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel']
+        List['AssetToEmployeeFilterPreferenceResponseModel']
     """
 
     return sync_detailed(
@@ -98,7 +96,7 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[List["QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel"]]:
+) -> Response[List["AssetToEmployeeFilterPreferenceResponseModel"]]:
     """GetEmployeeFilterPreferences
 
     Raises:
@@ -106,7 +104,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel']]
+        Response[List['AssetToEmployeeFilterPreferenceResponseModel']]
     """
 
     kwargs = _get_kwargs()
@@ -119,7 +117,7 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[List["QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel"]]:
+) -> Optional[List["AssetToEmployeeFilterPreferenceResponseModel"]]:
     """GetEmployeeFilterPreferences
 
     Raises:
@@ -127,7 +125,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsAssetToEmployeeFilterPreferenceResponseModel']
+        List['AssetToEmployeeFilterPreferenceResponseModel']
     """
 
     return (

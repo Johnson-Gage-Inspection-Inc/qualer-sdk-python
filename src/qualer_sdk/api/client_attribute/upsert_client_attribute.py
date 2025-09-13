@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_client_attributes_from_client_attribute_model import (
-    QualerApiModelsClientAttributesFromClientAttributeModel,
+    ClientAttributesFromClientAttributeModel,
 )
 from ...models.upsert_client_attribute_response_200 import UpsertClientAttributeResponse200
 from ...types import Response
@@ -15,7 +15,7 @@ from ...types import Response
 def _get_kwargs(
     client_company_id: int,
     *,
-    body: QualerApiModelsClientAttributesFromClientAttributeModel,
+    body: ClientAttributesFromClientAttributeModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -60,12 +60,12 @@ def sync_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientAttributesFromClientAttributeModel,
+    body: ClientAttributesFromClientAttributeModel,
 ) -> Response[UpsertClientAttributeResponse200]:
     """
     Args:
         client_company_id (int):
-        body (QualerApiModelsClientAttributesFromClientAttributeModel):
+        body (ClientAttributesFromClientAttributeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -91,12 +91,12 @@ def sync(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientAttributesFromClientAttributeModel,
+    body: ClientAttributesFromClientAttributeModel,
 ) -> Optional[UpsertClientAttributeResponse200]:
     """
     Args:
         client_company_id (int):
-        body (QualerApiModelsClientAttributesFromClientAttributeModel):
+        body (ClientAttributesFromClientAttributeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -117,12 +117,12 @@ async def asyncio_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientAttributesFromClientAttributeModel,
+    body: ClientAttributesFromClientAttributeModel,
 ) -> Response[UpsertClientAttributeResponse200]:
     """
     Args:
         client_company_id (int):
-        body (QualerApiModelsClientAttributesFromClientAttributeModel):
+        body (ClientAttributesFromClientAttributeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -146,12 +146,12 @@ async def asyncio(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsClientAttributesFromClientAttributeModel,
+    body: ClientAttributesFromClientAttributeModel,
 ) -> Optional[UpsertClientAttributeResponse200]:
     """
     Args:
         client_company_id (int):
-        body (QualerApiModelsClientAttributesFromClientAttributeModel):
+        body (ClientAttributesFromClientAttributeModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

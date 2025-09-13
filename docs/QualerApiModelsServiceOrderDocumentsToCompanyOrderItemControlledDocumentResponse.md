@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse
+# ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse
 
 ## Properties
 Name | Type | Description | Notes

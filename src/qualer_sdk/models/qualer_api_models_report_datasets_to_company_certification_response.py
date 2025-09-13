@@ -6,11 +6,11 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-T = TypeVar("T", bound="QualerApiModelsReportDatasetsToCompanyCertificationResponse")
+T = TypeVar("T", bound="ReportDatasetsToCompanyCertificationResponse")
 
 
 @_attrs_define
-class QualerApiModelsReportDatasetsToCompanyCertificationResponse:
+class ReportDatasetsToCompanyCertificationResponse:
     """
     Attributes:
         logo (Optional[str]):

@@ -7,14 +7,14 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.qualer_api_models_clients_from_asset_model_asset_status import (
-    QualerApiModelsClientsFromAssetModelAssetStatus,
+    ClientsFromAssetModelAssetStatus,
 )
 
-T = TypeVar("T", bound="QualerApiModelsClientsFromAssetModel")
+T = TypeVar("T", bound="ClientsFromAssetModel")
 
 
 @_attrs_define
-class QualerApiModelsClientsFromAssetModel:
+class ClientsFromAssetModel:
     """
     Attributes:
         site_id (Optional[int]):
@@ -25,7 +25,7 @@ class QualerApiModelsClientsFromAssetModel:
         serial_number (Optional[str]):
         asset_tag (Optional[str]):
         asset_user (Optional[str]):
-        asset_status (Optional[QualerApiModelsClientsFromAssetModelAssetStatus]):
+        asset_status (Optional[ClientsFromAssetModelAssetStatus]):
         asset_name (Optional[str]):
         asset_description (Optional[str]):
         asset_maker (Optional[str]):
@@ -53,7 +53,7 @@ class QualerApiModelsClientsFromAssetModel:
     serial_number: Optional[str] = None
     asset_tag: Optional[str] = None
     asset_user: Optional[str] = None
-    asset_status: Optional[QualerApiModelsClientsFromAssetModelAssetStatus] = None
+    asset_status: Optional[ClientsFromAssetModelAssetStatus] = None
     asset_name: Optional[str] = None
     asset_description: Optional[str] = None
     asset_maker: Optional[str] = None
@@ -202,11 +202,11 @@ class QualerApiModelsClientsFromAssetModel:
         asset_user = d.pop("AssetUser", None)
 
         _asset_status = d.pop("AssetStatus", None)
-        asset_status: Optional[QualerApiModelsClientsFromAssetModelAssetStatus]
+        asset_status: Optional[ClientsFromAssetModelAssetStatus]
         if _asset_status is None:
             asset_status = None
         else:
-            asset_status = QualerApiModelsClientsFromAssetModelAssetStatus(_asset_status)
+            asset_status = ClientsFromAssetModelAssetStatus(_asset_status)
 
         asset_name = d.pop("AssetName", None)
         asset_description = d.pop("AssetDescription", None)

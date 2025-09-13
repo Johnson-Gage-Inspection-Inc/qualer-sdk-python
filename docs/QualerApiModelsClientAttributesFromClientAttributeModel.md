@@ -1,4 +1,4 @@
-# QualerApiModelsClientAttributesFromClientAttributeModel
+# ClientAttributesFromClientAttributeModel
 
 ## Properties
 Name | Type | Description | Notes

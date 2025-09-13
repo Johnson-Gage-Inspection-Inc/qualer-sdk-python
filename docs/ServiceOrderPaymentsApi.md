@@ -26,7 +26,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrderPaymentsApi()
 service_order_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel() # QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel | 
+model = qualer_sdk.ServiceOrdersFromUpdatePaymentStatusModel() # ServiceOrdersFromUpdatePaymentStatusModel | 
 
 try:
     api_response = api_instance.change_work_order_payment_status(service_order_id, model)
@@ -40,7 +40,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **service_order_id** | **int**|  | 
- **model** | [**QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel**](QualerApiModelsServiceOrdersFromUpdatePaymentStatusModel.md)|  | 
+ **model** | [**ServiceOrdersFromUpdatePaymentStatusModel**](ServiceOrdersFromUpdatePaymentStatusModel.md)|  | 
 
 ### Return type
 
@@ -58,7 +58,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_work_order_payment**
-> QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse create_work_order_payment(service_order_id, model)
+> ServiceOrdersToCreatedWorkOrderPaymentResponse create_work_order_payment(service_order_id, model)
 
 
 
@@ -73,7 +73,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrderPaymentsApi()
 service_order_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsServiceOrdersFromAddPaymentModel() # QualerApiModelsServiceOrdersFromAddPaymentModel | 
+model = qualer_sdk.ServiceOrdersFromAddPaymentModel() # ServiceOrdersFromAddPaymentModel | 
 
 try:
     api_response = api_instance.create_work_order_payment(service_order_id, model)
@@ -87,11 +87,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **service_order_id** | **int**|  | 
- **model** | [**QualerApiModelsServiceOrdersFromAddPaymentModel**](QualerApiModelsServiceOrdersFromAddPaymentModel.md)|  | 
+ **model** | [**ServiceOrdersFromAddPaymentModel**](ServiceOrdersFromAddPaymentModel.md)|  | 
 
 ### Return type
 
-[**QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse**](QualerApiModelsServiceOrdersToCreatedWorkOrderPaymentResponse.md)
+[**ServiceOrdersToCreatedWorkOrderPaymentResponse**](ServiceOrdersToCreatedWorkOrderPaymentResponse.md)
 
 ### Authorization
 
@@ -105,7 +105,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all_work_order_payments**
-> list[QualerApiModelsServiceOrdersToPaymentResponseModel] get_all_work_order_payments(service_order_id)
+> list[ServiceOrdersToPaymentResponseModel] get_all_work_order_payments(service_order_id)
 
 
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsServiceOrdersToPaymentResponseModel]**](QualerApiModelsServiceOrdersToPaymentResponseModel.md)
+[**list[ServiceOrdersToPaymentResponseModel]**](ServiceOrdersToPaymentResponseModel.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_work_order_payment**
-> QualerApiModelsServiceOrdersToPaymentResponseModel get_work_order_payment(service_order_payment_id)
+> ServiceOrdersToPaymentResponseModel get_work_order_payment(service_order_payment_id)
 
 
 
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsServiceOrdersToPaymentResponseModel**](QualerApiModelsServiceOrdersToPaymentResponseModel.md)
+[**ServiceOrdersToPaymentResponseModel**](ServiceOrdersToPaymentResponseModel.md)
 
 ### Authorization
 

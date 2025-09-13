@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsReportDatasetsToMeasurementResponseGuardBandLogic(str, Enum):
+class ReportDatasetsToMeasurementResponseGuardBandLogic(str, Enum):
     NCSLZ5403 = "Ncslz5403"
     RDS = "Rds"
     TUR41 = "Tur41"

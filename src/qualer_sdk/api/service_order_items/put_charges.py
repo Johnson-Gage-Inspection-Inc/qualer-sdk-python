@@ -7,7 +7,7 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.put_charges_response_200 import PutChargesResponse200
 from ...models.qualer_api_models_service_orders_from_item_charge_update_model import (
-    QualerApiModelsServiceOrdersFromItemChargeUpdateModel,
+    ServiceOrdersFromItemChargeUpdateModel,
 )
 from ...types import Response
 
@@ -15,7 +15,7 @@ from ...types import Response
 def _get_kwargs(
     work_item_id: int,
     *,
-    body: QualerApiModelsServiceOrdersFromItemChargeUpdateModel,
+    body: ServiceOrdersFromItemChargeUpdateModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -60,7 +60,7 @@ def sync_detailed(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromItemChargeUpdateModel,
+    body: ServiceOrdersFromItemChargeUpdateModel,
 ) -> Response[PutChargesResponse200]:
     """Apply Service Order Item Charges
 
@@ -71,7 +71,7 @@ def sync_detailed(
 
     Args:
         work_item_id (int):
-        body (QualerApiModelsServiceOrdersFromItemChargeUpdateModel):
+        body (ServiceOrdersFromItemChargeUpdateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -97,7 +97,7 @@ def sync(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromItemChargeUpdateModel,
+    body: ServiceOrdersFromItemChargeUpdateModel,
 ) -> Optional[PutChargesResponse200]:
     """Apply Service Order Item Charges
 
@@ -108,7 +108,7 @@ def sync(
 
     Args:
         work_item_id (int):
-        body (QualerApiModelsServiceOrdersFromItemChargeUpdateModel):
+        body (ServiceOrdersFromItemChargeUpdateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -129,7 +129,7 @@ async def asyncio_detailed(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromItemChargeUpdateModel,
+    body: ServiceOrdersFromItemChargeUpdateModel,
 ) -> Response[PutChargesResponse200]:
     """Apply Service Order Item Charges
 
@@ -140,7 +140,7 @@ async def asyncio_detailed(
 
     Args:
         work_item_id (int):
-        body (QualerApiModelsServiceOrdersFromItemChargeUpdateModel):
+        body (ServiceOrdersFromItemChargeUpdateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -164,7 +164,7 @@ async def asyncio(
     work_item_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsServiceOrdersFromItemChargeUpdateModel,
+    body: ServiceOrdersFromItemChargeUpdateModel,
 ) -> Optional[PutChargesResponse200]:
     """Apply Service Order Item Charges
 
@@ -175,7 +175,7 @@ async def asyncio(
 
     Args:
         work_item_id (int):
-        body (QualerApiModelsServiceOrdersFromItemChargeUpdateModel):
+        body (ServiceOrdersFromItemChargeUpdateModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

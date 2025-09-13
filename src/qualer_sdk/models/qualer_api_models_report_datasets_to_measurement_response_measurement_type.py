@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsReportDatasetsToMeasurementResponseMeasurementType(str, Enum):
+class ReportDatasetsToMeasurementResponseMeasurementType(str, Enum):
     CUMULATIVE = "Cumulative"
     DATA = "Data"
 

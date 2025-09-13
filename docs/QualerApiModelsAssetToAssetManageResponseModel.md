@@ -1,4 +1,4 @@
-# QualerApiModelsAssetToAssetManageResponseModel
+# AssetToAssetManageResponseModel
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# QualerApiModelsReportDatasetsToExternalDataReportResponse
+# ReportDatasetsToExternalDataReportResponse
 
 ## Properties
 Name | Type | Description | Notes

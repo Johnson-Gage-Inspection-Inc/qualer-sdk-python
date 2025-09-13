@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsToUpdateMeasurementFieldResponseModel
+# MeasurementsToUpdateMeasurementFieldResponseModel
 
 ## Properties
 Name | Type | Description | Notes

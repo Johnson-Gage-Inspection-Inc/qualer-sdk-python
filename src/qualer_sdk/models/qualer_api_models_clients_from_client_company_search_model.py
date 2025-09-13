@@ -6,11 +6,11 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-T = TypeVar("T", bound="QualerApiModelsClientsFromClientCompanySearchModel")
+T = TypeVar("T", bound="ClientsFromClientCompanySearchModel")
 
 
 @_attrs_define
-class QualerApiModelsClientsFromClientCompanySearchModel:
+class ClientsFromClientCompanySearchModel:
     """
     Attributes:
         legacy_id (Optional[str]):

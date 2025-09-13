@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **get_document_list**
-> list[QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse] get_document_list(_from, to, report_type=report_type, service_order_item_id=service_order_item_id)
+> list[ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse] get_document_list(_from, to, report_type=report_type, service_order_item_id=service_order_item_id)
 
 Retrieve work order documents
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse]**](QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse.md)
+[**list[ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse]**](ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_documents_list**
-> list[QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse] get_documents_list(service_order_item_id, model_report_type=model_report_type)
+> list[ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse] get_documents_list(service_order_item_id, model_report_type=model_report_type)
 
 
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse]**](QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse.md)
+[**list[ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse]**](ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse.md)
 
 ### Authorization
 

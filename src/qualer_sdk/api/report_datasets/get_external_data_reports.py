@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_report_datasets_to_external_data_report_response import (
-    QualerApiModelsReportDatasetsToExternalDataReportResponse,
+    ReportDatasetsToExternalDataReportResponse,
 )
 from ...types import Response
 
@@ -35,12 +35,12 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[List["QualerApiModelsReportDatasetsToExternalDataReportResponse"]]:
+) -> Optional[List["ReportDatasetsToExternalDataReportResponse"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = QualerApiModelsReportDatasetsToExternalDataReportResponse.from_dict(
+            response_200_item = ReportDatasetsToExternalDataReportResponse.from_dict(
                 response_200_item_data
             )
 
@@ -55,7 +55,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[List["QualerApiModelsReportDatasetsToExternalDataReportResponse"]]:
+) -> Response[List["ReportDatasetsToExternalDataReportResponse"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -69,7 +69,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     service_order_item_ids: List[int],
-) -> Response[List["QualerApiModelsReportDatasetsToExternalDataReportResponse"]]:
+) -> Response[List["ReportDatasetsToExternalDataReportResponse"]]:
     """
     Args:
         service_order_id (int):
@@ -80,7 +80,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsReportDatasetsToExternalDataReportResponse']]
+        Response[List['ReportDatasetsToExternalDataReportResponse']]
     """
 
     kwargs = _get_kwargs(
@@ -100,7 +100,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     service_order_item_ids: List[int],
-) -> Optional[List["QualerApiModelsReportDatasetsToExternalDataReportResponse"]]:
+) -> Optional[List["ReportDatasetsToExternalDataReportResponse"]]:
     """
     Args:
         service_order_id (int):
@@ -111,7 +111,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsReportDatasetsToExternalDataReportResponse']
+        List['ReportDatasetsToExternalDataReportResponse']
     """
 
     return sync_detailed(
@@ -126,7 +126,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     service_order_item_ids: List[int],
-) -> Response[List["QualerApiModelsReportDatasetsToExternalDataReportResponse"]]:
+) -> Response[List["ReportDatasetsToExternalDataReportResponse"]]:
     """
     Args:
         service_order_id (int):
@@ -137,7 +137,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsReportDatasetsToExternalDataReportResponse']]
+        Response[List['ReportDatasetsToExternalDataReportResponse']]
     """
 
     kwargs = _get_kwargs(
@@ -155,7 +155,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     service_order_item_ids: List[int],
-) -> Optional[List["QualerApiModelsReportDatasetsToExternalDataReportResponse"]]:
+) -> Optional[List["ReportDatasetsToExternalDataReportResponse"]]:
     """
     Args:
         service_order_id (int):
@@ -166,7 +166,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsReportDatasetsToExternalDataReportResponse']
+        List['ReportDatasetsToExternalDataReportResponse']
     """
 
     return (

@@ -6,21 +6,21 @@ from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_service_orders_from_charge_update_model_price_model import (
-        QualerApiModelsServiceOrdersFromChargeUpdateModelPriceModel,
+        ServiceOrdersFromChargeUpdateModelPriceModel,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsServiceOrdersFromChargeUpdateModel")
+T = TypeVar("T", bound="ServiceOrdersFromChargeUpdateModel")
 
 
 @_attrs_define
-class QualerApiModelsServiceOrdersFromChargeUpdateModel:
+class ServiceOrdersFromChargeUpdateModel:
     """
     Attributes:
-        charges (Optional[List['QualerApiModelsServiceOrdersFromChargeUpdateModelPriceModel']]):
+        charges (Optional[List['ServiceOrdersFromChargeUpdateModelPriceModel']]):
     """
 
-    charges: Union[None, List["QualerApiModelsServiceOrdersFromChargeUpdateModelPriceModel"]] = None
+    charges: Union[None, List["ServiceOrdersFromChargeUpdateModelPriceModel"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -42,16 +42,14 @@ class QualerApiModelsServiceOrdersFromChargeUpdateModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_service_orders_from_charge_update_model_price_model import (
-            QualerApiModelsServiceOrdersFromChargeUpdateModelPriceModel,
+            ServiceOrdersFromChargeUpdateModelPriceModel,
         )
 
         d = dict(src_dict)
         charges = []
         _charges = d.pop("Charges", None)
         for charges_item_data in _charges or []:
-            charges_item = QualerApiModelsServiceOrdersFromChargeUpdateModelPriceModel.from_dict(
-                charges_item_data
-            )
+            charges_item = ServiceOrdersFromChargeUpdateModelPriceModel.from_dict(charges_item_data)
 
             charges.append(charges_item)
 

@@ -1,4 +1,4 @@
-# QualerApiModelsAssetToAssetForecastApiResponseModel
+# AssetToAssetForecastApiResponseModel
 
 ## Properties
 Name | Type | Description | Notes

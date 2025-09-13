@@ -6,24 +6,24 @@ from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_to_update_measurement_batch_response_model import (
-        QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel,
+        MeasurementsToUpdateMeasurementBatchResponseModel,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsMeasurementsToUpdateMeasurementFormResponseModel")
+T = TypeVar("T", bound="MeasurementsToUpdateMeasurementFormResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsToUpdateMeasurementFormResponseModel:
+class MeasurementsToUpdateMeasurementFormResponseModel:
     """
     Attributes:
-        measurement_batches (Optional[List['QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel']]):
+        measurement_batches (Optional[List['MeasurementsToUpdateMeasurementBatchResponseModel']]):
     """
 
     measurement_batches: Union[
         None,
         None,
-        List["QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel"],
+        List["MeasurementsToUpdateMeasurementBatchResponseModel"],
     ] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -46,17 +46,15 @@ class QualerApiModelsMeasurementsToUpdateMeasurementFormResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_measurements_to_update_measurement_batch_response_model import (
-            QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel,
+            MeasurementsToUpdateMeasurementBatchResponseModel,
         )
 
         d = dict(src_dict)
         measurement_batches = []
         _measurement_batches = d.pop("MeasurementBatches", None)
         for measurement_batches_item_data in _measurement_batches or []:
-            measurement_batches_item = (
-                QualerApiModelsMeasurementsToUpdateMeasurementBatchResponseModel.from_dict(
-                    measurement_batches_item_data
-                )
+            measurement_batches_item = MeasurementsToUpdateMeasurementBatchResponseModel.from_dict(
+                measurement_batches_item_data
             )
 
             measurement_batches.append(measurement_batches_item)

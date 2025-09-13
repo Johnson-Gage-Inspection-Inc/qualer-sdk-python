@@ -4,11 +4,11 @@ from typing import Any, Dict, List, Optional, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-T = TypeVar("T", bound="QualerApiModelsCommonToCultureListResponseModel")
+T = TypeVar("T", bound="CommonToCultureListResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsCommonToCultureListResponseModel:
+class CommonToCultureListResponseModel:
     """
     Attributes:
         culture_list (Optional[List[str]]):

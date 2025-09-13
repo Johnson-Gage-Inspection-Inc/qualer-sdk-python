@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get**
-> QualerApiModelsAssetPoolsToAssetPoolModel get(id)
+> AssetPoolsToAssetPoolModel get(id)
 
 
 
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsAssetPoolsToAssetPoolModel**](QualerApiModelsAssetPoolsToAssetPoolModel.md)
+[**AssetPoolsToAssetPoolModel**](AssetPoolsToAssetPoolModel.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all**
-> list[QualerApiModelsAssetPoolsToAssetPoolModel] get_all()
+> list[AssetPoolsToAssetPoolModel] get_all()
 
 
 
@@ -81,7 +81,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[QualerApiModelsAssetPoolsToAssetPoolModel]**](QualerApiModelsAssetPoolsToAssetPoolModel.md)
+[**list[AssetPoolsToAssetPoolModel]**](AssetPoolsToAssetPoolModel.md)
 
 ### Authorization
 

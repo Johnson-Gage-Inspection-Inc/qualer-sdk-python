@@ -1,4 +1,4 @@
-# QualerApiModelsAssetFromGetAssetManagerCounterModel
+# AssetFromGetAssetManagerCounterModel
 
 ## Properties
 Name | Type | Description | Notes

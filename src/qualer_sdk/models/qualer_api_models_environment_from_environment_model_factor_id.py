@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsEnvironmentFromEnvironmentModelFactorId(str, Enum):
+class EnvironmentFromEnvironmentModelFactorId(str, Enum):
     AIRBUOYANCY = "AirBuoyancy"
     AIRHUMIDITY = "AirHumidity"
     ALTITUDE = "Altitude"

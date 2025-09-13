@@ -27,7 +27,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrderItemMeasurementsApi()
 work_item_id = 56 # int | 
-models = [qualer_sdk.QualerApiModelsMeasurementsFromCreateMeasurementToolModel()] # list[QualerApiModelsMeasurementsFromCreateMeasurementToolModel] | 
+models = [qualer_sdk.MeasurementsFromCreateMeasurementToolModel()] # list[MeasurementsFromCreateMeasurementToolModel] | 
 
 try:
     api_response = api_instance.add_auxiliary_tools(work_item_id, models)
@@ -41,7 +41,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **work_item_id** | **int**|  | 
- **models** | [**list[QualerApiModelsMeasurementsFromCreateMeasurementToolModel]**](QualerApiModelsMeasurementsFromCreateMeasurementToolModel.md)|  | 
+ **models** | [**list[MeasurementsFromCreateMeasurementToolModel]**](MeasurementsFromCreateMeasurementToolModel.md)|  | 
 
 ### Return type
 
@@ -76,7 +76,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrderItemMeasurementsApi()
 work_item_id = 56 # int | Work Item ID of Measurement Form
-model = qualer_sdk.QualerApiModelsMeasurementsFromCreateMeasurementFormModel() # QualerApiModelsMeasurementsFromCreateMeasurementFormModel | Measurement Form parameters
+model = qualer_sdk.MeasurementsFromCreateMeasurementFormModel() # MeasurementsFromCreateMeasurementFormModel | Measurement Form parameters
 
 try:
     # Create Measurement Form.
@@ -91,7 +91,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **work_item_id** | **int**| Work Item ID of Measurement Form | 
- **model** | [**QualerApiModelsMeasurementsFromCreateMeasurementFormModel**](QualerApiModelsMeasurementsFromCreateMeasurementFormModel.md)| Measurement Form parameters | 
+ **model** | [**MeasurementsFromCreateMeasurementFormModel**](MeasurementsFromCreateMeasurementFormModel.md)| Measurement Form parameters | 
 
 ### Return type
 
@@ -109,7 +109,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_measurement_form**
-> QualerApiModelsMeasurementsToUpdateMeasurementFormResponseModel get_measurement_form(work_item_id)
+> MeasurementsToUpdateMeasurementFormResponseModel get_measurement_form(work_item_id)
 
 Get Measurement Form.
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsMeasurementsToUpdateMeasurementFormResponseModel**](QualerApiModelsMeasurementsToUpdateMeasurementFormResponseModel.md)
+[**MeasurementsToUpdateMeasurementFormResponseModel**](MeasurementsToUpdateMeasurementFormResponseModel.md)
 
 ### Authorization
 
@@ -155,7 +155,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_measurements_by_asset**
-> list[QualerApiModelsMeasurementsToMeasurementRecordResponseModel] get_measurements_by_asset(asset_id, _from=_from, to=to)
+> list[MeasurementsToMeasurementRecordResponseModel] get_measurements_by_asset(asset_id, _from=_from, to=to)
 
 
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsMeasurementsToMeasurementRecordResponseModel]**](QualerApiModelsMeasurementsToMeasurementRecordResponseModel.md)
+[**list[MeasurementsToMeasurementRecordResponseModel]**](MeasurementsToMeasurementRecordResponseModel.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrderItemMeasurementsApi()
 work_item_id = 56 # int | Work Item ID of Measurement Form
-model = qualer_sdk.QualerApiModelsMeasurementsFromUpdateMeasurementFormModel() # QualerApiModelsMeasurementsFromUpdateMeasurementFormModel | Measurement Form parameters
+model = qualer_sdk.MeasurementsFromUpdateMeasurementFormModel() # MeasurementsFromUpdateMeasurementFormModel | Measurement Form parameters
 
 try:
     # Update Measurement Form.
@@ -234,7 +234,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **work_item_id** | **int**| Work Item ID of Measurement Form | 
- **model** | [**QualerApiModelsMeasurementsFromUpdateMeasurementFormModel**](QualerApiModelsMeasurementsFromUpdateMeasurementFormModel.md)| Measurement Form parameters | 
+ **model** | [**MeasurementsFromUpdateMeasurementFormModel**](MeasurementsFromUpdateMeasurementFormModel.md)| Measurement Form parameters | 
 
 ### Return type
 

@@ -54,7 +54,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get**
-> list[QualerApiModelsAssetToEmployeePreferenceResponseModel] get(element_page)
+> list[AssetToEmployeePreferenceResponseModel] get(element_page)
 
 
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetToEmployeePreferenceResponseModel]**](QualerApiModelsAssetToEmployeePreferenceResponseModel.md)
+[**list[AssetToEmployeePreferenceResponseModel]**](AssetToEmployeePreferenceResponseModel.md)
 
 ### Authorization
 

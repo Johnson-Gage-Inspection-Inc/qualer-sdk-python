@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_company_to_environment_response_model import (
-    QualerApiModelsCompanyToEnvironmentResponseModel,
+    CompanyToEnvironmentResponseModel,
 )
 from ...types import Response
 
@@ -24,14 +24,12 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, List["QualerApiModelsCompanyToEnvironmentResponseModel"]]]:
+) -> Optional[Union[Any, List["CompanyToEnvironmentResponseModel"]]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = QualerApiModelsCompanyToEnvironmentResponseModel.from_dict(
-                response_200_item_data
-            )
+            response_200_item = CompanyToEnvironmentResponseModel.from_dict(response_200_item_data)
 
             response_200.append(response_200_item)
 
@@ -47,7 +45,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, List["QualerApiModelsCompanyToEnvironmentResponseModel"]]]:
+) -> Response[Union[Any, List["CompanyToEnvironmentResponseModel"]]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -60,7 +58,7 @@ def sync_detailed(
     id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[Union[Any, List["QualerApiModelsCompanyToEnvironmentResponseModel"]]]:
+) -> Response[Union[Any, List["CompanyToEnvironmentResponseModel"]]]:
     """
     Args:
         id (int):
@@ -70,7 +68,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, List['QualerApiModelsCompanyToEnvironmentResponseModel']]]
+        Response[Union[Any, List['CompanyToEnvironmentResponseModel']]]
     """
 
     kwargs = _get_kwargs(
@@ -88,7 +86,7 @@ def sync(
     id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[Union[Any, List["QualerApiModelsCompanyToEnvironmentResponseModel"]]]:
+) -> Optional[Union[Any, List["CompanyToEnvironmentResponseModel"]]]:
     """
     Args:
         id (int):
@@ -98,7 +96,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, List['QualerApiModelsCompanyToEnvironmentResponseModel']]
+        Union[Any, List['CompanyToEnvironmentResponseModel']]
     """
 
     return sync_detailed(
@@ -111,7 +109,7 @@ async def asyncio_detailed(
     id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[Union[Any, List["QualerApiModelsCompanyToEnvironmentResponseModel"]]]:
+) -> Response[Union[Any, List["CompanyToEnvironmentResponseModel"]]]:
     """
     Args:
         id (int):
@@ -121,7 +119,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, List['QualerApiModelsCompanyToEnvironmentResponseModel']]]
+        Response[Union[Any, List['CompanyToEnvironmentResponseModel']]]
     """
 
     kwargs = _get_kwargs(
@@ -137,7 +135,7 @@ async def asyncio(
     id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[Union[Any, List["QualerApiModelsCompanyToEnvironmentResponseModel"]]]:
+) -> Optional[Union[Any, List["CompanyToEnvironmentResponseModel"]]]:
     """
     Args:
         id (int):
@@ -147,7 +145,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, List['QualerApiModelsCompanyToEnvironmentResponseModel']]
+        Union[Any, List['CompanyToEnvironmentResponseModel']]
     """
 
     return (

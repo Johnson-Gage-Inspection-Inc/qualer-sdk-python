@@ -4,11 +4,11 @@ from typing import Any, Dict, List, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-T = TypeVar("T", bound="QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0")
+T = TypeVar("T", bound="VendorsToVendorCompanyResponseModelShippingAddressType0")
 
 
 @_attrs_define
-class QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0:
+class VendorsToVendorCompanyResponseModelShippingAddressType0:
     """ """
 
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)

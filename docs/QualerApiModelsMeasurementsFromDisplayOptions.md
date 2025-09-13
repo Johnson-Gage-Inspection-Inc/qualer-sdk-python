@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsFromDisplayOptions
+# MeasurementsFromDisplayOptions
 
 ## Properties
 Name | Type | Description | Notes

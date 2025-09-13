@@ -6,13 +6,13 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.logout_response_200 import LogoutResponse200
-from ...models.qualer_api_models_account_to_logout_model import QualerApiModelsAccountToLogoutModel
+from ...models.qualer_api_models_account_to_logout_model import AccountToLogoutModel
 from ...types import Response
 
 
 def _get_kwargs(
     *,
-    body: QualerApiModelsAccountToLogoutModel,
+    body: AccountToLogoutModel,
 ) -> Dict[str, Any]:
     headers: Dict[str, Any] = {}
 
@@ -62,7 +62,7 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAccountToLogoutModel,
+    body: AccountToLogoutModel,
 ) -> Response[Union[Any, LogoutResponse200]]:
     """Logout
 
@@ -75,7 +75,7 @@ def sync_detailed(
     Rotate - change the current token to a different GUID and return the new GUID
 
     Args:
-        body (QualerApiModelsAccountToLogoutModel):
+        body (AccountToLogoutModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -99,7 +99,7 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAccountToLogoutModel,
+    body: AccountToLogoutModel,
 ) -> Optional[Union[Any, LogoutResponse200]]:
     """Logout
 
@@ -112,7 +112,7 @@ def sync(
     Rotate - change the current token to a different GUID and return the new GUID
 
     Args:
-        body (QualerApiModelsAccountToLogoutModel):
+        body (AccountToLogoutModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -131,7 +131,7 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAccountToLogoutModel,
+    body: AccountToLogoutModel,
 ) -> Response[Union[Any, LogoutResponse200]]:
     """Logout
 
@@ -144,7 +144,7 @@ async def asyncio_detailed(
     Rotate - change the current token to a different GUID and return the new GUID
 
     Args:
-        body (QualerApiModelsAccountToLogoutModel):
+        body (AccountToLogoutModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -166,7 +166,7 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    body: QualerApiModelsAccountToLogoutModel,
+    body: AccountToLogoutModel,
 ) -> Optional[Union[Any, LogoutResponse200]]:
     """Logout
 
@@ -179,7 +179,7 @@ async def asyncio(
     Rotate - change the current token to a different GUID and return the new GUID
 
     Args:
-        body (QualerApiModelsAccountToLogoutModel):
+        body (AccountToLogoutModel):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

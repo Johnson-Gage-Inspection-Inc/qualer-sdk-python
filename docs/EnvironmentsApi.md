@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get**
-> list[QualerApiModelsEnvironmentToEnvironmentModel] get(id)
+> list[EnvironmentToEnvironmentModel] get(id)
 
 
 
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsEnvironmentToEnvironmentModel]**](QualerApiModelsEnvironmentToEnvironmentModel.md)
+[**list[EnvironmentToEnvironmentModel]**](EnvironmentToEnvironmentModel.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = qualer_sdk.EnvironmentsApi()
-model = qualer_sdk.QualerApiModelsEnvironmentFromEnvironmentModel() # QualerApiModelsEnvironmentFromEnvironmentModel | 
+model = qualer_sdk.EnvironmentFromEnvironmentModel() # EnvironmentFromEnvironmentModel | 
 id = 'id_example' # str | 
 
 try:
@@ -82,7 +82,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**QualerApiModelsEnvironmentFromEnvironmentModel**](QualerApiModelsEnvironmentFromEnvironmentModel.md)|  | 
+ **model** | [**EnvironmentFromEnvironmentModel**](EnvironmentFromEnvironmentModel.md)|  | 
  **id** | [**str**](.md)|  | 
 
 ### Return type

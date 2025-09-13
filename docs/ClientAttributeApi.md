@@ -69,7 +69,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ClientAttributeApi()
 client_company_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsClientAttributesFromClientAttributeModel() # QualerApiModelsClientAttributesFromClientAttributeModel | 
+model = qualer_sdk.ClientAttributesFromClientAttributeModel() # ClientAttributesFromClientAttributeModel | 
 
 try:
     api_response = api_instance.upsert_client_attribute(client_company_id, model)
@@ -83,7 +83,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **client_company_id** | **int**|  | 
- **model** | [**QualerApiModelsClientAttributesFromClientAttributeModel**](QualerApiModelsClientAttributesFromClientAttributeModel.md)|  | 
+ **model** | [**ClientAttributesFromClientAttributeModel**](ClientAttributesFromClientAttributeModel.md)|  | 
 
 ### Return type
 

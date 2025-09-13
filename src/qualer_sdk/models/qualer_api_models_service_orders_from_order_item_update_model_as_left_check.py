@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsServiceOrdersFromOrderItemUpdateModelAsLeftCheck(str, Enum):
+class ServiceOrdersFromOrderItemUpdateModelAsLeftCheck(str, Enum):
     FAIL = "Fail"
     NOTSERVICED = "NotServiced"
     PASS = "Pass"

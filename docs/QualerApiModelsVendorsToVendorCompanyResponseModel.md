@@ -1,4 +1,4 @@
-# QualerApiModelsVendorsToVendorCompanyResponseModel
+# VendorsToVendorCompanyResponseModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **company_name** | **str** |  | [optional] 
 **domain_name** | **str** |  | [optional] 
 **custom_name** | **str** |  | [optional] 
-**billing_address** | [**QualerApiModelsAddressToAddressResponseModel**](QualerApiModelsAddressToAddressResponseModel.md) |  | [optional] 
-**shipping_address** | [**QualerApiModelsAddressToAddressResponseModel**](QualerApiModelsAddressToAddressResponseModel.md) |  | [optional] 
+**billing_address** | [**AddressToAddressResponseModel**](AddressToAddressResponseModel.md) |  | [optional] 
+**shipping_address** | [**AddressToAddressResponseModel**](AddressToAddressResponseModel.md) |  | [optional] 
 **updated_on_utc** | **datetime** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

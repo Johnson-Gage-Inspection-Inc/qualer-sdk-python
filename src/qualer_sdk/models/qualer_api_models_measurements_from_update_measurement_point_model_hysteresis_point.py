@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsMeasurementsFromUpdateMeasurementPointModelHysteresisPoint(str, Enum):
+class MeasurementsFromUpdateMeasurementPointModelHysteresisPoint(str, Enum):
     FIRST = "First"
     NONE = "None"
     SECOND = "Second"

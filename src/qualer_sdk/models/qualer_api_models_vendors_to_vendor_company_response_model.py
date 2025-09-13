@@ -8,18 +8,18 @@ from dateutil.parser import isoparse
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_vendors_to_vendor_company_response_model_billing_address_type_0 import (
-        QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0,
+        VendorsToVendorCompanyResponseModelBillingAddressType0,
     )
     from ..models.qualer_api_models_vendors_to_vendor_company_response_model_shipping_address_type_0 import (
-        QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0,
+        VendorsToVendorCompanyResponseModelShippingAddressType0,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsVendorsToVendorCompanyResponseModel")
+T = TypeVar("T", bound="VendorsToVendorCompanyResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsVendorsToVendorCompanyResponseModel:
+class VendorsToVendorCompanyResponseModel:
     """
     Attributes:
         account_number_text (Optional[str]):
@@ -29,8 +29,8 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
         company_name (Optional[str]):
         domain_name (Optional[str]):
         custom_name (Optional[str]):
-        billing_address (Union['QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0', None]):
-        shipping_address (Union['QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0', None]):
+        billing_address (Union['VendorsToVendorCompanyResponseModelBillingAddressType0', None]):
+        shipping_address (Union['VendorsToVendorCompanyResponseModelShippingAddressType0', None]):
         updated_on_utc (Optional[datetime.datetime]):
     """
 
@@ -42,12 +42,12 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
     domain_name: Optional[str] = None
     custom_name: Optional[str] = None
     billing_address: Union[
-        "QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0",
+        "VendorsToVendorCompanyResponseModelBillingAddressType0",
         None,
         None,
     ] = None
     shipping_address: Union[
-        "QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0",
+        "VendorsToVendorCompanyResponseModelShippingAddressType0",
         None,
         None,
     ] = None
@@ -56,10 +56,10 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         from ..models.qualer_api_models_vendors_to_vendor_company_response_model_billing_address_type_0 import (
-            QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0,
+            VendorsToVendorCompanyResponseModelBillingAddressType0,
         )
         from ..models.qualer_api_models_vendors_to_vendor_company_response_model_shipping_address_type_0 import (
-            QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0,
+            VendorsToVendorCompanyResponseModelShippingAddressType0,
         )
 
         account_number_text = self.account_number_text
@@ -81,7 +81,7 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
             billing_address = None
         elif isinstance(
             self.billing_address,
-            QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0,
+            VendorsToVendorCompanyResponseModelBillingAddressType0,
         ):
             billing_address = self.billing_address.to_dict()
         else:
@@ -92,7 +92,7 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
             shipping_address = None
         elif isinstance(
             self.shipping_address,
-            QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0,
+            VendorsToVendorCompanyResponseModelShippingAddressType0,
         ):
             shipping_address = self.shipping_address.to_dict()
         else:
@@ -131,10 +131,10 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_vendors_to_vendor_company_response_model_billing_address_type_0 import (
-            QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0,
+            VendorsToVendorCompanyResponseModelBillingAddressType0,
         )
         from ..models.qualer_api_models_vendors_to_vendor_company_response_model_shipping_address_type_0 import (
-            QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0,
+            VendorsToVendorCompanyResponseModelShippingAddressType0,
         )
 
         d = dict(src_dict)
@@ -155,7 +155,7 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
         def _parse_billing_address(
             data: object,
         ) -> Union[
-            "QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0",
+            "VendorsToVendorCompanyResponseModelBillingAddressType0",
             None,
             None,
         ]:
@@ -165,9 +165,7 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
                 if not isinstance(data, dict):
                     raise TypeError()
                 billing_address_type_0 = (
-                    QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0.from_dict(
-                        data
-                    )
+                    VendorsToVendorCompanyResponseModelBillingAddressType0.from_dict(data)
                 )
 
                 return billing_address_type_0
@@ -175,7 +173,7 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
                 pass
             return cast(
                 Union[
-                    "QualerApiModelsVendorsToVendorCompanyResponseModelBillingAddressType0",
+                    "VendorsToVendorCompanyResponseModelBillingAddressType0",
                     None,
                     None,
                 ],
@@ -187,7 +185,7 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
         def _parse_shipping_address(
             data: object,
         ) -> Union[
-            "QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0",
+            "VendorsToVendorCompanyResponseModelShippingAddressType0",
             None,
             None,
         ]:
@@ -196,8 +194,8 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                shipping_address_type_0 = QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0.from_dict(
-                    data
+                shipping_address_type_0 = (
+                    VendorsToVendorCompanyResponseModelShippingAddressType0.from_dict(data)
                 )
 
                 return shipping_address_type_0
@@ -205,7 +203,7 @@ class QualerApiModelsVendorsToVendorCompanyResponseModel:
                 pass
             return cast(
                 Union[
-                    "QualerApiModelsVendorsToVendorCompanyResponseModelShippingAddressType0",
+                    "VendorsToVendorCompanyResponseModelShippingAddressType0",
                     None,
                     None,
                 ],

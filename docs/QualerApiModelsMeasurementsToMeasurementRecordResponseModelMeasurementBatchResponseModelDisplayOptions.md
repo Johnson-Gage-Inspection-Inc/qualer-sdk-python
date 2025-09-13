@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions
+# MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions
 
 ## Properties
 Name | Type | Description | Notes

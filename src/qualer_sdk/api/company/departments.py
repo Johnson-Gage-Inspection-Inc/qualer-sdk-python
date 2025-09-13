@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_company_to_departments_response_model import (
-    QualerApiModelsCompanyToDepartmentsResponseModel,
+    CompanyToDepartmentsResponseModel,
 )
 from ...types import Response
 
@@ -22,14 +22,12 @@ def _get_kwargs() -> Dict[str, Any]:
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[List["QualerApiModelsCompanyToDepartmentsResponseModel"]]:
+) -> Optional[List["CompanyToDepartmentsResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = QualerApiModelsCompanyToDepartmentsResponseModel.from_dict(
-                response_200_item_data
-            )
+            response_200_item = CompanyToDepartmentsResponseModel.from_dict(response_200_item_data)
 
             response_200.append(response_200_item)
 
@@ -42,7 +40,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[List["QualerApiModelsCompanyToDepartmentsResponseModel"]]:
+) -> Response[List["CompanyToDepartmentsResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -54,14 +52,14 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[List["QualerApiModelsCompanyToDepartmentsResponseModel"]]:
+) -> Response[List["CompanyToDepartmentsResponseModel"]]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsCompanyToDepartmentsResponseModel']]
+        Response[List['CompanyToDepartmentsResponseModel']]
     """
 
     kwargs = _get_kwargs()
@@ -76,14 +74,14 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[List["QualerApiModelsCompanyToDepartmentsResponseModel"]]:
+) -> Optional[List["CompanyToDepartmentsResponseModel"]]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsCompanyToDepartmentsResponseModel']
+        List['CompanyToDepartmentsResponseModel']
     """
 
     return sync_detailed(
@@ -94,14 +92,14 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[List["QualerApiModelsCompanyToDepartmentsResponseModel"]]:
+) -> Response[List["CompanyToDepartmentsResponseModel"]]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[List['QualerApiModelsCompanyToDepartmentsResponseModel']]
+        Response[List['CompanyToDepartmentsResponseModel']]
     """
 
     kwargs = _get_kwargs()
@@ -114,14 +112,14 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[List["QualerApiModelsCompanyToDepartmentsResponseModel"]]:
+) -> Optional[List["CompanyToDepartmentsResponseModel"]]:
     """
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        List['QualerApiModelsCompanyToDepartmentsResponseModel']
+        List['CompanyToDepartmentsResponseModel']
     """
 
     return (

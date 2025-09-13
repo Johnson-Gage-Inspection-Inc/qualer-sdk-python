@@ -24,7 +24,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrderShipmentsApi()
 service_order_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsServiceOrdersFromAppendTrackingNumberModel() # QualerApiModelsServiceOrdersFromAppendTrackingNumberModel | 
+model = qualer_sdk.ServiceOrdersFromAppendTrackingNumberModel() # ServiceOrdersFromAppendTrackingNumberModel | 
 
 try:
     api_response = api_instance.append_shipment_tracking_number(service_order_id, model)
@@ -38,7 +38,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **service_order_id** | **int**|  | 
- **model** | [**QualerApiModelsServiceOrdersFromAppendTrackingNumberModel**](QualerApiModelsServiceOrdersFromAppendTrackingNumberModel.md)|  | 
+ **model** | [**ServiceOrdersFromAppendTrackingNumberModel**](ServiceOrdersFromAppendTrackingNumberModel.md)|  | 
 
 ### Return type
 
@@ -71,7 +71,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = qualer_sdk.ServiceOrderShipmentsApi()
 service_order_id = 56 # int | 
-model = qualer_sdk.QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel() # QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel | 
+model = qualer_sdk.ServiceOrdersFromUpdateShipmentStatusModel() # ServiceOrdersFromUpdateShipmentStatusModel | 
 
 try:
     api_response = api_instance.update_shipment_status(service_order_id, model)
@@ -85,7 +85,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **service_order_id** | **int**|  | 
- **model** | [**QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel**](QualerApiModelsServiceOrdersFromUpdateShipmentStatusModel.md)|  | 
+ **model** | [**ServiceOrdersFromUpdateShipmentStatusModel**](ServiceOrdersFromUpdateShipmentStatusModel.md)|  | 
 
 ### Return type
 

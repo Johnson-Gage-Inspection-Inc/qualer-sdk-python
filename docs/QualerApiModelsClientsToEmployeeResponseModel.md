@@ -1,4 +1,4 @@
-# QualerApiModelsClientsToEmployeeResponseModel
+# ClientsToEmployeeResponseModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **last_name** | **str** |  | [optional] 
 **company_id** | **int** |  | [optional] 
 **login_email** | **str** |  | [optional] 
-**departments** | [**list[QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse]**](QualerApiModelsClientsToEmployeeEmployeeDepartmentResponse.md) |  | [optional] 
+**departments** | [**list[ClientsToEmployeeEmployeeDepartmentResponse]**](ClientsToEmployeeEmployeeDepartmentResponse.md) |  | [optional] 
 **subscription_email** | **str** |  | [optional] 
 **subscription_phone** | **str** |  | [optional] 
 **office_phone** | **str** |  | [optional] 

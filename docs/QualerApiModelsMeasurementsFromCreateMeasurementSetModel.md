@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsFromCreateMeasurementSetModel
+# MeasurementsFromCreateMeasurementSetModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 **default_unit_of_measure_id** | **int** |  | [optional] 
 **decimal_places** | **int** |  | [optional] 
 **significant_figures** | **int** |  | [optional] 
-**display_options** | [**QualerApiModelsMeasurementsFromDisplayOptions**](QualerApiModelsMeasurementsFromDisplayOptions.md) |  | [optional] 
-**custom_fields** | [**QualerApiModelsMeasurementsFromCustomFields**](QualerApiModelsMeasurementsFromCustomFields.md) |  | [optional] 
-**measurement_points** | [**list[QualerApiModelsMeasurementsFromCreateMeasurementPointModel]**](QualerApiModelsMeasurementsFromCreateMeasurementPointModel.md) |  | [optional] 
+**display_options** | [**MeasurementsFromDisplayOptions**](MeasurementsFromDisplayOptions.md) |  | [optional] 
+**custom_fields** | [**MeasurementsFromCustomFields**](MeasurementsFromCustomFields.md) |  | [optional] 
+**measurement_points** | [**list[MeasurementsFromCreateMeasurementPointModel]**](MeasurementsFromCreateMeasurementPointModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

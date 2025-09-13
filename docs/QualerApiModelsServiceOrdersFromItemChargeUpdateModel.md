@@ -1,9 +1,9 @@
-# QualerApiModelsServiceOrdersFromItemChargeUpdateModel
+# ServiceOrdersFromItemChargeUpdateModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**charges** | [**list[QualerApiModelsServiceOrdersFromItemChargeUpdateModelItemPriceModel]**](QualerApiModelsServiceOrdersFromItemChargeUpdateModelItemPriceModel.md) |  | [optional] 
+**charges** | [**list[ServiceOrdersFromItemChargeUpdateModelItemPriceModel]**](ServiceOrdersFromItemChargeUpdateModelItemPriceModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

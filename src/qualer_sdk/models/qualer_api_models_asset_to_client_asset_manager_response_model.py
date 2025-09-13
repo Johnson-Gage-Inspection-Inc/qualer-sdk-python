@@ -7,32 +7,32 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.qualer_api_models_asset_to_client_asset_manager_response_model_due_status import (
-    QualerApiModelsAssetToClientAssetManagerResponseModelDueStatus,
+    AssetToClientAssetManagerResponseModelDueStatus,
 )
 from ..models.qualer_api_models_asset_to_client_asset_manager_response_model_record_type import (
-    QualerApiModelsAssetToClientAssetManagerResponseModelRecordType,
+    AssetToClientAssetManagerResponseModelRecordType,
 )
 from ..models.qualer_api_models_asset_to_client_asset_manager_response_model_service_order_status import (
-    QualerApiModelsAssetToClientAssetManagerResponseModelServiceOrderStatus,
+    AssetToClientAssetManagerResponseModelServiceOrderStatus,
 )
 from ..models.qualer_api_models_asset_to_client_asset_manager_response_model_tool_role import (
-    QualerApiModelsAssetToClientAssetManagerResponseModelToolRole,
+    AssetToClientAssetManagerResponseModelToolRole,
 )
 from ..models.service_result_status import ServiceResultStatus
 from ..models.work_status import WorkStatus
 
-T = TypeVar("T", bound="QualerApiModelsAssetToClientAssetManagerResponseModel")
+T = TypeVar("T", bound="AssetToClientAssetManagerResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsAssetToClientAssetManagerResponseModel:
+class AssetToClientAssetManagerResponseModel:
     """
     Attributes:
         asset_id (Optional[int]):
         asset_name (Optional[str]):
         asset_description (Optional[str]):
         asset_maker (Optional[str]):
-        record_type (Optional[QualerApiModelsAssetToClientAssetManagerResponseModelRecordType]):
+        record_type (Optional[AssetToClientAssetManagerResponseModelRecordType]):
         parent_asset_id (Optional[int]):
         children_count (Optional[int]):
         site_id (Optional[int]):
@@ -70,7 +70,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         asset_room (Optional[str]):
         location (Optional[str]):
         station (Optional[str]):
-        tool_role (Optional[QualerApiModelsAssetToClientAssetManagerResponseModelToolRole]):
+        tool_role (Optional[AssetToClientAssetManagerResponseModelToolRole]):
         tool_id (Optional[int]):
         department_id (Optional[int]):
         department_name (Optional[str]):
@@ -106,7 +106,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         in_service (Optional[bool]):
         in_last_service (Optional[bool]):
         service_order_id (Optional[int]):
-        service_order_status (Optional[QualerApiModelsAssetToClientAssetManagerResponseModelServiceOrderStatus]):
+        service_order_status (Optional[AssetToClientAssetManagerResponseModelServiceOrderStatus]):
         custom_order_number (Optional[str]):
         service_order_item_id (Optional[int]):
         vendor (Optional[str]):
@@ -114,7 +114,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         certificate_number (Optional[str]):
         due_trigger_date (Optional[datetime.datetime]):
         past_due_trigger_date (Optional[datetime.datetime]):
-        due_status (Optional[QualerApiModelsAssetToClientAssetManagerResponseModelDueStatus]):
+        due_status (Optional[AssetToClientAssetManagerResponseModelDueStatus]):
         work_status (Optional[WorkStatus]):
         service_tag (Optional[str]):
         service_site_name (Optional[str]):
@@ -127,7 +127,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
     asset_name: Optional[str] = None
     asset_description: Optional[str] = None
     asset_maker: Optional[str] = None
-    record_type: Optional["QualerApiModelsAssetToClientAssetManagerResponseModelRecordType"] = None
+    record_type: Optional["AssetToClientAssetManagerResponseModelRecordType"] = None
     parent_asset_id: Optional[int] = None
     children_count: Optional[int] = None
     site_id: Optional[int] = None
@@ -165,7 +165,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
     asset_room: Optional[str] = None
     location: Optional[str] = None
     station: Optional[str] = None
-    tool_role: Optional["QualerApiModelsAssetToClientAssetManagerResponseModelToolRole"] = None
+    tool_role: Optional["AssetToClientAssetManagerResponseModelToolRole"] = None
     tool_id: Optional[int] = None
     department_id: Optional[int] = None
     department_name: Optional[str] = None
@@ -204,7 +204,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
     service_order_status: Union[
         None,
         None,
-        QualerApiModelsAssetToClientAssetManagerResponseModelServiceOrderStatus,
+        AssetToClientAssetManagerResponseModelServiceOrderStatus,
     ] = None
     custom_order_number: Optional[str] = None
     service_order_item_id: Optional[int] = None
@@ -213,7 +213,7 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
     certificate_number: Optional[str] = None
     due_trigger_date: Optional[datetime.datetime] = None
     past_due_trigger_date: Optional[datetime.datetime] = None
-    due_status: Optional["QualerApiModelsAssetToClientAssetManagerResponseModelDueStatus"] = None
+    due_status: Optional["AssetToClientAssetManagerResponseModelDueStatus"] = None
     work_status: Optional[WorkStatus] = None
     service_tag: Optional[str] = None
     service_site_name: Optional[str] = None
@@ -687,15 +687,13 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         asset_maker = d.pop("AssetMaker", None)
 
         _record_type = d.pop("RecordType", None)
-        record_type: Optional[QualerApiModelsAssetToClientAssetManagerResponseModelRecordType]
+        record_type: Optional[AssetToClientAssetManagerResponseModelRecordType]
         if not _record_type:
             record_type = None
         elif _record_type is None:
             record_type = None
         else:
-            record_type = QualerApiModelsAssetToClientAssetManagerResponseModelRecordType(
-                _record_type
-            )
+            record_type = AssetToClientAssetManagerResponseModelRecordType(_record_type)
 
         parent_asset_id = d.pop("ParentAssetId", None)
 
@@ -802,13 +800,13 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         station = d.pop("Station", None)
 
         _tool_role = d.pop("ToolRole", None)
-        tool_role: Optional[QualerApiModelsAssetToClientAssetManagerResponseModelToolRole]
+        tool_role: Optional[AssetToClientAssetManagerResponseModelToolRole]
         if not _tool_role:
             tool_role = None
         elif _tool_role is None:
             tool_role = None
         else:
-            tool_role = QualerApiModelsAssetToClientAssetManagerResponseModelToolRole(_tool_role)
+            tool_role = AssetToClientAssetManagerResponseModelToolRole(_tool_role)
 
         tool_id = d.pop("ToolId", None)
 
@@ -983,17 +981,15 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         service_order_status: Union[
             None,
             None,
-            QualerApiModelsAssetToClientAssetManagerResponseModelServiceOrderStatus,
+            AssetToClientAssetManagerResponseModelServiceOrderStatus,
         ]
         if not _service_order_status:
             service_order_status = None
         elif _service_order_status is None:
             service_order_status = None
         else:
-            service_order_status = (
-                QualerApiModelsAssetToClientAssetManagerResponseModelServiceOrderStatus(
-                    _service_order_status
-                )
+            service_order_status = AssetToClientAssetManagerResponseModelServiceOrderStatus(
+                _service_order_status
             )
 
         custom_order_number = d.pop("CustomOrderNumber", None)
@@ -1041,13 +1037,13 @@ class QualerApiModelsAssetToClientAssetManagerResponseModel:
         past_due_trigger_date = _parse_past_due_trigger_date(d.pop("PastDueTriggerDate", None))
 
         _due_status = d.pop("DueStatus", None)
-        due_status: Optional[QualerApiModelsAssetToClientAssetManagerResponseModelDueStatus]
+        due_status: Optional[AssetToClientAssetManagerResponseModelDueStatus]
         if not _due_status:
             due_status = None
         elif _due_status is None:
             due_status = None
         else:
-            due_status = QualerApiModelsAssetToClientAssetManagerResponseModelDueStatus(_due_status)
+            due_status = AssetToClientAssetManagerResponseModelDueStatus(_due_status)
 
         _work_status = d.pop("WorkStatus", None)
         work_status: Optional[WorkStatus]

@@ -7,30 +7,30 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.qualer_api_models_asset_to_asset_maintenance_plan_model_asset_status import (
-    QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus,
+    AssetToAssetMaintenancePlanModelAssetStatus,
 )
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_asset_to_asset_maintenance_plan_response import (
-        QualerApiModelsAssetToAssetMaintenancePlanResponse,
+        AssetToAssetMaintenancePlanResponse,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsAssetToAssetMaintenancePlanModel")
+T = TypeVar("T", bound="AssetToAssetMaintenancePlanModel")
 
 
 @_attrs_define
-class QualerApiModelsAssetToAssetMaintenancePlanModel:
+class AssetToAssetMaintenancePlanModel:
     """
     Attributes:
-        maintenance_plans (Optional[List['QualerApiModelsAssetToAssetMaintenancePlanResponse']]):
+        maintenance_plans (Optional[List['AssetToAssetMaintenancePlanResponse']]):
         company_id (Optional[int]):
         asset_id (Optional[int]):
         serial_number (Optional[str]):
         asset_user (Optional[str]):
         asset_tag (Optional[str]):
         equipment_id (Optional[str]):
-        asset_status (Optional[QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus]):
+        asset_status (Optional[AssetToAssetMaintenancePlanModelAssetStatus]):
         asset_name (Optional[str]):
         asset_description (Optional[str]):
         asset_maker (Optional[str]):
@@ -74,16 +74,14 @@ class QualerApiModelsAssetToAssetMaintenancePlanModel:
         composite_child_count (Optional[int]):
     """
 
-    maintenance_plans: Union[None, List["QualerApiModelsAssetToAssetMaintenancePlanResponse"]] = (
-        None
-    )
+    maintenance_plans: Union[None, List["AssetToAssetMaintenancePlanResponse"]] = None
     company_id: Optional[int] = None
     asset_id: Optional[int] = None
     serial_number: Optional[str] = None
     asset_user: Optional[str] = None
     asset_tag: Optional[str] = None
     equipment_id: Optional[str] = None
-    asset_status: Optional["QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus"] = None
+    asset_status: Optional["AssetToAssetMaintenancePlanModelAssetStatus"] = None
     asset_name: Optional[str] = None
     asset_description: Optional[str] = None
     asset_maker: Optional[str] = None
@@ -358,14 +356,14 @@ class QualerApiModelsAssetToAssetMaintenancePlanModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_asset_to_asset_maintenance_plan_response import (
-            QualerApiModelsAssetToAssetMaintenancePlanResponse,
+            AssetToAssetMaintenancePlanResponse,
         )
 
         d = dict(src_dict)
         maintenance_plans = []
         _maintenance_plans = d.pop("MaintenancePlans", None)
         for maintenance_plans_item_data in _maintenance_plans or []:
-            maintenance_plans_item = QualerApiModelsAssetToAssetMaintenancePlanResponse.from_dict(
+            maintenance_plans_item = AssetToAssetMaintenancePlanResponse.from_dict(
                 maintenance_plans_item_data
             )
 
@@ -384,11 +382,11 @@ class QualerApiModelsAssetToAssetMaintenancePlanModel:
         equipment_id = d.pop("EquipmentId", None)
 
         _asset_status = d.pop("AssetStatus", None)
-        asset_status: Optional[QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus]
+        asset_status: Optional[AssetToAssetMaintenancePlanModelAssetStatus]
         if not _asset_status:
             asset_status = None
         else:
-            asset_status = QualerApiModelsAssetToAssetMaintenancePlanModelAssetStatus(_asset_status)
+            asset_status = AssetToAssetMaintenancePlanModelAssetStatus(_asset_status)
 
         asset_name = d.pop("AssetName", None)
 

@@ -7,11 +7,11 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-T = TypeVar("T", bound="QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel")
+T = TypeVar("T", bound="AssetServiceRecordsToAssetServiceRecordResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsAssetServiceRecordsToAssetServiceRecordResponseModel:
+class AssetServiceRecordsToAssetServiceRecordResponseModel:
     """
     Attributes:
         asset_id (Optional[int]):

@@ -106,7 +106,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **departments**
-> list[QualerApiModelsCompanyToDepartmentsResponseModel] departments()
+> list[CompanyToDepartmentsResponseModel] departments()
 
 
 
@@ -133,7 +133,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[QualerApiModelsCompanyToDepartmentsResponseModel]**](QualerApiModelsCompanyToDepartmentsResponseModel.md)
+[**list[CompanyToDepartmentsResponseModel]**](CompanyToDepartmentsResponseModel.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **site_rooms**
-> list[QualerApiModelsCompanyToEnvironmentResponseModel] site_rooms(id)
+> list[CompanyToEnvironmentResponseModel] site_rooms(id)
 
 
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsCompanyToEnvironmentResponseModel]**](QualerApiModelsCompanyToEnvironmentResponseModel.md)
+[**list[CompanyToEnvironmentResponseModel]**](CompanyToEnvironmentResponseModel.md)
 
 ### Authorization
 
@@ -240,7 +240,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sites**
-> list[QualerApiModelsCompanyToSitesResponseModel] sites()
+> list[CompanyToSitesResponseModel] sites()
 
 
 
@@ -267,7 +267,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[QualerApiModelsCompanyToSitesResponseModel]**](QualerApiModelsCompanyToSitesResponseModel.md)
+[**list[CompanyToSitesResponseModel]**](CompanyToSitesResponseModel.md)
 
 ### Authorization
 

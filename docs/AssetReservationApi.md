@@ -65,7 +65,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get**
-> list[QualerApiModelsAssetReservationToAssetReservationResponse] get(model_from=model_from, model_to=model_to, model_asset_id=model_asset_id, model_area_id=model_area_id, model_product_id=model_product_id, model_serial_number=model_serial_number, model_asset_tag=model_asset_tag, model_reservation_id=model_reservation_id)
+> list[AssetReservationToAssetReservationResponse] get(model_from=model_from, model_to=model_to, model_asset_id=model_asset_id, model_area_id=model_area_id, model_product_id=model_product_id, model_serial_number=model_serial_number, model_asset_tag=model_asset_tag, model_reservation_id=model_reservation_id)
 
 
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsAssetReservationToAssetReservationResponse]**](QualerApiModelsAssetReservationToAssetReservationResponse.md)
+[**list[AssetReservationToAssetReservationResponse]**](AssetReservationToAssetReservationResponse.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **upsert**
-> QualerApiModelsAssetReservationToUpsertAssetReservationResponse upsert(model)
+> AssetReservationToUpsertAssetReservationResponse upsert(model)
 
 
 
@@ -138,7 +138,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = qualer_sdk.AssetReservationApi()
-model = qualer_sdk.QualerApiModelsAssetReservationFromUpsertAssetReservationModel() # QualerApiModelsAssetReservationFromUpsertAssetReservationModel | 
+model = qualer_sdk.AssetReservationFromUpsertAssetReservationModel() # AssetReservationFromUpsertAssetReservationModel | 
 
 try:
     api_response = api_instance.upsert(model)
@@ -151,11 +151,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**QualerApiModelsAssetReservationFromUpsertAssetReservationModel**](QualerApiModelsAssetReservationFromUpsertAssetReservationModel.md)|  | 
+ **model** | [**AssetReservationFromUpsertAssetReservationModel**](AssetReservationFromUpsertAssetReservationModel.md)|  | 
 
 ### Return type
 
-[**QualerApiModelsAssetReservationToUpsertAssetReservationResponse**](QualerApiModelsAssetReservationToUpsertAssetReservationResponse.md)
+[**AssetReservationToUpsertAssetReservationResponse**](AssetReservationToUpsertAssetReservationResponse.md)
 
 ### Authorization
 

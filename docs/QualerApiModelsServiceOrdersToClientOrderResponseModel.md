@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrdersToClientOrderResponseModel
+# ServiceOrdersToClientOrderResponseModel
 
 ## Properties
 Name | Type | Description | Notes
@@ -111,8 +111,8 @@ Name | Type | Description | Notes
 **request_to_date** | **datetime** |  | [optional] 
 **request_to_time** | **datetime** |  | [optional] 
 **order_notes** | **str** |  | [optional] 
-**billing_address** | [**QualerApiModelsAddressToAddressResponseModel**](QualerApiModelsAddressToAddressResponseModel.md) |  | [optional] 
-**shipping_address** | [**QualerApiModelsAddressToAddressResponseModel**](QualerApiModelsAddressToAddressResponseModel.md) |  | [optional] 
+**billing_address** | [**AddressToAddressResponseModel**](AddressToAddressResponseModel.md) |  | [optional] 
+**shipping_address** | [**AddressToAddressResponseModel**](AddressToAddressResponseModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrdersToAssetAddResultResponseModel
+# ServiceOrdersToAssetAddResultResponseModel
 
 ## Properties
 Name | Type | Description | Notes

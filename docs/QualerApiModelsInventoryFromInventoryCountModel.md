@@ -1,4 +1,4 @@
-# QualerApiModelsInventoryFromInventoryCountModel
+# InventoryFromInventoryCountModel
 
 ## Properties
 Name | Type | Description | Notes

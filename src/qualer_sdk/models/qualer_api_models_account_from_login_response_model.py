@@ -5,11 +5,11 @@ from uuid import UUID
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-T = TypeVar("T", bound="QualerApiModelsAccountFromLoginResponseModel")
+T = TypeVar("T", bound="AccountFromLoginResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsAccountFromLoginResponseModel:
+class AccountFromLoginResponseModel:
     """
     Attributes:
         token (Optional[UUID]):  Example: 00000000-0000-0000-0000-000000000000.

@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type(str, Enum):
+class MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type(str, Enum):
     CUSTOMFIELD = "CustomField"
     MANUALLYSELECTED = "ManuallySelected"
     MEASUREMENTQUANTITY = "MeasurementQuantity"

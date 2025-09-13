@@ -6,23 +6,23 @@ from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_custom_fields_create_measurement_field_response_model import (
-        QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFieldsCreateMeasurementFieldResponseModel,
+        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFieldsCreateMeasurementFieldResponseModel,
     )
 
 
 T = TypeVar(
     "T",
-    bound="QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields",
+    bound="MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields",
 )
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields:
+class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields:
     """
     Attributes:
         description (Optional[str]):
         result (Optional[str]):
-        items (Optional[List['QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseMod
+        items (Optional[List['MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseMod
             elCustomFieldsCreateMeasurementFieldResponseModel']]):
     """
 
@@ -32,7 +32,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         None,
         None,
         List[
-            "QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFieldsCreateMeasurementFieldResponseModel"
+            "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFieldsCreateMeasurementFieldResponseModel"
         ],
     ] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -64,7 +64,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_custom_fields_create_measurement_field_response_model import (
-            QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFieldsCreateMeasurementFieldResponseModel,
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFieldsCreateMeasurementFieldResponseModel,
         )
 
         d = dict(src_dict)
@@ -75,7 +75,7 @@ class QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatc
         items = []
         _items = d.pop("Items", None)
         for items_item_data in _items or []:
-            items_item = QualerApiModelsMeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFieldsCreateMeasurementFieldResponseModel.from_dict(
+            items_item = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFieldsCreateMeasurementFieldResponseModel.from_dict(
                 items_item_data
             )
 

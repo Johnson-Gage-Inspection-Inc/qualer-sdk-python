@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath(str, Enum):
+class ReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath(str, Enum):
     ADDITION = "Addition"
     AVERAGE = "Average"
     DIFFERENCE = "Difference"

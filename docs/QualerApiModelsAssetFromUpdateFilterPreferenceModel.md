@@ -1,4 +1,4 @@
-# QualerApiModelsAssetFromUpdateFilterPreferenceModel
+# AssetFromUpdateFilterPreferenceModel
 
 ## Properties
 Name | Type | Description | Notes

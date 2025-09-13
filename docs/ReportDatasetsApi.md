@@ -44,7 +44,7 @@ Method | HTTP request | Description
 
 
 # **channel_uniformity_by_order**
-> list[QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse] channel_uniformity_by_order(service_order_id)
+> list[ReportDatasetsToMeasurementChannelUniformityResponse] channel_uniformity_by_order(service_order_id)
 
 
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse]**](QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse.md)
+[**list[ReportDatasetsToMeasurementChannelUniformityResponse]**](ReportDatasetsToMeasurementChannelUniformityResponse.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all_measurements**
-> list[QualerApiModelsReportDatasetsToMeasurementAllResponse] get_all_measurements(service_order_item_id)
+> list[ReportDatasetsToMeasurementAllResponse] get_all_measurements(service_order_item_id)
 
 
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToMeasurementAllResponse]**](QualerApiModelsReportDatasetsToMeasurementAllResponse.md)
+[**list[ReportDatasetsToMeasurementAllResponse]**](ReportDatasetsToMeasurementAllResponse.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all_measurements_by_order**
-> list[QualerApiModelsReportDatasetsToMeasurementAllResponse] get_all_measurements_by_order(service_order_id)
+> list[ReportDatasetsToMeasurementAllResponse] get_all_measurements_by_order(service_order_id)
 
 
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToMeasurementAllResponse]**](QualerApiModelsReportDatasetsToMeasurementAllResponse.md)
+[**list[ReportDatasetsToMeasurementAllResponse]**](ReportDatasetsToMeasurementAllResponse.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_as_found_measurements**
-> list[QualerApiModelsReportDatasetsToMeasurementResponse] get_as_found_measurements(service_order_item_id)
+> list[ReportDatasetsToMeasurementResponse] get_as_found_measurements(service_order_item_id)
 
 
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToMeasurementResponse]**](QualerApiModelsReportDatasetsToMeasurementResponse.md)
+[**list[ReportDatasetsToMeasurementResponse]**](ReportDatasetsToMeasurementResponse.md)
 
 ### Authorization
 
@@ -224,7 +224,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_as_found_measurements_by_order**
-> list[QualerApiModelsReportDatasetsToMeasurementResponse] get_as_found_measurements_by_order(service_order_id)
+> list[ReportDatasetsToMeasurementResponse] get_as_found_measurements_by_order(service_order_id)
 
 
 
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToMeasurementResponse]**](QualerApiModelsReportDatasetsToMeasurementResponse.md)
+[**list[ReportDatasetsToMeasurementResponse]**](ReportDatasetsToMeasurementResponse.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_as_left_measurements**
-> list[QualerApiModelsReportDatasetsToMeasurementResponse] get_as_left_measurements(service_order_item_id)
+> list[ReportDatasetsToMeasurementResponse] get_as_left_measurements(service_order_item_id)
 
 
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToMeasurementResponse]**](QualerApiModelsReportDatasetsToMeasurementResponse.md)
+[**list[ReportDatasetsToMeasurementResponse]**](ReportDatasetsToMeasurementResponse.md)
 
 ### Authorization
 
@@ -314,7 +314,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_as_left_measurements_by_order**
-> list[QualerApiModelsReportDatasetsToMeasurementResponse] get_as_left_measurements_by_order(service_order_id)
+> list[ReportDatasetsToMeasurementResponse] get_as_left_measurements_by_order(service_order_id)
 
 
 
@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToMeasurementResponse]**](QualerApiModelsReportDatasetsToMeasurementResponse.md)
+[**list[ReportDatasetsToMeasurementResponse]**](ReportDatasetsToMeasurementResponse.md)
 
 ### Authorization
 
@@ -359,7 +359,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_attributes**
-> list[QualerApiModelsReportDatasetsToAssetAttributeResponse] get_asset_attributes(service_order_item_id)
+> list[ReportDatasetsToAssetAttributeResponse] get_asset_attributes(service_order_item_id)
 
 
 
@@ -390,7 +390,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToAssetAttributeResponse]**](QualerApiModelsReportDatasetsToAssetAttributeResponse.md)
+[**list[ReportDatasetsToAssetAttributeResponse]**](ReportDatasetsToAssetAttributeResponse.md)
 
 ### Authorization
 
@@ -404,7 +404,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_asset_service_records**
-> QualerApiModelsReportDatasetsToAssetSummaryResponse get_asset_service_records(service_order_item_id)
+> ReportDatasetsToAssetSummaryResponse get_asset_service_records(service_order_item_id)
 
 
 
@@ -435,7 +435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsReportDatasetsToAssetSummaryResponse**](QualerApiModelsReportDatasetsToAssetSummaryResponse.md)
+[**ReportDatasetsToAssetSummaryResponse**](ReportDatasetsToAssetSummaryResponse.md)
 
 ### Authorization
 
@@ -449,7 +449,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_channel_results**
-> list[QualerApiModelsReportDatasetsToMeasurementChannelResultResponse] get_channel_results(service_order_item_id)
+> list[ReportDatasetsToMeasurementChannelResultResponse] get_channel_results(service_order_item_id)
 
 
 
@@ -480,7 +480,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToMeasurementChannelResultResponse]**](QualerApiModelsReportDatasetsToMeasurementChannelResultResponse.md)
+[**list[ReportDatasetsToMeasurementChannelResultResponse]**](ReportDatasetsToMeasurementChannelResultResponse.md)
 
 ### Authorization
 
@@ -494,7 +494,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_channel_results_by_order**
-> list[QualerApiModelsReportDatasetsToMeasurementChannelResultResponse] get_channel_results_by_order(service_order_id)
+> list[ReportDatasetsToMeasurementChannelResultResponse] get_channel_results_by_order(service_order_id)
 
 
 
@@ -525,7 +525,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToMeasurementChannelResultResponse]**](QualerApiModelsReportDatasetsToMeasurementChannelResultResponse.md)
+[**list[ReportDatasetsToMeasurementChannelResultResponse]**](ReportDatasetsToMeasurementChannelResultResponse.md)
 
 ### Authorization
 
@@ -539,7 +539,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_channel_uniformity**
-> list[QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse] get_channel_uniformity(service_order_item_id)
+> list[ReportDatasetsToMeasurementChannelUniformityResponse] get_channel_uniformity(service_order_item_id)
 
 
 
@@ -570,7 +570,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse]**](QualerApiModelsReportDatasetsToMeasurementChannelUniformityResponse.md)
+[**list[ReportDatasetsToMeasurementChannelUniformityResponse]**](ReportDatasetsToMeasurementChannelUniformityResponse.md)
 
 ### Authorization
 
@@ -584,7 +584,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_client_attributes**
-> QualerApiModelsReportDatasetsToClientAttributeResponse get_client_attributes(service_order_id)
+> ReportDatasetsToClientAttributeResponse get_client_attributes(service_order_id)
 
 
 
@@ -615,7 +615,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsReportDatasetsToClientAttributeResponse**](QualerApiModelsReportDatasetsToClientAttributeResponse.md)
+[**ReportDatasetsToClientAttributeResponse**](ReportDatasetsToClientAttributeResponse.md)
 
 ### Authorization
 
@@ -629,7 +629,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_company_certifications**
-> list[QualerApiModelsReportDatasetsToCompanyCertificationResponse] get_company_certifications()
+> list[ReportDatasetsToCompanyCertificationResponse] get_company_certifications()
 
 
 
@@ -656,7 +656,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToCompanyCertificationResponse]**](QualerApiModelsReportDatasetsToCompanyCertificationResponse.md)
+[**list[ReportDatasetsToCompanyCertificationResponse]**](ReportDatasetsToCompanyCertificationResponse.md)
 
 ### Authorization
 
@@ -670,7 +670,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_external_data_reports**
-> list[QualerApiModelsReportDatasetsToExternalDataReportResponse] get_external_data_reports(service_order_id, service_order_item_ids)
+> list[ReportDatasetsToExternalDataReportResponse] get_external_data_reports(service_order_id, service_order_item_ids)
 
 
 
@@ -703,7 +703,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToExternalDataReportResponse]**](QualerApiModelsReportDatasetsToExternalDataReportResponse.md)
+[**list[ReportDatasetsToExternalDataReportResponse]**](ReportDatasetsToExternalDataReportResponse.md)
 
 ### Authorization
 
@@ -717,7 +717,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_measurement_charts**
-> list[QualerApiModelsReportDatasetsToMeasurementChartResponse] get_measurement_charts(service_order_item_id)
+> list[ReportDatasetsToMeasurementChartResponse] get_measurement_charts(service_order_item_id)
 
 
 
@@ -748,7 +748,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToMeasurementChartResponse]**](QualerApiModelsReportDatasetsToMeasurementChartResponse.md)
+[**list[ReportDatasetsToMeasurementChartResponse]**](ReportDatasetsToMeasurementChartResponse.md)
 
 ### Authorization
 
@@ -762,7 +762,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_measurement_fields**
-> list[QualerApiModelsReportDatasetsToMeasurementFieldResponse] get_measurement_fields(service_order_item_id)
+> list[ReportDatasetsToMeasurementFieldResponse] get_measurement_fields(service_order_item_id)
 
 
 
@@ -793,7 +793,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToMeasurementFieldResponse]**](QualerApiModelsReportDatasetsToMeasurementFieldResponse.md)
+[**list[ReportDatasetsToMeasurementFieldResponse]**](ReportDatasetsToMeasurementFieldResponse.md)
 
 ### Authorization
 
@@ -807,7 +807,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_measurement_fields_by_order**
-> list[QualerApiModelsReportDatasetsToMeasurementFieldResponse] get_measurement_fields_by_order(service_order_id)
+> list[ReportDatasetsToMeasurementFieldResponse] get_measurement_fields_by_order(service_order_id)
 
 
 
@@ -838,7 +838,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToMeasurementFieldResponse]**](QualerApiModelsReportDatasetsToMeasurementFieldResponse.md)
+[**list[ReportDatasetsToMeasurementFieldResponse]**](ReportDatasetsToMeasurementFieldResponse.md)
 
 ### Authorization
 
@@ -852,7 +852,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_order_item_documents**
-> list[QualerApiModelsReportDatasetsToOrderItemImageResponse] get_order_item_documents(service_order_item_id)
+> list[ReportDatasetsToOrderItemImageResponse] get_order_item_documents(service_order_item_id)
 
 
 
@@ -883,7 +883,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToOrderItemImageResponse]**](QualerApiModelsReportDatasetsToOrderItemImageResponse.md)
+[**list[ReportDatasetsToOrderItemImageResponse]**](ReportDatasetsToOrderItemImageResponse.md)
 
 ### Authorization
 
@@ -897,7 +897,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_order_item_images**
-> list[QualerApiModelsReportDatasetsToOrderItemImageResponse] get_order_item_images(service_order_item_id)
+> list[ReportDatasetsToOrderItemImageResponse] get_order_item_images(service_order_item_id)
 
 
 
@@ -928,7 +928,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToOrderItemImageResponse]**](QualerApiModelsReportDatasetsToOrderItemImageResponse.md)
+[**list[ReportDatasetsToOrderItemImageResponse]**](ReportDatasetsToOrderItemImageResponse.md)
 
 ### Authorization
 
@@ -942,7 +942,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_reference_standards**
-> list[QualerApiModelsReportDatasetsToReferenceStandardResponse] get_reference_standards(service_order_item_id)
+> list[ReportDatasetsToReferenceStandardResponse] get_reference_standards(service_order_item_id)
 
 
 
@@ -973,7 +973,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToReferenceStandardResponse]**](QualerApiModelsReportDatasetsToReferenceStandardResponse.md)
+[**list[ReportDatasetsToReferenceStandardResponse]**](ReportDatasetsToReferenceStandardResponse.md)
 
 ### Authorization
 
@@ -987,7 +987,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_reference_standards_by_order**
-> list[QualerApiModelsReportDatasetsToReferenceStandardResponse] get_reference_standards_by_order(service_order_id)
+> list[ReportDatasetsToReferenceStandardResponse] get_reference_standards_by_order(service_order_id)
 
 
 
@@ -1018,7 +1018,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToReferenceStandardResponse]**](QualerApiModelsReportDatasetsToReferenceStandardResponse.md)
+[**list[ReportDatasetsToReferenceStandardResponse]**](ReportDatasetsToReferenceStandardResponse.md)
 
 ### Authorization
 
@@ -1032,7 +1032,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_service_order_assignees**
-> list[QualerApiModelsReportDatasetsToServiceOrderAssigneeResponse] get_service_order_assignees(service_order_id)
+> list[ReportDatasetsToServiceOrderAssigneeResponse] get_service_order_assignees(service_order_id)
 
 
 
@@ -1063,7 +1063,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToServiceOrderAssigneeResponse]**](QualerApiModelsReportDatasetsToServiceOrderAssigneeResponse.md)
+[**list[ReportDatasetsToServiceOrderAssigneeResponse]**](ReportDatasetsToServiceOrderAssigneeResponse.md)
 
 ### Authorization
 
@@ -1077,7 +1077,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_service_order_charges**
-> list[QualerApiModelsReportDatasetsToServiceOrderChargeResponse] get_service_order_charges(service_order_id)
+> list[ReportDatasetsToServiceOrderChargeResponse] get_service_order_charges(service_order_id)
 
 
 
@@ -1108,7 +1108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToServiceOrderChargeResponse]**](QualerApiModelsReportDatasetsToServiceOrderChargeResponse.md)
+[**list[ReportDatasetsToServiceOrderChargeResponse]**](ReportDatasetsToServiceOrderChargeResponse.md)
 
 ### Authorization
 
@@ -1122,7 +1122,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_service_order_item_components**
-> list[QualerApiModelsReportDatasetsToServiceOrderItemComponentResponse] get_service_order_item_components(service_order_item_id)
+> list[ReportDatasetsToServiceOrderItemComponentResponse] get_service_order_item_components(service_order_item_id)
 
 
 
@@ -1153,7 +1153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToServiceOrderItemComponentResponse]**](QualerApiModelsReportDatasetsToServiceOrderItemComponentResponse.md)
+[**list[ReportDatasetsToServiceOrderItemComponentResponse]**](ReportDatasetsToServiceOrderItemComponentResponse.md)
 
 ### Authorization
 
@@ -1167,7 +1167,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_service_order_item_components_by_order**
-> list[QualerApiModelsReportDatasetsToServiceOrderItemComponentResponse] get_service_order_item_components_by_order(service_order_id)
+> list[ReportDatasetsToServiceOrderItemComponentResponse] get_service_order_item_components_by_order(service_order_id)
 
 
 
@@ -1198,7 +1198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToServiceOrderItemComponentResponse]**](QualerApiModelsReportDatasetsToServiceOrderItemComponentResponse.md)
+[**list[ReportDatasetsToServiceOrderItemComponentResponse]**](ReportDatasetsToServiceOrderItemComponentResponse.md)
 
 ### Authorization
 
@@ -1212,7 +1212,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_service_order_item_fields_by_order**
-> list[QualerApiModelsReportDatasetsToServiceOrderItemFieldResponse] get_service_order_item_fields_by_order(service_order_id)
+> list[ReportDatasetsToServiceOrderItemFieldResponse] get_service_order_item_fields_by_order(service_order_id)
 
 
 
@@ -1243,7 +1243,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToServiceOrderItemFieldResponse]**](QualerApiModelsReportDatasetsToServiceOrderItemFieldResponse.md)
+[**list[ReportDatasetsToServiceOrderItemFieldResponse]**](ReportDatasetsToServiceOrderItemFieldResponse.md)
 
 ### Authorization
 
@@ -1257,7 +1257,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_service_order_item_options**
-> list[QualerApiModelsReportDatasetsToServiceOrderItemOptionResponse] get_service_order_item_options(service_order_item_id)
+> list[ReportDatasetsToServiceOrderItemOptionResponse] get_service_order_item_options(service_order_item_id)
 
 
 
@@ -1288,7 +1288,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToServiceOrderItemOptionResponse]**](QualerApiModelsReportDatasetsToServiceOrderItemOptionResponse.md)
+[**list[ReportDatasetsToServiceOrderItemOptionResponse]**](ReportDatasetsToServiceOrderItemOptionResponse.md)
 
 ### Authorization
 
@@ -1302,7 +1302,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_service_order_item_status_history_async**
-> list[QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse] get_service_order_item_status_history_async(service_order_item_id)
+> list[ReportDatasetsToServiceOrderItemStatusHistoryResponse] get_service_order_item_status_history_async(service_order_item_id)
 
 
 
@@ -1333,7 +1333,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse]**](QualerApiModelsReportDatasetsToServiceOrderItemStatusHistoryResponse.md)
+[**list[ReportDatasetsToServiceOrderItemStatusHistoryResponse]**](ReportDatasetsToServiceOrderItemStatusHistoryResponse.md)
 
 ### Authorization
 
@@ -1347,7 +1347,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_service_order_item_tasks_by_order**
-> list[QualerApiModelsReportDatasetsToServiceOrderItemTaskResponse] get_service_order_item_tasks_by_order(service_order_id)
+> list[ReportDatasetsToServiceOrderItemTaskResponse] get_service_order_item_tasks_by_order(service_order_id)
 
 
 
@@ -1378,7 +1378,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToServiceOrderItemTaskResponse]**](QualerApiModelsReportDatasetsToServiceOrderItemTaskResponse.md)
+[**list[ReportDatasetsToServiceOrderItemTaskResponse]**](ReportDatasetsToServiceOrderItemTaskResponse.md)
 
 ### Authorization
 
@@ -1392,7 +1392,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_service_order_item_tasks_by_order_items**
-> list[QualerApiModelsReportDatasetsToServiceOrderItemTaskResponse] get_service_order_item_tasks_by_order_items(service_order_item_id)
+> list[ReportDatasetsToServiceOrderItemTaskResponse] get_service_order_item_tasks_by_order_items(service_order_item_id)
 
 
 
@@ -1423,7 +1423,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToServiceOrderItemTaskResponse]**](QualerApiModelsReportDatasetsToServiceOrderItemTaskResponse.md)
+[**list[ReportDatasetsToServiceOrderItemTaskResponse]**](ReportDatasetsToServiceOrderItemTaskResponse.md)
 
 ### Authorization
 
@@ -1437,7 +1437,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_service_order_items**
-> list[QualerApiModelsReportDatasetsToServiceOrderItemResponse] get_service_order_items(service_order_item_id)
+> list[ReportDatasetsToServiceOrderItemResponse] get_service_order_items(service_order_item_id)
 
 
 
@@ -1468,7 +1468,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToServiceOrderItemResponse]**](QualerApiModelsReportDatasetsToServiceOrderItemResponse.md)
+[**list[ReportDatasetsToServiceOrderItemResponse]**](ReportDatasetsToServiceOrderItemResponse.md)
 
 ### Authorization
 
@@ -1482,7 +1482,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_service_order_items_by_order**
-> list[QualerApiModelsReportDatasetsToServiceOrderItemResponse] get_service_order_items_by_order(service_order_id)
+> list[ReportDatasetsToServiceOrderItemResponse] get_service_order_items_by_order(service_order_id)
 
 
 
@@ -1513,7 +1513,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToServiceOrderItemResponse]**](QualerApiModelsReportDatasetsToServiceOrderItemResponse.md)
+[**list[ReportDatasetsToServiceOrderItemResponse]**](ReportDatasetsToServiceOrderItemResponse.md)
 
 ### Authorization
 
@@ -1527,7 +1527,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_service_order_tasks**
-> list[QualerApiModelsReportDatasetsToServiceOrderTaskResponse] get_service_order_tasks(service_order_id)
+> list[ReportDatasetsToServiceOrderTaskResponse] get_service_order_tasks(service_order_id)
 
 
 
@@ -1558,7 +1558,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToServiceOrderTaskResponse]**](QualerApiModelsReportDatasetsToServiceOrderTaskResponse.md)
+[**list[ReportDatasetsToServiceOrderTaskResponse]**](ReportDatasetsToServiceOrderTaskResponse.md)
 
 ### Authorization
 
@@ -1572,7 +1572,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_service_orders**
-> QualerApiModelsReportDatasetsToServiceOrderResponse get_service_orders(service_order_id)
+> ReportDatasetsToServiceOrderResponse get_service_orders(service_order_id)
 
 
 
@@ -1603,7 +1603,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QualerApiModelsReportDatasetsToServiceOrderResponse**](QualerApiModelsReportDatasetsToServiceOrderResponse.md)
+[**ReportDatasetsToServiceOrderResponse**](ReportDatasetsToServiceOrderResponse.md)
 
 ### Authorization
 
@@ -1617,7 +1617,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tool_attributes**
-> list[QualerApiModelsReportDatasetsToToolAttributeResponse] get_tool_attributes(service_order_item_id)
+> list[ReportDatasetsToToolAttributeResponse] get_tool_attributes(service_order_item_id)
 
 
 
@@ -1648,7 +1648,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToToolAttributeResponse]**](QualerApiModelsReportDatasetsToToolAttributeResponse.md)
+[**list[ReportDatasetsToToolAttributeResponse]**](ReportDatasetsToToolAttributeResponse.md)
 
 ### Authorization
 
@@ -1662,7 +1662,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tool_range_attributes**
-> list[QualerApiModelsReportDatasetsToToolRangeAttributeResponse] get_tool_range_attributes(service_order_item_id)
+> list[ReportDatasetsToToolRangeAttributeResponse] get_tool_range_attributes(service_order_item_id)
 
 
 
@@ -1693,7 +1693,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsReportDatasetsToToolRangeAttributeResponse]**](QualerApiModelsReportDatasetsToToolRangeAttributeResponse.md)
+[**list[ReportDatasetsToToolRangeAttributeResponse]**](ReportDatasetsToToolRangeAttributeResponse.md)
 
 ### Authorization
 

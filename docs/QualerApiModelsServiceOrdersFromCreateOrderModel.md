@@ -1,4 +1,4 @@
-# QualerApiModelsServiceOrdersFromCreateOrderModel
+# ServiceOrdersFromCreateOrderModel
 
 ## Properties
 Name | Type | Description | Notes

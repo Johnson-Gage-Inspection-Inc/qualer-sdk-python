@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsReportDatasetsToMeasurementResponseReadingEntryLogic(str, Enum):
+class ReportDatasetsToMeasurementResponseReadingEntryLogic(str, Enum):
     DOUBLESUBSTITUTION = "DoubleSubstitution"
     MEASUREDVALUECONVERSION = "MeasuredValueConversion"
     MEASUREDVALUECONVERSIONDISPLAY = "MeasuredValueConversionDisplay"

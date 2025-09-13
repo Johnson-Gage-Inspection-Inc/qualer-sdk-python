@@ -9,12 +9,12 @@ from ..models.report_type import ReportType
 
 T = TypeVar(
     "T",
-    bound="QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse",
+    bound="ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse",
 )
 
 
 @_attrs_define
-class QualerApiModelsServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse:
+class ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse:
     """
     Attributes:
         service_order_id (Optional[int]):

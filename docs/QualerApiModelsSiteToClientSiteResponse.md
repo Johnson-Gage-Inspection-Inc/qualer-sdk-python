@@ -1,4 +1,4 @@
-# QualerApiModelsSiteToClientSiteResponse
+# SiteToClientSiteResponse
 
 ## Properties
 Name | Type | Description | Notes
@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 **site_id** | **int** |  | [optional] 
 **site_name** | **str** |  | [optional] 
 **site_code** | **str** |  | [optional] 
-**shipping_address** | [**QualerApiModelsAddressToAddressResponseModel**](QualerApiModelsAddressToAddressResponseModel.md) |  | [optional] 
+**shipping_address** | [**AddressToAddressResponseModel**](AddressToAddressResponseModel.md) |  | [optional] 
 **shipping_inherited** | **bool** |  | [optional] 
-**billing_address** | [**QualerApiModelsAddressToAddressResponseModel**](QualerApiModelsAddressToAddressResponseModel.md) |  | [optional] 
+**billing_address** | [**AddressToAddressResponseModel**](AddressToAddressResponseModel.md) |  | [optional] 
 **default_account_representative_employee_id** | **int** |  | [optional] 
 **billing_inherited** | **bool** |  | [optional] 
 **federal_number** | **str** |  | [optional] 
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **time_zone_id** | **str** |  | [optional] 
 **time_zone_offset_minutes** | **int** |  | [optional] 
 **updated_on_utc** | **datetime** |  | [optional] 
-**attributes** | [**list[QualerApiModelsCommonFromAttributeModel]**](QualerApiModelsCommonFromAttributeModel.md) |  | [optional] 
+**attributes** | [**list[CommonFromAttributeModel]**](CommonFromAttributeModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

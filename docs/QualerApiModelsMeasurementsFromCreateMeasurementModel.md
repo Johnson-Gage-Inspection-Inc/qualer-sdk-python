@@ -1,4 +1,4 @@
-# QualerApiModelsMeasurementsFromCreateMeasurementModel
+# MeasurementsFromCreateMeasurementModel
 
 ## Properties
 Name | Type | Description | Notes

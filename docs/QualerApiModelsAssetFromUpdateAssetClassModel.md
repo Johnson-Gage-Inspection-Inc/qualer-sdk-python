@@ -1,4 +1,4 @@
-# QualerApiModelsAssetFromUpdateAssetClassModel
+# AssetFromUpdateAssetClassModel
 
 ## Properties
 Name | Type | Description | Notes

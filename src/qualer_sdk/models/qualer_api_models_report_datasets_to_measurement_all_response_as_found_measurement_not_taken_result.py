@@ -1,9 +1,7 @@
 from enum import Enum
 
 
-class QualerApiModelsReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult(
-    str, Enum
-):
+class ReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult(str, Enum):
     FAIL = "Fail"
     LIMITED = "Limited"
     PASS = "Pass"

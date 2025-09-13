@@ -1,4 +1,4 @@
-# QualerApiModelsReportDatasetsToAssetSummaryResponse
+# ReportDatasetsToAssetSummaryResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -5,26 +5,26 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.qualer_api_models_measurements_from_update_measurement_set_model_influence_parameter_1_type import (
-    QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type,
+    MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type,
 )
 from ..models.qualer_api_models_measurements_from_update_measurement_set_model_influence_parameter_2_type import (
-    QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type,
+    MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type,
 )
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_from_update_measurement_field_model import (
-        QualerApiModelsMeasurementsFromUpdateMeasurementFieldModel,
+        MeasurementsFromUpdateMeasurementFieldModel,
     )
     from ..models.qualer_api_models_measurements_from_update_measurement_point_model import (
-        QualerApiModelsMeasurementsFromUpdateMeasurementPointModel,
+        MeasurementsFromUpdateMeasurementPointModel,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsMeasurementsFromUpdateMeasurementSetModel")
+T = TypeVar("T", bound="MeasurementsFromUpdateMeasurementSetModel")
 
 
 @_attrs_define
-class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
+class MeasurementsFromUpdateMeasurementSetModel:
     """
     Attributes:
         measurement_set_id (Optional[int]):
@@ -34,19 +34,19 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
         decimal_places (Optional[int]):
         significant_figures (Optional[int]):
         influence_parameter_1_type (Union[None,
-            QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type]):
+            MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type]):
         influence_parameter_1_tool_type_id (Optional[int]):
         influence_parameter_1_parameter_id (Optional[int]):
         influence_parameter_1_source (Optional[str]):
         influence_parameter_1_value (Optional[str]):
         influence_parameter_2_type (Union[None,
-            QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type]):
+            MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type]):
         influence_parameter_2_tool_type_id (Optional[int]):
         influence_parameter_2_parameter_id (Optional[int]):
         influence_parameter_2_source (Optional[str]):
         influence_parameter_2_value (Optional[str]):
-        measurement_points (Optional[List['QualerApiModelsMeasurementsFromUpdateMeasurementPointModel']]):
-        measurement_fields (Optional[List['QualerApiModelsMeasurementsFromUpdateMeasurementFieldModel']]):
+        measurement_points (Optional[List['MeasurementsFromUpdateMeasurementPointModel']]):
+        measurement_fields (Optional[List['MeasurementsFromUpdateMeasurementFieldModel']]):
     """
 
     measurement_set_id: Optional[int] = None
@@ -58,7 +58,7 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
     influence_parameter_1_type: Union[
         None,
         None,
-        QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type,
+        MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type,
     ] = None
     influence_parameter_1_tool_type_id: Optional[int] = None
     influence_parameter_1_parameter_id: Optional[int] = None
@@ -67,18 +67,14 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
     influence_parameter_2_type: Union[
         None,
         None,
-        QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type,
+        MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type,
     ] = None
     influence_parameter_2_tool_type_id: Optional[int] = None
     influence_parameter_2_parameter_id: Optional[int] = None
     influence_parameter_2_source: Optional[str] = None
     influence_parameter_2_value: Optional[str] = None
-    measurement_points: Union[
-        None, List["QualerApiModelsMeasurementsFromUpdateMeasurementPointModel"]
-    ] = None
-    measurement_fields: Union[
-        None, List["QualerApiModelsMeasurementsFromUpdateMeasurementFieldModel"]
-    ] = None
+    measurement_points: Union[None, List["MeasurementsFromUpdateMeasurementPointModel"]] = None
+    measurement_fields: Union[None, List["MeasurementsFromUpdateMeasurementFieldModel"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -181,10 +177,10 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_measurements_from_update_measurement_field_model import (
-            QualerApiModelsMeasurementsFromUpdateMeasurementFieldModel,
+            MeasurementsFromUpdateMeasurementFieldModel,
         )
         from ..models.qualer_api_models_measurements_from_update_measurement_point_model import (
-            QualerApiModelsMeasurementsFromUpdateMeasurementPointModel,
+            MeasurementsFromUpdateMeasurementPointModel,
         )
 
         d = dict(src_dict)
@@ -204,13 +200,13 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
         influence_parameter_1_type: Union[
             None,
             None,
-            QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type,
+            MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type,
         ]
         if not _influence_parameter_1_type:
             influence_parameter_1_type = None
         else:
             influence_parameter_1_type = (
-                QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type(
+                MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type(
                     _influence_parameter_1_type
                 )
             )
@@ -227,13 +223,13 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
         influence_parameter_2_type: Union[
             None,
             None,
-            QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type,
+            MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type,
         ]
         if not _influence_parameter_2_type:
             influence_parameter_2_type = None
         else:
             influence_parameter_2_type = (
-                QualerApiModelsMeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type(
+                MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type(
                     _influence_parameter_2_type
                 )
             )
@@ -249,10 +245,8 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
         measurement_points = []
         _measurement_points = d.pop("MeasurementPoints", None)
         for measurement_points_item_data in _measurement_points or []:
-            measurement_points_item = (
-                QualerApiModelsMeasurementsFromUpdateMeasurementPointModel.from_dict(
-                    measurement_points_item_data
-                )
+            measurement_points_item = MeasurementsFromUpdateMeasurementPointModel.from_dict(
+                measurement_points_item_data
             )
 
             measurement_points.append(measurement_points_item)
@@ -260,10 +254,8 @@ class QualerApiModelsMeasurementsFromUpdateMeasurementSetModel:
         measurement_fields = []
         _measurement_fields = d.pop("MeasurementFields", None)
         for measurement_fields_item_data in _measurement_fields or []:
-            measurement_fields_item = (
-                QualerApiModelsMeasurementsFromUpdateMeasurementFieldModel.from_dict(
-                    measurement_fields_item_data
-                )
+            measurement_fields_item = MeasurementsFromUpdateMeasurementFieldModel.from_dict(
+                measurement_fields_item_data
             )
 
             measurement_fields.append(measurement_fields_item)

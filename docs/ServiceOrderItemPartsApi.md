@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_work_item_parts**
-> list[QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel] get_work_item_parts(work_item_id)
+> list[ServiceOrderItemPartsToOrderItemPartResponseModel] get_work_item_parts(work_item_id)
 
 
 
@@ -39,7 +39,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel]**](QualerApiModelsServiceOrderItemPartsToOrderItemPartResponseModel.md)
+[**list[ServiceOrderItemPartsToOrderItemPartResponseModel]**](ServiceOrderItemPartsToOrderItemPartResponseModel.md)
 
 ### Authorization
 

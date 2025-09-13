@@ -6,11 +6,11 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-T = TypeVar("T", bound="QualerApiModelsReportDatasetsToServiceOrderChargeResponse")
+T = TypeVar("T", bound="ReportDatasetsToServiceOrderChargeResponse")
 
 
 @_attrs_define
-class QualerApiModelsReportDatasetsToServiceOrderChargeResponse:
+class ReportDatasetsToServiceOrderChargeResponse:
     """
     Attributes:
         service_order_id (Optional[int]):

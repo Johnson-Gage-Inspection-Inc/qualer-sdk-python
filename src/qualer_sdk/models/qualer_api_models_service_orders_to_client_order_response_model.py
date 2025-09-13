@@ -9,18 +9,18 @@ from dateutil.parser import isoparse
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_service_orders_to_client_order_response_model_billing_address_type_0 import (
-        QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0,
+        ServiceOrdersToClientOrderResponseModelBillingAddressType0,
     )
     from ..models.qualer_api_models_service_orders_to_client_order_response_model_shipping_address_type_0 import (
-        QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0,
+        ServiceOrdersToClientOrderResponseModelShippingAddressType0,
     )
 
 
-T = TypeVar("T", bound="QualerApiModelsServiceOrdersToClientOrderResponseModel")
+T = TypeVar("T", bound="ServiceOrdersToClientOrderResponseModel")
 
 
 @_attrs_define
-class QualerApiModelsServiceOrdersToClientOrderResponseModel:
+class ServiceOrdersToClientOrderResponseModel:
     """
     Attributes:
         service_order_id (Optional[int]):
@@ -131,9 +131,9 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
         request_to_date (Optional[datetime.datetime]):
         request_to_time (Optional[datetime.datetime]):
         order_notes (Optional[str]):
-        billing_address (Union['QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0', None,
+        billing_address (Union['ServiceOrdersToClientOrderResponseModelBillingAddressType0', None,
             None]):
-        shipping_address (Union['QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0', None,
+        shipping_address (Union['ServiceOrdersToClientOrderResponseModelShippingAddressType0', None,
             None]):
     """
 
@@ -246,12 +246,12 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
     request_to_time: Optional[datetime.datetime] = None
     order_notes: Optional[str] = None
     billing_address: Union[
-        "QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0",
+        "ServiceOrdersToClientOrderResponseModelBillingAddressType0",
         None,
         None,
     ] = None
     shipping_address: Union[
-        "QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0",
+        "ServiceOrdersToClientOrderResponseModelShippingAddressType0",
         None,
         None,
     ] = None
@@ -259,10 +259,10 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         from ..models.qualer_api_models_service_orders_to_client_order_response_model_billing_address_type_0 import (
-            QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0,
+            ServiceOrdersToClientOrderResponseModelBillingAddressType0,
         )
         from ..models.qualer_api_models_service_orders_to_client_order_response_model_shipping_address_type_0 import (
-            QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0,
+            ServiceOrdersToClientOrderResponseModelShippingAddressType0,
         )
 
         service_order_id = self.service_order_id
@@ -646,7 +646,7 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
             billing_address = None
         elif isinstance(
             self.billing_address,
-            QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0,
+            ServiceOrdersToClientOrderResponseModelBillingAddressType0,
         ):
             billing_address = self.billing_address.to_dict()
         else:
@@ -657,7 +657,7 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
             shipping_address = None
         elif isinstance(
             self.shipping_address,
-            QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0,
+            ServiceOrdersToClientOrderResponseModelShippingAddressType0,
         ):
             shipping_address = self.shipping_address.to_dict()
         else:
@@ -892,10 +892,10 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.qualer_api_models_service_orders_to_client_order_response_model_billing_address_type_0 import (
-            QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0,
+            ServiceOrdersToClientOrderResponseModelBillingAddressType0,
         )
         from ..models.qualer_api_models_service_orders_to_client_order_response_model_shipping_address_type_0 import (
-            QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0,
+            ServiceOrdersToClientOrderResponseModelShippingAddressType0,
         )
 
         d = dict(src_dict)
@@ -1490,7 +1490,7 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
         def _parse_billing_address(
             data: object,
         ) -> Union[
-            "QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0",
+            "ServiceOrdersToClientOrderResponseModelBillingAddressType0",
             None,
             None,
         ]:
@@ -1499,8 +1499,8 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                billing_address_type_0 = QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0.from_dict(
-                    data
+                billing_address_type_0 = (
+                    ServiceOrdersToClientOrderResponseModelBillingAddressType0.from_dict(data)
                 )
 
                 return billing_address_type_0
@@ -1508,7 +1508,7 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
                 pass
             return cast(
                 Union[
-                    "QualerApiModelsServiceOrdersToClientOrderResponseModelBillingAddressType0",
+                    "ServiceOrdersToClientOrderResponseModelBillingAddressType0",
                     None,
                     None,
                 ],
@@ -1520,7 +1520,7 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
         def _parse_shipping_address(
             data: object,
         ) -> Union[
-            "QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0",
+            "ServiceOrdersToClientOrderResponseModelShippingAddressType0",
             None,
             None,
         ]:
@@ -1529,8 +1529,8 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                shipping_address_type_0 = QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0.from_dict(
-                    data
+                shipping_address_type_0 = (
+                    ServiceOrdersToClientOrderResponseModelShippingAddressType0.from_dict(data)
                 )
 
                 return shipping_address_type_0
@@ -1538,7 +1538,7 @@ class QualerApiModelsServiceOrdersToClientOrderResponseModel:
                 pass
             return cast(
                 Union[
-                    "QualerApiModelsServiceOrdersToClientOrderResponseModelShippingAddressType0",
+                    "ServiceOrdersToClientOrderResponseModelShippingAddressType0",
                     None,
                     None,
                 ],

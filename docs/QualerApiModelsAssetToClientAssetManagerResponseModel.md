@@ -1,4 +1,4 @@
-# QualerApiModelsAssetToClientAssetManagerResponseModel
+# AssetToClientAssetManagerResponseModel
 
 ## Properties
 Name | Type | Description | Notes

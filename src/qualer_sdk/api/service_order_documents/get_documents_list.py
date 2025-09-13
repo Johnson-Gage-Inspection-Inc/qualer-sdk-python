@@ -6,7 +6,7 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.qualer_api_models_service_order_documents_to_company_order_controlled_document_response import (
-    QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse,
+    ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse,
 )
 from ...types import Response
 
@@ -36,15 +36,17 @@ def _parse_response(
 ) -> Optional[
     Union[
         Any,
-        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
+        List["ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
     ]
 ]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse.from_dict(
-                response_200_item_data
+            response_200_item = (
+                ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse.from_dict(
+                    response_200_item_data
+                )
             )
 
             response_200.append(response_200_item)
@@ -67,7 +69,7 @@ def _build_response(
 ) -> Response[
     Union[
         Any,
-        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
+        List["ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
     ]
 ]:
     return Response(
@@ -86,7 +88,7 @@ def sync_detailed(
 ) -> Response[
     Union[
         Any,
-        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
+        List["ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
     ]
 ]:
     """
@@ -99,7 +101,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, List['QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]]
+        Response[Union[Any, List['ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]]
     """
 
     kwargs = _get_kwargs(
@@ -122,7 +124,7 @@ def sync(
 ) -> Optional[
     Union[
         Any,
-        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
+        List["ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
     ]
 ]:
     """
@@ -135,7 +137,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, List['QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]
+        Union[Any, List['ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]
     """
 
     return sync_detailed(
@@ -153,7 +155,7 @@ async def asyncio_detailed(
 ) -> Response[
     Union[
         Any,
-        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
+        List["ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
     ]
 ]:
     """
@@ -166,7 +168,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, List['QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]]
+        Response[Union[Any, List['ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]]
     """
 
     kwargs = _get_kwargs(
@@ -187,7 +189,7 @@ async def asyncio(
 ) -> Optional[
     Union[
         Any,
-        List["QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
+        List["ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse"],
     ]
 ]:
     """
@@ -200,7 +202,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, List['QualerApiModelsServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]
+        Union[Any, List['ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse']]
     """
 
     return (
