@@ -71,9 +71,38 @@ class ServiceOrdersFromChangeServiceOrderStatusModel:
         elif _service_order_status is None:
             service_order_status = None
         else:
-            service_order_status = ServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus(
-                _service_order_status
-            )
+            # Handle both integer and string values for ServiceOrderStatus
+            if isinstance(_service_order_status, int):
+                # Map integer values to string values based on observed API behavior
+                service_order_status_mapping = {
+                    9: "WaitingForApproval",
+                    11: "Processing",
+                    12: "QualityControl",
+                    13: "Cancelled",
+                    15: "Completed",
+                    16: "Denied",
+                    17: "Delayed",
+                    18: "Scheduling",
+                    19: "Closed",
+                    20: "WaitingForVendorSignOff",
+                }
+                string_value = service_order_status_mapping.get(_service_order_status)
+                if string_value:
+                    service_order_status = ServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus(
+                        string_value
+                    )
+                else:
+                    # Unknown integer value, set to None to avoid crash
+                    service_order_status = None
+            else:
+                # Handle string values normally
+                try:
+                    service_order_status = ServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus(
+                        _service_order_status
+                    )
+                except ValueError:
+                    # If the string value is not a valid enum value, set to None
+                    service_order_status = None
 
         reset_status = d.pop("ResetStatus", None)
 
