@@ -11,13 +11,13 @@ T = TypeVar("T", bound="ReportDatasetsToAssetAttributeResponse")
 class ReportDatasetsToAssetAttributeResponse:
     """
     Attributes:
-        asset_id (Optional[int]):
+        asset_id (int):
         attribute_name (Optional[str]):
         attribute_value (Optional[str]):
         is_service (Optional[bool]):
     """
 
-    asset_id: Optional[int] = None
+    asset_id: int
     attribute_name: Optional[str] = None
     attribute_value: Optional[str] = None
     is_service: Optional[bool] = None

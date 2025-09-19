@@ -11,7 +11,7 @@ T = TypeVar("T", bound="AssetReservationFromCloseAssetReservationsModel")
 class AssetReservationFromCloseAssetReservationsModel:
     """
     Attributes:
-        asset_id (Optional[int]):
+        asset_id (int):
         area_id (Optional[int]):
         product_id (Optional[int]):
         serial_number (Optional[str]):
@@ -19,7 +19,7 @@ class AssetReservationFromCloseAssetReservationsModel:
         reservation_id (Optional[int]):
     """
 
-    asset_id: Optional[int] = None
+    asset_id: int
     area_id: Optional[int] = None
     product_id: Optional[int] = None
     serial_number: Optional[str] = None

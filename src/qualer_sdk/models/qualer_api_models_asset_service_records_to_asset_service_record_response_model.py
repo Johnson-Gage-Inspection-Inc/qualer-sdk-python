@@ -14,7 +14,7 @@ T = TypeVar("T", bound="AssetServiceRecordsToAssetServiceRecordResponseModel")
 class AssetServiceRecordsToAssetServiceRecordResponseModel:
     """
     Attributes:
-        asset_id (Optional[int]):
+        asset_id (int):
         asset_service_record_id (Optional[int]):
         service_schedule_segment_id (Optional[int]):
         forward_segment_id (Optional[int]):
@@ -54,7 +54,7 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
         schedule_name (Optional[str]):
     """
 
-    asset_id: Optional[int] = None
+    asset_id: int
     asset_service_record_id: Optional[int] = None
     service_schedule_segment_id: Optional[int] = None
     forward_segment_id: Optional[int] = None
