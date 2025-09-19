@@ -1,20 +1,19 @@
 """Test ServiceOrderStatus integer to string mapping."""
-import pytest
 
 from qualer_sdk.models.qualer_api_models_asset_to_asset_manage_response_model import (
     AssetToAssetManageResponseModel,
 )
-from qualer_sdk.models.qualer_api_models_asset_to_client_asset_manager_response_model import (
-    AssetToClientAssetManagerResponseModel,
-)
-from qualer_sdk.models.qualer_api_models_service_orders_from_change_service_order_status_model import (
-    ServiceOrdersFromChangeServiceOrderStatusModel,
-)
 from qualer_sdk.models.qualer_api_models_asset_to_asset_manage_response_model_service_order_status import (
     AssetToAssetManageResponseModelServiceOrderStatus,
 )
+from qualer_sdk.models.qualer_api_models_asset_to_client_asset_manager_response_model import (
+    AssetToClientAssetManagerResponseModel,
+)
 from qualer_sdk.models.qualer_api_models_asset_to_client_asset_manager_response_model_service_order_status import (
     AssetToClientAssetManagerResponseModelServiceOrderStatus,
+)
+from qualer_sdk.models.qualer_api_models_service_orders_from_change_service_order_status_model import (
+    ServiceOrdersFromChangeServiceOrderStatusModel,
 )
 from qualer_sdk.models.qualer_api_models_service_orders_from_change_service_order_status_model_service_order_status import (
     ServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
@@ -43,7 +42,7 @@ class TestServiceOrderStatusMapping:
         for integer_value, expected_string in test_cases:
             data = {"ServiceOrderStatus": integer_value}
             model = AssetToAssetManageResponseModel.from_dict(data)
-            
+
             assert model.service_order_status is not None
             assert model.service_order_status.value == expected_string
 
@@ -66,7 +65,7 @@ class TestServiceOrderStatusMapping:
         for string_value in test_strings:
             data = {"ServiceOrderStatus": string_value}
             model = AssetToAssetManageResponseModel.from_dict(data)
-            
+
             assert model.service_order_status is not None
             assert model.service_order_status.value == string_value
 
@@ -74,7 +73,7 @@ class TestServiceOrderStatusMapping:
         """Test AssetToAssetManageResponseModel handles unknown integer values gracefully."""
         data = {"ServiceOrderStatus": 999}  # Unknown integer
         model = AssetToAssetManageResponseModel.from_dict(data)
-        
+
         # Should not crash and should set to None for unknown values
         assert model.service_order_status is None
 
@@ -82,7 +81,7 @@ class TestServiceOrderStatusMapping:
         """Test AssetToAssetManageResponseModel handles invalid string values gracefully."""
         data = {"ServiceOrderStatus": "InvalidStatus"}
         model = AssetToAssetManageResponseModel.from_dict(data)
-        
+
         # Should not crash and should set to None for invalid strings
         assert model.service_order_status is None
 
@@ -117,7 +116,7 @@ class TestServiceOrderStatusMapping:
         for integer_value, expected_string in test_cases:
             data = {"ServiceOrderStatus": integer_value}
             model = AssetToClientAssetManagerResponseModel.from_dict(data)
-            
+
             assert model.service_order_status is not None
             assert model.service_order_status.value == expected_string
 
@@ -140,7 +139,7 @@ class TestServiceOrderStatusMapping:
         for string_value in test_strings:
             data = {"ServiceOrderStatus": string_value}
             model = AssetToClientAssetManagerResponseModel.from_dict(data)
-            
+
             assert model.service_order_status is not None
             assert model.service_order_status.value == string_value
 
@@ -148,7 +147,7 @@ class TestServiceOrderStatusMapping:
         """Test AssetToClientAssetManagerResponseModel handles unknown integer values gracefully."""
         data = {"ServiceOrderStatus": 999}  # Unknown integer
         model = AssetToClientAssetManagerResponseModel.from_dict(data)
-        
+
         # Should not crash and should set to None for unknown values
         assert model.service_order_status is None
 
@@ -156,7 +155,7 @@ class TestServiceOrderStatusMapping:
         """Test AssetToClientAssetManagerResponseModel handles invalid string values gracefully."""
         data = {"ServiceOrderStatus": "InvalidStatus"}
         model = AssetToClientAssetManagerResponseModel.from_dict(data)
-        
+
         # Should not crash and should set to None for invalid strings
         assert model.service_order_status is None
 
@@ -179,7 +178,7 @@ class TestServiceOrderStatusMapping:
         for integer_value, expected_string in test_cases:
             data = {"ServiceOrderStatus": integer_value}
             model = ServiceOrdersFromChangeServiceOrderStatusModel.from_dict(data)
-            
+
             assert model.service_order_status is not None
             assert model.service_order_status.value == expected_string
 
@@ -202,7 +201,7 @@ class TestServiceOrderStatusMapping:
         for string_value in test_strings:
             data = {"ServiceOrderStatus": string_value}
             model = ServiceOrdersFromChangeServiceOrderStatusModel.from_dict(data)
-            
+
             assert model.service_order_status is not None
             assert model.service_order_status.value == string_value
 
@@ -210,7 +209,7 @@ class TestServiceOrderStatusMapping:
         """Test ServiceOrdersFromChangeServiceOrderStatusModel handles unknown integer values gracefully."""
         data = {"ServiceOrderStatus": 999}  # Unknown integer
         model = ServiceOrdersFromChangeServiceOrderStatusModel.from_dict(data)
-        
+
         # Should not crash and should set to None for unknown values
         assert model.service_order_status is None
 
@@ -219,7 +218,7 @@ class TestServiceOrderStatusMapping:
         # Check AssetToAssetManageResponseModelServiceOrderStatus
         mapped_values = [
             "WaitingForApproval",
-            "Processing", 
+            "Processing",
             "QualityControl",
             "Cancelled",
             "Completed",
@@ -229,7 +228,7 @@ class TestServiceOrderStatusMapping:
             "Closed",
             "WaitingForVendorSignOff",
         ]
-        
+
         for value in mapped_values:
             # Should not raise exception
             AssetToAssetManageResponseModelServiceOrderStatus(value)
