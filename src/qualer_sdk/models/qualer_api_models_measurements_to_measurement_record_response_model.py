@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -52,8 +52,7 @@ class MeasurementsToMeasurementRecordResponseModel:
         service_schedule_segment_id (Optional[int]):
         forward_next_service (Optional[bool]):
         forward_segment_id (Optional[int]):
-        measurement_batches (Union[None,
-            List['MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel']]):
+        measurement_batches (Optional[List['MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel']]):
     """
 
     service_order_id: Optional[int] = None
@@ -89,10 +88,8 @@ class MeasurementsToMeasurementRecordResponseModel:
     service_schedule_segment_id: Optional[int] = None
     forward_next_service: Optional[bool] = None
     forward_segment_id: Optional[int] = None
-    measurement_batches: Union[
-        None,
-        None,
-        List["MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel"],
+    measurement_batches: Optional[
+        List["MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel"]
     ] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
