@@ -217,6 +217,7 @@ from .qualer_api_models_asset_to_client_asset_manager_response_model_record_type
 from .qualer_api_models_asset_to_client_asset_manager_response_model_service_order_status import (
     AssetToClientAssetManagerResponseModelServiceOrderStatus,
 )
+
 from .qualer_api_models_asset_to_client_asset_manager_response_model_tool_role import (
     AssetToClientAssetManagerResponseModelToolRole,
 )
@@ -712,6 +713,7 @@ from .qualer_api_models_service_order_item_parts_to_order_item_part_response_mod
 from .qualer_api_models_service_order_item_tasks_from_service_order_item_task_create_model import (
     ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel,
 )
+from .service_order_status import ServiceOrderStatus
 from .qualer_api_models_service_orders_from_add_payment_model import (
     ServiceOrdersFromAddPaymentModel,
 )
@@ -1193,6 +1195,7 @@ __all__ = [
     "ServiceOrderItemPartsToOrderItemPartResponseModel",
     "ServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType",
     "ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel",
+    "ServiceOrderStatus",
     "ServiceOrdersFromAddPaymentModel",
     "ServiceOrdersFromAddWorkItemsModel",
     "ServiceOrdersFromAppendTrackingNumberModel",

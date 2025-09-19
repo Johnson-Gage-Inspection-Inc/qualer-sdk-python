@@ -12,12 +12,10 @@ from ..models.qualer_api_models_asset_to_asset_manage_response_model_due_status 
 from ..models.qualer_api_models_asset_to_asset_manage_response_model_record_type import (
     AssetToAssetManageResponseModelRecordType,
 )
-from ..models.qualer_api_models_asset_to_asset_manage_response_model_service_order_status import (
-    AssetToAssetManageResponseModelServiceOrderStatus,
-)
 from ..models.qualer_api_models_asset_to_asset_manage_response_model_tool_role import (
     AssetToAssetManageResponseModelToolRole,
 )
+from ..models.service_order_status import ServiceOrderStatus
 from ..models.service_result_status import ServiceResultStatus
 from ..models.work_status import WorkStatus
 
@@ -103,7 +101,7 @@ class AssetToAssetManageResponseModel:
         service_schedule_id (Optional[int]):
         service_schedule (Optional[str]):
         service_order_id (Optional[int]):
-        service_order_status (Optional[AssetToAssetManageResponseModelServiceOrderStatus]):
+        service_order_status (Optional[ServiceOrderStatus]):
         custom_order_number (Optional[str]):
         service_order_item_id (Optional[int]):
         vendor (Optional[str]):
@@ -190,7 +188,7 @@ class AssetToAssetManageResponseModel:
     service_schedule_id: Optional[int] = None
     service_schedule: Optional[str] = None
     service_order_id: Optional[int] = None
-    service_order_status: Union[None, AssetToAssetManageResponseModelServiceOrderStatus] = None
+    service_order_status: Union[None, ServiceOrderStatus] = None
     custom_order_number: Optional[str] = None
     service_order_item_id: Optional[int] = None
     vendor: Optional[str] = None
@@ -409,9 +407,9 @@ class AssetToAssetManageResponseModel:
 
         service_order_id = self.service_order_id
 
-        service_order_status: Optional[str] = None
-        if self.service_order_status and not isinstance(self.service_order_status, None):
-            service_order_status = self.service_order_status.value
+        service_order_status: Optional[str] = (
+            self.service_order_status.value if self.service_order_status else None
+        )
 
         custom_order_number = self.custom_order_number
 
@@ -920,48 +918,7 @@ class AssetToAssetManageResponseModel:
         service_order_id = d.pop("ServiceOrderId", None)
 
         _service_order_status = d.pop("ServiceOrderStatus", None)
-        service_order_status: Union[
-            None,
-            None,
-            AssetToAssetManageResponseModelServiceOrderStatus,
-        ]
-        if not _service_order_status:
-            service_order_status = None
-        elif _service_order_status is None:
-            service_order_status = None
-        else:
-            # Handle both integer and string values for ServiceOrderStatus
-            if isinstance(_service_order_status, int):
-                # Map integer values to string values based on observed API behavior
-                service_order_status_mapping = {
-                    9: "WaitingForApproval",
-                    11: "Processing",
-                    12: "QualityControl",
-                    13: "Cancelled",
-                    15: "Completed",
-                    16: "Denied",
-                    17: "Delayed",
-                    18: "Scheduling",
-                    19: "Closed",
-                    20: "WaitingForVendorSignOff",
-                }
-                string_value = service_order_status_mapping.get(_service_order_status)
-                if string_value:
-                    service_order_status = AssetToAssetManageResponseModelServiceOrderStatus(
-                        string_value
-                    )
-                else:
-                    # Unknown integer value, set to None to avoid crash
-                    service_order_status = None
-            else:
-                # Handle string values normally
-                try:
-                    service_order_status = AssetToAssetManageResponseModelServiceOrderStatus(
-                        _service_order_status
-                    )
-                except ValueError:
-                    # If the string value is not a valid enum value, set to None
-                    service_order_status = None
+        service_order_status = ServiceOrderStatus.from_api_value(_service_order_status)
 
         custom_order_number = d.pop("CustomOrderNumber", None)
 
