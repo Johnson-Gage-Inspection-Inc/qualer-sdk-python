@@ -1,12 +1,10 @@
 from collections.abc import Mapping
-from typing import Any, Dict, List, Optional, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.qualer_api_models_service_orders_from_change_service_order_status_model_service_order_status import (
-    ServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
-)
+from ..models.service_order_status import ServiceOrderStatus
 
 T = TypeVar("T", bound="ServiceOrdersFromChangeServiceOrderStatusModel")
 
@@ -15,27 +13,22 @@ T = TypeVar("T", bound="ServiceOrdersFromChangeServiceOrderStatusModel")
 class ServiceOrdersFromChangeServiceOrderStatusModel:
     """
     Attributes:
-        service_order_status (Union[None,
-            ServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus]):
+        service_order_status (Optional[ServiceOrderStatus]):
         reset_status (Optional[bool]):
         email (Optional[str]):
         password (Optional[str]):
     """
 
-    service_order_status: Union[
-        None,
-        None,
-        ServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
-    ] = None
+    service_order_status: Optional[ServiceOrderStatus] = None
     reset_status: Optional[bool] = None
     email: Optional[str] = None
     password: Optional[str] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
-        service_order_status: Optional[str] = None
-        if self.service_order_status and not isinstance(self.service_order_status, None):
-            service_order_status = self.service_order_status.value
+        service_order_status: Optional[str] = (
+            self.service_order_status.value if self.service_order_status else None
+        )
 
         reset_status = self.reset_status
 
@@ -61,19 +54,7 @@ class ServiceOrdersFromChangeServiceOrderStatusModel:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         _service_order_status = d.pop("ServiceOrderStatus", None)
-        service_order_status: Union[
-            None,
-            None,
-            ServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus,
-        ]
-        if not _service_order_status:
-            service_order_status = None
-        elif _service_order_status is None:
-            service_order_status = None
-        else:
-            service_order_status = ServiceOrdersFromChangeServiceOrderStatusModelServiceOrderStatus(
-                _service_order_status
-            )
+        service_order_status = ServiceOrderStatus.from_api_value(_service_order_status)
 
         reset_status = d.pop("ResetStatus", None)
 
@@ -88,9 +69,9 @@ class ServiceOrdersFromChangeServiceOrderStatusModel:
             password=password,
         )
 
-        qualer_api_models_service_orders_from_change_service_order_status_model.additional_properties = (
-            d
-        )
+        (
+            qualer_api_models_service_orders_from_change_service_order_status_model.additional_properties
+        ) = d
         return qualer_api_models_service_orders_from_change_service_order_status_model
 
     @property
