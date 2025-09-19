@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, Dict, List, Optional, TypeVar, Union, cast
+from typing import Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -199,7 +199,7 @@ class AssetToClientAssetManagerResponseModel:
     in_service: Optional[bool] = None
     in_last_service: Optional[bool] = None
     service_order_id: Optional[int] = None
-    service_order_status: Union[None, ServiceOrderStatus] = None
+    service_order_status: Optional[ServiceOrderStatus] = None
     custom_order_number: Optional[str] = None
     service_order_item_id: Optional[int] = None
     vendor: Optional[str] = None

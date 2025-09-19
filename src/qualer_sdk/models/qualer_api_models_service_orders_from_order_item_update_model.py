@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, Dict, List, Optional, TypeVar, Union, cast
+from typing import Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -70,7 +70,7 @@ class ServiceOrdersFromOrderItemUpdateModel:
     checked_by_name: Optional[str] = None
     completed_on: Optional[datetime.datetime] = None
     completed_by_name: Optional[str] = None
-    as_found_check: Union[None, ServiceOrdersFromOrderItemUpdateModelAsFoundCheck] = None
+    as_found_check: Optional[ServiceOrdersFromOrderItemUpdateModelAsFoundCheck] = None
     as_left_check: Optional["ServiceOrdersFromOrderItemUpdateModelAsLeftCheck"] = None
     result_status: Optional[ServiceResultStatus] = None
     as_found_result: Optional[ServiceResultStatus] = None
@@ -306,11 +306,7 @@ class ServiceOrdersFromOrderItemUpdateModel:
         completed_by_name = d.pop("CompletedByName", None)
 
         _as_found_check = d.pop("AsFoundCheck", None)
-        as_found_check: Union[
-            None,
-            None,
-            ServiceOrdersFromOrderItemUpdateModelAsFoundCheck,
-        ]
+        as_found_check: Optional[ServiceOrdersFromOrderItemUpdateModelAsFoundCheck]
         if not _as_found_check:
             as_found_check = None
         else:

@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -33,14 +33,12 @@ class MeasurementsFromUpdateMeasurementSetModel:
         use_expected_value (Optional[bool]):
         decimal_places (Optional[int]):
         significant_figures (Optional[int]):
-        influence_parameter_1_type (Union[None,
-            MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type]):
+        influence_parameter_1_type (Optional[MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type]):
         influence_parameter_1_tool_type_id (Optional[int]):
         influence_parameter_1_parameter_id (Optional[int]):
         influence_parameter_1_source (Optional[str]):
         influence_parameter_1_value (Optional[str]):
-        influence_parameter_2_type (Union[None,
-            MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type]):
+        influence_parameter_2_type (Optional[MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type]):
         influence_parameter_2_tool_type_id (Optional[int]):
         influence_parameter_2_parameter_id (Optional[int]):
         influence_parameter_2_source (Optional[str]):
@@ -55,26 +53,22 @@ class MeasurementsFromUpdateMeasurementSetModel:
     use_expected_value: Optional[bool] = None
     decimal_places: Optional[int] = None
     significant_figures: Optional[int] = None
-    influence_parameter_1_type: Union[
-        None,
-        None,
-        MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type,
+    influence_parameter_1_type: Optional[
+        MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type
     ] = None
     influence_parameter_1_tool_type_id: Optional[int] = None
     influence_parameter_1_parameter_id: Optional[int] = None
     influence_parameter_1_source: Optional[str] = None
     influence_parameter_1_value: Optional[str] = None
-    influence_parameter_2_type: Union[
-        None,
-        None,
-        MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type,
+    influence_parameter_2_type: Optional[
+        MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type
     ] = None
     influence_parameter_2_tool_type_id: Optional[int] = None
     influence_parameter_2_parameter_id: Optional[int] = None
     influence_parameter_2_source: Optional[str] = None
     influence_parameter_2_value: Optional[str] = None
-    measurement_points: Union[None, List["MeasurementsFromUpdateMeasurementPointModel"]] = None
-    measurement_fields: Union[None, List["MeasurementsFromUpdateMeasurementFieldModel"]] = None
+    measurement_points: Optional[List["MeasurementsFromUpdateMeasurementPointModel"]] = None
+    measurement_fields: Optional[List["MeasurementsFromUpdateMeasurementFieldModel"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -91,9 +85,7 @@ class MeasurementsFromUpdateMeasurementSetModel:
         significant_figures = self.significant_figures
 
         influence_parameter_1_type: Optional[str] = None
-        if self.influence_parameter_1_type and not isinstance(
-            self.influence_parameter_1_type, None
-        ):
+        if self.influence_parameter_1_type:
             influence_parameter_1_type = self.influence_parameter_1_type.value
 
         influence_parameter_1_tool_type_id = self.influence_parameter_1_tool_type_id
@@ -105,9 +97,7 @@ class MeasurementsFromUpdateMeasurementSetModel:
         influence_parameter_1_value = self.influence_parameter_1_value
 
         influence_parameter_2_type: Optional[str] = None
-        if self.influence_parameter_2_type and not isinstance(
-            self.influence_parameter_2_type, None
-        ):
+        if self.influence_parameter_2_type:
             influence_parameter_2_type = self.influence_parameter_2_type.value
 
         influence_parameter_2_tool_type_id = self.influence_parameter_2_tool_type_id
@@ -197,10 +187,8 @@ class MeasurementsFromUpdateMeasurementSetModel:
         significant_figures = d.pop("SignificantFigures", None)
 
         _influence_parameter_1_type = d.pop("InfluenceParameter1Type", None)
-        influence_parameter_1_type: Union[
-            None,
-            None,
-            MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type,
+        influence_parameter_1_type: Optional[
+            MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type
         ]
         if not _influence_parameter_1_type:
             influence_parameter_1_type = None
@@ -220,10 +208,8 @@ class MeasurementsFromUpdateMeasurementSetModel:
         influence_parameter_1_value = d.pop("InfluenceParameter1Value", None)
 
         _influence_parameter_2_type = d.pop("InfluenceParameter2Type", None)
-        influence_parameter_2_type: Union[
-            None,
-            None,
-            MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type,
+        influence_parameter_2_type: Optional[
+            MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type
         ]
         if not _influence_parameter_2_type:
             influence_parameter_2_type = None

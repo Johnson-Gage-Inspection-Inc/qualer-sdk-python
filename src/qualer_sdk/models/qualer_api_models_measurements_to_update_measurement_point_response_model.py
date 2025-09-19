@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -60,8 +60,7 @@ class MeasurementsToUpdateMeasurementPointResponseModel:
         influence_parameter_2_parameter_id (Optional[int]):
         influence_parameter_2_value (Optional[str]):
         measurements (Optional[List['MeasurementsToUpdateMeasurementResponseModel']]):
-        measurement_condition_factors (Union[None,
-            List['MeasurementsToUpdateMeasurementConditionFactorResponse']]):
+        measurement_condition_factors (Optional[List['MeasurementsToUpdateMeasurementConditionFactorResponse']]):
         primary_measurement_tool (Optional[MeasurementsToUpdateMeasurementToolResponseModel]):
         secondary_measurement_tool (Optional[MeasurementsToUpdateMeasurementToolResponseModel]):
     """
@@ -76,16 +75,8 @@ class MeasurementsToUpdateMeasurementPointResponseModel:
     range_min: Optional[float] = None
     range_max: Optional[float] = None
     tolerance_type: Optional[str] = None
-    tolerance_mode: Union[
-        None,
-        None,
-        MeasurementsToUpdateMeasurementPointResponseModelToleranceMode,
-    ] = None
-    tolerance_unit: Union[
-        None,
-        None,
-        MeasurementsToUpdateMeasurementPointResponseModelToleranceUnit,
-    ] = None
+    tolerance_mode: Optional[MeasurementsToUpdateMeasurementPointResponseModelToleranceMode] = None
+    tolerance_unit: Optional[MeasurementsToUpdateMeasurementPointResponseModelToleranceUnit] = None
     precision_type: Optional[str] = None
     precision: Optional[float] = None
     tolerance_minimum: Optional[float] = None
@@ -103,16 +94,12 @@ class MeasurementsToUpdateMeasurementPointResponseModel:
     influence_parameter_1_value: Optional[str] = None
     influence_parameter_2_parameter_id: Optional[int] = None
     influence_parameter_2_value: Optional[str] = None
-    measurements: Union[None, List["MeasurementsToUpdateMeasurementResponseModel"]] = None
-    measurement_condition_factors: Union[
-        None,
-        None,
-        List["MeasurementsToUpdateMeasurementConditionFactorResponse"],
+    measurements: Optional[List["MeasurementsToUpdateMeasurementResponseModel"]] = None
+    measurement_condition_factors: Optional[
+        List["MeasurementsToUpdateMeasurementConditionFactorResponse"]
     ] = None
-    primary_measurement_tool: Union[None, "MeasurementsToUpdateMeasurementToolResponseModel"] = None
-    secondary_measurement_tool: Union[None, "MeasurementsToUpdateMeasurementToolResponseModel"] = (
-        None
-    )
+    primary_measurement_tool: Optional["MeasurementsToUpdateMeasurementToolResponseModel"] = None
+    secondary_measurement_tool: Optional["MeasurementsToUpdateMeasurementToolResponseModel"] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -186,9 +173,7 @@ class MeasurementsToUpdateMeasurementPointResponseModel:
                 measurements.append(measurements_item)
 
         measurement_condition_factors: Optional[List[Dict[str, Any]]] = None
-        if self.measurement_condition_factors and not isinstance(
-            self.measurement_condition_factors, None
-        ):
+        if self.measurement_condition_factors:
             measurement_condition_factors = []
             for measurement_condition_factors_item_data in self.measurement_condition_factors:
                 measurement_condition_factors_item = (
@@ -197,13 +182,11 @@ class MeasurementsToUpdateMeasurementPointResponseModel:
                 measurement_condition_factors.append(measurement_condition_factors_item)
 
         primary_measurement_tool: Optional[Dict[str, Any]] = None
-        if self.primary_measurement_tool and not isinstance(self.primary_measurement_tool, None):
+        if self.primary_measurement_tool:
             primary_measurement_tool = self.primary_measurement_tool.to_dict()
 
         secondary_measurement_tool: Optional[Dict[str, Any]] = None
-        if self.secondary_measurement_tool and not isinstance(
-            self.secondary_measurement_tool, None
-        ):
+        if self.secondary_measurement_tool:
             secondary_measurement_tool = self.secondary_measurement_tool.to_dict()
 
         field_dict: Dict[str, Any] = {}
@@ -312,11 +295,7 @@ class MeasurementsToUpdateMeasurementPointResponseModel:
         tolerance_type = d.pop("ToleranceType", None)
 
         _tolerance_mode = d.pop("ToleranceMode", None)
-        tolerance_mode: Union[
-            None,
-            None,
-            MeasurementsToUpdateMeasurementPointResponseModelToleranceMode,
-        ]
+        tolerance_mode: Optional[MeasurementsToUpdateMeasurementPointResponseModelToleranceMode]
         if not _tolerance_mode:
             tolerance_mode = None
         elif _tolerance_mode is None:
@@ -331,11 +310,7 @@ class MeasurementsToUpdateMeasurementPointResponseModel:
             )
 
         _tolerance_unit = d.pop("ToleranceUnit", None)
-        tolerance_unit: Union[
-            None,
-            None,
-            MeasurementsToUpdateMeasurementPointResponseModelToleranceUnit,
-        ]
+        tolerance_unit: Optional[MeasurementsToUpdateMeasurementPointResponseModelToleranceUnit]
         if not _tolerance_unit:
             tolerance_unit = None
         elif _tolerance_unit is None:
@@ -408,7 +383,7 @@ class MeasurementsToUpdateMeasurementPointResponseModel:
             measurement_condition_factors.append(measurement_condition_factors_item)
 
         _primary_measurement_tool = d.pop("PrimaryMeasurementTool", None)
-        primary_measurement_tool: Union[None, MeasurementsToUpdateMeasurementToolResponseModel]
+        primary_measurement_tool: Optional[MeasurementsToUpdateMeasurementToolResponseModel]
         if not _primary_measurement_tool:
             primary_measurement_tool = None
         else:
@@ -417,7 +392,7 @@ class MeasurementsToUpdateMeasurementPointResponseModel:
             )
 
         _secondary_measurement_tool = d.pop("SecondaryMeasurementTool", None)
-        secondary_measurement_tool: Union[None, MeasurementsToUpdateMeasurementToolResponseModel]
+        secondary_measurement_tool: Optional[MeasurementsToUpdateMeasurementToolResponseModel]
         if not _secondary_measurement_tool:
             secondary_measurement_tool = None
         else:

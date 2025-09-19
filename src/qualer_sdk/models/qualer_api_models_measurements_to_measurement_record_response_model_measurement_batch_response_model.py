@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -25,25 +25,20 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel:
     Attributes:
         batch_type (Optional[str]):
         batch_result (Optional[str]):
-        specification (Union[None,
-            MeasurementsToMeasurementRecordResponseModelSpecificationResponseModel]):
+        specification (Optional[MeasurementsToMeasurementRecordResponseModelSpecificationResponseModel]):
         measurement_sets (Optional[List['MeasurementsToMeasurementRecordResponseModelMeasurementBatch
             ResponseModelMeasurementSetResponseModel']]):
     """
 
     batch_type: Optional[str] = None
     batch_result: Optional[str] = None
-    specification: Union[
-        None,
-        None,
-        "MeasurementsToMeasurementRecordResponseModelSpecificationResponseModel",
+    specification: Optional[
+        "MeasurementsToMeasurementRecordResponseModelSpecificationResponseModel"
     ] = None
-    measurement_sets: Union[
-        None,
-        None,
+    measurement_sets: Optional[
         List[
             "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModel"
-        ],
+        ]
     ] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -92,10 +87,8 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel:
         batch_result = d.pop("BatchResult", None)
 
         _specification = d.pop("Specification", None)
-        specification: Union[
-            None,
-            None,
-            MeasurementsToMeasurementRecordResponseModelSpecificationResponseModel,
+        specification: Optional[
+            MeasurementsToMeasurementRecordResponseModelSpecificationResponseModel
         ]
         if not _specification:
             specification = None

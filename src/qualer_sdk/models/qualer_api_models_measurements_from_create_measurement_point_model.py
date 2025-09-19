@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -68,16 +68,8 @@ class MeasurementsFromCreateMeasurementPointModel:
     range_max: Optional[float] = None
     specification_mode: Optional[int] = None
     tolerance_type: Optional[str] = None
-    tolerance_mode: Union[
-        None,
-        None,
-        MeasurementsFromCreateMeasurementPointModelToleranceMode,
-    ] = None
-    tolerance_unit: Union[
-        None,
-        None,
-        MeasurementsFromCreateMeasurementPointModelToleranceUnit,
-    ] = None
+    tolerance_mode: Optional[MeasurementsFromCreateMeasurementPointModelToleranceMode] = None
+    tolerance_unit: Optional[MeasurementsFromCreateMeasurementPointModelToleranceUnit] = None
     precision_type: Optional[str] = None
     readings: Optional[int] = None
     channels_type: Optional[str] = None
@@ -92,14 +84,12 @@ class MeasurementsFromCreateMeasurementPointModel:
     base_value: Optional[float] = None
     test_value: Optional[float] = None
     is_accredited: Optional[bool] = None
-    measurements: Union[None, List["MeasurementsFromCreateMeasurementModel"]] = None
-    condition_factors: Union[
-        None,
-        None,
-        List["MeasurementsFromCreateMeasurementConditionFactorModel"],
-    ] = None
-    primary_measurement_tool: Union[None, "MeasurementsFromCreateMeasurementToolModel"] = None
-    secondary_measurement_tool: Union[None, "MeasurementsFromCreateMeasurementToolModel"] = None
+    measurements: Optional[List["MeasurementsFromCreateMeasurementModel"]] = None
+    condition_factors: Optional[List["MeasurementsFromCreateMeasurementConditionFactorModel"]] = (
+        None
+    )
+    primary_measurement_tool: Optional["MeasurementsFromCreateMeasurementToolModel"] = None
+    secondary_measurement_tool: Optional["MeasurementsFromCreateMeasurementToolModel"] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -170,13 +160,11 @@ class MeasurementsFromCreateMeasurementPointModel:
                 condition_factors.append(condition_factors_item)
 
         primary_measurement_tool: Optional[Dict[str, Any]] = None
-        if self.primary_measurement_tool and not isinstance(self.primary_measurement_tool, None):
+        if self.primary_measurement_tool:
             primary_measurement_tool = self.primary_measurement_tool.to_dict()
 
         secondary_measurement_tool: Optional[Dict[str, Any]] = None
-        if self.secondary_measurement_tool and not isinstance(
-            self.secondary_measurement_tool, None
-        ):
+        if self.secondary_measurement_tool:
             secondary_measurement_tool = self.secondary_measurement_tool.to_dict()
 
         field_dict: Dict[str, Any] = {}
@@ -271,11 +259,7 @@ class MeasurementsFromCreateMeasurementPointModel:
         tolerance_type = d.pop("ToleranceType", None)
 
         _tolerance_mode = d.pop("ToleranceMode", None)
-        tolerance_mode: Union[
-            None,
-            None,
-            MeasurementsFromCreateMeasurementPointModelToleranceMode,
-        ]
+        tolerance_mode: Optional[MeasurementsFromCreateMeasurementPointModelToleranceMode]
         if not _tolerance_mode:
             tolerance_mode = None
         else:
@@ -284,11 +268,7 @@ class MeasurementsFromCreateMeasurementPointModel:
             )
 
         _tolerance_unit = d.pop("ToleranceUnit", None)
-        tolerance_unit: Union[
-            None,
-            None,
-            MeasurementsFromCreateMeasurementPointModelToleranceUnit,
-        ]
+        tolerance_unit: Optional[MeasurementsFromCreateMeasurementPointModelToleranceUnit]
         if not _tolerance_unit:
             tolerance_unit = None
         else:
@@ -345,7 +325,7 @@ class MeasurementsFromCreateMeasurementPointModel:
             condition_factors.append(condition_factors_item)
 
         _primary_measurement_tool = d.pop("PrimaryMeasurementTool", None)
-        primary_measurement_tool: Union[None, MeasurementsFromCreateMeasurementToolModel]
+        primary_measurement_tool: Optional[MeasurementsFromCreateMeasurementToolModel]
         if not _primary_measurement_tool:
             primary_measurement_tool = None
         else:
@@ -354,7 +334,7 @@ class MeasurementsFromCreateMeasurementPointModel:
             )
 
         _secondary_measurement_tool = d.pop("SecondaryMeasurementTool", None)
-        secondary_measurement_tool: Union[None, MeasurementsFromCreateMeasurementToolModel]
+        secondary_measurement_tool: Optional[MeasurementsFromCreateMeasurementToolModel]
         if not _secondary_measurement_tool:
             secondary_measurement_tool = None
         else:

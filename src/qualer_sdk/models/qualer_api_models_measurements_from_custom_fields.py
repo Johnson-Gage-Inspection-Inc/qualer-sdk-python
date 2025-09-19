@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -24,7 +24,7 @@ class MeasurementsFromCustomFields:
 
     description: Optional[str] = None
     result: Optional[str] = None
-    items: Union[None, List["MeasurementsFromCreateMeasurementFieldModel"]] = None
+    items: Optional[List["MeasurementsFromCreateMeasurementFieldModel"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:

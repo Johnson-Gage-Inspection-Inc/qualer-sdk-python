@@ -23,9 +23,7 @@ class ServiceOrdersToAssetAddResultResponseModel:
         asset_count = self.asset_count
 
         already_added_asset_serials: Optional[List[str]] = None
-        if self.already_added_asset_serials and not isinstance(
-            self.already_added_asset_serials, None
-        ):
+        if self.already_added_asset_serials:
             already_added_asset_serials = self.already_added_asset_serials
 
         field_dict: Dict[str, Any] = {}

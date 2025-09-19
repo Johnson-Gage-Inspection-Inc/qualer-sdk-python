@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -43,7 +43,7 @@ class ClientsToEmployeeResponseModel:
     last_name: Optional[str] = None
     company_id: Optional[int] = None
     login_email: Optional[str] = None
-    departments: Union[None, List["ClientsToEmployeeEmployeeDepartmentResponse"]] = None
+    departments: Optional[List["ClientsToEmployeeEmployeeDepartmentResponse"]] = None
     subscription_email: Optional[str] = None
     subscription_phone: Optional[str] = None
     office_phone: Optional[str] = None

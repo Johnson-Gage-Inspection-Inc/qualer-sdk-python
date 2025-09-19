@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -28,7 +28,7 @@ class MaintenancePlansToMaintenancePlanResponse:
     maintenance_plan_name: Optional[str] = None
     is_template: Optional[bool] = None
     company_name: Optional[str] = None
-    maintenance_tasks: Union[None, List["MaintenancePlansToMaintenanceTaskResponse"]] = None
+    maintenance_tasks: Optional[List["MaintenancePlansToMaintenanceTaskResponse"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:

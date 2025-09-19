@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import Any, Dict, List, Optional, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -36,11 +36,7 @@ class ReportDatasetsToMeasurementChannelResultResponse:
     service_order_item_id: Optional[int] = None
     measurement_point_id: Optional[int] = None
     column_index: Optional[int] = None
-    batch_type: Union[
-        None,
-        None,
-        ReportDatasetsToMeasurementChannelResultResponseBatchType,
-    ] = None
+    batch_type: Optional[ReportDatasetsToMeasurementChannelResultResponseBatchType] = None
     result: Optional[ServiceResultStatus] = None
     mean_result: Optional[bool] = None
     range_result: Optional[bool] = None
@@ -135,11 +131,7 @@ class ReportDatasetsToMeasurementChannelResultResponse:
         column_index = d.pop("ColumnIndex", None)
 
         _batch_type = d.pop("BatchType", None)
-        batch_type: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementChannelResultResponseBatchType,
-        ]
+        batch_type: Optional[ReportDatasetsToMeasurementChannelResultResponseBatchType]
         if not _batch_type:
             batch_type = None
         else:

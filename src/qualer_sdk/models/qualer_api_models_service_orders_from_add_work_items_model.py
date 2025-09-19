@@ -25,7 +25,7 @@ class ServiceOrdersFromAddWorkItemsModel:
             asset_ids = self.asset_ids
 
         schedule_segment_ids: Optional[List[int]] = None
-        if self.schedule_segment_ids and not isinstance(self.schedule_segment_ids, None):
+        if self.schedule_segment_ids:
             schedule_segment_ids = self.schedule_segment_ids
 
         field_dict: Dict[str, Any] = {}

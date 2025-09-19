@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -29,8 +29,8 @@ class VendorsToVendorCompanyResponseModel:
         company_name (Optional[str]):
         domain_name (Optional[str]):
         custom_name (Optional[str]):
-        billing_address (Union['VendorsToVendorCompanyResponseModelBillingAddressType0', None]):
-        shipping_address (Union['VendorsToVendorCompanyResponseModelShippingAddressType0', None]):
+        billing_address (Optional['VendorsToVendorCompanyResponseModelBillingAddressType0']):
+        shipping_address (Optional['VendorsToVendorCompanyResponseModelShippingAddressType0']):
         updated_on_utc (Optional[datetime.datetime]):
     """
 
@@ -41,16 +41,8 @@ class VendorsToVendorCompanyResponseModel:
     company_name: Optional[str] = None
     domain_name: Optional[str] = None
     custom_name: Optional[str] = None
-    billing_address: Union[
-        "VendorsToVendorCompanyResponseModelBillingAddressType0",
-        None,
-        None,
-    ] = None
-    shipping_address: Union[
-        "VendorsToVendorCompanyResponseModelShippingAddressType0",
-        None,
-        None,
-    ] = None
+    billing_address: Optional["VendorsToVendorCompanyResponseModelBillingAddressType0"] = None
+    shipping_address: Optional["VendorsToVendorCompanyResponseModelShippingAddressType0"] = None
     updated_on_utc: Optional[datetime.datetime] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -154,11 +146,7 @@ class VendorsToVendorCompanyResponseModel:
 
         def _parse_billing_address(
             data: object,
-        ) -> Union[
-            "VendorsToVendorCompanyResponseModelBillingAddressType0",
-            None,
-            None,
-        ]:
+        ) -> Optional["VendorsToVendorCompanyResponseModelBillingAddressType0"]:
             if not data:
                 return None
             try:
@@ -172,11 +160,7 @@ class VendorsToVendorCompanyResponseModel:
             except Exception:
                 pass
             return cast(
-                Union[
-                    "VendorsToVendorCompanyResponseModelBillingAddressType0",
-                    None,
-                    None,
-                ],
+                Optional["VendorsToVendorCompanyResponseModelBillingAddressType0"],
                 data,
             )
 
@@ -184,11 +168,7 @@ class VendorsToVendorCompanyResponseModel:
 
         def _parse_shipping_address(
             data: object,
-        ) -> Union[
-            "VendorsToVendorCompanyResponseModelShippingAddressType0",
-            None,
-            None,
-        ]:
+        ) -> Optional["VendorsToVendorCompanyResponseModelShippingAddressType0"]:
             if not data:
                 return None
             try:
@@ -202,11 +182,7 @@ class VendorsToVendorCompanyResponseModel:
             except Exception:
                 pass
             return cast(
-                Union[
-                    "VendorsToVendorCompanyResponseModelShippingAddressType0",
-                    None,
-                    None,
-                ],
+                Optional["VendorsToVendorCompanyResponseModelShippingAddressType0"],
                 data,
             )
 

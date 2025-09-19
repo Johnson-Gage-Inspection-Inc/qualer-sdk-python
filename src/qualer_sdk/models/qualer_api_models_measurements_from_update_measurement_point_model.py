@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -61,10 +61,8 @@ class MeasurementsFromUpdateMeasurementPointModel:
         tolerance_mode (Optional[MeasurementsFromUpdateMeasurementPointModelToleranceMode]):
         tolerance_unit (Optional[MeasurementsFromUpdateMeasurementPointModelToleranceUnit]):
         measurements (Optional[List['MeasurementsFromUpdateMeasurementModel']]):
-        measurement_condition_factors (Union[None,
-            List['MeasurementsFromUpdateMeasurementConditionFactorModel']]):
-        tool_application_mode (Union[None,
-            MeasurementsFromUpdateMeasurementPointModelToolApplicationMode]):
+        measurement_condition_factors (Optional[List['MeasurementsFromUpdateMeasurementConditionFactorModel']]):
+        tool_application_mode (Optional[MeasurementsFromUpdateMeasurementPointModelToolApplicationMode]):
         primary_measurement_tool (Optional[MeasurementsFromUpdateMeasurementToolModel]):
         secondary_measurement_tool (Optional[MeasurementsFromUpdateMeasurementToolModel]):
         linked_measurement_point_id (Optional[int]):
@@ -108,40 +106,22 @@ class MeasurementsFromUpdateMeasurementPointModel:
     resolution: Optional[float] = None
     resolution_count: Optional[float] = None
     is_accredited: Optional[bool] = None
-    specification_mode: Union[
-        None,
-        None,
-        MeasurementsFromUpdateMeasurementPointModelSpecificationMode,
+    specification_mode: Optional[MeasurementsFromUpdateMeasurementPointModelSpecificationMode] = (
+        None
+    )
+    tolerance_mode: Optional[MeasurementsFromUpdateMeasurementPointModelToleranceMode] = None
+    tolerance_unit: Optional[MeasurementsFromUpdateMeasurementPointModelToleranceUnit] = None
+    measurements: Optional[List["MeasurementsFromUpdateMeasurementModel"]] = None
+    measurement_condition_factors: Optional[
+        List["MeasurementsFromUpdateMeasurementConditionFactorModel"]
     ] = None
-    tolerance_mode: Union[
-        None,
-        None,
-        MeasurementsFromUpdateMeasurementPointModelToleranceMode,
+    tool_application_mode: Optional[
+        MeasurementsFromUpdateMeasurementPointModelToolApplicationMode
     ] = None
-    tolerance_unit: Union[
-        None,
-        None,
-        MeasurementsFromUpdateMeasurementPointModelToleranceUnit,
-    ] = None
-    measurements: Union[None, List["MeasurementsFromUpdateMeasurementModel"]] = None
-    measurement_condition_factors: Union[
-        None,
-        None,
-        List["MeasurementsFromUpdateMeasurementConditionFactorModel"],
-    ] = None
-    tool_application_mode: Union[
-        None,
-        None,
-        MeasurementsFromUpdateMeasurementPointModelToolApplicationMode,
-    ] = None
-    primary_measurement_tool: Union[None, "MeasurementsFromUpdateMeasurementToolModel"] = None
-    secondary_measurement_tool: Union[None, "MeasurementsFromUpdateMeasurementToolModel"] = None
+    primary_measurement_tool: Optional["MeasurementsFromUpdateMeasurementToolModel"] = None
+    secondary_measurement_tool: Optional["MeasurementsFromUpdateMeasurementToolModel"] = None
     linked_measurement_point_id: Optional[int] = None
-    hysteresis_point: Union[
-        None,
-        None,
-        MeasurementsFromUpdateMeasurementPointModelHysteresisPoint,
-    ] = None
+    hysteresis_point: Optional[MeasurementsFromUpdateMeasurementPointModelHysteresisPoint] = None
     influence_parameter_1_parameter_id: Optional[int] = None
     influence_parameter_1_value: Optional[str] = None
     influence_parameter_2_parameter_id: Optional[int] = None
@@ -220,9 +200,7 @@ class MeasurementsFromUpdateMeasurementPointModel:
                 measurements.append(measurements_item)
 
         measurement_condition_factors: Optional[List[Dict[str, Any]]] = None
-        if self.measurement_condition_factors and not isinstance(
-            self.measurement_condition_factors, None
-        ):
+        if self.measurement_condition_factors:
             measurement_condition_factors = []
             for measurement_condition_factors_item_data in self.measurement_condition_factors:
                 measurement_condition_factors_item = (
@@ -231,17 +209,15 @@ class MeasurementsFromUpdateMeasurementPointModel:
                 measurement_condition_factors.append(measurement_condition_factors_item)
 
         tool_application_mode: Optional[str] = None
-        if self.tool_application_mode and not isinstance(self.tool_application_mode, None):
+        if self.tool_application_mode:
             tool_application_mode = self.tool_application_mode.value
 
         primary_measurement_tool: Optional[Dict[str, Any]] = None
-        if self.primary_measurement_tool and not isinstance(self.primary_measurement_tool, None):
+        if self.primary_measurement_tool:
             primary_measurement_tool = self.primary_measurement_tool.to_dict()
 
         secondary_measurement_tool: Optional[Dict[str, Any]] = None
-        if self.secondary_measurement_tool and not isinstance(
-            self.secondary_measurement_tool, None
-        ):
+        if self.secondary_measurement_tool:
             secondary_measurement_tool = self.secondary_measurement_tool.to_dict()
 
         linked_measurement_point_id = self.linked_measurement_point_id
@@ -438,11 +414,7 @@ class MeasurementsFromUpdateMeasurementPointModel:
         is_accredited = d.pop("IsAccredited", None)
 
         _specification_mode = d.pop("SpecificationMode", None)
-        specification_mode: Union[
-            None,
-            None,
-            MeasurementsFromUpdateMeasurementPointModelSpecificationMode,
-        ]
+        specification_mode: Optional[MeasurementsFromUpdateMeasurementPointModelSpecificationMode]
         if not _specification_mode:
             specification_mode = None
         else:
@@ -451,11 +423,7 @@ class MeasurementsFromUpdateMeasurementPointModel:
             )
 
         _tolerance_mode = d.pop("ToleranceMode", None)
-        tolerance_mode: Union[
-            None,
-            None,
-            MeasurementsFromUpdateMeasurementPointModelToleranceMode,
-        ]
+        tolerance_mode: Optional[MeasurementsFromUpdateMeasurementPointModelToleranceMode]
         if not _tolerance_mode:
             tolerance_mode = None
         else:
@@ -464,11 +432,7 @@ class MeasurementsFromUpdateMeasurementPointModel:
             )
 
         _tolerance_unit = d.pop("ToleranceUnit", None)
-        tolerance_unit: Union[
-            None,
-            None,
-            MeasurementsFromUpdateMeasurementPointModelToleranceUnit,
-        ]
+        tolerance_unit: Optional[MeasurementsFromUpdateMeasurementPointModelToleranceUnit]
         if not _tolerance_unit:
             tolerance_unit = None
         else:
@@ -497,10 +461,8 @@ class MeasurementsFromUpdateMeasurementPointModel:
             measurement_condition_factors.append(measurement_condition_factors_item)
 
         _tool_application_mode = d.pop("ToolApplicationMode", None)
-        tool_application_mode: Union[
-            None,
-            None,
-            MeasurementsFromUpdateMeasurementPointModelToolApplicationMode,
+        tool_application_mode: Optional[
+            MeasurementsFromUpdateMeasurementPointModelToolApplicationMode
         ]
         if not _tool_application_mode:
             tool_application_mode = None
@@ -510,7 +472,7 @@ class MeasurementsFromUpdateMeasurementPointModel:
             )
 
         _primary_measurement_tool = d.pop("PrimaryMeasurementTool", None)
-        primary_measurement_tool: Union[None, MeasurementsFromUpdateMeasurementToolModel]
+        primary_measurement_tool: Optional[MeasurementsFromUpdateMeasurementToolModel]
         if not _primary_measurement_tool:
             primary_measurement_tool = None
         else:
@@ -519,7 +481,7 @@ class MeasurementsFromUpdateMeasurementPointModel:
             )
 
         _secondary_measurement_tool = d.pop("SecondaryMeasurementTool", None)
-        secondary_measurement_tool: Union[None, MeasurementsFromUpdateMeasurementToolModel]
+        secondary_measurement_tool: Optional[MeasurementsFromUpdateMeasurementToolModel]
         if not _secondary_measurement_tool:
             secondary_measurement_tool = None
         else:
@@ -530,11 +492,7 @@ class MeasurementsFromUpdateMeasurementPointModel:
         linked_measurement_point_id = d.pop("LinkedMeasurementPointId", None)
 
         _hysteresis_point = d.pop("HysteresisPoint", None)
-        hysteresis_point: Union[
-            None,
-            None,
-            MeasurementsFromUpdateMeasurementPointModelHysteresisPoint,
-        ]
+        hysteresis_point: Optional[MeasurementsFromUpdateMeasurementPointModelHysteresisPoint]
         if not _hysteresis_point:
             hysteresis_point = None
         else:

@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -28,9 +28,9 @@ class SiteToClientSiteResponse:
         site_id (Optional[int]):
         site_name (Optional[str]):
         site_code (Optional[str]):
-        shipping_address (Union['SiteToClientSiteResponseShippingAddressType0', None]):
+        shipping_address (Optional['SiteToClientSiteResponseShippingAddressType0']):
         shipping_inherited (Optional[bool]):
-        billing_address (Union['SiteToClientSiteResponseBillingAddressType0', None]):
+        billing_address (Optional['SiteToClientSiteResponseBillingAddressType0']):
         default_account_representative_employee_id (Optional[int]):
         billing_inherited (Optional[bool]):
         federal_number (Optional[str]):
@@ -219,11 +219,7 @@ class SiteToClientSiteResponse:
             except Exception:
                 pass
             return cast(
-                Union[
-                    "SiteToClientSiteResponseShippingAddressType0",
-                    None,
-                    None,
-                ],
+                Optional["SiteToClientSiteResponseShippingAddressType0"],
                 data,
             )
 
@@ -245,11 +241,7 @@ class SiteToClientSiteResponse:
             except Exception:
                 pass
             return cast(
-                Union[
-                    "SiteToClientSiteResponseBillingAddressType0",
-                    None,
-                    None,
-                ],
+                Optional["SiteToClientSiteResponseBillingAddressType0"],
                 data,
             )
 
