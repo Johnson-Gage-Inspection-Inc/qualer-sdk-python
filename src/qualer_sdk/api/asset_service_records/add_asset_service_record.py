@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Dict, Union
+from typing import Any, Dict, Optional, Union
 
 import httpx
 
@@ -37,8 +37,8 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Union[
-    AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse, None
+) -> Optional[
+    Union[AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse]
 ]:
     if response.status_code == 200:
         response_200 = AddAssetServiceRecordResponse200.from_dict(response.json())
@@ -111,8 +111,8 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     body: AssetServiceRecordsFromAddAssetServiceRecordModel,
-) -> Union[
-    AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse, None
+) -> Optional[
+    Union[AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse]
 ]:
     """
     Args:
@@ -124,7 +124,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse, None]
+        Optional[Union[AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse]]
     """
 
     return sync_detailed(
@@ -173,10 +173,11 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     body: AssetServiceRecordsFromAddAssetServiceRecordModel,
-) -> Union[
-    AddAssetServiceRecordResponse200,
-    AssetServiceRecordsToAddAssetServiceRecordResponse,
-    None,
+) -> Optional[
+    Union[
+        AddAssetServiceRecordResponse200,
+        AssetServiceRecordsToAddAssetServiceRecordResponse,
+    ]
 ]:
     """
     Args:
@@ -188,7 +189,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse]
+        Optional[Union[AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse]]
     """
 
     return (

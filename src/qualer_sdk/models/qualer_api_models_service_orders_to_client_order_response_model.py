@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, cast
 from uuid import UUID
 
 from attrs import define as _attrs_define
@@ -131,10 +131,8 @@ class ServiceOrdersToClientOrderResponseModel:
         request_to_date (Optional[datetime.datetime]):
         request_to_time (Optional[datetime.datetime]):
         order_notes (Optional[str]):
-        billing_address (Union['ServiceOrdersToClientOrderResponseModelBillingAddressType0', None,
-            None]):
-        shipping_address (Union['ServiceOrdersToClientOrderResponseModelShippingAddressType0', None,
-            None]):
+        billing_address (Optional['ServiceOrdersToClientOrderResponseModelBillingAddressType0']):
+        shipping_address (Optional['ServiceOrdersToClientOrderResponseModelShippingAddressType0']):
     """
 
     service_order_id: Optional[int] = None
@@ -245,16 +243,8 @@ class ServiceOrdersToClientOrderResponseModel:
     request_to_date: Optional[datetime.datetime] = None
     request_to_time: Optional[datetime.datetime] = None
     order_notes: Optional[str] = None
-    billing_address: Union[
-        "ServiceOrdersToClientOrderResponseModelBillingAddressType0",
-        None,
-        None,
-    ] = None
-    shipping_address: Union[
-        "ServiceOrdersToClientOrderResponseModelShippingAddressType0",
-        None,
-        None,
-    ] = None
+    billing_address: Optional["ServiceOrdersToClientOrderResponseModelBillingAddressType0"] = None
+    shipping_address: Optional["ServiceOrdersToClientOrderResponseModelShippingAddressType0"] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -1489,10 +1479,7 @@ class ServiceOrdersToClientOrderResponseModel:
 
         def _parse_billing_address(
             data: object,
-        ) -> Union[
-            "ServiceOrdersToClientOrderResponseModelBillingAddressType0",
-            None,
-        ]:
+        ) -> Optional["ServiceOrdersToClientOrderResponseModelBillingAddressType0"]:
             if not data:
                 return None
             try:
@@ -1506,11 +1493,7 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(
-                Union[
-                    "ServiceOrdersToClientOrderResponseModelBillingAddressType0",
-                    None,
-                    None,
-                ],
+                Optional["ServiceOrdersToClientOrderResponseModelBillingAddressType0"],
                 data,
             )
 
@@ -1518,10 +1501,7 @@ class ServiceOrdersToClientOrderResponseModel:
 
         def _parse_shipping_address(
             data: object,
-        ) -> Union[
-            "ServiceOrdersToClientOrderResponseModelShippingAddressType0",
-            None,
-        ]:
+        ) -> Optional["ServiceOrdersToClientOrderResponseModelShippingAddressType0"]:
             if not data:
                 return None
             try:
@@ -1535,11 +1515,7 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(
-                Union[
-                    "ServiceOrdersToClientOrderResponseModelShippingAddressType0",
-                    None,
-                    None,
-                ],
+                Optional["ServiceOrdersToClientOrderResponseModelShippingAddressType0"],
                 data,
             )
 
