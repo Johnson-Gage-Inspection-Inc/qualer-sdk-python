@@ -1492,7 +1492,6 @@ class ServiceOrdersToClientOrderResponseModel:
         ) -> Union[
             "ServiceOrdersToClientOrderResponseModelBillingAddressType0",
             None,
-            None,
         ]:
             if not data:
                 return None
@@ -1521,7 +1520,6 @@ class ServiceOrdersToClientOrderResponseModel:
             data: object,
         ) -> Union[
             "ServiceOrdersToClientOrderResponseModelShippingAddressType0",
-            None,
             None,
         ]:
             if not data:

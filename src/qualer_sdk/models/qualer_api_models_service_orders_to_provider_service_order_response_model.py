@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, Dict, List, Optional, TypeVar, Union, cast
+from typing import Any, Dict, List, Optional, TypeVar, cast
 from uuid import UUID
 
 from attrs import define as _attrs_define
@@ -54,11 +54,7 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
     due_date: Optional[datetime.datetime] = None
     assets: Optional[int] = None
     completed_assets: Optional[int] = None
-    order_status: Union[
-        None,
-        None,
-        ServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
-    ] = None
+    order_status: Optional[ServiceOrdersToProviderServiceOrderResponseModelOrderStatus] = None
     is_quality_control_fail: Optional[bool] = None
     service_private_comments: Optional[str] = None
     client_company_id: Optional[int] = None
@@ -67,11 +63,7 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
     client_legacy_id: Optional[str] = None
     business_from_time: Optional[datetime.datetime] = None
     business_to_time: Optional[datetime.datetime] = None
-    timeframe: Union[
-        None,
-        None,
-        ServiceOrdersToProviderServiceOrderResponseModelTimeframe,
-    ] = None
+    timeframe: Optional[ServiceOrdersToProviderServiceOrderResponseModelTimeframe] = None
     site_access_notes: Optional[str] = None
     desired_date: Optional[datetime.datetime] = None
     deadline_date: Optional[datetime.datetime] = None
@@ -280,11 +272,7 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
         completed_assets = d.pop("CompletedAssets", None)
 
         _order_status = d.pop("OrderStatus", None)
-        order_status: Union[
-            None,
-            None,
-            ServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
-        ]
+        order_status: Optional[ServiceOrdersToProviderServiceOrderResponseModelOrderStatus]
         if not _order_status:
             order_status = None
         else:
@@ -339,11 +327,7 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
         business_to_time = _parse_business_to_time(d.pop("BusinessToTime", None))
 
         _timeframe = d.pop("Timeframe", None)
-        timeframe: Union[
-            None,
-            None,
-            ServiceOrdersToProviderServiceOrderResponseModelTimeframe,
-        ]
+        timeframe: Optional[ServiceOrdersToProviderServiceOrderResponseModelTimeframe]
         if not _timeframe:
             timeframe = None
         else:

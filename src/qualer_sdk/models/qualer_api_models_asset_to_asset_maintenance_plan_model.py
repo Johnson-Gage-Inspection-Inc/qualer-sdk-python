@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -74,7 +74,7 @@ class AssetToAssetMaintenancePlanModel:
         composite_child_count (Optional[int]):
     """
 
-    maintenance_plans: Union[None, List["AssetToAssetMaintenancePlanResponse"]] = None
+    maintenance_plans: Optional[List["AssetToAssetMaintenancePlanResponse"]] = None
     company_id: Optional[int] = None
     asset_id: Optional[int] = None
     serial_number: Optional[str] = None

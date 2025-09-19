@@ -56,11 +56,7 @@ class ServiceOrdersFromServiceOrderMetadataCreateModel:
         metadata = d.pop("Metadata", None)
 
         _exhibits = d.pop("Exhibits", None)
-        exhibits: Union[
-            None,
-            None,
-            QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits,
-        ]
+        exhibits: Optional[QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits]
         if not _exhibits:
             exhibits = None
         else:

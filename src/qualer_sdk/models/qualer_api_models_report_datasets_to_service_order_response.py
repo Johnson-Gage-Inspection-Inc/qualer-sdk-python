@@ -585,7 +585,7 @@ class ReportDatasetsToServiceOrderResponse:
             sign_off_date = self.sign_off_date
 
         quality_control_date: Optional[str] = None
-        if self.quality_control_date and not isinstance(self.quality_control_date, None):
+        if self.quality_control_date:
             quality_control_date = self.quality_control_date.isoformat()
 
         client_sign_off_on: Optional[str]

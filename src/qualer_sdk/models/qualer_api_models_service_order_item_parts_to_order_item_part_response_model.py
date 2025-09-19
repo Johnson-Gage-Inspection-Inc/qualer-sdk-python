@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import Any, Dict, List, Optional, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -28,7 +28,7 @@ class ServiceOrderItemPartsToOrderItemPartResponseModel:
         delivery_charge (Optional[float]):
         time_spent_in_minutes (Optional[float]):
         free_quantity (Optional[int]):
-        service_order_charge_type (Union[None,
+        service_order_charge_type (Optional[
             ServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType]):
     """
 
@@ -45,10 +45,8 @@ class ServiceOrderItemPartsToOrderItemPartResponseModel:
     delivery_charge: Optional[float] = None
     time_spent_in_minutes: Optional[float] = None
     free_quantity: Optional[int] = None
-    service_order_charge_type: Union[
-        None,
-        None,
-        ServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType,
+    service_order_charge_type: Optional[
+        ServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType
     ] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -80,7 +78,7 @@ class ServiceOrderItemPartsToOrderItemPartResponseModel:
         free_quantity = self.free_quantity
 
         service_order_charge_type: Optional[str] = None
-        if self.service_order_charge_type and not isinstance(self.service_order_charge_type, None):
+        if self.service_order_charge_type:
             service_order_charge_type = self.service_order_charge_type.value
 
         field_dict: Dict[str, Any] = {}
@@ -147,10 +145,8 @@ class ServiceOrderItemPartsToOrderItemPartResponseModel:
         free_quantity = d.pop("FreeQuantity", None)
 
         _service_order_charge_type = d.pop("ServiceOrderChargeType", None)
-        service_order_charge_type: Union[
-            None,
-            None,
-            ServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType,
+        service_order_charge_type: Optional[
+            ServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType
         ]
         if not _service_order_charge_type:
             service_order_charge_type = None

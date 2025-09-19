@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -24,11 +24,9 @@ class ServiceOrdersFromServiceOrderMetadataUpdateModel:
 
     service_order_metadata_id: Optional[int] = None
     metadata: Optional[str] = None
-    exhibits: Union[
-        None,
-        None,
-        "QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits",
-    ] = None
+    exhibits: Optional["QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits"] = (
+        None
+    )
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -64,11 +62,7 @@ class ServiceOrdersFromServiceOrderMetadataUpdateModel:
         metadata = d.pop("Metadata", None)
 
         _exhibits = d.pop("Exhibits", None)
-        exhibits: Union[
-            None,
-            None,
-            QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits,
-        ]
+        exhibits: Optional[QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits]
         if not _exhibits:
             exhibits = None
         else:

@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import Any, Dict, List, Optional, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -118,11 +118,7 @@ class ReportDatasetsToMeasurementFieldResponse:
         measurement_point_id = d.pop("MeasurementPointId", None)
 
         _batch_type = d.pop("BatchType", None)
-        batch_type: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementFieldResponseBatchType,
-        ]
+        batch_type: Optional[ReportDatasetsToMeasurementFieldResponseBatchType]
         if not _batch_type:
             batch_type = None
         else:

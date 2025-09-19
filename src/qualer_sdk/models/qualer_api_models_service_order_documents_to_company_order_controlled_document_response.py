@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import Any, Dict, List, Optional, TypeVar, Union
+from typing import Any, Dict, List, Optional, TypeVar
 from uuid import UUID
 
 from attrs import define as _attrs_define
@@ -24,8 +24,7 @@ class ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse:
         guid (Optional[UUID]):  Example: 00000000-0000-0000-0000-000000000000.
         document_name (Optional[str]):
         file_name (Optional[str]):
-        document_type (Union[None,
-            ServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType]):
+        document_type (Optional[ServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType]):
         revision_number (Optional[int]):
         report_type (Optional[ReportType]):
         download_url (Optional[str]):
@@ -35,10 +34,8 @@ class ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse:
     guid: Optional[UUID] = None
     document_name: Optional[str] = None
     file_name: Optional[str] = None
-    document_type: Union[
-        None,
-        None,
-        ServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
+    document_type: Optional[
+        ServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType
     ] = None
     revision_number: Optional[int] = None
     report_type: Optional[ReportType] = None
@@ -107,10 +104,8 @@ class ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse:
         file_name = d.pop("FileName", None)
 
         _document_type = d.pop("DocumentType", None)
-        document_type: Union[
-            None,
-            None,
-            ServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
+        document_type: Optional[
+            ServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType
         ]
         if not _document_type:
             document_type = None

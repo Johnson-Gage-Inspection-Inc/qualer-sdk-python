@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, Dict, List, Optional, TypeVar, Union, cast
+from typing import Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -206,8 +206,7 @@ class ReportDatasetsToMeasurementResponse:
         use_expected_value (Optional[bool]):
         reading_entry_logic (Optional[ReportDatasetsToMeasurementResponseReadingEntryLogic]):
         reading_entry_math (Optional[ReportDatasetsToMeasurementResponseReadingEntryMath]):
-        double_substitution_sequence (Union[None,
-            ReportDatasetsToMeasurementResponseDoubleSubstitutionSequence]):
+        double_substitution_sequence (Optional[ReportDatasetsToMeasurementResponseDoubleSubstitutionSequence]):
         reading_entry_math_string (Optional[str]):
         nominal_extended (Optional[str]):
         expected_value_extended (Optional[str]):
@@ -292,8 +291,7 @@ class ReportDatasetsToMeasurementResponse:
         site_access_notes (Optional[str]):
         abbreviated_uom (Optional[str]):
         unit_scale_factor (Optional[float]):
-        measurement_not_taken_result (Union[None,
-            ReportDatasetsToMeasurementResponseMeasurementNotTakenResult]):
+        measurement_not_taken_result (Optional[ReportDatasetsToMeasurementResponseMeasurementNotTakenResult]):
         hide_from_certificate (Optional[bool]):
         measurement_not_taken_reason (Optional[str]):
         environment_text_1 (Optional[str]):
@@ -520,13 +518,13 @@ class ReportDatasetsToMeasurementResponse:
     tar_raw: Optional[float] = None
     tar_decimal_places: Optional[int] = None
     guard_band: Optional[str] = None
-    guard_band_logic: Union[None, ReportDatasetsToMeasurementResponseGuardBandLogic] = None
+    guard_band_logic: Optional[ReportDatasetsToMeasurementResponseGuardBandLogic] = None
     uncertainty_budget: Optional[str] = None
     calculated_uncertainty: Optional[float] = None
     lock_uncertainty_budget: Optional[bool] = None
     lab_mu: Optional[float] = None
     channel: Optional[int] = None
-    measurement_type: Union[None, ReportDatasetsToMeasurementResponseMeasurementType] = None
+    measurement_type: Optional[ReportDatasetsToMeasurementResponseMeasurementType] = None
     updated_by: Optional[str] = None
     updated_on: Optional[datetime.datetime] = None
     error: Optional[float] = None
@@ -588,12 +586,10 @@ class ReportDatasetsToMeasurementResponse:
     test_value: Optional[float] = None
     base_value: Optional[float] = None
     use_expected_value: Optional[bool] = None
-    reading_entry_logic: Union[None, ReportDatasetsToMeasurementResponseReadingEntryLogic] = None
-    reading_entry_math: Union[None, ReportDatasetsToMeasurementResponseReadingEntryMath] = None
-    double_substitution_sequence: Union[
-        None,
-        None,
-        ReportDatasetsToMeasurementResponseDoubleSubstitutionSequence,
+    reading_entry_logic: Optional[ReportDatasetsToMeasurementResponseReadingEntryLogic] = None
+    reading_entry_math: Optional[ReportDatasetsToMeasurementResponseReadingEntryMath] = None
+    double_substitution_sequence: Optional[
+        ReportDatasetsToMeasurementResponseDoubleSubstitutionSequence
     ] = None
     reading_entry_math_string: Optional[str] = None
     nominal_extended: Optional[str] = None
@@ -607,7 +603,7 @@ class ReportDatasetsToMeasurementResponse:
     accuracy_class: Optional[str] = None
     accuracy_class_min: Optional[float] = None
     accuracy_class_max: Optional[float] = None
-    environment_mask: Union[None, ReportDatasetsToMeasurementResponseEnvironmentMask] = None
+    environment_mask: Optional[ReportDatasetsToMeasurementResponseEnvironmentMask] = None
     display_name: Optional[str] = None
     display_part_number: Optional[str] = None
     part_number: Optional[str] = None
@@ -662,14 +658,14 @@ class ReportDatasetsToMeasurementResponse:
     tolerance_type: Optional["ReportDatasetsToMeasurementResponseToleranceType"] = None
     tolerance_type_string: Optional[str] = None
     precision_type: Optional["ReportDatasetsToMeasurementResponsePrecisionType"] = None
-    specification_mode: Union[None, ReportDatasetsToMeasurementResponseSpecificationMode] = None
+    specification_mode: Optional[ReportDatasetsToMeasurementResponseSpecificationMode] = None
     tolerance_mode: Optional["ReportDatasetsToMeasurementResponseToleranceMode"] = None
     tolerance_unit: Optional["ReportDatasetsToMeasurementResponseToleranceUnit"] = None
     tolerance_string: Optional[str] = None
     po_number: Optional[str] = None
     secondary_po: Optional[str] = None
     shipped_date: Optional[datetime.datetime] = None
-    shipment_status: Union[None, ReportDatasetsToMeasurementResponseShipmentStatus] = None
+    shipment_status: Optional[ReportDatasetsToMeasurementResponseShipmentStatus] = None
     shipped_on: Optional[datetime.datetime] = None
     delivered_on: Optional[datetime.datetime] = None
     tracking_number: Optional[str] = None
@@ -679,10 +675,8 @@ class ReportDatasetsToMeasurementResponse:
     site_access_notes: Optional[str] = None
     abbreviated_uom: Optional[str] = None
     unit_scale_factor: Optional[float] = None
-    measurement_not_taken_result: Union[
-        None,
-        None,
-        ReportDatasetsToMeasurementResponseMeasurementNotTakenResult,
+    measurement_not_taken_result: Optional[
+        ReportDatasetsToMeasurementResponseMeasurementNotTakenResult
     ] = None
     hide_from_certificate: Optional[bool] = None
     measurement_not_taken_reason: Optional[str] = None
@@ -816,12 +810,10 @@ class ReportDatasetsToMeasurementResponse:
     value_subtitle_40: Optional[str] = None
     values_decimal_places: Optional[int] = None
     repeat_measurement_and_calculate_hysteresis: Optional[bool] = None
-    measurement_point_order: Union[
-        None,
-        None,
-        ReportDatasetsToMeasurementResponseMeasurementPointOrder,
-    ] = None
-    hysteresis_point: Union[None, ReportDatasetsToMeasurementResponseHysteresisPoint] = None
+    measurement_point_order: Optional[ReportDatasetsToMeasurementResponseMeasurementPointOrder] = (
+        None
+    )
+    hysteresis_point: Optional[ReportDatasetsToMeasurementResponseHysteresisPoint] = None
     max_hysteresis: Optional[float] = None
     run: Optional[int] = None
     direction: Optional[int] = None
@@ -925,7 +917,7 @@ class ReportDatasetsToMeasurementResponse:
         cv_header = self.cv_header
 
         measurement_local_time: Optional[str] = None
-        if self.measurement_local_time and not isinstance(self.measurement_local_time, None):
+        if self.measurement_local_time:
             measurement_local_time = self.measurement_local_time.isoformat()
 
         mean = self.mean
@@ -1171,9 +1163,7 @@ class ReportDatasetsToMeasurementResponse:
             reading_entry_math = self.reading_entry_math.value
 
         double_substitution_sequence: Optional[str] = None
-        if self.double_substitution_sequence and not isinstance(
-            self.double_substitution_sequence, None
-        ):
+        if self.double_substitution_sequence:
             double_substitution_sequence = self.double_substitution_sequence.value
 
         reading_entry_math_string = self.reading_entry_math_string
@@ -1385,9 +1375,7 @@ class ReportDatasetsToMeasurementResponse:
         unit_scale_factor = self.unit_scale_factor
 
         measurement_not_taken_result: Optional[str] = None
-        if self.measurement_not_taken_result and not isinstance(
-            self.measurement_not_taken_result, None
-        ):
+        if self.measurement_not_taken_result:
             measurement_not_taken_result = self.measurement_not_taken_result.value
 
         hide_from_certificate = self.hide_from_certificate
@@ -1657,7 +1645,7 @@ class ReportDatasetsToMeasurementResponse:
         )
 
         measurement_point_order: Optional[str] = None
-        if self.measurement_point_order and not isinstance(self.measurement_point_order, None):
+        if self.measurement_point_order:
             measurement_point_order = self.measurement_point_order.value
 
         hysteresis_point: Optional[str] = None
@@ -2696,11 +2684,7 @@ class ReportDatasetsToMeasurementResponse:
         guard_band = d.pop("GuardBand", None)
 
         _guard_band_logic = d.pop("GuardBandLogic", None)
-        guard_band_logic: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementResponseGuardBandLogic,
-        ]
+        guard_band_logic: Optional[ReportDatasetsToMeasurementResponseGuardBandLogic]
         if not _guard_band_logic:
             guard_band_logic = None
         elif _guard_band_logic is None:
@@ -2719,11 +2703,7 @@ class ReportDatasetsToMeasurementResponse:
         channel = d.pop("Channel", None)
 
         _measurement_type = d.pop("MeasurementType", None)
-        measurement_type: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementResponseMeasurementType,
-        ]
+        measurement_type: Optional[ReportDatasetsToMeasurementResponseMeasurementType]
         if not _measurement_type:
             measurement_type = None
         elif _measurement_type is None:
@@ -2885,11 +2865,7 @@ class ReportDatasetsToMeasurementResponse:
         use_expected_value = d.pop("UseExpectedValue", None)
 
         _reading_entry_logic = d.pop("ReadingEntryLogic", None)
-        reading_entry_logic: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementResponseReadingEntryLogic,
-        ]
+        reading_entry_logic: Optional[ReportDatasetsToMeasurementResponseReadingEntryLogic]
         if not _reading_entry_logic:
             reading_entry_logic = None
         elif _reading_entry_logic is None:
@@ -2921,11 +2897,7 @@ class ReportDatasetsToMeasurementResponse:
                 )
 
         _reading_entry_math = d.pop("ReadingEntryMath", None)
-        reading_entry_math: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementResponseReadingEntryMath,
-        ]
+        reading_entry_math: Optional[ReportDatasetsToMeasurementResponseReadingEntryMath]
         if not _reading_entry_math:
             reading_entry_math = None
         elif _reading_entry_math is None:
@@ -2960,10 +2932,8 @@ class ReportDatasetsToMeasurementResponse:
                 )
 
         _double_substitution_sequence = d.pop("DoubleSubstitutionSequence", None)
-        double_substitution_sequence: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementResponseDoubleSubstitutionSequence,
+        double_substitution_sequence: Optional[
+            ReportDatasetsToMeasurementResponseDoubleSubstitutionSequence
         ]
         if not _double_substitution_sequence:
             double_substitution_sequence = None
@@ -3021,11 +2991,7 @@ class ReportDatasetsToMeasurementResponse:
         accuracy_class_max = d.pop("AccuracyClassMax", None)
 
         _environment_mask = d.pop("EnvironmentMask", None)
-        environment_mask: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementResponseEnvironmentMask,
-        ]
+        environment_mask: Optional[ReportDatasetsToMeasurementResponseEnvironmentMask]
         if not _environment_mask:
             environment_mask = None
         elif _environment_mask is None:
@@ -3265,11 +3231,7 @@ class ReportDatasetsToMeasurementResponse:
                 precision_type = ReportDatasetsToMeasurementResponsePrecisionType(_precision_type)
 
         _specification_mode = d.pop("SpecificationMode", None)
-        specification_mode: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementResponseSpecificationMode,
-        ]
+        specification_mode: Optional[ReportDatasetsToMeasurementResponseSpecificationMode]
         if not _specification_mode:
             specification_mode = None
         else:
@@ -3313,11 +3275,7 @@ class ReportDatasetsToMeasurementResponse:
         shipped_date = _parse_shipped_date(d.pop("ShippedDate", None))
 
         _shipment_status = d.pop("ShipmentStatus", None)
-        shipment_status: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementResponseShipmentStatus,
-        ]
+        shipment_status: Optional[ReportDatasetsToMeasurementResponseShipmentStatus]
         if not _shipment_status:
             shipment_status = None
         elif _shipment_status is None:
@@ -3370,10 +3328,8 @@ class ReportDatasetsToMeasurementResponse:
         unit_scale_factor = d.pop("UnitScaleFactor", None)
 
         _measurement_not_taken_result = d.pop("MeasurementNotTakenResult", None)
-        measurement_not_taken_result: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementResponseMeasurementNotTakenResult,
+        measurement_not_taken_result: Optional[
+            ReportDatasetsToMeasurementResponseMeasurementNotTakenResult
         ]
         if not _measurement_not_taken_result:
             measurement_not_taken_result = None
@@ -3664,11 +3620,7 @@ class ReportDatasetsToMeasurementResponse:
         )
 
         _measurement_point_order = d.pop("MeasurementPointOrder", None)
-        measurement_point_order: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementResponseMeasurementPointOrder,
-        ]
+        measurement_point_order: Optional[ReportDatasetsToMeasurementResponseMeasurementPointOrder]
         if not _measurement_point_order:
             measurement_point_order = None
         elif _measurement_point_order is None:
@@ -3691,11 +3643,7 @@ class ReportDatasetsToMeasurementResponse:
             )
 
         _hysteresis_point = d.pop("HysteresisPoint", None)
-        hysteresis_point: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementResponseHysteresisPoint,
-        ]
+        hysteresis_point: Optional[ReportDatasetsToMeasurementResponseHysteresisPoint]
         if not _hysteresis_point:
             hysteresis_point = None
         elif _hysteresis_point is None:

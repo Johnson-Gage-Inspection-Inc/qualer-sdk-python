@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -42,7 +42,7 @@ class MeasurementsFromCreateMeasurementSetModel:
     significant_figures: Optional[int] = None
     display_options: Optional["MeasurementsFromDisplayOptions"] = None
     custom_fields: Optional["MeasurementsFromCustomFields"] = None
-    measurement_points: Union[None, List["MeasurementsFromCreateMeasurementPointModel"]] = None
+    measurement_points: Optional[List["MeasurementsFromCreateMeasurementPointModel"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:

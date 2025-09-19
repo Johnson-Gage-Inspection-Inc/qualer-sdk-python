@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -179,7 +179,7 @@ class ServiceOrdersToClientOrderItemResponseModel:
     next_service_date: Optional[datetime.datetime] = None
     maintenance_task: Optional[str] = None
     maintenance_plan: Optional[str] = None
-    service_options: Union[None, List["ServiceOptionsToServiceOptionResponseModel"]] = None
+    service_options: Optional[List["ServiceOptionsToServiceOptionResponseModel"]] = None
     vendor_tag: Optional[str] = None
     legacy_id: Optional[str] = None
     asset_ownership: Optional[str] = None

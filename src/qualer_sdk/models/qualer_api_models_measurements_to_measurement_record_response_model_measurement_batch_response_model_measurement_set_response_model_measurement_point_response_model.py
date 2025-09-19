@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -81,20 +81,14 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
     range_min: Optional[float] = None
     range_max: Optional[float] = None
     tolerance_type: Optional[str] = None
-    specification_mode: Union[
-        None,
-        None,
-        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode,
+    specification_mode: Optional[
+        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode
     ] = None
-    tolerance_mode: Union[
-        None,
-        None,
-        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode,
+    tolerance_mode: Optional[
+        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode
     ] = None
-    tolerance_unit: Union[
-        None,
-        None,
-        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit,
+    tolerance_unit: Optional[
+        MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit
     ] = None
     precision_type: Optional[str] = None
     readings: Optional[int] = None
@@ -110,29 +104,21 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
     base_value: Optional[float] = None
     test_value: Optional[float] = None
     is_accredited: Optional[bool] = None
-    measurements: Union[
-        None,
-        None,
+    measurements: Optional[
         List[
             "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementResponseModel"
-        ],
+        ]
     ] = None
-    condition_factors: Union[
-        None,
-        None,
+    condition_factors: Optional[
         List[
             "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel"
-        ],
+        ]
     ] = None
-    primary_measurement_tool: Union[
-        None,
-        None,
-        "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel",
+    primary_measurement_tool: Optional[
+        "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel"
     ] = None
-    secondary_measurement_tool: Union[
-        None,
-        None,
-        "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel",
+    secondary_measurement_tool: Optional[
+        "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel"
     ] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -206,13 +192,11 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
                 condition_factors.append(condition_factors_item)
 
         primary_measurement_tool: Optional[Dict[str, Any]] = None
-        if self.primary_measurement_tool and not isinstance(self.primary_measurement_tool, None):
+        if self.primary_measurement_tool:
             primary_measurement_tool = self.primary_measurement_tool.to_dict()
 
         secondary_measurement_tool: Optional[Dict[str, Any]] = None
-        if self.secondary_measurement_tool and not isinstance(
-            self.secondary_measurement_tool, None
-        ):
+        if self.secondary_measurement_tool:
             secondary_measurement_tool = self.secondary_measurement_tool.to_dict()
 
         field_dict: Dict[str, Any] = {}
@@ -305,10 +289,8 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
         tolerance_type = d.pop("ToleranceType", None)
 
         _specification_mode = d.pop("SpecificationMode", None)
-        specification_mode: Union[
-            None,
-            None,
-            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode,
+        specification_mode: Optional[
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode
         ]
         if not _specification_mode:
             specification_mode = None
@@ -318,10 +300,8 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
             )
 
         _tolerance_mode = d.pop("ToleranceMode", None)
-        tolerance_mode: Union[
-            None,
-            None,
-            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode,
+        tolerance_mode: Optional[
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode
         ]
         if not _tolerance_mode:
             tolerance_mode = None
@@ -331,10 +311,8 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
             )
 
         _tolerance_unit = d.pop("ToleranceUnit", None)
-        tolerance_unit: Union[
-            None,
-            None,
-            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit,
+        tolerance_unit: Optional[
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit
         ]
         if not _tolerance_unit:
             tolerance_unit = None
@@ -390,10 +368,8 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
             condition_factors.append(condition_factors_item)
 
         _primary_measurement_tool = d.pop("PrimaryMeasurementTool", None)
-        primary_measurement_tool: Union[
-            None,
-            None,
-            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel,
+        primary_measurement_tool: Optional[
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel
         ]
         if not _primary_measurement_tool:
             primary_measurement_tool = None
@@ -403,10 +379,8 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
             )
 
         _secondary_measurement_tool = d.pop("SecondaryMeasurementTool", None)
-        secondary_measurement_tool: Union[
-            None,
-            None,
-            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel,
+        secondary_measurement_tool: Optional[
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel
         ]
         if not _secondary_measurement_tool:
             secondary_measurement_tool = None

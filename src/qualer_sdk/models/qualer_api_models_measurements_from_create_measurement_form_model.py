@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -29,7 +29,7 @@ class MeasurementsFromCreateMeasurementFormModel:
     batch_type: Optional[str] = None
     batch_result: Optional[str] = None
     specification: Optional["MeasurementsFromSpecification"] = None
-    measurement_sets: Union[None, List["MeasurementsFromCreateMeasurementSetModel"]] = None
+    measurement_sets: Optional[List["MeasurementsFromCreateMeasurementSetModel"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:

@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -54,11 +54,7 @@ class AssetToAssetMaintenancePlanResponse:
     technician_last_name: Optional[str] = None
     technician_alias: Optional[str] = None
     technician_department_name: Optional[str] = None
-    assigned_employees: Union[
-        None,
-        None,
-        List["AssetToAssetMaintenancePlanResponseAssignedEmployee"],
-    ] = None
+    assigned_employees: Optional[List["AssetToAssetMaintenancePlanResponseAssignedEmployee"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:

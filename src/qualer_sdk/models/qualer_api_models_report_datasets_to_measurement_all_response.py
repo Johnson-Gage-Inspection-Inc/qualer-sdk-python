@@ -1,6 +1,6 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, Dict, List, Optional, TypeVar, Union, cast
+from typing import Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -164,10 +164,8 @@ class ReportDatasetsToMeasurementAllResponse:
     as_found_secondary_tool_manufacturer: Optional[str] = None
     as_found_secondary_tool_manufacturer_part_number: Optional[str] = None
     as_found_secondary_tool_serial_number: Optional[str] = None
-    as_found_measurement_not_taken_result: Union[
-        None,
-        None,
-        ReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult,
+    as_found_measurement_not_taken_result: Optional[
+        ReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult
     ] = None
     as_found_hide_from_certificate: Optional[bool] = None
     as_found_measurement_not_taken_reason: Optional[str] = None
@@ -191,15 +189,11 @@ class ReportDatasetsToMeasurementAllResponse:
     as_left_tar_raw: Optional[float] = None
     as_found_guard_band: Optional[str] = None
     as_left_guard_band: Optional[str] = None
-    as_found_guard_band_logic: Union[
-        None,
-        None,
-        ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic,
+    as_found_guard_band_logic: Optional[
+        ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic
     ] = None
-    as_left_guard_band_logic: Union[
-        None,
-        None,
-        ReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic,
+    as_left_guard_band_logic: Optional[
+        ReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic
     ] = None
     as_found_error: Optional[float] = None
     as_found_error_extended: Optional[str] = None
@@ -227,10 +221,8 @@ class ReportDatasetsToMeasurementAllResponse:
     as_left_run: Optional[int] = None
     as_left_direction: Optional[int] = None
     as_left_hysteresis: Optional[float] = None
-    as_found_reading_entry_math: Union[
-        None,
-        None,
-        ReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath,
+    as_found_reading_entry_math: Optional[
+        ReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath
     ] = None
     as_found_reading_entry_math_string: Optional[str] = None
     as_found_value_1: Optional[str] = None
@@ -383,10 +375,8 @@ class ReportDatasetsToMeasurementAllResponse:
     as_found_uncertainty_budget: Optional[str] = None
     as_found_mu_extended: Optional[str] = None
     as_found_channel: Optional[int] = None
-    as_found_measurement_type: Union[
-        None,
-        None,
-        ReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
+    as_found_measurement_type: Optional[
+        ReportDatasetsToMeasurementAllResponseAsFoundMeasurementType
     ] = None
     as_found_updated_by: Optional[str] = None
     as_found_updated_on: Optional[datetime.datetime] = None
@@ -437,10 +427,8 @@ class ReportDatasetsToMeasurementAllResponse:
     as_found_unit_of_measure: Optional[str] = None
     as_found_display_format: Optional[str] = None
     as_found_precision: Optional[float] = None
-    as_found_precision_type: Union[
-        None,
-        None,
-        ReportDatasetsToMeasurementAllResponseAsFoundPrecisionType,
+    as_found_precision_type: Optional[
+        ReportDatasetsToMeasurementAllResponseAsFoundPrecisionType
     ] = None
     as_found_minimum: Optional[float] = None
     as_found_nominal: Optional[float] = None
@@ -461,10 +449,8 @@ class ReportDatasetsToMeasurementAllResponse:
     as_left_sd_header: Optional[float] = None
     as_left_cv_header: Optional[float] = None
     as_left_measurement_local_time: Optional[datetime.datetime] = None
-    as_left_reading_entry_math: Union[
-        None,
-        None,
-        ReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
+    as_left_reading_entry_math: Optional[
+        ReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath
     ] = None
     as_left_reading_entry_math_string: Optional[str] = None
     as_left_value_1: Optional[str] = None
@@ -617,10 +603,8 @@ class ReportDatasetsToMeasurementAllResponse:
     as_left_uncertainty_budget: Optional[str] = None
     as_left_mu_extended: Optional[str] = None
     as_left_channel: Optional[int] = None
-    as_left_measurement_type: Union[
-        None,
-        None,
-        ReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
+    as_left_measurement_type: Optional[
+        ReportDatasetsToMeasurementAllResponseAsLeftMeasurementType
     ] = None
     as_left_updated_by: Optional[str] = None
     as_left_updated_on: Optional[datetime.datetime] = None
@@ -667,11 +651,9 @@ class ReportDatasetsToMeasurementAllResponse:
     as_left_unit_of_measure: Optional[str] = None
     as_left_display_format: Optional[str] = None
     as_left_precision: Optional[float] = None
-    as_left_precision_type: Union[
-        None,
-        None,
-        ReportDatasetsToMeasurementAllResponseAsLeftPrecisionType,
-    ] = None
+    as_left_precision_type: Optional[ReportDatasetsToMeasurementAllResponseAsLeftPrecisionType] = (
+        None
+    )
     as_left_minimum: Optional[float] = None
     as_left_nominal: Optional[float] = None
     as_left_expected_value: Optional[float] = None
@@ -681,10 +663,8 @@ class ReportDatasetsToMeasurementAllResponse:
     as_left_maxi_mum: Optional[float] = None
     as_left_resolution: Optional[float] = None
     as_left_resolution_count: Optional[int] = None
-    as_left_measurement_not_taken_result: Union[
-        None,
-        None,
-        ReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult,
+    as_left_measurement_not_taken_result: Optional[
+        ReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult
     ] = None
     as_left_hide_from_certificate: Optional[bool] = None
     as_left_measurement_not_taken_reason: Optional[str] = None
@@ -3027,10 +3007,8 @@ class ReportDatasetsToMeasurementAllResponse:
         )
         as_found_secondary_tool_serial_number = d.pop("AsFoundSecondaryToolSerialNumber", None)
         _as_found_measurement_not_taken_result = d.pop("AsFoundMeasurementNotTakenResult", None)
-        as_found_measurement_not_taken_result: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult,
+        as_found_measurement_not_taken_result: Optional[
+            ReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult
         ]
         if not _as_found_measurement_not_taken_result:
             as_found_measurement_not_taken_result = None
@@ -3068,10 +3046,9 @@ class ReportDatasetsToMeasurementAllResponse:
         as_found_guard_band = d.pop("AsFoundGuardBand", None)
         as_left_guard_band = d.pop("AsLeftGuardBand", None)
         _as_found_guard_band_logic = d.pop("AsFoundGuardBandLogic", None)
-        as_found_guard_band_logic: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic,
+        _as_left_guard_band_logic = d.pop("AsLeftGuardBandLogic", None)
+        as_found_guard_band_logic: Optional[
+            ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic
         ]
         if not _as_found_guard_band_logic:
             as_found_guard_band_logic = None
@@ -3081,11 +3058,8 @@ class ReportDatasetsToMeasurementAllResponse:
             as_found_guard_band_logic = ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic(
                 _as_found_guard_band_logic
             )
-        _as_left_guard_band_logic = d.pop("AsLeftGuardBandLogic", None)
-        as_left_guard_band_logic: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic,
+        as_left_guard_band_logic: Optional[
+            ReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic
         ]
         if not _as_left_guard_band_logic:
             as_left_guard_band_logic = None
@@ -3095,6 +3069,7 @@ class ReportDatasetsToMeasurementAllResponse:
             as_left_guard_band_logic = ReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic(
                 _as_left_guard_band_logic
             )
+
         as_found_error = d.pop("AsFoundError", None)
         as_found_error_extended = d.pop("AsFoundErrorExtended", None)
         as_left_error = d.pop("AsLeftError", None)
@@ -3122,10 +3097,8 @@ class ReportDatasetsToMeasurementAllResponse:
         as_left_direction = d.pop("AsLeftDirection", None)
         as_left_hysteresis = d.pop("AsLeftHysteresis", None)
         _as_found_reading_entry_math = d.pop("AsFoundReadingEntryMath", None)
-        as_found_reading_entry_math: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath,
+        as_found_reading_entry_math: Optional[
+            ReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath
         ]
         if not _as_found_reading_entry_math:
             as_found_reading_entry_math = None
@@ -3305,10 +3278,8 @@ class ReportDatasetsToMeasurementAllResponse:
         as_found_mu_extended = d.pop("AsFoundMuExtended", None)
         as_found_channel = d.pop("AsFoundChannel", None)
         _as_found_measurement_type = d.pop("AsFoundMeasurementType", None)
-        as_found_measurement_type: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
+        as_found_measurement_type: Optional[
+            ReportDatasetsToMeasurementAllResponseAsFoundMeasurementType
         ]
         if not _as_found_measurement_type:
             as_found_measurement_type = None
@@ -3401,10 +3372,8 @@ class ReportDatasetsToMeasurementAllResponse:
         as_found_display_format = d.pop("AsFoundDisplayFormat", None)
         as_found_precision = d.pop("AsFoundPrecision", None)
         _as_found_precision_type = d.pop("AsFoundPrecisionType", None)
-        as_found_precision_type: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementAllResponseAsFoundPrecisionType,
+        as_found_precision_type: Optional[
+            ReportDatasetsToMeasurementAllResponseAsFoundPrecisionType
         ]
         if not _as_found_precision_type:
             as_found_precision_type = None
@@ -3459,10 +3428,8 @@ class ReportDatasetsToMeasurementAllResponse:
         else:
             as_left_measurement_local_time = isoparse(_as_left_measurement_local_time)
         _as_left_reading_entry_math = d.pop("AsLeftReadingEntryMath", None)
-        as_left_reading_entry_math: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
+        as_left_reading_entry_math: Optional[
+            ReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath
         ]
         if not _as_left_reading_entry_math:
             as_left_reading_entry_math = None
@@ -3648,10 +3615,8 @@ class ReportDatasetsToMeasurementAllResponse:
         as_left_mu_extended = d.pop("AsLeftMuExtended", None)
         as_left_channel = d.pop("AsLeftChannel", None)
         _as_left_measurement_type = d.pop("AsLeftMeasurementType", None)
-        as_left_measurement_type: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
+        as_left_measurement_type: Optional[
+            ReportDatasetsToMeasurementAllResponseAsLeftMeasurementType
         ]
         if not _as_left_measurement_type:
             as_left_measurement_type = None
@@ -3740,11 +3705,7 @@ class ReportDatasetsToMeasurementAllResponse:
         as_left_display_format = d.pop("AsLeftDisplayFormat", None)
         as_left_precision = d.pop("AsLeftPrecision", None)
         _as_left_precision_type = d.pop("AsLeftPrecisionType", None)
-        as_left_precision_type: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementAllResponseAsLeftPrecisionType,
-        ]
+        as_left_precision_type: Optional[ReportDatasetsToMeasurementAllResponseAsLeftPrecisionType]
         if not _as_left_precision_type:
             as_left_precision_type = None
         elif _as_left_precision_type is None:
@@ -3773,10 +3734,8 @@ class ReportDatasetsToMeasurementAllResponse:
         as_left_resolution = d.pop("AsLeftResolution", None)
         as_left_resolution_count = d.pop("AsLeftResolutionCount", None)
         _as_left_measurement_not_taken_result = d.pop("AsLeftMeasurementNotTakenResult", None)
-        as_left_measurement_not_taken_result: Union[
-            None,
-            None,
-            ReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult,
+        as_left_measurement_not_taken_result: Optional[
+            ReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult
         ]
         if not _as_left_measurement_not_taken_result:
             as_left_measurement_not_taken_result = None

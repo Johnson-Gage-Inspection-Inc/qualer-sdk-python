@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -32,10 +32,8 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
         default_unit_of_measure_id (Optional[int]):
         decimal_places (Optional[int]):
         significant_figures (Optional[int]):
-        display_options (Union[None,
-            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions]):
-        custom_fields (Union[None,
-            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields]):
+        display_options (Optional[MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions]):
+        custom_fields (Optional[MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields]):
         measurement_points (Optional[List['MeasurementsToMeasurementRecordResponseModelMeasurementBat
             chResponseModelMeasurementSetResponseModelMeasurementPointResponseModel']]):
     """
@@ -46,22 +44,16 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
     default_unit_of_measure_id: Optional[int] = None
     decimal_places: Optional[int] = None
     significant_figures: Optional[int] = None
-    display_options: Union[
-        None,
-        None,
-        "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions",
+    display_options: Optional[
+        "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions"
     ] = None
-    custom_fields: Union[
-        None,
-        None,
-        "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields",
+    custom_fields: Optional[
+        "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields"
     ] = None
-    measurement_points: Union[
-        None,
-        None,
+    measurement_points: Optional[
         List[
             "MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel"
-        ],
+        ]
     ] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -143,10 +135,8 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
         significant_figures = d.pop("SignificantFigures", None)
 
         _display_options = d.pop("DisplayOptions", None)
-        display_options: Union[
-            None,
-            None,
-            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions,
+        display_options: Optional[
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelDisplayOptions
         ]
         if not _display_options:
             display_options = None
@@ -156,10 +146,8 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
             )
 
         _custom_fields = d.pop("CustomFields", None)
-        custom_fields: Union[
-            None,
-            None,
-            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields,
+        custom_fields: Optional[
+            MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFields
         ]
         if not _custom_fields:
             custom_fields = None

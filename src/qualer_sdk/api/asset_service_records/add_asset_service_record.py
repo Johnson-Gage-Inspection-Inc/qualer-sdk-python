@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from typing import Any, Dict, Optional, Union
+from typing import Any, Dict, Union
 
 import httpx
 
@@ -37,11 +37,8 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[
-    Union[
-        AddAssetServiceRecordResponse200,
-        AssetServiceRecordsToAddAssetServiceRecordResponse,
-    ]
+) -> Union[
+    AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse, None
 ]:
     if response.status_code == 200:
         response_200 = AddAssetServiceRecordResponse200.from_dict(response.json())
@@ -114,11 +111,8 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     body: AssetServiceRecordsFromAddAssetServiceRecordModel,
-) -> Optional[
-    Union[
-        AddAssetServiceRecordResponse200,
-        AssetServiceRecordsToAddAssetServiceRecordResponse,
-    ]
+) -> Union[
+    AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse, None
 ]:
     """
     Args:
@@ -130,7 +124,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse]
+        Union[AddAssetServiceRecordResponse200, AssetServiceRecordsToAddAssetServiceRecordResponse, None]
     """
 
     return sync_detailed(
@@ -179,11 +173,10 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     body: AssetServiceRecordsFromAddAssetServiceRecordModel,
-) -> Optional[
-    Union[
-        AddAssetServiceRecordResponse200,
-        AssetServiceRecordsToAddAssetServiceRecordResponse,
-    ]
+) -> Union[
+    AddAssetServiceRecordResponse200,
+    AssetServiceRecordsToAddAssetServiceRecordResponse,
+    None,
 ]:
     """
     Args:

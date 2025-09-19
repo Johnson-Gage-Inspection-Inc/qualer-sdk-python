@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -118,11 +118,7 @@ class ClientsFromSponsoredClientCreateModel:
         account_number_text = d.pop("AccountNumberText", None)
 
         _client_status = d.pop("ClientStatus", None)
-        client_status: Union[
-            None,
-            None,
-            ClientsFromSponsoredClientCreateModelClientStatus,
-        ]
+        client_status: Optional[ClientsFromSponsoredClientCreateModelClientStatus]
         if not _client_status:
             client_status = None
         else:
