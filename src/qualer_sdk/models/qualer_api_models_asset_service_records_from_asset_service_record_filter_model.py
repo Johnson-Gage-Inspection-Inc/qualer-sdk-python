@@ -13,13 +13,13 @@ T = TypeVar("T", bound="AssetServiceRecordsFromAssetServiceRecordFilterModel")
 class AssetServiceRecordsFromAssetServiceRecordFilterModel:
     """
     Attributes:
-        asset_id (Optional[int]):
+        asset_id (int):
         serial_number (Optional[str]):
         from_ (Optional[datetime.datetime]):
         to (Optional[datetime.datetime]):
     """
 
-    asset_id: Optional[int] = None
+    asset_id: int
     serial_number: Optional[str] = None
     from_: Optional[datetime.datetime] = None
     to: Optional[datetime.datetime] = None

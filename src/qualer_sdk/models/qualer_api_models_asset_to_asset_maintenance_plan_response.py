@@ -19,7 +19,7 @@ T = TypeVar("T", bound="AssetToAssetMaintenancePlanResponse")
 class AssetToAssetMaintenancePlanResponse:
     """
     Attributes:
-        maintenance_plan_id (Optional[int]):
+        maintenance_plan_id (int):
         maintenance_plan_name (Optional[str]):
         task_notes (Optional[str]):
         last_service_task (Optional[str]):
@@ -38,7 +38,7 @@ class AssetToAssetMaintenancePlanResponse:
         assigned_employees (Optional[List['AssetToAssetMaintenancePlanResponseAssignedEmployee']]):
     """
 
-    maintenance_plan_id: Optional[int] = None
+    maintenance_plan_id: int
     maintenance_plan_name: Optional[str] = None
     task_notes: Optional[str] = None
     last_service_task: Optional[str] = None

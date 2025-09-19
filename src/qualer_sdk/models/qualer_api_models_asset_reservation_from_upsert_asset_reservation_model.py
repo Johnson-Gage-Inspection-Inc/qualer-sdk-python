@@ -13,7 +13,7 @@ T = TypeVar("T", bound="AssetReservationFromUpsertAssetReservationModel")
 class AssetReservationFromUpsertAssetReservationModel:
     """
     Attributes:
-        asset_id (Optional[int]):
+        asset_id (int):
         product_id (Optional[int]):
         reservation_id (Optional[int]):
         service_order_id (Optional[int]):
@@ -24,7 +24,7 @@ class AssetReservationFromUpsertAssetReservationModel:
         comments (Optional[str]):
     """
 
-    asset_id: Optional[int] = None
+    asset_id: int
     product_id: Optional[int] = None
     reservation_id: Optional[int] = None
     service_order_id: Optional[int] = None

@@ -26,7 +26,7 @@ T = TypeVar("T", bound="AssetToClientAssetManagerResponseModel")
 class AssetToClientAssetManagerResponseModel:
     """
     Attributes:
-        asset_id (Optional[int]):
+        asset_id (int):
         asset_name (Optional[str]):
         asset_description (Optional[str]):
         asset_maker (Optional[str]):
@@ -121,7 +121,7 @@ class AssetToClientAssetManagerResponseModel:
         schedules (Optional[str]):
     """
 
-    asset_id: Optional[int] = None
+    asset_id: int
     asset_name: Optional[str] = None
     asset_description: Optional[str] = None
     asset_maker: Optional[str] = None
