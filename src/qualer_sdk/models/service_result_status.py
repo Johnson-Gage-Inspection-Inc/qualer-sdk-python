@@ -1,74 +1,68 @@
 from __future__ import annotations
 
-from enum import IntEnum
+from enum import Enum
 
 
-class ServiceResultStatus(IntEnum):
-    """Service result outcome codes.
+class ServiceResultStatus(str, Enum):
+    """Service result outcome values (string-first).
 
-    This IntEnum intentionally mirrors Qualer API integer codes so that when
-    serialized to JSON, values are emitted as integers. Some endpoints may
-    return strings for these values, so a tolerant parser is provided via
-    `from_api_value`.
+    SDK standardizes on string values for readability. Some API endpoints
+    (e.g., set_work_item) require integer codes; use to_code() at those edges.
     """
 
-    DONE = 0
-    FAIL = 1
-    FAILAMBIGUOUS = 10
-    FAILSIGNIFICANT = 11
-    MISSED = 2
-    NOTAVAILABLE = 20
-    PASS = 21
-    PASSADJUSTMENT = 22
-    PASSAMBIGUOUS = 30
-    PENDING = 31
+    DONE = "Done"
+    FAIL = "Fail"
+    FAILAMBIGUOUS = "FailAmbiguous"
+    FAILSIGNIFICANT = "FailSignificant"
+    MISSED = "Missed"
+    NOTAVAILABLE = "NotAvailable"
+    PASS = "Pass"
+    PASSADJUSTMENT = "PassAdjustment"
+    PASSAMBIGUOUS = "PassAmbiguous"
+    PENDING = "Pending"
 
     def __str__(self) -> str:  # pragma: no cover - mirrors Enum behavior
-        # Keep numeric string form to match IntEnum behavior elsewhere
         return str(self.value)
+
+    def to_code(self) -> int:
+        """Return the API integer code for this status."""
+        return _STR_TO_CODE[self.value]
+
+    @classmethod
+    def from_code(cls, code: int | str | None) -> ServiceResultStatus | None:
+        """Parse from an API integer code or numeric string."""
+        if code is None:
+            return None
+        if isinstance(code, int):
+            return _INT_TO_ENUM.get(code)
+        s = str(code).strip()
+        if s.isdigit():
+            try:
+                return _INT_TO_ENUM.get(int(s))
+            except ValueError:  # pragma: no cover
+                return None
+        return None
 
     @classmethod
     def from_api_value(cls, value: int | str | None) -> ServiceResultStatus | None:
-        """Best-effort parser for API values.
-
-        Accepts either:
-        - an integer code (e.g. 21),
-        - a string name (e.g. "Pass"),
-        - a numeric string (e.g. "21").
-
-        Returns None for unknown/unsupported values.
-        """
+        """Best-effort parser for API values (int codes, numeric strings, or names)."""
         if value is None:
             return None
 
-        # Fast path: already an int code
-        if isinstance(value, int):
-            return _INT_TO_ENUM.get(value)
+        # Integer or numeric string -> code mapping
+        member = cls.from_code(value)
+        if member is not None:
+            return member
 
-        # Strings: try numeric first
-        s = str(value).strip()
-        if s.isdigit():
-            try:
-                code = int(s)
-            except ValueError:  # pragma: no cover - guarded by isdigit
-                return None
-            return _INT_TO_ENUM.get(code)
-
-        # Case-insensitive match against canonical names
-        lowered = s.lower()
-        for member in cls:
-            if member.name.lower() == lowered:
-                return member
-
-        # Also allow equality against expected API string values which match names
-        for member in cls:
-            if str(member.name).lower() == lowered:
-                return member
-
+        # Try match by string value or enum name (case-insensitive)
+        s = str(value).strip().lower()
+        for m in cls:
+            if m.value.lower() == s or m.name.lower() == s:
+                return m
         return None
 
 
-# Central mapping for integer codes -> Enum members (authoritative)
+# Centralized mappings between API integer codes and string values
 _INT_TO_ENUM: dict[int, ServiceResultStatus] = {
     0: ServiceResultStatus.DONE,
     1: ServiceResultStatus.FAIL,
@@ -81,3 +75,5 @@ _INT_TO_ENUM: dict[int, ServiceResultStatus] = {
     30: ServiceResultStatus.PASSAMBIGUOUS,
     31: ServiceResultStatus.PENDING,
 }
+
+_STR_TO_CODE: dict[str, int] = {v.value: k for k, v in _INT_TO_ENUM.items()}

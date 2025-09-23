@@ -135,15 +135,16 @@ class ServiceOrdersFromOrderItemUpdateModel:
 
         result_status: Optional[int] = None
         if self.result_status:
-            result_status = self.result_status.value
+            # Convert string enum to integer code for API
+            result_status = self.result_status.to_code()
 
         as_found_result: Optional[int] = None
         if self.as_found_result:
-            as_found_result = self.as_found_result.value
+            as_found_result = self.as_found_result.to_code()
 
         as_left_result: Optional[int] = None
         if self.as_left_result:
-            as_left_result = self.as_left_result.value
+            as_left_result = self.as_left_result.to_code()
 
         equipment_id = self.equipment_id
 
