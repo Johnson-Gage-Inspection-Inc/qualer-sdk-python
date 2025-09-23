@@ -7,12 +7,10 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.qualer_api_models_service_orders_to_provider_service_order_response_model_order_status import (
-    ServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
-)
 from ..models.qualer_api_models_service_orders_to_provider_service_order_response_model_timeframe import (
     ServiceOrdersToProviderServiceOrderResponseModelTimeframe,
 )
+from ..models.service_order_status import ServiceOrderStatus
 
 T = TypeVar("T", bound="ServiceOrdersToProviderServiceOrderResponseModel")
 
@@ -28,7 +26,7 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
         due_date (Optional[datetime.datetime]):
         assets (Optional[int]):
         completed_assets (Optional[int]):
-        order_status (Optional[ServiceOrdersToProviderServiceOrderResponseModelOrderStatus]):
+        order_status (Optional[ServiceOrderStatus]):
         is_quality_control_fail (Optional[bool]):
         service_private_comments (Optional[str]):
         client_company_id (Optional[int]):
@@ -54,7 +52,7 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
     due_date: Optional[datetime.datetime] = None
     assets: Optional[int] = None
     completed_assets: Optional[int] = None
-    order_status: Optional[ServiceOrdersToProviderServiceOrderResponseModelOrderStatus] = None
+    order_status: Optional[ServiceOrderStatus] = None
     is_quality_control_fail: Optional[bool] = None
     service_private_comments: Optional[str] = None
     client_company_id: Optional[int] = None
@@ -272,13 +270,11 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
         completed_assets = d.pop("CompletedAssets", None)
 
         _order_status = d.pop("OrderStatus", None)
-        order_status: Optional[ServiceOrdersToProviderServiceOrderResponseModelOrderStatus]
+        order_status: Optional[ServiceOrderStatus]
         if not _order_status:
             order_status = None
         else:
-            order_status = ServiceOrdersToProviderServiceOrderResponseModelOrderStatus(
-                _order_status
-            )
+            order_status = ServiceOrderStatus(_order_status)
 
         is_quality_control_fail = d.pop("IsQualityControlFail", None)
 
