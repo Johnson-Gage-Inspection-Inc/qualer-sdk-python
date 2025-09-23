@@ -4,22 +4,22 @@ from enum import Enum
 
 
 class ServiceOrderStatus(str, Enum):
-    CANCELLED = "Cancelled"
-    CLOSED = "Closed"
-    COMPLETED = "Completed"
-    DELAYED = "Delayed"
-    DELAYEDAPPROVAL = "DelayedApproval"
-    DENIED = "Denied"
-    DRAFT = "Draft"
     NEW = "New"
+    DRAFT = "Draft"
+    WAITINGFORAPPROVAL = "WaitingForApproval"
+    SUBMITTED = "Submitted"
     PROCESSING = "Processing"
     QUALITYCONTROL = "QualityControl"
-    READY = "Ready"
-    SCHEDULING = "Scheduling"
-    SUBMITTED = "Submitted"
-    WAITINGFORAPPROVAL = "WaitingForApproval"
+    CANCELLED = "Cancelled"
     WAITINGFORCLIENTSIGNOFF = "WaitingForClientSignOff"
+    COMPLETED = "Completed"
+    DENIED = "Denied"
+    DELAYED = "Delayed"
+    SCHEDULING = "Scheduling"
+    CLOSED = "Closed"
     WAITINGFORVENDORSIGNOFF = "WaitingForVendorSignOff"
+    DELAYEDAPPROVAL = "DelayedApproval"
+    READY = "Ready"
 
     # Central mapping for observed integer codes -> API string values
     def __str__(self) -> str:  # pragma: no cover - mirrors Enum behavior
@@ -53,20 +53,20 @@ class ServiceOrderStatus(str, Enum):
 
 # Central mapping for observed integer codes -> API string values
 _INT_TO_STR: dict[int, ServiceOrderStatus] = {
-    # ?: ServiceOrderStatus.NEW,
-    # ?: ServiceOrderStatus.DRAFT,
+    7: ServiceOrderStatus.NEW,  # This is a guess; not yet observed
+    8: ServiceOrderStatus.DRAFT,  # This is a guess; not yet observed
     9: ServiceOrderStatus.WAITINGFORAPPROVAL,
-    10: ServiceOrderStatus.SUBMITTED,  # Not observed directly yet, but inferred from the order
+    10: ServiceOrderStatus.SUBMITTED,  # Not observed, but inferred from the order
     11: ServiceOrderStatus.PROCESSING,
     12: ServiceOrderStatus.QUALITYCONTROL,
     13: ServiceOrderStatus.CANCELLED,
-    14: ServiceOrderStatus.WAITINGFORCLIENTSIGNOFF,  # Not observed directly yet, but inferred from the order
+    14: ServiceOrderStatus.WAITINGFORCLIENTSIGNOFF,  # Not observed, but inferred from the order
     15: ServiceOrderStatus.COMPLETED,
     16: ServiceOrderStatus.DENIED,
     17: ServiceOrderStatus.DELAYED,
     18: ServiceOrderStatus.SCHEDULING,
     19: ServiceOrderStatus.CLOSED,
     20: ServiceOrderStatus.WAITINGFORVENDORSIGNOFF,
-    # ?: ServiceOrderStatus.DELAYEDAPPROVAL,
-    # ?: ServiceOrderStatus.READY,
+    21: ServiceOrderStatus.DELAYEDAPPROVAL,  # This is a guess; not yet observed
+    22: ServiceOrderStatus.READY,  # This is a guess; not yet observed
 }
