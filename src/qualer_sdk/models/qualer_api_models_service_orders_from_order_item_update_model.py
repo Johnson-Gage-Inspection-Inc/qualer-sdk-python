@@ -320,31 +320,13 @@ class ServiceOrdersFromOrderItemUpdateModel:
             as_left_check = ServiceOrdersFromOrderItemUpdateModelAsLeftCheck(_as_left_check)
 
         _result_status = d.pop("ResultStatus", None)
-        result_status: Optional[ServiceResultStatus]
-        if not _result_status:
-            result_status = None
-        elif _result_status is None:
-            result_status = None
-        else:
-            result_status = ServiceResultStatus(_result_status)
+        result_status = ServiceResultStatus.from_api_value(_result_status)
 
         _as_found_result = d.pop("AsFoundResult", None)
-        as_found_result: Optional[ServiceResultStatus]
-        if not _as_found_result:
-            as_found_result = None
-        elif _as_found_result is None:
-            as_found_result = None
-        else:
-            as_found_result = ServiceResultStatus(_as_found_result)
+        as_found_result = ServiceResultStatus.from_api_value(_as_found_result)
 
         _as_left_result = d.pop("AsLeftResult", None)
-        as_left_result: Optional[ServiceResultStatus]
-        if not _as_left_result:
-            as_left_result = None
-        elif _as_left_result is None:
-            as_left_result = None
-        else:
-            as_left_result = ServiceResultStatus(_as_left_result)
+        as_left_result = ServiceResultStatus.from_api_value(_as_left_result)
 
         equipment_id = d.pop("EquipmentId", None)
 

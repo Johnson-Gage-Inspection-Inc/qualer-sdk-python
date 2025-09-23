@@ -158,13 +158,7 @@ class ReportDatasetsToMeasurementChannelUniformityResponse:
         delta_result = d.pop("DeltaResult", None)
 
         _result = d.pop("Result", None)
-        result: Optional[ServiceResultStatus]
-        if not _result:
-            result = None
-        elif _result is None:
-            result = None
-        else:
-            result = ServiceResultStatus(_result)
+        result = ServiceResultStatus.from_api_value(_result)
 
         qualer_api_models_report_datasets_to_measurement_channel_uniformity_response = cls(
             service_order_item_id=service_order_item_id,

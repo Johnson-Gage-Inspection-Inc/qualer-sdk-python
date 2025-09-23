@@ -138,13 +138,7 @@ class ReportDatasetsToMeasurementChannelResultResponse:
             batch_type = ReportDatasetsToMeasurementChannelResultResponseBatchType(_batch_type)
 
         _result = d.pop("Result", None)
-        result: Optional[ServiceResultStatus]
-        if not _result:
-            result = None
-        elif _result is None:
-            result = None
-        else:
-            result = ServiceResultStatus(_result)
+        result = ServiceResultStatus.from_api_value(_result)
 
         mean_result = d.pop("MeanResult", None)
 
