@@ -30,20 +30,9 @@ class TestIssue49ServiceOrderStatus:
     def test_all_observed_integer_mappings_from_issue(self):
         """Test all integer mappings observed in the issue report."""
         # From the issue description, these mappings were observed:
-        observed_mappings = {
-            9: "WaitingForApproval",
-            11: "Processing",
-            12: "QualityControl",
-            13: "Cancelled",
-            15: "Completed",  # This was the failing one in the issue
-            16: "Denied",
-            17: "Delayed",
-            18: "Scheduling",
-            19: "Closed",
-            20: "WaitingForVendorSignOff",
-        }
+        from qualer_sdk.models.service_order_status import _INT_TO_STR
 
-        for integer_value, expected_string in observed_mappings.items():
+        for integer_value, expected_string in _INT_TO_STR.items():
             mock_api_response = {
                 "ServiceOrderStatus": integer_value,
                 "AssetId": 12345,
