@@ -1,10 +1,13 @@
 import datetime
 from collections.abc import Mapping
-from typing import Any, Dict, List, Optional, TypeVar, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
+
+if TYPE_CHECKING:
+    from qualer_sdk.models import ServiceOrderStatus
 
 T = TypeVar("T", bound="ReportDatasetsToServiceOrderResponse")
 
@@ -149,7 +152,7 @@ class ReportDatasetsToServiceOrderResponse:
         shipment_status (Optional[int]):
         payment_status (Optional[int]):
         payment_option (Optional[str]):
-        order_status (Optional[int]):
+        order_status (Optional[ServiceOrderStatus]):
         created_by_name (Optional[str]):
         completed_by_name (Optional[str]):
         shipped_by_name (Optional[str]):
@@ -322,7 +325,7 @@ class ReportDatasetsToServiceOrderResponse:
     shipment_status: Optional[int] = None
     payment_status: Optional[int] = None
     payment_option: Optional[str] = None
-    order_status: Optional[int] = None
+    order_status: Optional["ServiceOrderStatus"] = None
     created_by_name: Optional[str] = None
     completed_by_name: Optional[str] = None
     shipped_by_name: Optional[str] = None

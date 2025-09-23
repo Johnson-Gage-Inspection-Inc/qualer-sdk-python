@@ -4,22 +4,22 @@ from enum import Enum
 
 
 class ServiceOrderStatus(str, Enum):
-    CANCELLED = "Cancelled"
-    CLOSED = "Closed"
-    COMPLETED = "Completed"
-    DELAYED = "Delayed"
-    DELAYEDAPPROVAL = "DelayedApproval"
-    DENIED = "Denied"
-    DRAFT = "Draft"
     NEW = "New"
+    DRAFT = "Draft"
+    WAITINGFORAPPROVAL = "WaitingForApproval"
+    SUBMITTED = "Submitted"
     PROCESSING = "Processing"
     QUALITYCONTROL = "QualityControl"
-    READY = "Ready"
-    SCHEDULING = "Scheduling"
-    SUBMITTED = "Submitted"
-    WAITINGFORAPPROVAL = "WaitingForApproval"
+    CANCELLED = "Cancelled"
     WAITINGFORCLIENTSIGNOFF = "WaitingForClientSignOff"
+    COMPLETED = "Completed"
+    DENIED = "Denied"
+    DELAYED = "Delayed"
+    SCHEDULING = "Scheduling"
+    CLOSED = "Closed"
     WAITINGFORVENDORSIGNOFF = "WaitingForVendorSignOff"
+    DELAYEDAPPROVAL = "DelayedApproval"
+    READY = "Ready"
 
     # Central mapping for observed integer codes -> API string values
     def __str__(self) -> str:  # pragma: no cover - mirrors Enum behavior
@@ -53,14 +53,20 @@ class ServiceOrderStatus(str, Enum):
 
 # Central mapping for observed integer codes -> API string values
 _INT_TO_STR: dict[int, ServiceOrderStatus] = {
+    7: ServiceOrderStatus.NEW,  # Inferred based on enum order; not yet observed
+    8: ServiceOrderStatus.DRAFT,  # Inferred based on enum order; not yet observed
     9: ServiceOrderStatus.WAITINGFORAPPROVAL,
+    10: ServiceOrderStatus.SUBMITTED,  # Inferred based on enum order; not yet observed
     11: ServiceOrderStatus.PROCESSING,
     12: ServiceOrderStatus.QUALITYCONTROL,
     13: ServiceOrderStatus.CANCELLED,
+    14: ServiceOrderStatus.WAITINGFORCLIENTSIGNOFF,  # Inferred based on enum order; not yet observed
     15: ServiceOrderStatus.COMPLETED,
     16: ServiceOrderStatus.DENIED,
     17: ServiceOrderStatus.DELAYED,
     18: ServiceOrderStatus.SCHEDULING,
     19: ServiceOrderStatus.CLOSED,
     20: ServiceOrderStatus.WAITINGFORVENDORSIGNOFF,
+    21: ServiceOrderStatus.DELAYEDAPPROVAL,  # Inferred based on enum order; not yet observed
+    22: ServiceOrderStatus.READY,  # Inferred based on enum order; not yet observed
 }
