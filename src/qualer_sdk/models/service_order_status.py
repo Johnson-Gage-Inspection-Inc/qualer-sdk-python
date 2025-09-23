@@ -53,14 +53,20 @@ class ServiceOrderStatus(str, Enum):
 
 # Central mapping for observed integer codes -> API string values
 _INT_TO_STR: dict[int, ServiceOrderStatus] = {
+    # ?: ServiceOrderStatus.NEW,
+    # ?: ServiceOrderStatus.DRAFT,
     9: ServiceOrderStatus.WAITINGFORAPPROVAL,
+    10: ServiceOrderStatus.SUBMITTED,  # Not observed directly yet, but inferred from the order
     11: ServiceOrderStatus.PROCESSING,
     12: ServiceOrderStatus.QUALITYCONTROL,
     13: ServiceOrderStatus.CANCELLED,
+    14: ServiceOrderStatus.WAITINGFORCLIENTSIGNOFF,  # Not observed directly yet, but inferred from the order
     15: ServiceOrderStatus.COMPLETED,
     16: ServiceOrderStatus.DENIED,
     17: ServiceOrderStatus.DELAYED,
     18: ServiceOrderStatus.SCHEDULING,
     19: ServiceOrderStatus.CLOSED,
     20: ServiceOrderStatus.WAITINGFORVENDORSIGNOFF,
+    # ?: ServiceOrderStatus.DELAYEDAPPROVAL,
+    # ?: ServiceOrderStatus.READY,
 }
