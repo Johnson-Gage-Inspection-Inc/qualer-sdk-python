@@ -105,9 +105,9 @@ class ServiceOrdersFromOrderItemUpdateModel:
 
         parts_total = self.parts_total
 
-        work_status: Optional[int] = None
+        work_status: Optional[str] = None
         if self.work_status:
-            work_status = self.work_status.value
+            work_status = self.work_status
 
         custom_work_status = self.custom_work_status
 
@@ -276,13 +276,7 @@ class ServiceOrdersFromOrderItemUpdateModel:
         parts_total = d.pop("PartsTotal", None)
 
         _work_status = d.pop("WorkStatus", None)
-        work_status: Optional[WorkStatus]
-        if not _work_status:
-            work_status = None
-        elif _work_status is None:
-            work_status = None
-        else:
-            work_status = WorkStatus(_work_status)
+        work_status = WorkStatus(_work_status)
 
         custom_work_status = d.pop("CustomWorkStatus", None)
 

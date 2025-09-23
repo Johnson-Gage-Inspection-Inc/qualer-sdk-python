@@ -29,6 +29,11 @@ class ServiceResultStatus(str, Enum):
         return _STR_TO_CODE[self.value]
 
     @classmethod
+    def _missing_(cls, value: object) -> ServiceResultStatus | None:  # type: ignore[override]
+        """Allow ServiceResultStatus(value) to accept ints, numeric strings, names, or values."""
+        return cls.from_api_value(value)  # type: ignore[arg-type]
+
+    @classmethod
     def from_code(cls, code: int | str | None) -> ServiceResultStatus | None:
         """Parse from an API integer code or numeric string."""
         if code is None:

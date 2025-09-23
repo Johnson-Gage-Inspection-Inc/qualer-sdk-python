@@ -363,17 +363,11 @@ class AssetToAssetManageResponseModel:
 
         asset_service_record_id = self.asset_service_record_id
 
-        result_status: Optional[int] = None
-        if self.result_status:
-            result_status = self.result_status.value
+        result_status = self.result_status
 
-        as_found_result: Optional[int] = None
-        if self.as_found_result:
-            as_found_result = self.as_found_result.value
+        as_found_result = self.as_found_result
 
-        as_left_result: Optional[int] = None
-        if self.as_left_result:
-            as_left_result = self.as_left_result.value
+        as_left_result = self.as_left_result
 
         last_service_date: Optional[str]
         if not self.last_service_date:
@@ -443,7 +437,7 @@ class AssetToAssetManageResponseModel:
 
         work_status: Optional[int] = None
         if self.work_status:
-            work_status = self.work_status.value
+            work_status = self.work_status
 
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
