@@ -1,23 +1,12 @@
-from enum import Enum
+import warnings
 
+from qualer_sdk.models import ServiceOrderStatus
 
-class ServiceOrdersToProviderServiceOrderResponseModelOrderStatus(str, Enum):
-    CANCELLED = "Cancelled"
-    CLOSED = "Closed"
-    COMPLETED = "Completed"
-    DELAYED = "Delayed"
-    DELAYEDAPPROVAL = "DelayedApproval"
-    DENIED = "Denied"
-    DRAFT = "Draft"
-    NEW = "New"
-    PROCESSING = "Processing"
-    QUALITYCONTROL = "QualityControl"
-    READY = "Ready"
-    SCHEDULING = "Scheduling"
-    SUBMITTED = "Submitted"
-    WAITINGFORAPPROVAL = "WaitingForApproval"
-    WAITINGFORCLIENTSIGNOFF = "WaitingForClientSignOff"
-    WAITINGFORVENDORSIGNOFF = "WaitingForVendorSignOff"
+ServiceOrdersToProviderServiceOrderResponseModelOrderStatus = ServiceOrderStatus
 
-    def __str__(self) -> str:
-        return str(self.value)
+warnings.warn(
+    "ServiceOrdersToProviderServiceOrderResponseModelOrderStatus is deprecated and will be removed in a future release. "
+    "Please use ServiceOrderStatus instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)
