@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 from enum import Enum
+from typing import Dict
+
+from .api_enum import ApiEnum
 
 
-class ServiceResultStatus(str, Enum):
+class ServiceResultStatus(ApiEnum, str, Enum):
     """Service result outcome values (string-first).
 
     SDK standardizes on string values for readability. Some API endpoints
@@ -29,6 +32,11 @@ class ServiceResultStatus(str, Enum):
         return _STR_TO_CODE[self.value]
 
     @classmethod
+    def _get_int_to_enum_mapping(cls) -> Dict[int, "ServiceResultStatus"]:
+        """Return the mapping from integer codes to enum members."""
+        return _INT_TO_ENUM
+
+    @classmethod
     def from_code(cls, code: int | str | None) -> ServiceResultStatus | None:
         """Parse from an API integer code or numeric string."""
         if code is None:
@@ -41,24 +49,6 @@ class ServiceResultStatus(str, Enum):
                 return _INT_TO_ENUM.get(int(s))
             except ValueError:  # pragma: no cover
                 return None
-        return None
-
-    @classmethod
-    def from_api_value(cls, value: int | str | None) -> ServiceResultStatus | None:
-        """Best-effort parser for API values (int codes, numeric strings, or names)."""
-        if value is None:
-            return None
-
-        # Integer or numeric string -> code mapping
-        member = cls.from_code(value)
-        if member is not None:
-            return member
-
-        # Try match by string value or enum name (case-insensitive)
-        s = str(value).strip().lower()
-        for m in cls:
-            if m.value.lower() == s or m.name.lower() == s:
-                return m
         return None
 
 
