@@ -105,9 +105,9 @@ class ServiceOrdersFromOrderItemUpdateModel:
 
         parts_total = self.parts_total
 
-        work_status: Optional[int] = None
+        work_status: Optional[str] = None
         if self.work_status:
-            work_status = self.work_status.value
+            work_status = self.work_status
 
         custom_work_status = self.custom_work_status
 
@@ -135,15 +135,16 @@ class ServiceOrdersFromOrderItemUpdateModel:
 
         result_status: Optional[int] = None
         if self.result_status:
-            result_status = self.result_status.value
+            # Convert string enum to integer code for API
+            result_status = int(self.result_status)
 
         as_found_result: Optional[int] = None
         if self.as_found_result:
-            as_found_result = self.as_found_result.value
+            as_found_result = int(self.as_found_result)
 
         as_left_result: Optional[int] = None
         if self.as_left_result:
-            as_left_result = self.as_left_result.value
+            as_left_result = int(self.as_left_result)
 
         equipment_id = self.equipment_id
 
@@ -275,13 +276,7 @@ class ServiceOrdersFromOrderItemUpdateModel:
         parts_total = d.pop("PartsTotal", None)
 
         _work_status = d.pop("WorkStatus", None)
-        work_status: Optional[WorkStatus]
-        if not _work_status:
-            work_status = None
-        elif _work_status is None:
-            work_status = None
-        else:
-            work_status = WorkStatus(_work_status)
+        work_status = WorkStatus(_work_status)
 
         custom_work_status = d.pop("CustomWorkStatus", None)
 
@@ -320,31 +315,13 @@ class ServiceOrdersFromOrderItemUpdateModel:
             as_left_check = ServiceOrdersFromOrderItemUpdateModelAsLeftCheck(_as_left_check)
 
         _result_status = d.pop("ResultStatus", None)
-        result_status: Optional[ServiceResultStatus]
-        if not _result_status:
-            result_status = None
-        elif _result_status is None:
-            result_status = None
-        else:
-            result_status = ServiceResultStatus(_result_status)
+        result_status = ServiceResultStatus.parse(_result_status)
 
         _as_found_result = d.pop("AsFoundResult", None)
-        as_found_result: Optional[ServiceResultStatus]
-        if not _as_found_result:
-            as_found_result = None
-        elif _as_found_result is None:
-            as_found_result = None
-        else:
-            as_found_result = ServiceResultStatus(_as_found_result)
+        as_found_result = ServiceResultStatus.parse(_as_found_result)
 
         _as_left_result = d.pop("AsLeftResult", None)
-        as_left_result: Optional[ServiceResultStatus]
-        if not _as_left_result:
-            as_left_result = None
-        elif _as_left_result is None:
-            as_left_result = None
-        else:
-            as_left_result = ServiceResultStatus(_as_left_result)
+        as_left_result = ServiceResultStatus.parse(_as_left_result)
 
         equipment_id = d.pop("EquipmentId", None)
 

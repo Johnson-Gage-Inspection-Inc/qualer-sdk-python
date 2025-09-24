@@ -1,15 +1,33 @@
-from enum import IntEnum
+# src/qualer_sdk/models/service_result_status.py
+from __future__ import annotations
+
+from .api_enum import ApiEnum
 
 
-class ServiceResultStatus(IntEnum):
-    VALUE_0 = 0
-    VALUE_1 = 1
-    VALUE_10 = 10
-    VALUE_11 = 11
-    VALUE_2 = 2
-    VALUE_20 = 20
-    VALUE_21 = 21
-    VALUE_22 = 22
+class ServiceResultStatus(ApiEnum):
 
-    def __str__(self) -> str:
-        return str(self.value)
+    DONE = "Done"
+    FAIL = "Fail"
+    FAILAMBIGUOUS = "FailAmbiguous"
+    FAILSIGNIFICANT = "FailSignificant"
+    MISSED = "Missed"
+    NOTAVAILABLE = "NotAvailable"
+    PASS = "Pass"
+    PASSADJUSTMENT = "PassAdjustment"
+    PASSAMBIGUOUS = "PassAmbiguous"
+    PENDING = "Pending"
+
+
+# ApiEnum will use this mapping for __int__ and tolerant construction
+ServiceResultStatus.INT_CODES = {  # type: ignore[attr-defined]
+    0: ServiceResultStatus.DONE,
+    1: ServiceResultStatus.FAIL,
+    2: ServiceResultStatus.MISSED,
+    10: ServiceResultStatus.FAILAMBIGUOUS,
+    11: ServiceResultStatus.FAILSIGNIFICANT,
+    20: ServiceResultStatus.NOTAVAILABLE,
+    21: ServiceResultStatus.PASS,
+    22: ServiceResultStatus.PASSADJUSTMENT,
+    30: ServiceResultStatus.PASSAMBIGUOUS,
+    31: ServiceResultStatus.PENDING,
+}

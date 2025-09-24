@@ -54,7 +54,7 @@ class ServiceOrdersFromChangeServiceOrderStatusModel:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         _service_order_status = d.pop("ServiceOrderStatus", None)
-        service_order_status = ServiceOrderStatus.from_api_value(_service_order_status)
+        service_order_status = ServiceOrderStatus.parse(_service_order_status)
 
         reset_status = d.pop("ResetStatus", None)
 
