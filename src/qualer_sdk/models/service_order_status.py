@@ -43,3 +43,5 @@ ServiceOrderStatus.INT_CODES = {  # type: ignore[attr-defined]
     21: ServiceOrderStatus.DELAYEDAPPROVAL,  # Inferred based on enum order; not yet observed
     22: ServiceOrderStatus.READY,  # Inferred based on enum order; not yet observed
 }
+
+_INT_TO_STR = {code: status.value for code, status in ServiceOrderStatus.INT_CODES.items()}
