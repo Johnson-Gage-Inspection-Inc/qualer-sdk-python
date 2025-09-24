@@ -2629,7 +2629,7 @@ class ReportDatasetsToMeasurementResponse:
         cv_extended = d.pop("CvExtended", None)
 
         _result = d.pop("Result", None)
-        result = ServiceResultStatus.from_api_value(_result)
+        result = ServiceResultStatus.parse(_result)
 
         range_result = d.pop("RangeResult", None)
 

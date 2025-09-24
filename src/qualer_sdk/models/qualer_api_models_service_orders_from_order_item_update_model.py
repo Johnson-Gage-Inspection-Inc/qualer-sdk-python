@@ -136,15 +136,15 @@ class ServiceOrdersFromOrderItemUpdateModel:
         result_status: Optional[int] = None
         if self.result_status:
             # Convert string enum to integer code for API
-            result_status = self.result_status.to_code()
+            result_status = int(self.result_status)
 
         as_found_result: Optional[int] = None
         if self.as_found_result:
-            as_found_result = self.as_found_result.to_code()
+            as_found_result = int(self.as_found_result)
 
         as_left_result: Optional[int] = None
         if self.as_left_result:
-            as_left_result = self.as_left_result.to_code()
+            as_left_result = int(self.as_left_result)
 
         equipment_id = self.equipment_id
 
@@ -315,13 +315,13 @@ class ServiceOrdersFromOrderItemUpdateModel:
             as_left_check = ServiceOrdersFromOrderItemUpdateModelAsLeftCheck(_as_left_check)
 
         _result_status = d.pop("ResultStatus", None)
-        result_status = ServiceResultStatus.from_api_value(_result_status)
+        result_status = ServiceResultStatus.parse(_result_status)
 
         _as_found_result = d.pop("AsFoundResult", None)
-        as_found_result = ServiceResultStatus.from_api_value(_as_found_result)
+        as_found_result = ServiceResultStatus.parse(_as_found_result)
 
         _as_left_result = d.pop("AsLeftResult", None)
-        as_left_result = ServiceResultStatus.from_api_value(_as_left_result)
+        as_left_result = ServiceResultStatus.parse(_as_left_result)
 
         equipment_id = d.pop("EquipmentId", None)
 
