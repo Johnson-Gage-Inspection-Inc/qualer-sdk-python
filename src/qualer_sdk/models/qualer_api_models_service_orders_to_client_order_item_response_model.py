@@ -19,7 +19,10 @@ T = TypeVar("T", bound="ServiceOrdersToClientOrderItemResponseModel")
 class ServiceOrdersToClientOrderItemResponseModel:
     """
     Attributes:
-        work_item_id (Optional[int]):
+        work_item_id (int):
+        serial_number (str):
+        asset_id (int):
+        asset_name (str):
         client_notes (Optional[str]):
         service_comments (Optional[str]):
         private_comments (Optional[str]):
@@ -66,14 +69,11 @@ class ServiceOrdersToClientOrderItemResponseModel:
         result_status (Optional[str]):
         as_found_result (Optional[str]):
         as_left_result (Optional[str]):
-        serial_number (Optional[str]):
         serial_number_change (Optional[str]):
         asset_tag (Optional[str]):
         asset_user (Optional[str]):
         asset_tag_change (Optional[str]):
         asset_user_change (Optional[str]):
-        asset_id (Optional[int]):
-        asset_name (Optional[str]):
         asset_description (Optional[str]):
         asset_site_name (Optional[str]):
         asset_site_id (Optional[int]):
@@ -102,7 +102,10 @@ class ServiceOrdersToClientOrderItemResponseModel:
         asset_ownership (Optional[str]):
     """
 
-    work_item_id: Optional[int] = None
+    work_item_id: int
+    serial_number: str
+    asset_id: int
+    asset_name: str
     client_notes: Optional[str] = None
     service_comments: Optional[str] = None
     private_comments: Optional[str] = None
@@ -149,14 +152,11 @@ class ServiceOrdersToClientOrderItemResponseModel:
     result_status: Optional[str] = None
     as_found_result: Optional[str] = None
     as_left_result: Optional[str] = None
-    serial_number: Optional[str] = None
     serial_number_change: Optional[str] = None
     asset_tag: Optional[str] = None
     asset_user: Optional[str] = None
     asset_tag_change: Optional[str] = None
     asset_user_change: Optional[str] = None
-    asset_id: Optional[int] = None
-    asset_name: Optional[str] = None
     asset_description: Optional[str] = None
     asset_site_name: Optional[str] = None
     asset_site_id: Optional[int] = None
