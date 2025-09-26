@@ -17,9 +17,9 @@ T = TypeVar("T", bound="AssetToAssetResponseModel")
 class AssetToAssetResponseModel:
     """
     Attributes:
-        company_id (Optional[int]):
-        asset_id (Optional[int]):
-        serial_number (Optional[str]):
+        company_id (int):
+        asset_id (int):
+        serial_number (str):
         asset_user (Optional[str]):
         asset_tag (Optional[str]):
         equipment_id (Optional[str]):
@@ -67,9 +67,9 @@ class AssetToAssetResponseModel:
         composite_child_count (Optional[int]):
     """
 
-    company_id: Optional[int] = None
-    asset_id: Optional[int] = None
-    serial_number: Optional[str] = None
+    company_id: int
+    asset_id: int
+    serial_number: str
     asset_user: Optional[str] = None
     asset_tag: Optional[str] = None
     equipment_id: Optional[str] = None
