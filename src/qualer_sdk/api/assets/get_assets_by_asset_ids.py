@@ -1,4 +1,10 @@
-"""This module provides functions for retrieving assets by their IDs using the collected assets workflow in the Qualer SDK."""
+"""Retrieve assets by IDs using the collected assets workflow.
+
+This module provides convenience functions that:
+- temporarily collect a set of asset IDs using the QuickCollection mechanism,
+- fetch the collected assets via the asset manager list endpoint, and
+- automatically clear the collection afterwards.
+"""
 
 from typing import List, Optional
 
