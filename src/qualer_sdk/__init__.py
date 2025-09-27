@@ -28,8 +28,8 @@ from . import api, models
 # Import core classes using relative imports
 from .client import AuthenticatedClient, Client
 from .context_managers import (
-    clear_all_collected_assets,
-    clear_all_collected_assets_async,
+    reset_collected_assets,
+    reset_collected_assets_async,
     collected_assets,
     collected_assets_async,
 )
@@ -48,6 +48,6 @@ __all__ = [
     "collected_assets",
     "collected_assets_async",
     "get_assets_by_asset_ids",
-    "clear_all_collected_assets",
-    "clear_all_collected_assets_async",
+    "reset_collected_assets",
+    "reset_collected_assets_async",
 ]

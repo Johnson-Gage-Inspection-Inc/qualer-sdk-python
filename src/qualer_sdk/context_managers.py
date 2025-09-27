@@ -58,7 +58,7 @@ def collected_assets(
 
 
 def reset_collected_assets(client: AuthenticatedClient):
-    """Clear collected assets
+    """Clear collected assets.
 
     Args:
         client (AuthenticatedClient): The authenticated client to use for API calls
@@ -113,33 +113,12 @@ async def collected_assets_async(
         try:
             await reset_collected_assets_async(client)
         except Exception:
+            # Best-effort cleanup; don't mask primary exceptions
             pass
 
 
 async def reset_collected_assets_async(client: AuthenticatedClient) -> None:
     """Async helper to clear collected assets (reset QuickCollection).
-
-    Args:
-        client: The authenticated client to use for API calls
-    """
-    await clear_collected_assets.asyncio(client=client, body=[])
-
-
-# Convenience function to clear all collected assets
-def clear_all_collected_assets(client: AuthenticatedClient) -> None:
-    """Clear all collected assets.
-
-    This is a convenience function that calls clear_collected_assets with an empty list,
-    which clears all assets from the QuickCollection according to the API documentation.
-
-    Args:
-        client: The authenticated client to use for API calls
-    """
-    clear_collected_assets.sync(client=client, body=[])
-
-
-async def clear_all_collected_assets_async(client: AuthenticatedClient) -> None:
-    """Async version of clear_all_collected_assets.
 
     Args:
         client: The authenticated client to use for API calls
