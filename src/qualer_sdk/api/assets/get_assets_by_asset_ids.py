@@ -1,4 +1,4 @@
-"""Utility functions for the Qualer SDK."""
+"""This module provides functions for retrieving assets by their IDs using the collected assets workflow in the Qualer SDK."""
 
 from typing import List, Optional
 
