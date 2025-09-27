@@ -98,12 +98,7 @@ def get_assets_by_asset_ids(
 async def collected_assets_async(
     client: AuthenticatedClient,
     asset_ids: List[int],
-    *,
-    search_string: Optional[str] = None,
-    page: Optional[int] = None,
-    page_size: Optional[int] = None,
-    clear_on_exit: bool = True,
-) -> AsyncIterator[List[AssetToAssetManageResponseModel]]:
+) -> AsyncIterator[None]:
     """Async context manager for working with collected assets.
 
     This is the async version of the collected_assets context manager.
@@ -112,20 +107,21 @@ async def collected_assets_async(
     Args:
         client: The authenticated client to use for API calls
         asset_ids: List of asset IDs to collect
-        search_string: Optional search string to filter the collected assets
-        page: Optional page number for pagination
-        page_size: Optional page size for pagination
-        clear_on_exit: Whether to clear the collected assets on exit (default: True)
 
     Yields:
-        List of collected AssetToAssetManageResponseModel objects
+        None
 
     Example:
         ```python
-        async with collected_assets_async(client, [123, 456, 789]) as assets:
+        from qualer_sdk.models.filter_type import FilterType
+        async with collected_assets_async(client, [123, 456, 789]):
+            # Now get the assets that were just collected
+            assets = await get_asset_manager_list.asyncio(
+                client=client,
+                model_filter_type=FilterType.COLLECTED_ASSETS,
+            )
             for asset in assets:
                 print(f"Asset: {asset.asset_name} (ID: {asset.asset_id})")
-            # Process your assets here
         # Assets are automatically cleared when exiting the context
         ```
 
@@ -134,36 +130,50 @@ async def collected_assets_async(
         The cleanup (clear_collected_assets) will still be attempted even if
         an exception occurs during the context block execution.
     """
-    collected_asset_ids: List[int] = []
-
     try:
         # Step 1: Collect the assets
-        collect_response = await collect_assets.asyncio(client=client, body=asset_ids)
-        if collect_response is not None:
-            # Keep track of what we collected for cleanup
-            collected_asset_ids = asset_ids.copy()
+        await collect_assets.asyncio(client=client, body=asset_ids)
 
-        # Step 2: Retrieve the collected assets
-        assets = await get_asset_manager_list.asyncio(
+        # Yield. (No reason to actually return anything though)
+        yield None
+
+    finally:
+        try:
+            await clear_collected_assets.asyncio(client=client, body=[])
+        except Exception:
+            # Don't let cleanup errors mask the original exception
+            # You might want to log this in a real application
+            pass
+
+
+async def get_assets_by_asset_ids_async(
+    client: AuthenticatedClient,
+    asset_ids: List[int],
+    *,
+    search_string: Optional[str] = None,
+    page: Optional[int] = None,
+    page_size: Optional[int] = None,
+) -> Optional[List[AssetToAssetManageResponseModel]]:
+    """Async version of get_assets_by_asset_ids.
+
+    Args:
+        client: The authenticated client to use for API calls
+        asset_ids: List of asset IDs to collect
+        search_string: Optional search string to filter the collected assets
+        page: Optional page number for pagination
+        page_size: Optional page size for pagination
+
+    Returns:
+        List of collected AssetToAssetManageResponseModel objects
+    """
+    async with collected_assets_async(client, asset_ids):
+        return await get_asset_manager_list.asyncio(
             client=client,
             model_filter_type=FilterType.COLLECTED_ASSETS,
             model_search_string=search_string,
             model_page=page,
             model_page_size=page_size,
         )
-
-        # Yield the collected assets (or empty list if None)
-        yield assets or []
-
-    finally:
-        # Step 3: Clear the collected assets (if requested and we collected any)
-        if clear_on_exit and collected_asset_ids:
-            try:
-                await clear_collected_assets.asyncio(client=client, body=collected_asset_ids)
-            except Exception:
-                # Don't let cleanup errors mask the original exception
-                # You might want to log this in a real application
-                pass
 
 
 # Convenience function to clear all collected assets
