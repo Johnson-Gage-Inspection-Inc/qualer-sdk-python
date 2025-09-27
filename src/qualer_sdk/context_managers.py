@@ -28,7 +28,7 @@ def collected_assets(
 
     Example:
         ```python
-        with collected_assets(client, [123, 456, 789]) as assets:
+        with collected_assets(client, [1235770, 1235660, 1235502]):
             assets = get_asset_manager_list.sync(
                 client=client,
                 model_filter_type=FilterType.COLLECTED_ASSETS,
@@ -45,19 +45,20 @@ def collected_assets(
         an exception occurs during the context block execution.
     """
     try:
-        # Step 1: Collect the assets
+        reset_collected_assets(client)
         collect_assets.sync(client=client, body=asset_ids)
-
-        # Yield. (No reason to actually return anything though)
         yield None
-
     finally:
-        try:
-            clear_collected_assets.sync(client=client, body=[])
-        except Exception:
-            # Don't let cleanup errors mask the original exception
-            # You might want to log this in a real application
-            pass
+        reset_collected_assets(client)
+
+
+def reset_collected_assets(client: AuthenticatedClient):
+    """Clear collected assets
+
+    Args:
+        client (AuthenticatedClient): The authenticated client to use for API calls
+    """
+    clear_collected_assets.sync(client=client, body=[])
 
 
 @asynccontextmanager
@@ -80,14 +81,14 @@ async def collected_assets_async(
     Example:
         ```python
         from qualer_sdk.models.filter_type import FilterType
-        async with collected_assets_async(client, [123, 456, 789]):
+        async with collected_assets_async(client, [1235770, 1235660, 1235502]):
             # Now get the assets that were just collected
             assets = await get_asset_manager_list.asyncio(
                 client=client,
                 model_filter_type=FilterType.COLLECTED_ASSETS,
             )
-            for asset in assets:
-                print(f"Asset: {asset.asset_name} (ID: {asset.asset_id})")
+        for asset in assets:
+            print(f"Asset: {asset.asset_name} (ID: {asset.asset_id})")
         # Assets are automatically cleared when exiting the context
         ```
 
@@ -97,19 +98,16 @@ async def collected_assets_async(
         an exception occurs during the context block execution.
     """
     try:
-        # Step 1: Collect the assets
+        await clear_collected_assets_async(client)
         await collect_assets.asyncio(client=client, body=asset_ids)
-
-        # Yield. (No reason to actually return anything though)
         yield None
 
     finally:
-        try:
-            await clear_collected_assets.asyncio(client=client, body=[])
-        except Exception:
-            # Don't let cleanup errors mask the original exception
-            # You might want to log this in a real application
-            pass
+        await clear_collected_assets_async(client)
+
+
+def clear_collected_assets_async(client):
+    return clear_collected_assets.asyncio(client=client, body=[])
 
 
 # Convenience function to clear all collected assets
