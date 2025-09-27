@@ -32,9 +32,8 @@ from .context_managers import (
     clear_all_collected_assets_async,
     collected_assets,
     collected_assets_async,
-    get_assets_by_asset_ids,
-    get_assets_by_asset_ids_async,
 )
+from .api.assets import get_assets_by_asset_ids
 from .errors import UnexpectedStatus
 from .types import Response
 
@@ -49,7 +48,6 @@ __all__ = [
     "collected_assets",
     "collected_assets_async",
     "get_assets_by_asset_ids",
-    "get_assets_by_asset_ids_async",
     "clear_all_collected_assets",
     "clear_all_collected_assets_async",
 ]
