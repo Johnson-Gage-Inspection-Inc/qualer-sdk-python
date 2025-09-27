@@ -15,16 +15,17 @@ def collected_assets(
     """Context manager for working with collected assets.
 
     This context manager simplifies the workflow of:
-    1. Collecting assets by their IDs
-    2. Retrieving the collected assets
-    3. Automatically clearing the collection on exit
+    1. Ensuring the QuickCollection starts clean (resets on entry)
+    2. Collecting assets by their IDs
+    3. Retrieving the collected assets within the context
+    4. Automatically clearing the collection on exit (resets on exit)
 
     Args:
         client: The authenticated client to use for API calls
         asset_ids: List of asset IDs to collect
 
     Yields:
-        List of collected AssetToAssetManageResponseModel objects
+        None
 
     Example:
         ```python
@@ -49,7 +50,11 @@ def collected_assets(
         collect_assets.sync(client=client, body=asset_ids)
         yield None
     finally:
-        reset_collected_assets(client)
+        try:
+            reset_collected_assets(client)
+        except Exception:
+            # Best-effort cleanup; don't mask primary exceptions
+            pass
 
 
 def reset_collected_assets(client: AuthenticatedClient):
@@ -87,8 +92,8 @@ async def collected_assets_async(
                 client=client,
                 model_filter_type=FilterType.COLLECTED_ASSETS,
             )
-        for asset in assets:
-            print(f"Asset: {asset.asset_name} (ID: {asset.asset_id})")
+            for asset in assets:
+                print(f"Asset: {asset.asset_name} (ID: {asset.asset_id})")
         # Assets are automatically cleared when exiting the context
         ```
 
@@ -98,16 +103,26 @@ async def collected_assets_async(
         an exception occurs during the context block execution.
     """
     try:
-        await clear_collected_assets_async(client)
+        # Ensure clean start
+        await reset_collected_assets_async(client)
+        # Collect assets for this scoped context
         await collect_assets.asyncio(client=client, body=asset_ids)
         yield None
-
     finally:
-        await clear_collected_assets_async(client)
+        # Best-effort reset on exit
+        try:
+            await reset_collected_assets_async(client)
+        except Exception:
+            pass
 
 
-def clear_collected_assets_async(client):
-    return clear_collected_assets.asyncio(client=client, body=[])
+async def reset_collected_assets_async(client: AuthenticatedClient) -> None:
+    """Async helper to clear collected assets (reset QuickCollection).
+
+    Args:
+        client: The authenticated client to use for API calls
+    """
+    await clear_collected_assets.asyncio(client=client, body=[])
 
 
 # Convenience function to clear all collected assets
