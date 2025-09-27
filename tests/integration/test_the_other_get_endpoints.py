@@ -19,6 +19,7 @@ SITE_ID = 81690  # valid site id
 
 # Mapping of endpoint to required params (from discovery log)
 ENDPOINT_REQUIRED_PARAMS = {
+    "assets.get_assets_by_asset_ids": {"asset_ids": [ASSET_ID]},
     "asset_attributes.get_asset_attributes": {"asset_id": ASSET_ID},
     "asset_maintenance_plans.get_maintenance_plan": {
         "asset_id": ASSET_ID,
