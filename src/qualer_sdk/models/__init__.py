@@ -12,6 +12,7 @@ The version of the OpenAPI document: v1
 """
 
 # Import all model classes
+from .filter_type import FilterType
 from .add_asset_service_record_response_200 import AddAssetServiceRecordResponse200
 from .add_auxiliary_tools_response_200 import AddAuxiliaryToolsResponse200
 from .add_department_response_204 import AddDepartmentResponse204
@@ -931,6 +932,7 @@ from .upsert_client_attribute_response_200 import UpsertClientAttributeResponse2
 from .work_status import WorkStatus
 
 __all__ = [
+    "FilterType",
     "AddAssetServiceRecordResponse200",
     "AddAuxiliaryToolsResponse200",
     "AddDepartmentResponse204",
