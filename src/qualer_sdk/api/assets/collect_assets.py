@@ -35,6 +35,8 @@ def _parse_response(
         response_200 = CollectAssetsResponse200.from_dict(response.json())
 
         return response_200
+    if response.status_code == 204:
+        return None
     if client.raise_on_unexpected_status:
         raise errors.UnexpectedStatus(response.status_code, response.content)
     else:
@@ -65,11 +67,13 @@ def sync_detailed(
         body (List[int]):
 
     Raises:
-        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        errors.UnexpectedStatus: If the server returns an undocumented status code and
+            Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
         Response[CollectAssetsResponse200]
+        Note: If the server responds with 204 No Content, `parsed` will be None.
     """
 
     kwargs = _get_kwargs(
@@ -96,11 +100,13 @@ def sync(
         body (List[int]):
 
     Raises:
-        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        errors.UnexpectedStatus: If the server returns an undocumented status code and
+            Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CollectAssetsResponse200
+        Optional[CollectAssetsResponse200]
+        Note: None when the server returns 204 No Content.
     """
 
     return sync_detailed(
@@ -122,11 +128,13 @@ async def asyncio_detailed(
         body (List[int]):
 
     Raises:
-        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        errors.UnexpectedStatus: If the server returns an undocumented status code and
+            Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
         Response[CollectAssetsResponse200]
+        Note: If the server responds with 204 No Content, `parsed` will be None.
     """
 
     kwargs = _get_kwargs(
@@ -151,11 +159,13 @@ async def asyncio(
         body (List[int]):
 
     Raises:
-        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        errors.UnexpectedStatus: If the server returns an undocumented status code and
+            Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CollectAssetsResponse200
+        Optional[CollectAssetsResponse200]
+        Note: None when the server returns 204 No Content.
     """
 
     return (
