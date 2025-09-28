@@ -121,6 +121,7 @@ class SiteFromSiteCreateModel:
         from ..models.qualer_api_models_address_address_model import (
             AddressAddressModel,
         )
+
         d = dict(src_dict)
         site_name = d.pop("SiteName", None)
         site_code = d.pop("SiteCode", None)

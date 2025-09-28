@@ -37,6 +37,7 @@ class ServiceOrdersFromUpdatePaymentStatusModel:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         payment_status = d.pop("PaymentStatus", None)
+
         def _parse_invoiced_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -48,6 +49,7 @@ class ServiceOrdersFromUpdatePaymentStatusModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         invoiced_on = _parse_invoiced_on(d.pop("InvoicedOn", None))
         qualer_api_models_service_orders_from_update_payment_status_model = cls(
             payment_status=payment_status,

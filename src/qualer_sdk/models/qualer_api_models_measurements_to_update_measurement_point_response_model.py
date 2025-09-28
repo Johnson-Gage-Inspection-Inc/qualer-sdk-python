@@ -234,6 +234,7 @@ class MeasurementsToUpdateMeasurementPointResponseModel:
         from ..models.qualer_api_models_measurements_to_update_measurement_tool_response_model import (
             MeasurementsToUpdateMeasurementToolResponseModel,
         )
+
         d = dict(src_dict)
         measurement_point_id = d.pop("MeasurementPointId", None)
         specification_name = d.pop("SpecificationName", None)

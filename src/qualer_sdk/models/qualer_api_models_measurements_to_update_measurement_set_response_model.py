@@ -78,12 +78,16 @@ class MeasurementsToUpdateMeasurementSetResponseModel:
         use_expected_value = self.use_expected_value
         decimal_places = self.decimal_places
         significant_figures = self.significant_figures
-        influence_parameter_1_type = self.influence_parameter_1_type.value if self.influence_parameter_1_type else None
+        influence_parameter_1_type = (
+            self.influence_parameter_1_type.value if self.influence_parameter_1_type else None
+        )
         influence_parameter_1_tool_type_id = self.influence_parameter_1_tool_type_id
         influence_parameter_1_parameter_id = self.influence_parameter_1_parameter_id
         influence_parameter_1_source = self.influence_parameter_1_source
         influence_parameter_1_value = self.influence_parameter_1_value
-        influence_parameter_2_type = self.influence_parameter_2_type.value if self.influence_parameter_2_type else None
+        influence_parameter_2_type = (
+            self.influence_parameter_2_type.value if self.influence_parameter_2_type else None
+        )
         influence_parameter_2_tool_type_id = self.influence_parameter_2_tool_type_id
         influence_parameter_2_parameter_id = self.influence_parameter_2_parameter_id
         influence_parameter_2_source = self.influence_parameter_2_source
@@ -149,6 +153,7 @@ class MeasurementsToUpdateMeasurementSetResponseModel:
         from ..models.qualer_api_models_measurements_to_update_measurement_point_response_model import (
             MeasurementsToUpdateMeasurementPointResponseModel,
         )
+
         d = dict(src_dict)
         measurement_set_id = d.pop("MeasurementSetId", None)
         measurement_name = d.pop("MeasurementName", None)

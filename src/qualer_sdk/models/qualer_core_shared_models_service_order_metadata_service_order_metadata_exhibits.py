@@ -56,6 +56,7 @@ class QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits:
         from ..models.qualer_core_shared_models_service_order_metadata_service_order_metadata_exhibits_key_value import (
             QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibitsKeyValue,
         )
+
         d = dict(src_dict)
         title = d.pop("Title", None)
         subtitle = d.pop("Subtitle", None)

@@ -237,6 +237,7 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model_measurement_tool_response_model import (
             MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel,
         )
+
         d = dict(src_dict)
         specification_name = d.pop("SpecificationName", None)
         measurement_quantity = d.pop("MeasurementQuantity", None)

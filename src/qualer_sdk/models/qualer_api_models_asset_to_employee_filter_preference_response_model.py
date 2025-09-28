@@ -54,6 +54,7 @@ class AssetToEmployeeFilterPreferenceResponseModel:
         filter_type = d.pop("FilterType", None)
         within_days = d.pop("WithinDays", None)
         use_date_range = d.pop("UseDateRange", None)
+
         def _parse_start_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -65,7 +66,9 @@ class AssetToEmployeeFilterPreferenceResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         start_date = _parse_start_date(d.pop("StartDate", None))
+
         def _parse_end_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -77,6 +80,7 @@ class AssetToEmployeeFilterPreferenceResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         end_date = _parse_end_date(d.pop("EndDate", None))
         qualer_api_models_asset_to_employee_filter_preference_response_model = cls(
             filter_type=filter_type,

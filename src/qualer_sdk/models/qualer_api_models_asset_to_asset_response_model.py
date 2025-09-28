@@ -312,6 +312,7 @@ class AssetToAssetResponseModel:
         condition = d.pop("Condition", None)
         criticality = d.pop("Criticality", None)
         pool = d.pop("Pool", None)
+
         def _parse_purchase_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -323,9 +324,11 @@ class AssetToAssetResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         purchase_date = _parse_purchase_date(d.pop("PurchaseDate", None))
         purchase_cost = d.pop("PurchaseCost", None)
         life_span_months = d.pop("LifeSpanMonths", None)
+
         def _parse_activation_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -339,9 +342,11 @@ class AssetToAssetResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         activation_date = _parse_activation_date(d.pop("ActivationDate", None))
         depreciation_basis = d.pop("DepreciationBasis", None)
         depreciation_method = d.pop("DepreciationMethod", None)
+
         def _parse_retirement_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -355,6 +360,7 @@ class AssetToAssetResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         retirement_date = _parse_retirement_date(d.pop("RetirementDate", None))
         salvage_value = d.pop("SalvageValue", None)
         retirment_reason = d.pop("RetirmentReason", None)

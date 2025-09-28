@@ -207,6 +207,7 @@ class MeasurementsFromCreateMeasurementPointModel:
         from ..models.qualer_api_models_measurements_from_create_measurement_tool_model import (
             MeasurementsFromCreateMeasurementToolModel,
         )
+
         d = dict(src_dict)
         specification_name = d.pop("SpecificationName", None)
         measurement_quantity = d.pop("MeasurementQuantity", None)

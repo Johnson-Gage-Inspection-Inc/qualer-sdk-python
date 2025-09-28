@@ -77,7 +77,9 @@ class ClientsToEmployeeResponseModel:
         alias = self.alias
         title = self.title
         is_deleted = self.is_deleted
-        last_seen_date_utc = self.last_seen_date_utc.isoformat() if self.last_seen_date_utc else None
+        last_seen_date_utc = (
+            self.last_seen_date_utc.isoformat() if self.last_seen_date_utc else None
+        )
         culture_name = self.culture_name
         culture_ui_name = self.culture_ui_name
         field_dict: Dict[str, Any] = {}
@@ -124,6 +126,7 @@ class ClientsToEmployeeResponseModel:
         from ..models.qualer_api_models_clients_to_employee_employee_department_response import (
             ClientsToEmployeeEmployeeDepartmentResponse,
         )
+
         d = dict(src_dict)
         employee_id = d.pop("EmployeeId", None)
         first_name = d.pop("FirstName", None)
@@ -145,6 +148,7 @@ class ClientsToEmployeeResponseModel:
         alias = d.pop("Alias", None)
         title = d.pop("Title", None)
         is_deleted = d.pop("IsDeleted", None)
+
         def _parse_last_seen_date_utc(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -158,6 +162,7 @@ class ClientsToEmployeeResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         last_seen_date_utc = _parse_last_seen_date_utc(d.pop("LastSeenDateUtc", None))
         culture_name = d.pop("CultureName", None)
         culture_ui_name = d.pop("CultureUiName", None)

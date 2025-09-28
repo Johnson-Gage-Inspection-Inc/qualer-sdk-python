@@ -109,6 +109,7 @@ class ReportDatasetsToServiceOrderChargeResponse:
         time_spent_in_minutes = d.pop("TimeSpentInMinutes", None)
         is_hourly_pricing = d.pop("IsHourlyPricing", None)
         created_by = d.pop("CreatedBy", None)
+
         def _parse_charge_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -120,6 +121,7 @@ class ReportDatasetsToServiceOrderChargeResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         charge_date = _parse_charge_date(d.pop("ChargeDate", None))
         qualer_api_models_report_datasets_to_service_order_charge_response = cls(
             service_order_id=service_order_id,

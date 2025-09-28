@@ -366,6 +366,7 @@ class ReportDatasetsToAssetSummaryResponse:
         is_limited = d.pop("IsLimited", None)
         certificate_number = d.pop("CertificateNumber", None)
         serial_number = d.pop("SerialNumber", None)
+
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -379,7 +380,9 @@ class ReportDatasetsToAssetSummaryResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
+
         def _parse_service_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -391,6 +394,7 @@ class ReportDatasetsToAssetSummaryResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         service_date = _parse_service_date(d.pop("ServiceDate", None))
         part_number = d.pop("PartNumber", None)
         display_part_number = d.pop("DisplayPartNumber", None)
@@ -412,83 +416,114 @@ class ReportDatasetsToAssetSummaryResponse:
         next_service_level = d.pop("NextServiceLevel", None)
         next_service_level_code = d.pop("NextServiceLevelCode", None)
         asset_id = d.pop("AssetId", None)
+
         def _parse_result_status(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         result_status = _parse_result_status(d.pop("ResultStatus", None))
+
         def _parse_serial_number_change(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         serial_number_change = _parse_serial_number_change(d.pop("SerialNumberChange", None))
+
         def _parse_provider_technician(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         provider_technician = _parse_provider_technician(d.pop("ProviderTechnician", None))
+
         def _parse_provider_technician_alias(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         provider_technician_alias = _parse_provider_technician_alias(
             d.pop("ProviderTechnicianAlias", None)
         )
+
         def _parse_provider_phone(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         provider_phone = _parse_provider_phone(d.pop("ProviderPhone", None))
+
         def _parse_provider_company(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         provider_company = _parse_provider_company(d.pop("ProviderCompany", None))
+
         def _parse_qr_code(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         qr_code = _parse_qr_code(d.pop("QrCode", None))
+
         def _parse_bar_code(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         bar_code = _parse_bar_code(d.pop("BarCode", None))
+
         def _parse_bar_code_string(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         bar_code_string = _parse_bar_code_string(d.pop("BarCodeString", None))
+
         def _parse_owner_company_id(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         owner_company_id = _parse_owner_company_id(d.pop("OwnerCompanyId", None))
+
         def _parse_owner_company_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         owner_company_name = _parse_owner_company_name(d.pop("OwnerCompanyName", None))
+
         def _parse_as_found_result(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         as_found_result = _parse_as_found_result(d.pop("AsFoundResult", None))
+
         def _parse_as_left_result(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         as_left_result = _parse_as_left_result(d.pop("AsLeftResult", None))
+
         def _parse_asset_tag_change(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_tag_change = _parse_asset_tag_change(d.pop("AssetTagChange", None))
+
         def _parse_asset_user_change(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_user_change = _parse_asset_user_change(d.pop("AssetUserChange", None))
+
         def _parse_due_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -500,60 +535,81 @@ class ReportDatasetsToAssetSummaryResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         due_date = _parse_due_date(d.pop("DueDate", None))
+
         def _parse_parts_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         parts_charge = _parse_parts_charge(d.pop("PartsCharge", None))
+
         def _parse_parts_charge_before_discount(
             data: object,
         ) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         parts_charge_before_discount = _parse_parts_charge_before_discount(
             d.pop("PartsChargeBeforeDiscount", None)
         )
+
         def _parse_service_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         service_charge = _parse_service_charge(d.pop("ServiceCharge", None))
+
         def _parse_repairs_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         repairs_charge = _parse_repairs_charge(d.pop("RepairsCharge", None))
+
         def _parse_segment_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         segment_name = _parse_segment_name(d.pop("SegmentName", None))
+
         def _parse_schedule_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         schedule_name = _parse_schedule_name(d.pop("ScheduleName", None))
+
         def _parse_next_segment_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         next_segment_name = _parse_next_segment_name(d.pop("NextSegmentName", None))
+
         def _parse_client_id(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         client_id = _parse_client_id(d.pop("ClientId", None))
+
         def _parse_interval_length(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         interval_length = _parse_interval_length(d.pop("IntervalLength", None))
+
         def _parse_interval_cycle(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         interval_cycle = _parse_interval_cycle(d.pop("IntervalCycle", None))
         qualer_api_models_report_datasets_to_asset_summary_response = cls(
             service_order_number=service_order_number,

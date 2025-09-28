@@ -840,6 +840,7 @@ class ReportDatasetsToServiceOrderItemResponse:
         certificate_number = d.pop("CertificateNumber", None)
         document_number = d.pop("DocumentNumber", None)
         revision = d.pop("Revision", None)
+
         def _parse_effective_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -853,6 +854,7 @@ class ReportDatasetsToServiceOrderItemResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         effective_date = _parse_effective_date(d.pop("EffectiveDate", None))
         document_section = d.pop("DocumentSection", None)
         service_level = d.pop("ServiceLevel", None)
@@ -914,11 +916,14 @@ class ReportDatasetsToServiceOrderItemResponse:
         category_name = d.pop("CategoryName", None)
         root_category_name = d.pop("RootCategoryName", None)
         vendor_tag = d.pop("VendorTag", None)
+
         def _parse_result_status(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         result_status = _parse_result_status(d.pop("ResultStatus", None))
+
         def _parse_service_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -930,7 +935,9 @@ class ReportDatasetsToServiceOrderItemResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         service_date = _parse_service_date(d.pop("ServiceDate", None))
+
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -944,7 +951,9 @@ class ReportDatasetsToServiceOrderItemResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
+
         def _parse_original_due_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -958,32 +967,44 @@ class ReportDatasetsToServiceOrderItemResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         original_due_date = _parse_original_due_date(d.pop("OriginalDueDate", None))
+
         def _parse_asset_tag(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_tag = _parse_asset_tag(d.pop("AssetTag", None))
+
         def _parse_department(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         department = _parse_department(d.pop("Department", None))
+
         def _parse_asset_user(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_user = _parse_asset_user(d.pop("AssetUser", None))
+
         def _parse_equipment_id(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         equipment_id = _parse_equipment_id(d.pop("EquipmentId", None))
+
         def _parse_legacy_identifier(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         legacy_identifier = _parse_legacy_identifier(d.pop("LegacyIdentifier", None))
+
         def _parse_activation_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -997,7 +1018,9 @@ class ReportDatasetsToServiceOrderItemResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         activation_date = _parse_activation_date(d.pop("ActivationDate", None))
+
         def _parse_purchase_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1009,161 +1032,213 @@ class ReportDatasetsToServiceOrderItemResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         purchase_date = _parse_purchase_date(d.pop("PurchaseDate", None))
+
         def _parse_part_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         part_name = _parse_part_name(d.pop("PartName", None))
+
         def _parse_part_description(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         part_description = _parse_part_description(d.pop("PartDescription", None))
         is_taxable = d.pop("IsTaxable", None)
         is_limited = d.pop("IsLimited", None)
+
         def _parse_quantity(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         quantity = _parse_quantity(d.pop("Quantity", None))
+
         def _parse_discount(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         discount = _parse_discount(d.pop("Discount", None))
+
         def _parse_price(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         price = _parse_price(d.pop("Price", None))
+
         def _parse_time_spent_in_minutes(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         time_spent_in_minutes = _parse_time_spent_in_minutes(d.pop("TimeSpentInMinutes", None))
+
         def _parse_is_hourly_pricing(data: object) -> Optional[bool]:
             if not data:
                 return None
             return cast(Optional[bool], data)
+
         is_hourly_pricing = _parse_is_hourly_pricing(d.pop("IsHourlyPricing", None))
+
         def _parse_delivery_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         delivery_charge = _parse_delivery_charge(d.pop("DeliveryCharge", None))
         serial_number = d.pop("SerialNumber", None)
+
         def _parse_part_repair_charges(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         part_repair_charges = _parse_part_repair_charges(d.pop("PartRepairCharges", None))
+
         def _parse_part_repair_price(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         part_repair_price = _parse_part_repair_price(d.pop("PartRepairPrice", None))
         override_parts_total = d.pop("OverridePartsTotal", None)
         override_repairs_total = d.pop("OverrideRepairsTotal", None)
+
         def _parse_asset_custodian_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_custodian_name = _parse_asset_custodian_name(d.pop("AssetCustodianName", None))
+
         def _parse_as_found_specification_group_name(
             data: object,
         ) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         as_found_specification_group_name = _parse_as_found_specification_group_name(
             d.pop("AsFoundSpecificationGroupName", None)
         )
+
         def _parse_as_found_specification_company_name(
             data: object,
         ) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         as_found_specification_company_name = _parse_as_found_specification_company_name(
             d.pop("AsFoundSpecificationCompanyName", None)
         )
+
         def _parse_as_left_specification_group_name(
             data: object,
         ) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         as_left_specification_group_name = _parse_as_left_specification_group_name(
             d.pop("AsLeftSpecificationGroupName", None)
         )
+
         def _parse_as_left_specification_company_name(
             data: object,
         ) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         as_left_specification_company_name = _parse_as_left_specification_company_name(
             d.pop("AsLeftSpecificationCompanyName", None)
         )
+
         def _parse_order_id(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         order_id = _parse_order_id(d.pop("OrderId", None))
+
         def _parse_parent_order_id(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         parent_order_id = _parse_parent_order_id(d.pop("ParentOrderId", None))
+
         def _parse_order_item_id(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         order_item_id = _parse_order_item_id(d.pop("OrderItemId", None))
+
         def _parse_order_item_part_id(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         order_item_part_id = _parse_order_item_part_id(d.pop("OrderItemPartId", None))
+
         def _parse_as_found_specification_group_id(
             data: object,
         ) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         as_found_specification_group_id = _parse_as_found_specification_group_id(
             d.pop("AsFoundSpecificationGroupId", None)
         )
+
         def _parse_as_left_specification_group_id(
             data: object,
         ) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         as_left_specification_group_id = _parse_as_left_specification_group_id(
             d.pop("AsLeftSpecificationGroupId", None)
         )
+
         def _parse_as_found_status(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         as_found_status = _parse_as_found_status(d.pop("AsFoundStatus", None))
+
         def _parse_as_left_status(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         as_left_status = _parse_as_left_status(d.pop("AsLeftStatus", None))
+
         def _parse_as_found_result(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         as_found_result = _parse_as_found_result(d.pop("AsFoundResult", None))
+
         def _parse_as_left_result(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         as_left_result = _parse_as_left_result(d.pop("AsLeftResult", None))
+
         def _parse_completed_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1175,7 +1250,9 @@ class ReportDatasetsToServiceOrderItemResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         completed_on = _parse_completed_on(d.pop("CompletedOn", None))
+
         def _parse_received_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1187,250 +1264,339 @@ class ReportDatasetsToServiceOrderItemResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         received_on = _parse_received_on(d.pop("ReceivedOn", None))
+
         def _parse_completed_by_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         completed_by_name = _parse_completed_by_name(d.pop("CompletedByName", None))
+
         def _parse_service_charge_base(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         service_charge_base = _parse_service_charge_base(d.pop("ServiceChargeBase", None))
+
         def _parse_service_total(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         service_total = _parse_service_total(d.pop("ServiceTotal", None))
+
         def _parse_repairs_total(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         repairs_total = _parse_repairs_total(d.pop("RepairsTotal", None))
+
         def _parse_parts_total(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         parts_total = _parse_parts_total(d.pop("PartsTotal", None))
+
         def _parse_parts_total_before_discount(
             data: object,
         ) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         parts_total_before_discount = _parse_parts_total_before_discount(
             d.pop("PartsTotalBeforeDiscount", None)
         )
+
         def _parse_parent_manufacturer(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         parent_manufacturer = _parse_parent_manufacturer(d.pop("ParentManufacturer", None))
+
         def _parse_parent_location(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         parent_location = _parse_parent_location(d.pop("ParentLocation", None))
+
         def _parse_parent_manufacturer_part_number(
             data: object,
         ) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         parent_manufacturer_part_number = _parse_parent_manufacturer_part_number(
             d.pop("ParentManufacturerPartNumber", None)
         )
+
         def _parse_parent_display_part_number(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         parent_display_part_number = _parse_parent_display_part_number(
             d.pop("ParentDisplayPartNumber", None)
         )
+
         def _parse_parent_asset_id(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         parent_asset_id = _parse_parent_asset_id(d.pop("ParentAssetId", None))
+
         def _parse_parent_category_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         parent_category_name = _parse_parent_category_name(d.pop("ParentCategoryName", None))
+
         def _parse_parent_root_category_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         parent_root_category_name = _parse_parent_root_category_name(
             d.pop("ParentRootCategoryName", None)
         )
+
         def _parse_parent_serial_number(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         parent_serial_number = _parse_parent_serial_number(d.pop("ParentSerialNumber", None))
+
         def _parse_parent_asset_tag(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         parent_asset_tag = _parse_parent_asset_tag(d.pop("ParentAssetTag", None))
+
         def _parse_parent_asset_user(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         parent_asset_user = _parse_parent_asset_user(d.pop("ParentAssetUser", None))
+
         def _parse_parent_display_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         parent_display_name = _parse_parent_display_name(d.pop("ParentDisplayName", None))
+
         def _parse_parent_equipment_id(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         parent_equipment_id = _parse_parent_equipment_id(d.pop("ParentEquipmentId", None))
+
         def _parse_asset_shipping_address_1(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_shipping_address_1 = _parse_asset_shipping_address_1(
             d.pop("AssetShippingAddress1", None)
         )
+
         def _parse_asset_shipping_address_2(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_shipping_address_2 = _parse_asset_shipping_address_2(
             d.pop("AssetShippingAddress2", None)
         )
+
         def _parse_asset_shipping_first_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_shipping_first_name = _parse_asset_shipping_first_name(
             d.pop("AssetShippingFirstName", None)
         )
+
         def _parse_asset_shipping_last_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_shipping_last_name = _parse_asset_shipping_last_name(
             d.pop("AssetShippingLastName", None)
         )
+
         def _parse_asset_shipping_email(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_shipping_email = _parse_asset_shipping_email(d.pop("AssetShippingEmail", None))
+
         def _parse_asset_shipping_company(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_shipping_company = _parse_asset_shipping_company(d.pop("AssetShippingCompany", None))
+
         def _parse_asset_shipping_city(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_shipping_city = _parse_asset_shipping_city(d.pop("AssetShippingCity", None))
+
         def _parse_asset_shipping_zip(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_shipping_zip = _parse_asset_shipping_zip(d.pop("AssetShippingZip", None))
+
         def _parse_asset_shipping_phone_number(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_shipping_phone_number = _parse_asset_shipping_phone_number(
             d.pop("AssetShippingPhoneNumber", None)
         )
+
         def _parse_asset_shipping_fax_number(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_shipping_fax_number = _parse_asset_shipping_fax_number(
             d.pop("AssetShippingFaxNumber", None)
         )
+
         def _parse_asset_shipping_country(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_shipping_country = _parse_asset_shipping_country(d.pop("AssetShippingCountry", None))
+
         def _parse_asset_shipping_state(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_shipping_state = _parse_asset_shipping_state(d.pop("AssetShippingState", None))
+
         def _parse_shipping_address_1(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         shipping_address_1 = _parse_shipping_address_1(d.pop("ShippingAddress1", None))
+
         def _parse_shipping_address_2(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         shipping_address_2 = _parse_shipping_address_2(d.pop("ShippingAddress2", None))
+
         def _parse_shipping_first_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         shipping_first_name = _parse_shipping_first_name(d.pop("ShippingFirstName", None))
+
         def _parse_shipping_last_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         shipping_last_name = _parse_shipping_last_name(d.pop("ShippingLastName", None))
+
         def _parse_shipping_email(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         shipping_email = _parse_shipping_email(d.pop("ShippingEmail", None))
+
         def _parse_shipping_company(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         shipping_company = _parse_shipping_company(d.pop("ShippingCompany", None))
+
         def _parse_shipping_city(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         shipping_city = _parse_shipping_city(d.pop("ShippingCity", None))
+
         def _parse_shipping_zip(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         shipping_zip = _parse_shipping_zip(d.pop("ShippingZip", None))
+
         def _parse_shipping_phone_number(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         shipping_phone_number = _parse_shipping_phone_number(d.pop("ShippingPhoneNumber", None))
+
         def _parse_shipping_fax_number(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         shipping_fax_number = _parse_shipping_fax_number(d.pop("ShippingFaxNumber", None))
+
         def _parse_shipping_country(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         shipping_country = _parse_shipping_country(d.pop("ShippingCountry", None))
+
         def _parse_shipping_state(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         shipping_state = _parse_shipping_state(d.pop("ShippingState", None))
+
         def _parse_asset_service_notes(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_service_notes = _parse_asset_service_notes(d.pop("AssetServiceNotes", None))
+
         def _parse_service_option_service_code(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         service_option_service_code = _parse_service_option_service_code(
             d.pop("ServiceOptionServiceCode", None)
         )

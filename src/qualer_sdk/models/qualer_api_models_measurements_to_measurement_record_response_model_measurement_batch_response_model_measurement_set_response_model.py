@@ -110,6 +110,7 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model import (
             MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModel,
         )
+
         d = dict(src_dict)
         measurement_name = d.pop("MeasurementName", None)
         is_accredited = d.pop("IsAccredited", None)

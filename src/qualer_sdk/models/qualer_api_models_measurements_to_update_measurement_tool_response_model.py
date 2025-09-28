@@ -92,6 +92,7 @@ class MeasurementsToUpdateMeasurementToolResponseModel:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         measurement_tool_id = d.pop("MeasurementToolId", None)
+
         def _parse_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -105,7 +106,9 @@ class MeasurementsToUpdateMeasurementToolResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         last_service_date = _parse_last_service_date(d.pop("LastServiceDate", None))
+
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -119,6 +122,7 @@ class MeasurementsToUpdateMeasurementToolResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
         calibrated_by = d.pop("CalibratedBy", None)
         certificate_number = d.pop("CertificateNumber", None)

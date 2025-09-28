@@ -90,6 +90,7 @@ class ServiceOrdersToBaseWorkItemModel:
         from ..models.qualer_api_models_service_orders_to_base_work_item_model_order_part_repair_price_model import (
             ServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel,
         )
+
         d = dict(src_dict)
         tasks = []
         _tasks = d.pop("Tasks", None)

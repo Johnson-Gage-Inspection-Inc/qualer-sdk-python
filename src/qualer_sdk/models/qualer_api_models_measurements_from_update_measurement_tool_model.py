@@ -104,6 +104,7 @@ class MeasurementsFromUpdateMeasurementToolModel:
         measurement_tool_id = d.pop("MeasurementToolId", None)
         tool_id = d.pop("ToolId", None)
         tool_type_name = d.pop("ToolTypeName", None)
+
         def _parse_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -117,7 +118,9 @@ class MeasurementsFromUpdateMeasurementToolModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         last_service_date = _parse_last_service_date(d.pop("LastServiceDate", None))
+
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -131,6 +134,7 @@ class MeasurementsFromUpdateMeasurementToolModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
         calibrated_by = d.pop("CalibratedBy", None)
         certificate_number = d.pop("CertificateNumber", None)
