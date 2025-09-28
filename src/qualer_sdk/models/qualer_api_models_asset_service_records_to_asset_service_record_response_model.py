@@ -115,8 +115,8 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
         asset_user_change = self.asset_user_change
         service_notes = self.service_notes
         serial_number_change = self.serial_number_change
-        due_date = self.due_date
-        next_service_date = self.next_service_date
+        due_date = self.due_date.isoformat() if self.due_date else None
+        next_service_date = self.next_service_date.isoformat() if self.next_service_date else None
         provider_technician = self.provider_technician
         provider_phone = self.provider_phone
         provider_company = self.provider_company
@@ -130,7 +130,8 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
         parts_charge_before_discount = self.parts_charge_before_discount
         service_charge = self.service_charge
         repairs_charge = self.repairs_charge
-        guid = self.guid
+        # Stringify UUIDs to ensure JSON-serializable output
+        guid = str(self.guid)
         segment_name = self.segment_name
         schedule_name = self.schedule_name
 
@@ -260,8 +261,9 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
                 pass
             return cast(datetime.datetime, data)
 
-        service_date_data = d.get("ServiceDate")
-        if service_date_data is None:
+        try:
+            service_date_data = d.pop("ServiceDate")
+        except KeyError:
             raise ValueError("Missing required field 'ServiceDate' in input dictionary.")
         service_date = _parse_service_date(service_date_data)
         serial_number = d.pop("SerialNumber", None)
