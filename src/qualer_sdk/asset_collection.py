@@ -19,7 +19,7 @@ from .models import FilterType
 import logging
 
 if TYPE_CHECKING:
-    from .models import AssetToAssetManageResponseModel
+    from .models.qualer_api_models_asset_to_asset_manage_response_model import AssetToAssetManageResponseModel
 
 
 class AssetCollection(set[int]):
