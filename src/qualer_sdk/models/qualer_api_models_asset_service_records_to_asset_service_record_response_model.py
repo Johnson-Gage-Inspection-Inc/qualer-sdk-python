@@ -15,7 +15,8 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
     """
     Attributes:
         asset_id (int):
-        asset_service_record_id (Optional[int]):
+        asset_service_record_id (int):
+        service_date (datetime.datetime):
         service_schedule_segment_id (Optional[int]):
         forward_segment_id (Optional[int]):
         forward_next_service (Optional[bool]):
@@ -26,7 +27,6 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
         result_status (Optional[str]):
         as_found_result (Optional[str]):
         as_left_result (Optional[str]):
-        service_date (Optional[datetime.datetime]):
         serial_number (Optional[str]):
         asset_tag (Optional[str]):
         asset_user (Optional[str]):
@@ -55,7 +55,8 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
     """
 
     asset_id: int
-    asset_service_record_id: Optional[int] = None
+    asset_service_record_id: int
+    service_date: datetime.datetime
     service_schedule_segment_id: Optional[int] = None
     forward_segment_id: Optional[int] = None
     forward_next_service: Optional[bool] = None
@@ -66,7 +67,6 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
     result_status: Optional[str] = None
     as_found_result: Optional[str] = None
     as_left_result: Optional[str] = None
-    service_date: Optional[datetime.datetime] = None
     serial_number: Optional[str] = None
     asset_tag: Optional[str] = None
     asset_user: Optional[str] = None
@@ -96,215 +96,43 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         asset_id = self.asset_id
-
         asset_service_record_id = self.asset_service_record_id
-
         service_schedule_segment_id = self.service_schedule_segment_id
-
         forward_segment_id = self.forward_segment_id
-
         forward_next_service = self.forward_next_service
-
         service_order_number = self.service_order_number
-
         custom_order_number = self.custom_order_number
-
         order_item_number = self.order_item_number
-
         certificate_number = self.certificate_number
-
-        result_status: Optional[str]
-        if not self.result_status:
-            result_status = None
-        else:
-            result_status: Optional[str]
-
-            if not self.result_status:
-
-                result_status = None
-            else:
-                result_status = self.result_status
-        as_found_result: Optional[str]
-        if not self.as_found_result:
-            as_found_result = None
-        else:
-            as_found_result: Optional[str]
-
-            if not self.as_found_result:
-
-                as_found_result = None
-            else:
-                as_found_result = self.as_found_result
-        as_left_result: Optional[str]
-        if not self.as_left_result:
-            as_left_result = None
-        else:
-            as_left_result: Optional[str]
-
-            if not self.as_left_result:
-
-                as_left_result = None
-            else:
-                as_left_result = self.as_left_result
-        service_date: Optional[str]
-        if not self.service_date:
-            service_date = None
-        elif isinstance(self.service_date, datetime.datetime):
-            service_date = self.service_date.isoformat()
-        else:
-            service_date = self.service_date
-
+        result_status = self.result_status
+        as_found_result = self.as_found_result
+        as_left_result = self.as_left_result
+        service_date = self.service_date.isoformat()
         serial_number = self.serial_number
-
-        asset_tag: Optional[str]
-        if not self.asset_tag:
-            asset_tag = None
-        else:
-            asset_tag = self.asset_tag
-
-        asset_user: Optional[str]
-        if not self.asset_user:
-            asset_user = None
-        else:
-            asset_user = self.asset_user
-
-        asset_tag_change: Optional[str]
-        if not self.asset_tag_change:
-            asset_tag_change = None
-        else:
-            asset_tag_change = self.asset_tag_change
-
-        asset_user_change: Optional[str]
-        if not self.asset_user_change:
-            asset_user_change = None
-        else:
-            asset_user_change = self.asset_user_change
-
-        service_notes: Optional[str]
-        if not self.service_notes:
-            service_notes = None
-        else:
-            service_notes = self.service_notes
-
-        serial_number_change: Optional[str]
-        if not self.serial_number_change:
-            serial_number_change = None
-        else:
-            serial_number_change = self.serial_number_change
-
-        due_date: Optional[str]
-        if not self.due_date:
-            due_date = None
-        elif isinstance(self.due_date, datetime.datetime):
-            due_date = self.due_date.isoformat()
-        else:
-            due_date = self.due_date
-
-        next_service_date: Optional[str]
-        if not self.next_service_date:
-            next_service_date = None
-        elif isinstance(self.next_service_date, datetime.datetime):
-            next_service_date = self.next_service_date.isoformat()
-        else:
-            next_service_date = self.next_service_date
-
-        provider_technician: Optional[str]
-        if not self.provider_technician:
-            provider_technician = None
-        else:
-            provider_technician = self.provider_technician
-
-        provider_phone: Optional[str]
-        if not self.provider_phone:
-            provider_phone = None
-        else:
-            provider_phone = self.provider_phone
-
-        provider_company: Optional[str]
-        if not self.provider_company:
-            provider_company = None
-        else:
-            provider_company = self.provider_company
-
-        service_level: Optional[str]
-        if not self.service_level:
-            service_level = None
-        else:
-            service_level = self.service_level
-
-        service_level_code: Optional[str]
-        if not self.service_level_code:
-            service_level_code = None
-        else:
-            service_level_code = self.service_level_code
-
-        next_service_level: Optional[str]
-        if not self.next_service_level:
-            next_service_level = None
-        else:
-            next_service_level = self.next_service_level
-
-        next_service_level_code: Optional[str]
-        if not self.next_service_level_code:
-            next_service_level_code = None
-        else:
-            next_service_level_code = self.next_service_level_code
-
-        asset_name: Optional[str]
-        if not self.asset_name:
-            asset_name = None
-        else:
-            asset_name = self.asset_name
-
-        asset_description: Optional[str]
-        if not self.asset_description:
-            asset_description = None
-        else:
-            asset_description = self.asset_description
-
-        parts_charge: Optional[float]
-        if not self.parts_charge:
-            parts_charge = None
-        else:
-            parts_charge = self.parts_charge
-
-        parts_charge_before_discount: Optional[float]
-        if not self.parts_charge_before_discount:
-            parts_charge_before_discount = None
-        else:
-            parts_charge_before_discount = self.parts_charge_before_discount
-
-        service_charge: Optional[float]
-        if not self.service_charge:
-            service_charge = None
-        else:
-            service_charge = self.service_charge
-
-        repairs_charge: Optional[float]
-        if not self.repairs_charge:
-            repairs_charge = None
-        else:
-            repairs_charge = self.repairs_charge
-
-        guid: Optional[str]
-        if not self.guid:
-            guid = None
-        elif isinstance(self.guid, UUID):
-            guid = str(self.guid)
-        else:
-            guid = self.guid
-
-        segment_name: Optional[str]
-        if not self.segment_name:
-            segment_name = None
-        else:
-            segment_name = self.segment_name
-
-        schedule_name: Optional[str]
-        if not self.schedule_name:
-            schedule_name = None
-        else:
-            schedule_name = self.schedule_name
+        asset_tag = self.asset_tag
+        asset_user = self.asset_user
+        asset_tag_change = self.asset_tag_change
+        asset_user_change = self.asset_user_change
+        service_notes = self.service_notes
+        serial_number_change = self.serial_number_change
+        due_date = self.due_date
+        next_service_date = self.next_service_date
+        provider_technician = self.provider_technician
+        provider_phone = self.provider_phone
+        provider_company = self.provider_company
+        service_level = self.service_level
+        service_level_code = self.service_level_code
+        next_service_level = self.next_service_level
+        next_service_level_code = self.next_service_level_code
+        asset_name = self.asset_name
+        asset_description = self.asset_description
+        parts_charge = self.parts_charge
+        parts_charge_before_discount = self.parts_charge_before_discount
+        service_charge = self.service_charge
+        repairs_charge = self.repairs_charge
+        guid = self.guid
+        segment_name = self.segment_name
+        schedule_name = self.schedule_name
 
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -422,9 +250,7 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
 
         as_left_result = _parse_as_left_result(d.pop("AsLeftResult", None))
 
-        def _parse_service_date(data: object) -> Optional[datetime.datetime]:
-            if not data:
-                return None
+        def _parse_service_date(data: object) -> datetime.datetime:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
@@ -432,9 +258,12 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
                 return service_date_type_0
             except Exception:
                 pass
-            return cast(Optional[datetime.datetime], data)
+            return cast(datetime.datetime, data)
 
-        service_date = _parse_service_date(d.pop("ServiceDate", None))
+        service_date_data = d.get("ServiceDate")
+        if service_date_data is None:
+            raise ValueError("Missing required field 'ServiceDate' in input dictionary.")
+        service_date = _parse_service_date(service_date_data)
         serial_number = d.pop("SerialNumber", None)
 
         def _parse_asset_tag(data: object) -> Optional[str]:
