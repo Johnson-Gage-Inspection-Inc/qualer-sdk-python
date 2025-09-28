@@ -1,11 +1,11 @@
-from enum import Enum
+import warnings
 
+from qualer_sdk.models.guard_band_logic import GuardBandLogic
 
-class ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic(str, Enum):
-    NCSLZ5403 = "Ncslz5403"
-    RDS = "Rds"
-    TUR41 = "Tur41"
-    UNCERTAINTY = "Uncertainty"
+ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic = GuardBandLogic
 
-    def __str__(self) -> str:
-        return str(self.value)
+warnings.warn(
+    "ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic is deprecated and will be removed in a future release. Please use GuardBandLogic instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)
