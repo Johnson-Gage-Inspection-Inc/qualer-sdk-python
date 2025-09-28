@@ -107,7 +107,7 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
         result_status = self.result_status
         as_found_result = self.as_found_result
         as_left_result = self.as_left_result
-        service_date = self.service_date.isoformat() if self.service_date else None
+        service_date = self.service_date.isoformat()
         serial_number = self.serial_number
         asset_tag = self.asset_tag
         asset_user = self.asset_user
