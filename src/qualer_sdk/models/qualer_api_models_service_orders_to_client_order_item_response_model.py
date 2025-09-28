@@ -20,14 +20,14 @@ class ServiceOrdersToClientOrderItemResponseModel:
     """
     Attributes:
         work_item_id (int):
-        serial_number (str):
         asset_id (int):
-        asset_name (str):
+        service_order_id (int):
+        serial_number (Optional[str]):
+        asset_name (Optional[str]):
         client_notes (Optional[str]):
         service_comments (Optional[str]):
         private_comments (Optional[str]):
         order_item_number (Optional[int]):
-        service_order_id (Optional[int]):
         channel_count (Optional[int]):
         service_total (Optional[float]):
         repairs_total (Optional[float]):
@@ -102,15 +102,18 @@ class ServiceOrdersToClientOrderItemResponseModel:
         asset_ownership (Optional[str]):
     """
 
+    # required identifiers
     work_item_id: int
-    serial_number: str
+    service_order_id: int
     asset_id: int
-    asset_name: str
+
+    # optional fields
+    serial_number: Optional[str] = None
+    asset_name: Optional[str] = None
     client_notes: Optional[str] = None
     service_comments: Optional[str] = None
     private_comments: Optional[str] = None
     order_item_number: Optional[int] = None
-    service_order_id: Optional[int] = None
     channel_count: Optional[int] = None
     service_total: Optional[float] = None
     repairs_total: Optional[float] = None
@@ -187,400 +190,91 @@ class ServiceOrdersToClientOrderItemResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         work_item_id = self.work_item_id
-
         client_notes = self.client_notes
-
         service_comments = self.service_comments
-
         private_comments = self.private_comments
-
         order_item_number = self.order_item_number
-
         service_order_id = self.service_order_id
-
         channel_count = self.channel_count
-
         service_total = self.service_total
-
         repairs_total = self.repairs_total
-
         parts_total = self.parts_total
-
         parts_total_before_discount = self.parts_total_before_discount
-
         override_service_total = self.override_service_total
-
         override_repairs_total = self.override_repairs_total
-
         override_parts_total = self.override_parts_total
-
         service_type = self.service_type
-
         document_number = self.document_number
-
         document_section = self.document_section
-
-        work_status: Optional[str]
-
-        if not self.work_status:
-
-            work_status = None
-
-        else:
-
-            work_status = self.work_status
+        work_status = self.work_status
         custom_work_status = self.custom_work_status
-
         is_limited = self.is_limited
-
-        checked_on: Optional[str]
-        if not self.checked_on:
-            checked_on = None
-        elif isinstance(self.checked_on, datetime.datetime):
-            checked_on = self.checked_on.isoformat()
-        else:
-            checked_on = self.checked_on
-
+        checked_on = self.checked_on.isoformat() if self.checked_on else None
         checked_by_name = self.checked_by_name
-
         checked_by_id = self.checked_by_id
-
-        completed_on: Optional[str]
-        if not self.completed_on:
-            completed_on = None
-        elif isinstance(self.completed_on, datetime.datetime):
-            completed_on = self.completed_on.isoformat()
-        else:
-            completed_on = self.completed_on
-
+        completed_on = self.completed_on.isoformat() if self.completed_on else None
         completed_by_name = self.completed_by_name
-
         completed_by_id = self.completed_by_id
-
         updated_by_id = self.updated_by_id
-
         updated_by = self.updated_by
-
         as_found_check = self.as_found_check
-
         as_left_check = self.as_left_check
-
-        item_result_status: Optional[str]
-        if not self.item_result_status:
-            item_result_status = None
-        else:
-            item_result_status = self.item_result_status
-
-        item_as_found_result: Optional[str]
-        if not self.item_as_found_result:
-            item_as_found_result = None
-        else:
-            item_as_found_result = self.item_as_found_result
-
-        item_as_left_result: Optional[str]
-        if not self.item_as_left_result:
-            item_as_left_result = None
-        else:
-            item_as_left_result = self.item_as_left_result
-
-        as_found_specification: Optional[int]
-        if not self.as_found_specification:
-            as_found_specification = None
-        else:
-            as_found_specification = self.as_found_specification
-
-        as_left_specification: Optional[int]
-        if not self.as_left_specification:
-            as_left_specification = None
-        else:
-            as_left_specification = self.as_left_specification
-
-        created_on_utc: Optional[str]
-        if not self.created_on_utc:
-            created_on_utc = None
-        elif isinstance(self.created_on_utc, datetime.datetime):
-            created_on_utc = self.created_on_utc.isoformat()
-        else:
-            created_on_utc = self.created_on_utc
-
-        updated_on_utc: Optional[str]
-        if not self.updated_on_utc:
-            updated_on_utc = None
-        elif isinstance(self.updated_on_utc, datetime.datetime):
-            updated_on_utc = self.updated_on_utc.isoformat()
-        else:
-            updated_on_utc = self.updated_on_utc
-
-        equipment_id: Optional[str]
-        if not self.equipment_id:
-            equipment_id = None
-        else:
-            equipment_id = self.equipment_id
-
-        service_level: Optional[str]
-        if not self.service_level:
-            service_level = None
-        else:
-            service_level = self.service_level
-
-        service_level_code: Optional[str]
-        if not self.service_level_code:
-            service_level_code = None
-        else:
-            service_level_code = self.service_level_code
-
-        service_level_document_number: Optional[str]
-        if not self.service_level_document_number:
-            service_level_document_number = None
-        else:
-            service_level_document_number = self.service_level_document_number
-
-        service_level_document_section: Optional[str]
-        if not self.service_level_document_section:
-            service_level_document_section = None
-        else:
-            service_level_document_section = self.service_level_document_section
-
-        next_service_level: Optional[str]
-        if not self.next_service_level:
-            next_service_level = None
-        else:
-            next_service_level = self.next_service_level
-
-        next_service_level_code: Optional[str]
-        if not self.next_service_level_code:
-            next_service_level_code = None
-        else:
-            next_service_level_code = self.next_service_level_code
-
-        result_status: Optional[str]
-        if not self.result_status:
-            result_status = None
-        else:
-            result_status: Optional[str]
-
-            if not self.result_status:
-
-                result_status = None
-            else:
-                result_status = self.result_status
-        as_found_result: Optional[str]
-        if not self.as_found_result:
-            as_found_result = None
-        else:
-            as_found_result: Optional[str]
-
-            if not self.as_found_result:
-
-                as_found_result = None
-            else:
-                as_found_result = self.as_found_result
-        as_left_result: Optional[str]
-        if not self.as_left_result:
-            as_left_result = None
-        else:
-            as_left_result: Optional[str]
-
-            if not self.as_left_result:
-
-                as_left_result = None
-            else:
-                as_left_result = self.as_left_result
-        serial_number: Optional[str]
-        if not self.serial_number:
-            serial_number = None
-        else:
-            serial_number = self.serial_number
-
-        serial_number_change: Optional[str]
-        if not self.serial_number_change:
-            serial_number_change = None
-        else:
-            serial_number_change = self.serial_number_change
-
-        asset_tag: Optional[str]
-        if not self.asset_tag:
-            asset_tag = None
-        else:
-            asset_tag = self.asset_tag
-
-        asset_user: Optional[str]
-        if not self.asset_user:
-            asset_user = None
-        else:
-            asset_user = self.asset_user
-
-        asset_tag_change: Optional[str]
-        if not self.asset_tag_change:
-            asset_tag_change = None
-        else:
-            asset_tag_change = self.asset_tag_change
-
-        asset_user_change: Optional[str]
-        if not self.asset_user_change:
-            asset_user_change = None
-        else:
-            asset_user_change = self.asset_user_change
-
-        asset_id: Optional[int]
-        if not self.asset_id:
-            asset_id = None
-        else:
-            asset_id = self.asset_id
-
-        asset_name: Optional[str]
-        if not self.asset_name:
-            asset_name = None
-        else:
-            asset_name = self.asset_name
-
-        asset_description: Optional[str]
-        if not self.asset_description:
-            asset_description = None
-        else:
-            asset_description = self.asset_description
-
-        asset_site_name: Optional[str]
-        if not self.asset_site_name:
-            asset_site_name = None
-        else:
-            asset_site_name = self.asset_site_name
-
-        asset_site_id: Optional[int]
-        if not self.asset_site_id:
-            asset_site_id = None
-        else:
-            asset_site_id = self.asset_site_id
-
-        asset_company_name: Optional[str]
-        if not self.asset_company_name:
-            asset_company_name = None
-        else:
-            asset_company_name = self.asset_company_name
-
-        asset_company_id: Optional[int]
-        if not self.asset_company_id:
-            asset_company_id = None
-        else:
-            asset_company_id = self.asset_company_id
-
-        client_company_id: Optional[int]
-        if not self.client_company_id:
-            client_company_id = None
-        else:
-            client_company_id = self.client_company_id
-
-        vendor_company_id: Optional[int]
-        if not self.vendor_company_id:
-            vendor_company_id = None
-        else:
-            vendor_company_id = self.vendor_company_id
-
-        service_notes: Optional[str]
-        if not self.service_notes:
-            service_notes = None
-        else:
-            service_notes = self.service_notes
-
-        provider_technician: Optional[str]
-        if not self.provider_technician:
-            provider_technician = None
-        else:
-            provider_technician = self.provider_technician
-
-        provider_phone: Optional[str]
-        if not self.provider_phone:
-            provider_phone = None
-        else:
-            provider_phone = self.provider_phone
-
-        provider_company: Optional[str]
-        if not self.provider_company:
-            provider_company = None
-        else:
-            provider_company = self.provider_company
-
-        service_charge: Optional[float]
-        if not self.service_charge:
-            service_charge = None
-        else:
-            service_charge = self.service_charge
-
-        repairs_charge: Optional[float]
-        if not self.repairs_charge:
-            repairs_charge = None
-        else:
-            repairs_charge = self.repairs_charge
-
-        parts_charge: Optional[float]
-        if not self.parts_charge:
-            parts_charge = None
-        else:
-            parts_charge = self.parts_charge
-
-        parts_charge_before_discount: Optional[float]
-        if not self.parts_charge_before_discount:
-            parts_charge_before_discount = None
-        else:
-            parts_charge_before_discount = self.parts_charge_before_discount
-
-        custom_order_number: Optional[str]
-        if not self.custom_order_number:
-            custom_order_number = None
-        else:
-            custom_order_number = self.custom_order_number
-
-        certificate_number: Optional[str]
-        if not self.certificate_number:
-            certificate_number = None
-        else:
-            certificate_number = self.certificate_number
-
-        service_date: Optional[str]
-        if not self.service_date:
-            service_date = None
-        elif isinstance(self.service_date, datetime.datetime):
-            service_date = self.service_date.isoformat()
-        else:
-            service_date = self.service_date
-
-        due_date: Optional[str]
-        if not self.due_date:
-            due_date = None
-        elif isinstance(self.due_date, datetime.datetime):
-            due_date = self.due_date.isoformat()
-        else:
-            due_date = self.due_date
-
-        next_service_date: Optional[str]
-        if not self.next_service_date:
-            next_service_date = None
-        elif isinstance(self.next_service_date, datetime.datetime):
-            next_service_date = self.next_service_date.isoformat()
-        else:
-            next_service_date = self.next_service_date
-
+        item_result_status = self.item_result_status
+        item_as_found_result = self.item_as_found_result
+        item_as_left_result = self.item_as_left_result
+        as_found_specification = self.as_found_specification
+        as_left_specification = self.as_left_specification
+        created_on_utc = self.created_on_utc.isoformat() if self.created_on_utc else None
+        updated_on_utc = self.updated_on_utc.isoformat() if self.updated_on_utc else None
+        equipment_id = self.equipment_id
+        service_level = self.service_level
+        service_level_code = self.service_level_code
+        service_level_document_number = self.service_level_document_number
+        service_level_document_section = self.service_level_document_section
+        next_service_level = self.next_service_level
+        next_service_level_code = self.next_service_level_code
+        result_status = self.result_status
+        as_found_result = self.as_found_result
+        as_left_result = self.as_left_result
+        serial_number = self.serial_number
+        serial_number_change = self.serial_number_change
+        asset_tag = self.asset_tag
+        asset_user = self.asset_user
+        asset_tag_change = self.asset_tag_change
+        asset_user_change = self.asset_user_change
+        asset_id = self.asset_id
+        asset_name = self.asset_name
+        asset_description = self.asset_description
+        asset_site_name = self.asset_site_name
+        asset_site_id = self.asset_site_id
+        asset_company_name = self.asset_company_name
+        asset_company_id = self.asset_company_id
+        client_company_id = self.client_company_id
+        vendor_company_id = self.vendor_company_id
+        service_notes = self.service_notes
+        provider_technician = self.provider_technician
+        provider_phone = self.provider_phone
+        provider_company = self.provider_company
+        service_charge = self.service_charge
+        repairs_charge = self.repairs_charge
+        parts_charge = self.parts_charge
+        parts_charge_before_discount = self.parts_charge_before_discount
+        custom_order_number = self.custom_order_number
+        certificate_number = self.certificate_number
+        service_date = self.service_date.isoformat() if self.service_date else None
+        due_date = self.due_date.isoformat() if self.due_date else None
+        next_service_date = self.next_service_date.isoformat() if self.next_service_date else None
         maintenance_task = self.maintenance_task
-
-        maintenance_plan: Optional[str]
-        if not self.maintenance_plan:
-            maintenance_plan = None
-        else:
-            maintenance_plan = self.maintenance_plan
-
+        maintenance_plan = self.maintenance_plan
         service_options: Optional[List[Dict[str, Any]]] = None
         if self.service_options:
             service_options = []
             for service_options_item_data in self.service_options:
                 service_options_item = service_options_item_data.to_dict()
                 service_options.append(service_options_item)
-
         vendor_tag = self.vendor_tag
-
         legacy_id = self.legacy_id
-
         asset_ownership = self.asset_ownership
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -746,7 +440,6 @@ class ServiceOrdersToClientOrderItemResponseModel:
             field_dict["LegacyId"] = legacy_id
         if asset_ownership is not None:
             field_dict["AssetOwnership"] = asset_ownership
-
         return field_dict
 
     @classmethod
@@ -757,43 +450,24 @@ class ServiceOrdersToClientOrderItemResponseModel:
 
         d = dict(src_dict)
         work_item_id = d.pop("WorkItemId", None)
-
         client_notes = d.pop("ClientNotes", None)
-
         service_comments = d.pop("ServiceComments", None)
-
         private_comments = d.pop("PrivateComments", None)
-
         order_item_number = d.pop("OrderItemNumber", None)
-
         service_order_id = d.pop("ServiceOrderId", None)
-
         channel_count = d.pop("ChannelCount", None)
-
         service_total = d.pop("ServiceTotal", None)
-
         repairs_total = d.pop("RepairsTotal", None)
-
         parts_total = d.pop("PartsTotal", None)
-
         parts_total_before_discount = d.pop("PartsTotalBeforeDiscount", None)
-
         override_service_total = d.pop("OverrideServiceTotal", None)
-
         override_repairs_total = d.pop("OverrideRepairsTotal", None)
-
         override_parts_total = d.pop("OverridePartsTotal", None)
-
         service_type = d.pop("ServiceType", None)
-
         document_number = d.pop("DocumentNumber", None)
-
         document_section = d.pop("DocumentSection", None)
-
         work_status = d.pop("WorkStatus", None)
-
         custom_work_status = d.pop("CustomWorkStatus", None)
-
         is_limited = d.pop("IsLimited", None)
 
         def _parse_checked_on(data: object) -> Optional[datetime.datetime]:
@@ -803,16 +477,13 @@ class ServiceOrdersToClientOrderItemResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 checked_on_type_0 = isoparse(data)
-
                 return checked_on_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
         checked_on = _parse_checked_on(d.pop("CheckedOn", None))
-
         checked_by_name = d.pop("CheckedByName", None)
-
         checked_by_id = d.pop("CheckedById", None)
 
         def _parse_completed_on(data: object) -> Optional[datetime.datetime]:
@@ -822,24 +493,17 @@ class ServiceOrdersToClientOrderItemResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 completed_on_type_0 = isoparse(data)
-
                 return completed_on_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
         completed_on = _parse_completed_on(d.pop("CompletedOn", None))
-
         completed_by_name = d.pop("CompletedByName", None)
-
         completed_by_id = d.pop("CompletedById", None)
-
         updated_by_id = d.pop("UpdatedById", None)
-
         updated_by = d.pop("UpdatedBy", None)
-
         as_found_check = d.pop("AsFoundCheck", None)
-
         as_left_check = d.pop("AsLeftCheck", None)
 
         def _parse_item_result_status(data: object) -> Optional[str]:
@@ -886,7 +550,6 @@ class ServiceOrdersToClientOrderItemResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 created_on_utc_type_0 = isoparse(data)
-
                 return created_on_utc_type_0
             except Exception:
                 pass
@@ -903,7 +566,6 @@ class ServiceOrdersToClientOrderItemResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 updated_on_utc_type_0 = isoparse(data)
-
                 return updated_on_utc_type_0
             except Exception:
                 pass
@@ -1177,7 +839,6 @@ class ServiceOrdersToClientOrderItemResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 service_date_type_0 = isoparse(data)
-
                 return service_date_type_0
             except Exception:
                 pass
@@ -1192,7 +853,6 @@ class ServiceOrdersToClientOrderItemResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 due_date_type_0 = isoparse(data)
-
                 return due_date_type_0
             except Exception:
                 pass
@@ -1209,14 +869,12 @@ class ServiceOrdersToClientOrderItemResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 next_service_date_type_0 = isoparse(data)
-
                 return next_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
 
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
-
         maintenance_task = d.pop("MaintenanceTask", None)
 
         def _parse_maintenance_plan(data: object) -> Optional[str]:
@@ -1225,29 +883,26 @@ class ServiceOrdersToClientOrderItemResponseModel:
             return cast(Optional[str], data)
 
         maintenance_plan = _parse_maintenance_plan(d.pop("MaintenancePlan", None))
-
         service_options = []
         _service_options = d.pop("ServiceOptions", None)
         for service_options_item_data in _service_options or []:
             service_options_item = ServiceOptionsToServiceOptionResponseModel.from_dict(
                 service_options_item_data
             )
-
             service_options.append(service_options_item)
-
         vendor_tag = d.pop("VendorTag", None)
-
         legacy_id = d.pop("LegacyId", None)
-
         asset_ownership = d.pop("AssetOwnership", None)
-
         qualer_api_models_service_orders_to_client_order_item_response_model = cls(
-            work_item_id=work_item_id,
+            work_item_id=cast(int, work_item_id),
+            service_order_id=cast(int, service_order_id),
+            asset_id=cast(int, asset_id),
+            serial_number=serial_number,
+            asset_name=asset_name,
             client_notes=client_notes,
             service_comments=service_comments,
             private_comments=private_comments,
             order_item_number=order_item_number,
-            service_order_id=service_order_id,
             channel_count=channel_count,
             service_total=service_total,
             repairs_total=repairs_total,
@@ -1289,14 +944,11 @@ class ServiceOrdersToClientOrderItemResponseModel:
             result_status=result_status,
             as_found_result=as_found_result,
             as_left_result=as_left_result,
-            serial_number=serial_number,
             serial_number_change=serial_number_change,
             asset_tag=asset_tag,
             asset_user=asset_user,
             asset_tag_change=asset_tag_change,
             asset_user_change=asset_user_change,
-            asset_id=asset_id,
-            asset_name=asset_name,
             asset_description=asset_description,
             asset_site_name=asset_site_name,
             asset_site_id=asset_site_id,
@@ -1324,10 +976,8 @@ class ServiceOrdersToClientOrderItemResponseModel:
             legacy_id=legacy_id,
             asset_ownership=asset_ownership,
         )
-
-        qualer_api_models_service_orders_to_client_order_item_response_model.additional_properties = (
-            d
-        )
+        obj = qualer_api_models_service_orders_to_client_order_item_response_model
+        obj.additional_properties = d
         return qualer_api_models_service_orders_to_client_order_item_response_model
 
     @property
