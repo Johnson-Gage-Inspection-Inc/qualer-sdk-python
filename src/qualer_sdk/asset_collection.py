@@ -245,10 +245,12 @@ class AsyncAssetCollection:
     def __iter__(self):
         return iter(self._ids)
 
-    def __contains__(self, item: object) -> bool:  # noqa: D401
+    def __contains__(self, item: object) -> bool:
+        """Return True if item is in the local set of asset IDs."""
         return item in self._ids
 
-    def __len__(self) -> int:  # noqa: D401
+    def __len__(self) -> int:
+        """Return the number of asset IDs in the local collection."""
         return len(self._ids)
 
     def copy(self) -> set[int]:
