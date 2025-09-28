@@ -4,8 +4,8 @@ import pytest
 
 
 def _setup_stubs(monkeypatch):
-    """Prepare stubs for API modules used by AssetCollection."""
-    import qualer_sdk.asset_collection as ac
+    """Prepare stubs for API modules used by QuickCollection."""
+    import qualer_sdk.quick_collection as ac
 
     calls = {
         "collect_sync": [],
@@ -59,7 +59,7 @@ def test_asset_collection_add_and_details(monkeypatch):
 
     client = object()
     # Disable start_clean to avoid an initial clear-all call
-    with ac.AssetCollection(client, [1, 2], start_clean=False) as coll:
+    with ac.QuickCollection(client, [1, 2], start_clean=False) as coll:
         coll.add(3)
         # get details should call the list endpoint with collected filter
         details = coll.get_details(page=1, page_size=50)
@@ -83,7 +83,7 @@ def test_asset_collection_remove_discard_pop_clear(monkeypatch):
     ac, calls = _setup_stubs(monkeypatch)
 
     client = object()
-    with ac.AssetCollection(client, [1, 2, 3]) as coll:
+    with ac.QuickCollection(client, [1, 2, 3]) as coll:
         # remove should clear that specific id on server
         coll.remove(2)
         assert (client, (2,)) in calls["clear_sync"]
@@ -114,7 +114,7 @@ def test_asset_collection_cleanup_on_exception(monkeypatch):
         pass
 
     with pytest.raises(Boom):
-        with ac.AssetCollection(client, [5]):
+        with ac.QuickCollection(client, [5]):
             raise Boom("boom")
 
     # Even with an exception, cleanup should have attempted a clear-all
@@ -126,7 +126,7 @@ def test_async_asset_collection_add_and_details(monkeypatch):
     client = object()
 
     async def _main():
-        async with ac.AsyncAssetCollection(client, [10, 20]) as coll:
+        async with ac.AsyncQuickCollection(client, [10, 20]) as coll:
             await coll.add(30)
             details = await coll.get_details(search_string="x")
             assert isinstance(details, list)
@@ -147,7 +147,7 @@ def test_async_asset_collection_cleanup_on_exception(monkeypatch):
         pass
 
     async def _boom():
-        async with ac.AsyncAssetCollection(client, [7]):
+        async with ac.AsyncQuickCollection(client, [7]):
             raise Oops("oops")
 
     with pytest.raises(Oops):

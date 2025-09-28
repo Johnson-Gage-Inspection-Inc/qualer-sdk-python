@@ -1,7 +1,7 @@
 """Context-managed set of asset IDs that mirrors Qualer QuickCollection.
 
 Usage:
-    with AssetCollection(client, [1, 2, 3]) as coll:
+    with QuickCollection(client, [1, 2, 3]) as coll:
         coll.add(4)
         coll.discard(2)
         # Within this block, the server QuickCollection stays in sync.
@@ -10,19 +10,20 @@ Usage:
 
 from __future__ import annotations
 
+import logging
 from typing import TYPE_CHECKING, Iterable
 
 from .api.assets import clear_collected_assets, collect_assets, get_asset_manager_list
 from .client import AuthenticatedClient
 from .models import FilterType
 
-import logging
-
 if TYPE_CHECKING:
-    from .models.qualer_api_models_asset_to_asset_manage_response_model import AssetToAssetManageResponseModel
+    from .models.qualer_api_models_asset_to_asset_manage_response_model import (
+        AssetToAssetManageResponseModel,
+    )
 
 
-class AssetCollection(set[int]):
+class QuickCollection(set[int]):
     """A set-like context manager that keeps server QuickCollection in sync.
 
     Notes:
@@ -34,7 +35,7 @@ class AssetCollection(set[int]):
 
     Example:
         ```python
-        with AssetCollection(client, [1235770, 1235660, 1235502]) as coll:
+        with QuickCollection(client, [1235770, 1235660, 1235502]) as coll:
             assets = get_asset_manager_list.sync(
                 client=client,
                 model_filter_type=FilterType.COLLECTED_ASSETS,
@@ -66,7 +67,7 @@ class AssetCollection(set[int]):
                 super().update(ids)
 
     # --- Context manager protocol ---
-    def __enter__(self) -> AssetCollection:
+    def __enter__(self) -> QuickCollection:
         return self
 
     def __exit__(self, exc_type, exc, tb) -> None:  # type: ignore[override]
@@ -182,7 +183,7 @@ class AssetCollection(set[int]):
         )
 
 
-class AsyncAssetCollection:
+class AsyncQuickCollection:
     """Async context-managed set that mirrors Qualer QuickCollection.
 
     This class provides an async API for keeping the server QuickCollection in sync
@@ -192,7 +193,7 @@ class AsyncAssetCollection:
 
     Usage:
     ```python
-    async with AsyncAssetCollection(client, [1, 2, 3]) as coll:
+    async with AsyncQuickCollection(client, [1, 2, 3]) as coll:
         await coll.add(4)
         await coll.discard(2)
         assets = await coll.get_details()
@@ -214,7 +215,7 @@ class AsyncAssetCollection:
         self._start_clean = start_clean
 
     # --- Async context manager protocol ---
-    async def __aenter__(self) -> AsyncAssetCollection:
+    async def __aenter__(self) -> AsyncQuickCollection:
         if self._start_clean:
             await clear_collected_assets.asyncio(client=self.client, body=[])
             self._ids.clear()
@@ -233,10 +234,10 @@ class AsyncAssetCollection:
                 except Exception as add_note_err:
                     # Failed to add note to exception during cleanup; log the error.
                     logging.warning(
-                        "Failed to add cleanup failure note to exception in AsyncAssetCollection.__aexit__: %r. "
+                        "Failed to add cleanup failure note to exception in AsyncQuickCollection.__aexit__: %r. "
                         "Original cleanup error: %r",
                         add_note_err,
-                        cleanup_err
+                        cleanup_err,
                     )
             else:
                 raise
