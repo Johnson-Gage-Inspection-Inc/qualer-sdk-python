@@ -72,6 +72,15 @@ class ApiEnum(str, Enum):
         except ValueError:
             return None
 
+    @classmethod
+    def from_api_value(cls: type[E], value: Any) -> E | None:
+        """Backward-compatible helper for generated model parsing."""
+        if value is None:
+            return None
+        if isinstance(value, cls):
+            return value
+        return cls.parse(value)
+
 
 # Provide the default *after* class creation to avoid creating a member.
 ApiEnum.INT_CODES = {}  # type: ignore[attr-defined]
