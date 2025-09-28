@@ -95,121 +95,60 @@ class MeasurementsToMeasurementRecordResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_id = self.service_order_id
-
         service_order_number = self.service_order_number
-
         custom_order_number = self.custom_order_number
-
         order_item_number = self.order_item_number
-
         certificate_number = self.certificate_number
-
         result_status: Optional[str]
         if not self.result_status:
             result_status = None
         else:
             result_status: Optional[str]
-
             if not self.result_status:
-
                 result_status = None
             else:
                 result_status = self.result_status
-        as_found_result: Optional[str]
-
-        if not self.as_found_result:
-
-            as_found_result = None
-
-        else:
-
-            as_found_result = self.as_found_result
+        as_found_result = self.as_found_result
         as_left_result: Optional[str]
         if not self.as_left_result:
             as_left_result = None
         else:
             as_left_result: Optional[str]
-
             if not self.as_left_result:
-
                 as_left_result = None
             else:
                 as_left_result = self.as_left_result
-        service_date: Optional[str]
-        if not self.service_date:
-            service_date = None
-        elif isinstance(self.service_date, datetime.datetime):
-            service_date = self.service_date.isoformat()
-        else:
-            service_date = self.service_date
-
+        service_date = self.service_date.isoformat() if self.service_date else None
         serial_number = self.serial_number
-
         asset_tag = self.asset_tag
-
         asset_user = self.asset_user
-
         asset_tag_change = self.asset_tag_change
-
         asset_user_change = self.asset_user_change
-
         service_notes = self.service_notes
-
         serial_number_change = self.serial_number_change
-
-        due_date: Optional[str]
-        if not self.due_date:
-            due_date = None
-        elif isinstance(self.due_date, datetime.datetime):
-            due_date = self.due_date.isoformat()
-        else:
-            due_date = self.due_date
-
-        next_service_date: Optional[str]
-        if not self.next_service_date:
-            next_service_date = None
-        elif isinstance(self.next_service_date, datetime.datetime):
-            next_service_date = self.next_service_date.isoformat()
-        else:
-            next_service_date = self.next_service_date
-
+        due_date = self.due_date.isoformat() if self.due_date else None
+        next_service_date = self.next_service_date.isoformat() if self.next_service_date else None
         service_level = self.service_level
-
         service_level_code = self.service_level_code
-
         next_service_level = self.next_service_level
-
         next_service_level_code = self.next_service_level_code
-
         asset_name = self.asset_name
-
         asset_description = self.asset_description
-
         parts_charge = self.parts_charge
-
         parts_charge_before_discount = self.parts_charge_before_discount
-
         service_charge = self.service_charge
-
         repairs_charge = self.repairs_charge
-
         segment_name = self.segment_name
-
         schedule_name = self.schedule_name
-
         service_schedule_segment_id = self.service_schedule_segment_id
-
         forward_next_service = self.forward_next_service
-
         forward_segment_id = self.forward_segment_id
-
         measurement_batches: Optional[List[Dict[str, Any]]] = None
         if self.measurement_batches:
             measurement_batches = []
             for measurement_batches_item_data in self.measurement_batches:
                 measurement_batches_item = measurement_batches_item_data.to_dict()
                 measurement_batches.append(measurement_batches_item)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -281,7 +220,6 @@ class MeasurementsToMeasurementRecordResponseModel:
             field_dict["ForwardSegmentId"] = forward_segment_id
         if measurement_batches is not None:
             field_dict["MeasurementBatches"] = measurement_batches
-
         return field_dict
 
     @classmethod
@@ -289,34 +227,23 @@ class MeasurementsToMeasurementRecordResponseModel:
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model import (
             MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel,
         )
-
         d = dict(src_dict)
         service_order_id = d.pop("ServiceOrderId", None)
-
         service_order_number = d.pop("ServiceOrderNumber", None)
-
         custom_order_number = d.pop("CustomOrderNumber", None)
-
         order_item_number = d.pop("OrderItemNumber", None)
-
         certificate_number = d.pop("CertificateNumber", None)
-
         def _parse_result_status(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         result_status = _parse_result_status(d.pop("ResultStatus", None))
-
         as_found_result = d.pop("AsFoundResult", None)
-
         def _parse_as_left_result(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         as_left_result = _parse_as_left_result(d.pop("AsLeftResult", None))
-
         def _parse_service_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -324,28 +251,18 @@ class MeasurementsToMeasurementRecordResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 service_date_type_0 = isoparse(data)
-
                 return service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         service_date = _parse_service_date(d.pop("ServiceDate", None))
-
         serial_number = d.pop("SerialNumber", None)
-
         asset_tag = d.pop("AssetTag", None)
-
         asset_user = d.pop("AssetUser", None)
-
         asset_tag_change = d.pop("AssetTagChange", None)
-
         asset_user_change = d.pop("AssetUserChange", None)
-
         service_notes = d.pop("ServiceNotes", None)
-
         serial_number_change = d.pop("SerialNumberChange", None)
-
         def _parse_due_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -353,14 +270,11 @@ class MeasurementsToMeasurementRecordResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 due_date_type_0 = isoparse(data)
-
                 return due_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         due_date = _parse_due_date(d.pop("DueDate", None))
-
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -370,44 +284,26 @@ class MeasurementsToMeasurementRecordResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 next_service_date_type_0 = isoparse(data)
-
                 return next_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
-
         service_level = d.pop("ServiceLevel", None)
-
         service_level_code = d.pop("ServiceLevelCode", None)
-
         next_service_level = d.pop("NextServiceLevel", None)
-
         next_service_level_code = d.pop("NextServiceLevelCode", None)
-
         asset_name = d.pop("AssetName", None)
-
         asset_description = d.pop("AssetDescription", None)
-
         parts_charge = d.pop("PartsCharge", None)
-
         parts_charge_before_discount = d.pop("PartsChargeBeforeDiscount", None)
-
         service_charge = d.pop("ServiceCharge", None)
-
         repairs_charge = d.pop("RepairsCharge", None)
-
         segment_name = d.pop("SegmentName", None)
-
         schedule_name = d.pop("ScheduleName", None)
-
         service_schedule_segment_id = d.pop("ServiceScheduleSegmentId", None)
-
         forward_next_service = d.pop("ForwardNextService", None)
-
         forward_segment_id = d.pop("ForwardSegmentId", None)
-
         measurement_batches = []
         _measurement_batches = d.pop("MeasurementBatches", None)
         for measurement_batches_item_data in _measurement_batches or []:
@@ -416,9 +312,7 @@ class MeasurementsToMeasurementRecordResponseModel:
                     measurement_batches_item_data
                 )
             )
-
             measurement_batches.append(measurement_batches_item)
-
         qualer_api_models_measurements_to_measurement_record_response_model = cls(
             service_order_id=service_order_id,
             service_order_number=service_order_number,
@@ -455,7 +349,6 @@ class MeasurementsToMeasurementRecordResponseModel:
             forward_segment_id=forward_segment_id,
             measurement_batches=measurement_batches,
         )
-
         qualer_api_models_measurements_to_measurement_record_response_model.additional_properties = (
             d
         )

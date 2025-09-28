@@ -63,69 +63,27 @@ class ReportDatasetsToReferenceStandardResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         is_auxiliary = self.is_auxiliary
-
-        last_service_date: Optional[str]
-        if not self.last_service_date:
-            last_service_date = None
-        elif isinstance(self.last_service_date, datetime.datetime):
-            last_service_date = self.last_service_date.isoformat()
-        else:
-            last_service_date = self.last_service_date
-
-        next_service_date: Optional[str]
-        if not self.next_service_date:
-            next_service_date = None
-        elif isinstance(self.next_service_date, datetime.datetime):
-            next_service_date = self.next_service_date.isoformat()
-        else:
-            next_service_date = self.next_service_date
-
-        certificate_number: Optional[str]
-        if not self.certificate_number:
-            certificate_number = None
-        else:
-            certificate_number = self.certificate_number
-
-        calibrated_by: Optional[str]
-        if not self.calibrated_by:
-            calibrated_by = None
-        else:
-            calibrated_by = self.calibrated_by
-
+        last_service_date = self.last_service_date.isoformat() if self.last_service_date else None
+        next_service_date = self.next_service_date.isoformat() if self.next_service_date else None
+        certificate_number = self.certificate_number
+        calibrated_by = self.calibrated_by
         tool_name = self.tool_name
-
         tool_site = self.tool_site
-
         tool_room = self.tool_room
-
         tool_station = self.tool_station
-
         tool_location = self.tool_location
-
         asset_tag = self.asset_tag
-
         lot_number = self.lot_number
-
         asset_user = self.asset_user
-
         tool_type_name = self.tool_type_name
-
         tool_description = self.tool_description
-
         tool_id = self.tool_id
-
         manufacturer = self.manufacturer
-
         serial_number = self.serial_number
-
         area = self.area
-
         service_order_item_id = self.service_order_item_id
-
         manufacturer_part_number = self.manufacturer_part_number
-
         equipment_id = self.equipment_id
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -173,14 +131,12 @@ class ReportDatasetsToReferenceStandardResponse:
             field_dict["ManufacturerPartNumber"] = manufacturer_part_number
         if equipment_id is not None:
             field_dict["EquipmentId"] = equipment_id
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         is_auxiliary = d.pop("IsAuxiliary", None)
-
         def _parse_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -190,14 +146,11 @@ class ReportDatasetsToReferenceStandardResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 last_service_date_type_0 = isoparse(data)
-
                 return last_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         last_service_date = _parse_last_service_date(d.pop("LastServiceDate", None))
-
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -207,62 +160,38 @@ class ReportDatasetsToReferenceStandardResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 next_service_date_type_0 = isoparse(data)
-
                 return next_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
-
         def _parse_certificate_number(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         certificate_number = _parse_certificate_number(d.pop("CertificateNumber", None))
-
         def _parse_calibrated_by(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         calibrated_by = _parse_calibrated_by(d.pop("CalibratedBy", None))
-
         tool_name = d.pop("ToolName", None)
-
         tool_site = d.pop("ToolSite", None)
-
         tool_room = d.pop("ToolRoom", None)
-
         tool_station = d.pop("ToolStation", None)
-
         tool_location = d.pop("ToolLocation", None)
-
         asset_tag = d.pop("AssetTag", None)
-
         lot_number = d.pop("LotNumber", None)
-
         asset_user = d.pop("AssetUser", None)
-
         tool_type_name = d.pop("ToolTypeName", None)
-
         tool_description = d.pop("ToolDescription", None)
-
         tool_id = d.pop("ToolId", None)
-
         manufacturer = d.pop("Manufacturer", None)
-
         serial_number = d.pop("SerialNumber", None)
-
         area = d.pop("Area", None)
-
         service_order_item_id = d.pop("ServiceOrderItemId", None)
-
         manufacturer_part_number = d.pop("ManufacturerPartNumber", None)
-
         equipment_id = d.pop("EquipmentId", None)
-
         qualer_api_models_report_datasets_to_reference_standard_response = cls(
             is_auxiliary=is_auxiliary,
             last_service_date=last_service_date,
@@ -287,7 +216,6 @@ class ReportDatasetsToReferenceStandardResponse:
             manufacturer_part_number=manufacturer_part_number,
             equipment_id=equipment_id,
         )
-
         qualer_api_models_report_datasets_to_reference_standard_response.additional_properties = d
         return qualer_api_models_report_datasets_to_reference_standard_response
 

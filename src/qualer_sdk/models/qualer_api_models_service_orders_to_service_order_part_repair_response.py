@@ -65,55 +65,32 @@ class ServiceOrdersToServiceOrderPartRepairResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_item_part_id = self.service_order_item_part_id
-
         price = self.price
-
         description = self.description
-
         name = self.name
-
         unit_name = self.unit_name
-
         quantity = self.quantity
-
         discount = self.discount
-
         delivery_charge = self.delivery_charge
-
         is_taxable = self.is_taxable
-
         time_spent_in_minutes = self.time_spent_in_minutes
-
         is_hourly_pricing = self.is_hourly_pricing
-
         free_quantity = self.free_quantity
-
         currency_iso_symbol = self.currency_iso_symbol
-
         created_by_id = self.created_by_id
-
         created_by = self.created_by
-
         created_on_utc: Optional[str] = None
         if self.created_on_utc:
             created_on_utc = self.created_on_utc.isoformat()
-
         charge_date: Optional[str] = None
         if self.charge_date:
             charge_date = self.charge_date.isoformat()
-
         contract_repairs_discount = self.contract_repairs_discount
-
         contract_parts_discount = self.contract_parts_discount
-
         service_order_charge_type = self.service_order_charge_type
-
         total_discount = self.total_discount
-
         total_price = self.total_price
-
         discount_price = self.discount_price
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -163,68 +140,44 @@ class ServiceOrdersToServiceOrderPartRepairResponse:
             field_dict["TotalPrice"] = total_price
         if discount_price is not None:
             field_dict["DiscountPrice"] = discount_price
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_order_item_part_id = d.pop("ServiceOrderItemPartId", None)
-
         price = d.pop("Price", None)
-
         description = d.pop("Description", None)
-
         name = d.pop("Name", None)
-
         unit_name = d.pop("UnitName", None)
-
         quantity = d.pop("Quantity", None)
-
         discount = d.pop("Discount", None)
-
         delivery_charge = d.pop("DeliveryCharge", None)
-
         is_taxable = d.pop("IsTaxable", None)
-
         time_spent_in_minutes = d.pop("TimeSpentInMinutes", None)
-
         is_hourly_pricing = d.pop("IsHourlyPricing", None)
-
         free_quantity = d.pop("FreeQuantity", None)
-
         currency_iso_symbol = d.pop("CurrencyIsoSymbol", None)
-
         created_by_id = d.pop("CreatedById", None)
-
         created_by = d.pop("CreatedBy", None)
-
         _created_on_utc = d.pop("CreatedOnUtc", None)
         created_on_utc: Optional[datetime.datetime]
         if not _created_on_utc:
             created_on_utc = None
         else:
             created_on_utc = isoparse(_created_on_utc)
-
         _charge_date = d.pop("ChargeDate", None)
         charge_date: Optional[datetime.datetime]
         if not _charge_date:
             charge_date = None
         else:
             charge_date = isoparse(_charge_date)
-
         contract_repairs_discount = d.pop("ContractRepairsDiscount", None)
-
         contract_parts_discount = d.pop("ContractPartsDiscount", None)
-
         service_order_charge_type = d.pop("ServiceOrderChargeType", None)
-
         total_discount = d.pop("TotalDiscount", None)
-
         total_price = d.pop("TotalPrice", None)
-
         discount_price = d.pop("DiscountPrice", None)
-
         qualer_api_models_service_orders_to_service_order_part_repair_response = cls(
             service_order_item_part_id=service_order_item_part_id,
             price=price,
@@ -250,7 +203,6 @@ class ServiceOrdersToServiceOrderPartRepairResponse:
             total_price=total_price,
             discount_price=discount_price,
         )
-
         qualer_api_models_service_orders_to_service_order_part_repair_response.additional_properties = (
             d
         )

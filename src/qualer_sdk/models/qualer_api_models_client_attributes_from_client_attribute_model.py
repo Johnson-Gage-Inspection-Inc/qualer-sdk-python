@@ -23,11 +23,8 @@ class ClientAttributesFromClientAttributeModel:
 
     def to_dict(self) -> Dict[str, Any]:
         client_site_id = self.client_site_id
-
         name = self.name
-
         value = self.value
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -37,24 +34,19 @@ class ClientAttributesFromClientAttributeModel:
             field_dict["Name"] = name
         if value is not None:
             field_dict["Value"] = value
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         client_site_id = d.pop("ClientSiteId", None)
-
         name = d.pop("Name", None)
-
         value = d.pop("Value", None)
-
         qualer_api_models_client_attributes_from_client_attribute_model = cls(
             client_site_id=client_site_id,
             name=name,
             value=value,
         )
-
         qualer_api_models_client_attributes_from_client_attribute_model.additional_properties = d
         return qualer_api_models_client_attributes_from_client_attribute_model
 

@@ -16,14 +16,12 @@ class ClientsToClientCompanyResponseModelBillingAddressType0:
     def to_dict(self) -> Dict[str, Any]:
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         qualer_api_models_clients_to_client_company_response_model_billing_address_type_0 = cls()
-
         qualer_api_models_clients_to_client_company_response_model_billing_address_type_0.additional_properties = (
             d
         )

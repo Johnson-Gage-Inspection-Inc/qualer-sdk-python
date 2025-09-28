@@ -51,39 +51,22 @@ class QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel:
 
     def to_dict(self) -> Dict[str, Any]:
         service_option_id = self.service_option_id
-
         service_option = self.service_option
-
         service_option_code = self.service_option_code
-
         option_type = self.option_type
-
         description = self.description
-
         service_task_id = self.service_task_id
-
         service_code = self.service_code
-
         document_number = self.document_number
-
         document_section = self.document_section
-
         capability_id = self.capability_id
-
         service_type_id = self.service_type_id
-
         service_task_price_id = self.service_task_price_id
-
         service_pricing_id = self.service_pricing_id
-
         price = self.price
-
         is_hourly = self.is_hourly
-
         issue = self.issue
-
         log_error = self.log_error
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -121,46 +104,28 @@ class QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel:
             field_dict["Issue"] = issue
         if log_error is not None:
             field_dict["LogError"] = log_error
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_option_id = d.pop("ServiceOptionId", None)
-
         service_option = d.pop("ServiceOption", None)
-
         service_option_code = d.pop("ServiceOptionCode", None)
-
         option_type = d.pop("OptionType", None)
-
         description = d.pop("Description", None)
-
         service_task_id = d.pop("ServiceTaskId", None)
-
         service_code = d.pop("ServiceCode", None)
-
         document_number = d.pop("DocumentNumber", None)
-
         document_section = d.pop("DocumentSection", None)
-
         capability_id = d.pop("CapabilityId", None)
-
         service_type_id = d.pop("ServiceTypeId", None)
-
         service_task_price_id = d.pop("ServiceTaskPriceId", None)
-
         service_pricing_id = d.pop("ServicePricingId", None)
-
         price = d.pop("Price", None)
-
         is_hourly = d.pop("IsHourly", None)
-
         issue = d.pop("Issue", None)
-
         log_error = d.pop("LogError", None)
-
         qualer_web_mvc_areas_api_models_service_prices_from_service_price_bulk_edit_model = cls(
             service_option_id=service_option_id,
             service_option=service_option,
@@ -180,7 +145,6 @@ class QualerWebMvcAreasApiModelsServicePricesFromServicePriceBulkEditModel:
             issue=issue,
             log_error=log_error,
         )
-
         qualer_web_mvc_areas_api_models_service_prices_from_service_price_bulk_edit_model.additional_properties = (
             d
         )

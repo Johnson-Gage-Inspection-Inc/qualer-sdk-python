@@ -23,15 +23,7 @@ class ServiceOrdersFromUpdatePaymentStatusModel:
 
     def to_dict(self) -> Dict[str, Any]:
         payment_status = self.payment_status
-
-        invoiced_on: Optional[str]
-        if not self.invoiced_on:
-            invoiced_on = None
-        elif isinstance(self.invoiced_on, datetime.datetime):
-            invoiced_on = self.invoiced_on.isoformat()
-        else:
-            invoiced_on = self.invoiced_on
-
+        invoiced_on = self.invoiced_on.isoformat() if self.invoiced_on else None
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -39,14 +31,12 @@ class ServiceOrdersFromUpdatePaymentStatusModel:
             field_dict["PaymentStatus"] = payment_status
         if invoiced_on is not None:
             field_dict["InvoicedOn"] = invoiced_on
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         payment_status = d.pop("PaymentStatus", None)
-
         def _parse_invoiced_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -54,19 +44,15 @@ class ServiceOrdersFromUpdatePaymentStatusModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 invoiced_on_type_0 = isoparse(data)
-
                 return invoiced_on_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         invoiced_on = _parse_invoiced_on(d.pop("InvoicedOn", None))
-
         qualer_api_models_service_orders_from_update_payment_status_model = cls(
             payment_status=payment_status,
             invoiced_on=invoiced_on,
         )
-
         qualer_api_models_service_orders_from_update_payment_status_model.additional_properties = d
         return qualer_api_models_service_orders_from_update_payment_status_model
 

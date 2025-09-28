@@ -27,15 +27,10 @@ class ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_item_id = self.service_order_item_id
-
         task_name = self.task_name
-
         task_description = self.task_description
-
         as_found_details = self.as_found_details
-
         as_left_details = self.as_left_details
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -49,22 +44,16 @@ class ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel:
             field_dict["AsFoundDetails"] = as_found_details
         if as_left_details is not None:
             field_dict["AsLeftDetails"] = as_left_details
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_order_item_id = d.pop("ServiceOrderItemId", None)
-
         task_name = d.pop("TaskName", None)
-
         task_description = d.pop("TaskDescription", None)
-
         as_found_details = d.pop("AsFoundDetails", None)
-
         as_left_details = d.pop("AsLeftDetails", None)
-
         qualer_api_models_service_order_item_tasks_from_service_order_item_task_create_model = cls(
             service_order_item_id=service_order_item_id,
             task_name=task_name,
@@ -72,7 +61,6 @@ class ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel:
             as_found_details=as_found_details,
             as_left_details=as_left_details,
         )
-
         qualer_api_models_service_order_item_tasks_from_service_order_item_task_create_model.additional_properties = (
             d
         )

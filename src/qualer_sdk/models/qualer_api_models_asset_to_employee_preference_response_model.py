@@ -27,17 +27,12 @@ class AssetToEmployeePreferenceResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         element_type = self.element_type
-
         element_page = self.element_page
-
         element_id = self.element_id
-
         preference: Optional[List[str]] = None
         if self.preference:
             preference = self.preference
-
         is_pinned = self.is_pinned
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -51,22 +46,16 @@ class AssetToEmployeePreferenceResponseModel:
             field_dict["Preference"] = preference
         if is_pinned is not None:
             field_dict["IsPinned"] = is_pinned
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         element_type = d.pop("ElementType", None)
-
         element_page = d.pop("ElementPage", None)
-
         element_id = d.pop("ElementId", None)
-
         preference = cast(List[str], d.pop("Preference", None))
-
         is_pinned = d.pop("IsPinned", None)
-
         qualer_api_models_asset_to_employee_preference_response_model = cls(
             element_type=element_type,
             element_page=element_page,
@@ -74,7 +63,6 @@ class AssetToEmployeePreferenceResponseModel:
             preference=preference,
             is_pinned=is_pinned,
         )
-
         qualer_api_models_asset_to_employee_preference_response_model.additional_properties = d
         return qualer_api_models_asset_to_employee_preference_response_model
 

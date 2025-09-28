@@ -124,81 +124,47 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
 
     def to_dict(self) -> Dict[str, Any]:
         specification_name = self.specification_name
-
         measurement_quantity = self.measurement_quantity
-
         unit_of_measure_id = self.unit_of_measure_id
-
         unit_of_measure = self.unit_of_measure
-
         range_min = self.range_min
-
         range_max = self.range_max
-
         tolerance_type = self.tolerance_type
-
-        specification_mode: Optional[int] = None
-        if self.specification_mode:
-            specification_mode = self.specification_mode.value
-
-        tolerance_mode: Optional[int] = None
-        if self.tolerance_mode:
-            tolerance_mode = self.tolerance_mode.value
-
-        tolerance_unit: Optional[int] = None
-        if self.tolerance_unit:
-            tolerance_unit = self.tolerance_unit.value
-
+        specification_mode = self.specification_mode.value if self.specification_mode else None
+        tolerance_mode = self.tolerance_mode.value if self.tolerance_mode else None
+        tolerance_unit = self.tolerance_unit.value if self.tolerance_unit else None
         precision_type = self.precision_type
-
         readings = self.readings
-
         channels_type = self.channels_type
-
         channel_count = self.channel_count
-
         precision = self.precision
-
         tolerance_minimum = self.tolerance_minimum
-
         tolerance_maximum = self.tolerance_maximum
-
         resolution = self.resolution
-
         resolution_count = self.resolution_count
-
         nominal = self.nominal
-
         expected_value = self.expected_value
-
         base_value = self.base_value
-
         test_value = self.test_value
-
         is_accredited = self.is_accredited
-
         measurements: Optional[List[Dict[str, Any]]] = None
         if self.measurements:
             measurements = []
             for measurements_item_data in self.measurements:
                 measurements_item = measurements_item_data.to_dict()
                 measurements.append(measurements_item)
-
         condition_factors: Optional[List[Dict[str, Any]]] = None
         if self.condition_factors:
             condition_factors = []
             for condition_factors_item_data in self.condition_factors:
                 condition_factors_item = condition_factors_item_data.to_dict()
                 condition_factors.append(condition_factors_item)
-
         primary_measurement_tool: Optional[Dict[str, Any]] = None
         if self.primary_measurement_tool:
             primary_measurement_tool = self.primary_measurement_tool.to_dict()
-
         secondary_measurement_tool: Optional[Dict[str, Any]] = None
         if self.secondary_measurement_tool:
             secondary_measurement_tool = self.secondary_measurement_tool.to_dict()
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -258,7 +224,6 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
             field_dict["PrimaryMeasurementTool"] = primary_measurement_tool
         if secondary_measurement_tool is not None:
             field_dict["SecondaryMeasurementTool"] = secondary_measurement_tool
-
         return field_dict
 
     @classmethod
@@ -272,22 +237,14 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model_measurement_tool_response_model import (
             MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel,
         )
-
         d = dict(src_dict)
         specification_name = d.pop("SpecificationName", None)
-
         measurement_quantity = d.pop("MeasurementQuantity", None)
-
         unit_of_measure_id = d.pop("UnitOfMeasureId", None)
-
         unit_of_measure = d.pop("UnitOfMeasure", None)
-
         range_min = d.pop("RangeMin", None)
-
         range_max = d.pop("RangeMax", None)
-
         tolerance_type = d.pop("ToleranceType", None)
-
         _specification_mode = d.pop("SpecificationMode", None)
         specification_mode: Optional[
             MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode
@@ -298,7 +255,6 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
             specification_mode = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelSpecificationMode(
                 _specification_mode
             )
-
         _tolerance_mode = d.pop("ToleranceMode", None)
         tolerance_mode: Optional[
             MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode
@@ -309,7 +265,6 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
             tolerance_mode = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceMode(
                 _tolerance_mode
             )
-
         _tolerance_unit = d.pop("ToleranceUnit", None)
         tolerance_unit: Optional[
             MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit
@@ -320,53 +275,34 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
             tolerance_unit = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelToleranceUnit(
                 _tolerance_unit
             )
-
         precision_type = d.pop("PrecisionType", None)
-
         readings = d.pop("Readings", None)
-
         channels_type = d.pop("ChannelsType", None)
-
         channel_count = d.pop("ChannelCount", None)
-
         precision = d.pop("Precision", None)
-
         tolerance_minimum = d.pop("ToleranceMinimum", None)
-
         tolerance_maximum = d.pop("ToleranceMaximum", None)
-
         resolution = d.pop("Resolution", None)
-
         resolution_count = d.pop("ResolutionCount", None)
-
         nominal = d.pop("Nominal", None)
-
         expected_value = d.pop("ExpectedValue", None)
-
         base_value = d.pop("BaseValue", None)
-
         test_value = d.pop("TestValue", None)
-
         is_accredited = d.pop("IsAccredited", None)
-
         measurements = []
         _measurements = d.pop("Measurements", None)
         for measurements_item_data in _measurements or []:
             measurements_item = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementResponseModel.from_dict(
                 measurements_item_data
             )
-
             measurements.append(measurements_item)
-
         condition_factors = []
         _condition_factors = d.pop("ConditionFactors", None)
         for condition_factors_item_data in _condition_factors or []:
             condition_factors_item = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementConditionFactorResponseModel.from_dict(
                 condition_factors_item_data
             )
-
             condition_factors.append(condition_factors_item)
-
         _primary_measurement_tool = d.pop("PrimaryMeasurementTool", None)
         primary_measurement_tool: Optional[
             MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel
@@ -377,7 +313,6 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
             primary_measurement_tool = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel.from_dict(
                 _primary_measurement_tool
             )
-
         _secondary_measurement_tool = d.pop("SecondaryMeasurementTool", None)
         secondary_measurement_tool: Optional[
             MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel
@@ -388,7 +323,6 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
             secondary_measurement_tool = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModelMeasurementPointResponseModelMeasurementToolResponseModel.from_dict(
                 _secondary_measurement_tool
             )
-
         qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model = cls(
             specification_name=specification_name,
             measurement_quantity=measurement_quantity,
@@ -419,7 +353,6 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
             primary_measurement_tool=primary_measurement_tool,
             secondary_measurement_tool=secondary_measurement_tool,
         )
-
         qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model.additional_properties = (
             d
         )

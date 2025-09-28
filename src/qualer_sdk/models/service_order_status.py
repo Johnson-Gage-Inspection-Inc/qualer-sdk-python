@@ -28,17 +28,14 @@ class ServiceOrderStatus(str, Enum):
     @classmethod
     def from_api_value(cls, value: int | str | None) -> ServiceOrderStatus | None:
         """Best-effort parser for API values.
-
         Accepts either a string enum value (e.g. "Processing") or an integer code
         (e.g. 11) seen in some API responses. Returns None for unknown values.
         """
         if value is None:
             return None
-
         if isinstance(value, int):
             mapped = _INT_TO_STR.get(value)
             return mapped if isinstance(mapped, cls) else None
-
         # Strings: accept exact match; try case-insensitive as a fallback.
         try:
             return cls(value)

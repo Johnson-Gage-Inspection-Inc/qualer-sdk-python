@@ -33,21 +33,13 @@ class ServiceOrdersToPaymentResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_id = self.service_order_id
-
         created_by_id = self.created_by_id
-
         transaction_id = self.transaction_id
-
         transaction_status = self.transaction_status
-
         payment_type = self.payment_type
-
         service_order_payment_id = self.service_order_payment_id
-
         payment_amount = self.payment_amount
-
         details = self.details
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -67,28 +59,19 @@ class ServiceOrdersToPaymentResponseModel:
             field_dict["PaymentAmount"] = payment_amount
         if details is not None:
             field_dict["Details"] = details
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_order_id = d.pop("ServiceOrderId", None)
-
         created_by_id = d.pop("CreatedById", None)
-
         transaction_id = d.pop("TransactionId", None)
-
         transaction_status = d.pop("TransactionStatus", None)
-
         payment_type = d.pop("PaymentType", None)
-
         service_order_payment_id = d.pop("ServiceOrderPaymentId", None)
-
         payment_amount = d.pop("PaymentAmount", None)
-
         details = d.pop("Details", None)
-
         qualer_api_models_service_orders_to_payment_response_model = cls(
             service_order_id=service_order_id,
             created_by_id=created_by_id,
@@ -99,7 +82,6 @@ class ServiceOrdersToPaymentResponseModel:
             payment_amount=payment_amount,
             details=details,
         )
-
         qualer_api_models_service_orders_to_payment_response_model.additional_properties = d
         return qualer_api_models_service_orders_to_payment_response_model
 

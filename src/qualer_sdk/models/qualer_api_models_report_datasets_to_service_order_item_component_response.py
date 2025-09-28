@@ -43,31 +43,18 @@ class ReportDatasetsToServiceOrderItemComponentResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         order_item_id = self.order_item_id
-
         component_asset_id = self.component_asset_id
-
         component_serial_number = self.component_serial_number
-
         component_asset_tag = self.component_asset_tag
-
         component_asset_user = self.component_asset_user
-
         component_equipment_id = self.component_equipment_id
-
         component_manufacturer_part_number = self.component_manufacturer_part_number
-
         component_manufacturer = self.component_manufacturer
-
         component_root_category = self.component_root_category
-
         component_sub_category = self.component_sub_category
-
         component_location = self.component_location
-
         component_display_name = self.component_display_name
-
         component_display_part_number = self.component_display_part_number
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -97,38 +84,24 @@ class ReportDatasetsToServiceOrderItemComponentResponse:
             field_dict["ComponentDisplayName"] = component_display_name
         if component_display_part_number is not None:
             field_dict["ComponentDisplayPartNumber"] = component_display_part_number
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         order_item_id = d.pop("OrderItemId", None)
-
         component_asset_id = d.pop("ComponentAssetId", None)
-
         component_serial_number = d.pop("ComponentSerialNumber", None)
-
         component_asset_tag = d.pop("ComponentAssetTag", None)
-
         component_asset_user = d.pop("ComponentAssetUser", None)
-
         component_equipment_id = d.pop("ComponentEquipmentId", None)
-
         component_manufacturer_part_number = d.pop("ComponentManufacturerPartNumber", None)
-
         component_manufacturer = d.pop("ComponentManufacturer", None)
-
         component_root_category = d.pop("ComponentRootCategory", None)
-
         component_sub_category = d.pop("ComponentSubCategory", None)
-
         component_location = d.pop("ComponentLocation", None)
-
         component_display_name = d.pop("ComponentDisplayName", None)
-
         component_display_part_number = d.pop("ComponentDisplayPartNumber", None)
-
         qualer_api_models_report_datasets_to_service_order_item_component_response = cls(
             order_item_id=order_item_id,
             component_asset_id=component_asset_id,
@@ -144,7 +117,6 @@ class ReportDatasetsToServiceOrderItemComponentResponse:
             component_display_name=component_display_name,
             component_display_part_number=component_display_part_number,
         )
-
         qualer_api_models_report_datasets_to_service_order_item_component_response.additional_properties = (
             d
         )

@@ -50,35 +50,21 @@ class QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateMod
 
     def to_dict(self) -> Dict[str, Any]:
         name = self.name
-
         description = self.description
-
         charge_date: Optional[str] = None
         if self.charge_date:
             charge_date = self.charge_date.isoformat()
-
         price = self.price
-
         unit_name = self.unit_name
-
         is_hourly_pricing = self.is_hourly_pricing
-
         time_spent_in_minutes = self.time_spent_in_minutes
-
         quantity = self.quantity
-
         discount = self.discount
-
         is_taxable = self.is_taxable
-
         delivery_charge = self.delivery_charge
-
         free_quantity = self.free_quantity
-
         created_by_id = self.created_by_id
-
         service_order_charge_type = self.service_order_charge_type
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -110,45 +96,30 @@ class QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateMod
             field_dict["CreatedById"] = created_by_id
         if service_order_charge_type is not None:
             field_dict["ServiceOrderChargeType"] = service_order_charge_type
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         name = d.pop("Name", None)
-
         description = d.pop("Description", None)
-
         _charge_date = d.pop("ChargeDate", None)
         charge_date: Optional[datetime.datetime]
         if not _charge_date:
             charge_date = None
         else:
             charge_date = isoparse(_charge_date)
-
         price = d.pop("Price", None)
-
         unit_name = d.pop("UnitName", None)
-
         is_hourly_pricing = d.pop("IsHourlyPricing", None)
-
         time_spent_in_minutes = d.pop("TimeSpentInMinutes", None)
-
         quantity = d.pop("Quantity", None)
-
         discount = d.pop("Discount", None)
-
         is_taxable = d.pop("IsTaxable", None)
-
         delivery_charge = d.pop("DeliveryCharge", None)
-
         free_quantity = d.pop("FreeQuantity", None)
-
         created_by_id = d.pop("CreatedById", None)
-
         service_order_charge_type = d.pop("ServiceOrderChargeType", None)
-
         qualer_web_mvc_areas_api_models_service_orders_from_service_order_part_repair_create_model = cls(
             name=name,
             description=description,
@@ -165,7 +136,6 @@ class QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateMod
             created_by_id=created_by_id,
             service_order_charge_type=service_order_charge_type,
         )
-
         qualer_web_mvc_areas_api_models_service_orders_from_service_order_part_repair_create_model.additional_properties = (
             d
         )

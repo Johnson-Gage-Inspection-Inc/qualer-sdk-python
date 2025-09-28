@@ -29,27 +29,10 @@ class AssetFromUpdateFilterPreferenceModel:
 
     def to_dict(self) -> Dict[str, Any]:
         filter_type = self.filter_type
-
         within_days = self.within_days
-
         use_date_range = self.use_date_range
-
-        start_date: Optional[str]
-        if not self.start_date:
-            start_date = None
-        elif isinstance(self.start_date, datetime.datetime):
-            start_date = self.start_date.isoformat()
-        else:
-            start_date = self.start_date
-
-        end_date: Optional[str]
-        if not self.end_date:
-            end_date = None
-        elif isinstance(self.end_date, datetime.datetime):
-            end_date = self.end_date.isoformat()
-        else:
-            end_date = self.end_date
-
+        start_date = self.start_date.isoformat() if self.start_date else None
+        end_date = self.end_date.isoformat() if self.end_date else None
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -63,18 +46,14 @@ class AssetFromUpdateFilterPreferenceModel:
             field_dict["StartDate"] = start_date
         if end_date is not None:
             field_dict["EndDate"] = end_date
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         filter_type = d.pop("FilterType", None)
-
         within_days = d.pop("WithinDays", None)
-
         use_date_range = d.pop("UseDateRange", None)
-
         def _parse_start_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -82,14 +61,11 @@ class AssetFromUpdateFilterPreferenceModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 start_date_type_0 = isoparse(data)
-
                 return start_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         start_date = _parse_start_date(d.pop("StartDate", None))
-
         def _parse_end_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -97,14 +73,11 @@ class AssetFromUpdateFilterPreferenceModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 end_date_type_0 = isoparse(data)
-
                 return end_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         end_date = _parse_end_date(d.pop("EndDate", None))
-
         qualer_api_models_asset_from_update_filter_preference_model = cls(
             filter_type=filter_type,
             within_days=within_days,
@@ -112,7 +85,6 @@ class AssetFromUpdateFilterPreferenceModel:
             start_date=start_date,
             end_date=end_date,
         )
-
         qualer_api_models_asset_from_update_filter_preference_model.additional_properties = d
         return qualer_api_models_asset_from_update_filter_preference_model
 

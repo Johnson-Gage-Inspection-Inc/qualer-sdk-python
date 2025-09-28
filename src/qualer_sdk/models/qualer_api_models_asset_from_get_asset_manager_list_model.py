@@ -25,13 +25,9 @@ class AssetFromGetAssetManagerListModel:
 
     def to_dict(self) -> Dict[str, Any]:
         filter_type = self.filter_type
-
         search_string = self.search_string
-
         page = self.page
-
         page_size = self.page_size
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -43,27 +39,21 @@ class AssetFromGetAssetManagerListModel:
             field_dict["Page"] = page
         if page_size is not None:
             field_dict["PageSize"] = page_size
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         filter_type = d.pop("FilterType", None)
-
         search_string = d.pop("SearchString", None)
-
         page = d.pop("Page", None)
-
         page_size = d.pop("PageSize", None)
-
         qualer_api_models_asset_from_get_asset_manager_list_model = cls(
             filter_type=filter_type,
             search_string=search_string,
             page=page,
             page_size=page_size,
         )
-
         qualer_api_models_asset_from_get_asset_manager_list_model.additional_properties = d
         return qualer_api_models_asset_from_get_asset_manager_list_model
 

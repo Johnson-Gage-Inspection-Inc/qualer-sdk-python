@@ -27,15 +27,10 @@ class ReportDatasetsToServiceOrderAssigneeResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         first_name = self.first_name
-
         last_name = self.last_name
-
         alias = self.alias
-
         email = self.email
-
         title = self.title
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -49,22 +44,16 @@ class ReportDatasetsToServiceOrderAssigneeResponse:
             field_dict["Email"] = email
         if title is not None:
             field_dict["Title"] = title
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         first_name = d.pop("FirstName", None)
-
         last_name = d.pop("LastName", None)
-
         alias = d.pop("Alias", None)
-
         email = d.pop("Email", None)
-
         title = d.pop("Title", None)
-
         qualer_api_models_report_datasets_to_service_order_assignee_response = cls(
             first_name=first_name,
             last_name=last_name,
@@ -72,7 +61,6 @@ class ReportDatasetsToServiceOrderAssigneeResponse:
             email=email,
             title=title,
         )
-
         qualer_api_models_report_datasets_to_service_order_assignee_response.additional_properties = (
             d
         )

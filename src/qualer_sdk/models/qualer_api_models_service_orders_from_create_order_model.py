@@ -31,25 +31,18 @@ class ServiceOrdersFromCreateOrderModel:
 
     def to_dict(self) -> Dict[str, Any]:
         client_company_id = self.client_company_id
-
         vendor_site_id = self.vendor_site_id
-
         asset_ids: Optional[List[int]] = None
         if self.asset_ids:
             asset_ids = self.asset_ids
-
         schedule_segment_ids: Optional[List[int]] = None
         if self.schedule_segment_ids:
             schedule_segment_ids = self.schedule_segment_ids
-
         service_level_ids: Optional[List[int]] = None
         if self.service_level_ids:
             service_level_ids = self.service_level_ids
-
         use_due_segments = self.use_due_segments
-
         order_notes = self.order_notes
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -67,26 +60,18 @@ class ServiceOrdersFromCreateOrderModel:
             field_dict["UseDueSegments"] = use_due_segments
         if order_notes is not None:
             field_dict["OrderNotes"] = order_notes
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         client_company_id = d.pop("ClientCompanyId", None)
-
         vendor_site_id = d.pop("VendorSiteId", None)
-
         asset_ids = cast(List[int], d.pop("AssetIds", None))
-
         schedule_segment_ids = cast(List[int], d.pop("ScheduleSegmentIds", None))
-
         service_level_ids = cast(List[int], d.pop("ServiceLevelIds", None))
-
         use_due_segments = d.pop("UseDueSegments", None)
-
         order_notes = d.pop("OrderNotes", None)
-
         qualer_api_models_service_orders_from_create_order_model = cls(
             client_company_id=client_company_id,
             vendor_site_id=vendor_site_id,
@@ -96,7 +81,6 @@ class ServiceOrdersFromCreateOrderModel:
             use_due_segments=use_due_segments,
             order_notes=order_notes,
         )
-
         qualer_api_models_service_orders_from_create_order_model.additional_properties = d
         return qualer_api_models_service_orders_from_create_order_model
 

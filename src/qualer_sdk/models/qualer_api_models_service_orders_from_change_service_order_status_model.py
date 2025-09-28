@@ -29,13 +29,9 @@ class ServiceOrdersFromChangeServiceOrderStatusModel:
         service_order_status: Optional[str] = (
             self.service_order_status.value if self.service_order_status else None
         )
-
         reset_status = self.reset_status
-
         email = self.email
-
         password = self.password
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -47,7 +43,6 @@ class ServiceOrdersFromChangeServiceOrderStatusModel:
             field_dict["Email"] = email
         if password is not None:
             field_dict["Password"] = password
-
         return field_dict
 
     @classmethod
@@ -55,20 +50,15 @@ class ServiceOrdersFromChangeServiceOrderStatusModel:
         d = dict(src_dict)
         _service_order_status = d.pop("ServiceOrderStatus", None)
         service_order_status = ServiceOrderStatus.from_api_value(_service_order_status)
-
         reset_status = d.pop("ResetStatus", None)
-
         email = d.pop("Email", None)
-
         password = d.pop("Password", None)
-
         qualer_api_models_service_orders_from_change_service_order_status_model = cls(
             service_order_status=service_order_status,
             reset_status=reset_status,
             email=email,
             password=password,
         )
-
         (
             qualer_api_models_service_orders_from_change_service_order_status_model.additional_properties
         ) = d

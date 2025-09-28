@@ -63,35 +63,30 @@ class QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel:
             for charges_item_data in self.charges:
                 charges_item = charges_item_data.to_dict()
                 charges.append(charges_item)
-
         tasks: Optional[List[Dict[str, Any]]] = None
         if self.tasks:
             tasks = []
             for tasks_item_data in self.tasks:
                 tasks_item = tasks_item_data.to_dict()
                 tasks.append(tasks_item)
-
         parts: Optional[List[Dict[str, Any]]] = None
         if self.parts:
             parts = []
             for parts_item_data in self.parts:
                 parts_item = parts_item_data.to_dict()
                 parts.append(parts_item)
-
         repairs: Optional[List[Dict[str, Any]]] = None
         if self.repairs:
             repairs = []
             for repairs_item_data in self.repairs:
                 repairs_item = repairs_item_data.to_dict()
                 repairs.append(repairs_item)
-
         work_items: Optional[List[Dict[str, Any]]] = None
         if self.work_items:
             work_items = []
             for work_items_item_data in self.work_items:
                 work_items_item = work_items_item_data.to_dict()
                 work_items.append(work_items_item)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -105,7 +100,6 @@ class QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel:
             field_dict["Repairs"] = repairs
         if work_items is not None:
             field_dict["WorkItems"] = work_items
-
         return field_dict
 
     @classmethod
@@ -122,7 +116,6 @@ class QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel:
         from ..models.qualer_api_models_service_orders_to_charge_response_model_base_price_model import (
             ServiceOrdersToChargeResponseModelBasePriceModel,
         )
-
         d = dict(src_dict)
         charges = []
         _charges = d.pop("Charges", None)
@@ -130,27 +123,21 @@ class QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel:
             charges_item = ServiceOrdersToChargeResponseModelBasePriceModel.from_dict(
                 charges_item_data
             )
-
             charges.append(charges_item)
-
         tasks = []
         _tasks = d.pop("Tasks", None)
         for tasks_item_data in _tasks or []:
             tasks_item = ServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel.from_dict(
                 tasks_item_data
             )
-
             tasks.append(tasks_item)
-
         parts = []
         _parts = d.pop("Parts", None)
         for parts_item_data in _parts or []:
             parts_item = ServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel.from_dict(
                 parts_item_data
             )
-
             parts.append(parts_item)
-
         repairs = []
         _repairs = d.pop("Repairs", None)
         for repairs_item_data in _repairs or []:
@@ -159,16 +146,12 @@ class QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel:
                     repairs_item_data
                 )
             )
-
             repairs.append(repairs_item)
-
         work_items = []
         _work_items = d.pop("WorkItems", None)
         for work_items_item_data in _work_items or []:
             work_items_item = ServiceOrdersToBaseWorkItemModel.from_dict(work_items_item_data)
-
             work_items.append(work_items_item)
-
         qualer_web_mvc_areas_api_models_service_orders_to_charge_response_model = cls(
             charges=charges,
             tasks=tasks,
@@ -176,7 +159,6 @@ class QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel:
             repairs=repairs,
             work_items=work_items,
         )
-
         qualer_web_mvc_areas_api_models_service_orders_to_charge_response_model.additional_properties = (
             d
         )

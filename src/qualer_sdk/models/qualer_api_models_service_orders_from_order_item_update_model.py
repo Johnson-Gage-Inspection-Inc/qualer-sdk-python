@@ -94,99 +94,42 @@ class ServiceOrdersFromOrderItemUpdateModel:
 
     def to_dict(self) -> Dict[str, Any]:
         service_comments = self.service_comments
-
         private_comments = self.private_comments
-
         service_notes = self.service_notes
-
         service_total = self.service_total
-
         repairs_total = self.repairs_total
-
         parts_total = self.parts_total
-
-        work_status: Optional[int] = None
-        if self.work_status:
-            work_status = self.work_status.value
-
+        work_status = self.work_status.value if self.work_status else None
         custom_work_status = self.custom_work_status
-
         is_limited = self.is_limited
-
         checked_on: Optional[str] = None
         if self.checked_on:
             checked_on = self.checked_on.isoformat()
-
         checked_by_name = self.checked_by_name
-
         completed_on: Optional[str] = None
         if self.completed_on:
             completed_on = self.completed_on.isoformat()
-
         completed_by_name = self.completed_by_name
-
-        as_found_check: Optional[str] = None
-        if self.as_found_check:
-            as_found_check = self.as_found_check.value
-
-        as_left_check: Optional[str] = None
-        if self.as_left_check:
-            as_left_check = self.as_left_check.value
-
-        result_status: Optional[int] = None
-        if self.result_status:
-            result_status = self.result_status.value
-
-        as_found_result: Optional[int] = None
-        if self.as_found_result:
-            as_found_result = self.as_found_result.value
-
-        as_left_result: Optional[int] = None
-        if self.as_left_result:
-            as_left_result = self.as_left_result.value
-
+        as_found_check = self.as_found_check.value if self.as_found_check else None
+        as_left_check = self.as_left_check.value if self.as_left_check else None
+        result_status = self.result_status.value if self.result_status else None
+        as_found_result = self.as_found_result.value if self.as_found_result else None
+        as_left_result = self.as_left_result.value if self.as_left_result else None
         equipment_id = self.equipment_id
-
         legacy_id = self.legacy_id
-
         serial_number = self.serial_number
-
         serial_number_change = self.serial_number_change
-
         asset_tag = self.asset_tag
-
         asset_tag_change = self.asset_tag_change
-
         asset_user = self.asset_user
-
         asset_user_change = self.asset_user_change
-
         provider_technician = self.provider_technician
-
         provider_phone = self.provider_phone
-
         provider_company = self.provider_company
-
         certificate_number = self.certificate_number
-
-        service_date: Optional[str]
-        if not self.service_date:
-            service_date = None
-        elif isinstance(self.service_date, datetime.datetime):
-            service_date = self.service_date.isoformat()
-        else:
-            service_date = self.service_date
-
-        next_service_date: Optional[str]
-        if not self.next_service_date:
-            next_service_date = None
-        elif isinstance(self.next_service_date, datetime.datetime):
-            next_service_date = self.next_service_date.isoformat()
-        else:
-            next_service_date = self.next_service_date
-
+        service_date = self.service_date.isoformat() if self.service_date else None
+        next_service_date = self.next_service_date.isoformat() if self.next_service_date else None
         vendor_tag = self.vendor_tag
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -256,24 +199,17 @@ class ServiceOrdersFromOrderItemUpdateModel:
             field_dict["NextServiceDate"] = next_service_date
         if vendor_tag is not None:
             field_dict["VendorTag"] = vendor_tag
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_comments = d.pop("ServiceComments", None)
-
         private_comments = d.pop("PrivateComments", None)
-
         service_notes = d.pop("ServiceNotes", None)
-
         service_total = d.pop("ServiceTotal", None)
-
         repairs_total = d.pop("RepairsTotal", None)
-
         parts_total = d.pop("PartsTotal", None)
-
         _work_status = d.pop("WorkStatus", None)
         work_status: Optional[WorkStatus]
         if not _work_status:
@@ -282,43 +218,34 @@ class ServiceOrdersFromOrderItemUpdateModel:
             work_status = None
         else:
             work_status = WorkStatus(_work_status)
-
         custom_work_status = d.pop("CustomWorkStatus", None)
-
         is_limited = d.pop("IsLimited", None)
-
         _checked_on = d.pop("CheckedOn", None)
         checked_on: Optional[datetime.datetime]
         if not _checked_on:
             checked_on = None
         else:
             checked_on = isoparse(_checked_on)
-
         checked_by_name = d.pop("CheckedByName", None)
-
         _completed_on = d.pop("CompletedOn", None)
         completed_on: Optional[datetime.datetime]
         if not _completed_on:
             completed_on = None
         else:
             completed_on = isoparse(_completed_on)
-
         completed_by_name = d.pop("CompletedByName", None)
-
         _as_found_check = d.pop("AsFoundCheck", None)
         as_found_check: Optional[ServiceOrdersFromOrderItemUpdateModelAsFoundCheck]
         if not _as_found_check:
             as_found_check = None
         else:
             as_found_check = ServiceOrdersFromOrderItemUpdateModelAsFoundCheck(_as_found_check)
-
         _as_left_check = d.pop("AsLeftCheck", None)
         as_left_check: Optional[ServiceOrdersFromOrderItemUpdateModelAsLeftCheck]
         if not _as_left_check:
             as_left_check = None
         else:
             as_left_check = ServiceOrdersFromOrderItemUpdateModelAsLeftCheck(_as_left_check)
-
         _result_status = d.pop("ResultStatus", None)
         result_status: Optional[ServiceResultStatus]
         if not _result_status:
@@ -327,7 +254,6 @@ class ServiceOrdersFromOrderItemUpdateModel:
             result_status = None
         else:
             result_status = ServiceResultStatus(_result_status)
-
         _as_found_result = d.pop("AsFoundResult", None)
         as_found_result: Optional[ServiceResultStatus]
         if not _as_found_result:
@@ -336,7 +262,6 @@ class ServiceOrdersFromOrderItemUpdateModel:
             as_found_result = None
         else:
             as_found_result = ServiceResultStatus(_as_found_result)
-
         _as_left_result = d.pop("AsLeftResult", None)
         as_left_result: Optional[ServiceResultStatus]
         if not _as_left_result:
@@ -345,31 +270,18 @@ class ServiceOrdersFromOrderItemUpdateModel:
             as_left_result = None
         else:
             as_left_result = ServiceResultStatus(_as_left_result)
-
         equipment_id = d.pop("EquipmentId", None)
-
         legacy_id = d.pop("LegacyId", None)
-
         serial_number = d.pop("SerialNumber", None)
-
         serial_number_change = d.pop("SerialNumberChange", None)
-
         asset_tag = d.pop("AssetTag", None)
-
         asset_tag_change = d.pop("AssetTagChange", None)
-
         asset_user = d.pop("AssetUser", None)
-
         asset_user_change = d.pop("AssetUserChange", None)
-
         provider_technician = d.pop("ProviderTechnician", None)
-
         provider_phone = d.pop("ProviderPhone", None)
-
         provider_company = d.pop("ProviderCompany", None)
-
         certificate_number = d.pop("CertificateNumber", None)
-
         def _parse_service_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -377,14 +289,11 @@ class ServiceOrdersFromOrderItemUpdateModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 service_date_type_0 = isoparse(data)
-
                 return service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         service_date = _parse_service_date(d.pop("ServiceDate", None))
-
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -394,16 +303,12 @@ class ServiceOrdersFromOrderItemUpdateModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 next_service_date_type_0 = isoparse(data)
-
                 return next_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
-
         vendor_tag = d.pop("VendorTag", None)
-
         qualer_api_models_service_orders_from_order_item_update_model = cls(
             service_comments=service_comments,
             private_comments=private_comments,
@@ -439,7 +344,6 @@ class ServiceOrdersFromOrderItemUpdateModel:
             next_service_date=next_service_date,
             vendor_tag=vendor_tag,
         )
-
         qualer_api_models_service_orders_from_order_item_update_model.additional_properties = d
         return qualer_api_models_service_orders_from_order_item_update_model
 

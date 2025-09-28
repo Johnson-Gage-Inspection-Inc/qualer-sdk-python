@@ -55,43 +55,26 @@ class SiteFromSiteCreateModel:
 
     def to_dict(self) -> Dict[str, Any]:
         site_name = self.site_name
-
         site_code = self.site_code
-
         shipping_inherited = self.shipping_inherited
-
         default_account_representative_employee_id = self.default_account_representative_employee_id
-
         billing_inherited = self.billing_inherited
-
         federal_number = self.federal_number
-
         state_number = self.state_number
-
         culture_name = self.culture_name
-
         is_science_facility = self.is_science_facility
-
         is_service_center = self.is_service_center
-
         is_inventory_storage = self.is_inventory_storage
-
         is_production = self.is_production
-
         time_zone_id = self.time_zone_id
-
         time_zone_offset_minutes = self.time_zone_offset_minutes
-
         company_name = self.company_name
-
         billing_address: Optional[Dict[str, Any]] = None
         if self.billing_address:
             billing_address = self.billing_address.to_dict()
-
         shipping_address: Optional[Dict[str, Any]] = None
         if self.shipping_address:
             shipping_address = self.shipping_address.to_dict()
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -131,7 +114,6 @@ class SiteFromSiteCreateModel:
             field_dict["BillingAddress"] = billing_address
         if shipping_address is not None:
             field_dict["ShippingAddress"] = shipping_address
-
         return field_dict
 
     @classmethod
@@ -139,54 +121,36 @@ class SiteFromSiteCreateModel:
         from ..models.qualer_api_models_address_address_model import (
             AddressAddressModel,
         )
-
         d = dict(src_dict)
         site_name = d.pop("SiteName", None)
-
         site_code = d.pop("SiteCode", None)
-
         shipping_inherited = d.pop("ShippingInherited", None)
-
         default_account_representative_employee_id = d.pop(
             "DefaultAccountRepresentativeEmployeeId", None
         )
-
         billing_inherited = d.pop("BillingInherited", None)
-
         federal_number = d.pop("FederalNumber", None)
-
         state_number = d.pop("StateNumber", None)
-
         culture_name = d.pop("CultureName", None)
-
         is_science_facility = d.pop("IsScienceFacility", None)
-
         is_service_center = d.pop("IsServiceCenter", None)
-
         is_inventory_storage = d.pop("IsInventoryStorage", None)
-
         is_production = d.pop("IsProduction", None)
-
         time_zone_id = d.pop("TimeZoneId", None)
-
         time_zone_offset_minutes = d.pop("TimeZoneOffsetMinutes", None)
-
         company_name = d.pop("CompanyName", None)
-
         _billing_address = d.pop("BillingAddress", None)
         billing_address: Optional[AddressAddressModel]
         if not _billing_address:
             billing_address = None
         else:
             billing_address = AddressAddressModel.from_dict(_billing_address)
-
         _shipping_address = d.pop("ShippingAddress", None)
         shipping_address: Optional[AddressAddressModel]
         if not _shipping_address:
             shipping_address = None
         else:
             shipping_address = AddressAddressModel.from_dict(_shipping_address)
-
         qualer_api_models_site_from_site_create_model = cls(
             site_name=site_name,
             site_code=site_code,
@@ -206,7 +170,6 @@ class SiteFromSiteCreateModel:
             billing_address=billing_address,
             shipping_address=shipping_address,
         )
-
         qualer_api_models_site_from_site_create_model.additional_properties = d
         return qualer_api_models_site_from_site_create_model
 

@@ -33,21 +33,13 @@ class ReportDatasetsToServiceOrderTaskResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         task_name = self.task_name
-
         task_order = self.task_order
-
         task_details = self.task_details
-
         time_spent = self.time_spent
-
         time_spent_hours = self.time_spent_hours
-
         time_spent_minutes = self.time_spent_minutes
-
         price = self.price
-
         is_hourly = self.is_hourly
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -67,28 +59,19 @@ class ReportDatasetsToServiceOrderTaskResponse:
             field_dict["Price"] = price
         if is_hourly is not None:
             field_dict["IsHourly"] = is_hourly
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         task_name = d.pop("TaskName", None)
-
         task_order = d.pop("TaskOrder", None)
-
         task_details = d.pop("TaskDetails", None)
-
         time_spent = d.pop("TimeSpent", None)
-
         time_spent_hours = d.pop("TimeSpentHours", None)
-
         time_spent_minutes = d.pop("TimeSpentMinutes", None)
-
         price = d.pop("Price", None)
-
         is_hourly = d.pop("IsHourly", None)
-
         qualer_api_models_report_datasets_to_service_order_task_response = cls(
             task_name=task_name,
             task_order=task_order,
@@ -99,7 +82,6 @@ class ReportDatasetsToServiceOrderTaskResponse:
             price=price,
             is_hourly=is_hourly,
         )
-
         qualer_api_models_report_datasets_to_service_order_task_response.additional_properties = d
         return qualer_api_models_report_datasets_to_service_order_task_response
 

@@ -73,55 +73,33 @@ class MeasurementsFromUpdateMeasurementSetModel:
 
     def to_dict(self) -> Dict[str, Any]:
         measurement_set_id = self.measurement_set_id
-
         is_accredited = self.is_accredited
-
         measurement_name = self.measurement_name
-
         use_expected_value = self.use_expected_value
-
         decimal_places = self.decimal_places
-
         significant_figures = self.significant_figures
-
-        influence_parameter_1_type: Optional[str] = None
-        if self.influence_parameter_1_type:
-            influence_parameter_1_type = self.influence_parameter_1_type.value
-
+        influence_parameter_1_type = self.influence_parameter_1_type.value if self.influence_parameter_1_type else None
         influence_parameter_1_tool_type_id = self.influence_parameter_1_tool_type_id
-
         influence_parameter_1_parameter_id = self.influence_parameter_1_parameter_id
-
         influence_parameter_1_source = self.influence_parameter_1_source
-
         influence_parameter_1_value = self.influence_parameter_1_value
-
-        influence_parameter_2_type: Optional[str] = None
-        if self.influence_parameter_2_type:
-            influence_parameter_2_type = self.influence_parameter_2_type.value
-
+        influence_parameter_2_type = self.influence_parameter_2_type.value if self.influence_parameter_2_type else None
         influence_parameter_2_tool_type_id = self.influence_parameter_2_tool_type_id
-
         influence_parameter_2_parameter_id = self.influence_parameter_2_parameter_id
-
         influence_parameter_2_source = self.influence_parameter_2_source
-
         influence_parameter_2_value = self.influence_parameter_2_value
-
         measurement_points: Optional[List[Dict[str, Any]]] = None
         if self.measurement_points:
             measurement_points = []
             for measurement_points_item_data in self.measurement_points:
                 measurement_points_item = measurement_points_item_data.to_dict()
                 measurement_points.append(measurement_points_item)
-
         measurement_fields: Optional[List[Dict[str, Any]]] = None
         if self.measurement_fields:
             measurement_fields = []
             for measurement_fields_item_data in self.measurement_fields:
                 measurement_fields_item = measurement_fields_item_data.to_dict()
                 measurement_fields.append(measurement_fields_item)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -161,7 +139,6 @@ class MeasurementsFromUpdateMeasurementSetModel:
             field_dict["MeasurementPoints"] = measurement_points
         if measurement_fields is not None:
             field_dict["MeasurementFields"] = measurement_fields
-
         return field_dict
 
     @classmethod
@@ -172,20 +149,13 @@ class MeasurementsFromUpdateMeasurementSetModel:
         from ..models.qualer_api_models_measurements_from_update_measurement_point_model import (
             MeasurementsFromUpdateMeasurementPointModel,
         )
-
         d = dict(src_dict)
         measurement_set_id = d.pop("MeasurementSetId", None)
-
         is_accredited = d.pop("IsAccredited", None)
-
         measurement_name = d.pop("MeasurementName", None)
-
         use_expected_value = d.pop("UseExpectedValue", None)
-
         decimal_places = d.pop("DecimalPlaces", None)
-
         significant_figures = d.pop("SignificantFigures", None)
-
         _influence_parameter_1_type = d.pop("InfluenceParameter1Type", None)
         influence_parameter_1_type: Optional[
             MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type
@@ -198,15 +168,10 @@ class MeasurementsFromUpdateMeasurementSetModel:
                     _influence_parameter_1_type
                 )
             )
-
         influence_parameter_1_tool_type_id = d.pop("InfluenceParameter1ToolTypeId", None)
-
         influence_parameter_1_parameter_id = d.pop("InfluenceParameter1ParameterId", None)
-
         influence_parameter_1_source = d.pop("InfluenceParameter1Source", None)
-
         influence_parameter_1_value = d.pop("InfluenceParameter1Value", None)
-
         _influence_parameter_2_type = d.pop("InfluenceParameter2Type", None)
         influence_parameter_2_type: Optional[
             MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type
@@ -219,33 +184,24 @@ class MeasurementsFromUpdateMeasurementSetModel:
                     _influence_parameter_2_type
                 )
             )
-
         influence_parameter_2_tool_type_id = d.pop("InfluenceParameter2ToolTypeId", None)
-
         influence_parameter_2_parameter_id = d.pop("InfluenceParameter2ParameterId", None)
-
         influence_parameter_2_source = d.pop("InfluenceParameter2Source", None)
-
         influence_parameter_2_value = d.pop("InfluenceParameter2Value", None)
-
         measurement_points = []
         _measurement_points = d.pop("MeasurementPoints", None)
         for measurement_points_item_data in _measurement_points or []:
             measurement_points_item = MeasurementsFromUpdateMeasurementPointModel.from_dict(
                 measurement_points_item_data
             )
-
             measurement_points.append(measurement_points_item)
-
         measurement_fields = []
         _measurement_fields = d.pop("MeasurementFields", None)
         for measurement_fields_item_data in _measurement_fields or []:
             measurement_fields_item = MeasurementsFromUpdateMeasurementFieldModel.from_dict(
                 measurement_fields_item_data
             )
-
             measurement_fields.append(measurement_fields_item)
-
         qualer_api_models_measurements_from_update_measurement_set_model = cls(
             measurement_set_id=measurement_set_id,
             is_accredited=is_accredited,
@@ -266,7 +222,6 @@ class MeasurementsFromUpdateMeasurementSetModel:
             measurement_points=measurement_points,
             measurement_fields=measurement_fields,
         )
-
         qualer_api_models_measurements_from_update_measurement_set_model.additional_properties = d
         return qualer_api_models_measurements_from_update_measurement_set_model
 

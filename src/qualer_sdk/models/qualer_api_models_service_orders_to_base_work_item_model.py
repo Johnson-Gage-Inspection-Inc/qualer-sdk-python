@@ -53,25 +53,20 @@ class ServiceOrdersToBaseWorkItemModel:
             for tasks_item_data in self.tasks:
                 tasks_item = tasks_item_data.to_dict()
                 tasks.append(tasks_item)
-
         parts: Optional[List[Dict[str, Any]]] = None
         if self.parts:
             parts = []
             for parts_item_data in self.parts:
                 parts_item = parts_item_data.to_dict()
                 parts.append(parts_item)
-
         repairs: Optional[List[Dict[str, Any]]] = None
         if self.repairs:
             repairs = []
             for repairs_item_data in self.repairs:
                 repairs_item = repairs_item_data.to_dict()
                 repairs.append(repairs_item)
-
         work_item_id = self.work_item_id
-
         vendor_tag = self.vendor_tag
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -85,7 +80,6 @@ class ServiceOrdersToBaseWorkItemModel:
             field_dict["WorkItemId"] = work_item_id
         if vendor_tag is not None:
             field_dict["VendorTag"] = vendor_tag
-
         return field_dict
 
     @classmethod
@@ -96,7 +90,6 @@ class ServiceOrdersToBaseWorkItemModel:
         from ..models.qualer_api_models_service_orders_to_base_work_item_model_order_part_repair_price_model import (
             ServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel,
         )
-
         d = dict(src_dict)
         tasks = []
         _tasks = d.pop("Tasks", None)
@@ -104,31 +97,23 @@ class ServiceOrdersToBaseWorkItemModel:
             tasks_item = ServiceOrdersToBaseWorkItemModelOrderItemTaskPriceModel.from_dict(
                 tasks_item_data
             )
-
             tasks.append(tasks_item)
-
         parts = []
         _parts = d.pop("Parts", None)
         for parts_item_data in _parts or []:
             parts_item = ServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel.from_dict(
                 parts_item_data
             )
-
             parts.append(parts_item)
-
         repairs = []
         _repairs = d.pop("Repairs", None)
         for repairs_item_data in _repairs or []:
             repairs_item = ServiceOrdersToBaseWorkItemModelOrderPartRepairPriceModel.from_dict(
                 repairs_item_data
             )
-
             repairs.append(repairs_item)
-
         work_item_id = d.pop("WorkItemId", None)
-
         vendor_tag = d.pop("VendorTag", None)
-
         qualer_api_models_service_orders_to_base_work_item_model = cls(
             tasks=tasks,
             parts=parts,
@@ -136,7 +121,6 @@ class ServiceOrdersToBaseWorkItemModel:
             work_item_id=work_item_id,
             vendor_tag=vendor_tag,
         )
-
         qualer_api_models_service_orders_to_base_work_item_model.additional_properties = d
         return qualer_api_models_service_orders_to_base_work_item_model
 

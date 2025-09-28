@@ -833,855 +833,399 @@ class ReportDatasetsToMeasurementResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         is_accredited = self.is_accredited
-
         service_total = self.service_total
-
         repairs_total = self.repairs_total
-
         parts_total = self.parts_total
-
         parameter_id = self.parameter_id
-
         tool_range_name = self.tool_range_name
-
         tool_range_uncertainty = self.tool_range_uncertainty
-
-        primary_tool_last_service_date: Optional[str]
-        if not self.primary_tool_last_service_date:
-            primary_tool_last_service_date = None
-        elif isinstance(self.primary_tool_last_service_date, datetime.datetime):
-            primary_tool_last_service_date = self.primary_tool_last_service_date.isoformat()
-        else:
-            primary_tool_last_service_date = self.primary_tool_last_service_date
-
-        primary_tool_next_service_date: Optional[str]
-        if not self.primary_tool_next_service_date:
-            primary_tool_next_service_date = None
-        elif isinstance(self.primary_tool_next_service_date, datetime.datetime):
-            primary_tool_next_service_date = self.primary_tool_next_service_date.isoformat()
-        else:
-            primary_tool_next_service_date = self.primary_tool_next_service_date
-
+        primary_tool_last_service_date = self.primary_tool_last_service_date.isoformat() if self.primary_tool_last_service_date else None
+        primary_tool_next_service_date = self.primary_tool_next_service_date.isoformat() if self.primary_tool_next_service_date else None
         primary_tool_calibrated_by = self.primary_tool_calibrated_by
-
         primary_tool_tool_name = self.primary_tool_tool_name
-
         primary_tool_tool_description = self.primary_tool_tool_description
-
         primary_tool_tool_type_name = self.primary_tool_tool_type_name
-
         primary_tool_manufacturer = self.primary_tool_manufacturer
-
         primary_tool_manufacturer_part_number = self.primary_tool_manufacturer_part_number
-
         primary_tool_serial_number = self.primary_tool_serial_number
-
-        secondary_tool_last_service_date: Optional[str]
-        if not self.secondary_tool_last_service_date:
-            secondary_tool_last_service_date = None
-        elif isinstance(self.secondary_tool_last_service_date, datetime.datetime):
-            secondary_tool_last_service_date = self.secondary_tool_last_service_date.isoformat()
-        else:
-            secondary_tool_last_service_date = self.secondary_tool_last_service_date
-
-        secondary_tool_next_service_date: Optional[str]
-        if not self.secondary_tool_next_service_date:
-            secondary_tool_next_service_date = None
-        elif isinstance(self.secondary_tool_next_service_date, datetime.datetime):
-            secondary_tool_next_service_date = self.secondary_tool_next_service_date.isoformat()
-        else:
-            secondary_tool_next_service_date = self.secondary_tool_next_service_date
-
+        secondary_tool_last_service_date = self.secondary_tool_last_service_date.isoformat() if self.secondary_tool_last_service_date else None
+        secondary_tool_next_service_date = self.secondary_tool_next_service_date.isoformat() if self.secondary_tool_next_service_date else None
         secondary_tool_calibrated_by = self.secondary_tool_calibrated_by
-
         secondary_tool_tool_name = self.secondary_tool_tool_name
-
         secondary_tool_tool_description = self.secondary_tool_tool_description
-
         secondary_tool_tool_type_name = self.secondary_tool_tool_type_name
-
         secondary_tool_manufacturer = self.secondary_tool_manufacturer
-
         secondary_tool_manufacturer_part_number = self.secondary_tool_manufacturer_part_number
-
         secondary_tool_serial_number = self.secondary_tool_serial_number
-
         measurement_set_name = self.measurement_set_name
-
         decimal_places = self.decimal_places
-
         significant_figures = self.significant_figures
-
         sd_header = self.sd_header
-
         cv_header = self.cv_header
-
         measurement_local_time: Optional[str] = None
         if self.measurement_local_time:
             measurement_local_time = self.measurement_local_time.isoformat()
-
         mean = self.mean
-
         mean_raw = self.mean_raw
-
         mean_decimal_places = self.mean_decimal_places
-
         mean_extended = self.mean_extended
-
         sd = self.sd
-
         sd_raw = self.sd_raw
-
         sd_decimal_places = self.sd_decimal_places
-
         delta = self.delta
-
         range_ = self.range_
-
         sd_extended = self.sd_extended
-
         range_extended = self.range_extended
-
         delta_extended = self.delta_extended
-
         minimum_measured_value = self.minimum_measured_value
-
         maximum_measured_value = self.maximum_measured_value
-
         min_max_value_extended = self.min_max_value_extended
-
         cv = self.cv
-
         cv_raw = self.cv_raw
-
         cv_decimal_places = self.cv_decimal_places
-
         cv_extended = self.cv_extended
-
-        result: Optional[int] = None
-        if self.result:
-            result = self.result.value
-
+        result = self.result.value if self.result else None
         range_result = self.range_result
-
         delta_result = self.delta_result
-
         min_result = self.min_result
-
         max_result = self.max_result
-
         tar_result = self.tar_result
-
         tur_result = self.tur_result
-
         error_result = self.error_result
-
         sd_result = self.sd_result
-
         cv_result = self.cv_result
-
         custom_field_result = self.custom_field_result
-
         mu = self.mu
-
         mu_raw = self.mu_raw
-
         mu_effective_dof = self.mu_effective_dof
-
         mu_coverage_factor = self.mu_coverage_factor
-
         mu_extended = self.mu_extended
-
         cmc = self.cmc
-
         cmc_comments = self.cmc_comments
-
         tur = self.tur
-
         tur_raw = self.tur_raw
-
         tur_decimal_places = self.tur_decimal_places
-
         tar = self.tar
-
         tar_raw = self.tar_raw
-
         tar_decimal_places = self.tar_decimal_places
-
         guard_band = self.guard_band
-
-        guard_band_logic: Optional[str] = None
-        if self.guard_band_logic:
-            guard_band_logic = self.guard_band_logic.value
-
+        guard_band_logic = self.guard_band_logic.value if self.guard_band_logic else None
         uncertainty_budget = self.uncertainty_budget
-
         calculated_uncertainty = self.calculated_uncertainty
-
         lock_uncertainty_budget = self.lock_uncertainty_budget
-
         lab_mu = self.lab_mu
-
         channel = self.channel
-
-        measurement_type: Optional[str] = None
-        if self.measurement_type:
-            measurement_type = self.measurement_type.value
-
+        measurement_type = self.measurement_type.value if self.measurement_type else None
         updated_by = self.updated_by
-
         updated_on: Optional[str] = None
         if self.updated_on:
             updated_on = self.updated_on.isoformat()
-
         error = self.error
-
         error_extended = self.error_extended
-
         require_adjustment = self.require_adjustment
-
         adjustment_threshold = self.adjustment_threshold
-
         percent_of_tolerance = self.percent_of_tolerance
-
         percent_of_tolerance_extended = self.percent_of_tolerance_extended
-
         tol_decimal_places = self.tol_decimal_places
-
         specification_title = self.specification_title
-
         specification_subtitle = self.specification_subtitle
-
         specification_group = self.specification_group
-
         batch_type = self.batch_type
-
         batch_result = self.batch_result
-
         is_by_channel = self.is_by_channel
-
         channel_count = self.channel_count
-
         is_range_accredited = self.is_range_accredited
-
         commenced_on: Optional[str] = None
         if self.commenced_on:
             commenced_on = self.commenced_on.isoformat()
-
         commenced_by = self.commenced_by
-
         z_factor = self.z_factor
-
         air_buoyancy = self.air_buoyancy
-
         evaporation_rate = self.evaporation_rate
-
         air_humidity = self.air_humidity
-
         altitude = self.altitude
-
         ambient_temperature = self.ambient_temperature
-
         barometric_pressure = self.barometric_pressure
-
         light_intensity = self.light_intensity
-
         noise_level = self.noise_level
-
         ph_level = self.ph_level
-
         water_conductivity = self.water_conductivity
-
         water_temperature = self.water_temperature
-
         solar_radiation = self.solar_radiation
-
         wind_speed = self.wind_speed
-
         z_factor_uom = self.z_factor_uom
-
         air_buoyancy_uom = self.air_buoyancy_uom
-
         evaporation_rate_uom = self.evaporation_rate_uom
-
         air_humidity_uom = self.air_humidity_uom
-
         altitude_uom = self.altitude_uom
-
         ambient_temperature_uom = self.ambient_temperature_uom
-
         barometric_pressure_uom = self.barometric_pressure_uom
-
         light_intensity_uom = self.light_intensity_uom
-
         noise_level_uom = self.noise_level_uom
-
         ph_level_uom = self.ph_level_uom
-
         water_conductivity_uom = self.water_conductivity_uom
-
         water_temperature_uom = self.water_temperature_uom
-
         solar_radiation_uom = self.solar_radiation_uom
-
         wind_speed_uom = self.wind_speed_uom
-
         specification_name = self.specification_name
-
         parameter_name = self.parameter_name
-
         measurement_set_display_order = self.measurement_set_display_order
-
         display_order = self.display_order
-
         unit_of_measure = self.unit_of_measure
-
         display_format = self.display_format
-
         precision = self.precision
-
         minimum = self.minimum
-
         nominal = self.nominal
-
         expected_value = self.expected_value
-
         expected_value_raw = self.expected_value_raw
-
         test_value = self.test_value
-
         base_value = self.base_value
-
         use_expected_value = self.use_expected_value
-
-        reading_entry_logic: Optional[str] = None
-        if self.reading_entry_logic:
-            reading_entry_logic = self.reading_entry_logic.value
-
-        reading_entry_math: Optional[str] = None
-        if self.reading_entry_math:
-            reading_entry_math = self.reading_entry_math.value
-
-        double_substitution_sequence: Optional[str] = None
-        if self.double_substitution_sequence:
-            double_substitution_sequence = self.double_substitution_sequence.value
-
+        reading_entry_logic = self.reading_entry_logic.value if self.reading_entry_logic else None
+        reading_entry_math = self.reading_entry_math.value if self.reading_entry_math else None
+        double_substitution_sequence = self.double_substitution_sequence.value if self.double_substitution_sequence else None
         reading_entry_math_string = self.reading_entry_math_string
-
         nominal_extended = self.nominal_extended
-
         expected_value_extended = self.expected_value_extended
-
         maximum = self.maximum
-
         tolerance_min = self.tolerance_min
-
         tolerance_max = self.tolerance_max
-
         resolution = self.resolution
-
         resolution_count = self.resolution_count
-
         min_max_header = self.min_max_header
-
         accuracy_class = self.accuracy_class
-
         accuracy_class_min = self.accuracy_class_min
-
         accuracy_class_max = self.accuracy_class_max
-
-        environment_mask: Optional[str] = None
-        if self.environment_mask:
-            environment_mask = self.environment_mask.value
-
+        environment_mask = self.environment_mask.value if self.environment_mask else None
         display_name = self.display_name
-
         display_part_number = self.display_part_number
-
         part_number = self.part_number
-
         vendor_company_id = self.vendor_company_id
-
         service_order_number = self.service_order_number
-
         custom_order_number = self.custom_order_number
-
         completed_by_name = self.completed_by_name
-
         completed_on: Optional[str] = None
         if self.completed_on:
             completed_on = self.completed_on.isoformat()
-
         is_limited = self.is_limited
-
         vendor_tag = self.vendor_tag
-
         vendor_service_notes = self.vendor_service_notes
-
         room = self.room
-
         segment_name = self.segment_name
-
         schedule_name = self.schedule_name
-
         next_segment_name = self.next_segment_name
-
         certificate_number = self.certificate_number
-
-        work_status: Optional[int] = None
-        if self.work_status:
-            work_status = self.work_status.value
-
+        work_status = self.work_status.value if self.work_status else None
         service_type = self.service_type
-
         service_level = self.service_level
-
         barcode = self.barcode
-
         service_comments = self.service_comments
-
         order_item_number = self.order_item_number
-
         asset_tag = self.asset_tag
-
         asset_user = self.asset_user
-
         serial_number = self.serial_number
-
         equipment_id = self.equipment_id
-
         legacy_identifier = self.legacy_identifier
-
         site_name = self.site_name
-
         asset_name = self.asset_name
-
         asset_description = self.asset_description
-
         product_name = self.product_name
-
         product_description = self.product_description
-
         asset_maker = self.asset_maker
-
         station = self.station
-
         asset_tag_change = self.asset_tag_change
-
         asset_user_change = self.asset_user_change
-
         serial_number_change = self.serial_number_change
-
-        service_date: Optional[str]
-        if not self.service_date:
-            service_date = None
-        elif isinstance(self.service_date, datetime.datetime):
-            service_date = self.service_date.isoformat()
-        else:
-            service_date = self.service_date
-
-        next_service_date: Optional[str]
-        if not self.next_service_date:
-            next_service_date = None
-        elif isinstance(self.next_service_date, datetime.datetime):
-            next_service_date = self.next_service_date.isoformat()
-        else:
-            next_service_date = self.next_service_date
-
+        service_date = self.service_date.isoformat() if self.service_date else None
+        next_service_date = self.next_service_date.isoformat() if self.next_service_date else None
         service_order_item_id = self.service_order_item_id
-
         service_order_id = self.service_order_id
-
         measurement_batch_id = self.measurement_batch_id
-
         measurement_id = self.measurement_id
-
         standard_id = self.standard_id
-
         tool_id = self.tool_id
-
         measurement_tool_id = self.measurement_tool_id
-
         measurement_condition_id = self.measurement_condition_id
-
         measurement_point_id = self.measurement_point_id
-
         measurement_set_id = self.measurement_set_id
-
         is_hidden = self.is_hidden
-
         readings = self.readings
-
-        tolerance_type: Optional[str] = None
-        if self.tolerance_type:
-            tolerance_type = self.tolerance_type.value
-
+        tolerance_type = self.tolerance_type.value if self.tolerance_type else None
         tolerance_type_string = self.tolerance_type_string
-
-        precision_type: Optional[str] = None
-        if self.precision_type:
-            precision_type = self.precision_type.value
-
-        specification_mode: Optional[int] = None
-        if self.specification_mode:
-            specification_mode = self.specification_mode.value
-
-        tolerance_mode: Optional[int] = None
-        if self.tolerance_mode:
-            tolerance_mode = self.tolerance_mode.value
-
-        tolerance_unit: Optional[int] = None
-        if self.tolerance_unit:
-            tolerance_unit = self.tolerance_unit.value
-
+        precision_type = self.precision_type.value if self.precision_type else None
+        specification_mode = self.specification_mode.value if self.specification_mode else None
+        tolerance_mode = self.tolerance_mode.value if self.tolerance_mode else None
+        tolerance_unit = self.tolerance_unit.value if self.tolerance_unit else None
         tolerance_string = self.tolerance_string
-
         po_number = self.po_number
-
         secondary_po = self.secondary_po
-
-        shipped_date: Optional[str]
-        if not self.shipped_date:
-            shipped_date = None
-        elif isinstance(self.shipped_date, datetime.datetime):
-            shipped_date = self.shipped_date.isoformat()
-        else:
-            shipped_date = self.shipped_date
-
-        shipment_status: Optional[str] = None
-        if self.shipment_status:
-            shipment_status = self.shipment_status.value
-
+        shipped_date = self.shipped_date.isoformat() if self.shipped_date else None
+        shipment_status = self.shipment_status.value if self.shipment_status else None
         shipped_on: Optional[str] = None
         if self.shipped_on:
             shipped_on = self.shipped_on.isoformat()
-
         delivered_on: Optional[str] = None
         if self.delivered_on:
             delivered_on = self.delivered_on.isoformat()
-
         tracking_number = self.tracking_number
-
         payment_terms = self.payment_terms
-
         shipping_method = self.shipping_method
-
         location = self.location
-
         site_access_notes = self.site_access_notes
-
         abbreviated_uom = self.abbreviated_uom
-
         unit_scale_factor = self.unit_scale_factor
-
-        measurement_not_taken_result: Optional[str] = None
-        if self.measurement_not_taken_result:
-            measurement_not_taken_result = self.measurement_not_taken_result.value
-
+        measurement_not_taken_result = self.measurement_not_taken_result.value if self.measurement_not_taken_result else None
         hide_from_certificate = self.hide_from_certificate
-
         measurement_not_taken_reason = self.measurement_not_taken_reason
-
         environment_text_1 = self.environment_text_1
-
         environment_text_2 = self.environment_text_2
-
         environment_text_3 = self.environment_text_3
-
         environment_text_4 = self.environment_text_4
-
         environment_text_5 = self.environment_text_5
-
         environment_text_6 = self.environment_text_6
-
         values = self.values
-
         value_1 = self.value_1
-
         value_2 = self.value_2
-
         value_3 = self.value_3
-
         value_4 = self.value_4
-
         value_5 = self.value_5
-
         value_6 = self.value_6
-
         value_7 = self.value_7
-
         value_8 = self.value_8
-
         value_9 = self.value_9
-
         value_10 = self.value_10
-
         value_11 = self.value_11
-
         value_12 = self.value_12
-
         value_13 = self.value_13
-
         value_14 = self.value_14
-
         value_15 = self.value_15
-
         value_16 = self.value_16
-
         value_17 = self.value_17
-
         value_18 = self.value_18
-
         value_19 = self.value_19
-
         value_20 = self.value_20
-
         value_21 = self.value_21
-
         value_22 = self.value_22
-
         value_23 = self.value_23
-
         value_24 = self.value_24
-
         value_25 = self.value_25
-
         value_26 = self.value_26
-
         value_27 = self.value_27
-
         value_28 = self.value_28
-
         value_29 = self.value_29
-
         value_30 = self.value_30
-
         value_31 = self.value_31
-
         value_32 = self.value_32
-
         value_33 = self.value_33
-
         value_34 = self.value_34
-
         value_35 = self.value_35
-
         value_36 = self.value_36
-
         value_37 = self.value_37
-
         value_38 = self.value_38
-
         value_39 = self.value_39
-
         value_40 = self.value_40
-
         raw_value_1 = self.raw_value_1
-
         raw_value_2 = self.raw_value_2
-
         raw_value_3 = self.raw_value_3
-
         raw_value_4 = self.raw_value_4
-
         raw_value_5 = self.raw_value_5
-
         raw_value_6 = self.raw_value_6
-
         raw_value_7 = self.raw_value_7
-
         raw_value_8 = self.raw_value_8
-
         raw_value_9 = self.raw_value_9
-
         raw_value_10 = self.raw_value_10
-
         raw_value_11 = self.raw_value_11
-
         raw_value_12 = self.raw_value_12
-
         raw_value_13 = self.raw_value_13
-
         raw_value_14 = self.raw_value_14
-
         raw_value_15 = self.raw_value_15
-
         raw_value_16 = self.raw_value_16
-
         raw_value_17 = self.raw_value_17
-
         raw_value_18 = self.raw_value_18
-
         raw_value_19 = self.raw_value_19
-
         raw_value_20 = self.raw_value_20
-
         raw_value_21 = self.raw_value_21
-
         raw_value_22 = self.raw_value_22
-
         raw_value_23 = self.raw_value_23
-
         raw_value_24 = self.raw_value_24
-
         raw_value_25 = self.raw_value_25
-
         raw_value_26 = self.raw_value_26
-
         raw_value_27 = self.raw_value_27
-
         raw_value_28 = self.raw_value_28
-
         raw_value_29 = self.raw_value_29
-
         raw_value_30 = self.raw_value_30
-
         raw_value_31 = self.raw_value_31
-
         raw_value_32 = self.raw_value_32
-
         raw_value_33 = self.raw_value_33
-
         raw_value_34 = self.raw_value_34
-
         raw_value_35 = self.raw_value_35
-
         raw_value_36 = self.raw_value_36
-
         raw_value_37 = self.raw_value_37
-
         raw_value_38 = self.raw_value_38
-
         raw_value_39 = self.raw_value_39
-
         raw_value_40 = self.raw_value_40
-
         subtitles_to_readings = self.subtitles_to_readings
-
         value_subtitle_1 = self.value_subtitle_1
-
         value_subtitle_2 = self.value_subtitle_2
-
         value_subtitle_3 = self.value_subtitle_3
-
         value_subtitle_4 = self.value_subtitle_4
-
         value_subtitle_5 = self.value_subtitle_5
-
         value_subtitle_6 = self.value_subtitle_6
-
         value_subtitle_7 = self.value_subtitle_7
-
         value_subtitle_8 = self.value_subtitle_8
-
         value_subtitle_9 = self.value_subtitle_9
-
         value_subtitle_10 = self.value_subtitle_10
-
         value_subtitle_11 = self.value_subtitle_11
-
         value_subtitle_12 = self.value_subtitle_12
-
         value_subtitle_13 = self.value_subtitle_13
-
         value_subtitle_14 = self.value_subtitle_14
-
         value_subtitle_15 = self.value_subtitle_15
-
         value_subtitle_16 = self.value_subtitle_16
-
         value_subtitle_17 = self.value_subtitle_17
-
         value_subtitle_18 = self.value_subtitle_18
-
         value_subtitle_19 = self.value_subtitle_19
-
         value_subtitle_20 = self.value_subtitle_20
-
         value_subtitle_21 = self.value_subtitle_21
-
         value_subtitle_22 = self.value_subtitle_22
-
         value_subtitle_23 = self.value_subtitle_23
-
         value_subtitle_24 = self.value_subtitle_24
-
         value_subtitle_25 = self.value_subtitle_25
-
         value_subtitle_26 = self.value_subtitle_26
-
         value_subtitle_27 = self.value_subtitle_27
-
         value_subtitle_28 = self.value_subtitle_28
-
         value_subtitle_29 = self.value_subtitle_29
-
         value_subtitle_30 = self.value_subtitle_30
-
         value_subtitle_31 = self.value_subtitle_31
-
         value_subtitle_32 = self.value_subtitle_32
-
         value_subtitle_33 = self.value_subtitle_33
-
         value_subtitle_34 = self.value_subtitle_34
-
         value_subtitle_35 = self.value_subtitle_35
-
         value_subtitle_36 = self.value_subtitle_36
-
         value_subtitle_37 = self.value_subtitle_37
-
         value_subtitle_38 = self.value_subtitle_38
-
         value_subtitle_39 = self.value_subtitle_39
-
         value_subtitle_40 = self.value_subtitle_40
-
         values_decimal_places = self.values_decimal_places
-
         repeat_measurement_and_calculate_hysteresis = (
             self.repeat_measurement_and_calculate_hysteresis
         )
-
-        measurement_point_order: Optional[str] = None
-        if self.measurement_point_order:
-            measurement_point_order = self.measurement_point_order.value
-
-        hysteresis_point: Optional[str] = None
-        if self.hysteresis_point:
-            hysteresis_point = self.hysteresis_point.value
-
+        measurement_point_order = self.measurement_point_order.value if self.measurement_point_order else None
+        hysteresis_point = self.hysteresis_point.value if self.hysteresis_point else None
         max_hysteresis = self.max_hysteresis
-
         run = self.run
-
         direction = self.direction
-
         hysteresis = self.hysteresis
-
         column_mean = self.column_mean
-
         column_mean_result = self.column_mean_result
-
         column_sd = self.column_sd
-
         column_sd_result = self.column_sd_result
-
         column_cv = self.column_cv
-
         column_cv_result = self.column_cv_result
-
         column_range = self.column_range
-
         column_range_result = self.column_range_result
-
         column_delta = self.column_delta
-
         column_delta_result = self.column_delta_result
-
         column_result = self.column_result
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -2449,26 +1993,18 @@ class ReportDatasetsToMeasurementResponse:
             field_dict["ColumnDeltaResult"] = column_delta_result
         if column_result is not None:
             field_dict["ColumnResult"] = column_result
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         is_accredited = d.pop("IsAccredited", None)
-
         service_total = d.pop("ServiceTotal", None)
-
         repairs_total = d.pop("RepairsTotal", None)
-
         parts_total = d.pop("PartsTotal", None)
-
         parameter_id = d.pop("ParameterId", None)
-
         tool_range_name = d.pop("ToolRangeName", None)
-
         tool_range_uncertainty = d.pop("ToolRangeUncertainty", None)
-
         def _parse_primary_tool_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2478,16 +2014,13 @@ class ReportDatasetsToMeasurementResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 primary_tool_last_service_date_type_0 = isoparse(data)
-
                 return primary_tool_last_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         primary_tool_last_service_date = _parse_primary_tool_last_service_date(
             d.pop("PrimaryToolLastServiceDate", None)
         )
-
         def _parse_primary_tool_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2497,30 +2030,20 @@ class ReportDatasetsToMeasurementResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 primary_tool_next_service_date_type_0 = isoparse(data)
-
                 return primary_tool_next_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         primary_tool_next_service_date = _parse_primary_tool_next_service_date(
             d.pop("PrimaryToolNextServiceDate", None)
         )
-
         primary_tool_calibrated_by = d.pop("PrimaryToolCalibratedBy", None)
-
         primary_tool_tool_name = d.pop("PrimaryToolToolName", None)
-
         primary_tool_tool_description = d.pop("PrimaryToolToolDescription", None)
-
         primary_tool_tool_type_name = d.pop("PrimaryToolToolTypeName", None)
-
         primary_tool_manufacturer = d.pop("PrimaryToolManufacturer", None)
-
         primary_tool_manufacturer_part_number = d.pop("PrimaryToolManufacturerPartNumber", None)
-
         primary_tool_serial_number = d.pop("PrimaryToolSerialNumber", None)
-
         def _parse_secondary_tool_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2530,16 +2053,13 @@ class ReportDatasetsToMeasurementResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 secondary_tool_last_service_date_type_0 = isoparse(data)
-
                 return secondary_tool_last_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         secondary_tool_last_service_date = _parse_secondary_tool_last_service_date(
             d.pop("SecondaryToolLastServiceDate", None)
         )
-
         def _parse_secondary_tool_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2549,140 +2069,80 @@ class ReportDatasetsToMeasurementResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 secondary_tool_next_service_date_type_0 = isoparse(data)
-
                 return secondary_tool_next_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         secondary_tool_next_service_date = _parse_secondary_tool_next_service_date(
             d.pop("SecondaryToolNextServiceDate", None)
         )
-
         secondary_tool_calibrated_by = d.pop("SecondaryToolCalibratedBy", None)
-
         secondary_tool_tool_name = d.pop("SecondaryToolToolName", None)
-
         secondary_tool_tool_description = d.pop("SecondaryToolToolDescription", None)
-
         secondary_tool_tool_type_name = d.pop("SecondaryToolToolTypeName", None)
-
         secondary_tool_manufacturer = d.pop("SecondaryToolManufacturer", None)
-
         secondary_tool_manufacturer_part_number = d.pop("SecondaryToolManufacturerPartNumber", None)
-
         secondary_tool_serial_number = d.pop("SecondaryToolSerialNumber", None)
-
         measurement_set_name = d.pop("MeasurementSetName", None)
-
         decimal_places = d.pop("DecimalPlaces", None)
-
         significant_figures = d.pop("SignificantFigures", None)
-
         sd_header = d.pop("SdHeader", None)
-
         cv_header = d.pop("CvHeader", None)
-
         _measurement_local_time = d.pop("MeasurementLocalTime", None)
         measurement_local_time: Optional[datetime.datetime]
         if not _measurement_local_time:
             measurement_local_time = None
         else:
             measurement_local_time = isoparse(_measurement_local_time)
-
         mean = d.pop("Mean", None)
-
         mean_raw = d.pop("MeanRaw", None)
-
         mean_decimal_places = d.pop("MeanDecimalPlaces", None)
-
         mean_extended = d.pop("MeanExtended", None)
-
         sd = d.pop("Sd", None)
-
         sd_raw = d.pop("SdRaw", None)
-
         sd_decimal_places = d.pop("SDDecimalPlaces", None)
-
         delta = d.pop("Delta", None)
-
         range_ = d.pop("Range", None)
-
         sd_extended = d.pop("SdExtended", None)
-
         range_extended = d.pop("RangeExtended", None)
-
         delta_extended = d.pop("DeltaExtended", None)
-
         minimum_measured_value = d.pop("MinimumMeasuredValue", None)
-
         maximum_measured_value = d.pop("MaximumMeasuredValue", None)
-
         min_max_value_extended = d.pop("MinMaxValueExtended", None)
-
         cv = d.pop("Cv", None)
-
         cv_raw = d.pop("CvRaw", None)
-
         cv_decimal_places = d.pop("CVDecimalPlaces", None)
-
         cv_extended = d.pop("CvExtended", None)
-
         _result = d.pop("Result", None)
         result: Optional[ServiceResultStatus]
         if not _result:
             result = None
         else:
             result = ServiceResultStatus(_result)
-
         range_result = d.pop("RangeResult", None)
-
         delta_result = d.pop("DeltaResult", None)
-
         min_result = d.pop("MinResult", None)
-
         max_result = d.pop("MaxResult", None)
-
         tar_result = d.pop("TarResult", None)
-
         tur_result = d.pop("TurResult", None)
-
         error_result = d.pop("ErrorResult", None)
-
         sd_result = d.pop("SdResult", None)
-
         cv_result = d.pop("CvResult", None)
-
         custom_field_result = d.pop("CustomFieldResult", None)
-
         mu = d.pop("Mu", None)
-
         mu_raw = d.pop("MuRaw", None)
-
         mu_effective_dof = d.pop("MUEffectiveDOF", None)
-
         mu_coverage_factor = d.pop("MUCoverageFactor", None)
-
         mu_extended = d.pop("MuExtended", None)
-
         cmc = d.pop("Cmc", None)
-
         cmc_comments = d.pop("CmcComments", None)
-
         tur = d.pop("Tur", None)
-
         tur_raw = d.pop("TurRaw", None)
-
         tur_decimal_places = d.pop("TURDecimalPlaces", None)
-
         tar = d.pop("Tar", None)
-
         tar_raw = d.pop("TarRaw", None)
-
         tar_decimal_places = d.pop("TARDecimalPlaces", None)
-
         guard_band = d.pop("GuardBand", None)
-
         _guard_band_logic = d.pop("GuardBandLogic", None)
         guard_band_logic: Optional[ReportDatasetsToMeasurementResponseGuardBandLogic]
         if not _guard_band_logic:
@@ -2691,17 +2151,11 @@ class ReportDatasetsToMeasurementResponse:
             guard_band_logic = None
         else:
             guard_band_logic = ReportDatasetsToMeasurementResponseGuardBandLogic(_guard_band_logic)
-
         uncertainty_budget = d.pop("UncertaintyBudget", None)
-
         calculated_uncertainty = d.pop("CalculatedUncertainty", None)
-
         lock_uncertainty_budget = d.pop("LockUncertaintyBudget", None)
-
         lab_mu = d.pop("LabMu", None)
-
         channel = d.pop("Channel", None)
-
         _measurement_type = d.pop("MeasurementType", None)
         measurement_type: Optional[ReportDatasetsToMeasurementResponseMeasurementType]
         if not _measurement_type:
@@ -2729,46 +2183,28 @@ class ReportDatasetsToMeasurementResponse:
                 measurement_type = ReportDatasetsToMeasurementResponseMeasurementType(
                     _measurement_type
                 )
-
         updated_by = d.pop("UpdatedBy", None)
-
         _updated_on = d.pop("UpdatedOn", None)
         updated_on: Optional[datetime.datetime]
         if not _updated_on:
             updated_on = None
         else:
             updated_on = isoparse(_updated_on)
-
         error = d.pop("Error", None)
-
         error_extended = d.pop("ErrorExtended", None)
-
         require_adjustment = d.pop("RequireAdjustment", None)
-
         adjustment_threshold = d.pop("AdjustmentThreshold", None)
-
         percent_of_tolerance = d.pop("PercentOfTolerance", None)
-
         percent_of_tolerance_extended = d.pop("PercentOfToleranceExtended", None)
-
         tol_decimal_places = d.pop("TOLDecimalPlaces", None)
-
         specification_title = d.pop("SpecificationTitle", None)
-
         specification_subtitle = d.pop("SpecificationSubtitle", None)
-
         specification_group = d.pop("SpecificationGroup", None)
-
         batch_type = d.pop("BatchType", None)
-
         batch_result = d.pop("BatchResult", None)
-
         is_by_channel = d.pop("IsByChannel", None)
-
         channel_count = d.pop("ChannelCount", None)
-
         is_range_accredited = d.pop("IsRangeAccredited", None)
-
         _commenced_on = d.pop("CommencedOn", None)
         commenced_on: Optional[datetime.datetime]
         if not _commenced_on:
@@ -2777,93 +2213,49 @@ class ReportDatasetsToMeasurementResponse:
             commenced_on = None
         else:
             commenced_on = isoparse(_commenced_on)
-
         commenced_by = d.pop("CommencedBy", None)
-
         z_factor = d.pop("ZFactor", None)
-
         air_buoyancy = d.pop("AirBuoyancy", None)
-
         evaporation_rate = d.pop("EvaporationRate", None)
-
         air_humidity = d.pop("AirHumidity", None)
-
         altitude = d.pop("Altitude", None)
-
         ambient_temperature = d.pop("AmbientTemperature", None)
-
         barometric_pressure = d.pop("BarometricPressure", None)
-
         light_intensity = d.pop("LightIntensity", None)
-
         noise_level = d.pop("NoiseLevel", None)
-
         ph_level = d.pop("PhLevel", None)
-
         water_conductivity = d.pop("WaterConductivity", None)
-
         water_temperature = d.pop("WaterTemperature", None)
-
         solar_radiation = d.pop("SolarRadiation", None)
-
         wind_speed = d.pop("WindSpeed", None)
-
         z_factor_uom = d.pop("ZFactorUom", None)
-
         air_buoyancy_uom = d.pop("AirBuoyancyUom", None)
-
         evaporation_rate_uom = d.pop("EvaporationRateUom", None)
-
         air_humidity_uom = d.pop("AirHumidityUom", None)
-
         altitude_uom = d.pop("AltitudeUom", None)
-
         ambient_temperature_uom = d.pop("AmbientTemperatureUom", None)
-
         barometric_pressure_uom = d.pop("BarometricPressureUom", None)
-
         light_intensity_uom = d.pop("LightIntensityUom", None)
-
         noise_level_uom = d.pop("NoiseLevelUom", None)
-
         ph_level_uom = d.pop("PhLevelUom", None)
-
         water_conductivity_uom = d.pop("WaterConductivityUom", None)
-
         water_temperature_uom = d.pop("WaterTemperatureUom", None)
-
         solar_radiation_uom = d.pop("SolarRadiationUom", None)
-
         wind_speed_uom = d.pop("WindSpeedUom", None)
-
         specification_name = d.pop("SpecificationName", None)
-
         parameter_name = d.pop("ParameterName", None)
-
         measurement_set_display_order = d.pop("MeasurementSetDisplayOrder", None)
-
         display_order = d.pop("DisplayOrder", None)
-
         unit_of_measure = d.pop("UnitOfMeasure", None)
-
         display_format = d.pop("DisplayFormat", None)
-
         precision = d.pop("Precision", None)
-
         minimum = d.pop("Minimum", None)
-
         nominal = d.pop("Nominal", None)
-
         expected_value = d.pop("ExpectedValue", None)
-
         expected_value_raw = d.pop("ExpectedValueRaw", None)
-
         test_value = d.pop("TestValue", None)
-
         base_value = d.pop("BaseValue", None)
-
         use_expected_value = d.pop("UseExpectedValue", None)
-
         _reading_entry_logic = d.pop("ReadingEntryLogic", None)
         reading_entry_logic: Optional[ReportDatasetsToMeasurementResponseReadingEntryLogic]
         if not _reading_entry_logic:
@@ -2895,7 +2287,6 @@ class ReportDatasetsToMeasurementResponse:
                 reading_entry_logic = ReportDatasetsToMeasurementResponseReadingEntryLogic(
                     _reading_entry_logic
                 )
-
         _reading_entry_math = d.pop("ReadingEntryMath", None)
         reading_entry_math: Optional[ReportDatasetsToMeasurementResponseReadingEntryMath]
         if not _reading_entry_math:
@@ -2930,7 +2321,6 @@ class ReportDatasetsToMeasurementResponse:
                 reading_entry_math = ReportDatasetsToMeasurementResponseReadingEntryMath(
                     _reading_entry_math
                 )
-
         _double_substitution_sequence = d.pop("DoubleSubstitutionSequence", None)
         double_substitution_sequence: Optional[
             ReportDatasetsToMeasurementResponseDoubleSubstitutionSequence
@@ -2965,31 +2355,18 @@ class ReportDatasetsToMeasurementResponse:
                         _double_substitution_sequence
                     )
                 )
-
         reading_entry_math_string = d.pop("ReadingEntryMathString", None)
-
         nominal_extended = d.pop("NominalExtended", None)
-
         expected_value_extended = d.pop("ExpectedValueExtended", None)
-
         maximum = d.pop("Maximum", None)
-
         tolerance_min = d.pop("ToleranceMin", None)
-
         tolerance_max = d.pop("ToleranceMax", None)
-
         resolution = d.pop("Resolution", None)
-
         resolution_count = d.pop("ResolutionCount", None)
-
         min_max_header = d.pop("MinMaxHeader", None)
-
         accuracy_class = d.pop("AccuracyClass", None)
-
         accuracy_class_min = d.pop("AccuracyClassMin", None)
-
         accuracy_class_max = d.pop("AccuracyClassMax", None)
-
         _environment_mask = d.pop("EnvironmentMask", None)
         environment_mask: Optional[ReportDatasetsToMeasurementResponseEnvironmentMask]
         if not _environment_mask:
@@ -3029,21 +2406,13 @@ class ReportDatasetsToMeasurementResponse:
                 environment_mask = ReportDatasetsToMeasurementResponseEnvironmentMask(
                     _environment_mask
                 )
-
         display_name = d.pop("DisplayName", None)
-
         display_part_number = d.pop("DisplayPartNumber", None)
-
         part_number = d.pop("PartNumber", None)
-
         vendor_company_id = d.pop("VendorCompanyId", None)
-
         service_order_number = d.pop("ServiceOrderNumber", None)
-
         custom_order_number = d.pop("CustomOrderNumber", None)
-
         completed_by_name = d.pop("CompletedByName", None)
-
         _completed_on = d.pop("CompletedOn", None)
         completed_on: Optional[datetime.datetime]
         if not _completed_on:
@@ -3052,23 +2421,14 @@ class ReportDatasetsToMeasurementResponse:
             completed_on = None
         else:
             completed_on = isoparse(_completed_on)
-
         is_limited = d.pop("IsLimited", None)
-
         vendor_tag = d.pop("VendorTag", None)
-
         vendor_service_notes = d.pop("VendorServiceNotes", None)
-
         room = d.pop("Room", None)
-
         segment_name = d.pop("SegmentName", None)
-
         schedule_name = d.pop("ScheduleName", None)
-
         next_segment_name = d.pop("NextSegmentName", None)
-
         certificate_number = d.pop("CertificateNumber", None)
-
         _work_status = d.pop("WorkStatus", None)
         work_status: Optional[WorkStatus]
         if not _work_status:
@@ -3077,47 +2437,26 @@ class ReportDatasetsToMeasurementResponse:
             work_status = None
         else:
             work_status = WorkStatus(_work_status)
-
         service_type = d.pop("ServiceType", None)
-
         service_level = d.pop("ServiceLevel", None)
-
         barcode = d.pop("Barcode", None)
-
         service_comments = d.pop("ServiceComments", None)
-
         order_item_number = d.pop("OrderItemNumber", None)
-
         asset_tag = d.pop("AssetTag", None)
-
         asset_user = d.pop("AssetUser", None)
-
         serial_number = d.pop("SerialNumber", None)
-
         equipment_id = d.pop("EquipmentId", None)
-
         legacy_identifier = d.pop("LegacyIdentifier", None)
-
         site_name = d.pop("SiteName", None)
-
         asset_name = d.pop("AssetName", None)
-
         asset_description = d.pop("AssetDescription", None)
-
         product_name = d.pop("ProductName", None)
-
         product_description = d.pop("ProductDescription", None)
-
         asset_maker = d.pop("AssetMaker", None)
-
         station = d.pop("Station", None)
-
         asset_tag_change = d.pop("AssetTagChange", None)
-
         asset_user_change = d.pop("AssetUserChange", None)
-
         serial_number_change = d.pop("SerialNumberChange", None)
-
         def _parse_service_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -3125,14 +2464,11 @@ class ReportDatasetsToMeasurementResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 service_date_type_0 = isoparse(data)
-
                 return service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         service_date = _parse_service_date(d.pop("ServiceDate", None))
-
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -3142,38 +2478,23 @@ class ReportDatasetsToMeasurementResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 next_service_date_type_0 = isoparse(data)
-
                 return next_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
-
         service_order_item_id = d.pop("ServiceOrderItemId", None)
-
         service_order_id = d.pop("ServiceOrderId", None)
-
         measurement_batch_id = d.pop("MeasurementBatchId", None)
-
         measurement_id = d.pop("MeasurementId", None)
-
         standard_id = d.pop("StandardId", None)
-
         tool_id = d.pop("ToolId", None)
-
         measurement_tool_id = d.pop("MeasurementToolId", None)
-
         measurement_condition_id = d.pop("MeasurementConditionId", None)
-
         measurement_point_id = d.pop("MeasurementPointId", None)
-
         measurement_set_id = d.pop("MeasurementSetId", None)
-
         is_hidden = d.pop("IsHidden", None)
-
         readings = d.pop("Readings", None)
-
         _tolerance_type = d.pop("ToleranceType", None)
         tolerance_type: Optional[ReportDatasetsToMeasurementResponseToleranceType]
         if not _tolerance_type:
@@ -3202,9 +2523,7 @@ class ReportDatasetsToMeasurementResponse:
             else:
                 # Handle string values normally
                 tolerance_type = ReportDatasetsToMeasurementResponseToleranceType(_tolerance_type)
-
         tolerance_type_string = d.pop("ToleranceTypeString", None)
-
         _precision_type = d.pop("PrecisionType", None)
         precision_type: Optional[ReportDatasetsToMeasurementResponsePrecisionType]
         if not _precision_type:
@@ -3229,7 +2548,6 @@ class ReportDatasetsToMeasurementResponse:
             else:
                 # Handle string values normally
                 precision_type = ReportDatasetsToMeasurementResponsePrecisionType(_precision_type)
-
         _specification_mode = d.pop("SpecificationMode", None)
         specification_mode: Optional[ReportDatasetsToMeasurementResponseSpecificationMode]
         if not _specification_mode:
@@ -3238,27 +2556,21 @@ class ReportDatasetsToMeasurementResponse:
             specification_mode = ReportDatasetsToMeasurementResponseSpecificationMode(
                 _specification_mode
             )
-
         _tolerance_mode = d.pop("ToleranceMode", None)
         tolerance_mode: Optional[ReportDatasetsToMeasurementResponseToleranceMode]
         if not _tolerance_mode:
             tolerance_mode = None
         else:
             tolerance_mode = ReportDatasetsToMeasurementResponseToleranceMode(_tolerance_mode)
-
         _tolerance_unit = d.pop("ToleranceUnit", None)
         tolerance_unit: Optional[ReportDatasetsToMeasurementResponseToleranceUnit]
         if not _tolerance_unit:
             tolerance_unit = None
         else:
             tolerance_unit = ReportDatasetsToMeasurementResponseToleranceUnit(_tolerance_unit)
-
         tolerance_string = d.pop("ToleranceString", None)
-
         po_number = d.pop("PoNumber", None)
-
         secondary_po = d.pop("SecondaryPo", None)
-
         def _parse_shipped_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -3266,14 +2578,11 @@ class ReportDatasetsToMeasurementResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 shipped_date_type_0 = isoparse(data)
-
                 return shipped_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         shipped_date = _parse_shipped_date(d.pop("ShippedDate", None))
-
         _shipment_status = d.pop("ShipmentStatus", None)
         shipment_status: Optional[ReportDatasetsToMeasurementResponseShipmentStatus]
         if not _shipment_status:
@@ -3294,7 +2603,6 @@ class ReportDatasetsToMeasurementResponse:
                 # This preserves the information while allowing the object to be created
                 shipment_status = None
                 # TODO: Consider logging this unknown value: _shipment_status
-
         _shipped_on = d.pop("ShippedOn", None)
         shipped_on: Optional[datetime.datetime]
         if not _shipped_on:
@@ -3303,7 +2611,6 @@ class ReportDatasetsToMeasurementResponse:
             shipped_on = None
         else:
             shipped_on = isoparse(_shipped_on)
-
         _delivered_on = d.pop("DeliveredOn", None)
         delivered_on: Optional[datetime.datetime]
         if not _delivered_on:
@@ -3312,21 +2619,13 @@ class ReportDatasetsToMeasurementResponse:
             delivered_on = None
         else:
             delivered_on = isoparse(_delivered_on)
-
         tracking_number = d.pop("TrackingNumber", None)
-
         payment_terms = d.pop("PaymentTerms", None)
-
         shipping_method = d.pop("ShippingMethod", None)
-
         location = d.pop("Location", None)
-
         site_access_notes = d.pop("SiteAccessNotes", None)
-
         abbreviated_uom = d.pop("AbbreviatedUOM", None)
-
         unit_scale_factor = d.pop("UnitScaleFactor", None)
-
         _measurement_not_taken_result = d.pop("MeasurementNotTakenResult", None)
         measurement_not_taken_result: Optional[
             ReportDatasetsToMeasurementResponseMeasurementNotTakenResult
@@ -3342,7 +2641,6 @@ class ReportDatasetsToMeasurementResponse:
                 _measurement_not_taken_result = int_to_str_map.get(
                     _measurement_not_taken_result, str(_measurement_not_taken_result)
                 )
-
             try:
                 measurement_not_taken_result = (
                     ReportDatasetsToMeasurementResponseMeasurementNotTakenResult(
@@ -3352,273 +2650,140 @@ class ReportDatasetsToMeasurementResponse:
             except ValueError:
                 # If the value is not recognized, use None as fallback
                 measurement_not_taken_result = None
-
         hide_from_certificate = d.pop("HideFromCertificate", None)
-
         measurement_not_taken_reason = d.pop("MeasurementNotTakenReason", None)
-
         environment_text_1 = d.pop("EnvironmentText1", None)
-
         environment_text_2 = d.pop("EnvironmentText2", None)
-
         environment_text_3 = d.pop("EnvironmentText3", None)
-
         environment_text_4 = d.pop("EnvironmentText4", None)
-
         environment_text_5 = d.pop("EnvironmentText5", None)
-
         environment_text_6 = d.pop("EnvironmentText6", None)
-
         values = d.pop("Values", None)
-
         value_1 = d.pop("Value1", None)
-
         value_2 = d.pop("Value2", None)
-
         value_3 = d.pop("Value3", None)
-
         value_4 = d.pop("Value4", None)
-
         value_5 = d.pop("Value5", None)
-
         value_6 = d.pop("Value6", None)
-
         value_7 = d.pop("Value7", None)
-
         value_8 = d.pop("Value8", None)
-
         value_9 = d.pop("Value9", None)
-
         value_10 = d.pop("Value10", None)
-
         value_11 = d.pop("Value11", None)
-
         value_12 = d.pop("Value12", None)
-
         value_13 = d.pop("Value13", None)
-
         value_14 = d.pop("Value14", None)
-
         value_15 = d.pop("Value15", None)
-
         value_16 = d.pop("Value16", None)
-
         value_17 = d.pop("Value17", None)
-
         value_18 = d.pop("Value18", None)
-
         value_19 = d.pop("Value19", None)
-
         value_20 = d.pop("Value20", None)
-
         value_21 = d.pop("Value21", None)
-
         value_22 = d.pop("Value22", None)
-
         value_23 = d.pop("Value23", None)
-
         value_24 = d.pop("Value24", None)
-
         value_25 = d.pop("Value25", None)
-
         value_26 = d.pop("Value26", None)
-
         value_27 = d.pop("Value27", None)
-
         value_28 = d.pop("Value28", None)
-
         value_29 = d.pop("Value29", None)
-
         value_30 = d.pop("Value30", None)
-
         value_31 = d.pop("Value31", None)
-
         value_32 = d.pop("Value32", None)
-
         value_33 = d.pop("Value33", None)
-
         value_34 = d.pop("Value34", None)
-
         value_35 = d.pop("Value35", None)
-
         value_36 = d.pop("Value36", None)
-
         value_37 = d.pop("Value37", None)
-
         value_38 = d.pop("Value38", None)
-
         value_39 = d.pop("Value39", None)
-
         value_40 = d.pop("Value40", None)
-
         raw_value_1 = d.pop("RawValue1", None)
-
         raw_value_2 = d.pop("RawValue2", None)
-
         raw_value_3 = d.pop("RawValue3", None)
-
         raw_value_4 = d.pop("RawValue4", None)
-
         raw_value_5 = d.pop("RawValue5", None)
-
         raw_value_6 = d.pop("RawValue6", None)
-
         raw_value_7 = d.pop("RawValue7", None)
-
         raw_value_8 = d.pop("RawValue8", None)
-
         raw_value_9 = d.pop("RawValue9", None)
-
         raw_value_10 = d.pop("RawValue10", None)
-
         raw_value_11 = d.pop("RawValue11", None)
-
         raw_value_12 = d.pop("RawValue12", None)
-
         raw_value_13 = d.pop("RawValue13", None)
-
         raw_value_14 = d.pop("RawValue14", None)
-
         raw_value_15 = d.pop("RawValue15", None)
-
         raw_value_16 = d.pop("RawValue16", None)
-
         raw_value_17 = d.pop("RawValue17", None)
-
         raw_value_18 = d.pop("RawValue18", None)
-
         raw_value_19 = d.pop("RawValue19", None)
-
         raw_value_20 = d.pop("RawValue20", None)
-
         raw_value_21 = d.pop("RawValue21", None)
-
         raw_value_22 = d.pop("RawValue22", None)
-
         raw_value_23 = d.pop("RawValue23", None)
-
         raw_value_24 = d.pop("RawValue24", None)
-
         raw_value_25 = d.pop("RawValue25", None)
-
         raw_value_26 = d.pop("RawValue26", None)
-
         raw_value_27 = d.pop("RawValue27", None)
-
         raw_value_28 = d.pop("RawValue28", None)
-
         raw_value_29 = d.pop("RawValue29", None)
-
         raw_value_30 = d.pop("RawValue30", None)
-
         raw_value_31 = d.pop("RawValue31", None)
-
         raw_value_32 = d.pop("RawValue32", None)
-
         raw_value_33 = d.pop("RawValue33", None)
-
         raw_value_34 = d.pop("RawValue34", None)
-
         raw_value_35 = d.pop("RawValue35", None)
-
         raw_value_36 = d.pop("RawValue36", None)
-
         raw_value_37 = d.pop("RawValue37", None)
-
         raw_value_38 = d.pop("RawValue38", None)
-
         raw_value_39 = d.pop("RawValue39", None)
-
         raw_value_40 = d.pop("RawValue40", None)
-
         subtitles_to_readings = d.pop("SubtitlesToReadings", None)
-
         value_subtitle_1 = d.pop("ValueSubtitle1", None)
-
         value_subtitle_2 = d.pop("ValueSubtitle2", None)
-
         value_subtitle_3 = d.pop("ValueSubtitle3", None)
-
         value_subtitle_4 = d.pop("ValueSubtitle4", None)
-
         value_subtitle_5 = d.pop("ValueSubtitle5", None)
-
         value_subtitle_6 = d.pop("ValueSubtitle6", None)
-
         value_subtitle_7 = d.pop("ValueSubtitle7", None)
-
         value_subtitle_8 = d.pop("ValueSubtitle8", None)
-
         value_subtitle_9 = d.pop("ValueSubtitle9", None)
-
         value_subtitle_10 = d.pop("ValueSubtitle10", None)
-
         value_subtitle_11 = d.pop("ValueSubtitle11", None)
-
         value_subtitle_12 = d.pop("ValueSubtitle12", None)
-
         value_subtitle_13 = d.pop("ValueSubtitle13", None)
-
         value_subtitle_14 = d.pop("ValueSubtitle14", None)
-
         value_subtitle_15 = d.pop("ValueSubtitle15", None)
-
         value_subtitle_16 = d.pop("ValueSubtitle16", None)
-
         value_subtitle_17 = d.pop("ValueSubtitle17", None)
-
         value_subtitle_18 = d.pop("ValueSubtitle18", None)
-
         value_subtitle_19 = d.pop("ValueSubtitle19", None)
-
         value_subtitle_20 = d.pop("ValueSubtitle20", None)
-
         value_subtitle_21 = d.pop("ValueSubtitle21", None)
-
         value_subtitle_22 = d.pop("ValueSubtitle22", None)
-
         value_subtitle_23 = d.pop("ValueSubtitle23", None)
-
         value_subtitle_24 = d.pop("ValueSubtitle24", None)
-
         value_subtitle_25 = d.pop("ValueSubtitle25", None)
-
         value_subtitle_26 = d.pop("ValueSubtitle26", None)
-
         value_subtitle_27 = d.pop("ValueSubtitle27", None)
-
         value_subtitle_28 = d.pop("ValueSubtitle28", None)
-
         value_subtitle_29 = d.pop("ValueSubtitle29", None)
-
         value_subtitle_30 = d.pop("ValueSubtitle30", None)
-
         value_subtitle_31 = d.pop("ValueSubtitle31", None)
-
         value_subtitle_32 = d.pop("ValueSubtitle32", None)
-
         value_subtitle_33 = d.pop("ValueSubtitle33", None)
-
         value_subtitle_34 = d.pop("ValueSubtitle34", None)
-
         value_subtitle_35 = d.pop("ValueSubtitle35", None)
-
         value_subtitle_36 = d.pop("ValueSubtitle36", None)
-
         value_subtitle_37 = d.pop("ValueSubtitle37", None)
-
         value_subtitle_38 = d.pop("ValueSubtitle38", None)
-
         value_subtitle_39 = d.pop("ValueSubtitle39", None)
-
         value_subtitle_40 = d.pop("ValueSubtitle40", None)
-
         values_decimal_places = d.pop("ValuesDecimalPlaces", None)
-
         repeat_measurement_and_calculate_hysteresis = d.pop(
             "RepeatMeasurementAndCalculateHysteresis", None
         )
-
         _measurement_point_order = d.pop("MeasurementPointOrder", None)
         measurement_point_order: Optional[ReportDatasetsToMeasurementResponseMeasurementPointOrder]
         if not _measurement_point_order:
@@ -3641,7 +2806,6 @@ class ReportDatasetsToMeasurementResponse:
             measurement_point_order = ReportDatasetsToMeasurementResponseMeasurementPointOrder(
                 _measurement_point_order
             )
-
         _hysteresis_point = d.pop("HysteresisPoint", None)
         hysteresis_point: Optional[ReportDatasetsToMeasurementResponseHysteresisPoint]
         if not _hysteresis_point:
@@ -3654,37 +2818,21 @@ class ReportDatasetsToMeasurementResponse:
                 hysteresis_point_map = {0: "First", 1: "None", 2: "Second", 3: "Zero"}
                 _hysteresis_point = hysteresis_point_map.get(_hysteresis_point, _hysteresis_point)
             hysteresis_point = ReportDatasetsToMeasurementResponseHysteresisPoint(_hysteresis_point)
-
         max_hysteresis = d.pop("MaxHysteresis", None)
-
         run = d.pop("Run", None)
-
         direction = d.pop("Direction", None)
-
         hysteresis = d.pop("Hysteresis", None)
-
         column_mean = d.pop("ColumnMean", None)
-
         column_mean_result = d.pop("ColumnMeanResult", None)
-
         column_sd = d.pop("ColumnSD", None)
-
         column_sd_result = d.pop("ColumnSDResult", None)
-
         column_cv = d.pop("ColumnCV", None)
-
         column_cv_result = d.pop("ColumnCVResult", None)
-
         column_range = d.pop("ColumnRange", None)
-
         column_range_result = d.pop("ColumnRangeResult", None)
-
         column_delta = d.pop("ColumnDelta", None)
-
         column_delta_result = d.pop("ColumnDeltaResult", None)
-
         column_result = d.pop("ColumnResult", None)
-
         qualer_api_models_report_datasets_to_measurement_response = cls(
             is_accredited=is_accredited,
             service_total=service_total,
@@ -4067,7 +3215,6 @@ class ReportDatasetsToMeasurementResponse:
             column_delta_result=column_delta_result,
             column_result=column_result,
         )
-
         qualer_api_models_report_datasets_to_measurement_response.additional_properties = d
         return qualer_api_models_report_datasets_to_measurement_response
 

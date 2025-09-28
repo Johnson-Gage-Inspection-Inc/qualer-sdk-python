@@ -19,24 +19,20 @@ class EmployeesToCreatedEmployeeResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         id = self.id
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if id is not None:
             field_dict["Id"] = id
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         id = d.pop("Id", None)
-
         qualer_api_models_employees_to_created_employee_response = cls(
             id=id,
         )
-
         qualer_api_models_employees_to_created_employee_response.additional_properties = d
         return qualer_api_models_employees_to_created_employee_response
 

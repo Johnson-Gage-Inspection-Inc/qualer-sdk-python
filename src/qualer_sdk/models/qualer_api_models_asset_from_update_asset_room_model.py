@@ -19,24 +19,20 @@ class AssetFromUpdateAssetRoomModel:
 
     def to_dict(self) -> Dict[str, Any]:
         room_number = self.room_number
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if room_number is not None:
             field_dict["RoomNumber"] = room_number
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         room_number = d.pop("RoomNumber", None)
-
         qualer_api_models_asset_from_update_asset_room_model = cls(
             room_number=room_number,
         )
-
         qualer_api_models_asset_from_update_asset_room_model.additional_properties = d
         return qualer_api_models_asset_from_update_asset_room_model
 

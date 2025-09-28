@@ -30,13 +30,11 @@ class ServiceOrdersFromChargeUpdateModel:
             for charges_item_data in self.charges:
                 charges_item = charges_item_data.to_dict()
                 charges.append(charges_item)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if charges is not None:
             field_dict["Charges"] = charges
-
         return field_dict
 
     @classmethod
@@ -44,19 +42,15 @@ class ServiceOrdersFromChargeUpdateModel:
         from ..models.qualer_api_models_service_orders_from_charge_update_model_price_model import (
             ServiceOrdersFromChargeUpdateModelPriceModel,
         )
-
         d = dict(src_dict)
         charges = []
         _charges = d.pop("Charges", None)
         for charges_item_data in _charges or []:
             charges_item = ServiceOrdersFromChargeUpdateModelPriceModel.from_dict(charges_item_data)
-
             charges.append(charges_item)
-
         qualer_api_models_service_orders_from_charge_update_model = cls(
             charges=charges,
         )
-
         qualer_api_models_service_orders_from_charge_update_model.additional_properties = d
         return qualer_api_models_service_orders_from_charge_update_model
 

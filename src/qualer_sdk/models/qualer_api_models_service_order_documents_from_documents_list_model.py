@@ -19,24 +19,20 @@ class ServiceOrderDocumentsFromDocumentsListModel:
 
     def to_dict(self) -> Dict[str, Any]:
         report_type = self.report_type
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if report_type is not None:
             field_dict["ReportType"] = report_type
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         report_type = d.pop("ReportType", None)
-
         qualer_api_models_service_order_documents_from_documents_list_model = cls(
             report_type=report_type,
         )
-
         qualer_api_models_service_order_documents_from_documents_list_model.additional_properties = (
             d
         )

@@ -16,14 +16,12 @@ class AddEmployeeDepartmentResponse204:
     def to_dict(self) -> Dict[str, Any]:
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         add_employee_department_response_204 = cls()
-
         add_employee_department_response_204.additional_properties = d
         return add_employee_department_response_204
 

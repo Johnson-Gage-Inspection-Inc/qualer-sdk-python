@@ -19,24 +19,20 @@ class ServiceOrdersFromUpdateShipmentStatusModel:
 
     def to_dict(self) -> Dict[str, Any]:
         shipment_status = self.shipment_status
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if shipment_status is not None:
             field_dict["ShipmentStatus"] = shipment_status
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         shipment_status = d.pop("ShipmentStatus", None)
-
         qualer_api_models_service_orders_from_update_shipment_status_model = cls(
             shipment_status=shipment_status,
         )
-
         qualer_api_models_service_orders_from_update_shipment_status_model.additional_properties = d
         return qualer_api_models_service_orders_from_update_shipment_status_model
 

@@ -132,123 +132,54 @@ class AssetToAssetMaintenancePlanModel:
             for maintenance_plans_item_data in self.maintenance_plans:
                 maintenance_plans_item = maintenance_plans_item_data.to_dict()
                 maintenance_plans.append(maintenance_plans_item)
-
         company_id = self.company_id
-
         asset_id = self.asset_id
-
         serial_number = self.serial_number
-
         asset_user = self.asset_user
-
         asset_tag = self.asset_tag
-
         equipment_id = self.equipment_id
-
-        asset_status: Optional[str] = None
-        if self.asset_status:
-            asset_status = self.asset_status.value
-
+        asset_status = self.asset_status.value if self.asset_status else None
         asset_name = self.asset_name
-
         asset_description = self.asset_description
-
         asset_maker = self.asset_maker
-
         location = self.location
-
         room_number = self.room_number
-
         barcode = self.barcode
-
         legacy_identifier = self.legacy_identifier
-
         root_category_name = self.root_category_name
-
         category_name = self.category_name
-
         class_ = self.class_
-
         custodian_email = self.custodian_email
-
         custodian_first_name = self.custodian_first_name
-
         custodian_last_name = self.custodian_last_name
-
         custodian_name = self.custodian_name
-
         department = self.department
-
         station = self.station
-
         notes = self.notes
-
         document_number = self.document_number
-
         document_section = self.document_section
-
         cumulative_service_cost = self.cumulative_service_cost
-
         product_id = self.product_id
-
         manufacturer_part_number = self.manufacturer_part_number
-
         product_name = self.product_name
-
         product_description = self.product_description
-
         product_manufacturer = self.product_manufacturer
-
         site_name = self.site_name
-
         site_id = self.site_id
-
         condition = self.condition
-
         criticality = self.criticality
-
         pool = self.pool
-
-        purchase_date: Optional[str]
-        if not self.purchase_date:
-            purchase_date = None
-        elif isinstance(self.purchase_date, datetime.datetime):
-            purchase_date = self.purchase_date.isoformat()
-        else:
-            purchase_date = self.purchase_date
-
+        purchase_date = self.purchase_date.isoformat() if self.purchase_date else None
         purchase_cost = self.purchase_cost
-
         life_span_months = self.life_span_months
-
-        activation_date: Optional[str]
-        if not self.activation_date:
-            activation_date = None
-        elif isinstance(self.activation_date, datetime.datetime):
-            activation_date = self.activation_date.isoformat()
-        else:
-            activation_date = self.activation_date
-
+        activation_date = self.activation_date.isoformat() if self.activation_date else None
         depreciation_basis = self.depreciation_basis
-
         depreciation_method = self.depreciation_method
-
-        retirement_date: Optional[str]
-        if not self.retirement_date:
-            retirement_date = None
-        elif isinstance(self.retirement_date, datetime.datetime):
-            retirement_date = self.retirement_date.isoformat()
-        else:
-            retirement_date = self.retirement_date
-
+        retirement_date = self.retirement_date.isoformat() if self.retirement_date else None
         salvage_value = self.salvage_value
-
         retirment_reason = self.retirment_reason
-
         composite_parent_id = self.composite_parent_id
-
         composite_child_count = self.composite_child_count
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -350,7 +281,6 @@ class AssetToAssetMaintenancePlanModel:
             field_dict["CompositeParentId"] = composite_parent_id
         if composite_child_count is not None:
             field_dict["CompositeChildCount"] = composite_child_count
-
         return field_dict
 
     @classmethod
@@ -358,7 +288,6 @@ class AssetToAssetMaintenancePlanModel:
         from ..models.qualer_api_models_asset_to_asset_maintenance_plan_response import (
             AssetToAssetMaintenancePlanResponse,
         )
-
         d = dict(src_dict)
         maintenance_plans = []
         _maintenance_plans = d.pop("MaintenancePlans", None)
@@ -366,88 +295,49 @@ class AssetToAssetMaintenancePlanModel:
             maintenance_plans_item = AssetToAssetMaintenancePlanResponse.from_dict(
                 maintenance_plans_item_data
             )
-
             maintenance_plans.append(maintenance_plans_item)
-
         company_id = d.pop("CompanyId", None)
-
         asset_id = d.pop("AssetId", None)
-
         serial_number = d.pop("SerialNumber", None)
-
         asset_user = d.pop("AssetUser", None)
-
         asset_tag = d.pop("AssetTag", None)
-
         equipment_id = d.pop("EquipmentId", None)
-
         _asset_status = d.pop("AssetStatus", None)
         asset_status: Optional[AssetToAssetMaintenancePlanModelAssetStatus]
         if not _asset_status:
             asset_status = None
         else:
             asset_status = AssetToAssetMaintenancePlanModelAssetStatus(_asset_status)
-
         asset_name = d.pop("AssetName", None)
-
         asset_description = d.pop("AssetDescription", None)
-
         asset_maker = d.pop("AssetMaker", None)
-
         location = d.pop("Location", None)
-
         room_number = d.pop("RoomNumber", None)
-
         barcode = d.pop("Barcode", None)
-
         legacy_identifier = d.pop("LegacyIdentifier", None)
-
         root_category_name = d.pop("RootCategoryName", None)
-
         category_name = d.pop("CategoryName", None)
-
         class_ = d.pop("Class", None)
-
         custodian_email = d.pop("CustodianEmail", None)
-
         custodian_first_name = d.pop("CustodianFirstName", None)
-
         custodian_last_name = d.pop("CustodianLastName", None)
-
         custodian_name = d.pop("CustodianName", None)
-
         department = d.pop("Department", None)
-
         station = d.pop("Station", None)
-
         notes = d.pop("Notes", None)
-
         document_number = d.pop("DocumentNumber", None)
-
         document_section = d.pop("DocumentSection", None)
-
         cumulative_service_cost = d.pop("CumulativeServiceCost", None)
-
         product_id = d.pop("ProductId", None)
-
         manufacturer_part_number = d.pop("ManufacturerPartNumber", None)
-
         product_name = d.pop("ProductName", None)
-
         product_description = d.pop("ProductDescription", None)
-
         product_manufacturer = d.pop("ProductManufacturer", None)
-
         site_name = d.pop("SiteName", None)
-
         site_id = d.pop("SiteId", None)
-
         condition = d.pop("Condition", None)
-
         criticality = d.pop("Criticality", None)
-
         pool = d.pop("Pool", None)
-
         def _parse_purchase_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -455,18 +345,13 @@ class AssetToAssetMaintenancePlanModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 purchase_date_type_0 = isoparse(data)
-
                 return purchase_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         purchase_date = _parse_purchase_date(d.pop("PurchaseDate", None))
-
         purchase_cost = d.pop("PurchaseCost", None)
-
         life_span_months = d.pop("LifeSpanMonths", None)
-
         def _parse_activation_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -476,18 +361,13 @@ class AssetToAssetMaintenancePlanModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 activation_date_type_0 = isoparse(data)
-
                 return activation_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         activation_date = _parse_activation_date(d.pop("ActivationDate", None))
-
         depreciation_basis = d.pop("DepreciationBasis", None)
-
         depreciation_method = d.pop("DepreciationMethod", None)
-
         def _parse_retirement_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -497,22 +377,15 @@ class AssetToAssetMaintenancePlanModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 retirement_date_type_0 = isoparse(data)
-
                 return retirement_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         retirement_date = _parse_retirement_date(d.pop("RetirementDate", None))
-
         salvage_value = d.pop("SalvageValue", None)
-
         retirment_reason = d.pop("RetirmentReason", None)
-
         composite_parent_id = d.pop("CompositeParentId", None)
-
         composite_child_count = d.pop("CompositeChildCount", None)
-
         qualer_api_models_asset_to_asset_maintenance_plan_model = cls(
             maintenance_plans=maintenance_plans,
             company_id=company_id,
@@ -564,7 +437,6 @@ class AssetToAssetMaintenancePlanModel:
             composite_parent_id=composite_parent_id,
             composite_child_count=composite_child_count,
         )
-
         qualer_api_models_asset_to_asset_maintenance_plan_model.additional_properties = d
         return qualer_api_models_asset_to_asset_maintenance_plan_model
 

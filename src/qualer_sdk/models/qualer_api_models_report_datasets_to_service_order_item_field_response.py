@@ -27,15 +27,10 @@ class ReportDatasetsToServiceOrderItemFieldResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         field_id = self.field_id
-
         type_ = self.type_
-
         value = self.value
-
         service_order_item_id = self.service_order_item_id
-
         service_order_item_task_id = self.service_order_item_task_id
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -49,22 +44,16 @@ class ReportDatasetsToServiceOrderItemFieldResponse:
             field_dict["ServiceOrderItemId"] = service_order_item_id
         if service_order_item_task_id is not None:
             field_dict["ServiceOrderItemTaskId"] = service_order_item_task_id
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         field_id = d.pop("FieldId", None)
-
         type_ = d.pop("Type", None)
-
         value = d.pop("Value", None)
-
         service_order_item_id = d.pop("ServiceOrderItemId", None)
-
         service_order_item_task_id = d.pop("ServiceOrderItemTaskId", None)
-
         qualer_api_models_report_datasets_to_service_order_item_field_response = cls(
             field_id=field_id,
             type_=type_,
@@ -72,7 +61,6 @@ class ReportDatasetsToServiceOrderItemFieldResponse:
             service_order_item_id=service_order_item_id,
             service_order_item_task_id=service_order_item_task_id,
         )
-
         qualer_api_models_report_datasets_to_service_order_item_field_response.additional_properties = (
             d
         )

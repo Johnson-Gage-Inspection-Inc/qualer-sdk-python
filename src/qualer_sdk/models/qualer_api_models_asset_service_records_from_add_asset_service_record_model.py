@@ -83,21 +83,15 @@ class AssetServiceRecordsFromAddAssetServiceRecordModel:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_number = self.service_order_number
-
         custom_order_number = self.custom_order_number
-
         order_item_number = self.order_item_number
-
         certificate_number = self.certificate_number
-
         result_status: Optional[str]
         if not self.result_status:
             result_status = None
         else:
             result_status: Optional[str]
-
             if not self.result_status:
-
                 result_status = None
             else:
                 result_status = self.result_status
@@ -106,9 +100,7 @@ class AssetServiceRecordsFromAddAssetServiceRecordModel:
             as_found_result = None
         else:
             as_found_result: Optional[str]
-
             if not self.as_found_result:
-
                 as_found_result = None
             else:
                 as_found_result = self.as_found_result
@@ -117,9 +109,7 @@ class AssetServiceRecordsFromAddAssetServiceRecordModel:
             as_left_result = None
         else:
             as_left_result: Optional[str]
-
             if not self.as_left_result:
-
                 as_left_result = None
             else:
                 as_left_result = self.as_left_result
@@ -128,157 +118,54 @@ class AssetServiceRecordsFromAddAssetServiceRecordModel:
             applied_interval = None
         else:
             applied_interval = self.applied_interval
-
         as_found_tolerance: Optional[float]
         if not self.as_found_tolerance:
             as_found_tolerance = None
         else:
             as_found_tolerance = self.as_found_tolerance
-
         as_left_tolerance: Optional[float]
         if not self.as_left_tolerance:
             as_left_tolerance = None
         else:
             as_left_tolerance = self.as_left_tolerance
-
-        service_date: Optional[str]
-        if not self.service_date:
-            service_date = None
-        elif isinstance(self.service_date, datetime.datetime):
-            service_date = self.service_date.isoformat()
-        else:
-            service_date = self.service_date
-
-        serial_number: Optional[str]
-        if not self.serial_number:
-            serial_number = None
-        else:
-            serial_number = self.serial_number
-
-        asset_tag: Optional[str]
-        if not self.asset_tag:
-            asset_tag = None
-        else:
-            asset_tag = self.asset_tag
-
-        asset_user: Optional[str]
-        if not self.asset_user:
-            asset_user = None
-        else:
-            asset_user = self.asset_user
-
-        service_notes: Optional[str]
-        if not self.service_notes:
-            service_notes = None
-        else:
-            service_notes = self.service_notes
-
-        due_date: Optional[str]
-        if not self.due_date:
-            due_date = None
-        elif isinstance(self.due_date, datetime.datetime):
-            due_date = self.due_date.isoformat()
-        else:
-            due_date = self.due_date
-
-        next_service_date: Optional[str]
-        if not self.next_service_date:
-            next_service_date = None
-        elif isinstance(self.next_service_date, datetime.datetime):
-            next_service_date = self.next_service_date.isoformat()
-        else:
-            next_service_date = self.next_service_date
-
-        provider_technician: Optional[str]
-        if not self.provider_technician:
-            provider_technician = None
-        else:
-            provider_technician = self.provider_technician
-
-        provider_phone: Optional[str]
-        if not self.provider_phone:
-            provider_phone = None
-        else:
-            provider_phone = self.provider_phone
-
-        provider_company: Optional[str]
-        if not self.provider_company:
-            provider_company = None
-        else:
-            provider_company = self.provider_company
-
-        service_level: Optional[str]
-        if not self.service_level:
-            service_level = None
-        else:
-            service_level = self.service_level
-
-        service_level_code: Optional[str]
-        if not self.service_level_code:
-            service_level_code = None
-        else:
-            service_level_code = self.service_level_code
-
-        next_service_level: Optional[str]
-        if not self.next_service_level:
-            next_service_level = None
-        else:
-            next_service_level = self.next_service_level
-
-        next_service_level_code: Optional[str]
-        if not self.next_service_level_code:
-            next_service_level_code = None
-        else:
-            next_service_level_code = self.next_service_level_code
-
-        asset_name: Optional[str]
-        if not self.asset_name:
-            asset_name = None
-        else:
-            asset_name = self.asset_name
-
-        asset_description: Optional[str]
-        if not self.asset_description:
-            asset_description = None
-        else:
-            asset_description = self.asset_description
-
+        service_date = self.service_date.isoformat() if self.service_date else None
+        serial_number = self.serial_number
+        asset_tag = self.asset_tag
+        asset_user = self.asset_user
+        service_notes = self.service_notes
+        due_date = self.due_date.isoformat() if self.due_date else None
+        next_service_date = self.next_service_date.isoformat() if self.next_service_date else None
+        provider_technician = self.provider_technician
+        provider_phone = self.provider_phone
+        provider_company = self.provider_company
+        service_level = self.service_level
+        service_level_code = self.service_level_code
+        next_service_level = self.next_service_level
+        next_service_level_code = self.next_service_level_code
+        asset_name = self.asset_name
+        asset_description = self.asset_description
         parts_charge: Optional[float]
         if not self.parts_charge:
             parts_charge = None
         else:
             parts_charge = self.parts_charge
-
         parts_charge_before_discount: Optional[float]
         if not self.parts_charge_before_discount:
             parts_charge_before_discount = None
         else:
             parts_charge_before_discount = self.parts_charge_before_discount
-
         service_charge: Optional[float]
         if not self.service_charge:
             service_charge = None
         else:
             service_charge = self.service_charge
-
         repairs_charge: Optional[float]
         if not self.repairs_charge:
             repairs_charge = None
         else:
             repairs_charge = self.repairs_charge
-
-        segment_name: Optional[str]
-        if not self.segment_name:
-            segment_name = None
-        else:
-            segment_name = self.segment_name
-
-        schedule_name: Optional[str]
-        if not self.schedule_name:
-            schedule_name = None
-        else:
-            schedule_name = self.schedule_name
-
+        segment_name = self.segment_name
+        schedule_name = self.schedule_name
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -346,62 +233,45 @@ class AssetServiceRecordsFromAddAssetServiceRecordModel:
             field_dict["SegmentName"] = segment_name
         if schedule_name is not None:
             field_dict["ScheduleName"] = schedule_name
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_order_number = d.pop("ServiceOrderNumber", None)
-
         custom_order_number = d.pop("CustomOrderNumber", None)
-
         order_item_number = d.pop("OrderItemNumber", None)
-
         certificate_number = d.pop("CertificateNumber", None)
-
         def _parse_result_status(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         result_status = _parse_result_status(d.pop("ResultStatus", None))
-
         def _parse_as_found_result(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         as_found_result = _parse_as_found_result(d.pop("AsFoundResult", None))
-
         def _parse_as_left_result(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         as_left_result = _parse_as_left_result(d.pop("AsLeftResult", None))
-
         def _parse_applied_interval(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         applied_interval = _parse_applied_interval(d.pop("AppliedInterval", None))
-
         def _parse_as_found_tolerance(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         as_found_tolerance = _parse_as_found_tolerance(d.pop("AsFoundTolerance", None))
-
         def _parse_as_left_tolerance(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         as_left_tolerance = _parse_as_left_tolerance(d.pop("AsLeftTolerance", None))
-
         def _parse_service_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -409,42 +279,31 @@ class AssetServiceRecordsFromAddAssetServiceRecordModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 service_date_type_0 = isoparse(data)
-
                 return service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         service_date = _parse_service_date(d.pop("ServiceDate", None))
-
         def _parse_serial_number(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         serial_number = _parse_serial_number(d.pop("SerialNumber", None))
-
         def _parse_asset_tag(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_tag = _parse_asset_tag(d.pop("AssetTag", None))
-
         def _parse_asset_user(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_user = _parse_asset_user(d.pop("AssetUser", None))
-
         def _parse_service_notes(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         service_notes = _parse_service_notes(d.pop("ServiceNotes", None))
-
         def _parse_due_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -452,14 +311,11 @@ class AssetServiceRecordsFromAddAssetServiceRecordModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 due_date_type_0 = isoparse(data)
-
                 return due_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         due_date = _parse_due_date(d.pop("DueDate", None))
-
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -469,125 +325,92 @@ class AssetServiceRecordsFromAddAssetServiceRecordModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 next_service_date_type_0 = isoparse(data)
-
                 return next_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
-
         def _parse_provider_technician(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         provider_technician = _parse_provider_technician(d.pop("ProviderTechnician", None))
-
         def _parse_provider_phone(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         provider_phone = _parse_provider_phone(d.pop("ProviderPhone", None))
-
         def _parse_provider_company(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         provider_company = _parse_provider_company(d.pop("ProviderCompany", None))
-
         def _parse_service_level(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         service_level = _parse_service_level(d.pop("ServiceLevel", None))
-
         def _parse_service_level_code(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         service_level_code = _parse_service_level_code(d.pop("ServiceLevelCode", None))
-
         def _parse_next_service_level(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         next_service_level = _parse_next_service_level(d.pop("NextServiceLevel", None))
-
         def _parse_next_service_level_code(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         next_service_level_code = _parse_next_service_level_code(
             d.pop("NextServiceLevelCode", None)
         )
-
         def _parse_asset_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_name = _parse_asset_name(d.pop("AssetName", None))
-
         def _parse_asset_description(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_description = _parse_asset_description(d.pop("AssetDescription", None))
-
         def _parse_parts_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         parts_charge = _parse_parts_charge(d.pop("PartsCharge", None))
-
         def _parse_parts_charge_before_discount(
             data: object,
         ) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         parts_charge_before_discount = _parse_parts_charge_before_discount(
             d.pop("PartsChargeBeforeDiscount", None)
         )
-
         def _parse_service_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         service_charge = _parse_service_charge(d.pop("ServiceCharge", None))
-
         def _parse_repairs_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         repairs_charge = _parse_repairs_charge(d.pop("RepairsCharge", None))
-
         def _parse_segment_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         segment_name = _parse_segment_name(d.pop("SegmentName", None))
-
         def _parse_schedule_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         schedule_name = _parse_schedule_name(d.pop("ScheduleName", None))
-
         qualer_api_models_asset_service_records_from_add_asset_service_record_model = cls(
             service_order_number=service_order_number,
             custom_order_number=custom_order_number,
@@ -622,7 +445,6 @@ class AssetServiceRecordsFromAddAssetServiceRecordModel:
             segment_name=segment_name,
             schedule_name=schedule_name,
         )
-
         qualer_api_models_asset_service_records_from_add_asset_service_record_model.additional_properties = (
             d
         )

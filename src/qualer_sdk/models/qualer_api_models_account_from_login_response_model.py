@@ -22,13 +22,11 @@ class AccountFromLoginResponseModel:
         token: Optional[str] = None
         if self.token:
             token = str(self.token)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if token is not None:
             field_dict["Token"] = token
-
         return field_dict
 
     @classmethod
@@ -40,11 +38,9 @@ class AccountFromLoginResponseModel:
             token = None
         else:
             token = UUID(_token)
-
         qualer_api_models_account_from_login_response_model = cls(
             token=token,
         )
-
         qualer_api_models_account_from_login_response_model.additional_properties = d
         return qualer_api_models_account_from_login_response_model
 

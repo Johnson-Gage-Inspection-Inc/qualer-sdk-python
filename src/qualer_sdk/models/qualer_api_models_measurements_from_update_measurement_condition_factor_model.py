@@ -27,15 +27,10 @@ class MeasurementsFromUpdateMeasurementConditionFactorModel:
 
     def to_dict(self) -> Dict[str, Any]:
         measurement_condition_factor_id = self.measurement_condition_factor_id
-
         factor_id = self.factor_id
-
         factor_name = self.factor_name
-
         factor_value = self.factor_value
-
         factor_uom = self.factor_uom
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -49,22 +44,16 @@ class MeasurementsFromUpdateMeasurementConditionFactorModel:
             field_dict["FactorValue"] = factor_value
         if factor_uom is not None:
             field_dict["FactorUom"] = factor_uom
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         measurement_condition_factor_id = d.pop("MeasurementConditionFactorId", None)
-
         factor_id = d.pop("FactorId", None)
-
         factor_name = d.pop("FactorName", None)
-
         factor_value = d.pop("FactorValue", None)
-
         factor_uom = d.pop("FactorUom", None)
-
         qualer_api_models_measurements_from_update_measurement_condition_factor_model = cls(
             measurement_condition_factor_id=measurement_condition_factor_id,
             factor_id=factor_id,
@@ -72,7 +61,6 @@ class MeasurementsFromUpdateMeasurementConditionFactorModel:
             factor_value=factor_value,
             factor_uom=factor_uom,
         )
-
         qualer_api_models_measurements_from_update_measurement_condition_factor_model.additional_properties = (
             d
         )

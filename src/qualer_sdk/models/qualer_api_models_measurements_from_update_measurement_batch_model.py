@@ -31,18 +31,14 @@ class MeasurementsFromUpdateMeasurementBatchModel:
 
     def to_dict(self) -> Dict[str, Any]:
         batch_id = self.batch_id
-
         batch_type = self.batch_type
-
         save_and_delete_empty = self.save_and_delete_empty
-
         measurement_sets: Optional[List[Dict[str, Any]]] = None
         if self.measurement_sets:
             measurement_sets = []
             for measurement_sets_item_data in self.measurement_sets:
                 measurement_sets_item = measurement_sets_item_data.to_dict()
                 measurement_sets.append(measurement_sets_item)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -54,7 +50,6 @@ class MeasurementsFromUpdateMeasurementBatchModel:
             field_dict["SaveAndDeleteEmpty"] = save_and_delete_empty
         if measurement_sets is not None:
             field_dict["MeasurementSets"] = measurement_sets
-
         return field_dict
 
     @classmethod
@@ -62,30 +57,23 @@ class MeasurementsFromUpdateMeasurementBatchModel:
         from ..models.qualer_api_models_measurements_from_update_measurement_set_model import (
             MeasurementsFromUpdateMeasurementSetModel,
         )
-
         d = dict(src_dict)
         batch_id = d.pop("BatchId", None)
-
         batch_type = d.pop("BatchType", None)
-
         save_and_delete_empty = d.pop("SaveAndDeleteEmpty", None)
-
         measurement_sets = []
         _measurement_sets = d.pop("MeasurementSets", None)
         for measurement_sets_item_data in _measurement_sets or []:
             measurement_sets_item = MeasurementsFromUpdateMeasurementSetModel.from_dict(
                 measurement_sets_item_data
             )
-
             measurement_sets.append(measurement_sets_item)
-
         qualer_api_models_measurements_from_update_measurement_batch_model = cls(
             batch_id=batch_id,
             batch_type=batch_type,
             save_and_delete_empty=save_and_delete_empty,
             measurement_sets=measurement_sets,
         )
-
         qualer_api_models_measurements_from_update_measurement_batch_model.additional_properties = d
         return qualer_api_models_measurements_from_update_measurement_batch_model
 

@@ -51,39 +51,23 @@ class MeasurementsFromCreateMeasurementModel:
 
     def to_dict(self) -> Dict[str, Any]:
         values = self.values
-
         mean = self.mean
-
         sd = self.sd
-
         range_ = self.range_
-
         delta = self.delta
-
         cv = self.cv
-
         cmc = self.cmc
-
         mu = self.mu
-
         tur = self.tur
-
         tar = self.tar
-
         max_value = self.max_value
-
         min_value = self.min_value
-
         error = self.error
-
         result = self.result
-
         updated_on: Optional[str] = None
         if self.updated_on:
             updated_on = self.updated_on.isoformat()
-
         updated_by = self.updated_by
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -119,49 +103,32 @@ class MeasurementsFromCreateMeasurementModel:
             field_dict["UpdatedOn"] = updated_on
         if updated_by is not None:
             field_dict["UpdatedBy"] = updated_by
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         values = d.pop("Values", None)
-
         mean = d.pop("Mean", None)
-
         sd = d.pop("SD", None)
-
         range_ = d.pop("Range", None)
-
         delta = d.pop("Delta", None)
-
         cv = d.pop("CV", None)
-
         cmc = d.pop("CMC", None)
-
         mu = d.pop("MU", None)
-
         tur = d.pop("TUR", None)
-
         tar = d.pop("TAR", None)
-
         max_value = d.pop("MaxValue", None)
-
         min_value = d.pop("MinValue", None)
-
         error = d.pop("Error", None)
-
         result = d.pop("Result", None)
-
         _updated_on = d.pop("UpdatedOn", None)
         updated_on: Optional[datetime.datetime]
         if not _updated_on:
             updated_on = None
         else:
             updated_on = isoparse(_updated_on)
-
         updated_by = d.pop("UpdatedBy", None)
-
         qualer_api_models_measurements_from_create_measurement_model = cls(
             values=values,
             mean=mean,
@@ -180,7 +147,6 @@ class MeasurementsFromCreateMeasurementModel:
             updated_on=updated_on,
             updated_by=updated_by,
         )
-
         qualer_api_models_measurements_from_create_measurement_model.additional_properties = d
         return qualer_api_models_measurements_from_create_measurement_model
 

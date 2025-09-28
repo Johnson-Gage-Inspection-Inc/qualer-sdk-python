@@ -45,31 +45,17 @@ class ReportDatasetsToMeasurementFieldResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         field_id = self.field_id
-
         name = self.name
-
         value = self.value
-
         measurement_name = self.measurement_name
-
         measurement_set_id = self.measurement_set_id
-
         specification_name = self.specification_name
-
         measurement_point_id = self.measurement_point_id
-
-        batch_type: Optional[int] = None
-        if self.batch_type:
-            batch_type = self.batch_type.value
-
+        batch_type = self.batch_type.value if self.batch_type else None
         service_order_item_id = self.service_order_item_id
-
         service_order_id = self.service_order_id
-
         batch_field_id = self.batch_field_id
-
         point_field_id = self.point_field_id
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -97,41 +83,28 @@ class ReportDatasetsToMeasurementFieldResponse:
             field_dict["BatchFieldId"] = batch_field_id
         if point_field_id is not None:
             field_dict["PointFieldId"] = point_field_id
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         field_id = d.pop("FieldId", None)
-
         name = d.pop("Name", None)
-
         value = d.pop("Value", None)
-
         measurement_name = d.pop("MeasurementName", None)
-
         measurement_set_id = d.pop("MeasurementSetId", None)
-
         specification_name = d.pop("SpecificationName", None)
-
         measurement_point_id = d.pop("MeasurementPointId", None)
-
         _batch_type = d.pop("BatchType", None)
         batch_type: Optional[ReportDatasetsToMeasurementFieldResponseBatchType]
         if not _batch_type:
             batch_type = None
         else:
             batch_type = ReportDatasetsToMeasurementFieldResponseBatchType(_batch_type)
-
         service_order_item_id = d.pop("ServiceOrderItemId", None)
-
         service_order_id = d.pop("ServiceOrderId", None)
-
         batch_field_id = d.pop("BatchFieldId", None)
-
         point_field_id = d.pop("PointFieldId", None)
-
         qualer_api_models_report_datasets_to_measurement_field_response = cls(
             field_id=field_id,
             name=name,
@@ -146,7 +119,6 @@ class ReportDatasetsToMeasurementFieldResponse:
             batch_field_id=batch_field_id,
             point_field_id=point_field_id,
         )
-
         qualer_api_models_report_datasets_to_measurement_field_response.additional_properties = d
         return qualer_api_models_report_datasets_to_measurement_field_response
 

@@ -29,17 +29,11 @@ class ReportDatasetsToServiceOrderItemOptionResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_item_id = self.service_order_item_id
-
         service_charge = self.service_charge
-
         time_spent = self.time_spent
-
         is_hourly = self.is_hourly
-
         price = self.price
-
         task_name = self.task_name
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -55,24 +49,17 @@ class ReportDatasetsToServiceOrderItemOptionResponse:
             field_dict["Price"] = price
         if task_name is not None:
             field_dict["TaskName"] = task_name
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_order_item_id = d.pop("ServiceOrderItemId", None)
-
         service_charge = d.pop("ServiceCharge", None)
-
         time_spent = d.pop("TimeSpent", None)
-
         is_hourly = d.pop("IsHourly", None)
-
         price = d.pop("Price", None)
-
         task_name = d.pop("TaskName", None)
-
         qualer_api_models_report_datasets_to_service_order_item_option_response = cls(
             service_order_item_id=service_order_item_id,
             service_charge=service_charge,
@@ -81,7 +68,6 @@ class ReportDatasetsToServiceOrderItemOptionResponse:
             price=price,
             task_name=task_name,
         )
-
         qualer_api_models_report_datasets_to_service_order_item_option_response.additional_properties = (
             d
         )

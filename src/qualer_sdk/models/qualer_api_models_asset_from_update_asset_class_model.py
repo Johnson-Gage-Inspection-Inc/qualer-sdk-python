@@ -19,24 +19,20 @@ class AssetFromUpdateAssetClassModel:
 
     def to_dict(self) -> Dict[str, Any]:
         class_ = self.class_
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if class_ is not None:
             field_dict["Class"] = class_
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         class_ = d.pop("Class", None)
-
         qualer_api_models_asset_from_update_asset_class_model = cls(
             class_=class_,
         )
-
         qualer_api_models_asset_from_update_asset_class_model.additional_properties = d
         return qualer_api_models_asset_from_update_asset_class_model
 

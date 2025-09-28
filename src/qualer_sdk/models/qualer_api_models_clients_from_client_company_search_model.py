@@ -29,17 +29,12 @@ class ClientsFromClientCompanySearchModel:
 
     def to_dict(self) -> Dict[str, Any]:
         legacy_id = self.legacy_id
-
         account_number_text = self.account_number_text
-
         company_name = self.company_name
-
         take = self.take
-
         modified_after: Optional[str] = None
         if self.modified_after:
             modified_after = self.modified_after.isoformat()
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -53,27 +48,21 @@ class ClientsFromClientCompanySearchModel:
             field_dict["Take"] = take
         if modified_after is not None:
             field_dict["ModifiedAfter"] = modified_after
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         legacy_id = d.pop("LegacyId", None)
-
         account_number_text = d.pop("AccountNumberText", None)
-
         company_name = d.pop("CompanyName", None)
-
         take = d.pop("Take", None)
-
         _modified_after = d.pop("ModifiedAfter", None)
         modified_after: Optional[datetime.datetime]
         if not _modified_after:
             modified_after = None
         else:
             modified_after = isoparse(_modified_after)
-
         qualer_api_models_clients_from_client_company_search_model = cls(
             legacy_id=legacy_id,
             account_number_text=account_number_text,
@@ -81,7 +70,6 @@ class ClientsFromClientCompanySearchModel:
             take=take,
             modified_after=modified_after,
         )
-
         qualer_api_models_clients_from_client_company_search_model.additional_properties = d
         return qualer_api_models_clients_from_client_company_search_model
 

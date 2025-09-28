@@ -21,9 +21,7 @@ class ReferenceToMeasurementQuantityResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         measurement_quantity_id = self.measurement_quantity_id
-
         measurement_quantity = self.measurement_quantity
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -31,21 +29,17 @@ class ReferenceToMeasurementQuantityResponse:
             field_dict["MeasurementQuantityId"] = measurement_quantity_id
         if measurement_quantity is not None:
             field_dict["MeasurementQuantity"] = measurement_quantity
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         measurement_quantity_id = d.pop("MeasurementQuantityId", None)
-
         measurement_quantity = d.pop("MeasurementQuantity", None)
-
         qualer_api_models_reference_to_measurement_quantity_response = cls(
             measurement_quantity_id=measurement_quantity_id,
             measurement_quantity=measurement_quantity,
         )
-
         qualer_api_models_reference_to_measurement_quantity_response.additional_properties = d
         return qualer_api_models_reference_to_measurement_quantity_response
 

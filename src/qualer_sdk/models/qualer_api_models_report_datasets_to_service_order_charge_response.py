@@ -47,39 +47,19 @@ class ReportDatasetsToServiceOrderChargeResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_id = self.service_order_id
-
         description = self.description
-
         name = self.name
-
         unit_name = self.unit_name
-
         quantity = self.quantity
-
         discount = self.discount
-
         fixed_charge = self.fixed_charge
-
         price = self.price
-
         subtotal = self.subtotal
-
         is_taxable = self.is_taxable
-
         time_spent_in_minutes = self.time_spent_in_minutes
-
         is_hourly_pricing = self.is_hourly_pricing
-
         created_by = self.created_by
-
-        charge_date: Optional[str]
-        if not self.charge_date:
-            charge_date = None
-        elif isinstance(self.charge_date, datetime.datetime):
-            charge_date = self.charge_date.isoformat()
-        else:
-            charge_date = self.charge_date
-
+        charge_date = self.charge_date.isoformat() if self.charge_date else None
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -111,38 +91,24 @@ class ReportDatasetsToServiceOrderChargeResponse:
             field_dict["CreatedBy"] = created_by
         if charge_date is not None:
             field_dict["ChargeDate"] = charge_date
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_order_id = d.pop("ServiceOrderId", None)
-
         description = d.pop("Description", None)
-
         name = d.pop("Name", None)
-
         unit_name = d.pop("UnitName", None)
-
         quantity = d.pop("Quantity", None)
-
         discount = d.pop("Discount", None)
-
         fixed_charge = d.pop("FixedCharge", None)
-
         price = d.pop("Price", None)
-
         subtotal = d.pop("Subtotal", None)
-
         is_taxable = d.pop("IsTaxable", None)
-
         time_spent_in_minutes = d.pop("TimeSpentInMinutes", None)
-
         is_hourly_pricing = d.pop("IsHourlyPricing", None)
-
         created_by = d.pop("CreatedBy", None)
-
         def _parse_charge_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -150,14 +116,11 @@ class ReportDatasetsToServiceOrderChargeResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 charge_date_type_0 = isoparse(data)
-
                 return charge_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         charge_date = _parse_charge_date(d.pop("ChargeDate", None))
-
         qualer_api_models_report_datasets_to_service_order_charge_response = cls(
             service_order_id=service_order_id,
             description=description,
@@ -174,7 +137,6 @@ class ReportDatasetsToServiceOrderChargeResponse:
             created_by=created_by,
             charge_date=charge_date,
         )
-
         qualer_api_models_report_datasets_to_service_order_charge_response.additional_properties = d
         return qualer_api_models_report_datasets_to_service_order_charge_response
 

@@ -27,15 +27,10 @@ class InventoryToInventoryResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         product_id = self.product_id
-
         manufacturer = self.manufacturer
-
         part_number = self.part_number
-
         is_stock_item = self.is_stock_item
-
         quantity_on_hand = self.quantity_on_hand
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -49,22 +44,16 @@ class InventoryToInventoryResponseModel:
             field_dict["IsStockItem"] = is_stock_item
         if quantity_on_hand is not None:
             field_dict["QuantityOnHand"] = quantity_on_hand
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         product_id = d.pop("ProductId", None)
-
         manufacturer = d.pop("Manufacturer", None)
-
         part_number = d.pop("PartNumber", None)
-
         is_stock_item = d.pop("IsStockItem", None)
-
         quantity_on_hand = d.pop("QuantityOnHand", None)
-
         qualer_api_models_inventory_to_inventory_response_model = cls(
             product_id=product_id,
             manufacturer=manufacturer,
@@ -72,7 +61,6 @@ class InventoryToInventoryResponseModel:
             is_stock_item=is_stock_item,
             quantity_on_hand=quantity_on_hand,
         )
-
         qualer_api_models_inventory_to_inventory_response_model.additional_properties = d
         return qualer_api_models_inventory_to_inventory_response_model
 

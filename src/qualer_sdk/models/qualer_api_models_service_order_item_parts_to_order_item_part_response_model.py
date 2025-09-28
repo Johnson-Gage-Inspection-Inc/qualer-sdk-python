@@ -52,35 +52,19 @@ class ServiceOrderItemPartsToOrderItemPartResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_item_part_id = self.service_order_item_part_id
-
         service_order_item_id = self.service_order_item_id
-
         name = self.name
-
         description = self.description
-
         discount = self.discount
-
         is_taxable = self.is_taxable
-
         is_hourly_pricing = self.is_hourly_pricing
-
         price = self.price
-
         unit_name = self.unit_name
-
         quantity = self.quantity
-
         delivery_charge = self.delivery_charge
-
         time_spent_in_minutes = self.time_spent_in_minutes
-
         free_quantity = self.free_quantity
-
-        service_order_charge_type: Optional[str] = None
-        if self.service_order_charge_type:
-            service_order_charge_type = self.service_order_charge_type.value
-
+        service_order_charge_type = self.service_order_charge_type.value if self.service_order_charge_type else None
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -112,38 +96,24 @@ class ServiceOrderItemPartsToOrderItemPartResponseModel:
             field_dict["FreeQuantity"] = free_quantity
         if service_order_charge_type is not None:
             field_dict["ServiceOrderChargeType"] = service_order_charge_type
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_order_item_part_id = d.pop("ServiceOrderItemPartId", None)
-
         service_order_item_id = d.pop("ServiceOrderItemId", None)
-
         name = d.pop("Name", None)
-
         description = d.pop("Description", None)
-
         discount = d.pop("Discount", None)
-
         is_taxable = d.pop("IsTaxable", None)
-
         is_hourly_pricing = d.pop("IsHourlyPricing", None)
-
         price = d.pop("Price", None)
-
         unit_name = d.pop("UnitName", None)
-
         quantity = d.pop("Quantity", None)
-
         delivery_charge = d.pop("DeliveryCharge", None)
-
         time_spent_in_minutes = d.pop("TimeSpentInMinutes", None)
-
         free_quantity = d.pop("FreeQuantity", None)
-
         _service_order_charge_type = d.pop("ServiceOrderChargeType", None)
         service_order_charge_type: Optional[
             ServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType
@@ -156,7 +126,6 @@ class ServiceOrderItemPartsToOrderItemPartResponseModel:
                     _service_order_charge_type
                 )
             )
-
         qualer_api_models_service_order_item_parts_to_order_item_part_response_model = cls(
             service_order_item_part_id=service_order_item_part_id,
             service_order_item_id=service_order_item_id,
@@ -173,7 +142,6 @@ class ServiceOrderItemPartsToOrderItemPartResponseModel:
             free_quantity=free_quantity,
             service_order_charge_type=service_order_charge_type,
         )
-
         qualer_api_models_service_order_item_parts_to_order_item_part_response_model.additional_properties = (
             d
         )

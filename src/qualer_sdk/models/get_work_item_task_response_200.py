@@ -16,14 +16,12 @@ class GetWorkItemTaskResponse200:
     def to_dict(self) -> Dict[str, Any]:
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         get_work_item_task_response_200 = cls()
-
         get_work_item_task_response_200.additional_properties = d
         return get_work_item_task_response_200
 

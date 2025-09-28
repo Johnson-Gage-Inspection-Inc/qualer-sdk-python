@@ -19,24 +19,20 @@ class CommonToSettingResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         value = self.value
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if value is not None:
             field_dict["Value"] = value
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         value = d.pop("Value", None)
-
         qualer_api_models_common_to_setting_response_model = cls(
             value=value,
         )
-
         qualer_api_models_common_to_setting_response_model.additional_properties = d
         return qualer_api_models_common_to_setting_response_model
 

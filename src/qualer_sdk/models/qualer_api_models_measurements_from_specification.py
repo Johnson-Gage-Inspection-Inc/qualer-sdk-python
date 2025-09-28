@@ -23,11 +23,8 @@ class MeasurementsFromSpecification:
 
     def to_dict(self) -> Dict[str, Any]:
         title = self.title
-
         subtitle = self.subtitle
-
         group = self.group
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -37,24 +34,19 @@ class MeasurementsFromSpecification:
             field_dict["Subtitle"] = subtitle
         if group is not None:
             field_dict["Group"] = group
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         title = d.pop("Title", None)
-
         subtitle = d.pop("Subtitle", None)
-
         group = d.pop("Group", None)
-
         qualer_api_models_measurements_from_specification = cls(
             title=title,
             subtitle=subtitle,
             group=group,
         )
-
         qualer_api_models_measurements_from_specification.additional_properties = d
         return qualer_api_models_measurements_from_specification
 

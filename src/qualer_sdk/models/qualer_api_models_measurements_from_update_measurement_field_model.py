@@ -25,13 +25,9 @@ class MeasurementsFromUpdateMeasurementFieldModel:
 
     def to_dict(self) -> Dict[str, Any]:
         field_id = self.field_id
-
         name = self.name
-
         type_ = self.type_
-
         value = self.value
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -43,27 +39,21 @@ class MeasurementsFromUpdateMeasurementFieldModel:
             field_dict["Type"] = type_
         if value is not None:
             field_dict["Value"] = value
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         field_id = d.pop("FieldId", None)
-
         name = d.pop("Name", None)
-
         type_ = d.pop("Type", None)
-
         value = d.pop("Value", None)
-
         qualer_api_models_measurements_from_update_measurement_field_model = cls(
             field_id=field_id,
             name=name,
             type_=type_,
             value=value,
         )
-
         qualer_api_models_measurements_from_update_measurement_field_model.additional_properties = d
         return qualer_api_models_measurements_from_update_measurement_field_model
 

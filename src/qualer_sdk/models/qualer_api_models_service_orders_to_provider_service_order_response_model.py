@@ -73,113 +73,31 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_id = self.service_order_id
-
         guid: Optional[str] = None
         if self.guid:
             guid = str(self.guid)
-
         service_order_number = self.service_order_number
-
         custom_order_number = self.custom_order_number
-
-        due_date: Optional[str]
-        if not self.due_date:
-            due_date = None
-        elif isinstance(self.due_date, datetime.datetime):
-            due_date = self.due_date.isoformat()
-        else:
-            due_date = self.due_date
-
+        due_date = self.due_date.isoformat() if self.due_date else None
         assets = self.assets
-
         completed_assets = self.completed_assets
-
-        order_status: Optional[str] = None
-        if self.order_status:
-            order_status = self.order_status.value
-
+        order_status = self.order_status.value if self.order_status else None
         is_quality_control_fail = self.is_quality_control_fail
-
         service_private_comments = self.service_private_comments
-
         client_company_id = self.client_company_id
-
         client_company_name = self.client_company_name
-
         client_site_name = self.client_site_name
-
         client_legacy_id = self.client_legacy_id
-
-        business_from_time: Optional[str]
-        if not self.business_from_time:
-            business_from_time = None
-        elif isinstance(self.business_from_time, datetime.datetime):
-            business_from_time = self.business_from_time.isoformat()
-        else:
-            business_from_time = self.business_from_time
-
-        business_to_time: Optional[str]
-        if not self.business_to_time:
-            business_to_time = None
-        elif isinstance(self.business_to_time, datetime.datetime):
-            business_to_time = self.business_to_time.isoformat()
-        else:
-            business_to_time = self.business_to_time
-
-        timeframe: Optional[str] = None
-        if self.timeframe:
-            timeframe = self.timeframe.value
-
+        business_from_time = self.business_from_time.isoformat() if self.business_from_time else None
+        business_to_time = self.business_to_time.isoformat() if self.business_to_time else None
+        timeframe = self.timeframe.value if self.timeframe else None
         site_access_notes = self.site_access_notes
-
-        desired_date: Optional[str]
-        if not self.desired_date:
-            desired_date = None
-        elif isinstance(self.desired_date, datetime.datetime):
-            desired_date = self.desired_date.isoformat()
-        else:
-            desired_date = self.desired_date
-
-        deadline_date: Optional[str]
-        if not self.deadline_date:
-            deadline_date = None
-        elif isinstance(self.deadline_date, datetime.datetime):
-            deadline_date = self.deadline_date.isoformat()
-        else:
-            deadline_date = self.deadline_date
-
-        request_from_date: Optional[str]
-        if not self.request_from_date:
-            request_from_date = None
-        elif isinstance(self.request_from_date, datetime.datetime):
-            request_from_date = self.request_from_date.isoformat()
-        else:
-            request_from_date = self.request_from_date
-
-        request_from_time: Optional[str]
-        if not self.request_from_time:
-            request_from_time = None
-        elif isinstance(self.request_from_time, datetime.datetime):
-            request_from_time = self.request_from_time.isoformat()
-        else:
-            request_from_time = self.request_from_time
-
-        request_to_date: Optional[str]
-        if not self.request_to_date:
-            request_to_date = None
-        elif isinstance(self.request_to_date, datetime.datetime):
-            request_to_date = self.request_to_date.isoformat()
-        else:
-            request_to_date = self.request_to_date
-
-        request_to_time: Optional[str]
-        if not self.request_to_time:
-            request_to_time = None
-        elif isinstance(self.request_to_time, datetime.datetime):
-            request_to_time = self.request_to_time.isoformat()
-        else:
-            request_to_time = self.request_to_time
-
+        desired_date = self.desired_date.isoformat() if self.desired_date else None
+        deadline_date = self.deadline_date.isoformat() if self.deadline_date else None
+        request_from_date = self.request_from_date.isoformat() if self.request_from_date else None
+        request_from_time = self.request_from_time.isoformat() if self.request_from_time else None
+        request_to_date = self.request_to_date.isoformat() if self.request_to_date else None
+        request_to_time = self.request_to_time.isoformat() if self.request_to_time else None
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -231,25 +149,20 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
             field_dict["RequestToDate"] = request_to_date
         if request_to_time is not None:
             field_dict["RequestToTime"] = request_to_time
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_order_id = d.pop("ServiceOrderId", None)
-
         _guid = d.pop("Guid", None)
         guid: Optional[UUID]
         if not _guid:
             guid = None
         else:
             guid = UUID(_guid)
-
         service_order_number = d.pop("ServiceOrderNumber", None)
-
         custom_order_number = d.pop("CustomOrderNumber", None)
-
         def _parse_due_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -257,37 +170,25 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 due_date_type_0 = isoparse(data)
-
                 return due_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         due_date = _parse_due_date(d.pop("DueDate", None))
-
         assets = d.pop("Assets", None)
-
         completed_assets = d.pop("CompletedAssets", None)
-
         _order_status = d.pop("OrderStatus", None)
         order_status: Optional[ServiceOrderStatus]
         if not _order_status:
             order_status = None
         else:
             order_status = ServiceOrderStatus(_order_status)
-
         is_quality_control_fail = d.pop("IsQualityControlFail", None)
-
         service_private_comments = d.pop("ServicePrivateComments", None)
-
         client_company_id = d.pop("ClientCompanyId", None)
-
         client_company_name = d.pop("ClientCompanyName", None)
-
         client_site_name = d.pop("ClientSiteName", None)
-
         client_legacy_id = d.pop("ClientLegacyId", None)
-
         def _parse_business_from_time(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -297,14 +198,11 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 business_from_time_type_0 = isoparse(data)
-
                 return business_from_time_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         business_from_time = _parse_business_from_time(d.pop("BusinessFromTime", None))
-
         def _parse_business_to_time(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -314,23 +212,18 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 business_to_time_type_0 = isoparse(data)
-
                 return business_to_time_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         business_to_time = _parse_business_to_time(d.pop("BusinessToTime", None))
-
         _timeframe = d.pop("Timeframe", None)
         timeframe: Optional[ServiceOrdersToProviderServiceOrderResponseModelTimeframe]
         if not _timeframe:
             timeframe = None
         else:
             timeframe = ServiceOrdersToProviderServiceOrderResponseModelTimeframe(_timeframe)
-
         site_access_notes = d.pop("SiteAccessNotes", None)
-
         def _parse_desired_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -338,14 +231,11 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 desired_date_type_0 = isoparse(data)
-
                 return desired_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         desired_date = _parse_desired_date(d.pop("DesiredDate", None))
-
         def _parse_deadline_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -353,14 +243,11 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 deadline_date_type_0 = isoparse(data)
-
                 return deadline_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         deadline_date = _parse_deadline_date(d.pop("DeadlineDate", None))
-
         def _parse_request_from_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -370,14 +257,11 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 request_from_date_type_0 = isoparse(data)
-
                 return request_from_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         request_from_date = _parse_request_from_date(d.pop("RequestFromDate", None))
-
         def _parse_request_from_time(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -387,14 +271,11 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 request_from_time_type_0 = isoparse(data)
-
                 return request_from_time_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         request_from_time = _parse_request_from_time(d.pop("RequestFromTime", None))
-
         def _parse_request_to_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -404,14 +285,11 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 request_to_date_type_0 = isoparse(data)
-
                 return request_to_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         request_to_date = _parse_request_to_date(d.pop("RequestToDate", None))
-
         def _parse_request_to_time(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -421,14 +299,11 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 request_to_time_type_0 = isoparse(data)
-
                 return request_to_time_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         request_to_time = _parse_request_to_time(d.pop("RequestToTime", None))
-
         qualer_api_models_service_orders_to_provider_service_order_response_model = cls(
             service_order_id=service_order_id,
             guid=guid,
@@ -455,7 +330,6 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
             request_to_date=request_to_date,
             request_to_time=request_to_time,
         )
-
         qualer_api_models_service_orders_to_provider_service_order_response_model.additional_properties = (
             d
         )

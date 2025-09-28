@@ -53,41 +53,23 @@ class ProductToProductApiResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         product_id = self.product_id
-
         parent_product_id = self.parent_product_id
-
         category_id = self.category_id
-
         manufacturer_id = self.manufacturer_id
-
         manufacturer_name = self.manufacturer_name
-
         product_name = self.product_name
-
         parent_product_name = self.parent_product_name
-
         manufacturer_part_number = self.manufacturer_part_number
-
         product_description = self.product_description
-
         is_family = self.is_family
-
         is_discontinued = self.is_discontinued
-
         is_stock_item = self.is_stock_item
-
         unit_sale_price = self.unit_sale_price
-
         supplier_information = self.supplier_information
-
         quantity_on_hand = self.quantity_on_hand
-
         product_code = self.product_code
-
         category_name = self.category_name
-
         parent_category_name = self.parent_category_name
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -127,48 +109,29 @@ class ProductToProductApiResponseModel:
             field_dict["CategoryName"] = category_name
         if parent_category_name is not None:
             field_dict["ParentCategoryName"] = parent_category_name
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         product_id = d.pop("ProductId", None)
-
         parent_product_id = d.pop("ParentProductId", None)
-
         category_id = d.pop("CategoryId", None)
-
         manufacturer_id = d.pop("ManufacturerId", None)
-
         manufacturer_name = d.pop("ManufacturerName", None)
-
         product_name = d.pop("ProductName", None)
-
         parent_product_name = d.pop("ParentProductName", None)
-
         manufacturer_part_number = d.pop("ManufacturerPartNumber", None)
-
         product_description = d.pop("ProductDescription", None)
-
         is_family = d.pop("IsFamily", None)
-
         is_discontinued = d.pop("IsDiscontinued", None)
-
         is_stock_item = d.pop("IsStockItem", None)
-
         unit_sale_price = d.pop("UnitSalePrice", None)
-
         supplier_information = d.pop("SupplierInformation", None)
-
         quantity_on_hand = d.pop("QuantityOnHand", None)
-
         product_code = d.pop("ProductCode", None)
-
         category_name = d.pop("CategoryName", None)
-
         parent_category_name = d.pop("ParentCategoryName", None)
-
         qualer_api_models_product_to_product_api_response_model = cls(
             product_id=product_id,
             parent_product_id=parent_product_id,
@@ -189,7 +152,6 @@ class ProductToProductApiResponseModel:
             category_name=category_name,
             parent_category_name=parent_category_name,
         )
-
         qualer_api_models_product_to_product_api_response_model.additional_properties = d
         return qualer_api_models_product_to_product_api_response_model
 

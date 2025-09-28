@@ -44,27 +44,15 @@ class ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_id = self.service_order_id
-
         guid: Optional[str] = None
         if self.guid:
             guid = str(self.guid)
-
         document_name = self.document_name
-
         file_name = self.file_name
-
-        document_type: Optional[int] = None
-        if self.document_type:
-            document_type = self.document_type.value
-
+        document_type = self.document_type.value if self.document_type else None
         revision_number = self.revision_number
-
-        report_type: Optional[int] = None
-        if self.report_type:
-            report_type = self.report_type.value
-
+        report_type = self.report_type.value if self.report_type else None
         download_url = self.download_url
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -84,25 +72,20 @@ class ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse:
             field_dict["ReportType"] = report_type
         if download_url is not None:
             field_dict["DownloadUrl"] = download_url
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_order_id = d.pop("ServiceOrderId", None)
-
         _guid = d.pop("Guid", None)
         guid: Optional[UUID]
         if not _guid:
             guid = None
         else:
             guid = UUID(_guid)
-
         document_name = d.pop("DocumentName", None)
-
         file_name = d.pop("FileName", None)
-
         _document_type = d.pop("DocumentType", None)
         document_type: Optional[
             ServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType
@@ -115,18 +98,14 @@ class ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse:
                     _document_type
                 )
             )
-
         revision_number = d.pop("RevisionNumber", None)
-
         _report_type = d.pop("ReportType", None)
         report_type: Optional[ReportType]
         if not _report_type:
             report_type = None
         else:
             report_type = ReportType(_report_type)
-
         download_url = d.pop("DownloadUrl", None)
-
         qualer_api_models_service_order_documents_to_company_order_controlled_document_response = (
             cls(
                 service_order_id=service_order_id,
@@ -139,7 +118,6 @@ class ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse:
                 download_url=download_url,
             )
         )
-
         qualer_api_models_service_order_documents_to_company_order_controlled_document_response.additional_properties = (
             d
         )

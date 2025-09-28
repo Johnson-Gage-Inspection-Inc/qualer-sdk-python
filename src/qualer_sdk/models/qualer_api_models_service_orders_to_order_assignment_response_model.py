@@ -43,35 +43,17 @@ class ServiceOrdersToOrderAssignmentResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         work_item_id = self.work_item_id
-
         employee_id = self.employee_id
-
         company_id = self.company_id
-
         subscription_email = self.subscription_email
-
         subscription_phone = self.subscription_phone
-
         office_phone = self.office_phone
-
         is_locked = self.is_locked
-
         image_url = self.image_url
-
         alias = self.alias
-
         title = self.title
-
         is_deleted = self.is_deleted
-
-        last_seen_date_utc: Optional[str]
-        if not self.last_seen_date_utc:
-            last_seen_date_utc = None
-        elif isinstance(self.last_seen_date_utc, datetime.datetime):
-            last_seen_date_utc = self.last_seen_date_utc.isoformat()
-        else:
-            last_seen_date_utc = self.last_seen_date_utc
-
+        last_seen_date_utc = self.last_seen_date_utc.isoformat() if self.last_seen_date_utc else None
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -99,34 +81,22 @@ class ServiceOrdersToOrderAssignmentResponseModel:
             field_dict["IsDeleted"] = is_deleted
         if last_seen_date_utc is not None:
             field_dict["LastSeenDateUtc"] = last_seen_date_utc
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         work_item_id = d.pop("WorkItemId", None)
-
         employee_id = d.pop("EmployeeId", None)
-
         company_id = d.pop("CompanyId", None)
-
         subscription_email = d.pop("SubscriptionEmail", None)
-
         subscription_phone = d.pop("SubscriptionPhone", None)
-
         office_phone = d.pop("OfficePhone", None)
-
         is_locked = d.pop("IsLocked", None)
-
         image_url = d.pop("ImageUrl", None)
-
         alias = d.pop("Alias", None)
-
         title = d.pop("Title", None)
-
         is_deleted = d.pop("IsDeleted", None)
-
         def _parse_last_seen_date_utc(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -136,14 +106,11 @@ class ServiceOrdersToOrderAssignmentResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 last_seen_date_utc_type_0 = isoparse(data)
-
                 return last_seen_date_utc_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         last_seen_date_utc = _parse_last_seen_date_utc(d.pop("LastSeenDateUtc", None))
-
         qualer_api_models_service_orders_to_order_assignment_response_model = cls(
             work_item_id=work_item_id,
             employee_id=employee_id,
@@ -158,7 +125,6 @@ class ServiceOrdersToOrderAssignmentResponseModel:
             is_deleted=is_deleted,
             last_seen_date_utc=last_seen_date_utc,
         )
-
         qualer_api_models_service_orders_to_order_assignment_response_model.additional_properties = (
             d
         )

@@ -41,29 +41,17 @@ class ReportDatasetsToServiceOrderItemTaskResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         id = self.id
-
         service_order_item_id = self.service_order_item_id
-
         service_charge = self.service_charge
-
         time_spent = self.time_spent
-
         is_hourly = self.is_hourly
-
         as_found_details = self.as_found_details
-
         as_left_details = self.as_left_details
-
         price = self.price
-
         task_name = self.task_name
-
         task_description = self.task_description
-
         level_description = self.level_description
-
         custom_text_value = self.custom_text_value
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -91,36 +79,23 @@ class ReportDatasetsToServiceOrderItemTaskResponse:
             field_dict["LevelDescription"] = level_description
         if custom_text_value is not None:
             field_dict["CustomTextValue"] = custom_text_value
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         id = d.pop("Id", None)
-
         service_order_item_id = d.pop("ServiceOrderItemId", None)
-
         service_charge = d.pop("ServiceCharge", None)
-
         time_spent = d.pop("TimeSpent", None)
-
         is_hourly = d.pop("IsHourly", None)
-
         as_found_details = d.pop("AsFoundDetails", None)
-
         as_left_details = d.pop("AsLeftDetails", None)
-
         price = d.pop("Price", None)
-
         task_name = d.pop("TaskName", None)
-
         task_description = d.pop("TaskDescription", None)
-
         level_description = d.pop("LevelDescription", None)
-
         custom_text_value = d.pop("CustomTextValue", None)
-
         qualer_api_models_report_datasets_to_service_order_item_task_response = cls(
             id=id,
             service_order_item_id=service_order_item_id,
@@ -135,7 +110,6 @@ class ReportDatasetsToServiceOrderItemTaskResponse:
             level_description=level_description,
             custom_text_value=custom_text_value,
         )
-
         qualer_api_models_report_datasets_to_service_order_item_task_response.additional_properties = (
             d
         )

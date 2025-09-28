@@ -25,13 +25,9 @@ class ReportDatasetsToAssetAttributeResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         asset_id = self.asset_id
-
         attribute_name = self.attribute_name
-
         attribute_value = self.attribute_value
-
         is_service = self.is_service
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -43,27 +39,21 @@ class ReportDatasetsToAssetAttributeResponse:
             field_dict["AttributeValue"] = attribute_value
         if is_service is not None:
             field_dict["IsService"] = is_service
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         asset_id = d.pop("AssetId", None)
-
         attribute_name = d.pop("AttributeName", None)
-
         attribute_value = d.pop("AttributeValue", None)
-
         is_service = d.pop("IsService", None)
-
         qualer_api_models_report_datasets_to_asset_attribute_response = cls(
             asset_id=asset_id,
             attribute_name=attribute_name,
             attribute_value=attribute_value,
             is_service=is_service,
         )
-
         qualer_api_models_report_datasets_to_asset_attribute_response.additional_properties = d
         return qualer_api_models_report_datasets_to_asset_attribute_response
 

@@ -43,31 +43,18 @@ class QualerWebMvcAreasApiModelsProductFromProductApiEditModel:
 
     def to_dict(self) -> Dict[str, Any]:
         product_description = self.product_description
-
         category_id = self.category_id
-
         manufacturer_id = self.manufacturer_id
-
         parent_product_id = self.parent_product_id
-
         product_name = self.product_name
-
         manufacturer_part_number = self.manufacturer_part_number
-
         is_family = self.is_family
-
         is_discontinued = self.is_discontinued
-
         is_stock_item = self.is_stock_item
-
         unit_sale_price = self.unit_sale_price
-
         supplier_information = self.supplier_information
-
         quantity_on_hand = self.quantity_on_hand
-
         product_code = self.product_code
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -97,38 +84,24 @@ class QualerWebMvcAreasApiModelsProductFromProductApiEditModel:
             field_dict["QuantityOnHand"] = quantity_on_hand
         if product_code is not None:
             field_dict["ProductCode"] = product_code
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         product_description = d.pop("ProductDescription", None)
-
         category_id = d.pop("CategoryId", None)
-
         manufacturer_id = d.pop("ManufacturerId", None)
-
         parent_product_id = d.pop("ParentProductId", None)
-
         product_name = d.pop("ProductName", None)
-
         manufacturer_part_number = d.pop("ManufacturerPartNumber", None)
-
         is_family = d.pop("IsFamily", None)
-
         is_discontinued = d.pop("IsDiscontinued", None)
-
         is_stock_item = d.pop("IsStockItem", None)
-
         unit_sale_price = d.pop("UnitSalePrice", None)
-
         supplier_information = d.pop("SupplierInformation", None)
-
         quantity_on_hand = d.pop("QuantityOnHand", None)
-
         product_code = d.pop("ProductCode", None)
-
         qualer_web_mvc_areas_api_models_product_from_product_api_edit_model = cls(
             product_description=product_description,
             category_id=category_id,
@@ -144,7 +117,6 @@ class QualerWebMvcAreasApiModelsProductFromProductApiEditModel:
             quantity_on_hand=quantity_on_hand,
             product_code=product_code,
         )
-
         qualer_web_mvc_areas_api_models_product_from_product_api_edit_model.additional_properties = (
             d
         )

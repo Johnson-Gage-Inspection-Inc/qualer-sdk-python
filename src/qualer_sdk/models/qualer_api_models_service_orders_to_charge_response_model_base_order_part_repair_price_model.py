@@ -36,21 +36,13 @@ class ServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel:
 
     def to_dict(self) -> Dict[str, Any]:
         delivery_charge = self.delivery_charge
-
         quantity = self.quantity
-
         time_spent_in_minutes = self.time_spent_in_minutes
-
         is_hourly_pricing = self.is_hourly_pricing
-
         description = self.description
-
         name = self.name
-
         price = self.price
-
         is_taxable = self.is_taxable
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -70,28 +62,19 @@ class ServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel:
             field_dict["Price"] = price
         if is_taxable is not None:
             field_dict["IsTaxable"] = is_taxable
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         delivery_charge = d.pop("DeliveryCharge", None)
-
         quantity = d.pop("Quantity", None)
-
         time_spent_in_minutes = d.pop("TimeSpentInMinutes", None)
-
         is_hourly_pricing = d.pop("IsHourlyPricing", None)
-
         description = d.pop("Description", None)
-
         name = d.pop("Name", None)
-
         price = d.pop("Price", None)
-
         is_taxable = d.pop("IsTaxable", None)
-
         qualer_api_models_service_orders_to_charge_response_model_base_order_part_repair_price_model = cls(
             delivery_charge=delivery_charge,
             quantity=quantity,
@@ -102,7 +85,6 @@ class ServiceOrdersToChargeResponseModelBaseOrderPartRepairPriceModel:
             price=price,
             is_taxable=is_taxable,
         )
-
         qualer_api_models_service_orders_to_charge_response_model_base_order_part_repair_price_model.additional_properties = (
             d
         )

@@ -57,45 +57,25 @@ class AssetToAssetsCountResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         assets_all = self.assets_all
-
         assets_collected = self.assets_collected
-
         assets_recently_serviced = self.assets_recently_serviced
-
         assets_due = self.assets_due
-
         assets_past_due = self.assets_past_due
-
         assets_service_pending = self.assets_service_pending
-
         assets_recently_purchased = self.assets_recently_purchased
-
         assets_warranty_expires = self.assets_warranty_expires
-
         assets_due_for_replacement = self.assets_due_for_replacement
-
         assets_out_of_service = self.assets_out_of_service
-
         assets_not_serviced = self.assets_not_serviced
-
         assets_without_schedule = self.assets_without_schedule
-
         assets_without_vendor = self.assets_without_vendor
-
         assets_without_product = self.assets_without_product
-
         assets_added = self.assets_added
-
         assets_updated = self.assets_updated
-
         assets_deleted = self.assets_deleted
-
         assets_no_agreement = self.assets_no_agreement
-
         assets_expired_agreement = self.assets_expired_agreement
-
         assets_expiring_soon_agreement = self.assets_expiring_soon_agreement
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -139,52 +119,31 @@ class AssetToAssetsCountResponseModel:
             field_dict["AssetsExpiredAgreement"] = assets_expired_agreement
         if assets_expiring_soon_agreement is not None:
             field_dict["AssetsExpiringSoonAgreement"] = assets_expiring_soon_agreement
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         assets_all = d.pop("AssetsAll", None)
-
         assets_collected = d.pop("AssetsCollected", None)
-
         assets_recently_serviced = d.pop("AssetsRecentlyServiced", None)
-
         assets_due = d.pop("AssetsDue", None)
-
         assets_past_due = d.pop("AssetsPastDue", None)
-
         assets_service_pending = d.pop("AssetsServicePending", None)
-
         assets_recently_purchased = d.pop("AssetsRecentlyPurchased", None)
-
         assets_warranty_expires = d.pop("AssetsWarrantyExpires", None)
-
         assets_due_for_replacement = d.pop("AssetsDueForReplacement", None)
-
         assets_out_of_service = d.pop("AssetsOutOfService", None)
-
         assets_not_serviced = d.pop("AssetsNotServiced", None)
-
         assets_without_schedule = d.pop("AssetsWithoutSchedule", None)
-
         assets_without_vendor = d.pop("AssetsWithoutVendor", None)
-
         assets_without_product = d.pop("AssetsWithoutProduct", None)
-
         assets_added = d.pop("AssetsAdded", None)
-
         assets_updated = d.pop("AssetsUpdated", None)
-
         assets_deleted = d.pop("AssetsDeleted", None)
-
         assets_no_agreement = d.pop("AssetsNoAgreement", None)
-
         assets_expired_agreement = d.pop("AssetsExpiredAgreement", None)
-
         assets_expiring_soon_agreement = d.pop("AssetsExpiringSoonAgreement", None)
-
         qualer_api_models_asset_to_assets_count_response_model = cls(
             assets_all=assets_all,
             assets_collected=assets_collected,
@@ -207,7 +166,6 @@ class AssetToAssetsCountResponseModel:
             assets_expired_agreement=assets_expired_agreement,
             assets_expiring_soon_agreement=assets_expiring_soon_agreement,
         )
-
         qualer_api_models_asset_to_assets_count_response_model.additional_properties = d
         return qualer_api_models_asset_to_assets_count_response_model
 

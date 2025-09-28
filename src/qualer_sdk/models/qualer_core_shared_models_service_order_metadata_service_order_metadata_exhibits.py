@@ -33,16 +33,13 @@ class QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits:
 
     def to_dict(self) -> Dict[str, Any]:
         title = self.title
-
         subtitle = self.subtitle
-
         exhibits: Optional[List[Dict[str, Any]]] = None
         if self.exhibits:
             exhibits = []
             for exhibits_item_data in self.exhibits:
                 exhibits_item = exhibits_item_data.to_dict()
                 exhibits.append(exhibits_item)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -52,7 +49,6 @@ class QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits:
             field_dict["Subtitle"] = subtitle
         if exhibits is not None:
             field_dict["Exhibits"] = exhibits
-
         return field_dict
 
     @classmethod
@@ -60,27 +56,21 @@ class QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits:
         from ..models.qualer_core_shared_models_service_order_metadata_service_order_metadata_exhibits_key_value import (
             QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibitsKeyValue,
         )
-
         d = dict(src_dict)
         title = d.pop("Title", None)
-
         subtitle = d.pop("Subtitle", None)
-
         exhibits = []
         _exhibits = d.pop("Exhibits", None)
         for exhibits_item_data in _exhibits or []:
             exhibits_item = QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibitsKeyValue.from_dict(
                 exhibits_item_data
             )
-
             exhibits.append(exhibits_item)
-
         qualer_core_shared_models_service_order_metadata_service_order_metadata_exhibits = cls(
             title=title,
             subtitle=subtitle,
             exhibits=exhibits,
         )
-
         qualer_core_shared_models_service_order_metadata_service_order_metadata_exhibits.additional_properties = (
             d
         )

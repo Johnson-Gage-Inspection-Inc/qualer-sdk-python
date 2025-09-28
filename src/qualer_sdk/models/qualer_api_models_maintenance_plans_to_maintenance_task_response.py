@@ -69,57 +69,31 @@ class MaintenancePlansToMaintenanceTaskResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         segment_name = self.segment_name
-
         service_level_id = self.service_level_id
-
         display_order = self.display_order
-
         service_notes = self.service_notes
-
         interval_cycle = self.interval_cycle
-
         interval_length = self.interval_length
-
         on_day = self.on_day
-
         on_month = self.on_month
-
         on_week_days = self.on_week_days
-
         weekday_of_month = self.weekday_of_month
-
         color_code = self.color_code
-
         service_interval = self.service_interval
-
         on_segment_id = self.on_segment_id
-
         document_number = self.document_number
-
         document_section = self.document_section
-
         as_found_standard_group_id = self.as_found_standard_group_id
-
         as_left_standard_group_id = self.as_left_standard_group_id
-
         task_notes = self.task_notes
-
         advance_recall_period = self.advance_recall_period
-
         days_before_due = self.days_before_due
-
         past_due_grace_period = self.past_due_grace_period
-
         days_after_due = self.days_after_due
-
         use_period_in_reports = self.use_period_in_reports
-
         generate_order_automatically = self.generate_order_automatically
-
         approve_upon_generation = self.approve_upon_generation
-
         generate_separate = self.generate_separate
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -175,64 +149,37 @@ class MaintenancePlansToMaintenanceTaskResponse:
             field_dict["ApproveUponGeneration"] = approve_upon_generation
         if generate_separate is not None:
             field_dict["GenerateSeparate"] = generate_separate
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         segment_name = d.pop("SegmentName", None)
-
         service_level_id = d.pop("ServiceLevelId", None)
-
         display_order = d.pop("DisplayOrder", None)
-
         service_notes = d.pop("ServiceNotes", None)
-
         interval_cycle = d.pop("IntervalCycle", None)
-
         interval_length = d.pop("IntervalLength", None)
-
         on_day = d.pop("OnDay", None)
-
         on_month = d.pop("OnMonth", None)
-
         on_week_days = d.pop("OnWeekDays", None)
-
         weekday_of_month = d.pop("WeekdayOfMonth", None)
-
         color_code = d.pop("ColorCode", None)
-
         service_interval = d.pop("ServiceInterval", None)
-
         on_segment_id = d.pop("OnSegmentId", None)
-
         document_number = d.pop("DocumentNumber", None)
-
         document_section = d.pop("DocumentSection", None)
-
         as_found_standard_group_id = d.pop("AsFoundStandardGroupId", None)
-
         as_left_standard_group_id = d.pop("AsLeftStandardGroupId", None)
-
         task_notes = d.pop("TaskNotes", None)
-
         advance_recall_period = d.pop("AdvanceRecallPeriod", None)
-
         days_before_due = d.pop("DaysBeforeDue", None)
-
         past_due_grace_period = d.pop("PastDueGracePeriod", None)
-
         days_after_due = d.pop("DaysAfterDue", None)
-
         use_period_in_reports = d.pop("UsePeriodInReports", None)
-
         generate_order_automatically = d.pop("GenerateOrderAutomatically", None)
-
         approve_upon_generation = d.pop("ApproveUponGeneration", None)
-
         generate_separate = d.pop("GenerateSeparate", None)
-
         qualer_api_models_maintenance_plans_to_maintenance_task_response = cls(
             segment_name=segment_name,
             service_level_id=service_level_id,
@@ -261,7 +208,6 @@ class MaintenancePlansToMaintenanceTaskResponse:
             approve_upon_generation=approve_upon_generation,
             generate_separate=generate_separate,
         )
-
         qualer_api_models_maintenance_plans_to_maintenance_task_response.additional_properties = d
         return qualer_api_models_maintenance_plans_to_maintenance_task_response
 

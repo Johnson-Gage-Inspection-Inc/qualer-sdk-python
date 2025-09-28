@@ -29,17 +29,11 @@ class AssetReservationFromCloseAssetReservationsModel:
 
     def to_dict(self) -> Dict[str, Any]:
         asset_id = self.asset_id
-
         area_id = self.area_id
-
         product_id = self.product_id
-
         serial_number = self.serial_number
-
         asset_tag = self.asset_tag
-
         reservation_id = self.reservation_id
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -55,24 +49,17 @@ class AssetReservationFromCloseAssetReservationsModel:
             field_dict["AssetTag"] = asset_tag
         if reservation_id is not None:
             field_dict["ReservationId"] = reservation_id
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         asset_id = d.pop("AssetId", None)
-
         area_id = d.pop("AreaId", None)
-
         product_id = d.pop("ProductId", None)
-
         serial_number = d.pop("SerialNumber", None)
-
         asset_tag = d.pop("AssetTag", None)
-
         reservation_id = d.pop("ReservationId", None)
-
         qualer_api_models_asset_reservation_from_close_asset_reservations_model = cls(
             asset_id=asset_id,
             area_id=area_id,
@@ -81,7 +68,6 @@ class AssetReservationFromCloseAssetReservationsModel:
             asset_tag=asset_tag,
             reservation_id=reservation_id,
         )
-
         qualer_api_models_asset_reservation_from_close_asset_reservations_model.additional_properties = (
             d
         )
