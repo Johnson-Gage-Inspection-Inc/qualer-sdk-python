@@ -236,6 +236,8 @@ def test_the_other_get_endpoints(endpoint_name):
 
     # Call the endpoint and assert no exception
     try:
-        sync_func(**call_args)
+        response = sync_func(**call_args)
+        if response is None:
+            pytest.skip(f"Endpoint {endpoint_name} returned None response")
     except Exception as e:
         pytest.fail(f"Endpoint {endpoint_name} raised exception: {e}")

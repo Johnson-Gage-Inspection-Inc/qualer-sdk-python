@@ -130,8 +130,11 @@ def test_get_endpoint_without_parameters(authenticated_client, endpoint_name, fu
         response_type = type(response).__name__
         print(f"  ✅ {endpoint_name}: {response_type}", end="")
 
+        if response is None:
+            pytest.skip(f"Endpoint {endpoint_name} returned None response")
+
         try:
-            if response is not None and hasattr(response, "__len__"):
+            if hasattr(response, "__len__"):
                 response_length = len(response)
                 print(f" (length: {response_length})")
             else:
