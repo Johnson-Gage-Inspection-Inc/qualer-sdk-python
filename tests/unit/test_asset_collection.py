@@ -16,9 +16,6 @@ def _setup_stubs(monkeypatch):
         "get_async": [],
     }
 
-    async def _noop_async(*args, **kwargs):  # pragma: no cover
-        return None
-
     def collect_sync(*, client, body):
         calls["collect_sync"].append((client, tuple(body)))
 
