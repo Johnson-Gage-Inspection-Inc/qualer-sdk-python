@@ -330,9 +330,7 @@ class ReportDatasetsToServiceOrderItemResponse:
         if self.updated_on:
             updated_on = self.updated_on.isoformat()
 
-        work_status: Optional[int] = None
-        if self.work_status:
-            work_status = self.work_status.value
+        work_status = self.work_status
 
         custom_work_status = self.custom_work_status
 
@@ -412,17 +410,7 @@ class ReportDatasetsToServiceOrderItemResponse:
 
         vendor_tag = self.vendor_tag
 
-        result_status: Optional[int]
-        if not self.result_status:
-            result_status = None
-        else:
-            result_status: Optional[str]
-
-            if not self.result_status:
-
-                result_status = None
-            else:
-                result_status = self.result_status
+        result_status = self.result_status
         service_date: Optional[str]
         if not self.service_date:
             service_date = None
@@ -641,28 +629,8 @@ class ReportDatasetsToServiceOrderItemResponse:
         else:
             as_left_status = self.as_left_status
 
-        as_found_result: Optional[int]
-        if not self.as_found_result:
-            as_found_result = None
-        else:
-            as_found_result: Optional[str]
-
-            if not self.as_found_result:
-
-                as_found_result = None
-            else:
-                as_found_result = self.as_found_result
-        as_left_result: Optional[int]
-        if not self.as_left_result:
-            as_left_result = None
-        else:
-            as_left_result: Optional[str]
-
-            if not self.as_left_result:
-
-                as_left_result = None
-            else:
-                as_left_result = self.as_left_result
+        as_found_result = self.as_found_result
+        as_left_result = self.as_left_result
         completed_on: Optional[str]
         if not self.completed_on:
             completed_on = None

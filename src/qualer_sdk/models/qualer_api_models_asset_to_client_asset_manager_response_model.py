@@ -381,17 +381,11 @@ class AssetToClientAssetManagerResponseModel:
 
         asset_service_record_id = self.asset_service_record_id
 
-        result_status: Optional[int] = None
-        if self.result_status:
-            result_status = self.result_status.value
+        result_status = self.result_status
 
-        as_found_result: Optional[int] = None
-        if self.as_found_result:
-            as_found_result = self.as_found_result.value
+        as_found_result = self.as_found_result
 
-        as_left_result: Optional[int] = None
-        if self.as_left_result:
-            as_left_result = self.as_left_result.value
+        as_left_result = self.as_left_result
 
         last_service_date: Optional[str]
         if not self.last_service_date:
@@ -459,13 +453,9 @@ class AssetToClientAssetManagerResponseModel:
         else:
             past_due_trigger_date = self.past_due_trigger_date
 
-        due_status: Optional[int] = None
-        if self.due_status:
-            due_status = self.due_status.value
+        due_status = self.due_status
 
-        work_status: Optional[int] = None
-        if self.work_status:
-            work_status = self.work_status.value
+        work_status = self.work_status
 
         service_tag = self.service_tag
 
@@ -881,15 +871,16 @@ class AssetToClientAssetManagerResponseModel:
         employee_id = d.pop("EmployeeId", None)
         asset_collection_id = d.pop("AssetCollectionId", None)
         asset_service_record_id = d.pop("AssetServiceRecordId", None)
+
         _result_status = d.pop("ResultStatus", None)
-        result_status = ServiceResultStatus.from_api_value(_result_status)
+        result_status = ServiceResultStatus.parse(_result_status)
 
         _as_found_result = d.pop("AsFoundResult", None)
-        as_found_result = ServiceResultStatus.from_api_value(_as_found_result)
+        as_found_result = ServiceResultStatus.parse(_as_found_result)
 
         _as_left_result = d.pop("AsLeftResult", None)
         as_left_result: Optional[ServiceResultStatus]
-        as_left_result = ServiceResultStatus.from_api_value(_as_left_result)
+        as_left_result = ServiceResultStatus.parse(_as_left_result)
 
         def _parse_last_service_date(
             data: object,
@@ -947,7 +938,7 @@ class AssetToClientAssetManagerResponseModel:
         service_order_id = d.pop("ServiceOrderId", None)
 
         _service_order_status = d.pop("ServiceOrderStatus", None)
-        service_order_status = ServiceOrderStatus.from_api_value(_service_order_status)
+        service_order_status = ServiceOrderStatus.parse(_service_order_status)
 
         custom_order_number = d.pop("CustomOrderNumber", None)
 

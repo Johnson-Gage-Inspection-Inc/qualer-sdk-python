@@ -274,7 +274,7 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
         if not _order_status:
             order_status = None
         else:
-            order_status = ServiceOrderStatus(_order_status)
+            order_status = ServiceOrderStatus.parse(_order_status)
 
         is_quality_control_fail = d.pop("IsQualityControlFail", None)
 

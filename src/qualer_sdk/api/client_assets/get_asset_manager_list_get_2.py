@@ -5,6 +5,7 @@ import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
+from ...models.asset_filter_type import AssetFilterType
 from ...models.qualer_api_models_asset_to_client_asset_manager_response_model import (
     AssetToClientAssetManagerResponseModel,
 )
@@ -14,7 +15,7 @@ from ...types import Response
 def _get_kwargs(
     client_company_id: int,
     *,
-    query_filter_type: Optional[str] = None,
+    query_filter_type: Optional[AssetFilterType] = None,
     query_search_string: Optional[str] = None,
     query_page: Optional[int] = None,
     query_page_size: Optional[int] = None,
@@ -75,22 +76,19 @@ def sync_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Optional[str] = None,
+    query_filter_type: Optional[AssetFilterType] = None,
     query_search_string: Optional[str] = None,
     query_page: Optional[int] = None,
     query_page_size: Optional[int] = None,
 ) -> Response[List["AssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
-     assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService,
-    ClientOutOfService, ClientWithoutSchedule
-
     ClientDueForService - depends on Employee Filter Preference
     POST api/user/filters
 
     Args:
         client_company_id (int):
-        query_filter_type (Optional[str]):
+        query_filter_type (Optional[AssetFilterType]):
         query_search_string (Optional[str]):
         query_page (Optional[int]):
         query_page_size (Optional[int]):
@@ -122,22 +120,19 @@ def sync(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Optional[str] = None,
+    query_filter_type: Optional[AssetFilterType] = None,
     query_search_string: Optional[str] = None,
     query_page: Optional[int] = None,
     query_page_size: Optional[int] = None,
 ) -> Optional[List["AssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
-     assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService,
-    ClientOutOfService, ClientWithoutSchedule
-
     ClientDueForService - depends on Employee Filter Preference
     POST api/user/filters
 
     Args:
         client_company_id (int):
-        query_filter_type (Optional[str]):
+        query_filter_type (Optional[AssetFilterType]):
         query_search_string (Optional[str]):
         query_page (Optional[int]):
         query_page_size (Optional[int]):
@@ -164,22 +159,19 @@ async def asyncio_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Optional[str] = None,
+    query_filter_type: Optional[AssetFilterType] = None,
     query_search_string: Optional[str] = None,
     query_page: Optional[int] = None,
     query_page_size: Optional[int] = None,
 ) -> Response[List["AssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
-     assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService,
-    ClientOutOfService, ClientWithoutSchedule
-
     ClientDueForService - depends on Employee Filter Preference
     POST api/user/filters
 
     Args:
         client_company_id (int):
-        query_filter_type (Optional[str]):
+        query_filter_type (Optional[AssetFilterType]):
         query_search_string (Optional[str]):
         query_page (Optional[int]):
         query_page_size (Optional[int]):
@@ -209,22 +201,19 @@ async def asyncio(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Optional[str] = None,
+    query_filter_type: Optional[AssetFilterType] = None,
     query_search_string: Optional[str] = None,
     query_page: Optional[int] = None,
     query_page_size: Optional[int] = None,
 ) -> Optional[List["AssetToClientAssetManagerResponseModel"]]:
     """GetAssetManagerList
 
-     assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService,
-    ClientOutOfService, ClientWithoutSchedule
-
     ClientDueForService - depends on Employee Filter Preference
     POST api/user/filters
 
     Args:
         client_company_id (int):
-        query_filter_type (Optional[str]):
+        query_filter_type (Optional[AssetFilterType]):
         query_search_string (Optional[str]):
         query_page (Optional[int]):
         query_page_size (Optional[int]):
