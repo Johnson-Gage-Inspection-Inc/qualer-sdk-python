@@ -22,7 +22,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Any]:
+) -> Optional[bytes]:
     if response.status_code == 200:
         return response.content
     if client.raise_on_unexpected_status:
@@ -33,7 +33,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Any]:
+) -> Response[bytes]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -47,14 +47,15 @@ def sync_detailed(
     image_name: str,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[Any]:
+) -> Response[bytes]:
     """
     Args:
         work_item_id (int):
         image_name (str):
 
     Raises:
-        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        errors.UnexpectedStatus: If the server returns an undocumented status code and
+            Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
@@ -78,14 +79,15 @@ async def asyncio_detailed(
     image_name: str,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[Any]:
+) -> Response[bytes]:
     """
     Args:
         work_item_id (int):
         image_name (str):
 
     Raises:
-        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        errors.UnexpectedStatus: If the server returns an undocumented status code and
+            Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:

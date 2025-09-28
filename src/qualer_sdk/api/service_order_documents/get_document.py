@@ -22,7 +22,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Any]:
+) -> Optional[bytes]:
     if response.status_code == 200:
         return response.content
     if response.status_code == 400:
@@ -37,7 +37,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Any]:
+) -> Response[bytes]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -50,7 +50,7 @@ def sync_detailed(
     guid: UUID,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[Any]:
+) -> Response[bytes]:
     """Retrieve work order document by Unique Id
 
      Sample request:
@@ -63,11 +63,12 @@ def sync_detailed(
         guid (UUID):
 
     Raises:
-        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        errors.UnexpectedStatus: If the server returns an undocumented status code and
+            Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Any]
+        Response[bytes]
     """
 
     kwargs = _get_kwargs(
@@ -85,7 +86,7 @@ async def asyncio_detailed(
     guid: UUID,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[Any]:
+) -> Response[bytes]:
     """Retrieve work order document by Unique Id
 
      Sample request:
@@ -98,11 +99,12 @@ async def asyncio_detailed(
         guid (UUID):
 
     Raises:
-        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        errors.UnexpectedStatus: If the server returns an undocumented status code and
+            Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Any]
+        Response[bytes]
     """
 
     kwargs = _get_kwargs(
