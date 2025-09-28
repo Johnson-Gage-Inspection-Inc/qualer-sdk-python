@@ -607,7 +607,7 @@ class AssetToClientAssetManagerResponseModel:
         if employee_id is not None:
             field_dict["EmployeeId"] = employee_id
         if asset_collection_id is not None:
-            field_dict["AssetCollectionId"] = asset_collection_id
+            field_dict["QuickCollectionId"] = asset_collection_id
         if asset_service_record_id is not None:
             field_dict["AssetServiceRecordId"] = asset_service_record_id
         if result_status is not None:
@@ -885,7 +885,7 @@ class AssetToClientAssetManagerResponseModel:
 
         employee_id = d.pop("EmployeeId", None)
 
-        asset_collection_id = d.pop("AssetCollectionId", None)
+        asset_collection_id = d.pop("QuickCollectionId", None)
 
         asset_service_record_id = d.pop("AssetServiceRecordId", None)
 

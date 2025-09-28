@@ -8,11 +8,11 @@ This module provides convenience functions that:
 
 from typing import List, Optional
 
-from ...asset_collection import AssetCollection, AsyncAssetCollection
 from ...client import AuthenticatedClient
 from ...models.qualer_api_models_asset_to_asset_manage_response_model import (
     AssetToAssetManageResponseModel,
 )
+from ...quick_collection import AsyncQuickCollection, QuickCollection
 
 
 def sync(
@@ -38,7 +38,7 @@ def sync(
     Returns:
         List of collected AssetToAssetManageResponseModel objects
     """
-    with AssetCollection(client, asset_ids) as collection:
+    with QuickCollection(client, asset_ids) as collection:
         return collection.get_details(
             search_string=search_string,
             page=page,
@@ -66,7 +66,7 @@ async def asyncio(
     Returns:
         List of collected AssetToAssetManageResponseModel objects
     """
-    async with AsyncAssetCollection(client, asset_ids) as collection:
+    async with AsyncQuickCollection(client, asset_ids) as collection:
         return await collection.get_details(
             search_string=search_string,
             page=page,
