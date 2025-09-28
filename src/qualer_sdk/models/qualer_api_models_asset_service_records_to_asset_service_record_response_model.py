@@ -260,7 +260,10 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
                 pass
             return cast(datetime.datetime, data)
 
-        service_date = _parse_service_date(d["ServiceDate"])
+        service_date_data = d.get("ServiceDate")
+        if service_date_data is None:
+            raise ValueError("Missing required field 'ServiceDate' in input dictionary.")
+        service_date = _parse_service_date(service_date_data)
         serial_number = d.pop("SerialNumber", None)
 
         def _parse_asset_tag(data: object) -> Optional[str]:
