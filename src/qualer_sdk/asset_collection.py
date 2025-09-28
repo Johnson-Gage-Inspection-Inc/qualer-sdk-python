@@ -16,6 +16,8 @@ from .api.assets import clear_collected_assets, collect_assets, get_asset_manage
 from .client import AuthenticatedClient
 from .models import FilterType
 
+import logging
+
 if TYPE_CHECKING:
     from .models import AssetToAssetManageResponseModel
 
@@ -228,8 +230,14 @@ class AsyncAssetCollection:
             if exc is not None and hasattr(exc, "add_note"):
                 try:
                     exc.add_note(f"Cleanup failed: {cleanup_err!r}")
-                except Exception:
-                    pass
+                except Exception as add_note_err:
+                    # Failed to add note to exception during cleanup; log the error.
+                    logging.warning(
+                        "Failed to add cleanup failure note to exception in AsyncAssetCollection.__aexit__: %r. "
+                        "Original cleanup error: %r",
+                        add_note_err,
+                        cleanup_err
+                    )
             else:
                 raise
 
