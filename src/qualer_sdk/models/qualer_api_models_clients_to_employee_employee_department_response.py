@@ -23,11 +23,8 @@ class ClientsToEmployeeEmployeeDepartmentResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         id = self.id
-
         name = self.name
-
         position = self.position
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -37,24 +34,19 @@ class ClientsToEmployeeEmployeeDepartmentResponse:
             field_dict["Name"] = name
         if position is not None:
             field_dict["Position"] = position
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         id = d.pop("Id", None)
-
         name = d.pop("Name", None)
-
         position = d.pop("Position", None)
-
         qualer_api_models_clients_to_employee_employee_department_response = cls(
             id=id,
             name=name,
             position=position,
         )
-
         qualer_api_models_clients_to_employee_employee_department_response.additional_properties = d
         return qualer_api_models_clients_to_employee_employee_department_response
 

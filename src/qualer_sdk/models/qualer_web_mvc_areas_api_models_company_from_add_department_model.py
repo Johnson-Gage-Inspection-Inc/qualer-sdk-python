@@ -21,9 +21,7 @@ class QualerWebMvcAreasApiModelsCompanyFromAddDepartmentModel:
 
     def to_dict(self) -> Dict[str, Any]:
         name = self.name
-
         description = self.description
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -31,21 +29,17 @@ class QualerWebMvcAreasApiModelsCompanyFromAddDepartmentModel:
             field_dict["Name"] = name
         if description is not None:
             field_dict["Description"] = description
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         name = d.pop("Name", None)
-
         description = d.pop("Description", None)
-
         qualer_web_mvc_areas_api_models_company_from_add_department_model = cls(
             name=name,
             description=description,
         )
-
         qualer_web_mvc_areas_api_models_company_from_add_department_model.additional_properties = d
         return qualer_web_mvc_areas_api_models_company_from_add_department_model
 

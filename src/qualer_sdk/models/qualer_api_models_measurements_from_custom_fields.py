@@ -29,16 +29,13 @@ class MeasurementsFromCustomFields:
 
     def to_dict(self) -> Dict[str, Any]:
         description = self.description
-
         result = self.result
-
         items: Optional[List[Dict[str, Any]]] = None
         if self.items:
             items = []
             for items_item_data in self.items:
                 items_item = items_item_data.to_dict()
                 items.append(items_item)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -48,7 +45,6 @@ class MeasurementsFromCustomFields:
             field_dict["Result"] = result
         if items is not None:
             field_dict["Items"] = items
-
         return field_dict
 
     @classmethod
@@ -56,25 +52,19 @@ class MeasurementsFromCustomFields:
         from ..models.qualer_api_models_measurements_from_create_measurement_field_model import (
             MeasurementsFromCreateMeasurementFieldModel,
         )
-
         d = dict(src_dict)
         description = d.pop("Description", None)
-
         result = d.pop("Result", None)
-
         items = []
         _items = d.pop("Items", None)
         for items_item_data in _items or []:
             items_item = MeasurementsFromCreateMeasurementFieldModel.from_dict(items_item_data)
-
             items.append(items_item)
-
         qualer_api_models_measurements_from_custom_fields = cls(
             description=description,
             result=result,
             items=items,
         )
-
         qualer_api_models_measurements_from_custom_fields.additional_properties = d
         return qualer_api_models_measurements_from_custom_fields
 

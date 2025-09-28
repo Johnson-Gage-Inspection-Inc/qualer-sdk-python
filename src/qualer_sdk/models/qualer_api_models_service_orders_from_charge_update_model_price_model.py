@@ -21,9 +21,7 @@ class ServiceOrdersFromChargeUpdateModelPriceModel:
 
     def to_dict(self) -> Dict[str, Any]:
         name = self.name
-
         price = self.price
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -31,21 +29,17 @@ class ServiceOrdersFromChargeUpdateModelPriceModel:
             field_dict["Name"] = name
         if price is not None:
             field_dict["Price"] = price
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         name = d.pop("Name", None)
-
         price = d.pop("Price", None)
-
         qualer_api_models_service_orders_from_charge_update_model_price_model = cls(
             name=name,
             price=price,
         )
-
         qualer_api_models_service_orders_from_charge_update_model_price_model.additional_properties = (
             d
         )

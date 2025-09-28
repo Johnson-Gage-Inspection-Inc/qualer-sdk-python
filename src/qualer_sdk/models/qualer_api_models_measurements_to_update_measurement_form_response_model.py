@@ -34,13 +34,11 @@ class MeasurementsToUpdateMeasurementFormResponseModel:
             for measurement_batches_item_data in self.measurement_batches:
                 measurement_batches_item = measurement_batches_item_data.to_dict()
                 measurement_batches.append(measurement_batches_item)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if measurement_batches is not None:
             field_dict["MeasurementBatches"] = measurement_batches
-
         return field_dict
 
     @classmethod
@@ -48,7 +46,6 @@ class MeasurementsToUpdateMeasurementFormResponseModel:
         from ..models.qualer_api_models_measurements_to_update_measurement_batch_response_model import (
             MeasurementsToUpdateMeasurementBatchResponseModel,
         )
-
         d = dict(src_dict)
         measurement_batches = []
         _measurement_batches = d.pop("MeasurementBatches", None)
@@ -56,13 +53,10 @@ class MeasurementsToUpdateMeasurementFormResponseModel:
             measurement_batches_item = MeasurementsToUpdateMeasurementBatchResponseModel.from_dict(
                 measurement_batches_item_data
             )
-
             measurement_batches.append(measurement_batches_item)
-
         qualer_api_models_measurements_to_update_measurement_form_response_model = cls(
             measurement_batches=measurement_batches,
         )
-
         qualer_api_models_measurements_to_update_measurement_form_response_model.additional_properties = (
             d
         )

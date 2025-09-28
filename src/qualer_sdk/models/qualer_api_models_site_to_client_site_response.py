@@ -74,13 +74,9 @@ class SiteToClientSiteResponse:
         from ..models.qualer_api_models_site_to_client_site_response_shipping_address_type_0 import (
             SiteToClientSiteResponseShippingAddressType0,
         )
-
         site_id = self.site_id
-
         site_name = self.site_name
-
         site_code = self.site_code
-
         shipping_address: Optional[Dict[str, Any]]
         if not self.shipping_address:
             shipping_address = None
@@ -91,9 +87,7 @@ class SiteToClientSiteResponse:
             shipping_address = self.shipping_address.to_dict()
         else:
             shipping_address = self.shipping_address
-
         shipping_inherited = self.shipping_inherited
-
         billing_address: Optional[Dict[str, Any]]
         if not self.billing_address:
             billing_address = None
@@ -104,40 +98,26 @@ class SiteToClientSiteResponse:
             billing_address = self.billing_address.to_dict()
         else:
             billing_address = self.billing_address
-
         default_account_representative_employee_id = self.default_account_representative_employee_id
-
         billing_inherited = self.billing_inherited
-
         federal_number = self.federal_number
-
         state_number = self.state_number
-
         culture_name = self.culture_name
-
         is_science_facility = self.is_science_facility
-
         is_service_center = self.is_service_center
-
         is_inventory_storage = self.is_inventory_storage
-
         is_production = self.is_production
-
         time_zone_id = self.time_zone_id
-
         time_zone_offset_minutes = self.time_zone_offset_minutes
-
         updated_on_utc: Optional[str] = None
         if self.updated_on_utc:
             updated_on_utc = self.updated_on_utc.isoformat()
-
         attributes: Optional[List[Dict[str, Any]]] = None
         if self.attributes:
             attributes = []
             for attributes_item_data in self.attributes:
                 attributes_item = attributes_item_data.to_dict()
                 attributes.append(attributes_item)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -181,7 +161,6 @@ class SiteToClientSiteResponse:
             field_dict["UpdatedOnUtc"] = updated_on_utc
         if attributes is not None:
             field_dict["Attributes"] = attributes
-
         return field_dict
 
     @classmethod
@@ -195,14 +174,10 @@ class SiteToClientSiteResponse:
         from ..models.qualer_api_models_site_to_client_site_response_shipping_address_type_0 import (
             SiteToClientSiteResponseShippingAddressType0,
         )
-
         d = dict(src_dict)
         site_id = d.pop("SiteId", None)
-
         site_name = d.pop("SiteName", None)
-
         site_code = d.pop("SiteCode", None)
-
         def _parse_shipping_address(
             data: object,
         ) -> Optional["SiteToClientSiteResponseShippingAddressType0"]:
@@ -214,7 +189,6 @@ class SiteToClientSiteResponse:
                 shipping_address_type_0 = SiteToClientSiteResponseShippingAddressType0.from_dict(
                     data
                 )
-
                 return shipping_address_type_0
             except Exception:
                 pass
@@ -222,11 +196,8 @@ class SiteToClientSiteResponse:
                 Optional["SiteToClientSiteResponseShippingAddressType0"],
                 data,
             )
-
         shipping_address = _parse_shipping_address(d.pop("ShippingAddress", None))
-
         shipping_inherited = d.pop("ShippingInherited", None)
-
         def _parse_billing_address(
             data: object,
         ) -> Optional["SiteToClientSiteResponseBillingAddressType0"]:
@@ -236,7 +207,6 @@ class SiteToClientSiteResponse:
                 if not isinstance(data, dict):
                     raise TypeError()
                 billing_address_type_0 = SiteToClientSiteResponseBillingAddressType0.from_dict(data)
-
                 return billing_address_type_0
             except Exception:
                 pass
@@ -244,47 +214,31 @@ class SiteToClientSiteResponse:
                 Optional["SiteToClientSiteResponseBillingAddressType0"],
                 data,
             )
-
         billing_address = _parse_billing_address(d.pop("BillingAddress", None))
-
         default_account_representative_employee_id = d.pop(
             "DefaultAccountRepresentativeEmployeeId", None
         )
-
         billing_inherited = d.pop("BillingInherited", None)
-
         federal_number = d.pop("FederalNumber", None)
-
         state_number = d.pop("StateNumber", None)
-
         culture_name = d.pop("CultureName", None)
-
         is_science_facility = d.pop("IsScienceFacility", None)
-
         is_service_center = d.pop("IsServiceCenter", None)
-
         is_inventory_storage = d.pop("IsInventoryStorage", None)
-
         is_production = d.pop("IsProduction", None)
-
         time_zone_id = d.pop("TimeZoneId", None)
-
         time_zone_offset_minutes = d.pop("TimeZoneOffsetMinutes", None)
-
         _updated_on_utc = d.pop("UpdatedOnUtc", None)
         updated_on_utc: Optional[datetime.datetime]
         if not _updated_on_utc:
             updated_on_utc = None
         else:
             updated_on_utc = isoparse(_updated_on_utc)
-
         attributes = []
         _attributes = d.pop("Attributes", None)
         for attributes_item_data in _attributes or []:
             attributes_item = CommonFromAttributeModel.from_dict(attributes_item_data)
-
             attributes.append(attributes_item)
-
         qualer_api_models_site_to_client_site_response = cls(
             site_id=site_id,
             site_name=site_name,
@@ -306,7 +260,6 @@ class SiteToClientSiteResponse:
             updated_on_utc=updated_on_utc,
             attributes=attributes,
         )
-
         qualer_api_models_site_to_client_site_response.additional_properties = d
         return qualer_api_models_site_to_client_site_response
 

@@ -47,35 +47,20 @@ class AddressToAddressResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         first_name = self.first_name
-
         last_name = self.last_name
-
         email = self.email
-
         company = self.company
-
         city = self.city
-
         address_1 = self.address_1
-
         address_2 = self.address_2
-
         zip_postal_code = self.zip_postal_code
-
         phone_number = self.phone_number
-
         fax_number = self.fax_number
-
         attention_1 = self.attention_1
-
         attention_2 = self.attention_2
-
         country = self.country
-
         state_province = self.state_province
-
         state_province_abbreviation = self.state_province_abbreviation
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -109,42 +94,26 @@ class AddressToAddressResponseModel:
             field_dict["StateProvince"] = state_province
         if state_province_abbreviation is not None:
             field_dict["StateProvinceAbbreviation"] = state_province_abbreviation
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         first_name = d.pop("FirstName", None)
-
         last_name = d.pop("LastName", None)
-
         email = d.pop("Email", None)
-
         company = d.pop("Company", None)
-
         city = d.pop("City", None)
-
         address_1 = d.pop("Address1", None)
-
         address_2 = d.pop("Address2", None)
-
         zip_postal_code = d.pop("ZipPostalCode", None)
-
         phone_number = d.pop("PhoneNumber", None)
-
         fax_number = d.pop("FaxNumber", None)
-
         attention_1 = d.pop("Attention1", None)
-
         attention_2 = d.pop("Attention2", None)
-
         country = d.pop("Country", None)
-
         state_province = d.pop("StateProvince", None)
-
         state_province_abbreviation = d.pop("StateProvinceAbbreviation", None)
-
         qualer_api_models_address_to_address_response_model = cls(
             first_name=first_name,
             last_name=last_name,
@@ -162,7 +131,6 @@ class AddressToAddressResponseModel:
             state_province=state_province,
             state_province_abbreviation=state_province_abbreviation,
         )
-
         qualer_api_models_address_to_address_response_model.additional_properties = d
         return qualer_api_models_address_to_address_response_model
 

@@ -131,156 +131,64 @@ class ReportDatasetsToAssetSummaryResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_number = self.service_order_number
-
         service_order_id = self.service_order_id
-
         service_order_item_id = self.service_order_item_id
-
         custom_order_number = self.custom_order_number
-
         order_item_number = self.order_item_number
-
         is_limited = self.is_limited
-
         certificate_number = self.certificate_number
-
         serial_number = self.serial_number
-
-        next_service_date: Optional[str]
-        if not self.next_service_date:
-            next_service_date = None
-        elif isinstance(self.next_service_date, datetime.datetime):
-            next_service_date = self.next_service_date.isoformat()
-        else:
-            next_service_date = self.next_service_date
-
-        service_date: Optional[str]
-        if not self.service_date:
-            service_date = None
-        elif isinstance(self.service_date, datetime.datetime):
-            service_date = self.service_date.isoformat()
-        else:
-            service_date = self.service_date
-
+        next_service_date = self.next_service_date.isoformat() if self.next_service_date else None
+        service_date = self.service_date.isoformat() if self.service_date else None
         part_number = self.part_number
-
         display_part_number = self.display_part_number
-
         asset_tag = self.asset_tag
-
         asset_user = self.asset_user
-
         asset_name = self.asset_name
-
         equipment_id = self.equipment_id
-
         legacy_identifier = self.legacy_identifier
-
         asset_description = self.asset_description
-
         class_ = self.class_
-
         condition = self.condition
-
         criticality = self.criticality
-
         asset_pool = self.asset_pool
-
         room = self.room
-
         station = self.station
-
         service_notes = self.service_notes
-
         service_level = self.service_level
-
         service_level_code = self.service_level_code
-
         next_service_level = self.next_service_level
-
         next_service_level_code = self.next_service_level_code
-
         asset_id = self.asset_id
-
         result_status: Optional[int]
         if not self.result_status:
             result_status = None
         else:
             result_status: Optional[str]
-
             if not self.result_status:
-
                 result_status = None
             else:
                 result_status = self.result_status
-        serial_number_change: Optional[str]
-        if not self.serial_number_change:
-            serial_number_change = None
-        else:
-            serial_number_change = self.serial_number_change
-
-        provider_technician: Optional[str]
-        if not self.provider_technician:
-            provider_technician = None
-        else:
-            provider_technician = self.provider_technician
-
-        provider_technician_alias: Optional[str]
-        if not self.provider_technician_alias:
-            provider_technician_alias = None
-        else:
-            provider_technician_alias = self.provider_technician_alias
-
-        provider_phone: Optional[str]
-        if not self.provider_phone:
-            provider_phone = None
-        else:
-            provider_phone = self.provider_phone
-
-        provider_company: Optional[str]
-        if not self.provider_company:
-            provider_company = None
-        else:
-            provider_company = self.provider_company
-
-        qr_code: Optional[str]
-        if not self.qr_code:
-            qr_code = None
-        else:
-            qr_code = self.qr_code
-
-        bar_code: Optional[str]
-        if not self.bar_code:
-            bar_code = None
-        else:
-            bar_code = self.bar_code
-
-        bar_code_string: Optional[str]
-        if not self.bar_code_string:
-            bar_code_string = None
-        else:
-            bar_code_string = self.bar_code_string
-
+        serial_number_change = self.serial_number_change
+        provider_technician = self.provider_technician
+        provider_technician_alias = self.provider_technician_alias
+        provider_phone = self.provider_phone
+        provider_company = self.provider_company
+        qr_code = self.qr_code
+        bar_code = self.bar_code
+        bar_code_string = self.bar_code_string
         owner_company_id: Optional[int]
         if not self.owner_company_id:
             owner_company_id = None
         else:
             owner_company_id = self.owner_company_id
-
-        owner_company_name: Optional[str]
-        if not self.owner_company_name:
-            owner_company_name = None
-        else:
-            owner_company_name = self.owner_company_name
-
+        owner_company_name = self.owner_company_name
         as_found_result: Optional[int]
         if not self.as_found_result:
             as_found_result = None
         else:
             as_found_result: Optional[str]
-
             if not self.as_found_result:
-
                 as_found_result = None
             else:
                 as_found_result = self.as_found_result
@@ -289,92 +197,47 @@ class ReportDatasetsToAssetSummaryResponse:
             as_left_result = None
         else:
             as_left_result: Optional[str]
-
             if not self.as_left_result:
-
                 as_left_result = None
             else:
                 as_left_result = self.as_left_result
-        asset_tag_change: Optional[str]
-        if not self.asset_tag_change:
-            asset_tag_change = None
-        else:
-            asset_tag_change = self.asset_tag_change
-
-        asset_user_change: Optional[str]
-        if not self.asset_user_change:
-            asset_user_change = None
-        else:
-            asset_user_change = self.asset_user_change
-
-        due_date: Optional[str]
-        if not self.due_date:
-            due_date = None
-        elif isinstance(self.due_date, datetime.datetime):
-            due_date = self.due_date.isoformat()
-        else:
-            due_date = self.due_date
-
+        asset_tag_change = self.asset_tag_change
+        asset_user_change = self.asset_user_change
+        due_date = self.due_date.isoformat() if self.due_date else None
         parts_charge: Optional[float]
         if not self.parts_charge:
             parts_charge = None
         else:
             parts_charge = self.parts_charge
-
         parts_charge_before_discount: Optional[float]
         if not self.parts_charge_before_discount:
             parts_charge_before_discount = None
         else:
             parts_charge_before_discount = self.parts_charge_before_discount
-
         service_charge: Optional[float]
         if not self.service_charge:
             service_charge = None
         else:
             service_charge = self.service_charge
-
         repairs_charge: Optional[float]
         if not self.repairs_charge:
             repairs_charge = None
         else:
             repairs_charge = self.repairs_charge
-
-        segment_name: Optional[str]
-        if not self.segment_name:
-            segment_name = None
-        else:
-            segment_name = self.segment_name
-
-        schedule_name: Optional[str]
-        if not self.schedule_name:
-            schedule_name = None
-        else:
-            schedule_name = self.schedule_name
-
-        next_segment_name: Optional[str]
-        if not self.next_segment_name:
-            next_segment_name = None
-        else:
-            next_segment_name = self.next_segment_name
-
+        segment_name = self.segment_name
+        schedule_name = self.schedule_name
+        next_segment_name = self.next_segment_name
         client_id: Optional[int]
         if not self.client_id:
             client_id = None
         else:
             client_id = self.client_id
-
         interval_length: Optional[int]
         if not self.interval_length:
             interval_length = None
         else:
             interval_length = self.interval_length
-
-        interval_cycle: Optional[str]
-        if not self.interval_cycle:
-            interval_cycle = None
-        else:
-            interval_cycle = self.interval_cycle
-
+        interval_cycle = self.interval_cycle
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -490,28 +353,19 @@ class ReportDatasetsToAssetSummaryResponse:
             field_dict["IntervalLength"] = interval_length
         if interval_cycle is not None:
             field_dict["IntervalCycle"] = interval_cycle
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_order_number = d.pop("ServiceOrderNumber", None)
-
         service_order_id = d.pop("ServiceOrderId", None)
-
         service_order_item_id = d.pop("ServiceOrderItemId", None)
-
         custom_order_number = d.pop("CustomOrderNumber", None)
-
         order_item_number = d.pop("OrderItemNumber", None)
-
         is_limited = d.pop("IsLimited", None)
-
         certificate_number = d.pop("CertificateNumber", None)
-
         serial_number = d.pop("SerialNumber", None)
-
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -521,14 +375,11 @@ class ReportDatasetsToAssetSummaryResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 next_service_date_type_0 = isoparse(data)
-
                 return next_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
-
         def _parse_service_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -536,161 +387,108 @@ class ReportDatasetsToAssetSummaryResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 service_date_type_0 = isoparse(data)
-
                 return service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         service_date = _parse_service_date(d.pop("ServiceDate", None))
-
         part_number = d.pop("PartNumber", None)
-
         display_part_number = d.pop("DisplayPartNumber", None)
-
         asset_tag = d.pop("AssetTag", None)
-
         asset_user = d.pop("AssetUser", None)
-
         asset_name = d.pop("AssetName", None)
-
         equipment_id = d.pop("EquipmentId", None)
-
         legacy_identifier = d.pop("LegacyIdentifier", None)
-
         asset_description = d.pop("AssetDescription", None)
-
         class_ = d.pop("Class", None)
-
         condition = d.pop("Condition", None)
-
         criticality = d.pop("Criticality", None)
-
         asset_pool = d.pop("AssetPool", None)
-
         room = d.pop("Room", None)
-
         station = d.pop("Station", None)
-
         service_notes = d.pop("ServiceNotes", None)
-
         service_level = d.pop("ServiceLevel", None)
-
         service_level_code = d.pop("ServiceLevelCode", None)
-
         next_service_level = d.pop("NextServiceLevel", None)
-
         next_service_level_code = d.pop("NextServiceLevelCode", None)
-
         asset_id = d.pop("AssetId", None)
-
         def _parse_result_status(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         result_status = _parse_result_status(d.pop("ResultStatus", None))
-
         def _parse_serial_number_change(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         serial_number_change = _parse_serial_number_change(d.pop("SerialNumberChange", None))
-
         def _parse_provider_technician(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         provider_technician = _parse_provider_technician(d.pop("ProviderTechnician", None))
-
         def _parse_provider_technician_alias(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         provider_technician_alias = _parse_provider_technician_alias(
             d.pop("ProviderTechnicianAlias", None)
         )
-
         def _parse_provider_phone(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         provider_phone = _parse_provider_phone(d.pop("ProviderPhone", None))
-
         def _parse_provider_company(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         provider_company = _parse_provider_company(d.pop("ProviderCompany", None))
-
         def _parse_qr_code(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         qr_code = _parse_qr_code(d.pop("QrCode", None))
-
         def _parse_bar_code(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         bar_code = _parse_bar_code(d.pop("BarCode", None))
-
         def _parse_bar_code_string(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         bar_code_string = _parse_bar_code_string(d.pop("BarCodeString", None))
-
         def _parse_owner_company_id(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         owner_company_id = _parse_owner_company_id(d.pop("OwnerCompanyId", None))
-
         def _parse_owner_company_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         owner_company_name = _parse_owner_company_name(d.pop("OwnerCompanyName", None))
-
         def _parse_as_found_result(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         as_found_result = _parse_as_found_result(d.pop("AsFoundResult", None))
-
         def _parse_as_left_result(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         as_left_result = _parse_as_left_result(d.pop("AsLeftResult", None))
-
         def _parse_asset_tag_change(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_tag_change = _parse_asset_tag_change(d.pop("AssetTagChange", None))
-
         def _parse_asset_user_change(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_user_change = _parse_asset_user_change(d.pop("AssetUserChange", None))
-
         def _parse_due_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -698,88 +496,65 @@ class ReportDatasetsToAssetSummaryResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 due_date_type_0 = isoparse(data)
-
                 return due_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         due_date = _parse_due_date(d.pop("DueDate", None))
-
         def _parse_parts_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         parts_charge = _parse_parts_charge(d.pop("PartsCharge", None))
-
         def _parse_parts_charge_before_discount(
             data: object,
         ) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         parts_charge_before_discount = _parse_parts_charge_before_discount(
             d.pop("PartsChargeBeforeDiscount", None)
         )
-
         def _parse_service_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         service_charge = _parse_service_charge(d.pop("ServiceCharge", None))
-
         def _parse_repairs_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         repairs_charge = _parse_repairs_charge(d.pop("RepairsCharge", None))
-
         def _parse_segment_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         segment_name = _parse_segment_name(d.pop("SegmentName", None))
-
         def _parse_schedule_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         schedule_name = _parse_schedule_name(d.pop("ScheduleName", None))
-
         def _parse_next_segment_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         next_segment_name = _parse_next_segment_name(d.pop("NextSegmentName", None))
-
         def _parse_client_id(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         client_id = _parse_client_id(d.pop("ClientId", None))
-
         def _parse_interval_length(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         interval_length = _parse_interval_length(d.pop("IntervalLength", None))
-
         def _parse_interval_cycle(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         interval_cycle = _parse_interval_cycle(d.pop("IntervalCycle", None))
-
         qualer_api_models_report_datasets_to_asset_summary_response = cls(
             service_order_number=service_order_number,
             service_order_id=service_order_id,
@@ -838,7 +613,6 @@ class ReportDatasetsToAssetSummaryResponse:
             interval_length=interval_length,
             interval_cycle=interval_cycle,
         )
-
         qualer_api_models_report_datasets_to_asset_summary_response.additional_properties = d
         return qualer_api_models_report_datasets_to_asset_summary_response
 

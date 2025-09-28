@@ -52,39 +52,20 @@ class ReportDatasetsToMeasurementChannelUniformityResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_item_id = self.service_order_item_id
-
         measurement_point_id = self.measurement_point_id
-
-        batch_type: Optional[int] = None
-        if self.batch_type:
-            batch_type = self.batch_type.value
-
+        batch_type = self.batch_type.value if self.batch_type else None
         column_index = self.column_index
-
         mean = self.mean
-
         mean_result = self.mean_result
-
         sd = self.sd
-
         sd_result = self.sd_result
-
         cv = self.cv
-
         cv_result = self.cv_result
-
         range_ = self.range_
-
         range_result = self.range_result
-
         delta = self.delta
-
         delta_result = self.delta_result
-
-        result: Optional[int] = None
-        if self.result:
-            result = self.result.value
-
+        result = self.result.value if self.result else None
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -118,45 +99,30 @@ class ReportDatasetsToMeasurementChannelUniformityResponse:
             field_dict["DeltaResult"] = delta_result
         if result is not None:
             field_dict["Result"] = result
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_order_item_id = d.pop("ServiceOrderItemId", None)
-
         measurement_point_id = d.pop("MeasurementPointId", None)
-
         _batch_type = d.pop("BatchType", None)
         batch_type: Optional[ReportDatasetsToMeasurementChannelUniformityResponseBatchType]
         if not _batch_type:
             batch_type = None
         else:
             batch_type = ReportDatasetsToMeasurementChannelUniformityResponseBatchType(_batch_type)
-
         column_index = d.pop("ColumnIndex", None)
-
         mean = d.pop("Mean", None)
-
         mean_result = d.pop("MeanResult", None)
-
         sd = d.pop("SD", None)
-
         sd_result = d.pop("SDResult", None)
-
         cv = d.pop("CV", None)
-
         cv_result = d.pop("CVResult", None)
-
         range_ = d.pop("Range", None)
-
         range_result = d.pop("RangeResult", None)
-
         delta = d.pop("Delta", None)
-
         delta_result = d.pop("DeltaResult", None)
-
         _result = d.pop("Result", None)
         result: Optional[ServiceResultStatus]
         if not _result:
@@ -165,7 +131,6 @@ class ReportDatasetsToMeasurementChannelUniformityResponse:
             result = None
         else:
             result = ServiceResultStatus(_result)
-
         qualer_api_models_report_datasets_to_measurement_channel_uniformity_response = cls(
             service_order_item_id=service_order_item_id,
             measurement_point_id=measurement_point_id,
@@ -183,7 +148,6 @@ class ReportDatasetsToMeasurementChannelUniformityResponse:
             delta_result=delta_result,
             result=result,
         )
-
         qualer_api_models_report_datasets_to_measurement_channel_uniformity_response.additional_properties = (
             d
         )

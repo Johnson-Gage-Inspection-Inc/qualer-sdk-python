@@ -82,28 +82,23 @@ class ReportDatasetsToExternalDataReportResponse:
             field_dict["ServiceOrderItemId"] = self.service_order_item_id
         if self.row is not None:
             field_dict["Row"] = self.row
-
         # Map single-letter fields dynamically to avoid E741 on variable names
         for letter in "abcdefghijklmnopqrstuvwxyz":
             value = getattr(self, letter)
             if value is not None:
                 field_dict[letter.upper()] = value
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         data = dict(src_dict)
-
         kwargs: Dict[str, Any] = {}
         kwargs["measurement_set_id"] = data.pop("MeasurementSetId", None)
         kwargs["service_order_item_id"] = data.pop("ServiceOrderItemId", None)
         kwargs["row"] = data.pop("Row", None)
-
         # Extract A..Z into a..z
         for letter in "abcdefghijklmnopqrstuvwxyz":
             kwargs[letter] = data.pop(letter.upper(), None)
-
         obj = cls(**kwargs)
         obj.additional_properties = data
         return obj

@@ -21,9 +21,7 @@ class ServiceOrderDocumentsFromUploadDocumentsModel:
 
     def to_dict(self) -> Dict[str, Any]:
         report_type = self.report_type
-
         is_private = self.is_private
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -31,21 +29,17 @@ class ServiceOrderDocumentsFromUploadDocumentsModel:
             field_dict["ReportType"] = report_type
         if is_private is not None:
             field_dict["IsPrivate"] = is_private
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         report_type = d.pop("ReportType", None)
-
         is_private = d.pop("IsPrivate", None)
-
         qualer_api_models_service_order_documents_from_upload_documents_model = cls(
             report_type=report_type,
             is_private=is_private,
         )
-
         qualer_api_models_service_order_documents_from_upload_documents_model.additional_properties = (
             d
         )

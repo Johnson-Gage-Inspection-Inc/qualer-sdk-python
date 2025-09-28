@@ -30,15 +30,10 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelC
 
     def to_dict(self) -> Dict[str, Any]:
         name = self.name
-
         type_ = self.type_
-
         value = self.value
-
         field_id = self.field_id
-
         valid_values = self.valid_values
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -52,22 +47,16 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelC
             field_dict["FieldId"] = field_id
         if valid_values is not None:
             field_dict["ValidValues"] = valid_values
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         name = d.pop("Name", None)
-
         type_ = d.pop("Type", None)
-
         value = d.pop("Value", None)
-
         field_id = d.pop("FieldId", None)
-
         valid_values = d.pop("ValidValues", None)
-
         qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_custom_fields_create_measurement_field_response_model = cls(
             name=name,
             type_=type_,
@@ -75,7 +64,6 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelC
             field_id=field_id,
             valid_values=valid_values,
         )
-
         qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_custom_fields_create_measurement_field_response_model.additional_properties = (
             d
         )

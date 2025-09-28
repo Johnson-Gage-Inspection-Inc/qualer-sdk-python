@@ -33,21 +33,13 @@ class EmployeesFromEmployeeLocationModel:
 
     def to_dict(self) -> Dict[str, Any]:
         latitude = self.latitude
-
         longitude = self.longitude
-
         accuracy = self.accuracy
-
         altitude = self.altitude
-
         altitude_accuracy = self.altitude_accuracy
-
         heading = self.heading
-
         speed = self.speed
-
         timestamp = self.timestamp
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -67,28 +59,19 @@ class EmployeesFromEmployeeLocationModel:
             field_dict["Speed"] = speed
         if timestamp is not None:
             field_dict["Timestamp"] = timestamp
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         latitude = d.pop("Latitude", None)
-
         longitude = d.pop("Longitude", None)
-
         accuracy = d.pop("Accuracy", None)
-
         altitude = d.pop("Altitude", None)
-
         altitude_accuracy = d.pop("AltitudeAccuracy", None)
-
         heading = d.pop("Heading", None)
-
         speed = d.pop("Speed", None)
-
         timestamp = d.pop("Timestamp", None)
-
         qualer_api_models_employees_from_employee_location_model = cls(
             latitude=latitude,
             longitude=longitude,
@@ -99,7 +82,6 @@ class EmployeesFromEmployeeLocationModel:
             speed=speed,
             timestamp=timestamp,
         )
-
         qualer_api_models_employees_from_employee_location_model.additional_properties = d
         return qualer_api_models_employees_from_employee_location_model
 

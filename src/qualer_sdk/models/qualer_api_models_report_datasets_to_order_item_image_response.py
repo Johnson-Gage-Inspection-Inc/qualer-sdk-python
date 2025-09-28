@@ -23,11 +23,8 @@ class ReportDatasetsToOrderItemImageResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_item_id = self.service_order_item_id
-
         image = self.image
-
         image_url = self.image_url
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -37,24 +34,19 @@ class ReportDatasetsToOrderItemImageResponse:
             field_dict["Image"] = image
         if image_url is not None:
             field_dict["ImageUrl"] = image_url
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_order_item_id = d.pop("ServiceOrderItemId", None)
-
         image = d.pop("Image", None)
-
         image_url = d.pop("ImageUrl", None)
-
         qualer_api_models_report_datasets_to_order_item_image_response = cls(
             service_order_item_id=service_order_item_id,
             image=image,
             image_url=image_url,
         )
-
         qualer_api_models_report_datasets_to_order_item_image_response.additional_properties = d
         return qualer_api_models_report_datasets_to_order_item_image_response
 

@@ -19,24 +19,20 @@ class EmployeesFromSearchEmployeeModel:
 
     def to_dict(self) -> Dict[str, Any]:
         search_string = self.search_string
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if search_string is not None:
             field_dict["SearchString"] = search_string
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         search_string = d.pop("SearchString", None)
-
         qualer_api_models_employees_from_search_employee_model = cls(
             search_string=search_string,
         )
-
         qualer_api_models_employees_from_search_employee_model.additional_properties = d
         return qualer_api_models_employees_from_search_employee_model
 

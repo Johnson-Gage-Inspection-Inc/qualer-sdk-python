@@ -19,7 +19,6 @@ class ServiceOrdersToClientOrderResponseModelBillingAddressType0:
     def to_dict(self) -> Dict[str, Any]:
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-
         return field_dict
 
     @classmethod
@@ -28,7 +27,6 @@ class ServiceOrdersToClientOrderResponseModelBillingAddressType0:
         qualer_api_models_service_orders_to_client_order_response_model_billing_address_type_0 = (
             cls()
         )
-
         qualer_api_models_service_orders_to_client_order_response_model_billing_address_type_0.additional_properties = (
             d
         )

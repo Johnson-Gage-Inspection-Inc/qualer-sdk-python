@@ -299,356 +299,176 @@ class ReportDatasetsToServiceOrderItemResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         certificate_number = self.certificate_number
-
         document_number = self.document_number
-
         revision = self.revision
-
-        effective_date: Optional[str]
-        if not self.effective_date:
-            effective_date = None
-        elif isinstance(self.effective_date, datetime.datetime):
-            effective_date = self.effective_date.isoformat()
-        else:
-            effective_date = self.effective_date
-
+        effective_date = self.effective_date.isoformat() if self.effective_date else None
         document_section = self.document_section
-
         service_level = self.service_level
-
         service_level_code = self.service_level_code
-
         service_type = self.service_type
-
         order_item_number = self.order_item_number
-
         service_charge = self.service_charge
-
         updated_by = self.updated_by
-
         updated_on: Optional[str] = None
         if self.updated_on:
             updated_on = self.updated_on.isoformat()
-
-        work_status: Optional[int] = None
-        if self.work_status:
-            work_status = self.work_status.value
-
+        work_status = self.work_status.value if self.work_status else None
         custom_work_status = self.custom_work_status
-
         service_comments = self.service_comments
-
         client_notes = self.client_notes
-
         vendor_service_notes = self.vendor_service_notes
-
         display_name = self.display_name
-
         display_part_number = self.display_part_number
-
         part_number = self.part_number
-
         schedule_name = self.schedule_name
-
         segment_name = self.segment_name
-
         next_segment_name = self.next_segment_name
-
         interval_length = self.interval_length
-
         interval_cycle = self.interval_cycle
-
         service_options = self.service_options
-
         service_options_price = self.service_options_price
-
         service_options_document_numbers = self.service_options_document_numbers
-
         location = self.location
-
         station = self.station
-
         room = self.room
-
         site = self.site
-
         vendor_id = self.vendor_id
-
         service_order_number = self.service_order_number
-
         custom_order_number = self.custom_order_number
-
         linked_order_number = self.linked_order_number
-
         asset_id = self.asset_id
-
         asset_class = self.asset_class
-
         asset_condition = self.asset_condition
-
         asset_criticality = self.asset_criticality
-
         asset_pool = self.asset_pool
-
         asset_name = self.asset_name
-
         asset_description = self.asset_description
-
         asset_document_number = self.asset_document_number
-
         asset_document_section = self.asset_document_section
-
         document_number_values = self.document_number_values
-
         product_name = self.product_name
-
         product_description = self.product_description
-
         asset_maker = self.asset_maker
-
         category_name = self.category_name
-
         root_category_name = self.root_category_name
-
         vendor_tag = self.vendor_tag
-
         result_status: Optional[int]
         if not self.result_status:
             result_status = None
         else:
             result_status: Optional[str]
-
             if not self.result_status:
-
                 result_status = None
             else:
                 result_status = self.result_status
-        service_date: Optional[str]
-        if not self.service_date:
-            service_date = None
-        elif isinstance(self.service_date, datetime.datetime):
-            service_date = self.service_date.isoformat()
-        else:
-            service_date = self.service_date
-
-        next_service_date: Optional[str]
-        if not self.next_service_date:
-            next_service_date = None
-        elif isinstance(self.next_service_date, datetime.datetime):
-            next_service_date = self.next_service_date.isoformat()
-        else:
-            next_service_date = self.next_service_date
-
-        original_due_date: Optional[str]
-        if not self.original_due_date:
-            original_due_date = None
-        elif isinstance(self.original_due_date, datetime.datetime):
-            original_due_date = self.original_due_date.isoformat()
-        else:
-            original_due_date = self.original_due_date
-
-        asset_tag: Optional[str]
-        if not self.asset_tag:
-            asset_tag = None
-        else:
-            asset_tag = self.asset_tag
-
-        department: Optional[str]
-        if not self.department:
-            department = None
-        else:
-            department = self.department
-
-        asset_user: Optional[str]
-        if not self.asset_user:
-            asset_user = None
-        else:
-            asset_user = self.asset_user
-
-        equipment_id: Optional[str]
-        if not self.equipment_id:
-            equipment_id = None
-        else:
-            equipment_id = self.equipment_id
-
-        legacy_identifier: Optional[str]
-        if not self.legacy_identifier:
-            legacy_identifier = None
-        else:
-            legacy_identifier = self.legacy_identifier
-
-        activation_date: Optional[str]
-        if not self.activation_date:
-            activation_date = None
-        elif isinstance(self.activation_date, datetime.datetime):
-            activation_date = self.activation_date.isoformat()
-        else:
-            activation_date = self.activation_date
-
-        purchase_date: Optional[str]
-        if not self.purchase_date:
-            purchase_date = None
-        elif isinstance(self.purchase_date, datetime.datetime):
-            purchase_date = self.purchase_date.isoformat()
-        else:
-            purchase_date = self.purchase_date
-
-        part_name: Optional[str]
-        if not self.part_name:
-            part_name = None
-        else:
-            part_name = self.part_name
-
-        part_description: Optional[str]
-        if not self.part_description:
-            part_description = None
-        else:
-            part_description = self.part_description
-
+        service_date = self.service_date.isoformat() if self.service_date else None
+        next_service_date = self.next_service_date.isoformat() if self.next_service_date else None
+        original_due_date = self.original_due_date.isoformat() if self.original_due_date else None
+        asset_tag = self.asset_tag
+        department = self.department
+        asset_user = self.asset_user
+        equipment_id = self.equipment_id
+        legacy_identifier = self.legacy_identifier
+        activation_date = self.activation_date.isoformat() if self.activation_date else None
+        purchase_date = self.purchase_date.isoformat() if self.purchase_date else None
+        part_name = self.part_name
+        part_description = self.part_description
         is_taxable = self.is_taxable
-
         is_limited = self.is_limited
-
         quantity: Optional[float]
         if not self.quantity:
             quantity = None
         else:
             quantity = self.quantity
-
         discount: Optional[float]
         if not self.discount:
             discount = None
         else:
             discount = self.discount
-
         price: Optional[float]
         if not self.price:
             price = None
         else:
             price = self.price
-
         time_spent_in_minutes: Optional[float]
         if not self.time_spent_in_minutes:
             time_spent_in_minutes = None
         else:
             time_spent_in_minutes = self.time_spent_in_minutes
-
         is_hourly_pricing: Optional[bool]
         if not self.is_hourly_pricing:
             is_hourly_pricing = None
         else:
             is_hourly_pricing = self.is_hourly_pricing
-
         delivery_charge: Optional[float]
         if not self.delivery_charge:
             delivery_charge = None
         else:
             delivery_charge = self.delivery_charge
-
         serial_number = self.serial_number
-
         part_repair_charges: Optional[float]
         if not self.part_repair_charges:
             part_repair_charges = None
         else:
             part_repair_charges = self.part_repair_charges
-
         part_repair_price: Optional[float]
         if not self.part_repair_price:
             part_repair_price = None
         else:
             part_repair_price = self.part_repair_price
-
         override_parts_total = self.override_parts_total
-
         override_repairs_total = self.override_repairs_total
-
-        asset_custodian_name: Optional[str]
-        if not self.asset_custodian_name:
-            asset_custodian_name = None
-        else:
-            asset_custodian_name = self.asset_custodian_name
-
-        as_found_specification_group_name: Optional[str]
-        if not self.as_found_specification_group_name:
-            as_found_specification_group_name = None
-        else:
-            as_found_specification_group_name = self.as_found_specification_group_name
-
-        as_found_specification_company_name: Optional[str]
-        if not self.as_found_specification_company_name:
-            as_found_specification_company_name = None
-        else:
-            as_found_specification_company_name = self.as_found_specification_company_name
-
-        as_left_specification_group_name: Optional[str]
-        if not self.as_left_specification_group_name:
-            as_left_specification_group_name = None
-        else:
-            as_left_specification_group_name = self.as_left_specification_group_name
-
-        as_left_specification_company_name: Optional[str]
-        if not self.as_left_specification_company_name:
-            as_left_specification_company_name = None
-        else:
-            as_left_specification_company_name = self.as_left_specification_company_name
-
+        asset_custodian_name = self.asset_custodian_name
+        as_found_specification_group_name = self.as_found_specification_group_name
+        as_found_specification_company_name = self.as_found_specification_company_name
+        as_left_specification_group_name = self.as_left_specification_group_name
+        as_left_specification_company_name = self.as_left_specification_company_name
         order_id: Optional[int]
         if not self.order_id:
             order_id = None
         else:
             order_id = self.order_id
-
         parent_order_id: Optional[int]
         if not self.parent_order_id:
             parent_order_id = None
         else:
             parent_order_id = self.parent_order_id
-
         order_item_id: Optional[int]
         if not self.order_item_id:
             order_item_id = None
         else:
             order_item_id = self.order_item_id
-
         order_item_part_id: Optional[int]
         if not self.order_item_part_id:
             order_item_part_id = None
         else:
             order_item_part_id = self.order_item_part_id
-
         as_found_specification_group_id: Optional[int]
         if not self.as_found_specification_group_id:
             as_found_specification_group_id = None
         else:
             as_found_specification_group_id = self.as_found_specification_group_id
-
         as_left_specification_group_id: Optional[int]
         if not self.as_left_specification_group_id:
             as_left_specification_group_id = None
         else:
             as_left_specification_group_id = self.as_left_specification_group_id
-
         as_found_status: Optional[int]
         if not self.as_found_status:
             as_found_status = None
         else:
             as_found_status = self.as_found_status
-
         as_left_status: Optional[int]
         if not self.as_left_status:
             as_left_status = None
         else:
             as_left_status = self.as_left_status
-
         as_found_result: Optional[int]
         if not self.as_found_result:
             as_found_result = None
         else:
             as_found_result: Optional[str]
-
             if not self.as_found_result:
-
                 as_found_result = None
             else:
                 as_found_result = self.as_found_result
@@ -657,292 +477,80 @@ class ReportDatasetsToServiceOrderItemResponse:
             as_left_result = None
         else:
             as_left_result: Optional[str]
-
             if not self.as_left_result:
-
                 as_left_result = None
             else:
                 as_left_result = self.as_left_result
-        completed_on: Optional[str]
-        if not self.completed_on:
-            completed_on = None
-        elif isinstance(self.completed_on, datetime.datetime):
-            completed_on = self.completed_on.isoformat()
-        else:
-            completed_on = self.completed_on
-
-        received_on: Optional[str]
-        if not self.received_on:
-            received_on = None
-        elif isinstance(self.received_on, datetime.datetime):
-            received_on = self.received_on.isoformat()
-        else:
-            received_on = self.received_on
-
-        completed_by_name: Optional[str]
-        if not self.completed_by_name:
-            completed_by_name = None
-        else:
-            completed_by_name = self.completed_by_name
-
+        completed_on = self.completed_on.isoformat() if self.completed_on else None
+        received_on = self.received_on.isoformat() if self.received_on else None
+        completed_by_name = self.completed_by_name
         service_charge_base: Optional[float]
         if not self.service_charge_base:
             service_charge_base = None
         else:
             service_charge_base = self.service_charge_base
-
         service_total: Optional[float]
         if not self.service_total:
             service_total = None
         else:
             service_total = self.service_total
-
         repairs_total: Optional[float]
         if not self.repairs_total:
             repairs_total = None
         else:
             repairs_total = self.repairs_total
-
         parts_total: Optional[float]
         if not self.parts_total:
             parts_total = None
         else:
             parts_total = self.parts_total
-
         parts_total_before_discount: Optional[float]
         if not self.parts_total_before_discount:
             parts_total_before_discount = None
         else:
             parts_total_before_discount = self.parts_total_before_discount
-
-        parent_manufacturer: Optional[str]
-        if not self.parent_manufacturer:
-            parent_manufacturer = None
-        else:
-            parent_manufacturer = self.parent_manufacturer
-
-        parent_location: Optional[str]
-        if not self.parent_location:
-            parent_location = None
-        else:
-            parent_location = self.parent_location
-
-        parent_manufacturer_part_number: Optional[str]
-        if not self.parent_manufacturer_part_number:
-            parent_manufacturer_part_number = None
-        else:
-            parent_manufacturer_part_number = self.parent_manufacturer_part_number
-
-        parent_display_part_number: Optional[str]
-        if not self.parent_display_part_number:
-            parent_display_part_number = None
-        else:
-            parent_display_part_number = self.parent_display_part_number
-
+        parent_manufacturer = self.parent_manufacturer
+        parent_location = self.parent_location
+        parent_manufacturer_part_number = self.parent_manufacturer_part_number
+        parent_display_part_number = self.parent_display_part_number
         parent_asset_id: Optional[int]
         if not self.parent_asset_id:
             parent_asset_id = None
         else:
             parent_asset_id = self.parent_asset_id
-
-        parent_category_name: Optional[str]
-        if not self.parent_category_name:
-            parent_category_name = None
-        else:
-            parent_category_name = self.parent_category_name
-
-        parent_root_category_name: Optional[str]
-        if not self.parent_root_category_name:
-            parent_root_category_name = None
-        else:
-            parent_root_category_name = self.parent_root_category_name
-
-        parent_serial_number: Optional[str]
-        if not self.parent_serial_number:
-            parent_serial_number = None
-        else:
-            parent_serial_number = self.parent_serial_number
-
-        parent_asset_tag: Optional[str]
-        if not self.parent_asset_tag:
-            parent_asset_tag = None
-        else:
-            parent_asset_tag = self.parent_asset_tag
-
-        parent_asset_user: Optional[str]
-        if not self.parent_asset_user:
-            parent_asset_user = None
-        else:
-            parent_asset_user = self.parent_asset_user
-
-        parent_display_name: Optional[str]
-        if not self.parent_display_name:
-            parent_display_name = None
-        else:
-            parent_display_name = self.parent_display_name
-
-        parent_equipment_id: Optional[str]
-        if not self.parent_equipment_id:
-            parent_equipment_id = None
-        else:
-            parent_equipment_id = self.parent_equipment_id
-
-        asset_shipping_address_1: Optional[str]
-        if not self.asset_shipping_address_1:
-            asset_shipping_address_1 = None
-        else:
-            asset_shipping_address_1 = self.asset_shipping_address_1
-
-        asset_shipping_address_2: Optional[str]
-        if not self.asset_shipping_address_2:
-            asset_shipping_address_2 = None
-        else:
-            asset_shipping_address_2 = self.asset_shipping_address_2
-
-        asset_shipping_first_name: Optional[str]
-        if not self.asset_shipping_first_name:
-            asset_shipping_first_name = None
-        else:
-            asset_shipping_first_name = self.asset_shipping_first_name
-
-        asset_shipping_last_name: Optional[str]
-        if not self.asset_shipping_last_name:
-            asset_shipping_last_name = None
-        else:
-            asset_shipping_last_name = self.asset_shipping_last_name
-
-        asset_shipping_email: Optional[str]
-        if not self.asset_shipping_email:
-            asset_shipping_email = None
-        else:
-            asset_shipping_email = self.asset_shipping_email
-
-        asset_shipping_company: Optional[str]
-        if not self.asset_shipping_company:
-            asset_shipping_company = None
-        else:
-            asset_shipping_company = self.asset_shipping_company
-
-        asset_shipping_city: Optional[str]
-        if not self.asset_shipping_city:
-            asset_shipping_city = None
-        else:
-            asset_shipping_city = self.asset_shipping_city
-
-        asset_shipping_zip: Optional[str]
-        if not self.asset_shipping_zip:
-            asset_shipping_zip = None
-        else:
-            asset_shipping_zip = self.asset_shipping_zip
-
-        asset_shipping_phone_number: Optional[str]
-        if not self.asset_shipping_phone_number:
-            asset_shipping_phone_number = None
-        else:
-            asset_shipping_phone_number = self.asset_shipping_phone_number
-
-        asset_shipping_fax_number: Optional[str]
-        if not self.asset_shipping_fax_number:
-            asset_shipping_fax_number = None
-        else:
-            asset_shipping_fax_number = self.asset_shipping_fax_number
-
-        asset_shipping_country: Optional[str]
-        if not self.asset_shipping_country:
-            asset_shipping_country = None
-        else:
-            asset_shipping_country = self.asset_shipping_country
-
-        asset_shipping_state: Optional[str]
-        if not self.asset_shipping_state:
-            asset_shipping_state = None
-        else:
-            asset_shipping_state = self.asset_shipping_state
-
-        shipping_address_1: Optional[str]
-        if not self.shipping_address_1:
-            shipping_address_1 = None
-        else:
-            shipping_address_1 = self.shipping_address_1
-
-        shipping_address_2: Optional[str]
-        if not self.shipping_address_2:
-            shipping_address_2 = None
-        else:
-            shipping_address_2 = self.shipping_address_2
-
-        shipping_first_name: Optional[str]
-        if not self.shipping_first_name:
-            shipping_first_name = None
-        else:
-            shipping_first_name = self.shipping_first_name
-
-        shipping_last_name: Optional[str]
-        if not self.shipping_last_name:
-            shipping_last_name = None
-        else:
-            shipping_last_name = self.shipping_last_name
-
-        shipping_email: Optional[str]
-        if not self.shipping_email:
-            shipping_email = None
-        else:
-            shipping_email = self.shipping_email
-
-        shipping_company: Optional[str]
-        if not self.shipping_company:
-            shipping_company = None
-        else:
-            shipping_company = self.shipping_company
-
-        shipping_city: Optional[str]
-        if not self.shipping_city:
-            shipping_city = None
-        else:
-            shipping_city = self.shipping_city
-
-        shipping_zip: Optional[str]
-        if not self.shipping_zip:
-            shipping_zip = None
-        else:
-            shipping_zip = self.shipping_zip
-
-        shipping_phone_number: Optional[str]
-        if not self.shipping_phone_number:
-            shipping_phone_number = None
-        else:
-            shipping_phone_number = self.shipping_phone_number
-
-        shipping_fax_number: Optional[str]
-        if not self.shipping_fax_number:
-            shipping_fax_number = None
-        else:
-            shipping_fax_number = self.shipping_fax_number
-
-        shipping_country: Optional[str]
-        if not self.shipping_country:
-            shipping_country = None
-        else:
-            shipping_country = self.shipping_country
-
-        shipping_state: Optional[str]
-        if not self.shipping_state:
-            shipping_state = None
-        else:
-            shipping_state = self.shipping_state
-
-        asset_service_notes: Optional[str]
-        if not self.asset_service_notes:
-            asset_service_notes = None
-        else:
-            asset_service_notes = self.asset_service_notes
-
-        service_option_service_code: Optional[str]
-        if not self.service_option_service_code:
-            service_option_service_code = None
-        else:
-            service_option_service_code = self.service_option_service_code
-
+        parent_category_name = self.parent_category_name
+        parent_root_category_name = self.parent_root_category_name
+        parent_serial_number = self.parent_serial_number
+        parent_asset_tag = self.parent_asset_tag
+        parent_asset_user = self.parent_asset_user
+        parent_display_name = self.parent_display_name
+        parent_equipment_id = self.parent_equipment_id
+        asset_shipping_address_1 = self.asset_shipping_address_1
+        asset_shipping_address_2 = self.asset_shipping_address_2
+        asset_shipping_first_name = self.asset_shipping_first_name
+        asset_shipping_last_name = self.asset_shipping_last_name
+        asset_shipping_email = self.asset_shipping_email
+        asset_shipping_company = self.asset_shipping_company
+        asset_shipping_city = self.asset_shipping_city
+        asset_shipping_zip = self.asset_shipping_zip
+        asset_shipping_phone_number = self.asset_shipping_phone_number
+        asset_shipping_fax_number = self.asset_shipping_fax_number
+        asset_shipping_country = self.asset_shipping_country
+        asset_shipping_state = self.asset_shipping_state
+        shipping_address_1 = self.shipping_address_1
+        shipping_address_2 = self.shipping_address_2
+        shipping_first_name = self.shipping_first_name
+        shipping_last_name = self.shipping_last_name
+        shipping_email = self.shipping_email
+        shipping_company = self.shipping_company
+        shipping_city = self.shipping_city
+        shipping_zip = self.shipping_zip
+        shipping_phone_number = self.shipping_phone_number
+        shipping_fax_number = self.shipping_fax_number
+        shipping_country = self.shipping_country
+        shipping_state = self.shipping_state
+        asset_service_notes = self.asset_service_notes
+        service_option_service_code = self.service_option_service_code
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -1224,18 +832,14 @@ class ReportDatasetsToServiceOrderItemResponse:
             field_dict["AssetServiceNotes"] = asset_service_notes
         if service_option_service_code is not None:
             field_dict["ServiceOptionServiceCode"] = service_option_service_code
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         certificate_number = d.pop("CertificateNumber", None)
-
         document_number = d.pop("DocumentNumber", None)
-
         revision = d.pop("Revision", None)
-
         def _parse_effective_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -1245,35 +849,24 @@ class ReportDatasetsToServiceOrderItemResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 effective_date_type_0 = isoparse(data)
-
                 return effective_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         effective_date = _parse_effective_date(d.pop("EffectiveDate", None))
-
         document_section = d.pop("DocumentSection", None)
-
         service_level = d.pop("ServiceLevel", None)
-
         service_level_code = d.pop("ServiceLevelCode", None)
-
         service_type = d.pop("ServiceType", None)
-
         order_item_number = d.pop("OrderItemNumber", None)
-
         service_charge = d.pop("ServiceCharge", None)
-
         updated_by = d.pop("UpdatedBy", None)
-
         _updated_on = d.pop("UpdatedOn", None)
         updated_on: Optional[datetime.datetime]
         if not _updated_on:
             updated_on = None
         else:
             updated_on = isoparse(_updated_on)
-
         _work_status = d.pop("WorkStatus", None)
         work_status: Optional[WorkStatus]
         if not _work_status:
@@ -1282,92 +875,50 @@ class ReportDatasetsToServiceOrderItemResponse:
             work_status = None
         else:
             work_status = WorkStatus(_work_status)
-
         custom_work_status = d.pop("CustomWorkStatus", None)
-
         service_comments = d.pop("ServiceComments", None)
-
         client_notes = d.pop("ClientNotes", None)
-
         vendor_service_notes = d.pop("VendorServiceNotes", None)
-
         display_name = d.pop("DisplayName", None)
-
         display_part_number = d.pop("DisplayPartNumber", None)
-
         part_number = d.pop("PartNumber", None)
-
         schedule_name = d.pop("ScheduleName", None)
-
         segment_name = d.pop("SegmentName", None)
-
         next_segment_name = d.pop("NextSegmentName", None)
-
         interval_length = d.pop("IntervalLength", None)
-
         interval_cycle = d.pop("IntervalCycle", None)
-
         service_options = d.pop("ServiceOptions", None)
-
         service_options_price = d.pop("ServiceOptionsPrice", None)
-
         service_options_document_numbers = d.pop("ServiceOptionsDocumentNumbers", None)
-
         location = d.pop("Location", None)
-
         station = d.pop("Station", None)
-
         room = d.pop("Room", None)
-
         site = d.pop("Site", None)
-
         vendor_id = d.pop("VendorId", None)
-
         service_order_number = d.pop("ServiceOrderNumber", None)
-
         custom_order_number = d.pop("CustomOrderNumber", None)
-
         linked_order_number = d.pop("LinkedOrderNumber", None)
-
         asset_id = d.pop("AssetId", None)
-
         asset_class = d.pop("AssetClass", None)
-
         asset_condition = d.pop("AssetCondition", None)
-
         asset_criticality = d.pop("AssetCriticality", None)
-
         asset_pool = d.pop("AssetPool", None)
-
         asset_name = d.pop("AssetName", None)
-
         asset_description = d.pop("AssetDescription", None)
-
         asset_document_number = d.pop("AssetDocumentNumber", None)
-
         asset_document_section = d.pop("AssetDocumentSection", None)
-
         document_number_values = d.pop("DocumentNumberValues", None)
-
         product_name = d.pop("ProductName", None)
-
         product_description = d.pop("ProductDescription", None)
-
         asset_maker = d.pop("AssetMaker", None)
-
         category_name = d.pop("CategoryName", None)
-
         root_category_name = d.pop("RootCategoryName", None)
-
         vendor_tag = d.pop("VendorTag", None)
-
         def _parse_result_status(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         result_status = _parse_result_status(d.pop("ResultStatus", None))
-
         def _parse_service_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1375,14 +926,11 @@ class ReportDatasetsToServiceOrderItemResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 service_date_type_0 = isoparse(data)
-
                 return service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         service_date = _parse_service_date(d.pop("ServiceDate", None))
-
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -1392,14 +940,11 @@ class ReportDatasetsToServiceOrderItemResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 next_service_date_type_0 = isoparse(data)
-
                 return next_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
-
         def _parse_original_due_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -1409,49 +954,36 @@ class ReportDatasetsToServiceOrderItemResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 original_due_date_type_0 = isoparse(data)
-
                 return original_due_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         original_due_date = _parse_original_due_date(d.pop("OriginalDueDate", None))
-
         def _parse_asset_tag(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_tag = _parse_asset_tag(d.pop("AssetTag", None))
-
         def _parse_department(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         department = _parse_department(d.pop("Department", None))
-
         def _parse_asset_user(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_user = _parse_asset_user(d.pop("AssetUser", None))
-
         def _parse_equipment_id(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         equipment_id = _parse_equipment_id(d.pop("EquipmentId", None))
-
         def _parse_legacy_identifier(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         legacy_identifier = _parse_legacy_identifier(d.pop("LegacyIdentifier", None))
-
         def _parse_activation_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -1461,14 +993,11 @@ class ReportDatasetsToServiceOrderItemResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 activation_date_type_0 = isoparse(data)
-
                 return activation_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         activation_date = _parse_activation_date(d.pop("ActivationDate", None))
-
         def _parse_purchase_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1476,223 +1005,165 @@ class ReportDatasetsToServiceOrderItemResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 purchase_date_type_0 = isoparse(data)
-
                 return purchase_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         purchase_date = _parse_purchase_date(d.pop("PurchaseDate", None))
-
         def _parse_part_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         part_name = _parse_part_name(d.pop("PartName", None))
-
         def _parse_part_description(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         part_description = _parse_part_description(d.pop("PartDescription", None))
-
         is_taxable = d.pop("IsTaxable", None)
-
         is_limited = d.pop("IsLimited", None)
-
         def _parse_quantity(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         quantity = _parse_quantity(d.pop("Quantity", None))
-
         def _parse_discount(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         discount = _parse_discount(d.pop("Discount", None))
-
         def _parse_price(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         price = _parse_price(d.pop("Price", None))
-
         def _parse_time_spent_in_minutes(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         time_spent_in_minutes = _parse_time_spent_in_minutes(d.pop("TimeSpentInMinutes", None))
-
         def _parse_is_hourly_pricing(data: object) -> Optional[bool]:
             if not data:
                 return None
             return cast(Optional[bool], data)
-
         is_hourly_pricing = _parse_is_hourly_pricing(d.pop("IsHourlyPricing", None))
-
         def _parse_delivery_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         delivery_charge = _parse_delivery_charge(d.pop("DeliveryCharge", None))
-
         serial_number = d.pop("SerialNumber", None)
-
         def _parse_part_repair_charges(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         part_repair_charges = _parse_part_repair_charges(d.pop("PartRepairCharges", None))
-
         def _parse_part_repair_price(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         part_repair_price = _parse_part_repair_price(d.pop("PartRepairPrice", None))
-
         override_parts_total = d.pop("OverridePartsTotal", None)
-
         override_repairs_total = d.pop("OverrideRepairsTotal", None)
-
         def _parse_asset_custodian_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_custodian_name = _parse_asset_custodian_name(d.pop("AssetCustodianName", None))
-
         def _parse_as_found_specification_group_name(
             data: object,
         ) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         as_found_specification_group_name = _parse_as_found_specification_group_name(
             d.pop("AsFoundSpecificationGroupName", None)
         )
-
         def _parse_as_found_specification_company_name(
             data: object,
         ) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         as_found_specification_company_name = _parse_as_found_specification_company_name(
             d.pop("AsFoundSpecificationCompanyName", None)
         )
-
         def _parse_as_left_specification_group_name(
             data: object,
         ) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         as_left_specification_group_name = _parse_as_left_specification_group_name(
             d.pop("AsLeftSpecificationGroupName", None)
         )
-
         def _parse_as_left_specification_company_name(
             data: object,
         ) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         as_left_specification_company_name = _parse_as_left_specification_company_name(
             d.pop("AsLeftSpecificationCompanyName", None)
         )
-
         def _parse_order_id(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         order_id = _parse_order_id(d.pop("OrderId", None))
-
         def _parse_parent_order_id(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         parent_order_id = _parse_parent_order_id(d.pop("ParentOrderId", None))
-
         def _parse_order_item_id(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         order_item_id = _parse_order_item_id(d.pop("OrderItemId", None))
-
         def _parse_order_item_part_id(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         order_item_part_id = _parse_order_item_part_id(d.pop("OrderItemPartId", None))
-
         def _parse_as_found_specification_group_id(
             data: object,
         ) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         as_found_specification_group_id = _parse_as_found_specification_group_id(
             d.pop("AsFoundSpecificationGroupId", None)
         )
-
         def _parse_as_left_specification_group_id(
             data: object,
         ) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         as_left_specification_group_id = _parse_as_left_specification_group_id(
             d.pop("AsLeftSpecificationGroupId", None)
         )
-
         def _parse_as_found_status(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         as_found_status = _parse_as_found_status(d.pop("AsFoundStatus", None))
-
         def _parse_as_left_status(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         as_left_status = _parse_as_left_status(d.pop("AsLeftStatus", None))
-
         def _parse_as_found_result(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         as_found_result = _parse_as_found_result(d.pop("AsFoundResult", None))
-
         def _parse_as_left_result(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         as_left_result = _parse_as_left_result(d.pop("AsLeftResult", None))
-
         def _parse_completed_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1700,14 +1171,11 @@ class ReportDatasetsToServiceOrderItemResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 completed_on_type_0 = isoparse(data)
-
                 return completed_on_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         completed_on = _parse_completed_on(d.pop("CompletedOn", None))
-
         def _parse_received_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1715,348 +1183,257 @@ class ReportDatasetsToServiceOrderItemResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 received_on_type_0 = isoparse(data)
-
                 return received_on_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         received_on = _parse_received_on(d.pop("ReceivedOn", None))
-
         def _parse_completed_by_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         completed_by_name = _parse_completed_by_name(d.pop("CompletedByName", None))
-
         def _parse_service_charge_base(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         service_charge_base = _parse_service_charge_base(d.pop("ServiceChargeBase", None))
-
         def _parse_service_total(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         service_total = _parse_service_total(d.pop("ServiceTotal", None))
-
         def _parse_repairs_total(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         repairs_total = _parse_repairs_total(d.pop("RepairsTotal", None))
-
         def _parse_parts_total(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         parts_total = _parse_parts_total(d.pop("PartsTotal", None))
-
         def _parse_parts_total_before_discount(
             data: object,
         ) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         parts_total_before_discount = _parse_parts_total_before_discount(
             d.pop("PartsTotalBeforeDiscount", None)
         )
-
         def _parse_parent_manufacturer(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         parent_manufacturer = _parse_parent_manufacturer(d.pop("ParentManufacturer", None))
-
         def _parse_parent_location(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         parent_location = _parse_parent_location(d.pop("ParentLocation", None))
-
         def _parse_parent_manufacturer_part_number(
             data: object,
         ) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         parent_manufacturer_part_number = _parse_parent_manufacturer_part_number(
             d.pop("ParentManufacturerPartNumber", None)
         )
-
         def _parse_parent_display_part_number(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         parent_display_part_number = _parse_parent_display_part_number(
             d.pop("ParentDisplayPartNumber", None)
         )
-
         def _parse_parent_asset_id(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
-
         parent_asset_id = _parse_parent_asset_id(d.pop("ParentAssetId", None))
-
         def _parse_parent_category_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         parent_category_name = _parse_parent_category_name(d.pop("ParentCategoryName", None))
-
         def _parse_parent_root_category_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         parent_root_category_name = _parse_parent_root_category_name(
             d.pop("ParentRootCategoryName", None)
         )
-
         def _parse_parent_serial_number(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         parent_serial_number = _parse_parent_serial_number(d.pop("ParentSerialNumber", None))
-
         def _parse_parent_asset_tag(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         parent_asset_tag = _parse_parent_asset_tag(d.pop("ParentAssetTag", None))
-
         def _parse_parent_asset_user(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         parent_asset_user = _parse_parent_asset_user(d.pop("ParentAssetUser", None))
-
         def _parse_parent_display_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         parent_display_name = _parse_parent_display_name(d.pop("ParentDisplayName", None))
-
         def _parse_parent_equipment_id(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         parent_equipment_id = _parse_parent_equipment_id(d.pop("ParentEquipmentId", None))
-
         def _parse_asset_shipping_address_1(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_shipping_address_1 = _parse_asset_shipping_address_1(
             d.pop("AssetShippingAddress1", None)
         )
-
         def _parse_asset_shipping_address_2(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_shipping_address_2 = _parse_asset_shipping_address_2(
             d.pop("AssetShippingAddress2", None)
         )
-
         def _parse_asset_shipping_first_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_shipping_first_name = _parse_asset_shipping_first_name(
             d.pop("AssetShippingFirstName", None)
         )
-
         def _parse_asset_shipping_last_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_shipping_last_name = _parse_asset_shipping_last_name(
             d.pop("AssetShippingLastName", None)
         )
-
         def _parse_asset_shipping_email(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_shipping_email = _parse_asset_shipping_email(d.pop("AssetShippingEmail", None))
-
         def _parse_asset_shipping_company(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_shipping_company = _parse_asset_shipping_company(d.pop("AssetShippingCompany", None))
-
         def _parse_asset_shipping_city(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_shipping_city = _parse_asset_shipping_city(d.pop("AssetShippingCity", None))
-
         def _parse_asset_shipping_zip(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_shipping_zip = _parse_asset_shipping_zip(d.pop("AssetShippingZip", None))
-
         def _parse_asset_shipping_phone_number(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_shipping_phone_number = _parse_asset_shipping_phone_number(
             d.pop("AssetShippingPhoneNumber", None)
         )
-
         def _parse_asset_shipping_fax_number(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_shipping_fax_number = _parse_asset_shipping_fax_number(
             d.pop("AssetShippingFaxNumber", None)
         )
-
         def _parse_asset_shipping_country(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_shipping_country = _parse_asset_shipping_country(d.pop("AssetShippingCountry", None))
-
         def _parse_asset_shipping_state(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_shipping_state = _parse_asset_shipping_state(d.pop("AssetShippingState", None))
-
         def _parse_shipping_address_1(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         shipping_address_1 = _parse_shipping_address_1(d.pop("ShippingAddress1", None))
-
         def _parse_shipping_address_2(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         shipping_address_2 = _parse_shipping_address_2(d.pop("ShippingAddress2", None))
-
         def _parse_shipping_first_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         shipping_first_name = _parse_shipping_first_name(d.pop("ShippingFirstName", None))
-
         def _parse_shipping_last_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         shipping_last_name = _parse_shipping_last_name(d.pop("ShippingLastName", None))
-
         def _parse_shipping_email(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         shipping_email = _parse_shipping_email(d.pop("ShippingEmail", None))
-
         def _parse_shipping_company(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         shipping_company = _parse_shipping_company(d.pop("ShippingCompany", None))
-
         def _parse_shipping_city(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         shipping_city = _parse_shipping_city(d.pop("ShippingCity", None))
-
         def _parse_shipping_zip(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         shipping_zip = _parse_shipping_zip(d.pop("ShippingZip", None))
-
         def _parse_shipping_phone_number(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         shipping_phone_number = _parse_shipping_phone_number(d.pop("ShippingPhoneNumber", None))
-
         def _parse_shipping_fax_number(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         shipping_fax_number = _parse_shipping_fax_number(d.pop("ShippingFaxNumber", None))
-
         def _parse_shipping_country(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         shipping_country = _parse_shipping_country(d.pop("ShippingCountry", None))
-
         def _parse_shipping_state(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         shipping_state = _parse_shipping_state(d.pop("ShippingState", None))
-
         def _parse_asset_service_notes(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_service_notes = _parse_asset_service_notes(d.pop("AssetServiceNotes", None))
-
         def _parse_service_option_service_code(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         service_option_service_code = _parse_service_option_service_code(
             d.pop("ServiceOptionServiceCode", None)
         )
-
         qualer_api_models_report_datasets_to_service_order_item_response = cls(
             certificate_number=certificate_number,
             document_number=document_number,
@@ -2198,7 +1575,6 @@ class ReportDatasetsToServiceOrderItemResponse:
             asset_service_notes=asset_service_notes,
             service_option_service_code=service_option_service_code,
         )
-
         qualer_api_models_report_datasets_to_service_order_item_response.additional_properties = d
         return qualer_api_models_report_datasets_to_service_order_item_response
 

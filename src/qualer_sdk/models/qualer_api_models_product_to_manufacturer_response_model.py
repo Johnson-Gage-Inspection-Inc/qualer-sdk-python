@@ -21,9 +21,7 @@ class ProductToManufacturerResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         manufacturer_id = self.manufacturer_id
-
         manufacturer_name = self.manufacturer_name
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -31,21 +29,17 @@ class ProductToManufacturerResponseModel:
             field_dict["ManufacturerId"] = manufacturer_id
         if manufacturer_name is not None:
             field_dict["ManufacturerName"] = manufacturer_name
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         manufacturer_id = d.pop("ManufacturerId", None)
-
         manufacturer_name = d.pop("ManufacturerName", None)
-
         qualer_api_models_product_to_manufacturer_response_model = cls(
             manufacturer_id=manufacturer_id,
             manufacturer_name=manufacturer_name,
         )
-
         qualer_api_models_product_to_manufacturer_response_model.additional_properties = d
         return qualer_api_models_product_to_manufacturer_response_model
 

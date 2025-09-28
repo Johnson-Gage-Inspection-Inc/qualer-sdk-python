@@ -25,9 +25,7 @@ class AssetFromUpdateAssetMaintenanceServiceDat:
         reset_service_date: Optional[str] = None
         if self.reset_service_date:
             reset_service_date = self.reset_service_date.isoformat()
-
         reset_service_task = self.reset_service_task
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -35,7 +33,6 @@ class AssetFromUpdateAssetMaintenanceServiceDat:
             field_dict["ResetServiceDate"] = reset_service_date
         if reset_service_task is not None:
             field_dict["ResetServiceTask"] = reset_service_task
-
         return field_dict
 
     @classmethod
@@ -47,14 +44,11 @@ class AssetFromUpdateAssetMaintenanceServiceDat:
             reset_service_date = None
         else:
             reset_service_date = isoparse(_reset_service_date)
-
         reset_service_task = d.pop("ResetServiceTask", None)
-
         qualer_api_models_asset_from_update_asset_maintenance_service_dat = cls(
             reset_service_date=reset_service_date,
             reset_service_task=reset_service_task,
         )
-
         qualer_api_models_asset_from_update_asset_maintenance_service_dat.additional_properties = d
         return qualer_api_models_asset_from_update_asset_maintenance_service_dat
 

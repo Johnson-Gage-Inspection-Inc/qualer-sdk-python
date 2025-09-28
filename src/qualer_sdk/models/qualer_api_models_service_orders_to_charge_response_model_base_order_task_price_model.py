@@ -32,17 +32,11 @@ class ServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel:
 
     def to_dict(self) -> Dict[str, Any]:
         contract_discount = self.contract_discount
-
         time_spent = self.time_spent
-
         is_hourly = self.is_hourly
-
         details = self.details
-
         name = self.name
-
         price = self.price
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -58,24 +52,17 @@ class ServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel:
             field_dict["Name"] = name
         if price is not None:
             field_dict["Price"] = price
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         contract_discount = d.pop("ContractDiscount", None)
-
         time_spent = d.pop("TimeSpent", None)
-
         is_hourly = d.pop("IsHourly", None)
-
         details = d.pop("Details", None)
-
         name = d.pop("Name", None)
-
         price = d.pop("Price", None)
-
         qualer_api_models_service_orders_to_charge_response_model_base_order_task_price_model = cls(
             contract_discount=contract_discount,
             time_spent=time_spent,
@@ -84,7 +71,6 @@ class ServiceOrdersToChargeResponseModelBaseOrderTaskPriceModel:
             name=name,
             price=price,
         )
-
         qualer_api_models_service_orders_to_charge_response_model_base_order_task_price_model.additional_properties = (
             d
         )

@@ -33,20 +33,15 @@ class MaintenancePlansToMaintenancePlanResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         maintenance_plan_id = self.maintenance_plan_id
-
         maintenance_plan_name = self.maintenance_plan_name
-
         is_template = self.is_template
-
         company_name = self.company_name
-
         maintenance_tasks: Optional[List[Dict[str, Any]]] = None
         if self.maintenance_tasks:
             maintenance_tasks = []
             for maintenance_tasks_item_data in self.maintenance_tasks:
                 maintenance_tasks_item = maintenance_tasks_item_data.to_dict()
                 maintenance_tasks.append(maintenance_tasks_item)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -60,7 +55,6 @@ class MaintenancePlansToMaintenancePlanResponse:
             field_dict["CompanyName"] = company_name
         if maintenance_tasks is not None:
             field_dict["MaintenanceTasks"] = maintenance_tasks
-
         return field_dict
 
     @classmethod
@@ -68,25 +62,18 @@ class MaintenancePlansToMaintenancePlanResponse:
         from ..models.qualer_api_models_maintenance_plans_to_maintenance_task_response import (
             MaintenancePlansToMaintenanceTaskResponse,
         )
-
         d = dict(src_dict)
         maintenance_plan_id = d.pop("MaintenancePlanId", None)
-
         maintenance_plan_name = d.pop("MaintenancePlanName", None)
-
         is_template = d.pop("IsTemplate", None)
-
         company_name = d.pop("CompanyName", None)
-
         maintenance_tasks = []
         _maintenance_tasks = d.pop("MaintenanceTasks", None)
         for maintenance_tasks_item_data in _maintenance_tasks or []:
             maintenance_tasks_item = MaintenancePlansToMaintenanceTaskResponse.from_dict(
                 maintenance_tasks_item_data
             )
-
             maintenance_tasks.append(maintenance_tasks_item)
-
         qualer_api_models_maintenance_plans_to_maintenance_plan_response = cls(
             maintenance_plan_id=maintenance_plan_id,
             maintenance_plan_name=maintenance_plan_name,
@@ -94,7 +81,6 @@ class MaintenancePlansToMaintenancePlanResponse:
             company_name=company_name,
             maintenance_tasks=maintenance_tasks,
         )
-
         qualer_api_models_maintenance_plans_to_maintenance_plan_response.additional_properties = d
         return qualer_api_models_maintenance_plans_to_maintenance_plan_response
 

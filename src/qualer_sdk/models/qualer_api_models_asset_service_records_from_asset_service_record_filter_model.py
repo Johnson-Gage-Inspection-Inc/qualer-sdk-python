@@ -27,17 +27,13 @@ class AssetServiceRecordsFromAssetServiceRecordFilterModel:
 
     def to_dict(self) -> Dict[str, Any]:
         asset_id = self.asset_id
-
         serial_number = self.serial_number
-
         from_: Optional[str] = None
         if self.from_:
             from_ = self.from_.isoformat()
-
         to: Optional[str] = None
         if self.to:
             to = self.to.isoformat()
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -49,37 +45,31 @@ class AssetServiceRecordsFromAssetServiceRecordFilterModel:
             field_dict["From"] = from_
         if to is not None:
             field_dict["To"] = to
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         asset_id = d.pop("AssetId", None)
-
         serial_number = d.pop("SerialNumber", None)
-
         _from_ = d.pop("From", None)
         from_: Optional[datetime.datetime]
         if not _from_:
             from_ = None
         else:
             from_ = isoparse(_from_)
-
         _to = d.pop("To", None)
         to: Optional[datetime.datetime]
         if not _to:
             to = None
         else:
             to = isoparse(_to)
-
         qualer_api_models_asset_service_records_from_asset_service_record_filter_model = cls(
             asset_id=asset_id,
             serial_number=serial_number,
             from_=from_,
             to=to,
         )
-
         qualer_api_models_asset_service_records_from_asset_service_record_filter_model.additional_properties = (
             d
         )

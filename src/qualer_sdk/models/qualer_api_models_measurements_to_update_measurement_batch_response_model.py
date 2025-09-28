@@ -33,16 +33,13 @@ class MeasurementsToUpdateMeasurementBatchResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         batch_id = self.batch_id
-
         batch_type = self.batch_type
-
         measurement_sets: Optional[List[Dict[str, Any]]] = None
         if self.measurement_sets:
             measurement_sets = []
             for measurement_sets_item_data in self.measurement_sets:
                 measurement_sets_item = measurement_sets_item_data.to_dict()
                 measurement_sets.append(measurement_sets_item)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -52,7 +49,6 @@ class MeasurementsToUpdateMeasurementBatchResponseModel:
             field_dict["BatchType"] = batch_type
         if measurement_sets is not None:
             field_dict["MeasurementSets"] = measurement_sets
-
         return field_dict
 
     @classmethod
@@ -60,27 +56,21 @@ class MeasurementsToUpdateMeasurementBatchResponseModel:
         from ..models.qualer_api_models_measurements_to_update_measurement_set_response_model import (
             MeasurementsToUpdateMeasurementSetResponseModel,
         )
-
         d = dict(src_dict)
         batch_id = d.pop("BatchId", None)
-
         batch_type = d.pop("BatchType", None)
-
         measurement_sets = []
         _measurement_sets = d.pop("MeasurementSets", None)
         for measurement_sets_item_data in _measurement_sets or []:
             measurement_sets_item = MeasurementsToUpdateMeasurementSetResponseModel.from_dict(
                 measurement_sets_item_data
             )
-
             measurement_sets.append(measurement_sets_item)
-
         qualer_api_models_measurements_to_update_measurement_batch_response_model = cls(
             batch_id=batch_id,
             batch_type=batch_type,
             measurement_sets=measurement_sets,
         )
-
         qualer_api_models_measurements_to_update_measurement_batch_response_model.additional_properties = (
             d
         )

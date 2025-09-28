@@ -45,42 +45,18 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
-        last_service_date: Optional[str]
-        if not self.last_service_date:
-            last_service_date = None
-        elif isinstance(self.last_service_date, datetime.datetime):
-            last_service_date = self.last_service_date.isoformat()
-        else:
-            last_service_date = self.last_service_date
-
-        next_service_date: Optional[str]
-        if not self.next_service_date:
-            next_service_date = None
-        elif isinstance(self.next_service_date, datetime.datetime):
-            next_service_date = self.next_service_date.isoformat()
-        else:
-            next_service_date = self.next_service_date
-
+        last_service_date = self.last_service_date.isoformat() if self.last_service_date else None
+        next_service_date = self.next_service_date.isoformat() if self.next_service_date else None
         calibrated_by = self.calibrated_by
-
         certificate_number = self.certificate_number
-
         tool_name = self.tool_name
-
         tool_description = self.tool_description
-
         manufacturer = self.manufacturer
-
         manufacturer_part_number = self.manufacturer_part_number
-
         serial_number = self.serial_number
-
         asset_tag = self.asset_tag
-
         asset_user = self.asset_user
-
         equipment_id = self.equipment_id
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -108,13 +84,11 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
             field_dict["AssetUser"] = asset_user
         if equipment_id is not None:
             field_dict["EquipmentId"] = equipment_id
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-
         def _parse_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -124,14 +98,11 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
                 if not isinstance(data, str):
                     raise TypeError()
                 last_service_date_type_0 = isoparse(data)
-
                 return last_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         last_service_date = _parse_last_service_date(d.pop("LastServiceDate", None))
-
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -141,34 +112,21 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
                 if not isinstance(data, str):
                     raise TypeError()
                 next_service_date_type_0 = isoparse(data)
-
                 return next_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
-
         calibrated_by = d.pop("CalibratedBy", None)
-
         certificate_number = d.pop("CertificateNumber", None)
-
         tool_name = d.pop("ToolName", None)
-
         tool_description = d.pop("ToolDescription", None)
-
         manufacturer = d.pop("Manufacturer", None)
-
         manufacturer_part_number = d.pop("ManufacturerPartNumber", None)
-
         serial_number = d.pop("SerialNumber", None)
-
         asset_tag = d.pop("AssetTag", None)
-
         asset_user = d.pop("AssetUser", None)
-
         equipment_id = d.pop("EquipmentId", None)
-
         qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model_measurement_tool_response_model = cls(
             last_service_date=last_service_date,
             next_service_date=next_service_date,
@@ -183,7 +141,6 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
             asset_user=asset_user,
             equipment_id=equipment_id,
         )
-
         qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model_measurement_tool_response_model.additional_properties = (
             d
         )

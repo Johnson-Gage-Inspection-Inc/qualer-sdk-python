@@ -41,29 +41,17 @@ class EmployeesFromCreateEmployeeModel:
 
     def to_dict(self) -> Dict[str, Any]:
         login_email = self.login_email
-
         password = self.password
-
         first_name = self.first_name
-
         last_name = self.last_name
-
         subscription_email = self.subscription_email
-
         mobile_phone = self.mobile_phone
-
         office_phone = self.office_phone
-
         alias = self.alias
-
         title = self.title
-
         culture_name = self.culture_name
-
         culture_ui_name = self.culture_ui_name
-
         image_url = self.image_url
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -91,36 +79,23 @@ class EmployeesFromCreateEmployeeModel:
             field_dict["CultureUiName"] = culture_ui_name
         if image_url is not None:
             field_dict["ImageUrl"] = image_url
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         login_email = d.pop("LoginEmail", None)
-
         password = d.pop("Password", None)
-
         first_name = d.pop("FirstName", None)
-
         last_name = d.pop("LastName", None)
-
         subscription_email = d.pop("SubscriptionEmail", None)
-
         mobile_phone = d.pop("MobilePhone", None)
-
         office_phone = d.pop("OfficePhone", None)
-
         alias = d.pop("Alias", None)
-
         title = d.pop("Title", None)
-
         culture_name = d.pop("CultureName", None)
-
         culture_ui_name = d.pop("CultureUiName", None)
-
         image_url = d.pop("ImageUrl", None)
-
         qualer_api_models_employees_from_create_employee_model = cls(
             login_email=login_email,
             password=password,
@@ -135,7 +110,6 @@ class EmployeesFromCreateEmployeeModel:
             culture_ui_name=culture_ui_name,
             image_url=image_url,
         )
-
         qualer_api_models_employees_from_create_employee_model.additional_properties = d
         return qualer_api_models_employees_from_create_employee_model
 

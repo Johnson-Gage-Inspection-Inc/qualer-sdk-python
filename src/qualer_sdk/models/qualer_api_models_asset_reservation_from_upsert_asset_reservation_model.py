@@ -37,27 +37,18 @@ class AssetReservationFromUpsertAssetReservationModel:
 
     def to_dict(self) -> Dict[str, Any]:
         asset_id = self.asset_id
-
         product_id = self.product_id
-
         reservation_id = self.reservation_id
-
         service_order_id = self.service_order_id
-
         begin_date: Optional[str] = None
         if self.begin_date:
             begin_date = self.begin_date.isoformat()
-
         end_date: Optional[str] = None
         if self.end_date:
             end_date = self.end_date.isoformat()
-
         reserved_by = self.reserved_by
-
         reserved_by_name = self.reserved_by_name
-
         comments = self.comments
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -79,40 +70,30 @@ class AssetReservationFromUpsertAssetReservationModel:
             field_dict["ReservedByName"] = reserved_by_name
         if comments is not None:
             field_dict["Comments"] = comments
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         asset_id = d.pop("AssetId", None)
-
         product_id = d.pop("ProductId", None)
-
         reservation_id = d.pop("ReservationId", None)
-
         service_order_id = d.pop("ServiceOrderId", None)
-
         _begin_date = d.pop("BeginDate", None)
         begin_date: Optional[datetime.datetime]
         if not _begin_date:
             begin_date = None
         else:
             begin_date = isoparse(_begin_date)
-
         _end_date = d.pop("EndDate", None)
         end_date: Optional[datetime.datetime]
         if not _end_date:
             end_date = None
         else:
             end_date = isoparse(_end_date)
-
         reserved_by = d.pop("ReservedBy", None)
-
         reserved_by_name = d.pop("ReservedByName", None)
-
         comments = d.pop("Comments", None)
-
         qualer_api_models_asset_reservation_from_upsert_asset_reservation_model = cls(
             asset_id=asset_id,
             product_id=product_id,
@@ -124,7 +105,6 @@ class AssetReservationFromUpsertAssetReservationModel:
             reserved_by_name=reserved_by_name,
             comments=comments,
         )
-
         qualer_api_models_asset_reservation_from_upsert_asset_reservation_model.additional_properties = (
             d
         )

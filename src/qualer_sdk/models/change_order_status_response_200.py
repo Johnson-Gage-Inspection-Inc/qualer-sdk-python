@@ -16,14 +16,12 @@ class ChangeOrderStatusResponse200:
     def to_dict(self) -> Dict[str, Any]:
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         change_order_status_response_200 = cls()
-
         change_order_status_response_200.additional_properties = d
         return change_order_status_response_200
 

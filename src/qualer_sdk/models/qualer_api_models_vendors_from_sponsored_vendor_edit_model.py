@@ -37,25 +37,17 @@ class VendorsFromSponsoredVendorEditModel:
 
     def to_dict(self) -> Dict[str, Any]:
         company_id = self.company_id
-
         account_number_text = self.account_number_text
-
         domain_name = self.domain_name
-
         custom_vendor_name = self.custom_vendor_name
-
         currency_id = self.currency_id
-
         company_name = self.company_name
-
         billing_address: Optional[Dict[str, Any]] = None
         if self.billing_address:
             billing_address = self.billing_address.to_dict()
-
         shipping_address: Optional[Dict[str, Any]] = None
         if self.shipping_address:
             shipping_address = self.shipping_address.to_dict()
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -75,7 +67,6 @@ class VendorsFromSponsoredVendorEditModel:
             field_dict["BillingAddress"] = billing_address
         if shipping_address is not None:
             field_dict["ShippingAddress"] = shipping_address
-
         return field_dict
 
     @classmethod
@@ -83,34 +74,25 @@ class VendorsFromSponsoredVendorEditModel:
         from ..models.qualer_api_models_address_address_model import (
             AddressAddressModel,
         )
-
         d = dict(src_dict)
         company_id = d.pop("CompanyId", None)
-
         account_number_text = d.pop("AccountNumberText", None)
-
         domain_name = d.pop("DomainName", None)
-
         custom_vendor_name = d.pop("CustomVendorName", None)
-
         currency_id = d.pop("CurrencyId", None)
-
         company_name = d.pop("CompanyName", None)
-
         _billing_address = d.pop("BillingAddress", None)
         billing_address: Optional[AddressAddressModel]
         if not _billing_address:
             billing_address = None
         else:
             billing_address = AddressAddressModel.from_dict(_billing_address)
-
         _shipping_address = d.pop("ShippingAddress", None)
         shipping_address: Optional[AddressAddressModel]
         if not _shipping_address:
             shipping_address = None
         else:
             shipping_address = AddressAddressModel.from_dict(_shipping_address)
-
         qualer_api_models_vendors_from_sponsored_vendor_edit_model = cls(
             company_id=company_id,
             account_number_text=account_number_text,
@@ -121,7 +103,6 @@ class VendorsFromSponsoredVendorEditModel:
             billing_address=billing_address,
             shipping_address=shipping_address,
         )
-
         qualer_api_models_vendors_from_sponsored_vendor_edit_model.additional_properties = d
         return qualer_api_models_vendors_from_sponsored_vendor_edit_model
 

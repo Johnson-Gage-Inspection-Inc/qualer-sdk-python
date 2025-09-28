@@ -21,9 +21,7 @@ class EmployeesFromEmployeeDepartmentModel:
 
     def to_dict(self) -> Dict[str, Any]:
         department_id = self.department_id
-
         position = self.position
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -31,21 +29,17 @@ class EmployeesFromEmployeeDepartmentModel:
             field_dict["DepartmentId"] = department_id
         if position is not None:
             field_dict["Position"] = position
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         department_id = d.pop("DepartmentId", None)
-
         position = d.pop("Position", None)
-
         qualer_api_models_employees_from_employee_department_model = cls(
             department_id=department_id,
             position=position,
         )
-
         qualer_api_models_employees_from_employee_department_model.additional_properties = d
         return qualer_api_models_employees_from_employee_department_model
 

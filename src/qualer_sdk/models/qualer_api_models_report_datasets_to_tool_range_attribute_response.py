@@ -31,19 +31,12 @@ class ReportDatasetsToToolRangeAttributeResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         measurement_point_id = self.measurement_point_id
-
         service_order_item_id = self.service_order_item_id
-
         tool_id = self.tool_id
-
         range_title = self.range_title
-
         range_subtitle = self.range_subtitle
-
         attribute_name = self.attribute_name
-
         attribute_value = self.attribute_value
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -61,26 +54,18 @@ class ReportDatasetsToToolRangeAttributeResponse:
             field_dict["AttributeName"] = attribute_name
         if attribute_value is not None:
             field_dict["AttributeValue"] = attribute_value
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         measurement_point_id = d.pop("MeasurementPointId", None)
-
         service_order_item_id = d.pop("ServiceOrderItemId", None)
-
         tool_id = d.pop("ToolId", None)
-
         range_title = d.pop("RangeTitle", None)
-
         range_subtitle = d.pop("RangeSubtitle", None)
-
         attribute_name = d.pop("AttributeName", None)
-
         attribute_value = d.pop("AttributeValue", None)
-
         qualer_api_models_report_datasets_to_tool_range_attribute_response = cls(
             measurement_point_id=measurement_point_id,
             service_order_item_id=service_order_item_id,
@@ -90,7 +75,6 @@ class ReportDatasetsToToolRangeAttributeResponse:
             attribute_name=attribute_name,
             attribute_value=attribute_value,
         )
-
         qualer_api_models_report_datasets_to_tool_range_attribute_response.additional_properties = d
         return qualer_api_models_report_datasets_to_tool_range_attribute_response
 

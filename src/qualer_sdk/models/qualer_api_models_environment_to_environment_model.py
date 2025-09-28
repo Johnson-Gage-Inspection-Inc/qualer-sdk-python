@@ -37,23 +37,13 @@ class EnvironmentToEnvironmentModel:
 
     def to_dict(self) -> Dict[str, Any]:
         room_name = self.room_name
-
-        factor_id: Optional[str] = None
-        if self.factor_id:
-            factor_id = self.factor_id.value
-
+        factor_id = self.factor_id.value if self.factor_id else None
         station_id = self.station_id
-
         factor_name = self.factor_name
-
         factor_value = self.factor_value
-
         valid_range_min = self.valid_range_min
-
         valid_range_max = self.valid_range_max
-
         unit_of_measure = self.unit_of_measure
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -73,33 +63,24 @@ class EnvironmentToEnvironmentModel:
             field_dict["ValidRangeMax"] = valid_range_max
         if unit_of_measure is not None:
             field_dict["UnitOfMeasure"] = unit_of_measure
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         room_name = d.pop("RoomName", None)
-
         _factor_id = d.pop("FactorId", None)
         factor_id: Optional[EnvironmentToEnvironmentModelFactorId]
         if not _factor_id:
             factor_id = None
         else:
             factor_id = EnvironmentToEnvironmentModelFactorId(_factor_id)
-
         station_id = d.pop("StationId", None)
-
         factor_name = d.pop("FactorName", None)
-
         factor_value = d.pop("FactorValue", None)
-
         valid_range_min = d.pop("ValidRangeMin", None)
-
         valid_range_max = d.pop("ValidRangeMax", None)
-
         unit_of_measure = d.pop("UnitOfMeasure", None)
-
         qualer_api_models_environment_to_environment_model = cls(
             room_name=room_name,
             factor_id=factor_id,
@@ -110,7 +91,6 @@ class EnvironmentToEnvironmentModel:
             valid_range_max=valid_range_max,
             unit_of_measure=unit_of_measure,
         )
-
         qualer_api_models_environment_to_environment_model.additional_properties = d
         return qualer_api_models_environment_to_environment_model
 

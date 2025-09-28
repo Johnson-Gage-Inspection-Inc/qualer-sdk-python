@@ -134,7 +134,6 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
         guid = str(self.guid)
         segment_name = self.segment_name
         schedule_name = self.schedule_name
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -214,7 +213,6 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
             field_dict["SegmentName"] = segment_name
         if schedule_name is not None:
             field_dict["ScheduleName"] = schedule_name
-
         return field_dict
 
     @classmethod
@@ -229,28 +227,21 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
         custom_order_number = d.pop("CustomOrderNumber", None)
         order_item_number = d.pop("OrderItemNumber", None)
         certificate_number = d.pop("CertificateNumber", None)
-
         def _parse_result_status(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         result_status = _parse_result_status(d.pop("ResultStatus", None))
-
         def _parse_as_found_result(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         as_found_result = _parse_as_found_result(d.pop("AsFoundResult", None))
-
         def _parse_as_left_result(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         as_left_result = _parse_as_left_result(d.pop("AsLeftResult", None))
-
         def _parse_service_date(data: object) -> datetime.datetime:
             try:
                 if not isinstance(data, str):
@@ -260,56 +251,42 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
             except Exception:
                 pass
             return cast(datetime.datetime, data)
-
         try:
             service_date_data = d.pop("ServiceDate")
         except KeyError:
             raise ValueError("Missing required field 'ServiceDate' in input dictionary.")
         service_date = _parse_service_date(service_date_data)
         serial_number = d.pop("SerialNumber", None)
-
         def _parse_asset_tag(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_tag = _parse_asset_tag(d.pop("AssetTag", None))
-
         def _parse_asset_user(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_user = _parse_asset_user(d.pop("AssetUser", None))
-
         def _parse_asset_tag_change(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_tag_change = _parse_asset_tag_change(d.pop("AssetTagChange", None))
-
         def _parse_asset_user_change(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_user_change = _parse_asset_user_change(d.pop("AssetUserChange", None))
-
         def _parse_service_notes(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         service_notes = _parse_service_notes(d.pop("ServiceNotes", None))
-
         def _parse_serial_number_change(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         serial_number_change = _parse_serial_number_change(d.pop("SerialNumberChange", None))
-
         def _parse_due_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -321,9 +298,7 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         due_date = _parse_due_date(d.pop("DueDate", None))
-
         def _parse_next_service_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -335,104 +310,76 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
-
         def _parse_provider_technician(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         provider_technician = _parse_provider_technician(d.pop("ProviderTechnician", None))
-
         def _parse_provider_phone(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         provider_phone = _parse_provider_phone(d.pop("ProviderPhone", None))
-
         def _parse_provider_company(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         provider_company = _parse_provider_company(d.pop("ProviderCompany", None))
-
         def _parse_service_level(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         service_level = _parse_service_level(d.pop("ServiceLevel", None))
-
         def _parse_service_level_code(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         service_level_code = _parse_service_level_code(d.pop("ServiceLevelCode", None))
-
         def _parse_next_service_level(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         next_service_level = _parse_next_service_level(d.pop("NextServiceLevel", None))
-
         def _parse_next_service_level_code(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         next_service_level_code = _parse_next_service_level_code(
             d.pop("NextServiceLevelCode", None)
         )
-
         def _parse_asset_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_name = _parse_asset_name(d.pop("AssetName", None))
-
         def _parse_asset_description(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         asset_description = _parse_asset_description(d.pop("AssetDescription", None))
-
         def _parse_parts_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         parts_charge = _parse_parts_charge(d.pop("PartsCharge", None))
-
         def _parse_parts_charge_before_discount(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         parts_charge_before_discount = _parse_parts_charge_before_discount(
             d.pop("PartsChargeBeforeDiscount", None)
         )
-
         def _parse_service_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         service_charge = _parse_service_charge(d.pop("ServiceCharge", None))
-
         def _parse_repairs_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
-
         repairs_charge = _parse_repairs_charge(d.pop("RepairsCharge", None))
-
         def _parse_guid(data: object) -> Optional[UUID]:
             if not data:
                 return None
@@ -444,23 +391,17 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
             except Exception:
                 pass
             return cast(Optional[UUID], data)
-
         guid = _parse_guid(d.pop("Guid", None))
-
         def _parse_segment_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         segment_name = _parse_segment_name(d.pop("SegmentName", None))
-
         def _parse_schedule_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         schedule_name = _parse_schedule_name(d.pop("ScheduleName", None))
-
         model_obj = cls(
             asset_id=asset_id,
             asset_service_record_id=asset_service_record_id,
@@ -501,7 +442,6 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
             segment_name=segment_name,
             schedule_name=schedule_name,
         )
-
         model_obj.additional_properties = d
         return model_obj
 

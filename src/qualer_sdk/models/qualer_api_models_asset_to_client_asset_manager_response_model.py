@@ -218,265 +218,100 @@ class AssetToClientAssetManagerResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         asset_id = self.asset_id
-
         asset_name = self.asset_name
-
         asset_description = self.asset_description
-
         asset_maker = self.asset_maker
-
-        record_type: Optional[int] = None
-        if self.record_type:
-            record_type = self.record_type.value
-
+        record_type = self.record_type.value if self.record_type else None
         parent_asset_id = self.parent_asset_id
-
         children_count = self.children_count
-
         site_id = self.site_id
-
         serial_number = self.serial_number
-
         asset_tag = self.asset_tag
-
         asset_user = self.asset_user
-
         equipment_id = self.equipment_id
-
         legacy_identifier = self.legacy_identifier
-
         criticality = self.criticality
-
         condition = self.condition
-
         asset_class = self.asset_class
-
-        activation_date: Optional[str]
-        if not self.activation_date:
-            activation_date = None
-        elif isinstance(self.activation_date, datetime.datetime):
-            activation_date = self.activation_date.isoformat()
-        else:
-            activation_date = self.activation_date
-
-        retirment_date: Optional[str]
-        if not self.retirment_date:
-            retirment_date = None
-        elif isinstance(self.retirment_date, datetime.datetime):
-            retirment_date = self.retirment_date.isoformat()
-        else:
-            retirment_date = self.retirment_date
-
+        activation_date = self.activation_date.isoformat() if self.activation_date else None
+        retirment_date = self.retirment_date.isoformat() if self.retirment_date else None
         client_vendor_id = self.client_vendor_id
-
         company_name = self.company_name
-
         site_name = self.site_name
-
         asset_has_image = self.asset_has_image
-
         has_image = self.has_image
-
         parent_has_image = self.parent_has_image
-
         pool_id = self.pool_id
-
         pool = self.pool
-
         product_id = self.product_id
-
         parent_product_id = self.parent_product_id
-
         product_name = self.product_name
-
         parent_product_name = self.parent_product_name
-
         category_id = self.category_id
-
         root_category_id = self.root_category_id
-
         category_name = self.category_name
-
         root_category_name = self.root_category_name
-
         manufacturer_id = self.manufacturer_id
-
         manufacturer = self.manufacturer
-
         display_part_number = self.display_part_number
-
         display_name = self.display_name
-
         manufacturer_part_number = self.manufacturer_part_number
-
         asset_room = self.asset_room
-
         location = self.location
-
         station = self.station
-
-        tool_role: Optional[int] = None
-        if self.tool_role:
-            tool_role = self.tool_role.value
-
+        tool_role = self.tool_role.value if self.tool_role else None
         tool_id = self.tool_id
-
         department_id = self.department_id
-
         department_name = self.department_name
-
         custodian_name = self.custodian_name
-
         warranty = self.warranty
-
-        warranty_end: Optional[str]
-        if not self.warranty_end:
-            warranty_end = None
-        elif isinstance(self.warranty_end, datetime.datetime):
-            warranty_end = self.warranty_end.isoformat()
-        else:
-            warranty_end = self.warranty_end
-
+        warranty_end = self.warranty_end.isoformat() if self.warranty_end else None
         is_warranty_expired = self.is_warranty_expired
-
         depreciation_method = self.depreciation_method
-
         depreciation_basis = self.depreciation_basis
-
         salvage_value = self.salvage_value
-
         total_service_cost = self.total_service_cost
-
         life_span_months = self.life_span_months
-
-        due_for_replacement_date: Optional[str]
-        if not self.due_for_replacement_date:
-            due_for_replacement_date = None
-        elif isinstance(self.due_for_replacement_date, datetime.datetime):
-            due_for_replacement_date = self.due_for_replacement_date.isoformat()
-        else:
-            due_for_replacement_date = self.due_for_replacement_date
-
+        due_for_replacement_date = self.due_for_replacement_date.isoformat() if self.due_for_replacement_date else None
         depreciation_proc = self.depreciation_proc
-
-        purchase_date: Optional[str]
-        if not self.purchase_date:
-            purchase_date = None
-        elif isinstance(self.purchase_date, datetime.datetime):
-            purchase_date = self.purchase_date.isoformat()
-        else:
-            purchase_date = self.purchase_date
-
+        purchase_date = self.purchase_date.isoformat() if self.purchase_date else None
         purchase_cost = self.purchase_cost
-
         time_in_service = self.time_in_service
-
         retirement_reason = self.retirement_reason
-
         residual_cost = self.residual_cost
-
         employee_id = self.employee_id
-
         asset_collection_id = self.asset_collection_id
-
         asset_service_record_id = self.asset_service_record_id
-
-        result_status: Optional[int] = None
-        if self.result_status:
-            result_status = self.result_status.value
-
-        as_found_result: Optional[int] = None
-        if self.as_found_result:
-            as_found_result = self.as_found_result.value
-
-        as_left_result: Optional[int] = None
-        if self.as_left_result:
-            as_left_result = self.as_left_result.value
-
-        last_service_date: Optional[str]
-        if not self.last_service_date:
-            last_service_date = None
-        elif isinstance(self.last_service_date, datetime.datetime):
-            last_service_date = self.last_service_date.isoformat()
-        else:
-            last_service_date = self.last_service_date
-
-        last_service: Optional[str]
-        if not self.last_service:
-            last_service = None
-        else:
-            last_service = self.last_service
-
-        next_service_date: Optional[str]
-        if not self.next_service_date:
-            next_service_date = None
-        elif isinstance(self.next_service_date, datetime.datetime):
-            next_service_date = self.next_service_date.isoformat()
-        else:
-            next_service_date = self.next_service_date
-
+        result_status = self.result_status.value if self.result_status else None
+        as_found_result = self.as_found_result.value if self.as_found_result else None
+        as_left_result = self.as_left_result.value if self.as_left_result else None
+        last_service_date = self.last_service_date.isoformat() if self.last_service_date else None
+        last_service = self.last_service
+        next_service_date = self.next_service_date.isoformat() if self.next_service_date else None
         next_service = self.next_service
-
         service_schedule_segment_id = self.service_schedule_segment_id
-
         service_schedule_id = self.service_schedule_id
-
         service_schedule = self.service_schedule
-
         in_service = self.in_service
-
         in_last_service = self.in_last_service
-
         service_order_id = self.service_order_id
-
         service_order_status: Optional[str] = (
             self.service_order_status.value if self.service_order_status else None
         )
-
         custom_order_number = self.custom_order_number
-
         service_order_item_id = self.service_order_item_id
-
         vendor = self.vendor
-
         technician = self.technician
-
         certificate_number = self.certificate_number
-
-        due_trigger_date: Optional[str]
-        if not self.due_trigger_date:
-            due_trigger_date = None
-        elif isinstance(self.due_trigger_date, datetime.datetime):
-            due_trigger_date = self.due_trigger_date.isoformat()
-        else:
-            due_trigger_date = self.due_trigger_date
-
-        past_due_trigger_date: Optional[str]
-        if not self.past_due_trigger_date:
-            past_due_trigger_date = None
-        elif isinstance(self.past_due_trigger_date, datetime.datetime):
-            past_due_trigger_date = self.past_due_trigger_date.isoformat()
-        else:
-            past_due_trigger_date = self.past_due_trigger_date
-
-        due_status: Optional[int] = None
-        if self.due_status:
-            due_status = self.due_status.value
-
-        work_status: Optional[int] = None
-        if self.work_status:
-            work_status = self.work_status.value
-
+        due_trigger_date = self.due_trigger_date.isoformat() if self.due_trigger_date else None
+        past_due_trigger_date = self.past_due_trigger_date.isoformat() if self.past_due_trigger_date else None
+        due_status = self.due_status.value if self.due_status else None
+        work_status = self.work_status.value if self.work_status else None
         service_tag = self.service_tag
-
         service_site_name = self.service_site_name
-
         service_site_id = self.service_site_id
-
         standard_title = self.standard_title
-
         schedules = self.schedules
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -666,20 +501,15 @@ class AssetToClientAssetManagerResponseModel:
             field_dict["StandardTitle"] = standard_title
         if schedules is not None:
             field_dict["Schedules"] = schedules
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         asset_id = d.pop("AssetId", None)
-
         asset_name = d.pop("AssetName", None)
-
         asset_description = d.pop("AssetDescription", None)
-
         asset_maker = d.pop("AssetMaker", None)
-
         _record_type = d.pop("RecordType", None)
         record_type: Optional[AssetToClientAssetManagerResponseModelRecordType]
         if not _record_type:
@@ -688,29 +518,17 @@ class AssetToClientAssetManagerResponseModel:
             record_type = None
         else:
             record_type = AssetToClientAssetManagerResponseModelRecordType(_record_type)
-
         parent_asset_id = d.pop("ParentAssetId", None)
-
         children_count = d.pop("ChildrenCount", None)
-
         site_id = d.pop("SiteId", None)
-
         serial_number = d.pop("SerialNumber", None)
-
         asset_tag = d.pop("AssetTag", None)
-
         asset_user = d.pop("AssetUser", None)
-
         equipment_id = d.pop("EquipmentId", None)
-
         legacy_identifier = d.pop("LegacyIdentifier", None)
-
         criticality = d.pop("Criticality", None)
-
         condition = d.pop("Condition", None)
-
         asset_class = d.pop("AssetClass", None)
-
         def _parse_activation_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -720,14 +538,11 @@ class AssetToClientAssetManagerResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 activation_date_type_0 = isoparse(data)
-
                 return activation_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         activation_date = _parse_activation_date(d.pop("ActivationDate", None))
-
         def _parse_retirment_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -737,62 +552,35 @@ class AssetToClientAssetManagerResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 retirment_date_type_0 = isoparse(data)
-
                 return retirment_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         retirment_date = _parse_retirment_date(d.pop("RetirmentDate", None))
-
         client_vendor_id = d.pop("ClientVendorId", None)
-
         company_name = d.pop("CompanyName", None)
-
         site_name = d.pop("SiteName", None)
-
         asset_has_image = d.pop("AssetHasImage", None)
-
         has_image = d.pop("HasImage", None)
-
         parent_has_image = d.pop("ParentHasImage", None)
-
         pool_id = d.pop("PoolId", None)
-
         pool = d.pop("Pool", None)
-
         product_id = d.pop("ProductId", None)
-
         parent_product_id = d.pop("ParentProductId", None)
-
         product_name = d.pop("ProductName", None)
-
         parent_product_name = d.pop("ParentProductName", None)
-
         category_id = d.pop("CategoryId", None)
-
         root_category_id = d.pop("RootCategoryId", None)
-
         category_name = d.pop("CategoryName", None)
-
         root_category_name = d.pop("RootCategoryName", None)
-
         manufacturer_id = d.pop("ManufacturerId", None)
-
         manufacturer = d.pop("Manufacturer", None)
-
         display_part_number = d.pop("DisplayPartNumber", None)
-
         display_name = d.pop("DisplayName", None)
-
         manufacturer_part_number = d.pop("ManufacturerPartNumber", None)
-
         asset_room = d.pop("AssetRoom", None)
-
         location = d.pop("Location", None)
-
         station = d.pop("Station", None)
-
         _tool_role = d.pop("ToolRole", None)
         tool_role: Optional[AssetToClientAssetManagerResponseModelToolRole]
         if not _tool_role:
@@ -801,17 +589,11 @@ class AssetToClientAssetManagerResponseModel:
             tool_role = None
         else:
             tool_role = AssetToClientAssetManagerResponseModelToolRole(_tool_role)
-
         tool_id = d.pop("ToolId", None)
-
         department_id = d.pop("DepartmentId", None)
-
         department_name = d.pop("DepartmentName", None)
-
         custodian_name = d.pop("CustodianName", None)
-
         warranty = d.pop("Warranty", None)
-
         def _parse_warranty_end(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -819,26 +601,17 @@ class AssetToClientAssetManagerResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 warranty_end_type_0 = isoparse(data)
-
                 return warranty_end_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         warranty_end = _parse_warranty_end(d.pop("WarrantyEnd", None))
-
         is_warranty_expired = d.pop("IsWarrantyExpired", None)
-
         depreciation_method = d.pop("DepreciationMethod", None)
-
         depreciation_basis = d.pop("DepreciationBasis", None)
-
         salvage_value = d.pop("SalvageValue", None)
-
         total_service_cost = d.pop("TotalServiceCost", None)
-
         life_span_months = d.pop("LifeSpanMonths", None)
-
         def _parse_due_for_replacement_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -848,18 +621,14 @@ class AssetToClientAssetManagerResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 due_for_replacement_date_type_0 = isoparse(data)
-
                 return due_for_replacement_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         due_for_replacement_date = _parse_due_for_replacement_date(
             d.pop("DueForReplacementDate", None)
         )
-
         depreciation_proc = d.pop("DepreciationProc", None)
-
         def _parse_purchase_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -867,28 +636,18 @@ class AssetToClientAssetManagerResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 purchase_date_type_0 = isoparse(data)
-
                 return purchase_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         purchase_date = _parse_purchase_date(d.pop("PurchaseDate", None))
-
         purchase_cost = d.pop("PurchaseCost", None)
-
         time_in_service = d.pop("TimeInService", None)
-
         retirement_reason = d.pop("RetirementReason", None)
-
         residual_cost = d.pop("ResidualCost", None)
-
         employee_id = d.pop("EmployeeId", None)
-
         asset_collection_id = d.pop("QuickCollectionId", None)
-
         asset_service_record_id = d.pop("AssetServiceRecordId", None)
-
         _result_status = d.pop("ResultStatus", None)
         result_status: Optional[ServiceResultStatus]
         if not _result_status:
@@ -897,7 +656,6 @@ class AssetToClientAssetManagerResponseModel:
             result_status = None
         else:
             result_status = ServiceResultStatus(_result_status)
-
         _as_found_result = d.pop("AsFoundResult", None)
         as_found_result: Optional[ServiceResultStatus]
         if not _as_found_result:
@@ -906,7 +664,6 @@ class AssetToClientAssetManagerResponseModel:
             as_found_result = None
         else:
             as_found_result = ServiceResultStatus(_as_found_result)
-
         _as_left_result = d.pop("AsLeftResult", None)
         as_left_result: Optional[ServiceResultStatus]
         if not _as_left_result:
@@ -915,7 +672,6 @@ class AssetToClientAssetManagerResponseModel:
             as_left_result = None
         else:
             as_left_result = ServiceResultStatus(_as_left_result)
-
         def _parse_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -925,21 +681,16 @@ class AssetToClientAssetManagerResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 last_service_date_type_0 = isoparse(data)
-
                 return last_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         last_service_date = _parse_last_service_date(d.pop("LastServiceDate", None))
-
         def _parse_last_service(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
-
         last_service = _parse_last_service(d.pop("LastService", None))
-
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -949,41 +700,25 @@ class AssetToClientAssetManagerResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 next_service_date_type_0 = isoparse(data)
-
                 return next_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
-
         next_service = d.pop("NextService", None)
-
         service_schedule_segment_id = d.pop("ServiceScheduleSegmentId", None)
-
         service_schedule_id = d.pop("ServiceScheduleId", None)
-
         service_schedule = d.pop("ServiceSchedule", None)
-
         in_service = d.pop("InService", None)
-
         in_last_service = d.pop("InLastService", None)
-
         service_order_id = d.pop("ServiceOrderId", None)
-
         _service_order_status = d.pop("ServiceOrderStatus", None)
         service_order_status = ServiceOrderStatus.from_api_value(_service_order_status)
-
         custom_order_number = d.pop("CustomOrderNumber", None)
-
         service_order_item_id = d.pop("ServiceOrderItemId", None)
-
         vendor = d.pop("Vendor", None)
-
         technician = d.pop("Technician", None)
-
         certificate_number = d.pop("CertificateNumber", None)
-
         def _parse_due_trigger_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -993,14 +728,11 @@ class AssetToClientAssetManagerResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 due_trigger_date_type_0 = isoparse(data)
-
                 return due_trigger_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         due_trigger_date = _parse_due_trigger_date(d.pop("DueTriggerDate", None))
-
         def _parse_past_due_trigger_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -1010,14 +742,11 @@ class AssetToClientAssetManagerResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 past_due_trigger_date_type_0 = isoparse(data)
-
                 return past_due_trigger_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         past_due_trigger_date = _parse_past_due_trigger_date(d.pop("PastDueTriggerDate", None))
-
         _due_status = d.pop("DueStatus", None)
         due_status: Optional[AssetToClientAssetManagerResponseModelDueStatus]
         if not _due_status:
@@ -1026,7 +755,6 @@ class AssetToClientAssetManagerResponseModel:
             due_status = None
         else:
             due_status = AssetToClientAssetManagerResponseModelDueStatus(_due_status)
-
         _work_status = d.pop("WorkStatus", None)
         work_status: Optional[WorkStatus]
         if not _work_status:
@@ -1035,17 +763,11 @@ class AssetToClientAssetManagerResponseModel:
             work_status = None
         else:
             work_status = WorkStatus(_work_status)
-
         service_tag = d.pop("ServiceTag", None)
-
         service_site_name = d.pop("ServiceSiteName", None)
-
         service_site_id = d.pop("ServiceSiteId", None)
-
         standard_title = d.pop("StandardTitle", None)
-
         schedules = d.pop("Schedules", None)
-
         qualer_api_models_asset_to_client_asset_manager_response_model = cls(
             asset_id=asset_id,
             asset_name=asset_name,
@@ -1141,7 +863,6 @@ class AssetToClientAssetManagerResponseModel:
             standard_title=standard_title,
             schedules=schedules,
         )
-
         qualer_api_models_asset_to_client_asset_manager_response_model.additional_properties = d
         return qualer_api_models_asset_to_client_asset_manager_response_model
 

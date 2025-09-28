@@ -21,24 +21,20 @@ class CommonToCultureListResponseModel:
         culture_list: Optional[List[str]] = None
         if self.culture_list:
             culture_list = self.culture_list
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if culture_list is not None:
             field_dict["CultureList"] = culture_list
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         culture_list = cast(List[str], d.pop("CultureList", None))
-
         qualer_api_models_common_to_culture_list_response_model = cls(
             culture_list=culture_list,
         )
-
         qualer_api_models_common_to_culture_list_response_model.additional_properties = d
         return qualer_api_models_common_to_culture_list_response_model
 

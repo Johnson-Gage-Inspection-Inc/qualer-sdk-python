@@ -43,31 +43,18 @@ class MeasurementsFromDisplayOptions:
 
     def to_dict(self) -> Dict[str, Any]:
         err = self.err
-
         mean = self.mean
-
         max_ = self.max_
-
         min_ = self.min_
-
         sd = self.sd
-
         cv = self.cv
-
         tar = self.tar
-
         tur = self.tur
-
         mu = self.mu
-
         cmc = self.cmc
-
         tol = self.tol
-
         delta = self.delta
-
         range_ = self.range_
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -97,38 +84,24 @@ class MeasurementsFromDisplayOptions:
             field_dict["Delta"] = delta
         if range_ is not None:
             field_dict["Range"] = range_
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         err = d.pop("Err", None)
-
         mean = d.pop("Mean", None)
-
         max_ = d.pop("Max", None)
-
         min_ = d.pop("Min", None)
-
         sd = d.pop("Sd", None)
-
         cv = d.pop("Cv", None)
-
         tar = d.pop("Tar", None)
-
         tur = d.pop("Tur", None)
-
         mu = d.pop("Mu", None)
-
         cmc = d.pop("Cmc", None)
-
         tol = d.pop("Tol", None)
-
         delta = d.pop("Delta", None)
-
         range_ = d.pop("Range", None)
-
         qualer_api_models_measurements_from_display_options = cls(
             err=err,
             mean=mean,
@@ -144,7 +117,6 @@ class MeasurementsFromDisplayOptions:
             delta=delta,
             range_=range_,
         )
-
         qualer_api_models_measurements_from_display_options.additional_properties = d
         return qualer_api_models_measurements_from_display_options
 

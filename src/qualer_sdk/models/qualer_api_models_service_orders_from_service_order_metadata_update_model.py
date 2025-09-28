@@ -31,13 +31,10 @@ class ServiceOrdersFromServiceOrderMetadataUpdateModel:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_metadata_id = self.service_order_metadata_id
-
         metadata = self.metadata
-
         exhibits: Optional[Dict[str, Any]] = None
         if self.exhibits:
             exhibits = self.exhibits.to_dict()
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -47,7 +44,6 @@ class ServiceOrdersFromServiceOrderMetadataUpdateModel:
             field_dict["Metadata"] = metadata
         if exhibits is not None:
             field_dict["Exhibits"] = exhibits
-
         return field_dict
 
     @classmethod
@@ -55,12 +51,9 @@ class ServiceOrdersFromServiceOrderMetadataUpdateModel:
         from ..models.qualer_core_shared_models_service_order_metadata_service_order_metadata_exhibits import (
             QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits,
         )
-
         d = dict(src_dict)
         service_order_metadata_id = d.pop("ServiceOrderMetadataId", None)
-
         metadata = d.pop("Metadata", None)
-
         _exhibits = d.pop("Exhibits", None)
         exhibits: Optional[QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits]
         if not _exhibits:
@@ -71,13 +64,11 @@ class ServiceOrdersFromServiceOrderMetadataUpdateModel:
                     _exhibits
                 )
             )
-
         qualer_api_models_service_orders_from_service_order_metadata_update_model = cls(
             service_order_metadata_id=service_order_metadata_id,
             metadata=metadata,
             exhibits=exhibits,
         )
-
         qualer_api_models_service_orders_from_service_order_metadata_update_model.additional_properties = (
             d
         )

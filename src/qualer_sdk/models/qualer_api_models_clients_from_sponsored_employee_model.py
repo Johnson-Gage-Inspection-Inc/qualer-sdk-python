@@ -33,21 +33,13 @@ class ClientsFromSponsoredEmployeeModel:
 
     def to_dict(self) -> Dict[str, Any]:
         client_company_id = self.client_company_id
-
         first_name = self.first_name
-
         last_name = self.last_name
-
         login_email = self.login_email
-
         password = self.password
-
         subscription_email = self.subscription_email
-
         mobile_phone = self.mobile_phone
-
         office_phone = self.office_phone
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -67,28 +59,19 @@ class ClientsFromSponsoredEmployeeModel:
             field_dict["MobilePhone"] = mobile_phone
         if office_phone is not None:
             field_dict["OfficePhone"] = office_phone
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         client_company_id = d.pop("ClientCompanyId", None)
-
         first_name = d.pop("FirstName", None)
-
         last_name = d.pop("LastName", None)
-
         login_email = d.pop("LoginEmail", None)
-
         password = d.pop("Password", None)
-
         subscription_email = d.pop("SubscriptionEmail", None)
-
         mobile_phone = d.pop("MobilePhone", None)
-
         office_phone = d.pop("OfficePhone", None)
-
         qualer_api_models_clients_from_sponsored_employee_model = cls(
             client_company_id=client_company_id,
             first_name=first_name,
@@ -99,7 +82,6 @@ class ClientsFromSponsoredEmployeeModel:
             mobile_phone=mobile_phone,
             office_phone=office_phone,
         )
-
         qualer_api_models_clients_from_sponsored_employee_model.additional_properties = d
         return qualer_api_models_clients_from_sponsored_employee_model
 

@@ -21,9 +21,7 @@ class AccountFromEmployeeMessagesModel:
 
     def to_dict(self) -> Dict[str, Any]:
         period = self.period
-
         site_id = self.site_id
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -31,21 +29,17 @@ class AccountFromEmployeeMessagesModel:
             field_dict["Period"] = period
         if site_id is not None:
             field_dict["SiteId"] = site_id
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         period = d.pop("Period", None)
-
         site_id = d.pop("SiteId", None)
-
         qualer_api_models_account_from_employee_messages_model = cls(
             period=period,
             site_id=site_id,
         )
-
         qualer_api_models_account_from_employee_messages_model.additional_properties = d
         return qualer_api_models_account_from_employee_messages_model
 

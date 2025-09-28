@@ -19,24 +19,20 @@ class ServiceOrdersFromAppendTrackingNumberModel:
 
     def to_dict(self) -> Dict[str, Any]:
         tracking_number = self.tracking_number
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if tracking_number is not None:
             field_dict["TrackingNumber"] = tracking_number
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         tracking_number = d.pop("TrackingNumber", None)
-
         qualer_api_models_service_orders_from_append_tracking_number_model = cls(
             tracking_number=tracking_number,
         )
-
         qualer_api_models_service_orders_from_append_tracking_number_model.additional_properties = d
         return qualer_api_models_service_orders_from_append_tracking_number_model
 

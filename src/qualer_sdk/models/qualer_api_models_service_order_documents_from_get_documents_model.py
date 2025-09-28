@@ -19,24 +19,20 @@ class ServiceOrderDocumentsFromGetDocumentsModel:
 
     def to_dict(self) -> Dict[str, Any]:
         file_name = self.file_name
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if file_name is not None:
             field_dict["FileName"] = file_name
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         file_name = d.pop("FileName", None)
-
         qualer_api_models_service_order_documents_from_get_documents_model = cls(
             file_name=file_name,
         )
-
         qualer_api_models_service_order_documents_from_get_documents_model.additional_properties = d
         return qualer_api_models_service_order_documents_from_get_documents_model
 

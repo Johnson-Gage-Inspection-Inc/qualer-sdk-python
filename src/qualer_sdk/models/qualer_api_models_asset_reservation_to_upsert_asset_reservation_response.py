@@ -19,24 +19,20 @@ class AssetReservationToUpsertAssetReservationResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         asset_reservation_id = self.asset_reservation_id
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if asset_reservation_id is not None:
             field_dict["AssetReservationId"] = asset_reservation_id
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         asset_reservation_id = d.pop("AssetReservationId", None)
-
         qualer_api_models_asset_reservation_to_upsert_asset_reservation_response = cls(
             asset_reservation_id=asset_reservation_id,
         )
-
         qualer_api_models_asset_reservation_to_upsert_asset_reservation_response.additional_properties = (
             d
         )

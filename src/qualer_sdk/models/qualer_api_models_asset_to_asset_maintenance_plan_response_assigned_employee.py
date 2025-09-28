@@ -23,11 +23,8 @@ class AssetToAssetMaintenancePlanResponseAssignedEmployee:
 
     def to_dict(self) -> Dict[str, Any]:
         first_name = self.first_name
-
         last_name = self.last_name
-
         alias = self.alias
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -37,24 +34,19 @@ class AssetToAssetMaintenancePlanResponseAssignedEmployee:
             field_dict["LastName"] = last_name
         if alias is not None:
             field_dict["Alias"] = alias
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         first_name = d.pop("FirstName", None)
-
         last_name = d.pop("LastName", None)
-
         alias = d.pop("Alias", None)
-
         qualer_api_models_asset_to_asset_maintenance_plan_response_assigned_employee = cls(
             first_name=first_name,
             last_name=last_name,
             alias=alias,
         )
-
         qualer_api_models_asset_to_asset_maintenance_plan_response_assigned_employee.additional_properties = (
             d
         )

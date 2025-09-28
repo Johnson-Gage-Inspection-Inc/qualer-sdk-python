@@ -29,17 +29,12 @@ class AccountToEmployeeEventResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         id = self.id
-
         subject = self.subject
-
         created_on_utc: Optional[str] = None
         if self.created_on_utc:
             created_on_utc = self.created_on_utc.isoformat()
-
         event_type_id = self.event_type_id
-
         event_type_group = self.event_type_group
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -53,27 +48,21 @@ class AccountToEmployeeEventResponseModel:
             field_dict["EventTypeId"] = event_type_id
         if event_type_group is not None:
             field_dict["EventTypeGroup"] = event_type_group
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         id = d.pop("Id", None)
-
         subject = d.pop("Subject", None)
-
         _created_on_utc = d.pop("CreatedOnUtc", None)
         created_on_utc: Optional[datetime.datetime]
         if not _created_on_utc:
             created_on_utc = None
         else:
             created_on_utc = isoparse(_created_on_utc)
-
         event_type_id = d.pop("EventTypeId", None)
-
         event_type_group = d.pop("EventTypeGroup", None)
-
         qualer_api_models_account_to_employee_event_response_model = cls(
             id=id,
             subject=subject,
@@ -81,7 +70,6 @@ class AccountToEmployeeEventResponseModel:
             event_type_id=event_type_id,
             event_type_group=event_type_group,
         )
-
         qualer_api_models_account_to_employee_event_response_model.additional_properties = d
         return qualer_api_models_account_to_employee_event_response_model
 

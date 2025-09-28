@@ -29,17 +29,12 @@ class MeasurementsToUpdateMeasurementResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         measurement_id = self.measurement_id
-
         values = self.values
-
         channel = self.channel
-
         updated_by = self.updated_by
-
         updated_on: Optional[str] = None
         if self.updated_on:
             updated_on = self.updated_on.isoformat()
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -53,27 +48,21 @@ class MeasurementsToUpdateMeasurementResponseModel:
             field_dict["UpdatedBy"] = updated_by
         if updated_on is not None:
             field_dict["UpdatedOn"] = updated_on
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         measurement_id = d.pop("MeasurementId", None)
-
         values = d.pop("Values", None)
-
         channel = d.pop("Channel", None)
-
         updated_by = d.pop("UpdatedBy", None)
-
         _updated_on = d.pop("UpdatedOn", None)
         updated_on: Optional[datetime.datetime]
         if not _updated_on:
             updated_on = None
         else:
             updated_on = isoparse(_updated_on)
-
         qualer_api_models_measurements_to_update_measurement_response_model = cls(
             measurement_id=measurement_id,
             values=values,
@@ -81,7 +70,6 @@ class MeasurementsToUpdateMeasurementResponseModel:
             updated_by=updated_by,
             updated_on=updated_on,
         )
-
         qualer_api_models_measurements_to_update_measurement_response_model.additional_properties = (
             d
         )

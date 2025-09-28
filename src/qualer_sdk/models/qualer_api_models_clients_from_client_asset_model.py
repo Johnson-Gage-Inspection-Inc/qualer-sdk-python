@@ -19,24 +19,20 @@ class ClientsFromClientAssetModel:
 
     def to_dict(self) -> Dict[str, Any]:
         asset_id = self.asset_id
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if asset_id is not None:
             field_dict["AssetId"] = asset_id
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         asset_id = d.pop("AssetId", None)
-
         qualer_api_models_clients_from_client_asset_model = cls(
             asset_id=asset_id,
         )
-
         qualer_api_models_clients_from_client_asset_model.additional_properties = d
         return qualer_api_models_clients_from_client_asset_model
 

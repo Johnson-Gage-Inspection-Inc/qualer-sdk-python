@@ -19,24 +19,20 @@ class AssetServiceRecordsFromAsrDocumentModel:
 
     def to_dict(self) -> Dict[str, Any]:
         asset_service_record_id = self.asset_service_record_id
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if asset_service_record_id is not None:
             field_dict["AssetServiceRecordId"] = asset_service_record_id
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         asset_service_record_id = d.pop("AssetServiceRecordId", None)
-
         qualer_api_models_asset_service_records_from_asr_document_model = cls(
             asset_service_record_id=asset_service_record_id,
         )
-
         qualer_api_models_asset_service_records_from_asr_document_model.additional_properties = d
         return qualer_api_models_asset_service_records_from_asr_document_model
 

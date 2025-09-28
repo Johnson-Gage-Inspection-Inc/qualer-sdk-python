@@ -83,7 +83,6 @@ class ClientsFromAssetModel:
         serial_number = self.serial_number
         asset_tag = self.asset_tag
         asset_user = self.asset_user
-
         # Enum and optional string fields
         asset_status: Optional[str] = (
             self.asset_status.value if self.asset_status is not None else None
@@ -97,7 +96,6 @@ class ClientsFromAssetModel:
         legacy_identifier = self.legacy_identifier
         condition = self.condition
         criticality = self.criticality
-
         # Datetime fields to ISO8601 strings
         purchase_date: Optional[str]
         if self.purchase_date is None:
@@ -106,10 +104,8 @@ class ClientsFromAssetModel:
             purchase_date = self.purchase_date.isoformat()
         else:
             purchase_date = self.purchase_date
-
         purchase_cost = self.purchase_cost
         life_span_months = self.life_span_months
-
         activation_date: Optional[str]
         if self.activation_date is None:
             activation_date = None
@@ -117,10 +113,8 @@ class ClientsFromAssetModel:
             activation_date = self.activation_date.isoformat()
         else:
             activation_date = self.activation_date
-
         depreciation_basis = self.depreciation_basis
         depreciation_method = self.depreciation_method
-
         retirement_date: Optional[str]
         if self.retirement_date is None:
             retirement_date = None
@@ -128,9 +122,7 @@ class ClientsFromAssetModel:
             retirement_date = self.retirement_date.isoformat()
         else:
             retirement_date = self.retirement_date
-
         salvage_value = self.salvage_value
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -186,7 +178,6 @@ class ClientsFromAssetModel:
             field_dict["RetirementDate"] = retirement_date
         if salvage_value is not None:
             field_dict["SalvageValue"] = salvage_value
-
         return field_dict
 
     @classmethod
@@ -200,14 +191,12 @@ class ClientsFromAssetModel:
         serial_number = d.pop("SerialNumber", None)
         asset_tag = d.pop("AssetTag", None)
         asset_user = d.pop("AssetUser", None)
-
         _asset_status = d.pop("AssetStatus", None)
         asset_status: Optional[ClientsFromAssetModelAssetStatus]
         if _asset_status is None:
             asset_status = None
         else:
             asset_status = ClientsFromAssetModelAssetStatus(_asset_status)
-
         asset_name = d.pop("AssetName", None)
         asset_description = d.pop("AssetDescription", None)
         asset_maker = d.pop("AssetMaker", None)
@@ -217,7 +206,6 @@ class ClientsFromAssetModel:
         legacy_identifier = d.pop("LegacyIdentifier", None)
         condition = d.pop("Condition", None)
         criticality = d.pop("Criticality", None)
-
         def _parse_purchase_date(data: object) -> Optional[datetime.datetime]:
             if data is None:
                 return data
@@ -229,11 +217,9 @@ class ClientsFromAssetModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         purchase_date = _parse_purchase_date(d.pop("PurchaseDate", None))
         purchase_cost = d.pop("PurchaseCost", None)
         life_span_months = d.pop("LifeSpanMonths", None)
-
         def _parse_activation_date(data: object) -> Optional[datetime.datetime]:
             if data is None:
                 return data
@@ -245,11 +231,9 @@ class ClientsFromAssetModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         activation_date = _parse_activation_date(d.pop("ActivationDate", None))
         depreciation_basis = d.pop("DepreciationBasis", None)
         depreciation_method = d.pop("DepreciationMethod", None)
-
         def _parse_retirement_date(data: object) -> Optional[datetime.datetime]:
             if data is None:
                 return data
@@ -261,10 +245,8 @@ class ClientsFromAssetModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         retirement_date = _parse_retirement_date(d.pop("RetirementDate", None))
         salvage_value = d.pop("SalvageValue", None)
-
         qualer_api_models_clients_from_asset_model = cls(
             site_id=site_id,
             product_id=product_id,
@@ -293,7 +275,6 @@ class ClientsFromAssetModel:
             retirement_date=retirement_date,
             salvage_value=salvage_value,
         )
-
         qualer_api_models_clients_from_asset_model.additional_properties = d
         return qualer_api_models_clients_from_asset_model
 

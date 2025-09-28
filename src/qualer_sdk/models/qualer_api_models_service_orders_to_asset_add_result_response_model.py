@@ -21,11 +21,9 @@ class ServiceOrdersToAssetAddResultResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         asset_count = self.asset_count
-
         already_added_asset_serials: Optional[List[str]] = None
         if self.already_added_asset_serials:
             already_added_asset_serials = self.already_added_asset_serials
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -33,21 +31,17 @@ class ServiceOrdersToAssetAddResultResponseModel:
             field_dict["AssetCount"] = asset_count
         if already_added_asset_serials is not None:
             field_dict["AlreadyAddedAssetSerials"] = already_added_asset_serials
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         asset_count = d.pop("AssetCount", None)
-
         already_added_asset_serials = cast(List[str], d.pop("AlreadyAddedAssetSerials", None))
-
         qualer_api_models_service_orders_to_asset_add_result_response_model = cls(
             asset_count=asset_count,
             already_added_asset_serials=already_added_asset_serials,
         )
-
         qualer_api_models_service_orders_to_asset_add_result_response_model.additional_properties = (
             d
         )

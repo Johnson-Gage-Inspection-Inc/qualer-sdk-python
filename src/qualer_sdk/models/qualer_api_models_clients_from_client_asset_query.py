@@ -27,15 +27,10 @@ class ClientsFromClientAssetQuery:
 
     def to_dict(self) -> Dict[str, Any]:
         equipment_id = self.equipment_id
-
         serial_number = self.serial_number
-
         asset_tag = self.asset_tag
-
         barcode = self.barcode
-
         legacy_id = self.legacy_id
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -49,22 +44,16 @@ class ClientsFromClientAssetQuery:
             field_dict["Barcode"] = barcode
         if legacy_id is not None:
             field_dict["LegacyId"] = legacy_id
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         equipment_id = d.pop("EquipmentId", None)
-
         serial_number = d.pop("SerialNumber", None)
-
         asset_tag = d.pop("AssetTag", None)
-
         barcode = d.pop("Barcode", None)
-
         legacy_id = d.pop("LegacyId", None)
-
         qualer_api_models_clients_from_client_asset_query = cls(
             equipment_id=equipment_id,
             serial_number=serial_number,
@@ -72,7 +61,6 @@ class ClientsFromClientAssetQuery:
             barcode=barcode,
             legacy_id=legacy_id,
         )
-
         qualer_api_models_clients_from_client_asset_query.additional_properties = d
         return qualer_api_models_clients_from_client_asset_query
 

@@ -59,62 +59,27 @@ class AssetToAssetMaintenancePlanResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         maintenance_plan_id = self.maintenance_plan_id
-
         maintenance_plan_name = self.maintenance_plan_name
-
         task_notes = self.task_notes
-
         last_service_task = self.last_service_task
-
-        last_service_date: Optional[str]
-        if not self.last_service_date:
-            last_service_date = None
-        elif isinstance(self.last_service_date, datetime.datetime):
-            last_service_date = self.last_service_date.isoformat()
-        else:
-            last_service_date = self.last_service_date
-
+        last_service_date = self.last_service_date.isoformat() if self.last_service_date else None
         next_service_task = self.next_service_task
-
-        next_service_date: Optional[str]
-        if not self.next_service_date:
-            next_service_date = None
-        elif isinstance(self.next_service_date, datetime.datetime):
-            next_service_date = self.next_service_date.isoformat()
-        else:
-            next_service_date = self.next_service_date
-
-        certificate_due_date: Optional[str]
-        if not self.certificate_due_date:
-            certificate_due_date = None
-        elif isinstance(self.certificate_due_date, datetime.datetime):
-            certificate_due_date = self.certificate_due_date.isoformat()
-        else:
-            certificate_due_date = self.certificate_due_date
-
+        next_service_date = self.next_service_date.isoformat() if self.next_service_date else None
+        certificate_due_date = self.certificate_due_date.isoformat() if self.certificate_due_date else None
         owner_first_name = self.owner_first_name
-
         owner_last_name = self.owner_last_name
-
         owner_alias = self.owner_alias
-
         owner_department_name = self.owner_department_name
-
         technician_first_name = self.technician_first_name
-
         technician_last_name = self.technician_last_name
-
         technician_alias = self.technician_alias
-
         technician_department_name = self.technician_department_name
-
         assigned_employees: Optional[List[Dict[str, Any]]] = None
         if self.assigned_employees:
             assigned_employees = []
             for assigned_employees_item_data in self.assigned_employees:
                 assigned_employees_item = assigned_employees_item_data.to_dict()
                 assigned_employees.append(assigned_employees_item)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -152,7 +117,6 @@ class AssetToAssetMaintenancePlanResponse:
             field_dict["TechnicianDepartmentName"] = technician_department_name
         if assigned_employees is not None:
             field_dict["AssignedEmployees"] = assigned_employees
-
         return field_dict
 
     @classmethod
@@ -160,16 +124,11 @@ class AssetToAssetMaintenancePlanResponse:
         from ..models.qualer_api_models_asset_to_asset_maintenance_plan_response_assigned_employee import (
             AssetToAssetMaintenancePlanResponseAssignedEmployee,
         )
-
         d = dict(src_dict)
         maintenance_plan_id = d.pop("MaintenancePlanId", None)
-
         maintenance_plan_name = d.pop("MaintenancePlanName", None)
-
         task_notes = d.pop("TaskNotes", None)
-
         last_service_task = d.pop("LastServiceTask", None)
-
         def _parse_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -179,16 +138,12 @@ class AssetToAssetMaintenancePlanResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 last_service_date_type_0 = isoparse(data)
-
                 return last_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         last_service_date = _parse_last_service_date(d.pop("LastServiceDate", None))
-
         next_service_task = d.pop("NextServiceTask", None)
-
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -198,14 +153,11 @@ class AssetToAssetMaintenancePlanResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 next_service_date_type_0 = isoparse(data)
-
                 return next_service_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
-
         def _parse_certificate_due_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -215,39 +167,26 @@ class AssetToAssetMaintenancePlanResponse:
                 if not isinstance(data, str):
                     raise TypeError()
                 certificate_due_date_type_0 = isoparse(data)
-
                 return certificate_due_date_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         certificate_due_date = _parse_certificate_due_date(d.pop("CertificateDueDate", None))
-
         owner_first_name = d.pop("OwnerFirstName", None)
-
         owner_last_name = d.pop("OwnerLastName", None)
-
         owner_alias = d.pop("OwnerAlias", None)
-
         owner_department_name = d.pop("OwnerDepartmentName", None)
-
         technician_first_name = d.pop("TechnicianFirstName", None)
-
         technician_last_name = d.pop("TechnicianLastName", None)
-
         technician_alias = d.pop("TechnicianAlias", None)
-
         technician_department_name = d.pop("TechnicianDepartmentName", None)
-
         assigned_employees = []
         _assigned_employees = d.pop("AssignedEmployees", None)
         for assigned_employees_item_data in _assigned_employees or []:
             assigned_employees_item = AssetToAssetMaintenancePlanResponseAssignedEmployee.from_dict(
                 assigned_employees_item_data
             )
-
             assigned_employees.append(assigned_employees_item)
-
         qualer_api_models_asset_to_asset_maintenance_plan_response = cls(
             maintenance_plan_id=maintenance_plan_id,
             maintenance_plan_name=maintenance_plan_name,
@@ -267,7 +206,6 @@ class AssetToAssetMaintenancePlanResponse:
             technician_department_name=technician_department_name,
             assigned_employees=assigned_employees,
         )
-
         qualer_api_models_asset_to_asset_maintenance_plan_response.additional_properties = d
         return qualer_api_models_asset_to_asset_maintenance_plan_response
 

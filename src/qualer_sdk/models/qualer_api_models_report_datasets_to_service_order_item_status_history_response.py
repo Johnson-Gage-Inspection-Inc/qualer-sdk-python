@@ -41,31 +41,20 @@ class ReportDatasetsToServiceOrderItemStatusHistoryResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_item_id = self.service_order_item_id
-
         previous_status_name = self.previous_status_name
-
         selected_status_name = self.selected_status_name
-
         explanation = self.explanation
-
         is_password_reentered = self.is_password_reentered
-
         created_on: Optional[str] = None
         if self.created_on:
             created_on = self.created_on.isoformat()
-
         created_on_utc: Optional[str] = None
         if self.created_on_utc:
             created_on_utc = self.created_on_utc.isoformat()
-
         employee_id = self.employee_id
-
         first_name = self.first_name
-
         last_name = self.last_name
-
         alias = self.alias
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -91,44 +80,32 @@ class ReportDatasetsToServiceOrderItemStatusHistoryResponse:
             field_dict["LastName"] = last_name
         if alias is not None:
             field_dict["Alias"] = alias
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_order_item_id = d.pop("ServiceOrderItemId", None)
-
         previous_status_name = d.pop("PreviousStatusName", None)
-
         selected_status_name = d.pop("SelectedStatusName", None)
-
         explanation = d.pop("Explanation", None)
-
         is_password_reentered = d.pop("IsPasswordReentered", None)
-
         _created_on = d.pop("CreatedOn", None)
         created_on: Optional[datetime.datetime]
         if not _created_on:
             created_on = None
         else:
             created_on = isoparse(_created_on)
-
         _created_on_utc = d.pop("CreatedOnUtc", None)
         created_on_utc: Optional[datetime.datetime]
         if not _created_on_utc:
             created_on_utc = None
         else:
             created_on_utc = isoparse(_created_on_utc)
-
         employee_id = d.pop("EmployeeId", None)
-
         first_name = d.pop("FirstName", None)
-
         last_name = d.pop("LastName", None)
-
         alias = d.pop("Alias", None)
-
         qualer_api_models_report_datasets_to_service_order_item_status_history_response = cls(
             service_order_item_id=service_order_item_id,
             previous_status_name=previous_status_name,
@@ -142,7 +119,6 @@ class ReportDatasetsToServiceOrderItemStatusHistoryResponse:
             last_name=last_name,
             alias=alias,
         )
-
         qualer_api_models_report_datasets_to_service_order_item_status_history_response.additional_properties = (
             d
         )

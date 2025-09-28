@@ -44,20 +44,16 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         batch_type = self.batch_type
-
         batch_result = self.batch_result
-
         specification: Optional[Dict[str, Any]] = None
         if self.specification:
             specification = self.specification.to_dict()
-
         measurement_sets: Optional[List[Dict[str, Any]]] = None
         if self.measurement_sets:
             measurement_sets = []
             for measurement_sets_item_data in self.measurement_sets:
                 measurement_sets_item = measurement_sets_item_data.to_dict()
                 measurement_sets.append(measurement_sets_item)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -69,7 +65,6 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel:
             field_dict["Specification"] = specification
         if measurement_sets is not None:
             field_dict["MeasurementSets"] = measurement_sets
-
         return field_dict
 
     @classmethod
@@ -80,12 +75,9 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel:
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_specification_response_model import (
             MeasurementsToMeasurementRecordResponseModelSpecificationResponseModel,
         )
-
         d = dict(src_dict)
         batch_type = d.pop("BatchType", None)
-
         batch_result = d.pop("BatchResult", None)
-
         _specification = d.pop("Specification", None)
         specification: Optional[
             MeasurementsToMeasurementRecordResponseModelSpecificationResponseModel
@@ -98,23 +90,19 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel:
                     _specification
                 )
             )
-
         measurement_sets = []
         _measurement_sets = d.pop("MeasurementSets", None)
         for measurement_sets_item_data in _measurement_sets or []:
             measurement_sets_item = MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelMeasurementSetResponseModel.from_dict(
                 measurement_sets_item_data
             )
-
             measurement_sets.append(measurement_sets_item)
-
         qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model = cls(
             batch_type=batch_type,
             batch_result=batch_result,
             specification=specification,
             measurement_sets=measurement_sets,
         )
-
         qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model.additional_properties = (
             d
         )

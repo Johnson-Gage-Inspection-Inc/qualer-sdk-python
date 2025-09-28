@@ -23,11 +23,8 @@ class QualerWebMvcAreasApiModelsAccountToLoginModel:
 
     def to_dict(self) -> Dict[str, Any]:
         user_name = self.user_name
-
         password = self.password
-
         clear_previous_tokens = self.clear_previous_tokens
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -38,24 +35,19 @@ class QualerWebMvcAreasApiModelsAccountToLoginModel:
         )
         if clear_previous_tokens is not None:
             field_dict["ClearPreviousTokens"] = clear_previous_tokens
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         user_name = d.pop("UserName")
-
         password = d.pop("Password")
-
         clear_previous_tokens = d.pop("ClearPreviousTokens", None)
-
         qualer_web_mvc_areas_api_models_account_to_login_model = cls(
             user_name=user_name,
             password=password,
             clear_previous_tokens=clear_previous_tokens,
         )
-
         qualer_web_mvc_areas_api_models_account_to_login_model.additional_properties = d
         return qualer_web_mvc_areas_api_models_account_to_login_model
 

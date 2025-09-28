@@ -33,21 +33,13 @@ class ServiceOptionsToServiceOptionResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         name = self.name
-
         price = self.price
-
         service_charge = self.service_charge
-
         time_spent = self.time_spent
-
         is_hourly = self.is_hourly
-
         document_number = self.document_number
-
         document_section = self.document_section
-
         service_code = self.service_code
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -67,28 +59,19 @@ class ServiceOptionsToServiceOptionResponseModel:
             field_dict["DocumentSection"] = document_section
         if service_code is not None:
             field_dict["ServiceCode"] = service_code
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         name = d.pop("Name", None)
-
         price = d.pop("Price", None)
-
         service_charge = d.pop("ServiceCharge", None)
-
         time_spent = d.pop("TimeSpent", None)
-
         is_hourly = d.pop("IsHourly", None)
-
         document_number = d.pop("DocumentNumber", None)
-
         document_section = d.pop("DocumentSection", None)
-
         service_code = d.pop("ServiceCode", None)
-
         qualer_api_models_service_options_to_service_option_response_model = cls(
             name=name,
             price=price,
@@ -99,7 +82,6 @@ class ServiceOptionsToServiceOptionResponseModel:
             document_section=document_section,
             service_code=service_code,
         )
-
         qualer_api_models_service_options_to_service_option_response_model.additional_properties = d
         return qualer_api_models_service_options_to_service_option_response_model
 

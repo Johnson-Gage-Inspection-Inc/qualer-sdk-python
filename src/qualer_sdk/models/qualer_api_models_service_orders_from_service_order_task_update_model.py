@@ -35,25 +35,17 @@ class ServiceOrdersFromServiceOrderTaskUpdateModel:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_task_id = self.service_order_task_id
-
         task_name = self.task_name
-
         task_details = self.task_details
-
         start_time: Optional[str] = None
         if self.start_time:
             start_time = self.start_time.isoformat()
-
         finish_time: Optional[str] = None
         if self.finish_time:
             finish_time = self.finish_time.isoformat()
-
         time_spent_minutes = self.time_spent_minutes
-
         price = self.price
-
         is_hourly = self.is_hourly
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -73,38 +65,29 @@ class ServiceOrdersFromServiceOrderTaskUpdateModel:
             field_dict["Price"] = price
         if is_hourly is not None:
             field_dict["IsHourly"] = is_hourly
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_order_task_id = d.pop("ServiceOrderTaskId", None)
-
         task_name = d.pop("TaskName", None)
-
         task_details = d.pop("TaskDetails", None)
-
         _start_time = d.pop("StartTime", None)
         start_time: Optional[datetime.datetime]
         if not _start_time:
             start_time = None
         else:
             start_time = isoparse(_start_time)
-
         _finish_time = d.pop("FinishTime", None)
         finish_time: Optional[datetime.datetime]
         if not _finish_time:
             finish_time = None
         else:
             finish_time = isoparse(_finish_time)
-
         time_spent_minutes = d.pop("TimeSpentMinutes", None)
-
         price = d.pop("Price", None)
-
         is_hourly = d.pop("IsHourly", None)
-
         qualer_api_models_service_orders_from_service_order_task_update_model = cls(
             service_order_task_id=service_order_task_id,
             task_name=task_name,
@@ -115,7 +98,6 @@ class ServiceOrdersFromServiceOrderTaskUpdateModel:
             price=price,
             is_hourly=is_hourly,
         )
-
         qualer_api_models_service_orders_from_service_order_task_update_model.additional_properties = (
             d
         )

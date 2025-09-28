@@ -19,24 +19,20 @@ class AccountToLogoutModel:
 
     def to_dict(self) -> Dict[str, Any]:
         logout_action = self.logout_action
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if logout_action is not None:
             field_dict["LogoutAction"] = logout_action
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         logout_action = d.pop("LogoutAction", None)
-
         qualer_api_models_account_to_logout_model = cls(
             logout_action=logout_action,
         )
-
         qualer_api_models_account_to_logout_model.additional_properties = d
         return qualer_api_models_account_to_logout_model
 

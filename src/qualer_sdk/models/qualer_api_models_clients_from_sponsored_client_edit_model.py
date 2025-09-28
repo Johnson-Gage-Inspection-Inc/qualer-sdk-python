@@ -51,37 +51,22 @@ class ClientsFromSponsoredClientEditModel:
 
     def to_dict(self) -> Dict[str, Any]:
         company_id = self.company_id
-
         account_number_text = self.account_number_text
-
-        client_status: Optional[str] = None
-        if self.client_status:
-            client_status = self.client_status.value
-
+        client_status = self.client_status.value if self.client_status else None
         domain_name = self.domain_name
-
         custom_client_name = self.custom_client_name
-
         legacy_id = self.legacy_id
-
         currency_id = self.currency_id
-
         account_representative_employee_id = self.account_representative_employee_id
-
         account_representative_site_id = self.account_representative_site_id
-
         account_manager_employee_id = self.account_manager_employee_id
-
         company_name = self.company_name
-
         billing_address: Optional[Dict[str, Any]] = None
         if self.billing_address:
             billing_address = self.billing_address.to_dict()
-
         shipping_address: Optional[Dict[str, Any]] = None
         if self.shipping_address:
             shipping_address = self.shipping_address.to_dict()
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -111,7 +96,6 @@ class ClientsFromSponsoredClientEditModel:
             field_dict["BillingAddress"] = billing_address
         if shipping_address is not None:
             field_dict["ShippingAddress"] = shipping_address
-
         return field_dict
 
     @classmethod
@@ -119,49 +103,35 @@ class ClientsFromSponsoredClientEditModel:
         from ..models.qualer_api_models_address_address_model import (
             AddressAddressModel,
         )
-
         d = dict(src_dict)
         company_id = d.pop("CompanyId", None)
-
         account_number_text = d.pop("AccountNumberText", None)
-
         _client_status = d.pop("ClientStatus", None)
         client_status: Optional[ClientsFromSponsoredClientEditModelClientStatus]
         if not _client_status:
             client_status = None
         else:
             client_status = ClientsFromSponsoredClientEditModelClientStatus(_client_status)
-
         domain_name = d.pop("DomainName", None)
-
         custom_client_name = d.pop("CustomClientName", None)
-
         legacy_id = d.pop("LegacyId", None)
-
         currency_id = d.pop("CurrencyId", None)
-
         account_representative_employee_id = d.pop("AccountRepresentativeEmployeeId", None)
-
         account_representative_site_id = d.pop("AccountRepresentativeSiteId", None)
-
         account_manager_employee_id = d.pop("AccountManagerEmployeeId", None)
-
         company_name = d.pop("CompanyName", None)
-
         _billing_address = d.pop("BillingAddress", None)
         billing_address: Optional[AddressAddressModel]
         if not _billing_address:
             billing_address = None
         else:
             billing_address = AddressAddressModel.from_dict(_billing_address)
-
         _shipping_address = d.pop("ShippingAddress", None)
         shipping_address: Optional[AddressAddressModel]
         if not _shipping_address:
             shipping_address = None
         else:
             shipping_address = AddressAddressModel.from_dict(_shipping_address)
-
         qualer_api_models_clients_from_sponsored_client_edit_model = cls(
             company_id=company_id,
             account_number_text=account_number_text,
@@ -177,7 +147,6 @@ class ClientsFromSponsoredClientEditModel:
             billing_address=billing_address,
             shipping_address=shipping_address,
         )
-
         qualer_api_models_clients_from_sponsored_client_edit_model.additional_properties = d
         return qualer_api_models_clients_from_sponsored_client_edit_model
 

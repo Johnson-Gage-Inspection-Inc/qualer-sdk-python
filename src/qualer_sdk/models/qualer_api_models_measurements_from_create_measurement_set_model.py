@@ -47,32 +47,23 @@ class MeasurementsFromCreateMeasurementSetModel:
 
     def to_dict(self) -> Dict[str, Any]:
         measurement_name = self.measurement_name
-
         is_accredited = self.is_accredited
-
         measurement_quantity_id = self.measurement_quantity_id
-
         default_unit_of_measure_id = self.default_unit_of_measure_id
-
         decimal_places = self.decimal_places
-
         significant_figures = self.significant_figures
-
         display_options: Optional[Dict[str, Any]] = None
         if self.display_options:
             display_options = self.display_options.to_dict()
-
         custom_fields: Optional[Dict[str, Any]] = None
         if self.custom_fields:
             custom_fields = self.custom_fields.to_dict()
-
         measurement_points: Optional[List[Dict[str, Any]]] = None
         if self.measurement_points:
             measurement_points = []
             for measurement_points_item_data in self.measurement_points:
                 measurement_points_item = measurement_points_item_data.to_dict()
                 measurement_points.append(measurement_points_item)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -94,7 +85,6 @@ class MeasurementsFromCreateMeasurementSetModel:
             field_dict["CustomFields"] = custom_fields
         if measurement_points is not None:
             field_dict["MeasurementPoints"] = measurement_points
-
         return field_dict
 
     @classmethod
@@ -108,43 +98,32 @@ class MeasurementsFromCreateMeasurementSetModel:
         from ..models.qualer_api_models_measurements_from_display_options import (
             MeasurementsFromDisplayOptions,
         )
-
         d = dict(src_dict)
         measurement_name = d.pop("MeasurementName", None)
-
         is_accredited = d.pop("IsAccredited", None)
-
         measurement_quantity_id = d.pop("MeasurementQuantityId", None)
-
         default_unit_of_measure_id = d.pop("DefaultUnitOfMeasureId", None)
-
         decimal_places = d.pop("DecimalPlaces", None)
-
         significant_figures = d.pop("SignificantFigures", None)
-
         _display_options = d.pop("DisplayOptions", None)
         display_options: Optional[MeasurementsFromDisplayOptions]
         if not _display_options:
             display_options = None
         else:
             display_options = MeasurementsFromDisplayOptions.from_dict(_display_options)
-
         _custom_fields = d.pop("CustomFields", None)
         custom_fields: Optional[MeasurementsFromCustomFields]
         if not _custom_fields:
             custom_fields = None
         else:
             custom_fields = MeasurementsFromCustomFields.from_dict(_custom_fields)
-
         measurement_points = []
         _measurement_points = d.pop("MeasurementPoints", None)
         for measurement_points_item_data in _measurement_points or []:
             measurement_points_item = MeasurementsFromCreateMeasurementPointModel.from_dict(
                 measurement_points_item_data
             )
-
             measurement_points.append(measurement_points_item)
-
         qualer_api_models_measurements_from_create_measurement_set_model = cls(
             measurement_name=measurement_name,
             is_accredited=is_accredited,
@@ -156,7 +135,6 @@ class MeasurementsFromCreateMeasurementSetModel:
             custom_fields=custom_fields,
             measurement_points=measurement_points,
         )
-
         qualer_api_models_measurements_from_create_measurement_set_model.additional_properties = d
         return qualer_api_models_measurements_from_create_measurement_set_model
 

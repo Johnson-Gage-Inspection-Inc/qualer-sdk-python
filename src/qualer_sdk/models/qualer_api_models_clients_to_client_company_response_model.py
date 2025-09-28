@@ -70,37 +70,22 @@ class ClientsToClientCompanyResponseModel:
         from ..models.qualer_api_models_clients_to_client_company_response_model_shipping_address_type_0 import (
             ClientsToClientCompanyResponseModelShippingAddressType0,
         )
-
         company_id = self.company_id
-
         account_number_text = self.account_number_text
-
         account_number = self.account_number
-
         currency_id = self.currency_id
-
         client_status = self.client_status
-
         company_name = self.company_name
-
         company_description = self.company_description
-
         domain_name = self.domain_name
-
         custom_client_name = self.custom_client_name
-
         legacy_id = self.legacy_id
-
         updated_on_utc: Optional[str] = None
         if self.updated_on_utc:
             updated_on_utc = self.updated_on_utc.isoformat()
-
         account_representative_employee_id = self.account_representative_employee_id
-
         account_representative_site_id = self.account_representative_site_id
-
         account_manager_employee_id = self.account_manager_employee_id
-
         billing_address: Optional[Dict[str, Any]]
         if not self.billing_address:
             billing_address = None
@@ -111,7 +96,6 @@ class ClientsToClientCompanyResponseModel:
             billing_address = self.billing_address.to_dict()
         else:
             billing_address = self.billing_address
-
         shipping_address: Optional[Dict[str, Any]]
         if not self.shipping_address:
             shipping_address = None
@@ -122,14 +106,12 @@ class ClientsToClientCompanyResponseModel:
             shipping_address = self.shipping_address.to_dict()
         else:
             shipping_address = self.shipping_address
-
         attributes: Optional[List[Dict[str, Any]]] = None
         if self.attributes:
             attributes = []
             for attributes_item_data in self.attributes:
                 attributes_item = attributes_item_data.to_dict()
                 attributes.append(attributes_item)
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -167,7 +149,6 @@ class ClientsToClientCompanyResponseModel:
             field_dict["ShippingAddress"] = shipping_address
         if attributes is not None:
             field_dict["Attributes"] = attributes
-
         return field_dict
 
     @classmethod
@@ -181,41 +162,26 @@ class ClientsToClientCompanyResponseModel:
         from ..models.qualer_api_models_clients_to_client_company_response_model_shipping_address_type_0 import (
             ClientsToClientCompanyResponseModelShippingAddressType0,
         )
-
         d = dict(src_dict)
         company_id = d.pop("CompanyId", None)
-
         account_number_text = d.pop("AccountNumberText", None)
-
         account_number = d.pop("AccountNumber", None)
-
         currency_id = d.pop("CurrencyId", None)
-
         client_status = d.pop("ClientStatus", None)
-
         company_name = d.pop("CompanyName", None)
-
         company_description = d.pop("CompanyDescription", None)
-
         domain_name = d.pop("DomainName", None)
-
         custom_client_name = d.pop("CustomClientName", None)
-
         legacy_id = d.pop("LegacyId", None)
-
         _updated_on_utc = d.pop("UpdatedOnUtc", None)
         updated_on_utc: Optional[datetime.datetime]
         if not _updated_on_utc:
             updated_on_utc = None
         else:
             updated_on_utc = isoparse(_updated_on_utc)
-
         account_representative_employee_id = d.pop("AccountRepresentativeEmployeeId", None)
-
         account_representative_site_id = d.pop("AccountRepresentativeSiteId", None)
-
         account_manager_employee_id = d.pop("AccountManagerEmployeeId", None)
-
         def _parse_billing_address(
             data: object,
         ) -> Optional["ClientsToClientCompanyResponseModelBillingAddressType0"]:
@@ -227,7 +193,6 @@ class ClientsToClientCompanyResponseModel:
                 billing_address_type_0 = (
                     ClientsToClientCompanyResponseModelBillingAddressType0.from_dict(data)
                 )
-
                 return billing_address_type_0
             except Exception:
                 pass
@@ -235,9 +200,7 @@ class ClientsToClientCompanyResponseModel:
                 Optional["ClientsToClientCompanyResponseModelBillingAddressType0"],
                 data,
             )
-
         billing_address = _parse_billing_address(d.pop("BillingAddress", None))
-
         def _parse_shipping_address(
             data: object,
         ) -> Optional["ClientsToClientCompanyResponseModelShippingAddressType0"]:
@@ -249,7 +212,6 @@ class ClientsToClientCompanyResponseModel:
                 shipping_address_type_0 = (
                     ClientsToClientCompanyResponseModelShippingAddressType0.from_dict(data)
                 )
-
                 return shipping_address_type_0
             except Exception:
                 pass
@@ -257,16 +219,12 @@ class ClientsToClientCompanyResponseModel:
                 Optional["ClientsToClientCompanyResponseModelShippingAddressType0"],
                 data,
             )
-
         shipping_address = _parse_shipping_address(d.pop("ShippingAddress", None))
-
         attributes = []
         _attributes = d.pop("Attributes", None)
         for attributes_item_data in _attributes or []:
             attributes_item = AttributesToAttributeResponse.from_dict(attributes_item_data)
-
             attributes.append(attributes_item)
-
         qualer_api_models_clients_to_client_company_response_model = cls(
             company_id=company_id,
             account_number_text=account_number_text,
@@ -286,7 +244,6 @@ class ClientsToClientCompanyResponseModel:
             shipping_address=shipping_address,
             attributes=attributes,
         )
-
         qualer_api_models_clients_to_client_company_response_model.additional_properties = d
         return qualer_api_models_clients_to_client_company_response_model
 

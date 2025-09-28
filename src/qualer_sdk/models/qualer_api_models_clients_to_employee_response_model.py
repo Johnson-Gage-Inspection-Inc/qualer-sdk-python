@@ -59,50 +59,27 @@ class ClientsToEmployeeResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         employee_id = self.employee_id
-
         first_name = self.first_name
-
         last_name = self.last_name
-
         company_id = self.company_id
-
         login_email = self.login_email
-
         departments: Optional[List[Dict[str, Any]]] = None
         if self.departments:
             departments = []
             for departments_item_data in self.departments:
                 departments_item = departments_item_data.to_dict()
                 departments.append(departments_item)
-
         subscription_email = self.subscription_email
-
         subscription_phone = self.subscription_phone
-
         office_phone = self.office_phone
-
         is_locked = self.is_locked
-
         image_url = self.image_url
-
         alias = self.alias
-
         title = self.title
-
         is_deleted = self.is_deleted
-
-        last_seen_date_utc: Optional[str]
-        if not self.last_seen_date_utc:
-            last_seen_date_utc = None
-        elif isinstance(self.last_seen_date_utc, datetime.datetime):
-            last_seen_date_utc = self.last_seen_date_utc.isoformat()
-        else:
-            last_seen_date_utc = self.last_seen_date_utc
-
+        last_seen_date_utc = self.last_seen_date_utc.isoformat() if self.last_seen_date_utc else None
         culture_name = self.culture_name
-
         culture_ui_name = self.culture_ui_name
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -140,7 +117,6 @@ class ClientsToEmployeeResponseModel:
             field_dict["CultureName"] = culture_name
         if culture_ui_name is not None:
             field_dict["CultureUiName"] = culture_ui_name
-
         return field_dict
 
     @classmethod
@@ -148,43 +124,27 @@ class ClientsToEmployeeResponseModel:
         from ..models.qualer_api_models_clients_to_employee_employee_department_response import (
             ClientsToEmployeeEmployeeDepartmentResponse,
         )
-
         d = dict(src_dict)
         employee_id = d.pop("EmployeeId", None)
-
         first_name = d.pop("FirstName", None)
-
         last_name = d.pop("LastName", None)
-
         company_id = d.pop("CompanyId", None)
-
         login_email = d.pop("LoginEmail", None)
-
         departments = []
         _departments = d.pop("Departments", None)
         for departments_item_data in _departments or []:
             departments_item = ClientsToEmployeeEmployeeDepartmentResponse.from_dict(
                 departments_item_data
             )
-
             departments.append(departments_item)
-
         subscription_email = d.pop("SubscriptionEmail", None)
-
         subscription_phone = d.pop("SubscriptionPhone", None)
-
         office_phone = d.pop("OfficePhone", None)
-
         is_locked = d.pop("IsLocked", None)
-
         image_url = d.pop("ImageUrl", None)
-
         alias = d.pop("Alias", None)
-
         title = d.pop("Title", None)
-
         is_deleted = d.pop("IsDeleted", None)
-
         def _parse_last_seen_date_utc(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -194,18 +154,13 @@ class ClientsToEmployeeResponseModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 last_seen_date_utc_type_0 = isoparse(data)
-
                 return last_seen_date_utc_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         last_seen_date_utc = _parse_last_seen_date_utc(d.pop("LastSeenDateUtc", None))
-
         culture_name = d.pop("CultureName", None)
-
         culture_ui_name = d.pop("CultureUiName", None)
-
         qualer_api_models_clients_to_employee_response_model = cls(
             employee_id=employee_id,
             first_name=first_name,
@@ -225,7 +180,6 @@ class ClientsToEmployeeResponseModel:
             culture_name=culture_name,
             culture_ui_name=culture_ui_name,
         )
-
         qualer_api_models_clients_to_employee_response_model.additional_properties = d
         return qualer_api_models_clients_to_employee_response_model
 

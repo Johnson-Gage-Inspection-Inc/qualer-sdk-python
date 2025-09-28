@@ -21,9 +21,7 @@ class AssetPoolsToAssetPoolModel:
 
     def to_dict(self) -> Dict[str, Any]:
         asset_pool_id = self.asset_pool_id
-
         asset_pool_name = self.asset_pool_name
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -31,21 +29,17 @@ class AssetPoolsToAssetPoolModel:
             field_dict["AssetPoolId"] = asset_pool_id
         if asset_pool_name is not None:
             field_dict["AssetPoolName"] = asset_pool_name
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         asset_pool_id = d.pop("AssetPoolId", None)
-
         asset_pool_name = d.pop("AssetPoolName", None)
-
         qualer_api_models_asset_pools_to_asset_pool_model = cls(
             asset_pool_id=asset_pool_id,
             asset_pool_name=asset_pool_name,
         )
-
         qualer_api_models_asset_pools_to_asset_pool_model.additional_properties = d
         return qualer_api_models_asset_pools_to_asset_pool_model
 

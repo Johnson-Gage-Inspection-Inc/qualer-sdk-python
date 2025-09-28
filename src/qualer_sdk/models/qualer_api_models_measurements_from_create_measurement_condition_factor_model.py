@@ -29,21 +29,10 @@ class MeasurementsFromCreateMeasurementConditionFactorModel:
 
     def to_dict(self) -> Dict[str, Any]:
         factor_id = self.factor_id
-
         factor_name = self.factor_name
-
         factor_value = self.factor_value
-
         factor_uom = self.factor_uom
-
-        last_modified_on_utc: Optional[str]
-        if not self.last_modified_on_utc:
-            last_modified_on_utc = None
-        elif isinstance(self.last_modified_on_utc, datetime.datetime):
-            last_modified_on_utc = self.last_modified_on_utc.isoformat()
-        else:
-            last_modified_on_utc = self.last_modified_on_utc
-
+        last_modified_on_utc = self.last_modified_on_utc.isoformat() if self.last_modified_on_utc else None
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -57,20 +46,15 @@ class MeasurementsFromCreateMeasurementConditionFactorModel:
             field_dict["FactorUom"] = factor_uom
         if last_modified_on_utc is not None:
             field_dict["LastModifiedOnUtc"] = last_modified_on_utc
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         factor_id = d.pop("FactorId", None)
-
         factor_name = d.pop("FactorName", None)
-
         factor_value = d.pop("FactorValue", None)
-
         factor_uom = d.pop("FactorUom", None)
-
         def _parse_last_modified_on_utc(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -80,14 +64,11 @@ class MeasurementsFromCreateMeasurementConditionFactorModel:
                 if not isinstance(data, str):
                     raise TypeError()
                 last_modified_on_utc_type_0 = isoparse(data)
-
                 return last_modified_on_utc_type_0
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
-
         last_modified_on_utc = _parse_last_modified_on_utc(d.pop("LastModifiedOnUtc", None))
-
         qualer_api_models_measurements_from_create_measurement_condition_factor_model = cls(
             factor_id=factor_id,
             factor_name=factor_name,
@@ -95,7 +76,6 @@ class MeasurementsFromCreateMeasurementConditionFactorModel:
             factor_uom=factor_uom,
             last_modified_on_utc=last_modified_on_utc,
         )
-
         qualer_api_models_measurements_from_create_measurement_condition_factor_model.additional_properties = (
             d
         )

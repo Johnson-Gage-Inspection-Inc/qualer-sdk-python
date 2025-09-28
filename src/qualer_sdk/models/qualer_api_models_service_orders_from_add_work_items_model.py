@@ -23,11 +23,9 @@ class ServiceOrdersFromAddWorkItemsModel:
         asset_ids: Optional[List[int]] = None
         if self.asset_ids:
             asset_ids = self.asset_ids
-
         schedule_segment_ids: Optional[List[int]] = None
         if self.schedule_segment_ids:
             schedule_segment_ids = self.schedule_segment_ids
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -35,21 +33,17 @@ class ServiceOrdersFromAddWorkItemsModel:
             field_dict["AssetIds"] = asset_ids
         if schedule_segment_ids is not None:
             field_dict["ScheduleSegmentIds"] = schedule_segment_ids
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         asset_ids = cast(List[int], d.pop("AssetIds", None))
-
         schedule_segment_ids = cast(List[int], d.pop("ScheduleSegmentIds", None))
-
         qualer_api_models_service_orders_from_add_work_items_model = cls(
             asset_ids=asset_ids,
             schedule_segment_ids=schedule_segment_ids,
         )
-
         qualer_api_models_service_orders_from_add_work_items_model.additional_properties = d
         return qualer_api_models_service_orders_from_add_work_items_model
 

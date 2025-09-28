@@ -19,24 +19,20 @@ class AccountToEmployeeEventMessageResponseModel:
 
     def to_dict(self) -> Dict[str, Any]:
         message = self.message
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if message is not None:
             field_dict["Message"] = message
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         message = d.pop("Message", None)
-
         qualer_api_models_account_to_employee_event_message_response_model = cls(
             message=message,
         )
-
         qualer_api_models_account_to_employee_event_message_response_model.additional_properties = d
         return qualer_api_models_account_to_employee_event_message_response_model
 

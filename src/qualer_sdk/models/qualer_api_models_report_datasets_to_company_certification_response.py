@@ -35,27 +35,19 @@ class ReportDatasetsToCompanyCertificationResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         logo = self.logo
-
         initial_date: Optional[str] = None
         if self.initial_date:
             initial_date = self.initial_date.isoformat()
-
         certification_date: Optional[str] = None
         if self.certification_date:
             certification_date = self.certification_date.isoformat()
-
         expiration_date: Optional[str] = None
         if self.expiration_date:
             expiration_date = self.expiration_date.isoformat()
-
         certification_name = self.certification_name
-
         certificate_number = self.certificate_number
-
         certification_authority = self.certification_authority
-
         certification_standard = self.certification_standard
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -75,43 +67,34 @@ class ReportDatasetsToCompanyCertificationResponse:
             field_dict["CertificationAuthority"] = certification_authority
         if certification_standard is not None:
             field_dict["CertificationStandard"] = certification_standard
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         logo = d.pop("Logo", None)
-
         _initial_date = d.pop("InitialDate", None)
         initial_date: Optional[datetime.datetime]
         if not _initial_date:
             initial_date = None
         else:
             initial_date = isoparse(_initial_date)
-
         _certification_date = d.pop("CertificationDate", None)
         certification_date: Optional[datetime.datetime]
         if not _certification_date:
             certification_date = None
         else:
             certification_date = isoparse(_certification_date)
-
         _expiration_date = d.pop("ExpirationDate", None)
         expiration_date: Optional[datetime.datetime]
         if not _expiration_date:
             expiration_date = None
         else:
             expiration_date = isoparse(_expiration_date)
-
         certification_name = d.pop("CertificationName", None)
-
         certificate_number = d.pop("CertificateNumber", None)
-
         certification_authority = d.pop("CertificationAuthority", None)
-
         certification_standard = d.pop("CertificationStandard", None)
-
         qualer_api_models_report_datasets_to_company_certification_response = cls(
             logo=logo,
             initial_date=initial_date,
@@ -122,7 +105,6 @@ class ReportDatasetsToCompanyCertificationResponse:
             certification_authority=certification_authority,
             certification_standard=certification_standard,
         )
-
         qualer_api_models_report_datasets_to_company_certification_response.additional_properties = (
             d
         )

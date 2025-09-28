@@ -145,60 +145,32 @@ class MeasurementsFromUpdateMeasurementPointModel:
 
     def to_dict(self) -> Dict[str, Any]:
         measurement_point_id = self.measurement_point_id
-
         specification_name = self.specification_name
-
         unit_of_measure = self.unit_of_measure
-
         expected_value = self.expected_value
-
         expected_value_raw = self.expected_value_raw
-
         base_value = self.base_value
-
         test_value = self.test_value
-
         nominal = self.nominal
-
         range_min = self.range_min
-
         range_max = self.range_max
-
         tolerance_type = self.tolerance_type
-
         precision_type = self.precision_type
-
         precision = self.precision
-
         tolerance_minimum = self.tolerance_minimum
-
         tolerance_maximum = self.tolerance_maximum
-
         resolution = self.resolution
-
         resolution_count = self.resolution_count
-
         is_accredited = self.is_accredited
-
-        specification_mode: Optional[int] = None
-        if self.specification_mode:
-            specification_mode = self.specification_mode.value
-
-        tolerance_mode: Optional[int] = None
-        if self.tolerance_mode:
-            tolerance_mode = self.tolerance_mode.value
-
-        tolerance_unit: Optional[int] = None
-        if self.tolerance_unit:
-            tolerance_unit = self.tolerance_unit.value
-
+        specification_mode = self.specification_mode.value if self.specification_mode else None
+        tolerance_mode = self.tolerance_mode.value if self.tolerance_mode else None
+        tolerance_unit = self.tolerance_unit.value if self.tolerance_unit else None
         measurements: Optional[List[Dict[str, Any]]] = None
         if self.measurements:
             measurements = []
             for measurements_item_data in self.measurements:
                 measurements_item = measurements_item_data.to_dict()
                 measurements.append(measurements_item)
-
         measurement_condition_factors: Optional[List[Dict[str, Any]]] = None
         if self.measurement_condition_factors:
             measurement_condition_factors = []
@@ -207,63 +179,34 @@ class MeasurementsFromUpdateMeasurementPointModel:
                     measurement_condition_factors_item_data.to_dict()
                 )
                 measurement_condition_factors.append(measurement_condition_factors_item)
-
-        tool_application_mode: Optional[str] = None
-        if self.tool_application_mode:
-            tool_application_mode = self.tool_application_mode.value
-
+        tool_application_mode = self.tool_application_mode.value if self.tool_application_mode else None
         primary_measurement_tool: Optional[Dict[str, Any]] = None
         if self.primary_measurement_tool:
             primary_measurement_tool = self.primary_measurement_tool.to_dict()
-
         secondary_measurement_tool: Optional[Dict[str, Any]] = None
         if self.secondary_measurement_tool:
             secondary_measurement_tool = self.secondary_measurement_tool.to_dict()
-
         linked_measurement_point_id = self.linked_measurement_point_id
-
-        hysteresis_point: Optional[str] = None
-        if self.hysteresis_point:
-            hysteresis_point = self.hysteresis_point.value
-
+        hysteresis_point = self.hysteresis_point.value if self.hysteresis_point else None
         influence_parameter_1_parameter_id = self.influence_parameter_1_parameter_id
-
         influence_parameter_1_value = self.influence_parameter_1_value
-
         influence_parameter_2_parameter_id = self.influence_parameter_2_parameter_id
-
         influence_parameter_2_value = self.influence_parameter_2_value
-
         measurement_not_taken_reason = self.measurement_not_taken_reason
-
         hide_from_certificate = self.hide_from_certificate
-
         measurement_not_taken_result = self.measurement_not_taken_result
-
         is_measurement_not_taken = self.is_measurement_not_taken
-
         column_mean = self.column_mean
-
         column_mean_result = self.column_mean_result
-
         column_sd = self.column_sd
-
         column_sd_result = self.column_sd_result
-
         column_cv = self.column_cv
-
         column_cv_result = self.column_cv_result
-
         column_range = self.column_range
-
         column_range_result = self.column_range_result
-
         column_delta = self.column_delta
-
         column_delta_result = self.column_delta_result
-
         column_result = self.column_result
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -361,7 +304,6 @@ class MeasurementsFromUpdateMeasurementPointModel:
             field_dict["ColumnDeltaResult"] = column_delta_result
         if column_result is not None:
             field_dict["ColumnResult"] = column_result
-
         return field_dict
 
     @classmethod
@@ -375,44 +317,25 @@ class MeasurementsFromUpdateMeasurementPointModel:
         from ..models.qualer_api_models_measurements_from_update_measurement_tool_model import (
             MeasurementsFromUpdateMeasurementToolModel,
         )
-
         d = dict(src_dict)
         measurement_point_id = d.pop("MeasurementPointId", None)
-
         specification_name = d.pop("SpecificationName", None)
-
         unit_of_measure = d.pop("UnitOfMeasure", None)
-
         expected_value = d.pop("ExpectedValue", None)
-
         expected_value_raw = d.pop("ExpectedValueRaw", None)
-
         base_value = d.pop("BaseValue", None)
-
         test_value = d.pop("TestValue", None)
-
         nominal = d.pop("Nominal", None)
-
         range_min = d.pop("RangeMin", None)
-
         range_max = d.pop("RangeMax", None)
-
         tolerance_type = d.pop("ToleranceType", None)
-
         precision_type = d.pop("PrecisionType", None)
-
         precision = d.pop("Precision", None)
-
         tolerance_minimum = d.pop("ToleranceMinimum", None)
-
         tolerance_maximum = d.pop("ToleranceMaximum", None)
-
         resolution = d.pop("Resolution", None)
-
         resolution_count = d.pop("ResolutionCount", None)
-
         is_accredited = d.pop("IsAccredited", None)
-
         _specification_mode = d.pop("SpecificationMode", None)
         specification_mode: Optional[MeasurementsFromUpdateMeasurementPointModelSpecificationMode]
         if not _specification_mode:
@@ -421,7 +344,6 @@ class MeasurementsFromUpdateMeasurementPointModel:
             specification_mode = MeasurementsFromUpdateMeasurementPointModelSpecificationMode(
                 _specification_mode
             )
-
         _tolerance_mode = d.pop("ToleranceMode", None)
         tolerance_mode: Optional[MeasurementsFromUpdateMeasurementPointModelToleranceMode]
         if not _tolerance_mode:
@@ -430,7 +352,6 @@ class MeasurementsFromUpdateMeasurementPointModel:
             tolerance_mode = MeasurementsFromUpdateMeasurementPointModelToleranceMode(
                 _tolerance_mode
             )
-
         _tolerance_unit = d.pop("ToleranceUnit", None)
         tolerance_unit: Optional[MeasurementsFromUpdateMeasurementPointModelToleranceUnit]
         if not _tolerance_unit:
@@ -439,16 +360,13 @@ class MeasurementsFromUpdateMeasurementPointModel:
             tolerance_unit = MeasurementsFromUpdateMeasurementPointModelToleranceUnit(
                 _tolerance_unit
             )
-
         measurements = []
         _measurements = d.pop("Measurements", None)
         for measurements_item_data in _measurements or []:
             measurements_item = MeasurementsFromUpdateMeasurementModel.from_dict(
                 measurements_item_data
             )
-
             measurements.append(measurements_item)
-
         measurement_condition_factors = []
         _measurement_condition_factors = d.pop("MeasurementConditionFactors", None)
         for measurement_condition_factors_item_data in _measurement_condition_factors or []:
@@ -457,9 +375,7 @@ class MeasurementsFromUpdateMeasurementPointModel:
                     measurement_condition_factors_item_data
                 )
             )
-
             measurement_condition_factors.append(measurement_condition_factors_item)
-
         _tool_application_mode = d.pop("ToolApplicationMode", None)
         tool_application_mode: Optional[
             MeasurementsFromUpdateMeasurementPointModelToolApplicationMode
@@ -470,7 +386,6 @@ class MeasurementsFromUpdateMeasurementPointModel:
             tool_application_mode = MeasurementsFromUpdateMeasurementPointModelToolApplicationMode(
                 _tool_application_mode
             )
-
         _primary_measurement_tool = d.pop("PrimaryMeasurementTool", None)
         primary_measurement_tool: Optional[MeasurementsFromUpdateMeasurementToolModel]
         if not _primary_measurement_tool:
@@ -479,7 +394,6 @@ class MeasurementsFromUpdateMeasurementPointModel:
             primary_measurement_tool = MeasurementsFromUpdateMeasurementToolModel.from_dict(
                 _primary_measurement_tool
             )
-
         _secondary_measurement_tool = d.pop("SecondaryMeasurementTool", None)
         secondary_measurement_tool: Optional[MeasurementsFromUpdateMeasurementToolModel]
         if not _secondary_measurement_tool:
@@ -488,9 +402,7 @@ class MeasurementsFromUpdateMeasurementPointModel:
             secondary_measurement_tool = MeasurementsFromUpdateMeasurementToolModel.from_dict(
                 _secondary_measurement_tool
             )
-
         linked_measurement_point_id = d.pop("LinkedMeasurementPointId", None)
-
         _hysteresis_point = d.pop("HysteresisPoint", None)
         hysteresis_point: Optional[MeasurementsFromUpdateMeasurementPointModelHysteresisPoint]
         if not _hysteresis_point:
@@ -499,45 +411,25 @@ class MeasurementsFromUpdateMeasurementPointModel:
             hysteresis_point = MeasurementsFromUpdateMeasurementPointModelHysteresisPoint(
                 _hysteresis_point
             )
-
         influence_parameter_1_parameter_id = d.pop("InfluenceParameter1ParameterId", None)
-
         influence_parameter_1_value = d.pop("InfluenceParameter1Value", None)
-
         influence_parameter_2_parameter_id = d.pop("InfluenceParameter2ParameterId", None)
-
         influence_parameter_2_value = d.pop("InfluenceParameter2Value", None)
-
         measurement_not_taken_reason = d.pop("MeasurementNotTakenReason", None)
-
         hide_from_certificate = d.pop("HideFromCertificate", None)
-
         measurement_not_taken_result = d.pop("MeasurementNotTakenResult", None)
-
         is_measurement_not_taken = d.pop("IsMeasurementNotTaken", None)
-
         column_mean = d.pop("ColumnMean", None)
-
         column_mean_result = d.pop("ColumnMeanResult", None)
-
         column_sd = d.pop("ColumnSD", None)
-
         column_sd_result = d.pop("ColumnSDResult", None)
-
         column_cv = d.pop("ColumnCV", None)
-
         column_cv_result = d.pop("ColumnCVResult", None)
-
         column_range = d.pop("ColumnRange", None)
-
         column_range_result = d.pop("ColumnRangeResult", None)
-
         column_delta = d.pop("ColumnDelta", None)
-
         column_delta_result = d.pop("ColumnDeltaResult", None)
-
         column_result = d.pop("ColumnResult", None)
-
         qualer_api_models_measurements_from_update_measurement_point_model = cls(
             measurement_point_id=measurement_point_id,
             specification_name=specification_name,
@@ -587,7 +479,6 @@ class MeasurementsFromUpdateMeasurementPointModel:
             column_delta_result=column_delta_result,
             column_result=column_result,
         )
-
         qualer_api_models_measurements_from_update_measurement_point_model.additional_properties = d
         return qualer_api_models_measurements_from_update_measurement_point_model
 

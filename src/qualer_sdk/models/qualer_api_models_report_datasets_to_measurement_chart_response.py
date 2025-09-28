@@ -33,21 +33,13 @@ class ReportDatasetsToMeasurementChartResponse:
 
     def to_dict(self) -> Dict[str, Any]:
         service_order_item_id = self.service_order_item_id
-
         measurement_set_id = self.measurement_set_id
-
         chart_type = self.chart_type
-
         chart_image = self.chart_image
-
         nominal = self.nominal
-
         title = self.title
-
         unit_of_measure = self.unit_of_measure
-
         abbreviated_uom = self.abbreviated_uom
-
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -67,28 +59,19 @@ class ReportDatasetsToMeasurementChartResponse:
             field_dict["UnitOfMeasure"] = unit_of_measure
         if abbreviated_uom is not None:
             field_dict["AbbreviatedUOM"] = abbreviated_uom
-
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         service_order_item_id = d.pop("ServiceOrderItemId", None)
-
         measurement_set_id = d.pop("MeasurementSetId", None)
-
         chart_type = d.pop("ChartType", None)
-
         chart_image = d.pop("ChartImage", None)
-
         nominal = d.pop("Nominal", None)
-
         title = d.pop("Title", None)
-
         unit_of_measure = d.pop("UnitOfMeasure", None)
-
         abbreviated_uom = d.pop("AbbreviatedUOM", None)
-
         qualer_api_models_report_datasets_to_measurement_chart_response = cls(
             service_order_item_id=service_order_item_id,
             measurement_set_id=measurement_set_id,
@@ -99,7 +82,6 @@ class ReportDatasetsToMeasurementChartResponse:
             unit_of_measure=unit_of_measure,
             abbreviated_uom=abbreviated_uom,
         )
-
         qualer_api_models_report_datasets_to_measurement_chart_response.additional_properties = d
         return qualer_api_models_report_datasets_to_measurement_chart_response
 
