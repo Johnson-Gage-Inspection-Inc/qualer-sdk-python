@@ -25,7 +25,6 @@ from .change_order_status_response_200 import ChangeOrderStatusResponse200
 from .change_work_order_payment_status_response_200 import (
     ChangeWorkOrderPaymentStatusResponse200,
 )
-from .clear_collected_assets_response_200 import ClearCollectedAssetsResponse200
 from .close_response_200 import CloseResponse200
 from .collect_assets_response_200 import CollectAssetsResponse200
 from .companies_response_200 import CompaniesResponse200
@@ -997,7 +996,6 @@ __all__ = [
     "AttributesToAttributeResponse",
     "ChangeOrderStatusResponse200",
     "ChangeWorkOrderPaymentStatusResponse200",
-    "ClearCollectedAssetsResponse200",
     "ClientAttributesFromClientAttributeModel",
     "ClientsFromAssetModel",
     "ClientsFromAssetModelAssetStatus",
