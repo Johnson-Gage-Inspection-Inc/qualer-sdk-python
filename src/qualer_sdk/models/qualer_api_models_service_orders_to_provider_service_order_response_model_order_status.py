@@ -1,6 +1,6 @@
 import warnings
 
-from qualer_sdk.models import ServiceOrderStatus
+from qualer_sdk.models.service_order_status import ServiceOrderStatus
 
 ServiceOrdersToProviderServiceOrderResponseModelOrderStatus = ServiceOrderStatus
 

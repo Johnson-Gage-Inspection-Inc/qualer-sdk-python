@@ -5,6 +5,7 @@ import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
+from ...models.filter_type import FilterType
 from ...models.qualer_api_models_asset_to_asset_manage_response_model import (
     AssetToAssetManageResponseModel,
 )
@@ -13,21 +14,16 @@ from ...types import Response
 
 def _get_kwargs(
     *,
-    model_filter_type: Optional[str] = None,
+    model_filter_type: Optional[FilterType] = None,
     model_search_string: Optional[str] = None,
     model_page: Optional[int] = None,
     model_page_size: Optional[int] = None,
 ) -> Dict[str, Any]:
     params: Dict[str, Any] = {}
-
     params["model.filterType"] = model_filter_type
-
     params["model.searchString"] = model_search_string
-
     params["model.page"] = model_page
-
     params["model.pageSize"] = model_page_size
-
     params = {k: v for k, v in params.items() if v is not None}
 
     _kwargs: Dict[str, Any] = {
@@ -71,24 +67,18 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_filter_type: Optional[str] = None,
+    model_filter_type: Optional[FilterType] = None,
     model_search_string: Optional[str] = None,
     model_page: Optional[int] = None,
     model_page_size: Optional[int] = None,
 ) -> Response[List["AssetToAssetManageResponseModel"]]:
     """GetAssetManagerList
 
-     filterType: None, DueForService, RecentlyServiced, NotServiced, RecentlyPurchased,
-        WarrantyExpiring, DueForReplacement, OutOfService,
-        PastDue, ServicePending, CollectedAssets,  WithoutSchedule, WithoutVendor,
-        WithoutProduct, Added, Modified, Deleted,
-        NoAgreement, ExpiredAgreement, AgreementUpForRenewal
-
     Args:
-        model_filter_type (Optional[str]):
-        model_search_string (Optional[str]):
-        model_page (Optional[int]):
-        model_page_size (Optional[int]):
+        model_filter_type (Optional[FilterType]): Filter type for asset management list.
+        model_search_string (Optional[str]): Search string for asset management list.
+        model_page (Optional[int]): Page number for asset management list.
+        model_page_size (Optional[int]): Page size for asset management list.
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -115,24 +105,18 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_filter_type: Optional[str] = None,
+    model_filter_type: Optional[FilterType] = None,
     model_search_string: Optional[str] = None,
     model_page: Optional[int] = None,
     model_page_size: Optional[int] = None,
 ) -> Optional[List["AssetToAssetManageResponseModel"]]:
     """GetAssetManagerList
 
-     filterType: None, DueForService, RecentlyServiced, NotServiced, RecentlyPurchased,
-        WarrantyExpiring, DueForReplacement, OutOfService,
-        PastDue, ServicePending, CollectedAssets,  WithoutSchedule, WithoutVendor,
-        WithoutProduct, Added, Modified, Deleted,
-        NoAgreement, ExpiredAgreement, AgreementUpForRenewal
-
     Args:
-        model_filter_type (Optional[str]):
-        model_search_string (Optional[str]):
-        model_page (Optional[int]):
-        model_page_size (Optional[int]):
+        model_filter_type (Optional[FilterType]): Filter type for asset management list.
+        model_search_string (Optional[str]): Search string for asset management list.
+        model_page (Optional[int]): Page number for asset management list.
+        model_page_size (Optional[int]): Page size for asset management list.
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -154,24 +138,18 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_filter_type: Optional[str] = None,
+    model_filter_type: Optional[FilterType] = None,
     model_search_string: Optional[str] = None,
     model_page: Optional[int] = None,
     model_page_size: Optional[int] = None,
 ) -> Response[List["AssetToAssetManageResponseModel"]]:
     """GetAssetManagerList
 
-     filterType: None, DueForService, RecentlyServiced, NotServiced, RecentlyPurchased,
-        WarrantyExpiring, DueForReplacement, OutOfService,
-        PastDue, ServicePending, CollectedAssets,  WithoutSchedule, WithoutVendor,
-        WithoutProduct, Added, Modified, Deleted,
-        NoAgreement, ExpiredAgreement, AgreementUpForRenewal
-
     Args:
-        model_filter_type (Optional[str]):
-        model_search_string (Optional[str]):
-        model_page (Optional[int]):
-        model_page_size (Optional[int]):
+        model_filter_type (Optional[FilterType]): Filter type for asset management list.
+        model_search_string (Optional[str]): Search string for asset management list.
+        model_page (Optional[int]): Page number for asset management list.
+        model_page_size (Optional[int]): Page size for asset management list.
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -196,24 +174,18 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_filter_type: Optional[str] = None,
+    model_filter_type: Optional[FilterType] = None,
     model_search_string: Optional[str] = None,
     model_page: Optional[int] = None,
     model_page_size: Optional[int] = None,
 ) -> Optional[List["AssetToAssetManageResponseModel"]]:
     """GetAssetManagerList
 
-     filterType: None, DueForService, RecentlyServiced, NotServiced, RecentlyPurchased,
-        WarrantyExpiring, DueForReplacement, OutOfService,
-        PastDue, ServicePending, CollectedAssets,  WithoutSchedule, WithoutVendor,
-        WithoutProduct, Added, Modified, Deleted,
-        NoAgreement, ExpiredAgreement, AgreementUpForRenewal
-
     Args:
-        model_filter_type (Optional[str]):
-        model_search_string (Optional[str]):
-        model_page (Optional[int]):
-        model_page_size (Optional[int]):
+        model_filter_type (Optional[FilterType]): Filter type for asset management list.
+        model_search_string (Optional[str]): Search string for asset management list.
+        model_page (Optional[int]): Page number for asset management list.
+        model_page_size (Optional[int]): Page size for asset management list.
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
