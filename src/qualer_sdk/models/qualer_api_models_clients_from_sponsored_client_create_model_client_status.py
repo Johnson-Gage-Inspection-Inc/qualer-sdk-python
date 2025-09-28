@@ -1,11 +1,11 @@
-from enum import Enum
+import warnings
 
+from qualer_sdk.models.client_status import ClientStatus
 
-class ClientsFromSponsoredClientCreateModelClientStatus(str, Enum):
-    APPROVED = "Approved"
-    HIDDEN = "Hidden"
-    NOTAPPROVED = "NotApproved"
-    PROSPECT = "Prospect"
+ClientsFromSponsoredClientCreateModelClientStatus = ClientStatus
 
-    def __str__(self) -> str:
-        return str(self.value)
+warnings.warn(
+    "ClientsFromSponsoredClientCreateModelClientStatus is deprecated and will be removed in a future release. Please use ClientStatus instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)

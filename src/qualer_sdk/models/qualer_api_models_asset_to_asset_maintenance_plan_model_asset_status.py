@@ -1,12 +1,12 @@
-from enum import Enum
+import warnings
 
+from qualer_sdk.models.asset_status import AssetStatus
 
-class AssetToAssetMaintenancePlanModelAssetStatus(str, Enum):
-    ACTIVE = "Active"
-    FAILED = "Failed"
-    INACTIVE = "Inactive"
-    NEW = "New"
-    RETIRED = "Retired"
+AssetToAssetMaintenancePlanModelAssetStatus = AssetStatus
 
-    def __str__(self) -> str:
-        return str(self.value)
+warnings.warn(
+    "AssetToAssetMaintenancePlanModelAssetStatus is deprecated and will be removed in a future release. "
+    "Please use AssetStatus instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)

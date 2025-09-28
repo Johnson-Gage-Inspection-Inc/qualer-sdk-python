@@ -1,10 +1,11 @@
-from enum import Enum
+import warnings
 
+from qualer_sdk.models.measurement_precision_type import MeasurementPrecisionType
 
-class ReportDatasetsToMeasurementAllResponseAsLeftPrecisionType(str, Enum):
-    PERCENTAGE = "Percentage"
-    READABILITY = "Readability"
-    UNITOFMEASURE = "UnitOfMeasure"
+ReportDatasetsToMeasurementAllResponseAsLeftPrecisionType = MeasurementPrecisionType
 
-    def __str__(self) -> str:
-        return str(self.value)
+warnings.warn(
+    "ReportDatasetsToMeasurementAllResponseAsLeftPrecisionType is deprecated and will be removed in a future release. Please use MeasurementPrecisionType instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)
