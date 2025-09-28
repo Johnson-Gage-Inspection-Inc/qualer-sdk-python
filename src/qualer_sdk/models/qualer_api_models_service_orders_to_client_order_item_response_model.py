@@ -20,9 +20,10 @@ class ServiceOrdersToClientOrderItemResponseModel:
     """
     Attributes:
         work_item_id (int):
-        serial_number (str):
         asset_id (int):
-        asset_name (str):
+        service_order_id (int):
+        serial_number (Optional[str]):
+        asset_name (Optional[str]):
         client_notes (Optional[str]):
         service_comments (Optional[str]):
         private_comments (Optional[str]):
@@ -101,10 +102,14 @@ class ServiceOrdersToClientOrderItemResponseModel:
         asset_ownership (Optional[str]):
     """
 
+    # required identifiers
     work_item_id: int
-    serial_number: str
+    service_order_id: int
     asset_id: int
-    asset_name: str
+
+    # optional fields
+    serial_number: Optional[str] = None
+    asset_name: Optional[str] = None
     client_notes: Optional[str] = None
     service_comments: Optional[str] = None
     private_comments: Optional[str] = None
@@ -889,12 +894,15 @@ class ServiceOrdersToClientOrderItemResponseModel:
         legacy_id = d.pop("LegacyId", None)
         asset_ownership = d.pop("AssetOwnership", None)
         qualer_api_models_service_orders_to_client_order_item_response_model = cls(
-            work_item_id=work_item_id,
+            work_item_id=cast(int, work_item_id),
+            service_order_id=cast(int, service_order_id),
+            asset_id=cast(int, asset_id),
+            serial_number=serial_number,
+            asset_name=asset_name,
             client_notes=client_notes,
             service_comments=service_comments,
             private_comments=private_comments,
             order_item_number=order_item_number,
-            service_order_id=service_order_id,
             channel_count=channel_count,
             service_total=service_total,
             repairs_total=repairs_total,
@@ -936,14 +944,11 @@ class ServiceOrdersToClientOrderItemResponseModel:
             result_status=result_status,
             as_found_result=as_found_result,
             as_left_result=as_left_result,
-            serial_number=serial_number,
             serial_number_change=serial_number_change,
             asset_tag=asset_tag,
             asset_user=asset_user,
             asset_tag_change=asset_tag_change,
             asset_user_change=asset_user_change,
-            asset_id=asset_id,
-            asset_name=asset_name,
             asset_description=asset_description,
             asset_site_name=asset_site_name,
             asset_site_id=asset_site_id,
@@ -971,9 +976,8 @@ class ServiceOrdersToClientOrderItemResponseModel:
             legacy_id=legacy_id,
             asset_ownership=asset_ownership,
         )
-        qualer_api_models_service_orders_to_client_order_item_response_model.additional_properties = (
-            d
-        )
+        obj = qualer_api_models_service_orders_to_client_order_item_response_model
+        obj.additional_properties = d
         return qualer_api_models_service_orders_to_client_order_item_response_model
 
     @property
