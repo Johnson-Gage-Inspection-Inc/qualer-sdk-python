@@ -4,7 +4,7 @@ from enum import Enum
 class FilterType(str, Enum):
     """Filter types for GetAssetManagerList API endpoint."""
 
-    NONE = "None"
+    UNSET = "Unset"
     DUE_FOR_SERVICE = "DueForService"
     RECENTLY_SERVICED = "RecentlyServiced"
     NOT_SERVICED = "NotServiced"
