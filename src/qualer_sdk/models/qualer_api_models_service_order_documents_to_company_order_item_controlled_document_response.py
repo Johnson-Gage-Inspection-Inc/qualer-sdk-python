@@ -66,17 +66,17 @@ class ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        service_order_id = d.pop("ServiceOrderId", None)
-        service_order_item_id = d.pop("ServiceOrderItemId", None)
-        _guid = d.pop("Guid", None)
+        service_order_id = d.pop("ServiceOrderId")
+        service_order_item_id = d.pop("ServiceOrderItemId")
+        _guid = d.pop("Guid")
         guid = UUID(_guid)
-        document_name = d.pop("DocumentName", None)
-        file_name = d.pop("FileName", None)
-        document_type = d.pop("DocumentType", None)
-        revision_number = d.pop("RevisionNumber", None)
-        _report_type = d.pop("ReportType", None)
+        document_name = d.pop("DocumentName")
+        file_name = d.pop("FileName")
+        document_type = d.pop("DocumentType")
+        revision_number = d.pop("RevisionNumber")
+        _report_type = d.pop("ReportType")
         report_type = ReportType(_report_type)
-        download_url = d.pop("DownloadUrl", None)
+        download_url = d.pop("DownloadUrl")
         qualer_api_models_service_order_documents_to_company_order_item_controlled_document_response = cls(
             service_order_id=service_order_id,
             service_order_item_id=service_order_item_id,
