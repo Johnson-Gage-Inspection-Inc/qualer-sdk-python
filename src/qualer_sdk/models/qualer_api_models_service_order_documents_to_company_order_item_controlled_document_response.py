@@ -77,7 +77,7 @@ class ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse:
         _report_type = d.pop("ReportType")
         report_type = ReportType(_report_type)
         download_url = d.pop("DownloadUrl")
-        qualer_api_models_service_order_documents_to_company_order_item_controlled_document_response = cls(
+        obj = cls(
             service_order_id=service_order_id,
             service_order_item_id=service_order_item_id,
             guid=guid,
@@ -88,10 +88,8 @@ class ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse:
             report_type=report_type,
             download_url=download_url,
         )
-        qualer_api_models_service_order_documents_to_company_order_item_controlled_document_response.additional_properties = (
-            d
-        )
-        return qualer_api_models_service_order_documents_to_company_order_item_controlled_document_response
+        obj.additional_properties = d
+        return obj
 
     @property
     def additional_keys(self) -> List[str]:
