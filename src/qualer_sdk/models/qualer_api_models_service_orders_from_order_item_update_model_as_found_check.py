@@ -1,10 +1,11 @@
-from enum import Enum
+import warnings
 
+from qualer_sdk.models.service_order_check_result import ServiceOrderCheckResult
 
-class ServiceOrdersFromOrderItemUpdateModelAsFoundCheck(str, Enum):
-    FAIL = "Fail"
-    NOTSERVICED = "NotServiced"
-    PASS = "Pass"
+ServiceOrdersFromOrderItemUpdateModelAsFoundCheck = ServiceOrderCheckResult
 
-    def __str__(self) -> str:
-        return str(self.value)
+warnings.warn(
+    "ServiceOrdersFromOrderItemUpdateModelAsFoundCheck is deprecated and will be removed in a future release. Please use ServiceOrderCheckResult instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)
