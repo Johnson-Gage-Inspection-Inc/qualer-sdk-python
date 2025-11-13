@@ -119,7 +119,7 @@ class AssetToAssetResponseModel:
     retirment_reason: Optional[str] = None
     composite_parent_id: Optional[int] = None
     composite_child_count: Optional[int] = None
-    additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
+    additional_properties: Optional[Dict[str, Any]] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
         company_id = self.company_id
@@ -173,7 +173,8 @@ class AssetToAssetResponseModel:
         composite_parent_id = self.composite_parent_id
         composite_child_count = self.composite_child_count
         field_dict: Dict[str, Any] = {}
-        field_dict.update(self.additional_properties)
+        if self.additional_properties:
+            field_dict.update(self.additional_properties)
         field_dict.update({})
         if company_id is not None:
             field_dict["CompanyId"] = company_id
@@ -435,16 +436,22 @@ class AssetToAssetResponseModel:
 
     @property
     def additional_keys(self) -> List[str]:
-        return list(self.additional_properties.keys())
+        return list(self.additional_properties.keys()) if self.additional_properties else []
 
     def __getitem__(self, key: str) -> Any:
+        if self.additional_properties is None:
+            raise KeyError(key)
         return self.additional_properties[key]
 
     def __setitem__(self, key: str, value: Any) -> None:
+        if self.additional_properties is None:
+            self.additional_properties = {}
         self.additional_properties[key] = value
 
     def __delitem__(self, key: str) -> None:
+        if self.additional_properties is None:
+            raise KeyError(key)
         del self.additional_properties[key]
 
     def __contains__(self, key: str) -> bool:
-        return key in self.additional_properties
+        return key in self.additional_properties if self.additional_properties else False
