@@ -24,6 +24,8 @@ class AssetToAssetResponseModel:
         asset_tag (Optional[str]):
         equipment_id (Optional[str]):
         asset_status (Optional[AssetToAssetResponseModelAssetStatus]):
+        custom_status_name (Optional[str]):
+        custom_status_abbr (Optional[str]):
         asset_name (Optional[str]):
         asset_description (Optional[str]):
         asset_maker (Optional[str]):
@@ -74,6 +76,8 @@ class AssetToAssetResponseModel:
     asset_tag: Optional[str] = None
     equipment_id: Optional[str] = None
     asset_status: Optional[AssetToAssetResponseModelAssetStatus] = None
+    custom_status_name: Optional[str] = None
+    custom_status_abbr: Optional[str] = None
     asset_name: Optional[str] = None
     asset_description: Optional[str] = None
     asset_maker: Optional[str] = None
@@ -125,6 +129,8 @@ class AssetToAssetResponseModel:
         asset_tag = self.asset_tag
         equipment_id = self.equipment_id
         asset_status = self.asset_status.value if self.asset_status else None
+        custom_status_name = self.custom_status_name
+        custom_status_abbr = self.custom_status_abbr
         asset_name = self.asset_name
         asset_description = self.asset_description
         asset_maker = self.asset_maker
@@ -183,6 +189,10 @@ class AssetToAssetResponseModel:
             field_dict["EquipmentId"] = equipment_id
         if asset_status is not None:
             field_dict["AssetStatus"] = asset_status
+        if custom_status_name is not None:
+            field_dict["CustomStatusName"] = custom_status_name
+        if custom_status_abbr is not None:
+            field_dict["CustomStatusAbbr"] = custom_status_abbr
         if asset_name is not None:
             field_dict["AssetName"] = asset_name
         if asset_description is not None:
@@ -282,6 +292,8 @@ class AssetToAssetResponseModel:
             asset_status = None
         else:
             asset_status = AssetToAssetResponseModelAssetStatus(_asset_status)
+        custom_status_name = d.pop("CustomStatusName", None)
+        custom_status_abbr = d.pop("CustomStatusAbbr", None)
         asset_name = d.pop("AssetName", None)
         asset_description = d.pop("AssetDescription", None)
         asset_maker = d.pop("AssetMaker", None)
@@ -312,6 +324,7 @@ class AssetToAssetResponseModel:
         condition = d.pop("Condition", None)
         criticality = d.pop("Criticality", None)
         pool = d.pop("Pool", None)
+
         def _parse_purchase_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -323,9 +336,11 @@ class AssetToAssetResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         purchase_date = _parse_purchase_date(d.pop("PurchaseDate", None))
         purchase_cost = d.pop("PurchaseCost", None)
         life_span_months = d.pop("LifeSpanMonths", None)
+
         def _parse_activation_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -339,9 +354,11 @@ class AssetToAssetResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         activation_date = _parse_activation_date(d.pop("ActivationDate", None))
         depreciation_basis = d.pop("DepreciationBasis", None)
         depreciation_method = d.pop("DepreciationMethod", None)
+
         def _parse_retirement_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -355,6 +372,7 @@ class AssetToAssetResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         retirement_date = _parse_retirement_date(d.pop("RetirementDate", None))
         salvage_value = d.pop("SalvageValue", None)
         retirment_reason = d.pop("RetirmentReason", None)
@@ -368,6 +386,8 @@ class AssetToAssetResponseModel:
             asset_tag=asset_tag,
             equipment_id=equipment_id,
             asset_status=asset_status,
+            custom_status_name=custom_status_name,
+            custom_status_abbr=custom_status_abbr,
             asset_name=asset_name,
             asset_description=asset_description,
             asset_maker=asset_maker,
