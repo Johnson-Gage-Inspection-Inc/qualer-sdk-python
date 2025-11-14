@@ -1,10 +1,11 @@
-from enum import Enum
+import warnings
 
+from qualer_sdk.models.measurement_not_taken_result import MeasurementNotTakenResult
 
-class ReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult(str, Enum):
-    FAIL = "Fail"
-    LIMITED = "Limited"
-    PASS = "Pass"
+ReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult = MeasurementNotTakenResult
 
-    def __str__(self) -> str:
-        return str(self.value)
+warnings.warn(
+    "ReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult is deprecated and will be removed in a future release. Please use MeasurementNotTakenResult instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)
