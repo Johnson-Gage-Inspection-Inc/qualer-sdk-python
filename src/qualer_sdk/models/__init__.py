@@ -815,9 +815,6 @@ from .qualer_api_models_service_orders_to_payment_response_model import (
 from .qualer_api_models_service_orders_to_provider_service_order_response_model import (
     ServiceOrdersToProviderServiceOrderResponseModel,
 )
-from .qualer_api_models_service_orders_to_provider_service_order_response_model_order_status import (
-    ServiceOrdersToProviderServiceOrderResponseModelOrderStatus,
-)
 from .qualer_api_models_service_orders_to_provider_service_order_response_model_timeframe import (
     ServiceOrdersToProviderServiceOrderResponseModelTimeframe,
 )
@@ -1244,7 +1241,6 @@ __all__ = [
     "ServiceOrdersToOrderAssignmentResponseModel",
     "ServiceOrdersToPaymentResponseModel",
     "ServiceOrdersToProviderServiceOrderResponseModel",
-    "ServiceOrdersToProviderServiceOrderResponseModelOrderStatus",
     "ServiceOrdersToProviderServiceOrderResponseModelTimeframe",
     "ServiceOrdersToServiceOrderPartRepairResponse",
     "ServiceOrdersToServiceOrderTaskResponse",
