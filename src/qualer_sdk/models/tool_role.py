@@ -1,11 +1,11 @@
-from enum import IntEnum
+from enum import Enum
 
 
-class ToolRole(IntEnum):
-    REFERENCE_STANDARD = 0
-    ENVIRONMENTAL_SENSOR = 1
-    CONTROLLED_ENVIRONMENT = 2
-    SCIENTIFIC_INSTRUMENT = 3
+class ToolRole(str, Enum):
+    REFERENCE_STANDARD = "Reference Standard"
+    ENVIRONMENTAL_SENSOR = "Environmental Sensor"
+    CONTROLLED_ENVIRONMENT = "Controlled Environment"
+    SCIENTIFIC_INSTRUMENT = "Scientific Instrument"
 
     def __str__(self) -> str:
         return str(self.value)
