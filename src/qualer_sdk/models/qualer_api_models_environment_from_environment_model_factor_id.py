@@ -1,21 +1,11 @@
-from enum import Enum
+import warnings
 
+from qualer_sdk.models.environment_factor import EnvironmentFactor
 
-class EnvironmentFromEnvironmentModelFactorId(str, Enum):
-    AIRBUOYANCY = "AirBuoyancy"
-    AIRHUMIDITY = "AirHumidity"
-    ALTITUDE = "Altitude"
-    AMBIENTTEMPERATURE = "AmbientTemperature"
-    BAROMETRICPRESSURE = "BarometricPressure"
-    EVAPORATIONRATE = "EvaporationRate"
-    LIGHTINTENSITY = "LightIntensity"
-    NOISELEVEL = "NoiseLevel"
-    PHLEVEL = "PhLevel"
-    SOLARRADIATION = "SolarRadiation"
-    WATERCONDUCTIVITY = "WaterConductivity"
-    WATERTEMPERATURE = "WaterTemperature"
-    WINDSPEED = "WindSpeed"
-    ZFACTOR = "ZFactor"
+EnvironmentFromEnvironmentModelFactorId = EnvironmentFactor
 
-    def __str__(self) -> str:
-        return str(self.value)
+warnings.warn(
+    "EnvironmentFromEnvironmentModelFactorId is deprecated and will be removed in a future release. Please use EnvironmentFactor instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)

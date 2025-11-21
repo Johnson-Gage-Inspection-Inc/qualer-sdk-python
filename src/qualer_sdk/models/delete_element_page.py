@@ -1,25 +1,11 @@
-from enum import Enum
+import warnings
 
+from qualer_sdk.models.element_page import ElementPage
 
-class DeleteElementPage(str, Enum):
-    ASSETMANAGER = "AssetManager"
-    CLIENTAGREEMENTS = "ClientAgreements"
-    CLIENTASSETMANAGER = "ClientAssetManager"
-    CLIENTS = "Clients"
-    DOCUMENTMANAGER = "DocumentManager"
-    GLOBALASSETMANAGER = "GlobalAssetManager"
-    INVENTORYMANAGER = "InventoryManager"
-    INVOICESMANAGER = "InvoicesManager"
-    PRODUCTMANAGER = "ProductManager"
-    PRODUCTSPECIFICATIONS = "ProductSpecifications"
-    SERVICEORDERITEMS = "ServiceOrderItems"
-    SERVICEREQUESTS = "ServiceRequests"
-    SERVICESCHEDULES = "ServiceSchedules"
-    TAXONOMY = "Taxonomy"
-    VENDORAGREEMENTS = "VendorAgreements"
-    VENDORS = "Vendors"
-    WORKCALENDAR = "WorkCalendar"
-    WORKORDERS = "WorkOrders"
+DeleteElementPage = ElementPage
 
-    def __str__(self) -> str:
-        return str(self.value)
+warnings.warn(
+    "DeleteElementPage is deprecated and will be removed in a future release. Please use ElementPage instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)
