@@ -14,7 +14,7 @@ from ...types import Response
 
 def _get_kwargs(
     *,
-    model_filter_type: Optional[FilterType] = None,
+    model_filter_type: FilterType = FilterType.UNSET,
     model_search_string: Optional[str] = None,
     model_page: Optional[int] = None,
     model_page_size: Optional[int] = None,
@@ -67,7 +67,7 @@ def _build_response(
 def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_filter_type: Optional[FilterType] = None,
+    model_filter_type: FilterType = FilterType.UNSET,
     model_search_string: Optional[str] = None,
     model_page: Optional[int] = None,
     model_page_size: Optional[int] = None,
@@ -105,7 +105,7 @@ def sync_detailed(
 def sync(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_filter_type: Optional[FilterType] = None,
+    model_filter_type: FilterType = FilterType.UNSET,
     model_search_string: Optional[str] = None,
     model_page: Optional[int] = None,
     model_page_size: Optional[int] = None,
@@ -138,7 +138,7 @@ def sync(
 async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_filter_type: Optional[FilterType] = None,
+    model_filter_type: FilterType = FilterType.UNSET,
     model_search_string: Optional[str] = None,
     model_page: Optional[int] = None,
     model_page_size: Optional[int] = None,
@@ -174,7 +174,7 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
-    model_filter_type: Optional[FilterType] = None,
+    model_filter_type: FilterType = FilterType.UNSET,
     model_search_string: Optional[str] = None,
     model_page: Optional[int] = None,
     model_page_size: Optional[int] = None,
