@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from enum import Enum
 
 
@@ -7,22 +9,36 @@ class ToolRole(str, Enum):
     CONTROLLED_ENVIRONMENT = "Controlled Environment"
     SCIENTIFIC_INSTRUMENT = "Scientific Instrument"
 
-    def __str__(self) -> str:
-        return str(self.value)
-
     def __repr__(self) -> str:
         return str(self.value)
 
     @classmethod
-    def _missing_(cls, value):
-        """Handle integer to string mapping for API responses."""
+    def from_api_value(cls, value: int | str | None) -> ToolRole | None:
+        """Best-effort parser for API values.
+        Accepts either a string enum value (e.g. "Environmental Sensor") or an integer code
+        (e.g. 1) seen in API responses. Returns None for unknown values.
+        """
+        if value is None:
+            return None
         if isinstance(value, int):
-            _int_to_str_map = {
-                0: "Reference Standard",
-                1: "Environmental Sensor",
-                2: "Controlled Environment",
-                3: "Scientific Instrument",
-            }
-            if value in _int_to_str_map:
-                return cls(_int_to_str_map[value])
-        return super()._missing_(value)
+            mapped = _INT_TO_STR.get(value)
+            return mapped if isinstance(mapped, cls) else None
+        # Strings: accept exact match; try case-insensitive as a fallback.
+        try:
+            return cls(value)
+        except ValueError:
+            # Case-insensitive fallback
+            normalized = str(value).strip().lower()
+            for member in cls:
+                if member.value.lower() == normalized:
+                    return member
+            return None
+
+
+# Central mapping for observed integer codes -> API string values
+_INT_TO_STR: dict[int, ToolRole] = {
+    0: ToolRole.REFERENCE_STANDARD,
+    1: ToolRole.ENVIRONMENTAL_SENSOR,
+    2: ToolRole.CONTROLLED_ENVIRONMENT,
+    3: ToolRole.SCIENTIFIC_INSTRUMENT,
+}
