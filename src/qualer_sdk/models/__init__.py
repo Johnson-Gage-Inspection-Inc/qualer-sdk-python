@@ -188,9 +188,6 @@ from .qualer_api_models_asset_to_asset_manage_response_model_record_type import 
 from .qualer_api_models_asset_to_asset_manage_response_model_service_order_status import (
     AssetToAssetManageResponseModelServiceOrderStatus,
 )
-from .qualer_api_models_asset_to_asset_manage_response_model_tool_role import (
-    AssetToAssetManageResponseModelToolRole,
-)
 from .qualer_api_models_asset_to_asset_response_model import (
     AssetToAssetResponseModel,
 )
@@ -217,9 +214,6 @@ from .qualer_api_models_asset_to_client_asset_manager_response_model_record_type
 )
 from .qualer_api_models_asset_to_client_asset_manager_response_model_service_order_status import (
     AssetToClientAssetManagerResponseModelServiceOrderStatus,
-)
-from .qualer_api_models_asset_to_client_asset_manager_response_model_tool_role import (
-    AssetToClientAssetManagerResponseModelToolRole,
 )
 from .qualer_api_models_asset_to_employee_filter_preference_response_model import (
     AssetToEmployeeFilterPreferenceResponseModel,
@@ -926,6 +920,7 @@ from .upsert_asset_attributes_put_2_response_200 import (
 from .upsert_asset_attributes_response_200 import UpsertAssetAttributesResponse200
 from .upsert_client_attribute_response_200 import UpsertClientAttributeResponse200
 from .work_status import WorkStatus
+from .tool_role import ToolRole
 
 __all__ = [
     "AccountFromEmployeeMessagesModel",
@@ -977,7 +972,6 @@ __all__ = [
     "AssetToAssetManageResponseModelDueStatus",
     "AssetToAssetManageResponseModelRecordType",
     "AssetToAssetManageResponseModelServiceOrderStatus",
-    "AssetToAssetManageResponseModelToolRole",
     "AssetToAssetResponseModel",
     "AssetToAssetResponseModelAssetStatus",
     "AssetToAssetServiceForecastModel",
@@ -987,7 +981,6 @@ __all__ = [
     "AssetToClientAssetManagerResponseModelDueStatus",
     "AssetToClientAssetManagerResponseModelRecordType",
     "AssetToClientAssetManagerResponseModelServiceOrderStatus",
-    "AssetToClientAssetManagerResponseModelToolRole",
     "AssetToEmployeeFilterPreferenceResponseModel",
     "AssetToEmployeePreferenceResponseModel",
     "AttributesToAttributeResponse",
@@ -1251,6 +1244,7 @@ __all__ = [
     "SiteToClientSiteResponse",
     "SiteToClientSiteResponseBillingAddressType0",
     "SiteToClientSiteResponseShippingAddressType0",
+    "ToolRole",
     "UpdateAssetClassResponse200",
     "UpdateAssetDepartmentResponse200",
     "UpdateAssetRoomResponse200",

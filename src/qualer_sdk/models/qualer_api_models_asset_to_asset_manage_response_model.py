@@ -12,11 +12,9 @@ from ..models.qualer_api_models_asset_to_asset_manage_response_model_due_status 
 from ..models.qualer_api_models_asset_to_asset_manage_response_model_record_type import (
     AssetToAssetManageResponseModelRecordType,
 )
-from ..models.qualer_api_models_asset_to_asset_manage_response_model_tool_role import (
-    AssetToAssetManageResponseModelToolRole,
-)
 from ..models.service_order_status import ServiceOrderStatus
 from ..models.service_result_status import ServiceResultStatus
+from ..models.tool_role import ToolRole
 from ..models.work_status import WorkStatus
 
 T = TypeVar("T", bound="AssetToAssetManageResponseModel")
@@ -68,7 +66,7 @@ class AssetToAssetManageResponseModel:
         asset_room (Optional[str]):
         location (Optional[str]):
         station (Optional[str]):
-        tool_role (Optional[AssetToAssetManageResponseModelToolRole]):
+        tool_role (Optional[ToolRole]):
         tool_id (Optional[int]):
         department_id (Optional[int]):
         department_name (Optional[str]):
@@ -155,7 +153,7 @@ class AssetToAssetManageResponseModel:
     asset_room: Optional[str] = None
     location: Optional[str] = None
     station: Optional[str] = None
-    tool_role: Optional[AssetToAssetManageResponseModelToolRole] = None
+    tool_role: Optional[ToolRole] = None
     tool_id: Optional[int] = None
     department_id: Optional[int] = None
     department_name: Optional[str] = None
@@ -256,7 +254,9 @@ class AssetToAssetManageResponseModel:
         salvage_value = self.salvage_value
         total_service_cost = self.total_service_cost
         life_span_months = self.life_span_months
-        due_for_replacement_date = self.due_for_replacement_date.isoformat() if self.due_for_replacement_date else None
+        due_for_replacement_date = (
+            self.due_for_replacement_date.isoformat() if self.due_for_replacement_date else None
+        )
         depreciation_proc = self.depreciation_proc
         purchase_date = self.purchase_date.isoformat() if self.purchase_date else None
         purchase_cost = self.purchase_cost
@@ -285,7 +285,9 @@ class AssetToAssetManageResponseModel:
         technician = self.technician
         certificate_number = self.certificate_number
         due_trigger_date = self.due_trigger_date.isoformat() if self.due_trigger_date else None
-        past_due_trigger_date = self.past_due_trigger_date.isoformat() if self.past_due_trigger_date else None
+        past_due_trigger_date = (
+            self.past_due_trigger_date.isoformat() if self.past_due_trigger_date else None
+        )
         due_status = self.due_status.value if self.due_status else None
         work_status = self.work_status.value if self.work_status else None
         field_dict: Dict[str, Any] = {}
@@ -489,6 +491,7 @@ class AssetToAssetManageResponseModel:
         criticality = d.pop("Criticality", None)
         condition = d.pop("Condition", None)
         asset_class = d.pop("AssetClass", None)
+
         def _parse_activation_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -502,7 +505,9 @@ class AssetToAssetManageResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         activation_date = _parse_activation_date(d.pop("ActivationDate", None))
+
         def _parse_retirment_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -516,6 +521,7 @@ class AssetToAssetManageResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         retirment_date = _parse_retirment_date(d.pop("RetirmentDate", None))
         client_vendor_id = d.pop("ClientVendorId", None)
         company_name = d.pop("CompanyName", None)
@@ -542,18 +548,19 @@ class AssetToAssetManageResponseModel:
         location = d.pop("Location", None)
         station = d.pop("Station", None)
         _tool_role = d.pop("ToolRole", None)
-        tool_role: Optional[AssetToAssetManageResponseModelToolRole]
+        tool_role: Optional[ToolRole]
         if not _tool_role:
             tool_role = None
         elif _tool_role is None:
             tool_role = None
         else:
-            tool_role = AssetToAssetManageResponseModelToolRole(_tool_role)
+            tool_role = ToolRole(_tool_role)
         tool_id = d.pop("ToolId", None)
         department_id = d.pop("DepartmentId", None)
         department_name = d.pop("DepartmentName", None)
         custodian_name = d.pop("CustodianName", None)
         warranty = d.pop("Warranty", None)
+
         def _parse_warranty_end(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -565,6 +572,7 @@ class AssetToAssetManageResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         warranty_end = _parse_warranty_end(d.pop("WarrantyEnd", None))
         is_warranty_expired = d.pop("IsWarrantyExpired", None)
         depreciation_method = d.pop("DepreciationMethod", None)
@@ -572,6 +580,7 @@ class AssetToAssetManageResponseModel:
         salvage_value = d.pop("SalvageValue", None)
         total_service_cost = d.pop("TotalServiceCost", None)
         life_span_months = d.pop("LifeSpanMonths", None)
+
         def _parse_due_for_replacement_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -585,10 +594,12 @@ class AssetToAssetManageResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         due_for_replacement_date = _parse_due_for_replacement_date(
             d.pop("DueForReplacementDate", None)
         )
         depreciation_proc = d.pop("DepreciationProc", None)
+
         def _parse_purchase_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -600,6 +611,7 @@ class AssetToAssetManageResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         purchase_date = _parse_purchase_date(d.pop("PurchaseDate", None))
         purchase_cost = d.pop("PurchaseCost", None)
         time_in_service = d.pop("TimeInService", None)
@@ -631,6 +643,7 @@ class AssetToAssetManageResponseModel:
             as_left_result = None
         else:
             as_left_result = ServiceResultStatus(_as_left_result)
+
         def _parse_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -644,12 +657,16 @@ class AssetToAssetManageResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         last_service_date = _parse_last_service_date(d.pop("LastServiceDate", None))
+
         def _parse_last_service(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         last_service = _parse_last_service(d.pop("LastService", None))
+
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -663,6 +680,7 @@ class AssetToAssetManageResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
         next_service = d.pop("NextService", None)
         service_schedule_segment_id = d.pop("ServiceScheduleSegmentId", None)
@@ -676,6 +694,7 @@ class AssetToAssetManageResponseModel:
         vendor = d.pop("Vendor", None)
         technician = d.pop("Technician", None)
         certificate_number = d.pop("CertificateNumber", None)
+
         def _parse_due_trigger_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -689,7 +708,9 @@ class AssetToAssetManageResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         due_trigger_date = _parse_due_trigger_date(d.pop("DueTriggerDate", None))
+
         def _parse_past_due_trigger_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -703,6 +724,7 @@ class AssetToAssetManageResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         past_due_trigger_date = _parse_past_due_trigger_date(d.pop("PastDueTriggerDate", None))
         _due_status = d.pop("DueStatus", None)
         due_status: Optional[AssetToAssetManageResponseModelDueStatus]
