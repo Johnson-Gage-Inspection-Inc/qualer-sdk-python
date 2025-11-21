@@ -10,6 +10,9 @@ class ToolRole(str, Enum):
     def __str__(self) -> str:
         return str(self.value)
 
+    def __repr__(self) -> str:
+        return str(self.value)
+
     @classmethod
     def _missing_(cls, value):
         """Handle integer to string mapping for API responses."""
