@@ -66,7 +66,7 @@ ENDPOINT_REQUIRED_PARAMS = {
     "client_asset_service_records.get_asset_service_records_by_asset_get_2": {"asset_id": ASSET_ID},
     "client_assets.get_all_assets_get_2": {},
     "client_assets.get_asset_counters": {"client_company_id": CLIENT_COMPANY_ID},
-    "client_assets.get_asset_get_2": {"asset_id_path": ASSET_ID},
+    "client_assets.get_asset_get_2": {"asset_id": ASSET_ID},
     "client_assets.get_asset_manager_list_get_2": {"client_company_id": CLIENT_COMPANY_ID},
     "client_assets.get_assets": {"client_company_id": CLIENT_COMPANY_ID},
     "client_attribute.get_client_attributes": {"client_company_id": CLIENT_COMPANY_ID},
