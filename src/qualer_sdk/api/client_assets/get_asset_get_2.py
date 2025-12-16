@@ -12,7 +12,7 @@ from ...types import Response
 
 
 def _get_kwargs(
-    asset_id_path: str,
+    asset_id: str,
     *,
     asset_id_query: Optional[str] = None,
     model_asset_id: Optional[int] = None,
@@ -27,7 +27,7 @@ def _get_kwargs(
 
     _kwargs: Dict[str, Any] = {
         "method": "get",
-        "url": f"/api/service/clients/assets/{asset_id_path}",
+        "url": f"/api/service/clients/assets/{asset_id}",
         "params": params,
     }
 
@@ -59,7 +59,7 @@ def _build_response(
 
 
 def sync_detailed(
-    asset_id_path: str,
+    asset_id: str,
     *,
     client: Union[AuthenticatedClient, Client],
     asset_id_query: Optional[str] = None,
@@ -67,7 +67,7 @@ def sync_detailed(
 ) -> Response[AssetToAssetResponseModel]:
     """
     Args:
-        asset_id_path (str):
+        asset_id (str):
         asset_id_query (Optional[str]):
         model_asset_id (Optional[int]):
 
@@ -80,7 +80,7 @@ def sync_detailed(
     """
 
     kwargs = _get_kwargs(
-        asset_id_path=asset_id_path,
+        asset_id=asset_id,
         asset_id_query=asset_id_query,
         model_asset_id=model_asset_id,
     )
@@ -93,7 +93,7 @@ def sync_detailed(
 
 
 def sync(
-    asset_id_path: str,
+    asset_id: str,
     *,
     client: Union[AuthenticatedClient, Client],
     asset_id_query: Optional[str] = None,
@@ -101,7 +101,7 @@ def sync(
 ) -> Optional[AssetToAssetResponseModel]:
     """
     Args:
-        asset_id_path (str):
+        asset_id (str):
         asset_id_query (Optional[str]):
         model_asset_id (Optional[int]):
 
@@ -114,7 +114,7 @@ def sync(
     """
 
     return sync_detailed(
-        asset_id_path=asset_id_path,
+        asset_id=asset_id,
         client=client,
         asset_id_query=asset_id_query,
         model_asset_id=model_asset_id,
@@ -122,7 +122,7 @@ def sync(
 
 
 async def asyncio_detailed(
-    asset_id_path: str,
+    asset_id: str,
     *,
     client: Union[AuthenticatedClient, Client],
     asset_id_query: Optional[str] = None,
@@ -130,7 +130,7 @@ async def asyncio_detailed(
 ) -> Response[AssetToAssetResponseModel]:
     """
     Args:
-        asset_id_path (str):
+        asset_id (str):
         asset_id_query (Optional[str]):
         model_asset_id (Optional[int]):
 
@@ -143,7 +143,7 @@ async def asyncio_detailed(
     """
 
     kwargs = _get_kwargs(
-        asset_id_path=asset_id_path,
+        asset_id=asset_id,
         asset_id_query=asset_id_query,
         model_asset_id=model_asset_id,
     )
@@ -154,7 +154,7 @@ async def asyncio_detailed(
 
 
 async def asyncio(
-    asset_id_path: str,
+    asset_id: str,
     *,
     client: Union[AuthenticatedClient, Client],
     asset_id_query: Optional[str] = None,
@@ -162,7 +162,7 @@ async def asyncio(
 ) -> Optional[AssetToAssetResponseModel]:
     """
     Args:
-        asset_id_path (str):
+        asset_id (str):
         asset_id_query (Optional[str]):
         model_asset_id (Optional[int]):
 
@@ -176,7 +176,7 @@ async def asyncio(
 
     return (
         await asyncio_detailed(
-            asset_id_path=asset_id_path,
+            asset_id=asset_id,
             client=client,
             asset_id_query=asset_id_query,
             model_asset_id=model_asset_id,
