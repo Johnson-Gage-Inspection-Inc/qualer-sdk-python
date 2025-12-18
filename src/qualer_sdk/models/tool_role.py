@@ -9,7 +9,7 @@ class ToolRole(str, Enum):
     CONTROLLED_ENVIRONMENT = "Controlled Environment"
     SCIENTIFIC_INSTRUMENT = "Scientific Instrument"
 
-    def __repr__(self) -> str:
+    def __str__(self) -> str:  # pragma: no cover - mirrors Enum behavior
         return str(self.value)
 
     @classmethod
