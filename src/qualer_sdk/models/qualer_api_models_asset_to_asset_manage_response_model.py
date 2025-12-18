@@ -9,9 +9,7 @@ from dateutil.parser import isoparse
 from ..models.qualer_api_models_asset_to_asset_manage_response_model_due_status import (
     AssetToAssetManageResponseModelDueStatus,
 )
-from ..models.qualer_api_models_asset_to_asset_manage_response_model_record_type import (
-    AssetToAssetManageResponseModelRecordType,
-)
+from ..models.record_type import RecordType
 from ..models.service_order_status import ServiceOrderStatus
 from ..models.service_result_status import ServiceResultStatus
 from ..models.tool_role import ToolRole
@@ -28,7 +26,7 @@ class AssetToAssetManageResponseModel:
         asset_name (Optional[str]):
         asset_description (Optional[str]):
         asset_maker (Optional[str]):
-        record_type (Optional[AssetToAssetManageResponseModelRecordType]):
+        record_type (Optional[RecordType]):
         parent_asset_id (Optional[int]):
         children_count (Optional[int]):
         site_id (Optional[int]):
@@ -115,7 +113,7 @@ class AssetToAssetManageResponseModel:
     asset_name: Optional[str] = None
     asset_description: Optional[str] = None
     asset_maker: Optional[str] = None
-    record_type: Optional["AssetToAssetManageResponseModelRecordType"] = None
+    record_type: Optional["RecordType"] = None
     parent_asset_id: Optional[int] = None
     children_count: Optional[int] = None
     site_id: Optional[int] = None
@@ -473,13 +471,13 @@ class AssetToAssetManageResponseModel:
         asset_description = d.pop("AssetDescription", None)
         asset_maker = d.pop("AssetMaker", None)
         _record_type = d.pop("RecordType", None)
-        record_type: Optional[AssetToAssetManageResponseModelRecordType]
+        record_type: Optional[RecordType]
         if not _record_type:
             record_type = None
         elif _record_type is None:
             record_type = None
         else:
-            record_type = AssetToAssetManageResponseModelRecordType(_record_type)
+            record_type = RecordType.from_api_value(_record_type)
         parent_asset_id = d.pop("ParentAssetId", None)
         children_count = d.pop("ChildrenCount", None)
         site_id = d.pop("SiteId", None)

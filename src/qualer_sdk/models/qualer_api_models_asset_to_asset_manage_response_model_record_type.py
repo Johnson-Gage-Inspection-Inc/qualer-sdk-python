@@ -1,11 +1,22 @@
-from enum import IntEnum
+# Backward compatibility: import from the unified RecordType
+import warnings
+
+from .record_type import RecordType as _RecordType
+
+__all__ = ["AssetToAssetManageResponseModelRecordType"]
 
 
-class AssetToAssetManageResponseModelRecordType(IntEnum):
-    VALUE_0 = 0
-    VALUE_1 = 1
-    VALUE_2 = 2
-    VALUE_3 = 3
+def __getattr__(name: str):
+    if name == "AssetToAssetManageResponseModelRecordType":
+        warnings.warn(
+            "AssetToAssetManageResponseModelRecordType is deprecated. "
+            "Use RecordType instead (from qualer_sdk.models import RecordType).",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+        return _RecordType
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
 
-    def __str__(self) -> str:
-        return str(self.value)
+
+# For direct import: from module import AssetToAssetManageResponseModelRecordType
+AssetToAssetManageResponseModelRecordType = _RecordType
