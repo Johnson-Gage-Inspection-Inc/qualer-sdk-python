@@ -1,11 +1,4 @@
-from enum import IntEnum
+# Backward compatibility: import from the unified RecordType
+from .record_type import RecordType as AssetToClientAssetManagerResponseModelRecordType
 
-
-class AssetToClientAssetManagerResponseModelRecordType(IntEnum):
-    VALUE_0 = 0
-    VALUE_1 = 1
-    VALUE_2 = 2
-    VALUE_3 = 3
-
-    def __str__(self) -> str:
-        return str(self.value)
+__all__ = ["AssetToClientAssetManagerResponseModelRecordType"]

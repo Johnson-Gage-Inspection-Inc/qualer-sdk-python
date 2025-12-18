@@ -215,6 +215,7 @@ from .qualer_api_models_asset_to_client_asset_manager_response_model_record_type
 from .qualer_api_models_asset_to_client_asset_manager_response_model_service_order_status import (
     AssetToClientAssetManagerResponseModelServiceOrderStatus,
 )
+from .record_type import RecordType
 from .qualer_api_models_asset_to_employee_filter_preference_response_model import (
     AssetToEmployeeFilterPreferenceResponseModel,
 )
@@ -982,6 +983,7 @@ __all__ = [
     "AssetToClientAssetManagerResponseModelRecordType",
     "AssetToClientAssetManagerResponseModelServiceOrderStatus",
     "AssetToEmployeeFilterPreferenceResponseModel",
+    "RecordType",
     "AssetToEmployeePreferenceResponseModel",
     "AttributesToAttributeResponse",
     "ChangeOrderStatusResponse200",
