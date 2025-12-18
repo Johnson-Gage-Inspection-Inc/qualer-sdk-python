@@ -13,14 +13,9 @@ try:
     from importlib.metadata import version
 
     __version__ = version("qualer-sdk")
-except ImportError:
-    # Fallback for Python < 3.8 or if package not installed
-    try:
-        import pkg_resources
-
-        __version__ = pkg_resources.get_distribution("qualer-sdk").version
-    except Exception:
-        __version__ = "unknown"
+except Exception:
+    # Fallback if package is not installed or metadata is unavailable
+    __version__ = "unknown"
 
 # Import API and models modules using relative imports to avoid circular imports
 from . import api, models
