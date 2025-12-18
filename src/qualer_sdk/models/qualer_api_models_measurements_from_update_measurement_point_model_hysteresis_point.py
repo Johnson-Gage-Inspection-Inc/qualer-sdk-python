@@ -1,11 +1,11 @@
-from enum import Enum
+import warnings
 
+from qualer_sdk.models.hysteresis_point import HysteresisPoint
 
-class MeasurementsFromUpdateMeasurementPointModelHysteresisPoint(str, Enum):
-    FIRST = "First"
-    NONE = "None"
-    SECOND = "Second"
-    ZERO = "Zero"
+MeasurementsFromUpdateMeasurementPointModelHysteresisPoint = HysteresisPoint
 
-    def __str__(self) -> str:
-        return str(self.value)
+warnings.warn(
+    "MeasurementsFromUpdateMeasurementPointModelHysteresisPoint is deprecated and will be removed in a future release. Please use HysteresisPoint instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)
