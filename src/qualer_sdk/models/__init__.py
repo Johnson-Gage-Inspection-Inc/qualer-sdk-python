@@ -702,15 +702,10 @@ from .qualer_api_models_service_order_documents_from_get_documents_model import 
 from .qualer_api_models_service_order_documents_from_upload_documents_model import (
     ServiceOrderDocumentsFromUploadDocumentsModel,
 )
-from .qualer_api_models_service_order_documents_to_company_order_controlled_document_response import (
-    ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse,
-)
 from .qualer_api_models_service_order_documents_to_company_order_controlled_document_response_document_type import (
     ServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType,
 )
-from .qualer_api_models_service_order_documents_to_company_order_item_controlled_document_response import (
-    ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse,
-)
+from .service_order_document_response import ServiceOrderDocumentResponse
 from .qualer_api_models_service_order_item_parts_to_order_item_part_response_model import (
     ServiceOrderItemPartsToOrderItemPartResponseModel,
 )
@@ -1219,9 +1214,8 @@ __all__ = [
     "ServiceOrderDocumentsFromDocumentsListModel",
     "ServiceOrderDocumentsFromGetDocumentsModel",
     "ServiceOrderDocumentsFromUploadDocumentsModel",
-    "ServiceOrderDocumentsToCompanyOrderControlledDocumentResponse",
+    "ServiceOrderDocumentResponse",
     "ServiceOrderDocumentsToCompanyOrderControlledDocumentResponseDocumentType",
-    "ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse",
     "ServiceOrderItemPartsToOrderItemPartResponseModel",
     "ServiceOrderItemPartsToOrderItemPartResponseModelServiceOrderChargeType",
     "ServiceOrderItemTasksFromServiceOrderItemTaskCreateModel",
