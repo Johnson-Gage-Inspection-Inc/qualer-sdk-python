@@ -6,8 +6,8 @@ import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.qualer_api_models_service_order_documents_to_company_order_item_controlled_document_response import (
-    ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse,
+from ...models import (
+    ServiceOrderDocumentResponse,
 )
 from ...types import Response
 
@@ -47,18 +47,14 @@ def _parse_response(
 ) -> Optional[
     Union[
         Any,
-        List["ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"],
+        List["ServiceOrderDocumentResponse"],
     ]
 ]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
         for response_200_item_data in _response_200:
-            response_200_item = (
-                ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse.from_dict(
-                    response_200_item_data
-                )
-            )
+            response_200_item = ServiceOrderDocumentResponse.from_dict(response_200_item_data)
 
             response_200.append(response_200_item)
 
@@ -77,7 +73,7 @@ def _build_response(
 ) -> Response[
     Union[
         Any,
-        List["ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"],
+        List["ServiceOrderDocumentResponse"],
     ]
 ]:
     return Response(
@@ -98,7 +94,7 @@ def sync_detailed(
 ) -> Response[
     Union[
         Any,
-        List["ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"],
+        List["ServiceOrderDocumentResponse"],
     ]
 ]:
     """Retrieve work order documents
@@ -136,7 +132,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, List['ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]]
+        Response[Union[Any, List['ServiceOrderDocumentResponse']]]
     """
 
     kwargs = _get_kwargs(
@@ -163,7 +159,7 @@ def sync(
 ) -> Optional[
     Union[
         Any,
-        List["ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"],
+        List["ServiceOrderDocumentResponse"],
     ]
 ]:
     """Retrieve work order documents
@@ -201,7 +197,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, List['ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]
+        Union[Any, List['ServiceOrderDocumentResponse']]
     """
 
     return sync_detailed(
@@ -223,7 +219,7 @@ async def asyncio_detailed(
 ) -> Response[
     Union[
         Any,
-        List["ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"],
+        List["ServiceOrderDocumentResponse"],
     ]
 ]:
     """Retrieve work order documents
@@ -261,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, List['ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]]
+        Response[Union[Any, List['ServiceOrderDocumentResponse']]]
     """
 
     kwargs = _get_kwargs(
@@ -286,7 +282,7 @@ async def asyncio(
 ) -> Optional[
     Union[
         Any,
-        List["ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse"],
+        List["ServiceOrderDocumentResponse"],
     ]
 ]:
     """Retrieve work order documents
@@ -324,7 +320,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, List['ServiceOrderDocumentsToCompanyOrderItemControlledDocumentResponse']]
+        Union[Any, List['ServiceOrderDocumentResponse']]
     """
 
     return (

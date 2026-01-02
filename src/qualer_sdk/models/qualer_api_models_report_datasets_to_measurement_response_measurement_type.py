@@ -1,9 +1,11 @@
-from enum import Enum
+import warnings
 
+from qualer_sdk.models.measurement_type import MeasurementType
 
-class ReportDatasetsToMeasurementResponseMeasurementType(str, Enum):
-    CUMULATIVE = "Cumulative"
-    DATA = "Data"
+ReportDatasetsToMeasurementResponseMeasurementType = MeasurementType
 
-    def __str__(self) -> str:
-        return str(self.value)
+warnings.warn(
+    "ReportDatasetsToMeasurementResponseMeasurementType is deprecated and will be removed in a future release. Please use MeasurementType instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)

@@ -1,13 +1,11 @@
-from enum import Enum
+import warnings
 
+from qualer_sdk.models.influence_parameter_type import InfluenceParameterType
 
-class MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type(str, Enum):
-    CUSTOMFIELD = "CustomField"
-    MANUALLYSELECTED = "ManuallySelected"
-    MEASUREMENTQUANTITY = "MeasurementQuantity"
-    STATICVALUE = "StaticValue"
-    TOOLATTRIBUTE = "ToolAttribute"
-    UUTATTRIBUTE = "UutAttribute"
+MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type = InfluenceParameterType
 
-    def __str__(self) -> str:
-        return str(self.value)
+warnings.warn(
+    "MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type is deprecated and will be removed in a future release. Please use InfluenceParameterType instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)

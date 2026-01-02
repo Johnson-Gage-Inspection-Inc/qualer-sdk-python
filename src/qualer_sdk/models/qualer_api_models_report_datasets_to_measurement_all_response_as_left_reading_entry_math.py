@@ -1,16 +1,11 @@
-from enum import Enum
+import warnings
 
+from qualer_sdk.models.reading_entry_math import ReadingEntryMath
 
-class ReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath(str, Enum):
-    ADDITION = "Addition"
-    AVERAGE = "Average"
-    DIFFERENCE = "Difference"
-    DIVISION = "Division"
-    MAXIMUM = "Maximum"
-    MINIMUM = "Minimum"
-    MULTIPLICATION = "Multiplication"
-    REVERSESUBTRACTION = "ReverseSubtraction"
-    SUBTRACTION = "Subtraction"
+ReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath = ReadingEntryMath
 
-    def __str__(self) -> str:
-        return str(self.value)
+warnings.warn(
+    "ReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath is deprecated and will be removed in a future release. Please use ReadingEntryMath instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)
