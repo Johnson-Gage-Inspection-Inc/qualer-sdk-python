@@ -13,9 +13,16 @@ from __future__ import annotations
 import logging
 from typing import TYPE_CHECKING, Iterable
 
+try:
+    from typing import Self
+except ImportError:
+    from typing_extensions import Self  # type: ignore[assignment]
+
 from .api.assets import clear_collected_assets, collect_assets, get_asset_manager_list
 from .client import AuthenticatedClient
 from .models import FilterType
+
+logger = logging.getLogger(__name__)
 
 if TYPE_CHECKING:
     from .models.qualer_api_models_asset_to_asset_manage_response_model import (
@@ -36,14 +43,10 @@ class QuickCollection(set[int]):
     Example:
         ```python
         with QuickCollection(client, [1235770, 1235660, 1235502]) as coll:
-            assets = get_asset_manager_list.sync(
-                client=client,
-                model_filter_type=FilterType.COLLECTED_ASSETS,
-                model_search_string=search_string,
-                model_page=page,
-                model_page_size=page_size,
-            )
-        # Assets are automatically cleared when exiting the context.
+            assets = coll.get_details(search_string=search_string)
+            for asset in assets:
+                print(f"Asset {asset.asset_id}: {asset.category_name}")
+        # Collection is automatically cleared when exiting the context.
         ```
     """
 
@@ -59,7 +62,11 @@ class QuickCollection(set[int]):
         super().__init__()
         self.client = client
         if start_clean:
-            self.clear()
+            # Clear server-side collection without syncing through self.clear()
+            try:
+                clear_collected_assets.sync(client=self.client, body=[])
+            except Exception as e:
+                logger.warning("Failed to clear server collection during init: %r", e)
         if asset_ids:
             ids = list(asset_ids)
             if ids:
@@ -67,13 +74,14 @@ class QuickCollection(set[int]):
                 super().update(ids)
 
     # --- Context manager protocol ---
-    def __enter__(self) -> QuickCollection:
+    def __enter__(self) -> Self:
         return self
 
     def __exit__(self, exc_type, exc, tb) -> None:  # type: ignore[override]
         try:
             clear_collected_assets.sync(client=self.client, body=[])
         except Exception as cleanup_err:
+            logger.error("Failed to clear server collection during cleanup: %r", cleanup_err)
             # If a primary exception exists, attach cleanup failure as a note; otherwise re-raise.
             if exc is not None and hasattr(exc, "add_note"):
                 try:
@@ -233,8 +241,8 @@ class AsyncQuickCollection:
                     exc.add_note(f"Cleanup failed: {cleanup_err!r}")
                 except Exception as add_note_err:
                     # Failed to add note to exception during cleanup; log the error.
-                    logging.warning(
-                        "Failed to add cleanup failure note to exception in AsyncQuickCollection.__aexit__: %r. "
+                    logger.warning(
+                        "Failed to add cleanup failure note in AsyncQuickCollection.__aexit__: %r. "
                         "Original cleanup error: %r",
                         add_note_err,
                         cleanup_err,
