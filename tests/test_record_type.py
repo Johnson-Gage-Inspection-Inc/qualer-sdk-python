@@ -1,5 +1,11 @@
 """Tests for the unified RecordType enum."""
 
+from qualer_sdk.models.qualer_api_models_asset_to_asset_manage_response_model import (
+    AssetToAssetManageResponseModel,
+)
+from qualer_sdk.models.qualer_api_models_asset_to_client_asset_manager_response_model import (
+    AssetToClientAssetManagerResponseModel,
+)
 from qualer_sdk.models.record_type import RecordType
 
 
@@ -89,3 +95,160 @@ class TestBackwardCompatibility:
         
         assert ImportedRecordType is RecordType
         assert ImportedRecordType.EQUIPMENT.value == "Equipment"
+
+
+class TestRecordTypeIntegration:
+    """Test RecordType integration with model deserialization."""
+
+    def test_asset_to_asset_manage_response_model_integer_mapping(self):
+        """Test AssetToAssetManageResponseModel handles integer RecordType values."""
+        # Test known integer mappings (0-3)
+        test_cases = [
+            (0, "WaitingForAgreement"),
+            (1, "Equipment"),
+            (2, "System"),
+            (3, "Agreement"),
+        ]
+
+        for integer_value, expected_string in test_cases:
+            data = {"AssetId": 1, "RecordType": integer_value}
+            model = AssetToAssetManageResponseModel.from_dict(data)
+
+            assert model.record_type is not None
+            assert model.record_type.value == expected_string
+
+    def test_asset_to_asset_manage_response_model_string_mapping(self):
+        """Test AssetToAssetManageResponseModel handles string RecordType values."""
+        # Test string values work correctly
+        test_strings = [
+            "WaitingForAgreement",
+            "Equipment",
+            "System",
+            "Agreement",
+        ]
+
+        for string_value in test_strings:
+            data = {"AssetId": 1, "RecordType": string_value}
+            model = AssetToAssetManageResponseModel.from_dict(data)
+
+            assert model.record_type is not None
+            assert model.record_type.value == string_value
+
+    def test_asset_to_asset_manage_response_model_zero_value(self):
+        """Test AssetToAssetManageResponseModel correctly handles RecordType value 0 (WAITING_FOR_AGREEMENT).
+        
+        This is a critical test to ensure that value 0 is not treated as falsy
+        and is correctly mapped to WAITING_FOR_AGREEMENT.
+        """
+        data = {"AssetId": 1, "RecordType": 0}
+        model = AssetToAssetManageResponseModel.from_dict(data)
+
+        # RecordType 0 should be correctly parsed, not treated as falsy
+        assert model.record_type is not None
+        assert model.record_type == RecordType.WAITING_FOR_AGREEMENT
+        assert model.record_type.value == "WaitingForAgreement"
+
+    def test_asset_to_asset_manage_response_model_unknown_integer(self):
+        """Test AssetToAssetManageResponseModel handles unknown integer RecordType values gracefully."""
+        data = {"AssetId": 1, "RecordType": 999}  # Unknown integer
+        model = AssetToAssetManageResponseModel.from_dict(data)
+
+        # Should not crash and should set to None for unknown values
+        assert model.record_type is None
+
+    def test_asset_to_asset_manage_response_model_invalid_string(self):
+        """Test AssetToAssetManageResponseModel handles invalid string RecordType values gracefully."""
+        data = {"AssetId": 1, "RecordType": "InvalidType"}
+        model = AssetToAssetManageResponseModel.from_dict(data)
+
+        # Should not crash and should set to None for invalid strings
+        assert model.record_type is None
+
+    def test_asset_to_asset_manage_response_model_none_values(self):
+        """Test AssetToAssetManageResponseModel handles None and missing RecordType values."""
+        # Test None value
+        data = {"AssetId": 1, "RecordType": None}
+        model = AssetToAssetManageResponseModel.from_dict(data)
+        assert model.record_type is None
+
+        # Test missing field
+        data = {"AssetId": 1}
+        model = AssetToAssetManageResponseModel.from_dict(data)
+        assert model.record_type is None
+
+    def test_asset_to_client_asset_manager_response_model_integer_mapping(self):
+        """Test AssetToClientAssetManagerResponseModel handles integer RecordType values."""
+        # Test known integer mappings (0-3)
+        test_cases = [
+            (0, "WaitingForAgreement"),
+            (1, "Equipment"),
+            (2, "System"),
+            (3, "Agreement"),
+        ]
+
+        for integer_value, expected_string in test_cases:
+            data = {"AssetId": 1, "RecordType": integer_value}
+            model = AssetToClientAssetManagerResponseModel.from_dict(data)
+
+            assert model.record_type is not None
+            assert model.record_type.value == expected_string
+
+    def test_asset_to_client_asset_manager_response_model_string_mapping(self):
+        """Test AssetToClientAssetManagerResponseModel handles string RecordType values."""
+        # Test string values work correctly
+        test_strings = [
+            "WaitingForAgreement",
+            "Equipment",
+            "System",
+            "Agreement",
+        ]
+
+        for string_value in test_strings:
+            data = {"AssetId": 1, "RecordType": string_value}
+            model = AssetToClientAssetManagerResponseModel.from_dict(data)
+
+            assert model.record_type is not None
+            assert model.record_type.value == string_value
+
+    def test_asset_to_client_asset_manager_response_model_zero_value(self):
+        """Test AssetToClientAssetManagerResponseModel correctly handles RecordType value 0 (WAITING_FOR_AGREEMENT).
+        
+        This is a critical test to ensure that value 0 is not treated as falsy
+        and is correctly mapped to WAITING_FOR_AGREEMENT.
+        """
+        data = {"AssetId": 1, "RecordType": 0}
+        model = AssetToClientAssetManagerResponseModel.from_dict(data)
+
+        # RecordType 0 should be correctly parsed, not treated as falsy
+        assert model.record_type is not None
+        assert model.record_type == RecordType.WAITING_FOR_AGREEMENT
+        assert model.record_type.value == "WaitingForAgreement"
+
+    def test_asset_to_client_asset_manager_response_model_unknown_integer(self):
+        """Test AssetToClientAssetManagerResponseModel handles unknown integer RecordType values gracefully."""
+        data = {"AssetId": 1, "RecordType": 999}  # Unknown integer
+        model = AssetToClientAssetManagerResponseModel.from_dict(data)
+
+        # Should not crash and should set to None for unknown values
+        assert model.record_type is None
+
+    def test_asset_to_client_asset_manager_response_model_invalid_string(self):
+        """Test AssetToClientAssetManagerResponseModel handles invalid string RecordType values gracefully."""
+        data = {"AssetId": 1, "RecordType": "InvalidType"}
+        model = AssetToClientAssetManagerResponseModel.from_dict(data)
+
+        # Should not crash and should set to None for invalid strings
+        assert model.record_type is None
+
+    def test_asset_to_client_asset_manager_response_model_none_values(self):
+        """Test AssetToClientAssetManagerResponseModel handles None and missing RecordType values."""
+        # Test None value
+        data = {"AssetId": 1, "RecordType": None}
+        model = AssetToClientAssetManagerResponseModel.from_dict(data)
+        assert model.record_type is None
+
+        # Test missing field
+        data = {"AssetId": 1}
+        model = AssetToClientAssetManagerResponseModel.from_dict(data)
+        assert model.record_type is None
+

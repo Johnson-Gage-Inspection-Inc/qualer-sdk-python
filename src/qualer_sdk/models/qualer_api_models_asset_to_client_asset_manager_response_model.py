@@ -510,9 +510,7 @@ class AssetToClientAssetManagerResponseModel:
         asset_maker = d.pop("AssetMaker", None)
         _record_type = d.pop("RecordType", None)
         record_type: Optional[RecordType]
-        if not _record_type:
-            record_type = None
-        elif _record_type is None:
+        if _record_type is None:
             record_type = None
         else:
             record_type = RecordType.from_api_value(_record_type)
