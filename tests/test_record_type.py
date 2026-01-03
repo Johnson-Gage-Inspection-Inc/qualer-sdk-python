@@ -1,7 +1,5 @@
 """Tests for the unified RecordType enum."""
 
-import pytest
-
 from qualer_sdk.models.record_type import RecordType
 
 
