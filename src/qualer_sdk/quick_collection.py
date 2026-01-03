@@ -11,12 +11,7 @@ Usage:
 from __future__ import annotations
 
 import logging
-from typing import TYPE_CHECKING, Iterable
-
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self  # type: ignore[assignment]
+from typing import TYPE_CHECKING, Iterable, Self
 
 from .api.assets import clear_collected_assets, collect_assets, get_asset_manager_list
 from .client import AuthenticatedClient
