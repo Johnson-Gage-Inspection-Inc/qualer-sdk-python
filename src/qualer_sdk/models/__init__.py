@@ -191,6 +191,9 @@ from .qualer_api_models_asset_to_asset_maintenance_plan_response_assigned_employ
 from .qualer_api_models_asset_to_asset_manage_response_model import (
     AssetToAssetManageResponseModel,
 )
+from .asset_due_status import (
+    AssetDueStatus,
+)
 from .qualer_api_models_asset_to_asset_manage_response_model_due_status import (
     AssetToAssetManageResponseModelDueStatus,
 )
@@ -984,6 +987,7 @@ __all__ = [
     "AssetToAssetMaintenancePlanResponse",
     "AssetToAssetMaintenancePlanResponseAssignedEmployee",
     "AssetToAssetManageResponseModel",
+    "AssetDueStatus",
     "AssetToAssetManageResponseModelDueStatus",
     "AssetToAssetManageResponseModelRecordType",
     "AssetToAssetManageResponseModelServiceOrderStatus",
