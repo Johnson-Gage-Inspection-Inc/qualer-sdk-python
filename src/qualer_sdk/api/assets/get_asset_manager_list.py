@@ -75,7 +75,7 @@ def sync_detailed(
     """GetAssetManagerList
 
     Args:
-        model_filter_type (Optional[FilterType]): Filter type for asset management list.
+        model_filter_type (FilterType): Filter type for asset management list.
         model_search_string (Optional[str]): Search string for asset management list.
         model_page (Optional[int]): Page number for asset management list.
         model_page_size (Optional[int]): Page size for asset management list.
@@ -113,7 +113,7 @@ def sync(
     """GetAssetManagerList
 
     Args:
-        model_filter_type (Optional[FilterType]): Filter type for asset management list.
+        model_filter_type (FilterType): Filter type for asset management list.
         model_search_string (Optional[str]): Search string for asset management list.
         model_page (Optional[int]): Page number for asset management list.
         model_page_size (Optional[int]): Page size for asset management list.
@@ -146,7 +146,7 @@ async def asyncio_detailed(
     """GetAssetManagerList
 
     Args:
-        model_filter_type (Optional[FilterType]): Filter type for asset management list.
+        model_filter_type (FilterType): Filter type for asset management list.
         model_search_string (Optional[str]): Search string for asset management list.
         model_page (Optional[int]): Page number for asset management list.
         model_page_size (Optional[int]): Page size for asset management list.
@@ -182,7 +182,7 @@ async def asyncio(
     """GetAssetManagerList
 
     Args:
-        model_filter_type (Optional[FilterType]): Filter type for asset management list.
+        model_filter_type (FilterType): Filter type for asset management list.
         model_search_string (Optional[str]): Search string for asset management list.
         model_page (Optional[int]): Page number for asset management list.
         model_page_size (Optional[int]): Page size for asset management list.
