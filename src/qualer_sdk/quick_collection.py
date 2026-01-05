@@ -349,24 +349,48 @@ class AsyncQuickCollection:
     async def get_details(
         self,
         *,
+        client_company_id: int | None = None,
         search_string: str | None = None,
         page: int | None = None,
         page_size: int | None = None,
     ) -> list[AssetToClientAssetManagerResponseModel]:
         """Retrieve asset details for the collected assets (async version).
 
-        Returns the richer AssetToClientAssetManagerResponseModel. Client-specific
-        fields will be None when querying standard assets.
+        Returns the richer AssetToClientAssetManagerResponseModel which works for both
+        standard and client-specific asset queries. Client-specific fields (asset_collection_id,
+        in_service, in_last_service, service_tag, service_site_name, service_site_id,
+        standard_title, schedules) will be None when querying standard assets via the
+        standard endpoint.
+
+        **Note:** The return type was changed from AssetToAssetManageResponseModel to
+        AssetToClientAssetManagerResponseModel in order to support both standard and
+        client assets through a single unified interface. AssetToClientAssetManagerResponseModel
+        is a strict superset of AssetToAssetManageResponseModel (all common fields are
+        identical, with 8 additional optional fields). The cast is safe because the API
+        response data structure is compatible with the richer model type.
         """
-        # Cast standard assets to client model (superset type). Safe because:
-        # 1. AssetToClientAssetManagerResponseModel has all fields from AssetToAssetManageResponseModel
-        # 2. Additional client-specific fields are optional and will be None
-        # 3. Both models parse the same base asset JSON structure
-        result = await get_asset_manager_list.asyncio(
-            client=self.client,
-            model_filter_type=FilterType.COLLECTED_ASSETS,
-            model_search_string=search_string,
-            model_page=page,
-            model_page_size=page_size,
-        )
-        return cast(list[AssetToClientAssetManagerResponseModel], result or [])
+        if not client_company_id:
+            # Cast standard assets to client model (superset type). Safe because:
+            # 1. AssetToClientAssetManagerResponseModel has all fields from AssetToAssetManageResponseModel
+            # 2. Additional client-specific fields are optional and will be None
+            # 3. Both models parse the same base asset JSON structure
+            result = await get_asset_manager_list.asyncio(
+                client=self.client,
+                model_filter_type=FilterType.COLLECTED_ASSETS,
+                model_search_string=search_string,
+                model_page=page,
+                model_page_size=page_size,
+            )
+            return cast(list[AssetToClientAssetManagerResponseModel], result or [])
+        else:
+            return (
+                await get_asset_manager_list_get_2.asyncio(
+                    client_company_id=client_company_id,
+                    client=self.client,
+                    query_filter_type=AssetFilterType.CLIENT_ASSETS_COLLECTED,
+                    query_search_string=search_string,
+                    query_page=page,
+                    query_page_size=page_size,
+                )
+                or []
+            )
