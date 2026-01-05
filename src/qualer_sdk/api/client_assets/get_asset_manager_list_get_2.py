@@ -15,7 +15,7 @@ from ...types import Response
 def _get_kwargs(
     client_company_id: int,
     *,
-    query_filter_type: Optional[AssetFilterType] = None,
+    query_filter_type: AssetFilterType = AssetFilterType.CLIENT_UNSET,
     query_search_string: Optional[str] = None,
     query_page: Optional[int] = None,
     query_page_size: Optional[int] = None,
@@ -76,7 +76,7 @@ def sync_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Optional[AssetFilterType] = None,
+    query_filter_type: AssetFilterType = AssetFilterType.CLIENT_UNSET,
     query_search_string: Optional[str] = None,
     query_page: Optional[int] = None,
     query_page_size: Optional[int] = None,
@@ -88,7 +88,7 @@ def sync_detailed(
 
     Args:
         client_company_id (int):
-        query_filter_type (Optional[AssetFilterType]):
+        query_filter_type (AssetFilterType):
         query_search_string (Optional[str]):
         query_page (Optional[int]):
         query_page_size (Optional[int]):
@@ -120,7 +120,7 @@ def sync(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Optional[AssetFilterType] = None,
+    query_filter_type: AssetFilterType = AssetFilterType.CLIENT_UNSET,
     query_search_string: Optional[str] = None,
     query_page: Optional[int] = None,
     query_page_size: Optional[int] = None,
@@ -132,7 +132,7 @@ def sync(
 
     Args:
         client_company_id (int):
-        query_filter_type (Optional[AssetFilterType]):
+        query_filter_type (AssetFilterType):
         query_search_string (Optional[str]):
         query_page (Optional[int]):
         query_page_size (Optional[int]):
@@ -159,7 +159,7 @@ async def asyncio_detailed(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Optional[AssetFilterType] = None,
+    query_filter_type: AssetFilterType = AssetFilterType.CLIENT_UNSET,
     query_search_string: Optional[str] = None,
     query_page: Optional[int] = None,
     query_page_size: Optional[int] = None,
@@ -171,7 +171,7 @@ async def asyncio_detailed(
 
     Args:
         client_company_id (int):
-        query_filter_type (Optional[AssetFilterType]):
+        query_filter_type (AssetFilterType):
         query_search_string (Optional[str]):
         query_page (Optional[int]):
         query_page_size (Optional[int]):
@@ -201,7 +201,7 @@ async def asyncio(
     client_company_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-    query_filter_type: Optional[AssetFilterType] = None,
+    query_filter_type: AssetFilterType = AssetFilterType.CLIENT_UNSET,
     query_search_string: Optional[str] = None,
     query_page: Optional[int] = None,
     query_page_size: Optional[int] = None,
@@ -213,7 +213,7 @@ async def asyncio(
 
     Args:
         client_company_id (int):
-        query_filter_type (Optional[AssetFilterType]):
+        query_filter_type (AssetFilterType):
         query_search_string (Optional[str]):
         query_page (Optional[int]):
         query_page_size (Optional[int]):
