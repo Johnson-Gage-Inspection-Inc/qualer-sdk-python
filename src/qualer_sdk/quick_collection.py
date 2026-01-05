@@ -11,7 +11,12 @@ Usage:
 from __future__ import annotations
 
 import logging
-from typing import Iterable, Self, cast
+from typing import Iterable, cast
+
+try:
+    from typing import Self
+except ImportError:
+    from typing_extensions import Self
 
 from .api.assets import clear_collected_assets, collect_assets, get_asset_manager_list
 from .api.client_assets import get_asset_manager_list_get_2
