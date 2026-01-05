@@ -11,18 +11,18 @@ Usage:
 from __future__ import annotations
 
 import logging
-from typing import TYPE_CHECKING, Iterable, Self
+from typing import Iterable, Self, cast
 
 from .api.assets import clear_collected_assets, collect_assets, get_asset_manager_list
+from .api.client_assets import get_asset_manager_list_get_2
 from .client import AuthenticatedClient
-from .models import FilterType
+from .models import (
+    AssetFilterType,
+    AssetToClientAssetManagerResponseModel,
+    FilterType,
+)
 
 logger = logging.getLogger(__name__)
-
-if TYPE_CHECKING:
-    from .models.qualer_api_models_asset_to_asset_manage_response_model import (
-        AssetToAssetManageResponseModel,
-    )
 
 
 class QuickCollection(set[int]):
@@ -170,20 +170,39 @@ class QuickCollection(set[int]):
     def get_details(
         self,
         *,
+        client_company_id: int | None = None,
         search_string: str | None = None,
         page: int | None = None,
         page_size: int | None = None,
-    ) -> list[AssetToAssetManageResponseModel]:
-        return (
-            get_asset_manager_list.sync(
+    ) -> list[AssetToClientAssetManagerResponseModel]:
+        """Retrieve asset details for the collected assets.
+
+        Returns the richer AssetToClientAssetManagerResponseModel which works for both
+        standard and client-specific asset queries. Client-specific fields will be None
+        when querying standard assets.
+        """
+        if not client_company_id:
+            # Cast standard assets to client model (superset type)
+            result = get_asset_manager_list.sync(
                 client=self.client,
                 model_filter_type=FilterType.COLLECTED_ASSETS,
                 model_search_string=search_string,
                 model_page=page,
                 model_page_size=page_size,
             )
-            or []
-        )
+            return cast(list[AssetToClientAssetManagerResponseModel], result or [])
+        else:
+            return (
+                get_asset_manager_list_get_2.sync(
+                    client_company_id=client_company_id,
+                    client=self.client,
+                    query_filter_type=AssetFilterType.CLIENT_ASSETS_COLLECTED,
+                    query_search_string=search_string,
+                    query_page=page,
+                    query_page_size=page_size,
+                )
+                or []
+            )
 
 
 class AsyncQuickCollection:
@@ -316,14 +335,13 @@ class AsyncQuickCollection:
         search_string: str | None = None,
         page: int | None = None,
         page_size: int | None = None,
-    ) -> list[AssetToAssetManageResponseModel]:
-        return (
-            await get_asset_manager_list.asyncio(
-                client=self.client,
-                model_filter_type=FilterType.COLLECTED_ASSETS,
-                model_search_string=search_string,
-                model_page=page,
-                model_page_size=page_size,
-            )
-            or []
+    ) -> list[AssetToClientAssetManagerResponseModel]:
+        # Cast standard assets to client model (superset type)
+        result = await get_asset_manager_list.asyncio(
+            client=self.client,
+            model_filter_type=FilterType.COLLECTED_ASSETS,
+            model_search_string=search_string,
+            model_page=page,
+            model_page_size=page_size,
         )
+        return cast(list[AssetToClientAssetManagerResponseModel], result or [])
