@@ -590,7 +590,7 @@ class AssetToClientAssetManagerResponseModel:
         elif _tool_role is None:
             tool_role = None
         else:
-            tool_role = ToolRole(_tool_role)
+            tool_role = ToolRole.from_api_value(_tool_role)
         tool_id = d.pop("ToolId", None)
         department_id = d.pop("DepartmentId", None)
         department_name = d.pop("DepartmentName", None)
