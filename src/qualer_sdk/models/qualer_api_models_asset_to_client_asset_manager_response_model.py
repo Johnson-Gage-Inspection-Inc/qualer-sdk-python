@@ -6,14 +6,14 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.qualer_api_models_asset_to_client_asset_manager_response_model_due_status import (
-    AssetToClientAssetManagerResponseModelDueStatus,
+from ..models import (
+    AssetDueStatus,
+    RecordType,
+    ServiceOrderStatus,
+    ServiceResultStatus,
+    ToolRole,
+    WorkStatus,
 )
-from ..models.record_type import RecordType
-from ..models.service_order_status import ServiceOrderStatus
-from ..models.service_result_status import ServiceResultStatus
-from ..models.tool_role import ToolRole
-from ..models.work_status import WorkStatus
 
 T = TypeVar("T", bound="AssetToClientAssetManagerResponseModel")
 
@@ -108,7 +108,7 @@ class AssetToClientAssetManagerResponseModel:
         certificate_number (Optional[str]):
         due_trigger_date (Optional[datetime.datetime]):
         past_due_trigger_date (Optional[datetime.datetime]):
-        due_status (Optional[AssetToClientAssetManagerResponseModelDueStatus]):
+        due_status (Optional[AssetDueStatus]):
         work_status (Optional[WorkStatus]):
         service_tag (Optional[str]):
         service_site_name (Optional[str]):
@@ -203,7 +203,7 @@ class AssetToClientAssetManagerResponseModel:
     certificate_number: Optional[str] = None
     due_trigger_date: Optional[datetime.datetime] = None
     past_due_trigger_date: Optional[datetime.datetime] = None
-    due_status: Optional["AssetToClientAssetManagerResponseModelDueStatus"] = None
+    due_status: Optional["AssetDueStatus"] = None
     work_status: Optional[WorkStatus] = None
     service_tag: Optional[str] = None
     service_site_name: Optional[str] = None
@@ -768,13 +768,13 @@ class AssetToClientAssetManagerResponseModel:
 
         past_due_trigger_date = _parse_past_due_trigger_date(d.pop("PastDueTriggerDate", None))
         _due_status = d.pop("DueStatus", None)
-        due_status: Optional[AssetToClientAssetManagerResponseModelDueStatus]
+        due_status: Optional[AssetDueStatus]
         if not _due_status:
             due_status = None
         elif _due_status is None:
             due_status = None
         else:
-            due_status = AssetToClientAssetManagerResponseModelDueStatus(_due_status)
+            due_status = AssetDueStatus(_due_status)
         _work_status = d.pop("WorkStatus", None)
         work_status: Optional[WorkStatus]
         if not _work_status:
