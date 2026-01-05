@@ -6,14 +6,12 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models import (
-    AssetDueStatus,
-    RecordType,
-    ServiceOrderStatus,
-    ServiceResultStatus,
-    ToolRole,
-    WorkStatus,
-)
+from .asset_due_status import AssetDueStatus
+from .record_type import RecordType
+from .service_order_status import ServiceOrderStatus
+from .service_result_status import ServiceResultStatus
+from .tool_role import ToolRole
+from .work_status import WorkStatus
 
 T = TypeVar("T", bound="AssetToAssetManageResponseModel")
 
