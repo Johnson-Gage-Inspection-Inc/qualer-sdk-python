@@ -183,11 +183,23 @@ class QuickCollection(set[int]):
         """Retrieve asset details for the collected assets.
 
         Returns the richer AssetToClientAssetManagerResponseModel which works for both
-        standard and client-specific asset queries. Client-specific fields will be None
-        when querying standard assets.
+        standard and client-specific asset queries. Client-specific fields (asset_collection_id,
+        in_service, in_last_service, service_tag, service_site_name, service_site_id,
+        standard_title, schedules) will be None when querying standard assets via the
+        standard endpoint.
+
+        **Note:** The return type was changed from AssetToAssetManageResponseModel to
+        AssetToClientAssetManagerResponseModel in order to support both standard and
+        client assets through a single unified interface. AssetToClientAssetManagerResponseModel
+        is a strict superset of AssetToAssetManageResponseModel (all common fields are
+        identical, with 8 additional optional fields). The cast is safe because the API
+        response data structure is compatible with the richer model type.
         """
         if not client_company_id:
-            # Cast standard assets to client model (superset type)
+            # Cast standard assets to client model (superset type). Safe because:
+            # 1. AssetToClientAssetManagerResponseModel has all fields from AssetToAssetManageResponseModel
+            # 2. Additional client-specific fields are optional and will be None
+            # 3. Both models parse the same base asset JSON structure
             result = get_asset_manager_list.sync(
                 client=self.client,
                 model_filter_type=FilterType.COLLECTED_ASSETS,
@@ -255,6 +267,7 @@ class AsyncQuickCollection:
         try:
             await clear_collected_assets.asyncio(client=self.client, body=[])
         except Exception as cleanup_err:
+            logger.error("Failed to clear server collection during cleanup: %r", cleanup_err)
             if exc is not None and hasattr(exc, "add_note"):
                 try:
                     exc.add_note(f"Cleanup failed: {cleanup_err!r}")
@@ -333,7 +346,6 @@ class AsyncQuickCollection:
         await clear_collected_assets.asyncio(client=self.client, body=[])
         self._ids.clear()
 
-    # --- Convenience retrieval ---
     async def get_details(
         self,
         *,
@@ -341,7 +353,15 @@ class AsyncQuickCollection:
         page: int | None = None,
         page_size: int | None = None,
     ) -> list[AssetToClientAssetManagerResponseModel]:
-        # Cast standard assets to client model (superset type)
+        """Retrieve asset details for the collected assets (async version).
+
+        Returns the richer AssetToClientAssetManagerResponseModel. Client-specific
+        fields will be None when querying standard assets.
+        """
+        # Cast standard assets to client model (superset type). Safe because:
+        # 1. AssetToClientAssetManagerResponseModel has all fields from AssetToAssetManageResponseModel
+        # 2. Additional client-specific fields are optional and will be None
+        # 3. Both models parse the same base asset JSON structure
         result = await get_asset_manager_list.asyncio(
             client=self.client,
             model_filter_type=FilterType.COLLECTED_ASSETS,
