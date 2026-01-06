@@ -188,8 +188,8 @@ class QuickCollection(set[int]):
         standard_title, schedules) will be None when querying standard assets via the
         standard endpoint.
 
-        **Note:** The return type was changed from AssetToAssetManageResponseModel to
-        AssetToClientAssetManagerResponseModel in order to support both standard and
+        **Note:** The return type was previously changed from AssetToAssetManageResponseModel
+        to AssetToClientAssetManagerResponseModel in order to support both standard and
         client assets through a single unified interface. AssetToClientAssetManagerResponseModel
         is a strict superset of AssetToAssetManageResponseModel (all common fields are
         identical, with 8 additional optional fields). The cast is safe because the API
@@ -197,7 +197,7 @@ class QuickCollection(set[int]):
         """
         if not client_company_id:
             # Cast standard assets to client model (superset type). Safe because:
-            # 1. AssetToClientAssetManagerResponseModel has all fields from AssetToAssetManageResponseModel
+            # 1. Client model has all fields from standard model (see models for details)
             # 2. Additional client-specific fields are optional and will be None
             # 3. Both models parse the same base asset JSON structure
             result = get_asset_manager_list.sync(
@@ -362,8 +362,8 @@ class AsyncQuickCollection:
         standard_title, schedules) will be None when querying standard assets via the
         standard endpoint.
 
-        **Note:** The return type was changed from AssetToAssetManageResponseModel to
-        AssetToClientAssetManagerResponseModel in order to support both standard and
+        **Note:** The return type was previously changed from AssetToAssetManageResponseModel
+        to AssetToClientAssetManagerResponseModel in order to support both standard and
         client assets through a single unified interface. AssetToClientAssetManagerResponseModel
         is a strict superset of AssetToAssetManageResponseModel (all common fields are
         identical, with 8 additional optional fields). The cast is safe because the API
@@ -371,7 +371,7 @@ class AsyncQuickCollection:
         """
         if not client_company_id:
             # Cast standard assets to client model (superset type). Safe because:
-            # 1. AssetToClientAssetManagerResponseModel has all fields from AssetToAssetManageResponseModel
+            # 1. Client model has all fields from standard model (see models)
             # 2. Additional client-specific fields are optional and will be None
             # 3. Both models parse the same base asset JSON structure
             result = await get_asset_manager_list.asyncio(
