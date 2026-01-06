@@ -9,8 +9,8 @@ This module provides convenience functions that:
 from typing import List, Optional
 
 from ...client import AuthenticatedClient
-from ...models.qualer_api_models_asset_to_asset_manage_response_model import (
-    AssetToAssetManageResponseModel,
+from ...models.qualer_api_models_asset_to_client_asset_manager_response_model import (
+    AssetToClientAssetManagerResponseModel,
 )
 from ...quick_collection import AsyncQuickCollection, QuickCollection
 
@@ -22,7 +22,7 @@ def sync(
     search_string: Optional[str] = None,
     page: Optional[int] = None,
     page_size: Optional[int] = None,
-) -> Optional[List[AssetToAssetManageResponseModel]]:
+) -> Optional[List[AssetToClientAssetManagerResponseModel]]:
     """Get assets by their IDs using the collected assets workflow.
 
     This is a convenience function that uses the collected_assets context manager
@@ -36,7 +36,7 @@ def sync(
         page_size: Optional page size for pagination
 
     Returns:
-        List of collected AssetToAssetManageResponseModel objects
+        List of collected AssetToClientAssetManagerResponseModel objects
     """
     with QuickCollection(client, asset_ids) as collection:
         return collection.get_details(
@@ -53,7 +53,7 @@ async def asyncio(
     search_string: Optional[str] = None,
     page: Optional[int] = None,
     page_size: Optional[int] = None,
-) -> Optional[List[AssetToAssetManageResponseModel]]:
+) -> Optional[List[AssetToClientAssetManagerResponseModel]]:
     """Async version of get_assets_by_asset_ids.
 
     Args:
