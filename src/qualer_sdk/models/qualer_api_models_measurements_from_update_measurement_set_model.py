@@ -4,8 +4,12 @@ from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.influence_parameter_type import InfluenceParameterType as MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type
-from ..models.influence_parameter_type import InfluenceParameterType as MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type
+from ..models.influence_parameter_type import (
+    InfluenceParameterType as MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type,
+)
+from ..models.influence_parameter_type import (
+    InfluenceParameterType as MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type,
+)
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_from_update_measurement_field_model import (
@@ -74,12 +78,16 @@ class MeasurementsFromUpdateMeasurementSetModel:
         use_expected_value = self.use_expected_value
         decimal_places = self.decimal_places
         significant_figures = self.significant_figures
-        influence_parameter_1_type = self.influence_parameter_1_type.value if self.influence_parameter_1_type else None
+        influence_parameter_1_type = (
+            self.influence_parameter_1_type.value if self.influence_parameter_1_type else None
+        )
         influence_parameter_1_tool_type_id = self.influence_parameter_1_tool_type_id
         influence_parameter_1_parameter_id = self.influence_parameter_1_parameter_id
         influence_parameter_1_source = self.influence_parameter_1_source
         influence_parameter_1_value = self.influence_parameter_1_value
-        influence_parameter_2_type = self.influence_parameter_2_type.value if self.influence_parameter_2_type else None
+        influence_parameter_2_type = (
+            self.influence_parameter_2_type.value if self.influence_parameter_2_type else None
+        )
         influence_parameter_2_tool_type_id = self.influence_parameter_2_tool_type_id
         influence_parameter_2_parameter_id = self.influence_parameter_2_parameter_id
         influence_parameter_2_source = self.influence_parameter_2_source
@@ -145,6 +153,7 @@ class MeasurementsFromUpdateMeasurementSetModel:
         from ..models.qualer_api_models_measurements_from_update_measurement_point_model import (
             MeasurementsFromUpdateMeasurementPointModel,
         )
+
         d = dict(src_dict)
         measurement_set_id = d.pop("MeasurementSetId", None)
         is_accredited = d.pop("IsAccredited", None)

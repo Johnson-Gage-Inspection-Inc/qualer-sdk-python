@@ -171,6 +171,7 @@ class AssetToAssetServiceForecastModel:
         maintenance_plan_name = d.pop("MaintenancePlanName", None)
         maintenance_task_id = d.pop("MaintenanceTaskId", None)
         maintenance_task_name = d.pop("MaintenanceTaskName", None)
+
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -184,7 +185,9 @@ class AssetToAssetServiceForecastModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
+
         def _parse_advance_recall_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -198,7 +201,9 @@ class AssetToAssetServiceForecastModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         advance_recall_date = _parse_advance_recall_date(d.pop("AdvanceRecallDate", None))
+
         def _parse_grace_period_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -212,7 +217,9 @@ class AssetToAssetServiceForecastModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         grace_period_date = _parse_grace_period_date(d.pop("GracePeriodDate", None))
+
         def _parse_certificate_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -226,6 +233,7 @@ class AssetToAssetServiceForecastModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         certificate_next_service_date = _parse_certificate_next_service_date(
             d.pop("CertificateNextServiceDate", None)
         )

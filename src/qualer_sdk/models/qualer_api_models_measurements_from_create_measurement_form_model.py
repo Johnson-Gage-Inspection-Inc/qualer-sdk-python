@@ -65,6 +65,7 @@ class MeasurementsFromCreateMeasurementFormModel:
         from ..models.qualer_api_models_measurements_from_specification import (
             MeasurementsFromSpecification,
         )
+
         d = dict(src_dict)
         batch_type = d.pop("BatchType", None)
         batch_result = d.pop("BatchResult", None)

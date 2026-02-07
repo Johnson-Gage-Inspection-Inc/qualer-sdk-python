@@ -53,6 +53,7 @@ class VendorsToVendorCompanyResponseModel:
         from ..models.qualer_api_models_vendors_to_vendor_company_response_model_shipping_address_type_0 import (
             VendorsToVendorCompanyResponseModelShippingAddressType0,
         )
+
         account_number_text = self.account_number_text
         account_number = self.account_number
         currency_id = self.currency_id
@@ -116,6 +117,7 @@ class VendorsToVendorCompanyResponseModel:
         from ..models.qualer_api_models_vendors_to_vendor_company_response_model_shipping_address_type_0 import (
             VendorsToVendorCompanyResponseModelShippingAddressType0,
         )
+
         d = dict(src_dict)
         account_number_text = d.pop("AccountNumberText", None)
         account_number = d.pop("AccountNumber", None)
@@ -124,6 +126,7 @@ class VendorsToVendorCompanyResponseModel:
         company_name = d.pop("CompanyName", None)
         domain_name = d.pop("DomainName", None)
         custom_name = d.pop("CustomName", None)
+
         def _parse_billing_address(
             data: object,
         ) -> Optional["VendorsToVendorCompanyResponseModelBillingAddressType0"]:
@@ -142,7 +145,9 @@ class VendorsToVendorCompanyResponseModel:
                 Optional["VendorsToVendorCompanyResponseModelBillingAddressType0"],
                 data,
             )
+
         billing_address = _parse_billing_address(d.pop("BillingAddress", None))
+
         def _parse_shipping_address(
             data: object,
         ) -> Optional["VendorsToVendorCompanyResponseModelShippingAddressType0"]:
@@ -161,6 +166,7 @@ class VendorsToVendorCompanyResponseModel:
                 Optional["VendorsToVendorCompanyResponseModelShippingAddressType0"],
                 data,
             )
+
         shipping_address = _parse_shipping_address(d.pop("ShippingAddress", None))
         _updated_on_utc = d.pop("UpdatedOnUtc", None)
         updated_on_utc: Optional[datetime.datetime]

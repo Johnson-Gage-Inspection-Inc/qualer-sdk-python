@@ -101,6 +101,7 @@ class ClientsFromSponsoredClientEditModel:
         from ..models.qualer_api_models_address_address_model import (
             AddressAddressModel,
         )
+
         d = dict(src_dict)
         company_id = d.pop("CompanyId", None)
         account_number_text = d.pop("AccountNumberText", None)

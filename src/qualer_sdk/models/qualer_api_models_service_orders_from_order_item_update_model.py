@@ -6,8 +6,12 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.service_order_check_result import ServiceOrderCheckResult as ServiceOrdersFromOrderItemUpdateModelAsFoundCheck
-from ..models.service_order_check_result import ServiceOrderCheckResult as ServiceOrdersFromOrderItemUpdateModelAsLeftCheck
+from ..models.service_order_check_result import (
+    ServiceOrderCheckResult as ServiceOrdersFromOrderItemUpdateModelAsFoundCheck,
+)
+from ..models.service_order_check_result import (
+    ServiceOrderCheckResult as ServiceOrdersFromOrderItemUpdateModelAsLeftCheck,
+)
 from ..models.service_result_status import ServiceResultStatus
 from ..models.work_status import WorkStatus
 
@@ -278,6 +282,7 @@ class ServiceOrdersFromOrderItemUpdateModel:
         provider_phone = d.pop("ProviderPhone", None)
         provider_company = d.pop("ProviderCompany", None)
         certificate_number = d.pop("CertificateNumber", None)
+
         def _parse_service_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -289,7 +294,9 @@ class ServiceOrdersFromOrderItemUpdateModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         service_date = _parse_service_date(d.pop("ServiceDate", None))
+
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -303,6 +310,7 @@ class ServiceOrdersFromOrderItemUpdateModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
         vendor_tag = d.pop("VendorTag", None)
         qualer_api_models_service_orders_from_order_item_update_model = cls(

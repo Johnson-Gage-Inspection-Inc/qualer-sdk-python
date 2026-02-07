@@ -75,6 +75,7 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel:
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_specification_response_model import (
             MeasurementsToMeasurementRecordResponseModelSpecificationResponseModel,
         )
+
         d = dict(src_dict)
         batch_type = d.pop("BatchType", None)
         batch_result = d.pop("BatchResult", None)

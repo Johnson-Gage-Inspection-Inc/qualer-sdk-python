@@ -472,7 +472,9 @@ class ReportDatasetsToServiceOrderResponse:
         quality_control_date: Optional[str] = None
         if self.quality_control_date:
             quality_control_date = self.quality_control_date.isoformat()
-        client_sign_off_on = self.client_sign_off_on.isoformat() if self.client_sign_off_on else None
+        client_sign_off_on = (
+            self.client_sign_off_on.isoformat() if self.client_sign_off_on else None
+        )
         client_sign_off_by_name = self.client_sign_off_by_name
         client_signed_on = self.client_signed_on.isoformat() if self.client_signed_on else None
         client_sticker_notes = self.client_sticker_notes
@@ -527,7 +529,9 @@ class ReportDatasetsToServiceOrderResponse:
         vendor_sign_off_by_name = self.vendor_sign_off_by_name
         service_discount = self.service_discount
         return_account = self.return_account
-        business_hours_from = self.business_hours_from.isoformat() if self.business_hours_from else None
+        business_hours_from = (
+            self.business_hours_from.isoformat() if self.business_hours_from else None
+        )
         business_hours_to = self.business_hours_to.isoformat() if self.business_hours_to else None
         client_company_alternative_names = self.client_company_alternative_names
         client_id = self.client_id
@@ -899,6 +903,7 @@ class ReportDatasetsToServiceOrderResponse:
         po_number = d.pop("PoNumber", None)
         secondary_po = d.pop("SecondaryPo", None)
         location = d.pop("Location", None)
+
         def _parse_shipped_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -910,6 +915,7 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         shipped_date = _parse_shipped_date(d.pop("ShippedDate", None))
         payment_terms = d.pop("PaymentTerms", None)
         site_access_notes = d.pop("SiteAccessNotes", None)
@@ -1006,6 +1012,7 @@ class ReportDatasetsToServiceOrderResponse:
         culture_name = d.pop("CultureName", None)
         vendor_company_id = d.pop("VendorCompanyId", None)
         client_vendor_id = d.pop("ClientVendorId", None)
+
         def _parse_sign_off_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1017,6 +1024,7 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         sign_off_date = _parse_sign_off_date(d.pop("SignOffDate", None))
         _quality_control_date = d.pop("QualityControlDate", None)
         quality_control_date: Optional[datetime.datetime]
@@ -1026,6 +1034,7 @@ class ReportDatasetsToServiceOrderResponse:
             quality_control_date = None
         else:
             quality_control_date = isoparse(_quality_control_date)
+
         def _parse_client_sign_off_on(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -1039,8 +1048,10 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         client_sign_off_on = _parse_client_sign_off_on(d.pop("ClientSignOffOn", None))
         client_sign_off_by_name = d.pop("ClientSignOffByName", None)
+
         def _parse_client_signed_on(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -1054,6 +1065,7 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         client_signed_on = _parse_client_signed_on(d.pop("ClientSignedOn", None))
         client_sticker_notes = d.pop("ClientStickerNotes", None)
         asset_sticker_notes = d.pop("AssetStickerNotes", None)
@@ -1069,6 +1081,7 @@ class ReportDatasetsToServiceOrderResponse:
             created_on = None
         else:
             created_on = isoparse(_created_on)
+
         def _parse_invoiced_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1080,7 +1093,9 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         invoiced_on = _parse_invoiced_on(d.pop("InvoicedOn", None))
+
         def _parse_submitted_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1092,7 +1107,9 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         submitted_on = _parse_submitted_on(d.pop("SubmittedOn", None))
+
         def _parse_shipped_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1104,7 +1121,9 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         shipped_on = _parse_shipped_on(d.pop("ShippedOn", None))
+
         def _parse_completed_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1116,7 +1135,9 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         completed_on = _parse_completed_on(d.pop("CompletedOn", None))
+
         def _parse_accepted_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1128,7 +1149,9 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         accepted_on = _parse_accepted_on(d.pop("AcceptedOn", None))
+
         def _parse_approved_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1140,7 +1163,9 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         approved_on = _parse_approved_on(d.pop("ApprovedOn", None))
+
         def _parse_delivered_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1152,7 +1177,9 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         delivered_on = _parse_delivered_on(d.pop("DeliveredOn", None))
+
         def _parse_paid_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1164,7 +1191,9 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         paid_on = _parse_paid_on(d.pop("PaidOn", None))
+
         def _parse_cancelled_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1176,7 +1205,9 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         cancelled_on = _parse_cancelled_on(d.pop("CancelledOn", None))
+
         def _parse_fulfilled_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1188,7 +1219,9 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         fulfilled_on = _parse_fulfilled_on(d.pop("FulfilledOn", None))
+
         def _parse_sign_off_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1200,7 +1233,9 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         sign_off_on = _parse_sign_off_on(d.pop("SignOffOn", None))
+
         def _parse_vendor_signed_on(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -1214,11 +1249,14 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         vendor_signed_on = _parse_vendor_signed_on(d.pop("VendorSignedOn", None))
+
         def _parse_client_notes(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         client_notes = _parse_client_notes(d.pop("ClientNotes", None))
         order_shipping_option = d.pop("OrderShippingOption", None)
         shipment_status = d.pop("ShipmentStatus", None)
@@ -1226,66 +1264,91 @@ class ReportDatasetsToServiceOrderResponse:
         payment_option = d.pop("PaymentOption", None)
         order_status = d.pop("OrderStatus", None)
         created_by_name = d.pop("CreatedByName", None)
+
         def _parse_completed_by_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         completed_by_name = _parse_completed_by_name(d.pop("CompletedByName", None))
+
         def _parse_shipped_by_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         shipped_by_name = _parse_shipped_by_name(d.pop("ShippedByName", None))
+
         def _parse_accepted_by_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         accepted_by_name = _parse_accepted_by_name(d.pop("AcceptedByName", None))
+
         def _parse_approve_by_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         approve_by_name = _parse_approve_by_name(d.pop("ApproveByName", None))
+
         def _parse_invoiced_by_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         invoiced_by_name = _parse_invoiced_by_name(d.pop("InvoicedByName", None))
+
         def _parse_delivered_by_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         delivered_by_name = _parse_delivered_by_name(d.pop("DeliveredByName", None))
+
         def _parse_paid_by_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         paid_by_name = _parse_paid_by_name(d.pop("PaidByName", None))
+
         def _parse_cancelled_by_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         cancelled_by_name = _parse_cancelled_by_name(d.pop("CancelledByName", None))
+
         def _parse_sign_off_by_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         sign_off_by_name = _parse_sign_off_by_name(d.pop("SignOffByName", None))
+
         def _parse_owner_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         owner_name = _parse_owner_name(d.pop("OwnerName", None))
+
         def _parse_owner_department(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         owner_department = _parse_owner_department(d.pop("OwnerDepartment", None))
+
         def _parse_assignee_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         assignee_name = _parse_assignee_name(d.pop("AssigneeName", None))
+
         def _parse_payment_due_on(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -1299,8 +1362,10 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         payment_due_on = _parse_payment_due_on(d.pop("PaymentDueOn", None))
         process_date_option = d.pop("ProcessDateOption", None)
+
         def _parse_desired_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1312,7 +1377,9 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         desired_date = _parse_desired_date(d.pop("DesiredDate", None))
+
         def _parse_deadline_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -1324,6 +1391,7 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         deadline_date = _parse_deadline_date(d.pop("DeadlineDate", None))
         _vendor_sign_off_on = d.pop("VendorSignOffOn", None)
         vendor_sign_off_on: Optional[datetime.datetime]
@@ -1334,6 +1402,7 @@ class ReportDatasetsToServiceOrderResponse:
         vendor_sign_off_by_name = d.pop("VendorSignOffByName", None)
         service_discount = d.pop("ServiceDiscount", None)
         return_account = d.pop("ReturnAccount", None)
+
         def _parse_business_hours_from(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -1347,7 +1416,9 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         business_hours_from = _parse_business_hours_from(d.pop("BusinessHoursFrom", None))
+
         def _parse_business_hours_to(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -1361,6 +1432,7 @@ class ReportDatasetsToServiceOrderResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         business_hours_to = _parse_business_hours_to(d.pop("BusinessHoursTo", None))
         client_company_alternative_names = d.pop("ClientCompanyAlternativeNames", None)
         client_id = d.pop("ClientId", None)

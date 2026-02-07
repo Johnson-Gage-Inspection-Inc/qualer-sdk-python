@@ -64,7 +64,9 @@ class ServiceOrderItemPartsToOrderItemPartResponseModel:
         delivery_charge = self.delivery_charge
         time_spent_in_minutes = self.time_spent_in_minutes
         free_quantity = self.free_quantity
-        service_order_charge_type = self.service_order_charge_type.value if self.service_order_charge_type else None
+        service_order_charge_type = (
+            self.service_order_charge_type.value if self.service_order_charge_type else None
+        )
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})

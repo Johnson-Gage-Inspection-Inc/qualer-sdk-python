@@ -60,6 +60,7 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelC
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_custom_fields_create_measurement_field_response_model import (
             MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelCustomFieldsCreateMeasurementFieldResponseModel,
         )
+
         d = dict(src_dict)
         description = d.pop("Description", None)
         result = d.pop("Result", None)

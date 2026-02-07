@@ -53,7 +53,9 @@ class ServiceOrdersToOrderAssignmentResponseModel:
         alias = self.alias
         title = self.title
         is_deleted = self.is_deleted
-        last_seen_date_utc = self.last_seen_date_utc.isoformat() if self.last_seen_date_utc else None
+        last_seen_date_utc = (
+            self.last_seen_date_utc.isoformat() if self.last_seen_date_utc else None
+        )
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -97,6 +99,7 @@ class ServiceOrdersToOrderAssignmentResponseModel:
         alias = d.pop("Alias", None)
         title = d.pop("Title", None)
         is_deleted = d.pop("IsDeleted", None)
+
         def _parse_last_seen_date_utc(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -110,6 +113,7 @@ class ServiceOrdersToOrderAssignmentResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         last_seen_date_utc = _parse_last_seen_date_utc(d.pop("LastSeenDateUtc", None))
         qualer_api_models_service_orders_to_order_assignment_response_model = cls(
             work_item_id=work_item_id,

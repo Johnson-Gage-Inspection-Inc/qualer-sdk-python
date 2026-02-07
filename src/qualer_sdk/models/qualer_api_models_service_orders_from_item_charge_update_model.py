@@ -46,6 +46,7 @@ class ServiceOrdersFromItemChargeUpdateModel:
         from ..models.qualer_api_models_service_orders_from_item_charge_update_model_item_price_model import (
             ServiceOrdersFromItemChargeUpdateModelItemPriceModel,
         )
+
         d = dict(src_dict)
         charges = []
         _charges = d.pop("Charges", None)

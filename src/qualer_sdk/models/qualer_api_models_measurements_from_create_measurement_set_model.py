@@ -98,6 +98,7 @@ class MeasurementsFromCreateMeasurementSetModel:
         from ..models.qualer_api_models_measurements_from_display_options import (
             MeasurementsFromDisplayOptions,
         )
+
         d = dict(src_dict)
         measurement_name = d.pop("MeasurementName", None)
         is_accredited = d.pop("IsAccredited", None)

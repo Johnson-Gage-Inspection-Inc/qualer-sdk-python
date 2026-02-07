@@ -288,6 +288,7 @@ class AssetToAssetForecastApiResponseModel:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
+
         def _parse_last_due_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -299,7 +300,9 @@ class AssetToAssetForecastApiResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         last_due_date = _parse_last_due_date(d.pop("LastDueDate", None))
+
         def _parse_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -313,7 +316,9 @@ class AssetToAssetForecastApiResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         last_service_date = _parse_last_service_date(d.pop("LastServiceDate", None))
+
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -327,11 +332,14 @@ class AssetToAssetForecastApiResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
+
         def _parse_next_service_task(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         next_service_task = _parse_next_service_task(d.pop("NextServiceTask", None))
         company_id = d.pop("CompanyId", None)
         asset_id = d.pop("AssetId", None)
@@ -375,6 +383,7 @@ class AssetToAssetForecastApiResponseModel:
         condition = d.pop("Condition", None)
         criticality = d.pop("Criticality", None)
         pool = d.pop("Pool", None)
+
         def _parse_purchase_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -386,9 +395,11 @@ class AssetToAssetForecastApiResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         purchase_date = _parse_purchase_date(d.pop("PurchaseDate", None))
         purchase_cost = d.pop("PurchaseCost", None)
         life_span_months = d.pop("LifeSpanMonths", None)
+
         def _parse_activation_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -402,9 +413,11 @@ class AssetToAssetForecastApiResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         activation_date = _parse_activation_date(d.pop("ActivationDate", None))
         depreciation_basis = d.pop("DepreciationBasis", None)
         depreciation_method = d.pop("DepreciationMethod", None)
+
         def _parse_retirement_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -418,6 +431,7 @@ class AssetToAssetForecastApiResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         retirement_date = _parse_retirement_date(d.pop("RetirementDate", None))
         salvage_value = d.pop("SalvageValue", None)
         retirment_reason = d.pop("RetirmentReason", None)

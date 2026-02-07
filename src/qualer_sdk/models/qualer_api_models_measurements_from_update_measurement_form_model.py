@@ -42,6 +42,7 @@ class MeasurementsFromUpdateMeasurementFormModel:
         from ..models.qualer_api_models_measurements_from_update_measurement_batch_model import (
             MeasurementsFromUpdateMeasurementBatchModel,
         )
+
         d = dict(src_dict)
         measurement_batches = []
         _measurement_batches = d.pop("MeasurementBatches", None)

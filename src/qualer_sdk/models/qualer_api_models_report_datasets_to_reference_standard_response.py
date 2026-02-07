@@ -137,6 +137,7 @@ class ReportDatasetsToReferenceStandardResponse:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         is_auxiliary = d.pop("IsAuxiliary", None)
+
         def _parse_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -150,7 +151,9 @@ class ReportDatasetsToReferenceStandardResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         last_service_date = _parse_last_service_date(d.pop("LastServiceDate", None))
+
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -164,16 +167,21 @@ class ReportDatasetsToReferenceStandardResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
+
         def _parse_certificate_number(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         certificate_number = _parse_certificate_number(d.pop("CertificateNumber", None))
+
         def _parse_calibrated_by(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         calibrated_by = _parse_calibrated_by(d.pop("CalibratedBy", None))
         tool_name = d.pop("ToolName", None)
         tool_site = d.pop("ToolSite", None)
