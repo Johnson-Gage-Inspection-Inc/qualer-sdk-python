@@ -59,7 +59,7 @@ def _discover_models() -> None:
             # Avoid clobbering in rare collisions; first wins.
             _NAME_TO_MODULE.setdefault(cls, module_name)
             _ALL.add(cls)
-        
+
         # Register module-level alias assignments (backwards-compatibility)
         for alias in _ALIAS_RE.findall(text):
             _NAME_TO_MODULE.setdefault(alias, module_name)
