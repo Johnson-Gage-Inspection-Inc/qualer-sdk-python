@@ -11,6 +11,7 @@ openapi-python-client>=0.25.0
 pre-commit>=2.0
 pytest-cov>=2.0
 pytest-vcr>=1.0.2
+vcrpy>=5.0.0
 pytest>=6.0
 python-dotenv>=1.0.0
 twine>=3.0
