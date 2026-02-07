@@ -9,33 +9,19 @@ from dateutil.parser import isoparse
 from ..models.qualer_api_models_report_datasets_to_measurement_response_double_substitution_sequence import (
     ReportDatasetsToMeasurementResponseDoubleSubstitutionSequence,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_response_environment_mask import (
-    ReportDatasetsToMeasurementResponseEnvironmentMask,
-)
-from ..models.qualer_api_models_report_datasets_to_measurement_response_guard_band_logic import (
-    ReportDatasetsToMeasurementResponseGuardBandLogic,
-)
-from ..models.qualer_api_models_report_datasets_to_measurement_response_hysteresis_point import (
-    ReportDatasetsToMeasurementResponseHysteresisPoint,
-)
-from ..models.qualer_api_models_report_datasets_to_measurement_response_measurement_not_taken_result import (
-    ReportDatasetsToMeasurementResponseMeasurementNotTakenResult,
-)
+from ..models.environment_factor import EnvironmentFactor as ReportDatasetsToMeasurementResponseEnvironmentMask
+from ..models.guard_band_logic import GuardBandLogic as ReportDatasetsToMeasurementResponseGuardBandLogic
+from ..models.hysteresis_point import HysteresisPoint as ReportDatasetsToMeasurementResponseHysteresisPoint
+from ..models.measurement_not_taken_result import MeasurementNotTakenResult as ReportDatasetsToMeasurementResponseMeasurementNotTakenResult
 from ..models.qualer_api_models_report_datasets_to_measurement_response_measurement_point_order import (
     ReportDatasetsToMeasurementResponseMeasurementPointOrder,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_response_measurement_type import (
-    ReportDatasetsToMeasurementResponseMeasurementType,
-)
-from ..models.qualer_api_models_report_datasets_to_measurement_response_precision_type import (
-    ReportDatasetsToMeasurementResponsePrecisionType,
-)
+from ..models.measurement_type import MeasurementType as ReportDatasetsToMeasurementResponseMeasurementType
+from ..models.measurement_precision_type import MeasurementPrecisionType as ReportDatasetsToMeasurementResponsePrecisionType
 from ..models.qualer_api_models_report_datasets_to_measurement_response_reading_entry_logic import (
     ReportDatasetsToMeasurementResponseReadingEntryLogic,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_response_reading_entry_math import (
-    ReportDatasetsToMeasurementResponseReadingEntryMath,
-)
+from ..models.reading_entry_math import ReadingEntryMath as ReportDatasetsToMeasurementResponseReadingEntryMath
 from ..models.qualer_api_models_report_datasets_to_measurement_response_shipment_status import (
     ReportDatasetsToMeasurementResponseShipmentStatus,
 )

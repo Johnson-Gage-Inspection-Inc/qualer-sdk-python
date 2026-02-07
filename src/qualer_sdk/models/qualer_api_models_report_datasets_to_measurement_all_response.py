@@ -6,36 +6,16 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_found_guard_band_logic import (
-    ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic,
-)
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_found_measurement_not_taken_result import (
-    ReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult,
-)
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_found_measurement_type import (
-    ReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
-)
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_found_precision_type import (
-    ReportDatasetsToMeasurementAllResponseAsFoundPrecisionType,
-)
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_found_reading_entry_math import (
-    ReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath,
-)
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_guard_band_logic import (
-    ReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic,
-)
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_measurement_not_taken_result import (
-    ReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult,
-)
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_measurement_type import (
-    ReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
-)
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_precision_type import (
-    ReportDatasetsToMeasurementAllResponseAsLeftPrecisionType,
-)
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_reading_entry_math import (
-    ReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
-)
+from ..models.guard_band_logic import GuardBandLogic as ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic
+from ..models.measurement_not_taken_result import MeasurementNotTakenResult as ReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult
+from ..models.measurement_type import MeasurementType as ReportDatasetsToMeasurementAllResponseAsFoundMeasurementType
+from ..models.measurement_precision_type import MeasurementPrecisionType as ReportDatasetsToMeasurementAllResponseAsFoundPrecisionType
+from ..models.reading_entry_math import ReadingEntryMath as ReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath
+from ..models.guard_band_logic import GuardBandLogic as ReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic
+from ..models.measurement_not_taken_result import MeasurementNotTakenResult as ReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult
+from ..models.measurement_type import MeasurementType as ReportDatasetsToMeasurementAllResponseAsLeftMeasurementType
+from ..models.measurement_precision_type import MeasurementPrecisionType as ReportDatasetsToMeasurementAllResponseAsLeftPrecisionType
+from ..models.reading_entry_math import ReadingEntryMath as ReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath
 from ..models.work_status import WorkStatus
 
 T = TypeVar("T", bound="ReportDatasetsToMeasurementAllResponse")

@@ -4,8 +4,8 @@ from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.qualer_api_models_measurements_from_update_measurement_point_model_hysteresis_point import (
-    MeasurementsFromUpdateMeasurementPointModelHysteresisPoint,
+from ..models.hysteresis_point import (
+    HysteresisPoint as MeasurementsFromUpdateMeasurementPointModelHysteresisPoint,
 )
 from ..models.qualer_api_models_measurements_from_update_measurement_point_model_specification_mode import (
     MeasurementsFromUpdateMeasurementPointModelSpecificationMode,

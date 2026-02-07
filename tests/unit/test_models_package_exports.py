@@ -3,7 +3,9 @@ from pathlib import Path
 
 import qualer_sdk.models as models
 
-_THIS_DIR = Path(__file__).resolve().parent.parent / "src" / "qualer_sdk" / "models"
+# Compute repository root: tests/unit/test_*.py -> go up 2 levels to repo root
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+_THIS_DIR = _REPO_ROOT / "src" / "qualer_sdk" / "models"
 _CLASS_RE = re.compile(r"^\s*class\s+([A-Za-z_][A-Za-z0-9_]*)\b", re.M)
 
 

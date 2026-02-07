@@ -4,12 +4,8 @@ from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.qualer_api_models_measurements_from_update_measurement_set_model_influence_parameter_1_type import (
-    MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type,
-)
-from ..models.qualer_api_models_measurements_from_update_measurement_set_model_influence_parameter_2_type import (
-    MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type,
-)
+from ..models.influence_parameter_type import InfluenceParameterType as MeasurementsFromUpdateMeasurementSetModelInfluenceParameter1Type
+from ..models.influence_parameter_type import InfluenceParameterType as MeasurementsFromUpdateMeasurementSetModelInfluenceParameter2Type
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_measurements_from_update_measurement_field_model import (
