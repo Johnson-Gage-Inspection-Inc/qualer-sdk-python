@@ -1,24 +1,16 @@
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
+from typing import Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.qualer_api_models_measurements_to_update_measurement_set_response_model_influence_parameter_1_type import (
-    MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type,
+from ..models.influence_parameter_type import InfluenceParameterType
+from ..models.qualer_api_models_measurements_to_update_measurement_field_response_model import (
+    MeasurementsToUpdateMeasurementFieldResponseModel as MeasurementFieldResponse,
 )
-from ..models.qualer_api_models_measurements_to_update_measurement_set_response_model_influence_parameter_2_type import (
-    MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type,
+from ..models.qualer_api_models_measurements_to_update_measurement_point_response_model import (
+    MeasurementsToUpdateMeasurementPointResponseModel as MeasurementPointResponse,
 )
-
-if TYPE_CHECKING:
-    from ..models.qualer_api_models_measurements_to_update_measurement_field_response_model import (
-        MeasurementsToUpdateMeasurementFieldResponseModel,
-    )
-    from ..models.qualer_api_models_measurements_to_update_measurement_point_response_model import (
-        MeasurementsToUpdateMeasurementPointResponseModel,
-    )
-
 
 T = TypeVar("T", bound="MeasurementsToUpdateMeasurementSetResponseModel")
 
@@ -27,9 +19,9 @@ T = TypeVar("T", bound="MeasurementsToUpdateMeasurementSetResponseModel")
 class MeasurementsToUpdateMeasurementSetResponseModel:
     """
     Attributes:
-        measurement_set_id (Optional[int]):
-        measurement_name (Optional[str]):
-        is_accredited (Optional[bool]):
+        measurement_set_id (int):
+        measurement_name (str):
+        is_accredited (bool):
         use_expected_value (Optional[bool]):
         decimal_places (Optional[int]):
         significant_figures (Optional[int]):
@@ -47,28 +39,24 @@ class MeasurementsToUpdateMeasurementSetResponseModel:
         measurement_fields (Optional[List['MeasurementsToUpdateMeasurementFieldResponseModel']]):
     """
 
-    measurement_set_id: Optional[int] = None
-    measurement_name: Optional[str] = None
-    is_accredited: Optional[bool] = None
+    measurement_set_id: int
+    measurement_name: str
+    is_accredited: bool
     use_expected_value: Optional[bool] = None
     decimal_places: Optional[int] = None
     significant_figures: Optional[int] = None
-    influence_parameter_1_type: Optional[
-        MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type
-    ] = None
+    influence_parameter_1_type: Optional[InfluenceParameterType] = None
     influence_parameter_1_tool_type_id: Optional[int] = None
     influence_parameter_1_parameter_id: Optional[int] = None
     influence_parameter_1_source: Optional[str] = None
     influence_parameter_1_value: Optional[str] = None
-    influence_parameter_2_type: Optional[
-        MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type
-    ] = None
+    influence_parameter_2_type: Optional[InfluenceParameterType] = None
     influence_parameter_2_tool_type_id: Optional[int] = None
     influence_parameter_2_parameter_id: Optional[int] = None
     influence_parameter_2_source: Optional[str] = None
     influence_parameter_2_value: Optional[str] = None
-    measurement_points: Optional[List["MeasurementsToUpdateMeasurementPointResponseModel"]] = None
-    measurement_fields: Optional[List["MeasurementsToUpdateMeasurementFieldResponseModel"]] = None
+    measurement_points: Optional[List["MeasurementPointResponse"]] = None
+    measurement_fields: Optional[List["MeasurementFieldResponse"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -78,12 +66,16 @@ class MeasurementsToUpdateMeasurementSetResponseModel:
         use_expected_value = self.use_expected_value
         decimal_places = self.decimal_places
         significant_figures = self.significant_figures
-        influence_parameter_1_type = self.influence_parameter_1_type.value if self.influence_parameter_1_type else None
+        influence_parameter_1_type = (
+            self.influence_parameter_1_type.value if self.influence_parameter_1_type else None
+        )
         influence_parameter_1_tool_type_id = self.influence_parameter_1_tool_type_id
         influence_parameter_1_parameter_id = self.influence_parameter_1_parameter_id
         influence_parameter_1_source = self.influence_parameter_1_source
         influence_parameter_1_value = self.influence_parameter_1_value
-        influence_parameter_2_type = self.influence_parameter_2_type.value if self.influence_parameter_2_type else None
+        influence_parameter_2_type = (
+            self.influence_parameter_2_type.value if self.influence_parameter_2_type else None
+        )
         influence_parameter_2_tool_type_id = self.influence_parameter_2_tool_type_id
         influence_parameter_2_parameter_id = self.influence_parameter_2_parameter_id
         influence_parameter_2_source = self.influence_parameter_2_source
@@ -143,12 +135,7 @@ class MeasurementsToUpdateMeasurementSetResponseModel:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.qualer_api_models_measurements_to_update_measurement_field_response_model import (
-            MeasurementsToUpdateMeasurementFieldResponseModel,
-        )
-        from ..models.qualer_api_models_measurements_to_update_measurement_point_response_model import (
-            MeasurementsToUpdateMeasurementPointResponseModel,
-        )
+
         d = dict(src_dict)
         measurement_set_id = d.pop("MeasurementSetId", None)
         measurement_name = d.pop("MeasurementName", None)
@@ -157,37 +144,25 @@ class MeasurementsToUpdateMeasurementSetResponseModel:
         decimal_places = d.pop("DecimalPlaces", None)
         significant_figures = d.pop("SignificantFigures", None)
         _influence_parameter_1_type = d.pop("InfluenceParameter1Type", None)
-        influence_parameter_1_type: Optional[
-            MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type
-        ]
+        influence_parameter_1_type: Optional[InfluenceParameterType]
         if not _influence_parameter_1_type:
             influence_parameter_1_type = None
         elif _influence_parameter_1_type is None:
             influence_parameter_1_type = None
         else:
-            influence_parameter_1_type = (
-                MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type(
-                    _influence_parameter_1_type
-                )
-            )
+            influence_parameter_1_type = InfluenceParameterType(_influence_parameter_1_type)
         influence_parameter_1_tool_type_id = d.pop("InfluenceParameter1ToolTypeId", None)
         influence_parameter_1_parameter_id = d.pop("InfluenceParameter1ParameterId", None)
         influence_parameter_1_source = d.pop("InfluenceParameter1Source", None)
         influence_parameter_1_value = d.pop("InfluenceParameter1Value", None)
         _influence_parameter_2_type = d.pop("InfluenceParameter2Type", None)
-        influence_parameter_2_type: Optional[
-            MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type
-        ]
+        influence_parameter_2_type: Optional[InfluenceParameterType]
         if not _influence_parameter_2_type:
             influence_parameter_2_type = None
         elif _influence_parameter_2_type is None:
             influence_parameter_2_type = None
         else:
-            influence_parameter_2_type = (
-                MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type(
-                    _influence_parameter_2_type
-                )
-            )
+            influence_parameter_2_type = InfluenceParameterType(_influence_parameter_2_type)
         influence_parameter_2_tool_type_id = d.pop("InfluenceParameter2ToolTypeId", None)
         influence_parameter_2_parameter_id = d.pop("InfluenceParameter2ParameterId", None)
         influence_parameter_2_source = d.pop("InfluenceParameter2Source", None)
@@ -195,14 +170,14 @@ class MeasurementsToUpdateMeasurementSetResponseModel:
         measurement_points = []
         _measurement_points = d.pop("MeasurementPoints", None)
         for measurement_points_item_data in _measurement_points or []:
-            measurement_points_item = MeasurementsToUpdateMeasurementPointResponseModel.from_dict(
+            measurement_points_item = MeasurementPointResponse.from_dict(
                 measurement_points_item_data
             )
             measurement_points.append(measurement_points_item)
         measurement_fields = []
         _measurement_fields = d.pop("MeasurementFields", None)
         for measurement_fields_item_data in _measurement_fields or []:
-            measurement_fields_item = MeasurementsToUpdateMeasurementFieldResponseModel.from_dict(
+            measurement_fields_item = MeasurementFieldResponse.from_dict(
                 measurement_fields_item_data
             )
             measurement_fields.append(measurement_fields_item)
