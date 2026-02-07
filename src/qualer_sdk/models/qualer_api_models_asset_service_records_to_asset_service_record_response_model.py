@@ -49,7 +49,7 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
         parts_charge_before_discount (Optional[float]):
         service_charge (Optional[float]):
         repairs_charge (Optional[float]):
-        guid (UUID):  Example: 00000000-0000-0000-0000-000000000000.
+        guid (UUID):  A unique identifier for the asset service record.
         segment_name (Optional[str]):
         schedule_name (Optional[str]):
     """
