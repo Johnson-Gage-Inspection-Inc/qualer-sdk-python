@@ -32,6 +32,11 @@ _ALL: Set[str] = set()
 # - We map every class defined in the module.
 _CLASS_RE = re.compile(r"^\s*class\s+([A-Za-z_][A-Za-z0-9_]*)\b", re.M)
 
+# Alias assignment scan:
+# - Captures "Name = ..." at module level (backwards-compatibility aliases)
+# - Looks for assignments like "AssetToAssetManageResponseModelDueStatus = AssetDueStatus"
+_ALIAS_RE = re.compile(r"^([A-Z][A-Za-z0-9_]*)\s*=\s*[A-Za-z]", re.M)
+
 
 def _discover_models() -> None:
     if _NAME_TO_MODULE:
@@ -49,10 +54,16 @@ def _discover_models() -> None:
             continue
 
         module_name = py.stem
+        # Register class definitions
         for cls in _CLASS_RE.findall(text):
             # Avoid clobbering in rare collisions; first wins.
             _NAME_TO_MODULE.setdefault(cls, module_name)
             _ALL.add(cls)
+        
+        # Register module-level alias assignments (backwards-compatibility)
+        for alias in _ALIAS_RE.findall(text):
+            _NAME_TO_MODULE.setdefault(alias, module_name)
+            _ALL.add(alias)
 
     # Also include whatever the deprecated package advertises (but don’t import its modules)
     try:

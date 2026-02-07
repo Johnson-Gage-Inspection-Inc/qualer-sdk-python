@@ -6,9 +6,7 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.qualer_api_models_asset_to_asset_maintenance_plan_model_asset_status import (
-    AssetToAssetMaintenancePlanModelAssetStatus,
-)
+from ..models.asset_status import AssetStatus as AssetToAssetMaintenancePlanModelAssetStatus
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_asset_to_asset_maintenance_plan_response import (

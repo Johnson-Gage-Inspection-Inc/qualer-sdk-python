@@ -4,9 +4,7 @@ from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.qualer_api_models_clients_from_sponsored_client_create_model_client_status import (
-    ClientsFromSponsoredClientCreateModelClientStatus,
-)
+from ..models.client_status import ClientStatus as ClientsFromSponsoredClientCreateModelClientStatus
 
 if TYPE_CHECKING:
     from ..models.qualer_api_models_address_address_model import AddressAddressModel

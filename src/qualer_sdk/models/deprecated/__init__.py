@@ -51,13 +51,8 @@ def __getattr__(name: str) -> Any:
 
     module_stem, replacement = hit
 
-    warnings.warn(
-        f"{name} is deprecated and will be removed in a future release. "
-        f"Please use {replacement} instead.",
-        DeprecationWarning,
-        stacklevel=2,
-    )
-
+    # The deprecated module itself will emit the warning when imported.
+    # We don't need to emit it here to avoid duplicate warnings.
     m = importlib.import_module(f".{module_stem}", __name__)
     return getattr(m, name)
 

@@ -6,9 +6,7 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.qualer_api_models_clients_from_asset_model_asset_status import (
-    ClientsFromAssetModelAssetStatus,
-)
+from ..models.asset_status import AssetStatus as ClientsFromAssetModelAssetStatus
 
 T = TypeVar("T", bound="ClientsFromAssetModel")
 

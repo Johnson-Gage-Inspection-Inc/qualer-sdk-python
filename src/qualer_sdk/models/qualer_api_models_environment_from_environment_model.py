@@ -4,9 +4,7 @@ from typing import Any, Dict, List, Optional, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.qualer_api_models_environment_from_environment_model_factor_id import (
-    EnvironmentFromEnvironmentModelFactorId,
-)
+from ..models.environment_factor import EnvironmentFactor as EnvironmentFromEnvironmentModelFactorId
 
 T = TypeVar("T", bound="EnvironmentFromEnvironmentModel")
 
