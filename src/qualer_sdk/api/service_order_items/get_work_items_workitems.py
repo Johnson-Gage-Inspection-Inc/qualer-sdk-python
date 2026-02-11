@@ -54,7 +54,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, List["ServiceOrdersToClientOrderItemResponseModel"]]]:
+) -> Optional[List["ServiceOrdersToClientOrderItemResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
@@ -148,7 +148,7 @@ def sync(
     to: Optional[datetime.datetime] = None,
     work_item_number: Optional[str] = None,
     asset_search: Optional[str] = None,
-) -> Optional[Union[Any, List["ServiceOrdersToClientOrderItemResponseModel"]]]:
+) -> Optional[List["ServiceOrdersToClientOrderItemResponseModel"]]:
     """Retrieve work items
 
      Sample request:
@@ -247,7 +247,7 @@ async def asyncio(
     to: Optional[datetime.datetime] = None,
     work_item_number: Optional[str] = None,
     asset_search: Optional[str] = None,
-) -> Optional[Union[Any, List["ServiceOrdersToClientOrderItemResponseModel"]]]:
+) -> Optional[List["ServiceOrdersToClientOrderItemResponseModel"]]:
     """Retrieve work items
 
      Sample request:
