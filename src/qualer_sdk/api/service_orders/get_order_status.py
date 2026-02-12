@@ -87,14 +87,15 @@ def sync(
     """Gets current status and next status according to the workflow
 
     Args:
-        service_order_id (int):
+        service_order_id (int): The ID of the service order
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetOrderStatusResponse200
+        GetOrderStatusResponse200: Object containing current status, next status,
+            and flags for password/email re-entry requirements. Returns None for 403/404.
     """
 
     return sync_detailed(
@@ -138,14 +139,15 @@ async def asyncio(
     """Gets current status and next status according to the workflow
 
     Args:
-        service_order_id (int):
+        service_order_id (int): The ID of the service order
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetOrderStatusResponse200
+        GetOrderStatusResponse200: Object containing current status, next status,
+            and flags for password/email re-entry requirements. Returns None for 403/404.
     """
 
     return (
