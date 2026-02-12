@@ -36,7 +36,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, ServiceOrdersToAssetAddResultResponseModel]]:
+) -> Optional[ServiceOrdersToAssetAddResultResponseModel]:
     if response.status_code == 200:
         response_200 = ServiceOrdersToAssetAddResultResponseModel.from_dict(response.json())
 
@@ -55,7 +55,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, ServiceOrdersToAssetAddResultResponseModel]]:
+) -> Response[ServiceOrdersToAssetAddResultResponseModel]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -69,7 +69,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: ServiceOrdersFromAddWorkItemsModel,
-) -> Response[Union[Any, ServiceOrdersToAssetAddResultResponseModel]]:
+) -> Response[ServiceOrdersToAssetAddResultResponseModel]:
     """Add work items
 
     Args:
@@ -81,7 +81,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, ServiceOrdersToAssetAddResultResponseModel]]
+        Response[ServiceOrdersToAssetAddResultResponseModel]
     """
 
     kwargs = _get_kwargs(
@@ -101,7 +101,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     body: ServiceOrdersFromAddWorkItemsModel,
-) -> Optional[Union[Any, ServiceOrdersToAssetAddResultResponseModel]]:
+) -> Optional[ServiceOrdersToAssetAddResultResponseModel]:
     """Add work items
 
     Args:
@@ -113,7 +113,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, ServiceOrdersToAssetAddResultResponseModel]
+        ServiceOrdersToAssetAddResultResponseModel
     """
 
     return sync_detailed(
@@ -128,7 +128,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: ServiceOrdersFromAddWorkItemsModel,
-) -> Response[Union[Any, ServiceOrdersToAssetAddResultResponseModel]]:
+) -> Response[ServiceOrdersToAssetAddResultResponseModel]:
     """Add work items
 
     Args:
@@ -140,7 +140,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, ServiceOrdersToAssetAddResultResponseModel]]
+        Response[ServiceOrdersToAssetAddResultResponseModel]
     """
 
     kwargs = _get_kwargs(
@@ -158,7 +158,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     body: ServiceOrdersFromAddWorkItemsModel,
-) -> Optional[Union[Any, ServiceOrdersToAssetAddResultResponseModel]]:
+) -> Optional[ServiceOrdersToAssetAddResultResponseModel]:
     """Add work items
 
     Args:
@@ -170,7 +170,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, ServiceOrdersToAssetAddResultResponseModel]
+        ServiceOrdersToAssetAddResultResponseModel
     """
 
     return (

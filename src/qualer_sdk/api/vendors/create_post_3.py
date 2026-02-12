@@ -35,7 +35,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, VendorsToCreatedVendorCompanyResponse]]:
+) -> Optional[VendorsToCreatedVendorCompanyResponse]:
     if response.status_code == 201:
         response_201 = VendorsToCreatedVendorCompanyResponse.from_dict(response.json())
 
@@ -51,7 +51,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, VendorsToCreatedVendorCompanyResponse]]:
+) -> Response[VendorsToCreatedVendorCompanyResponse]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -64,7 +64,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: VendorsFromSponsoredVendorCreateModel,
-) -> Response[Union[Any, VendorsToCreatedVendorCompanyResponse]]:
+) -> Response[VendorsToCreatedVendorCompanyResponse]:
     """Create Vendor information.
 
     Args:
@@ -75,7 +75,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, VendorsToCreatedVendorCompanyResponse]]
+        Response[VendorsToCreatedVendorCompanyResponse]
     """
 
     kwargs = _get_kwargs(
@@ -93,7 +93,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     body: VendorsFromSponsoredVendorCreateModel,
-) -> Optional[Union[Any, VendorsToCreatedVendorCompanyResponse]]:
+) -> Optional[VendorsToCreatedVendorCompanyResponse]:
     """Create Vendor information.
 
     Args:
@@ -104,7 +104,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, VendorsToCreatedVendorCompanyResponse]
+        VendorsToCreatedVendorCompanyResponse
     """
 
     return sync_detailed(
@@ -117,7 +117,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: VendorsFromSponsoredVendorCreateModel,
-) -> Response[Union[Any, VendorsToCreatedVendorCompanyResponse]]:
+) -> Response[VendorsToCreatedVendorCompanyResponse]:
     """Create Vendor information.
 
     Args:
@@ -128,7 +128,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, VendorsToCreatedVendorCompanyResponse]]
+        Response[VendorsToCreatedVendorCompanyResponse]
     """
 
     kwargs = _get_kwargs(
@@ -144,7 +144,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     body: VendorsFromSponsoredVendorCreateModel,
-) -> Optional[Union[Any, VendorsToCreatedVendorCompanyResponse]]:
+) -> Optional[VendorsToCreatedVendorCompanyResponse]:
     """Create Vendor information.
 
     Args:
@@ -155,7 +155,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, VendorsToCreatedVendorCompanyResponse]
+        VendorsToCreatedVendorCompanyResponse
     """
 
     return (

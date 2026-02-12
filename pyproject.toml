@@ -141,4 +141,6 @@ line-length = 100
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP"] # add others you use
+# Ignore line length (E501) - let Black handle formatting
+ignore = ["E501"]
 fixable = ["ALL"]

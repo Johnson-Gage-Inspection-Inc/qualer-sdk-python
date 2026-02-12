@@ -44,12 +44,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[
-    Union[
-        Any,
-        List["ServiceOrderDocumentResponse"],
-    ]
-]:
+) -> Optional[List["ServiceOrderDocumentResponse"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
@@ -70,12 +65,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[
-    Union[
-        Any,
-        List["ServiceOrderDocumentResponse"],
-    ]
-]:
+) -> Response[List["ServiceOrderDocumentResponse"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -91,12 +81,7 @@ def sync_detailed(
     to: datetime.datetime,
     report_type: Optional[str] = None,
     service_order_item_id: Optional[int] = None,
-) -> Response[
-    Union[
-        Any,
-        List["ServiceOrderDocumentResponse"],
-    ]
-]:
+) -> Response[List["ServiceOrderDocumentResponse"]]:
     """Retrieve work order documents
 
      Sample request:
@@ -132,7 +117,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, List['ServiceOrderDocumentResponse']]]
+        Response[List['ServiceOrderDocumentResponse']]
     """
 
     kwargs = _get_kwargs(
@@ -156,12 +141,7 @@ def sync(
     to: datetime.datetime,
     report_type: Optional[str] = None,
     service_order_item_id: Optional[int] = None,
-) -> Optional[
-    Union[
-        Any,
-        List["ServiceOrderDocumentResponse"],
-    ]
-]:
+) -> Optional[List["ServiceOrderDocumentResponse"]]:
     """Retrieve work order documents
 
      Sample request:
@@ -197,7 +177,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, List['ServiceOrderDocumentResponse']]
+        List['ServiceOrderDocumentResponse']
     """
 
     return sync_detailed(
@@ -216,12 +196,7 @@ async def asyncio_detailed(
     to: datetime.datetime,
     report_type: Optional[str] = None,
     service_order_item_id: Optional[int] = None,
-) -> Response[
-    Union[
-        Any,
-        List["ServiceOrderDocumentResponse"],
-    ]
-]:
+) -> Response[List["ServiceOrderDocumentResponse"]]:
     """Retrieve work order documents
 
      Sample request:
@@ -257,7 +232,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, List['ServiceOrderDocumentResponse']]]
+        Response[List['ServiceOrderDocumentResponse']]
     """
 
     kwargs = _get_kwargs(
@@ -279,12 +254,7 @@ async def asyncio(
     to: datetime.datetime,
     report_type: Optional[str] = None,
     service_order_item_id: Optional[int] = None,
-) -> Optional[
-    Union[
-        Any,
-        List["ServiceOrderDocumentResponse"],
-    ]
-]:
+) -> Optional[List["ServiceOrderDocumentResponse"]]:
     """Retrieve work order documents
 
      Sample request:
@@ -320,7 +290,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, List['ServiceOrderDocumentResponse']]
+        List['ServiceOrderDocumentResponse']
     """
 
     return (

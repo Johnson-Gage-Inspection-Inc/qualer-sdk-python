@@ -34,7 +34,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, UpdateEmployeeResponse201]]:
+) -> Optional[UpdateEmployeeResponse201]:
     if response.status_code == 201:
         response_201 = UpdateEmployeeResponse201.from_dict(response.json())
 
@@ -50,7 +50,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, UpdateEmployeeResponse201]]:
+) -> Response[UpdateEmployeeResponse201]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -64,7 +64,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: EmployeesFromUpdateEmployeeModel,
-) -> Response[Union[Any, UpdateEmployeeResponse201]]:
+) -> Response[UpdateEmployeeResponse201]:
     r"""Update Employee
 
      CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />
@@ -81,7 +81,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, UpdateEmployeeResponse201]]
+        Response[UpdateEmployeeResponse201]
     """
 
     kwargs = _get_kwargs(
@@ -101,7 +101,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     body: EmployeesFromUpdateEmployeeModel,
-) -> Optional[Union[Any, UpdateEmployeeResponse201]]:
+) -> Optional[UpdateEmployeeResponse201]:
     r"""Update Employee
 
      CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />
@@ -118,7 +118,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, UpdateEmployeeResponse201]
+        UpdateEmployeeResponse201
     """
 
     return sync_detailed(
@@ -133,7 +133,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: EmployeesFromUpdateEmployeeModel,
-) -> Response[Union[Any, UpdateEmployeeResponse201]]:
+) -> Response[UpdateEmployeeResponse201]:
     r"""Update Employee
 
      CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />
@@ -150,7 +150,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, UpdateEmployeeResponse201]]
+        Response[UpdateEmployeeResponse201]
     """
 
     kwargs = _get_kwargs(
@@ -168,7 +168,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     body: EmployeesFromUpdateEmployeeModel,
-) -> Optional[Union[Any, UpdateEmployeeResponse201]]:
+) -> Optional[UpdateEmployeeResponse201]:
     r"""Update Employee
 
      CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\".<br />
@@ -185,7 +185,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, UpdateEmployeeResponse201]
+        UpdateEmployeeResponse201
     """
 
     return (

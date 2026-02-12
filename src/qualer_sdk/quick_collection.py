@@ -11,7 +11,7 @@ Usage:
 from __future__ import annotations
 
 import logging
-from typing import Iterable, cast
+from typing import Iterable, List, Set, cast
 
 try:
     from typing import Self
@@ -100,7 +100,7 @@ class QuickCollection(set[int]):
 
     def update(self, *iterables: Iterable[int]) -> None:  # type: ignore[override]
         """Add multiple asset IDs to the collection (server first)."""
-        ids: set[int] = set()
+        ids: Set[int] = set()
         for it in iterables:
             ids.update(it)
         if not ids:
@@ -135,7 +135,7 @@ class QuickCollection(set[int]):
         clear_collected_assets.sync(client=self.client, body=[])
         super().clear()
 
-    def copy(self) -> set[int]:  # type: ignore[override]
+    def copy(self) -> Set[int]:  # type: ignore[override]
         """
         Return a shallow copy of the collection as a standard set.
 
@@ -179,7 +179,7 @@ class QuickCollection(set[int]):
         search_string: str | None = None,
         page: int | None = None,
         page_size: int | None = None,
-    ) -> list[AssetToClientAssetManagerResponseModel]:
+    ) -> List[AssetToClientAssetManagerResponseModel]:
         """Retrieve asset details for the collected assets.
 
         Returns the richer AssetToClientAssetManagerResponseModel which works for both
@@ -207,7 +207,7 @@ class QuickCollection(set[int]):
                 model_page=page,
                 model_page_size=page_size,
             )
-            return cast(list[AssetToClientAssetManagerResponseModel], result or [])
+            return cast(List[AssetToClientAssetManagerResponseModel], result or [])
         else:
             return (
                 get_asset_manager_list_get_2.sync(
@@ -249,8 +249,8 @@ class AsyncQuickCollection:
         start_clean: bool = True,
     ) -> None:
         self.client = client
-        self._ids: set[int] = set()
-        self._initial_ids: set[int] = set(asset_ids or [])
+        self._ids: Set[int] = set()
+        self._initial_ids: Set[int] = set(asset_ids or [])
         self._start_clean = start_clean
 
     # --- Async context manager protocol ---
@@ -294,7 +294,7 @@ class AsyncQuickCollection:
         """Return the number of asset IDs in the local collection."""
         return len(self._ids)
 
-    def copy(self) -> set[int]:
+    def copy(self) -> Set[int]:
         """Return a shallow copy of the local IDs as a standard set."""
         import warnings
 
@@ -314,7 +314,7 @@ class AsyncQuickCollection:
         self._ids.add(asset_id)
 
     async def update(self, *iterables: Iterable[int]) -> None:
-        ids: set[int] = set()
+        ids: Set[int] = set()
         for it in iterables:
             ids.update(it)
         if not ids:
@@ -353,7 +353,7 @@ class AsyncQuickCollection:
         search_string: str | None = None,
         page: int | None = None,
         page_size: int | None = None,
-    ) -> list[AssetToClientAssetManagerResponseModel]:
+    ) -> List[AssetToClientAssetManagerResponseModel]:
         """Retrieve asset details for the collected assets (async version).
 
         Returns the richer AssetToClientAssetManagerResponseModel which works for both
@@ -381,7 +381,7 @@ class AsyncQuickCollection:
                 model_page=page,
                 model_page_size=page_size,
             )
-            return cast(list[AssetToClientAssetManagerResponseModel], result or [])
+            return cast(List[AssetToClientAssetManagerResponseModel], result or [])
         else:
             return (
                 await get_asset_manager_list_get_2.asyncio(

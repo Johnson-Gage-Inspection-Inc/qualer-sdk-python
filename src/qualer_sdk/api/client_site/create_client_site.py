@@ -34,7 +34,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, CreateClientSiteResponse200]]:
+) -> Optional[CreateClientSiteResponse200]:
     if response.status_code == 200:
         response_200 = CreateClientSiteResponse200.from_dict(response.json())
 
@@ -53,7 +53,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, CreateClientSiteResponse200]]:
+) -> Response[CreateClientSiteResponse200]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -67,7 +67,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: SiteFromSiteCreateModel,
-) -> Response[Union[Any, CreateClientSiteResponse200]]:
+) -> Response[CreateClientSiteResponse200]:
     r"""Create Client Site.
 
      CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"
@@ -81,7 +81,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, CreateClientSiteResponse200]]
+        Response[CreateClientSiteResponse200]
     """
 
     kwargs = _get_kwargs(
@@ -101,7 +101,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     body: SiteFromSiteCreateModel,
-) -> Optional[Union[Any, CreateClientSiteResponse200]]:
+) -> Optional[CreateClientSiteResponse200]:
     r"""Create Client Site.
 
      CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"
@@ -115,7 +115,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, CreateClientSiteResponse200]
+        CreateClientSiteResponse200
     """
 
     return sync_detailed(
@@ -130,7 +130,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: SiteFromSiteCreateModel,
-) -> Response[Union[Any, CreateClientSiteResponse200]]:
+) -> Response[CreateClientSiteResponse200]:
     r"""Create Client Site.
 
      CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"
@@ -144,7 +144,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, CreateClientSiteResponse200]]
+        Response[CreateClientSiteResponse200]
     """
 
     kwargs = _get_kwargs(
@@ -162,7 +162,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     body: SiteFromSiteCreateModel,
-) -> Optional[Union[Any, CreateClientSiteResponse200]]:
+) -> Optional[CreateClientSiteResponse200]:
     r"""Create Client Site.
 
      CultureName examples: \"en-US\", \"en-AU\" , \"de-DE\", \"es-ES\"
@@ -176,7 +176,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, CreateClientSiteResponse200]
+        CreateClientSiteResponse200
     """
 
     return (
