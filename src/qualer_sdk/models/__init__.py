@@ -33,9 +33,10 @@ _ALL: Set[str] = set()
 _CLASS_RE = re.compile(r"^\s*class\s+([A-Za-z_][A-Za-z0-9_]*)\b", re.M)
 
 # Alias assignment scan:
-# - Captures "Name = ..." at module level (backwards-compatibility aliases)
+# - Captures "Name = OtherName" at module level (backwards-compatibility aliases)
 # - Looks for assignments like "AssetToAssetManageResponseModelDueStatus = AssetDueStatus"
-_ALIAS_RE = re.compile(r"^([A-Z][A-Za-z0-9_]*)\s*=\s*[A-Za-z]", re.M)
+# - Excludes TypeVar patterns like "T = TypeVar(...)" and other function calls
+_ALIAS_RE = re.compile(r"^([A-Z][A-Za-z0-9_]*)\s*=\s*(?:[A-Z][A-Za-z0-9_]*)\s*$", re.M)
 
 
 def _discover_models() -> None:

@@ -361,7 +361,7 @@ class AssetServiceRecordsToAssetServiceRecordResponseModel:
                 guid_type_0 = UUID(data)
                 return guid_type_0
             except Exception:
-                return cast(Optional[UUID], data)
+                return None
 
         try:
             raw_guid = d.pop("Guid")

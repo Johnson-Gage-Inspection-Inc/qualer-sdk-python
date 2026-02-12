@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import importlib
 import re
-import warnings
 from pathlib import Path
 from typing import Any
 
@@ -49,7 +48,7 @@ def __getattr__(name: str) -> Any:
     if hit is None:
         raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
 
-    module_stem, replacement = hit
+    module_stem, _ = hit
 
     # The deprecated module itself will emit the warning when imported.
     # We don't need to emit it here to avoid duplicate warnings.
