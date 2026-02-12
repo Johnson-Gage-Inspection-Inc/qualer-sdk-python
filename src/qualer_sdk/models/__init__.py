@@ -16,7 +16,7 @@ from __future__ import annotations
 import importlib
 import re
 from pathlib import Path
-from typing import Any, Dict, Set, Tuple
+from typing import Any, Dict, List, Set, Tuple
 
 # --- discovery (non-deprecated) ------------------------------------------------
 
@@ -96,7 +96,7 @@ def __getattr__(name: str) -> Any:
         raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
 
 
-def __dir__() -> list[str]:
+def __dir__() -> List[str]:
     _discover_models()
     return sorted(set(globals().keys()) | _ALL)
 
