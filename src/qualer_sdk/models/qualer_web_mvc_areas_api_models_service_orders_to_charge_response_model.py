@@ -116,6 +116,7 @@ class QualerWebMvcAreasApiModelsServiceOrdersToChargeResponseModel:
         from ..models.qualer_api_models_service_orders_to_charge_response_model_base_price_model import (
             ServiceOrdersToChargeResponseModelBasePriceModel,
         )
+
         d = dict(src_dict)
         charges = []
         _charges = d.pop("Charges", None)

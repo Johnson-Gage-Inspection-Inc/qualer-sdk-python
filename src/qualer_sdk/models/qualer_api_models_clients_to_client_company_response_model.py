@@ -70,6 +70,7 @@ class ClientsToClientCompanyResponseModel:
         from ..models.qualer_api_models_clients_to_client_company_response_model_shipping_address_type_0 import (
             ClientsToClientCompanyResponseModelShippingAddressType0,
         )
+
         company_id = self.company_id
         account_number_text = self.account_number_text
         account_number = self.account_number
@@ -162,6 +163,7 @@ class ClientsToClientCompanyResponseModel:
         from ..models.qualer_api_models_clients_to_client_company_response_model_shipping_address_type_0 import (
             ClientsToClientCompanyResponseModelShippingAddressType0,
         )
+
         d = dict(src_dict)
         company_id = d.pop("CompanyId", None)
         account_number_text = d.pop("AccountNumberText", None)
@@ -182,6 +184,7 @@ class ClientsToClientCompanyResponseModel:
         account_representative_employee_id = d.pop("AccountRepresentativeEmployeeId", None)
         account_representative_site_id = d.pop("AccountRepresentativeSiteId", None)
         account_manager_employee_id = d.pop("AccountManagerEmployeeId", None)
+
         def _parse_billing_address(
             data: object,
         ) -> Optional["ClientsToClientCompanyResponseModelBillingAddressType0"]:
@@ -200,7 +203,9 @@ class ClientsToClientCompanyResponseModel:
                 Optional["ClientsToClientCompanyResponseModelBillingAddressType0"],
                 data,
             )
+
         billing_address = _parse_billing_address(d.pop("BillingAddress", None))
+
         def _parse_shipping_address(
             data: object,
         ) -> Optional["ClientsToClientCompanyResponseModelShippingAddressType0"]:
@@ -219,6 +224,7 @@ class ClientsToClientCompanyResponseModel:
                 Optional["ClientsToClientCompanyResponseModelShippingAddressType0"],
                 data,
             )
+
         shipping_address = _parse_shipping_address(d.pop("ShippingAddress", None))
         attributes = []
         _attributes = d.pop("Attributes", None)

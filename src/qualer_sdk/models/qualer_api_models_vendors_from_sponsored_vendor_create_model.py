@@ -69,6 +69,7 @@ class VendorsFromSponsoredVendorCreateModel:
         from ..models.qualer_api_models_address_address_model import (
             AddressAddressModel,
         )
+
         d = dict(src_dict)
         account_number_text = d.pop("AccountNumberText", None)
         domain_name = d.pop("DomainName", None)

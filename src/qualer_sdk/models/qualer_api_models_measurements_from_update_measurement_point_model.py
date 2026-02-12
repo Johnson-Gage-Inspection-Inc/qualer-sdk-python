@@ -4,8 +4,8 @@ from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.qualer_api_models_measurements_from_update_measurement_point_model_hysteresis_point import (
-    MeasurementsFromUpdateMeasurementPointModelHysteresisPoint,
+from ..models.hysteresis_point import (
+    HysteresisPoint as MeasurementsFromUpdateMeasurementPointModelHysteresisPoint,
 )
 from ..models.qualer_api_models_measurements_from_update_measurement_point_model_specification_mode import (
     MeasurementsFromUpdateMeasurementPointModelSpecificationMode,
@@ -179,7 +179,9 @@ class MeasurementsFromUpdateMeasurementPointModel:
                     measurement_condition_factors_item_data.to_dict()
                 )
                 measurement_condition_factors.append(measurement_condition_factors_item)
-        tool_application_mode = self.tool_application_mode.value if self.tool_application_mode else None
+        tool_application_mode = (
+            self.tool_application_mode.value if self.tool_application_mode else None
+        )
         primary_measurement_tool: Optional[Dict[str, Any]] = None
         if self.primary_measurement_tool:
             primary_measurement_tool = self.primary_measurement_tool.to_dict()
@@ -317,6 +319,7 @@ class MeasurementsFromUpdateMeasurementPointModel:
         from ..models.qualer_api_models_measurements_from_update_measurement_tool_model import (
             MeasurementsFromUpdateMeasurementToolModel,
         )
+
         d = dict(src_dict)
         measurement_point_id = d.pop("MeasurementPointId", None)
         specification_name = d.pop("SpecificationName", None)

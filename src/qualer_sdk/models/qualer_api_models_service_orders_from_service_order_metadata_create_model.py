@@ -48,6 +48,7 @@ class ServiceOrdersFromServiceOrderMetadataCreateModel:
         from ..models.qualer_core_shared_models_service_order_metadata_service_order_metadata_exhibits import (
             QualerCoreSharedModelsServiceOrderMetadataServiceOrderMetadataExhibits,
         )
+
         d = dict(src_dict)
         metadata = d.pop("Metadata", None)
         _exhibits = d.pop("Exhibits", None)

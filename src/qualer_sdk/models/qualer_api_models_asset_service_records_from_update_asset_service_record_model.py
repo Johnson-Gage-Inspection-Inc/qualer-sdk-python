@@ -242,36 +242,49 @@ class AssetServiceRecordsFromUpdateAssetServiceRecordModel:
         custom_order_number = d.pop("CustomOrderNumber", None)
         order_item_number = d.pop("OrderItemNumber", None)
         certificate_number = d.pop("CertificateNumber", None)
+
         def _parse_result_status(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         result_status = _parse_result_status(d.pop("ResultStatus", None))
+
         def _parse_as_found_result(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         as_found_result = _parse_as_found_result(d.pop("AsFoundResult", None))
+
         def _parse_as_left_result(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         as_left_result = _parse_as_left_result(d.pop("AsLeftResult", None))
+
         def _parse_applied_interval(data: object) -> Optional[int]:
             if not data:
                 return None
             return cast(Optional[int], data)
+
         applied_interval = _parse_applied_interval(d.pop("AppliedInterval", None))
+
         def _parse_as_found_tolerance(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         as_found_tolerance = _parse_as_found_tolerance(d.pop("AsFoundTolerance", None))
+
         def _parse_as_left_tolerance(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         as_left_tolerance = _parse_as_left_tolerance(d.pop("AsLeftTolerance", None))
+
         def _parse_service_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -283,23 +296,31 @@ class AssetServiceRecordsFromUpdateAssetServiceRecordModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         service_date = _parse_service_date(d.pop("ServiceDate", None))
         serial_number = d.pop("SerialNumber", None)
+
         def _parse_asset_tag(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_tag = _parse_asset_tag(d.pop("AssetTag", None))
+
         def _parse_asset_user(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_user = _parse_asset_user(d.pop("AssetUser", None))
+
         def _parse_service_notes(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         service_notes = _parse_service_notes(d.pop("ServiceNotes", None))
+
         def _parse_due_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -311,7 +332,9 @@ class AssetServiceRecordsFromUpdateAssetServiceRecordModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         due_date = _parse_due_date(d.pop("DueDate", None))
+
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -325,87 +348,118 @@ class AssetServiceRecordsFromUpdateAssetServiceRecordModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
+
         def _parse_provider_technician(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         provider_technician = _parse_provider_technician(d.pop("ProviderTechnician", None))
+
         def _parse_provider_phone(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         provider_phone = _parse_provider_phone(d.pop("ProviderPhone", None))
+
         def _parse_provider_company(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         provider_company = _parse_provider_company(d.pop("ProviderCompany", None))
+
         def _parse_service_level(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         service_level = _parse_service_level(d.pop("ServiceLevel", None))
+
         def _parse_service_level_code(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         service_level_code = _parse_service_level_code(d.pop("ServiceLevelCode", None))
+
         def _parse_next_service_level(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         next_service_level = _parse_next_service_level(d.pop("NextServiceLevel", None))
+
         def _parse_next_service_level_code(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         next_service_level_code = _parse_next_service_level_code(
             d.pop("NextServiceLevelCode", None)
         )
+
         def _parse_asset_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_name = _parse_asset_name(d.pop("AssetName", None))
+
         def _parse_asset_description(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         asset_description = _parse_asset_description(d.pop("AssetDescription", None))
+
         def _parse_parts_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         parts_charge = _parse_parts_charge(d.pop("PartsCharge", None))
+
         def _parse_parts_charge_before_discount(
             data: object,
         ) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         parts_charge_before_discount = _parse_parts_charge_before_discount(
             d.pop("PartsChargeBeforeDiscount", None)
         )
+
         def _parse_service_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         service_charge = _parse_service_charge(d.pop("ServiceCharge", None))
+
         def _parse_repairs_charge(data: object) -> Optional[float]:
             if not data:
                 return None
             return cast(Optional[float], data)
+
         repairs_charge = _parse_repairs_charge(d.pop("RepairsCharge", None))
+
         def _parse_segment_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         segment_name = _parse_segment_name(d.pop("SegmentName", None))
+
         def _parse_schedule_name(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         schedule_name = _parse_schedule_name(d.pop("ScheduleName", None))
         qualer_api_models_asset_service_records_from_update_asset_service_record_model = cls(
             service_order_number=service_order_number,

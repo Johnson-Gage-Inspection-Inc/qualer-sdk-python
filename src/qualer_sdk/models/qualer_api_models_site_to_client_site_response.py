@@ -74,6 +74,7 @@ class SiteToClientSiteResponse:
         from ..models.qualer_api_models_site_to_client_site_response_shipping_address_type_0 import (
             SiteToClientSiteResponseShippingAddressType0,
         )
+
         site_id = self.site_id
         site_name = self.site_name
         site_code = self.site_code
@@ -174,10 +175,12 @@ class SiteToClientSiteResponse:
         from ..models.qualer_api_models_site_to_client_site_response_shipping_address_type_0 import (
             SiteToClientSiteResponseShippingAddressType0,
         )
+
         d = dict(src_dict)
         site_id = d.pop("SiteId", None)
         site_name = d.pop("SiteName", None)
         site_code = d.pop("SiteCode", None)
+
         def _parse_shipping_address(
             data: object,
         ) -> Optional["SiteToClientSiteResponseShippingAddressType0"]:
@@ -196,8 +199,10 @@ class SiteToClientSiteResponse:
                 Optional["SiteToClientSiteResponseShippingAddressType0"],
                 data,
             )
+
         shipping_address = _parse_shipping_address(d.pop("ShippingAddress", None))
         shipping_inherited = d.pop("ShippingInherited", None)
+
         def _parse_billing_address(
             data: object,
         ) -> Optional["SiteToClientSiteResponseBillingAddressType0"]:
@@ -214,6 +219,7 @@ class SiteToClientSiteResponse:
                 Optional["SiteToClientSiteResponseBillingAddressType0"],
                 data,
             )
+
         billing_address = _parse_billing_address(d.pop("BillingAddress", None))
         default_account_representative_employee_id = d.pop(
             "DefaultAccountRepresentativeEmployeeId", None

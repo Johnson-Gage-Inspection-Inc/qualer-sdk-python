@@ -62,6 +62,7 @@ class MaintenancePlansToMaintenancePlanResponse:
         from ..models.qualer_api_models_maintenance_plans_to_maintenance_task_response import (
             MaintenancePlansToMaintenanceTaskResponse,
         )
+
         d = dict(src_dict)
         maintenance_plan_id = d.pop("MaintenancePlanId", None)
         maintenance_plan_name = d.pop("MaintenancePlanName", None)

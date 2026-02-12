@@ -35,7 +35,9 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
         factor_name = self.factor_name
         factor_value = self.factor_value
         factor_uom = self.factor_uom
-        last_modified_on_utc = self.last_modified_on_utc.isoformat() if self.last_modified_on_utc else None
+        last_modified_on_utc = (
+            self.last_modified_on_utc.isoformat() if self.last_modified_on_utc else None
+        )
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -58,6 +60,7 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
         factor_name = d.pop("FactorName", None)
         factor_value = d.pop("FactorValue", None)
         factor_uom = d.pop("FactorUom", None)
+
         def _parse_last_modified_on_utc(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -71,6 +74,7 @@ class MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModelM
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         last_modified_on_utc = _parse_last_modified_on_utc(d.pop("LastModifiedOnUtc", None))
         qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model_measurement_set_response_model_measurement_point_response_model_measurement_condition_factor_response_model = cls(
             factor_id=factor_id,

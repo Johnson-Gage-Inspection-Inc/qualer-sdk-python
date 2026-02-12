@@ -227,23 +227,29 @@ class MeasurementsToMeasurementRecordResponseModel:
         from ..models.qualer_api_models_measurements_to_measurement_record_response_model_measurement_batch_response_model import (
             MeasurementsToMeasurementRecordResponseModelMeasurementBatchResponseModel,
         )
+
         d = dict(src_dict)
         service_order_id = d.pop("ServiceOrderId", None)
         service_order_number = d.pop("ServiceOrderNumber", None)
         custom_order_number = d.pop("CustomOrderNumber", None)
         order_item_number = d.pop("OrderItemNumber", None)
         certificate_number = d.pop("CertificateNumber", None)
+
         def _parse_result_status(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         result_status = _parse_result_status(d.pop("ResultStatus", None))
         as_found_result = d.pop("AsFoundResult", None)
+
         def _parse_as_left_result(data: object) -> Optional[str]:
             if not data:
                 return None
             return cast(Optional[str], data)
+
         as_left_result = _parse_as_left_result(d.pop("AsLeftResult", None))
+
         def _parse_service_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -255,6 +261,7 @@ class MeasurementsToMeasurementRecordResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         service_date = _parse_service_date(d.pop("ServiceDate", None))
         serial_number = d.pop("SerialNumber", None)
         asset_tag = d.pop("AssetTag", None)
@@ -263,6 +270,7 @@ class MeasurementsToMeasurementRecordResponseModel:
         asset_user_change = d.pop("AssetUserChange", None)
         service_notes = d.pop("ServiceNotes", None)
         serial_number_change = d.pop("SerialNumberChange", None)
+
         def _parse_due_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -274,7 +282,9 @@ class MeasurementsToMeasurementRecordResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         due_date = _parse_due_date(d.pop("DueDate", None))
+
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -288,6 +298,7 @@ class MeasurementsToMeasurementRecordResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
         service_level = d.pop("ServiceLevel", None)
         service_level_code = d.pop("ServiceLevelCode", None)

@@ -65,7 +65,9 @@ class AssetToAssetMaintenancePlanResponse:
         last_service_date = self.last_service_date.isoformat() if self.last_service_date else None
         next_service_task = self.next_service_task
         next_service_date = self.next_service_date.isoformat() if self.next_service_date else None
-        certificate_due_date = self.certificate_due_date.isoformat() if self.certificate_due_date else None
+        certificate_due_date = (
+            self.certificate_due_date.isoformat() if self.certificate_due_date else None
+        )
         owner_first_name = self.owner_first_name
         owner_last_name = self.owner_last_name
         owner_alias = self.owner_alias
@@ -124,11 +126,13 @@ class AssetToAssetMaintenancePlanResponse:
         from ..models.qualer_api_models_asset_to_asset_maintenance_plan_response_assigned_employee import (
             AssetToAssetMaintenancePlanResponseAssignedEmployee,
         )
+
         d = dict(src_dict)
         maintenance_plan_id = d.pop("MaintenancePlanId", None)
         maintenance_plan_name = d.pop("MaintenancePlanName", None)
         task_notes = d.pop("TaskNotes", None)
         last_service_task = d.pop("LastServiceTask", None)
+
         def _parse_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -142,8 +146,10 @@ class AssetToAssetMaintenancePlanResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         last_service_date = _parse_last_service_date(d.pop("LastServiceDate", None))
         next_service_task = d.pop("NextServiceTask", None)
+
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -157,7 +163,9 @@ class AssetToAssetMaintenancePlanResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
+
         def _parse_certificate_due_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -171,6 +179,7 @@ class AssetToAssetMaintenancePlanResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         certificate_due_date = _parse_certificate_due_date(d.pop("CertificateDueDate", None))
         owner_first_name = d.pop("OwnerFirstName", None)
         owner_last_name = d.pop("OwnerLastName", None)

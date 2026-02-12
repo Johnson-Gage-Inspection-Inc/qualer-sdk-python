@@ -52,6 +52,7 @@ class MeasurementsFromCustomFields:
         from ..models.qualer_api_models_measurements_from_create_measurement_field_model import (
             MeasurementsFromCreateMeasurementFieldModel,
         )
+
         d = dict(src_dict)
         description = d.pop("Description", None)
         result = d.pop("Result", None)

@@ -9,32 +9,32 @@ from dateutil.parser import isoparse
 from ..models.qualer_api_models_report_datasets_to_measurement_response_double_substitution_sequence import (
     ReportDatasetsToMeasurementResponseDoubleSubstitutionSequence,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_response_environment_mask import (
-    ReportDatasetsToMeasurementResponseEnvironmentMask,
+from ..models.environment_factor import (
+    EnvironmentFactor as ReportDatasetsToMeasurementResponseEnvironmentMask,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_response_guard_band_logic import (
-    ReportDatasetsToMeasurementResponseGuardBandLogic,
+from ..models.guard_band_logic import (
+    GuardBandLogic as ReportDatasetsToMeasurementResponseGuardBandLogic,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_response_hysteresis_point import (
-    ReportDatasetsToMeasurementResponseHysteresisPoint,
+from ..models.hysteresis_point import (
+    HysteresisPoint as ReportDatasetsToMeasurementResponseHysteresisPoint,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_response_measurement_not_taken_result import (
-    ReportDatasetsToMeasurementResponseMeasurementNotTakenResult,
+from ..models.measurement_not_taken_result import (
+    MeasurementNotTakenResult as ReportDatasetsToMeasurementResponseMeasurementNotTakenResult,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_measurement_point_order import (
     ReportDatasetsToMeasurementResponseMeasurementPointOrder,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_response_measurement_type import (
-    ReportDatasetsToMeasurementResponseMeasurementType,
+from ..models.measurement_type import (
+    MeasurementType as ReportDatasetsToMeasurementResponseMeasurementType,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_response_precision_type import (
-    ReportDatasetsToMeasurementResponsePrecisionType,
+from ..models.measurement_precision_type import (
+    MeasurementPrecisionType as ReportDatasetsToMeasurementResponsePrecisionType,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_reading_entry_logic import (
     ReportDatasetsToMeasurementResponseReadingEntryLogic,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_response_reading_entry_math import (
-    ReportDatasetsToMeasurementResponseReadingEntryMath,
+from ..models.reading_entry_math import (
+    ReadingEntryMath as ReportDatasetsToMeasurementResponseReadingEntryMath,
 )
 from ..models.qualer_api_models_report_datasets_to_measurement_response_shipment_status import (
     ReportDatasetsToMeasurementResponseShipmentStatus,
@@ -839,8 +839,16 @@ class ReportDatasetsToMeasurementResponse:
         parameter_id = self.parameter_id
         tool_range_name = self.tool_range_name
         tool_range_uncertainty = self.tool_range_uncertainty
-        primary_tool_last_service_date = self.primary_tool_last_service_date.isoformat() if self.primary_tool_last_service_date else None
-        primary_tool_next_service_date = self.primary_tool_next_service_date.isoformat() if self.primary_tool_next_service_date else None
+        primary_tool_last_service_date = (
+            self.primary_tool_last_service_date.isoformat()
+            if self.primary_tool_last_service_date
+            else None
+        )
+        primary_tool_next_service_date = (
+            self.primary_tool_next_service_date.isoformat()
+            if self.primary_tool_next_service_date
+            else None
+        )
         primary_tool_calibrated_by = self.primary_tool_calibrated_by
         primary_tool_tool_name = self.primary_tool_tool_name
         primary_tool_tool_description = self.primary_tool_tool_description
@@ -848,8 +856,16 @@ class ReportDatasetsToMeasurementResponse:
         primary_tool_manufacturer = self.primary_tool_manufacturer
         primary_tool_manufacturer_part_number = self.primary_tool_manufacturer_part_number
         primary_tool_serial_number = self.primary_tool_serial_number
-        secondary_tool_last_service_date = self.secondary_tool_last_service_date.isoformat() if self.secondary_tool_last_service_date else None
-        secondary_tool_next_service_date = self.secondary_tool_next_service_date.isoformat() if self.secondary_tool_next_service_date else None
+        secondary_tool_last_service_date = (
+            self.secondary_tool_last_service_date.isoformat()
+            if self.secondary_tool_last_service_date
+            else None
+        )
+        secondary_tool_next_service_date = (
+            self.secondary_tool_next_service_date.isoformat()
+            if self.secondary_tool_next_service_date
+            else None
+        )
         secondary_tool_calibrated_by = self.secondary_tool_calibrated_by
         secondary_tool_tool_name = self.secondary_tool_tool_name
         secondary_tool_tool_description = self.secondary_tool_tool_description
@@ -983,7 +999,9 @@ class ReportDatasetsToMeasurementResponse:
         use_expected_value = self.use_expected_value
         reading_entry_logic = self.reading_entry_logic.value if self.reading_entry_logic else None
         reading_entry_math = self.reading_entry_math.value if self.reading_entry_math else None
-        double_substitution_sequence = self.double_substitution_sequence.value if self.double_substitution_sequence else None
+        double_substitution_sequence = (
+            self.double_substitution_sequence.value if self.double_substitution_sequence else None
+        )
         reading_entry_math_string = self.reading_entry_math_string
         nominal_extended = self.nominal_extended
         expected_value_extended = self.expected_value_extended
@@ -1074,7 +1092,9 @@ class ReportDatasetsToMeasurementResponse:
         site_access_notes = self.site_access_notes
         abbreviated_uom = self.abbreviated_uom
         unit_scale_factor = self.unit_scale_factor
-        measurement_not_taken_result = self.measurement_not_taken_result.value if self.measurement_not_taken_result else None
+        measurement_not_taken_result = (
+            self.measurement_not_taken_result.value if self.measurement_not_taken_result else None
+        )
         hide_from_certificate = self.hide_from_certificate
         measurement_not_taken_reason = self.measurement_not_taken_reason
         environment_text_1 = self.environment_text_1
@@ -1209,7 +1229,9 @@ class ReportDatasetsToMeasurementResponse:
         repeat_measurement_and_calculate_hysteresis = (
             self.repeat_measurement_and_calculate_hysteresis
         )
-        measurement_point_order = self.measurement_point_order.value if self.measurement_point_order else None
+        measurement_point_order = (
+            self.measurement_point_order.value if self.measurement_point_order else None
+        )
         hysteresis_point = self.hysteresis_point.value if self.hysteresis_point else None
         max_hysteresis = self.max_hysteresis
         run = self.run
@@ -2005,6 +2027,7 @@ class ReportDatasetsToMeasurementResponse:
         parameter_id = d.pop("ParameterId", None)
         tool_range_name = d.pop("ToolRangeName", None)
         tool_range_uncertainty = d.pop("ToolRangeUncertainty", None)
+
         def _parse_primary_tool_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2018,9 +2041,11 @@ class ReportDatasetsToMeasurementResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         primary_tool_last_service_date = _parse_primary_tool_last_service_date(
             d.pop("PrimaryToolLastServiceDate", None)
         )
+
         def _parse_primary_tool_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2034,6 +2059,7 @@ class ReportDatasetsToMeasurementResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         primary_tool_next_service_date = _parse_primary_tool_next_service_date(
             d.pop("PrimaryToolNextServiceDate", None)
         )
@@ -2044,6 +2070,7 @@ class ReportDatasetsToMeasurementResponse:
         primary_tool_manufacturer = d.pop("PrimaryToolManufacturer", None)
         primary_tool_manufacturer_part_number = d.pop("PrimaryToolManufacturerPartNumber", None)
         primary_tool_serial_number = d.pop("PrimaryToolSerialNumber", None)
+
         def _parse_secondary_tool_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2057,9 +2084,11 @@ class ReportDatasetsToMeasurementResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         secondary_tool_last_service_date = _parse_secondary_tool_last_service_date(
             d.pop("SecondaryToolLastServiceDate", None)
         )
+
         def _parse_secondary_tool_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2073,6 +2102,7 @@ class ReportDatasetsToMeasurementResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         secondary_tool_next_service_date = _parse_secondary_tool_next_service_date(
             d.pop("SecondaryToolNextServiceDate", None)
         )
@@ -2457,6 +2487,7 @@ class ReportDatasetsToMeasurementResponse:
         asset_tag_change = d.pop("AssetTagChange", None)
         asset_user_change = d.pop("AssetUserChange", None)
         serial_number_change = d.pop("SerialNumberChange", None)
+
         def _parse_service_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -2468,7 +2499,9 @@ class ReportDatasetsToMeasurementResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         service_date = _parse_service_date(d.pop("ServiceDate", None))
+
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2482,6 +2515,7 @@ class ReportDatasetsToMeasurementResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
         service_order_item_id = d.pop("ServiceOrderItemId", None)
         service_order_id = d.pop("ServiceOrderId", None)
@@ -2571,6 +2605,7 @@ class ReportDatasetsToMeasurementResponse:
         tolerance_string = d.pop("ToleranceString", None)
         po_number = d.pop("PoNumber", None)
         secondary_po = d.pop("SecondaryPo", None)
+
         def _parse_shipped_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -2582,6 +2617,7 @@ class ReportDatasetsToMeasurementResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         shipped_date = _parse_shipped_date(d.pop("ShippedDate", None))
         _shipment_status = d.pop("ShipmentStatus", None)
         shipment_status: Optional[ReportDatasetsToMeasurementResponseShipmentStatus]

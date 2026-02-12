@@ -254,6 +254,7 @@ class ServiceOrdersToClientOrderResponseModel:
         from ..models.qualer_api_models_service_orders_to_client_order_response_model_shipping_address_type_0 import (
             ServiceOrdersToClientOrderResponseModelShippingAddressType0,
         )
+
         service_order_id = self.service_order_id
         parent_order_id = self.parent_order_id
         client_legacy_id = self.client_legacy_id
@@ -282,13 +283,21 @@ class ServiceOrdersToClientOrderResponseModel:
         created_on = self.created_on.isoformat() if self.created_on else None
         approved_on = self.approved_on.isoformat() if self.approved_on else None
         sign_off_on = self.sign_off_on.isoformat() if self.sign_off_on else None
-        vendor_sign_off_on = self.vendor_sign_off_on.isoformat() if self.vendor_sign_off_on else None
+        vendor_sign_off_on = (
+            self.vendor_sign_off_on.isoformat() if self.vendor_sign_off_on else None
+        )
         completed_on = self.completed_on.isoformat() if self.completed_on else None
         submited_on = self.submited_on.isoformat() if self.submited_on else None
         shipped_on = self.shipped_on.isoformat() if self.shipped_on else None
         accepted_on = self.accepted_on.isoformat() if self.accepted_on else None
-        ready_for_quality_control_on = self.ready_for_quality_control_on.isoformat() if self.ready_for_quality_control_on else None
-        quality_control_on = self.quality_control_on.isoformat() if self.quality_control_on else None
+        ready_for_quality_control_on = (
+            self.ready_for_quality_control_on.isoformat()
+            if self.ready_for_quality_control_on
+            else None
+        )
+        quality_control_on = (
+            self.quality_control_on.isoformat() if self.quality_control_on else None
+        )
         delivered_on = self.delivered_on.isoformat() if self.delivered_on else None
         invoiced_on = self.invoiced_on.isoformat() if self.invoiced_on else None
         last_invoiced_on = self.last_invoiced_on.isoformat() if self.last_invoiced_on else None
@@ -356,7 +365,9 @@ class ServiceOrdersToClientOrderResponseModel:
         guid: Optional[str] = None
         if self.guid:
             guid = str(self.guid)
-        business_from_time = self.business_from_time.isoformat() if self.business_from_time else None
+        business_from_time = (
+            self.business_from_time.isoformat() if self.business_from_time else None
+        )
         business_to_time = self.business_to_time.isoformat() if self.business_to_time else None
         site_access_notes = self.site_access_notes
         desired_date = self.desired_date.isoformat() if self.desired_date else None
@@ -619,6 +630,7 @@ class ServiceOrdersToClientOrderResponseModel:
         from ..models.qualer_api_models_service_orders_to_client_order_response_model_shipping_address_type_0 import (
             ServiceOrdersToClientOrderResponseModelShippingAddressType0,
         )
+
         d = dict(src_dict)
         service_order_id = d.pop("ServiceOrderId", None)
         parent_order_id = d.pop("ParentOrderId", None)
@@ -645,6 +657,7 @@ class ServiceOrdersToClientOrderResponseModel:
         client_alternative_names = d.pop("ClientAlternativeNames", None)
         service_comments = d.pop("ServiceComments", None)
         service_private_comments = d.pop("ServicePrivateComments", None)
+
         def _parse_created_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -656,7 +669,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         created_on = _parse_created_on(d.pop("CreatedOn", None))
+
         def _parse_approved_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -668,7 +683,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         approved_on = _parse_approved_on(d.pop("ApprovedOn", None))
+
         def _parse_sign_off_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -680,7 +697,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         sign_off_on = _parse_sign_off_on(d.pop("SignOffOn", None))
+
         def _parse_vendor_sign_off_on(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -694,7 +713,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         vendor_sign_off_on = _parse_vendor_sign_off_on(d.pop("VendorSignOffOn", None))
+
         def _parse_completed_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -706,7 +727,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         completed_on = _parse_completed_on(d.pop("CompletedOn", None))
+
         def _parse_submited_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -718,7 +741,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         submited_on = _parse_submited_on(d.pop("SubmitedOn", None))
+
         def _parse_shipped_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -730,7 +755,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         shipped_on = _parse_shipped_on(d.pop("ShippedOn", None))
+
         def _parse_accepted_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -742,7 +769,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         accepted_on = _parse_accepted_on(d.pop("AcceptedOn", None))
+
         def _parse_ready_for_quality_control_on(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -756,9 +785,11 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         ready_for_quality_control_on = _parse_ready_for_quality_control_on(
             d.pop("ReadyForQualityControlOn", None)
         )
+
         def _parse_quality_control_on(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -772,7 +803,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         quality_control_on = _parse_quality_control_on(d.pop("QualityControlOn", None))
+
         def _parse_delivered_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -784,7 +817,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         delivered_on = _parse_delivered_on(d.pop("DeliveredOn", None))
+
         def _parse_invoiced_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -796,7 +831,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         invoiced_on = _parse_invoiced_on(d.pop("InvoicedOn", None))
+
         def _parse_last_invoiced_on(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -810,7 +847,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         last_invoiced_on = _parse_last_invoiced_on(d.pop("LastInvoicedOn", None))
+
         def _parse_payment_due_on(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -824,7 +863,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         payment_due_on = _parse_payment_due_on(d.pop("PaymentDueOn", None))
+
         def _parse_paid_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -836,7 +877,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         paid_on = _parse_paid_on(d.pop("PaidOn", None))
+
         def _parse_late_fee_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -848,7 +891,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         late_fee_on = _parse_late_fee_on(d.pop("LateFeeOn", None))
+
         def _parse_cancelled_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -860,7 +905,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         cancelled_on = _parse_cancelled_on(d.pop("CancelledOn", None))
+
         def _parse_closed_on(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -872,6 +919,7 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         closed_on = _parse_closed_on(d.pop("ClosedOn", None))
         _last_updated_on = d.pop("LastUpdatedOn", None)
         last_updated_on: Optional[datetime.datetime]
@@ -938,6 +986,7 @@ class ServiceOrdersToClientOrderResponseModel:
             guid = None
         else:
             guid = UUID(_guid)
+
         def _parse_business_from_time(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -951,7 +1000,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         business_from_time = _parse_business_from_time(d.pop("BusinessFromTime", None))
+
         def _parse_business_to_time(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -965,8 +1016,10 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         business_to_time = _parse_business_to_time(d.pop("BusinessToTime", None))
         site_access_notes = d.pop("SiteAccessNotes", None)
+
         def _parse_desired_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -978,7 +1031,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         desired_date = _parse_desired_date(d.pop("DesiredDate", None))
+
         def _parse_deadline_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -990,7 +1045,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         deadline_date = _parse_deadline_date(d.pop("DeadlineDate", None))
+
         def _parse_request_from_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -1004,7 +1061,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         request_from_date = _parse_request_from_date(d.pop("RequestFromDate", None))
+
         def _parse_request_from_time(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -1018,7 +1077,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         request_from_time = _parse_request_from_time(d.pop("RequestFromTime", None))
+
         def _parse_request_to_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -1032,7 +1093,9 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         request_to_date = _parse_request_to_date(d.pop("RequestToDate", None))
+
         def _parse_request_to_time(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -1046,8 +1109,10 @@ class ServiceOrdersToClientOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         request_to_time = _parse_request_to_time(d.pop("RequestToTime", None))
         order_notes = d.pop("OrderNotes", None)
+
         def _parse_billing_address(
             data: object,
         ) -> Optional["ServiceOrdersToClientOrderResponseModelBillingAddressType0"]:
@@ -1066,7 +1131,9 @@ class ServiceOrdersToClientOrderResponseModel:
                 Optional["ServiceOrdersToClientOrderResponseModelBillingAddressType0"],
                 data,
             )
+
         billing_address = _parse_billing_address(d.pop("BillingAddress", None))
+
         def _parse_shipping_address(
             data: object,
         ) -> Optional["ServiceOrdersToClientOrderResponseModelShippingAddressType0"]:
@@ -1085,6 +1152,7 @@ class ServiceOrdersToClientOrderResponseModel:
                 Optional["ServiceOrdersToClientOrderResponseModelShippingAddressType0"],
                 data,
             )
+
         shipping_address = _parse_shipping_address(d.pop("ShippingAddress", None))
         qualer_api_models_service_orders_to_client_order_response_model = cls(
             service_order_id=service_order_id,

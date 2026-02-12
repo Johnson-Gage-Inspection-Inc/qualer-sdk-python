@@ -88,7 +88,9 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
         client_company_name = self.client_company_name
         client_site_name = self.client_site_name
         client_legacy_id = self.client_legacy_id
-        business_from_time = self.business_from_time.isoformat() if self.business_from_time else None
+        business_from_time = (
+            self.business_from_time.isoformat() if self.business_from_time else None
+        )
         business_to_time = self.business_to_time.isoformat() if self.business_to_time else None
         timeframe = self.timeframe.value if self.timeframe else None
         site_access_notes = self.site_access_notes
@@ -163,6 +165,7 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
             guid = UUID(_guid)
         service_order_number = d.pop("ServiceOrderNumber", None)
         custom_order_number = d.pop("CustomOrderNumber", None)
+
         def _parse_due_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -174,6 +177,7 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         due_date = _parse_due_date(d.pop("DueDate", None))
         assets = d.pop("Assets", None)
         completed_assets = d.pop("CompletedAssets", None)
@@ -189,6 +193,7 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
         client_company_name = d.pop("ClientCompanyName", None)
         client_site_name = d.pop("ClientSiteName", None)
         client_legacy_id = d.pop("ClientLegacyId", None)
+
         def _parse_business_from_time(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -202,7 +207,9 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         business_from_time = _parse_business_from_time(d.pop("BusinessFromTime", None))
+
         def _parse_business_to_time(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -216,6 +223,7 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         business_to_time = _parse_business_to_time(d.pop("BusinessToTime", None))
         _timeframe = d.pop("Timeframe", None)
         timeframe: Optional[ServiceOrdersToProviderServiceOrderResponseModelTimeframe]
@@ -224,6 +232,7 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
         else:
             timeframe = ServiceOrdersToProviderServiceOrderResponseModelTimeframe(_timeframe)
         site_access_notes = d.pop("SiteAccessNotes", None)
+
         def _parse_desired_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -235,7 +244,9 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         desired_date = _parse_desired_date(d.pop("DesiredDate", None))
+
         def _parse_deadline_date(data: object) -> Optional[datetime.datetime]:
             if not data:
                 return None
@@ -247,7 +258,9 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         deadline_date = _parse_deadline_date(d.pop("DeadlineDate", None))
+
         def _parse_request_from_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -261,7 +274,9 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         request_from_date = _parse_request_from_date(d.pop("RequestFromDate", None))
+
         def _parse_request_from_time(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -275,7 +290,9 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         request_from_time = _parse_request_from_time(d.pop("RequestFromTime", None))
+
         def _parse_request_to_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -289,7 +306,9 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         request_to_date = _parse_request_to_date(d.pop("RequestToDate", None))
+
         def _parse_request_to_time(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -303,6 +322,7 @@ class ServiceOrdersToProviderServiceOrderResponseModel:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         request_to_time = _parse_request_to_time(d.pop("RequestToTime", None))
         qualer_api_models_service_orders_to_provider_service_order_response_model = cls(
             service_order_id=service_order_id,

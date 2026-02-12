@@ -24,7 +24,7 @@ setup(
     include_package_data=True,
     package_data={"qualer_sdk": ["py.typed"]},
     install_requires=[
-        "urllib3>=1.15",
+        "urllib3>=1.15,<2.0",
         "six>=1.10",
         "certifi",
         "python-dateutil",

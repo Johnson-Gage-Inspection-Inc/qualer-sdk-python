@@ -6,35 +6,35 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_found_guard_band_logic import (
-    ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic,
+from ..models.guard_band_logic import (
+    GuardBandLogic as ReportDatasetsToMeasurementAllResponseAsFoundGuardBandLogic,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_found_measurement_not_taken_result import (
-    ReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult,
+from ..models.measurement_not_taken_result import (
+    MeasurementNotTakenResult as ReportDatasetsToMeasurementAllResponseAsFoundMeasurementNotTakenResult,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_found_measurement_type import (
-    ReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
+from ..models.measurement_type import (
+    MeasurementType as ReportDatasetsToMeasurementAllResponseAsFoundMeasurementType,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_found_precision_type import (
-    ReportDatasetsToMeasurementAllResponseAsFoundPrecisionType,
+from ..models.measurement_precision_type import (
+    MeasurementPrecisionType as ReportDatasetsToMeasurementAllResponseAsFoundPrecisionType,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_found_reading_entry_math import (
-    ReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath,
+from ..models.reading_entry_math import (
+    ReadingEntryMath as ReportDatasetsToMeasurementAllResponseAsFoundReadingEntryMath,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_guard_band_logic import (
-    ReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic,
+from ..models.guard_band_logic import (
+    GuardBandLogic as ReportDatasetsToMeasurementAllResponseAsLeftGuardBandLogic,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_measurement_not_taken_result import (
-    ReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult,
+from ..models.measurement_not_taken_result import (
+    MeasurementNotTakenResult as ReportDatasetsToMeasurementAllResponseAsLeftMeasurementNotTakenResult,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_measurement_type import (
-    ReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
+from ..models.measurement_type import (
+    MeasurementType as ReportDatasetsToMeasurementAllResponseAsLeftMeasurementType,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_precision_type import (
-    ReportDatasetsToMeasurementAllResponseAsLeftPrecisionType,
+from ..models.measurement_precision_type import (
+    MeasurementPrecisionType as ReportDatasetsToMeasurementAllResponseAsLeftPrecisionType,
 )
-from ..models.qualer_api_models_report_datasets_to_measurement_all_response_as_left_reading_entry_math import (
-    ReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
+from ..models.reading_entry_math import (
+    ReadingEntryMath as ReportDatasetsToMeasurementAllResponseAsLeftReadingEntryMath,
 )
 from ..models.work_status import WorkStatus
 
@@ -2726,6 +2726,7 @@ class ReportDatasetsToMeasurementAllResponse:
         asset_tag_change = d.pop("AssetTagChange", None)
         asset_user_change = d.pop("AssetUserChange", None)
         serial_number_change = d.pop("SerialNumberChange", None)
+
         def _parse_service_date(data: object) -> Optional[datetime.datetime]:
             if data is None:
                 return data
@@ -2737,7 +2738,9 @@ class ReportDatasetsToMeasurementAllResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         service_date = _parse_service_date(d.pop("ServiceDate", None))
+
         def _parse_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2751,10 +2754,12 @@ class ReportDatasetsToMeasurementAllResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         next_service_date = _parse_next_service_date(d.pop("NextServiceDate", None))
         service_order_item_id = d.pop("ServiceOrderItemId", None)
         site_name = d.pop("SiteName", None)
         po_number = d.pop("PoNumber", None)
+
         def _parse_shipped_date(data: object) -> Optional[datetime.datetime]:
             if data is None:
                 return data
@@ -2766,6 +2771,7 @@ class ReportDatasetsToMeasurementAllResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         shipped_date = _parse_shipped_date(d.pop("ShippedDate", None))
         tracking_number = d.pop("TrackingNumber", None)
         payment_terms = d.pop("PaymentTerms", None)
@@ -2791,6 +2797,7 @@ class ReportDatasetsToMeasurementAllResponse:
         as_left_min_max_value_extended = d.pop("AsLeftMinMaxValueExtended", None)
         as_left_tool_range_name = d.pop("AsLeftToolRangeName", None)
         as_left_tool_range_uncertainty = d.pop("AsLeftToolRangeUncertainty", None)
+
         def _parse_as_left_primary_tool_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2804,9 +2811,11 @@ class ReportDatasetsToMeasurementAllResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         as_left_primary_tool_last_service_date = _parse_as_left_primary_tool_last_service_date(
             d.pop("AsLeftPrimaryToolLastServiceDate", None)
         )
+
         def _parse_as_left_primary_tool_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2820,6 +2829,7 @@ class ReportDatasetsToMeasurementAllResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         as_left_primary_tool_next_service_date = _parse_as_left_primary_tool_next_service_date(
             d.pop("AsLeftPrimaryToolNextServiceDate", None)
         )
@@ -2851,6 +2861,7 @@ class ReportDatasetsToMeasurementAllResponse:
         as_found_min_max_value_extended = d.pop("AsFoundMinMaxValueExtended", None)
         as_found_tool_range_name = d.pop("AsFoundToolRangeName", None)
         as_found_tool_range_uncertainty = d.pop("AsFoundToolRangeUncertainty", None)
+
         def _parse_as_found_primary_tool_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2864,9 +2875,11 @@ class ReportDatasetsToMeasurementAllResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         as_found_primary_tool_last_service_date = _parse_as_found_primary_tool_last_service_date(
             d.pop("AsFoundPrimaryToolLastServiceDate", None)
         )
+
         def _parse_as_found_primary_tool_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2880,6 +2893,7 @@ class ReportDatasetsToMeasurementAllResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         as_found_primary_tool_next_service_date = _parse_as_found_primary_tool_next_service_date(
             d.pop("AsFoundPrimaryToolNextServiceDate", None)
         )
@@ -2892,6 +2906,7 @@ class ReportDatasetsToMeasurementAllResponse:
             "AsFoundPrimaryToolManufacturerPartNumber", None
         )
         as_found_primary_tool_serial_number = d.pop("AsFoundPrimaryToolSerialNumber", None)
+
         def _parse_as_left_secondary_tool_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2905,9 +2920,11 @@ class ReportDatasetsToMeasurementAllResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         as_left_secondary_tool_last_service_date = _parse_as_left_secondary_tool_last_service_date(
             d.pop("AsLeftSecondaryToolLastServiceDate", None)
         )
+
         def _parse_as_left_secondary_tool_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2921,6 +2938,7 @@ class ReportDatasetsToMeasurementAllResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         as_left_secondary_tool_next_service_date = _parse_as_left_secondary_tool_next_service_date(
             d.pop("AsLeftSecondaryToolNextServiceDate", None)
         )
@@ -2933,6 +2951,7 @@ class ReportDatasetsToMeasurementAllResponse:
             "AsLeftSecondaryToolManufacturerPartNumber", None
         )
         as_left_secondary_tool_serial_number = d.pop("AsLeftSecondaryToolSerialNumber", None)
+
         def _parse_as_found_secondary_tool_last_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2946,11 +2965,13 @@ class ReportDatasetsToMeasurementAllResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         as_found_secondary_tool_last_service_date = (
             _parse_as_found_secondary_tool_last_service_date(
                 d.pop("AsFoundSecondaryToolLastServiceDate", None)
             )
         )
+
         def _parse_as_found_secondary_tool_next_service_date(
             data: object,
         ) -> Optional[datetime.datetime]:
@@ -2964,6 +2985,7 @@ class ReportDatasetsToMeasurementAllResponse:
             except Exception:
                 pass
             return cast(Optional[datetime.datetime], data)
+
         as_found_secondary_tool_next_service_date = (
             _parse_as_found_secondary_tool_next_service_date(
                 d.pop("AsFoundSecondaryToolNextServiceDate", None)
@@ -3559,10 +3581,12 @@ class ReportDatasetsToMeasurementAllResponse:
         as_left_cv_raw = d.pop("AsLeftCvRaw", None)
         as_left_delta = d.pop("AsLeftDelta", None)
         as_left_range = d.pop("AsLeftRange", None)
+
         def _parse_as_left_result(data: object) -> Optional[int]:
             if data is None:
                 return data
             return cast(Optional[int], data)
+
         as_left_result = _parse_as_left_result(d.pop("AsLeftResult", None))
         as_left_range_result = d.pop("AsLeftRangeResult", None)
         as_left_delta_result = d.pop("AsLeftDeltaResult", None)
