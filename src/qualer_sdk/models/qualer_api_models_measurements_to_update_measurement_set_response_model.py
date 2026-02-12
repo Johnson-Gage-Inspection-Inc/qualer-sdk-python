@@ -25,12 +25,12 @@ class MeasurementsToUpdateMeasurementSetResponseModel:
         use_expected_value (Optional[bool]):
         decimal_places (Optional[int]):
         significant_figures (Optional[int]):
-        influence_parameter_1_type (Optional[MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter1Type]):
+        influence_parameter_1_type (Optional[InfluenceParameterType]):
         influence_parameter_1_tool_type_id (Optional[int]):
         influence_parameter_1_parameter_id (Optional[int]):
         influence_parameter_1_source (Optional[str]):
         influence_parameter_1_value (Optional[str]):
-        influence_parameter_2_type (Optional[MeasurementsToUpdateMeasurementSetResponseModelInfluenceParameter2Type]):
+        influence_parameter_2_type (Optional[InfluenceParameterType]):
         influence_parameter_2_tool_type_id (Optional[int]):
         influence_parameter_2_parameter_id (Optional[int]):
         influence_parameter_2_source (Optional[str]):
