@@ -34,7 +34,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, UpdateWorkOrderTaskResponse204]]:
+) -> Optional[UpdateWorkOrderTaskResponse204]:
     if response.status_code == 204:
         response_204 = UpdateWorkOrderTaskResponse204.from_dict(response.json())
 
@@ -53,7 +53,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, UpdateWorkOrderTaskResponse204]]:
+) -> Response[UpdateWorkOrderTaskResponse204]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -67,7 +67,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: ServiceOrdersFromServiceOrderTaskUpdateModel,
-) -> Response[Union[Any, UpdateWorkOrderTaskResponse204]]:
+) -> Response[UpdateWorkOrderTaskResponse204]:
     """- If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their
     difference
     - If StartTime and FinishTime are not defined they will be recalculated
@@ -83,7 +83,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, UpdateWorkOrderTaskResponse204]]
+        Response[UpdateWorkOrderTaskResponse204]
     """
 
     kwargs = _get_kwargs(
@@ -103,7 +103,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     body: ServiceOrdersFromServiceOrderTaskUpdateModel,
-) -> Optional[Union[Any, UpdateWorkOrderTaskResponse204]]:
+) -> Optional[UpdateWorkOrderTaskResponse204]:
     """- If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their
     difference
     - If StartTime and FinishTime are not defined they will be recalculated
@@ -119,7 +119,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, UpdateWorkOrderTaskResponse204]
+        UpdateWorkOrderTaskResponse204
     """
 
     return sync_detailed(
@@ -134,7 +134,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: ServiceOrdersFromServiceOrderTaskUpdateModel,
-) -> Response[Union[Any, UpdateWorkOrderTaskResponse204]]:
+) -> Response[UpdateWorkOrderTaskResponse204]:
     """- If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their
     difference
     - If StartTime and FinishTime are not defined they will be recalculated
@@ -150,7 +150,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, UpdateWorkOrderTaskResponse204]]
+        Response[UpdateWorkOrderTaskResponse204]
     """
 
     kwargs = _get_kwargs(
@@ -168,7 +168,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     body: ServiceOrdersFromServiceOrderTaskUpdateModel,
-) -> Optional[Union[Any, UpdateWorkOrderTaskResponse204]]:
+) -> Optional[UpdateWorkOrderTaskResponse204]:
     """- If StartTime and FinishTime are defined TimeSpent will be ignored and recalculated based on their
     difference
     - If StartTime and FinishTime are not defined they will be recalculated
@@ -184,7 +184,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, UpdateWorkOrderTaskResponse204]
+        UpdateWorkOrderTaskResponse204
     """
 
     return (

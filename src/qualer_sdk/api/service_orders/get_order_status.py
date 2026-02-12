@@ -22,7 +22,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, GetOrderStatusResponse200]]:
+) -> Optional[GetOrderStatusResponse200]:
     if response.status_code == 200:
         response_200 = GetOrderStatusResponse200.from_dict(response.json())
 
@@ -41,7 +41,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, GetOrderStatusResponse200]]:
+) -> Response[GetOrderStatusResponse200]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -54,7 +54,7 @@ def sync_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[Union[Any, GetOrderStatusResponse200]]:
+) -> Response[GetOrderStatusResponse200]:
     """Gets current status and next status according to the workflow
 
     Args:
@@ -65,7 +65,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, GetOrderStatusResponse200]]
+        Response[GetOrderStatusResponse200]
     """
 
     kwargs = _get_kwargs(
@@ -83,7 +83,7 @@ def sync(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[Union[Any, GetOrderStatusResponse200]]:
+) -> Optional[GetOrderStatusResponse200]:
     """Gets current status and next status according to the workflow
 
     Args:
@@ -94,7 +94,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, GetOrderStatusResponse200]
+        GetOrderStatusResponse200
     """
 
     return sync_detailed(
@@ -107,7 +107,7 @@ async def asyncio_detailed(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[Union[Any, GetOrderStatusResponse200]]:
+) -> Response[GetOrderStatusResponse200]:
     """Gets current status and next status according to the workflow
 
     Args:
@@ -118,7 +118,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, GetOrderStatusResponse200]]
+        Response[GetOrderStatusResponse200]
     """
 
     kwargs = _get_kwargs(
@@ -134,7 +134,7 @@ async def asyncio(
     service_order_id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[Union[Any, GetOrderStatusResponse200]]:
+) -> Optional[GetOrderStatusResponse200]:
     """Gets current status and next status according to the workflow
 
     Args:
@@ -145,7 +145,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, GetOrderStatusResponse200]
+        GetOrderStatusResponse200
     """
 
     return (

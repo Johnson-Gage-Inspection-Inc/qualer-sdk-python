@@ -77,7 +77,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, List["ServiceOrdersToClientOrderItemResponseModel"]]]:
+) -> Response[List["ServiceOrdersToClientOrderItemResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -95,7 +95,7 @@ def sync_detailed(
     to: Optional[datetime.datetime] = None,
     work_item_number: Optional[str] = None,
     asset_search: Optional[str] = None,
-) -> Response[Union[Any, List["ServiceOrdersToClientOrderItemResponseModel"]]]:
+) -> Response[List["ServiceOrdersToClientOrderItemResponseModel"]]:
     """Retrieve work items
 
      Sample request:
@@ -120,7 +120,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, List['ServiceOrdersToClientOrderItemResponseModel']]]
+        Response[List['ServiceOrdersToClientOrderItemResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -173,7 +173,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, List['ServiceOrdersToClientOrderItemResponseModel']]
+        List['ServiceOrdersToClientOrderItemResponseModel']
     """
 
     return sync_detailed(
@@ -196,7 +196,7 @@ async def asyncio_detailed(
     to: Optional[datetime.datetime] = None,
     work_item_number: Optional[str] = None,
     asset_search: Optional[str] = None,
-) -> Response[Union[Any, List["ServiceOrdersToClientOrderItemResponseModel"]]]:
+) -> Response[List["ServiceOrdersToClientOrderItemResponseModel"]]:
     """Retrieve work items
 
      Sample request:
@@ -221,7 +221,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, List['ServiceOrdersToClientOrderItemResponseModel']]]
+        Response[List['ServiceOrdersToClientOrderItemResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -272,7 +272,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, List['ServiceOrdersToClientOrderItemResponseModel']]
+        List['ServiceOrdersToClientOrderItemResponseModel']
     """
 
     return (
