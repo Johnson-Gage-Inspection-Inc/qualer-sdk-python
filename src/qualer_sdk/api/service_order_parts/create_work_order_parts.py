@@ -34,7 +34,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, CreateWorkOrderPartsResponse204]]:
+) -> Optional[CreateWorkOrderPartsResponse204]:
     if response.status_code == 204:
         response_204 = CreateWorkOrderPartsResponse204.from_dict(response.json())
 
@@ -53,7 +53,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, CreateWorkOrderPartsResponse204]]:
+) -> Response[CreateWorkOrderPartsResponse204]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -67,7 +67,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateModel,
-) -> Response[Union[Any, CreateWorkOrderPartsResponse204]]:
+) -> Response[CreateWorkOrderPartsResponse204]:
     """ServiceOrderChargeType: Part, Labor, Charge
 
     Args:
@@ -79,7 +79,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, CreateWorkOrderPartsResponse204]]
+        Response[CreateWorkOrderPartsResponse204]
     """
 
     kwargs = _get_kwargs(
@@ -99,7 +99,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateModel,
-) -> Optional[Union[Any, CreateWorkOrderPartsResponse204]]:
+) -> Optional[CreateWorkOrderPartsResponse204]:
     """ServiceOrderChargeType: Part, Labor, Charge
 
     Args:
@@ -111,7 +111,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, CreateWorkOrderPartsResponse204]
+        CreateWorkOrderPartsResponse204
     """
 
     return sync_detailed(
@@ -126,7 +126,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateModel,
-) -> Response[Union[Any, CreateWorkOrderPartsResponse204]]:
+) -> Response[CreateWorkOrderPartsResponse204]:
     """ServiceOrderChargeType: Part, Labor, Charge
 
     Args:
@@ -138,7 +138,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, CreateWorkOrderPartsResponse204]]
+        Response[CreateWorkOrderPartsResponse204]
     """
 
     kwargs = _get_kwargs(
@@ -156,7 +156,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerWebMvcAreasApiModelsServiceOrdersFromServiceOrderPartRepairCreateModel,
-) -> Optional[Union[Any, CreateWorkOrderPartsResponse204]]:
+) -> Optional[CreateWorkOrderPartsResponse204]:
     """ServiceOrderChargeType: Part, Labor, Charge
 
     Args:
@@ -168,7 +168,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, CreateWorkOrderPartsResponse204]
+        CreateWorkOrderPartsResponse204
     """
 
     return (

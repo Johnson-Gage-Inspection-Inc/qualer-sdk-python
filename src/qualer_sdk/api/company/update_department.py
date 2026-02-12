@@ -34,7 +34,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, UpdateDepartmentResponse204]]:
+) -> Optional[UpdateDepartmentResponse204]:
     if response.status_code == 204:
         response_204 = UpdateDepartmentResponse204.from_dict(response.json())
 
@@ -50,7 +50,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, UpdateDepartmentResponse204]]:
+) -> Response[UpdateDepartmentResponse204]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -64,7 +64,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel,
-) -> Response[Union[Any, UpdateDepartmentResponse204]]:
+) -> Response[UpdateDepartmentResponse204]:
     """
     Args:
         department_id (int):
@@ -75,7 +75,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, UpdateDepartmentResponse204]]
+        Response[UpdateDepartmentResponse204]
     """
 
     kwargs = _get_kwargs(
@@ -95,7 +95,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel,
-) -> Optional[Union[Any, UpdateDepartmentResponse204]]:
+) -> Optional[UpdateDepartmentResponse204]:
     """
     Args:
         department_id (int):
@@ -106,7 +106,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, UpdateDepartmentResponse204]
+        UpdateDepartmentResponse204
     """
 
     return sync_detailed(
@@ -121,7 +121,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel,
-) -> Response[Union[Any, UpdateDepartmentResponse204]]:
+) -> Response[UpdateDepartmentResponse204]:
     """
     Args:
         department_id (int):
@@ -132,7 +132,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, UpdateDepartmentResponse204]]
+        Response[UpdateDepartmentResponse204]
     """
 
     kwargs = _get_kwargs(
@@ -150,7 +150,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     body: QualerWebMvcAreasApiModelsCompanyFromUpdateDepartmentModel,
-) -> Optional[Union[Any, UpdateDepartmentResponse204]]:
+) -> Optional[UpdateDepartmentResponse204]:
     """
     Args:
         department_id (int):
@@ -161,7 +161,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, UpdateDepartmentResponse204]
+        UpdateDepartmentResponse204
     """
 
     return (

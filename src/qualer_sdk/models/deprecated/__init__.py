@@ -48,7 +48,7 @@ def __getattr__(name: str) -> Any:
     if hit is None:
         raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
 
-    module_stem, _ = hit
+    module_stem, replacement = hit
 
     # The deprecated module itself will emit the warning when imported.
     # We don't need to emit it here to avoid duplicate warnings.

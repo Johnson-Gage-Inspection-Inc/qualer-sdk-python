@@ -31,7 +31,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, LogoutResponse200]]:
+) -> Optional[LogoutResponse200]:
     if response.status_code == 200:
         response_200 = LogoutResponse200.from_dict(response.json())
 
@@ -50,7 +50,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, LogoutResponse200]]:
+) -> Response[LogoutResponse200]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -63,7 +63,7 @@ def sync_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: AccountToLogoutModel,
-) -> Response[Union[Any, LogoutResponse200]]:
+) -> Response[LogoutResponse200]:
     """Logout
 
      LogoutAction:<br />
@@ -82,7 +82,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, LogoutResponse200]]
+        Response[LogoutResponse200]
     """
 
     kwargs = _get_kwargs(
@@ -100,7 +100,7 @@ def sync(
     *,
     client: Union[AuthenticatedClient, Client],
     body: AccountToLogoutModel,
-) -> Optional[Union[Any, LogoutResponse200]]:
+) -> Optional[LogoutResponse200]:
     """Logout
 
      LogoutAction:<br />
@@ -119,7 +119,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, LogoutResponse200]
+        LogoutResponse200
     """
 
     return sync_detailed(
@@ -132,7 +132,7 @@ async def asyncio_detailed(
     *,
     client: Union[AuthenticatedClient, Client],
     body: AccountToLogoutModel,
-) -> Response[Union[Any, LogoutResponse200]]:
+) -> Response[LogoutResponse200]:
     """Logout
 
      LogoutAction:<br />
@@ -151,7 +151,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, LogoutResponse200]]
+        Response[LogoutResponse200]
     """
 
     kwargs = _get_kwargs(
@@ -167,7 +167,7 @@ async def asyncio(
     *,
     client: Union[AuthenticatedClient, Client],
     body: AccountToLogoutModel,
-) -> Optional[Union[Any, LogoutResponse200]]:
+) -> Optional[LogoutResponse200]:
     """Logout
 
      LogoutAction:<br />
@@ -186,7 +186,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, LogoutResponse200]
+        LogoutResponse200
     """
 
     return (

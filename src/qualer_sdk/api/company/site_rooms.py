@@ -24,7 +24,7 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Optional[Union[Any, List["CompanyToEnvironmentResponseModel"]]]:
+) -> Optional[List["CompanyToEnvironmentResponseModel"]]:
     if response.status_code == 200:
         response_200 = []
         _response_200 = response.json()
@@ -45,7 +45,7 @@ def _parse_response(
 
 def _build_response(
     *, client: Union[AuthenticatedClient, Client], response: httpx.Response
-) -> Response[Union[Any, List["CompanyToEnvironmentResponseModel"]]]:
+) -> Response[List["CompanyToEnvironmentResponseModel"]]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -58,7 +58,7 @@ def sync_detailed(
     id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[Union[Any, List["CompanyToEnvironmentResponseModel"]]]:
+) -> Response[List["CompanyToEnvironmentResponseModel"]]:
     """
     Args:
         id (int):
@@ -68,7 +68,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, List['CompanyToEnvironmentResponseModel']]]
+        Response[List['CompanyToEnvironmentResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -86,7 +86,7 @@ def sync(
     id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[Union[Any, List["CompanyToEnvironmentResponseModel"]]]:
+) -> Optional[List["CompanyToEnvironmentResponseModel"]]:
     """
     Args:
         id (int):
@@ -96,7 +96,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, List['CompanyToEnvironmentResponseModel']]
+        List['CompanyToEnvironmentResponseModel']
     """
 
     return sync_detailed(
@@ -109,7 +109,7 @@ async def asyncio_detailed(
     id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Response[Union[Any, List["CompanyToEnvironmentResponseModel"]]]:
+) -> Response[List["CompanyToEnvironmentResponseModel"]]:
     """
     Args:
         id (int):
@@ -119,7 +119,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[Any, List['CompanyToEnvironmentResponseModel']]]
+        Response[List['CompanyToEnvironmentResponseModel']]
     """
 
     kwargs = _get_kwargs(
@@ -135,7 +135,7 @@ async def asyncio(
     id: int,
     *,
     client: Union[AuthenticatedClient, Client],
-) -> Optional[Union[Any, List["CompanyToEnvironmentResponseModel"]]]:
+) -> Optional[List["CompanyToEnvironmentResponseModel"]]:
     """
     Args:
         id (int):
@@ -145,7 +145,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[Any, List['CompanyToEnvironmentResponseModel']]
+        List['CompanyToEnvironmentResponseModel']
     """
 
     return (
