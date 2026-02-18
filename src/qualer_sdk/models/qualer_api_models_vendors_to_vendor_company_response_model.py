@@ -1,17 +1,14 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 if TYPE_CHECKING:
-    from ..models.qualer_api_models_vendors_to_vendor_company_response_model_billing_address_type_0 import (
-        VendorsToVendorCompanyResponseModelBillingAddressType0,
-    )
-    from ..models.qualer_api_models_vendors_to_vendor_company_response_model_shipping_address_type_0 import (
-        VendorsToVendorCompanyResponseModelShippingAddressType0,
+    from ..models.qualer_api_models_address_to_address_response_model import (
+        AddressToAddressResponseModel,
     )
 
 
@@ -29,8 +26,8 @@ class VendorsToVendorCompanyResponseModel:
         company_name (Optional[str]):
         domain_name (Optional[str]):
         custom_name (Optional[str]):
-        billing_address (Optional['VendorsToVendorCompanyResponseModelBillingAddressType0']):
-        shipping_address (Optional['VendorsToVendorCompanyResponseModelShippingAddressType0']):
+        billing_address (Optional['AddressToAddressResponseModel']):
+        shipping_address (Optional['AddressToAddressResponseModel']):
         updated_on_utc (Optional[datetime.datetime]):
     """
 
@@ -41,19 +38,12 @@ class VendorsToVendorCompanyResponseModel:
     company_name: Optional[str] = None
     domain_name: Optional[str] = None
     custom_name: Optional[str] = None
-    billing_address: Optional["VendorsToVendorCompanyResponseModelBillingAddressType0"] = None
-    shipping_address: Optional["VendorsToVendorCompanyResponseModelShippingAddressType0"] = None
+    billing_address: Optional["AddressToAddressResponseModel"] = None
+    shipping_address: Optional["AddressToAddressResponseModel"] = None
     updated_on_utc: Optional[datetime.datetime] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
-        from ..models.qualer_api_models_vendors_to_vendor_company_response_model_billing_address_type_0 import (
-            VendorsToVendorCompanyResponseModelBillingAddressType0,
-        )
-        from ..models.qualer_api_models_vendors_to_vendor_company_response_model_shipping_address_type_0 import (
-            VendorsToVendorCompanyResponseModelShippingAddressType0,
-        )
-
         account_number_text = self.account_number_text
         account_number = self.account_number
         currency_id = self.currency_id
@@ -61,26 +51,12 @@ class VendorsToVendorCompanyResponseModel:
         company_name = self.company_name
         domain_name = self.domain_name
         custom_name = self.custom_name
-        billing_address: Optional[Dict[str, Any]]
-        if not self.billing_address:
-            billing_address = None
-        elif isinstance(
-            self.billing_address,
-            VendorsToVendorCompanyResponseModelBillingAddressType0,
-        ):
+        billing_address: Optional[Dict[str, Any]] = None
+        if self.billing_address:
             billing_address = self.billing_address.to_dict()
-        else:
-            billing_address = self.billing_address
-        shipping_address: Optional[Dict[str, Any]]
-        if not self.shipping_address:
-            shipping_address = None
-        elif isinstance(
-            self.shipping_address,
-            VendorsToVendorCompanyResponseModelShippingAddressType0,
-        ):
+        shipping_address: Optional[Dict[str, Any]] = None
+        if self.shipping_address:
             shipping_address = self.shipping_address.to_dict()
-        else:
-            shipping_address = self.shipping_address
         updated_on_utc: Optional[str] = None
         if self.updated_on_utc:
             updated_on_utc = self.updated_on_utc.isoformat()
@@ -111,11 +87,8 @@ class VendorsToVendorCompanyResponseModel:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.qualer_api_models_vendors_to_vendor_company_response_model_billing_address_type_0 import (
-            VendorsToVendorCompanyResponseModelBillingAddressType0,
-        )
-        from ..models.qualer_api_models_vendors_to_vendor_company_response_model_shipping_address_type_0 import (
-            VendorsToVendorCompanyResponseModelShippingAddressType0,
+        from ..models.qualer_api_models_address_to_address_response_model import (
+            AddressToAddressResponseModel,
         )
 
         d = dict(src_dict)
@@ -127,47 +100,15 @@ class VendorsToVendorCompanyResponseModel:
         domain_name = d.pop("DomainName", None)
         custom_name = d.pop("CustomName", None)
 
-        def _parse_billing_address(
-            data: object,
-        ) -> Optional["VendorsToVendorCompanyResponseModelBillingAddressType0"]:
-            if not data:
-                return None
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                billing_address_type_0 = (
-                    VendorsToVendorCompanyResponseModelBillingAddressType0.from_dict(data)
-                )
-                return billing_address_type_0
-            except Exception:
-                pass
-            return cast(
-                Optional["VendorsToVendorCompanyResponseModelBillingAddressType0"],
-                data,
-            )
+        _billing_address = d.pop("BillingAddress", None)
+        billing_address: Optional[AddressToAddressResponseModel] = None
+        if isinstance(_billing_address, dict):
+            billing_address = AddressToAddressResponseModel.from_dict(_billing_address)
 
-        billing_address = _parse_billing_address(d.pop("BillingAddress", None))
-
-        def _parse_shipping_address(
-            data: object,
-        ) -> Optional["VendorsToVendorCompanyResponseModelShippingAddressType0"]:
-            if not data:
-                return None
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                shipping_address_type_0 = (
-                    VendorsToVendorCompanyResponseModelShippingAddressType0.from_dict(data)
-                )
-                return shipping_address_type_0
-            except Exception:
-                pass
-            return cast(
-                Optional["VendorsToVendorCompanyResponseModelShippingAddressType0"],
-                data,
-            )
-
-        shipping_address = _parse_shipping_address(d.pop("ShippingAddress", None))
+        _shipping_address = d.pop("ShippingAddress", None)
+        shipping_address: Optional[AddressToAddressResponseModel] = None
+        if isinstance(_shipping_address, dict):
+            shipping_address = AddressToAddressResponseModel.from_dict(_shipping_address)
         _updated_on_utc = d.pop("UpdatedOnUtc", None)
         updated_on_utc: Optional[datetime.datetime]
         if not _updated_on_utc:

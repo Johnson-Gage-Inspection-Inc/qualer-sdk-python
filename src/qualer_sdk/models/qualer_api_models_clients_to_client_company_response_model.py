@@ -1,20 +1,17 @@
 import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 if TYPE_CHECKING:
+    from ..models.qualer_api_models_address_to_address_response_model import (
+        AddressToAddressResponseModel,
+    )
     from ..models.qualer_api_models_attributes_to_attribute_response import (
         AttributesToAttributeResponse,
-    )
-    from ..models.qualer_api_models_clients_to_client_company_response_model_billing_address_type_0 import (
-        ClientsToClientCompanyResponseModelBillingAddressType0,
-    )
-    from ..models.qualer_api_models_clients_to_client_company_response_model_shipping_address_type_0 import (
-        ClientsToClientCompanyResponseModelShippingAddressType0,
     )
 
 
@@ -39,8 +36,8 @@ class ClientsToClientCompanyResponseModel:
         account_representative_employee_id (Optional[int]):
         account_representative_site_id (Optional[int]):
         account_manager_employee_id (Optional[int]):
-        billing_address (Optional['ClientsToClientCompanyResponseModelBillingAddressType0']):
-        shipping_address (Optional['ClientsToClientCompanyResponseModelShippingAddressType0']):
+        billing_address (Optional['AddressToAddressResponseModel']):
+        shipping_address (Optional['AddressToAddressResponseModel']):
         attributes (Optional[List['AttributesToAttributeResponse']]):
     """
 
@@ -58,19 +55,12 @@ class ClientsToClientCompanyResponseModel:
     account_representative_employee_id: Optional[int] = None
     account_representative_site_id: Optional[int] = None
     account_manager_employee_id: Optional[int] = None
-    billing_address: Optional["ClientsToClientCompanyResponseModelBillingAddressType0"] = None
-    shipping_address: Optional["ClientsToClientCompanyResponseModelShippingAddressType0"] = None
+    billing_address: Optional["AddressToAddressResponseModel"] = None
+    shipping_address: Optional["AddressToAddressResponseModel"] = None
     attributes: Optional[List["AttributesToAttributeResponse"]] = None
     additional_properties: Dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
-        from ..models.qualer_api_models_clients_to_client_company_response_model_billing_address_type_0 import (
-            ClientsToClientCompanyResponseModelBillingAddressType0,
-        )
-        from ..models.qualer_api_models_clients_to_client_company_response_model_shipping_address_type_0 import (
-            ClientsToClientCompanyResponseModelShippingAddressType0,
-        )
-
         company_id = self.company_id
         account_number_text = self.account_number_text
         account_number = self.account_number
@@ -87,26 +77,12 @@ class ClientsToClientCompanyResponseModel:
         account_representative_employee_id = self.account_representative_employee_id
         account_representative_site_id = self.account_representative_site_id
         account_manager_employee_id = self.account_manager_employee_id
-        billing_address: Optional[Dict[str, Any]]
-        if not self.billing_address:
-            billing_address = None
-        elif isinstance(
-            self.billing_address,
-            ClientsToClientCompanyResponseModelBillingAddressType0,
-        ):
+        billing_address: Optional[Dict[str, Any]] = None
+        if self.billing_address:
             billing_address = self.billing_address.to_dict()
-        else:
-            billing_address = self.billing_address
-        shipping_address: Optional[Dict[str, Any]]
-        if not self.shipping_address:
-            shipping_address = None
-        elif isinstance(
-            self.shipping_address,
-            ClientsToClientCompanyResponseModelShippingAddressType0,
-        ):
+        shipping_address: Optional[Dict[str, Any]] = None
+        if self.shipping_address:
             shipping_address = self.shipping_address.to_dict()
-        else:
-            shipping_address = self.shipping_address
         attributes: Optional[List[Dict[str, Any]]] = None
         if self.attributes:
             attributes = []
@@ -154,14 +130,11 @@ class ClientsToClientCompanyResponseModel:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.qualer_api_models_address_to_address_response_model import (
+            AddressToAddressResponseModel,
+        )
         from ..models.qualer_api_models_attributes_to_attribute_response import (
             AttributesToAttributeResponse,
-        )
-        from ..models.qualer_api_models_clients_to_client_company_response_model_billing_address_type_0 import (
-            ClientsToClientCompanyResponseModelBillingAddressType0,
-        )
-        from ..models.qualer_api_models_clients_to_client_company_response_model_shipping_address_type_0 import (
-            ClientsToClientCompanyResponseModelShippingAddressType0,
         )
 
         d = dict(src_dict)
@@ -185,47 +158,15 @@ class ClientsToClientCompanyResponseModel:
         account_representative_site_id = d.pop("AccountRepresentativeSiteId", None)
         account_manager_employee_id = d.pop("AccountManagerEmployeeId", None)
 
-        def _parse_billing_address(
-            data: object,
-        ) -> Optional["ClientsToClientCompanyResponseModelBillingAddressType0"]:
-            if not data:
-                return None
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                billing_address_type_0 = (
-                    ClientsToClientCompanyResponseModelBillingAddressType0.from_dict(data)
-                )
-                return billing_address_type_0
-            except Exception:
-                pass
-            return cast(
-                Optional["ClientsToClientCompanyResponseModelBillingAddressType0"],
-                data,
-            )
+        _billing_address = d.pop("BillingAddress", None)
+        billing_address: Optional[AddressToAddressResponseModel] = None
+        if isinstance(_billing_address, dict):
+            billing_address = AddressToAddressResponseModel.from_dict(_billing_address)
 
-        billing_address = _parse_billing_address(d.pop("BillingAddress", None))
-
-        def _parse_shipping_address(
-            data: object,
-        ) -> Optional["ClientsToClientCompanyResponseModelShippingAddressType0"]:
-            if not data:
-                return None
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                shipping_address_type_0 = (
-                    ClientsToClientCompanyResponseModelShippingAddressType0.from_dict(data)
-                )
-                return shipping_address_type_0
-            except Exception:
-                pass
-            return cast(
-                Optional["ClientsToClientCompanyResponseModelShippingAddressType0"],
-                data,
-            )
-
-        shipping_address = _parse_shipping_address(d.pop("ShippingAddress", None))
+        _shipping_address = d.pop("ShippingAddress", None)
+        shipping_address: Optional[AddressToAddressResponseModel] = None
+        if isinstance(_shipping_address, dict):
+            shipping_address = AddressToAddressResponseModel.from_dict(_shipping_address)
         attributes = []
         _attributes = d.pop("Attributes", None)
         for attributes_item_data in _attributes or []:
